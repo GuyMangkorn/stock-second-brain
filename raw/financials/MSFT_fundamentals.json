@@ -1,0 +1,184 @@
+{
+  "company": "Microsoft Corporation",
+  "ticker": "MSFT",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly",
+  "reporting_scope": "FY26 Q3 and nine months ended 2026-03-31",
+  "periods": [
+    "FY25 Q3",
+    "FY26 Q3",
+    "9M FY25",
+    "9M FY26",
+    "2025-06-30",
+    "2026-03-31"
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q filing detail",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/0001193125-26-191507-index.html",
+      "notes": "Accession 0001193125-26-191507; filing date 2026-04-29; period of report 2026-03-31."
+    },
+    {
+      "source": "Microsoft FY26 Q3 income statements",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/income-statements"
+    },
+    {
+      "source": "Microsoft FY26 Q3 balance sheets",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/balance-sheets"
+    },
+    {
+      "source": "Microsoft FY26 Q3 cash flows",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/cash-flows"
+    },
+    {
+      "source": "Microsoft FY26 Q3 segment results",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/segment-revenues"
+    },
+    {
+      "source": "Microsoft FY26 Q3 earnings call transcript",
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3"
+    }
+  ],
+  "financial_series": {
+    "total_revenue_usd_m": {
+      "FY25 Q3": 70066,
+      "FY26 Q3": 82886,
+      "9M FY25": 205283,
+      "9M FY26": 241832
+    },
+    "gross_margin_usd_m": {
+      "FY25 Q3": 48147,
+      "FY26 Q3": 56058,
+      "9M FY25": 141466,
+      "9M FY26": 164983
+    },
+    "operating_income_usd_m": {
+      "FY25 Q3": 32000,
+      "FY26 Q3": 38398,
+      "9M FY25": 94205,
+      "9M FY26": 114634
+    },
+    "net_income_usd_m": {
+      "FY25 Q3": 25824,
+      "FY26 Q3": 31778,
+      "9M FY25": 74599,
+      "9M FY26": 97983
+    },
+    "diluted_eps_usd": {
+      "FY25 Q3": 3.46,
+      "FY26 Q3": 4.27,
+      "9M FY25": 9.99,
+      "9M FY26": 13.14
+    },
+    "net_cash_from_operations_usd_m": {
+      "FY25 Q3": 37044,
+      "FY26 Q3": 46679,
+      "9M FY25": 93515,
+      "9M FY26": 127494
+    },
+    "additions_to_property_and_equipment_usd_m": {
+      "FY25 Q3": -16745,
+      "FY26 Q3": -30876,
+      "9M FY25": -47472,
+      "9M FY26": -80146
+    },
+    "free_cash_flow_usd_m_calculated": {
+      "FY25 Q3": 20299,
+      "FY26 Q3": 15803,
+      "9M FY25": 46043,
+      "9M FY26": 47348
+    },
+    "total_assets_usd_m": {
+      "2025-06-30": 619003,
+      "2026-03-31": 694228
+    },
+    "total_liabilities_usd_m": {
+      "2025-06-30": 275524,
+      "2026-03-31": 279861
+    },
+    "stockholders_equity_usd_m": {
+      "2025-06-30": 343479,
+      "2026-03-31": 414367
+    }
+  },
+  "segment_series": [
+    {
+      "segment": "Productivity and Business Processes",
+      "revenue_usd_m": {
+        "FY25 Q3": 29944,
+        "FY26 Q3": 35013
+      },
+      "operating_income_usd_m": {
+        "FY25 Q3": 17379,
+        "FY26 Q3": 20973
+      }
+    },
+    {
+      "segment": "Intelligent Cloud",
+      "revenue_usd_m": {
+        "FY25 Q3": 26751,
+        "FY26 Q3": 34681
+      },
+      "operating_income_usd_m": {
+        "FY25 Q3": 11095,
+        "FY26 Q3": 13753
+      }
+    },
+    {
+      "segment": "More Personal Computing",
+      "revenue_usd_m": {
+        "FY25 Q3": 13371,
+        "FY26 Q3": 13192
+      },
+      "operating_income_usd_m": {
+        "FY25 Q3": 3526,
+        "FY26 Q3": 3672
+      }
+    }
+  ],
+  "ratios": [
+    {
+      "name": "gross_profit_margin",
+      "period": "FY26 Q3",
+      "value": 0.6763,
+      "formula": "56058 / 82886"
+    },
+    {
+      "name": "operating_margin",
+      "period": "FY26 Q3",
+      "value": 0.4633,
+      "formula": "38398 / 82886"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "FY26 Q3",
+      "value": 0.3834,
+      "formula": "31778 / 82886"
+    },
+    {
+      "name": "current_ratio",
+      "period": "2026-03-31",
+      "value": 1.2829,
+      "formula": "175329 / 136661"
+    },
+    {
+      "name": "quick_ratio",
+      "period": "2026-03-31",
+      "value": 1.0121,
+      "formula": "(32105 + 46167 + 60041) / 136661"
+    },
+    {
+      "name": "liabilities_to_equity",
+      "period": "2026-03-31",
+      "value": 0.6754,
+      "formula": "279861 / 414367"
+    }
+  ],
+  "missing_data": [
+    "Current stock price and valuation multiples require a fresh market-data check.",
+    "Product-level dollar revenue not normalized where only growth rates were disclosed.",
+    "Full annual FY2026 data is not yet available.",
+    "Longer historical segment comparisons were not normalized in this ingest."
+  ]
+}
