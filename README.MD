@@ -78,6 +78,7 @@ stock-second-brain/
       dcf-valuation/
       x-research/
       source-integrity-audit/
+      stock-decision-pipeline/
 ```
 
 ## Source Priority
@@ -173,7 +174,27 @@ Expected output:
 - caveats about sample bias and rumor risk
 - entity follow-up update only when useful
 
-### 6. Source Integrity Audit
+### 6. Decision-Grade Pipeline
+
+Use `.codex/skills/stock-decision-pipeline/SKILL.md`.
+
+Goal: chain the common decision workflow from source discovery to financial
+facts, entity thesis, valuation, and a final decision memo.
+
+Expected output for a new ticker:
+
+- `raw/imports/TICKER_latest_results_source.md`
+- `raw/financials/TICKER_fundamentals.md`
+- `wiki/entities/TICKER.md`
+- `wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md`
+- `wiki/analysis/TICKER Decision Memo YYYY-MM-DD.md`
+- `log.md` entries
+
+For an existing ticker, use the lightest sufficient refresh: P13 only when the
+vault and latest DCF are still valid, P11 -> P13 when valuation is stale, or
+P7 -> P11 -> P13 when the thesis also needs refresh.
+
+### 7. Source Integrity Audit
 
 Use `.codex/skills/source-integrity-audit/SKILL.md`.
 
@@ -202,11 +223,12 @@ or filing access:
 
 | Prompt | Why it can run alone | Expected first output |
 |---|---|---|
-| Latest Results Ingest | It asks the agent to find official latest sources first. | `raw/imports/TICKER_latest_results_source.md` |
+| Latest Results Source Discovery | It asks the agent to find official latest sources first. | `raw/imports/TICKER_latest_results_source.md` |
 | SEC Filing First | It starts from SEC/official filings before writing notes. | source note plus entity update |
 | Earnings Transcript Digest | It asks the agent to find or verify a transcript source. | `wiki/analysis/TICKER Earnings Transcript Digest YYYY-MM-DD.md` |
 | News / Catalyst Update | It can search current news, but must label news as lower-priority context. | catalyst memo |
 | Company Deep Dive | It includes official-source research and can build the first entity page. | `wiki/entities/TICKER.md` |
+| Stock Decision Pipeline | It chains source discovery, ingest, thesis, DCF, and decision memo. | source note, fundamentals, entity page, valuation memo, decision memo |
 | Batch Screener | It starts from a ticker list or screener file, but output is triage, not a decision-grade memo. | screener triage memo |
 | X Sentiment | It can start from a ticker/event and search public sentiment when X/search access exists. | sentiment memo |
 
@@ -217,13 +239,14 @@ file exists:
 
 | Prompt | Required input | Run this first if missing |
 |---|---|---|
-| Financial Statements Normalize | `raw/imports/TICKER_latest_results_source.md` or another source file | Latest Results Ingest or SEC Filing First |
+| Financial Statements Normalize | `raw/imports/TICKER_latest_results_source.md` or another source file | Latest Results Source Discovery or SEC Filing First |
 | Thesis Refresh | `wiki/entities/TICKER.md` and ideally `raw/financials/TICKER_fundamentals.md` | Company Deep Dive or Financial Statements Normalize |
 | Compare Companies | entity/fundamentals files for the compared tickers | Company Deep Dive for each ticker |
 | Query The Vault | enough notes in `index.md`, `wiki/entities/`, or `wiki/analysis/` | ingest one or more tickers first |
 | Source Integrity Audit | a non-empty vault with multiple notes | create or ingest source/entity notes first |
 | Decision Memo | entity thesis plus current price/valuation if action depends on market data | Company Deep Dive, then refresh current market data |
-| DCF Valuation | verified FCF, cash/debt, shares, current price, and assumptions | Latest Results Ingest, Financial Statements Normalize, then fresh market-data check |
+| Decision Memo Price Refresh | existing entity/fundamentals and preferably latest DCF | P13 only if valuation is still valid; otherwise P11 -> P13 |
+| DCF Valuation | verified FCF, cash/debt, shares, current price, and assumptions | Latest Results Source Discovery, Financial Statements Normalize, then fresh market-data check |
 
 #### Recommended Flow For A New Ticker
 
@@ -239,6 +262,7 @@ file exists:
 | N5: อยากรู้ fair value | ต้องการ valuation หรือ upside/downside | P1 -> P4 -> P6 -> P11 | source-backed DCF memo |
 | N6: มีข่าว/event ใหญ่ | หุ้นใหม่มี catalyst/news/controversy | P1 -> P5 -> P6 -> optional P12 | catalyst memo + entity update + sentiment context |
 | N7: มาจาก screener list | มีหลาย ticker และต้องเลือกตัวที่จะขุดต่อ | P14 -> เลือก top names -> N1/N5 | screener triage แล้วค่อย full pipeline เฉพาะตัวที่ผ่าน |
+| N8: Decision-grade ตั้งแต่ศูนย์ | หุ้นใหม่และอยากได้ decision memo พร้อม valuation | P15 หรือ P1 -> P4 -> P6 -> P11 -> P13 | source note, fundamentals, entity page, DCF, decision memo |
 
 Prompt chain ที่ใช้บ่อยสุด:
 
@@ -249,6 +273,8 @@ P1 -> P4 -> P6
 ถ้าจะทำ decision-grade เพิ่ม:
 
 ```text
+P15
+หรือ
 P1 -> P4 -> P6 -> P11 -> P13 -> optional P10
 ```
 
@@ -268,6 +294,7 @@ P1 -> P4 -> P6 -> P11 -> P13 -> optional P10
 | E6: ถามจาก vault | อยาก query ข้อมูลที่สะสมไว้ ไม่อยากค้นเว็บใหม่ | P9 | answer จาก vault พร้อมไฟล์อ้างอิง |
 | E7: ก่อนตัดสินใจจริง | ต้องการตรวจว่า note/source/chart น่าเชื่อถือไหม | P10 -> fix gaps -> P13 | audit memo + decision memo |
 | E8: Sentiment หลัง event | price action แรงหรือ market chatter สำคัญ | P12 -> P7 | sentiment context + thesis refresh |
+| E9: มี data แล้ว แค่อัปเดต decision ด้วยราคาปัจจุบัน | entity/fundamentals มีอยู่ และ DCF ล่าสุดยังน่าจะใช้ได้ | P13 เท่านั้น ถ้า valuation ยัง valid; ถ้า stale ใช้ P11 -> P13 | decision memo ใหม่พร้อม fresh price check |
 
 Prompt chain ที่ใช้บ่อยสุด:
 
@@ -287,13 +314,23 @@ P1 -> P4 -> P7
 P7 -> P11 -> P10 -> P13
 ```
 
-### P1 - Latest Results Ingest
+ถ้ามี data และ DCF อยู่แล้ว แค่อยากอัปเดต decision memo จากราคาปัจจุบัน:
+
+```text
+P13 only ถ้า thesis และ valuation assumptions ยัง valid
+P11 -> P13 ถ้า valuation stale หรือราคาเปลี่ยนจน upside/downside เปลี่ยนมาก
+P7 -> P11 -> P13 ถ้า thesis หรือ business facts อาจ stale
+P1 -> P4 -> P7 -> P11 -> P13 ถ้ามีงบใหม่ที่ยังไม่ได้ ingest
+```
+
+### P1 - Latest Results Source Discovery
 
 ```text
 ใช้ skill latest-results-web สำหรับ MSFT
 หา source ทางการล่าสุดตามลำดับ SEC filings, earnings transcript, financial statements, news
 แล้วสร้าง raw/imports/MSFT_latest_results_source.md
-จากนั้นใช้ skill financial-facts-ingest เพื่ออัปเดต wiki/entities/MSFT.md
+เขียน Handoff For Ingest ให้ชัดสำหรับ P4
+ยังไม่ต้อง normalize งบหรืออัปเดต wiki/entities/MSFT.md ในขั้นนี้
 ```
 
 ### P2 - SEC Filing First
@@ -425,6 +462,35 @@ on the shortlist.
 source coverage และ data gaps
 บันทึกเป็น wiki/analysis/Screener Triage YYYY-MM-DD.md
 แนะนำ top 1-3 ตัวที่จะรัน latest-results-web ต่อ
+```
+
+### P15 - Stock Decision Pipeline
+
+Use this when you want the common chain to run as one workflow.
+
+New ticker / decision-grade from zero:
+
+```text
+ใช้ skill stock-decision-pipeline สำหรับ MSFT
+รัน full new-ticker decision-grade flow: P1 -> P4 -> P6 -> P11 -> P13
+P1 ให้สร้าง source note เท่านั้น, P4 ค่อย normalize และ update entity
+fresh check current price, market cap, shares, cash, debt, FCF และ guidance ก่อน P11/P13
+ถ้าขั้นไหน source ไม่พอ ให้หยุดและเขียน Missing / Unverified Data แทนการเดา
+บันทึก durable outputs และ log.md ทุกขั้นที่มีการ update
+```
+
+Existing data / update decision memo with current price:
+
+```text
+ใช้ skill stock-decision-pipeline สำหรับ MSFT
+vault มี entity/fundamentals และอาจมี DCF แล้ว
+อ่าน index.md, wiki/entities/MSFT.md, raw/financials/MSFT_fundamentals.md,
+และ valuation/decision memo ล่าสุดใน wiki/analysis/
+fresh check ราคาปัจจุบันและ market data ที่จำเป็น
+ถ้า thesis และ valuation assumptions ยัง valid ให้รัน P13 เท่านั้น
+ถ้า valuation stale ให้รัน P11 -> P13
+ถ้า thesis stale ให้รัน P7 -> P11 -> P13
+บันทึกเป็น wiki/analysis/MSFT Decision Memo YYYY-MM-DD.md
 ```
 
 ## Output Standards

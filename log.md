@@ -2,6 +2,9 @@
 
 ## 2026-05-18
 
+- `skills`: Added `stock-decision-pipeline` as the orchestrator for
+  P1 -> P4 -> P6 -> P11 -> P13, clarified P1 as source discovery only, and
+  documented existing-data decision memo refresh flows with fresh price checks.
 - `analysis`: Created `wiki/analysis/MSFT Decision Memo 2026-05-18.md` with a WAIT-for-new-capital / HOLD-existing-core action read, using vault facts plus a fresh StockAnalysis market-data check; updated `[[MSFT]]` with the dated decision memo link and current action read.
 - `valuation`: Created `wiki/analysis/MSFT DCF Valuation 2026-05-18.md` after fresh-checking MSFT price, market cap, shares, cash, debt, FCF, and guidance; updated `[[MSFT]]` with the dated valuation memo and watch item.
 

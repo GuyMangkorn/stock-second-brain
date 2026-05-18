@@ -97,6 +97,24 @@ Required behavior:
 - Save durable valuation work in `wiki/analysis/`.
 - Update entity valuation watch items only when the valuation changes the thesis.
 
+### decision-pipeline
+
+Use when the user asks to chain P1 -> P4 -> P6 -> P11 -> P13, run a
+decision-grade workflow from a ticker, or refresh a decision memo with the
+current stock price.
+
+Required behavior:
+
+- Use `.codex/skills/stock-decision-pipeline/SKILL.md`.
+- For new tickers, run source discovery before ingest: P1 -> P4 -> P6 -> P11
+  -> P13.
+- For existing tickers, read vault context first and choose the lightest
+  sufficient flow: P13 only, P11 -> P13, P7 -> P11 -> P13, or P1 -> P4 -> P7
+  -> P11 -> P13 when new results exist.
+- Freshly verify current price and market data before decision or valuation
+  work.
+- Save durable decision memos in `wiki/analysis/` and append `log.md`.
+
 ### sentiment
 
 Use when the user asks for X/Twitter sentiment, public chatter, CT/fintwit, or
@@ -167,6 +185,7 @@ Analysis memos:
 wiki/analysis/TICKER Memo Title YYYY-MM-DD.md
 wiki/analysis/Theme Memo Title YYYY-MM-DD.md
 wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md
+wiki/analysis/TICKER Decision Memo YYYY-MM-DD.md
 wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md
 wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
 ```

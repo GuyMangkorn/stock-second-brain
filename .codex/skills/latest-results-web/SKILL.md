@@ -33,8 +33,9 @@ a local source file.
    - annual requested: `raw/imports/TICKER_latest_annual_source.md`
 4. Include source URLs, source kind, publication date, reporting periods,
    currency, units, reporting basis, extracted facts, and gaps.
-5. If enough verified financial facts exist, hand off to
-   `financial-facts-ingest`.
+5. Write a clear `Handoff For Ingest` section for `financial-facts-ingest`.
+   Do not normalize statements or update the entity page in this skill unless
+   the user explicitly asks for a one-step source discovery plus ingest.
 6. If official sources cannot be found, stop and report
    `ไม่พบข้อมูลที่ยืนยันได้`.
 
@@ -86,4 +87,3 @@ Stop when:
 - no official source can be found
 - source period labels, currency, or units are unclear
 - all available sources are secondary summaries with no primary trail
-
