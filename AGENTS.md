@@ -43,6 +43,7 @@ Use the user's selected priority order:
 2. Earnings transcripts and call materials
 3. Financial statements and metrics
 4. News and web research
+5. X/Twitter sentiment and market chatter only as lower-priority context.
 
 Investor relations pages are preferred discovery surfaces when they host the
 official filings, releases, presentations, transcripts, or data tables.
@@ -83,6 +84,30 @@ Required behavior:
 - Prefer official filings and transcripts before secondary context.
 - Update the entity page when the result is durable.
 
+### valuation
+
+Use when the user asks for fair value, intrinsic value, DCF, price target,
+upside/downside, undervalued, or overvalued analysis.
+
+Required behavior:
+
+- Use `.codex/skills/dcf-valuation/SKILL.md`.
+- Verify current price and market data freshly.
+- Use source-backed FCF, cash, debt, shares, and guidance.
+- Save durable valuation work in `wiki/analysis/`.
+- Update entity valuation watch items only when the valuation changes the thesis.
+
+### sentiment
+
+Use when the user asks for X/Twitter sentiment, public chatter, CT/fintwit, or
+what people are saying about a stock/event.
+
+Required behavior:
+
+- Use `.codex/skills/x-research/SKILL.md`.
+- Treat sentiment as context, not financial fact.
+- Save durable sentiment work in `wiki/analysis/` when useful.
+
 ### query
 
 Use when the user asks a question against the vault.
@@ -98,6 +123,10 @@ Required behavior:
 ### lint
 
 Use to health-check the vault.
+
+Required behavior:
+
+- Use `.codex/skills/source-integrity-audit/SKILL.md`.
 
 Check for:
 
@@ -137,6 +166,9 @@ Analysis memos:
 ```text
 wiki/analysis/TICKER Memo Title YYYY-MM-DD.md
 wiki/analysis/Theme Memo Title YYYY-MM-DD.md
+wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md
+wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
 ```
 
 ## Entity Page Standard

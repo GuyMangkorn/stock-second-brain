@@ -42,6 +42,9 @@ tags:
 | Microsoft FY26 Q3 segment results | https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/segment-revenues | Segment revenue and operating income. |
 | Microsoft FY26 Q3 earnings call transcript | https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3 | Management commentary, outlook, AI/cloud metrics, capex commentary. |
 | Raw source note | raw/imports/MSFT_latest_results_source.md | Local extract and ingest handoff. |
+| Deep dive source note | raw/imports/MSFT_company_deep_dive_2026-05-17.md | FY2025 annual baseline, segment revenue mix, product/service revenue mix, and company deep-dive facts. |
+| Microsoft FY2025 Annual Report | https://www.microsoft.com/investor/reports/ar25/index.html | FY2025 annual results, business model, segments, product and service revenue, and Microsoft Cloud revenue. |
+| SEC FY2025 Form 10-K | https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm | Official annual filing backing FY2025 Annual Report facts. |
 
 ## Reporting Scope
 
@@ -53,6 +56,44 @@ tags:
 - All numbers below are sourced from Microsoft official IR tables or SEC filing references unless explicitly labeled as calculated.
 
 ## Financial Table
+
+### FY2025 Annual Baseline
+
+All amounts are USD millions except EPS and ratios.
+
+| Metric | FY2025 | FY2024 | YoY Change | Source |
+|---|---:|---:|---:|---|
+| Revenue | 281,724 | 245,122 | 15% | Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Gross margin | 193,893 | 171,008 | 13% | Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Operating income | 128,528 | 109,433 | 17% | Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Net income | 101,832 | 88,136 | 16% | Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Diluted EPS | 13.64 | 11.80 | 16% | Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Microsoft Cloud revenue | 168,900 | 137,700 | 23% | Microsoft FY2025 Annual Report, Note 18 / MD&A. |
+
+### FY2025 Segment Revenue And Operating Income
+
+| Segment | FY2025 Revenue | Share of FY2025 Revenue | FY2025 Operating Income | Source |
+|---|---:|---:|---:|---|
+| Productivity and Business Processes | 120,810 | 42.88% | 69,773 | Microsoft FY2025 Annual Report, Note 18. |
+| Intelligent Cloud | 106,265 | 37.72% | 44,589 | Microsoft FY2025 Annual Report, Note 18. |
+| More Personal Computing | 54,649 | 19.40% | 14,166 | Microsoft FY2025 Annual Report, Note 18. |
+| Total | 281,724 | 100.00% | 128,528 | Microsoft FY2025 Annual Report, Note 18. |
+
+### FY2025 Product And Service Revenue
+
+| Product / service offering | FY2025 Revenue | Share of FY2025 Revenue | Source |
+|---|---:|---:|---|
+| Server products and cloud services | 98,435 | 34.94% | Microsoft FY2025 Annual Report, Note 18. |
+| Microsoft 365 Commercial products and cloud services | 87,767 | 31.15% | Microsoft FY2025 Annual Report, Note 18. |
+| Gaming | 23,455 | 8.33% | Microsoft FY2025 Annual Report, Note 18. |
+| LinkedIn | 17,812 | 6.32% | Microsoft FY2025 Annual Report, Note 18. |
+| Windows and Devices | 17,314 | 6.15% | Microsoft FY2025 Annual Report, Note 18. |
+| Search and news advertising | 13,878 | 4.93% | Microsoft FY2025 Annual Report, Note 18. |
+| Dynamics products and cloud services | 7,827 | 2.78% | Microsoft FY2025 Annual Report, Note 18. |
+| Enterprise and partner services | 7,760 | 2.75% | Microsoft FY2025 Annual Report, Note 18. |
+| Microsoft 365 Consumer products and cloud services | 7,404 | 2.63% | Microsoft FY2025 Annual Report, Note 18. |
+| Other | 72 | 0.03% | Microsoft FY2025 Annual Report, Note 18. |
+| Total | 281,724 | 100.00% | Microsoft FY2025 Annual Report, Note 18. |
 
 ### Income Statement And Cash Flow
 
@@ -105,14 +146,29 @@ tags:
 
 ## Key Ratios
 
-| Ratio | FY26 Q3 / 2026-03-31 | Formula | Source |
-|---|---:|---|---|
-| Gross profit margin | 67.63% | 56,058 / 82,886 | Calculated from Microsoft FY26 Q3 income statements. |
-| Operating margin | 46.33% | 38,398 / 82,886 | Calculated from Microsoft FY26 Q3 income statements. |
-| Net profit margin | 38.34% | 31,778 / 82,886 | Calculated from Microsoft FY26 Q3 income statements. |
-| Current ratio | 1.28x | 175,329 / 136,661 | Calculated from Microsoft FY26 Q3 balance sheets. |
-| Quick ratio | 1.01x | (32,105 + 46,167 + 60,041) / 136,661 | Calculated from Microsoft FY26 Q3 balance sheets. |
-| Liabilities / equity | 0.68x | 279,861 / 414,367 | Calculated from Microsoft FY26 Q3 balance sheets; vault default D/E definition. |
+| Ratio | Period / date | Value | Formula | Source |
+|---|---|---:|---|---|
+| Gross profit margin | FY26 Q3 | 67.63% | 56,058 / 82,886 | Calculated from Microsoft FY26 Q3 income statements. |
+| Gross profit margin | FY25 Q3 | 68.72% | 48,147 / 70,066 | Calculated from Microsoft FY26 Q3 income statements. |
+| Gross profit margin | 9M FY26 | 68.22% | 164,983 / 241,832 | Calculated from Microsoft FY26 Q3 income statements. |
+| Gross profit margin | 9M FY25 | 68.91% | 141,466 / 205,283 | Calculated from Microsoft FY26 Q3 income statements. |
+| Operating margin | FY26 Q3 | 46.33% | 38,398 / 82,886 | Calculated from Microsoft FY26 Q3 income statements. |
+| Operating margin | FY25 Q3 | 45.67% | 32,000 / 70,066 | Calculated from Microsoft FY26 Q3 income statements. |
+| Operating margin | 9M FY26 | 47.40% | 114,634 / 241,832 | Calculated from Microsoft FY26 Q3 income statements. |
+| Operating margin | 9M FY25 | 45.89% | 94,205 / 205,283 | Calculated from Microsoft FY26 Q3 income statements. |
+| Net profit margin | FY26 Q3 | 38.34% | 31,778 / 82,886 | Calculated from Microsoft FY26 Q3 income statements. |
+| Net profit margin | FY25 Q3 | 36.86% | 25,824 / 70,066 | Calculated from Microsoft FY26 Q3 income statements. |
+| Net profit margin | 9M FY26 | 40.52% | 97,983 / 241,832 | Calculated from Microsoft FY26 Q3 income statements. |
+| Net profit margin | 9M FY25 | 36.34% | 74,599 / 205,283 | Calculated from Microsoft FY26 Q3 income statements. |
+| Gross profit margin | FY2025 | 68.82% | 193,893 / 281,724 | Calculated from Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Operating margin | FY2025 | 45.62% | 128,528 / 281,724 | Calculated from Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Net profit margin | FY2025 | 36.15% | 101,832 / 281,724 | Calculated from Microsoft FY2025 Annual Report, Summary Results of Operations. |
+| Current ratio | 2026-03-31 | 1.28x | 175,329 / 136,661 | Calculated from Microsoft FY26 Q3 balance sheets. |
+| Current ratio | 2025-06-30 | 1.35x | 191,131 / 141,218 | Calculated from Microsoft FY26 Q3 balance sheets. |
+| Quick ratio | 2026-03-31 | 1.01x | (32,105 + 46,167 + 60,041) / 136,661 | Calculated from Microsoft FY26 Q3 balance sheets. |
+| Quick ratio | 2025-06-30 | 1.16x | (30,242 + 64,323 + 69,905) / 141,218 | Calculated from Microsoft FY26 Q3 balance sheets. |
+| Liabilities / equity | 2026-03-31 | 0.68x | 279,861 / 414,367 | Calculated from Microsoft FY26 Q3 balance sheets; vault default D/E definition. |
+| Liabilities / equity | 2025-06-30 | 0.80x | 275,524 / 343,479 | Calculated from Microsoft FY26 Q3 balance sheets; vault default D/E definition. |
 
 ## Quarterly YoY Comparison
 
@@ -133,6 +189,10 @@ series:
     borderColor: rgba(252, 211, 77, 1)
     data: [25824, 31778]
 ```
+
+## Quarterly Trend
+
+ไม่พบข้อมูลที่ยืนยันได้สำหรับ sequential quarterly trend ในไฟล์ input นี้ แหล่งข้อมูลให้เฉพาะ `FY26 Q3` และ `FY25 Q3` สำหรับการเทียบไตรมาสเดียวกัน ไม่ได้ให้ลำดับไตรมาสต่อเนื่องใน source labels
 
 ## YTD Comparison
 
@@ -156,6 +216,28 @@ series:
     backgroundColor: rgba(139, 92, 246, 0.68)
     borderColor: rgba(167, 139, 250, 1)
     data: [46043, 47348]
+```
+
+## Annual Trend
+
+FY2025 annual baseline was added from `raw/imports/MSFT_company_deep_dive_2026-05-17.md`. A complete multi-year annual cash-flow and balance-sheet trend has not been normalized yet.
+
+```chart
+type: bar
+labels: ["FY2024", "FY2025"]
+series:
+  - title: Revenue
+    backgroundColor: rgba(16, 185, 129, 0.72)
+    borderColor: rgba(52, 211, 153, 1)
+    data: [245122, 281724]
+  - title: Operating Income
+    backgroundColor: rgba(56, 189, 248, 0.68)
+    borderColor: rgba(125, 211, 252, 1)
+    data: [109433, 128528]
+  - title: Net Income
+    backgroundColor: rgba(251, 191, 36, 0.72)
+    borderColor: rgba(252, 211, 77, 1)
+    data: [88136, 101832]
 ```
 
 ## Segment Revenue Chart
@@ -241,7 +323,11 @@ series:
 
 ## Missing / Unverified Data
 
-- Current stock price, P/E, P/BV, dividend yield, and analyst targets are not included because they require a fresh market-data check at time of use.
-- Product-level revenue dollars were not normalized where the company disclosed only growth rates.
-- Full annual FY2026 data is not yet available because FY2026 is incomplete as of the latest source.
-- Longer historical segment comparisons were not normalized in this ingest.
+| Data item | Status | Notes / Follow-up |
+|---|---|---|
+| Current stock price, P/E, P/BV, dividend yield, and analyst targets | ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input | Requires a fresh market-data check at time of use; not normalized from `raw/imports/MSFT_latest_results_source.md`. |
+| Product-level revenue dollars where Microsoft disclosed only growth rates | ไม่พบข้อมูลที่ยืนยันได้ | Do not backfill product-level dollars without an official table. |
+| Sequential quarterly trend labels beyond `FY26 Q3` and `FY25 Q3` | ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input | Source supports same-quarter YoY comparison, not a sequential quarterly chart. |
+| Complete multi-year annual cash flow and balance sheet trend labels | ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input | FY2025 annual income statement and revenue mix were normalized from the deep-dive source note, but full multi-year annual cash-flow and balance-sheet tables were not normalized. |
+| Full annual FY2026 results | ไม่พบข้อมูลที่ยืนยันได้ | FY2026 is incomplete as of `FY26 Q3`. |
+| Longer historical segment comparisons beyond FY2025 annual baseline and FY26 Q3 / FY25 Q3 comparison | ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input | FY2025 annual segment values and FY26 Q3 / FY25 Q3 segment values were normalized; longer annual segment history was not normalized. |

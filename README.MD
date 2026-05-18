@@ -37,6 +37,14 @@ The important Dexter ideas copied conceptually are:
 See `wiki/reference/skill-mechanics.md` for the exact SKILL operating model used
 by this project.
 
+Dexter skill mapping:
+
+| Dexter skill | Stock Second Brain skill | Status |
+|---|---|---|
+| `stock-research` | `official-source-stock-research` | Adapted for Obsidian entity/source notes. |
+| `dcf-valuation` | `dcf-valuation` | Adapted for source-backed valuation memos. |
+| `x-research` | `x-research` | Adapted as lower-priority sentiment/context, not fact source. |
+
 What is intentionally **not** copied:
 
 - Bun runtime
@@ -67,6 +75,9 @@ stock-second-brain/
       official-source-stock-research/
       latest-results-web/
       financial-facts-ingest/
+      dcf-valuation/
+      x-research/
+      source-integrity-audit/
 ```
 
 ## Source Priority
@@ -81,6 +92,9 @@ Use this default order unless a task explicitly says otherwise:
    books, investor presentations, structured statement data, market ratios.
 4. News and web research: reputable news, sell-side summaries, market context,
    and recent events not yet covered in official sources.
+
+X/Twitter sentiment is a separate lower-priority context layer. It should never
+override official filings, transcripts, or verified financial facts.
 
 If sources conflict, record the conflict instead of forcing a clean answer.
 Every durable number should trace back to a URL, local path, filing, or explicit
@@ -131,6 +145,48 @@ Expected output:
 - optional analysis memo in `wiki/analysis/`
 - source-backed thesis, risks, catalysts, and watch items
 
+### 4. DCF Valuation
+
+Use `.codex/skills/dcf-valuation/SKILL.md`.
+
+Goal: estimate fair value through a transparent, source-backed DCF, with
+explicit assumptions and sensitivity matrix.
+
+Expected output:
+
+- `wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md`
+- input table, FCF projection, valuation summary, sensitivity matrix
+- entity update only when the valuation changes thesis or watch items
+- `log.md` entry
+
+### 5. X / Market Sentiment
+
+Use `.codex/skills/x-research/SKILL.md`.
+
+Goal: capture public market sentiment as context, not as a source of financial
+facts.
+
+Expected output:
+
+- `wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md`
+- bullish/bearish/mixed themes
+- caveats about sample bias and rumor risk
+- entity follow-up update only when useful
+
+### 6. Source Integrity Audit
+
+Use `.codex/skills/source-integrity-audit/SKILL.md`.
+
+Goal: lint the vault for source gaps, stale current data, unsupported numbers,
+chart/table mismatches, orphan notes, and missing links.
+
+Expected output:
+
+- `wiki/analysis/Source Integrity Audit YYYY-MM-DD.md`
+- severity-ranked findings
+- fixes applied when requested
+- `log.md` entry
+
 ## Prompt Examples
 
 ### Prompt Dependency Guide
@@ -151,7 +207,8 @@ or filing access:
 | Earnings Transcript Digest | It asks the agent to find or verify a transcript source. | `wiki/analysis/TICKER Earnings Transcript Digest YYYY-MM-DD.md` |
 | News / Catalyst Update | It can search current news, but must label news as lower-priority context. | catalyst memo |
 | Company Deep Dive | It includes official-source research and can build the first entity page. | `wiki/entities/TICKER.md` |
-| Batch Screener | It starts from a ticker list supplied in the prompt. | screener triage memo |
+| Batch Screener | It starts from a ticker list or screener file, but output is triage, not a decision-grade memo. | screener triage memo |
+| X Sentiment | It can start from a ticker/event and search public sentiment when X/search access exists. | sentiment memo |
 
 #### Needs Existing Vault Data Or Source Files
 
@@ -166,26 +223,71 @@ file exists:
 | Query The Vault | enough notes in `index.md`, `wiki/entities/`, or `wiki/analysis/` | ingest one or more tickers first |
 | Source Integrity Audit | a non-empty vault with multiple notes | create or ingest source/entity notes first |
 | Decision Memo | entity thesis plus current price/valuation if action depends on market data | Company Deep Dive, then refresh current market data |
+| DCF Valuation | verified FCF, cash/debt, shares, current price, and assumptions | Latest Results Ingest, Financial Statements Normalize, then fresh market-data check |
 
 #### Recommended Flow For A New Ticker
 
+ใช้ส่วนนี้เมื่อ ticker ยังไม่มี entity page หรือ financial facts ใน vault.
+ถ้าไม่แน่ใจว่าจะเริ่มตรงไหน ให้ใช้ **Scenario N1**.
+
+| Scenario | ใช้เมื่อ | Prompt order | ผลลัพธ์ที่ควรได้ |
+|---|---|---|---|
+| N1: Full Foundation | หุ้นใหม่และอยากสร้างฐานข้อมูลให้ครบ | P1 -> P4 -> P6 | source note, fundamentals, entity page |
+| N2: มี source/filing อยู่แล้ว | คุณมี SEC/IR URL, filing excerpt, Markdown, หรือ CSV แล้ว | P2 หรือ P4 -> P6 | ingest จาก source ที่มี แล้วสร้าง thesis/entity |
+| N3: อยากอ่านเร็ว ยังไม่ ingest เต็ม | ต้องการ company deep dive แบบเร็ว แต่ยังไม่ต้อง normalize งบ | P6 | entity/memo แบบ source-grounded พร้อม data gaps |
+| N4: เพิ่งประกาศงบ | มี earnings ล่าสุดและอยากเก็บงบ + transcript | P1 -> P4 -> P3 -> P6 | latest financials, transcript digest, thesis update |
+| N5: อยากรู้ fair value | ต้องการ valuation หรือ upside/downside | P1 -> P4 -> P6 -> P11 | source-backed DCF memo |
+| N6: มีข่าว/event ใหญ่ | หุ้นใหม่มี catalyst/news/controversy | P1 -> P5 -> P6 -> optional P12 | catalyst memo + entity update + sentiment context |
+| N7: มาจาก screener list | มีหลาย ticker และต้องเลือกตัวที่จะขุดต่อ | P14 -> เลือก top names -> N1/N5 | screener triage แล้วค่อย full pipeline เฉพาะตัวที่ผ่าน |
+
+Prompt chain ที่ใช้บ่อยสุด:
+
 ```text
-1. ใช้ skill latest-results-web สำหรับ TICKER
-2. ใช้ financial-facts-ingest กับ raw/imports/TICKER_latest_results_source.md
-3. ใช้ official-source-stock-research ทำ thesis/entity update
-4. สร้าง decision memo หรือ comparison หลังมีข้อมูลใน vault แล้ว
+P1 -> P4 -> P6
+```
+
+ถ้าจะทำ decision-grade เพิ่ม:
+
+```text
+P1 -> P4 -> P6 -> P11 -> P13 -> optional P10
 ```
 
 #### Recommended Flow For An Existing Ticker
 
+ใช้ส่วนนี้เมื่อมี `wiki/entities/TICKER.md` หรือ
+`raw/financials/TICKER_fundamentals.md` อยู่แล้ว. ถ้าไม่แน่ใจ ให้ใช้
+**Scenario E1**.
+
+| Scenario | ใช้เมื่อ | Prompt order | ผลลัพธ์ที่ควรได้ |
+|---|---|---|---|
+| E1: Refresh จาก vault เดิม | อยากรู้ thesis ล่าสุดจากข้อมูลที่มีอยู่ | P7 | thesis ดีขึ้น/แย่ลง/เหมือนเดิม พร้อม gaps |
+| E2: มีงบใหม่ | บริษัทเพิ่งประกาศ quarter/year ใหม่ | P1 -> P4 -> P7 | update fundamentals + refresh entity/thesis |
+| E3: Update valuation | อยากดู fair value ใหม่หรือราคาเปลี่ยนแรง | P7 -> P11 -> P13 | valuation memo + decision memo |
+| E4: ข่าวหรือ catalyst ใหม่ | มีข่าว, product launch, regulation, M&A, downgrade/upgrade | P5 -> P7 -> optional P12 | catalyst note + thesis impact |
+| E5: เทียบกับหุ้นอื่น | อยากเทียบ ticker นี้กับ peer หรือ basket | P7 ของแต่ละตัวถ้าข้อมูลเก่า -> P8 | comparison memo |
+| E6: ถามจาก vault | อยาก query ข้อมูลที่สะสมไว้ ไม่อยากค้นเว็บใหม่ | P9 | answer จาก vault พร้อมไฟล์อ้างอิง |
+| E7: ก่อนตัดสินใจจริง | ต้องการตรวจว่า note/source/chart น่าเชื่อถือไหม | P10 -> fix gaps -> P13 | audit memo + decision memo |
+| E8: Sentiment หลัง event | price action แรงหรือ market chatter สำคัญ | P12 -> P7 | sentiment context + thesis refresh |
+
+Prompt chain ที่ใช้บ่อยสุด:
+
 ```text
-1. refresh thesis ของ TICKER จากข้อมูลล่าสุดใน vault
-2. ถ้าข้อมูลเก่า ให้ใช้ latest-results-web เพื่อหา official source ใหม่
-3. ingest source ใหม่ด้วย financial-facts-ingest
-4. update entity page, thesis history, follow-up, และ log.md
+P7
 ```
 
-### Latest Results Ingest
+ถ้ามีงบใหม่:
+
+```text
+P1 -> P4 -> P7
+```
+
+ถ้าจะตัดสินใจซื้อ/ขาย:
+
+```text
+P7 -> P11 -> P10 -> P13
+```
+
+### P1 - Latest Results Ingest
 
 ```text
 ใช้ skill latest-results-web สำหรับ MSFT
@@ -194,7 +296,7 @@ file exists:
 จากนั้นใช้ skill financial-facts-ingest เพื่ออัปเดต wiki/entities/MSFT.md
 ```
 
-### SEC Filing First
+### P2 - SEC Filing First
 
 ```text
 ใช้ official-source-stock-research สำหรับ AAPL
@@ -203,7 +305,7 @@ file exists:
 บันทึกเป็น raw/imports/AAPL_sec_filing_source.md แล้ว ingest เข้า entity note
 ```
 
-### Earnings Transcript Digest
+### P3 - Earnings Transcript Digest
 
 ```text
 อ่าน earnings transcript ล่าสุดของ NVDA จากแหล่งทางการหรือ transcript ที่ trace กลับได้
@@ -213,7 +315,7 @@ file exists:
 และ update follow-up ใน wiki/entities/NVDA.md
 ```
 
-### Financial Statements Normalize
+### P4 - Financial Statements Normalize
 
 ```text
 ใช้ financial-facts-ingest กับ raw/imports/MSFT_latest_results_source.md
@@ -223,7 +325,7 @@ missing data registry และ update wiki/entities/MSFT.md
 ถ้าข้อมูลยืนยันไม่ได้ให้เขียนว่า ไม่พบข้อมูลที่ยืนยันได้
 ```
 
-### News / Catalyst Update
+### P5 - News / Catalyst Update
 
 ```text
 อัปเดต catalyst note ของ PANW จากข่าวล่าสุด
@@ -232,7 +334,7 @@ missing data registry และ update wiki/entities/MSFT.md
 ถ้า insight durable ให้บันทึกใน wiki/analysis/PANW Catalyst Update YYYY-MM-DD.md
 ```
 
-### Company Deep Dive
+### P6 - Company Deep Dive
 
 ```text
 ใช้ official-source-stock-research ทำ company deep dive ของ ASML
@@ -241,7 +343,7 @@ valuation watch items, source map, และ unanswered questions
 output หลักเป็น wiki/entities/ASML.md และถ้าจำเป็นให้สร้าง memo ใน wiki/analysis/
 ```
 
-### Thesis Refresh
+### P7 - Thesis Refresh
 
 ```text
 refresh thesis ของ MSFT จากข้อมูลล่าสุดใน vault
@@ -251,7 +353,7 @@ refresh thesis ของ MSFT จากข้อมูลล่าสุดใ�
 ถ้าควรเก็บถาวร ให้ update Thesis History ใน entity page
 ```
 
-### Compare Companies
+### P8 - Compare Companies
 
 ```text
 เทียบ NVDA, AMD, AVGO จากข้อมูลใน stock-second-brain
@@ -260,7 +362,7 @@ refresh thesis ของ MSFT จากข้อมูลล่าสุดใ�
 สร้าง comparison memo ใน wiki/analysis/AI Semis Comparison YYYY-MM-DD.md
 ```
 
-### Query The Vault
+### P9 - Query The Vault
 
 ```text
 จาก stock-second-brain ตอนนี้มีบริษัทไหนที่ revenue growth ดีแต่ source_gap_count สูง
@@ -268,16 +370,38 @@ refresh thesis ของ MSFT จากข้อมูลล่าสุดใ�
 ตอบพร้อม link ไปยัง entity pages และบอกว่า gap ไหนต้องหาต่อ
 ```
 
-### Source Integrity Audit
+### P10 - Source Integrity Audit
 
 ```text
-lint stock-second-brain ให้หน่อย
+ใช้ skill source-integrity-audit lint stock-second-brain ให้หน่อย
 หา uncited numbers, source conflicts, stale thesis, orphan notes,
-entity ที่ไม่มี fundamentals file, และ analysis memo ที่ไม่ได้ link กลับ entity
+chart/table mismatch, entity ที่ไม่มี fundamentals file,
+และ analysis memo ที่ไม่ได้ link กลับ entity
 เขียนผลไว้ที่ wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
 ```
 
-### Decision Memo
+### P11 - DCF Valuation
+
+```text
+ใช้ skill dcf-valuation สำหรับ MSFT
+อ่าน wiki/entities/MSFT.md และ raw/financials/MSFT_fundamentals.md ก่อน
+fresh check ราคาปัจจุบัน, market cap, shares, cash, debt, FCF และ guidance
+ทำ base/bull/bear assumptions, 5-year FCF projection, sensitivity matrix,
+sanity checks และ caveats
+บันทึกเป็น wiki/analysis/MSFT DCF Valuation YYYY-MM-DD.md
+```
+
+### P12 - X / Market Sentiment
+
+```text
+ใช้ skill x-research สำหรับ NVDA หลัง earnings ล่าสุด
+สรุป public sentiment เป็น bullish/bearish/mixed themes
+แยก expert posts, retail chatter, source-backed posts และ rumor/noise
+อย่าใช้ X เป็นแหล่งตัวเลขงบหรือ valuation
+บันทึกเป็น wiki/analysis/NVDA X Sentiment YYYY-MM-DD.md
+```
+
+### P13 - Decision Memo
 
 ```text
 สร้าง decision memo สำหรับ MSFT ว่าควร add, hold, wait หรือ trim
@@ -286,14 +410,21 @@ entity ที่ไม่มี fundamentals file, และ analysis memo ท�
 บันทึกใน wiki/analysis/MSFT Decision Memo YYYY-MM-DD.md
 ```
 
-### Batch Screener
+### P14 - Batch Screener
+
+Use directly when you already have a ticker list and want triage first. For
+decision-grade output, use Batch Screener to select top candidates, then run
+`latest-results-web -> financial-facts-ingest -> official-source-stock-research`
+on the shortlist.
 
 ```text
 นี่คือ screener list: MSFT, NVDA, ASML, PANW, NOW
 ทำ triage ก่อน ไม่ต้อง full report ทุกตัว
-จัดอันดับจาก quality, valuation, catalyst density, downside risk, source coverage
-และ data gaps
+อ่าน index.md และ wiki/entities/ ก่อนเพื่อดูว่าตัวไหนมีข้อมูลใน vault แล้ว
+จัดอันดับจาก quality, valuation risk, catalyst density, downside risk,
+source coverage และ data gaps
 บันทึกเป็น wiki/analysis/Screener Triage YYYY-MM-DD.md
+แนะนำ top 1-3 ตัวที่จะรัน latest-results-web ต่อ
 ```
 
 ## Output Standards

@@ -3,9 +3,11 @@
   "ticker": "MSFT",
   "market": "Nasdaq",
   "currency": "USD",
-  "period_type": "quarterly",
-  "reporting_scope": "FY26 Q3 and nine months ended 2026-03-31",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "FY2025 annual baseline plus FY26 Q3 and nine months ended 2026-03-31",
   "periods": [
+    "FY2024",
+    "FY2025",
     "FY25 Q3",
     "FY26 Q3",
     "9M FY25",
@@ -38,34 +40,54 @@
     {
       "source": "Microsoft FY26 Q3 earnings call transcript",
       "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3"
+    },
+    {
+      "source": "Microsoft FY2025 Annual Report",
+      "url": "https://www.microsoft.com/investor/reports/ar25/index.html",
+      "notes": "FY2025 annual results, segment revenue, product and service revenue, business model, and risk disclosures."
+    },
+    {
+      "source": "SEC FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "notes": "Official annual filing backing Microsoft FY2025 Annual Report facts."
     }
   ],
   "financial_series": {
     "total_revenue_usd_m": {
+      "FY2024": 245122,
+      "FY2025": 281724,
       "FY25 Q3": 70066,
       "FY26 Q3": 82886,
       "9M FY25": 205283,
       "9M FY26": 241832
     },
     "gross_margin_usd_m": {
+      "FY2024": 171008,
+      "FY2025": 193893,
       "FY25 Q3": 48147,
       "FY26 Q3": 56058,
       "9M FY25": 141466,
       "9M FY26": 164983
     },
     "operating_income_usd_m": {
+      "FY2024": 109433,
+      "FY2025": 128528,
       "FY25 Q3": 32000,
       "FY26 Q3": 38398,
       "9M FY25": 94205,
       "9M FY26": 114634
     },
     "net_income_usd_m": {
+      "FY2024": 88136,
+      "FY2025": 101832,
       "FY25 Q3": 25824,
       "FY26 Q3": 31778,
       "9M FY25": 74599,
       "9M FY26": 97983
     },
     "diluted_eps_usd": {
+      "FY2024": 11.8,
+      "FY2025": 13.64,
       "FY25 Q3": 3.46,
       "FY26 Q3": 4.27,
       "9M FY25": 9.99,
@@ -102,14 +124,50 @@
       "2026-03-31": 414367
     }
   },
+  "annual_baseline": {
+    "microsoft_cloud_revenue_usd_m": {
+      "FY2024": 137700,
+      "FY2025": 168900
+    },
+    "segment_revenue_usd_m": {
+      "FY2025": {
+        "Productivity and Business Processes": 120810,
+        "Intelligent Cloud": 106265,
+        "More Personal Computing": 54649
+      }
+    },
+    "segment_operating_income_usd_m": {
+      "FY2025": {
+        "Productivity and Business Processes": 69773,
+        "Intelligent Cloud": 44589,
+        "More Personal Computing": 14166
+      }
+    },
+    "product_and_service_revenue_usd_m": {
+      "FY2025": {
+        "Server products and cloud services": 98435,
+        "Microsoft 365 Commercial products and cloud services": 87767,
+        "Gaming": 23455,
+        "LinkedIn": 17812,
+        "Windows and Devices": 17314,
+        "Search and news advertising": 13878,
+        "Dynamics products and cloud services": 7827,
+        "Enterprise and partner services": 7760,
+        "Microsoft 365 Consumer products and cloud services": 7404,
+        "Other": 72
+      }
+    }
+  },
   "segment_series": [
     {
       "segment": "Productivity and Business Processes",
       "revenue_usd_m": {
+        "FY2025": 120810,
         "FY25 Q3": 29944,
         "FY26 Q3": 35013
       },
       "operating_income_usd_m": {
+        "FY2025": 69773,
         "FY25 Q3": 17379,
         "FY26 Q3": 20973
       }
@@ -117,10 +175,12 @@
     {
       "segment": "Intelligent Cloud",
       "revenue_usd_m": {
+        "FY2025": 106265,
         "FY25 Q3": 26751,
         "FY26 Q3": 34681
       },
       "operating_income_usd_m": {
+        "FY2025": 44589,
         "FY25 Q3": 11095,
         "FY26 Q3": 13753
       }
@@ -128,10 +188,12 @@
     {
       "segment": "More Personal Computing",
       "revenue_usd_m": {
+        "FY2025": 54649,
         "FY25 Q3": 13371,
         "FY26 Q3": 13192
       },
       "operating_income_usd_m": {
+        "FY2025": 14166,
         "FY25 Q3": 3526,
         "FY26 Q3": 3672
       }
@@ -145,10 +207,46 @@
       "formula": "56058 / 82886"
     },
     {
+      "name": "gross_profit_margin",
+      "period": "FY25 Q3",
+      "value": 0.6872,
+      "formula": "48147 / 70066"
+    },
+    {
+      "name": "gross_profit_margin",
+      "period": "9M FY26",
+      "value": 0.6822,
+      "formula": "164983 / 241832"
+    },
+    {
+      "name": "gross_profit_margin",
+      "period": "9M FY25",
+      "value": 0.6891,
+      "formula": "141466 / 205283"
+    },
+    {
       "name": "operating_margin",
       "period": "FY26 Q3",
       "value": 0.4633,
       "formula": "38398 / 82886"
+    },
+    {
+      "name": "operating_margin",
+      "period": "FY25 Q3",
+      "value": 0.4567,
+      "formula": "32000 / 70066"
+    },
+    {
+      "name": "operating_margin",
+      "period": "9M FY26",
+      "value": 0.4740,
+      "formula": "114634 / 241832"
+    },
+    {
+      "name": "operating_margin",
+      "period": "9M FY25",
+      "value": 0.4589,
+      "formula": "94205 / 205283"
     },
     {
       "name": "net_profit_margin",
@@ -157,10 +255,52 @@
       "formula": "31778 / 82886"
     },
     {
+      "name": "net_profit_margin",
+      "period": "FY25 Q3",
+      "value": 0.3686,
+      "formula": "25824 / 70066"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "9M FY26",
+      "value": 0.4052,
+      "formula": "97983 / 241832"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "9M FY25",
+      "value": 0.3634,
+      "formula": "74599 / 205283"
+    },
+    {
+      "name": "gross_profit_margin",
+      "period": "FY2025",
+      "value": 0.6882,
+      "formula": "193893 / 281724"
+    },
+    {
+      "name": "operating_margin",
+      "period": "FY2025",
+      "value": 0.4562,
+      "formula": "128528 / 281724"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "FY2025",
+      "value": 0.3615,
+      "formula": "101832 / 281724"
+    },
+    {
       "name": "current_ratio",
       "period": "2026-03-31",
       "value": 1.2829,
       "formula": "175329 / 136661"
+    },
+    {
+      "name": "current_ratio",
+      "period": "2025-06-30",
+      "value": 1.3534,
+      "formula": "191131 / 141218"
     },
     {
       "name": "quick_ratio",
@@ -169,16 +309,54 @@
       "formula": "(32105 + 46167 + 60041) / 136661"
     },
     {
+      "name": "quick_ratio",
+      "period": "2025-06-30",
+      "value": 1.1647,
+      "formula": "(30242 + 64323 + 69905) / 141218"
+    },
+    {
       "name": "liabilities_to_equity",
       "period": "2026-03-31",
       "value": 0.6754,
       "formula": "279861 / 414367"
+    },
+    {
+      "name": "liabilities_to_equity",
+      "period": "2025-06-30",
+      "value": 0.8022,
+      "formula": "275524 / 343479"
     }
   ],
   "missing_data": [
-    "Current stock price and valuation multiples require a fresh market-data check.",
-    "Product-level dollar revenue not normalized where only growth rates were disclosed.",
-    "Full annual FY2026 data is not yet available.",
-    "Longer historical segment comparisons were not normalized in this ingest."
+    {
+      "data_item": "Current stock price, P/E, P/BV, dividend yield, and analyst targets",
+      "status": "ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input",
+      "notes": "Requires a fresh market-data check at time of use; not normalized from raw/imports/MSFT_latest_results_source.md."
+    },
+    {
+      "data_item": "Product-level revenue dollars where Microsoft disclosed only growth rates",
+      "status": "ไม่พบข้อมูลที่ยืนยันได้",
+      "notes": "Do not backfill product-level dollars without an official table."
+    },
+    {
+      "data_item": "Sequential quarterly trend labels beyond FY26 Q3 and FY25 Q3",
+      "status": "ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input",
+      "notes": "Source supports same-quarter YoY comparison, not a sequential quarterly chart."
+    },
+    {
+      "data_item": "Complete multi-year annual cash flow and balance sheet trend labels",
+      "status": "ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input",
+      "notes": "This update normalized FY2025 annual income statement and revenue mix, but did not normalize full multi-year annual cash flow and balance sheet tables."
+    },
+    {
+      "data_item": "Full annual FY2026 results",
+      "status": "ไม่พบข้อมูลที่ยืนยันได้",
+      "notes": "FY2026 is incomplete as of FY26 Q3."
+    },
+    {
+      "data_item": "Longer historical segment comparisons beyond the FY2025 annual baseline and FY26 Q3 / FY25 Q3 comparison",
+      "status": "ไม่พบข้อมูลที่ยืนยันได้ในไฟล์ input",
+      "notes": "FY2025 annual segment values and FY26 Q3 / FY25 Q3 segment values were normalized; longer annual segment history was not normalized."
+    }
   ]
 }

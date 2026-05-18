@@ -116,3 +116,57 @@ Required sections:
 - Reports / Source Notes
 - Follow-Up
 - Missing / Unverified Data
+
+## Analysis Memos
+
+DCF valuation:
+
+```text
+wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md
+```
+
+Required sections:
+
+- Bottom Line
+- Source Map
+- Input Table
+- Base Case Assumptions
+- FCF Projection
+- Valuation Summary
+- Sensitivity Matrix
+- Sanity Checks
+- Missing / Unverified Data
+
+X / market sentiment:
+
+```text
+wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md
+```
+
+Required sections:
+
+- Query Summary
+- Bullish Themes
+- Bearish Themes
+- Neutral / Mixed Themes
+- Source-Backed Posts
+- Overall Sentiment
+- Caveats
+- Follow-Up
+
+Source integrity audit:
+
+```text
+wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
+```
+
+Required sections:
+
+- Scope
+- High Severity Findings
+- Medium Severity Findings
+- Low Severity Findings
+- Chart / Table Checks
+- Source Gap Summary
+- Fixes Applied
+- Follow-Up
