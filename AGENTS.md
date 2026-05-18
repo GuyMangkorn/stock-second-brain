@@ -48,6 +48,26 @@ Use the user's selected priority order:
 Investor relations pages are preferred discovery surfaces when they host the
 official filings, releases, presentations, transcripts, or data tables.
 
+## Language Standard
+
+Use a hybrid Thai/English research style for future durable outputs:
+
+- Write narrative analysis, thesis, risks, catalysts, action reads, caveats, and
+  final chat answers primarily in Thai.
+- Keep standard headings, frontmatter keys, JSON keys, filenames, ticker names,
+  source titles, table column labels, formulas, and metric names in English.
+- Keep finance and valuation terms in English when translation could reduce
+  precision or searchability, including `valuation`, `DCF`, `FCF`, `WACC`,
+  `terminal growth`, `margin of safety`, `upside/downside`, `multiple`,
+  `drawdown`, `net debt`, `free cash flow`, `capex`, and `guidance`.
+- Preserve raw source meaning and quoted/source-derived wording in the source's
+  original language. Translate or summarize only as analysis, not as a
+  replacement for the source fact.
+- Prefer one language per sentence where possible, with English finance terms
+  embedded only when they carry the precise meaning.
+- Do not translate durable field names so Obsidian search, links, and future
+  automation remain stable.
+
 ## Operating Modes
 
 ### latest-results

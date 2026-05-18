@@ -21,6 +21,13 @@ ingest, update, refresh, compare, audit, or build the stock brain.
 Prefer official Investor Relations pages as discovery surfaces, but trust the
 underlying filing, release, transcript, or data table more than a summary page.
 
+## Language Standard
+
+Follow `wiki/reference/output-contract.md`: write narrative thesis, risks,
+catalysts, action reads, and caveats primarily in Thai, while preserving English
+headings, ticker/source labels, metric names, and finance terms such as `DCF`,
+`FCF`, `WACC`, `valuation`, `margin of safety`, and `upside/downside`.
+
 ## Research Checklist
 
 Track progress internally:

@@ -2,6 +2,25 @@
 
 This page defines the expected shape for durable outputs.
 
+## Language Standard
+
+Future durable outputs should use hybrid Thai/English:
+
+- Narrative analysis, thesis, risks, catalysts, decision reads, caveats, and
+  chat summaries: Thai-first.
+- Headings, frontmatter keys, JSON keys, filenames, ticker symbols, source
+  labels, table column names, formulas, and metric names: English.
+- Finance and valuation terms should stay English when they are clearer or more
+  searchable, such as `valuation`, `DCF`, `FCF`, `WACC`, `terminal growth`,
+  `margin of safety`, `upside/downside`, `multiple`, `net debt`, `capex`, and
+  `guidance`.
+- Raw source notes should preserve the source's meaning and language as much as
+  possible. Thai summaries are allowed, but they must not replace traceable
+  source facts.
+- Financial facts Markdown and JSON should remain structured and automation
+  friendly; use Thai mainly in explanatory notes, missing-data explanations, and
+  judgment sections.
+
 ## Source Note
 
 File:

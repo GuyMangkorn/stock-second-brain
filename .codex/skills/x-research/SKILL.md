@@ -12,6 +12,12 @@ stock, sector, earnings result, or market event.
 This is adapted from Dexter's `x-research` skill, but in this vault sentiment is
 treated as context, not a primary fact source.
 
+## Language Standard
+
+Follow `wiki/reference/output-contract.md`: summarize sentiment themes,
+caveats, and follow-up in Thai, while keeping source labels, account handles,
+tickers, links, and market/finance terms in English.
+
 ## Source Position
 
 X/Twitter is below the normal source stack:
@@ -88,4 +94,3 @@ Stop and report gaps when:
 - query results are too noisy to summarize honestly
 - posts cannot be linked or traced
 - the topic is being driven by rumors with no source-backed confirmation
-

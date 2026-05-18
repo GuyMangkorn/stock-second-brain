@@ -1,7 +1,46 @@
 # Log
 
+## 2026-05-19
+
+- `maintenance`: Added a project-wide hybrid Thai/English language standard to
+  `AGENTS.md`, `wiki/reference/output-contract.md`, `README.MD`, and local
+  stock workflow skills so future durable analysis uses Thai-first narrative
+  while preserving English headings, structured fields, and finance terms.
+- `latest-results`: Created `raw/imports/JNJ_latest_results_source.md` from
+  Johnson & Johnson Q1 2026 Form 10-Q, official Q1 2026 earnings release,
+  presentation, transcript, FY2025 Annual Report, and fresh market-data checks;
+  P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/JNJ_fundamentals.md`,
+  `raw/financials/JNJ_fundamentals.json`, and `wiki/entities/JNJ.md` from
+  verified JNJ Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/JNJ.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/JNJ DCF Valuation 2026-05-19.md` after
+  fresh-checking JNJ price, market cap, shares, cash, debt, FCF, and guidance.
+- `analysis`: Created `wiki/analysis/JNJ Decision Memo 2026-05-19.md` with a
+  WAIT / AVOID-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 ## 2026-05-18
 
+- `latest-results`: Created `raw/imports/GOOGL_latest_results_source.md` from
+  Alphabet Q1 2026 Form 10-Q, official Q1 2026 earnings release, slides,
+  transcript, FY2025 Form 10-K, and fresh market-data checks; P1 was limited to
+  source note creation only.
+- `ingest`: Created `raw/financials/GOOGL_fundamentals.md`,
+  `raw/financials/GOOGL_fundamentals.json`, and `wiki/entities/GOOGL.md` from
+  verified Alphabet Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/GOOGL.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/GOOGL DCF Valuation 2026-05-18.md` after
+  fresh-checking GOOGL price, market cap, shares, cash, debt, FCF, and guidance.
+- `analysis`: Created `wiki/analysis/GOOGL Decision Memo 2026-05-18.md` with a
+  WAIT / AVOID-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
 - `skills`: Added `stock-decision-pipeline` as the orchestrator for
   P1 -> P4 -> P6 -> P11 -> P13, clarified P1 as source discovery only, and
   documented existing-data decision memo refresh flows with fresh price checks.

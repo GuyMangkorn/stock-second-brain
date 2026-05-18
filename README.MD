@@ -16,6 +16,10 @@ This project follows the requirements:
 - MVP scope: ingest data into a Markdown vault.
 - Source priority: SEC filings, earnings transcripts, financial statements /
   metrics, then news and web research.
+- Language style: Thai-first narrative analysis with English headings,
+  structured fields, ticker/source labels, and finance terms such as DCF, FCF,
+  WACC, valuation, and margin of safety kept in English for precision and
+  searchability.
 - Architecture source: use `dexter-clone` workflow/SKILL behavior as the model,
   not its Bun runtime or CLI code.
 - Folder name: `stock-second-brain`.

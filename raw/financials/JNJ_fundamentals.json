@@ -1,0 +1,154 @@
+{
+  "company": "Johnson & Johnson",
+  "ticker": "JNJ",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 fiscal first quarter ended 2026-03-29 plus FY2025 annual baseline",
+  "periods": [
+    {
+      "label": "Q1 2026",
+      "period_end": "2026-03-29",
+      "units": "USD millions except EPS and shares",
+      "revenue": 24062,
+      "gross_profit": 15956,
+      "net_income": 5235,
+      "diluted_eps": 2.14,
+      "operating_cash_flow": 2514,
+      "capex_spend": 1049,
+      "free_cash_flow": 1465,
+      "cash_and_equivalents": 21688,
+      "marketable_securities": 363,
+      "cash_plus_marketable_securities": 22051,
+      "total_debt": 54987,
+      "net_debt": 32936,
+      "diluted_average_shares_m": 2445.2
+    },
+    {
+      "label": "Q1 2025",
+      "period_end": "2025-03-30",
+      "units": "USD millions except EPS and shares",
+      "revenue": 21893,
+      "gross_profit": 14536,
+      "net_income": 10999,
+      "diluted_eps": 4.54,
+      "operating_cash_flow": 4174,
+      "capex_spend": 795,
+      "free_cash_flow": 3379,
+      "diluted_average_shares_m": 2423.8
+    },
+    {
+      "label": "FY2025",
+      "period_end": "2025-12-28",
+      "units": "USD millions except EPS",
+      "revenue": 94193,
+      "net_income": 26804,
+      "diluted_eps": 11.03,
+      "operating_cash_flow": 24530,
+      "capex_spend": 4832,
+      "free_cash_flow": 19698
+    }
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000087/jnj-20260329.htm",
+      "use": "Q1 2026 income statement, balance sheet, cash flow, shares, segments, debt"
+    },
+    {
+      "source": "J&J Q1 2026 press release",
+      "url": "https://www.investor.jnj.com/investor-news/news-details/2026/Johnson--Johnson-reports-Q1-2026-results-raises-2026-outlook/",
+      "use": "Q1 2026 results and FY2026 guidance"
+    },
+    {
+      "source": "J&J Q1 2026 earnings call transcript",
+      "url": "https://s203.q4cdn.com/636242992/files/doc_financials/2026/q1/JNJ-USQ_Transcript_2026-04-14.pdf",
+      "use": "management commentary, FCF outlook, guidance context"
+    },
+    {
+      "source": "FY2025 Annual Report / Form 10-K",
+      "url": "https://www.jnj.com/download/johnson-johnson-2025-annual-report",
+      "use": "FY2025 annual baseline and FCF reconciliation"
+    },
+    {
+      "source": "FinanceCharts JNJ price history",
+      "url": "https://www.financecharts.com/stocks/JNJ/summary/price",
+      "use": "fresh current price check"
+    }
+  ],
+  "financial_series": {
+    "quarterly_yoy": {
+      "labels": ["Q1 2025", "Q1 2026"],
+      "revenue": [21893, 24062],
+      "net_income": [10999, 5235],
+      "free_cash_flow": [3379, 1465]
+    },
+    "annual": {
+      "labels": ["FY2023", "FY2024", "FY2025"],
+      "revenue": [85159, 88821, 94193],
+      "net_income": [35153, 14066, 26804],
+      "free_cash_flow": [18248, 19842, 19698]
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segment": "Innovative Medicine",
+      "revenue": 15426,
+      "segment_income_before_tax": 5317
+    },
+    {
+      "period": "Q1 2026",
+      "segment": "MedTech",
+      "revenue": 8636,
+      "segment_income_before_tax": 1239
+    }
+  ],
+  "ratios": [
+    {
+      "name": "gross_profit_margin",
+      "period": "Q1 2026",
+      "value": 0.6631,
+      "formula": "15956 / 24062"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "Q1 2026",
+      "value": 0.2176,
+      "formula": "5235 / 24062"
+    },
+    {
+      "name": "current_ratio",
+      "period": "2026-03-29",
+      "value": 1.03,
+      "formula": "59173 / 57716"
+    },
+    {
+      "name": "quick_ratio",
+      "period": "2026-03-29",
+      "value": 0.69,
+      "formula": "(21688 + 363 + 17721) / 57716"
+    },
+    {
+      "name": "liabilities_to_equity",
+      "period": "2026-03-29",
+      "value": 1.47,
+      "formula": "119708 / 81186"
+    }
+  ],
+  "market_data_check": {
+    "checked_date": "2026-05-19",
+    "price_date": "2026-05-18",
+    "current_price_usd": 227.54,
+    "common_shares_outstanding": 2407216971,
+    "calculated_market_cap_usd_b": 547.7,
+    "source": "https://www.financecharts.com/stocks/JNJ/summary/price"
+  },
+  "missing_data": [
+    "Product-level revenue for ICOTYDE and IMAAVY: not disclosed.",
+    "Product-level profitability by brand: not disclosed.",
+    "GAAP forward guidance: not provided.",
+    "FY2026 full-year actual results: ไม่พบข้อมูลที่ยืนยันได้.",
+    "Sequential quarterly trend for Q2-Q4 2025 through Q1 2026: not normalized in this source note."
+  ]
+}

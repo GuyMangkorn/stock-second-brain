@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.MD",
+                "file": "wiki/analysis/JNJ Decision Memo 2026-05-19.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "JNJ Decision Memo 2026-05-19"
             }
           }
         ]
@@ -185,30 +185,35 @@
   },
   "active": "6895e3304de0bde7",
   "lastOpenFiles": [
-    "AGENTS.md",
-    "raw/imports/MSFT_latest_results_source.md",
+    "wiki/entities/JNJ.md",
+    "raw/imports/GOOGL_latest_results_source.md",
+    "wiki/analysis/JNJ Decision Memo 2026-05-19.md",
+    "wiki/analysis/JNJ DCF Valuation 2026-05-19.md",
+    "raw/financials/JNJ_fundamentals.json",
+    "raw/financials/JNJ_fundamentals.md",
+    "raw/imports/JNJ_latest_results_source.md",
+    "wiki/entities/GOOGL.md",
+    "wiki/entities/MSFT.md",
+    "wiki/entities/Entity Index.md",
+    "wiki/reference/valuation-assumptions.md",
+    "wiki/analysis/GOOGL DCF Valuation 2026-05-18.md",
+    "wiki/analysis/GOOGL Decision Memo 2026-05-18.md",
     "raw/imports/MSFT_company_deep_dive_2026-05-17.md",
+    "raw/imports/MSFT_latest_results_source.md",
+    "raw/financials/MSFT_fundamentals.md",
+    "raw/financials/GOOGL_fundamentals.md",
+    "README.MD",
+    "raw/financials/GOOGL_fundamentals.json",
+    "AGENTS.md",
     "wiki/analysis/MSFT DCF Valuation 2026-05-18.md",
     "wiki/analysis/MSFT Decision Memo 2026-05-18.md",
     "wiki/reference/financial-ratios.md",
     "wiki/reference/chart-conventions.md",
     "wiki/analysis/README.md",
     "raw/imports/README.md",
-    "README.MD",
-    "wiki/entities/MSFT.md",
     "wiki/reference/entity-template.md",
-    "wiki/reference/valuation-assumptions.md",
     "log.md",
-    "wiki/reference/source-hierarchy.md",
-    "wiki/reference/skill-mechanics.md",
-    "wiki/reference/batch-screener-playbook.md",
-    "wiki/reference/output-contract.md",
-    "wiki/entities/Entity Index.md",
-    "raw/financials/MSFT_fundamentals.md",
     "stock-second-brain",
-    "wiki/reference/dataview-conventions.md",
-    "raw/financials/README.md",
-    "raw/assets/README.md",
     "raw/financials/MSFT_fundamentals.json"
   ]
 }

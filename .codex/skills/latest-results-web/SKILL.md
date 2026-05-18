@@ -20,6 +20,13 @@ a local source file.
 4. News and web research: reputable news only for context or recent events not
    yet reflected in official documents.
 
+## Language Standard
+
+Follow `wiki/reference/output-contract.md`. Source maps, source titles, filing
+labels, table columns, and extracted source facts should stay close to the
+source language. Thai summaries are allowed for commentary and handoff notes,
+but they must not alter the source meaning.
+
 ## Required Workflow
 
 1. Identify ticker, company, exchange, reporting currency, and fiscal calendar.

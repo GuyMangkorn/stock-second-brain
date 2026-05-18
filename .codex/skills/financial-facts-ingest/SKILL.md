@@ -27,6 +27,11 @@ Read these before writing durable output:
 - `wiki/reference/chart-conventions.md`
 - `wiki/reference/entity-template.md`
 
+Follow the output contract's language standard. Keep structured fields,
+financial tables, JSON keys, headings, and metric labels in English; use Thai
+mainly for explanatory notes, missing-data explanations, thesis commentary, and
+judgment sections.
+
 ## Required Workflow
 
 1. Confirm the input file exists or the source URL is accessible.

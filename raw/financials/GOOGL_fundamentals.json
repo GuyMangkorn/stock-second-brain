@@ -1,0 +1,174 @@
+{
+  "company": "Alphabet Inc.",
+  "ticker": "GOOGL",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "FY2025 annual baseline plus Q1 2026 quarter ended 2026-03-31",
+  "periods": [
+    "Q1 2025",
+    "Q1 2026",
+    "TTM Q1 2026",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+      "use": "Q1 2026 financial statements and MD&A"
+    },
+    {
+      "source": "Alphabet Q1 2026 earnings release",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf",
+      "use": "Q1 2026 tables, segment results, and FCF reconciliation"
+    },
+    {
+      "source": "Alphabet Q1 2026 earnings transcript",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+      "use": "Capex guidance and management commentary"
+    },
+    {
+      "source": "SEC Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "use": "FY2025 annual baseline and segment history"
+    }
+  ],
+  "financial_series": {
+    "q1_income_statement_usd_m": {
+      "Q1 2025": {
+        "revenue": 90234,
+        "cost_of_revenues": 36361,
+        "gross_profit": 53873,
+        "operating_income": 30606,
+        "net_income": 34540,
+        "diluted_eps": 2.81,
+        "diluted_shares": 12291
+      },
+      "Q1 2026": {
+        "revenue": 109896,
+        "cost_of_revenues": 41271,
+        "gross_profit": 68625,
+        "operating_income": 39696,
+        "net_income": 62578,
+        "diluted_eps": 5.11,
+        "diluted_shares": 12238
+      }
+    },
+    "q1_cash_flow_usd_m": {
+      "Q1 2025": {
+        "operating_cash_flow": 36150,
+        "capex_spend": 17197,
+        "free_cash_flow": 18953
+      },
+      "Q1 2026": {
+        "operating_cash_flow": 45790,
+        "capex_spend": 35674,
+        "free_cash_flow": 10116
+      },
+      "TTM Q1 2026": {
+        "operating_cash_flow": 174353,
+        "capex_spend": 109924,
+        "free_cash_flow": 64429
+      }
+    },
+    "balance_sheet_usd_m": {
+      "2025-12-31": {
+        "cash_and_equivalents": 30708,
+        "marketable_securities": 96135,
+        "cash_and_marketable_securities": 126843,
+        "total_assets": 595281,
+        "long_term_debt": 46547,
+        "total_liabilities": 180016,
+        "stockholders_equity": 415265,
+        "shares_issued_outstanding": 12088
+      },
+      "2026-03-31": {
+        "cash_and_equivalents": 38063,
+        "marketable_securities": 88777,
+        "cash_and_marketable_securities": 126840,
+        "total_assets": 703919,
+        "long_term_debt": 77501,
+        "total_liabilities": 225173,
+        "stockholders_equity": 478746,
+        "shares_issued_outstanding": 12116
+      }
+    },
+    "annual_segment_revenue_usd_m": {
+      "FY2023": {
+        "google_services": 272543,
+        "google_cloud": 33088,
+        "other_bets": 1527,
+        "hedging": 236,
+        "total_revenue": 307394,
+        "operating_income": 84293
+      },
+      "FY2024": {
+        "google_services": 304930,
+        "google_cloud": 43229,
+        "other_bets": 1648,
+        "hedging": 211,
+        "total_revenue": 350018,
+        "operating_income": 112390
+      },
+      "FY2025": {
+        "google_services": 342721,
+        "google_cloud": 58705,
+        "other_bets": 1537,
+        "hedging": -127,
+        "total_revenue": 402836,
+        "operating_income": 129039
+      }
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segments": [
+        {
+          "name": "Google Services",
+          "revenue": 89637,
+          "operating_income": 40589
+        },
+        {
+          "name": "Google Cloud",
+          "revenue": 20028,
+          "operating_income": 6598
+        },
+        {
+          "name": "Other Bets",
+          "revenue": 411,
+          "operating_income": -2100
+        }
+      ]
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Operating margin",
+      "period": "Q1 2026",
+      "value": 0.3612,
+      "formula": "39696 / 109896"
+    },
+    {
+      "name": "FCF margin",
+      "period": "Q1 2026",
+      "value": 0.0921,
+      "formula": "10116 / 109896"
+    },
+    {
+      "name": "Current ratio",
+      "period": "2026-03-31",
+      "value": 1.9224,
+      "formula": "213753 / 111188"
+    }
+  ],
+  "missing_data": [
+    "Product-level AI revenue and margin for AI Overviews, Gemini, Vertex AI, TPU sales, and AI infrastructure are not disclosed.",
+    "Exact TPU hardware sales economics and customer concentration are not disclosed.",
+    "FY2026 full-year results are not yet reported.",
+    "Quantified 2027 capex guidance is not disclosed."
+  ]
+}
+

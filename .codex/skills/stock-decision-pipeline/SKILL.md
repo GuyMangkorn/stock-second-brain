@@ -12,6 +12,12 @@ decision memo using the current stock price.
 This skill coordinates other stock-second-brain skills. It should not replace
 their source integrity rules.
 
+## Language Standard
+
+Follow `wiki/reference/output-contract.md`: decision memo narratives should be
+Thai-first, while headings, ticker labels, source labels, market data fields,
+and finance/valuation terms remain English for precision and searchability.
+
 ## Non-Negotiables
 
 - Use source-backed facts before writing durable notes.

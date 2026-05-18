@@ -8,6 +8,12 @@ description: Audit stock-second-brain for uncited numbers, stale market data, so
 Use this skill when the user asks to lint, audit, clean, verify, inspect source
 quality, find stale data, find hallucinations, or maintain the vault.
 
+## Language Standard
+
+Follow `wiki/reference/output-contract.md`: write findings, severity rationale,
+fix explanations, and follow-up notes primarily in Thai, while keeping file
+paths, headings, source labels, metric names, and finance terms in English.
+
 ## Audit Scope
 
 Check:
@@ -82,4 +88,3 @@ Stop and ask for a narrower scope when:
 - the vault is too large for one pass and the user did not specify a subset
 - required files are missing or unreadable
 - a source conflict requires fresh web research but web access is unavailable
-

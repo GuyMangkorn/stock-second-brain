@@ -30,6 +30,9 @@ Read before writing:
 - `wiki/reference/valuation-assumptions.md`
 - `wiki/reference/output-contract.md`
 
+Follow the output contract's language standard: Thai-first narrative with
+English finance terms, headings, formulas, and metric labels preserved.
+
 ## Required Inputs
 
 Minimum viable DCF inputs:
@@ -163,4 +166,3 @@ Stop and report missing inputs when:
 - WACC basis is unsupported
 - the business is too cyclical or financial-sector-specific for a simple DCF
   without a different valuation model
-
