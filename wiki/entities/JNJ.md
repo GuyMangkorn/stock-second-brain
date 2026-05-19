@@ -41,8 +41,8 @@ tags:
 | Latest quarterly net earnings | USD 5,235 million |
 | FY2025 free cash flow | USD 19,698 million |
 | FY2026 FCF outlook | approximately USD 21 billion |
-| Current price check | USD 227.54 on 2026-05-18, checked 2026-05-19 Bangkok time |
-| Market cap check | USD 547.7 billion, calculated from current price and SEC common shares outstanding |
+| Current price check | USD 228.92 on 2026-05-18, checked 2026-05-19 Bangkok time |
+| Market cap check | USD 551.1 billion, calculated from current price and SEC common shares outstanding |
 | Normalized file | [[JNJ_fundamentals]] |
 | Latest source note | [[JNJ_latest_results_source]] |
 | Latest valuation memo | [[JNJ DCF Valuation 2026-05-19]] |
@@ -130,7 +130,7 @@ JNJ still has rare scale in global health care, a broad Innovative Medicine and 
 
 ### Bear Case
 
-The stock price already discounts stability. At USD 227.54, the market cap is about USD 547.7B, while FY2026 FCF outlook is about USD 21B, implying a low FCF yield. STELARA erosion, MedTech tariffs, launch investment, orthopaedics separation, litigation/talc matters, higher debt, and product-cycle risk all matter more when the valuation leaves limited margin of safety.
+The stock price already discounts stability. At USD 228.92, the market cap is about USD 551.1B using SEC common shares outstanding, while FY2026 FCF outlook is about USD 21B, implying a low FCF yield. STELARA erosion, MedTech tariffs, launch investment, orthopaedics separation, litigation/talc matters, higher debt, and product-cycle risk all matter more when the valuation leaves limited margin of safety.
 
 ### Key Debate
 
@@ -158,7 +158,7 @@ The key debate is not whether JNJ is high quality; official sources support the 
 ## Valuation Watch Items
 
 - Latest DCF memo: [[JNJ DCF Valuation 2026-05-19]].
-- Base-case fair value from the memo is approximately USD 150 per diluted share versus the fresh price check of USD 227.54.
+- Base-case fair value from the memo is approximately USD 150 per diluted share versus the fresh price check of USD 228.92.
 - The sensitivity matrix still sits below current price across the main WACC / terminal growth range used in the vault.
 - Watch FY2026 FCF conversion, net debt reduction, and whether guidance upgrades are supported by cash flow rather than only adjusted EPS.
 

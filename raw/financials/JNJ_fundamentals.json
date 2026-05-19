@@ -139,9 +139,10 @@
   "market_data_check": {
     "checked_date": "2026-05-19",
     "price_date": "2026-05-18",
-    "current_price_usd": 227.54,
+    "current_price_usd": 228.92,
     "common_shares_outstanding": 2407216971,
-    "calculated_market_cap_usd_b": 547.7,
+    "calculated_market_cap_usd_b": 551.1,
+    "provider_market_cap_usd_b": 552.324,
     "source": "https://www.financecharts.com/stocks/JNJ/summary/price"
   },
   "missing_data": [

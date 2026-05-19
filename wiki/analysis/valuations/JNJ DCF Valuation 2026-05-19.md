@@ -22,7 +22,7 @@ This DCF can be run because the required inputs were freshly checked: current pr
 
 Using FY2026 FCF outlook of approximately USD 21B, Q1 2026 cash plus marketable securities of USD 22.051B, total debt of USD 54.987B, diluted average shares of 2.4452B, a base WACC of 8.5%, terminal growth of 2.5%, and a five-year FCF growth fade from 6.0% to 4.0%, base-case fair value is approximately USD 150 per diluted share.
 
-Against the fresh price check of USD 227.54 on 2026-05-18, the base case implies roughly 34% downside. Even the upper end of the sensitivity table, using 7.5% WACC and 3.0% terminal growth, is about USD 202 per share, below the current price.
+Against the fresh price check of USD 228.92 on 2026-05-18, the base case implies roughly 34% downside. Even the upper end of the sensitivity table, using 7.5% WACC and 3.0% terminal growth, is about USD 202 per share, below the current price.
 
 ## Source Map
 
@@ -43,9 +43,10 @@ All company financial statement amounts are USD billions unless noted.
 
 | Input | Value | Source / Calculation |
 |---|---:|---|
-| Fresh market price used | USD 227.54 | FinanceCharts price page, current share price for 2026-05-18; checked 2026-05-19 Bangkok time. |
+| Fresh market price used | USD 228.92 | FinanceCharts price page, closing share price for 2026-05-18; checked 2026-05-19 Bangkok time. |
 | Common shares outstanding | 2.407216971B | SEC Form 10-Q, shares outstanding as of 2026-04-17. |
-| Fresh market cap | USD 547.7B | Calculated: 227.54 * 2.407216971B. |
+| Fresh market cap | USD 551.1B | Calculated: 228.92 * 2.407216971B. |
+| FinanceCharts market cap cross-check | USD 552.324B | FinanceCharts price page; provider market cap uses provider share basis. |
 | Diluted shares used for DCF | 2.4452B | SEC Form 10-Q, Q1 2026 diluted average shares. |
 | Cash and cash equivalents | 21.688 | SEC Form 10-Q. |
 | Marketable securities | 0.363 | SEC Form 10-Q. |
@@ -100,11 +101,11 @@ Base rationale: the model starts from the CFO's approximately USD 21B FY2026 FCF
 
 Amounts are USD billions except per-share data.
 
-| Scenario | WACC | Terminal Growth | PV of Explicit FCF | PV of Terminal Value | Enterprise Value | Net Debt | Equity Value | Fair Value / Diluted Share | Upside / Downside vs USD 227.54 |
+| Scenario | WACC | Terminal Growth | PV of Explicit FCF | PV of Terminal Value | Enterprise Value | Net Debt | Equity Value | Fair Value / Diluted Share | Upside / Downside vs USD 228.92 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Bear | 9.5% | 2.0% | 87.938 | 253.877 | 341.815 | (32.936) | 308.879 | 126.32 | -44.5% |
-| Base | 8.5% | 2.5% | 96.186 | 304.467 | 400.654 | (32.936) | 367.718 | 150.38 | -33.9% |
-| Bull | 7.5% | 3.0% | 101.622 | 414.569 | 516.191 | (32.936) | 483.255 | 197.63 | -13.2% |
+| Bear | 9.5% | 2.0% | 87.938 | 253.877 | 341.815 | (32.936) | 308.879 | 126.32 | -44.8% |
+| Base | 8.5% | 2.5% | 96.186 | 304.467 | 400.654 | (32.936) | 367.718 | 150.38 | -34.3% |
+| Bull | 7.5% | 3.0% | 101.622 | 414.569 | 516.191 | (32.936) | 483.255 | 197.63 | -13.7% |
 
 ## Sensitivity Matrix
 
@@ -120,11 +121,11 @@ Base projection fair value per diluted share, USD.
 
 | Check | Result | Read |
 |---|---:|---|
-| Market cap / FY2026 FCF outlook | 26.1x | USD 547.7B / USD 21.0B. Rich for a mature health care compounder. |
-| FY2026 FCF yield on market cap | 3.83% | USD 21.0B / USD 547.7B. |
-| Market EV / FY2026 FCF outlook | 27.7x | Market cap + net debt divided by FY2026 FCF outlook. |
+| Market cap / FY2026 FCF outlook | 26.2x | USD 551.1B / USD 21.0B. Rich for a mature health care compounder. |
+| FY2026 FCF yield on market cap | 3.81% | USD 21.0B / USD 551.1B. |
+| Market EV / FY2026 FCF outlook | 27.8x | Market cap + net debt divided by FY2026 FCF outlook. |
 | Base terminal value share of EV | 76.0% | High but below the 85%-90% warning zone. |
-| Dividend yield | 2.36% | USD 5.36 annual dividend / USD 227.54 price. Good income support, but not enough to offset valuation alone. |
+| Dividend yield | 2.34% | USD 5.36 annual dividend / USD 228.92 price. Good income support, but not enough to offset valuation alone. |
 | FCF vs dividends | covered on FY2025 and FY2026 outlook | FY2025 FCF USD 19.698B covered FY2025 dividends of USD 12.381B; FY2026 FCF outlook about USD 21B supports dividend capacity. |
 
 ## What Would Change The Valuation

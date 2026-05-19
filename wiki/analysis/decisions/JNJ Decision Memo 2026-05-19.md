@@ -23,7 +23,7 @@ tags:
 
 **Action: WAIT / AVOID new capital at current price.**
 
-JNJ เป็น high-quality, cash-generative health care compounder ที่มี durable dividend profile และ Q1 2026 growth print ดีกว่าภาพ mature-company ทั่วไป. ประเด็นหลักคือ valuation. ที่ USD 227.54 หุ้นสะท้อน stability และ cash-flow growth ไปมากแล้ว ขณะที่ official sources ยังแสดง STELARA headwinds, MedTech margin pressure, litigation/legal overhang, net debt ที่สูงขึ้น และ product-cycle execution risk
+JNJ เป็น high-quality, cash-generative health care compounder ที่มี durable dividend profile และ Q1 2026 growth print ดีกว่าภาพ mature-company ทั่วไป. ประเด็นหลักคือ valuation. ที่ USD 228.92 หุ้นสะท้อน stability และ cash-flow growth ไปมากแล้ว ขณะที่ official sources ยังแสดง STELARA headwinds, MedTech margin pressure, litigation/legal overhang, net debt ที่สูงขึ้น และ product-cycle execution risk
 
 สำหรับ new capital action คือ **WAIT**. สำหรับ existing normal-sized defensive position การ **HOLD** ยังสมเหตุสมผลได้ เพราะ dividend coverage และ business quality ยัง intact แต่ current price ยังไม่ให้ DCF-based margin of safety
 
@@ -31,12 +31,13 @@ JNJ เป็น high-quality, cash-generative health care compounder ที่�
 
 | Item | Value | Source |
 |---|---:|---|
-| Fresh price | USD 227.54 | FinanceCharts price page, current share price for Monday, 2026-05-18; checked 2026-05-19 Bangkok time. |
+| Fresh price | USD 228.92 | FinanceCharts price page, closing share price for Monday, 2026-05-18; checked 2026-05-19 Bangkok time. |
 | Common shares outstanding | 2,407,216,971 | SEC Form 10-Q, as of 2026-04-17. |
-| Market cap | USD 547.7B | Calculated: 227.54 * 2,407,216,971 / 1,000,000,000. |
+| Market cap | USD 551.1B | Calculated: 228.92 * 2,407,216,971 / 1,000,000,000. |
+| FinanceCharts market cap cross-check | USD 552.324B | FinanceCharts price page; provider market cap uses provider share basis. |
 | Diluted average shares | 2,445.2M | SEC Form 10-Q, Q1 2026. |
 | Annual dividend rate | USD 5.36 | Q1 2026 earnings call transcript / presentation. |
-| Dividend yield | 2.36% | 5.36 / 227.54. |
+| Dividend yield | 2.34% | 5.36 / 228.92. |
 
 ## Evidence From Vault
 
@@ -63,9 +64,9 @@ JNJ เป็น high-quality, cash-generative health care compounder ที่�
 |---|---:|---|
 | DCF base fair value | USD 150.38 per diluted share | ต่ำกว่า current price ประมาณ 34% |
 | DCF bull fair value | USD 197.63 per diluted share | ยังต่ำกว่า current price |
-| Market cap / FY2026 FCF outlook | 26.1x | rich สำหรับ mature health care compounder |
-| FY2026 FCF yield | 3.83% | defensive แต่ยังไม่เห็นว่าถูกชัดเจน |
-| Dividend yield | 2.36% | ช่วย support ได้ แต่ยังไม่พอ justify การ add หากไม่มี valuation cushion |
+| Market cap / FY2026 FCF outlook | 26.2x | rich สำหรับ mature health care compounder |
+| FY2026 FCF yield | 3.81% | defensive แต่ยังไม่เห็นว่าถูกชัดเจน |
+| Dividend yield | 2.34% | ช่วย support ได้ แต่ยังไม่พอ justify การ add หากไม่มี valuation cushion |
 
 valuation ไม่ได้บอกว่า JNJ เป็นธุรกิจอ่อนแอ แต่บอกว่า current price ต้องการส่วนผสมที่แข็งแรงมากของ FCF growth, successful launches, legal risk containment และ MedTech margin recovery
 
@@ -80,7 +81,7 @@ valuation ไม่ได้บอกว่า JNJ เป็นธุรกิ�
 
 ## Bear Case
 
-- ที่ USD 227.54 JNJ trade ประมาณ 26.1x FY2026 FCF outlook ซึ่งไม่ถือว่าถูกสำหรับ mature health care
+- ที่ USD 228.92 JNJ trade ประมาณ 26.2x FY2026 FCF outlook ซึ่งไม่ถือว่าถูกสำหรับ mature health care
 - STELARA เป็น explicit headwind และ management ระบุว่าเป็น Q1 operational sales headwind ประมาณ 540 bps
 - MedTech margin ลดลง โดยมี tariffs และ separation costs เป็นแรงกดดันส่วนหนึ่ง
 - Net debt อยู่ประมาณ USD 32.936B หลัง M&A และ capital allocation

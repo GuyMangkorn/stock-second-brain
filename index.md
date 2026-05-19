@@ -17,11 +17,11 @@ updated: 2026-05-19
   `[[V]]`, and created `[[V DCF Valuation 2026-05-19]]` plus
   `[[V Decision Memo 2026-05-19]]` with a WAIT-new-capital / HOLD-existing
   quality-position action read.
-- 2026-05-19: Ran full new-ticker decision-grade flow for `[[JNJ]]`: created
-  `[[JNJ_latest_results_source]]`, normalized `[[JNJ_fundamentals]]`, added
-  `[[JNJ]]`, and created `[[JNJ DCF Valuation 2026-05-19]]` plus
-  `[[JNJ Decision Memo 2026-05-19]]` with a WAIT / AVOID-new-capital action
-  read.
+- 2026-05-19: Refreshed full decision-grade flow for `[[JNJ]]`: updated
+  `[[JNJ_latest_results_source]]`, `[[JNJ_fundamentals]]`, `[[JNJ]]`,
+  `[[JNJ DCF Valuation 2026-05-19]]`, and
+  `[[JNJ Decision Memo 2026-05-19]]` with a fresh USD 228.92 price check and
+  a WAIT / AVOID-new-capital action read.
 - 2026-05-18: Ran full new-ticker decision-grade flow for `[[GOOGL]]`: created
   `[[GOOGL_latest_results_source]]`, normalized `[[GOOGL_fundamentals]]`, added
   `[[GOOGL]]`, and created `[[GOOGL DCF Valuation 2026-05-18]]` plus

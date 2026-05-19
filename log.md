@@ -2,6 +2,10 @@
 
 ## 2026-05-19
 
+- `latest-results`: Refreshed `raw/imports/JNJ_latest_results_source.md` market-data check for JNJ using FinanceCharts 2026-05-18 close, while keeping P1 as source-note-only.
+- `ingest`: Refreshed `raw/financials/JNJ_fundamentals.md`, `raw/financials/JNJ_fundamentals.json`, and `wiki/entities/JNJ.md` with the updated JNJ price, calculated SEC-share market cap, and provider market-cap cross-check.
+- `valuation`: Refreshed `wiki/analysis/valuations/JNJ DCF Valuation 2026-05-19.md` sanity checks and upside/downside against the updated JNJ price and market cap.
+- `analysis`: Refreshed `wiki/analysis/decisions/JNJ Decision Memo 2026-05-19.md` market-data table and valuation read; action remains WAIT / AVOID new capital at current price.
 - `latest-results`: Created `raw/imports/VZ_latest_results_source.md` from
   Verizon Q1 2026 Form 10-Q, official Q1 2026 earnings release, IR-hosted
   transcript, FY2025 Form 10-K, and fresh market-data checks; P1 was limited

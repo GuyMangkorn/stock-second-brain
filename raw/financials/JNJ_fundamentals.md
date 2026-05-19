@@ -133,10 +133,10 @@ tags:
 
 | Metric | Value | Source / Calculation |
 |---|---:|---|
-| Current share price | USD 227.54 | FinanceCharts price page, current share price for 2026-05-18; checked 2026-05-19 Bangkok time. |
+| Current share price | USD 228.92 | FinanceCharts price page, closing share price for 2026-05-18; checked 2026-05-19 Bangkok time. |
 | Common shares outstanding | 2,407,216,971 | SEC Form 10-Q, as of 2026-04-17. |
-| Market cap | USD 547.7B | Calculated: 227.54 * 2,407,216,971 / 1,000,000,000. |
-| FinanceCharts overview market cap cross-check | USD 546.848B | FinanceCharts overview, last close metrics dated 2026-05-15. |
+| Market cap | USD 551.1B | Calculated: 228.92 * 2,407,216,971 / 1,000,000,000. |
+| FinanceCharts market cap cross-check | USD 552.324B | FinanceCharts price page, market cap for 2026-05-18; provider market cap uses provider share basis. |
 
 ### Guidance
 
@@ -165,7 +165,7 @@ tags:
 | Liabilities / equity | 2026-03-29 | 1.47x | 119,708 / 81,186 | Calculated from SEC Form 10-Q; vault default D/E definition. |
 | Liabilities / equity | 2025-12-28 | 1.44x | 117,666 / 81,544 | Calculated from SEC Form 10-Q; vault default D/E definition. |
 | FY2025 FCF margin | FY2025 | 20.91% | 19,698 / 94,193 | Calculated from FY2025 Annual Report. |
-| Dividend yield | 2026-05-18 price | 2.36% | 5.36 / 227.54 | Calculated from announced annual dividend rate and current price. |
+| Dividend yield | 2026-05-18 price | 2.34% | 5.36 / 228.92 | Calculated from announced annual dividend rate and current price. |
 
 ## Quarterly YoY Comparison
 

@@ -51,9 +51,10 @@ tags:
 |---|---:|---|
 | Company | Johnson & Johnson | SEC Form 10-Q and J&J IR sources. |
 | Ticker / exchange | JNJ / NYSE | SEC Form 10-Q. |
-| Current share price | USD 227.54 | FinanceCharts price page, current share price for Monday, 2026-05-18; checked 2026-05-19 Bangkok time. |
+| Current share price | USD 228.92 | FinanceCharts price page, closing share price for Monday, 2026-05-18; checked 2026-05-19 Bangkok time. |
 | Common shares outstanding | 2,407,216,971 | SEC Form 10-Q: common shares outstanding as of 2026-04-17. |
-| Market cap check | USD 547.7B | Calculated: USD 227.54 * 2,407,216,971 shares / 1,000,000,000. |
+| Market cap check | USD 551.1B | Calculated: USD 228.92 * 2,407,216,971 shares / 1,000,000,000. |
+| FinanceCharts market cap cross-check | USD 552.324B | FinanceCharts price page; provider market cap uses provider share basis. |
 | Diluted average shares | 2,445.2 million | SEC Form 10-Q, Q1 2026 diluted average shares. |
 
 ### Q1 2026 Income Statement
