@@ -23,9 +23,9 @@ tags:
 
 **Action: WAIT / AVOID new capital at current price.**
 
-Alphabet is a high-quality business with accelerating Google Cloud revenue, huge cloud backlog, and still-exceptional Google Services profitability. The problem is price. At the fresh market price of USD 404.15, the stock appears to require a very aggressive FCF recovery while official guidance says capex will remain extremely high in 2026 and increase significantly again in 2027.
+Alphabet เป็น high-quality business ที่มี Google Cloud revenue เร่งตัว, cloud backlog ขนาดใหญ่ และ Google Services profitability ที่ยังโดดเด่นมาก. ปัญหาหลักคือ price. ที่ fresh market price USD 404.15 หุ้นดูเหมือนต้องการ FCF recovery ที่ aggressive มาก ในขณะที่ official guidance ระบุว่า capex จะยังสูงมากในปี 2026 และจะเพิ่มขึ้นอย่างมีนัยสำคัญอีกครั้งในปี 2027
 
-For a new position, the action is **WAIT**. For an existing position, the action is **HOLD only if sizing is normal and the investor is explicitly underwriting a long AI infrastructure payoff**. If the position is oversized after the stock move, **trim** is reasonable on valuation discipline.
+สำหรับ new position action คือ **WAIT**. สำหรับ existing position action คือ **HOLD only if sizing is normal and the investor is explicitly underwriting a long AI infrastructure payoff**. ถ้า position กลายเป็น oversized หลังหุ้นขึ้นแรง การ **trim** ถือว่าสมเหตุสมผลตาม valuation discipline
 
 ## Current Price / Market Data Check
 
@@ -65,71 +65,70 @@ For a new position, the action is **WAIT**. For an existing position, the action
 
 | Valuation item | Result | Read |
 |---|---:|---|
-| DCF base fair value | USD 112.92 per diluted share | About 72% below the fresh market price. |
-| DCF bull fair value | USD 259.00 per diluted share | Still about 36% below the fresh market price. |
-| Market cap / TTM FCF | 76.1x | The market is paying a very high multiple on cash flow during a capex-heavy phase. |
-| TTM FCF yield | 1.32% | Too low for ordinary execution risk unless FCF ramps rapidly. |
-| Reverse DCF | About 44.1% 5-year FCF CAGR required | Very aggressive starting from TTM FCF of USD 64.429B. |
+| DCF base fair value | USD 112.92 per diluted share | ต่ำกว่า fresh market price ประมาณ 72% |
+| DCF bull fair value | USD 259.00 per diluted share | ยังต่ำกว่า fresh market price ประมาณ 36% |
+| Market cap / TTM FCF | 76.1x | ตลาดกำลังจ่าย multiple สูงมากบน cash flow ในช่วง capex-heavy |
+| TTM FCF yield | 1.32% | ต่ำเกินไปสำหรับ ordinary execution risk เว้นแต่ FCF จะ ramp เร็วมาก |
+| Reverse DCF | About 44.1% 5-year FCF CAGR required | aggressive มากเมื่อเริ่มจาก TTM FCF USD 64.429B |
 
-The valuation says the market has already capitalized a large share of the AI/cloud upside. Alphabet may still grow into this price, but the margin of safety is thin unless FCF accelerates dramatically.
+valuation บอกว่าตลาด capitalize AI/cloud upside ไปมากแล้ว. Alphabet อาจยัง grow into this price ได้ แต่ margin of safety บางมาก เว้นแต่ FCF จะ accelerate อย่างแรง
 
 ## Bull Case
 
-- Google Services remains an extraordinary profit pool, with Q1 2026 operating income of USD 40.589B.
-- Search and Gemini-related surfaces may protect or expand engagement, and management says AI Overviews, AI Mode, and Gemini are contributing to usage.
-- Google Cloud is scaling fast: Q1 2026 revenue rose 63% YoY and operating income reached USD 6.598B.
-- Cloud backlog of USD 462.3B creates a real forward demand signal.
-- Alphabet has a strong balance sheet with USD 126.840B of cash and marketable securities.
-- Vertical integration across models, TPU infrastructure, Search, YouTube, Android, Workspace, Cloud, and Gemini could create durable AI economics.
+- Google Services ยังเป็น profit pool ที่ยอดเยี่ยม โดย Q1 2026 operating income อยู่ที่ USD 40.589B
+- Search และ Gemini-related surfaces อาจช่วยปกป้องหรือขยาย engagement และ management ระบุว่า AI Overviews, AI Mode และ Gemini กำลังช่วยหนุน usage
+- Google Cloud scale เร็วมาก: Q1 2026 revenue เพิ่ม 63% YoY และ operating income ถึง USD 6.598B
+- Cloud backlog USD 462.3B เป็น forward demand signal ที่จับต้องได้
+- Alphabet มี balance sheet แข็งแรง พร้อม cash and marketable securities USD 126.840B
+- Vertical integration ตั้งแต่ models, TPU infrastructure, Search, YouTube, Android, Workspace, Cloud และ Gemini อาจสร้าง durable AI economics ได้
 
 ## Bear Case
 
-- Capex is extreme: Q1 2026 capex was USD 35.674B and 2026 guidance is USD 180B-190B.
-- Management expects 2027 capex to increase significantly, so the FCF pressure is not just a one-year issue.
-- Q1 2026 FCF fell to USD 10.116B despite strong revenue and operating income growth.
-- Q1 2026 net income was boosted by USD 28.7B of after-tax equity-security gains.
-- TPU hardware sales and AI infrastructure contracts may add revenue but not necessarily high-margin FCF.
-- Regulatory, antitrust, privacy, and AI search disruption risks remain real.
-- At USD 404.15, even the bull DCF case is below market price.
+- capex สูงมาก: Q1 2026 capex อยู่ที่ USD 35.674B และ 2026 guidance อยู่ที่ USD 180B-190B
+- management คาดว่า 2027 capex จะเพิ่มขึ้นอย่างมีนัยสำคัญ ดังนั้น FCF pressure ไม่ใช่ประเด็นปีเดียว
+- Q1 2026 FCF ลดลงเหลือ USD 10.116B แม้ revenue และ operating income growth แข็งแรง
+- Q1 2026 net income ได้แรงหนุนจาก after-tax equity-security gains USD 28.7B
+- TPU hardware sales และ AI infrastructure contracts อาจเพิ่ม revenue แต่ไม่จำเป็นต้องแปลเป็น high-margin FCF
+- regulatory, antitrust, privacy และ AI search disruption risks ยังเป็นความเสี่ยงจริง
+- ที่ USD 404.15 แม้ bull DCF case ก็ยังต่ำกว่า market price
 
 ## Key Assumptions
 
 | Assumption | Working choice |
 |---|---|
-| Investor profile | Long-term investor focused on risk-adjusted compounding, not short-term momentum. |
-| Position status | Unknown; action separates new capital from existing position sizing. |
-| Valuation discipline | Fresh price must be compared to source-backed FCF, not only revenue growth or analyst targets. |
-| AI economics | Demand is real, but product-level AI margins and TPU hardware economics are not disclosed. |
-| FCF recovery | Possible, but not yet verified strongly enough to justify adding at current price. |
+| Investor profile | Long-term investor ที่ focus risk-adjusted compounding ไม่ใช่ short-term momentum |
+| Position status | ยังไม่รู้; action จึงแยก new capital ออกจาก existing position sizing |
+| Valuation discipline | fresh price ต้องเทียบกับ source-backed FCF ไม่ใช่แค่ revenue growth หรือ analyst targets |
+| AI economics | demand เป็นของจริง แต่ product-level AI margins และ TPU hardware economics ยังไม่ disclosed |
+| FCF recovery | เป็นไปได้ แต่ยัง verify ได้ไม่แข็งแรงพอที่จะ justify การ add ที่ current price |
 
 ## What Would Change The Decision
 
-- Upgrade toward add if price falls materially while official sources still show strong cloud backlog conversion and stable Google Services profitability.
-- Upgrade if FCF rises despite high capex, especially if TTM FCF begins moving toward the DCF bull path.
-- Upgrade if management quantifies 2027 capex and it is less severe than the current qualitative warning.
-- Upgrade if Alphabet discloses AI product or TPU economics that support strong ROIC.
-- Downgrade toward trim if capex rises again without FCF recovery, Google Cloud margin weakens, backlog quality deteriorates, or Search monetization shows AI-driven pressure.
+- upgrade toward add ถ้า price ลดลงอย่างมีนัยสำคัญ ขณะที่ official sources ยังแสดง cloud backlog conversion ที่แข็งแรงและ Google Services profitability ที่ stable
+- upgrade ถ้า FCF เพิ่มขึ้นแม้ capex ยังสูง โดยเฉพาะถ้า TTM FCF เริ่มขยับเข้าใกล้ DCF bull path
+- upgrade ถ้า management quantify 2027 capex แล้วออกมาเบากว่า qualitative warning ปัจจุบัน
+- upgrade ถ้า Alphabet disclose AI product หรือ TPU economics ที่ support ROIC แข็งแรง
+- downgrade toward trim ถ้า capex เพิ่มอีกโดยไม่มี FCF recovery, Google Cloud margin อ่อนลง, backlog quality แย่ลง หรือ Search monetization เริ่มเห็น AI-driven pressure
 
 ## Missing / Unverified Data
 
 | Item | Status | Why it matters |
 |---|---|---|
-| Product-level AI revenue and margin for AI Overviews, Gemini, Vertex AI, TPU sales, and AI infrastructure | Not disclosed | Cannot underwrite AI economics directly. |
-| Exact TPU hardware sales economics and customer concentration | Not disclosed | Important for judging whether backlog is high-quality FCF or lower-margin hardware/infrastructure revenue. |
-| Quantified 2027 capex | Not disclosed | Major input for FCF recovery. |
-| FY2026 full-year results | ไม่พบข้อมูลที่ยืนยันได้ | Q1 and TTM data are the freshest verified cash-flow facts. |
-| Investor-specific tax basis and position size | Not provided | Prevents a universal hold/trim answer for existing holders. |
+| Product-level AI revenue and margin for AI Overviews, Gemini, Vertex AI, TPU sales, and AI infrastructure | Not disclosed | ยัง underwrite AI economics โดยตรงไม่ได้ |
+| Exact TPU hardware sales economics and customer concentration | Not disclosed | สำคัญต่อการประเมินว่า backlog เป็น high-quality FCF หรือเป็น lower-margin hardware/infrastructure revenue |
+| Quantified 2027 capex | Not disclosed | เป็น input สำคัญของ FCF recovery |
+| FY2026 full-year results | ไม่พบข้อมูลที่ยืนยันได้ | Q1 และ TTM data คือ cash-flow facts ที่สดและ verify ได้ที่สุด |
+| Investor-specific tax basis and position size | Not provided | ทำให้ให้ universal hold/trim answer สำหรับ existing holders ไม่ได้ |
 
 ## Source Map
 
 | Source | URL / Path | Use |
 |---|---|---|
-| `raw/imports/GOOGL_latest_results_source.md` | Local source note | P1 official-source discovery and extraction. |
-| `raw/financials/GOOGL_fundamentals.md` | Local normalized facts | P4 verified financial facts, charts, ratios. |
-| `wiki/entities/GOOGL.md` | Local entity page | P6 business model, thesis, risks, catalysts. |
-| `wiki/analysis/valuations/GOOGL DCF Valuation 2026-05-18.md` | Local valuation memo | P11 DCF and valuation sensitivity. |
-| SEC Q1 2026 Form 10-Q | https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm | Official quarterly facts. |
-| Alphabet Q1 2026 earnings release | https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf | Financial tables and FCF. |
-| Alphabet Q1 2026 transcript | https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf | Capex guidance and management commentary. |
-| StockAnalysis GOOGL overview | https://stockanalysis.com/stocks/googl/ | Fresh price and market data checked 2026-05-18. |
-
+| `raw/imports/GOOGL_latest_results_source.md` | Local source note | P1 official-source discovery และ extraction |
+| `raw/financials/GOOGL_fundamentals.md` | Local normalized facts | P4 verified financial facts, charts, ratios |
+| `wiki/entities/GOOGL.md` | Local entity page | P6 business model, thesis, risks, catalysts |
+| `wiki/analysis/valuations/GOOGL DCF Valuation 2026-05-18.md` | Local valuation memo | P11 DCF และ valuation sensitivity |
+| SEC Q1 2026 Form 10-Q | https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm | Official quarterly facts |
+| Alphabet Q1 2026 earnings release | https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf | Financial tables และ FCF |
+| Alphabet Q1 2026 transcript | https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf | Capex guidance และ management commentary |
+| StockAnalysis GOOGL overview | https://stockanalysis.com/stocks/googl/ | Fresh price และ market data checked 2026-05-18 |

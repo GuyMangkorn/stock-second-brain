@@ -24,24 +24,24 @@ tags:
 
 **Action: WAIT for new capital; HOLD an existing normal-sized core position.**
 
-Microsoft remains a high-quality compounder with strong official-source evidence for cloud, AI, productivity, developer, security, and enterprise distribution momentum. The reason not to add today is valuation, not business quality. At the freshly checked market price, the stock still requires a very favorable free-cash-flow conversion story while Microsoft is entering a much more capital-intensive AI buildout phase.
+Microsoft ยังเป็น high-quality compounder โดย official sources สนับสนุนชัดเจนทั้ง cloud, AI, productivity, developer, security และ enterprise distribution momentum. เหตุผลที่ยังไม่ควร add วันนี้คือ valuation ไม่ใช่ business quality. ที่ราคาตลาดที่เช็กสดล่าสุด หุ้นยังต้องการ free-cash-flow conversion story ที่ดีมาก ในขณะที่ Microsoft กำลังเข้าสู่ช่วง AI buildout ที่ใช้ capital intensity สูงขึ้นมาก
 
-This memo does not recommend a blanket trim unless MSFT is already oversized in the portfolio or the investor needs to reduce exposure to expensive mega-cap AI/platform duration. If the position is normal-sized and tax/friction costs matter, the cleaner action is hold and wait for either a better price or clearer proof that AI capex is converting into durable free cash flow.
+memo นี้ไม่ได้แนะนำให้ trim แบบ blanket เว้นแต่ MSFT จะมีน้ำหนัก oversized ใน portfolio อยู่แล้ว หรือ investor ต้องการลด exposure ต่อ expensive mega-cap AI/platform duration. ถ้า position ยังเป็น normal-sized และ tax/friction costs มีผล การกระทำที่สะอาดกว่าคือ hold แล้วรอทั้งราคาที่ดีกว่านี้ หรือหลักฐานที่ชัดขึ้นว่า AI capex กำลังแปลงเป็น durable free cash flow
 
 ## Source Map
 
 | Source | URL / Path | Use |
 |---|---|---|
-| Vault dashboard | `index.md` | Confirms active MSFT coverage and source gaps. |
-| Entity page | `wiki/entities/MSFT.md` | Business model, source map, moat, thesis, risks, catalysts, valuation watch items. |
-| Normalized financial facts | `raw/financials/MSFT_fundamentals.md` | FY2025 baseline, FY26 Q3 / 9M FY26 financial facts, cash flow, balance sheet. |
-| Latest results source note | `raw/imports/MSFT_latest_results_source.md` | Local source digest from FY26 Q3 official filings, IR tables, and transcript. |
-| Company deep dive source note | `raw/imports/MSFT_company_deep_dive_2026-05-17.md` | FY2025 annual baseline, segment mix, product/service mix, moat and AI/capex context. |
-| DCF valuation memo | `wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md` | Source-backed valuation scenarios and reverse DCF. |
-| Microsoft FY26 Q3 income statements | https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/income-statements | Official quarterly revenue, operating income, net income, EPS. |
-| Microsoft FY26 Q3 cash flows | https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/cash-flows | Official operating cash flow and capex inputs. |
-| Microsoft FY26 Q3 earnings transcript | https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3 | Management commentary on Azure, AI, RPO, capex, and guidance. |
-| StockAnalysis MSFT statistics | https://stockanalysis.com/stocks/msft/statistics/ | Fresh market price, valuation ratios, market cap, shares, TTM FCF, analyst context checked 2026-05-18. |
+| Vault dashboard | `index.md` | ยืนยันว่า MSFT อยู่ใน active coverage และมี source gaps อะไรบ้าง |
+| Entity page | `wiki/entities/MSFT.md` | Business model, source map, moat, thesis, risks, catalysts, valuation watch items |
+| Normalized financial facts | `raw/financials/MSFT_fundamentals.md` | FY2025 baseline, FY26 Q3 / 9M FY26 financial facts, cash flow, balance sheet |
+| Latest results source note | `raw/imports/MSFT_latest_results_source.md` | Local source digest จาก FY26 Q3 official filings, IR tables และ transcript |
+| Company deep dive source note | `raw/imports/MSFT_company_deep_dive_2026-05-17.md` | FY2025 annual baseline, segment mix, product/service mix, moat และ AI/capex context |
+| DCF valuation memo | `wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md` | Source-backed valuation scenarios และ reverse DCF |
+| Microsoft FY26 Q3 income statements | https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/income-statements | Official quarterly revenue, operating income, net income, EPS |
+| Microsoft FY26 Q3 cash flows | https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/cash-flows | Official operating cash flow และ capex inputs |
+| Microsoft FY26 Q3 earnings transcript | https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3 | Management commentary เกี่ยวกับ Azure, AI, RPO, capex และ guidance |
+| StockAnalysis MSFT statistics | https://stockanalysis.com/stocks/msft/statistics/ | Fresh market price, valuation ratios, market cap, shares, TTM FCF และ analyst context ที่เช็กเมื่อ 2026-05-18 |
 
 ## Facts
 
@@ -99,83 +99,83 @@ This memo does not recommend a blanket trim unless MSFT is already oversized in 
 
 | Assumption | Working choice | Why it matters |
 |---|---|---|
-| Investor profile | Long-term investor seeking risk-adjusted compounding, not short-term trading | The action read prioritizes durable business quality and valuation discipline. |
-| Existing position size | Normal-sized core position unless otherwise stated | If the position is oversized, trim becomes more attractive. |
-| Tax/friction | Tax and transaction costs are unknown | Without personal tax facts, this memo avoids recommending a blanket trim. |
-| Required margin of safety | New money should require either a price closer to intrinsic value or materially clearer FCF conversion | MSFT is high quality, but current FCF yield is low while capex intensity is rising. |
-| Valuation framework | DCF and FCF yield matter more than analyst targets | Analyst targets can reflect market sentiment and forward EPS optimism; cash-flow conversion is the key debate. |
-| AI economics | AI demand is real, but product-level AI margins and OpenAI-specific economics remain undisclosed | The upside case exists, but cannot be fully underwritten from official sources. |
+| Investor profile | Long-term investor ที่มองหา risk-adjusted compounding ไม่ใช่ short-term trading | action read จึงให้ความสำคัญกับ durable business quality และ valuation discipline |
+| Existing position size | ถือว่าเป็น normal-sized core position เว้นแต่ระบุเป็นอย่างอื่น | ถ้า position oversized การ trim จะน่าสนใจขึ้น |
+| Tax/friction | ยังไม่รู้ tax และ transaction costs | เมื่อไม่มี personal tax facts memo นี้จึงหลีกเลี่ยงการแนะนำ blanket trim |
+| Required margin of safety | New money ควรต้องได้ราคาที่ใกล้ intrinsic value มากขึ้น หรือเห็น FCF conversion ชัดเจนขึ้นมาก | MSFT มีคุณภาพสูง แต่ current FCF yield ต่ำ ขณะที่ capex intensity กำลังสูงขึ้น |
+| Valuation framework | DCF และ FCF yield สำคัญกว่า analyst targets | analyst targets อาจสะท้อน market sentiment และ forward EPS optimism; cash-flow conversion คือ key debate |
+| AI economics | AI demand เป็นของจริง แต่ product-level AI margins และ OpenAI-specific economics ยังไม่ disclosed | upside case มีอยู่ แต่ยัง underwrite จาก official sources ได้ไม่เต็มที่ |
 
 ## Calculations
 
 | Calculation | Result | Read |
 |---|---:|---|
-| FY26 Q3 revenue growth | 18.3% | Strong top-line momentum. |
-| FY26 Q3 operating income growth | 20.0% | Operating leverage still visible despite AI spend. |
-| FY26 Q3 net income growth | 23.1% | Earnings growth remains strong. |
-| FY26 Q3 capex growth | 84.4% | Capex is growing far faster than revenue or operating income. |
-| FY26 Q3 FCF growth | -22.1% | Cash conversion is the main negative signal. |
-| 9M FY26 capex growth | 68.8% | Capital intensity is not a one-quarter issue. |
-| 9M FY26 FCF growth | 2.8% | Operating cash flow growth is mostly being absorbed by capex. |
-| DCF base fair value vs 421.92 close | 205.70, or -51.2% | Existing vault DCF says base case is far below market. |
-| DCF bull fair value vs 421.92 close | 309.10, or -26.7% | Even bull case remains below latest close under mature-company terminal assumptions. |
-| Market-implied FCF yield | 2.33% | Investors are paying for a long runway of future FCF growth. |
-| Market EV / TTM FCF | 43.63x | Demanding multiple while AI capex is elevated. |
-| Reverse DCF from vault | About 25.1% 5-year FCF CAGR required | Current price needs a much stronger FCF path than the base case. |
+| FY26 Q3 revenue growth | 18.3% | top-line momentum ยังแข็งแรง |
+| FY26 Q3 operating income growth | 20.0% | ยังเห็น operating leverage แม้ AI spend สูงขึ้น |
+| FY26 Q3 net income growth | 23.1% | earnings growth ยังแข็งแรง |
+| FY26 Q3 capex growth | 84.4% | capex โตเร็วกว่ารายได้และ operating income มาก |
+| FY26 Q3 FCF growth | -22.1% | cash conversion คือสัญญาณลบหลัก |
+| 9M FY26 capex growth | 68.8% | capital intensity ไม่ใช่ปัญหาแค่ไตรมาสเดียว |
+| 9M FY26 FCF growth | 2.8% | operating cash flow growth ส่วนใหญ่ถูก capex ดูดซับ |
+| DCF base fair value vs 421.92 close | 205.70, or -51.2% | DCF ใน vault บอกว่า base case ต่ำกว่าราคาตลาดมาก |
+| DCF bull fair value vs 421.92 close | 309.10, or -26.7% | แม้ bull case ก็ยังต่ำกว่า latest close ภายใต้ mature-company terminal assumptions |
+| Market-implied FCF yield | 2.33% | investor กำลังจ่ายเพื่อ runway ของ future FCF growth ที่ยาวมาก |
+| Market EV / TTM FCF | 43.63x | multiple ค่อนข้าง demanding ในช่วงที่ AI capex ยังสูง |
+| Reverse DCF from vault | About 25.1% 5-year FCF CAGR required | current price ต้องการ FCF path ที่แข็งแรงกว่า base case มาก |
 
 ## Judgment
 
 ### Why Not Add Now
 
-- The company quality is not the issue. Official sources show strong revenue, operating income, net income, Azure growth, Microsoft Cloud growth, AI ARR, RPO, and Copilot adoption.
-- The stock price embeds a large amount of future FCF conversion. At roughly 43x FCF and a 2.33% FCF yield, the market is already underwriting a successful AI monetization cycle.
-- The cash-flow signal is weaker than the income statement signal. FY26 Q3 revenue grew 18.3% and operating income grew 20.0%, but Q3 FCF fell 22.1% because capex rose sharply.
-- The vault DCF has a wide gap between intrinsic value and market price. Base fair value is about USD 205.70 and bull fair value is about USD 309.10 versus the latest close of USD 421.92.
+- company quality ไม่ใช่ประเด็นลบหลัก. Official sources แสดง revenue, operating income, net income, Azure growth, Microsoft Cloud growth, AI ARR, RPO และ Copilot adoption ที่แข็งแรง
+- stock price สะท้อน future FCF conversion ไปมากแล้ว. ที่ประมาณ 43x FCF และ 2.33% FCF yield ตลาดกำลัง underwrite ว่า AI monetization cycle จะสำเร็จ
+- cash-flow signal อ่อนกว่า income statement signal. FY26 Q3 revenue โต 18.3% และ operating income โต 20.0% แต่ Q3 FCF ลดลง 22.1% เพราะ capex เพิ่มแรง
+- DCF ใน vault มีช่องว่างกว้างระหว่าง intrinsic value กับ market price. Base fair value ประมาณ USD 205.70 และ bull fair value ประมาณ USD 309.10 เทียบกับ latest close ที่ USD 421.92
 
 ### Why Not Blanket Trim
 
-- Microsoft is still one of the highest-quality businesses in the vault: strong enterprise distribution, high operating margins, diversified growth engines, deep balance sheet, and reported AI demand.
-- A forced trim could be premature if AI capex converts faster than the DCF assumes, especially if Azure capacity constraints ease and Copilot/GitHub/Dynamics monetization scales.
-- Analyst context remains favorable, with StockAnalysis showing a strong-buy consensus and average target above market, though this is lower-priority context and not a substitute for source-backed valuation work.
+- Microsoft ยังเป็นหนึ่งในธุรกิจคุณภาพสูงสุดใน vault: enterprise distribution แข็งแรง, operating margins สูง, growth engines กระจายตัว, balance sheet ลึก และมี reported AI demand
+- forced trim อาจเร็วเกินไปถ้า AI capex convert เร็วกว่าที่ DCF assume โดยเฉพาะถ้า Azure capacity constraints คลี่คลาย และ Copilot/GitHub/Dynamics monetization scale ได้
+- analyst context ยังเป็นบวก โดย StockAnalysis แสดง strong-buy consensus และ average target สูงกว่าราคาตลาด แม้นี่เป็น lower-priority context และไม่ใช่ตัวแทนของ source-backed valuation work
 
 ### What To Do
 
 | Situation | Action | Rationale |
 |---|---|---|
-| No position / considering new capital | WAIT | Price does not offer enough cash-flow margin of safety today. |
-| Existing normal-sized position | HOLD | Business quality and AI/cloud momentum justify staying invested, but valuation argues against adding. |
-| Existing oversized position | TRIM selectively | Reduce concentration risk if MSFT has become too large or if portfolio already has heavy AI infrastructure/platform exposure. |
-| Price falls near DCF bull value without thesis deterioration | Reassess for ADD | Around the low USD 300s, the valuation debate becomes more balanced, subject to updated FCF and capex data. |
-| FCF conversion improves materially while price stays flat | Reassess for ADD | The stock can become more attractive through better cash flow, not only through a lower price. |
+| No position / considering new capital | WAIT | ราคายังไม่ให้ cash-flow margin of safety เพียงพอวันนี้ |
+| Existing normal-sized position | HOLD | business quality และ AI/cloud momentum ยังพอรองรับการถือ แต่ valuation ไม่สนับสนุนให้ add |
+| Existing oversized position | TRIM selectively | ลด concentration risk ถ้า MSFT ใหญ่เกินไป หรือ portfolio มี AI infrastructure/platform exposure หนักอยู่แล้ว |
+| Price falls near DCF bull value without thesis deterioration | Reassess for ADD | แถว low USD 300s valuation debate จะสมดุลขึ้น โดยยังต้องอัปเดต FCF และ capex data |
+| FCF conversion improves materially while price stays flat | Reassess for ADD | หุ้นอาจน่าสนใจขึ้นได้จาก cash flow ที่ดีขึ้น ไม่จำเป็นต้องมาจากราคาที่ลดลงเท่านั้น |
 
 ## Decision Triggers
 
 ### Upgrade Toward Add
 
-- FY26 Q4 / FY2026 full-year cash flow shows operating cash flow growth absorbing capex better than expected.
-- Microsoft Cloud gross margin stabilizes or improves despite AI infrastructure growth.
-- Azure growth remains near or above management's high-30s constant-currency guide while capacity constraints ease.
-- Microsoft discloses stronger AI monetization economics, including Copilot, GitHub Copilot, Security Copilot, Dynamics agents, or Azure AI usage economics.
-- Price falls toward the DCF bull-case range, especially if no thesis damage accompanies the decline.
+- FY26 Q4 / FY2026 full-year cash flow แสดงว่า operating cash flow growth absorb capex ได้ดีกว่าคาด
+- Microsoft Cloud gross margin ทรงตัวหรือดีขึ้น แม้ AI infrastructure growth สูง
+- Azure growth อยู่ใกล้หรือสูงกว่า management's high-30s constant-currency guide พร้อมกับ capacity constraints ที่คลี่คลาย
+- Microsoft disclose AI monetization economics ที่แข็งแรงขึ้น เช่น Copilot, GitHub Copilot, Security Copilot, Dynamics agents หรือ Azure AI usage economics
+- price ลดลงเข้าใกล้ DCF bull-case range โดยเฉพาะถ้า decline ไม่ได้มาพร้อม thesis damage
 
 ### Downgrade Toward Trim
 
-- Capex, finance leases, depreciation, or component pricing continue rising without clear FCF recovery.
-- Microsoft Cloud gross margin keeps compressing below guidance.
-- RPO quality weakens, recognition slows, or OpenAI-related concentration becomes a larger unresolved risk.
-- Azure growth decelerates despite heavy capacity investment.
-- The position becomes oversized relative to portfolio risk limits.
+- capex, finance leases, depreciation หรือ component pricing ยังเพิ่มต่อโดยไม่มี FCF recovery ที่ชัด
+- Microsoft Cloud gross margin compress ต่อและต่ำกว่า guidance
+- RPO quality อ่อนลง, recognition ช้าลง หรือ OpenAI-related concentration กลายเป็น unresolved risk ที่ใหญ่ขึ้น
+- Azure growth decelerate แม้มี capacity investment หนัก
+- position ใหญ่เกิน portfolio risk limits
 
 ## Missing / Unverified Data
 
 | Item | Status | Why it matters |
 |---|---|---|
-| Product-level revenue and margins for Microsoft 365 Copilot, GitHub Copilot, Security Copilot, and other AI products | Not disclosed | Cannot directly underwrite AI unit economics. |
-| OpenAI-specific Azure revenue, capacity allocation, margins, and contract economics | Not disclosed with enough granularity | Concentration and profitability risk remain hard to quantify. |
-| Full FY2026 annual results | ไม่พบข้อมูลที่ยืนยันได้ | FY2026 is incomplete as of FY26 Q3. |
-| Exact FY26 Q4 cash paid for property and equipment | Not yet reported | Needed to verify whether capex continues to suppress FCF. |
-| Investor-specific tax basis, position size, and risk limits | Not provided | Prevents a universal trim/hold recommendation. |
+| Product-level revenue and margins for Microsoft 365 Copilot, GitHub Copilot, Security Copilot, and other AI products | Not disclosed | ยัง underwrite AI unit economics โดยตรงไม่ได้ |
+| OpenAI-specific Azure revenue, capacity allocation, margins, and contract economics | Not disclosed with enough granularity | concentration และ profitability risk ยัง quantify ได้ยาก |
+| Full FY2026 annual results | ไม่พบข้อมูลที่ยืนยันได้ | FY2026 ยังไม่ครบปี ณ FY26 Q3 |
+| Exact FY26 Q4 cash paid for property and equipment | Not yet reported | ต้องใช้ตรวจว่า capex ยัง suppress FCF ต่อหรือไม่ |
+| Investor-specific tax basis, position size, and risk limits | Not provided | ทำให้ไม่สามารถให้ universal trim/hold recommendation ได้ |
 
 ## Bottom Line
 
-MSFT is a **hold-quality business** but a **wait-price stock** today. For new money, the decision is **WAIT**. For an existing normal-sized long-term position, the decision is **HOLD**. Trim only if portfolio sizing or risk exposure, not company fundamentals alone, requires it.
+MSFT เป็น **hold-quality business** แต่เป็น **wait-price stock** ณ วันนี้. สำหรับ new money decision คือ **WAIT**. สำหรับ existing normal-sized long-term position decision คือ **HOLD**. ควร trim เฉพาะเมื่อ portfolio sizing หรือ risk exposure ต้องการ ไม่ใช่เพราะ company fundamentals เพียงอย่างเดียว

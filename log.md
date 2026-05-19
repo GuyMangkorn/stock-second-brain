@@ -9,6 +9,9 @@
   `AGENTS.md`, `wiki/reference/output-contract.md`, `README.MD`, and local
   stock workflow skills so future durable analysis uses Thai-first narrative
   while preserving English headings, structured fields, and finance terms.
+- `maintenance`: Translated existing MSFT, GOOGL, and JNJ decision memo
+  narrative sections into the new Thai-first style while preserving headings,
+  source labels, metric names, valuation terms, and source-backed numbers.
 - `maintenance`: Created `wiki/analysis/audits/Source Integrity Audit 2026-05-19.md`
   to identify agent-queryability improvements for schema consistency, machine
   indexes, decision metadata, chart source-of-truth, and source-gap tracking.
