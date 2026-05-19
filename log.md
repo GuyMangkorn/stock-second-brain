@@ -9,6 +9,9 @@
   `AGENTS.md`, `wiki/reference/output-contract.md`, `README.MD`, and local
   stock workflow skills so future durable analysis uses Thai-first narrative
   while preserving English headings, structured fields, and finance terms.
+- `maintenance`: Created `wiki/analysis/Source Integrity Audit 2026-05-19.md`
+  to identify agent-queryability improvements for schema consistency, machine
+  indexes, decision metadata, chart source-of-truth, and source-gap tracking.
 - `latest-results`: Created `raw/imports/JNJ_latest_results_source.md` from
   Johnson & Johnson Q1 2026 Form 10-Q, official Q1 2026 earnings release,
   presentation, transcript, FY2025 Annual Report, and fresh market-data checks;
