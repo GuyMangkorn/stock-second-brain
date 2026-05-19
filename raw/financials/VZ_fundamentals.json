@@ -1,0 +1,103 @@
+{
+  "company": "Verizon Communications Inc.",
+  "ticker": "VZ",
+  "market": "NYSE / Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": ["Q1 2026", "Q1 2025", "FY2025", "FY2024", "FY2023"],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000023/vz-20260331.htm",
+      "use": "Q1 2026 financial statements, shares, cash, debt, segment revenue, and FCF reconciliation."
+    },
+    {
+      "source": "Verizon Q1 2026 earnings release",
+      "url": "https://www.verizon.com/about/news/feed/verizons-transformation-actions-deliver-growth-profitability-1q26-company-raises-adjusted-eps",
+      "use": "Q1 highlights, operational metrics, non-GAAP items, and FY2026 guidance."
+    },
+    {
+      "source": "FY2025 Form 10-K",
+      "url": "https://www.verizon.com/about/sites/default/files/2025-Annual-Report-on-Form-10k.pdf",
+      "use": "FY2025-FY2023 annual financial baseline."
+    },
+    {
+      "source": "Q1 2026 earnings transcript",
+      "url": "https://www.verizon.com/about/file/77847/download?token=DCOVBtyf",
+      "use": "Management commentary and guidance context."
+    },
+    {
+      "source": "MarketBeat VZ stock page",
+      "url": "https://www.marketbeat.com/stocks/NYSE/VZ/",
+      "use": "Fresh market price and market cap check."
+    }
+  ],
+  "financial_series": {
+    "q1_income_statement_usd_m": [
+      {"metric": "total_operating_revenues", "q1_2026": 34440, "q1_2025": 33485},
+      {"metric": "operating_income", "q1_2026": 8242, "q1_2025": 7978},
+      {"metric": "net_income", "q1_2026": 5146, "q1_2025": 4983},
+      {"metric": "net_income_attributable_to_verizon", "q1_2026": 5045, "q1_2025": 4879},
+      {"metric": "diluted_eps", "q1_2026": 1.20, "q1_2025": 1.15}
+    ],
+    "q1_cash_flow_usd_m": [
+      {"metric": "operating_cash_flow", "q1_2026": 7984, "q1_2025": 7782},
+      {"metric": "capex_spend", "q1_2026": 4201, "q1_2025": 4145},
+      {"metric": "free_cash_flow", "q1_2026": 3783, "q1_2025": 3637}
+    ],
+    "balance_sheet_usd_m": [
+      {"metric": "cash_and_cash_equivalents", "date": "2026-03-31", "value": 8366},
+      {"metric": "total_assets", "date": "2026-03-31", "value": 417882},
+      {"metric": "debt_maturing_within_one_year", "date": "2026-03-31", "value": 28229},
+      {"metric": "long_term_debt", "date": "2026-03-31", "value": 144231},
+      {"metric": "total_debt_calculated", "date": "2026-03-31", "value": 172460},
+      {"metric": "net_debt_calculated", "date": "2026-03-31", "value": 164094},
+      {"metric": "total_equity", "date": "2026-03-31", "value": 104622}
+    ],
+    "annual_trend_usd_m": [
+      {"metric": "total_operating_revenues", "fy2025": 138191, "fy2024": 134788, "fy2023": 133974},
+      {"metric": "operating_income", "fy2025": 29259, "fy2024": 28686, "fy2023": 22877},
+      {"metric": "net_income", "fy2025": 17608, "fy2024": 17949, "fy2023": 12095},
+      {"metric": "operating_cash_flow", "fy2025": 37137, "fy2024": 36912, "fy2023": 37475},
+      {"metric": "capex_spend", "fy2025": 17011, "fy2024": 17090, "fy2023": 18767},
+      {"metric": "free_cash_flow", "fy2025": 20126, "fy2024": 19822, "fy2023": 18708}
+    ]
+  },
+  "segment_series": [
+    {"segment": "Consumer", "q1_2026_revenue_usd_m": 26453, "q1_2025_revenue_usd_m": 25618, "q1_2026_operating_income_usd_m": 7714, "q1_2025_operating_income_usd_m": 7424},
+    {"segment": "Business", "q1_2026_revenue_usd_m": 7419, "q1_2025_revenue_usd_m": 7286, "q1_2026_operating_income_usd_m": 884, "q1_2025_operating_income_usd_m": 664}
+  ],
+  "market_data": {
+    "checked_date": "2026-05-19",
+    "source": "MarketBeat",
+    "close_price_2026_05_18": 46.88,
+    "extended_hours_quote_2026_05_19_0435_et": 46.79,
+    "market_cap_usd_b": 195.74,
+    "common_shares_outstanding": 4175558910,
+    "diluted_weighted_average_shares_m": 4210
+  },
+  "guidance": [
+    {"metric": "adjusted_eps", "fy2026": "USD 4.95 to USD 4.99"},
+    {"metric": "retail_postpaid_phone_net_additions", "fy2026": "top half of 750,000 to 1.0M range"},
+    {"metric": "mobility_and_broadband_service_revenue_growth", "fy2026": "2.0% to 3.0%; approximately USD 93B"},
+    {"metric": "cash_flow_from_operations", "fy2026": "USD 37.5B to USD 38.0B"},
+    {"metric": "capital_expenditures", "fy2026": "USD 16.0B to USD 16.5B"},
+    {"metric": "free_cash_flow", "fy2026": "USD 21.5B or more"}
+  ],
+  "ratios": [
+    {"ratio": "q1_2026_operating_margin", "value": 0.2393, "formula": "8242 / 34440"},
+    {"ratio": "q1_2026_net_margin", "value": 0.1494, "formula": "5146 / 34440"},
+    {"ratio": "q1_2026_fcf_margin", "value": 0.1098, "formula": "3783 / 34440"},
+    {"ratio": "current_ratio_2026_03_31", "value": 0.64, "formula": "44723 / 69880"},
+    {"ratio": "liabilities_to_equity_2026_03_31", "value": 2.99, "formula": "(69880 + 243380) / 104622"},
+    {"ratio": "fy2026_guided_fcf_yield_on_market_cap", "value": 0.1098, "formula": "21.5 / 195.74"}
+  ],
+  "missing_data": [
+    "Product-level profitability by wireless, FWA, fiber, IoT, security, and enterprise services is not disclosed.",
+    "Frontier standalone post-close financial contribution in Q1 2026 is not fully isolated.",
+    "Exact normalized recurring FCF after Frontier integration and debt paydown is unverified.",
+    "Investor-specific tax basis, dividend income need, and position size were not provided.",
+    "Intrayear market price after regular market open on 2026-05-19 was not verified."
+  ]
+}

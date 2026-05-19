@@ -2,6 +2,23 @@
 
 ## 2026-05-19
 
+- `latest-results`: Created `raw/imports/VZ_latest_results_source.md` from
+  Verizon Q1 2026 Form 10-Q, official Q1 2026 earnings release, IR-hosted
+  transcript, FY2025 Form 10-K, and fresh market-data checks; P1 was limited
+  to source note creation only.
+- `ingest`: Created `raw/financials/VZ_fundamentals.md`,
+  `raw/financials/VZ_fundamentals.json`, and `wiki/entities/VZ.md` from
+  verified Verizon Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/VZ.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/VZ DCF Valuation 2026-05-19.md`
+  after fresh-checking VZ price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/VZ Decision Memo 2026-05-19.md`
+  with a WAIT / WATCHLIST-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
 - `latest-results`: Created `raw/imports/V_latest_results_source.md` from Visa
   Q2 FY2026 Form 10-Q, official Q2 FY2026 earnings release, transcript,
   presentation, operational performance data, FY2025 Form 10-K, May 2026
