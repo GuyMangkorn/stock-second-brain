@@ -7,6 +7,11 @@ updated: 2026-05-19
 
 ## Latest Work
 
+- 2026-05-19: Ran full new-ticker decision-grade flow for `[[V]]`: created
+  `[[V_latest_results_source]]`, normalized `[[V_fundamentals]]`, added
+  `[[V]]`, and created `[[V DCF Valuation 2026-05-19]]` plus
+  `[[V Decision Memo 2026-05-19]]` with a WAIT-new-capital / HOLD-existing
+  quality-position action read.
 - 2026-05-19: Ran full new-ticker decision-grade flow for `[[JNJ]]`: created
   `[[JNJ_latest_results_source]]`, normalized `[[JNJ_fundamentals]]`, added
   `[[JNJ]]`, and created `[[JNJ DCF Valuation 2026-05-19]]` plus
@@ -30,6 +35,7 @@ updated: 2026-05-19
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[V]] | V | Visa Inc. | NYSE | Q2 FY2026 | 5 |
 | [[JNJ]] | JNJ | Johnson & Johnson | NYSE | Q1 2026 | 5 |
 | [[GOOGL]] | GOOGL | Alphabet Inc. | Nasdaq | Q1 2026 | 6 |
 | [[MSFT]] | MSFT | Microsoft Corporation | Nasdaq | FY26 Q3 | 5 |
@@ -38,6 +44,7 @@ updated: 2026-05-19
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[V]] | Segment profit by growth engine is not disclosed; product-level economics for agentic commerce, stablecoin settlement, and Visa Direct are not disclosed; forward free cash flow guidance is not disclosed; post-exchange-offer fully diluted share count is not directly disclosed; FY2026 full-year actual results are unavailable. |
 | [[JNJ]] | Product-level revenue for ICOTYDE and IMAAVY is not disclosed; product-level profitability by brand is not disclosed; GAAP forward guidance is not provided; FY2026 full-year actual results are unavailable; sequential quarterly trend across recent quarters has not been normalized. |
 | [[GOOGL]] | Product-level AI revenue/margins and TPU economics are not disclosed; FY2026 full-year results are unavailable; 2027 capex amount is not quantified; Q1 2026 net income includes large equity-security gains; investor-specific tax basis and position size are not provided. |
 | [[MSFT]] | Current market price and valuation multiples require fresh market-data check; product-level FY26 Q3 revenue not normalized where only growth rates were disclosed; exact AI product revenue/margins are not disclosed; OpenAI-specific Azure economics and concentration are not disclosed with enough granularity; full annual FY2026 data is not yet available. |
@@ -46,6 +53,7 @@ updated: 2026-05-19
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[V_latest_results_source]] | V | latest-results | Fiscal Q2 2026 quarter and six months ended 2026-03-31 plus FY2025 annual baseline | [[V_fundamentals]] |
 | [[JNJ_latest_results_source]] | JNJ | latest-results | Q1 2026 fiscal first quarter ended 2026-03-29 plus FY2025 annual baseline | [[JNJ_fundamentals]] |
 | [[GOOGL_latest_results_source]] | GOOGL | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[GOOGL_fundamentals]] |
 | [[MSFT_latest_results_source]] | MSFT | latest-results | FY26 Q3 and nine months ended 2026-03-31 | [[MSFT_fundamentals]] |
@@ -56,6 +64,9 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[V]]`, refresh after Q3 FY2026 results with attention to FCF
+  conversion, post-exchange-offer diluted shares, incentives, cross-border
+  travel, VAS, Visa Direct, litigation/regulatory updates, and guidance changes.
 - For `[[JNJ]]`, refresh after Q2 2026 results with attention to FCF, net debt,
   STELARA erosion, MedTech tariff/separation pressure, product launch
   disclosure, and FY2026 guidance changes.

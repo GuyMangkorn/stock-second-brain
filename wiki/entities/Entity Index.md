@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[V]] | V | Visa Inc. | NYSE | Q2 FY2026 | 5 |
 | [[JNJ]] | JNJ | Johnson & Johnson | NYSE | Q1 2026 | 5 |
 | [[GOOGL]] | GOOGL | Alphabet Inc. | Nasdaq | Q1 2026 | 6 |
 | [[MSFT]] | MSFT | Microsoft Corporation | Nasdaq | FY26 Q3 | 5 |

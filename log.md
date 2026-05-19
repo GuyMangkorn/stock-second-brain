@@ -2,6 +2,24 @@
 
 ## 2026-05-19
 
+- `latest-results`: Created `raw/imports/V_latest_results_source.md` from Visa
+  Q2 FY2026 Form 10-Q, official Q2 FY2026 earnings release, transcript,
+  presentation, operational performance data, FY2025 Form 10-K, May 2026
+  exchange-offer 8-Ks, and fresh market-data checks; P1 was limited to source
+  note creation only.
+- `ingest`: Created `raw/financials/V_fundamentals.md`,
+  `raw/financials/V_fundamentals.json`, and `wiki/entities/V.md` from verified
+  Visa Q2 FY2026 / FY2025 source fields, with missing data recorded instead of
+  inferred.
+- `research`: Expanded `wiki/entities/V.md` with official-source business
+  model, revenue category mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/V DCF Valuation 2026-05-19.md`
+  after fresh-checking Visa price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/V Decision Memo 2026-05-19.md`
+  with a WAIT-new-capital / HOLD-existing-quality-position action read and
+  updated `index.md` plus `wiki/entities/Entity Index.md` for the new entity.
 - `maintenance`: Added a Git Completion Workflow to `AGENTS.md` so future
   prompt-driven durable file changes are staged selectively and committed with
   a concise message after completion.

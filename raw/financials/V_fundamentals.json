@@ -1,0 +1,151 @@
+{
+  "company": "Visa Inc.",
+  "ticker": "V",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Fiscal Q2 2026 quarter and six months ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": [
+    {
+      "label": "Q2 FY2026",
+      "period_end": "2026-03-31",
+      "net_revenue_usd_m": 11230,
+      "operating_expenses_usd_m": 3996,
+      "operating_income_usd_m": 7234,
+      "net_income_usd_m": 6021,
+      "diluted_eps_class_a_usd": 3.14,
+      "diluted_weighted_average_class_a_shares_m": 1916
+    },
+    {
+      "label": "6M FY2026",
+      "period_end": "2026-03-31",
+      "net_revenue_usd_m": 22131,
+      "operating_income_usd_m": 13971,
+      "net_income_usd_m": 11874,
+      "operating_cash_flow_usd_m": 9788,
+      "capex_spend_usd_m": 761,
+      "free_cash_flow_usd_m": 9027
+    },
+    {
+      "label": "FY2025",
+      "period_end": "2025-09-30",
+      "net_revenue_usd_m": 40000,
+      "operating_income_usd_m": 23994,
+      "net_income_usd_m": 20058,
+      "operating_cash_flow_usd_m": 23059,
+      "capex_spend_usd_m": 1482,
+      "free_cash_flow_usd_m": 21577,
+      "diluted_weighted_average_class_a_shares_m": 1966
+    }
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000079/v-20260331.htm",
+      "use": "Q2 FY2026 statements, balance sheet, cash flow, debt, and shares"
+    },
+    {
+      "source": "SEC Q2 FY2026 earnings release exhibit",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000077/q22026earningsrelease.htm",
+      "use": "Q2 financial highlights and operating drivers"
+    },
+    {
+      "source": "FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+      "use": "Annual baseline"
+    },
+    {
+      "source": "Q2 FY2026 earnings transcript",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2026/q2/CORRECTED-TRANSCRIPT_-Visa-Inc-V-US-Q2-2026-Earnings-Call-28-April-2026-5_00-PM-ET-4.pdf",
+      "use": "Management commentary and guidance"
+    },
+    {
+      "source": "FinanceCharts V price page",
+      "url": "https://www.financecharts.com/stocks/V/summary/price",
+      "use": "Fresh price and market cap check"
+    }
+  ],
+  "financial_series": {
+    "income_statement": [
+      {
+        "period": "Q2 FY2026",
+        "net_revenue_usd_m": 11230,
+        "operating_income_usd_m": 7234,
+        "net_income_usd_m": 6021
+      },
+      {
+        "period": "Q2 FY2025",
+        "net_revenue_usd_m": 9594,
+        "operating_income_usd_m": 5435,
+        "net_income_usd_m": 4577
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "6M FY2026",
+        "operating_cash_flow_usd_m": 9788,
+        "capex_spend_usd_m": 761,
+        "free_cash_flow_usd_m": 9027
+      },
+      {
+        "period": "6M FY2025",
+        "operating_cash_flow_usd_m": 10091,
+        "capex_spend_usd_m": 672,
+        "free_cash_flow_usd_m": 9419
+      },
+      {
+        "period": "FY2025",
+        "operating_cash_flow_usd_m": 23059,
+        "capex_spend_usd_m": 1482,
+        "free_cash_flow_usd_m": 21577
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2026-03-31",
+        "cash_and_equivalents_usd_m": 12404,
+        "investment_securities_usd_m": 1817,
+        "cash_plus_investments_usd_m": 14221,
+        "total_debt_usd_m": 23976,
+        "net_debt_usd_m": 9755,
+        "total_liabilities_usd_m": 59388,
+        "total_equity_usd_m": 35661
+      }
+    ]
+  },
+  "segment_series": [],
+  "ratios": [
+    {
+      "name": "Operating margin",
+      "period": "Q2 FY2026",
+      "value": 0.6442,
+      "formula": "7234 / 11230"
+    },
+    {
+      "name": "Net profit margin",
+      "period": "Q2 FY2026",
+      "value": 0.5362,
+      "formula": "6021 / 11230"
+    },
+    {
+      "name": "FY2025 FCF margin",
+      "period": "FY2025",
+      "value": 0.5394,
+      "formula": "21577 / 40000"
+    }
+  ],
+  "market_data": {
+    "price_date": "2026-05-18",
+    "checked_date_bangkok": "2026-05-19",
+    "share_price_usd": 332.64,
+    "market_cap_usd_b": 624.481,
+    "source": "FinanceCharts"
+  },
+  "missing_data": [
+    "Segment profit by growth engine is not disclosed.",
+    "Product-level economics for agentic commerce, stablecoin settlement, and Visa Direct are not disclosed.",
+    "Forward free cash flow guidance is not disclosed.",
+    "Post-exchange-offer fully diluted share count is not directly disclosed in checked sources.",
+    "FY2026 full-year actual results are unavailable."
+  ]
+}
