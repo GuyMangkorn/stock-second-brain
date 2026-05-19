@@ -42,9 +42,9 @@ The body is the operating manual for the agent:
 | `latest-results-web` | Need latest official source discovery | `raw/imports/TICKER_latest_results_source.md` |
 | `financial-facts-ingest` | Need to normalize filings, tables, transcripts, Markdown, or CSV | `raw/financials/TICKER_fundamentals.md`, `wiki/entities/TICKER.md` |
 | `official-source-stock-research` | Need deep dive, thesis refresh, earnings review, or comparison | entity updates and analysis memos |
-| `dcf-valuation` | Need fair value, intrinsic value, DCF, upside/downside, or valuation sensitivity | `wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md` |
-| `x-research` | Need X/Twitter sentiment, market chatter, or public reaction | `wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md` |
-| `source-integrity-audit` | Need vault linting, source checks, stale data checks, or chart/table validation | `wiki/analysis/Source Integrity Audit YYYY-MM-DD.md` |
+| `dcf-valuation` | Need fair value, intrinsic value, DCF, upside/downside, or valuation sensitivity | `wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md` |
+| `x-research` | Need X/Twitter sentiment, market chatter, or public reaction | `wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md` |
+| `source-integrity-audit` | Need vault linting, source checks, stale data checks, or chart/table validation | `wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md` |
 
 ## Why This Matters
 

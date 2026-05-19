@@ -52,13 +52,13 @@ source that is independently checked.
 Save durable sentiment work as:
 
 ```text
-wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
 ```
 
 For sector or theme sentiment:
 
 ```text
-wiki/analysis/THEME X Sentiment YYYY-MM-DD.md
+wiki/analysis/sentiment/THEME X Sentiment YYYY-MM-DD.md
 ```
 
 Append `log.md`.

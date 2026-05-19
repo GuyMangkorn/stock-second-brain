@@ -37,7 +37,7 @@ tags:
 | Currency |  |
 | Latest period |  |
 | Reporting scope |  |
-| Normalized file | [[TICKER_fundamentals]] |
+| Normalized file | `raw/financials/TICKER_fundamentals.md` |
 
 ## Source Map
 

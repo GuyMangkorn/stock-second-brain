@@ -138,10 +138,42 @@ Required sections:
 
 ## Analysis Memos
 
+Use category folders under `wiki/analysis/` so agents can find the right class
+of memo without scanning every analysis note:
+
+| Folder | Memo type |
+|---|---|
+| `wiki/analysis/decisions/` | decision memos |
+| `wiki/analysis/valuations/` | DCF and valuation work |
+| `wiki/analysis/earnings/` | earnings and transcript digests |
+| `wiki/analysis/catalysts/` | catalyst and news context |
+| `wiki/analysis/comparisons/` | peer/theme comparisons and screener triage |
+| `wiki/analysis/sentiment/` | X/Twitter and market chatter context |
+| `wiki/analysis/audits/` | source integrity audits and source gap registries |
+
+Decision memo:
+
+```text
+wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
+```
+
+Required sections:
+
+- Action Read
+- Current Price / Market Data Check when market data affects the action
+- Evidence From Vault
+- Valuation Read when relevant
+- Bull Case
+- Bear Case
+- Key Assumptions
+- What Would Change The Decision
+- Missing / Unverified Data
+- Source Map
+
 DCF valuation:
 
 ```text
-wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md
+wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md
 ```
 
 Required sections:
@@ -159,7 +191,7 @@ Required sections:
 X / market sentiment:
 
 ```text
-wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
 ```
 
 Required sections:
@@ -176,7 +208,7 @@ Required sections:
 Source integrity audit:
 
 ```text
-wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
+wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
 ```
 
 Required sections:

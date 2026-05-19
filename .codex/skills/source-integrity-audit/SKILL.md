@@ -48,7 +48,7 @@ Check:
 ## Output File
 
 ```text
-wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
+wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
 ```
 
 Append `log.md`.

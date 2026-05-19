@@ -11,7 +11,7 @@ source_files:
   - wiki/entities/GOOGL.md
   - raw/financials/GOOGL_fundamentals.md
   - raw/imports/GOOGL_latest_results_source.md
-  - wiki/analysis/GOOGL DCF Valuation 2026-05-18.md
+  - wiki/analysis/valuations/GOOGL DCF Valuation 2026-05-18.md
 tags:
   - analysis/decision-memo
   - ticker/GOOGL
@@ -127,7 +127,7 @@ The valuation says the market has already capitalized a large share of the AI/cl
 | `raw/imports/GOOGL_latest_results_source.md` | Local source note | P1 official-source discovery and extraction. |
 | `raw/financials/GOOGL_fundamentals.md` | Local normalized facts | P4 verified financial facts, charts, ratios. |
 | `wiki/entities/GOOGL.md` | Local entity page | P6 business model, thesis, risks, catalysts. |
-| `wiki/analysis/GOOGL DCF Valuation 2026-05-18.md` | Local valuation memo | P11 DCF and valuation sensitivity. |
+| `wiki/analysis/valuations/GOOGL DCF Valuation 2026-05-18.md` | Local valuation memo | P11 DCF and valuation sensitivity. |
 | SEC Q1 2026 Form 10-Q | https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm | Official quarterly facts. |
 | Alphabet Q1 2026 earnings release | https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf | Financial tables and FCF. |
 | Alphabet Q1 2026 transcript | https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf | Capex guidance and management commentary. |

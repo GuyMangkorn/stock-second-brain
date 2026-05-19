@@ -72,6 +72,13 @@ stock-second-brain/
   wiki/
     entities/
     analysis/
+      decisions/
+      valuations/
+      earnings/
+      catalysts/
+      comparisons/
+      sentiment/
+      audits/
     overview/
     reference/
   .codex/
@@ -147,7 +154,7 @@ stack first, then secondary context.
 Expected output:
 
 - entity page update in `wiki/entities/TICKER.md`
-- optional analysis memo in `wiki/analysis/`
+- optional analysis memo in the relevant `wiki/analysis/<category>/` folder
 - source-backed thesis, risks, catalysts, and watch items
 
 ### 4. DCF Valuation
@@ -159,7 +166,7 @@ explicit assumptions and sensitivity matrix.
 
 Expected output:
 
-- `wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md`
+- `wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md`
 - input table, FCF projection, valuation summary, sensitivity matrix
 - entity update only when the valuation changes thesis or watch items
 - `log.md` entry
@@ -173,7 +180,7 @@ facts.
 
 Expected output:
 
-- `wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md`
+- `wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md`
 - bullish/bearish/mixed themes
 - caveats about sample bias and rumor risk
 - entity follow-up update only when useful
@@ -190,8 +197,8 @@ Expected output for a new ticker:
 - `raw/imports/TICKER_latest_results_source.md`
 - `raw/financials/TICKER_fundamentals.md`
 - `wiki/entities/TICKER.md`
-- `wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md`
-- `wiki/analysis/TICKER Decision Memo YYYY-MM-DD.md`
+- `wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md`
+- `wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md`
 - `log.md` entries
 
 For an existing ticker, use the lightest sufficient refresh: P13 only when the
@@ -207,7 +214,7 @@ chart/table mismatches, orphan notes, and missing links.
 
 Expected output:
 
-- `wiki/analysis/Source Integrity Audit YYYY-MM-DD.md`
+- `wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md`
 - severity-ranked findings
 - fixes applied when requested
 - `log.md` entry
@@ -229,7 +236,7 @@ or filing access:
 |---|---|---|
 | Latest Results Source Discovery | It asks the agent to find official latest sources first. | `raw/imports/TICKER_latest_results_source.md` |
 | SEC Filing First | It starts from SEC/official filings before writing notes. | source note plus entity update |
-| Earnings Transcript Digest | It asks the agent to find or verify a transcript source. | `wiki/analysis/TICKER Earnings Transcript Digest YYYY-MM-DD.md` |
+| Earnings Transcript Digest | It asks the agent to find or verify a transcript source. | `wiki/analysis/earnings/TICKER Earnings Transcript Digest YYYY-MM-DD.md` |
 | News / Catalyst Update | It can search current news, but must label news as lower-priority context. | catalyst memo |
 | Company Deep Dive | It includes official-source research and can build the first entity page. | `wiki/entities/TICKER.md` |
 | Stock Decision Pipeline | It chains source discovery, ingest, thesis, DCF, and decision memo. | source note, fundamentals, entity page, valuation memo, decision memo |
@@ -352,7 +359,7 @@ P1 -> P4 -> P7 -> P11 -> P13 ถ้ามีงบใหม่ที่ยัง
 อ่าน earnings transcript ล่าสุดของ NVDA จากแหล่งทางการหรือ transcript ที่ trace กลับได้
 สรุป management commentary, demand signals, supply constraints, guidance tone,
 และ Q&A ที่กระทบ thesis
-บันทึกเป็น wiki/analysis/NVDA Earnings Transcript Digest YYYY-MM-DD.md
+บันทึกเป็น wiki/analysis/earnings/NVDA Earnings Transcript Digest YYYY-MM-DD.md
 และ update follow-up ใน wiki/entities/NVDA.md
 ```
 
@@ -372,7 +379,7 @@ missing data registry และ update wiki/entities/MSFT.md
 อัปเดต catalyst note ของ PANW จากข่าวล่าสุด
 ใช้ news เป็น source ชั้นที่ 4 เท่านั้น และแยกชัดว่าอะไรเป็น official filing,
 อะไรเป็น transcript, อะไรเป็น financial metric, และอะไรเป็น news context
-ถ้า insight durable ให้บันทึกใน wiki/analysis/PANW Catalyst Update YYYY-MM-DD.md
+ถ้า insight durable ให้บันทึกใน wiki/analysis/catalysts/PANW Catalyst Update YYYY-MM-DD.md
 ```
 
 ### P6 - Company Deep Dive
@@ -381,7 +388,8 @@ missing data registry และ update wiki/entities/MSFT.md
 ใช้ official-source-stock-research ทำ company deep dive ของ ASML
 ต้องมี business model, segments, revenue mix, moat, risks, catalysts,
 valuation watch items, source map, และ unanswered questions
-output หลักเป็น wiki/entities/ASML.md และถ้าจำเป็นให้สร้าง memo ใน wiki/analysis/
+output หลักเป็น wiki/entities/ASML.md และถ้าจำเป็นให้สร้าง memo ใน
+wiki/analysis/<category>/
 ```
 
 ### P7 - Thesis Refresh
@@ -400,7 +408,7 @@ refresh thesis ของ MSFT จากข้อมูลล่าสุดใ�
 เทียบ NVDA, AMD, AVGO จากข้อมูลใน stock-second-brain
 ใช้ entity notes และ normalized financials เป็นหลัก
 ถ้า data gap สำคัญ ให้ mark gap แทนการเดา
-สร้าง comparison memo ใน wiki/analysis/AI Semis Comparison YYYY-MM-DD.md
+สร้าง comparison memo ใน wiki/analysis/comparisons/AI Semis Comparison YYYY-MM-DD.md
 ```
 
 ### P9 - Query The Vault
@@ -418,7 +426,7 @@ refresh thesis ของ MSFT จากข้อมูลล่าสุดใ�
 หา uncited numbers, source conflicts, stale thesis, orphan notes,
 chart/table mismatch, entity ที่ไม่มี fundamentals file,
 และ analysis memo ที่ไม่ได้ link กลับ entity
-เขียนผลไว้ที่ wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
+เขียนผลไว้ที่ wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
 ```
 
 ### P11 - DCF Valuation
@@ -429,7 +437,7 @@ chart/table mismatch, entity ที่ไม่มี fundamentals file,
 fresh check ราคาปัจจุบัน, market cap, shares, cash, debt, FCF และ guidance
 ทำ base/bull/bear assumptions, 5-year FCF projection, sensitivity matrix,
 sanity checks และ caveats
-บันทึกเป็น wiki/analysis/MSFT DCF Valuation YYYY-MM-DD.md
+บันทึกเป็น wiki/analysis/valuations/MSFT DCF Valuation YYYY-MM-DD.md
 ```
 
 ### P12 - X / Market Sentiment
@@ -439,7 +447,7 @@ sanity checks และ caveats
 สรุป public sentiment เป็น bullish/bearish/mixed themes
 แยก expert posts, retail chatter, source-backed posts และ rumor/noise
 อย่าใช้ X เป็นแหล่งตัวเลขงบหรือ valuation
-บันทึกเป็น wiki/analysis/NVDA X Sentiment YYYY-MM-DD.md
+บันทึกเป็น wiki/analysis/sentiment/NVDA X Sentiment YYYY-MM-DD.md
 ```
 
 ### P13 - Decision Memo
@@ -448,7 +456,7 @@ sanity checks และ caveats
 สร้าง decision memo สำหรับ MSFT ว่าควร add, hold, wait หรือ trim
 ใช้ข้อมูลใน vault เป็นหลัก ถ้าต้องใช้ราคาหรือ valuation ปัจจุบันให้ค้นใหม่
 แยก facts, assumptions, calculations, และ judgment
-บันทึกใน wiki/analysis/MSFT Decision Memo YYYY-MM-DD.md
+บันทึกใน wiki/analysis/decisions/MSFT Decision Memo YYYY-MM-DD.md
 ```
 
 ### P14 - Batch Screener
@@ -464,7 +472,7 @@ on the shortlist.
 อ่าน index.md และ wiki/entities/ ก่อนเพื่อดูว่าตัวไหนมีข้อมูลใน vault แล้ว
 จัดอันดับจาก quality, valuation risk, catalyst density, downside risk,
 source coverage และ data gaps
-บันทึกเป็น wiki/analysis/Screener Triage YYYY-MM-DD.md
+บันทึกเป็น wiki/analysis/comparisons/Screener Triage YYYY-MM-DD.md
 แนะนำ top 1-3 ตัวที่จะรัน latest-results-web ต่อ
 ```
 
@@ -489,12 +497,13 @@ Existing data / update decision memo with current price:
 ใช้ skill stock-decision-pipeline สำหรับ MSFT
 vault มี entity/fundamentals และอาจมี DCF แล้ว
 อ่าน index.md, wiki/entities/MSFT.md, raw/financials/MSFT_fundamentals.md,
-และ valuation/decision memo ล่าสุดใน wiki/analysis/
+และ valuation/decision memo ล่าสุดใน `wiki/analysis/valuations/` และ
+`wiki/analysis/decisions/`
 fresh check ราคาปัจจุบันและ market data ที่จำเป็น
 ถ้า thesis และ valuation assumptions ยัง valid ให้รัน P13 เท่านั้น
 ถ้า valuation stale ให้รัน P11 -> P13
 ถ้า thesis stale ให้รัน P7 -> P11 -> P13
-บันทึกเป็น wiki/analysis/MSFT Decision Memo YYYY-MM-DD.md
+บันทึกเป็น wiki/analysis/decisions/MSFT Decision Memo YYYY-MM-DD.md
 ```
 
 ## Output Standards
@@ -533,6 +542,18 @@ Financial facts live in `raw/financials/` and should be repeatable:
 - calculate only ratios with complete inputs
 - label every calculation
 - keep source gaps visible
+
+Analysis memos live under category folders in `wiki/analysis/`:
+
+| Folder | Use |
+|---|---|
+| `wiki/analysis/decisions/` | add/hold/wait/trim decision memos |
+| `wiki/analysis/valuations/` | DCF, fair value, and valuation sensitivity work |
+| `wiki/analysis/earnings/` | earnings transcript digests and quarterly update notes |
+| `wiki/analysis/catalysts/` | news, event, regulation, product, and M&A catalyst notes |
+| `wiki/analysis/comparisons/` | peer comparisons, sector/theme memos, and screener triage |
+| `wiki/analysis/sentiment/` | X/Twitter and market chatter context |
+| `wiki/analysis/audits/` | source integrity audits and source gap registries |
 
 ## Stop Conditions
 

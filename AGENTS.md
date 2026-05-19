@@ -12,8 +12,8 @@ Maintain a compounding research vault where:
   source-backed raw inputs.
 - `raw/financials/` stores normalized company financial facts.
 - `wiki/entities/` stores one living company page per ticker.
-- `wiki/analysis/` stores comparisons, decision memos, source audits, screener
-  triage, and thesis updates.
+- `wiki/analysis/` stores category folders for decisions, valuations,
+  earnings, catalysts, comparisons, sentiment, and source audits.
 - `wiki/overview/` stores portfolio, sector, theme, and dashboard notes.
 - `index.md` stays useful as the main dashboard.
 - `log.md` records every meaningful ingest or maintenance event.
@@ -134,7 +134,7 @@ Required behavior:
 - Use `.codex/skills/dcf-valuation/SKILL.md`.
 - Verify current price and market data freshly.
 - Use source-backed FCF, cash, debt, shares, and guidance.
-- Save durable valuation work in `wiki/analysis/`.
+- Save durable valuation work in `wiki/analysis/valuations/`.
 - Update entity valuation watch items only when the valuation changes the thesis.
 
 ### decision-pipeline
@@ -153,7 +153,8 @@ Required behavior:
   -> P11 -> P13 when new results exist.
 - Freshly verify current price and market data before decision or valuation
   work.
-- Save durable decision memos in `wiki/analysis/` and append `log.md`.
+- Save durable decision memos in `wiki/analysis/decisions/` and append
+  `log.md`.
 
 ### sentiment
 
@@ -164,7 +165,7 @@ Required behavior:
 
 - Use `.codex/skills/x-research/SKILL.md`.
 - Treat sentiment as context, not financial fact.
-- Save durable sentiment work in `wiki/analysis/` when useful.
+- Save durable sentiment work in `wiki/analysis/sentiment/` when useful.
 
 ### query
 
@@ -222,12 +223,14 @@ wiki/entities/TICKER.md
 Analysis memos:
 
 ```text
-wiki/analysis/TICKER Memo Title YYYY-MM-DD.md
-wiki/analysis/Theme Memo Title YYYY-MM-DD.md
-wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md
-wiki/analysis/TICKER Decision Memo YYYY-MM-DD.md
-wiki/analysis/TICKER X Sentiment YYYY-MM-DD.md
-wiki/analysis/Source Integrity Audit YYYY-MM-DD.md
+wiki/analysis/earnings/TICKER Earnings Transcript Digest YYYY-MM-DD.md
+wiki/analysis/catalysts/TICKER Catalyst Update YYYY-MM-DD.md
+wiki/analysis/comparisons/Theme Memo Title YYYY-MM-DD.md
+wiki/analysis/comparisons/Screener Triage YYYY-MM-DD.md
+wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md
+wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
+wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
 ```
 
 ## Entity Page Standard

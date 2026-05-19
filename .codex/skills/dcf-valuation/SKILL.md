@@ -123,7 +123,7 @@ Terminal value = Year 5 FCF * (1 + terminal growth) / (WACC - terminal growth)
 Save durable valuation work as:
 
 ```text
-wiki/analysis/TICKER DCF Valuation YYYY-MM-DD.md
+wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md
 ```
 
 Update `wiki/entities/TICKER.md` only when the valuation changes the thesis,

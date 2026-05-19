@@ -53,8 +53,8 @@ Execution order:
    when useful.
 4. Use `dcf-valuation` only after core inputs are verified: current price,
    FCF or OCF minus capex, cash, debt, diluted shares, and assumptions.
-5. Create `wiki/analysis/TICKER Decision Memo YYYY-MM-DD.md` with an action
-   read: add, hold, wait, trim, or avoid/watchlist.
+5. Create `wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md` with an
+   action read: add, hold, wait, trim, or avoid/watchlist.
 6. Use `source-integrity-audit` before or after P13 when the decision depends
    on fragile source coverage, old notes, or many linked files.
 
@@ -69,7 +69,7 @@ Read first:
 - `wiki/entities/TICKER.md`
 - `raw/financials/TICKER_fundamentals.md`
 - latest relevant valuation, thesis, decision, catalyst, and audit memos in
-  `wiki/analysis/`
+  the relevant `wiki/analysis/<category>/` folder
 
 Then choose the lightest sufficient flow:
 
@@ -90,7 +90,7 @@ with valuation gaps clearly labeled.
 Save as:
 
 ```text
-wiki/analysis/TICKER Decision Memo YYYY-MM-DD.md
+wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
 ```
 
 Recommended sections:

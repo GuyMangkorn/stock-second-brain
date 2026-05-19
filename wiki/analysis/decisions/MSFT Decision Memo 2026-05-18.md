@@ -12,7 +12,7 @@ source_files:
   - raw/financials/MSFT_fundamentals.md
   - raw/imports/MSFT_latest_results_source.md
   - raw/imports/MSFT_company_deep_dive_2026-05-17.md
-  - wiki/analysis/MSFT DCF Valuation 2026-05-18.md
+  - wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md
 tags:
   - analysis/decision-memo
   - ticker/MSFT
@@ -37,7 +37,7 @@ This memo does not recommend a blanket trim unless MSFT is already oversized in 
 | Normalized financial facts | `raw/financials/MSFT_fundamentals.md` | FY2025 baseline, FY26 Q3 / 9M FY26 financial facts, cash flow, balance sheet. |
 | Latest results source note | `raw/imports/MSFT_latest_results_source.md` | Local source digest from FY26 Q3 official filings, IR tables, and transcript. |
 | Company deep dive source note | `raw/imports/MSFT_company_deep_dive_2026-05-17.md` | FY2025 annual baseline, segment mix, product/service mix, moat and AI/capex context. |
-| DCF valuation memo | `wiki/analysis/MSFT DCF Valuation 2026-05-18.md` | Source-backed valuation scenarios and reverse DCF. |
+| DCF valuation memo | `wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md` | Source-backed valuation scenarios and reverse DCF. |
 | Microsoft FY26 Q3 income statements | https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/income-statements | Official quarterly revenue, operating income, net income, EPS. |
 | Microsoft FY26 Q3 cash flows | https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/cash-flows | Official operating cash flow and capex inputs. |
 | Microsoft FY26 Q3 earnings transcript | https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3 | Management commentary on Azure, AI, RPO, capex, and guidance. |
@@ -77,7 +77,7 @@ This memo does not recommend a blanket trim unless MSFT is already oversized in 
 | 9M FY26 free cash flow | 47,348 million | Calculated: 127,494 - 80,146 |
 | 9M FY26 free cash flow change | 2.8% YoY | Calculated from 47,348 / 46,043 - 1 |
 | Calendar 2026 capex expectation | Roughly 190,000 million | Microsoft FY26 Q3 transcript; `raw/imports/MSFT_company_deep_dive_2026-05-17.md` |
-| FY26 Q4 capex guidance | More than 40,000 million | Microsoft FY26 Q3 transcript; `wiki/analysis/MSFT DCF Valuation 2026-05-18.md` |
+| FY26 Q4 capex guidance | More than 40,000 million | Microsoft FY26 Q3 transcript; `wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md` |
 
 ### Fresh Market And Valuation Facts
 

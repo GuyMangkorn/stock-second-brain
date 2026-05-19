@@ -9,9 +9,12 @@
   `AGENTS.md`, `wiki/reference/output-contract.md`, `README.MD`, and local
   stock workflow skills so future durable analysis uses Thai-first narrative
   while preserving English headings, structured fields, and finance terms.
-- `maintenance`: Created `wiki/analysis/Source Integrity Audit 2026-05-19.md`
+- `maintenance`: Created `wiki/analysis/audits/Source Integrity Audit 2026-05-19.md`
   to identify agent-queryability improvements for schema consistency, machine
   indexes, decision metadata, chart source-of-truth, and source-gap tracking.
+- `maintenance`: Reorganized `wiki/analysis/` into category folders for
+  decisions, valuations, earnings, catalysts, comparisons, sentiment, and
+  audits; moved existing analysis memos and updated path conventions.
 - `latest-results`: Created `raw/imports/JNJ_latest_results_source.md` from
   Johnson & Johnson Q1 2026 Form 10-Q, official Q1 2026 earnings release,
   presentation, transcript, FY2025 Annual Report, and fresh market-data checks;
@@ -23,9 +26,9 @@
 - `research`: Expanded `wiki/entities/JNJ.md` with official-source business
   model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
   follow-up, and missing/unverified data sections.
-- `valuation`: Created `wiki/analysis/JNJ DCF Valuation 2026-05-19.md` after
+- `valuation`: Created `wiki/analysis/valuations/JNJ DCF Valuation 2026-05-19.md` after
   fresh-checking JNJ price, market cap, shares, cash, debt, FCF, and guidance.
-- `analysis`: Created `wiki/analysis/JNJ Decision Memo 2026-05-19.md` with a
+- `analysis`: Created `wiki/analysis/decisions/JNJ Decision Memo 2026-05-19.md` with a
   WAIT / AVOID-new-capital action read and updated `index.md` plus
   `wiki/entities/Entity Index.md` for the new entity.
 
@@ -42,16 +45,16 @@
 - `research`: Expanded `wiki/entities/GOOGL.md` with official-source business
   model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
   follow-up, and missing/unverified data sections.
-- `valuation`: Created `wiki/analysis/GOOGL DCF Valuation 2026-05-18.md` after
+- `valuation`: Created `wiki/analysis/valuations/GOOGL DCF Valuation 2026-05-18.md` after
   fresh-checking GOOGL price, market cap, shares, cash, debt, FCF, and guidance.
-- `analysis`: Created `wiki/analysis/GOOGL Decision Memo 2026-05-18.md` with a
+- `analysis`: Created `wiki/analysis/decisions/GOOGL Decision Memo 2026-05-18.md` with a
   WAIT / AVOID-new-capital action read and updated `index.md` plus
   `wiki/entities/Entity Index.md` for the new entity.
 - `skills`: Added `stock-decision-pipeline` as the orchestrator for
   P1 -> P4 -> P6 -> P11 -> P13, clarified P1 as source discovery only, and
   documented existing-data decision memo refresh flows with fresh price checks.
-- `analysis`: Created `wiki/analysis/MSFT Decision Memo 2026-05-18.md` with a WAIT-for-new-capital / HOLD-existing-core action read, using vault facts plus a fresh StockAnalysis market-data check; updated `[[MSFT]]` with the dated decision memo link and current action read.
-- `valuation`: Created `wiki/analysis/MSFT DCF Valuation 2026-05-18.md` after fresh-checking MSFT price, market cap, shares, cash, debt, FCF, and guidance; updated `[[MSFT]]` with the dated valuation memo and watch item.
+- `analysis`: Created `wiki/analysis/decisions/MSFT Decision Memo 2026-05-18.md` with a WAIT-for-new-capital / HOLD-existing-core action read, using vault facts plus a fresh StockAnalysis market-data check; updated `[[MSFT]]` with the dated decision memo link and current action read.
+- `valuation`: Created `wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md` after fresh-checking MSFT price, market cap, shares, cash, debt, FCF, and guidance; updated `[[MSFT]]` with the dated valuation memo and watch item.
 
 ## 2026-05-17
 

@@ -1,0 +1,10 @@
+# Obsidian workspace noise
+.obsidian/workspace.json
+.obsidian/graph.json
+
+# Scratch notes created from Obsidian defaults
+/Untitled.*
+/20??-??-??.md
+
+# Accidental nested checkout/worktree inside this vault
+/stock-second-brain/

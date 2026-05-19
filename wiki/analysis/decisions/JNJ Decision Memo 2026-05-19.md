@@ -11,7 +11,7 @@ source_files:
   - wiki/entities/JNJ.md
   - raw/financials/JNJ_fundamentals.md
   - raw/imports/JNJ_latest_results_source.md
-  - wiki/analysis/JNJ DCF Valuation 2026-05-19.md
+  - wiki/analysis/valuations/JNJ DCF Valuation 2026-05-19.md
 tags:
   - analysis/decision-memo
   - ticker/JNJ
@@ -122,7 +122,7 @@ The valuation does not say JNJ is a weak business. It says the current price req
 | `raw/imports/JNJ_latest_results_source.md` | Local source note | P1 official-source discovery and extraction. |
 | `raw/financials/JNJ_fundamentals.md` | Local normalized facts | P4 verified financial facts, charts, ratios. |
 | `wiki/entities/JNJ.md` | Local entity page | P6 business model, thesis, risks, catalysts. |
-| `wiki/analysis/JNJ DCF Valuation 2026-05-19.md` | Local valuation memo | P11 DCF and valuation sensitivity. |
+| `wiki/analysis/valuations/JNJ DCF Valuation 2026-05-19.md` | Local valuation memo | P11 DCF and valuation sensitivity. |
 | SEC Q1 2026 Form 10-Q | https://www.sec.gov/Archives/edgar/data/200406/000020040626000087/jnj-20260329.htm | Official quarterly facts. |
 | FY2025 Annual Report | https://www.jnj.com/download/johnson-johnson-2025-annual-report | FY2025 annual baseline and FCF. |
 | J&J Q1 2026 transcript | https://s203.q4cdn.com/636242992/files/doc_financials/2026/q1/JNJ-USQ_Transcript_2026-04-14.pdf | Management commentary and FCF outlook. |

@@ -78,8 +78,9 @@ For a single company, update or create:
 - `wiki/entities/TICKER.md`
 - source note in `raw/imports/` when new sources were gathered
 - normalized facts in `raw/financials/` when financial tables were extracted
-- analysis memo in `wiki/analysis/` when the result is a decision, transcript
-  digest, source audit, comparison, or thesis refresh
+- analysis memo in the relevant `wiki/analysis/<category>/` folder when the
+  result is a decision, transcript digest, source audit, comparison, or thesis
+  refresh
 - `log.md`
 
 ## Entity Note Sections
