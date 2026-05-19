@@ -2,6 +2,23 @@
 
 ## 2026-05-19
 
+- `latest-results`: Created `raw/imports/MDT_latest_results_source.md` from
+  Medtronic Q3 FY26 Form 10-Q, official Q3 FY26 earnings release, FY2025
+  Form 10-K, FY2025 full-year release, IR page, and fresh market-data checks;
+  P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/MDT_fundamentals.md`,
+  `raw/financials/MDT_fundamentals.json`, and `wiki/entities/MDT.md` from
+  verified Medtronic Q3 FY26 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/MDT.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/MDT DCF Valuation 2026-05-19.md`
+  after fresh-checking MDT price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/MDT Decision Memo 2026-05-19.md`
+  with a WAIT / WATCHLIST-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
 - `latest-results`: Refreshed `raw/imports/JNJ_latest_results_source.md` market-data check for JNJ using FinanceCharts 2026-05-18 close, while keeping P1 as source-note-only.
 - `ingest`: Refreshed `raw/financials/JNJ_fundamentals.md`, `raw/financials/JNJ_fundamentals.json`, and `wiki/entities/JNJ.md` with the updated JNJ price, calculated SEC-share market cap, and provider market-cap cross-check.
 - `valuation`: Refreshed `wiki/analysis/valuations/JNJ DCF Valuation 2026-05-19.md` sanity checks and upside/downside against the updated JNJ price and market cap.

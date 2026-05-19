@@ -1,0 +1,194 @@
+{
+  "company": "Medtronic plc",
+  "ticker": "MDT",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "FY26 Q3 and nine months ended 2026-01-23 plus FY2025 annual baseline",
+  "periods": [
+    "FY25 Q3",
+    "FY26 Q3",
+    "9M FY25",
+    "9M FY26",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1613103/000162828026011107/mdt-20260123.htm",
+      "use": "Q3 FY26 / 9M FY26 financial statements, balance sheet, shares, cash, investments, debt, segment detail, and cash flow."
+    },
+    {
+      "source": "Medtronic Q3 FY26 earnings release",
+      "url": "https://news.medtronic.com/2026-02-17-Medtronic-reports-strong-third-quarter-fiscal-2026-results-with-highest-enterprise-revenue-growth-in-10-quarters",
+      "use": "Q3 highlights, segment revenue, FCF reconciliation, and FY26 guidance."
+    },
+    {
+      "source": "Medtronic FY2025 Q4/full-year release",
+      "url": "https://news.medtronic.com/2025-05-21-Medtronic-reports-strong-finish-to-its-fiscal-year-with-its-fourth-quarter-financial-results-announces-dividend-increase",
+      "use": "FY2025 annual revenue, EPS, cash flow, FCF, and segment commentary."
+    },
+    {
+      "source": "StockAnalysis MDT statistics page",
+      "url": "https://stockanalysis.com/stocks/mdt/statistics/",
+      "use": "Fresh market-data check, checked 2026-05-19."
+    }
+  ],
+  "financial_series": {
+    "income_statement_usd_m": {
+      "FY26 Q3": {
+        "net_sales": 9017,
+        "operating_profit": 1464,
+        "net_income": 1150,
+        "net_income_attributable_to_medtronic": 1143,
+        "diluted_eps": 0.89,
+        "diluted_weighted_average_shares_m": 1289.5
+      },
+      "FY25 Q3": {
+        "net_sales": 8292,
+        "operating_profit": 1646,
+        "net_income": 1303,
+        "net_income_attributable_to_medtronic": 1294,
+        "diluted_eps": 1.01,
+        "diluted_weighted_average_shares_m": 1286.2
+      },
+      "9M FY26": {
+        "net_sales": 26557,
+        "operating_profit": 4594,
+        "net_income": 3578,
+        "net_income_attributable_to_medtronic": 3557,
+        "diluted_eps": 2.76,
+        "diluted_weighted_average_shares_m": 1288.2
+      },
+      "9M FY25": {
+        "net_sales": 24610,
+        "operating_profit": 4519,
+        "net_income": 3630,
+        "net_income_attributable_to_medtronic": 3606,
+        "diluted_eps": 2.79,
+        "diluted_weighted_average_shares_m": 1290.6
+      }
+    },
+    "cash_flow_usd_m": {
+      "9M FY26": {
+        "operating_cash_flow": 4757,
+        "capex_spend": 1416,
+        "free_cash_flow": 3341,
+        "dividends_to_shareholders": 2731,
+        "repurchase_of_ordinary_shares": 600
+      },
+      "9M FY25": {
+        "operating_cash_flow": 4516,
+        "capex_spend": 1400,
+        "free_cash_flow": 3116,
+        "dividends_to_shareholders": 2692,
+        "repurchase_of_ordinary_shares": 2961
+      },
+      "FY2025": {
+        "operating_cash_flow": 7044,
+        "capex_spend": 1859,
+        "free_cash_flow": 5185
+      },
+      "FY2024": {
+        "operating_cash_flow": 6787,
+        "capex_spend": 1587,
+        "free_cash_flow": 5200
+      },
+      "FY2023": {
+        "operating_cash_flow": 6039,
+        "capex_spend": 1459,
+        "free_cash_flow": 4580
+      }
+    },
+    "balance_sheet_usd_m": {
+      "2026-01-23": {
+        "cash_and_cash_equivalents": 1147,
+        "investments": 7236,
+        "cash_plus_investments": 8383,
+        "total_current_assets": 24071,
+        "total_assets": 91485,
+        "current_debt_obligations": 191,
+        "long_term_debt": 27880,
+        "total_debt": 28071,
+        "net_debt_cash_plus_investments": 19688,
+        "total_current_liabilities": 9495,
+        "total_liabilities": 42289,
+        "total_equity": 49196,
+        "ordinary_shares_outstanding": 1283366516
+      }
+    },
+    "market_data": {
+      "checked_date": "2026-05-19",
+      "current_share_price_close_2026_05_18": 77.32,
+      "premarket_quote_2026_05_19_0801_edt": 77.36,
+      "market_cap_usd_b": 99.27,
+      "enterprise_value_usd_b": 118.81,
+      "shares_outstanding_b": 1.28
+    }
+  },
+  "segment_series": [
+    {
+      "segment": "Cardiovascular",
+      "q3_fy26_revenue_usd_m": 3457,
+      "q3_fy25_revenue_usd_m": 3037,
+      "nine_month_fy26_revenue_usd_m": 10179,
+      "nine_month_fy25_revenue_usd_m": 9145
+    },
+    {
+      "segment": "Neuroscience",
+      "q3_fy26_revenue_usd_m": 2558,
+      "q3_fy25_revenue_usd_m": 2458,
+      "nine_month_fy26_revenue_usd_m": 7536,
+      "nine_month_fy25_revenue_usd_m": 7226
+    },
+    {
+      "segment": "Medical Surgical",
+      "q3_fy26_revenue_usd_m": 2173,
+      "q3_fy25_revenue_usd_m": 2072,
+      "nine_month_fy26_revenue_usd_m": 6428,
+      "nine_month_fy25_revenue_usd_m": 6196
+    },
+    {
+      "segment": "Diabetes",
+      "q3_fy26_revenue_usd_m": 796,
+      "q3_fy25_revenue_usd_m": 694,
+      "nine_month_fy26_revenue_usd_m": 2274,
+      "nine_month_fy25_revenue_usd_m": 2027
+    }
+  ],
+  "ratios": [
+    {
+      "name": "operating_margin",
+      "period": "Q3 FY26",
+      "value": 0.1624,
+      "formula": "1464 / 9017"
+    },
+    {
+      "name": "fcf_margin",
+      "period": "9M FY26",
+      "value": 0.1258,
+      "formula": "3341 / 26557"
+    },
+    {
+      "name": "current_ratio",
+      "period": "2026-01-23",
+      "value": 2.54,
+      "formula": "24071 / 9495"
+    },
+    {
+      "name": "ttm_fcf_yield_on_market_cap",
+      "period": "2026-05-18 close",
+      "value": 0.0545,
+      "formula": "5.410 / 99.27"
+    }
+  ],
+  "missing_data": [
+    "FY26 full-year results not disclosed; Q4 FY26 results scheduled for 2026-06-03.",
+    "FY26 full-year FCF guidance not verified in extracted official sources.",
+    "Product/division-level profitability not disclosed.",
+    "Diabetes standalone post-separation financials not verified.",
+    "Investor-specific required return, position size, and tax basis not provided."
+  ]
+}

@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[MDT]] | MDT | Medtronic plc | NYSE | FY26 Q3 | 6 |
 | [[VZ]] | VZ | Verizon Communications Inc. | NYSE / Nasdaq | Q1 2026 | 5 |
 | [[V]] | V | Visa Inc. | NYSE | Q2 FY2026 | 5 |
 | [[JNJ]] | JNJ | Johnson & Johnson | NYSE | Q1 2026 | 5 |

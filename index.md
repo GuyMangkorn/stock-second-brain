@@ -7,6 +7,11 @@ updated: 2026-05-19
 
 ## Latest Work
 
+- 2026-05-19: Ran full new-ticker decision-grade flow for `[[MDT]]`: created
+  `[[MDT_latest_results_source]]`, normalized `[[MDT_fundamentals]]`, added
+  `[[MDT]]`, and created `[[MDT DCF Valuation 2026-05-19]]` plus
+  `[[MDT Decision Memo 2026-05-19]]` with a WAIT / WATCHLIST-new-capital action
+  read.
 - 2026-05-19: Ran full new-ticker decision-grade flow for `[[VZ]]`: created
   `[[VZ_latest_results_source]]`, normalized `[[VZ_fundamentals]]`, added
   `[[VZ]]`, and created `[[VZ DCF Valuation 2026-05-19]]` plus
@@ -40,6 +45,7 @@ updated: 2026-05-19
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[MDT]] | MDT | Medtronic plc | NYSE | FY26 Q3 | 6 |
 | [[VZ]] | VZ | Verizon Communications Inc. | NYSE / Nasdaq | Q1 2026 | 5 |
 | [[V]] | V | Visa Inc. | NYSE | Q2 FY2026 | 5 |
 | [[JNJ]] | JNJ | Johnson & Johnson | NYSE | Q1 2026 | 5 |
@@ -50,6 +56,7 @@ updated: 2026-05-19
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[MDT]] | FY26 full-year results are not disclosed because Q4 FY26 / FY2026 results are scheduled for 2026-06-03; FY26 full-year FCF guidance was not verified in extracted official Q3 sources; product/division-level profitability is not disclosed; Diabetes standalone post-separation financials are not verified; post-CathWorks / Anteris financial contribution is not fully disclosed; investor-specific position size, tax basis, and required return were not provided. |
 | [[VZ]] | Product-level profitability by wireless, FWA, fiber, IoT, security, and enterprise services is not disclosed; Frontier standalone post-close financial contribution in Q1 2026 is not fully isolated; exact normalized recurring FCF after Frontier integration and debt paydown is unverified; investor-specific tax basis, dividend income need, and position size were not provided; intrayear market price after regular market open on 2026-05-19 was not verified. |
 | [[V]] | Segment profit by growth engine is not disclosed; product-level economics for agentic commerce, stablecoin settlement, and Visa Direct are not disclosed; forward free cash flow guidance is not disclosed; post-exchange-offer fully diluted share count is not directly disclosed; FY2026 full-year actual results are unavailable. |
 | [[JNJ]] | Product-level revenue for ICOTYDE and IMAAVY is not disclosed; product-level profitability by brand is not disclosed; GAAP forward guidance is not provided; FY2026 full-year actual results are unavailable; sequential quarterly trend across recent quarters has not been normalized. |
@@ -60,6 +67,7 @@ updated: 2026-05-19
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[MDT_latest_results_source]] | MDT | latest-results | FY26 Q3 and nine months ended 2026-01-23 plus FY2025 annual baseline | [[MDT_fundamentals]] |
 | [[VZ_latest_results_source]] | VZ | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[VZ_fundamentals]] |
 | [[V_latest_results_source]] | V | latest-results | Fiscal Q2 2026 quarter and six months ended 2026-03-31 plus FY2025 annual baseline | [[V_fundamentals]] |
 | [[JNJ_latest_results_source]] | JNJ | latest-results | Q1 2026 fiscal first quarter ended 2026-03-29 plus FY2025 annual baseline | [[JNJ_fundamentals]] |
@@ -72,6 +80,10 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[MDT]]`, refresh after Q4 FY26 / FY2026 results on 2026-06-03 with
+  attention to FY2026 FCF, GAAP/non-GAAP conversion, Diabetes separation
+  economics, Cardiovascular/PFA growth, tariff impact, Hugo commercialization,
+  cash, debt, shares, and updated guidance.
 - For `[[VZ]]`, refresh after Q2 2026 results with attention to FCF,
   total debt, Frontier integration, churn, postpaid phone adds, broadband net
   adds, capex, dividend coverage, and guidance changes.
