@@ -2,6 +2,9 @@
 
 ## 2026-05-19
 
+- `maintenance`: Added a Git Completion Workflow to `AGENTS.md` so future
+  prompt-driven durable file changes are staged selectively and committed with
+  a concise message after completion.
 - `maintenance`: Added a project-wide hybrid Thai/English language standard to
   `AGENTS.md`, `wiki/reference/output-contract.md`, `README.MD`, and local
   stock workflow skills so future durable analysis uses Thai-first narrative

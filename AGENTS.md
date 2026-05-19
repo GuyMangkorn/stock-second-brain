@@ -68,6 +68,26 @@ Use a hybrid Thai/English research style for future durable outputs:
 - Do not translate durable field names so Obsidian search, links, and future
   automation remain stable.
 
+## Git Completion Workflow
+
+When an agent completes a user prompt that creates or modifies durable project
+files, finish with a git commit before the final chat answer.
+
+Required behavior:
+
+- Inspect `git status --short` before staging so pre-existing user changes are
+  visible.
+- Stage only files changed for the completed prompt. Do not stage unrelated
+  dirty files or user work that was already present.
+- Run the relevant lightweight verification for the change when practical.
+- Commit after the work is complete with a concise message that describes the
+  delivered outcome, for example `docs: add git completion workflow`.
+- If there are no file changes, or the prompt was read-only, do not create an
+  empty commit; state that no commit was needed.
+- If git commit fails because the repository is not configured or the working
+  tree contains conflicting user changes, report the blocker clearly and leave
+  the user's unrelated work untouched.
+
 ## Operating Modes
 
 ### latest-results
