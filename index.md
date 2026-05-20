@@ -7,6 +7,11 @@ updated: 2026-05-20
 
 ## Latest Work
 
+- 2026-05-20: Ran full new-ticker decision-grade flow for `[[ABT]]`: created
+  `[[ABT_latest_results_source]]`, normalized `[[ABT_fundamentals]]`, added
+  `[[ABT]]`, and created `[[ABT DCF Valuation 2026-05-20]]` plus
+  `[[ABT Decision Memo 2026-05-20]]` with a WAIT / WATCHLIST-new-capital action
+  read.
 - 2026-05-20: Ran full new-ticker decision-grade flow for `[[ATLX]]`: created
   `[[ATLX_latest_results_source]]`, normalized `[[ATLX_fundamentals]]`, added
   `[[ATLX]]`, and created `[[ATLX DCF Valuation 2026-05-20]]` plus
@@ -51,6 +56,7 @@ updated: 2026-05-20
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[ABT]] | ABT | Abbott Laboratories | NYSE | Q1 2026 | 7 |
 | [[ATLX]] | ATLX | Atlas Lithium Corporation | Nasdaq Capital Market | Q1 2026 | 8 |
 | [[MDT]] | MDT | Medtronic plc | NYSE | FY26 Q3 | 6 |
 | [[VZ]] | VZ | Verizon Communications Inc. | NYSE / Nasdaq | Q1 2026 | 5 |
@@ -63,6 +69,7 @@ updated: 2026-05-20
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[ABT]] | FY2026 full-year actual results are not disclosed; FY2026 full-year FCF guidance was not verified; forward GAAP EPS / net income guidance was not provided; official full Q&A transcript was not normalized; product-level profitability is not disclosed; Exact Sciences full run-rate contribution and integration cost detail is only partially disclosed; investor-specific position size, tax basis, and required return were not provided. |
 | [[ATLX]] | Commercial lithium revenue from Neves is not disclosed / not yet generated; revenue guidance is not verified; FCF guidance is not verified; normalized positive FCF base for DCF is not verified; final Neves financing package is not verified; fully diluted share count is not fully normalized; realized lithium concentrate unit economics are not verified; investor-specific position size, tax basis, and required return were not provided. |
 | [[MDT]] | FY26 full-year results are not disclosed because Q4 FY26 / FY2026 results are scheduled for 2026-06-03; FY26 full-year FCF guidance was not verified in extracted official Q3 sources; product/division-level profitability is not disclosed; Diabetes standalone post-separation financials are not verified; post-CathWorks / Anteris financial contribution is not fully disclosed; investor-specific position size, tax basis, and required return were not provided. |
 | [[VZ]] | Product-level profitability by wireless, FWA, fiber, IoT, security, and enterprise services is not disclosed; Frontier standalone post-close financial contribution in Q1 2026 is not fully isolated; exact normalized recurring FCF after Frontier integration and debt paydown is unverified; investor-specific tax basis, dividend income need, and position size were not provided; intrayear market price after regular market open on 2026-05-19 was not verified. |
@@ -75,6 +82,7 @@ updated: 2026-05-20
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[ABT_latest_results_source]] | ABT | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[ABT_fundamentals]] |
 | [[ATLX_latest_results_source]] | ATLX | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[ATLX_fundamentals]] |
 | [[MDT_latest_results_source]] | MDT | latest-results | FY26 Q3 and nine months ended 2026-01-23 plus FY2025 annual baseline | [[MDT_fundamentals]] |
 | [[VZ_latest_results_source]] | VZ | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[VZ_fundamentals]] |
@@ -89,6 +97,10 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[ABT]]`, refresh after Q2 2026 results with attention to FCF,
+  debt paydown after Exact Sciences, Cancer Diagnostics contribution,
+  Nutrition volume recovery, Medical Devices growth, cash, shares, and any
+  change to FY2026 sales / adjusted EPS guidance.
 - For `[[ATLX]]`, refresh after the next Form 10-Q or any Neves financing /
   commissioning 8-K; require commercial lithium revenue, realized unit
   economics, capex-to-completion, final funding structure, fully diluted shares,

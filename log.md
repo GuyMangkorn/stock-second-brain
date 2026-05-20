@@ -2,6 +2,24 @@
 
 ## 2026-05-20
 
+- `latest-results`: Created `raw/imports/ABT_latest_results_source.md` from
+  Abbott Q1 2026 Form 10-Q, official Q1 2026 earnings release, FY2025
+  Form 10-K, and fresh market-data checks; P1 was limited to source note
+  creation only.
+- `ingest`: Created `raw/financials/ABT_fundamentals.md`,
+  `raw/financials/ABT_fundamentals.json`, and `wiki/entities/ABT.md` from
+  verified Abbott Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/ABT.md` with official-source business
+  model, segment/category mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/ABT DCF Valuation 2026-05-20.md`
+  after fresh-checking ABT price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/ABT Decision Memo 2026-05-20.md`
+  with a WAIT / WATCHLIST-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/ATLX_latest_results_source.md` from
   Atlas Lithium Q1 2026 Form 10-Q, FY2025 Form 10-K, official IR/news releases,
   and fresh market-data checks; P1 was limited to source note creation only.

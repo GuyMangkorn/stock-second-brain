@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[ABT]] | ABT | Abbott Laboratories | NYSE | Q1 2026 | 7 |
 | [[ATLX]] | ATLX | Atlas Lithium Corporation | Nasdaq Capital Market | Q1 2026 | 8 |
 | [[MDT]] | MDT | Medtronic plc | NYSE | FY26 Q3 | 6 |
 | [[VZ]] | VZ | Verizon Communications Inc. | NYSE / Nasdaq | Q1 2026 | 5 |

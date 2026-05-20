@@ -1,0 +1,217 @@
+{
+  "company": "Abbott Laboratories",
+  "ticker": "ABT",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": [
+    "Q1 2025",
+    "Q1 2026",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm",
+      "use": "Q1 2026 and Q1 2025 financial statements, balance sheet, shares, cash, debt, cash flow, and MD&A."
+    },
+    {
+      "source": "Abbott Q1 2026 earnings release",
+      "url": "https://abbott.mediaroom.com/2026-04-16-Abbott-Reports-First-Quarter-2026-Results-Updates-Guidance-to-Reflect-Acquisition-of-Exact-Sciences?asPDF=1",
+      "use": "Q1 results commentary, segment/category revenue, comparable growth, Exact Sciences update, dividend, and FY2026 guidance."
+    },
+    {
+      "source": "Abbott FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm",
+      "use": "FY2025/FY2024/FY2023 annual cash-flow baseline and FY2025 context."
+    },
+    {
+      "source": "StockAnalysis ABT statistics page",
+      "url": "https://stockanalysis.com/stocks/abt/statistics/",
+      "use": "Fresh market-data check, checked 2026-05-20."
+    },
+    {
+      "source": "MarketBeat ABT quote page",
+      "url": "https://www.marketbeat.com/stocks/NYSE/ABT/",
+      "use": "Cross-check for latest quote, market cap, and shares, checked 2026-05-20."
+    }
+  ],
+  "financial_series": {
+    "income_statement_usd_m": {
+      "Q1 2026": {
+        "net_sales": 11164,
+        "operating_earnings": 1345,
+        "earnings_before_taxes": 1449,
+        "net_earnings": 1077,
+        "diluted_eps": 0.61,
+        "adjusted_diluted_eps": 1.15,
+        "diluted_weighted_average_shares_m": 1747.073
+      },
+      "Q1 2025": {
+        "net_sales": 10358,
+        "operating_earnings": 1693,
+        "earnings_before_taxes": 1778,
+        "net_earnings": 1325,
+        "diluted_eps": 0.76,
+        "adjusted_diluted_eps": 1.09,
+        "diluted_weighted_average_shares_m": 1747.22
+      }
+    },
+    "cash_flow_usd_m": {
+      "Q1 2026": {
+        "operating_cash_flow": 1315,
+        "capex_spend": 399,
+        "free_cash_flow": 916
+      },
+      "Q1 2025": {
+        "operating_cash_flow": 1417,
+        "capex_spend": 484,
+        "free_cash_flow": 933
+      },
+      "FY2025": {
+        "operating_cash_flow": 9566,
+        "capex_spend": 2171,
+        "free_cash_flow": 7395
+      },
+      "FY2024": {
+        "operating_cash_flow": 8558,
+        "capex_spend": 2207,
+        "free_cash_flow": 6351
+      },
+      "FY2023": {
+        "operating_cash_flow": 7261,
+        "capex_spend": 2202,
+        "free_cash_flow": 5059
+      },
+      "TTM": {
+        "free_cash_flow": 7378,
+        "formula": "FY2025 FCF 7395 - Q1 2025 FCF 933 + Q1 2026 FCF 916"
+      }
+    },
+    "balance_sheet_usd_m": {
+      "2026-03-31": {
+        "cash_and_cash_equivalents": 6803,
+        "short_term_investments": 492,
+        "cash_plus_short_term_investments": 7295,
+        "total_current_assets": 25508,
+        "total_assets": 110429,
+        "current_portion_of_long_term_debt": 4409,
+        "long_term_debt": 29638,
+        "total_debt": 34047,
+        "net_debt_cash_plus_short_term_investments": 26752,
+        "total_current_liabilities": 18377,
+        "total_liabilities": 57728,
+        "total_shareholders_investment": 52701,
+        "common_shares_outstanding": 1741812429
+      },
+      "2025-12-31": {
+        "cash_and_cash_equivalents": 8522,
+        "short_term_investments": 417,
+        "cash_plus_short_term_investments": 8939,
+        "total_current_assets": 25996,
+        "total_assets": 86713,
+        "current_portion_of_long_term_debt": 3033,
+        "long_term_debt": 9896,
+        "total_debt": 12929,
+        "net_debt_cash_plus_short_term_investments": 3990,
+        "total_current_liabilities": 16496,
+        "total_liabilities": 33942,
+        "total_shareholders_investment": 52771
+      }
+    },
+    "market_data": {
+      "checked_date": "2026-05-20",
+      "current_share_price_close_2026_05_19": 88.82,
+      "marketbeat_quote_close_2026_05_19": 88.81,
+      "market_cap_usd_b": 154.71,
+      "enterprise_value_usd_b": 181.55,
+      "shares_outstanding_b": 1.74
+    }
+  },
+  "segment_series": [
+    {
+      "segment": "Nutrition",
+      "q1_2026_revenue_usd_m": 2017,
+      "q1_2026_mix": 0.181,
+      "reported_growth": -0.06,
+      "comparable_growth": -0.077
+    },
+    {
+      "segment": "Diagnostics",
+      "q1_2026_revenue_usd_m": 2180,
+      "q1_2026_mix": 0.195,
+      "reported_growth": 0.061,
+      "comparable_growth": 0.018
+    },
+    {
+      "segment": "Established Pharmaceuticals",
+      "q1_2026_revenue_usd_m": 1426,
+      "q1_2026_mix": 0.128,
+      "reported_growth": 0.132,
+      "comparable_growth": 0.09
+    },
+    {
+      "segment": "Medical Devices",
+      "q1_2026_revenue_usd_m": 5539,
+      "q1_2026_mix": 0.496,
+      "reported_growth": 0.132,
+      "comparable_growth": 0.085
+    }
+  ],
+  "ratios": [
+    {
+      "name": "operating_margin",
+      "period": "Q1 2026",
+      "value": 0.1205,
+      "formula": "1345 / 11164"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "Q1 2026",
+      "value": 0.0965,
+      "formula": "1077 / 11164"
+    },
+    {
+      "name": "fcf_margin",
+      "period": "Q1 2026",
+      "value": 0.082,
+      "formula": "916 / 11164"
+    },
+    {
+      "name": "current_ratio",
+      "period": "2026-03-31",
+      "value": 1.39,
+      "formula": "25508 / 18377"
+    },
+    {
+      "name": "net_debt_to_ttm_fcf",
+      "period": "2026-03-31 / TTM",
+      "value": 3.63,
+      "formula": "26752 / 7378"
+    },
+    {
+      "name": "ttm_fcf_yield_on_market_cap",
+      "period": "2026-05-19 close",
+      "value": 0.0477,
+      "formula": "7.378 / 154.71"
+    },
+    {
+      "name": "market_ev_to_ttm_fcf",
+      "period": "2026-05-19 close",
+      "value": 24.61,
+      "formula": "181.55 / 7.378"
+    }
+  ],
+  "missing_data": [
+    "FY2026 full-year actual results not disclosed.",
+    "FY2026 full-year FCF guidance not verified in extracted official sources.",
+    "Forward GAAP EPS / net income guidance not provided.",
+    "Official full Q&A transcript not normalized.",
+    "Product-level profitability not disclosed.",
+    "Exact Sciences full run-rate contribution and integration cost detail only partially disclosed.",
+    "Investor-specific required return, position size, and tax basis not provided."
+  ]
+}
