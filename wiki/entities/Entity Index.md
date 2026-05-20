@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[COST]] | COST | Costco Wholesale Corporation | Nasdaq | Q2 FY2026 | 8 |
 | [[WMT]] | WMT | Walmart Inc. | Nasdaq Global Select Market | FY2026 | 8 |
 | [[EW]] | EW | Edwards Lifesciences Corporation | NYSE | Q1 2026 | 8 |
 | [[ABT]] | ABT | Abbott Laboratories | NYSE | Q1 2026 | 7 |

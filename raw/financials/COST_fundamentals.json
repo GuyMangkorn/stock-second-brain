@@ -1,0 +1,288 @@
+{
+  "company": "Costco Wholesale Corporation",
+  "ticker": "COST",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + year-to-date + annual",
+  "reporting_scope": "Q2 FY2026 and 24 weeks ended 2026-02-15 plus FY2025 annual baseline and April 2026 monthly sales update",
+  "periods": [
+    "Q2 FY2025",
+    "Q2 FY2026",
+    "H1 FY2025",
+    "H1 FY2026",
+    "FY2023",
+    "FY2024",
+    "FY2025",
+    "TTM"
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000029/cost-20260215.htm",
+      "use": "Q2/H1 FY2026 financial statements, shares, cash, debt, cash flow, capex, category sales, membership, and MD&A."
+    },
+    {
+      "source": "Costco Q2 FY2026 earnings release",
+      "url": "https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Second-Quarter-and-Year-to-Date-Operating-Results-for-Fiscal-2026-and-February-Sales-Results/default.aspx",
+      "use": "Official Q2/H1 FY2026 results and February sales."
+    },
+    {
+      "source": "Costco April 2026 sales release",
+      "url": "https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-April-Sales-Results/default.aspx",
+      "use": "Latest official monthly sales context."
+    },
+    {
+      "source": "Costco FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+      "use": "FY2025/FY2024/FY2023 annual cash-flow baseline, business model, and risk context."
+    },
+    {
+      "source": "Q2 FY2026 earnings call transcript",
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/529905-q2-2026/",
+      "use": "Management commentary and capex/opening outlook; checked 2026-05-20."
+    },
+    {
+      "source": "StockAnalysis COST transcripts / quote page",
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/",
+      "use": "Fresh quote check, checked 2026-05-20."
+    },
+    {
+      "source": "StockScan COST price history",
+      "url": "https://stockscan.io/stocks/COST/price-history",
+      "use": "Quote cross-check, checked 2026-05-20."
+    }
+  ],
+  "financial_series": {
+    "income_statement_usd_m": {
+      "Q2 FY2026": {
+        "net_sales": 68242,
+        "membership_fees": 1355,
+        "total_revenue": 69597,
+        "merchandise_costs": 60719,
+        "sga": 6272,
+        "operating_income": 2606,
+        "income_before_income_taxes": 2721,
+        "net_income": 2035,
+        "diluted_eps": 4.58,
+        "diluted_weighted_average_shares_m": 444.42
+      },
+      "Q2 FY2025": {
+        "net_sales": 62530,
+        "membership_fees": 1193,
+        "total_revenue": 63723,
+        "merchandise_costs": 55744,
+        "sga": 5663,
+        "operating_income": 2316,
+        "income_before_income_taxes": 2422,
+        "net_income": 1788,
+        "diluted_eps": 4.02,
+        "diluted_weighted_average_shares_m": 444.886
+      },
+      "H1 FY2026": {
+        "net_sales": 134220,
+        "membership_fees": 2684,
+        "total_revenue": 136904,
+        "merchandise_costs": 119229,
+        "sga": 12606,
+        "operating_income": 5069,
+        "income_before_income_taxes": 5304,
+        "net_income": 4036,
+        "diluted_eps": 9.08,
+        "diluted_weighted_average_shares_m": 444.468
+      },
+      "H1 FY2025": {
+        "net_sales": 123515,
+        "membership_fees": 2359,
+        "total_revenue": 125874,
+        "merchandise_costs": 109853,
+        "sga": 11509,
+        "operating_income": 4512,
+        "income_before_income_taxes": 4728,
+        "net_income": 3586,
+        "diluted_eps": 8.06,
+        "diluted_weighted_average_shares_m": 444.888
+      },
+      "TTM": {
+        "net_income": 8549,
+        "formula": "FY2025 net income 8099 - H1 FY2025 net income 3586 + H1 FY2026 net income 4036"
+      }
+    },
+    "merchandise_category_sales_usd_m": {
+      "H1 FY2026": {
+        "foods_and_sundries": 54092,
+        "non_foods": 36593,
+        "fresh_foods": 18903,
+        "warehouse_ancillary_and_other_businesses": 24632,
+        "total_net_sales": 134220
+      },
+      "H1 FY2025": {
+        "foods_and_sundries": 50174,
+        "non_foods": 33697,
+        "fresh_foods": 17054,
+        "warehouse_ancillary_and_other_businesses": 22590,
+        "total_net_sales": 123515
+      }
+    },
+    "cash_flow_usd_m": {
+      "H1 FY2026": {
+        "operating_cash_flow": 7684,
+        "capex_spend": 2815,
+        "free_cash_flow": 4869
+      },
+      "H1 FY2025": {
+        "operating_cash_flow": 6008,
+        "capex_spend": 2401,
+        "free_cash_flow": 3607
+      },
+      "FY2025": {
+        "operating_cash_flow": 13335,
+        "capex_spend": 5498,
+        "free_cash_flow": 7837
+      },
+      "FY2024": {
+        "operating_cash_flow": 11339,
+        "capex_spend": 4710,
+        "free_cash_flow": 6629
+      },
+      "FY2023": {
+        "operating_cash_flow": 11068,
+        "capex_spend": 4323,
+        "free_cash_flow": 6745
+      },
+      "TTM": {
+        "free_cash_flow": 9099,
+        "formula": "FY2025 FCF 7837 - H1 FY2025 FCF 3607 + H1 FY2026 FCF 4869"
+      }
+    },
+    "balance_sheet_usd_m": {
+      "2026-02-15": {
+        "cash_and_cash_equivalents": 17383,
+        "short_term_investments": 857,
+        "cash_plus_short_term_investments": 18240,
+        "total_current_assets": 43133,
+        "property_and_equipment_net": 33645,
+        "total_assets": 83639,
+        "long_term_debt_carrying_value_including_current_portion_before_discounts_costs": 5775,
+        "short_term_borrowings": 98,
+        "total_debt_used_for_valuation": 5873,
+        "net_cash_using_cash_plus_short_term_investments": 12367,
+        "total_equity": 32087,
+        "common_shares_outstanding_m": 443.692
+      },
+      "2025-08-31": {
+        "cash_and_cash_equivalents": 14161,
+        "short_term_investments": 1123,
+        "cash_plus_short_term_investments": 15284,
+        "total_current_assets": 38380,
+        "property_and_equipment_net": 31909,
+        "total_assets": 77099,
+        "long_term_debt_carrying_value_including_current_portion_before_discounts_costs": 5805,
+        "total_equity": 29164,
+        "common_shares_outstanding_m": 443.237
+      }
+    },
+    "market_data": {
+      "checked_date": "2026-05-20",
+      "latest_regular_close_2026_05_19": 1094.32,
+      "premarket_quote_2026_05_20_0802_edt": 1089.9,
+      "stockscan_cross_check_2026_05_20": 1085.14,
+      "implied_market_cap_usd_b": 485.54,
+      "implied_enterprise_value_usd_b": 473.17,
+      "sec_common_shares_outstanding_m": 443.692,
+      "h1_fy2026_diluted_weighted_average_shares_m": 444.468
+    },
+    "guidance": {
+      "fy2026_capex_usd_b": 6.5,
+      "fy2026_remaining_warehouse_openings_after_h1": 21,
+      "fy2026_net_new_openings_expected": 28,
+      "longer_term_new_openings_target_per_year": "30+",
+      "full_year_sales_eps_fcf_guidance": "ไม่พบข้อมูลที่ยืนยันได้"
+    }
+  },
+  "segment_series": [
+    {
+      "category": "Foods and Sundries",
+      "h1_fy2026_net_sales_usd_m": 54092,
+      "h1_fy2026_mix": 0.403,
+      "h1_yoy_growth": 0.0781
+    },
+    {
+      "category": "Non-Foods",
+      "h1_fy2026_net_sales_usd_m": 36593,
+      "h1_fy2026_mix": 0.273,
+      "h1_yoy_growth": 0.0859
+    },
+    {
+      "category": "Fresh Foods",
+      "h1_fy2026_net_sales_usd_m": 18903,
+      "h1_fy2026_mix": 0.141,
+      "h1_yoy_growth": 0.1084
+    },
+    {
+      "category": "Warehouse Ancillary and Other Businesses",
+      "h1_fy2026_net_sales_usd_m": 24632,
+      "h1_fy2026_mix": 0.184,
+      "h1_yoy_growth": 0.0904
+    }
+  ],
+  "ratios": [
+    {
+      "name": "operating_margin",
+      "period": "Q2 FY2026",
+      "value": 0.0382,
+      "formula": "2606 / 68242"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "Q2 FY2026",
+      "value": 0.0298,
+      "formula": "2035 / 68242"
+    },
+    {
+      "name": "gross_margin_on_net_sales",
+      "period": "Q2 FY2026",
+      "value": 0.1102,
+      "formula": "(68242 - 60719) / 68242"
+    },
+    {
+      "name": "h1_fcf_margin_on_net_sales",
+      "period": "H1 FY2026",
+      "value": 0.0363,
+      "formula": "4869 / 134220"
+    },
+    {
+      "name": "cash_plus_short_term_investments_to_total_debt",
+      "period": "2026-02-15",
+      "value": 3.11,
+      "formula": "18240 / 5873"
+    },
+    {
+      "name": "ttm_fcf_yield_on_market_cap",
+      "period": "2026-05-19 close",
+      "value": 0.0187,
+      "formula": "9.099 / 485.54"
+    },
+    {
+      "name": "market_ev_to_ttm_fcf",
+      "period": "2026-05-19 close",
+      "value": 52.0,
+      "formula": "473.17 / 9.099"
+    },
+    {
+      "name": "implied_pe",
+      "period": "2026-05-19 close / TTM",
+      "value": 56.91,
+      "formula": "1094.32 / 19.23"
+    }
+  ],
+  "missing_data": [
+    "FY2026 full-year actual results not disclosed.",
+    "FY2026 full-year sales / EPS guidance not verified in reviewed official sources.",
+    "FY2026 full-year FCF guidance not verified in reviewed official sources.",
+    "Company-hosted written transcript not verified; transcript source is StockAnalysis / Quartr.",
+    "Segment profitability by merchandise category or geography not disclosed.",
+    "Tariff refund / net tariff impact is partially disclosed but not quantified.",
+    "Market data after regular-market open on 2026-05-20 not verified.",
+    "Investor-specific tax basis, position size, portfolio constraints, and required return not provided."
+  ]
+}

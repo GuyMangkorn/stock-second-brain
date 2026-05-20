@@ -2,6 +2,24 @@
 
 ## 2026-05-20
 
+- `latest-results`: Created `raw/imports/COST_latest_results_source.md` from
+  Costco Q2 FY2026 Form 10-Q, official Q2 FY2026 earnings release, April 2026
+  sales release, FY2025 Form 10-K, Q2 FY2026 transcript context, and fresh
+  market-data checks; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/COST_fundamentals.md`,
+  `raw/financials/COST_fundamentals.json`, and `wiki/entities/COST.md` from
+  verified COST Q2/H1 FY2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/COST.md` with official-source business
+  model, merchandise category mix, thesis, risks, catalysts, valuation watch
+  items, reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/COST DCF Valuation 2026-05-20.md`
+  after fresh-checking COST price, market cap, shares, cash, debt, FCF, and
+  guidance/opening outlook.
+- `analysis`: Created `wiki/analysis/decisions/COST Decision Memo 2026-05-20.md`
+  with an AVOID-new-capital / WAIT action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/WMT_latest_results_source.md` from
   Walmart FY2026 Form 10-K, official Q4 FY26 earnings release, Q4 FY26
   earnings call transcript, IR latest-results/event pages, and fresh Stooq
