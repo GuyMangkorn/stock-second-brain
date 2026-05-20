@@ -1,12 +1,18 @@
 ---
 type: dashboard
-updated: 2026-05-19
+updated: 2026-05-20
 ---
 
 # Stock Second Brain Dashboard
 
 ## Latest Work
 
+- 2026-05-20: Ran full new-ticker decision-grade flow for `[[ATLX]]`: created
+  `[[ATLX_latest_results_source]]`, normalized `[[ATLX_fundamentals]]`, added
+  `[[ATLX]]`, and created `[[ATLX DCF Valuation 2026-05-20]]` plus
+  `[[ATLX Decision Memo 2026-05-20]]`. P11 stopped before fair value because
+  DCF inputs were not source-sufficient; P13 action read is AVOID new capital /
+  WATCHLIST only.
 - 2026-05-19: Ran full new-ticker decision-grade flow for `[[MDT]]`: created
   `[[MDT_latest_results_source]]`, normalized `[[MDT_fundamentals]]`, added
   `[[MDT]]`, and created `[[MDT DCF Valuation 2026-05-19]]` plus
@@ -45,6 +51,7 @@ updated: 2026-05-19
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[ATLX]] | ATLX | Atlas Lithium Corporation | Nasdaq Capital Market | Q1 2026 | 8 |
 | [[MDT]] | MDT | Medtronic plc | NYSE | FY26 Q3 | 6 |
 | [[VZ]] | VZ | Verizon Communications Inc. | NYSE / Nasdaq | Q1 2026 | 5 |
 | [[V]] | V | Visa Inc. | NYSE | Q2 FY2026 | 5 |
@@ -56,6 +63,7 @@ updated: 2026-05-19
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[ATLX]] | Commercial lithium revenue from Neves is not disclosed / not yet generated; revenue guidance is not verified; FCF guidance is not verified; normalized positive FCF base for DCF is not verified; final Neves financing package is not verified; fully diluted share count is not fully normalized; realized lithium concentrate unit economics are not verified; investor-specific position size, tax basis, and required return were not provided. |
 | [[MDT]] | FY26 full-year results are not disclosed because Q4 FY26 / FY2026 results are scheduled for 2026-06-03; FY26 full-year FCF guidance was not verified in extracted official Q3 sources; product/division-level profitability is not disclosed; Diabetes standalone post-separation financials are not verified; post-CathWorks / Anteris financial contribution is not fully disclosed; investor-specific position size, tax basis, and required return were not provided. |
 | [[VZ]] | Product-level profitability by wireless, FWA, fiber, IoT, security, and enterprise services is not disclosed; Frontier standalone post-close financial contribution in Q1 2026 is not fully isolated; exact normalized recurring FCF after Frontier integration and debt paydown is unverified; investor-specific tax basis, dividend income need, and position size were not provided; intrayear market price after regular market open on 2026-05-19 was not verified. |
 | [[V]] | Segment profit by growth engine is not disclosed; product-level economics for agentic commerce, stablecoin settlement, and Visa Direct are not disclosed; forward free cash flow guidance is not disclosed; post-exchange-offer fully diluted share count is not directly disclosed; FY2026 full-year actual results are unavailable. |
@@ -67,6 +75,7 @@ updated: 2026-05-19
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[ATLX_latest_results_source]] | ATLX | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[ATLX_fundamentals]] |
 | [[MDT_latest_results_source]] | MDT | latest-results | FY26 Q3 and nine months ended 2026-01-23 plus FY2025 annual baseline | [[MDT_fundamentals]] |
 | [[VZ_latest_results_source]] | VZ | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[VZ_fundamentals]] |
 | [[V_latest_results_source]] | V | latest-results | Fiscal Q2 2026 quarter and six months ended 2026-03-31 plus FY2025 annual baseline | [[V_fundamentals]] |
@@ -80,6 +89,10 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[ATLX]]`, refresh after the next Form 10-Q or any Neves financing /
+  commissioning 8-K; require commercial lithium revenue, realized unit
+  economics, capex-to-completion, final funding structure, fully diluted shares,
+  and source-backed revenue/FCF guidance before running a DCF fair value.
 - For `[[MDT]]`, refresh after Q4 FY26 / FY2026 results on 2026-06-03 with
   attention to FY2026 FCF, GAAP/non-GAAP conversion, Diabetes separation
   economics, Cardiovascular/PFA growth, tariff impact, Hugo commercialization,

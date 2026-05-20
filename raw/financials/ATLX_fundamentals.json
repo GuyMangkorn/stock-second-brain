@@ -1,0 +1,135 @@
+{
+  "company": "Atlas Lithium Corporation",
+  "ticker": "ATLX",
+  "market": "Nasdaq Capital Market",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": ["Q1 2026", "Q1 2025", "FY2025", "FY2024"],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1540684/000149315226021719/form10-q.htm",
+      "use": "Q1 2026 statements, balance sheet, shares, cash flow, liquidity, and segment facts"
+    },
+    {
+      "source": "SEC Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1540684/000149315226008854/form10-k.htm",
+      "use": "FY2025 annual baseline and exploration-stage risk"
+    },
+    {
+      "source": "Atlas Lithium official news releases",
+      "url": "https://www.atlas-lithium.com/news/",
+      "use": "Forward-looking Neves project execution and strategic financing context"
+    },
+    {
+      "source": "StockAnalysis ATLX market-cap page",
+      "url": "https://stockanalysis.com/stocks/atlx/market-cap/",
+      "use": "Fresh market-data check"
+    }
+  ],
+  "financial_series": {
+    "income_statement": [
+      {
+        "period": "Q1 2026",
+        "net_revenue": 74386,
+        "gross_profit": 72043,
+        "operating_loss": -16792440,
+        "net_loss": -16540056,
+        "net_loss_attributable_to_atlas_lithium_stockholders": -13557408,
+        "basic_and_diluted_loss_per_share": -0.50,
+        "weighted_average_shares": 27237495
+      },
+      {
+        "period": "Q1 2025",
+        "net_revenue": 25175,
+        "gross_profit": -62675,
+        "operating_loss": -9823557,
+        "net_loss": -10213587,
+        "net_loss_attributable_to_atlas_lithium_stockholders": -9016957,
+        "basic_and_diluted_loss_per_share": -0.55,
+        "weighted_average_shares": 16501815
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "Q1 2026",
+        "operating_cash_flow": -10630115,
+        "capex_spend": 1212480,
+        "capitalized_exploration_costs": 124251,
+        "free_cash_flow_before_capitalized_exploration": -11842595,
+        "cash_burn_including_capex_and_capitalized_exploration": -11966846,
+        "net_cash_provided_by_financing_activities": 10385358
+      },
+      {
+        "period": "FY2025",
+        "operating_cash_flow": -22166692,
+        "capex_spend": 6091572,
+        "capitalized_exploration_costs": 2867818,
+        "free_cash_flow_before_capitalized_exploration": -28258264,
+        "cash_burn_including_capex_and_capitalized_exploration": -31126082,
+        "net_cash_provided_by_financing_activities": 51523029
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2026-03-31",
+        "cash_and_cash_equivalents": 34358623,
+        "total_current_assets": 36365651,
+        "total_assets": 87446641,
+        "convertible_debt": 10179592,
+        "deferred_consideration_from_royalties_sold": 20000000,
+        "total_liabilities": 34716201,
+        "total_stockholders_equity": 52730440,
+        "common_shares_issued_and_outstanding": 27769914
+      }
+    ],
+    "market_data": {
+      "check_date": "2026-05-20",
+      "price": 4.275,
+      "price_timestamp": "2026-05-19 2:55 PM EDT",
+      "market_cap": 126070000,
+      "enterprise_value": 102910000,
+      "sec_cover_page_shares_as_of_2026_05_04": 29490887,
+      "implied_market_cap_using_sec_shares": 126073541.925
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segment": "Mining",
+      "revenue_source": "Iron ore project",
+      "customer_concentration": "one customer accounted for 100% of revenue",
+      "segment_assets": 87446641
+    }
+  ],
+  "ratios": [
+    {
+      "ratio": "current_ratio",
+      "date": "2026-03-31",
+      "value": 2.52,
+      "formula": "36365651 / 14416207"
+    },
+    {
+      "ratio": "liabilities_to_equity",
+      "date": "2026-03-31",
+      "value": 0.66,
+      "formula": "34716201 / 52730440"
+    },
+    {
+      "ratio": "q1_fcf_burn_to_cash",
+      "date": "2026-03-31",
+      "value": 0.3447,
+      "formula": "11842595 / 34358623"
+    }
+  ],
+  "missing_data": [
+    "Commercial lithium revenue from Neves not disclosed / not yet generated",
+    "Revenue guidance not verified",
+    "Free cash flow guidance not verified",
+    "Normalized positive FCF base for DCF not verified",
+    "Final Neves financing package not verified",
+    "Fully diluted share count not fully normalized",
+    "Segment economics for future lithium concentrate production not verified"
+  ]
+}
