@@ -7,6 +7,12 @@ updated: 2026-05-20
 
 ## Latest Work
 
+- 2026-05-20: Ran full new-ticker decision-grade flow for `[[WMT]]`: created
+  `[[WMT_latest_results_source]]`, normalized `[[WMT_fundamentals]]`, added
+  `[[WMT]]`, and created `[[WMT DCF Valuation 2026-05-20]]` plus
+  `[[WMT Decision Memo 2026-05-20]]`. P1 was source-note-only; P13 action read
+  is AVOID-new-capital / WAIT because current valuation is far above the
+  source-backed DCF range and FY2027 Q1 results are scheduled for 2026-05-21.
 - 2026-05-20: Ran full new-ticker decision-grade flow for `[[EW]]`: created
   `[[EW_latest_results_source]]`, normalized `[[EW_fundamentals]]`, added
   `[[EW]]`, and created `[[EW DCF Valuation 2026-05-20]]` plus
@@ -61,6 +67,7 @@ updated: 2026-05-20
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[WMT]] | WMT | Walmart Inc. | Nasdaq Global Select Market | FY2026 | 8 |
 | [[EW]] | EW | Edwards Lifesciences Corporation | NYSE | Q1 2026 | 8 |
 | [[ABT]] | ABT | Abbott Laboratories | NYSE | Q1 2026 | 7 |
 | [[ATLX]] | ATLX | Atlas Lithium Corporation | Nasdaq Capital Market | Q1 2026 | 8 |
@@ -75,6 +82,7 @@ updated: 2026-05-20
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[WMT]] | FY2027 Q1 actual results are not yet available as of the 2026-05-20 source check; FY2027 full-year FCF guidance was not verified; forward GAAP EPS / net income guidance was not provided; product-level profitability by eCommerce, ads, marketplace, membership, VIZIO, and data services is not disclosed; segment-level FCF is not disclosed; full normalized quarterly time series was not normalized; exact end-of-day U.S. market data after the 2026-05-20 close was only partially verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[EW]] | GAAP reconciliation for forward non-GAAP guidance is not provided; FY2026 full-year actual results are not yet available; product-level profitability by TAVR, TMTT, and Surgical is not disclosed; forward FCF guidance is not disclosed; normalized recurring FCF after Q1 working-capital movements, divestiture effects, legal accrual timing, transition service arrangements, and ASR timing is not fully isolated; exact share count after 2026-04-30 is not disclosed; market quote is provider-sourced and should be refreshed before future action calls; investor-specific position size, tax basis, required return, and portfolio constraints were not provided. |
 | [[ABT]] | FY2026 full-year actual results are not disclosed; FY2026 full-year FCF guidance was not verified; forward GAAP EPS / net income guidance was not provided; official full Q&A transcript was not normalized; product-level profitability is not disclosed; Exact Sciences full run-rate contribution and integration cost detail is only partially disclosed; investor-specific position size, tax basis, and required return were not provided. |
 | [[ATLX]] | Commercial lithium revenue from Neves is not disclosed / not yet generated; revenue guidance is not verified; FCF guidance is not verified; normalized positive FCF base for DCF is not verified; final Neves financing package is not verified; fully diluted share count is not fully normalized; realized lithium concentrate unit economics are not verified; investor-specific position size, tax basis, and required return were not provided. |
@@ -89,6 +97,7 @@ updated: 2026-05-20
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[WMT_latest_results_source]] | WMT | latest-results | FY2026 fiscal year ended 2026-01-31 plus FY2027 guidance; FY2027 Q1 event scheduled 2026-05-21 | [[WMT_fundamentals]] |
 | [[EW_latest_results_source]] | EW | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[EW_fundamentals]] |
 | [[ABT_latest_results_source]] | ABT | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[ABT_fundamentals]] |
 | [[ATLX_latest_results_source]] | ATLX | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[ATLX_fundamentals]] |
@@ -105,6 +114,10 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[WMT]]`, refresh immediately after FY2027 Q1 results on 2026-05-21
+  with actual sales, operating income, EPS, cash flow if available, cash, debt,
+  shares, guidance, eCommerce/ads/membership commentary, and any FCF or capex
+  update before changing the AVOID-new-capital / WAIT action read.
 - For `[[EW]]`, refresh after Q2 2026 results with attention to FCF
   conversion, TAVR growth, TMTT ramp, Surgical growth, cash, debt, shares,
   R&D as % of sales, and any change to FY2026 sales / adjusted EPS guidance.

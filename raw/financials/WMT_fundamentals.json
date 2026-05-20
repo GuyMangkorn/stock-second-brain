@@ -1,0 +1,148 @@
+{
+  "company": "Walmart Inc.",
+  "ticker": "WMT",
+  "market": "Nasdaq Global Select Market",
+  "currency": "USD",
+  "period_type": "annual",
+  "reporting_scope": "FY2026 fiscal year ended 2026-01-31 plus FY2027 guidance",
+  "latest_period": "FY2026",
+  "latest_period_end": "2026-01-31",
+  "provenance": [
+    {
+      "source": "FY2026 Form 10-K",
+      "url": "https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-26-000055/0000104169-26-000055.pdf"
+    },
+    {
+      "source": "Q4 FY26 earnings release",
+      "url": "https://corporate.walmart.com/content/dam/corporate/documents/newsroom/2026/02/19/walmart-releases-q4-fy26-earnings/q4-fy26-earnings-release.pdf"
+    },
+    {
+      "source": "Q4 FY26 earnings call transcript",
+      "url": "https://corporate.walmart.com/content/dam/corporate/documents/newsroom/2026/02/19/walmart-releases-q4-fy26-earnings/q4-fy26-earnings-call-transcript.pdf"
+    },
+    {
+      "source": "Stooq quote CSV",
+      "url": "https://stooq.com/q/l/?s=wmt.us&f=sd2t2ohlcv&h&e=csv"
+    }
+  ],
+  "periods": ["FY2024", "FY2025", "FY2026"],
+  "financial_series": {
+    "total_revenues_usd_m": {
+      "FY2024": 648125,
+      "FY2025": 680985,
+      "FY2026": 713163
+    },
+    "net_sales_usd_m": {
+      "FY2024": 642637,
+      "FY2025": 674538,
+      "FY2026": 706413
+    },
+    "operating_income_usd_m": {
+      "FY2024": 27012,
+      "FY2025": 29348,
+      "FY2026": 29825
+    },
+    "consolidated_net_income_usd_m": {
+      "FY2024": 16270,
+      "FY2025": 20157,
+      "FY2026": 22270
+    },
+    "operating_cash_flow_usd_m": {
+      "FY2024": 35726,
+      "FY2025": 36443,
+      "FY2026": 41565
+    },
+    "capex_spend_usd_m": {
+      "FY2024": 20606,
+      "FY2025": 23783,
+      "FY2026": 26642
+    },
+    "free_cash_flow_usd_m": {
+      "FY2024": 15120,
+      "FY2025": 12660,
+      "FY2026": 14923
+    }
+  },
+  "segment_series": [
+    {
+      "period": "FY2026",
+      "segment": "Walmart U.S.",
+      "net_sales_usd_m": 482975,
+      "total_revenues_usd_m": 485599,
+      "operating_income_usd_m": 25158
+    },
+    {
+      "period": "FY2026",
+      "segment": "Walmart International",
+      "net_sales_usd_m": 130423,
+      "total_revenues_usd_m": 131988,
+      "operating_income_usd_m": 5103
+    },
+    {
+      "period": "FY2026",
+      "segment": "Sam's Club U.S.",
+      "net_sales_usd_m": 93015,
+      "total_revenues_usd_m": 95540,
+      "operating_income_usd_m": 2442
+    }
+  ],
+  "balance_sheet": {
+    "as_of": "2026-01-31",
+    "cash_and_cash_equivalents_usd_m": 10727,
+    "total_assets_usd_m": 284668,
+    "short_term_borrowings_usd_m": 6596,
+    "long_term_debt_due_within_one_year_usd_m": 3542,
+    "long_term_debt_usd_m": 34624,
+    "finance_lease_obligations_due_within_one_year_usd_m": 856,
+    "long_term_finance_lease_obligations_usd_m": 5905,
+    "total_debt_and_finance_lease_obligations_usd_m": 51523,
+    "net_debt_and_finance_lease_obligations_usd_m": 40796,
+    "walmart_shareholders_equity_usd_m": 99617
+  },
+  "market_data": {
+    "checked_date": "2026-05-20",
+    "source": "Stooq quote CSV",
+    "quote_timestamp": "2026-05-20 17:29:38",
+    "price_usd": 132.57,
+    "shares_outstanding_b": 7.972402501,
+    "implied_market_cap_usd_b": 1056.901,
+    "fy2026_diluted_weighted_average_shares_b": 8.022
+  },
+  "guidance": {
+    "fy2027_net_sales_constant_currency_growth": "3.5% to 4.5%",
+    "fy2027_adjusted_operating_income_constant_currency_growth": "6.0% to 8.0%",
+    "fy2027_adjusted_eps_usd": "2.75 to 2.85",
+    "fy2027_capex": "Approximately 3.5% of net sales",
+    "fy2027_fcf_guidance": "ไม่พบข้อมูลที่ยืนยันได้"
+  },
+  "ratios": [
+    {
+      "name": "FY2026 revenue growth",
+      "value": 0.0472
+    },
+    {
+      "name": "FY2026 operating margin on total revenues",
+      "value": 0.0418
+    },
+    {
+      "name": "FY2026 FCF margin on total revenues",
+      "value": 0.0209
+    },
+    {
+      "name": "FY2026 FCF yield on implied market cap",
+      "value": 0.0141
+    },
+    {
+      "name": "Forward adjusted P/E on FY2027 EPS guidance midpoint",
+      "value": 47.35
+    }
+  ],
+  "missing_data": [
+    "FY2027 Q1 actual results not yet available as of the 2026-05-20 source check.",
+    "FY2027 full-year FCF guidance not verified.",
+    "Forward GAAP EPS / net income guidance not provided.",
+    "Product-level profitability by higher-margin growth businesses not disclosed.",
+    "Segment-level FCF not disclosed.",
+    "Investor-specific cost basis, position size, tax status, and required return not provided."
+  ]
+}

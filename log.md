@@ -2,6 +2,24 @@
 
 ## 2026-05-20
 
+- `latest-results`: Created `raw/imports/WMT_latest_results_source.md` from
+  Walmart FY2026 Form 10-K, official Q4 FY26 earnings release, Q4 FY26
+  earnings call transcript, IR latest-results/event pages, and fresh Stooq
+  market-data check; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/WMT_fundamentals.md`,
+  `raw/financials/WMT_fundamentals.json`, and `wiki/entities/WMT.md` from
+  verified WMT FY2026 / FY2027 guidance source fields, with FY2027 Q1 actuals
+  and FCF guidance recorded as missing instead of inferred.
+- `research`: Expanded `wiki/entities/WMT.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/WMT DCF Valuation 2026-05-20.md`
+  after fresh-checking WMT price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/WMT Decision Memo 2026-05-20.md`
+  with an AVOID-new-capital / WAIT action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/EW_latest_results_source.md` from
   Edwards Lifesciences Q1 2026 Form 10-Q, official Q1 2026 earnings release,
   IR-hosted transcript, FY2025 Form 10-K, and fresh market-data checks; P1 was
