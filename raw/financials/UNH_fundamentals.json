@@ -1,0 +1,131 @@
+{
+  "company": "UnitedHealth Group Incorporated",
+  "ticker": "UNH",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "mixed",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": ["Q1 2026", "Q1 2025", "FY2025", "FY2024", "FY2023"],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q, Q1 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000127/unh-20260331.htm"
+    },
+    {
+      "source": "UnitedHealth Group Q1 2026 earnings release",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/unh-reports-first-quarter-2026-results.pdf"
+    },
+    {
+      "source": "UnitedHealth Group Q1 2026 prepared remarks",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/unh-q1-2026-remarks.pdf"
+    },
+    {
+      "source": "SEC Form 10-K, FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm"
+    },
+    {
+      "source": "StockAnalysis UNH statistics",
+      "url": "https://stockanalysis.com/stocks/unh/statistics/"
+    },
+    {
+      "source": "MarketBeat UNH quote",
+      "url": "https://www.marketbeat.com/stocks/NYSE/UNH/"
+    }
+  ],
+  "financial_series": {
+    "income_statement_usd_m": [
+      {
+        "period": "Q1 2026",
+        "total_revenues": 111721,
+        "earnings_from_operations": 8990,
+        "net_earnings_attributable_to_common": 6280,
+        "diluted_eps": 6.9,
+        "diluted_weighted_average_shares_m": 910
+      },
+      {
+        "period": "Q1 2025",
+        "total_revenues": 109575,
+        "earnings_from_operations": 9119,
+        "net_earnings_attributable_to_common": 6292,
+        "diluted_eps": 6.85,
+        "diluted_weighted_average_shares_m": 918
+      }
+    ],
+    "cash_flow_usd_m": [
+      {"period": "Q1 2026", "operating_cash_flow": 8912, "capex_spend": 763, "free_cash_flow": 8149},
+      {"period": "Q1 2025", "operating_cash_flow": 5456, "capex_spend": 898, "free_cash_flow": 4558},
+      {"period": "FY2025", "operating_cash_flow": 19697, "capex_spend": 3622, "free_cash_flow": 16075},
+      {"period": "FY2024", "operating_cash_flow": 24204, "capex_spend": 3499, "free_cash_flow": 20705},
+      {"period": "FY2023", "operating_cash_flow": 29068, "capex_spend": 3386, "free_cash_flow": 25682}
+    ],
+    "balance_sheet_usd_m": [
+      {
+        "period": "2026-03-31",
+        "cash_and_equivalents": 28001,
+        "short_term_investments": 3228,
+        "cash_plus_short_term_investments": 31229,
+        "long_term_investments": 56788,
+        "total_assets": 312644,
+        "short_term_borrowings_and_current_maturities": 6477,
+        "long_term_debt": 71440,
+        "total_debt": 77917,
+        "total_equity": 103895
+      },
+      {
+        "period": "2025-12-31",
+        "cash_and_equivalents": 24365,
+        "short_term_investments": 3756,
+        "cash_plus_short_term_investments": 28121,
+        "long_term_investments": 54251,
+        "total_assets": 309581,
+        "short_term_borrowings_and_current_maturities": 6069,
+        "long_term_debt": 72320,
+        "total_debt": 78389,
+        "total_equity": 100090
+      }
+    ],
+    "market_data": {
+      "checked_date": "2026-05-20",
+      "stockanalysis_price": 385.99,
+      "stockanalysis_time": "2026-05-20 11:50 AM EDT",
+      "stockanalysis_market_cap_usd_b": 350.53,
+      "stockanalysis_enterprise_value_usd_b": 401.37,
+      "stockanalysis_shares_outstanding_m": 908.14,
+      "marketbeat_price": 383.69,
+      "marketbeat_time": "2026-05-20 12:12 PM Eastern",
+      "marketbeat_market_cap_usd_b": 348.45
+    }
+  },
+  "segment_series": [
+    {"period": "Q1 2026", "segment": "UnitedHealthcare", "revenue_usd_m": 86265, "earnings_from_operations_usd_m": 5694},
+    {"period": "Q1 2026", "segment": "Optum Health", "revenue_usd_m": 24109, "earnings_from_operations_usd_m": 1141},
+    {"period": "Q1 2026", "segment": "Optum Insight", "revenue_usd_m": 5125, "earnings_from_operations_usd_m": 963},
+    {"period": "Q1 2026", "segment": "Optum Rx", "revenue_usd_m": 35736, "earnings_from_operations_usd_m": 1192},
+    {"period": "Q1 2026", "segment": "Total Optum", "revenue_usd_m": 63749, "earnings_from_operations_usd_m": 3296},
+    {"period": "Q1 2025", "segment": "UnitedHealthcare", "revenue_usd_m": 84617, "earnings_from_operations_usd_m": 5226},
+    {"period": "Q1 2025", "segment": "Optum Health", "revenue_usd_m": 24837, "earnings_from_operations_usd_m": 1411},
+    {"period": "Q1 2025", "segment": "Optum Insight", "revenue_usd_m": 5027, "earnings_from_operations_usd_m": 1164},
+    {"period": "Q1 2025", "segment": "Optum Rx", "revenue_usd_m": 35132, "earnings_from_operations_usd_m": 1318},
+    {"period": "Q1 2025", "segment": "Total Optum", "revenue_usd_m": 63885, "earnings_from_operations_usd_m": 3893}
+  ],
+  "ratios": [
+    {"name": "Q1 2026 revenue growth", "value": 0.0196, "basis": "111721 / 109575 - 1"},
+    {"name": "Q1 2026 operating margin", "value": 0.08, "basis": "SEC Form 10-Q / earnings release"},
+    {"name": "Q1 2026 net earnings margin", "value": 0.056, "basis": "SEC Form 10-Q"},
+    {"name": "Q1 2026 medical care ratio", "value": 0.839, "basis": "SEC Form 10-Q / earnings release"},
+    {"name": "Q1 2026 FCF conversion to net earnings", "value": 1.257, "basis": "8149 / 6481"},
+    {"name": "TTM FCF yield on market cap", "value": 0.0561, "basis": "19666 / 350530"},
+    {"name": "Market EV / TTM FCF", "value": 20.41, "basis": "StockAnalysis, checked 2026-05-20"},
+    {"name": "Net debt / TTM FCF", "value": 2.374, "basis": "(77917 - 31229) / 19666"}
+  ],
+  "missing_data": [
+    "FY2026 full-year actual results are not disclosed.",
+    "FY2026 full-year FCF guidance: ไม่พบข้อมูลที่ยืนยันได้.",
+    "Official full Q&A transcript was not normalized.",
+    "Segment-level FCF is not disclosed.",
+    "Product / contract-level profitability is not disclosed.",
+    "Full regulatory / legal exposure quantification is only partially disclosed.",
+    "End-of-day 2026-05-20 price was not available during workflow.",
+    "Investor-specific position size, cost basis, tax status, and required return were not provided."
+  ]
+}

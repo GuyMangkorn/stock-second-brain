@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[UNH]] | UNH | UnitedHealth Group Incorporated | NYSE | Q1 2026 | 8 |
 | [[CSCO]] | CSCO | Cisco Systems, Inc. | Nasdaq | Q3 FY2026 | 8 |
 | [[COST]] | COST | Costco Wholesale Corporation | Nasdaq | Q2 FY2026 | 8 |
 | [[WMT]] | WMT | Walmart Inc. | Nasdaq Global Select Market | FY2026 | 8 |

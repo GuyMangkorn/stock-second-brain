@@ -7,6 +7,12 @@ updated: 2026-05-20
 
 ## Latest Work
 
+- 2026-05-20: Ran full new-ticker decision-grade flow for `[[UNH]]`: created
+  `[[UNH_latest_results_source]]`, normalized `[[UNH_fundamentals]]`, added
+  `[[UNH]]`, and created `[[UNH DCF Valuation 2026-05-20]]` plus
+  `[[UNH Decision Memo 2026-05-20]]`. P1 was source-note-only; P13 action read
+  is WAIT / WATCHLIST-new-capital because current valuation already discounts a
+  large recovery despite stronger Q1 2026 execution.
 - 2026-05-20: Ran full new-ticker decision-grade flow for `[[CSCO]]`: created
   `[[CSCO_latest_results_source]]`, normalized `[[CSCO_fundamentals]]`, added
   `[[CSCO]]`, and created `[[CSCO DCF Valuation 2026-05-20]]` plus
@@ -78,6 +84,7 @@ updated: 2026-05-20
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[UNH]] | UNH | UnitedHealth Group Incorporated | NYSE | Q1 2026 | 8 |
 | [[CSCO]] | CSCO | Cisco Systems, Inc. | Nasdaq | Q3 FY2026 | 8 |
 | [[COST]] | COST | Costco Wholesale Corporation | Nasdaq | Q2 FY2026 | 8 |
 | [[WMT]] | WMT | Walmart Inc. | Nasdaq Global Select Market | FY2026 | 8 |
@@ -95,6 +102,7 @@ updated: 2026-05-20
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[UNH]] | FY2026 full-year actual results are not disclosed; FY2026 full-year FCF guidance was not verified; official full Q&A transcript was not normalized; segment-level FCF is not disclosed; product / contract-level profitability is not disclosed; full regulatory / legal exposure quantification is only partially disclosed; end-of-day 2026-05-20 price was not available during workflow; investor-specific position size, cost basis, tax status, and required return were not provided. |
 | [[CSCO]] | Q3 FY2026 Form 10-Q was not found during source discovery; official full prepared remarks / Q&A transcript was not normalized; FY2026 full-year actual results are not disclosed; FY2026 FCF guidance was not verified; product-category operating profit is not disclosed; hyperscaler AI customer concentration and margin are not disclosed; market quote after 2026-05-18 close was not verified; investor-specific position size, tax basis, and required return were not provided. |
 | [[COST]] | FY2026 full-year actual results are not disclosed; FY2026 full-year sales / EPS guidance was not verified; FY2026 full-year FCF guidance was not verified; company-hosted written transcript was not verified; segment profitability by merchandise category or geography is not disclosed; tariff refund / net tariff impact is not quantified; market data after regular-market open on 2026-05-20 was not verified; investor-specific tax basis, position size, portfolio constraints, and required return were not provided. |
 | [[WMT]] | FY2027 Q1 actual results are not yet available as of the 2026-05-20 source check; FY2027 full-year FCF guidance was not verified; forward GAAP EPS / net income guidance was not provided; product-level profitability by eCommerce, ads, marketplace, membership, VIZIO, and data services is not disclosed; segment-level FCF is not disclosed; full normalized quarterly time series was not normalized; exact end-of-day U.S. market data after the 2026-05-20 close was only partially verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -112,6 +120,7 @@ updated: 2026-05-20
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[UNH_latest_results_source]] | UNH | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[UNH_fundamentals]] |
 | [[CSCO_latest_results_source]] | CSCO | latest-results | Q3 FY2026 and nine months ended 2026-04-25 plus FY2025 annual baseline | [[CSCO_fundamentals]] |
 | [[COST_latest_results_source]] | COST | latest-results | Q2 FY2026 and 24 weeks ended 2026-02-15 plus FY2025 annual baseline and April 2026 monthly sales update | [[COST_fundamentals]] |
 | [[WMT_latest_results_source]] | WMT | latest-results | FY2026 fiscal year ended 2026-01-31 plus FY2027 guidance; FY2027 Q1 event scheduled 2026-05-21 | [[WMT_fundamentals]] |
@@ -131,6 +140,10 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[UNH]]`, refresh after Q2 2026 results with attention to MCR,
+  operating cost ratio, Optum Health margin, Optum Rx scripts, UHC membership,
+  OCF, capex, cash, debt, shares, buyback completion, guidance, and any
+  official full Q&A transcript; refresh price before any action change.
 - For `[[CSCO]]`, refresh after Q4 FY2026 / FY2026 results with attention to
   AI infrastructure order-to-revenue conversion, FCF, product gross margin,
   Security/Splunk growth, cash, investments, debt, shares, RPO, deferred
