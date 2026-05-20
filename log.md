@@ -2,6 +2,24 @@
 
 ## 2026-05-20
 
+- `latest-results`: Created `raw/imports/EW_latest_results_source.md` from
+  Edwards Lifesciences Q1 2026 Form 10-Q, official Q1 2026 earnings release,
+  IR-hosted transcript, FY2025 Form 10-K, and fresh market-data checks; P1 was
+  limited to source note creation only.
+- `ingest`: Created `raw/financials/EW_fundamentals.md`,
+  `raw/financials/EW_fundamentals.json`, and `wiki/entities/EW.md` from
+  verified EW Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/EW.md` with official-source business
+  model, product mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/EW DCF Valuation 2026-05-20.md`
+  after fresh-checking EW price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/EW Decision Memo 2026-05-20.md`
+  with a WAIT / AVOID-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/ABT_latest_results_source.md` from
   Abbott Q1 2026 Form 10-Q, official Q1 2026 earnings release, FY2025
   Form 10-K, and fresh market-data checks; P1 was limited to source note

@@ -1,0 +1,257 @@
+{
+  "company": "Edwards Lifesciences Corporation",
+  "ticker": "EW",
+  "market": "NYSE",
+  "currency": "USD",
+  "units": "millions except per-share data",
+  "period_type": "mixed",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": [
+    "Q1 2026",
+    "Q1 2025",
+    "FY2025",
+    "FY2024",
+    "FY2023"
+  ],
+  "provenance": [
+    {
+      "source": "EW Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1099800/000109980026000026/ew-20260331.htm",
+      "used_for": [
+        "latest quarter income statement",
+        "cash flow",
+        "balance sheet",
+        "product and region sales",
+        "shares"
+      ]
+    },
+    {
+      "source": "EW FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1099800/000109980026000009/ew-20251231.htm",
+      "used_for": [
+        "annual baseline",
+        "annual cash flow",
+        "risk and buyback context"
+      ]
+    },
+    {
+      "source": "EW Q1 2026 earnings release",
+      "url": "https://ir.edwards.com/news/news-details/2026/Edwards-Lifesciences-Reports-First-Quarter-Results/default.aspx",
+      "used_for": [
+        "guidance",
+        "headline non-GAAP context"
+      ]
+    },
+    {
+      "source": "FinancialContent quote",
+      "url": "https://markets.financialcontent.com/stocks.ksnt/quote/detailedquote?Symbol=NY%3AEW",
+      "used_for": [
+        "fresh current price"
+      ],
+      "accessed": "2026-05-20"
+    }
+  ],
+  "market_data": {
+    "price_usd": 82.16,
+    "price_datetime": "2026-05-19 16:10 EDT",
+    "shares_outstanding_m": 575.8,
+    "shares_date": "2026-04-30",
+    "calculated_market_cap_usd_m": 47307.7,
+    "market_cap_formula": "82.16 * 575.8"
+  },
+  "financial_series": {
+    "income_statement": [
+      {
+        "period": "Q1 2026",
+        "net_sales": 1648.6,
+        "gross_profit": 1286.0,
+        "operating_income": 477.6,
+        "net_income_continuing_operations": 380.7,
+        "diluted_eps_continuing_operations": 0.66,
+        "diluted_weighted_average_shares": 580.7
+      },
+      {
+        "period": "Q1 2025",
+        "net_sales": 1412.7,
+        "gross_profit": 1111.1,
+        "operating_income": 394.8,
+        "net_income_continuing_operations": 363.6,
+        "diluted_eps_continuing_operations": 0.62,
+        "diluted_weighted_average_shares": 587.8
+      },
+      {
+        "period": "FY2025",
+        "net_sales": 6067.6,
+        "gross_profit": 4733.4,
+        "operating_income": 1264.2,
+        "net_income_continuing_operations": 1056.0,
+        "diluted_weighted_average_shares": 585.8
+      },
+      {
+        "period": "FY2024",
+        "net_sales": 5439.5,
+        "gross_profit": 4322.0,
+        "operating_income": 1378.7,
+        "net_income_continuing_operations": 1396.0,
+        "diluted_weighted_average_shares": 599.3
+      },
+      {
+        "period": "FY2023",
+        "net_sales": 5010.0,
+        "gross_profit": 4031.6,
+        "operating_income": 1308.9,
+        "net_income_continuing_operations": 1220.0,
+        "diluted_weighted_average_shares": 609.4
+      }
+    ],
+    "cash_flow": [
+      {
+        "period": "Q1 2026",
+        "operating_cash_flow": 43.8,
+        "capex_spend": 64.9,
+        "free_cash_flow": -21.1
+      },
+      {
+        "period": "Q1 2025",
+        "operating_cash_flow": 280.4,
+        "capex_spend": 56.0,
+        "free_cash_flow": 224.4
+      },
+      {
+        "period": "FY2025",
+        "operating_cash_flow": 1595.2,
+        "capex_spend": 260.2,
+        "free_cash_flow": 1335.0
+      },
+      {
+        "period": "FY2024",
+        "operating_cash_flow": 542.3,
+        "capex_spend": 252.4,
+        "free_cash_flow": 289.9
+      },
+      {
+        "period": "FY2023",
+        "operating_cash_flow": 895.8,
+        "capex_spend": 253.0,
+        "free_cash_flow": 642.8
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2026-03-31",
+        "cash_and_equivalents": 2445.5,
+        "short_term_investments": 1226.0,
+        "cash_plus_short_term_investments": 3671.5,
+        "long_term_debt": 598.5,
+        "total_assets": 13321.2,
+        "total_liabilities": 2993.7,
+        "stockholders_equity": 10327.5,
+        "net_cash_before_lease_liabilities": 3073.0
+      },
+      {
+        "date": "2025-12-31",
+        "cash_and_equivalents": 2938.0,
+        "short_term_investments": 1288.3,
+        "long_term_debt": 598.3,
+        "total_assets": 13697.2,
+        "total_liabilities": 3359.6,
+        "stockholders_equity": 10337.6
+      }
+    ]
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segments": [
+        {
+          "name": "Transcatheter Aortic Valve Replacement",
+          "sales": 1197.3
+        },
+        {
+          "name": "Transcatheter Mitral and Tricuspid Therapies",
+          "sales": 175.1
+        },
+        {
+          "name": "Surgical",
+          "sales": 276.2
+        }
+      ]
+    },
+    {
+      "period": "Q1 2025",
+      "segments": [
+        {
+          "name": "Transcatheter Aortic Valve Replacement",
+          "sales": 1046.6
+        },
+        {
+          "name": "Transcatheter Mitral and Tricuspid Therapies",
+          "sales": 115.2
+        },
+        {
+          "name": "Surgical",
+          "sales": 250.9
+        }
+      ]
+    }
+  ],
+  "guidance": [
+    {
+      "metric": "FY2026 total company sales",
+      "value": "USD 6.5B to USD 6.9B at current exchange rates",
+      "source": "Q1 2026 earnings release"
+    },
+    {
+      "metric": "FY2026 constant-currency sales growth",
+      "value": "9% to 11%",
+      "source": "Q1 2026 earnings release"
+    },
+    {
+      "metric": "FY2026 TAVR sales",
+      "value": "USD 4.7B to USD 5.0B at current exchange rates",
+      "source": "Q1 2026 earnings release"
+    },
+    {
+      "metric": "FY2026 TMTT sales",
+      "value": "USD 740M to USD 780M",
+      "source": "Q1 2026 earnings release"
+    },
+    {
+      "metric": "FY2026 adjusted EPS",
+      "value": "USD 2.95 to USD 3.05",
+      "source": "Q1 2026 earnings release"
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Q1 2026 gross margin",
+      "value": 0.78,
+      "formula": "1286.0 / 1648.6"
+    },
+    {
+      "name": "Q1 2026 operating margin",
+      "value": 0.29,
+      "formula": "477.6 / 1648.6"
+    },
+    {
+      "name": "FY2025 FCF margin",
+      "value": 0.22,
+      "formula": "1335.0 / 6067.6"
+    },
+    {
+      "name": "Price / TTM FCF",
+      "value": 43.4,
+      "formula": "47307.7 / 1089.5"
+    }
+  ],
+  "missing_data": [
+    "GAAP reconciliation for forward non-GAAP guidance is not provided by the company.",
+    "FY2026 full-year actual results are not yet available.",
+    "Product-level profitability by TAVR, TMTT, and Surgical is not disclosed.",
+    "Forward FCF guidance is not disclosed.",
+    "Normalized recurring FCF after Q1 working-capital movements, divestiture effects, legal accrual timing, transition service arrangements, and ASR timing is not fully isolated.",
+    "Exact share count after 2026-04-30 is not disclosed.",
+    "Market quote is provider-sourced and should be refreshed before any future action call.",
+    "Investor-specific position size, tax basis, required return, and portfolio constraints were not provided."
+  ]
+}

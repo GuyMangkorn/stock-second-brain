@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[EW]] | EW | Edwards Lifesciences Corporation | NYSE | Q1 2026 | 8 |
 | [[ABT]] | ABT | Abbott Laboratories | NYSE | Q1 2026 | 7 |
 | [[ATLX]] | ATLX | Atlas Lithium Corporation | Nasdaq Capital Market | Q1 2026 | 8 |
 | [[MDT]] | MDT | Medtronic plc | NYSE | FY26 Q3 | 6 |
