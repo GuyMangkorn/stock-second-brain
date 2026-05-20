@@ -1,0 +1,300 @@
+{
+  "company": "Cisco Systems, Inc.",
+  "ticker": "CSCO",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q3 FY2026 and nine months ended 2026-04-25 plus FY2025 annual baseline",
+  "periods": [
+    "Q3 FY2025",
+    "Q3 FY2026",
+    "9M FY2025",
+    "9M FY2026",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+  ],
+  "provenance": [
+    {
+      "source": "SEC Form 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000075/csco-20260513.htm",
+      "use": "Official Q3 FY2026 result filing reference."
+    },
+    {
+      "source": "Cisco Q3 FY2026 earnings release",
+      "url": "https://investor.cisco.com/news/news-details/2026/CISCO-REPORTS-THIRD-QUARTER-EARNINGS/default.aspx",
+      "use": "Q3 FY2026 and Q3 FY2025 results, 9M comparisons, balance sheet, cash flow, segment/category revenue, capital allocation, and guidance."
+    },
+    {
+      "source": "Cisco FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "use": "FY2025/FY2024/FY2023 annual cash-flow baseline and business context."
+    },
+    {
+      "source": "Yahoo Finance CSCO quote",
+      "url": "https://finance.yahoo.com/quote/CSCO/",
+      "use": "Fresh market-data cross-check, checked 2026-05-20."
+    },
+    {
+      "source": "FinanceCharts CSCO market cap history",
+      "url": "https://www.financecharts.com/stocks/CSCO/summary/market-cap",
+      "use": "Fresh market-data cross-check, checked 2026-05-20."
+    }
+  ],
+  "financial_series": {
+    "income_statement_usd_m": {
+      "Q3 FY2026": {
+        "product_revenue": 12117,
+        "services_revenue": 3724,
+        "total_revenue": 15841,
+        "gross_margin": 10080,
+        "operating_income": 3960,
+        "income_before_taxes": 4039,
+        "net_income": 3373,
+        "diluted_eps": 0.85,
+        "non_gaap_eps": 1.06,
+        "diluted_shares_m": 3982
+      },
+      "Q3 FY2025": {
+        "product_revenue": 10374,
+        "services_revenue": 3775,
+        "total_revenue": 14149,
+        "gross_margin": 9278,
+        "operating_income": 3202,
+        "income_before_taxes": 2947,
+        "net_income": 2491,
+        "diluted_eps": 0.62,
+        "non_gaap_eps": 0.96,
+        "diluted_shares_m": 4002
+      },
+      "9M FY2026": {
+        "product_revenue": 34836,
+        "services_revenue": 11237,
+        "total_revenue": 46073,
+        "gross_margin": 29797,
+        "operating_income": 11104,
+        "income_before_taxes": 11076,
+        "net_income": 9408,
+        "diluted_eps": 2.36,
+        "non_gaap_eps": 3.11,
+        "diluted_shares_m": 3987
+      },
+      "9M FY2025": {
+        "product_revenue": 30722,
+        "services_revenue": 11259,
+        "total_revenue": 41981,
+        "gross_margin": 27510,
+        "operating_income": 8673,
+        "income_before_taxes": 8101,
+        "net_income": 7630,
+        "diluted_eps": 1.91,
+        "non_gaap_eps": 2.81,
+        "diluted_shares_m": 4004
+      }
+    },
+    "cash_flow_usd_m": {
+      "Q3 FY2026": {
+        "operating_cash_flow": 3757,
+        "capex_spend": 414,
+        "free_cash_flow": 3343
+      },
+      "Q3 FY2025": {
+        "operating_cash_flow": 4127,
+        "capex_spend": 261,
+        "free_cash_flow": 3866
+      },
+      "9M FY2026": {
+        "operating_cash_flow": 8791,
+        "capex_spend": 1020,
+        "free_cash_flow": 7771
+      },
+      "9M FY2025": {
+        "operating_cash_flow": 9959,
+        "capex_spend": 688,
+        "free_cash_flow": 9271
+      },
+      "FY2025": {
+        "operating_cash_flow": 14193,
+        "capex_spend": 905,
+        "free_cash_flow": 13288
+      },
+      "FY2024": {
+        "operating_cash_flow": 10880,
+        "capex_spend": 670,
+        "free_cash_flow": 10210
+      },
+      "FY2023": {
+        "operating_cash_flow": 19886,
+        "capex_spend": 849,
+        "free_cash_flow": 19037
+      },
+      "TTM": {
+        "free_cash_flow": 11788,
+        "formula": "FY2025 FCF 13288 - 9M FY2025 FCF 9271 + 9M FY2026 FCF 7771"
+      }
+    },
+    "balance_sheet_usd_m": {
+      "2026-04-25": {
+        "cash_and_cash_equivalents": 7083,
+        "investments": 9557,
+        "cash_plus_investments": 16640,
+        "total_current_assets": 36559,
+        "total_assets": 125546,
+        "short_term_debt": 11932,
+        "long_term_debt": 19371,
+        "total_debt": 31303,
+        "net_debt_cash_plus_investments": 14663,
+        "deferred_revenue": 28599,
+        "rpo": 43462
+      },
+      "2025-07-26": {
+        "cash_and_cash_equivalents": 8346,
+        "investments": 7764,
+        "cash_plus_investments": 16110,
+        "total_current_assets": 34986,
+        "total_assets": 122291,
+        "short_term_debt": 5232,
+        "long_term_debt": 23056,
+        "total_debt": 28288,
+        "net_debt_cash_plus_investments": 12178,
+        "deferred_revenue": 27991
+      }
+    },
+    "market_data": {
+      "checked_date": "2026-05-20",
+      "latest_accessible_close_2026_05_18": 118.88,
+      "market_cap_usd_b": 469.603,
+      "market_data_shares_outstanding_b": 3.95,
+      "yahoo_close_2026_05_15": 118.21,
+      "yahoo_after_hours_2026_05_15": 117.83,
+      "yahoo_market_cap_usd_b": 466.917,
+      "diluted_shares_used_for_dcf_b": 3.987
+    }
+  },
+  "segment_series": [
+    {
+      "segment": "Americas",
+      "q3_fy2026_revenue_usd_m": 9569,
+      "q3_fy2026_mix": 0.604,
+      "q3_yoy_growth": 0.14,
+      "nine_month_revenue_usd_m": 27403,
+      "nine_month_yoy_growth": 0.1
+    },
+    {
+      "segment": "EMEA",
+      "q3_fy2026_revenue_usd_m": 4054,
+      "q3_fy2026_mix": 0.256,
+      "q3_yoy_growth": 0.09,
+      "nine_month_revenue_usd_m": 12262,
+      "nine_month_yoy_growth": 0.1
+    },
+    {
+      "segment": "APJC",
+      "q3_fy2026_revenue_usd_m": 2218,
+      "q3_fy2026_mix": 0.14,
+      "q3_yoy_growth": 0.09,
+      "nine_month_revenue_usd_m": 6409,
+      "nine_month_yoy_growth": 0.07
+    },
+    {
+      "segment": "Networking",
+      "q3_fy2026_revenue_usd_m": 8815,
+      "q3_fy2026_mix": 0.556,
+      "q3_yoy_growth": 0.25,
+      "nine_month_revenue_usd_m": 24877,
+      "nine_month_yoy_growth": 0.2
+    },
+    {
+      "segment": "Security",
+      "q3_fy2026_revenue_usd_m": 2008,
+      "q3_fy2026_mix": 0.127,
+      "q3_yoy_growth": 0,
+      "nine_month_revenue_usd_m": 6006,
+      "nine_month_yoy_growth": -0.02
+    },
+    {
+      "segment": "Collaboration",
+      "q3_fy2026_revenue_usd_m": 1024,
+      "q3_fy2026_mix": 0.065,
+      "q3_yoy_growth": -0.01,
+      "nine_month_revenue_usd_m": 3133,
+      "nine_month_yoy_growth": 0.01
+    },
+    {
+      "segment": "Observability",
+      "q3_fy2026_revenue_usd_m": 269,
+      "q3_fy2026_mix": 0.017,
+      "q3_yoy_growth": 0.03,
+      "nine_month_revenue_usd_m": 820,
+      "nine_month_yoy_growth": 0.03
+    },
+    {
+      "segment": "Services",
+      "q3_fy2026_revenue_usd_m": 3724,
+      "q3_fy2026_mix": 0.235,
+      "q3_yoy_growth": -0.01,
+      "nine_month_revenue_usd_m": 11237,
+      "nine_month_yoy_growth": 0
+    }
+  ],
+  "ratios": [
+    {
+      "name": "revenue_growth",
+      "period": "Q3 FY2026 YoY",
+      "value": 0.1196,
+      "formula": "15841 / 14149 - 1"
+    },
+    {
+      "name": "gaap_operating_margin",
+      "period": "Q3 FY2026",
+      "value": 0.25,
+      "formula": "3960 / 15841"
+    },
+    {
+      "name": "net_profit_margin",
+      "period": "Q3 FY2026",
+      "value": 0.2129,
+      "formula": "3373 / 15841"
+    },
+    {
+      "name": "fcf_margin",
+      "period": "Q3 FY2026",
+      "value": 0.211,
+      "formula": "3343 / 15841"
+    },
+    {
+      "name": "fcf_margin",
+      "period": "9M FY2026",
+      "value": 0.1687,
+      "formula": "7771 / 46073"
+    },
+    {
+      "name": "net_debt_to_ttm_fcf",
+      "period": "2026-04-25 / TTM",
+      "value": 1.24,
+      "formula": "14663 / 11788"
+    },
+    {
+      "name": "ttm_fcf_yield_on_market_cap",
+      "period": "2026-05-18 close",
+      "value": 0.0251,
+      "formula": "11.788 / 469.603"
+    },
+    {
+      "name": "market_ev_to_ttm_fcf",
+      "period": "2026-05-18 close",
+      "value": 41.08,
+      "formula": "(469.603 + 31.303 - 16.640) / 11.788"
+    }
+  ],
+  "missing_data": [
+    "Q3 FY2026 Form 10-Q not found during P1/P4.",
+    "Official full prepared remarks / Q&A transcript not normalized.",
+    "FY2026 full-year actual results not disclosed.",
+    "FY2026 FCF guidance not verified in extracted official sources.",
+    "Product-category operating profit not disclosed.",
+    "Hyperscaler AI customer concentration not disclosed.",
+    "Market quote after 2026-05-18 close not verified.",
+    "Investor-specific required return, position size, and tax basis not provided."
+  ]
+}

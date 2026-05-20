@@ -2,6 +2,24 @@
 
 ## 2026-05-20
 
+- `latest-results`: Created `raw/imports/CSCO_latest_results_source.md` from
+  Cisco Q3 FY2026 Form 8-K, official Q3 FY2026 earnings release, FY2025 Form
+  10-K, official IR event page, and fresh market-data checks; P1 was limited to
+  source note creation only.
+- `ingest`: Created `raw/financials/CSCO_fundamentals.md`,
+  `raw/financials/CSCO_fundamentals.json`, and `wiki/entities/CSCO.md` from
+  verified Cisco Q3 FY2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/CSCO.md` with official-source business
+  model, segment/category mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/CSCO DCF Valuation 2026-05-20.md`
+  after fresh-checking CSCO price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/CSCO Decision Memo 2026-05-20.md`
+  with an AVOID / WAIT-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/COST_latest_results_source.md` from
   Costco Q2 FY2026 Form 10-Q, official Q2 FY2026 earnings release, April 2026
   sales release, FY2025 Form 10-K, Q2 FY2026 transcript context, and fresh
