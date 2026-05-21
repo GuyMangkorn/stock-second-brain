@@ -2,6 +2,24 @@
 
 ## 2026-05-21
 
+- `latest-results`: Created `raw/imports/AMAT_latest_results_source.md` from
+  Applied Materials Q2 FY2026 Form 8-K / Exhibit 99.1, FY2025 Form 10-K, IR
+  release PDF, and fresh market-data checks; P1 was limited to source note
+  creation only.
+- `ingest`: Created `raw/financials/AMAT_fundamentals.md`,
+  `raw/financials/AMAT_fundamentals.json`, and `wiki/entities/AMAT.md` from
+  verified AMAT Q2 FY2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/AMAT.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/AMAT DCF Valuation 2026-05-21.md`
+  after fresh-checking AMAT price, market cap, shares, cash, debt, FCF, and
+  guidance.
+- `analysis`: Created `wiki/analysis/decisions/AMAT Decision Memo 2026-05-21.md`
+  with an AVOID-new-capital / WAIT-for-better-entry action read and updated
+  `index.md` plus `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/PG_latest_results_source.md` from
   Procter & Gamble Q3 FY2026 Form 10-Q, official Q3 FY2026 earnings release,
   FY2025 Annual Report / Form 10-K, secondary transcript context, and fresh
