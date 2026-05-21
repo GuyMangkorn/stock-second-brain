@@ -2,6 +2,25 @@
 
 ## 2026-05-21
 
+- `latest-results`: Created `raw/imports/GE_latest_results_source.md` from GE
+  Aerospace Q1 2026 Form 10-Q, official Q1 2026 earnings release, GE-hosted
+  Q1 2026 earnings call transcript, FY2025 Form 10-K, and fresh Stooq
+  market-data check; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/GE_fundamentals.md`,
+  `raw/financials/GE_fundamentals.json`, and `wiki/entities/GE.md` from
+  verified GE Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/GE.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/GE DCF Valuation 2026-05-21.md`
+  after fresh-checking GE price, market cap, shares, cash, debt, FCF, and
+  guidance; DCF uses GE-defined non-GAAP FCF and treats insurance/investment
+  securities normalization as a source gap rather than unsupported excess cash.
+- `analysis`: Created `wiki/analysis/decisions/GE Decision Memo 2026-05-21.md`
+  with an AVOID-new-capital / WAIT action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/AMAT_latest_results_source.md` from
   Applied Materials Q2 FY2026 Form 8-K / Exhibit 99.1, FY2025 Form 10-K, IR
   release PDF, and fresh market-data checks; P1 was limited to source note

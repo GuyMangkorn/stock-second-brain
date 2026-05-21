@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[GE]] | GE | GE Aerospace | NYSE | Q1 2026 | 8 |
 | [[AMAT]] | AMAT | Applied Materials, Inc. | Nasdaq Global Select Market | Q2 FY2026 | 8 |
 | [[PG]] | PG | The Procter & Gamble Company | NYSE | Q3 FY2026 | 7 |
 | [[IBM]] | IBM | International Business Machines Corporation | NYSE | Q1 2026 | 7 |

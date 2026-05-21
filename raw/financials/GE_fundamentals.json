@@ -1,0 +1,168 @@
+{
+  "company": "GE Aerospace",
+  "ticker": "GE",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": [
+    {
+      "label": "Q1 2026",
+      "period_end": "2026-03-31",
+      "total_revenue_usd_m": 12392,
+      "adjusted_revenue_usd_m": 11614,
+      "profit_gaap_usd_m": 2198,
+      "operating_profit_non_gaap_usd_m": 2528,
+      "net_income_attributable_common_usd_m": 1904,
+      "continuing_diluted_eps_usd": 1.83,
+      "adjusted_eps_usd": 1.86,
+      "diluted_shares_m": 1054,
+      "free_cash_flow_non_gaap_usd_m": 1658,
+      "cfoa_usd_m": 1868
+    },
+    {
+      "label": "Q1 2025",
+      "period_end": "2025-03-31",
+      "total_revenue_usd_m": 9935,
+      "adjusted_revenue_usd_m": 9001,
+      "profit_gaap_usd_m": 2245,
+      "operating_profit_non_gaap_usd_m": 2146,
+      "net_income_attributable_common_usd_m": 1978,
+      "continuing_diluted_eps_usd": 1.83,
+      "adjusted_eps_usd": 1.49,
+      "diluted_shares_m": 1078,
+      "free_cash_flow_non_gaap_usd_m": 1451,
+      "cfoa_usd_m": 1543
+    },
+    {
+      "label": "FY2025",
+      "period_end": "2025-12-31",
+      "total_revenue_usd_m": 45855,
+      "adjusted_revenue_usd_m": 42322,
+      "operating_profit_non_gaap_usd_m": 9055,
+      "adjusted_eps_usd": 6.37,
+      "free_cash_flow_non_gaap_usd_m": 7694,
+      "cfoa_usd_m": 8543
+    },
+    {
+      "label": "FY2024",
+      "period_end": "2024-12-31",
+      "total_revenue_usd_m": 38702,
+      "adjusted_revenue_usd_m": 35121,
+      "operating_profit_non_gaap_usd_m": 7253,
+      "free_cash_flow_non_gaap_usd_m": 6203,
+      "cfoa_usd_m": 5817
+    }
+  ],
+  "provenance": [
+    {
+      "source": "GE Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000027/ge-20260331.htm"
+    },
+    {
+      "source": "GE Q1 2026 earnings release",
+      "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000026/ge1q2026earningsrelease.htm"
+    },
+    {
+      "source": "GE Q1 2026 earnings call transcript",
+      "url": "https://www.geaerospace.com/sites/default/files/geaerospace_webcast_transcript_04212026.pdf"
+    },
+    {
+      "source": "GE FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm"
+    },
+    {
+      "source": "Stooq GE quote CSV",
+      "url": "https://stooq.com/q/l/?s=ge.us&f=sd2t2ohlcv&h&e=csv"
+    }
+  ],
+  "financial_series": {
+    "q1_total_revenue_usd_m": {
+      "Q1 2025": 9935,
+      "Q1 2026": 12392
+    },
+    "q1_operating_profit_non_gaap_usd_m": {
+      "Q1 2025": 2146,
+      "Q1 2026": 2528
+    },
+    "q1_free_cash_flow_non_gaap_usd_m": {
+      "Q1 2025": 1451,
+      "Q1 2026": 1658
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segments": {
+        "Commercial Engines & Services": 8920,
+        "Defense & Propulsion Technologies": 3214,
+        "Corporate Cost & Eliminations": -519
+      }
+    },
+    {
+      "period": "Q1 2025",
+      "segments": {
+        "Commercial Engines & Services": 6663,
+        "Defense & Propulsion Technologies": 2698,
+        "Corporate Cost & Eliminations": -361
+      }
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Q1 2026 revenue growth",
+      "value": 0.2473,
+      "formula": "12392 / 9935 - 1"
+    },
+    {
+      "name": "Q1 2026 operating profit margin",
+      "value": 0.2177,
+      "formula": "2528 / 11614"
+    },
+    {
+      "name": "Q1 2026 FCF margin on adjusted revenue",
+      "value": 0.1428,
+      "formula": "1658 / 11614"
+    },
+    {
+      "name": "TTM GE-defined FCF",
+      "value_usd_m": 7901,
+      "formula": "7694 - 1451 + 1658"
+    }
+  ],
+  "market_data": {
+    "price_usd": 300.17,
+    "price_date": "2026-05-20",
+    "checked_date": "2026-05-21",
+    "shares_outstanding_m": 1043.337235,
+    "market_cap_usd_b": 313.18,
+    "source": "Stooq quote plus GE Q1 2026 Form 10-Q share count"
+  },
+  "balance_sheet": {
+    "cash_and_restricted_cash_usd_m": 10981,
+    "investment_securities_usd_m": 38193,
+    "short_term_borrowings_usd_m": 2103,
+    "long_term_borrowings_usd_m": 18174,
+    "total_borrowings_usd_m": 20277,
+    "insurance_liabilities_and_annuity_benefits_usd_m": 35699,
+    "shares_outstanding_m": 1043.337235,
+    "diluted_shares_m": 1054
+  },
+  "guidance": {
+    "fy2026_adjusted_revenue_growth": "low double digits",
+    "fy2026_operating_profit_usd_b": "9.85-10.25",
+    "fy2026_adjusted_eps_usd": "7.10-7.40",
+    "fy2026_free_cash_flow_usd_b": "8.0-8.4",
+    "fy2026_fcf_conversion": ">100%"
+  },
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "GAAP reconciliation for FY2026 non-GAAP guidance is not disclosed because GE says it cannot provide it without unreasonable effort.",
+    "Segment-level FCF is not disclosed.",
+    "Program-level profitability for LEAP, GE9X, defense systems, and aftermarket contracts is not disclosed.",
+    "Customer concentration and airline credit-risk exposure are not disclosed.",
+    "Excess cash versus insurance/investment securities normalization requires judgment.",
+    "Market data after the 2026-05-20 close was not verified.",
+    "Investor-specific tax basis, position size, and required return were not provided."
+  ]
+}
