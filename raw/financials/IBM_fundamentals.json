@@ -1,0 +1,134 @@
+{
+  "company": "International Business Machines Corporation",
+  "ticker": "IBM",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": [
+    {
+      "label": "Q1 2026",
+      "period_end": "2026-03-31",
+      "revenue_usd_m": 15917,
+      "gross_profit_usd_m": 8950,
+      "net_income_usd_m": 1216,
+      "diluted_eps_usd": 1.28,
+      "diluted_shares_m": 952.1,
+      "ibm_defined_fcf_usd_m": 2220
+    },
+    {
+      "label": "Q1 2025",
+      "period_end": "2025-03-31",
+      "revenue_usd_m": 14541,
+      "gross_profit_usd_m": 8031,
+      "net_income_usd_m": 1055,
+      "diluted_eps_usd": 1.12,
+      "diluted_shares_m": 945.4,
+      "ibm_defined_fcf_usd_m": 1962
+    },
+    {
+      "label": "FY2025",
+      "period_end": "2025-12-31",
+      "revenue_usd_m": 67535,
+      "gross_profit_usd_m": 39297,
+      "net_income_usd_m": 10593,
+      "diluted_eps_usd": 11.17,
+      "ibm_defined_fcf_usd_m": 14734
+    }
+  ],
+  "provenance": [
+    {
+      "source": "IBM Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000038/ibm-20260331.htm"
+    },
+    {
+      "source": "IBM Q1 2026 earnings release",
+      "url": "https://newsroom.ibm.com/2026-04-22-IBM-RELEASES-FIRST-QUARTER-RESULTS"
+    },
+    {
+      "source": "IBM 1Q26 prepared remarks",
+      "url": "https://www.ibm.com/downloads/documents/us-en/15db805fff4249f1"
+    },
+    {
+      "source": "IBM FY2025 10-K / annual report extract",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/ibm-20251231_d2.htm"
+    },
+    {
+      "source": "Stooq IBM quote CSV",
+      "url": "https://stooq.com/q/l/?s=ibm.us&f=sd2t2ohlcv&h&e=csv"
+    }
+  ],
+  "financial_series": {
+    "q1_revenue_usd_m": {
+      "Q1 2025": 14541,
+      "Q1 2026": 15917
+    },
+    "q1_net_income_usd_m": {
+      "Q1 2025": 1055,
+      "Q1 2026": 1216
+    },
+    "q1_ibm_defined_fcf_usd_m": {
+      "Q1 2025": 1962,
+      "Q1 2026": 2220
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segments": {
+        "Software": 7052,
+        "Consulting": 5272,
+        "Infrastructure": 3326,
+        "Financing": 220,
+        "Other": 48
+      }
+    },
+    {
+      "period": "Q1 2025",
+      "segments": {
+        "Software": 6336,
+        "Consulting": 5068,
+        "Infrastructure": 2886,
+        "Financing": 191,
+        "Other": 61
+      }
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Q1 2026 revenue growth",
+      "value": 0.0946,
+      "formula": "15917 / 14541 - 1"
+    },
+    {
+      "name": "Q1 2026 gross margin",
+      "value": 0.5623,
+      "formula": "8950 / 15917"
+    },
+    {
+      "name": "Q1 2026 IBM-defined FCF margin",
+      "value": 0.1395,
+      "formula": "2220 / 15917"
+    },
+    {
+      "name": "TTM IBM-defined FCF",
+      "value_usd_m": 14992,
+      "formula": "14734 - 1962 + 2220"
+    }
+  ],
+  "market_data": {
+    "price_usd": 224.88,
+    "price_date": "2026-05-20",
+    "checked_date": "2026-05-21",
+    "shares_outstanding_m": 939.88528,
+    "market_cap_usd_b": 211.36,
+    "source": "Stooq quote plus IBM Form 10-Q share count"
+  },
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "Product-level AI revenue and AI margins are not disclosed.",
+    "Exact Q1 2026 generative AI book of business value was not verified in the source set.",
+    "Segment-level FCF is not disclosed.",
+    "Investor-specific tax basis, position size, and required return were not provided."
+  ]
+}
