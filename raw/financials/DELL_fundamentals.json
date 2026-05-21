@@ -1,0 +1,75 @@
+{
+  "company": "Dell Technologies Inc.",
+  "ticker": "DELL",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "annual",
+  "reporting_scope": "FY2026 fiscal year ended 2026-01-30, with FY2027 guidance and market-data check 2026-05-21",
+  "periods": ["FY2024", "FY2025", "FY2026"],
+  "provenance": [
+    {
+      "source": "FY2026 Form 10-K",
+      "url": "https://investors.delltechnologies.com/node/19326/html",
+      "used_for": ["annual income statement", "segment revenue", "debt", "diluted shares"]
+    },
+    {
+      "source": "FY2026 Q4 / full-year results release",
+      "url": "https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-3",
+      "used_for": ["free cash flow", "balance sheet", "FY2027 guidance"]
+    },
+    {
+      "source": "StockAnalysis DELL quote",
+      "url": "https://stockanalysis.com/stocks/dell/",
+      "checked_date": "2026-05-21",
+      "used_for": ["current price", "market cap", "current shares out"]
+    }
+  ],
+  "financial_series": {
+    "net_revenue_usd_m": {"FY2024": 88425, "FY2025": 95567, "FY2026": 113538},
+    "gross_margin_usd_m": {"FY2024": 21069, "FY2025": 21250, "FY2026": 22707},
+    "operating_income_usd_m": {"FY2024": 5411, "FY2025": 6237, "FY2026": 8149},
+    "net_income_attributable_usd_m": {"FY2024": 3388, "FY2025": 4592, "FY2026": 5936},
+    "diluted_eps_usd": {"FY2024": 4.6, "FY2025": 6.38, "FY2026": 8.68},
+    "weighted_average_diluted_shares_m": {"FY2024": 736, "FY2025": 720, "FY2026": 684},
+    "operating_cash_flow_usd_m": {"FY2025": 4521, "FY2026": 11185},
+    "capex_spend_usd_m": {"FY2025": 2563, "FY2026": 2630},
+    "free_cash_flow_usd_m": {"FY2025": 1958, "FY2026": 8555},
+    "cash_and_equivalents_usd_m": {"2025-01-31": 3631, "2026-01-30": 11528},
+    "core_debt_principal_usd_m": {"2025-01-31": 12997, "2026-01-30": 17018},
+    "dfs_related_debt_principal_usd_m": {"2025-01-31": 11739, "2026-01-30": 14646},
+    "total_debt_principal_usd_m": {"2025-01-31": 24788, "2026-01-30": 31763}
+  },
+  "segment_series": [
+    {"segment": "Infrastructure Solutions Group", "revenue_usd_m": {"FY2024": 33885, "FY2025": 43593, "FY2026": 60826}, "operating_income_usd_m": {"FY2024": 4286, "FY2025": 5579, "FY2026": 7111}},
+    {"segment": "Client Solutions Group", "revenue_usd_m": {"FY2024": 48916, "FY2025": 48393, "FY2026": 50984}, "operating_income_usd_m": {"FY2024": 3712, "FY2025": 2972, "FY2026": 2833}},
+    {"segment": "Corporate and other", "revenue_usd_m": {"FY2024": 5624, "FY2025": 3581, "FY2026": 1728}, "operating_income_usd_m": {"FY2024": -120, "FY2025": -22, "FY2026": 47}}
+  ],
+  "market_data": {
+    "checked_date": "2026-05-21",
+    "close_price_usd": 242.93,
+    "close_price_timestamp": "2026-05-20 4:00 PM EDT",
+    "premarket_price_usd": 242.39,
+    "premarket_timestamp": "2026-05-21 6:52 AM EDT",
+    "market_cap_usd_b": 157.8,
+    "shares_out_m": 649.57,
+    "pe_ratio": 27.99,
+    "forward_pe": 18.73,
+    "source": "https://stockanalysis.com/stocks/dell/"
+  },
+  "ratios": [
+    {"name": "FY2026 gross margin", "value": 0.2},
+    {"name": "FY2026 operating margin", "value": 0.0718},
+    {"name": "FY2026 net margin", "value": 0.0523},
+    {"name": "FY2026 FCF margin", "value": 0.0753},
+    {"name": "FY2026 FCF yield on market cap", "value": 0.0542}
+  ],
+  "missing_data": [
+    "FY2027 Q1 actual results are not available as of 2026-05-21.",
+    "FY2027 free cash flow guidance is not disclosed.",
+    "Product-level and customer-level AI server profitability is not disclosed.",
+    "Segment-level FCF is not disclosed.",
+    "AI server order/backlog split by customer type is not disclosed.",
+    "DFS debt valuation treatment requires explicit judgment.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}

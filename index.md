@@ -7,6 +7,12 @@ updated: 2026-05-21
 
 ## Latest Work
 
+- 2026-05-21: Ran full new-ticker decision-grade flow for `[[DELL]]`: created
+  `[[DELL_latest_results_source]]`, normalized `[[DELL_fundamentals]]`, added
+  `[[DELL]]`, and created `[[DELL DCF Valuation 2026-05-21]]` plus
+  `[[DELL Decision Memo 2026-05-21]]`. P1 was source-note-only; P13 action
+  read is WAIT / AVOID-new-capital because the source-backed base-case DCF is
+  below the freshly checked market price ahead of FY2027 Q1 results.
 - 2026-05-21: Ran full new-ticker decision-grade flow for `[[GE]]`: created
   `[[GE_latest_results_source]]`, normalized `[[GE_fundamentals]]`, added
   `[[GE]]`, and created `[[GE DCF Valuation 2026-05-21]]` plus
@@ -108,6 +114,7 @@ updated: 2026-05-21
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[DELL]] | DELL | Dell Technologies Inc. | NYSE | FY2026 | 7 |
 | [[GE]] | GE | GE Aerospace | NYSE | Q1 2026 | 8 |
 | [[AMAT]] | AMAT | Applied Materials, Inc. | Nasdaq Global Select Market | Q2 FY2026 | 8 |
 | [[PG]] | PG | The Procter & Gamble Company | NYSE | Q3 FY2026 | 7 |
@@ -130,6 +137,7 @@ updated: 2026-05-21
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[DELL]] | FY2027 Q1 actual results are not available as of the 2026-05-21 source check; FY2027 free cash flow guidance is not disclosed; product-level and customer-level AI server profitability is not disclosed; segment-level FCF is not disclosed; AI server order/backlog split by enterprise, neocloud, and sovereign customers is not disclosed; DFS debt valuation treatment requires explicit judgment; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[GE]] | Full FY2026 actual results are not disclosed; GAAP reconciliation for FY2026 non-GAAP guidance is not disclosed; segment-level FCF is not disclosed; program-level profitability is not disclosed; customer concentration and airline credit-risk exposure are not disclosed; excess cash versus insurance/investment securities normalization requires judgment; market data after the 2026-05-20 close was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[AMAT]] | Q2 FY2026 Form 10-Q was not found as of the 2026-05-21 source search; official full Q2 FY2026 call transcript / Q&A was not verified; FY2026 full-year FCF guidance is not disclosed; exact Q2 period-end shares outstanding was not verified; segment-level FCF is not disclosed; customer-specific AI/HBM/advanced-packaging revenue and margins are not disclosed; market-data provider variance requires refresh before action changes; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[PG]] | Full FY2026 actual results are not disclosed; official company-hosted full earnings call transcript was not verified; product/category-level profitability below reportable segments is not disclosed; forward adjusted free cash flow dollar amount is not disclosed; exact realized FY2026 tariff / commodity impact after Q3 is not disclosed; market data after 2026-05-20 close was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -152,6 +160,7 @@ updated: 2026-05-21
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[DELL_latest_results_source]] | DELL | latest-results | FY2026 fiscal year ended 2026-01-30 plus FY2027 guidance and fresh 2026-05-21 market-data check | [[DELL_fundamentals]] |
 | [[GE_latest_results_source]] | GE | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[GE_fundamentals]] |
 | [[AMAT_latest_results_source]] | AMAT | latest-results | Q2 FY2026 and six months ended 2026-04-26 plus FY2025 annual baseline | [[AMAT_fundamentals]] |
 | [[PG_latest_results_source]] | PG | latest-results | Q3 FY2026 and nine months ended 2026-03-31 plus FY2025 annual baseline | [[PG_fundamentals]] |
@@ -176,6 +185,11 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[DELL]]`, refresh immediately after FY2027 Q1 results on 2026-05-28
+  with attention to revenue, AI server shipments/orders/backlog, gross margin,
+  OCF/FCF if disclosed, cash, core debt, DFS debt, shares, pricing / component
+  cost commentary, and any change to FY2027 guidance before changing the
+  WAIT / AVOID-new-capital action read.
 - For `[[GE]]`, refresh after Q2 2026 results with attention to FY2026 FCF
   pacing, CES services growth, DPT margin, cash, borrowings, share repurchases,
   RPO, supply-chain delinquency, GE9X / LEAP execution, and any disclosure that

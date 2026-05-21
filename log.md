@@ -2,6 +2,26 @@
 
 ## 2026-05-21
 
+- `latest-results`: Created `raw/imports/DELL_latest_results_source.md` from
+  Dell FY2026 Form 10-K, official FY2026 Q4 / full-year results release,
+  IR-hosted Q4 FY2026 transcript, Dell IR upcoming-events page, and fresh
+  StockAnalysis market-data check; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/DELL_fundamentals.md`,
+  `raw/financials/DELL_fundamentals.json`, and `wiki/entities/DELL.md` from
+  verified DELL FY2026 / FY2027 guidance source fields, with missing data
+  recorded instead of inferred.
+- `research`: Expanded `wiki/entities/DELL.md` with official-source business
+  model, segment/category mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/DELL DCF Valuation 2026-05-21.md` after
+  fresh-checking DELL price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF explicitly separates core debt from DFS related debt.
+- `analysis`: Created
+  `wiki/analysis/decisions/DELL Decision Memo 2026-05-21.md` with a
+  WAIT / AVOID-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/GE_latest_results_source.md` from GE
   Aerospace Q1 2026 Form 10-Q, official Q1 2026 earnings release, GE-hosted
   Q1 2026 earnings call transcript, FY2025 Form 10-K, and fresh Stooq
