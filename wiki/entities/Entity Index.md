@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[PG]] | PG | The Procter & Gamble Company | NYSE | Q3 FY2026 | 7 |
 | [[IBM]] | IBM | International Business Machines Corporation | NYSE | Q1 2026 | 7 |
 | [[UNH]] | UNH | UnitedHealth Group Incorporated | NYSE | Q1 2026 | 8 |
 | [[CSCO]] | CSCO | Cisco Systems, Inc. | Nasdaq | Q3 FY2026 | 8 |

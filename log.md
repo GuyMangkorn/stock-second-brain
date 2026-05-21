@@ -2,6 +2,24 @@
 
 ## 2026-05-21
 
+- `latest-results`: Created `raw/imports/PG_latest_results_source.md` from
+  Procter & Gamble Q3 FY2026 Form 10-Q, official Q3 FY2026 earnings release,
+  FY2025 Annual Report / Form 10-K, secondary transcript context, and fresh
+  Stooq market-data check; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/PG_fundamentals.md`,
+  `raw/financials/PG_fundamentals.json`, and `wiki/entities/PG.md` from
+  verified PG Q3 FY2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/PG.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created `wiki/analysis/valuations/PG DCF Valuation 2026-05-21.md`
+  after fresh-checking PG price, market cap, shares, cash, debt, FCF, and
+  guidance; DCF uses simple `OCF - capex` FCF and labels non-GAAP guidance.
+- `analysis`: Created `wiki/analysis/decisions/PG Decision Memo 2026-05-21.md`
+  with a WAIT / HOLD-existing-quality action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/IBM_latest_results_source.md` from
   IBM Q1 2026 Form 10-Q, official Q1 2026 earnings release, official prepared
   remarks, FY2025 Form 10-K / annual report extract, and fresh Stooq

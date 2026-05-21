@@ -1,0 +1,125 @@
+{
+  "company": "The Procter & Gamble Company",
+  "ticker": "PG",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q3 FY2026 and nine months ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": [
+    "Q3 FY2026",
+    "9M FY2026",
+    "FY2025"
+  ],
+  "provenance": [
+    {
+      "source": "P&G Q3 FY2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000060/pg-20260331.htm"
+    },
+    {
+      "source": "P&G Q3 FY2026 earnings release",
+      "url": "https://www.pginvestor.com/news/news-details/2026/PG-Announces-Fiscal-Year-2026-Third-Quarter-Results/default.aspx"
+    },
+    {
+      "source": "P&G FY2025 Annual Report / Form 10-K PDF",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000080424/000119312525191752/d879413dars.pdf"
+    },
+    {
+      "source": "Stooq PG quote CSV",
+      "url": "https://stooq.com/q/l/?s=pg.us&f=sd2t2ohlcv&h&e=csv",
+      "checked_date": "2026-05-21"
+    }
+  ],
+  "financial_series": {
+    "income_statement_q3": {
+      "Q3 FY2026": {
+        "net_sales_usd_m": 21235,
+        "gross_profit_usd_m": 10513,
+        "operating_income_usd_m": 4576,
+        "net_earnings_usd_m": 3951,
+        "net_earnings_attributable_to_pg_usd_m": 3932,
+        "diluted_eps_usd": 1.63,
+        "core_eps_usd": 1.59,
+        "diluted_weighted_average_shares_m": 2416.5
+      },
+      "Q3 FY2025": {
+        "net_sales_usd_m": 19776,
+        "gross_profit_usd_m": 10081,
+        "operating_income_usd_m": 4558,
+        "net_earnings_usd_m": 3793,
+        "net_earnings_attributable_to_pg_usd_m": 3769,
+        "diluted_eps_usd": 1.54,
+        "core_eps_usd": 1.54,
+        "diluted_weighted_average_shares_m": 2449.8
+      }
+    },
+    "cash_flow": {
+      "9M FY2026": {
+        "operating_cash_flow_usd_m": 14425,
+        "capital_expenditures_usd_m": 3386,
+        "simple_free_cash_flow_usd_m": 11039
+      },
+      "9M FY2025": {
+        "operating_cash_flow_usd_m": 12832,
+        "capital_expenditures_usd_m": 2777,
+        "simple_free_cash_flow_usd_m": 10055
+      },
+      "FY2025": {
+        "operating_cash_flow_usd_m": 17817,
+        "capital_expenditures_usd_m": 3773,
+        "simple_free_cash_flow_usd_m": 14044
+      },
+      "TTM": {
+        "simple_free_cash_flow_usd_m": 15028,
+        "calculation": "FY2025 FCF 14044 - 9M FY2025 FCF 10055 + 9M FY2026 FCF 11039"
+      }
+    },
+    "balance_sheet": {
+      "2026-03-31": {
+        "cash_and_equivalents_usd_m": 12306,
+        "debt_due_within_one_year_usd_m": 13174,
+        "long_term_debt_usd_m": 23852,
+        "total_debt_usd_m": 37026,
+        "total_assets_usd_m": 128378,
+        "total_liabilities_usd_m": 73647,
+        "total_shareholders_equity_usd_m": 54731,
+        "common_shares_outstanding_m": 2328.599
+      }
+    },
+    "market_data": {
+      "checked_date": "2026-05-21",
+      "latest_close_date": "2026-05-20",
+      "latest_close_price_usd": 142.44,
+      "market_cap_usd_b": 331.69,
+      "market_fcf_yield": 0.0453,
+      "market_ev_to_ttm_fcf": 23.72
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q3 FY2026",
+      "segments": [
+        {"segment": "Beauty", "net_sales_usd_m": 3866, "reported_yoy": 0.11, "organic_sales_growth": 0.07, "net_earnings_usd_m": 579},
+        {"segment": "Grooming", "net_sales_usd_m": 1608, "reported_yoy": 0.07, "organic_sales_growth": 0.01, "net_earnings_usd_m": 331},
+        {"segment": "Health Care", "net_sales_usd_m": 3073, "reported_yoy": 0.07, "organic_sales_growth": 0.02, "net_earnings_usd_m": 579},
+        {"segment": "Fabric & Home Care", "net_sales_usd_m": 7403, "reported_yoy": 0.07, "organic_sales_growth": 0.03, "net_earnings_usd_m": 1300},
+        {"segment": "Baby, Feminine & Family Care", "net_sales_usd_m": 5058, "reported_yoy": 0.06, "organic_sales_growth": 0.03, "net_earnings_usd_m": 980}
+      ]
+    }
+  ],
+  "ratios": [
+    {"ratio": "gross_margin", "period": "Q3 FY2026", "value": 0.4951},
+    {"ratio": "operating_margin", "period": "Q3 FY2026", "value": 0.2155},
+    {"ratio": "net_profit_margin", "period": "Q3 FY2026", "value": 0.1861},
+    {"ratio": "ytd_fcf_margin", "period": "9M FY2026", "value": 0.1677},
+    {"ratio": "net_debt_to_ttm_fcf", "period": "2026-03-31 / TTM", "value": 1.64}
+  ],
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "Official company-hosted full earnings call transcript was not verified.",
+    "Product/category-level profitability below reportable segments is not disclosed.",
+    "Forward adjusted free cash flow dollar amount is not disclosed.",
+    "Exact realized FY2026 tariff / commodity impact after Q3 is not disclosed.",
+    "Market data after 2026-05-20 close was not verified.",
+    "Investor-specific tax basis, position size, tax status, and required return were not provided."
+  ]
+}

@@ -7,6 +7,12 @@ updated: 2026-05-21
 
 ## Latest Work
 
+- 2026-05-21: Ran full new-ticker decision-grade flow for `[[PG]]`: created
+  `[[PG_latest_results_source]]`, normalized `[[PG_fundamentals]]`, added
+  `[[PG]]`, and created `[[PG DCF Valuation 2026-05-21]]` plus
+  `[[PG Decision Memo 2026-05-21]]`. P1 was source-note-only; P13 action read
+  is WAIT / HOLD-existing-quality because business quality is high but current
+  valuation does not show enough margin of safety for new capital.
 - 2026-05-21: Ran full new-ticker decision-grade flow for `[[IBM]]`: created
   `[[IBM_latest_results_source]]`, normalized `[[IBM_fundamentals]]`, added
   `[[IBM]]`, and created `[[IBM DCF Valuation 2026-05-21]]` plus
@@ -90,6 +96,7 @@ updated: 2026-05-21
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[PG]] | PG | The Procter & Gamble Company | NYSE | Q3 FY2026 | 7 |
 | [[IBM]] | IBM | International Business Machines Corporation | NYSE | Q1 2026 | 7 |
 | [[UNH]] | UNH | UnitedHealth Group Incorporated | NYSE | Q1 2026 | 8 |
 | [[CSCO]] | CSCO | Cisco Systems, Inc. | Nasdaq | Q3 FY2026 | 8 |
@@ -109,6 +116,7 @@ updated: 2026-05-21
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[PG]] | Full FY2026 actual results are not disclosed; official company-hosted full earnings call transcript was not verified; product/category-level profitability below reportable segments is not disclosed; forward adjusted free cash flow dollar amount is not disclosed; exact realized FY2026 tariff / commodity impact after Q3 is not disclosed; market data after 2026-05-20 close was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[IBM]] | Full FY2026 actual results are not disclosed; product-level AI revenue and AI margins are not disclosed; exact Q1 2026 generative AI book of business value was not verified; segment-level FCF is not disclosed; full detailed balance sheet was not normalized in this pass; Financing debt treatment requires explicit valuation judgment; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[UNH]] | FY2026 full-year actual results are not disclosed; FY2026 full-year FCF guidance was not verified; official full Q&A transcript was not normalized; segment-level FCF is not disclosed; product / contract-level profitability is not disclosed; full regulatory / legal exposure quantification is only partially disclosed; end-of-day 2026-05-20 price was not available during workflow; investor-specific position size, cost basis, tax status, and required return were not provided. |
 | [[CSCO]] | Q3 FY2026 Form 10-Q was not found during source discovery; official full prepared remarks / Q&A transcript was not normalized; FY2026 full-year actual results are not disclosed; FY2026 FCF guidance was not verified; product-category operating profit is not disclosed; hyperscaler AI customer concentration and margin are not disclosed; market quote after 2026-05-18 close was not verified; investor-specific position size, tax basis, and required return were not provided. |
@@ -128,6 +136,7 @@ updated: 2026-05-21
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[PG_latest_results_source]] | PG | latest-results | Q3 FY2026 and nine months ended 2026-03-31 plus FY2025 annual baseline | [[PG_fundamentals]] |
 | [[IBM_latest_results_source]] | IBM | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[IBM_fundamentals]] |
 | [[UNH_latest_results_source]] | UNH | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[UNH_fundamentals]] |
 | [[CSCO_latest_results_source]] | CSCO | latest-results | Q3 FY2026 and nine months ended 2026-04-25 plus FY2025 annual baseline | [[CSCO_fundamentals]] |
@@ -149,6 +158,11 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[PG]]`, refresh after FY2026 Q4 / full-year results with attention to
+  organic sales, gross margin, operating margin, FCF, cash, debt, shares,
+  adjusted free cash flow productivity, tariff/commodity impacts, buybacks,
+  dividends, and FY2027 guidance; refresh price before changing the
+  WAIT / HOLD-existing-quality action read.
 - For `[[IBM]]`, refresh after Q2 2026 results with attention to Software
   growth, Red Hat/OpenShift, Consulting signings/backlog conversion, IBM Z
   cycle normalization, FCF progress toward about USD 15.7B, cash, debt,
