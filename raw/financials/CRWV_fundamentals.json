@@ -1,0 +1,99 @@
+{
+  "company": "CoreWeave, Inc.",
+  "ticker": "CRWV",
+  "market": "Nasdaq Global Select Market",
+  "currency": "USD",
+  "period_type": "mixed",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31; FY2025 annual baseline; FY2026 guidance; market-data check 2026-05-21",
+  "periods": ["FY2023", "FY2024", "FY2025", "Q1 2025", "Q1 2026"],
+  "provenance": [
+    {
+      "source": "Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000222/crwv-20260331.htm",
+      "used_for": ["quarterly income statement", "balance sheet", "cash flow", "debt", "leases", "share count"]
+    },
+    {
+      "source": "FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+      "used_for": ["annual revenue", "annual cash flow", "annual capex", "business context"]
+    },
+    {
+      "source": "Q1 2026 earnings release",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-First-Quarter-2026-Results/default.aspx",
+      "used_for": ["adjusted EBITDA", "capex", "backlog", "RPO", "summary guidance"]
+    },
+    {
+      "source": "Q1 2026 outlook presentation",
+      "url": "https://s205.q4cdn.com/133937190/files/doc_financials/2026/q1/CoreWeave-1Q26-Outlook-Presentation.pdf",
+      "used_for": ["Q2 2026 guidance", "FY2026 guidance", "quarterly trend"]
+    },
+    {
+      "source": "StockAnalysis CRWV quote and statistics",
+      "url": "https://stockanalysis.com/stocks/crwv/",
+      "checked_date": "2026-05-21",
+      "used_for": ["current price", "market cap", "enterprise value", "current shares out"]
+    }
+  ],
+  "financial_series": {
+    "revenue_usd_m": {"FY2023": 229, "FY2024": 1915, "FY2025": 5131, "Q1 2025": 982, "Q1 2026": 2078, "TTM_2026-03-31": 6227},
+    "operating_income_loss_usd_m": {"Q1 2025": -270, "Q1 2026": -144},
+    "net_loss_usd_m": {"Q1 2025": -315, "Q1 2026": -740},
+    "adjusted_operating_income_usd_m": {"Q1 2025": 163, "Q1 2026": 21},
+    "adjusted_ebitda_usd_m": {"Q1 2025": 606, "Q1 2026": 1157},
+    "operating_cash_flow_usd_m": {"FY2023": 1833, "FY2024": 2749, "FY2025": 3058, "Q1 2025": 61, "Q1 2026": 2984, "TTM_2026-03-31": 5981},
+    "cash_capex_usd_m": {"FY2023": 2943, "FY2024": 8702, "FY2025": 10309, "Q1 2025": 1407, "Q1 2026": 7695, "TTM_2026-03-31": 16597},
+    "free_cash_flow_usd_m": {"FY2023": -1110, "FY2024": -5953, "FY2025": -7251, "Q1 2025": -1346, "Q1 2026": -4711, "TTM_2026-03-31": -10616},
+    "cash_and_marketable_securities_usd_m": {"2025-12-31": 2668, "2026-03-31": 2266},
+    "cash_restricted_cash_and_marketable_securities_usd_m": {"2025-12-31": 3602, "2026-03-31": 3342},
+    "total_debt_excluding_leases_usd_m": {"2025-12-31": 18154, "2026-03-31": 24859},
+    "debt_like_obligations_including_leases_usd_m": {"2025-12-31": 27408, "2026-03-31": 35147},
+    "total_assets_usd_m": {"2025-12-31": 34064, "2026-03-31": 55573},
+    "total_liabilities_usd_m": {"2025-12-31": 35461, "2026-03-31": 50814},
+    "stockholders_equity_usd_m": {"2025-12-31": -1397, "2026-03-31": 4759}
+  },
+  "segment_series": [],
+  "guidance": {
+    "q2_2026_revenue_usd_m": {"low": 2450, "high": 2600},
+    "q2_2026_adjusted_operating_income_usd_m": {"low": 30, "high": 90},
+    "q2_2026_capex_usd_m": {"low": 7000, "high": 9000},
+    "q2_2026_interest_expense_usd_m": {"low": 650, "high": 730},
+    "fy2026_revenue_usd_m": {"low": 12000, "high": 13000},
+    "fy2026_adjusted_operating_income_usd_m": {"low": 900, "high": 1100},
+    "fy2026_capex_usd_m": {"low": 31000, "high": 35000},
+    "fy2026_exit_arr_usd_m": {"low": 18000, "high": 19000}
+  },
+  "market_data": {
+    "checked_date": "2026-05-21",
+    "close_price_usd": 101.28,
+    "close_price_timestamp": "2026-05-20 4:00 PM EDT",
+    "premarket_price_usd": 105.95,
+    "premarket_timestamp": "2026-05-21 8:15 AM EDT",
+    "market_cap_usd_b": 55.26,
+    "enterprise_value_usd_b": 88.14,
+    "shares_out_m": 545.57,
+    "ev_to_ttm_revenue": 14.15,
+    "source": "https://stockanalysis.com/stocks/crwv/"
+  },
+  "ratios": [
+    {"name": "Q1 2026 calculated gross margin", "value": 0.655},
+    {"name": "Q1 2026 operating margin", "value": -0.069},
+    {"name": "Q1 2026 net margin", "value": -0.356},
+    {"name": "Q1 2026 adjusted EBITDA margin", "value": 0.557},
+    {"name": "TTM FCF margin", "value": -1.705},
+    {"name": "Current ratio", "value": 0.315},
+    {"name": "Quick ratio", "value": 0.246},
+    {"name": "Debt-like obligations / equity", "value": 7.386},
+    {"name": "EV / FY2026 revenue guidance midpoint", "value": 7.051}
+  ],
+  "missing_data": [
+    "FY2026 full-year actual results are not available as of 2026-05-21.",
+    "FY2026 free cash flow guidance is not disclosed.",
+    "A source-backed positive normalized FCF base is not available.",
+    "Revenue by product line, customer type, or individual major customer is not fully disclosed.",
+    "Segment-level operating income and segment-level FCF are not disclosed.",
+    "Post-quarter DDTL 5.0 draw amounts and exact pro forma debt outstanding are not verified in a filing-level balance sheet.",
+    "GAAP net income or EPS guidance for FY2026 was not verified.",
+    "Current market quote is provider-sourced and pre-market on 2026-05-21.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}

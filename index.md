@@ -7,6 +7,12 @@ updated: 2026-05-21
 
 ## Latest Work
 
+- 2026-05-21: Ran full new-ticker decision-grade flow for `[[CRWV]]`: created
+  `[[CRWV_latest_results_source]]`, normalized `[[CRWV_fundamentals]]`, added
+  `[[CRWV]]`, and created `[[CRWV DCF Valuation 2026-05-21]]` plus
+  `[[CRWV Decision Memo 2026-05-21]]`. P1 was source-note-only; P11 stopped
+  before a precise DCF fair value because positive normalized FCF is not
+  source-backed; P13 action read is AVOID-new-capital / WATCHLIST.
 - 2026-05-21: Ran full new-ticker decision-grade flow for `[[DELL]]`: created
   `[[DELL_latest_results_source]]`, normalized `[[DELL_fundamentals]]`, added
   `[[DELL]]`, and created `[[DELL DCF Valuation 2026-05-21]]` plus
@@ -114,6 +120,7 @@ updated: 2026-05-21
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[CRWV]] | CRWV | CoreWeave, Inc. | Nasdaq Global Select Market | Q1 2026 | 9 |
 | [[DELL]] | DELL | Dell Technologies Inc. | NYSE | FY2026 | 7 |
 | [[GE]] | GE | GE Aerospace | NYSE | Q1 2026 | 8 |
 | [[AMAT]] | AMAT | Applied Materials, Inc. | Nasdaq Global Select Market | Q2 FY2026 | 8 |
@@ -137,6 +144,7 @@ updated: 2026-05-21
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[CRWV]] | FY2026 full-year actual results are not available as of the 2026-05-21 source check; FY2026 free cash flow guidance is not disclosed; a source-backed positive normalized FCF base is not available; revenue by product line, customer type, or individual major customer is not fully disclosed; segment-level operating income and segment-level FCF are not disclosed; post-quarter DDTL 5.0 draw amounts and exact pro forma debt outstanding are not verified in a filing-level balance sheet; GAAP net income or EPS guidance for FY2026 was not verified; current market quote is provider-sourced and pre-market on 2026-05-21; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[DELL]] | FY2027 Q1 actual results are not available as of the 2026-05-21 source check; FY2027 free cash flow guidance is not disclosed; product-level and customer-level AI server profitability is not disclosed; segment-level FCF is not disclosed; AI server order/backlog split by enterprise, neocloud, and sovereign customers is not disclosed; DFS debt valuation treatment requires explicit judgment; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[GE]] | Full FY2026 actual results are not disclosed; GAAP reconciliation for FY2026 non-GAAP guidance is not disclosed; segment-level FCF is not disclosed; program-level profitability is not disclosed; customer concentration and airline credit-risk exposure are not disclosed; excess cash versus insurance/investment securities normalization requires judgment; market data after the 2026-05-20 close was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[AMAT]] | Q2 FY2026 Form 10-Q was not found as of the 2026-05-21 source search; official full Q2 FY2026 call transcript / Q&A was not verified; FY2026 full-year FCF guidance is not disclosed; exact Q2 period-end shares outstanding was not verified; segment-level FCF is not disclosed; customer-specific AI/HBM/advanced-packaging revenue and margins are not disclosed; market-data provider variance requires refresh before action changes; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -160,6 +168,7 @@ updated: 2026-05-21
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[CRWV_latest_results_source]] | CRWV | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-05-21 market-data check | [[CRWV_fundamentals]] |
 | [[DELL_latest_results_source]] | DELL | latest-results | FY2026 fiscal year ended 2026-01-30 plus FY2027 guidance and fresh 2026-05-21 market-data check | [[DELL_fundamentals]] |
 | [[GE_latest_results_source]] | GE | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[GE_fundamentals]] |
 | [[AMAT_latest_results_source]] | AMAT | latest-results | Q2 FY2026 and six months ended 2026-04-26 plus FY2025 annual baseline | [[AMAT_fundamentals]] |
@@ -185,6 +194,11 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[CRWV]]`, refresh after Q2 2026 results with attention to revenue,
+  adjusted operating income, adjusted EBITDA, OCF, cash capex, FCF, cash,
+  restricted cash, debt, leases, shares, RPO, backlog, interest expense, and
+  whether management provides any source-backed FCF bridge before changing the
+  AVOID-new-capital / WATCHLIST action read.
 - For `[[DELL]]`, refresh immediately after FY2027 Q1 results on 2026-05-28
   with attention to revenue, AI server shipments/orders/backlog, gross margin,
   OCF/FCF if disclosed, cash, core debt, DFS debt, shares, pricing / component

@@ -2,6 +2,28 @@
 
 ## 2026-05-21
 
+- `latest-results`: Created `raw/imports/CRWV_latest_results_source.md` from
+  CoreWeave Q1 2026 Form 10-Q, FY2025 Form 10-K, official Q1 2026 earnings
+  release, official outlook presentation, company-hosted Q1 2026 transcript,
+  post-quarter DDTL 5.0 context, and fresh StockAnalysis market-data check; P1
+  was limited to source note creation only.
+- `ingest`: Created `raw/financials/CRWV_fundamentals.md`,
+  `raw/financials/CRWV_fundamentals.json`, and `wiki/entities/CRWV.md` from
+  verified CRWV Q1 2026 / FY2025 / FY2026 guidance source fields, with missing
+  data recorded instead of inferred.
+- `research`: Expanded `wiki/entities/CRWV.md` with official-source business
+  model, operating indicators, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/CRWV DCF Valuation 2026-05-21.md` after
+  fresh-checking CRWV price, market cap, shares, cash, debt, FCF, and guidance;
+  P11 stopped before a precise DCF fair value because positive normalized FCF
+  is not source-backed.
+- `analysis`: Created
+  `wiki/analysis/decisions/CRWV Decision Memo 2026-05-21.md` with an
+  AVOID-new-capital / WATCHLIST action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/DELL_latest_results_source.md` from
   Dell FY2026 Form 10-K, official FY2026 Q4 / full-year results release,
   IR-hosted Q4 FY2026 transcript, Dell IR upcoming-events page, and fresh
