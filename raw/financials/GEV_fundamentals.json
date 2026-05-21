@@ -1,0 +1,131 @@
+{
+  "company": "GE Vernova Inc.",
+  "ticker": "GEV",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": ["Q1 2025", "Q1 2026", "FY2025"],
+  "provenance": [
+    {
+      "source": "GE Vernova Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm",
+      "use": "Primary quarterly statements, share count, balance sheet, debt, cash flow, EPS, and segment footnotes."
+    },
+    {
+      "source": "GE Vernova Q1 2026 earnings release / presentation",
+      "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_04222026.pdf",
+      "use": "Official results, segment orders/revenue/EBITDA, non-GAAP FCF reconciliation, and FY2026 guidance."
+    },
+    {
+      "source": "GE Vernova FY2025 annual report",
+      "url": "https://www.gevernova.com/sites/default/files/gevernova_2025_annual_report.pdf",
+      "use": "FY2025 annual baseline."
+    },
+    {
+      "source": "Investing.com GEV quote page",
+      "url": "https://www.investing.com/equities/ge-vernova-llc",
+      "use": "Fresh market price and market cap checked 2026-05-21."
+    }
+  ],
+  "financial_series": {
+    "revenue_usd_m": {
+      "Q1 2025": 8032,
+      "Q1 2026": 9339,
+      "FY2025": 36682
+    },
+    "net_income_attributable_usd_m": {
+      "Q1 2025": 254,
+      "Q1 2026": 4745,
+      "FY2025": 1551
+    },
+    "adjusted_ebitda_usd_m": {
+      "Q1 2025": 457,
+      "Q1 2026": 896,
+      "FY2025": 2915
+    },
+    "operating_cash_flow_usd_m": {
+      "Q1 2025": 1161,
+      "Q1 2026": 5188,
+      "FY2025": 4378
+    },
+    "capex_spend_usd_m": {
+      "Q1 2025": 186,
+      "Q1 2026": 397,
+      "FY2025": 692
+    },
+    "free_cash_flow_usd_m": {
+      "Q1 2025": 975,
+      "Q1 2026": 4791,
+      "FY2025": 3710,
+      "TTM": 7526
+    },
+    "cash_and_restricted_cash_usd_m": {
+      "2025-12-31": 8848,
+      "2026-03-31": 10172
+    },
+    "total_borrowings_and_finance_leases_usd_m": {
+      "2025-12-31": 289,
+      "2026-03-31": 2857
+    }
+  },
+  "segment_series": [
+    {
+      "segment": "Power",
+      "q1_2026_orders_usd_m": 10008,
+      "q1_2026_revenue_usd_m": 4971,
+      "q1_2026_ebitda_usd_m": 811
+    },
+    {
+      "segment": "Electrification",
+      "q1_2026_orders_usd_m": 7112,
+      "q1_2026_revenue_usd_m": 2959,
+      "q1_2026_ebitda_usd_m": 528
+    },
+    {
+      "segment": "Wind",
+      "q1_2026_orders_usd_m": 1199,
+      "q1_2026_revenue_usd_m": 1432,
+      "q1_2026_ebitda_usd_m": -382
+    }
+  ],
+  "market_data": {
+    "checked_date": "2026-05-21",
+    "price_usd": 1024.52,
+    "market_cap_usd_b": 275.31,
+    "shares_outstanding_m": 268.719995,
+    "diluted_shares_m": 272,
+    "source": "Investing.com quote page and GE Vernova Q1 2026 Form 10-Q"
+  },
+  "guidance": {
+    "fy2026_revenue_usd_b_low": 44.5,
+    "fy2026_revenue_usd_b_high": 45.5,
+    "fy2026_fcf_usd_b_low": 6.5,
+    "fy2026_fcf_usd_b_high": 7.5,
+    "fy2026_fcf_usd_b_midpoint": 7.0
+  },
+  "ratios": [
+    {
+      "name": "TTM FCF yield on market cap",
+      "period": "2026-05-21",
+      "value": 0.0273,
+      "formula": "7.526 / 275.31"
+    },
+    {
+      "name": "Market EV / TTM FCF",
+      "period": "2026-05-21",
+      "value": 35.61,
+      "formula": "(275.31 + 2.857 - 10.172) / 7.526"
+    }
+  ],
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "GAAP reconciliation for forward non-GAAP FCF / adjusted EBITDA margin guidance is not disclosed.",
+    "Segment-level FCF is not disclosed.",
+    "Wind project-level loss reserve and contract profitability is not disclosed.",
+    "Customer down-payment / slot-reservation conversion and cancellation terms are not disclosed.",
+    "Prolec GE full post-integration run-rate profitability is only partially disclosed.",
+    "Product-level data-center / gas turbine / grid equipment profitability is not disclosed.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}
