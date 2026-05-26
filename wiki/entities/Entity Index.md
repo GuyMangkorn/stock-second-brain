@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[SHOP]] | SHOP | Shopify Inc. | Nasdaq / TSX | Q1 2026 | 9 |
 | [[MCD]] | MCD | McDonald's Corporation | NYSE | Q1 2026 | 7 |
 | [[GEV]] | GEV | GE Vernova Inc. | NYSE | Q1 2026 | 8 |
 | [[CRWV]] | CRWV | CoreWeave, Inc. | Nasdaq Global Select Market | Q1 2026 | 9 |

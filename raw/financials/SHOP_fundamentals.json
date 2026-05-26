@@ -1,0 +1,140 @@
+{
+  "company": "Shopify Inc.",
+  "ticker": "SHOP",
+  "market": "Nasdaq / TSX",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "periods": ["Q1 2025", "Q1 2026", "FY2025"],
+  "provenance": [
+    {
+      "source": "Shopify Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000019/shop-20260331.htm"
+    },
+    {
+      "source": "Shopify Q1 2026 results press release",
+      "url": "https://www.shopify.com/investors/press-releases/shopify-delivers-again-as-merchants-clear-100-billion-in-q1-gmv"
+    },
+    {
+      "source": "Shopify FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000007/shop-20251231.htm"
+    },
+    {
+      "source": "Stooq SHOP.US quote CSV",
+      "url": "https://stooq.com/q/l/?s=shop.us&f=sd2t2ohlcv&h&e=csv"
+    }
+  ],
+  "financial_series": {
+    "revenue_usd_m": {
+      "Q1 2025": 2360,
+      "Q1 2026": 3170,
+      "FY2025": 11556
+    },
+    "gross_profit_usd_m": {
+      "Q1 2025": 1169,
+      "Q1 2026": 1546,
+      "FY2025": 5555
+    },
+    "operating_income_usd_m": {
+      "Q1 2025": 203,
+      "Q1 2026": 382,
+      "FY2025": 1468
+    },
+    "net_income_usd_m": {
+      "Q1 2025": -682,
+      "Q1 2026": -581,
+      "FY2025": 1231
+    },
+    "operating_cash_flow_usd_m": {
+      "Q1 2025": 367,
+      "Q1 2026": 481,
+      "FY2025": 2033
+    },
+    "capex_spend_usd_m": {
+      "Q1 2025": 4,
+      "Q1 2026": 5,
+      "FY2025": 26
+    },
+    "free_cash_flow_usd_m": {
+      "Q1 2025": 363,
+      "Q1 2026": 476,
+      "FY2025": 2007,
+      "TTM": 2120
+    },
+    "cash_and_marketable_securities_usd_m": {
+      "2026-03-31": 5743
+    },
+    "operating_lease_liabilities_usd_m": {
+      "2026-03-31": 179
+    }
+  },
+  "segment_series": [
+    {
+      "name": "Subscription solutions",
+      "revenue_usd_m": {
+        "Q1 2025": 620,
+        "Q1 2026": 750,
+        "FY2025": 2752
+      }
+    },
+    {
+      "name": "Merchant solutions",
+      "revenue_usd_m": {
+        "Q1 2025": 1740,
+        "Q1 2026": 2420,
+        "FY2025": 8804
+      }
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Q1 2026 revenue growth",
+      "value": 0.3432,
+      "formula": "3170 / 2360 - 1"
+    },
+    {
+      "name": "Q1 2026 gross margin",
+      "value": 0.4877,
+      "formula": "1546 / 3170"
+    },
+    {
+      "name": "Q1 2026 operating margin",
+      "value": 0.1205,
+      "formula": "382 / 3170"
+    },
+    {
+      "name": "Q1 2026 FCF margin",
+      "value": 0.1502,
+      "formula": "476 / 3170"
+    },
+    {
+      "name": "TTM FCF yield on market cap",
+      "value": 0.0159,
+      "formula": "2.120 / 133.658"
+    },
+    {
+      "name": "Market EV / TTM FCF",
+      "value": 60.42,
+      "formula": "(133.658 + 0.179 - 5.743) / 2.120"
+    }
+  ],
+  "market_data": {
+    "price_usd": 103.0,
+    "price_date": "2026-05-22",
+    "checked_date": "2026-05-26",
+    "market_cap_usd_b": 133.66,
+    "shares_outstanding_b": 1.29765461,
+    "diluted_shares_for_dcf_b": 1.303357874
+  },
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "FY2026 full-year revenue / FCF guidance is not disclosed.",
+    "Official company-hosted full call transcript / Q&A was not verified.",
+    "Segment-level operating income or FCF is not disclosed.",
+    "Product-level profitability for Payments, Shop Pay, Shop Campaigns, Capital, POS, and AI tools is not disclosed.",
+    "Merchant cohort retention, take rate by merchant size, and GMV by geography are partially disclosed / not disclosed.",
+    "Loan / merchant cash advance credit losses through a recessionary cycle are not disclosed.",
+    "Equity and other investment future fair-value impact is not predictable.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}

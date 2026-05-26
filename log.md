@@ -2,6 +2,27 @@
 
 ## 2026-05-26
 
+- `latest-results`: Created `raw/imports/SHOP_latest_results_source.md` from
+  Shopify Q1 2026 Form 10-Q, official Q1 2026 results press release, FY2025
+  Form 10-K, secondary transcript context, and fresh Stooq / StockAnalysis
+  market-data checks; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/SHOP_fundamentals.md`,
+  `raw/financials/SHOP_fundamentals.json`, and `wiki/entities/SHOP.md` from
+  verified SHOP Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/SHOP.md` with official-source business
+  model, revenue mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/SHOP DCF Valuation 2026-05-26.md` after
+  fresh-checking SHOP price, market cap, shares, cash, debt-like obligations,
+  FCF, and guidance; DCF uses TTM `OCF - capex` FCF because full-year FY2026
+  FCF guidance was not verified.
+- `analysis`: Created
+  `wiki/analysis/decisions/SHOP Decision Memo 2026-05-26.md` with a WAIT /
+  WATCHLIST action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/MCD_latest_results_source.md` from
   McDonald's Q1 2026 Form 10-Q, official Q1 2026 earnings release PDF,
   FY2025 Form 10-K / Annual Report, official Q1 webcast page, and fresh
@@ -22,6 +43,29 @@
 - `analysis`: Created
   `wiki/analysis/decisions/MCD Decision Memo 2026-05-26.md` with an
   AVOID-new-capital / WATCHLIST action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
+- `latest-results`: Created `raw/imports/CRWD_latest_results_source.md` from
+  CrowdStrike FY2026 Form 10-K, official Q4/FY2026 earnings release, Q1 FY2027
+  results-date announcement, secondary Q4 FY2026 transcript context, and fresh
+  StockAnalysis market-data checks; P1 was limited to source note creation
+  only.
+- `ingest`: Created `raw/financials/CRWD_fundamentals.md`,
+  `raw/financials/CRWD_fundamentals.json`, and `wiki/entities/CRWD.md` from
+  verified CRWD FY2026 / FY2027 guidance source fields, with missing data
+  recorded instead of inferred.
+- `research`: Expanded `wiki/entities/CRWD.md` with official-source business
+  model, revenue mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/CRWD DCF Valuation 2026-05-26.md` after
+  fresh-checking CRWD price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF uses FY2026 company-defined FCF as the source-backed cash-flow anchor and
+  labels FY2027 FCF as an assumption because management did not disclose FCF
+  guidance.
+- `analysis`: Created
+  `wiki/analysis/decisions/CRWD Decision Memo 2026-05-26.md` with a WAIT /
+  AVOID-new-capital action read and updated `index.md` plus
   `wiki/entities/Entity Index.md` for the new entity.
 
 ## 2026-05-21

@@ -7,6 +7,12 @@ updated: 2026-05-26
 
 ## Latest Work
 
+- 2026-05-26: Ran full new-ticker decision-grade flow for `[[SHOP]]`: created
+  `[[SHOP_latest_results_source]]`, normalized `[[SHOP_fundamentals]]`, added
+  `[[SHOP]]`, and created `[[SHOP DCF Valuation 2026-05-26]]` plus
+  `[[SHOP Decision Memo 2026-05-26]]`. P1 was source-note-only; P13 action
+  read is WAIT / WATCHLIST because Shopify is a high-quality commerce
+  compounder but current valuation is above the source-backed DCF range.
 - 2026-05-26: Ran full new-ticker decision-grade flow for `[[MCD]]`: created
   `[[MCD_latest_results_source]]`, normalized `[[MCD_fundamentals]]`, added
   `[[MCD]]`, and created `[[MCD DCF Valuation 2026-05-26]]` plus
@@ -14,6 +20,13 @@ updated: 2026-05-26
   is AVOID-new-capital / WATCHLIST because business quality is high but the
   latest available price implies a thin FCF yield and a demanding EV / FCF
   multiple.
+- 2026-05-26: Ran full new-ticker decision-grade flow for `[[CRWD]]`: created
+  `[[CRWD_latest_results_source]]`, normalized `[[CRWD_fundamentals]]`, added
+  `[[CRWD]]`, and created `[[CRWD DCF Valuation 2026-05-26]]` plus
+  `[[CRWD Decision Memo 2026-05-26]]`. P1 was source-note-only; P13 action
+  read is WAIT / AVOID-new-capital because CrowdStrike is a high-quality
+  cybersecurity compounder but current valuation is far above the source-backed
+  DCF range.
 - 2026-05-21: Ran full new-ticker decision-grade flow for `[[GEV]]`: created
   `[[GEV_latest_results_source]]`, normalized `[[GEV_fundamentals]]`, added
   `[[GEV]]`, and created `[[GEV DCF Valuation 2026-05-21]]` plus
@@ -134,7 +147,9 @@ updated: 2026-05-26
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[SHOP]] | SHOP | Shopify Inc. | Nasdaq / TSX | Q1 2026 | 9 |
 | [[MCD]] | MCD | McDonald's Corporation | NYSE | Q1 2026 | 7 |
+| [[CRWD]] | CRWD | CrowdStrike Holdings, Inc. | Nasdaq Global Select Market | FY2026 | 9 |
 | [[GEV]] | GEV | GE Vernova Inc. | NYSE | Q1 2026 | 8 |
 | [[CRWV]] | CRWV | CoreWeave, Inc. | Nasdaq Global Select Market | Q1 2026 | 9 |
 | [[DELL]] | DELL | Dell Technologies Inc. | NYSE | FY2026 | 7 |
@@ -160,7 +175,9 @@ updated: 2026-05-26
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[SHOP]] | Full FY2026 actual results are not disclosed; FY2026 full-year revenue / FCF guidance is not disclosed; official company-hosted full call transcript / Q&A was not verified; segment-level operating income or FCF is not disclosed; product-level profitability for Payments, Shop Pay, Shop Campaigns, Capital, POS, and AI tools is not disclosed; merchant cohort retention, take rate by merchant size, and GMV by geography are partially disclosed / not disclosed; loan / merchant cash advance credit losses through a recessionary cycle are not disclosed; equity and other investment future fair-value impact is not predictable; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[MCD]] | Full FY2026 actual results are not disclosed; official text transcript / full Q&A was not verified; forward FCF dollar guidance is not disclosed; product-level profitability by menu category is not disclosed; franchisee-level profitability and leverage are not disclosed; exact current intraday price on 2026-05-26 was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
+| [[CRWD]] | FY2027 Q1 actual results are not available as of the 2026-05-26 source check; FY2027 free cash flow guidance is not disclosed; company-hosted full written Q4 FY2026 earnings call transcript / Q&A was not verified; product-level revenue and profitability by module or platform category are not fully disclosed; segment-level operating income and segment-level FCF are not disclosed; customer-level economics, renewal pricing, and contract duration distribution are not disclosed; ultimate July 19 Incident legal / remediation cost is not fully known; current market price, market cap, and EV are provider-sourced, not company-filed facts; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[GEV]] | Full FY2026 actual results are not disclosed; GAAP reconciliation for forward non-GAAP FCF / adjusted EBITDA margin guidance is not disclosed; segment-level FCF is not disclosed; Wind project-level loss reserve and contract profitability is not disclosed; customer down-payment / slot-reservation conversion and cancellation terms are not disclosed; Prolec GE full post-integration run-rate profitability is only partially disclosed; product-level data-center / gas turbine / grid equipment profitability is not disclosed; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[CRWV]] | FY2026 full-year actual results are not available as of the 2026-05-21 source check; FY2026 free cash flow guidance is not disclosed; a source-backed positive normalized FCF base is not available; revenue by product line, customer type, or individual major customer is not fully disclosed; segment-level operating income and segment-level FCF are not disclosed; post-quarter DDTL 5.0 draw amounts and exact pro forma debt outstanding are not verified in a filing-level balance sheet; GAAP net income or EPS guidance for FY2026 was not verified; current market quote is provider-sourced and pre-market on 2026-05-21; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[DELL]] | FY2027 Q1 actual results are not available as of the 2026-05-21 source check; FY2027 free cash flow guidance is not disclosed; product-level and customer-level AI server profitability is not disclosed; segment-level FCF is not disclosed; AI server order/backlog split by enterprise, neocloud, and sovereign customers is not disclosed; DFS debt valuation treatment requires explicit judgment; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -186,7 +203,9 @@ updated: 2026-05-26
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[SHOP_latest_results_source]] | SHOP | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-26 market-data check | [[SHOP_fundamentals]] |
 | [[MCD_latest_results_source]] | MCD | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[MCD_fundamentals]] |
+| [[CRWD_latest_results_source]] | CRWD | latest-results | Q4 FY2026 and fiscal year ended 2026-01-31 plus FY2027 guidance and fresh 2026-05-26 market-data check | [[CRWD_fundamentals]] |
 | [[GEV_latest_results_source]] | GEV | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[GEV_fundamentals]] |
 | [[CRWV_latest_results_source]] | CRWV | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-05-21 market-data check | [[CRWV_fundamentals]] |
 | [[DELL_latest_results_source]] | DELL | latest-results | FY2026 fiscal year ended 2026-01-30 plus FY2027 guidance and fresh 2026-05-21 market-data check | [[DELL_fundamentals]] |
@@ -214,10 +233,19 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[SHOP]]`, refresh after Q2 2026 results with GMV, MRR, revenue,
+  Merchant solutions gross margin, transaction and loan losses, loans / MCAs,
+  OCF, capex, FCF, cash, marketable securities, leases, shares, and any
+  FY2026 guidance; refresh price before changing the WAIT / WATCHLIST action
+  read.
 - For `[[MCD]]`, refresh after Q2 2026 results with comparable sales, guest
   count / check commentary, revenue, operating income, OCF, capex, FCF, cash,
   debt, leases, shares, and outlook; refresh price before changing the
   AVOID-new-capital / WATCHLIST action read.
+- For `[[CRWD]]`, refresh immediately after Q1 FY2027 results on 2026-06-03
+  with attention to revenue, ARR, net new ARR, non-GAAP operating income, OCF,
+  FCF, cash, debt, shares, and any revised FY2027 guidance; refresh price
+  before changing the WAIT / AVOID-new-capital action read.
 - For `[[GEV]]`, refresh after Q2 2026 results with attention to segment
   orders, backlog, adjusted EBITDA, Wind losses, customer advances / slot
   reservations, OCF, capex, FCF, cash, debt, shares, and any updated FY2026
