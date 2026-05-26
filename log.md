@@ -1,5 +1,29 @@
 # Log
 
+## 2026-05-26
+
+- `latest-results`: Created `raw/imports/MCD_latest_results_source.md` from
+  McDonald's Q1 2026 Form 10-Q, official Q1 2026 earnings release PDF,
+  FY2025 Form 10-K / Annual Report, official Q1 webcast page, and fresh
+  StockAnalysis market-data check; P1 was limited to source note creation
+  only.
+- `ingest`: Created `raw/financials/MCD_fundamentals.md`,
+  `raw/financials/MCD_fundamentals.json`, and `wiki/entities/MCD.md` from
+  verified MCD Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/MCD.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/MCD DCF Valuation 2026-05-26.md` after
+  fresh-checking MCD price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF uses TTM simple `OCF - capex` FCF and separately flags lease liabilities
+  as debt-like context.
+- `analysis`: Created
+  `wiki/analysis/decisions/MCD Decision Memo 2026-05-26.md` with an
+  AVOID-new-capital / WATCHLIST action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 ## 2026-05-21
 
 - `latest-results`: Created `raw/imports/GEV_latest_results_source.md` from

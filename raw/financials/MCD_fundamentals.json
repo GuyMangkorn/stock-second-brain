@@ -1,0 +1,182 @@
+{
+  "company": "McDonald's Corporation",
+  "ticker": "MCD",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline",
+  "latest_period": "Q1 2026",
+  "latest_period_end": "2026-03-31",
+  "provenance": [
+    {
+      "source": "McDonald's Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000051/mcd-20260331.htm",
+      "use": "Q1 statements, cash flow, balance sheet, segments, outlook"
+    },
+    {
+      "source": "McDonald's Q1 2026 earnings release PDF",
+      "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/Q1%202026%20Exhibit%2099.1%20-%203.31.26.pdf",
+      "use": "Comparable sales, Systemwide sales, EPS reconciliation, commentary"
+    },
+    {
+      "source": "McDonald's FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+      "use": "FY2025 annual baseline, cash flow, debt, shares, strategy"
+    },
+    {
+      "source": "StockAnalysis MCD quote / market cap",
+      "url": "https://stockanalysis.com/stocks/mcd/",
+      "use": "Fresh market-data check on 2026-05-26 Asia/Bangkok"
+    }
+  ],
+  "periods": [
+    "Q1 2026",
+    "Q1 2025",
+    "FY2025",
+    "FY2024",
+    "FY2023"
+  ],
+  "financial_series": {
+    "quarterly_income_statement_usd_m": [
+      {
+        "period": "Q1 2026",
+        "revenue": 6517,
+        "operating_income": 2953,
+        "net_income": 1983,
+        "diluted_eps": 2.78,
+        "diluted_shares_m": 713.5
+      },
+      {
+        "period": "Q1 2025",
+        "revenue": 5956,
+        "operating_income": 2648,
+        "net_income": 1868,
+        "diluted_eps": 2.6,
+        "diluted_shares_m": 718.2
+      }
+    ],
+    "quarterly_cash_flow_usd_m": [
+      {
+        "period": "Q1 2026",
+        "operating_cash_flow": 2412,
+        "capital_expenditures": 682,
+        "simple_free_cash_flow": 1730
+      },
+      {
+        "period": "Q1 2025",
+        "operating_cash_flow": 2428,
+        "capital_expenditures": 551,
+        "simple_free_cash_flow": 1877
+      }
+    ],
+    "annual_trend_usd_m": [
+      {
+        "period": "FY2025",
+        "revenue": 26885,
+        "operating_income": 12393,
+        "net_income": 8563,
+        "operating_cash_flow": 10551,
+        "capital_expenditures": 3365,
+        "simple_free_cash_flow": 7186,
+        "diluted_eps": 11.95,
+        "diluted_shares_m": 716.4
+      },
+      {
+        "period": "FY2024",
+        "revenue": 25920,
+        "operating_income": 11712,
+        "net_income": 8223,
+        "operating_cash_flow": 9447,
+        "capital_expenditures": 2775,
+        "simple_free_cash_flow": 6672,
+        "diluted_eps": 11.39,
+        "diluted_shares_m": 721.9
+      },
+      {
+        "period": "FY2023",
+        "revenue": 25494,
+        "operating_income": 11647,
+        "net_income": 8469,
+        "operating_cash_flow": 9612,
+        "capital_expenditures": 2357,
+        "simple_free_cash_flow": 7255,
+        "diluted_eps": 11.56,
+        "diluted_shares_m": 732.3
+      }
+    ],
+    "balance_sheet_usd_m": [
+      {
+        "date": "2026-03-31",
+        "cash_and_equivalents": 1170,
+        "long_term_debt": 40105,
+        "long_term_lease_liability": 14069,
+        "total_assets": 60037
+      },
+      {
+        "date": "2025-12-31",
+        "cash_and_equivalents": 774,
+        "long_term_debt": 39973,
+        "long_term_lease_liability": 14147,
+        "total_assets": 59515
+      }
+    ],
+    "market_data": {
+      "checked_date": "2026-05-26",
+      "latest_close_date": "2026-05-22",
+      "latest_close_usd": 282.27,
+      "after_hours_usd": 282.24,
+      "shares_outstanding_m": 710.51,
+      "market_cap_usd_b": 200.55,
+      "enterprise_value_usd_b": 254.28,
+      "ttm_simple_fcf_usd_b": 7.039,
+      "market_fcf_yield": 0.0351,
+      "market_ev_to_ttm_fcf": 36.13
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segment": "U.S.",
+      "revenue_usd_m": 2583,
+      "operating_income_usd_m": 1380
+    },
+    {
+      "period": "Q1 2026",
+      "segment": "International Operated Markets",
+      "revenue_usd_m": 3325,
+      "operating_income_usd_m": 1507
+    },
+    {
+      "period": "Q1 2026",
+      "segment": "International Developmental Licensed Markets & Corporate",
+      "revenue_usd_m": 610,
+      "operating_income_usd_m": 67
+    }
+  ],
+  "guidance": [
+    {
+      "item": "2026 capital expenditures",
+      "value": "USD 3.7B to USD 3.9B",
+      "source": "Q1 2026 Form 10-Q outlook"
+    },
+    {
+      "item": "2026 operating margin percent",
+      "value": "mid-to-high 40% range",
+      "source": "Q1 2026 Form 10-Q outlook"
+    },
+    {
+      "item": "2026 FCF conversion rate",
+      "value": "low-to-mid 80% range",
+      "source": "Q1 2026 Form 10-Q outlook"
+    }
+  ],
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "Official text transcript / full Q&A was not verified.",
+    "Forward FCF dollar guidance is not disclosed.",
+    "Product-level profitability by menu category is not disclosed.",
+    "Franchisee-level profitability and leverage are not disclosed.",
+    "Exact current intraday price on 2026-05-26 was not verified; latest available close was 2026-05-22.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}
