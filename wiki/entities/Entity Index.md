@@ -8,6 +8,7 @@ type: entity-index
 |---|---|---|---|---|---:|
 | [[SHOP]] | SHOP | Shopify Inc. | Nasdaq / TSX | Q1 2026 | 9 |
 | [[MCD]] | MCD | McDonald's Corporation | NYSE | Q1 2026 | 7 |
+| [[CRWD]] | CRWD | CrowdStrike Holdings, Inc. | Nasdaq Global Select Market | FY2026 | 9 |
 | [[GEV]] | GEV | GE Vernova Inc. | NYSE | Q1 2026 | 8 |
 | [[CRWV]] | CRWV | CoreWeave, Inc. | Nasdaq Global Select Market | Q1 2026 | 9 |
 | [[DELL]] | DELL | Dell Technologies Inc. | NYSE | FY2026 | 7 |

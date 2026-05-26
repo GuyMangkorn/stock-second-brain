@@ -1,0 +1,168 @@
+{
+  "company": "CrowdStrike Holdings, Inc.",
+  "ticker": "CRWD",
+  "market": "Nasdaq Global Select Market",
+  "currency": "USD",
+  "period_type": "mixed",
+  "reporting_scope": "Q4 FY2026 and fiscal year ended 2026-01-31; FY2027 guidance; market-data check 2026-05-26",
+  "latest_period": "FY2026",
+  "latest_period_end": "2026-01-31",
+  "provenance": [
+    {
+      "source": "FY2026 Form 10-K filing detail",
+      "url": "https://ir.crowdstrike.com/sec-filings/sec-filing/10-k/0001535527-26-000010"
+    },
+    {
+      "source": "FY2026 Form 10-K PDF",
+      "url": "https://ir.crowdstrike.com/static-files/717b7579-e6fc-4864-af98-9523d5d4fecb"
+    },
+    {
+      "source": "Q4/FY2026 earnings release",
+      "url": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2026"
+    },
+    {
+      "source": "StockAnalysis statistics / quote",
+      "url": "https://stockanalysis.com/stocks/crwd/statistics/"
+    },
+    {
+      "source": "Raw source note",
+      "path": "raw/imports/CRWD_latest_results_source.md"
+    }
+  ],
+  "periods": [
+    "Q4 FY2026",
+    "Q4 FY2025",
+    "FY2026",
+    "FY2025",
+    "FY2024"
+  ],
+  "financial_series": {
+    "revenue_usd_m": {
+      "FY2024": 3055.555,
+      "FY2025": 3953.624,
+      "FY2026": 4812.005
+    },
+    "gross_profit_usd_m": {
+      "FY2024": 2296.626,
+      "FY2025": 2963.452,
+      "FY2026": 3593.076
+    },
+    "gaap_operating_income_usd_m": {
+      "FY2024": -19.141,
+      "FY2025": -116.4,
+      "FY2026": -293.292
+    },
+    "gaap_net_income_attributable_to_crowdstrike_usd_m": {
+      "FY2024": 72.181,
+      "FY2025": -15.241,
+      "FY2026": -162.502
+    },
+    "operating_cash_flow_usd_m": {
+      "FY2024": 1166.207,
+      "FY2025": 1381.727,
+      "FY2026": 1612.349
+    },
+    "purchases_of_property_and_equipment_usd_m": {
+      "FY2024": 176.529,
+      "FY2025": 254.852,
+      "FY2026": 302.108
+    },
+    "company_defined_free_cash_flow_usd_m": {
+      "FY2025": 1065.079,
+      "FY2026": 1235.274
+    },
+    "cash_and_cash_equivalents_usd_m": {
+      "2025-01-31": 4323.295,
+      "2026-01-31": 5230.125
+    },
+    "long_term_debt_usd_m": {
+      "2025-01-31": 743.983,
+      "2026-01-31": 745.471
+    },
+    "class_a_shares_outstanding_m": {
+      "2025-01-31": 247.872,
+      "2026-01-31": 253.363
+    }
+  },
+  "segment_series": [
+    {
+      "period": "FY2026",
+      "segment": "Subscription",
+      "revenue_usd_m": 4564.683
+    },
+    {
+      "period": "FY2026",
+      "segment": "Professional Services",
+      "revenue_usd_m": 247.322
+    }
+  ],
+  "guidance": {
+    "fy2027_arr_usd_m_range": [
+      6465.8,
+      6516.4
+    ],
+    "fy2027_revenue_usd_m_range": [
+      5867.6,
+      5927.6
+    ],
+    "fy2027_non_gaap_operating_income_usd_m_range": [
+      1422.2,
+      1462.2
+    ],
+    "fy2027_non_gaap_eps_range": [
+      4.78,
+      4.9
+    ],
+    "fy2027_diluted_shares_m": 260,
+    "fy2027_fcf_guidance": "not disclosed"
+  },
+  "market_data_check": {
+    "checked_date": "2026-05-26",
+    "regular_session_last_close_usd": 663.46,
+    "regular_session_last_close_time": "2026-05-22 16:00 EDT",
+    "pre_market_quote_usd": 657.01,
+    "pre_market_quote_time": "2026-05-26 08:31 EDT",
+    "market_cap_usd_b": 168.87,
+    "enterprise_value_usd_b": 164.46,
+    "shares_outstanding_m": 254.54,
+    "source": "StockAnalysis"
+  },
+  "ratios": [
+    {
+      "ratio": "revenue_growth",
+      "period": "FY2026",
+      "value": 0.2172
+    },
+    {
+      "ratio": "gross_margin",
+      "period": "FY2026",
+      "value": 0.7467
+    },
+    {
+      "ratio": "gaap_operating_margin",
+      "period": "FY2026",
+      "value": -0.0609
+    },
+    {
+      "ratio": "company_defined_fcf_margin",
+      "period": "FY2026",
+      "value": 0.2567
+    },
+    {
+      "ratio": "ev_to_company_defined_fcf",
+      "period": "2026-05-26",
+      "value": 133.14
+    }
+  ],
+  "missing_data": [
+    "FY2027 Q1 actual results are not available as of the 2026-05-26 source check.",
+    "FY2027 free cash flow guidance is not disclosed.",
+    "Company-hosted full written Q4 FY2026 earnings call transcript / Q&A was not verified.",
+    "Product-level revenue and profitability by module or platform category are not fully disclosed.",
+    "Segment-level operating income and segment-level FCF are not disclosed.",
+    "Customer-level economics, renewal pricing, and contract duration distribution are not disclosed.",
+    "Ultimate July 19 Incident legal / remediation cost is not fully known.",
+    "Current market price, market cap, and EV are provider-sourced, not company-filed facts.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}
