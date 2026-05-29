@@ -480,3 +480,7 @@
   and added FY2025 annual baseline / revenue mix facts to
   `raw/financials/MSFT_fundamentals.md` and
   `raw/financials/MSFT_fundamentals.json`.
+
+## 2026-05-30
+
+- `screener`: Created `raw/imports/MARKET_screener_sources_2026-05-30.md` and `wiki/analysis/comparisons/Screener Triage 2026-05-30.md` with a 40-stock medium-to-high-upside watchlist, source caveats, and next-step research queue.
