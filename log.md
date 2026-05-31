@@ -6,6 +6,26 @@
   memos can use multi-method valuation reads, including reverse DCF, peer
   multiples, growth-adjusted multiples, unit economics, scenario analysis, and
   optionality when a DCF-led valuation is unreliable.
+- `latest-results`: Created `raw/imports/CEG_latest_results_source.md` from
+  Constellation Energy Q1 2026 Form 10-Q, official Q1 2026 results release /
+  presentation, FY2025 Form 10-K, official webcast page, and fresh Twelve Data
+  market-data check; P1 was limited to source note creation only.
+- `ingest`: Created `raw/financials/CEG_fundamentals.md`,
+  `raw/financials/CEG_fundamentals.json`, and `wiki/entities/CEG.md` from
+  verified CEG Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/CEG.md` with official-source business
+  model, segment revenue mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/CEG DCF Valuation 2026-05-31.md` after
+  fresh-checking CEG price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF uses non-GAAP FCF before growth as a scenario anchor and flags
+  GAAP-style TTM FCF as a key sanity check.
+- `analysis`: Created
+  `wiki/analysis/decisions/CEG Decision Memo 2026-05-31.md` with a WAIT /
+  WATCHLIST-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
 
 ## 2026-05-26
 

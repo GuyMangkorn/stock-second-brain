@@ -1,0 +1,168 @@
+{
+  "company": "Constellation Energy Corporation",
+  "ticker": "CEG",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-31 market-data check",
+  "periods": [
+    {
+      "label": "Q1 2026",
+      "period_end": "2026-03-31",
+      "source": "CEG Q1 2026 Form 10-Q / Q1 2026 release",
+      "operating_revenue_usd_m": 11122,
+      "operating_income_usd_m": 2332,
+      "net_income_attributable_usd_m": 1590,
+      "gaap_eps_usd": 4.49,
+      "adjusted_operating_earnings_usd_m": 972,
+      "adjusted_operating_eps_usd": 2.74,
+      "weighted_average_diluted_shares_m": 354,
+      "operating_cash_flow_usd_m": 425,
+      "capex_spend_usd_m": 1275,
+      "gaap_style_fcf_usd_m": -850
+    },
+    {
+      "label": "Q1 2025",
+      "period_end": "2025-03-31",
+      "source": "CEG Q1 2026 Form 10-Q / Q1 2026 release",
+      "operating_revenue_usd_m": 6788,
+      "operating_income_usd_m": 451,
+      "net_income_attributable_usd_m": 118,
+      "gaap_eps_usd": 0.38,
+      "adjusted_operating_earnings_usd_m": 673,
+      "adjusted_operating_eps_usd": 2.14,
+      "weighted_average_diluted_shares_m": 314,
+      "operating_cash_flow_usd_m": 107,
+      "capex_spend_usd_m": 806,
+      "gaap_style_fcf_usd_m": -699
+    },
+    {
+      "label": "FY2025",
+      "period_end": "2025-12-31",
+      "source": "CEG FY2025 Form 10-K",
+      "operating_revenue_usd_m": 25533,
+      "operating_income_usd_m": 3086,
+      "net_income_attributable_usd_m": 2319,
+      "gaap_eps_usd": 7.40,
+      "adjusted_operating_earnings_usd_m": 2944,
+      "adjusted_operating_eps_usd": 9.39,
+      "weighted_average_diluted_shares_m": 314,
+      "operating_cash_flow_usd_m": 4237,
+      "capex_spend_usd_m": 2949,
+      "gaap_style_fcf_usd_m": 1288
+    }
+  ],
+  "provenance": [
+    {
+      "source": "CEG Q1 2026 Form 10-Q filing detail",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000067/0001868275-26-000067-index.htm"
+    },
+    {
+      "source": "CEG Q1 2026 Form 10-Q document",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000067/ceg-20260331.htm"
+    },
+    {
+      "source": "CEG Q1 2026 release and presentation",
+      "url": "https://investors.constellationenergy.com/static-files/9dc0168f-5328-42ce-9d66-2c3abe07bff0"
+    },
+    {
+      "source": "CEG Q1 2026 earnings presentation",
+      "url": "https://investors.constellationenergy.com/static-files/e5a93793-71b7-453f-a5d3-6a8acb420282"
+    },
+    {
+      "source": "CEG FY2025 Form 10-K / annual report",
+      "url": "https://investors.constellationenergy.com/static-files/8d46f4dc-04f9-4916-aa5d-e12bd5c45aa7"
+    },
+    {
+      "source": "Twelve Data CEG historical quote page",
+      "url": "https://twelvedata.com/markets/736051/stock/nasdaq/ceg/historical-data"
+    }
+  ],
+  "financial_series": {
+    "balance_sheet_2026_03_31_usd_m": {
+      "cash_and_equivalents": 800,
+      "restricted_cash_and_equivalents": 371,
+      "cash_restricted_cash_and_equivalents": 1171,
+      "current_assets": 18009,
+      "total_assets": 96911,
+      "short_term_borrowings": 5102,
+      "long_term_debt_due_within_one_year": 370,
+      "long_term_debt": 16994,
+      "total_debt_used_locally": 22466,
+      "net_debt_used_locally": 21295,
+      "total_liabilities": 63091,
+      "total_equity": 33820,
+      "shares_outstanding_m": 362.359
+    },
+    "market_data_2026_05_31": {
+      "latest_market_close_price_usd": 287.75,
+      "latest_market_close_date": "2026-05-29",
+      "market_cap_cross_check_usd_b": 104.27,
+      "market_ev_cross_check_usd_b": 125.56,
+      "ttm_gaap_style_fcf_usd_b": 1.137,
+      "fcf_before_growth_2026_2027_average_usd_b": 4.2
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "metric": "operating_revenue_usd_m",
+      "Mid-Atlantic": 1847,
+      "Midwest": 1732,
+      "New York": 569,
+      "ERCOT": 370,
+      "Other Power Regions": 1487,
+      "Calpine": 2395,
+      "Other": 1407,
+      "Unrealized gains / losses": 1315
+    },
+    {
+      "period": "Q1 2025",
+      "metric": "operating_revenue_usd_m",
+      "Mid-Atlantic": 1665,
+      "Midwest": 1404,
+      "New York": 562,
+      "ERCOT": 398,
+      "Other Power Regions": 1556,
+      "Calpine": null,
+      "Other": 1490,
+      "Unrealized gains / losses": -287
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Revenue growth",
+      "period": "Q1 2026 YoY",
+      "value": "63.85%",
+      "formula": "11122 / 6788 - 1"
+    },
+    {
+      "name": "Operating margin",
+      "period": "Q1 2026",
+      "value": "20.97%",
+      "formula": "2332 / 11122"
+    },
+    {
+      "name": "Net margin",
+      "period": "Q1 2026",
+      "value": "14.30%",
+      "formula": "1590 / 11122"
+    },
+    {
+      "name": "FCF-before-growth yield",
+      "period": "2026-05-29 price",
+      "value": "4.03%",
+      "formula": "4.2 / 104.27"
+    }
+  ],
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "Official written Q1 2026 call transcript / full Q&A was not verified.",
+    "GAAP reconciliation for forward Base EPS and free cash flow before growth was not fully disclosed.",
+    "Segment-level operating income and FCF are not disclosed.",
+    "Durable post-Calpine run-rate FCF after growth capex is only partially disclosed.",
+    "Product/customer-level profitability for data-center, powered-land, nuclear, and gas contracts is not disclosed.",
+    "Exact future regulatory outcomes for PJM, ERCOT, nuclear PTC, co-location, and large-load contracting are not knowable.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}

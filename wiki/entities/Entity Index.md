@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[CEG]] | CEG | Constellation Energy Corporation | Nasdaq | Q1 2026 | 8 |
 | [[SHOP]] | SHOP | Shopify Inc. | Nasdaq / TSX | Q1 2026 | 9 |
 | [[MCD]] | MCD | McDonald's Corporation | NYSE | Q1 2026 | 7 |
 | [[CRWD]] | CRWD | CrowdStrike Holdings, Inc. | Nasdaq Global Select Market | FY2026 | 9 |

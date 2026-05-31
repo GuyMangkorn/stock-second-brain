@@ -7,6 +7,13 @@ updated: 2026-05-26
 
 ## Latest Work
 
+- 2026-05-31: Ran full new-ticker decision-grade flow for `[[CEG]]`: created
+  `[[CEG_latest_results_source]]`, normalized `[[CEG_fundamentals]]`, added
+  `[[CEG]]`, and created `[[CEG DCF Valuation 2026-05-31]]` plus
+  `[[CEG Decision Memo 2026-05-31]]`. P1 was source-note-only; P13 action read
+  is WAIT / WATCHLIST-new-capital because Constellation is a scarce reliable
+  power / nuclear / data-center load growth platform, but valuation depends on
+  non-GAAP FCF before growth converting into durable cash after growth capex.
 - 2026-05-26: Ran full new-ticker decision-grade flow for `[[SHOP]]`: created
   `[[SHOP_latest_results_source]]`, normalized `[[SHOP_fundamentals]]`, added
   `[[SHOP]]`, and created `[[SHOP DCF Valuation 2026-05-26]]` plus
@@ -147,6 +154,7 @@ updated: 2026-05-26
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[CEG]] | CEG | Constellation Energy Corporation | Nasdaq | Q1 2026 | 8 |
 | [[SHOP]] | SHOP | Shopify Inc. | Nasdaq / TSX | Q1 2026 | 9 |
 | [[MCD]] | MCD | McDonald's Corporation | NYSE | Q1 2026 | 7 |
 | [[CRWD]] | CRWD | CrowdStrike Holdings, Inc. | Nasdaq Global Select Market | FY2026 | 9 |
@@ -175,6 +183,7 @@ updated: 2026-05-26
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[CEG]] | Full FY2026 actual results are not disclosed; official written Q1 2026 call transcript / full Q&A was not verified; GAAP reconciliation for forward Base EPS and free cash flow before growth was not fully disclosed; segment-level operating income and FCF are not disclosed; durable post-Calpine run-rate FCF after growth capex is only partially disclosed; product/customer-level profitability for data-center, powered-land, nuclear, and gas contracts is not disclosed; exact future regulatory outcomes for PJM, ERCOT, nuclear PTC, co-location, and large-load contracting are not knowable; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[SHOP]] | Full FY2026 actual results are not disclosed; FY2026 full-year revenue / FCF guidance is not disclosed; official company-hosted full call transcript / Q&A was not verified; segment-level operating income or FCF is not disclosed; product-level profitability for Payments, Shop Pay, Shop Campaigns, Capital, POS, and AI tools is not disclosed; merchant cohort retention, take rate by merchant size, and GMV by geography are partially disclosed / not disclosed; loan / merchant cash advance credit losses through a recessionary cycle are not disclosed; equity and other investment future fair-value impact is not predictable; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[MCD]] | Full FY2026 actual results are not disclosed; official text transcript / full Q&A was not verified; forward FCF dollar guidance is not disclosed; product-level profitability by menu category is not disclosed; franchisee-level profitability and leverage are not disclosed; exact current intraday price on 2026-05-26 was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[CRWD]] | FY2027 Q1 actual results are not available as of the 2026-05-26 source check; FY2027 free cash flow guidance is not disclosed; company-hosted full written Q4 FY2026 earnings call transcript / Q&A was not verified; product-level revenue and profitability by module or platform category are not fully disclosed; segment-level operating income and segment-level FCF are not disclosed; customer-level economics, renewal pricing, and contract duration distribution are not disclosed; ultimate July 19 Incident legal / remediation cost is not fully known; current market price, market cap, and EV are provider-sourced, not company-filed facts; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -203,6 +212,7 @@ updated: 2026-05-26
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[CEG_latest_results_source]] | CEG | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-31 market-data check | [[CEG_fundamentals]] |
 | [[SHOP_latest_results_source]] | SHOP | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-26 market-data check | [[SHOP_fundamentals]] |
 | [[MCD_latest_results_source]] | MCD | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[MCD_fundamentals]] |
 | [[CRWD_latest_results_source]] | CRWD | latest-results | Q4 FY2026 and fiscal year ended 2026-01-31 plus FY2027 guidance and fresh 2026-05-26 market-data check | [[CRWD_fundamentals]] |
