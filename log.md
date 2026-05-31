@@ -1,5 +1,12 @@
 # Log
 
+## 2026-05-31
+
+- `skills`: Updated `stock-decision-pipeline` and `output-contract` so decision
+  memos can use multi-method valuation reads, including reverse DCF, peer
+  multiples, growth-adjusted multiples, unit economics, scenario analysis, and
+  optionality when a DCF-led valuation is unreliable.
+
 ## 2026-05-26
 
 - `latest-results`: Created `raw/imports/SHOP_latest_results_source.md` from

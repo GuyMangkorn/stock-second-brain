@@ -24,7 +24,8 @@ and finance/valuation terms remain English for precision and searchability.
 - Keep facts, assumptions, calculations, and judgment separate.
 - Freshly check current price, market cap, shares, and other market data before
   any valuation or action call.
-- Do not force a DCF or action recommendation when required inputs are missing.
+- Do not force a DCF, fair value target, or action recommendation when required
+  inputs are missing or the business model makes a point-estimate DCF fragile.
 - Append `log.md` for every durable source note, financial ingest, valuation
   memo, decision memo, entity update, or audit memo.
 
@@ -52,7 +53,9 @@ Execution order:
    work, updating `wiki/entities/TICKER.md` and creating an analysis memo only
    when useful.
 4. Use `dcf-valuation` only after core inputs are verified: current price,
-   FCF or OCF minus capex, cash, debt, diluted shares, and assumptions.
+   FCF or OCF minus capex, cash, debt, diluted shares, and assumptions. If DCF
+   inputs are unstable, treat P11 as a valuation-gap or multi-method valuation
+   read instead of forcing a point estimate.
 5. Create `wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md` with an
    action read: add, hold, wait, trim, or avoid/watchlist.
 6. Use `source-integrity-audit` before or after P13 when the decision depends
@@ -85,6 +88,35 @@ If no reliable valuation exists, do not infer upside/downside from price alone.
 Either run P11 first or write the decision memo as a watchlist/hold-style memo
 with valuation gaps clearly labeled.
 
+## Multi-Method Valuation Policy
+
+DCF is one valuation lens, not a required anchor for every decision memo. Use a
+DCF-led `Valuation Read` only when normalized FCF, reinvestment needs, capital
+structure, share count, and terminal assumptions are reliable enough to support
+the output.
+
+For high-growth, pre-profit, optionality-heavy, cyclical, financial-sector, or
+otherwise hard-to-normalize companies, do not force a precise DCF. Use a
+multi-method valuation read and label each lens clearly:
+
+- `DCF Read` when input quality supports it.
+- `Reverse DCF Read` to identify what growth, margin, and FCF conversion the
+  current price implies.
+- `Multiple Read` using sourced peer or historical valuation ranges when
+  available.
+- `Growth-Adjusted Read` such as EV/Sales, EV/Gross Profit, or P/FCF relative
+  to growth, margin, scale, and quality.
+- `Unit Economics / Cohort Read` for SaaS, marketplaces, fintech, and other
+  cohort-driven businesses.
+- `Scenario / Optionality Read` for outcomes with wide dispersion or meaningful
+  product, platform, regulatory, or cycle optionality.
+- `Margin of Safety / Position Sizing Read` to connect valuation uncertainty to
+  portfolio action.
+
+Keep the decision humble when valuation dispersion is wide. Prefer `wait`,
+`watchlist`, smaller sizing, or explicit follow-up triggers over a false-precise
+fair value.
+
 ## Decision Memo Requirements
 
 Save as:
@@ -106,6 +138,10 @@ Recommended sections:
 - `## What Would Change The Decision`
 - `## Missing / Unverified Data`
 - `## Source Map`
+
+`Valuation Read` should state which lenses were used and why. If DCF is skipped,
+explain why and use other source-backed valuation lenses rather than implying a
+fair value from price movement alone.
 
 Decision language should be explicit but humble. Prefer `wait` or `watchlist`
 when source gaps or valuation uncertainty are material.
@@ -132,5 +168,7 @@ Stop and report gaps when:
 - ticker identity is ambiguous
 - current price or market data cannot be freshly checked for a decision memo
 - FCF, cash/debt, or share count is missing for a DCF-dependent decision
+- the business requires a non-DCF valuation lens but the needed peer,
+  unit-economics, scenario, or market-data inputs are unavailable
 - source notes conflict and the conflict changes the decision
 - the user asks for an action call but the vault has no durable source base

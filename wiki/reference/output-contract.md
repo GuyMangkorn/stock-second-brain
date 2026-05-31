@@ -11,9 +11,9 @@ Future durable outputs should use hybrid Thai/English:
 - Headings, frontmatter keys, JSON keys, filenames, ticker symbols, source
   labels, table column names, formulas, and metric names: English.
 - Finance and valuation terms should stay English when they are clearer or more
-  searchable, such as `valuation`, `DCF`, `FCF`, `WACC`, `terminal growth`,
-  `margin of safety`, `upside/downside`, `multiple`, `net debt`, `capex`, and
-  `guidance`.
+  searchable, such as `valuation`, `DCF`, `reverse DCF`, `FCF`, `WACC`,
+  `terminal growth`, `margin of safety`, `upside/downside`, `multiple`, `net
+  debt`, `capex`, `unit economics`, and `guidance`.
 - Raw source notes should preserve the source's meaning and language as much as
   possible. Thai summaries are allowed, but they must not replace traceable
   source facts.
@@ -162,7 +162,9 @@ Required sections:
 - Action Read
 - Current Price / Market Data Check when market data affects the action
 - Evidence From Vault
-- Valuation Read when relevant
+- Valuation Read when relevant; use DCF only when inputs are reliable, otherwise
+  label alternative lenses such as reverse DCF, peer multiples,
+  growth-adjusted multiples, unit economics, scenario analysis, and optionality
 - Bull Case
 - Bear Case
 - Key Assumptions
