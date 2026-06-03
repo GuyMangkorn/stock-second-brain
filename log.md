@@ -2,6 +2,29 @@
 
 ## 2026-06-03
 
+- `latest-results`: Created `raw/imports/VST_latest_results_source.md` from
+  Vistra Q1 2026 Form 10-Q, official Q1 2026 results release / presentation,
+  FY2025 Form 10-K / results release, third-party transcript discovery, and
+  fresh StockAnalysis / IR market-data checks; P1 was limited to source note
+  creation only.
+- `ingest`: Created `raw/financials/VST_fundamentals.md`,
+  `raw/financials/VST_fundamentals.json`, and `wiki/entities/VST.md` from
+  verified VST Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/VST.md` with official-source business
+  model, segment revenue / Adjusted EBITDA mix, thesis, risks, catalysts,
+  valuation watch items, reports, follow-up, and missing/unverified data
+  sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/VST DCF Valuation 2026-06-03.md` after
+  fresh-checking VST price, market cap, shares, cash, debt, preferred stock,
+  FCF, and guidance; DCF uses FY2026 consolidated Adjusted FCFbG as a scenario
+  anchor and flags GAAP-style TTM FCF as a key sanity check.
+- `analysis`: Created
+  `wiki/analysis/decisions/VST Decision Memo 2026-06-03.md` with a WAIT /
+  HOLD-existing action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 - `latest-results`: Created `raw/imports/AXON_latest_results_source.md` from
   Axon Q1 2026 Form 10-Q, official Q1 2026 results release / shareholder
   letter, company-hosted Q1 2026 transcript, FY2025 Form 10-K, and fresh

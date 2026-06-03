@@ -1,0 +1,252 @@
+{
+  "company": "Vistra Corp.",
+  "ticker": "VST",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check",
+  "latest_period": "Q1 2026",
+  "latest_period_end": "2026-03-31",
+  "provenance": [
+    {
+      "source": "VST Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000014/vistra-20260331.htm"
+    },
+    {
+      "source": "VST Q1 2026 earnings release",
+      "url": "https://investor.vistracorp.com/2026-05-07-Vistra-Reports-First-Quarter-2026-Results?asPDF=1"
+    },
+    {
+      "source": "VST Q1 2026 investor presentation",
+      "url": "https://filecache.investorroom.com/mr5ir_vistracorp_ir/343/Q1_2026_Results_Presentation_vFINAL.pdf"
+    },
+    {
+      "source": "VST FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/vistra-20251231.htm"
+    },
+    {
+      "source": "VST FY2025 results release",
+      "url": "https://investor.vistracorp.com/2026-02-26-Vistra-Reports-Fourth-Quarter-and-Full-Year-2025-Results?asPDF=1"
+    },
+    {
+      "source": "StockAnalysis VST quote / statistics",
+      "url": "https://stockanalysis.com/stocks/vst/statistics/"
+    }
+  ],
+  "financial_series": {
+    "income_statement_usd_m": [
+      {
+        "period": "Q1 2025",
+        "operating_revenues": 3933,
+        "operating_income": -120,
+        "net_income_attributable_to_vistra": -268,
+        "net_income_attributable_to_common_stock": -317,
+        "ongoing_operations_adjusted_ebitda": 1240,
+        "diluted_eps": -0.93,
+        "weighted_average_diluted_shares_m": 339.799989
+      },
+      {
+        "period": "Q1 2026",
+        "operating_revenues": 5640,
+        "operating_income": 1499,
+        "net_income_attributable_to_vistra": 1029,
+        "net_income_attributable_to_common_stock": 980,
+        "ongoing_operations_adjusted_ebitda": 1494,
+        "diluted_eps": 2.87,
+        "weighted_average_diluted_shares_m": 341.856774
+      },
+      {
+        "period": "FY2023",
+        "operating_revenues": 14779,
+        "operating_income": 2661,
+        "net_income": 1492
+      },
+      {
+        "period": "FY2024",
+        "operating_revenues": 17224,
+        "operating_income": 4081,
+        "net_income": 2812
+      },
+      {
+        "period": "FY2025",
+        "operating_revenues": 17738,
+        "operating_income": 1906,
+        "net_income": 944,
+        "net_income_attributable_to_common_stock": 752,
+        "ongoing_operations_adjusted_ebitda": 5912
+      }
+    ],
+    "cash_flow_usd_m": [
+      {
+        "period": "Q1 2025",
+        "operating_cash_flow": 599,
+        "capex_spend": 768,
+        "gaap_style_free_cash_flow": -169
+      },
+      {
+        "period": "Q1 2026",
+        "operating_cash_flow": 1199,
+        "capex_spend": 883,
+        "gaap_style_free_cash_flow": 316
+      },
+      {
+        "period": "FY2023",
+        "operating_cash_flow": 5453,
+        "capex_spend": 1676,
+        "gaap_style_free_cash_flow": 3777
+      },
+      {
+        "period": "FY2024",
+        "operating_cash_flow": 4563,
+        "capex_spend": 2078,
+        "gaap_style_free_cash_flow": 2485
+      },
+      {
+        "period": "FY2025",
+        "operating_cash_flow": 4070,
+        "capex_spend": 2752,
+        "gaap_style_free_cash_flow": 1318
+      }
+    ],
+    "balance_sheet_usd_m": [
+      {
+        "date": "2025-12-31",
+        "cash_and_equivalents": 785,
+        "cash_equivalents_and_restricted_cash": 822,
+        "current_assets": 9179,
+        "total_assets": 41550,
+        "long_term_debt_including_current": 17043,
+        "total_liabilities": 36440,
+        "total_equity": 5110,
+        "common_shares_outstanding_m": 338.059635
+      },
+      {
+        "date": "2026-03-31",
+        "cash_and_equivalents": 634,
+        "cash_equivalents_and_restricted_cash": 677,
+        "current_assets": 9016,
+        "total_assets": 41308,
+        "long_term_debt_including_current": 19163,
+        "company_total_debt_bridge": 19262,
+        "net_debt_before_cash_margin_deposits": 18628,
+        "net_debt_after_cash_margin_deposits": 17569,
+        "preferred_stock_liquidation_preference": 2476,
+        "total_liabilities": 35698,
+        "total_equity": 5610,
+        "common_shares_outstanding_m": 338.079954
+      }
+    ],
+    "market_data": {
+      "checked_at": "2026-06-03 12:00 PM EDT",
+      "price_usd": 155.37,
+      "market_cap_usd_b": 52.39,
+      "shares_outstanding_m": 337.18,
+      "enterprise_value_usd_b": 72.53,
+      "local_market_cap_cross_check_usd_b": 52.388,
+      "local_ev_bridge_for_common_equity_dcf_usd_b": 73.492,
+      "ttm_gaap_style_fcf_usd_b": 1.803,
+      "fy2026_consolidated_adjusted_fcfbg_midpoint_usd_b": 4.16
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "metric": "operating_revenues_usd_m",
+      "segments": {
+        "Retail": 3689,
+        "Texas": 2987,
+        "East": 2260,
+        "West": 89,
+        "Asset Closure": 6,
+        "Corporate and Other eliminations": -3391
+      }
+    },
+    {
+      "period": "Q1 2026",
+      "metric": "adjusted_ebitda_usd_m",
+      "segments": {
+        "Retail": 68,
+        "Texas": 586,
+        "East": 801,
+        "West": 56,
+        "Corporate and Other": -17,
+        "Asset Closure": -19
+      }
+    }
+  ],
+  "ratios": [
+    {
+      "ratio": "Revenue growth",
+      "period": "Q1 2026 YoY",
+      "value": 0.434
+    },
+    {
+      "ratio": "Operating margin",
+      "period": "Q1 2026",
+      "value": 0.2658
+    },
+    {
+      "ratio": "Net margin",
+      "period": "Q1 2026",
+      "value": 0.1824
+    },
+    {
+      "ratio": "Ongoing Operations Adjusted EBITDA margin",
+      "period": "Q1 2026",
+      "value": 0.2649
+    },
+    {
+      "ratio": "Current ratio",
+      "period": "2026-03-31",
+      "value": 0.896
+    },
+    {
+      "ratio": "D/E Ratio",
+      "period": "2026-03-31",
+      "value": 6.36,
+      "formula": "total_liabilities / total_equity"
+    },
+    {
+      "ratio": "TTM GAAP-style FCF yield",
+      "period": "2026-06-03 price",
+      "value": 0.0344
+    },
+    {
+      "ratio": "FY2026 Adjusted FCFbG midpoint yield",
+      "period": "2026-06-03 price",
+      "value": 0.0794,
+      "basis": "non-GAAP guidance"
+    }
+  ],
+  "guidance": [
+    {
+      "metric": "FY2026 Ongoing Operations Adjusted EBITDA",
+      "low_usd_b": 6.8,
+      "high_usd_b": 7.6,
+      "basis": "non-GAAP"
+    },
+    {
+      "metric": "FY2026 Ongoing Operations Adjusted FCFbG",
+      "low_usd_b": 3.925,
+      "high_usd_b": 4.725,
+      "basis": "non-GAAP"
+    },
+    {
+      "metric": "FY2026 consolidated Adjusted FCFbG",
+      "low_usd_b": 3.76,
+      "high_usd_b": 4.56,
+      "basis": "non-GAAP"
+    }
+  ],
+  "missing_data": [
+    "Full FY2026 actual results are not disclosed.",
+    "Official written Q1 2026 call transcript / full Q&A was not verified.",
+    "GAAP reconciliation for 2027 Adjusted EBITDA midpoint opportunity is not provided.",
+    "Post-close Cogentrix actual contribution is not disclosed.",
+    "Meta PPA contribution economics are partially disclosed.",
+    "Segment-level FCF is not disclosed.",
+    "Required growth capex versus maintenance capex split is partially disclosed.",
+    "Exact current price after market close on 2026-06-03 was not available during market-open check.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}

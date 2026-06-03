@@ -7,6 +7,13 @@ updated: 2026-06-03
 
 ## Latest Work
 
+- 2026-06-03: Ran full new-ticker decision-grade flow for `[[VST]]`: created
+  `[[VST_latest_results_source]]`, normalized `[[VST_fundamentals]]`, added
+  `[[VST]]`, and created `[[VST DCF Valuation 2026-06-03]]` plus
+  `[[VST Decision Memo 2026-06-03]]`. P1 was source-note-only; P13 action
+  read is WAIT / HOLD-existing because Vistra is a power-demand beneficiary
+  with strong Adjusted FCFbG guidance, but the source-backed base-case DCF is
+  below the fresh intraday price and depends on non-GAAP cash-flow conversion.
 - 2026-06-03: Ran full new-ticker decision-grade flow for `[[AXON]]`: created
   `[[AXON_latest_results_source]]`, normalized `[[AXON_fundamentals]]`, added
   `[[AXON]]`, and created `[[AXON DCF Valuation 2026-06-03]]` plus
@@ -161,6 +168,7 @@ updated: 2026-06-03
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[VST]] | VST | Vistra Corp. | NYSE | Q1 2026 | 9 |
 | [[AXON]] | AXON | Axon Enterprise, Inc. | Nasdaq | Q1 2026 | 8 |
 | [[CEG]] | CEG | Constellation Energy Corporation | Nasdaq | Q1 2026 | 8 |
 | [[SHOP]] | SHOP | Shopify Inc. | Nasdaq / TSX | Q1 2026 | 9 |
@@ -191,6 +199,7 @@ updated: 2026-06-03
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[VST]] | Full FY2026 actual results are not disclosed; official written Q1 2026 call transcript / full Q&A was not verified; GAAP reconciliation for 2027 Adjusted EBITDA midpoint opportunity is not provided; post-close Cogentrix actual contribution is not disclosed; Meta PPA contribution economics are partially disclosed; segment-level FCF is not disclosed; required growth capex versus maintenance capex split is partially disclosed; exact current price after market close on 2026-06-03 was not available during market-open check; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[AXON]] | FY2026 full-year actual results are not disclosed; FY2026 GAAP net income guidance and GAAP-to-Adjusted EBITDA reconciliation are not provided; product-level profitability for AI products, counter-drone, TASER, cameras, Fusus, Carbyne, Prepared, and other modules is not disclosed; segment-level FCF is not disclosed; normalized recurring FCF is uncertain because Q1 2026 FCF was negative while management still guides to approximately USD 450M full-year FCF; exact timing, cancellation risk, and margin conversion for future contracted bookings are not fully disclosed; provider market data is not an official company filing fact and may vary by timestamp; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[CEG]] | Full FY2026 actual results are not disclosed; official written Q1 2026 call transcript / full Q&A was not verified; GAAP reconciliation for forward Base EPS and free cash flow before growth was not fully disclosed; segment-level operating income and FCF are not disclosed; durable post-Calpine run-rate FCF after growth capex is only partially disclosed; product/customer-level profitability for data-center, powered-land, nuclear, and gas contracts is not disclosed; exact future regulatory outcomes for PJM, ERCOT, nuclear PTC, co-location, and large-load contracting are not knowable; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[SHOP]] | Full FY2026 actual results are not disclosed; FY2026 full-year revenue / FCF guidance is not disclosed; official company-hosted full call transcript / Q&A was not verified; segment-level operating income or FCF is not disclosed; product-level profitability for Payments, Shop Pay, Shop Campaigns, Capital, POS, and AI tools is not disclosed; merchant cohort retention, take rate by merchant size, and GMV by geography are partially disclosed / not disclosed; loan / merchant cash advance credit losses through a recessionary cycle are not disclosed; equity and other investment future fair-value impact is not predictable; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -221,6 +230,7 @@ updated: 2026-06-03
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[VST_latest_results_source]] | VST | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check | [[VST_fundamentals]] |
 | [[AXON_latest_results_source]] | AXON | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check | [[AXON_fundamentals]] |
 | [[CEG_latest_results_source]] | CEG | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-31 market-data check | [[CEG_fundamentals]] |
 | [[SHOP_latest_results_source]] | SHOP | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-26 market-data check | [[SHOP_fundamentals]] |
@@ -253,6 +263,11 @@ source-note, or fundamentals files change.
 
 ## Follow-Up
 
+- For `[[VST]]`, refresh after Q2 2026 results with operating revenue, Retail
+  margin, Ongoing Operations Adjusted EBITDA, OCF, capex, GAAP-style FCF, cash,
+  net debt, preferred stock, shares, hedge coverage, Cogentrix / Meta PPA
+  updates, and any revised FY2026 outlook; refresh price before changing the
+  WAIT / HOLD-existing action read.
 - For `[[AXON]]`, refresh after Q2 2026 results with revenue, ARR, NRR,
   future contracted bookings, OCF, capex, FCF, cash, debt, shares, stock-based
   compensation, and any revised FY2026 outlook; refresh price before changing
