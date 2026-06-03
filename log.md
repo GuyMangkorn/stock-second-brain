@@ -1,5 +1,29 @@
 # Log
 
+## 2026-06-03
+
+- `latest-results`: Created `raw/imports/AXON_latest_results_source.md` from
+  Axon Q1 2026 Form 10-Q, official Q1 2026 results release / shareholder
+  letter, company-hosted Q1 2026 transcript, FY2025 Form 10-K, and fresh
+  StockAnalysis market-data checks; P1 was limited to source note creation
+  only.
+- `ingest`: Created `raw/financials/AXON_fundamentals.md`,
+  `raw/financials/AXON_fundamentals.json`, and `wiki/entities/AXON.md` from
+  verified AXON Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/AXON.md` with official-source business
+  model, segment revenue mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/AXON DCF Valuation 2026-06-03.md` after
+  fresh-checking AXON price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF uses FY2026 FCF guidance as a scenario anchor and flags Q1 / TTM FCF
+  volatility as a key caveat.
+- `analysis`: Created
+  `wiki/analysis/decisions/AXON Decision Memo 2026-06-03.md` with a WAIT /
+  WATCHLIST-new-capital action read and updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
+
 ## 2026-05-31
 
 - `skills`: Updated `stock-decision-pipeline` and `output-contract` so decision

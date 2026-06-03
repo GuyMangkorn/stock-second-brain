@@ -1,0 +1,205 @@
+{
+  "company": "Axon Enterprise, Inc.",
+  "ticker": "AXON",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "mixed",
+  "reporting_scope": "Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check",
+  "latest_period": "Q1 2026",
+  "latest_period_end": "2026-03-31",
+  "provenance": [
+    {
+      "source": "Q1 2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1069183/000162828026031542/axon-20260331.htm"
+    },
+    {
+      "source": "FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1069183/000162828026011360/axon-20251231.htm"
+    },
+    {
+      "source": "Q1 2026 results release / shareholder letter",
+      "url": "https://www.sec.gov/Archives/edgar/data/1069183/000162828026031285/axon-20260506xex991.htm"
+    },
+    {
+      "source": "Q1 2026 earnings call transcript PDF",
+      "url": "https://investor.axon.com/image/Axon_Q1_2026_Earnings_Call_Transcript.pdf"
+    },
+    {
+      "source": "StockAnalysis overview / statistics",
+      "url": "https://stockanalysis.com/stocks/axon/"
+    },
+    {
+      "source": "Raw source note",
+      "path": "raw/imports/AXON_latest_results_source.md"
+    }
+  ],
+  "periods": [
+    "Q1 2026",
+    "Q1 2025",
+    "FY2025",
+    "FY2024",
+    "FY2023"
+  ],
+  "financial_series": {
+    "revenue_usd_m": {
+      "Q1 2025": 603.633,
+      "Q1 2026": 807.345,
+      "FY2023": 1560.699,
+      "FY2024": 2082.526,
+      "FY2025": 2779.536
+    },
+    "gross_profit_usd_m": {
+      "Q1 2025": 365.739,
+      "Q1 2026": 477.286,
+      "FY2023": 955.453,
+      "FY2024": 1241.38,
+      "FY2025": 1658.125
+    },
+    "operating_income_usd_m": {
+      "Q1 2025": -8.793,
+      "Q1 2026": 29.243,
+      "FY2023": 157.85,
+      "FY2024": 94.768,
+      "FY2025": -61.944
+    },
+    "net_income_usd_m": {
+      "Q1 2025": 87.98,
+      "Q1 2026": 169.312,
+      "FY2023": 175.783,
+      "FY2024": 377.034,
+      "FY2025": 124.656
+    },
+    "operating_cash_flow_usd_m": {
+      "Q1 2025": 25.794,
+      "Q1 2026": -31.517,
+      "FY2023": 202.134,
+      "FY2024": 447.657,
+      "FY2025": 211.339
+    },
+    "purchases_of_property_and_equipment_usd_m": {
+      "Q1 2025": 24.862,
+      "Q1 2026": 23.125,
+      "FY2023": 72.506,
+      "FY2024": 118.13,
+      "FY2025": 136.258
+    },
+    "simple_fcf_usd_m": {
+      "Q1 2025": 0.932,
+      "Q1 2026": -54.642,
+      "FY2023": 129.628,
+      "FY2024": 329.527,
+      "FY2025": 75.081
+    },
+    "cash_short_term_investments_marketable_securities_usd_m": {
+      "2025-12-31": 1733.777,
+      "2026-03-31": 736.973
+    },
+    "senior_notes_principal_usd_m": {
+      "2025-12-31": 1831.11,
+      "2026-03-31": 1750
+    },
+    "common_shares_outstanding_m": {
+      "2025-12-31": 80.212,
+      "2026-03-31": 80.572
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q1 2026",
+      "segment": "TASER",
+      "revenue_usd_m": 232.853
+    },
+    {
+      "period": "Q1 2026",
+      "segment": "Personal Sensors",
+      "revenue_usd_m": 108.751
+    },
+    {
+      "period": "Q1 2026",
+      "segment": "Platform Solutions",
+      "revenue_usd_m": 111.217
+    },
+    {
+      "period": "Q1 2026",
+      "segment": "Software and Services",
+      "revenue_usd_m": 354.524
+    }
+  ],
+  "guidance": {
+    "fy2026_revenue_growth_range": [
+      0.3,
+      0.32
+    ],
+    "fy2026_implied_revenue_usd_m_range": [
+      3613.397,
+      3668.988
+    ],
+    "fy2026_adjusted_ebitda_margin": 0.255,
+    "fy2026_implied_adjusted_ebitda_usd_m_range": [
+      921.416,
+      935.592
+    ],
+    "fy2026_operating_cash_flow_guidance_usd_m": ">600",
+    "fy2026_free_cash_flow_guidance_usd_m": "approximately 450",
+    "fy2026_stock_based_compensation_usd_m_range": [
+      590,
+      620
+    ],
+    "fy2026_capex_usd_m_range": [
+      160,
+      190
+    ],
+    "fy2026_gaap_net_income_guidance": "not disclosed"
+  },
+  "market_data_check": {
+    "checked_date": "2026-06-03",
+    "current_price_usd": 482.23,
+    "current_price_time": "2026-06-03 10:51 EDT",
+    "market_cap_usd_b": 38.87,
+    "shares_outstanding_m": 80.6,
+    "previous_close_usd": 490.12,
+    "source": "StockAnalysis"
+  },
+  "ratios": [
+    {
+      "ratio": "revenue_growth",
+      "period": "Q1 2026",
+      "value": 0.3374
+    },
+    {
+      "ratio": "gross_margin",
+      "period": "Q1 2026",
+      "value": 0.5912
+    },
+    {
+      "ratio": "operating_margin",
+      "period": "Q1 2026",
+      "value": 0.0362
+    },
+    {
+      "ratio": "fcf_margin",
+      "period": "Q1 2026",
+      "value": -0.0677
+    },
+    {
+      "ratio": "ev_to_fy2026_fcf_guidance",
+      "period": "2026-06-03",
+      "value": 88.63
+    },
+    {
+      "ratio": "ev_to_fy2026_revenue_guidance_midpoint",
+      "period": "2026-06-03",
+      "value": 10.95
+    }
+  ],
+  "missing_data": [
+    "FY2026 full-year actual results are not disclosed.",
+    "FY2026 GAAP net income guidance and GAAP-to-Adjusted EBITDA reconciliation are not provided.",
+    "Product-level profitability for AI products, counter-drone, TASER, cameras, Fusus, Carbyne, Prepared, and other modules is not disclosed.",
+    "Segment-level FCF is not disclosed.",
+    "Normalized recurring FCF is uncertain because Q1 2026 FCF was negative while management still guides to approximately USD 450M full-year FCF.",
+    "Exact timing, cancellation risk, and margin conversion for future contracted bookings are not fully disclosed.",
+    "Provider market data is not an official company filing fact and may vary by timestamp.",
+    "Investor-specific cost basis, position size, tax status, and required return were not provided."
+  ]
+}
