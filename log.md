@@ -1,5 +1,11 @@
 # Log
 
+## 2026-06-06
+
+- `skills`: Created GPT-ready Markdown skill exports in `gpt-skills/` from the
+  local `.codex/skills/*/SKILL.md` workflows, using uppercase snake-case
+  filenames and shared stock research source-integrity rules.
+
 ## 2026-06-03
 
 - `latest-results`: Created `raw/imports/VST_latest_results_source.md` from
