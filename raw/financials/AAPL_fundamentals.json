@@ -1,0 +1,146 @@
+{
+  "company": "Apple Inc.",
+  "ticker": "AAPL",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "FY2025 annual baseline plus Q2 FY2026 quarter and six months ended 2026-03-28",
+  "latest_period": "Q2 FY2026",
+  "latest_period_end": "2026-03-28",
+  "provenance": [
+    {
+      "source": "SEC Q2 FY2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+      "use": "Latest official quarterly filing, financial statements, revenue mix, cash/debt, shares, capital return, and risk context."
+    },
+    {
+      "source": "SEC FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "use": "FY2025 annual baseline and FY2023-FY2025 annual financial history."
+    },
+    {
+      "source": "Local source note",
+      "path": "raw/imports/AAPL_latest_results_source.md",
+      "use": "Extraction and ingest handoff."
+    },
+    {
+      "source": "Local market quote note",
+      "path": "raw/imports/AAPL_market_quote_2026-06-11.md",
+      "use": "Fresh market price and valuation-ratio context."
+    }
+  ],
+  "financial_series": {
+    "q2_fy2026": {
+      "revenue_usd_m": 111184,
+      "gross_margin_usd_m": 54781,
+      "operating_income_usd_m": 35885,
+      "net_income_usd_m": 29578,
+      "diluted_eps_usd": 2.01,
+      "weighted_average_diluted_shares_m": 14725.873
+    },
+    "q2_fy2025": {
+      "revenue_usd_m": 95359,
+      "gross_margin_usd_m": 44867,
+      "operating_income_usd_m": 29589,
+      "net_income_usd_m": 24780,
+      "diluted_eps_usd": 1.65,
+      "weighted_average_diluted_shares_m": 15056.133
+    },
+    "first_half_fy2026": {
+      "revenue_usd_m": 254940,
+      "operating_income_usd_m": 86737,
+      "net_income_usd_m": 71675,
+      "operating_cash_flow_usd_m": 82627,
+      "capex_spend_usd_m": 4344,
+      "free_cash_flow_usd_m": 78283,
+      "weighted_average_diluted_shares_m": 14768.115
+    },
+    "first_half_fy2025": {
+      "revenue_usd_m": 219659,
+      "operating_income_usd_m": 72421,
+      "net_income_usd_m": 61110,
+      "operating_cash_flow_usd_m": 53887,
+      "capex_spend_usd_m": 6011,
+      "free_cash_flow_usd_m": 47876
+    },
+    "ttm_q2_fy2026": {
+      "operating_cash_flow_usd_m": 140222,
+      "capex_spend_usd_m": 11048,
+      "free_cash_flow_usd_m": 129174,
+      "calculation": "FY2025 - 1H FY2025 + 1H FY2026"
+    },
+    "balance_sheet_2026_03_28": {
+      "cash_and_equivalents_usd_m": 45572,
+      "current_marketable_securities_usd_m": 22935,
+      "noncurrent_marketable_securities_usd_m": 78088,
+      "cash_and_marketable_securities_usd_m": 146595,
+      "commercial_paper_usd_m": 1997,
+      "current_term_debt_usd_m": 8310,
+      "noncurrent_term_debt_usd_m": 74404,
+      "total_debt_usd_m": 84711,
+      "net_cash_usd_m": 61884,
+      "shareholders_equity_usd_m": 106491
+    }
+  },
+  "segment_series": [
+    {
+      "period": "Q2 FY2026",
+      "dimension": "product",
+      "values_usd_m": {
+        "iPhone": 56994,
+        "Mac": 8399,
+        "iPad": 6914,
+        "Wearables, Home and Accessories": 7901,
+        "Services": 30976
+      }
+    },
+    {
+      "period": "Q2 FY2026",
+      "dimension": "geography",
+      "values_usd_m": {
+        "Americas": 45093,
+        "Europe": 28055,
+        "Greater China": 20497,
+        "Japan": 8401,
+        "Rest of Asia Pacific": 9138
+      }
+    }
+  ],
+  "ratios": [
+    {
+      "name": "Revenue growth",
+      "period": "Q2 FY2026 YoY",
+      "value": 0.166
+    },
+    {
+      "name": "Operating margin",
+      "period": "Q2 FY2026",
+      "value": 0.3227
+    },
+    {
+      "name": "Net profit margin",
+      "period": "Q2 FY2026",
+      "value": 0.266
+    },
+    {
+      "name": "Current ratio",
+      "period": "2026-03-28",
+      "value": 1.07
+    },
+    {
+      "name": "Cash and marketable securities / total debt",
+      "period": "2026-03-28",
+      "value": 1.73
+    }
+  ],
+  "missing_data": [
+    "Official Apple investor-relations Q2 FY2026 press release page was not verified in this pass.",
+    "Official earnings-call transcript was not verified in this pass.",
+    "Forward revenue, EPS, gross margin, capex, or FCF guidance was not disclosed in the verified official source set.",
+    "Product unit volumes and product-level margins below Products / Services are not disclosed.",
+    "Segment-level FCF by product or geography is not disclosed.",
+    "AI-specific revenue or Apple Intelligence monetization is not disclosed.",
+    "Q2 standalone operating cash flow and capex are not disclosed in the extracted official table.",
+    "Investor-specific position size, tax basis, and required return were not provided."
+  ]
+}

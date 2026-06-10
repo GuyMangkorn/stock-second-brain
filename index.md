@@ -1,12 +1,20 @@
 ---
 type: dashboard
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # Stock Second Brain Dashboard
 
 ## Latest Work
 
+- 2026-06-11: Ran full new-ticker decision-grade flow for `[[AAPL]]`: created
+  `[[AAPL_latest_results_source]]`, `[[AAPL_market_quote_2026-06-11]]`,
+  normalized `[[AAPL_fundamentals]]`, added `[[AAPL]]`, and created
+  `[[AAPL DCF Valuation 2026-06-11]]` plus
+  `[[AAPL Decision Memo 2026-06-11]]`. P1 was source-note-only; P13 action
+  read is AVOID new capital / HOLD existing quality position only if sizing
+  and tax context justify it because the fresh price of USD 292.15 is far above
+  the source-backed base DCF value of about USD 153.
 - 2026-06-10: Ran full new-ticker decision-grade flow for `[[META]]`: created
   `[[META_latest_results_source]]`, `[[META_market_quote_2026-06-10]]`,
   normalized `[[META_fundamentals]]`, added `[[META]]`, and created
@@ -182,6 +190,7 @@ updated: 2026-06-10
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[AAPL]] | AAPL | Apple Inc. | Nasdaq | Q2 FY2026 | 8 |
 | [[META]] | META | Meta Platforms, Inc. | Nasdaq | Q1 2026 | 7 |
 | [[VST]] | VST | Vistra Corp. | NYSE | Q1 2026 | 9 |
 | [[AXON]] | AXON | Axon Enterprise, Inc. | Nasdaq | Q1 2026 | 8 |
@@ -214,6 +223,7 @@ updated: 2026-06-10
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[AAPL]] | Official Apple investor-relations Q2 FY2026 press release page was not verified; official earnings-call transcript was not verified; forward revenue, EPS, gross margin, capex, or FCF guidance was not disclosed in the verified official source set; product unit volumes and product-level margins below Products / Services are not disclosed; segment-level FCF by product or geography is not disclosed; AI-specific revenue or Apple Intelligence monetization is not disclosed; Q2 standalone operating cash flow and capex are not disclosed in the extracted official table; investor-specific position size, tax basis, and required return were not provided. |
 | [[META]] | Product-level AI revenue, AI ad-tool revenue, Meta AI revenue, and AI infrastructure ROI are not disclosed; Reality Labs product-level margins, unit volume, and AR glasses economics are not disclosed; segment-level free cash flow is not disclosed; full FY2026 actual results are not yet reported; exact remaining-quarter 2026 capex cadence is not disclosed; FY2023 finance lease principal payments in the extracted table are not verified; investor-specific position size, tax basis, and required return were not provided. |
 | [[VST]] | Full FY2026 actual results are not disclosed; official written Q1 2026 call transcript / full Q&A was not verified; GAAP reconciliation for 2027 Adjusted EBITDA midpoint opportunity is not provided; post-close Cogentrix actual contribution is not disclosed; Meta PPA contribution economics are partially disclosed; segment-level FCF is not disclosed; required growth capex versus maintenance capex split is partially disclosed; exact current price after market close on 2026-06-03 was not available during market-open check; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[AXON]] | FY2026 full-year actual results are not disclosed; FY2026 GAAP net income guidance and GAAP-to-Adjusted EBITDA reconciliation are not provided; product-level profitability for AI products, counter-drone, TASER, cameras, Fusus, Carbyne, Prepared, and other modules is not disclosed; segment-level FCF is not disclosed; normalized recurring FCF is uncertain because Q1 2026 FCF was negative while management still guides to approximately USD 450M full-year FCF; exact timing, cancellation risk, and margin conversion for future contracted bookings are not fully disclosed; provider market data is not an official company filing fact and may vary by timestamp; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -246,6 +256,7 @@ updated: 2026-06-10
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[AAPL_latest_results_source]] | AAPL | latest-results | Q2 FY2026 quarter and six months ended 2026-03-28 plus FY2025 annual baseline and fresh 2026-06-10 market-data check | [[AAPL_fundamentals]] |
 | [[META_latest_results_source]] | META | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-10 market-data check | [[META_fundamentals]] |
 | [[VST_latest_results_source]] | VST | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check | [[VST_fundamentals]] |
 | [[AXON_latest_results_source]] | AXON | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check | [[AXON_fundamentals]] |

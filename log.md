@@ -1,5 +1,31 @@
 # Log
 
+## 2026-06-11
+
+- `latest-results`: Created `raw/imports/AAPL_latest_results_source.md` from
+  Apple Q2 FY2026 Form 10-Q, FY2025 Form 10-K, official SEC filing detail
+  pages, and fresh StockAnalysis market-data checks; P1 was limited to source
+  note creation only and records missing official release/transcript/guidance
+  fields instead of inferring them.
+- `ingest`: Created `raw/financials/AAPL_fundamentals.md`,
+  `raw/financials/AAPL_fundamentals.json`, and `wiki/entities/AAPL.md` from
+  verified AAPL Q2 FY2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/AAPL.md` with official-source business
+  model, product and geography revenue mix, thesis, risks, catalysts, valuation
+  watch items, reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/AAPL DCF Valuation 2026-06-11.md` after
+  fresh-checking AAPL price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF uses TTM `OCF - capex` FCF from official-source calculations and flags
+  missing official guidance as a key caveat.
+- `analysis`: Created
+  `wiki/analysis/decisions/AAPL Decision Memo 2026-06-11.md` and
+  `raw/imports/AAPL_market_quote_2026-06-11.md` with an AVOID new capital /
+  HOLD existing quality position only if sizing and tax context justify it
+  action read; updated `index.md` plus `wiki/entities/Entity Index.md` for the
+  new entity.
+
 ## 2026-06-10
 
 - `latest-results`: Created `raw/imports/META_latest_results_source.md` from
