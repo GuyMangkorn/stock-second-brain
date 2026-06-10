@@ -1,12 +1,18 @@
 ---
 type: dashboard
-updated: 2026-06-03
+updated: 2026-06-10
 ---
 
 # Stock Second Brain Dashboard
 
 ## Latest Work
 
+- 2026-06-10: Refreshed `[[IBM]]` with a fresh market quote source
+  `[[IBM_market_quote_2026-06-10]]`, created
+  `[[IBM DCF Valuation 2026-06-10]]` plus
+  `[[IBM Decision Memo 2026-06-10]]`, and moved the action read to WAIT /
+  HOLD-existing-only because the latest quote of USD 277.49 is above the
+  source-backed base DCF value of about USD 240.27.
 - 2026-06-03: Ran full new-ticker decision-grade flow for `[[VST]]`: created
   `[[VST_latest_results_source]]`, normalized `[[VST_fundamentals]]`, added
   `[[VST]]`, and created `[[VST DCF Valuation 2026-06-03]]` plus
@@ -180,7 +186,7 @@ updated: 2026-06-03
 | [[GE]] | GE | GE Aerospace | NYSE | Q1 2026 | 8 |
 | [[AMAT]] | AMAT | Applied Materials, Inc. | Nasdaq Global Select Market | Q2 FY2026 | 8 |
 | [[PG]] | PG | The Procter & Gamble Company | NYSE | Q3 FY2026 | 7 |
-| [[IBM]] | IBM | International Business Machines Corporation | NYSE | Q1 2026 | 7 |
+| [[IBM]] | IBM | International Business Machines Corporation | NYSE | Q1 2026 | 8 |
 | [[UNH]] | UNH | UnitedHealth Group Incorporated | NYSE | Q1 2026 | 8 |
 | [[CSCO]] | CSCO | Cisco Systems, Inc. | Nasdaq | Q3 FY2026 | 8 |
 | [[COST]] | COST | Costco Wholesale Corporation | Nasdaq | Q2 FY2026 | 8 |
@@ -211,7 +217,7 @@ updated: 2026-06-03
 | [[GE]] | Full FY2026 actual results are not disclosed; GAAP reconciliation for FY2026 non-GAAP guidance is not disclosed; segment-level FCF is not disclosed; program-level profitability is not disclosed; customer concentration and airline credit-risk exposure are not disclosed; excess cash versus insurance/investment securities normalization requires judgment; market data after the 2026-05-20 close was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[AMAT]] | Q2 FY2026 Form 10-Q was not found as of the 2026-05-21 source search; official full Q2 FY2026 call transcript / Q&A was not verified; FY2026 full-year FCF guidance is not disclosed; exact Q2 period-end shares outstanding was not verified; segment-level FCF is not disclosed; customer-specific AI/HBM/advanced-packaging revenue and margins are not disclosed; market-data provider variance requires refresh before action changes; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[PG]] | Full FY2026 actual results are not disclosed; official company-hosted full earnings call transcript was not verified; product/category-level profitability below reportable segments is not disclosed; forward adjusted free cash flow dollar amount is not disclosed; exact realized FY2026 tariff / commodity impact after Q3 is not disclosed; market data after 2026-05-20 close was not verified; investor-specific cost basis, position size, tax status, and required return were not provided. |
-| [[IBM]] | Full FY2026 actual results are not disclosed; product-level AI revenue and AI margins are not disclosed; exact Q1 2026 generative AI book of business value was not verified; segment-level FCF is not disclosed; full detailed balance sheet was not normalized in this pass; Financing debt treatment requires explicit valuation judgment; investor-specific cost basis, position size, tax status, and required return were not provided. |
+| [[IBM]] | Full FY2026 actual results are not disclosed; product-level AI revenue and AI margins are not disclosed; exact Q1 2026 generative AI book of business value was not verified; segment-level FCF is not disclosed; full detailed balance sheet was not normalized in this pass; Financing debt treatment requires explicit valuation judgment; investor-specific cost basis, position size, tax status, and required return were not provided; intraday 2026-06-10 real-time quote was not verified because the latest market quote source returned 2026-06-09. |
 | [[UNH]] | FY2026 full-year actual results are not disclosed; FY2026 full-year FCF guidance was not verified; official full Q&A transcript was not normalized; segment-level FCF is not disclosed; product / contract-level profitability is not disclosed; full regulatory / legal exposure quantification is only partially disclosed; end-of-day 2026-05-20 price was not available during workflow; investor-specific position size, cost basis, tax status, and required return were not provided. |
 | [[CSCO]] | Q3 FY2026 Form 10-Q was not found during source discovery; official full prepared remarks / Q&A transcript was not normalized; FY2026 full-year actual results are not disclosed; FY2026 FCF guidance was not verified; product-category operating profit is not disclosed; hyperscaler AI customer concentration and margin are not disclosed; market quote after 2026-05-18 close was not verified; investor-specific position size, tax basis, and required return were not provided. |
 | [[COST]] | FY2026 full-year actual results are not disclosed; FY2026 full-year sales / EPS guidance was not verified; FY2026 full-year FCF guidance was not verified; company-hosted written transcript was not verified; segment profitability by merchandise category or geography is not disclosed; tariff refund / net tariff impact is not quantified; market data after regular-market open on 2026-05-20 was not verified; investor-specific tax basis, position size, portfolio constraints, and required return were not provided. |
@@ -243,6 +249,7 @@ updated: 2026-06-03
 | [[AMAT_latest_results_source]] | AMAT | latest-results | Q2 FY2026 and six months ended 2026-04-26 plus FY2025 annual baseline | [[AMAT_fundamentals]] |
 | [[PG_latest_results_source]] | PG | latest-results | Q3 FY2026 and nine months ended 2026-03-31 plus FY2025 annual baseline | [[PG_fundamentals]] |
 | [[IBM_latest_results_source]] | IBM | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[IBM_fundamentals]] |
+| [[IBM_market_quote_2026-06-10]] | IBM | market-quote | Latest market quote for valuation refresh | [[IBM Decision Memo 2026-06-10]] |
 | [[UNH_latest_results_source]] | UNH | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline | [[UNH_fundamentals]] |
 | [[CSCO_latest_results_source]] | CSCO | latest-results | Q3 FY2026 and nine months ended 2026-04-25 plus FY2025 annual baseline | [[CSCO_fundamentals]] |
 | [[COST_latest_results_source]] | COST | latest-results | Q2 FY2026 and 24 weeks ended 2026-02-15 plus FY2025 annual baseline and April 2026 monthly sales update | [[COST_fundamentals]] |

@@ -10,7 +10,7 @@ latest_period: Q1 2026
 latest_period_end: 2026-03-31
 latest_total_revenue_usd_m: 15917
 latest_net_income_usd_m: 1216
-source_gap_count: 7
+source_gap_count: 8
 source_gaps:
   - Full FY2026 actual results are not disclosed.
   - Product-level AI revenue and AI margins are not disclosed.
@@ -19,8 +19,10 @@ source_gaps:
   - Full detailed balance sheet was not normalized in this pass.
   - Financing debt treatment requires explicit valuation judgment.
   - Investor-specific cost basis, position size, tax status, and required return were not provided.
+  - Intraday 2026-06-10 real-time quote was not verified; latest market quote source returned 2026-06-09.
 source_notes:
   - raw/imports/IBM_latest_results_source.md
+  - raw/imports/IBM_market_quote_2026-06-10.md
 normalized_markdown: raw/financials/IBM_fundamentals.md
 normalized_json: raw/financials/IBM_fundamentals.json
 tags:
@@ -41,8 +43,8 @@ tags:
 | Latest period | Q1 2026, quarter ended 2026-03-31 |
 | Reporting scope | Q1 2026 plus FY2025 annual baseline |
 | Normalized file | `raw/financials/IBM_fundamentals.md` |
-| Latest price check | USD 224.88 close on 2026-05-20; checked 2026-05-21 Asia/Bangkok |
-| Current action read | HOLD / WATCHLIST; ADD only with margin of safety or clearer FCF/debt proof |
+| Latest price check | USD 277.49 latest close on 2026-06-09; checked 2026-06-10 Asia/Bangkok |
+| Current action read | WAIT / HOLD-existing-only; do not add at current price without stronger FCF/debt proof |
 
 IBM เป็น Software-led Hybrid Cloud and AI platform company ที่ยังมี Consulting, Infrastructure, Financing และ mainframe cycle exposure ผสมอยู่ใน business model. Q1 2026 official sources แสดง revenue growth, margin expansion, FCF growth และ guidance ที่ยังมั่นใจ แต่ balance sheet มี leverage สูงหลัง Confluent และ acquisition-led strategy จึงต้อง underwrite debt และ FCF durability อย่างระวัง.
 
@@ -53,7 +55,7 @@ IBM เป็น Software-led Hybrid Cloud and AI platform company ที่ย�
 | 1 | SEC / official filings | Found | Q1 2026 Form 10-Q, accession `0000051143-26-000038`, filed 2026-04-23; FY2025 10-K / annual report extract reviewed. |
 | 1 | Official company results | Found | IBM Q1 2026 earnings release used for segment revenue, cash/debt summary, guidance, and dividend. |
 | 2 | Earnings transcript / call material | Found | IBM official 1Q26 prepared remarks used for management commentary and guidance detail. |
-| 3 | Financial statements / metrics | Found | Stooq used only for fresh market price; market cap calculated from official IBM shares outstanding. |
+| 3 | Financial statements / metrics | Found | Alpha Vantage used only for 2026-06-10 fresh market quote; market cap calculated from official IBM shares outstanding. |
 | 4 | News / web context | Not used for durable financial facts | Official sources were sufficient for core flow. |
 
 ## Business Model
@@ -123,7 +125,7 @@ IBM มี setup ที่น่าสนใจสำหรับ investor ท�
 
 Debt and business mix are the main friction. Total debt USD 66.4B เทียบกับ TTM FCF USD 14.992B ทำให้ total debt / FCF ประมาณ 4.43x. แม้ IBM Financing debt มี receivables backing บางส่วน แต่ equity valuation ต้องไม่ ignore balance sheet complexity. Consulting growth ยังต่ำ, AI economics ไม่ได้ disclosed ใน product-level revenue/margin, และ Infrastructure growth มี mainframe cycle component ที่อาจไม่ recurring เท่า Software.
 
-DCF base case gives only modest upside versus current price. นี่ไม่ใช่ obvious bargain ถ้าต้องการ large margin of safety.
+DCF base case now sits below current price after the stock moved from USD 224.88 in the 2026-05-21 memo to USD 277.49 on the latest quote. นี่ไม่ใช่ obvious bargain ถ้าต้องการ large margin of safety.
 
 ### Key Debate
 
@@ -150,17 +152,20 @@ DCF base case gives only modest upside versus current price. นี่ไม่�
 
 ## Valuation Watch Items
 
-- Current DCF memo: [[IBM DCF Valuation 2026-05-21]].
-- Base-case fair value is about USD 240.27 per diluted share versus USD 224.88 latest close, implying roughly 6.8% upside.
+- Current DCF memo: [[IBM DCF Valuation 2026-06-10]].
+- Base-case fair value is about USD 240.27 per diluted share versus USD 277.49 latest quote, implying roughly 13.4% downside.
 - Bear case is about USD 152.63 and bull case about USD 367.87; wide range reflects FCF durability, debt treatment, and terminal multiple sensitivity.
-- Current price does not provide a large margin of safety, but IBM is not obviously overvalued on a source-backed FCF DCF if management's FY2026 FCF guidance holds.
+- Current price now embeds more of the bull case. Existing normal-sized positions can be held for Q2 proof, but new capital should wait for either a pullback or clearer FCF/debt evidence.
 
 ## Reports / Source Notes
 
 | Note | Type |
 |---|---|
 | [[IBM_latest_results_source]] | Latest results source note |
+| [[IBM_market_quote_2026-06-10]] | Market quote source note |
 | [[IBM_fundamentals]] | Normalized financial facts |
+| [[IBM DCF Valuation 2026-06-10]] | DCF valuation refresh |
+| [[IBM Decision Memo 2026-06-10]] | Decision memo refresh |
 | [[IBM DCF Valuation 2026-05-21]] | DCF valuation |
 | [[IBM Decision Memo 2026-05-21]] | Decision memo |
 
@@ -170,7 +175,7 @@ DCF base case gives only modest upside versus current price. นี่ไม่�
 - Track whether FY2026 FCF is progressing toward about USD 15.7B.
 - Track post-Confluent debt reduction and interest expense.
 - Watch Consulting signings/backlog conversion and whether GenAI backlog becomes durable revenue.
-- Refresh price before changing the HOLD / WATCHLIST action read.
+- Refresh price before changing the WAIT / HOLD-existing-only action read.
 
 ## Missing / Unverified Data
 
@@ -183,3 +188,4 @@ DCF base case gives only modest upside versus current price. นี่ไม่�
 | Full detailed balance sheet normalization | not completed | P11/P13 required cash, debt, shares, and FCF; other lines can be normalized later. |
 | Financing debt treatment | judgment required | DCF uses total debt conservatively and separately shows IBM Financing debt caveat. |
 | Investor-specific tax basis, position size, tax status, and required return | not provided | Needed for final sizing. |
+| Intraday 2026-06-10 real-time quote | not disclosed | Latest market quote source returned 2026-06-09 latest trading day. |

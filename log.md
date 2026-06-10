@@ -1,5 +1,15 @@
 # Log
 
+## 2026-06-10
+
+- `valuation`: Created `wiki/analysis/valuations/IBM DCF Valuation 2026-06-10.md`
+  after fresh-checking IBM market quote, keeping the Q1 2026 official-source
+  operating inputs, and updating the valuation read to show base-case downside
+  at the current price.
+- `analysis`: Created `wiki/analysis/decisions/IBM Decision Memo 2026-06-10.md`
+  and `raw/imports/IBM_market_quote_2026-06-10.md`; updated `wiki/entities/IBM.md`
+  and `index.md` with a WAIT / HOLD-existing-only action read.
+
 ## 2026-06-06
 
 - `skills`: Created GPT-ready Markdown skill exports in `gpt-skills/` from the
