@@ -51,6 +51,7 @@ tags:
 | Latest source note | [[AAPL_latest_results_source]] |
 | Market quote note | [[AAPL_market_quote_2026-06-11]] |
 | Latest valuation memo | [[AAPL DCF Valuation 2026-06-11]] |
+| Bullish valuation scenario | [[AAPL Bullish Valuation Scenario 2026-06-11]] |
 | Latest decision memo | [[AAPL Decision Memo 2026-06-11]] |
 
 Apple เป็น consumer technology ecosystem ที่รายได้ยังพึ่ง iPhone สูง แต่คุณภาพของ model ดีขึ้นจาก Services gross margin ที่สูงมาก, installed base, App Store/cloud/advertising economics, และ capital return ขนาดใหญ่. ประเด็นหลักตอนนี้ไม่ใช่ business quality แต่คือ valuation ที่แพงเมื่อเทียบกับ FCF ที่ verify ได้.
@@ -253,6 +254,7 @@ Can Apple grow FCF per share fast enough from an already huge USD 129B TTM FCF b
 - Base DCF fair value from `[[AAPL DCF Valuation 2026-06-11]]`: about USD 153 per diluted share.
 - Base-case upside/downside vs fresh price: about (48)%.
 - Bull DCF fair value: about USD 229 per diluted share, still below fresh price.
+- Bullish scenario addendum from `[[AAPL Bullish Valuation Scenario 2026-06-11]]`: Quality Bull fair value about USD 290 per share, Aggressive Bull about USD 430, and Dream Case about USD 726; the latter two are highly terminal-value-sensitive.
 - P/FCF: about 33.0x; EV/FCF: about 32.6x.
 - Reverse DCF at 9.0% WACC / 2.5% terminal growth requires about 20.5% 5-year FCF CAGR from TTM Q2 FY2026 FCF, which is a high bar for Apple at this scale.
 
@@ -262,6 +264,7 @@ Can Apple grow FCF per share fast enough from an already huge USD 129B TTM FCF b
 - [[AAPL_market_quote_2026-06-11]]
 - [[AAPL_fundamentals]]
 - [[AAPL DCF Valuation 2026-06-11]]
+- [[AAPL Bullish Valuation Scenario 2026-06-11]]
 - [[AAPL Decision Memo 2026-06-11]]
 
 ## Follow-Up

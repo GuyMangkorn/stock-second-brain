@@ -46,6 +46,15 @@ tags:
 | FCF yield | 3.03% | StockAnalysis statistics page. |
 | Analyst average price target | USD 311.55 | StockAnalysis statistics page; secondary market context only. |
 
+## Additional Fresh Check For Bullish Scenario
+
+| Item | Value | Source |
+|---|---:|---|
+| Fresh price | USD 292.38 | StockAnalysis overview page, 2026-06-10 1:08 PM EDT, market open. |
+| Market capitalization | USD 4.29T | StockAnalysis overview page, checked 2026-06-10. |
+| Shares outstanding | 14.69B | StockAnalysis overview page, checked 2026-06-10. |
+| Analyst average price target | USD 311.55 | StockAnalysis overview page; secondary market context only. |
+
 ## Missing / Unverified Data
 
 | Item | Status | Handling |

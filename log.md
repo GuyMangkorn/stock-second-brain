@@ -2,6 +2,12 @@
 
 ## 2026-06-11
 
+- `valuation`: Created
+  `wiki/analysis/valuations/AAPL Bullish Valuation Scenario 2026-06-11.md`
+  and updated `wiki/entities/AAPL.md`,
+  `raw/imports/AAPL_market_quote_2026-06-11.md`, and `index.md` to capture a
+  bullish re-underwrite using lower WACC, higher terminal value, faster FCF
+  growth, and explicit share-count reduction assumptions.
 - `latest-results`: Created `raw/imports/AAPL_latest_results_source.md` from
   Apple Q2 FY2026 Form 10-Q, FY2025 Form 10-K, official SEC filing detail
   pages, and fresh StockAnalysis market-data checks; P1 was limited to source

@@ -7,6 +7,10 @@ updated: 2026-06-11
 
 ## Latest Work
 
+- 2026-06-11: Added `[[AAPL Bullish Valuation Scenario 2026-06-11]]`
+  to test lower WACC, higher terminal value, faster FCF growth, and explicit
+  share-count reduction assumptions. Quality Bull roughly supports the current
+  price, while Aggressive Bull creates upside but is terminal-value-sensitive.
 - 2026-06-11: Ran full new-ticker decision-grade flow for `[[AAPL]]`: created
   `[[AAPL_latest_results_source]]`, `[[AAPL_market_quote_2026-06-11]]`,
   normalized `[[AAPL_fundamentals]]`, added `[[AAPL]]`, and created
