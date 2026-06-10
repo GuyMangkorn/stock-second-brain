@@ -1,0 +1,161 @@
+{
+  "company": "Meta Platforms, Inc.",
+  "ticker": "META",
+  "market": "Nasdaq",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "FY2025 annual baseline plus Q1 2026 quarter ended 2026-03-31",
+  "latest_period": "Q1 2026",
+  "latest_period_end": "2026-03-31",
+  "periods": ["Q1 2025", "Q1 2026", "FY2023", "FY2024", "FY2025"],
+  "provenance": [
+    {
+      "source": "SEC Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
+      "accession": "0001628280-26-028526"
+    },
+    {
+      "source": "SEC 8-K Exhibit 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+      "accession": "0001628280-26-028364"
+    },
+    {
+      "source": "SEC FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "accession": "0001628280-26-003942"
+    },
+    {
+      "source": "raw/imports/META_latest_results_source.md",
+      "url": "raw/imports/META_latest_results_source.md"
+    },
+    {
+      "source": "raw/imports/META_market_quote_2026-06-10.md",
+      "url": "raw/imports/META_market_quote_2026-06-10.md"
+    }
+  ],
+  "financial_series": {
+    "revenue_usd_m": {
+      "Q1 2025": 42314,
+      "Q1 2026": 56311,
+      "FY2023": 134902,
+      "FY2024": 164501,
+      "FY2025": 200966
+    },
+    "operating_income_usd_m": {
+      "Q1 2025": 17555,
+      "Q1 2026": 22872,
+      "FY2023": 46751,
+      "FY2024": 69380,
+      "FY2025": 83276
+    },
+    "net_income_usd_m": {
+      "Q1 2025": 16644,
+      "Q1 2026": 26773,
+      "FY2023": 39098,
+      "FY2024": 62360,
+      "FY2025": 60458
+    },
+    "operating_cash_flow_usd_m": {
+      "Q1 2025": 24026,
+      "Q1 2026": 32226,
+      "FY2023": 71113,
+      "FY2024": 91328,
+      "FY2025": 115800,
+      "TTM Q1 2026": 124000
+    },
+    "capex_spend_usd_m": {
+      "Q1 2025": 12941,
+      "Q1 2026": 18997,
+      "FY2023": 27045,
+      "FY2024": 37256,
+      "FY2025": 69691,
+      "TTM Q1 2026": 75747
+    },
+    "finance_lease_principal_usd_m": {
+      "Q1 2025": 751,
+      "Q1 2026": 843,
+      "FY2024": 1969,
+      "FY2025": 2524,
+      "TTM Q1 2026": 2616
+    },
+    "free_cash_flow_company_method_usd_m": {
+      "Q1 2025": 10334,
+      "Q1 2026": 12386,
+      "FY2024": 52103,
+      "FY2025": 43585,
+      "TTM Q1 2026": 45637
+    }
+  },
+  "balance_sheet": {
+    "2026-03-31": {
+      "cash_and_cash_equivalents_usd_m": 23426,
+      "marketable_securities_usd_m": 57754,
+      "cash_and_marketable_securities_usd_m": 81180,
+      "total_assets_usd_m": 395250,
+      "long_term_debt_usd_m": 58748,
+      "total_liabilities_usd_m": 151569,
+      "stockholders_equity_usd_m": 243681
+    }
+  },
+  "segment_series": [
+    {
+      "segment": "Family of Apps",
+      "q1_2026_revenue_usd_m": 55909,
+      "q1_2025_revenue_usd_m": 41902,
+      "q1_2026_operating_income_usd_m": 26900,
+      "q1_2025_operating_income_usd_m": 21765
+    },
+    {
+      "segment": "Reality Labs",
+      "q1_2026_revenue_usd_m": 402,
+      "q1_2025_revenue_usd_m": 412,
+      "q1_2026_operating_income_usd_m": -4028,
+      "q1_2025_operating_income_usd_m": -4210
+    }
+  ],
+  "market_data": {
+    "checked": "2026-06-10 12:52 PM ET",
+    "last_sale_price_usd": 577.61,
+    "market_cap_usd": 1466244068856,
+    "total_class_a_b_shares_outstanding": 2538423304,
+    "weighted_average_diluted_shares_m": 2564
+  },
+  "ratios": [
+    {
+      "ratio": "Q1 2026 YoY revenue growth",
+      "value": 0.3308,
+      "formula": "56311 / 42314 - 1"
+    },
+    {
+      "ratio": "Q1 2026 operating margin",
+      "value": 0.4062,
+      "formula": "22872 / 56311"
+    },
+    {
+      "ratio": "Q1 2026 FCF margin",
+      "value": 0.22,
+      "formula": "12386 / 56311"
+    },
+    {
+      "ratio": "cash plus marketable securities to long-term debt",
+      "value": 1.3818,
+      "formula": "81180 / 58748"
+    }
+  ],
+  "guidance": {
+    "q2_2026_revenue_usd_b": "58-61",
+    "fy2026_total_expenses_usd_b": "162-169",
+    "fy2026_capex_including_finance_lease_principal_usd_b": "125-145",
+    "remaining_2026_tax_rate": "13%-16%",
+    "source": "SEC 8-K Exhibit 99.1"
+  },
+  "missing_data": [
+    "Product-level AI revenue, AI ad-tool revenue, Meta AI revenue, and AI infrastructure ROI are not disclosed.",
+    "Reality Labs product-level margins and unit economics are not disclosed.",
+    "Segment-level free cash flow is not disclosed.",
+    "Full FY2026 actual results are not yet reported.",
+    "Exact remaining-quarter 2026 capex cadence is not disclosed.",
+    "FY2023 finance lease principal payments in extracted table are not verified.",
+    "Investor-specific position size, tax basis, and required return were not provided."
+  ]
+}

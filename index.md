@@ -7,6 +7,14 @@ updated: 2026-06-10
 
 ## Latest Work
 
+- 2026-06-10: Ran full new-ticker decision-grade flow for `[[META]]`: created
+  `[[META_latest_results_source]]`, `[[META_market_quote_2026-06-10]]`,
+  normalized `[[META_fundamentals]]`, added `[[META]]`, and created
+  `[[META DCF Valuation 2026-06-10]]` plus
+  `[[META Decision Memo 2026-06-10]]`. P1 was source-note-only; P13 action
+  read is WAIT new capital / HOLD existing quality position because FoA quality
+  is strong but the fresh price of USD 577.61 is modestly above the
+  source-backed base DCF value of about USD 529.
 - 2026-06-10: Refreshed `[[IBM]]` with a fresh market quote source
   `[[IBM_market_quote_2026-06-10]]`, created
   `[[IBM DCF Valuation 2026-06-10]]` plus
@@ -174,6 +182,7 @@ updated: 2026-06-10
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[META]] | META | Meta Platforms, Inc. | Nasdaq | Q1 2026 | 7 |
 | [[VST]] | VST | Vistra Corp. | NYSE | Q1 2026 | 9 |
 | [[AXON]] | AXON | Axon Enterprise, Inc. | Nasdaq | Q1 2026 | 8 |
 | [[CEG]] | CEG | Constellation Energy Corporation | Nasdaq | Q1 2026 | 8 |
@@ -205,6 +214,7 @@ updated: 2026-06-10
 
 | Entity | Missing / Unverified |
 |---|---|
+| [[META]] | Product-level AI revenue, AI ad-tool revenue, Meta AI revenue, and AI infrastructure ROI are not disclosed; Reality Labs product-level margins, unit volume, and AR glasses economics are not disclosed; segment-level free cash flow is not disclosed; full FY2026 actual results are not yet reported; exact remaining-quarter 2026 capex cadence is not disclosed; FY2023 finance lease principal payments in the extracted table are not verified; investor-specific position size, tax basis, and required return were not provided. |
 | [[VST]] | Full FY2026 actual results are not disclosed; official written Q1 2026 call transcript / full Q&A was not verified; GAAP reconciliation for 2027 Adjusted EBITDA midpoint opportunity is not provided; post-close Cogentrix actual contribution is not disclosed; Meta PPA contribution economics are partially disclosed; segment-level FCF is not disclosed; required growth capex versus maintenance capex split is partially disclosed; exact current price after market close on 2026-06-03 was not available during market-open check; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[AXON]] | FY2026 full-year actual results are not disclosed; FY2026 GAAP net income guidance and GAAP-to-Adjusted EBITDA reconciliation are not provided; product-level profitability for AI products, counter-drone, TASER, cameras, Fusus, Carbyne, Prepared, and other modules is not disclosed; segment-level FCF is not disclosed; normalized recurring FCF is uncertain because Q1 2026 FCF was negative while management still guides to approximately USD 450M full-year FCF; exact timing, cancellation risk, and margin conversion for future contracted bookings are not fully disclosed; provider market data is not an official company filing fact and may vary by timestamp; investor-specific cost basis, position size, tax status, and required return were not provided. |
 | [[CEG]] | Full FY2026 actual results are not disclosed; official written Q1 2026 call transcript / full Q&A was not verified; GAAP reconciliation for forward Base EPS and free cash flow before growth was not fully disclosed; segment-level operating income and FCF are not disclosed; durable post-Calpine run-rate FCF after growth capex is only partially disclosed; product/customer-level profitability for data-center, powered-land, nuclear, and gas contracts is not disclosed; exact future regulatory outcomes for PJM, ERCOT, nuclear PTC, co-location, and large-load contracting are not knowable; investor-specific cost basis, position size, tax status, and required return were not provided. |
@@ -236,6 +246,7 @@ updated: 2026-06-10
 
 | Source Note | Ticker | Source Kind | Scope | Normalized Output |
 |---|---|---|---|---|
+| [[META_latest_results_source]] | META | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-10 market-data check | [[META_fundamentals]] |
 | [[VST_latest_results_source]] | VST | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check | [[VST_fundamentals]] |
 | [[AXON_latest_results_source]] | AXON | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline, FY2026 guidance, and fresh 2026-06-03 market-data check | [[AXON_fundamentals]] |
 | [[CEG_latest_results_source]] | CEG | latest-results | Q1 2026 quarter ended 2026-03-31 plus FY2025 annual baseline and fresh 2026-05-31 market-data check | [[CEG_fundamentals]] |

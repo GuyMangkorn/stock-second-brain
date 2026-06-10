@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[META]] | META | Meta Platforms, Inc. | Nasdaq | Q1 2026 | 7 |
 | [[VST]] | VST | Vistra Corp. | NYSE | Q1 2026 | 9 |
 | [[AXON]] | AXON | Axon Enterprise, Inc. | Nasdaq | Q1 2026 | 8 |
 | [[CEG]] | CEG | Constellation Energy Corporation | Nasdaq | Q1 2026 | 8 |

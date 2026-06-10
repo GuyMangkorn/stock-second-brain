@@ -2,6 +2,27 @@
 
 ## 2026-06-10
 
+- `latest-results`: Created `raw/imports/META_latest_results_source.md` from
+  Meta Q1 2026 Form 10-Q, official Q1 2026 earnings 8-K Exhibit 99.1, FY2025
+  Form 10-K, SEC companyfacts, and fresh Nasdaq / Yahoo market-data checks; P1
+  was limited to source note creation only.
+- `ingest`: Created `raw/financials/META_fundamentals.md`,
+  `raw/financials/META_fundamentals.json`, and `wiki/entities/META.md` from
+  verified META Q1 2026 / FY2025 source fields, with missing data recorded
+  instead of inferred.
+- `research`: Expanded `wiki/entities/META.md` with official-source business
+  model, segment mix, thesis, risks, catalysts, valuation watch items, reports,
+  follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/META DCF Valuation 2026-06-10.md` after
+  fresh-checking META price, market cap, shares, cash, debt, FCF, and guidance;
+  DCF uses TTM company-method FCF and flags capex guidance as the key
+  sensitivity.
+- `analysis`: Created
+  `wiki/analysis/decisions/META Decision Memo 2026-06-10.md` and
+  `raw/imports/META_market_quote_2026-06-10.md` with a WAIT new capital / HOLD
+  existing quality position action read; updated `index.md` plus
+  `wiki/entities/Entity Index.md` for the new entity.
 - `valuation`: Created `wiki/analysis/valuations/IBM DCF Valuation 2026-06-10.md`
   after fresh-checking IBM market quote, keeping the Q1 2026 official-source
   operating inputs, and updating the valuation read to show base-case downside
