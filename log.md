@@ -2,6 +2,15 @@
 
 ## 2026-06-11
 
+- `research`: Created `raw/imports/BABA_latest_results_source.md`,
+  `raw/imports/BABA_market_quote_2026-06-11.md`,
+  `raw/financials/BABA_fundamentals.md`,
+  `raw/financials/BABA_fundamentals.json`, `wiki/entities/BABA.md`, and
+  `wiki/analysis/decisions/BABA Decision Memo 2026-06-11.md`; updated
+  `index.md` and `wiki/entities/Entity Index.md` with a WATCHLIST / small
+  staged entry only after FCF recovery evidence action read after the latest
+  available ADR close fell 40.12% from its 52-week high while FY2026 FCF was
+  negative.
 - `valuation`: Created
   `wiki/analysis/valuations/AAPL Bullish Valuation Scenario 2026-06-11.md`
   and updated `wiki/entities/AAPL.md`,

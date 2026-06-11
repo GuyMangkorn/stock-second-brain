@@ -7,6 +7,13 @@ updated: 2026-06-11
 
 ## Latest Work
 
+- 2026-06-11: Added `[[BABA]]` after a source-backed price-drop review:
+  created `[[BABA_latest_results_source]]`, `[[BABA_market_quote_2026-06-11]]`,
+  normalized `[[BABA_fundamentals]]`, and created
+  `[[BABA Decision Memo 2026-06-11]]`. Action read is WATCHLIST / small staged
+  entry only after FCF recovery evidence because the latest available ADR close
+  of USD 115.38 is 40.12% below the 52-week high, but FY2026 FCF was negative
+  RMB 46.609B and adjusted EBITA fell 56% YoY.
 - 2026-06-11: Added `[[AAPL Bullish Valuation Scenario 2026-06-11]]`
   to test lower WACC, higher terminal value, faster FCF growth, and explicit
   share-count reduction assumptions. Quality Bull roughly supports the current
@@ -194,6 +201,7 @@ updated: 2026-06-11
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[BABA]] | BABA | Alibaba Group Holding Limited | NYSE ADS / HKEX | FY2026 | 6 |
 | [[AAPL]] | AAPL | Apple Inc. | Nasdaq | Q2 FY2026 | 8 |
 | [[META]] | META | Meta Platforms, Inc. | Nasdaq | Q1 2026 | 7 |
 | [[VST]] | VST | Vistra Corp. | NYSE | Q1 2026 | 9 |

@@ -1,0 +1,110 @@
+{
+  "type": "financial-facts",
+  "ticker": "BABA",
+  "company": "Alibaba Group Holding Limited",
+  "market": "NYSE ADS / HKEX",
+  "currency": "RMB",
+  "units": "RMB millions except per-share/per-ADS, ratios, employee count, and market-data calculations",
+  "latest_period": "FY2026",
+  "latest_period_end": "2026-03-31",
+  "source_note": "raw/imports/BABA_latest_results_source.md",
+  "entity": "wiki/entities/BABA.md",
+  "ads_ratio": {
+    "ordinary_shares_per_ads": 8,
+    "source": "Alibaba FY2026 results release"
+  },
+  "march_quarter_2026": {
+    "revenue": 243380,
+    "operating_income_loss": -848,
+    "adjusted_ebitda": 16435,
+    "adjusted_ebita": 5102,
+    "net_income": 23502,
+    "non_gaap_net_income": 86,
+    "diluted_eps_ads": 10.36,
+    "non_gaap_diluted_eps_ads": 0.62,
+    "operating_cash_flow": 9410,
+    "free_cash_flow": -17300,
+    "capital_expenditures": 26887
+  },
+  "fy2026": {
+    "revenue": 1023670,
+    "operating_income": 50150,
+    "adjusted_ebitda": 113483,
+    "adjusted_ebita": 76416,
+    "net_income": 102127,
+    "net_income_attributable_to_ordinary_shareholders": 105904,
+    "non_gaap_net_income": 60658,
+    "diluted_eps_ads": 44.0,
+    "non_gaap_diluted_eps_ads": 26.8,
+    "operating_cash_flow": 76213,
+    "free_cash_flow": -46609,
+    "capital_expenditures": 126063,
+    "cash_and_other_liquid_investments": 520824
+  },
+  "fy2025": {
+    "revenue": 996347,
+    "operating_income": 140905,
+    "adjusted_ebitda": 202325,
+    "adjusted_ebita": 173065,
+    "net_income": 125976,
+    "net_income_attributable_to_ordinary_shareholders": 129470,
+    "non_gaap_net_income": 158122,
+    "diluted_eps_ads": 53.59,
+    "non_gaap_diluted_eps_ads": 65.41,
+    "operating_cash_flow": 163509,
+    "free_cash_flow": 73870,
+    "cash_and_other_liquid_investments": 597132
+  },
+  "balance_sheet_2026_03_31": {
+    "cash_and_cash_equivalents": 131530,
+    "short_term_investments": 155310,
+    "restricted_cash_and_escrow_receivables": 42038,
+    "total_current_assets": 610769,
+    "property_and_equipment_net": 282699,
+    "total_assets": 1909570,
+    "current_bank_borrowings": 28224,
+    "total_current_liabilities": 476398,
+    "non_current_bank_borrowings": 47450,
+    "non_current_unsecured_senior_notes": 117485,
+    "non_current_convertible_unsecured_senior_notes": 55861,
+    "non_current_exchangeable_bonds": 10976,
+    "total_liabilities": 783300,
+    "total_shareholders_equity": 1060886,
+    "total_equity": 1118425
+  },
+  "segments_fy2026": {
+    "alibaba_china_ecommerce_group": {
+      "revenue": 554217,
+      "adjusted_ebita": 107509
+    },
+    "alibaba_international_digital_commerce_group": {
+      "revenue": 144170,
+      "adjusted_ebita": -2051
+    },
+    "cloud_intelligence_group": {
+      "revenue": 158132,
+      "adjusted_ebita": 14265
+    },
+    "all_others": {
+      "revenue": 254367,
+      "adjusted_ebita": -35737
+    }
+  },
+  "market_context_usd": {
+    "latest_available_adr_close": 115.38,
+    "close_date": "2026-06-10",
+    "implied_market_cap_m": 277416.7875,
+    "implied_enterprise_value_m": 239604.7875,
+    "price_to_fy2026_non_gaap_net_income": 31.5461,
+    "ev_to_fy2026_adjusted_ebita": 21.6289,
+    "ev_to_fy2026_revenue": 1.6146
+  },
+  "missing_or_unverified": [
+    "Full FY2026 Form 20-F not found in this source pass",
+    "Earnings call transcript not found in this source pass",
+    "Segment-level free cash flow not disclosed",
+    "AI product profitability and cloud capex payback not disclosed",
+    "Quick commerce gross margin and subsidy cadence not disclosed",
+    "Current intraday quote for 2026-06-11 not verified"
+  ]
+}
