@@ -158,6 +158,7 @@ Charts live in [[BABA_fundamentals]] and use only verified official values.
 |---|---|
 | Latest close | USD 115.38 on 2026-06-10. |
 | Drawdown | 40.12% below USD 192.67 52-week high. |
+| Scenario DCF fair value | Base case about USD 88/ADS; practical fair value range USD 75-110; bull recovery case about USD 129 in [[BABA DCF Valuation 2026-06-18]]. |
 | Implied market cap | USD 277.417B using diluted ADS equivalent. |
 | Implied enterprise value | USD 239.605B after company-defined liquid investments and interest-bearing debt. |
 | Price / FY2026 non-GAAP net income | 31.5x. |
@@ -170,6 +171,7 @@ Charts live in [[BABA_fundamentals]] and use only verified official values.
 - [[BABA_latest_results_source]]
 - [[BABA_market_quote_2026-06-11]]
 - [[BABA_fundamentals]]
+- [[BABA DCF Valuation 2026-06-18]]
 - [[BABA Decision Memo 2026-06-11]]
 
 ## Follow-Up
@@ -177,7 +179,7 @@ Charts live in [[BABA_fundamentals]] and use only verified official values.
 - Find FY2026 Form 20-F when filed and reconcile annual release fields.
 - Find official earnings transcript or call replay transcript if available.
 - Refresh after next quarterly result to check whether FCF outflow narrows.
-- Build a DCF only after we can underwrite normalized FCF or management provides clearer capex / FCF trajectory.
+- Refresh [[BABA DCF Valuation 2026-06-18]] after the next official quarter because current fair value depends on FCF recovery assumptions.
 
 ## Missing / Unverified Data
 
