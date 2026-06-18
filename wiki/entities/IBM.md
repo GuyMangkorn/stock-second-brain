@@ -23,6 +23,7 @@ source_gaps:
 source_notes:
   - raw/imports/IBM_latest_results_source.md
   - raw/imports/IBM_market_quote_2026-06-10.md
+  - raw/imports/IBM_market_quote_2026-06-18.md
 normalized_markdown: raw/financials/IBM_fundamentals.md
 normalized_json: raw/financials/IBM_fundamentals.json
 tags:
@@ -43,8 +44,8 @@ tags:
 | Latest period | Q1 2026, quarter ended 2026-03-31 |
 | Reporting scope | Q1 2026 plus FY2025 annual baseline |
 | Normalized file | `raw/financials/IBM_fundamentals.md` |
-| Latest price check | USD 277.49 latest close on 2026-06-09; checked 2026-06-10 Asia/Bangkok |
-| Current action read | WAIT / HOLD-existing-only; do not add at current price without stronger FCF/debt proof |
+| Latest price check | USD 262.35 latest close on 2026-06-17; checked 2026-06-18 Asia/Bangkok |
+| Current action read | WAIT / HOLD-existing; price drop improves watchlist priority but still lacks clear base-case margin of safety |
 
 IBM เป็น Software-led Hybrid Cloud and AI platform company ที่ยังมี Consulting, Infrastructure, Financing และ mainframe cycle exposure ผสมอยู่ใน business model. Q1 2026 official sources แสดง revenue growth, margin expansion, FCF growth และ guidance ที่ยังมั่นใจ แต่ balance sheet มี leverage สูงหลัง Confluent และ acquisition-led strategy จึงต้อง underwrite debt และ FCF durability อย่างระวัง.
 
@@ -55,8 +56,8 @@ IBM เป็น Software-led Hybrid Cloud and AI platform company ที่ย�
 | 1 | SEC / official filings | Found | Q1 2026 Form 10-Q, accession `0000051143-26-000038`, filed 2026-04-23; FY2025 10-K / annual report extract reviewed. |
 | 1 | Official company results | Found | IBM Q1 2026 earnings release used for segment revenue, cash/debt summary, guidance, and dividend. |
 | 2 | Earnings transcript / call material | Found | IBM official 1Q26 prepared remarks used for management commentary and guidance detail. |
-| 3 | Financial statements / metrics | Found | Alpha Vantage used only for 2026-06-10 fresh market quote; market cap calculated from official IBM shares outstanding. |
-| 4 | News / web context | Not used for durable financial facts | Official sources were sufficient for core flow. |
+| 3 | Financial statements / metrics | Found | Market quote sources used only for dated price checks; market cap calculated from official IBM shares outstanding. |
+| 4 | News / web context | Used as lower-priority market context | MarketWatch used for 2026-06-17 close; Investopedia / Axios used only to explain early-June price-action context, not as company financial facts. |
 
 ## Business Model
 
@@ -152,18 +153,21 @@ DCF base case now sits below current price after the stock moved from USD 224.88
 
 ## Valuation Watch Items
 
+- Current decision memo: [[IBM Decision Memo 2026-06-18]].
 - Current DCF memo: [[IBM DCF Valuation 2026-06-10]].
-- Base-case fair value is about USD 240.27 per diluted share versus USD 277.49 latest quote, implying roughly 13.4% downside.
+- Base-case fair value is about USD 240.27 per diluted share versus USD 262.35 latest close, implying roughly 8.4% downside.
 - Bear case is about USD 152.63 and bull case about USD 367.87; wide range reflects FCF durability, debt treatment, and terminal multiple sensitivity.
-- Current price now embeds more of the bull case. Existing normal-sized positions can be held for Q2 proof, but new capital should wait for either a pullback or clearer FCF/debt evidence.
+- The pullback from the USD 332.46 52-week high improves risk/reward, but the stock is still above base-case DCF. Existing normal-sized positions can be held for Q2 proof; new capital should wait for either a pullback closer to base value or clearer FCF/debt evidence.
 
 ## Reports / Source Notes
 
 | Note | Type |
 |---|---|
 | [[IBM_latest_results_source]] | Latest results source note |
+| [[IBM_market_quote_2026-06-18]] | Market quote source note |
 | [[IBM_market_quote_2026-06-10]] | Market quote source note |
 | [[IBM_fundamentals]] | Normalized financial facts |
+| [[IBM Decision Memo 2026-06-18]] | Decision memo refresh |
 | [[IBM DCF Valuation 2026-06-10]] | DCF valuation refresh |
 | [[IBM Decision Memo 2026-06-10]] | Decision memo refresh |
 | [[IBM DCF Valuation 2026-05-21]] | DCF valuation |
