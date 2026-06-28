@@ -1,0 +1,186 @@
+{
+  "company": "Unilever PLC",
+  "ticker": "UL",
+  "market": "NYSE ADR",
+  "currency": "EUR",
+  "period_type": "mixed",
+  "reporting_scope": "Q1 2026 trading update and FY2025 annual baseline, continuing operations after Ice Cream demerger",
+  "periods": ["Q1 2026", "FY2025", "FY2024", "FY2023"],
+  "provenance": [
+    {
+      "source": "Unilever Annual Report and Accounts 2025 / Form 20-F",
+      "url": "https://www.unilever.com/files/unilever-annual-report-and-accounts-2025.pdf",
+      "priority": 1
+    },
+    {
+      "source": "Unilever Q1 2026 Overview",
+      "url": "https://www.unilever.com/investors/results-events/results-events-webcasts/overview-q1-2026/",
+      "priority": 2
+    },
+    {
+      "source": "StockAnalysis UL quote",
+      "url": "https://stockanalysis.com/stocks/ul/",
+      "priority": 3
+    },
+    {
+      "source": "XE EUR/USD converter",
+      "url": "https://www.xe.com/currencyconverter/convert/?Amount=1&From=EUR&To=USD",
+      "priority": 3
+    }
+  ],
+  "financial_series": {
+    "quarterly_trading_update": [
+      {
+        "period": "Q1 2026",
+        "period_end": "2026-03-31",
+        "turnover_eur_b": 12.6,
+        "underlying_sales_growth_pct": 3.8,
+        "underlying_volume_growth_pct": 2.9,
+        "underlying_price_growth_pct": 0.9,
+        "power_brands_underlying_sales_growth_pct": 5.0,
+        "power_brands_underlying_volume_growth_pct": 4.0,
+        "emerging_markets_underlying_sales_growth_pct": 5.7,
+        "emerging_markets_underlying_volume_growth_pct": 4.2,
+        "share_buyback_announced_eur_b": 1.5
+      }
+    ],
+    "annual": [
+      {
+        "period": "FY2025",
+        "period_end": "2025-12-31",
+        "turnover_eur_m": 50500,
+        "turnover_growth_pct": -3.8,
+        "underlying_sales_growth_pct": 3.5,
+        "underlying_volume_growth_pct": 1.5,
+        "operating_margin_pct": 17.9,
+        "underlying_operating_margin_pct": 20.0,
+        "operating_cash_flow_eur_m": 10772,
+        "free_cash_flow_eur_m": 5921
+      },
+      {
+        "period": "FY2024",
+        "period_end": "2024-12-31",
+        "turnover_eur_m": 52500,
+        "turnover_growth_pct": 1.5,
+        "underlying_sales_growth_pct": 4.3,
+        "underlying_volume_growth_pct": 3.1,
+        "operating_margin_pct": 16.8,
+        "underlying_operating_margin_pct": 19.4,
+        "operating_cash_flow_eur_m": 10913,
+        "free_cash_flow_eur_m": 6304
+      },
+      {
+        "period": "FY2023",
+        "period_end": "2023-12-31",
+        "turnover_eur_m": 51700,
+        "turnover_growth_pct": -1.0,
+        "underlying_sales_growth_pct": 7.7,
+        "underlying_volume_growth_pct": 1.1,
+        "operating_margin_pct": 17.4,
+        "underlying_operating_margin_pct": 17.6,
+        "operating_cash_flow_eur_m": 10326,
+        "free_cash_flow_eur_m": 6445
+      }
+    ],
+    "balance_sheet": {
+      "period_end": "2025-12-31",
+      "cash_and_equivalents_eur_m": 3941,
+      "other_current_financial_assets_eur_m": 1121,
+      "current_financial_liabilities_eur_m": 2582,
+      "non_current_financial_liabilities_eur_m": 25696,
+      "total_financial_liabilities_eur_m": 28278,
+      "net_debt_eur_m": 23076,
+      "total_assets_eur_m": 70471,
+      "total_liabilities_eur_m": 52884,
+      "shareholders_equity_eur_m": 15530,
+      "diluted_average_shares_m": 2195.3,
+      "estimated_post_cancellation_ordinary_shares_m": 2181.005247
+    },
+    "market_data": {
+      "checked_at": "2026-06-28 Asia/Bangkok",
+      "price_usd": 60.55,
+      "after_hours_price_usd": 61.21,
+      "market_cap_usd_b": 131.45,
+      "shares_out_b": 2.18,
+      "eur_usd": 1.13904
+    }
+  },
+  "segment_series": [
+    {
+      "period": "FY2025",
+      "segment": "Beauty & Wellbeing",
+      "turnover_eur_m": 12800,
+      "revenue_mix_pct": 25.35,
+      "underlying_sales_growth_pct": 4.3,
+      "operating_margin_pct": 16.2,
+      "underlying_operating_margin_pct": 19.2
+    },
+    {
+      "period": "FY2025",
+      "segment": "Personal Care",
+      "turnover_eur_m": 13200,
+      "revenue_mix_pct": 26.14,
+      "underlying_sales_growth_pct": 4.7,
+      "operating_margin_pct": 20.5,
+      "underlying_operating_margin_pct": 22.6
+    },
+    {
+      "period": "FY2025",
+      "segment": "Home Care",
+      "turnover_eur_m": 11600,
+      "revenue_mix_pct": 22.97,
+      "underlying_sales_growth_pct": 2.6,
+      "operating_margin_pct": 13.1,
+      "underlying_operating_margin_pct": 14.9
+    },
+    {
+      "period": "FY2025",
+      "segment": "Foods",
+      "turnover_eur_m": 12900,
+      "revenue_mix_pct": 25.54,
+      "underlying_sales_growth_pct": 2.5,
+      "operating_margin_pct": 21.3,
+      "underlying_operating_margin_pct": 22.6
+    }
+  ],
+  "ratios": [
+    {
+      "period": "FY2025",
+      "metric": "fcf_margin",
+      "value": 0.1172
+    },
+    {
+      "period": "FY2025",
+      "metric": "underlying_operating_margin",
+      "value": 0.2
+    },
+    {
+      "period": "2025-12-31 / FY2025",
+      "metric": "total_financial_liabilities_to_fcf",
+      "value": 4.78
+    },
+    {
+      "period": "2025-12-31 / FY2025",
+      "metric": "net_debt_to_fcf",
+      "value": 3.9
+    },
+    {
+      "period": "2026-06-26 close",
+      "metric": "market_fcf_yield",
+      "value": 0.0513
+    },
+    {
+      "period": "2026-06-26 close",
+      "metric": "market_ev_to_fy2025_fcf",
+      "value": 23.6
+    }
+  ],
+  "missing_data": [
+    "Q1 2026 full income statement, balance sheet and cash flow were not disclosed in the captured source.",
+    "Official Q1 2026 transcript / Q&A was not verified.",
+    "Legal ADR-to-ordinary share ratio source was not independently verified.",
+    "Capex-only annual line was not extracted; do not infer capex from incomplete tables.",
+    "Latest balance sheet after 2025-12-31 was not disclosed in the captured source.",
+    "Product-level profitability below business groups is not disclosed."
+  ]
+}

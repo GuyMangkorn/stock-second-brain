@@ -1,5 +1,29 @@
 # Log
 
+## 2026-06-28
+
+- `latest-results`: Created `raw/imports/UL_latest_results_source.md` from
+  Unilever Q1 2026 Overview, Unilever Annual Report and Accounts 2025 / Form
+  20-F, StockAnalysis market data, and XE EUR/USD; P1 was limited to source note
+  creation only.
+- `ingest`: Created `raw/financials/UL_fundamentals.md`,
+  `raw/financials/UL_fundamentals.json`, and `wiki/entities/UL.md` from
+  verified UL Q1 2026 trading update / FY2025 annual source fields, with Q1 full
+  statement, ADR-ratio, capex-only, transcript, and post-2025 balance-sheet gaps
+  recorded instead of inferred.
+- `research`: Expanded `wiki/entities/UL.md` with official-source business
+  model, business group mix, thesis, risks, catalysts, valuation watch items,
+  reports, follow-up, and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/UL DCF Valuation 2026-06-28.md` after
+  fresh-checking UL price, market cap, shares, cash, debt, FCF, guidance, and
+  EUR/USD; base DCF fair value is about USD 53.28 per ADR-equivalent share
+  versus the fresh USD 60.55 close.
+- `analysis`: Created
+  `wiki/analysis/decisions/UL Decision Memo 2026-06-28.md` with a WATCHLIST /
+  WAIT action read because source-backed base valuation is below current price
+  and Q1 2026 full statements were not available in captured official sources.
+
 ## 2026-06-11
 
 - `research`: Created `raw/imports/BABA_latest_results_source.md`,
