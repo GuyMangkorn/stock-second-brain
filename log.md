@@ -1,5 +1,13 @@
 # Log
 
+## 2026-06-29
+
+- `analysis`: Created
+  `wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md`
+  from the full dividend ETF universe triage, grouping all `100` ETFs by
+  similar exposure/holdings bucket, preserving original scores and action
+  reads, and verifying that no ETF was left ungrouped.
+
 ## 2026-06-28
 
 - `latest-results`: Created `raw/imports/UL_latest_results_source.md` from

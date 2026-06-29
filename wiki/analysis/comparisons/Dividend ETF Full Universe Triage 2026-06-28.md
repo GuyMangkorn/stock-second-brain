@@ -12,7 +12,9 @@ sort_rule: verified dividend yield desc, then score desc
 
 ต่อจาก `Dividend ETF Triage 2026-06-28` รอบแรกที่ทำเฉพาะ 10 ตัวแรกตาม AUM. Memo นี้ parse ETF ทั้ง `100` rows จากไฟล์ local `raw/assets/ETF ที่เน้นการจ่ายเงินปันผล.md` และใช้ `Exchange:Ticker` เป็น key เพราะมี ticker ซ้ำข้ามตลาด เช่น `TDIV` และ `WDIV`.
 
-Sort ตามคำขอ: กองที่หา dividend yield ได้จะเรียงจาก yield สูงไปต่ำก่อน; กองที่ยังหา dividend yield ไม่ได้จะเรียงด้วย `Score /10` ต่อ. `DVY` ถูก manual-adjust เป็น 5.8 เพราะ prior source-deepening พบ high-yield / utilities sensitivity สูงกว่า heuristic raw score. Dividend ที่ไม่ได้ verify จะเขียน `ไม่พบข้อมูลที่ยืนยันได้` แทน ไม่เดา.
+Grouped companion note: `Dividend ETF Overlap Groups 2026-06-28` จัดครบทั้ง `100` ETF เป็นกลุ่ม exposure/holdings ที่ใกล้เคียงกันเพื่อช่วยลดการซื้อ ETF ซ้ำซ้อนในสินทรัพย์หรือ factor เดียวกัน. คะแนน `Score` ยังถูกยกติดไปด้วย แต่ไม่ได้ใช้เป็น sort หลักใน grouped view.
+
+Original ranking below ยังเก็บ logic เดิมไว้เพื่อ traceability: กองที่หา dividend yield ได้จะเรียงจาก yield สูงไปต่ำก่อน; กองที่ยังหา dividend yield ไม่ได้จะเรียงด้วย `Score /10` ต่อ. `DVY` ถูก manual-adjust เป็น 5.8 เพราะ prior source-deepening พบ high-yield / utilities sensitivity สูงกว่า heuristic raw score. Dividend ที่ไม่ได้ verify จะเขียน `ไม่พบข้อมูลที่ยืนยันได้` แทน ไม่เดา.
 
 Macro backdrop ณ 2026-06-28: Fed เพิ่งประชุม 2026-06-16 ถึง 2026-06-17 และ market commentary ล่าสุดตีความ tone เป็น hawkish / higher-for-longer. Scoring จึงให้ premium กับ low-cost, diversified, dividend growth / quality และ penalize high-yield trap, REIT/property, MLP/energy, financial-only, single-country concentration, high fee, และกองที่เล็ก/complex มากเกินไป.
 
@@ -22,6 +24,12 @@ Macro backdrop ณ 2026-06-28: Fed เพิ่งประชุม 2026-06-16 
 - Quality adjustment: dividend growth / quality > broad dividend equity > high-yield-only.
 - Macro adjustment: Fed hawkish penalizes REIT/property, MLP/energy, bank-only/financial-only, high-yield concentration, high expenses, and country/FX concentration.
 - `Score` เป็น triage score ไม่ใช่ target allocation; ก่อนซื้อจริงต้อง refresh issuer holdings/factsheet ในวัน order.
+
+## Grouped Overlap View
+
+- Grouped memo: `wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md`
+- Coverage verification: source universe `100`, assigned `100`, unknown group `0`, duplicate assignment `0`.
+- Use grouped view เป็นหน้าหลักสำหรับหลีกเลี่ยง ETF overlap; ใช้ original ranking below เป็น audit trail ของ yield/score เดิม.
 
 ## Source-Deepened Top Read
 
