@@ -267,6 +267,265 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `2454` | MEDIATEK | 1.06% |
 | 10 | `CBA` | COMMONW BK AUSTR | 1.06% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-01C
+### Source Patterns Added
+- Invesco official pages expose CUSIP metadata and holdings through `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/{CUSIP}/holdings/fund?idType=cusip&productType=ETF`; parsed `DJD`, `PEY`, `PFM`, `PID`, `KBWY`, and `KBWD`.
+- First Trust official holdings pages expose `Holdings of the Fund` HTML tables; parsed `TDIV`, `FVD`, and `FDD`.
+- ALPS/Alerian official fund pages call `https://www.alpsfunds.com/_hcms/api/getData?api_url=https://secure.alpsinc.com/MarketingAPI/api/v1/Holding/{TICKER}/Full`; parsed `SDOG`, `IDOG`, `ENFR`, and `AMLP`.
+- Global X official fund page links a full holdings CSV; parsed `SDIV` from `https://assets.globalxetfs.com/funds/holdings/sdiv_full-holdings_20260630.csv`.
+
+### AMEX:DJD
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46137V605/holdings/fund?idType=cusip&productType=ETF`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `UNH` | UnitedHealth Group Inc | 8.65% |
+| 2 | `CVX` | Chevron Corp | 6.49% |
+| 3 | `CSCO` | Cisco Systems Inc | 6.26% |
+| 4 | `IBM` | International Business Machines Corp | 6.22% |
+| 5 | `MRK` | Merck & Co Inc | 6.01% |
+| 6 | `KO` | Coca-Cola Co/The | 5.39% |
+| 7 | `GS` | Goldman Sachs Group Inc/The | 5.06% |
+| 8 | `AMGN` | Amgen Inc | 4.90% |
+| 9 | `HD` | Home Depot Inc/The | 4.84% |
+| 10 | `PG` | Procter & Gamble Co/The | 4.76% |
+
+### AMEX:SDOG
+- Source: ALPS/Alerian official holdings API via ALPS fund page proxy
+- URL: `https://www.alpsfunds.com/_hcms/api/getData?api_url=https://secure.alpsinc.com/MarketingAPI/api/v1/Holding/SDOG/Full`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `GPC` | Genuine Parts Co. | 2.32% |
+| 2 | `ABBV` | AbbVie Inc. | 2.25% |
+| 3 | `WSO` | Watsco Inc. | 2.23% |
+| 4 | `MRK` | Merck & Co. Inc. | 2.20% |
+| 5 | `SW` | Smurfit Westrock PLC | 2.18% |
+| 6 | `AMCR` | Amcor PLC | 2.18% |
+| 7 | `IP` | International Paper Co. | 2.15% |
+| 8 | `KVUE` | Kenvue Inc. | 2.15% |
+| 9 | `ES` | Eversource Energy | 2.15% |
+| 10 | `SNA` | Snap-On Inc. | 2.12% |
+
+### NASDAQ:PEY
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46137V563/holdings/fund?idType=cusip&productType=ETF`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `FLO` | Flowers Foods Inc | 4.03% |
+| 2 | `PRGO` | Perrigo Co PLC | 3.67% |
+| 3 | `RHI` | Robert Half Inc | 3.31% |
+| 4 | `NSP` | Insperity Inc | 3.30% |
+| 5 | `UVV` | Universal Corp/VA | 2.52% |
+| 6 | `MO` | Altria Group Inc | 2.51% |
+| 7 | `UPS` | United Parcel Service Inc | 2.45% |
+| 8 | `MAIN` | Main Street Capital Corp | 2.41% |
+| 9 | `PFE` | Pfizer Inc | 2.39% |
+| 10 | `KMB` | Kimberly-Clark Corp | 2.33% |
+
+### NASDAQ:TDIV
+- Source: First Trust official holdings page HTML
+- URL: `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=TDIV`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `IBM` | International Business Machines Corporation | 8.09% |
+| 2 | `AVGO` | Broadcom Inc. | 7.24% |
+| 3 | `MSFT` | Microsoft Corporation | 7.10% |
+| 4 | `TXN` | Texas Instruments Incorporated | 7.06% |
+| 5 | `ORCL` | Oracle Corporation | 5.34% |
+| 6 | `TSM` | Taiwan Semiconductor Manufacturing Company Limited (ADR) | 4.89% |
+| 7 | `AMAT` | Applied Materials, Inc. | 3.54% |
+| 8 | `QCOM` | QUALCOMM Incorporated | 3.15% |
+| 9 | `ADI` | Analog Devices, Inc. | 2.87% |
+| 10 | `KLAC` | KLA Corporation | 2.35% |
+
+### NASDAQ:PFM
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46137V506/holdings/fund?idType=cusip&productType=ETF`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `LLY` | Eli Lilly & Co | 4.13% |
+| 2 | `AAPL` | Apple Inc | 3.68% |
+| 3 | `AVGO` | Broadcom Inc | 3.36% |
+| 4 | `WMT` | Walmart Inc | 3.30% |
+| 5 | `MSFT` | Microsoft Corp | 3.29% |
+| 6 | `JPM` | JPMorgan Chase & Co | 3.21% |
+| 7 | `JNJ` | Johnson & Johnson | 2.24% |
+| 8 | `V` | Visa Inc | 2.08% |
+| 9 | `XOM` | Exxon Mobil Corp | 2.07% |
+| 10 | `LRCX` | Lam Research Corp | 1.98% |
+
+### AMEX:FVD
+- Source: First Trust official holdings page HTML
+- URL: `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=FVD`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `JKHY` | Jack Henry & Associates, Inc. | 0.44% |
+| 2 | `REYN` | Reynolds Consumer Products Inc. | 0.44% |
+| 3 | `RLI` | RLI Corp. | 0.44% |
+| 4 | `SON` | Sonoco Products Company | 0.44% |
+| 5 | `ABBV` | AbbVie Inc. | 0.43% |
+| 6 | `AJG` | Arthur J. Gallagher & Co. | 0.43% |
+| 7 | `BRO` | Brown & Brown, Inc. | 0.43% |
+| 8 | `CMCSA` | Comcast Corporation (Class A) | 0.43% |
+| 9 | `IBM` | International Business Machines Corporation | 0.43% |
+| 10 | `JNJ` | Johnson & Johnson | 0.43% |
+
+### NASDAQ:PID
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46137V548/holdings/fund?idType=cusip&productType=ETF`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `ITUB` | Itau Unibanco Holding SA | 4.35% |
+| 2 | `TLK` | Telkom Indonesia Persero Tbk PT | 3.61% |
+| 3 | `TU` | TELUS Corp | 3.58% |
+| 4 | `SNY` | Sanofi SA | 3.21% |
+| 5 | `FINV` | FinVolution Group | 3.16% |
+| 6 | `BTI` | British American Tobacco PLC | 3.11% |
+| 7 | `ENB` | Enbridge Inc | 2.97% |
+| 8 | `OTEX` | Open Text Corp | 2.52% |
+| 9 | `BIP` | Brookfield Infrastructure Partners LP | 2.51% |
+| 10 | `E` | Eni SpA | 2.50% |
+
+### AMEX:ENFR
+- Source: ALPS/Alerian official holdings API via ALPS fund page proxy
+- URL: `https://www.alpsfunds.com/_hcms/api/getData?api_url=https://secure.alpsinc.com/MarketingAPI/api/v1/Holding/ENFR/Full`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `ENB CN` | Enbridge Inc. | 8.26% |
+| 2 | `ET` | Energy Transfer LP | 7.82% |
+| 3 | `EPD` | Enterprise Products Partners LP | 7.05% |
+| 4 | `WMB` | The Williams Cos. Inc. | 6.33% |
+| 5 | `DTM` | DT Midstream Inc. | 5.27% |
+| 6 | `KMI` | Kinder Morgan Inc. | 5.14% |
+| 7 | `MPLX` | MPLX LP | 5.02% |
+| 8 | `LNG` | Cheniere Energy Inc. | 5.02% |
+| 9 | `PAGP` | Plains GP Holdings LP | 5.02% |
+| 10 | `TRGP` | Targa Resources Corp. | 5.01% |
+
+### AMEX:IDOG
+- Source: ALPS/Alerian official holdings API via ALPS fund page proxy
+- URL: `https://www.alpsfunds.com/_hcms/api/getData?api_url=https://secure.alpsinc.com/MarketingAPI/api/v1/Holding/IDOG/Full`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `SIA SP` | Singapore Airlines Ltd. | 2.27% |
+| 2 | `BNP FP` | BNP Paribas SA | 2.18% |
+| 3 | `7267 JP` | Honda Motor Co. Ltd. | 2.16% |
+| 4 | `BAMI IM` | Banco BPM SpA | 2.15% |
+| 5 | `ENEL IM` | Enel SpA | 2.11% |
+| 6 | `EDP PL` | EDP SA | 2.11% |
+| 7 | `ML FP` | Cie Generale des Etablissements Michelin SCA | 2.10% |
+| 8 | `4503 JP` | Astellas Pharma Inc. | 2.09% |
+| 9 | `BMPS IM` | Banca Monte dei Paschi di Siena SpA | 2.09% |
+| 10 | `4502 JP` | Takeda Pharmaceutical Co. Ltd. | 2.08% |
+
+### AMEX:AMLP
+- Source: ALPS/Alerian official holdings API via ALPS fund page proxy
+- URL: `https://www.alpsfunds.com/_hcms/api/getData?api_url=https://secure.alpsinc.com/MarketingAPI/api/v1/Holding/AMLP/Full`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `SUN` | Sunoco LP | 12.58% |
+| 2 | `ET` | Energy Transfer LP | 12.31% |
+| 3 | `MPLX` | MPLX LP | 12.05% |
+| 4 | `WES` | Western Midstream Partners LP | 12.05% |
+| 5 | `PAA` | Plains All American Pipeline LP | 11.98% |
+| 6 | `EPD` | Enterprise Products Partners LP | 11.91% |
+| 7 | `HESM` | Hess Midstream LP | 8.29% |
+| 8 | `CQP` | Cheniere Energy Partners LP | 4.23% |
+| 9 | `USAC` | USA Compression Partners LP | 3.68% |
+| 10 | `GEL` | Genesis Energy LP | 2.66% |
+
+### AMEX:FDD
+- Source: First Trust official holdings page HTML
+- URL: `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=FDD`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `LGEN.LN` | Legal & General Group Plc | 6.11% |
+| 2 | `TW/.LN` | Taylor Wimpey Plc | 4.63% |
+| 3 | `AGN.NA` | Aegon Ltd. | 4.25% |
+| 4 | `BME.LN` | B&M European Value Retail SA | 4.18% |
+| 5 | `ABN.NA` | ABN AMRO Group N.V. | 4.06% |
+| 6 | `NWG.LN` | Natwest Group Plc | 3.98% |
+| 7 | `LIGHT.NA` | Signify NV | 3.97% |
+| 8 | `INVP.LN` | Investec Plc | 3.93% |
+| 9 | `AKRBP.NO` | Aker BP ASA | 3.92% |
+| 10 | `TEP.FP` | Teleperformance SE | 3.85% |
+
+### AMEX:SDIV
+- Source: Global X official full holdings CSV
+- URL: `https://assets.globalxetfs.com/funds/holdings/sdiv_full-holdings_20260630.csv`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `TFG-R TB` | THAIFOODS GROUP PCL-NVDR | 2.01% |
+| 2 | `IIPR` | INNOVATIVE INDUSTRIAL PROPER | 1.36% |
+| 3 | `PK` | PARK HOTELS & RESORTS INC | 1.28% |
+| 4 | `HAUTO NO` | HOEGH AUTOLINERS ASA | 1.25% |
+| 5 | `NAT` | NORDIC AMERICAN TANKERS LTD | 1.23% |
+| 6 | `SAUD3 BZ` | BRADSAUDE SA | 1.22% |
+| 7 | `TFSL` | TFS FINANCIAL CORP | 1.20% |
+| 8 | `QFIN` | QFIN HOLDINGS INC-ADR | 1.20% |
+| 9 | `RHI` | ROBERT HALF INC | 1.18% |
+| 10 | `ALX` | ALEXANDER'S INC | 1.18% |
+
+### NASDAQ:KBWY
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46138E594/holdings/fund?idType=cusip&productType=ETF`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `IIPR` | Innovative Industrial Properties Inc | 6.47% |
+| 2 | `CHCT` | Community Healthcare Trust Inc | 5.30% |
+| 3 | `MRP` | Millrose Properties Inc | 5.14% |
+| 4 | `PK` | Park Hotels & Resorts Inc | 4.41% |
+| 5 | `GOOD` | Gladstone Commercial Corp | 4.16% |
+| 6 | `HIW` | Highwoods Properties Inc | 3.97% |
+| 7 | `AHRT` | AH Realty Trust Inc | 3.91% |
+| 8 | `DEA` | Easterly Government Properties Inc | 3.50% |
+| 9 | `CTO` | CTO Realty Growth Inc | 3.47% |
+| 10 | `GNL` | Global Net Lease Inc | 3.47% |
+
+### NASDAQ:KBWD
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46138E610/holdings/fund?idType=cusip&productType=ETF`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `IVR` | Invesco Mortgage Capital Inc | 4.27% |
+| 2 | `ORC` | Orchid Island Capital Inc | 4.25% |
+| 3 | `ARR` | ARMOUR Residential REIT Inc | 3.94% |
+| 4 | `PMT` | PennyMac Mortgage Investment Trust | 3.82% |
+| 5 | `DX` | Dynex Capital Inc | 3.66% |
+| 6 | `MFA` | MFA Financial Inc | 3.65% |
+| 7 | `GSBD` | Goldman Sachs BDC Inc | 3.63% |
+| 8 | `FSK` | FS KKR Capital Corp | 3.62% |
+| 9 | `AGNC` | AGNC Investment Corp | 3.41% |
+| 10 | `PFLT` | PennantPark Floating Rate Capital Ltd | 3.21% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
