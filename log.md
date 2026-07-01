@@ -4,6 +4,11 @@
 
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  State Street/SPDR Top 10 holdings for six pending U.S., Europe, and Australia
+  ETFs, raising verified holdings coverage to `33` of `100` ETFs.
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official Top
   10 holdings for Invesco, First Trust, ALPS/Alerian, and Global X ETFs,
   raising verified holdings coverage to `27` of `100` ETFs and adding

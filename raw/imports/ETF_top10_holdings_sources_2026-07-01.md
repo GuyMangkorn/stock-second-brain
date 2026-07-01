@@ -526,6 +526,119 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `AGNC` | AGNC Investment Corp | 3.41% |
 | 10 | `PFLT` | PennantPark Floating Rate Capital Ltd | 3.21% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-01D
+### Source Patterns Added
+- State Street/SPDR official fund pages expose `Top Holdings` / `Fund Top 10 Holdings` tables directly in HTML for U.S., Europe, and Australia locales; parsed `DWX`, `SPYW`, `ZPRG`, `ZPRA`, `WDIV` on ASX, and `SYI`.
+- State Street/SPDR top-holdings tables in this batch did not disclose security tickers, so ticker fields are recorded as `not disclosed` rather than inferred.
+
+### XETR:SPYW
+- Source: State Street/SPDR official fund page HTML
+- URL: `https://www.ssga.com/de/en_gb/intermediary/etfs/state-street-spdr-sp-euro-dividend-aristocrats-ucits-etf-dist-spyw-gy`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | ageas SA/NV | 3.71% |
+| 2 | `not disclosed` | NN Group N.V. | 3.54% |
+| 3 | `not disclosed` | Teleperformance SE | 3.52% |
+| 4 | `not disclosed` | Hannover Rueck SE | 3.46% |
+| 5 | `not disclosed` | Munchener Ruckversicherungs-Gesellschaft AG | 3.45% |
+| 6 | `not disclosed` | UPM-Kymmene Oyj | 3.43% |
+| 7 | `not disclosed` | UNIPOL ASSICURAZIONI SPA | 3.40% |
+| 8 | `not disclosed` | Sanofi SA | 3.31% |
+| 9 | `not disclosed` | Elisa Oyj Class A | 3.27% |
+| 10 | `not disclosed` | Poste Italiane SpA | 3.17% |
+
+### XETR:ZPRG
+- Source: State Street/SPDR official fund page HTML
+- URL: `https://www.ssga.com/de/en_gb/intermediary/etfs/state-street-spdr-sp-global-dividend-aristocrats-ucits-etf-dist-zprg-gy`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Highwoods Properties Inc. | 1.98% |
+| 2 | `not disclosed` | Getty Realty Corp. | 1.84% |
+| 3 | `not disclosed` | Verizon Communications Inc. | 1.68% |
+| 4 | `not disclosed` | Edison International | 1.66% |
+| 5 | `not disclosed` | John Wiley & Sons Inc. Class A | 1.64% |
+| 6 | `not disclosed` | LTC Properties Inc. | 1.55% |
+| 7 | `not disclosed` | Northwest Bancshares Inc. | 1.53% |
+| 8 | `not disclosed` | United Parcel Service Inc. Class B | 1.51% |
+| 9 | `not disclosed` | Energizer Holdings Inc. | 1.48% |
+| 10 | `not disclosed` | ONEOK Inc. | 1.48% |
+
+### ASX:WDIV
+- Source: State Street/SPDR official fund page HTML
+- URL: `https://www.ssga.com/au/en_gb/intermediary/etfs/state-street-spdr-sp-global-dividend-etf-wdiv`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Lenovo Group | 2.27% |
+| 2 | `not disclosed` | Legal & General Group | 1.81% |
+| 3 | `not disclosed` | Altria Group | 1.78% |
+| 4 | `not disclosed` | Highwoods Prop | 1.78% |
+| 5 | `not disclosed` | Getty Realty | 1.64% |
+| 6 | `not disclosed` | Northwest Bancshares | 1.59% |
+| 7 | `not disclosed` | Verizon Communications | 1.50% |
+| 8 | `not disclosed` | Edison International | 1.49% |
+| 9 | `not disclosed` | Apa Group | 1.47% |
+| 10 | `not disclosed` | Vanguard International Semiconductor | 1.46% |
+
+### ASX:SYI
+- Source: State Street/SPDR official fund page HTML
+- URL: `https://www.ssga.com/au/en_gb/intermediary/etfs/state-street-spdr-msci-australia-select-high-dividend-yield-etf-syi`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Natl Australia Bk | 9.76% |
+| 2 | `not disclosed` | Anz Group Hldgs Li | 9.69% |
+| 3 | `not disclosed` | Westpac Bkg Corp | 9.42% |
+| 4 | `not disclosed` | Telstra Group Ltd | 8.41% |
+| 5 | `not disclosed` | Csl Ltd | 8.20% |
+| 6 | `not disclosed` | Qbe Ins Group | 5.58% |
+| 7 | `not disclosed` | Coles Group Ltd | 4.82% |
+| 8 | `not disclosed` | Evolution Mining | 3.51% |
+| 9 | `not disclosed` | Santos Limited | 3.45% |
+| 10 | `not disclosed` | Suncorp Group Ltd | 3.08% |
+
+### AMEX:DWX
+- Source: State Street/SPDR official fund page HTML
+- URL: `https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-international-dividend-etf-dwx`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | TOTALENERGIES SE | 2.52% |
+| 2 | `not disclosed` | EVONIK INDUSTRIES AG | 2.00% |
+| 3 | `not disclosed` | DCC PLC | 1.98% |
+| 4 | `not disclosed` | PEMBINA PIPELINE CORP | 1.89% |
+| 5 | `not disclosed` | ORANGE | 1.79% |
+| 6 | `not disclosed` | AMBEV SA | 1.78% |
+| 7 | `not disclosed` | VEOLIA ENVIRONNEMENT | 1.77% |
+| 8 | `not disclosed` | SNAM SPA | 1.73% |
+| 9 | `not disclosed` | NEDBANK GROUP LTD | 1.65% |
+| 10 | `not disclosed` | ZURICH INSURANCE GROUP AG | 1.64% |
+
+### XETR:ZPRA
+- Source: State Street/SPDR official fund page HTML
+- URL: `https://www.ssga.com/de/en_gb/intermediary/etfs/state-street-spdr-sp-pan-asia-dividend-aristocrats-ucits-etf-dist-zpra-gy`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | APA Group | 5.93% |
+| 2 | `not disclosed` | Bosideng International Holdings Limited | 4.49% |
+| 3 | `not disclosed` | Bank of China Limited Class H | 4.37% |
+| 4 | `not disclosed` | KrungThai Card Public Co. Ltd. NVDR | 3.87% |
+| 5 | `not disclosed` | Industrial and Commercial Bank of China Limited Class H | 3.64% |
+| 6 | `not disclosed` | China Communications Services Corp. Ltd. Class H | 3.45% |
+| 7 | `not disclosed` | Sonic Healthcare Limited | 3.45% |
+| 8 | `not disclosed` | CK Infrastructure Holdings Limited | 3.42% |
+| 9 | `not disclosed` | Tsingtao Brewery Co. Ltd. Class H | 3.23% |
+| 10 | `not disclosed` | China Merchants Bank Co. Ltd. Class H | 2.61% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
