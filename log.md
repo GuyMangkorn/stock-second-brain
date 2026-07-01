@@ -2,6 +2,12 @@
 
 ## 2026-07-01
 
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official Top
+  10 holdings for State Street/SPDR, ProShares, and Vanguard ETFs, raising
+  verified holdings coverage to `13` of `100` ETFs while keeping unresolved
+  WisdomTree holdings pending rather than inferred.
 - `analysis`: Created
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` to start the
