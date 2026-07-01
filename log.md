@@ -1,5 +1,15 @@
 # Log
 
+## 2026-07-01
+
+- `analysis`: Created
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` to start the
+  revised ETF workflow: extract verified Top 10 holdings where official sources
+  are found, mark failed/pending holdings checks explicitly, and keep every ETF
+  assigned to a fallback description group until holdings-based grouping is
+  complete.
+
 ## 2026-06-29
 
 - `analysis`: Created

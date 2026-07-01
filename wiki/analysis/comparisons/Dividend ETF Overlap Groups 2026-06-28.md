@@ -16,6 +16,8 @@ Memo นี้จัด ETF จาก `Dividend ETF Full Universe Triage 2026-06
 
 คะแนน `Score` และ `Action Read` ถูกยกมาจาก memo เดิมเพื่อใช้ประกอบการ triage แต่ตารางนี้ไม่ได้ sort ตามคะแนนแล้ว. ภายในแต่ละกลุ่มเรียงตาม original `Sort` จาก universe memo เพื่อรักษา traceability.
 
+Updated holdings workflow: `Dividend ETF Top 10 Holdings Tracker 2026-07-01` เป็น tracker ใหม่สำหรับเปลี่ยน grouping จาก description/theme inference ไปเป็น Top 10 holdings จริง. Memo นี้ยังใช้เป็น fallback description group สำหรับ ETF ที่ยังหา holdings ไม่เจอหรือยังไม่ได้ตรวจ official source.
+
 ## Grouping Rule
 
 - Group by portfolio role first: dividend growth/core, broad dividend income, high-yield/value income, sector-only income, country/regional sleeves, and asset-class sleeves.
