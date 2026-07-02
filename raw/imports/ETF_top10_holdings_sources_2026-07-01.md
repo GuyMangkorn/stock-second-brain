@@ -964,6 +964,33 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 10 | `not disclosed` | Banco Santander SA | 1.5% |
 
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02F
+### Source Patterns Added
+- Vanguard UK official product page linked an official factsheet PDF; parsed `VHYA` Top 10 holdings from the factsheet.
+- The Vanguard UK factsheet discloses holding names and weights, but not tickers in the Top 10 table; ticker / ID is recorded as `not disclosed` rather than inferred.
+### Lookups Not Found In This Batch
+- `AMEX:DIVI`: Franklin Templeton official product page opened, but no parseable Top 10 holdings table or holdings download was found in the captured HTML/API surface; kept description fallback group.
+- `ASX:VHY`: Vanguard Australia official ETF pages opened as shell pages, and tested candidate official factsheet/document URLs did not return a usable holdings document; kept description fallback group.
+
+### LSE:VHYA
+- Source: Vanguard UK official factsheet PDF
+- URL: `https://fund-docs.vanguard.com/FTSE_All-World_High_Dividend_Yield_UCITS_ETF_USD_Distributing_9506_EU_INT_UK_EN.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | JPMorgan Chase & Co. | 1.6% |
+| 2 | `not disclosed` | Exxon Mobil Corp. | 1.5% |
+| 3 | `not disclosed` | Johnson & Johnson | 1.3% |
+| 4 | `not disclosed` | Cisco Systems Inc. | 1.1% |
+| 5 | `not disclosed` | AbbVie Inc. | 0.9% |
+| 6 | `not disclosed` | UnitedHealth Group Inc. | 0.8% |
+| 7 | `not disclosed` | Chevron Corp. | 0.8% |
+| 8 | `not disclosed` | Procter & Gamble Co. | 0.8% |
+| 9 | `not disclosed` | HSBC Holdings plc | 0.8% |
+| 10 | `not disclosed` | Home Depot Inc. | 0.8% |
+
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.

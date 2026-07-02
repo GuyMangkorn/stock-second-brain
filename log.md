@@ -5,6 +5,12 @@
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  Vanguard UK factsheet Top 10 holdings for `VHYA`, raising verified holdings
+  coverage to `50` of `100` ETFs; marked `DIVI` and `VHY` as official lookup
+  not found in this batch while retaining description fallback groups.
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
   Vanguard Canada factsheet Top 10 holdings for `VGG`, `VDY`, `VGH`, and
   `VIDY`, raising verified holdings coverage to `49` of `100` ETFs.
 - `analysis`: Expanded
