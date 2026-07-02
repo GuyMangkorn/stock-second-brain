@@ -690,7 +690,7 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 
 - `AMEX:QDPL`: Pacer official product page `https://www.paceretfs.com/products/qdpl` returned HTTP 403 in this environment; left pending rather than inferred.
 - `EURONEXT:TDIV`: Initial VanEck candidate holdings URL returned HTTP 404; left pending until correct official VanEck product URL/API is verified.
-- `TSX:RBNK`: RBC official page exposed holdings as-of date but parseable embedded data did not include holdings rows in the extracted `fundData`; left pending rather than inferred.
+- `TSX:RBNK`: Resolved in Batch 2026-07-02G after a deeper parse of RBC GAM embedded `fundData.portfolio.holdings.allHoldings`.
 
 ### NASDAQ:MDIV
 - Source: First Trust official holdings page HTML
@@ -989,6 +989,63 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 8 | `not disclosed` | Procter & Gamble Co. | 0.8% |
 | 9 | `not disclosed` | HSBC Holdings plc | 0.8% |
 | 10 | `not disclosed` | Home Depot Inc. | 0.8% |
+
+
+## Additional Verified Holdings Extracted - Batch 2026-07-02G
+### Source Patterns Added
+- RBC GAM official product page embeds `fundData.portfolio.holdings.allHoldings`; parsed `RBNK` from the page data. `RBNK` has only six holdings, so the verified list is 6/6 rather than an inferred Top 10.
+- Deka official ETF pages link factsheet PDFs; parsed `EL4G` and `EL4X` Top Werte tables from official factsheets.
+- RBC and Deka source tables disclose holding names and weights but not tickers in the parsed Top holdings table; ticker / ID is recorded as `not disclosed` rather than inferred.
+
+### TSX:RBNK
+- Source: RBC GAM official product page embedded fundData
+- URL: `https://www.rbcgam.com/en/ca/products/etfs/RBNK/detail`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Bank of Montreal | 26.08% |
+| 2 | `not disclosed` | Bank of Nova Scotia | 25.10% |
+| 3 | `not disclosed` | Toronto-Dominion Bank | 16.91% |
+| 4 | `not disclosed` | Canadian Imperial Bank of Commerce | 15.46% |
+| 5 | `not disclosed` | Royal Bank of Canada | 8.63% |
+| 6 | `not disclosed` | National Bank of Canada | 7.83% |
+
+### XETR:EL4G
+- Source: Deka official factsheet PDF
+- URL: `https://www.deka-etf.de/documents/factsheet_7_20260531_de.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Signify N.V. Reg.Shares | 6.2% |
+| 2 | `not disclosed` | OMV AG Inhaber-Aktien | 5.1% |
+| 3 | `not disclosed` | ABN AMRO Bank N.V. Cert.v.Aand.op Naam | 4.7% |
+| 4 | `not disclosed` | NN Group N.V. Aandelen aan toonder | 4.3% |
+| 5 | `not disclosed` | ASR Nederland N.V. Aandelen op naam | 4.3% |
+| 6 | `not disclosed` | Randstad N.V. Aandelen aan toonder | 4.1% |
+| 7 | `not disclosed` | Poste Italiane S.p.A. Azioni nom. | 3.9% |
+| 8 | `not disclosed` | Volkswagen AG Vorzugsaktien | 3.8% |
+| 9 | `not disclosed` | Credit Agricole S.A. Actions Port. | 3.7% |
+| 10 | `not disclosed` | BNP Paribas S.A. Actions Port. | 3.6% |
+
+### XETR:EL4X
+- Source: Deka official factsheet PDF
+- URL: `https://www.deka-etf.de/documents/factsheet_23_20260531_de.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Volkswagen AG Vorzugsaktien | 9.9% |
+| 2 | `not disclosed` | Bayerische Motoren Werke AG Stammaktien | 8.3% |
+| 3 | `not disclosed` | Deutsche Lufthansa AG vink.Namens-Aktien | 8.1% |
+| 4 | `not disclosed` | Deutsche Bank AG Namens-Aktien | 6.2% |
+| 5 | `not disclosed` | Fresenius Medical Care AG Inhaber-Aktien | 5.9% |
+| 6 | `not disclosed` | Evonik Industries AG Namens-Aktien | 5.6% |
+| 7 | `not disclosed` | LEG Immobilien SE Namens-Aktien | 5.3% |
+| 8 | `not disclosed` | Commerzbank AG Inhaber-Aktien | 5.0% |
+| 9 | `not disclosed` | Porsche Automobil Holding SE Inhaber-Vorzugsaktien | 4.7% |
+| 10 | `not disclosed` | Brenntag SE Namens-Aktien | 4.4% |
 
 
 ## Next Extraction Queue
