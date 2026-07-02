@@ -5,6 +5,12 @@
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  Fidelity Canada Top 10 holdings for `FCCD` and `FCID`, raising verified
+  holdings coverage to `35` of `100` ETFs; kept `FDVV` pending because official
+  U.S. pages were unavailable in this environment.
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
   State Street/SPDR Top 10 holdings for six pending U.S., Europe, and Australia
   ETFs, raising verified holdings coverage to `33` of `100` ETFs.
 - `analysis`: Expanded

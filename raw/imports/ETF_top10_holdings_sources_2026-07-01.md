@@ -639,6 +639,48 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `not disclosed` | Tsingtao Brewery Co. Ltd. Class H | 3.23% |
 | 10 | `not disclosed` | China Merchants Bank Co. Ltd. Class H | 2.61% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02A
+### Source Patterns Added
+- Fidelity Canada official ETF pages expose `window.FidelityAPI.fidelityApiFidcaProductsAPIRootUrl` and `data-fund-axis-code`; holdings are fetched from `https://fidcaproductsapi.fidelity.ca/FidcaProductsAPI/api/fundPage/fund/EN/{axisCode}`. Parsed `FCCD` and `FCID`.
+- Fidelity Canada API holdings in this batch disclosed security names and weights but not security tickers, so ticker fields are recorded as `not disclosed`.
+- Fidelity U.S. official `FDVV` pages checked in this environment returned temporary unavailable / HTTP 403 responses; `FDVV` remains `pending_source_check` rather than inferred.
+
+### TSX:FCCD
+- Source: Fidelity Canada official fundPage holdings API
+- URL: `https://fidcaproductsapi.fidelity.ca/FidcaProductsAPI/api/fundPage/fund/EN/FCCD`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | ROYAL BANK OF CANADA | 6.65% |
+| 2 | `not disclosed` | TORONTO-DOMINION BANK | 4.74% |
+| 3 | `not disclosed` | ENBRIDGE INC | 4.55% |
+| 4 | `not disclosed` | MAGNA INTL INC | 3.72% |
+| 5 | `not disclosed` | CANADIAN NATL RESOURCES LTD | 3.47% |
+| 6 | `not disclosed` | FORTIS INC | 3.46% |
+| 7 | `not disclosed` | RESTAURANT BRANDS INTERNATIONAL INC | 3.35% |
+| 8 | `not disclosed` | TC ENERGY CORP | 3.18% |
+| 9 | `not disclosed` | EMERA INC | 3.09% |
+| 10 | `not disclosed` | SUNCOR ENERGY INC | 2.95% |
+
+### TSX:FCID
+- Source: Fidelity Canada official fundPage holdings API
+- URL: `https://fidcaproductsapi.fidelity.ca/FidcaProductsAPI/api/fundPage/fund/EN/FCID`
+- As of: `2026-06-30`
+
+| Rank | Ticker | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | KLEPIERRE SA | 3.55% |
+| 2 | `not disclosed` | SHELL PLC | 3.17% |
+| 3 | `not disclosed` | LINK REAL ESTATE INVESTMENT TR | 3.02% |
+| 4 | `not disclosed` | TOTALENERGIES SE | 2.99% |
+| 5 | `not disclosed` | INVINCIBLE INVESTMENT CORP | 2.86% |
+| 6 | `not disclosed` | EQUINOR ASA | 2.74% |
+| 7 | `not disclosed` | BHP GROUP LIMITED | 2.63% |
+| 8 | `not disclosed` | WOODSIDE ENERGY GROUP LTD | 2.54% |
+| 9 | `not disclosed` | HSBC HOLDINGS PLC | 2.40% |
+| 10 | `not disclosed` | RIO TINTO PLC | 2.19% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
