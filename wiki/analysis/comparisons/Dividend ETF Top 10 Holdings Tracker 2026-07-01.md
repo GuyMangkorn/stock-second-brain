@@ -3,9 +3,9 @@ type: etf_top10_holdings_tracker
 created: 2026-07-01
 source_memo: wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md
 universe_count: 100
-official_holdings_found_count: 38
-official_lookup_failed_count: 1
-pending_source_check_count: 61
+official_holdings_found_count: 40
+official_lookup_failed_count: 0
+pending_source_check_count: 60
 fallback_group_source: wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md
 custom-width: 95
 ---
@@ -26,9 +26,9 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 | Status | Count |
 | --- | ---: |
-| official_holdings_found | 38 |
-| official_lookup_failed | 1 |
-| pending_source_check | 61 |
+| official_holdings_found | 40 |
+| official_lookup_failed | 0 |
+| pending_source_check | 60 |
 | total universe rows | 100 |
 
 ## Holdings-Verified ETFs
@@ -55,6 +55,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | `AMEX:WDIV` | State Street SPDR S&P Global Dividend ETF | 2026-06-30 | 1. LENOVO GROUP LTD (2.24%); 2. LEGAL + GENERAL GROUP PLC (1.79%); 3. ALTRIA GROUP INC (1.74%); 4. HIGHWOODS PROPERTIES INC (1.74%); 5. GETTY REALTY CORP (1.61%); 6. NORTHWEST BANCSHARES INC (1.57%); 7. APA GROUP (1.50%); 8. VERIZON COMMUNICATIONS INC (1.47%); 9. TELUS CORP (1.47%); 10. VANGUARD INTERNATIONAL SEMI (1.45%) | State Street/SPDR official fund page HTML |
 | `CBOE:REGL` | ProShares S&P MidCap 400 Dividend Aristocrats ETF | 2026-06-30 | 1. CHE CHEMED CORP (1.88%); 2. CBT CABOT CORP (1.80%); 3. THG HANOVER INSURANCE GROUP INC/ (1.78%); 4. UMBF UMB FINANCIAL CORP (1.75%); 5. AIT APPLIED INDUSTRIAL TECH INC (1.73%); 6. LFUS LITTELFUSE INC (1.73%); 7. R RYDER SYSTEM INC (1.72%); 8. CBSH COMMERCE BANCSHARES INC (1.72%); 9. SLGN SILGAN HOLDINGS INC (1.72%); 10. UNM UNUM GROUP (1.71%) | ProShares official fund page HTML |
 | `NASDAQ:PID` | Invesco International Dividend Achievers ETF | 2026-06-30 | 1. ITUB Itau Unibanco Holding SA (4.35%); 2. TLK Telkom Indonesia Persero Tbk PT (3.61%); 3. TU TELUS Corp (3.58%); 4. SNY Sanofi SA (3.21%); 5. FINV FinVolution Group (3.16%); 6. BTI British American Tobacco PLC (3.11%); 7. ENB Enbridge Inc (2.97%); 8. OTEX Open Text Corp (2.52%); 9. BIP Brookfield Infrastructure Partners LP (2.51%); 10. E Eni SpA (2.50%) | Invesco official holdings API |
+| `NASDAQ:DVY` | iShares Select Dividend ETF | 2026-06-30 | 1. MO ALTRIA GROUP INC (2.26%); 2. TROW T ROWE PRICE GROUP INC (2.22%); 3. PRU PRUDENTIAL FINANCIAL INC (2.01%); 4. PFE PFIZER INC (1.99%); 5. OKE ONEOK INC (1.71%); 6. HPQ HP INC (1.68%); 7. KMB KIMBERLY CLARK CORP (1.68%); 8. EIX EDISON INTERNATIONAL (1.63%); 9. VZ VERIZON COMMUNICATIONS INC (1.62%); 10. F FORD MOTOR CO (1.58%) | BlackRock/iShares official product-data API, portfolioId 239500 |
 | `ASX:WDIV` | State Street SPDR S&P Global Dividend ETF | 2026-06-30 | 1. Lenovo Group (2.27%); 2. Legal & General Group (1.81%); 3. Altria Group (1.78%); 4. Highwoods Prop (1.78%); 5. Getty Realty (1.64%); 6. Northwest Bancshares (1.59%); 7. Verizon Communications (1.50%); 8. Edison International (1.49%); 9. Apa Group (1.47%); 10. Vanguard International Semiconductor (1.46%) | State Street/SPDR official fund page HTML |
 | `CBOE:TDV` | ProShares S&P Technology Dividend Aristocrats ETF | 2026-06-30 | 1. AMAT APPLIED MATERIALS INC (4.42%); 2. KLAC KLA CORP (4.08%); 3. LRCX LAM RESEARCH CORP (4.05%); 4. KLIC KULICKE & SOFFA INDUSTRIES (3.85%); 5. QCOM QUALCOMM INC (3.29%); 6. CGNX COGNEX CORP (3.25%); 7. CSCO CISCO SYSTEMS INC (3.16%); 8. TXN TEXAS INSTRUMENTS INC (3.08%); 9. POWI POWER INTEGRATIONS INC (3.00%); 10. BMI BADGER METER INC (2.96%) | ProShares official fund page HTML |
 | `CBOE:SMDV` | ProShares Russell 2000 Dividend Growers ETF | 2026-06-30 | 1. HNI HNI CORP (1.17%); 2. MTRN MATERION CORP (1.16%); 3. GOLF ACUSHNET HOLDINGS CORP (1.14%); 4. SXI STANDEX INTERNATIONAL CORP (1.13%); 5. APOG APOGEE ENTERPRISES INC (1.10%); 6. BMI BADGER METER INC (1.09%); 7. NPO ENPRO INC (1.08%); 8. GRC GORMAN-RUPP CO (1.06%); 9. KWR QUAKER CHEMICAL CORPORATION (1.06%); 10. AGM FEDERAL AGRIC MTG CORP-CL C (1.05%) | ProShares official fund page HTML |
@@ -72,6 +73,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | `TSX:FCID` | Fidelity International High Dividend ETF Trust Units Series L | 2026-06-30 | 1. KLEPIERRE SA (3.55%); 2. SHELL PLC (3.17%); 3. LINK REAL ESTATE INVESTMENT TR (3.02%); 4. TOTALENERGIES SE (2.99%); 5. INVINCIBLE INVESTMENT CORP (2.86%); 6. EQUINOR ASA (2.74%); 7. BHP GROUP LIMITED (2.63%); 8. WOODSIDE ENERGY GROUP LTD (2.54%); 9. HSBC HOLDINGS PLC (2.40%); 10. RIO TINTO PLC (2.19%) | Fidelity Canada official fundPage holdings API |
 | `LSE:MLPD` | Invesco Morningstar US Energy Infrastructure MLP UCITS ETF | 2026-07-01 | 1. US86765K1097 SUNOCO UNT (10.62%); 2. US55336V1008 MPLX COM UNT (10.17%); 3. US29273V1008 ENERGY TRANSFER UNT (10.10%); 4. US7265031051 PLAINS ALL AMERICAN PIPELINE UNT (10.00%); 5. US2937921078 ENTERPRISE PRODUCTS PARTNERS UNT (9.98%); 6. US9586691035 WESTERN MIDSTREAM PARTNERS COM UNT (9.97%); 7. US24664T1034 DELEK LOGISTICS PARTNERS COM UNT (5.11%); 8. US09225M1018 BLACK STONE MINERALS UNT (5.06%); 9. US37946R1095 GLOBAL PARTNERS UNT (4.98%); 10. US4511001012 ICAHN ENTERPRISES UNT (4.95%) | Invesco official holdings API |
 | `TSE:2564` | Global X MSCI SuperDividend Japan ETF | 2026-07-03 | 1. 7267 HONDA MOTOR (4.46%); 2. 5938 LIXIL GROUP CORP (4.33%); 3. 8601 DAIWA SECURITIES GROUP INC ORD (4.33%); 4. 5451 YODOGAWA STEEL WORKS LTD (4.27%); 5. 8616 TOKAI TOKYO FINANCIAL HOLDINGS ORD (4.25%); 6. 4023 KUREHA CORP (4.13%); 7. 8595 JAFCO GROUP CO LTD (4.12%); 8. 7261 MAZDA MOTOR CORP ORD (4.09%); 9. 8985 JAPAN HOTEL REIT INVESTMENT (4.07%); 10. 4928 NOEVIR HOLDING CO (4.07%) | Global X Japan official PCF / Solactive all stock information; weights calculated from shares amount * stock price |
+| `LSE:DPYA` | iShares Developed Markets Property Yield UCITS ETF | 2026-06-30 | 1. PLD PROLOGIS REIT INC (7%); 2. EQIX EQUINIX REIT INC (6%); 3. SPG SIMON PROPERTY GROUP REIT INC (4%); 4. DLR DIGITAL REALTY TRUST REIT INC (4%); 5. O REALTY INCOME REIT CORP (3%); 6. PSA PUBLIC STORAGE REIT (3%); 7. VTR VENTAS REIT INC (2%); 8. IRM IRON MOUNTAIN INC (2%); 9. EXR EXTRA SPACE STORAGE REIT INC (2%); 10. VICI VICI PPTYS INC (2%) | BlackRock/iShares official product-data API, portfolioId 251801 |
 | `NASDAQ:KBWD` | Invesco KBW High Dividend Yield Financial ETF | 2026-06-30 | 1. IVR Invesco Mortgage Capital Inc (4.27%); 2. ORC Orchid Island Capital Inc (4.25%); 3. ARR ARMOUR Residential REIT Inc (3.94%); 4. PMT PennyMac Mortgage Investment Trust (3.82%); 5. DX Dynex Capital Inc (3.66%); 6. MFA MFA Financial Inc (3.65%); 7. GSBD Goldman Sachs BDC Inc (3.63%); 8. FSK FS KKR Capital Corp (3.62%); 9. AGNC AGNC Investment Corp (3.41%); 10. PFLT PennantPark Floating Rate Capital Ltd (3.21%) | Invesco official holdings API |
 
 ## Preliminary Holdings-Based Groups (Verified ETFs)
@@ -82,10 +84,10 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | --- | --- | --- |
 | HG01 U.S. mega-cap dividend quality / broad large-cap overlap | AVGO, AAPL, MSFT, JPM, JNJ, XOM, LLY, WMT overlap; watch duplication in core U.S. dividend sleeve | `AMEX:DGRO`, `AMEX:VIG`, `AMEX:VYM`, `NASDAQ:PFM` |
 | HG02 U.S. dividend aristocrats / equal-weight quality income | many low-single-weight defensive/industrial/financial dividend growers; less mega-cap concentration | `CBOE:NOBL`, `AMEX:FVD`, `AMEX:SDOG` |
-| HG03 U.S. high-dividend value / defensive income | high-yield U.S. equity income with healthcare, staples, telecom, REIT/value tilt | `AMEX:SPYD`, `AMEX:SDY`, `NASDAQ:PEY`, `AMEX:DJD` |
+| HG03 U.S. high-dividend value / defensive income | high-yield U.S. equity income with healthcare, staples, telecom, REIT/value tilt | `AMEX:SPYD`, `AMEX:SDY`, `NASDAQ:PEY`, `AMEX:DJD`, `NASDAQ:DVY` |
 | HG04 U.S. technology dividend / semiconductor-income tilt | IBM, AVGO, MSFT, TXN, QCOM, AMAT, KLAC, LRCX overlap; avoid stacking tech-dividend ETFs blindly | `CBOE:TDV`, `NASDAQ:TDIV` |
 | HG05 U.S. mid/small dividend growers | mid/small-cap dividend growers with little mega-cap overlap | `CBOE:REGL`, `CBOE:SMDV` |
-| HG06 REIT / property income | property/REIT-heavy holdings; duplicates with IIPR, PK, HIW/property exposure matter | `NASDAQ:KBWY`, `AMEX:SDIV` |
+| HG06 REIT / property income | property/REIT-heavy holdings; duplicates with IIPR, PK, HIW/property exposure matter | `NASDAQ:KBWY`, `AMEX:SDIV`, `LSE:DPYA` |
 | HG07 Financials / mortgage REIT / BDC income | mREIT/BDC/financial yield exposure, structurally different from broad dividend equity | `NASDAQ:KBWD` |
 | HG08 Energy / MLP infrastructure income | pipeline/MLP-heavy exposure with ET, EPD, MPLX overlap; commodity/infrastructure risk bucket | `AMEX:ENFR`, `AMEX:AMLP`, `LSE:MLPD` |
 | HG09 International dividend growth / quality | non-U.S. quality/dividend growers with banks, pharma, staples, industrials; VIGI is quality-growth tilted | `NASDAQ:VIGI` |
@@ -94,6 +96,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | HG12 Asia-Pacific dividend equity | Asia-Pacific/Australia/Japan high-dividend holdings; bank/infrastructure/telecom/auto/REIT concentration differs from global dividend ETFs | `XETR:ZPRA`, `ASX:SYI`, `TSE:2564` |
 | HG13 Canada dividend equity | Canada dividend holdings with banks, pipelines, energy, utilities, and insurers; watch overlap with Canada-specific dividend ETFs | `TSX:FCCD` |
 | HG14 Multi-asset income / fund-of-funds hybrid | income sleeve includes ETF holdings, REITs, MLPs, mortgage REITs, and other high-yield assets; do not compare as pure equity dividend ETF | `NASDAQ:MDIV` |
+
 
 ## Full Universe Source Status
 
@@ -147,7 +150,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | 46 | `NASDAQ:PID` | Invesco International Dividend Achievers ETF | 5.9 | official_holdings_found | 1. ITUB Itau Unibanco Holding SA (4.35%); 2. TLK Telkom Indonesia Persero Tbk PT (3.61%); 3. TU TELUS Corp (3.58%); 4. SNY Sanofi SA (3.21%); 5. FINV FinVolution Group (3.16%); 6. BTI British American Tobacco PLC (3.11%); 7. ENB Enbridge Inc (2.97%); 8. OTEX Open Text Corp (2.52%); 9. BIP Brookfield Infrastructure Partners LP (2.51%); 10. E Eni SpA (2.50%) | Invesco official holdings API | Top 10 holdings verified | G06 International dividend growth / quality |
 | 47 | `XETR:ISPA` | iShares STOXX Global Select Dividend 100 UCITS ETF (DE) | 5.9 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G08 International/global high-dividend yield |
 | 48 | `AMEX:QDPL` | Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF | 5.8 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G02 U.S. broad dividend large-cap income |
-| 49 | `NASDAQ:DVY` | iShares Select Dividend ETF | 5.8 | official_lookup_failed | ไม่พบข้อมูลที่ยืนยันได้ใน official lookup รอบนี้; candidate source rejected because ticker/fund mismatch. | iShares candidate portfolioId 239464 rejected because API returned iShares Intermediate Government/Credit Bond ETF / GVI, not DVY | Description/theme fallback until correct official holdings source is found | G03 U.S. high-dividend yield / value income |
+| 49 | `NASDAQ:DVY` | iShares Select Dividend ETF | 5.8 | official_holdings_found | 1. MO ALTRIA GROUP INC (2.26%); 2. TROW T ROWE PRICE GROUP INC (2.22%); 3. PRU PRUDENTIAL FINANCIAL INC (2.01%); 4. PFE PFIZER INC (1.99%); 5. OKE ONEOK INC (1.71%); 6. HPQ HP INC (1.68%); 7. KMB KIMBERLY CLARK CORP (1.68%); 8. EIX EDISON INTERNATIONAL (1.63%); 9. VZ VERIZON COMMUNICATIONS INC (1.62%); 10. F FORD MOTOR CO (1.58%) | BlackRock/iShares official product-data API, portfolioId 239500 | Top 10 holdings verified | G03 U.S. high-dividend yield / value income |
 | 50 | `TSX:PDC` | Invesco Canadian Dividend Index ETF | 5.8 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G10 Canada dividend equity |
 | 51 | `XETR:ELFC` | Deka EURO iSTOXX ex Fin Dividend+ UCITS ETF | 5.8 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G09 Europe/UK dividend equity |
 | 52 | `ASX:WDIV` | State Street SPDR S&P Global Dividend ETF | 5.7 | official_holdings_found | 1. Lenovo Group (2.27%); 2. Legal & General Group (1.81%); 3. Altria Group (1.78%); 4. Highwoods Prop (1.78%); 5. Getty Realty (1.64%); 6. Northwest Bancshares (1.59%); 7. Verizon Communications (1.50%); 8. Edison International (1.49%); 9. Apa Group (1.47%); 10. Vanguard International Semiconductor (1.46%) | State Street/SPDR official fund page HTML | Top 10 holdings verified | G07 International/global broad dividend income |
@@ -197,7 +200,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | 96 | `SSE:513690` | Bosera Hang Seng High Dividend Yield ETF | 3.7 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G13 Emerging Asia / EM high-dividend equity |
 | 97 | `TSE:2564` | Global X MSCI SuperDividend Japan ETF | 3.7 | official_holdings_found | 1. 7267 HONDA MOTOR (4.46%); 2. 5938 LIXIL GROUP CORP (4.33%); 3. 8601 DAIWA SECURITIES GROUP INC ORD (4.33%); 4. 5451 YODOGAWA STEEL WORKS LTD (4.27%); 5. 8616 TOKAI TOKYO FINANCIAL HOLDINGS ORD (4.25%); 6. 4023 KUREHA CORP (4.13%); 7. 8595 JAFCO GROUP CO LTD (4.12%); 8. 7261 MAZDA MOTOR CORP ORD (4.09%); 9. 8985 JAPAN HOTEL REIT INVESTMENT (4.07%); 10. 4928 NOEVIR HOLDING CO (4.07%) | Global X Japan official PCF / Solactive all stock information; weights calculated from shares amount * stock price | Top 10 holdings verified | G12 Japan dividend equity |
 | 98 | `HKEX:3110` | Global X Hang Seng High Dividend Yield ETF | 3.5 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G13 Emerging Asia / EM high-dividend equity |
-| 99 | `LSE:DPYA` | iShares Developed Markets Property Yield UCITS ETF | 3.5 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G16 REIT / property income |
+| 99 | `LSE:DPYA` | iShares Developed Markets Property Yield UCITS ETF | 3.5 | official_holdings_found | 1. PLD PROLOGIS REIT INC (7%); 2. EQIX EQUINIX REIT INC (6%); 3. SPG SIMON PROPERTY GROUP REIT INC (4%); 4. DLR DIGITAL REALTY TRUST REIT INC (4%); 5. O REALTY INCOME REIT CORP (3%); 6. PSA PUBLIC STORAGE REIT (3%); 7. VTR VENTAS REIT INC (2%); 8. IRM IRON MOUNTAIN INC (2%); 9. EXR EXTRA SPACE STORAGE REIT INC (2%); 10. VICI VICI PPTYS INC (2%) | BlackRock/iShares official product-data API, portfolioId 251801 | Top 10 holdings verified | G16 REIT / property income |
 | 100 | `NASDAQ:KBWD` | Invesco KBW High Dividend Yield Financial ETF | 2.0 | official_holdings_found | 1. IVR Invesco Mortgage Capital Inc (4.27%); 2. ORC Orchid Island Capital Inc (4.25%); 3. ARR ARMOUR Residential REIT Inc (3.94%); 4. PMT PennyMac Mortgage Investment Trust (3.82%); 5. DX Dynex Capital Inc (3.66%); 6. MFA MFA Financial Inc (3.65%); 7. GSBD Goldman Sachs BDC Inc (3.63%); 8. FSK FS KKR Capital Corp (3.62%); 9. AGNC AGNC Investment Corp (3.41%); 10. PFLT PennantPark Floating Rate Capital Ltd (3.21%) | Invesco official holdings API | Top 10 holdings verified | G15 Financials / bank-only income |
 
 ## Verification

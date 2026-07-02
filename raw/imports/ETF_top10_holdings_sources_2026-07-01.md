@@ -746,6 +746,49 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `8985` | JAPAN HOTEL REIT INVESTMENT | 4.07% |
 | 10 | `4928` | NOEVIR HOLDING CO | 4.07% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02C
+### Source Patterns Added
+- BlackRock/iShares official product-data API was reused only after matching `fundName` to the target ETF; parsed `DVY` and `DPYA`.
+- Rejected mismatched iShares regional `portfolioId` candidates for `IUKD`, `EXSB`, `EXSG`, and `EXX5` because the API returned different official fund names; those ETFs remain pending rather than inferred.
+- Canada/Australia iShares guessed pages for `XEI` and `IHD` were also rejected because they resolved to different funds (`XRE` and `IOZ`).
+
+### NASDAQ:DVY
+- Source: BlackRock/iShares official product-data API, portfolioId 239500
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=en_US&portfolioId=239500&targetSite=us-ishares&userType=individual&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `MO` | ALTRIA GROUP INC | 2.26% |
+| 2 | `TROW` | T ROWE PRICE GROUP INC | 2.22% |
+| 3 | `PRU` | PRUDENTIAL FINANCIAL INC | 2.01% |
+| 4 | `PFE` | PFIZER INC | 1.99% |
+| 5 | `OKE` | ONEOK INC | 1.71% |
+| 6 | `HPQ` | HP INC | 1.68% |
+| 7 | `KMB` | KIMBERLY CLARK CORP | 1.68% |
+| 8 | `EIX` | EDISON INTERNATIONAL | 1.63% |
+| 9 | `VZ` | VERIZON COMMUNICATIONS INC | 1.62% |
+| 10 | `F` | FORD MOTOR CO | 1.58% |
+
+### LSE:DPYA
+- Source: BlackRock/iShares official product-data API, portfolioId 251801
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=en_GB&portfolioId=251801&targetSite=uk-ishares&userType=individual&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `PLD` | PROLOGIS REIT INC | 7% |
+| 2 | `EQIX` | EQUINIX REIT INC | 6% |
+| 3 | `SPG` | SIMON PROPERTY GROUP REIT INC | 4% |
+| 4 | `DLR` | DIGITAL REALTY TRUST REIT INC | 4% |
+| 5 | `O` | REALTY INCOME REIT CORP | 3% |
+| 6 | `PSA` | PUBLIC STORAGE REIT | 3% |
+| 7 | `VTR` | VENTAS REIT INC | 2% |
+| 8 | `IRM` | IRON MOUNTAIN INC | 2% |
+| 9 | `EXR` | EXTRA SPACE STORAGE REIT INC | 2% |
+| 10 | `VICI` | VICI PPTYS INC | 2% |
+
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.

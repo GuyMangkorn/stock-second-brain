@@ -1,5 +1,14 @@
 # Log
 
+## 2026-07-02
+
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  BlackRock/iShares Top 10 holdings for `DVY` and `DPYA`, raising verified
+  holdings coverage to `40` of `100` ETFs and clearing the prior `DVY`
+  official lookup failure after finding the correct product-data `portfolioId`.
+
 ## 2026-07-01
 
 - `analysis`: Expanded
