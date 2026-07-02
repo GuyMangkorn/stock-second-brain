@@ -886,6 +886,84 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 10 | `SDLF` | STANDARD LIFE PLC | 3% |
 
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02E
+### Source Patterns Added
+- Vanguard Canada official product pages link fund factsheets directly; parsed `VGG`, `VDY`, `VGH`, and `VIDY` from official factsheet PDFs.
+- Factsheets disclose holding names and weights, but not tickers in the Top 10 table; ticker / ID is recorded as `not disclosed` rather than inferred.
+
+### TSX:VGG
+- Source: Vanguard Canada official factsheet PDF
+- URL: `https://fund-docs.vanguard.com/VGG_U.S._Dividend_Appreciation_Index_ETF_9566_FS_EN_CA.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Broadcom Inc. | 5.4% |
+| 2 | `not disclosed` | Apple Inc. | 4.6% |
+| 3 | `not disclosed` | Microsoft Corp. | 4.3% |
+| 4 | `not disclosed` | Eli Lilly & Co. | 3.9% |
+| 5 | `not disclosed` | JPMorgan Chase & Co. | 3.3% |
+| 6 | `not disclosed` | Exxon Mobil Corp. | 2.7% |
+| 7 | `not disclosed` | Johnson & Johnson | 2.4% |
+| 8 | `not disclosed` | Visa Inc. | 2.3% |
+| 9 | `not disclosed` | Walmart Inc. | 2.2% |
+| 10 | `not disclosed` | Cisco Systems Inc. | 2.1% |
+
+### TSX:VDY
+- Source: Vanguard Canada official factsheet PDF
+- URL: `https://fund-docs.vanguard.com/VDY_FTSE_Canadian_High_Dividend_Yield_Index_ETF_9560_FS_EN_CA.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Royal Bank of Canada | 15.3% |
+| 2 | `not disclosed` | Toronto-Dominion Bank | 11.0% |
+| 3 | `not disclosed` | Enbridge Inc. | 6.8% |
+| 4 | `not disclosed` | Bank of Montreal | 6.6% |
+| 5 | `not disclosed` | Canadian Imperial Bank of Commerce | 5.8% |
+| 6 | `not disclosed` | Bank of Nova Scotia | 5.7% |
+| 7 | `not disclosed` | Canadian Natural Resources Ltd. | 5.3% |
+| 8 | `not disclosed` | Suncor Energy Inc. | 4.3% |
+| 9 | `not disclosed` | TC Energy Corp. | 3.9% |
+| 10 | `not disclosed` | Manulife Financial Corp. | 3.7% |
+
+### TSX:VGH
+- Source: Vanguard Canada official factsheet PDF
+- URL: `https://fund-docs.vanguard.com/VGH_U.S._Dividend_Appreciation_Index_ETF_CAD_hedged_9564_FS_EN_CA.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Broadcom Inc. | 5.4% |
+| 2 | `not disclosed` | Apple Inc. | 4.6% |
+| 3 | `not disclosed` | Microsoft Corp. | 4.3% |
+| 4 | `not disclosed` | Eli Lilly & Co. | 3.9% |
+| 5 | `not disclosed` | JPMorgan Chase & Co. | 3.3% |
+| 6 | `not disclosed` | Exxon Mobil Corp. | 2.7% |
+| 7 | `not disclosed` | Johnson & Johnson | 2.4% |
+| 8 | `not disclosed` | Visa Inc. | 2.3% |
+| 9 | `not disclosed` | Walmart Inc. | 2.2% |
+| 10 | `not disclosed` | Cisco Systems Inc. | 2.1% |
+
+### TSX:VIDY
+- Source: Vanguard Canada official factsheet PDF
+- URL: `https://fund-docs.vanguard.com/VIDY_FTSE_Developed_ex_North_America_High_Dividend_Yield_Index_ETF_9742_FS_EN_CA.pdf`
+- As of: `2026-05-31`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | HSBC Holdings plc | 2.7% |
+| 2 | `not disclosed` | Roche Holding AG | 2.5% |
+| 3 | `not disclosed` | Novartis AG | 2.4% |
+| 4 | `not disclosed` | Nestle SA | 2.2% |
+| 5 | `not disclosed` | Shell plc | 2.0% |
+| 6 | `not disclosed` | BHP Group Ltd. | 1.8% |
+| 7 | `not disclosed` | Mitsubishi UFJ Financial Group Inc. | 1.7% |
+| 8 | `not disclosed` | Toyota Motor Corp. | 1.7% |
+| 9 | `not disclosed` | Commonwealth Bank of Australia | 1.6% |
+| 10 | `not disclosed` | Banco Santander SA | 1.5% |
+
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.

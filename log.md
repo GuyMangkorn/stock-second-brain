@@ -5,6 +5,11 @@
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  Vanguard Canada factsheet Top 10 holdings for `VGG`, `VDY`, `VGH`, and
+  `VIDY`, raising verified holdings coverage to `49` of `100` ETFs.
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
   BlackRock/iShares DE Top 10 holdings for `EXSB`, `EXXW`, `EXX5`, `EXSG`,
   and `IUKD`, raising verified holdings coverage to `45` of `100` ETFs while
   leaving unresolved iShares lookups pending rather than inferred.
