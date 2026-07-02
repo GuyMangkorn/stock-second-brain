@@ -681,6 +681,71 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `not disclosed` | HSBC HOLDINGS PLC | 2.40% |
 | 10 | `not disclosed` | RIO TINTO PLC | 2.19% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02B
+### Source Patterns Added
+- First Trust official holdings pages expose `Holdings of the Fund` HTML tables; parsed `MDIV`.
+- Invesco UCITS product page exposes `productMetaData` with ISIN and a `dng-api.invesco.com` holdings endpoint; parsed `MLPD`.
+- Global X Japan official fund page links Solactive PCF/all stock information CSV for `2564`; weights are calculated from official `Shares Amount * Stock Price` per line divided by the sum of stock market values, so these are shown calculations from source inputs rather than source-disclosed weights.
+### Lookups Not Yet Resolved
+
+- `AMEX:QDPL`: Pacer official product page `https://www.paceretfs.com/products/qdpl` returned HTTP 403 in this environment; left pending rather than inferred.
+- `EURONEXT:TDIV`: Initial VanEck candidate holdings URL returned HTTP 404; left pending until correct official VanEck product URL/API is verified.
+- `TSX:RBNK`: RBC official page exposed holdings as-of date but parseable embedded data did not include holdings rows in the extracted `fundData`; left pending rather than inferred.
+
+### NASDAQ:MDIV
+- Source: First Trust official holdings page HTML
+- URL: `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=MDIV`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `HYLS` | First Trust Tactical High Yield ETF | 19.64% |
+| 2 | `PMT` | PennyMac Mortgage Investment Trust | 1.67% |
+| 3 | `AGNC` | AGNC Investment Corp. | 1.61% |
+| 4 | `MFA` | MFA Financial, Inc. | 1.60% |
+| 5 | `IEP` | Icahn Enterprises, L.P. | 1.53% |
+| 6 | `MNR` | Mach Natural Resources LP | 1.50% |
+| 7 | `TXO` | TXO Partners, L.P. | 1.49% |
+| 8 | `NLY` | Annaly Capital Management, Inc. | 1.47% |
+| 9 | `RITM` | Rithm Capital Corp. | 1.21% |
+| 10 | `CAPL` | CrossAmerica Partners LP | 1.13% |
+
+### LSE:MLPD
+- Source: Invesco official holdings API
+- URL: `https://dng-api.invesco.com/cache/v1/accounts/en_GB/shareclasses/IE00B8CJW150/holdings/index?idType=isin`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `US86765K1097` | SUNOCO UNT | 10.62% |
+| 2 | `US55336V1008` | MPLX COM UNT | 10.17% |
+| 3 | `US29273V1008` | ENERGY TRANSFER UNT | 10.10% |
+| 4 | `US7265031051` | PLAINS ALL AMERICAN PIPELINE UNT | 10.00% |
+| 5 | `US2937921078` | ENTERPRISE PRODUCTS PARTNERS UNT | 9.98% |
+| 6 | `US9586691035` | WESTERN MIDSTREAM PARTNERS COM UNT | 9.97% |
+| 7 | `US24664T1034` | DELEK LOGISTICS PARTNERS COM UNT | 5.11% |
+| 8 | `US09225M1018` | BLACK STONE MINERALS UNT | 5.06% |
+| 9 | `US37946R1095` | GLOBAL PARTNERS UNT | 4.98% |
+| 10 | `US4511001012` | ICAHN ENTERPRISES UNT | 4.95% |
+
+### TSE:2564
+- Source: Global X Japan official PCF / Solactive all stock information; weights calculated from shares amount * stock price
+- URL: `https://www.solactive.com/downloads/etfservices/tse-pcf/single/2564.csv`
+- As of: `2026-07-03`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `7267` | HONDA MOTOR | 4.46% |
+| 2 | `5938` | LIXIL GROUP CORP | 4.33% |
+| 3 | `8601` | DAIWA SECURITIES GROUP INC ORD | 4.33% |
+| 4 | `5451` | YODOGAWA STEEL WORKS LTD | 4.27% |
+| 5 | `8616` | TOKAI TOKYO FINANCIAL HOLDINGS ORD | 4.25% |
+| 6 | `4023` | KUREHA CORP | 4.13% |
+| 7 | `8595` | JAFCO GROUP CO LTD | 4.12% |
+| 8 | `7261` | MAZDA MOTOR CORP ORD | 4.09% |
+| 9 | `8985` | JAPAN HOTEL REIT INVESTMENT | 4.07% |
+| 10 | `4928` | NOEVIR HOLDING CO | 4.07% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.

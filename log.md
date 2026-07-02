@@ -4,6 +4,12 @@
 
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official Top
+  10 holdings for `MDIV`, `MLPD`, and `2564`, raising verified holdings
+  coverage to `38` of `100` ETFs; unresolved Pacer, VanEck, and RBC lookups
+  remain pending rather than inferred.
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
   Fidelity Canada Top 10 holdings for `FCCD` and `FCID`, raising verified
   holdings coverage to `35` of `100` ETFs; kept `FDVV` pending because official
