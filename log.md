@@ -5,6 +5,12 @@
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  WisdomTree product-page Top holdings for 13 ETFs, raising verified holdings
+  coverage to `66` of `100` ETFs.
+
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
   RBC GAM holdings for `RBNK` and Deka factsheet Top Werte for `EL4G` and
   `EL4X`, raising verified holdings coverage to `53` of `100` ETFs.
 

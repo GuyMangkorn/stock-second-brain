@@ -1048,6 +1048,245 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 10 | `not disclosed` | Brenntag SE Namens-Aktien | 4.4% |
 
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02H
+### Source Patterns Added
+- WisdomTree official U.S. product pages expose a Top holdings table in page HTML with `Holdings` and `As of 7/1/2026`; parsed 13 pending WisdomTree ETFs from those official pages.
+- WisdomTree page Top holdings tables disclose holding names and weights but not ticker symbols in the rendered table; ticker / ID is recorded as `not disclosed` rather than inferred.
+
+### AMEX:DEM
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dem`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | MediaTek Inc | 6.84% |
+| 2 | `not disclosed` | China Construction Bank-H | 4.03% |
+| 3 | `not disclosed` | United Microelectronics Corp | 3.23% |
+| 4 | `not disclosed` | Industrial & Commercial Bank of China-H | 2.45% |
+| 5 | `not disclosed` | Saudi Arabian Oil Co | 1.89% |
+| 6 | `not disclosed` | Grupo Financiero Banorte-O | 1.82% |
+| 7 | `not disclosed` | Orlen SA | 1.64% |
+| 8 | `not disclosed` | Quanta Computer Inc | 1.60% |
+| 9 | `not disclosed` | PKO Bank Polski SA | 1.49% |
+| 10 | `not disclosed` | Fomento Economico Mexicano SAB | 1.48% |
+
+### AMEX:DHS
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dhs`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | AbbVie Inc | 4.91% |
+| 2 | `not disclosed` | Merck & Co Inc/NJ | 4.15% |
+| 3 | `not disclosed` | Altria Group Inc | 3.76% |
+| 4 | `not disclosed` | Texas Instruments Inc | 3.42% |
+| 5 | `not disclosed` | Exxon Mobil Corp | 3.14% |
+| 6 | `not disclosed` | Philip Morris International Inc | 3.09% |
+| 7 | `not disclosed` | AT&T Inc | 2.56% |
+| 8 | `not disclosed` | Verizon Communications Inc | 2.42% |
+| 9 | `not disclosed` | Bristol-Myers Squibb Co | 2.26% |
+| 10 | `not disclosed` | Chevron Corp | 2.19% |
+
+### AMEX:DES
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/des`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | TFS Financial Corp | 1.20% |
+| 2 | `not disclosed` | Kodiak Gas Services Inc | 1.14% |
+| 3 | `not disclosed` | Entertainment Properties Trust | 1.03% |
+| 4 | `not disclosed` | Sonoco Products Co | 0.99% |
+| 5 | `not disclosed` | NorthWestern Energy Group Inc | 0.89% |
+| 6 | `not disclosed` | Iridium Communications Inc | 0.89% |
+| 7 | `not disclosed` | Cal-Maine Foods Inc | 0.89% |
+| 8 | `not disclosed` | Outfront Media Inc | 0.86% |
+| 9 | `not disclosed` | Archrock Inc | 0.84% |
+| 10 | `not disclosed` | Travel + Leisure Co | 0.83% |
+
+### AMEX:DON
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/don`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Franklin Resources Inc | 1.45% |
+| 2 | `not disclosed` | Viatris Inc | 1.31% |
+| 3 | `not disclosed` | Best Buy Co Inc | 1.30% |
+| 4 | `not disclosed` | Stanley Black & Decker Inc. | 1.05% |
+| 5 | `not disclosed` | American Financial Group Inc | 0.97% |
+| 6 | `not disclosed` | Antero Midstream Corp | 0.94% |
+| 7 | `not disclosed` | Snap-On Inc | 0.94% |
+| 8 | `not disclosed` | APA Corp | 0.93% |
+| 9 | `not disclosed` | Omnicom Group Inc | 0.92% |
+| 10 | `not disclosed` | Hasbro Inc | 0.91% |
+
+### AMEX:DTD
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dtd`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Nvidia Corp | 3.33% |
+| 2 | `not disclosed` | Microsoft Corp | 3.16% |
+| 3 | `not disclosed` | JPMorgan Chase & Co | 2.72% |
+| 4 | `not disclosed` | Apple Inc | 2.13% |
+| 5 | `not disclosed` | Broadcom Inc | 1.88% |
+| 6 | `not disclosed` | Johnson & Johnson | 1.80% |
+| 7 | `not disclosed` | Exxon Mobil Corp | 1.70% |
+| 8 | `not disclosed` | Meta Platforms Inc. Cl A | 1.59% |
+| 9 | `not disclosed` | AbbVie Inc | 1.54% |
+| 10 | `not disclosed` | Chevron Corp | 1.38% |
+
+### AMEX:DLN
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dln`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Microsoft Corp | 3.80% |
+| 2 | `not disclosed` | Nvidia Corp | 3.54% |
+| 3 | `not disclosed` | JPMorgan Chase & Co | 2.94% |
+| 4 | `not disclosed` | Apple Inc | 2.22% |
+| 5 | `not disclosed` | Broadcom Inc | 2.13% |
+| 6 | `not disclosed` | Johnson & Johnson | 2.03% |
+| 7 | `not disclosed` | Meta Platforms Inc. Cl A | 1.95% |
+| 8 | `not disclosed` | Exxon Mobil Corp | 1.84% |
+| 9 | `not disclosed` | AbbVie Inc | 1.75% |
+| 10 | `not disclosed` | Morgan Stanley | 1.52% |
+
+### CBOE:DDWM
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/ddwm`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | HSBC Holdings PLC | 1.70% |
+| 2 | `not disclosed` | Novartis AG | 1.19% |
+| 3 | `not disclosed` | Nestle SA | 1.19% |
+| 4 | `not disclosed` | Intesa Sanpaolo SpA | 1.15% |
+| 5 | `not disclosed` | ASML Holding NV | 1.07% |
+| 6 | `not disclosed` | Roche Holding AG | 1.05% |
+| 7 | `not disclosed` | Toyota Motor Corp | 0.99% |
+| 8 | `not disclosed` | Shell Plc-New | 0.95% |
+| 9 | `not disclosed` | Banco Bilbao Vizcaya Argentaria SA | 0.94% |
+| 10 | `not disclosed` | British American Tobacco Plc | 0.92% |
+
+### AMEX:DWM
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dwm`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | HSBC Holdings PLC | 1.71% |
+| 2 | `not disclosed` | Novartis AG | 1.21% |
+| 3 | `not disclosed` | Nestle SA | 1.18% |
+| 4 | `not disclosed` | Intesa Sanpaolo SpA | 1.14% |
+| 5 | `not disclosed` | ASML Holding NV | 1.09% |
+| 6 | `not disclosed` | Roche Holding AG | 1.05% |
+| 7 | `not disclosed` | Toyota Motor Corp | 1.01% |
+| 8 | `not disclosed` | Shell Plc-New | 0.95% |
+| 9 | `not disclosed` | Banco Bilbao Vizcaya Argentaria SA | 0.94% |
+| 10 | `not disclosed` | British American Tobacco Plc | 0.92% |
+
+### AMEX:DLS
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dls`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Elecnor SA | 0.72% |
+| 2 | `not disclosed` | Hoegh Autoliners ASA | 0.69% |
+| 3 | `not disclosed` | Plus500 Ltd | 0.66% |
+| 4 | `not disclosed` | Taiyo Yuden Co Ltd | 0.65% |
+| 5 | `not disclosed` | Hafnia Ltd | 0.64% |
+| 6 | `not disclosed` | Man Group Plc/Jersey | 0.56% |
+| 7 | `not disclosed` | NOS SGPS SA | 0.48% |
+| 8 | `not disclosed` | Dof Group ASA | 0.46% |
+| 9 | `not disclosed` | First Resources Ltd | 0.44% |
+| 10 | `not disclosed` | FIBI Holdings | 0.42% |
+
+### AMEX:DGS
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dgs`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | InnoLux Corp | 3.17% |
+| 2 | `not disclosed` | Growthpoint Properties Ltd | 1.20% |
+| 3 | `not disclosed` | Powertech Technology Inc | 1.15% |
+| 4 | `not disclosed` | Banco Del Bajio SA | 0.97% |
+| 5 | `not disclosed` | Old Mutual Ltd | 0.92% |
+| 6 | `not disclosed` | Compeq Manufacturing Co | 0.88% |
+| 7 | `not disclosed` | WPG Holdings Co Ltd | 0.78% |
+| 8 | `not disclosed` | Transmissora Alianca de Energia Eletrica SA | 0.72% |
+| 9 | `not disclosed` | Grupo Aeroportuario del Centro | 0.72% |
+| 10 | `not disclosed` | Samsung Securities Co Ltd | 0.71% |
+
+### AMEX:DFJ
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dfj`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Daishi Hokuetsu Financial Grp | 0.72% |
+| 2 | `not disclosed` | Chugin Financial Group Inc | 0.67% |
+| 3 | `not disclosed` | Citizen Watch Co Ltd | 0.60% |
+| 4 | `not disclosed` | Nichias Corp | 0.59% |
+| 5 | `not disclosed` | Sanki Engineering Co Ltd | 0.59% |
+| 6 | `not disclosed` | Infroneer Holdings Inc | 0.58% |
+| 7 | `not disclosed` | Exedy Corp | 0.56% |
+| 8 | `not disclosed` | NSK Ltd | 0.56% |
+| 9 | `not disclosed` | Yamaguchi Financial Group Inc | 0.55% |
+| 10 | `not disclosed` | Seino Holdings Corp | 0.50% |
+
+### AMEX:DTH
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/dth`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | HSBC Holdings PLC | 3.20% |
+| 2 | `not disclosed` | Nestle SA | 2.43% |
+| 3 | `not disclosed` | Intesa Sanpaolo SpA | 2.19% |
+| 4 | `not disclosed` | Shell Plc-New | 2.05% |
+| 5 | `not disclosed` | British American Tobacco Plc | 1.93% |
+| 6 | `not disclosed` | BHP Group Ltd | 1.92% |
+| 7 | `not disclosed` | Banco Bilbao Vizcaya Argentaria SA | 1.69% |
+| 8 | `not disclosed` | AXA SA | 1.63% |
+| 9 | `not disclosed` | Rio Tinto Plc | 1.52% |
+| 10 | `not disclosed` | BNP Paribas | 1.51% |
+
+### CBOE:DDLS
+- Source: WisdomTree official product page HTML
+- URL: `https://www.wisdomtree.com/us/products/equity/ddls`
+- As of: `2026-07-01`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `not disclosed` | Elecnor SA | 0.73% |
+| 2 | `not disclosed` | Hoegh Autoliners ASA | 0.69% |
+| 3 | `not disclosed` | Taiyo Yuden Co Ltd | 0.66% |
+| 4 | `not disclosed` | Plus500 Ltd | 0.65% |
+| 5 | `not disclosed` | Hafnia Ltd | 0.64% |
+| 6 | `not disclosed` | Man Group Plc/Jersey | 0.56% |
+| 7 | `not disclosed` | NOS SGPS SA | 0.49% |
+| 8 | `not disclosed` | Dof Group ASA | 0.46% |
+| 9 | `not disclosed` | First Resources Ltd | 0.45% |
+| 10 | `not disclosed` | FIBI Holdings | 0.43% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
