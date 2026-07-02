@@ -789,6 +789,103 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 10 | `VICI` | VICI PPTYS INC | 2% |
 
 
+## Additional Verified Holdings Extracted - Batch 2026-07-02D
+### Source Patterns Added
+- BlackRock/iShares DE official product-data API was scanned by `portfolioId` and accepted only when `fundName` matched the target ETF; parsed `EXSB`, `EXXW`, `EXX5`, `EXSG`, and `IUKD`.
+- Additional BlackRock scan for remaining iShares candidates was stopped after no clear matching output in the bounded continuation window; unresolved iShares ETFs remain pending rather than inferred.
+- `EXXW` official `fundName` is `iShares Dow Jones Asia Pacific Select Dividend 50 UCITS ETF (DE)`; this corrects the prior universe display name that said Select Dividend 30.
+
+### XETR:EXSB
+- Source: BlackRock/iShares official product-data API, portfolioId 251763
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=de_DE&portfolioId=251763&targetSite=de-ishares&userType=privatanleger&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `ALV` | ALLIANZ | 11% |
+| 2 | `MUV2` | MUENCHENER RUECKVERSICHERUNGS-GESE | 11% |
+| 3 | `DHL` | DEUTSCHE POST AG | 10% |
+| 4 | `RWE` | RWE AG | 10% |
+| 5 | `EOAN` | E.ON N | 10% |
+| 6 | `BAS` | BASF N | 10% |
+| 7 | `MBG` | MERCEDES-BENZ GROUP N AG | 9% |
+| 8 | `DTG` | DAIMLER TRUCK HOLDING E AG | 6% |
+| 9 | `BMW` | BMW AG | 6% |
+| 10 | `VNA` | VONOVIA SE | 5% |
+
+### XETR:EXXW
+- Source: BlackRock/iShares official product-data API, portfolioId 251764
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=de_DE&portfolioId=251764&targetSite=de-ishares&userType=privatanleger&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `BHP` | BHP GROUP LTD | 9% |
+| 2 | `FMG` | FORTESCUE LTD | 5% |
+| 3 | `D05` | DBS GROUP HOLDINGS LTD | 5% |
+| 4 | `7267` | HONDA MOTOR LTD | 5% |
+| 5 | `O39` | OVERSEA-CHINESE BANKING LTD | 4% |
+| 6 | `ANZ` | ANZ GROUP HOLDINGS LTD | 4% |
+| 7 | `STO` | SANTOS LTD | 4% |
+| 8 | `WBC` | WESTPAC BANKING CORPORATION | 3% |
+| 9 | `U11` | UNITED OVERSEAS BANK LTD | 3% |
+| 10 | `QBE` | QBE INSURANCE GROUP LTD | 3% |
+
+### XETR:EXX5
+- Source: BlackRock/iShares official product-data API, portfolioId 251771
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=de_DE&portfolioId=251771&targetSite=de-ishares&userType=privatanleger&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `MO` | ALTRIA GROUP INC | 2% |
+| 2 | `TROW` | T ROWE PRICE GROUP INC | 2% |
+| 3 | `PRU` | PRUDENTIAL FINANCIAL INC | 2% |
+| 4 | `PFE` | PFIZER INC | 2% |
+| 5 | `OKE` | ONEOK INC | 2% |
+| 6 | `HPQ` | HP INC | 2% |
+| 7 | `KMB` | KIMBERLY CLARK CORP | 2% |
+| 8 | `EIX` | EDISON INTERNATIONAL | 2% |
+| 9 | `VZ` | VERIZON COMMUNICATIONS INC | 2% |
+| 10 | `F` | FORD MOTOR CO | 2% |
+
+### XETR:EXSG
+- Source: BlackRock/iShares official product-data API, portfolioId 251788
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=de_DE&portfolioId=251788&targetSite=de-ishares&userType=privatanleger&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `ABN` | ABN AMRO BANK NV | 5% |
+| 2 | `LIGHT` | SIGNIFY NV | 5% |
+| 3 | `OMV` | OMV AG | 5% |
+| 4 | `NN` | NN GROUP NV | 4% |
+| 5 | `PST` | POSTE ITALIANE | 4% |
+| 6 | `ASRNL` | ASR NEDERLAND NV | 4% |
+| 7 | `CS` | AXA SA | 4% |
+| 8 | `BNP` | BNP PARIBAS SA | 4% |
+| 9 | `ACA` | CREDIT AGRICOLE SA | 4% |
+| 10 | `RAND` | RANDSTAD HOLDING | 4% |
+
+### LSE:IUKD
+- Source: BlackRock/iShares official product-data API, portfolioId 251807
+- URL: `https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v2/get-product-data?appSubType=ISHARES&appType=PRODUCT_PAGE&component=holdings.all&locale=de_DE&portfolioId=251807&targetSite=de-ishares&userType=privatanleger&excludeContent=true&asOfDate=&includeConfig=true`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `LGEN` | LEGAL AND GENERAL GROUP PLC | 5% |
+| 2 | `BATS` | BRITISH AMERICAN TOBACCO | 5% |
+| 3 | `NWG` | NATWEST GROUP PLC | 4% |
+| 4 | `HSBA` | HSBC HOLDINGS PLC | 4% |
+| 5 | `BP.` | BP PLC | 4% |
+| 6 | `AV.` | AVIVA PLC | 4% |
+| 7 | `RIO` | RIO TINTO PLC | 4% |
+| 8 | `ADM` | ADMIRAL GROUP PLC | 3% |
+| 9 | `LLOY` | LLOYDS BANKING GROUP PLC | 3% |
+| 10 | `SDLF` | STANDARD LIFE PLC | 3% |
+
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
