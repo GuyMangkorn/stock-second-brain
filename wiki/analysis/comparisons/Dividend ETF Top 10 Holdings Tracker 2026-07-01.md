@@ -3,9 +3,9 @@ type: etf_top10_holdings_tracker
 created: 2026-07-01
 source_memo: wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md
 universe_count: 100
-official_holdings_found_count: 73
+official_holdings_found_count: 74
 official_lookup_failed_count: 2
-pending_source_check_count: 25
+pending_source_check_count: 24
 fallback_group_source: wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md
 custom-width: 95
 ---
@@ -26,9 +26,9 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 | Status | Count |
 | --- | ---: |
-| official_holdings_found | 73 |
+| official_holdings_found | 74 |
 | official_lookup_failed | 2 |
-| pending_source_check | 25 |
+| pending_source_check | 24 |
 | total universe rows | 100 |
 
 ## Holdings-Verified ETFs
@@ -74,6 +74,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | `LSE:VHYA` | Vanguard FTSE All-World High Dividend Yield UCITS ETF Accum USD | 2026-05-31 | 1. JPMorgan Chase & Co. (1.6%); 2. Exxon Mobil Corp. (1.5%); 3. Johnson & Johnson (1.3%); 4. Cisco Systems Inc. (1.1%); 5. AbbVie Inc. (0.9%); 6. UnitedHealth Group Inc. (0.8%); 7. Chevron Corp. (0.8%); 8. Procter & Gamble Co. (0.8%); 9. HSBC Holdings plc (0.8%); 10. Home Depot Inc. (0.8%) | Vanguard UK official factsheet PDF |
 | `NASDAQ:PID` | Invesco International Dividend Achievers ETF | 2026-06-30 | 1. ITUB Itau Unibanco Holding SA (4.35%); 2. TLK Telkom Indonesia Persero Tbk PT (3.61%); 3. TU TELUS Corp (3.58%); 4. SNY Sanofi SA (3.21%); 5. FINV FinVolution Group (3.16%); 6. BTI British American Tobacco PLC (3.11%); 7. ENB Enbridge Inc (2.97%); 8. OTEX Open Text Corp (2.52%); 9. BIP Brookfield Infrastructure Partners LP (2.51%); 10. E Eni SpA (2.50%) | Invesco official holdings API |
 | `XETR:ISPA` | iShares STOXX Global Select Dividend 100 UCITS ETF (DE) | 2026-07-02 | 1. LGEN LEGAL AND GENERAL GROUP PLC (2.44%); 2. 1308 SITC INTERNATIONAL HOLDINGS LTD (1.91%); 3. TW. TAYLOR WIMPEY PLC (1.81%); 4. AGN AEGON LTD (1.70%); 5. TEP TELEPERFORMANCE (1.65%); 6. BME B&M EUROPEAN VALUE RETAIL PLC (1.63%); 7. ABN ABN AMRO BANK NV (1.62%); 8. NWG NATWEST GROUP PLC (1.62%); 9. AKRBP AKER BP (1.55%); 10. LIGHT SIGNIFY NV (1.51%) | BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 251973 |
+| `AMEX:QDPL` | Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF | 2026-07-06 | 1. NVDA NVIDIA Corp (6.66%); 2. AAPL Apple Inc (6.39%); 3. MSFT Microsoft Corp (4.09%); 4. ASDZ28 Index S&P 500 Annl Div Dec28 (3.74%); 5. ASDZ27 Index S&P 500 Annl Div Dec27 (3.70%); 6. ASDZ26 Index S&P 500 Annl Div Dec26 (3.60%); 7. AMZN Amazon.com Inc (3.35%); 8. GOOGL Alphabet Inc (2.98%); 9. AVGO Broadcom Inc (2.41%); 10. GOOG Alphabet Inc (2.37%) | Pacer ETFs official daily holdings CSV |
 | `NASDAQ:DVY` | iShares Select Dividend ETF | 2026-06-30 | 1. MO ALTRIA GROUP INC (2.26%); 2. TROW T ROWE PRICE GROUP INC (2.22%); 3. PRU PRUDENTIAL FINANCIAL INC (2.01%); 4. PFE PFIZER INC (1.99%); 5. OKE ONEOK INC (1.71%); 6. HPQ HP INC (1.68%); 7. KMB KIMBERLY CLARK CORP (1.68%); 8. EIX EDISON INTERNATIONAL (1.63%); 9. VZ VERIZON COMMUNICATIONS INC (1.62%); 10. F FORD MOTOR CO (1.58%) | BlackRock/iShares official product-data API, portfolioId 239500 |
 | `ASX:WDIV` | State Street SPDR S&P Global Dividend ETF | 2026-06-30 | 1. Lenovo Group (2.27%); 2. Legal & General Group (1.81%); 3. Altria Group (1.78%); 4. Highwoods Prop (1.78%); 5. Getty Realty (1.64%); 6. Northwest Bancshares (1.59%); 7. Verizon Communications (1.50%); 8. Edison International (1.49%); 9. Apa Group (1.47%); 10. Vanguard International Semiconductor (1.46%) | State Street/SPDR official fund page HTML |
 | `XETR:EXSB` | iShares DivDAX UCITS ETF (DE) | 2026-06-30 | 1. ALV ALLIANZ (11%); 2. MUV2 MUENCHENER RUECKVERSICHERUNGS-GESE (11%); 3. DHL DEUTSCHE POST AG (10%); 4. RWE RWE AG (10%); 5. EOAN E.ON N (10%); 6. BAS BASF N (10%); 7. MBG MERCEDES-BENZ GROUP N AG (9%); 8. DTG DAIMLER TRUCK HOLDING E AG (6%); 9. BMW BMW AG (6%); 10. VNA VONOVIA SE (5%) | BlackRock/iShares official product-data API, portfolioId 251763 |
@@ -115,7 +116,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 | Holdings group | Basis | ETFs |
 | --- | --- | --- |
-| HG01 U.S. mega-cap dividend quality / broad large-cap overlap | AVGO, AAPL, MSFT, JPM, JNJ, XOM, LLY, WMT/NVDA overlap; watch duplication in core U.S. dividend sleeve | `AMEX:DGRO`, `AMEX:VIG`, `AMEX:VYM`, `NASDAQ:PFM`, `TSX:VGG`, `TSX:VGH`, `AMEX:DTD`, `AMEX:DLN` |
+| HG01 U.S. mega-cap dividend quality / broad large-cap overlap | AVGO, AAPL, MSFT, JPM, JNJ, XOM, LLY, WMT/NVDA overlap plus QDPL S&P dividend futures exposure; watch duplication in core U.S. dividend sleeve | `AMEX:DGRO`, `AMEX:VIG`, `AMEX:VYM`, `NASDAQ:PFM`, `TSX:VGG`, `TSX:VGH`, `AMEX:DTD`, `AMEX:DLN`, `AMEX:QDPL` |
 | HG02 U.S. dividend aristocrats / equal-weight quality income | many low-single-weight defensive/industrial/financial dividend growers; less mega-cap concentration | `CBOE:NOBL`, `AMEX:FVD`, `AMEX:SDOG` |
 | HG03 U.S. high-dividend value / defensive income | high-yield U.S. equity income with healthcare, staples, telecom, energy, REIT/value tilt | `AMEX:SPYD`, `AMEX:SDY`, `NASDAQ:PEY`, `AMEX:DJD`, `NASDAQ:DVY`, `XETR:EXX5`, `AMEX:DHS` |
 | HG04 U.S. technology dividend / semiconductor-income tilt | IBM, AVGO, MSFT, TXN, QCOM, AMAT, KLAC, LRCX/NVDA/AAPL overlap; avoid stacking tech-dividend ETFs blindly | `CBOE:TDV`, `NASDAQ:TDIV`, `XETR:QDVD` |
@@ -192,7 +193,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | 45 | `LSE:VHYA` | Vanguard FTSE All-World High Dividend Yield UCITS ETF Accum USD | 6.0 | official_holdings_found | 1. JPMorgan Chase & Co. (1.6%); 2. Exxon Mobil Corp. (1.5%); 3. Johnson & Johnson (1.3%); 4. Cisco Systems Inc. (1.1%); 5. AbbVie Inc. (0.9%); 6. UnitedHealth Group Inc. (0.8%); 7. Chevron Corp. (0.8%); 8. Procter & Gamble Co. (0.8%); 9. HSBC Holdings plc (0.8%); 10. Home Depot Inc. (0.8%) | Vanguard UK official factsheet PDF | Top 10 holdings verified | G08 International/global high-dividend yield |
 | 46 | `NASDAQ:PID` | Invesco International Dividend Achievers ETF | 5.9 | official_holdings_found | 1. ITUB Itau Unibanco Holding SA (4.35%); 2. TLK Telkom Indonesia Persero Tbk PT (3.61%); 3. TU TELUS Corp (3.58%); 4. SNY Sanofi SA (3.21%); 5. FINV FinVolution Group (3.16%); 6. BTI British American Tobacco PLC (3.11%); 7. ENB Enbridge Inc (2.97%); 8. OTEX Open Text Corp (2.52%); 9. BIP Brookfield Infrastructure Partners LP (2.51%); 10. E Eni SpA (2.50%) | Invesco official holdings API | Top 10 holdings verified | G06 International dividend growth / quality |
 | 47 | `XETR:ISPA` | iShares STOXX Global Select Dividend 100 UCITS ETF (DE) | 5.9 | official_holdings_found | 1. LGEN LEGAL AND GENERAL GROUP PLC (2.44%); 2. 1308 SITC INTERNATIONAL HOLDINGS LTD (1.91%); 3. TW. TAYLOR WIMPEY PLC (1.81%); 4. AGN AEGON LTD (1.70%); 5. TEP TELEPERFORMANCE (1.65%); 6. BME B&M EUROPEAN VALUE RETAIL PLC (1.63%); 7. ABN ABN AMRO BANK NV (1.62%); 8. NWG NATWEST GROUP PLC (1.62%); 9. AKRBP AKER BP (1.55%); 10. LIGHT SIGNIFY NV (1.51%) | BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 251973 | Top 10 holdings verified from official all/top holdings source | G08 International/global high-dividend yield |
-| 48 | `AMEX:QDPL` | Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF | 5.8 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G02 U.S. broad dividend large-cap income |
+| 48 | `AMEX:QDPL` | Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF | 5.8 | official_holdings_found | 1. NVDA NVIDIA Corp (6.66%); 2. AAPL Apple Inc (6.39%); 3. MSFT Microsoft Corp (4.09%); 4. ASDZ28 Index S&P 500 Annl Div Dec28 (3.74%); 5. ASDZ27 Index S&P 500 Annl Div Dec27 (3.70%); 6. ASDZ26 Index S&P 500 Annl Div Dec26 (3.60%); 7. AMZN Amazon.com Inc (3.35%); 8. GOOGL Alphabet Inc (2.98%); 9. AVGO Broadcom Inc (2.41%); 10. GOOG Alphabet Inc (2.37%) | Pacer ETFs official daily holdings CSV | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 49 | `NASDAQ:DVY` | iShares Select Dividend ETF | 5.8 | official_holdings_found | 1. MO ALTRIA GROUP INC (2.26%); 2. TROW T ROWE PRICE GROUP INC (2.22%); 3. PRU PRUDENTIAL FINANCIAL INC (2.01%); 4. PFE PFIZER INC (1.99%); 5. OKE ONEOK INC (1.71%); 6. HPQ HP INC (1.68%); 7. KMB KIMBERLY CLARK CORP (1.68%); 8. EIX EDISON INTERNATIONAL (1.63%); 9. VZ VERIZON COMMUNICATIONS INC (1.62%); 10. F FORD MOTOR CO (1.58%) | BlackRock/iShares official product-data API, portfolioId 239500 | Top 10 holdings verified | G03 U.S. high-dividend yield / value income |
 | 50 | `TSX:PDC` | Invesco Canadian Dividend Index ETF | 5.8 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G10 Canada dividend equity |
 | 51 | `XETR:ELFC` | Deka EURO iSTOXX ex Fin Dividend+ UCITS ETF | 5.8 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G09 Europe/UK dividend equity |
@@ -251,7 +252,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 - Source universe rows parsed from full triage memo: `100`.
 - Tracker rows emitted in `Full Universe Source Status`: `100`.
 - Every ETF has a status and a fallback group, even when Top 10 holdings are not yet verified.
-- Holdings-based grouping is not complete yet: `73` ETFs currently have verified Top 10 holdings.
+- Holdings-based grouping is not complete yet: `74` ETFs currently have verified Top 10 holdings.
 
 ## Source Map
 

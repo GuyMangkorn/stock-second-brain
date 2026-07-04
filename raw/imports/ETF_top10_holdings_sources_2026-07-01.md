@@ -1427,3 +1427,26 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
 - For every ETF, set one of: `official_holdings_found`, `official_lookup_failed`, or `source_not_available_after_check`; do not infer Top 10 holdings from fund name.
+
+## Additional Verified Holdings Extracted - Batch 2026-07-05B
+
+- Pacer ETFs official product page exposes a daily holdings CSV link; parsed `QDPL` from the source CSV and ranked by the source-disclosed `Weightings` column. The top 10 includes both common stocks and S&P 500 annual dividend index positions because the CSV is the ETF holdings file, not a pure equity-only table.
+
+### `AMEX:QDPL` - Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF
+
+- Source: Pacer ETFs official daily holdings CSV
+- URL: `https://www.paceretfs.com/usbank/live/fsb0.pacer.x330.QDPL_Holdings.csv`
+- As of: `2026-07-06`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `NVDA` | NVIDIA Corp | 6.66% |
+| 2 | `AAPL` | Apple Inc | 6.39% |
+| 3 | `MSFT` | Microsoft Corp | 4.09% |
+| 4 | `ASDZ28 Index` | S&P 500 Annl Div Dec28 | 3.74% |
+| 5 | `ASDZ27 Index` | S&P 500 Annl Div Dec27 | 3.70% |
+| 6 | `ASDZ26 Index` | S&P 500 Annl Div Dec26 | 3.60% |
+| 7 | `AMZN` | Amazon.com Inc | 3.35% |
+| 8 | `GOOGL` | Alphabet Inc | 2.98% |
+| 9 | `AVGO` | Broadcom Inc | 2.41% |
+| 10 | `GOOG` | Alphabet Inc | 2.37% |
