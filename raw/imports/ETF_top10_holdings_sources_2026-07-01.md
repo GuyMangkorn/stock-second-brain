@@ -1383,6 +1383,46 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `CSCO` | CISCO SYSTEMS INC | 2.55% |
 | 10 | `LRCX` | LAM RESEARCH CORP | 2.47% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-05A
+### Source Patterns Added
+- Nomura Asset Management / NEXT FUNDS official fund pages link monthly holdings XLSX files (`組入銘柄情報`); parsed `1489` and `1577` from the `保有明細` sheet using the source-disclosed `% of NAV` column.
+
+### TSE:1489
+- Source: Nomura Asset Management / NEXT FUNDS official monthly holdings XLSX
+- URL: `https://www.nomura-am.co.jp/fund/monthly_holdings/1489_brd_data.xlsx`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `7267` | HONDA MOTOR CO.,LTD. | 4.65% |
+| 2 | `8604` | NOMURA HOLDINGS,INC. | 3.76% |
+| 3 | `8750` | DAIICHI LIFE GROUP,INC. | 3.63% |
+| 4 | `9107` | KAWASAKI KISEN KAISHA,LTD. | 3.56% |
+| 5 | `8316` | SUMITOMO MITSUI FINANCIAL GROUP,INC. | 3.20% |
+| 6 | `4502` | TAKEDA PHARMACEUTICAL COMPANY LIMITED | 3.04% |
+| 7 | `5401` | NIPPON STEEL CORPORATION | 3.04% |
+| 8 | `9434` | SOFTBANK CORP. | 2.99% |
+| 9 | `8725` | MS&AD INSURANCE GROUP HOLDINGS,INC. | 2.97% |
+| 10 | `2914` | JAPAN TOBACCO INC. | 2.90% |
+
+### TSE:1577
+- Source: Nomura Asset Management / NEXT FUNDS official monthly holdings XLSX
+- URL: `https://www.nomura-am.co.jp/fund/monthly_holdings/1577_brd_data.xlsx`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `7182` | JAPAN POST BANK CO.,LTD. | 2.05% |
+| 2 | `4021` | NISSAN CHEMICAL CORPORATION | 1.94% |
+| 3 | `5334` | NITERRA CO.,LTD. | 1.93% |
+| 4 | `6113` | AMADA CO.,LTD. | 1.92% |
+| 5 | `8750` | DAIICHI LIFE GROUP,INC. | 1.92% |
+| 6 | `8591` | ORIX CORPORATION | 1.87% |
+| 7 | `7186` | YOKOHAMA FINANCIAL GROUP,INC. | 1.81% |
+| 8 | `8411` | MIZUHO FINANCIAL GROUP,INC. | 1.79% |
+| 9 | `9147` | NIPPON EXPRESS HOLDINGS,INC. | 1.79% |
+| 10 | `8316` | SUMITOMO MITSUI FINANCIAL GROUP,INC. | 1.78% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.

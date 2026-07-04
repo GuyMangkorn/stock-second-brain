@@ -3,9 +3,9 @@ type: etf_top10_holdings_tracker
 created: 2026-07-01
 source_memo: wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md
 universe_count: 100
-official_holdings_found_count: 71
+official_holdings_found_count: 73
 official_lookup_failed_count: 2
-pending_source_check_count: 27
+pending_source_check_count: 25
 fallback_group_source: wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md
 custom-width: 95
 ---
@@ -26,9 +26,9 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 | Status | Count |
 | --- | ---: |
-| official_holdings_found | 71 |
+| official_holdings_found | 73 |
 | official_lookup_failed | 2 |
-| pending_source_check | 27 |
+| pending_source_check | 25 |
 | total universe rows | 100 |
 
 ## Holdings-Verified ETFs
@@ -69,6 +69,8 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | `CBOE:REGL` | ProShares S&P MidCap 400 Dividend Aristocrats ETF | 2026-06-30 | 1. CHE CHEMED CORP (1.88%); 2. CBT CABOT CORP (1.80%); 3. THG HANOVER INSURANCE GROUP INC/ (1.78%); 4. UMBF UMB FINANCIAL CORP (1.75%); 5. AIT APPLIED INDUSTRIAL TECH INC (1.73%); 6. LFUS LITTELFUSE INC (1.73%); 7. R RYDER SYSTEM INC (1.72%); 8. CBSH COMMERCE BANCSHARES INC (1.72%); 9. SLGN SILGAN HOLDINGS INC (1.72%); 10. UNM UNUM GROUP (1.71%) | ProShares official fund page HTML |
 | `TSX:VIDY` | Vanguard FTSE Developed ex North America High Dividend Yield Index ETF | 2026-05-31 | 1. HSBC Holdings plc (2.7%); 2. Roche Holding AG (2.5%); 3. Novartis AG (2.4%); 4. Nestle SA (2.2%); 5. Shell plc (2.0%); 6. BHP Group Ltd. (1.8%); 7. Mitsubishi UFJ Financial Group Inc. (1.7%); 8. Toyota Motor Corp. (1.7%); 9. Commonwealth Bank of Australia (1.6%); 10. Banco Santander SA (1.5%) | Vanguard Canada official factsheet PDF |
 | `XETR:QDVD` | iShares MSCI USA Quality Dividend ESG UCITS ETF | 2026-07-02 | 1. NVDA NVIDIA CORP (5.14%); 2. AAPL APPLE INC (4.91%); 3. AMAT APPLIED MATERIAL INC (3.57%); 4. MSFT MICROSOFT CORP (3.31%); 5. ABBV ABBVIE INC (3.05%); 6. IBM INTERNATIONAL BUSINESS MACHINES CO (2.91%); 7. HD HOME DEPOT INC (2.81%); 8. MRK MERCK & CO INC (2.67%); 9. CSCO CISCO SYSTEMS INC (2.55%); 10. LRCX LAM RESEARCH CORP (2.47%) | BlackRock/iShares Switzerland official all-holdings JSON for QDIV / MSCI USA Quality Dividend Advanced UCITS ETF, portfolioId 264660 |
+| `TSE:1489` | Next Funds Nikkei 225 High Dividend Yield Stock 50 Index ETF | 2026-06-30 | 1. 7267 HONDA MOTOR CO.,LTD. (4.65%); 2. 8604 NOMURA HOLDINGS,INC. (3.76%); 3. 8750 DAIICHI LIFE GROUP,INC. (3.63%); 4. 9107 KAWASAKI KISEN KAISHA,LTD. (3.56%); 5. 8316 SUMITOMO MITSUI FINANCIAL GROUP,INC. (3.20%); 6. 4502 TAKEDA PHARMACEUTICAL COMPANY LIMITED (3.04%); 7. 5401 NIPPON STEEL CORPORATION (3.04%); 8. 9434 SOFTBANK CORP. (2.99%); 9. 8725 MS&AD INSURANCE GROUP HOLDINGS,INC. (2.97%); 10. 2914 JAPAN TOBACCO INC. (2.90%) | Nomura Asset Management / NEXT FUNDS official monthly holdings XLSX |
+| `TSE:1577` | NEXT FUNDS Nomura Japan Equity High Dividend 70 Exchange Traded Fund | 2026-06-30 | 1. 7182 JAPAN POST BANK CO.,LTD. (2.05%); 2. 4021 NISSAN CHEMICAL CORPORATION (1.94%); 3. 5334 NITERRA CO.,LTD. (1.93%); 4. 6113 AMADA CO.,LTD. (1.92%); 5. 8750 DAIICHI LIFE GROUP,INC. (1.92%); 6. 8591 ORIX CORPORATION (1.87%); 7. 7186 YOKOHAMA FINANCIAL GROUP,INC. (1.81%); 8. 8411 MIZUHO FINANCIAL GROUP,INC. (1.79%); 9. 9147 NIPPON EXPRESS HOLDINGS,INC. (1.79%); 10. 8316 SUMITOMO MITSUI FINANCIAL GROUP,INC. (1.78%) | Nomura Asset Management / NEXT FUNDS official monthly holdings XLSX |
 | `LSE:VHYA` | Vanguard FTSE All-World High Dividend Yield UCITS ETF Accum USD | 2026-05-31 | 1. JPMorgan Chase & Co. (1.6%); 2. Exxon Mobil Corp. (1.5%); 3. Johnson & Johnson (1.3%); 4. Cisco Systems Inc. (1.1%); 5. AbbVie Inc. (0.9%); 6. UnitedHealth Group Inc. (0.8%); 7. Chevron Corp. (0.8%); 8. Procter & Gamble Co. (0.8%); 9. HSBC Holdings plc (0.8%); 10. Home Depot Inc. (0.8%) | Vanguard UK official factsheet PDF |
 | `NASDAQ:PID` | Invesco International Dividend Achievers ETF | 2026-06-30 | 1. ITUB Itau Unibanco Holding SA (4.35%); 2. TLK Telkom Indonesia Persero Tbk PT (3.61%); 3. TU TELUS Corp (3.58%); 4. SNY Sanofi SA (3.21%); 5. FINV FinVolution Group (3.16%); 6. BTI British American Tobacco PLC (3.11%); 7. ENB Enbridge Inc (2.97%); 8. OTEX Open Text Corp (2.52%); 9. BIP Brookfield Infrastructure Partners LP (2.51%); 10. E Eni SpA (2.50%) | Invesco official holdings API |
 | `XETR:ISPA` | iShares STOXX Global Select Dividend 100 UCITS ETF (DE) | 2026-07-02 | 1. LGEN LEGAL AND GENERAL GROUP PLC (2.44%); 2. 1308 SITC INTERNATIONAL HOLDINGS LTD (1.91%); 3. TW. TAYLOR WIMPEY PLC (1.81%); 4. AGN AEGON LTD (1.70%); 5. TEP TELEPERFORMANCE (1.65%); 6. BME B&M EUROPEAN VALUE RETAIL PLC (1.63%); 7. ABN ABN AMRO BANK NV (1.62%); 8. NWG NATWEST GROUP PLC (1.62%); 9. AKRBP AKER BP (1.55%); 10. LIGHT SIGNIFY NV (1.51%) | BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 251973 |
@@ -124,7 +126,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | HG09 International dividend growth / quality | non-U.S. quality/dividend growers with banks, pharma, staples, industrials; VIGI is quality-growth tilted | `NASDAQ:VIGI` |
 | HG10 International/global high-dividend equity | international high-dividend/value holdings with banks, telecom, energy, autos, tobacco, insurers overlap | `CBOE:IDV`, `NASDAQ:VYMI`, `NASDAQ:PID`, `AMEX:IDOG`, `AMEX:WDIV`, `ASX:WDIV`, `AMEX:DWX`, `XETR:ZPRG`, `TSX:FCID`, `TSX:VIDY`, `LSE:VHYA`, `CBOE:DDWM`, `AMEX:DWM`, `AMEX:DTH` |
 | HG11 Europe dividend aristocrats / high-dividend equity | Europe/UK high-dividend holdings with insurers, banks, industrials, telecom, and healthcare concentration; ISPA currently overlaps FDD/IUKD-style names such as LGEN, Taylor Wimpey, Aegon, ABN, NatWest, Signify | `AMEX:FDD`, `XETR:SPYW`, `XETR:EXSB`, `XETR:EXSG`, `LSE:IUKD`, `XETR:EL4G`, `XETR:EL4X`, `XETR:ISPA` |
-| HG12 Asia-Pacific dividend equity | Asia-Pacific/Australia/Japan high-dividend holdings; bank/infrastructure/telecom/auto/REIT concentration differs from global dividend ETFs | `XETR:ZPRA`, `ASX:SYI`, `TSE:2564`, `XETR:EXXW` |
+| HG12 Asia-Pacific dividend equity | Asia-Pacific/Australia high-dividend holdings; bank/infrastructure/telecom/auto/REIT concentration differs from global dividend ETFs | `XETR:ZPRA`, `ASX:SYI`, `XETR:EXXW` |
 | HG13 Canada dividend equity | Canada dividend holdings with banks, pipelines, energy, utilities, telecom, and insurers; watch overlap with Canada-specific dividend ETFs | `TSX:FCCD`, `TSX:VDY`, `TSX:XEI`, `TSX:CDZ` |
 | HG14 Multi-asset income / fund-of-funds hybrid | income sleeve includes ETF holdings, REITs, MLPs, mortgage REITs, and other high-yield assets; do not compare as pure equity dividend ETF | `NASDAQ:MDIV` |
 | HG15 Canadian bank-only income | concentrated Canadian bank exposure; materially different from diversified Canada dividend ETFs even when some bank holdings overlap | `TSX:RBNK` |
@@ -132,6 +134,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | HG17 International small-cap dividend equity | developed international small-cap dividend holdings with near-identical overlap in Elecnor, Hoegh Autoliners, Plus500/Taiyo Yuden, Hafnia, and Man Group | `AMEX:DLS`, `CBOE:DDLS` |
 | HG18 Japan small-cap dividend equity | Japan small-cap dividend holdings; differs from broad Japan high-yield large/mid-cap ETFs despite same country bucket | `AMEX:DFJ` |
 | HG19 Swiss dividend defensive / financial-healthcare concentration | Switzerland-only dividend exposure; very concentrated in Zurich Insurance, Nestle, Novartis, Roche, Holcim, Swiss Re and Swiss Life, so avoid treating it as broad Europe dividend exposure | `SIX:CHDVD` |
+| HG20 Japan high-dividend large/mid equity | Japan high-dividend equity exposure with Honda, Dai-ichi Life, SMFG, Takeda, Japan Tobacco, financials, autos, shipping and industrial overlap; compare before stacking Japan dividend ETFs | `TSE:1489`, `TSE:1577`, `TSE:2564` |
 
 
 
@@ -184,8 +187,8 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | 40 | `TSX:VIDY` | Vanguard FTSE Developed ex North America High Dividend Yield Index ETF | 6.2 | official_holdings_found | 1. HSBC Holdings plc (2.7%); 2. Roche Holding AG (2.5%); 3. Novartis AG (2.4%); 4. Nestle SA (2.2%); 5. Shell plc (2.0%); 6. BHP Group Ltd. (1.8%); 7. Mitsubishi UFJ Financial Group Inc. (1.7%); 8. Toyota Motor Corp. (1.7%); 9. Commonwealth Bank of Australia (1.6%); 10. Banco Santander SA (1.5%) | Vanguard Canada official factsheet PDF | Top 10 holdings verified | G10 Canada dividend equity |
 | 41 | `XETR:DXSA` | Xtrackers Euro Stoxx Quality Dividend UCITS ETF | 6.2 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G09 Europe/UK dividend equity |
 | 42 | `XETR:QDVD` | iShares MSCI USA Quality Dividend ESG UCITS ETF | 6.2 | official_holdings_found | 1. NVDA NVIDIA CORP (5.14%); 2. AAPL APPLE INC (4.91%); 3. AMAT APPLIED MATERIAL INC (3.57%); 4. MSFT MICROSOFT CORP (3.31%); 5. ABBV ABBVIE INC (3.05%); 6. IBM INTERNATIONAL BUSINESS MACHINES CO (2.91%); 7. HD HOME DEPOT INC (2.81%); 8. MRK MERCK & CO INC (2.67%); 9. CSCO CISCO SYSTEMS INC (2.55%); 10. LRCX LAM RESEARCH CORP (2.47%) | BlackRock/iShares Switzerland official all-holdings JSON for QDIV / MSCI USA Quality Dividend Advanced UCITS ETF, portfolioId 264660 | Top 10 holdings verified from official all/top holdings source | G09 Europe/UK dividend equity |
-| 43 | `TSE:1489` | Next Funds Nikkei 225 High Dividend Yield Stock 50 Index ETF | 6.1 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G12 Japan dividend equity |
-| 44 | `TSE:1577` | NEXT FUNDS Nomura Japan Equity High Dividend 70 Exchange Traded Fund | 6.1 | pending_source_check | pending_source_check; ยังไม่ได้ตรวจ official holdings source ใน batch นี้ | not checked in this batch | Description/theme fallback pending holdings extraction | G12 Japan dividend equity |
+| 43 | `TSE:1489` | Next Funds Nikkei 225 High Dividend Yield Stock 50 Index ETF | 6.1 | official_holdings_found | 1. 7267 HONDA MOTOR CO.,LTD. (4.65%); 2. 8604 NOMURA HOLDINGS,INC. (3.76%); 3. 8750 DAIICHI LIFE GROUP,INC. (3.63%); 4. 9107 KAWASAKI KISEN KAISHA,LTD. (3.56%); 5. 8316 SUMITOMO MITSUI FINANCIAL GROUP,INC. (3.20%); 6. 4502 TAKEDA PHARMACEUTICAL COMPANY LIMITED (3.04%); 7. 5401 NIPPON STEEL CORPORATION (3.04%); 8. 9434 SOFTBANK CORP. (2.99%); 9. 8725 MS&AD INSURANCE GROUP HOLDINGS,INC. (2.97%); 10. 2914 JAPAN TOBACCO INC. (2.90%) | Nomura Asset Management / NEXT FUNDS official monthly holdings XLSX | Top 10 holdings verified from official monthly holdings XLSX | G12 Japan dividend equity |
+| 44 | `TSE:1577` | NEXT FUNDS Nomura Japan Equity High Dividend 70 Exchange Traded Fund | 6.1 | official_holdings_found | 1. 7182 JAPAN POST BANK CO.,LTD. (2.05%); 2. 4021 NISSAN CHEMICAL CORPORATION (1.94%); 3. 5334 NITERRA CO.,LTD. (1.93%); 4. 6113 AMADA CO.,LTD. (1.92%); 5. 8750 DAIICHI LIFE GROUP,INC. (1.92%); 6. 8591 ORIX CORPORATION (1.87%); 7. 7186 YOKOHAMA FINANCIAL GROUP,INC. (1.81%); 8. 8411 MIZUHO FINANCIAL GROUP,INC. (1.79%); 9. 9147 NIPPON EXPRESS HOLDINGS,INC. (1.79%); 10. 8316 SUMITOMO MITSUI FINANCIAL GROUP,INC. (1.78%) | Nomura Asset Management / NEXT FUNDS official monthly holdings XLSX | Top 10 holdings verified from official monthly holdings XLSX | G12 Japan dividend equity |
 | 45 | `LSE:VHYA` | Vanguard FTSE All-World High Dividend Yield UCITS ETF Accum USD | 6.0 | official_holdings_found | 1. JPMorgan Chase & Co. (1.6%); 2. Exxon Mobil Corp. (1.5%); 3. Johnson & Johnson (1.3%); 4. Cisco Systems Inc. (1.1%); 5. AbbVie Inc. (0.9%); 6. UnitedHealth Group Inc. (0.8%); 7. Chevron Corp. (0.8%); 8. Procter & Gamble Co. (0.8%); 9. HSBC Holdings plc (0.8%); 10. Home Depot Inc. (0.8%) | Vanguard UK official factsheet PDF | Top 10 holdings verified | G08 International/global high-dividend yield |
 | 46 | `NASDAQ:PID` | Invesco International Dividend Achievers ETF | 5.9 | official_holdings_found | 1. ITUB Itau Unibanco Holding SA (4.35%); 2. TLK Telkom Indonesia Persero Tbk PT (3.61%); 3. TU TELUS Corp (3.58%); 4. SNY Sanofi SA (3.21%); 5. FINV FinVolution Group (3.16%); 6. BTI British American Tobacco PLC (3.11%); 7. ENB Enbridge Inc (2.97%); 8. OTEX Open Text Corp (2.52%); 9. BIP Brookfield Infrastructure Partners LP (2.51%); 10. E Eni SpA (2.50%) | Invesco official holdings API | Top 10 holdings verified | G06 International dividend growth / quality |
 | 47 | `XETR:ISPA` | iShares STOXX Global Select Dividend 100 UCITS ETF (DE) | 5.9 | official_holdings_found | 1. LGEN LEGAL AND GENERAL GROUP PLC (2.44%); 2. 1308 SITC INTERNATIONAL HOLDINGS LTD (1.91%); 3. TW. TAYLOR WIMPEY PLC (1.81%); 4. AGN AEGON LTD (1.70%); 5. TEP TELEPERFORMANCE (1.65%); 6. BME B&M EUROPEAN VALUE RETAIL PLC (1.63%); 7. ABN ABN AMRO BANK NV (1.62%); 8. NWG NATWEST GROUP PLC (1.62%); 9. AKRBP AKER BP (1.55%); 10. LIGHT SIGNIFY NV (1.51%) | BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 251973 | Top 10 holdings verified from official all/top holdings source | G08 International/global high-dividend yield |
@@ -248,7 +251,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 - Source universe rows parsed from full triage memo: `100`.
 - Tracker rows emitted in `Full Universe Source Status`: `100`.
 - Every ETF has a status and a fallback group, even when Top 10 holdings are not yet verified.
-- Holdings-based grouping is not complete yet: `71` ETFs currently have verified Top 10 holdings.
+- Holdings-based grouping is not complete yet: `73` ETFs currently have verified Top 10 holdings.
 
 ## Source Map
 

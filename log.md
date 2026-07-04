@@ -1,5 +1,13 @@
 # Log
 
+## 2026-07-05
+
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  Nomura/NEXT FUNDS monthly holdings for `1489` and `1577`, raising verified
+  holdings coverage to `73` of `100` ETFs.
+
 ## 2026-07-04
 
 - `analysis`: Expanded
