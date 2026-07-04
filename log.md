@@ -1,5 +1,13 @@
 # Log
 
+## 2026-07-04
+
+- `analysis`: Expanded
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  BlackRock/iShares holdings for `XEI`, `CDZ`, `CHDVD`, `ISPA`, and `QDVD`,
+  raising verified holdings coverage to `71` of `100` ETFs.
+
 ## 2026-07-02
 
 - `analysis`: Expanded

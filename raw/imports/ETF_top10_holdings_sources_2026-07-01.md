@@ -1287,6 +1287,102 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 9 | `not disclosed` | First Resources Ltd | 0.45% |
 | 10 | `not disclosed` | FIBI Holdings | 0.43% |
 
+## Additional Verified Holdings Extracted - Batch 2026-07-04A
+### Source Patterns Added
+- BlackRock/iShares Canada pages expose `topHoldingsTab` JSON endpoints; parsed `XEI` and `CDZ` Top 10 directly from official top holdings JSON.
+- BlackRock/iShares Switzerland pages for `CHDVD`, `ISPA`/`SDGPEX`, and `QDVD`/`QDIV` expose official all-holdings JSON sorted by weight; recorded the first 10 rows as Top 10 from official all holdings.
+- `XETR:QDVD` is recorded against the official BlackRock Switzerland product page that uses ticker `QDIV` for iShares MSCI USA Quality Dividend Advanced UCITS ETF; kept the tracker ticker as `XETR:QDVD` and noted the source ticker mapping.
+
+### TSX:XEI
+- Source: BlackRock/iShares Canada official top holdings JSON, portfolioId 239846
+- URL: `https://www.blackrock.com/ca/investors/en/products/239846/ishares-sptsx-equity-income-index-etf/1464253357814.ajax?tab=top&fileType=json`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `TD` | TORONTO DOMINION | 5.31% |
+| 2 | `RY` | ROYAL BANK OF CANADA | 5.27% |
+| 3 | `ENB` | ENBRIDGE INC | 4.87% |
+| 4 | `TRP` | TC ENERGY CORP | 4.68% |
+| 5 | `BMO` | BANK OF MONTREAL | 4.51% |
+| 6 | `CNQ` | CANADIAN NATURAL RESOURCES LTD | 4.43% |
+| 7 | `SU` | SUNCOR ENERGY INC | 4.40% |
+| 8 | `NTR` | NUTRIEN LTD | 3.98% |
+| 9 | `BNS` | BANK OF NOVA SCOTIA | 3.88% |
+| 10 | `CM` | CANADIAN IMPERIAL BANK OF COMMERCE | 3.87% |
+
+### TSX:CDZ
+- Source: BlackRock/iShares Canada official top holdings JSON, portfolioId 239834
+- URL: `https://www.blackrock.com/ca/investors/en/products/239834/ishares-sptsx-canadian-dividend-aristocrats-index-fund/1464253357814.ajax?tab=top&fileType=json`
+- As of: `2026-06-30`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `SOBO` | SOUTH BOW CORP | 3.08% |
+| 2 | `WTE` | WESTSHORE TERMINALS INVESTMENT COR | 2.46% |
+| 3 | `GEI` | GIBSON ENERGY INC | 2.46% |
+| 4 | `T` | TELUS | 2.33% |
+| 5 | `ENB` | ENBRIDGE INC | 2.23% |
+| 6 | `MTL` | MULLEN GROUP LTD | 2.17% |
+| 7 | `PPL` | PEMBINA PIPELINE CORP | 2.13% |
+| 8 | `CRT.UN` | CT REIT UNITS TRUST | 2.08% |
+| 9 | `CPX` | CAPITAL POWER CORP | 1.88% |
+| 10 | `CNQ` | CANADIAN NATURAL RESOURCES LTD | 1.84% |
+
+### SIX:CHDVD
+- Source: BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 264108
+- URL: `https://www.blackrock.com/ch/individual/en/products/264108/ishares-swiss-dividend-ch-fund/1489751357111.ajax?tab=all&fileType=json`
+- As of: `2026-07-02`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `ZURN` | ZURICH INSURANCE GROUP AG | 15.06% |
+| 2 | `NESN` | NESTLE SA | 14.78% |
+| 3 | `NOVN` | NOVARTIS AG | 14.65% |
+| 4 | `ROP` | ROCHE PS PAR AG | 14.60% |
+| 5 | `HOLN` | HOLCIM LTD AG | 10.01% |
+| 6 | `SREN` | SWISS RE AG | 9.79% |
+| 7 | `SLHN` | SWISS LIFE HOLDING AG | 5.81% |
+| 8 | `SIKA` | SIKA AG | 3.58% |
+| 9 | `GIVN` | GIVAUDAN SA | 3.47% |
+| 10 | `HBAN` | HELVETIA BALOISE HOLDING N AG | 3.11% |
+
+### XETR:ISPA
+- Source: BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 251973
+- URL: `https://www.blackrock.com/ch/individual/en/products/251973/ishares-stoxx-global-select-dividend-100-ucits-etf-de-fund/1489751357111.ajax?tab=all&fileType=json`
+- As of: `2026-07-02`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `LGEN` | LEGAL AND GENERAL GROUP PLC | 2.44% |
+| 2 | `1308` | SITC INTERNATIONAL HOLDINGS LTD | 1.91% |
+| 3 | `TW.` | TAYLOR WIMPEY PLC | 1.81% |
+| 4 | `AGN` | AEGON LTD | 1.70% |
+| 5 | `TEP` | TELEPERFORMANCE | 1.65% |
+| 6 | `BME` | B&M EUROPEAN VALUE RETAIL PLC | 1.63% |
+| 7 | `ABN` | ABN AMRO BANK NV | 1.62% |
+| 8 | `NWG` | NATWEST GROUP PLC | 1.62% |
+| 9 | `AKRBP` | AKER BP | 1.55% |
+| 10 | `LIGHT` | SIGNIFY NV | 1.51% |
+
+### XETR:QDVD
+- Source: BlackRock/iShares Switzerland official all-holdings JSON for QDIV / MSCI USA Quality Dividend Advanced UCITS ETF, portfolioId 264660
+- URL: `https://www.blackrock.com/ch/individual/en/products/264660/ishares-msci-usa-dividend-iq-ucits-etf/1489751357111.ajax?tab=all&fileType=json`
+- As of: `2026-07-02`
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `NVDA` | NVIDIA CORP | 5.14% |
+| 2 | `AAPL` | APPLE INC | 4.91% |
+| 3 | `AMAT` | APPLIED MATERIAL INC | 3.57% |
+| 4 | `MSFT` | MICROSOFT CORP | 3.31% |
+| 5 | `ABBV` | ABBVIE INC | 3.05% |
+| 6 | `IBM` | INTERNATIONAL BUSINESS MACHINES CO | 2.91% |
+| 7 | `HD` | HOME DEPOT INC | 2.81% |
+| 8 | `MRK` | MERCK & CO INC | 2.67% |
+| 9 | `CSCO` | CISCO SYSTEMS INC | 2.55% |
+| 10 | `LRCX` | LAM RESEARCH CORP | 2.47% |
+
 ## Next Extraction Queue
 
 - Resolve official issuer holdings endpoints for Vanguard, State Street SPDR, WisdomTree, ProShares, Invesco, Fidelity, First Trust, VanEck, ALPS, Global X, and regional exchanges.
