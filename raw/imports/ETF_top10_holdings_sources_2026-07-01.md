@@ -1450,3 +1450,15 @@ Initial source-status note for the updated ETF grouping goal: group ETFs by veri
 | 8 | `GOOGL` | Alphabet Inc | 2.98% |
 | 9 | `AVGO` | Broadcom Inc | 2.41% |
 | 10 | `GOOG` | Alphabet Inc | 2.37% |
+
+## Official Lookup Attempts Without Verified Holdings - Batch 2026-07-05C
+
+These ETFs were checked against official issuer/product surfaces during this batch, but no source-backed Top 10 holdings table/file was verified. Per project rules, holdings remain `ไม่พบข้อมูลที่ยืนยันได้` and grouping stays on the existing description/theme fallback until a verifiable official holdings source is found.
+
+| ETF | Official surfaces checked | Result | Fallback group basis |
+| --- | --- | --- | --- |
+| `EURONEXT:SEL` | Amundi Luxembourg official search/fund context pages for `LU0292095535`; Amundi document API path exposed as `/retail/api/awf-ged/documents` but product result remained behind profile/search context during this batch | `ไม่พบข้อมูลที่ยืนยันได้` | STOXX Europe Select Dividend 30 description/theme, Europe dividend equity |
+| `XETR:ELFC` | Deka official ETF page slug checks and Deka official factsheet document pattern near existing verified Deka files (`factsheet_7_20260531_de.pdf`, `factsheet_23_20260531_de.pdf`) | `ไม่พบข้อมูลที่ยืนยันได้` | EURO iSTOXX ex Financials Dividend+ description/theme, Europe dividend equity |
+| `XETR:EXSH` | BlackRock/iShares Germany official product search endpoint and BlackRock/iShares all-holdings JSON product-id scan near existing verified DE iShares product IDs | `ไม่พบข้อมูลที่ยืนยันได้` | STOXX Europe Select Dividend 30 description/theme, Europe dividend equity |
+| `TSE:1698` | Amova/Nikko official detail page `https://www.amova-am.com/fund/detail/1698/`, Amova report URL templates, `api/fund-japan`, and ETF API path exposed in page source | `ไม่พบข้อมูลที่ยืนยันได้` | Japan high-dividend / TSE Dividend Focus 100 description/theme |
+| `ASX:RDV` | Russell Investments official Australia ETF page and candidate official factsheet URLs under `russellinvestments.com/-/media/files/au/funds/factsheets/etfs/` | `ไม่พบข้อมูลที่ยืนยันได้` | Australia high-dividend shares description/theme |

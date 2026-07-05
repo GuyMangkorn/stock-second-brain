@@ -2,6 +2,13 @@
 
 ## 2026-07-05
 
+- `analysis`: Updated
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  lookup-failed status for `SEL`, `ELFC`, `EXSH`, `1698`, and `RDV`; each keeps
+  description/theme fallback grouping because Top 10 holdings were
+  `ไม่พบข้อมูลที่ยืนยันได้`.
+
 - `analysis`: Expanded
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with Pacer
