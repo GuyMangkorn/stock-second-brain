@@ -1,5 +1,14 @@
 # Log
 
+## 2026-07-09
+
+- `analysis`: Updated
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official
+  lookup-failed status for `FDVV`, `TDIV`, `IHD`, `DXSA`, `PDC`, `XGSD`, and
+  `TBNK`; each keeps description/theme fallback grouping because Top 10
+  holdings were `ไม่พบข้อมูลที่ยืนยันได้`.
+
 ## 2026-07-05
 
 - `analysis`: Updated
