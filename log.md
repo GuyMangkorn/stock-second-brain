@@ -2,6 +2,30 @@
 
 ## 2026-07-09
 
+- `latest-results`: Created `raw/imports/SMIC_latest_results_source.md` from
+  SMIC official IR Q1 2026 earnings release, quarterly statement spreadsheets,
+  FY2025 annual report / PRC annual spreadsheets, and webcast announcement; P1
+  was limited to source note creation only.
+- `ingest`: Created `raw/financials/SMIC_fundamentals.md` and
+  `wiki/entities/SMIC.md` from verified SMIC Q1 2026 / FY2025 source fields,
+  with FY2026 FCF guidance, full-year capex guidance, transcript, and
+  share-count reconciliation gaps recorded instead of inferred.
+- `research`: Expanded `wiki/entities/SMIC.md` with official-source business
+  model, thesis, risks, catalysts, valuation watch items, reports, follow-up,
+  and missing/unverified data sections.
+- `valuation`: Created
+  `wiki/analysis/valuations/SMIC DCF Valuation 2026-07-09.md` after
+  fresh-checking SMIC price, market cap, shares, cash, debt-like obligations,
+  FCF, and guidance; P11 stopped before a precise fair value because FCF is
+  negative and source-backed FY2026 FCF / capex guidance was not found.
+- `analysis`: Created
+  `wiki/analysis/decisions/SMIC Decision Memo 2026-07-09.md` and
+  `raw/imports/SMIC_market_quote_2026-07-09.md` with a WATCHLIST / WAIT action
+  read; updated `index.md` plus `wiki/entities/Entity Index.md` for the new
+  entity.
+
+## 2026-07-09
+
 - `analysis`: Updated
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with official

@@ -1,12 +1,20 @@
 ---
 type: dashboard
-updated: 2026-06-11
+updated: 2026-07-09
 ---
 
 # Stock Second Brain Dashboard
 
 ## Latest Work
 
+- 2026-07-09: Ran full new-ticker decision-grade flow for `[[SMIC]]`:
+  created `[[SMIC_latest_results_source]]`, `[[SMIC_market_quote_2026-07-09]]`,
+  normalized `[[SMIC_fundamentals]]`, added `[[SMIC]]`, and created
+  `[[SMIC DCF Valuation 2026-07-09]]` plus
+  `[[SMIC Decision Memo 2026-07-09]]`. P1 was source-note-only; P11 stopped
+  before a precise DCF because simple FCF is negative, FY2026 FCF / capex
+  guidance was not found, and market-cap/share-count data did not reconcile.
+  P13 action read is WATCHLIST / WAIT.
 - 2026-06-11: Added `[[BABA]]` after a source-backed price-drop review:
   created `[[BABA_latest_results_source]]`, `[[BABA_market_quote_2026-06-11]]`,
   normalized `[[BABA_fundamentals]]`, and created
