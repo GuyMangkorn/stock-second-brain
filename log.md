@@ -2,6 +2,15 @@
 
 ## 2026-07-09
 
+- `analysis`: Updated
+  `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
+  and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with KB RISE
+  official Top 10 holdings for `KRX:315960`; marked the remaining unresolved
+  ETF official lookups as `ไม่พบข้อมูลที่ยืนยันได้`, leaving description/theme
+  fallback groups so all `100` ETFs have a grouping and no ETF remains pending.
+
+## 2026-07-09
+
 - `latest-results`: Created `raw/imports/SMIC_latest_results_source.md` from
   SMIC official IR Q1 2026 earnings release, quarterly statement spreadsheets,
   FY2025 annual report / PRC annual spreadsheets, and webcast announcement; P1

@@ -1476,3 +1476,43 @@ These ETFs were checked against official issuer/product surfaces during this bat
 | `TSX:PDC` | Invesco Canada official product-page candidate and existing Invesco `dng-api.invesco.com` holdings pattern checks; captured page did not expose a matching PDC CUSIP/holdings API payload | `ไม่พบข้อมูลที่ยืนยันได้` | Canadian dividend index description/theme |
 | `XETR:XGSD` | DWS/Xtrackers official product page `https://etf.dws.com/en-gb/LU0292096186-stoxx-global-select-dividend-100-swap-ucits-etf-1d/`; captured product shell exposed API bases `https://etf.dws.com/api/` and `https://etf.dws.com/product_literature/api`, and Nuxt bundle was inspected for product/portfolio/download routes, but no verified holdings payload was identified | `ไม่พบข้อมูลที่ยืนยันได้` | Global Select Dividend 100 swap / global high-dividend description/theme |
 | `TSX:TBNK` | TD Asset Management official ETF page `https://www.td.com/ca/en/asset-management/funds/solutions/etfs/fundCard?fundId=7158` and official `/bin/fund-search-data` API attempt; captured page was a dynamic fund template and direct API attempt returned no parseable Top 10 holdings table/file | `ไม่พบข้อมูลที่ยืนยันได้` | Canadian bank dividend / bank-only income description/theme |
+
+## Additional Verified Holdings Extracted - Batch 2026-07-09B
+
+### `KRX:315960` - KB RISE Large Cap High Dividend10TR ETF
+
+- Source: KB RISE official product page HTML
+- URL: `https://www.riseetf.co.kr/prod/finderDetail/4494`
+- As of: `2026-07-09`
+- Source note: Official product page title identified `RISE 대형고배당10TR` and ticker `(315960)`. The page included a `TOP10 구성 종목` table and a matching `구성종목(PDF) 현황` table.
+
+| Rank | Ticker / ID | Holding | Weight |
+| ---: | --- | --- | ---: |
+| 1 | `KR7000660001` | SK하이닉스 | 28.83% |
+| 2 | `KR7005930003` | 삼성전자 | 25.90% |
+| 3 | `KR7005380001` | 현대차 | 10.25% |
+| 4 | `KR7032830002` | 삼성생명 | 7.49% |
+| 5 | `KR7105560007` | KB금융 | 6.90% |
+| 6 | `KR7000270009` | 기아 | 6.62% |
+| 7 | `KR7055550008` | 신한지주 | 5.51% |
+| 8 | `KR7086790003` | 하나금융지주 | 3.63% |
+| 9 | `KR7005490008` | POSCO홀딩스 | 2.61% |
+| 10 | `KR7316140003` | 우리금융지주 | 2.44% |
+
+## Official Lookup Attempts Without Verified Holdings - Batch 2026-07-09B
+
+These ETFs were checked against official issuer/product surfaces or official-exchange/product-search surfaces during this batch, but no source-backed Top 10 holdings table/file was verified. Per project rules, holdings remain `ไม่พบข้อมูลที่ยืนยันได้` and grouping stays on the existing description/theme fallback until a verifiable official holdings source is found.
+
+| ETF | Official surfaces checked | Result | Fallback group basis |
+| --- | --- | --- | --- |
+| `KRX:161510` | Hanwha PLUS official product URL candidate `https://www.plusetf.co.kr/etf/fund_info?fund_cd=KR7161510000`; request timed out before a parseable holdings table/file was verified | `ไม่พบข้อมูลที่ยืนยันได้` | Korea / Emerging Asia high-dividend description/theme |
+| `TWSE:00918` | Official-source web searches for United Taiwan / 00918 holdings did not identify a parseable issuer holdings table/file in this batch | `ไม่พบข้อมูลที่ยืนยันได้` | Taiwan high-dividend recovery 30 description/theme |
+| `TWSE:00919` | Official-source web searches for Capital TIP / 00919 holdings did not identify a parseable issuer holdings table/file in this batch | `ไม่พบข้อมูลที่ยืนยันได้` | Taiwan selected high-dividend description/theme |
+| `KRX:402970` | ACE official product shell `https://www.aceetf.co.kr/fund/view?fundId=KR7402970003`; captured Next.js shell included fund id context but rendered holdings fields were blank/undefined and no matching holdings payload was verified | `ไม่พบข้อมูลที่ยืนยันได้` | U.S. Dividend 100 / U.S. broad dividend description/theme |
+| `KRX:466940` | TIGER official product page `https://www.tigeretf.com/ko/product/search/detail/index.do?ksdFund=KR7466940005` and official script/context inspection; captured page exposed the target `ksdFund` but visible product context was mismatched/dynamic and no matching holdings endpoint was verified | `ไม่พบข้อมูลที่ยืนยันได้` | Korea bank high-dividend / bank-only income description/theme |
+| `SZSE:159691` | SZSE official fund list shell `https://www.szse.cn/market/product/fund/list/index.html?code=159691`; captured page did not expose a matching holdings table/file | `ไม่พบข้อมูลที่ยืนยันได้` | Hong Kong Connect high-dividend description/theme |
+| `KRX:489250` | KODEX official product URL candidate `https://www.kodex.com/product_view.do?fId=2ETF489250`; captured page resolved to generic/non-matching page content without a verified holdings table/file | `ไม่พบข้อมูลที่ยืนยันได้` | U.S. Dividend Dow Jones / U.S. broad dividend description/theme |
+| `SSE:513910` | SSE official ETF info page `https://www.sse.com.cn/assortment/fund/list/etfinfo/basic/index.shtml?FUNDID=513910`; captured page exposed generic ETF sections but no matching holdings table/file in static page content | `ไม่พบข้อมูลที่ยืนยันได้` | China SOE dividend index description/theme |
+| `TSE:1660` | MAXIS official URL candidates under `maxis.am.mufg.jp` and `maxis.mukam.jp` for fund/product paths; captured official pages returned `404 Not Found` instead of a product/holdings page | `ไม่พบข้อมูลที่ยืนยันได้` | Japan high-yield J-REIT / property income description/theme |
+| `SSE:513690` | Official-source web/search and SSE-style product lookup did not identify a parseable issuer holdings table/file in this batch | `ไม่พบข้อมูลที่ยืนยันได้` | Hang Seng high-dividend / Emerging Asia equity description/theme |
+| `HKEX:3110` | Global X Hong Kong official URL candidates `https://www.globalxetfs.com.hk/funds/3110/` and `https://www.globalxetfs.com.hk/3110/`; captured pages resolved to Global X Hong Kong 404/not-found content | `ไม่พบข้อมูลที่ยืนยันได้` | Hang Seng High Dividend Yield description/theme |
