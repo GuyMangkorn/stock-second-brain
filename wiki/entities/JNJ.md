@@ -19,6 +19,7 @@ source_gaps:
   - Sequential quarterly trend across recent quarters has not been normalized in this source note.
 source_notes:
   - raw/imports/JNJ_latest_results_source.md
+  - raw/imports/JNJ_market_quote_2026-07-09.md
 normalized_markdown: raw/financials/JNJ_fundamentals.md
 normalized_json: raw/financials/JNJ_fundamentals.json
 tags:
@@ -41,12 +42,14 @@ tags:
 | Latest quarterly net earnings | USD 5,235 million |
 | FY2025 free cash flow | USD 19,698 million |
 | FY2026 FCF outlook | approximately USD 21 billion |
-| Current price check | USD 228.92 on 2026-05-18, checked 2026-05-19 Bangkok time |
-| Market cap check | USD 551.1 billion, calculated from current price and SEC common shares outstanding |
+| Current price check | USD 263.40 on 2026-07-08 close, checked 2026-07-09 Bangkok time |
+| Market cap check | USD 634.1 billion, calculated from current price and SEC common shares outstanding |
+| Current action read | WAIT / DO NOT ADD before Q2 2026 results |
 | Normalized file | [[JNJ_fundamentals]] |
 | Latest source note | [[JNJ_latest_results_source]] |
+| Latest market quote note | [[JNJ_market_quote_2026-07-09]] |
 | Latest valuation memo | [[JNJ DCF Valuation 2026-05-19]] |
-| Latest decision memo | [[JNJ Decision Memo 2026-05-19]] |
+| Latest decision memo | [[JNJ Decision Memo 2026-07-09]] |
 
 Johnson & Johnson is a diversified health care company now centered on Innovative Medicine and MedTech after the Kenvue separation. The core investment debate is whether strong pharma/medtech innovation and a durable dividend profile can offset STELARA erosion, legal/talc overhang, MedTech margin pressure, debt from M&A, and a valuation that already prices in a lot of stability.
 
@@ -130,11 +133,11 @@ JNJ still has rare scale in global health care, a broad Innovative Medicine and 
 
 ### Bear Case
 
-The stock price already discounts stability. At USD 228.92, the market cap is about USD 551.1B using SEC common shares outstanding, while FY2026 FCF outlook is about USD 21B, implying a low FCF yield. STELARA erosion, MedTech tariffs, launch investment, orthopaedics separation, litigation/talc matters, higher debt, and product-cycle risk all matter more when the valuation leaves limited margin of safety.
+The stock price already discounts stability. At USD 263.40, the market cap is about USD 634.1B using SEC common shares outstanding, while FY2026 FCF outlook is about USD 21B, implying a low FCF yield. STELARA erosion, MedTech tariffs, launch investment, orthopaedics separation, litigation/talc matters, higher debt, and product-cycle risk all matter more when the valuation leaves limited margin of safety.
 
 ### Key Debate
 
-The key debate is not whether JNJ is high quality; official sources support the quality. The question is whether current price fairly compensates for low-to-mid single digit FCF growth, patent/launch risk, MedTech margin pressure, and legal overhang. The P11 DCF says no margin of safety at the current price.
+The key debate is not whether JNJ is high quality; official sources support the quality. The question is whether current price fairly compensates for low-to-mid single digit FCF growth, patent/launch risk, MedTech margin pressure, and legal overhang. The July 2026 decision refresh says the price rerated faster than source-backed FCF evidence, so new capital should wait for Q2 2026 results.
 
 ## Risks
 
@@ -157,21 +160,25 @@ The key debate is not whether JNJ is high quality; official sources support the 
 
 ## Valuation Watch Items
 
+- Latest decision memo: [[JNJ Decision Memo 2026-07-09]].
 - Latest DCF memo: [[JNJ DCF Valuation 2026-05-19]].
-- Base-case fair value from the memo is approximately USD 150 per diluted share versus the fresh price check of USD 228.92.
+- Base-case fair value from the memo is approximately USD 150 per diluted share versus the fresh price check of USD 263.40.
 - The sensitivity matrix still sits below current price across the main WACC / terminal growth range used in the vault.
-- Watch FY2026 FCF conversion, net debt reduction, and whether guidance upgrades are supported by cash flow rather than only adjusted EPS.
+- At USD 263.40, market cap / FY2026 FCF outlook is about 30.2x and FCF yield is about 3.31%.
+- Watch Q2 2026 FCF conversion, net debt reduction, and whether guidance upgrades are supported by cash flow rather than only adjusted EPS.
 
 ## Reports / Source Notes
 
 - [[JNJ_latest_results_source]]
+- [[JNJ_market_quote_2026-07-09]]
 - [[JNJ_fundamentals]]
 - [[JNJ DCF Valuation 2026-05-19]]
+- [[JNJ Decision Memo 2026-07-09]]
 - [[JNJ Decision Memo 2026-05-19]]
 
 ## Follow-Up
 
-- Refresh after Q2 2026 results with focus on FCF, cash/debt, STELARA headwind, MedTech tariff impact, and FY2026 guidance.
+- Refresh after Q2 2026 results, expected by secondary market sources on 2026-07-15, with focus on FCF, cash/debt, STELARA headwind, MedTech tariff impact, and FY2026 guidance.
 - Add a multi-quarter trend ingest if decision quality requires Q2-Q4 2025 sequential comparisons.
 - Track product-level disclosure for ICOTYDE, IMAAVY, INLEXZO, CAPLYTA, and MedTech cardiovascular platforms.
 - Revisit valuation if price falls materially or FY2026 FCF outlook increases materially.

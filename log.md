@@ -2,6 +2,12 @@
 
 ## 2026-07-09
 
+- `analysis`: Refreshed `wiki/entities/JNJ.md` with
+  `raw/imports/JNJ_market_quote_2026-07-09.md` and
+  `wiki/analysis/decisions/JNJ Decision Memo 2026-07-09.md`; action read is
+  WAIT / DO-NOT-ADD-before-Q2-results after the latest checked USD 263.40 close
+  implied about 30.2x FY2026 FCF outlook and a thinner margin of safety.
+
 - `analysis`: Updated
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
   and `raw/imports/ETF_top10_holdings_sources_2026-07-01.md` with KB RISE

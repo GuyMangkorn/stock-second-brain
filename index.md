@@ -7,6 +7,11 @@ updated: 2026-07-09
 
 ## Latest Work
 
+- 2026-07-09: Refreshed `[[JNJ]]` before Q2 2026 results with
+  `[[JNJ_market_quote_2026-07-09]]` and
+  `[[JNJ Decision Memo 2026-07-09]]`. Latest checked close is USD 263.40 on
+  2026-07-08, implying about 30.2x FY2026 FCF outlook and a WAIT /
+  DO-NOT-ADD-before-Q2-results action read.
 - 2026-07-09: Ran full new-ticker decision-grade flow for `[[SMIC]]`:
   created `[[SMIC_latest_results_source]]`, `[[SMIC_market_quote_2026-07-09]]`,
   normalized `[[SMIC_fundamentals]]`, added `[[SMIC]]`, and created
