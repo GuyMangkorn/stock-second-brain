@@ -1,6 +1,8 @@
 # Obsidian workspace noise
+.obsidian/
 .obsidian/workspace.json
 .obsidian/graph.json
+.obsidian/*
 
 # Scratch notes created from Obsidian defaults
 /Untitled.*
