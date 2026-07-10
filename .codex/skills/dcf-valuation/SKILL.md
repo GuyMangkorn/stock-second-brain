@@ -1,168 +1,73 @@
 ---
 name: dcf-valuation
-description: Build a source-backed DCF valuation memo for a ticker using verified financial facts, official filings, market data, WACC assumptions, sensitivity tables, and explicit caveats.
+description: Use when the user asks for fair value, intrinsic value, DCF, valuation sensitivity, upside/downside, price target, or whether a public stock appears under- or overvalued.
 ---
 
 # DCF Valuation
 
-Use this skill when the user asks for fair value, intrinsic value, DCF,
-valuation, upside/downside, price target, undervalued/overvalued analysis, or
-"what is TICKER worth".
-
-This is adapted from Dexter's DCF workflow, but made Obsidian-native and
-source-integrity-first.
-
-## Non-Negotiables
-
-- Do not calculate a precise fair value unless the core inputs are source-backed.
-- Label every assumption and scenario.
-- Use current price only after a fresh market-data check.
-- Do not treat a DCF output as a company-disclosed fact.
-- If FCF, share count, cash, debt, or WACC basis is missing, stop and list the
-  missing inputs instead of forcing a valuation.
-
 ## Required References
 
-Read before writing:
-
-- `wiki/reference/source-hierarchy.md`
-- `wiki/reference/financial-ratios.md`
-- `wiki/reference/valuation-assumptions.md`
-- `wiki/reference/output-contract.md`
-
-Follow the output contract's language standard: Thai-first narrative with
-English finance terms, headings, formulas, and metric labels preserved.
+Read `source-hierarchy.md`, `financial-ratios.md`,
+`valuation-assumptions.md`, and `output-contract.md` from `wiki/reference/`.
 
 ## Required Inputs
 
-Minimum viable DCF inputs:
+- freshly checked stock price and timestamp
+- verified historical or TTM FCF, or OCF minus capex
+- cash and short-term investments
+- total debt or debt-like obligations
+- diluted shares
+- business/sector basis for WACC
+- explicit forecast growth and terminal growth assumptions
 
-- latest current stock price and date/time checked
-- historical free cash flow or operating cash flow and capex
-- latest cash and short-term investments
-- latest total debt or debt-like obligations
-- diluted shares outstanding or weighted diluted shares
-- sector / business model for WACC range
-- terminal growth assumption
-- explicit forecast growth assumptions
+Prefer three to five annual FCF periods, current guidance, reinvestment context,
+and margin/ROIC history.
 
-Preferred inputs:
+## Stage Gate
 
-- 3-5 years of annual FCF
-- latest trailing twelve-month FCF
-- management guidance
-- segment trend and capex commentary
-- ROIC or operating margin trend
-- net debt / cash calculation
+Classify the run before writing:
 
-## Workflow Checklist
+- `calculation-ready`: inputs support a DCF or another explicit valuation model.
+- `blocked`: a required input is missing, incompatible, or the model is
+  unsuitable for the business.
 
-```text
-DCF Valuation Progress:
-- [ ] Step 1: Read existing entity and fundamentals files
-- [ ] Step 2: Freshly check current price and market data
-- [ ] Step 3: Gather or verify FCF, capex, cash, debt, shares, and guidance
-- [ ] Step 4: Choose WACC from source-backed sector/business risk
-- [ ] Step 5: Choose growth assumptions and terminal growth
-- [ ] Step 6: Project FCF for Years 1-5
-- [ ] Step 7: Calculate terminal value and present value
-- [ ] Step 8: Calculate equity value and fair value per share
-- [ ] Step 9: Build sensitivity matrix
-- [ ] Step 10: Run sanity checks and write caveats
-- [ ] Step 11: Save memo and update entity/log when durable
-```
+For `blocked`, return a compact blocker in chat or the decision memo. Do not
+create `TICKER DCF Valuation...md` unless the user explicitly asks for a gap
+memo.
 
-## Calculation Rules
+## Calculation Workflow
 
-Free cash flow:
+1. Read existing entity/fundamentals and freshly verify market data.
+2. Reconcile FCF, cash, debt, shares, guidance, and period labels.
+3. Label base, upside, and downside assumptions; choose WACC and terminal growth
+   from the business risk and source-backed context.
+4. Project FCF, discount it, calculate terminal value, enterprise value, equity
+   value, and per-share value.
+5. Add at least a 3x3 sensitivity table when a point estimate is meaningful.
+6. Sanity-check implied FCF yield and relevant own-history/peer multiples when
+   sourced.
+7. Save `wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md`, update
+   entity valuation watch items only when changed, and append one log bullet.
 
 ```text
 FCF = operating cash flow - capex spend
+EV = PV(projected FCF) + PV(terminal value)
+Equity value = EV + cash - debt
+Fair value/share = equity value / diluted shares
+Terminal value = Year 5 FCF * (1 + g) / (WACC - g)
 ```
 
-When source reports capex as a cash outflow, convert to positive spend for the
-formula and label it.
+## Memo Recipe
 
-Enterprise value:
+Use a bottom line, compact source links, input table, assumptions, projection,
+valuation summary, sensitivity, sanity checks, valuation-specific blockers, and
+change triggers. Do not copy the entity thesis or decision bull/bear case.
 
-```text
-EV = PV of projected FCF + PV of terminal value
-```
+Narrative limit: 500 words in `lean`, 900 in `full`; tables are exempt. Warn
+when terminal value exceeds 85%-90% of EV.
 
-Equity value:
+## Model Boundary
 
-```text
-Equity value = EV + cash and short-term investments - total debt
-```
-
-Fair value per share:
-
-```text
-Fair value per share = equity value / diluted shares
-```
-
-Terminal value:
-
-```text
-Terminal value = Year 5 FCF * (1 + terminal growth) / (WACC - terminal growth)
-```
-
-## Assumption Discipline
-
-- Mature companies: default terminal growth range 2.0%-3.0%.
-- High-growth companies: fade growth toward a sustainable terminal range.
-- Cap sustained FCF growth assumptions unless management guidance and history
-  justify otherwise.
-- If terminal value is more than 85%-90% of total EV, explicitly warn that the
-  valuation is assumption-heavy.
-- Compare implied FCF yield, P/E, EV/FCF, or EV/Revenue to the company's own
-  history and peers when source data exists.
-
-## Output File
-
-Save durable valuation work as:
-
-```text
-wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md
-```
-
-Update `wiki/entities/TICKER.md` only when the valuation changes the thesis,
-valuation watch items, or follow-up list.
-
-Append `log.md`.
-
-## Memo Sections
-
-Use this structure:
-
-- `# TICKER DCF Valuation - YYYY-MM-DD`
-- `## Bottom Line`
-- `## Source Map`
-- `## Input Table`
-- `## Base Case Assumptions`
-- `## FCF Projection`
-- `## Valuation Summary`
-- `## Sensitivity Matrix`
-- `## Sanity Checks`
-- `## What Would Change The Valuation`
-- `## Missing / Unverified Data`
-- `## Entity Update`
-
-## Sensitivity Matrix
-
-Build at least a 3x3 table:
-
-- WACC: base -1%, base, base +1%
-- terminal growth: 2.0%, 2.5%, 3.0% unless sector context says otherwise
-
-## Stop Conditions
-
-Stop and report missing inputs when:
-
-- current price cannot be freshly checked
-- free cash flow cannot be verified or calculated
-- share count is missing
-- cash/debt inputs are missing
-- WACC basis is unsupported
-- the business is too cyclical or financial-sector-specific for a simple DCF
-  without a different valuation model
+Use reverse DCF, peer multiples, unit economics, or scenarios for pre-profit,
+financial, highly cyclical, optionality-heavy, or unstable-FCF businesses. Label
+each lens and avoid false precision.

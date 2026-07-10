@@ -1,64 +1,45 @@
 # Skill Mechanics
 
-This project uses the Dexter SKILL model conceptually, without copying the
-Dexter runtime.
+Project skills live in `.codex/skills/SKILL-NAME/SKILL.md`. Match the user task
+from frontmatter, read the selected skill, and follow its mode and output
+contract.
 
-## What A Skill Is
+## Mode Routing
 
-A skill is a folder containing `SKILL.md`.
+| Signal | Mode |
+|---|---|
+| Explicit `mode:` | requested mode |
+| full, deep dive, archive, legacy full chain | `full` |
+| save, update, ingest, refresh, memo | `lean` |
+| why, explain, outlook, predict, general question | `chat` |
 
-Each `SKILL.md` begins with YAML frontmatter:
+## Prompt Aliases
 
-```yaml
----
-name: skill-name
-description: When this skill should be used.
----
-```
-
-The body is the operating manual for the agent:
-
-- when to use the skill
-- source priority
-- workflow checklist
-- output files
-- stop conditions
-- audit rules
-
-## How The Agent Should Use Skills
-
-1. Match the user's task to available skill descriptions.
-2. Invoke the relevant skill early.
-3. Follow the skill's checklist before writing durable output.
-4. Read referenced files in `wiki/reference/` when the skill requires them.
-5. Save durable output into `raw/` and `wiki/`.
-6. Update `log.md`.
-7. Answer briefly with paths, caveats, and next best step.
+| Alias | Skill/profile |
+|---|---|
+| P1 | `latest-results-web` |
+| P4 | `financial-facts-ingest` |
+| P6 | `official-source-stock-research` / new-ticker deep dive |
+| P7 | `official-source-stock-research` / thesis refresh |
+| P10 | `source-integrity-audit` |
+| P11 | `dcf-valuation` |
+| P13 | `stock-decision-pipeline` decision output |
 
 ## Available Local Skills
 
-| Skill | Use When | Main Output |
+| Skill | Use when | Default output |
 |---|---|---|
-| `latest-results-web` | Need latest official source discovery | `raw/imports/TICKER_latest_results_source.md` |
-| `financial-facts-ingest` | Need to normalize filings, tables, transcripts, Markdown, or CSV | `raw/financials/TICKER_fundamentals.md`, `wiki/entities/TICKER.md` |
-| `official-source-stock-research` | Need deep dive, thesis refresh, earnings review, or comparison | entity updates and analysis memos |
-| `dcf-valuation` | Need fair value, intrinsic value, DCF, upside/downside, or valuation sensitivity | `wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md` |
-| `x-research` | Need X/Twitter sentiment, market chatter, or public reaction | `wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md` |
-| `source-integrity-audit` | Need vault linting, source checks, stale data checks, or chart/table validation | `wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md` |
+| `explain-market-move` | Why an asset moved over a recent window | chat |
+| `market-scenario-research` | Theme, bottleneck, macro, rates, or FX scenarios | chat |
+| `latest-results-web` | Latest official result discovery | source note |
+| `financial-facts-ingest` | Normalize sourced financial facts | fundamentals + entity delta |
+| `official-source-stock-research` | Deep dive, earnings, or thesis refresh | profile-dependent |
+| `dcf-valuation` | Fair value or valuation sensitivity | valuation or compact blocker |
+| `stock-decision-pipeline` | Chain or refresh a decision workflow | decision memo |
+| `x-research` | Public market sentiment | chat |
+| `source-integrity-audit` | Source and vault quality check | chat or audit memo |
 
-## Why This Matters
+## Completion
 
-The SKILL model keeps research repeatable:
-
-- the agent does not improvise a new process every time
-- source hierarchy remains consistent
-- outputs land in predictable Obsidian paths
-- missing data is preserved instead of hidden
-- prompt examples become reliable operating commands
-
-## No Runtime Dependency
-
-Dexter's original implementation scans skill folders and exposes metadata to an
-LLM tool. This vault does not include that code. The useful part for this
-project is the workflow contract: a skill is a Markdown playbook that the agent
-must follow.
+Use links instead of duplicate content, append one workflow bullet to `log.md`,
+answer briefly, validate changed skills, and commit only scoped files.

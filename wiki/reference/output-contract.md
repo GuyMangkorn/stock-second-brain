@@ -1,225 +1,119 @@
 # Output Contract
 
-This page defines the expected shape for durable outputs.
+This page defines compact, source-backed output shapes.
 
-## Language Standard
+## Mode Selection And Budgets
 
-Future durable outputs should use hybrid Thai/English:
+Use explicit `mode: chat | lean | full` first. Otherwise route general why,
+explain, outlook, and prediction questions to `chat`; save/update/ingest/refresh
+requests to `lean`; and explicit full/deep-dive/archive or legacy full-chain
+requests to `full`.
 
-- Narrative analysis, thesis, risks, catalysts, decision reads, caveats, and
-  chat summaries: Thai-first.
-- Headings, frontmatter keys, JSON keys, filenames, ticker symbols, source
-  labels, table column names, formulas, and metric names: English.
-- Finance and valuation terms should stay English when they are clearer or more
-  searchable, such as `valuation`, `DCF`, `reverse DCF`, `FCF`, `WACC`,
-  `terminal growth`, `margin of safety`, `upside/downside`, `multiple`, `net
-  debt`, `capex`, `unit economics`, and `guidance`.
-- Raw source notes should preserve the source's meaning and language as much as
-  possible. Thai summaries are allowed, but they must not replace traceable
-  source facts.
-- Financial facts Markdown and JSON should remain structured and automation
-  friendly; use Thai mainly in explanatory notes, missing-data explanations, and
-  judgment sections.
+| Output | Chat | Lean | Full |
+|---|---:|---:|---:|
+| Chat response | <=400 words | <=200 words after writes | <=200 words after writes |
+| Entity narrative | no write | 250-400 words changed | <=700 words |
+| Valuation narrative | no write | <=500 words | <=900 words |
+| Decision memo | no write | 400-500 words | <=800 words |
+| Charts | 0 | <=1 | <=3 |
+
+Source and normalized tables are exempt. Budgets apply to narrative. Omit empty
+or unsupported optional sections.
+
+## Single Source Of Truth
+
+| Layer | Owns | Other layers use |
+|---|---|---|
+| `raw/imports/` | Raw evidence, source map, extraction gaps | local links |
+| `raw/financials/` | Normalized numbers, ratios, period-compatible chart data | compact metric references |
+| `wiki/entities/` | Living company summary and unresolved ticker-level gaps | links to facts/reports |
+| `wiki/analysis/valuations/` | Assumptions and calculations | valuation conclusion/link |
+| `wiki/analysis/decisions/` | Action and decision-changing evidence | links to prior layers |
+
+Do not copy full tables, source maps, bull/bear cases, or gap lists across
+layers.
+
+## Language
+
+Use Thai-first narrative. Keep headings, keys, filenames, tickers, source
+labels, table columns, formulas, and precise finance terms in English. Preserve
+source meaning and language in raw notes.
 
 ## Source Note
-
-File:
 
 ```text
 raw/imports/TICKER_source_kind_YYYY-MM-DD.md
 raw/imports/TICKER_latest_results_source.md
 ```
 
-Required sections:
+Required: frontmatter, `Source Map`, `Reporting Scope`, `Currency / Units`,
+`Extracted Facts`, extraction-specific `Missing / Unverified Data`, and
+`Handoff For Ingest`. Add transcript or financial tables only when relevant.
+The minimal profile extracts only fields needed downstream; full profile is for
+explicit archival requests.
 
-- `# TICKER - Source Title`
-- `## Source Map`
-- `## Reporting Scope`
-- `## Currency / Units`
-- `## Extracted Facts`
-- `## Transcript / Commentary` when relevant
-- `## Financial Tables` when relevant
-- `## Missing / Unverified Data`
-- `## Handoff For Ingest`
-
-Required frontmatter:
-
-```yaml
----
-type: source-note
-ticker:
-company:
-source_kind:
-search_date:
-reporting_scope:
-currency:
-normalized_output:
-entity:
-tags:
----
-```
-
-## Financial Facts Markdown
-
-File:
+## Financial Facts
 
 ```text
 raw/financials/TICKER_fundamentals.md
 ```
 
-Required sections:
+Required: `Snapshot`, `Provenance`, `Reporting Scope`, `Financial Table`,
+supported `Key Ratios`, and normalization gaps. Add only supported comparison
+sections and the most decision-relevant chart within the mode limit. Market
+quotes belong in a dated market source or decision/valuation check, not the
+normalized company facts file.
 
-- `# TICKER - Company Name`
-- `## Snapshot`
-- `## Provenance`
-- `## Reporting Scope`
-- `## Financial Table`
-- `## Key Ratios`
-- `## Quarterly YoY Comparison` when same-quarter data exists
-- `## Quarterly Trend` when sequential quarterly data exists
-- `## YTD Comparison` when year-to-date comparable periods exist
-- `## Annual Trend` when complete fiscal-year data exists
-- `## Segment Revenue Chart`
-- `## Cash Flow And Capex Chart` when cash flow data exists
-- `## Balance Sheet Snapshot Chart` when balance sheet snapshots exist
-- `## Missing / Unverified Data`
+`TICKER_fundamentals.json` is opt-in when requested or needed by a downstream
+machine workflow.
 
-## Optional Financial Facts JSON
-
-File:
-
-```text
-raw/financials/TICKER_fundamentals.json
-```
-
-Recommended top-level keys:
-
-```json
-{
-  "company": "",
-  "ticker": "",
-  "market": "",
-  "currency": "",
-  "period_type": "annual",
-  "reporting_scope": "",
-  "periods": [],
-  "provenance": [],
-  "financial_series": {},
-  "segment_series": [],
-  "ratios": [],
-  "missing_data": []
-}
-```
-
-## Entity Page
-
-File:
+## Entity
 
 ```text
 wiki/entities/TICKER.md
 ```
 
-Required sections:
+Use `wiki/reference/entity-template.md`. The entity is a thin living hub, not a
+copy of fundamentals or analysis memos. Update only changed sections.
 
-- Snapshot
-- Source Map
-- Business Model
-- Segments / Revenue Mix
-- Financial Facts
-- Charts
-- Transcript / Management Commentary
-- Thesis
-- Risks
-- Catalysts
-- Valuation Watch Items
-- Reports / Source Notes
-- Follow-Up
-- Missing / Unverified Data
-
-## Analysis Memos
-
-Use category folders under `wiki/analysis/` so agents can find the right class
-of memo without scanning every analysis note:
-
-| Folder | Memo type |
-|---|---|
-| `wiki/analysis/decisions/` | decision memos |
-| `wiki/analysis/valuations/` | DCF and valuation work |
-| `wiki/analysis/earnings/` | earnings and transcript digests |
-| `wiki/analysis/catalysts/` | catalyst and news context |
-| `wiki/analysis/comparisons/` | peer/theme comparisons and screener triage |
-| `wiki/analysis/sentiment/` | X/Twitter and market chatter context |
-| `wiki/analysis/audits/` | source integrity audits and source gap registries |
-
-Decision memo:
-
-```text
-wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
-```
-
-Required sections:
-
-- Action Read
-- Current Price / Market Data Check when market data affects the action
-- Evidence From Vault
-- Valuation Read when relevant; use DCF only when inputs are reliable, otherwise
-  label alternative lenses such as reverse DCF, peer multiples,
-  growth-adjusted multiples, unit economics, scenario analysis, and optionality
-- Bull Case
-- Bear Case
-- Key Assumptions
-- What Would Change The Decision
-- Missing / Unverified Data
-- Source Map
-
-DCF valuation:
+## Valuation
 
 ```text
 wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md
 ```
 
-Required sections:
+Create when a source-backed calculation succeeds. Include `Bottom Line`,
+compact source links, inputs, assumptions, calculation/projection, valuation
+summary, sensitivity when meaningful, sanity checks, valuation blockers, and
+change triggers. If calculation cannot proceed, put a short blocker in the
+decision memo unless the user explicitly requests a valuation-gap memo.
 
-- Bottom Line
-- Source Map
-- Input Table
-- Base Case Assumptions
-- FCF Projection
-- Valuation Summary
-- Sensitivity Matrix
-- Sanity Checks
-- Missing / Unverified Data
-
-X / market sentiment:
+## Decision
 
 ```text
-wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
 ```
 
-Required sections:
+Use `Action Read`, current market-data check, decision-changing evidence,
+compact valuation read, key assumption/falsifier, action-relevant gaps, and
+local report/source links. Reference the entity's bull/bear case instead of
+restating it unless the decision changed it.
 
-- Query Summary
-- Bullish Themes
-- Bearish Themes
-- Neutral / Mixed Themes
-- Source-Backed Posts
-- Overall Sentiment
-- Caveats
-- Follow-Up
-
-Source integrity audit:
+## General Research Routing
 
 ```text
-wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
+wiki/analysis/catalysts/TICKER Market Move YYYY-MM-DD.md
+wiki/overview/themes/THEME.md
+wiki/overview/macro/TOPIC.md
 ```
 
-Required sections:
+Market-move notes contain the move check, up to three evidence-labelled
+drivers, thesis impact, and falsifiers. Theme and macro files are living notes
+with current thesis, causal map, scenario table, signposts, falsifiers, compact
+sources, and a dated delta log. Do not create a generic discussion folder.
 
-- Scope
-- High Severity Findings
-- Medium Severity Findings
-- Low Severity Findings
-- Chart / Table Checks
-- Source Gap Summary
-- Fixes Applied
-- Follow-Up
+## Sentiment And Audits
+
+Sentiment and scoped audits default to chat. Save a sentiment memo when asked
+or when it changes durable follow-up. Save an audit memo for a requested
+durable audit or applied fixes.

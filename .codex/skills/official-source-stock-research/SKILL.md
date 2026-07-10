@@ -1,112 +1,62 @@
 ---
 name: official-source-stock-research
-description: Run official-source stock research for company deep dives, earnings reviews, thesis updates, and Obsidian entity notes using SEC filings, earnings transcripts, financial statements, then news.
+description: Use when the user asks for a company deep dive, earnings review, thesis update, business-model analysis, new-ticker research, or an existing-ticker thesis refresh using official sources.
 ---
 
 # Official Source Stock Research
 
-Use this skill for company deep dives, earnings reviews, thesis refreshes,
-comparison memos, and ticker research inside `stock-second-brain`.
-
-The output should become durable Obsidian knowledge when the user asks to save,
-ingest, update, refresh, compare, audit, or build the stock brain.
-
 ## Source Priority
 
-1. SEC filings and official company filings.
-2. Earnings transcripts and call materials.
-3. Financial statements and metrics.
-4. News and web research.
+Use official filings, earnings materials/transcripts, financial statements, then
+reputable news. Treat the underlying document as stronger evidence than an IR
+summary page.
 
-Prefer official Investor Relations pages as discovery surfaces, but trust the
-underlying filing, release, transcript, or data table more than a summary page.
+## Profiles
 
-## Language Standard
+| Profile | Trigger | Output |
+|---|---|---|
+| `chat` | general ticker question without save/update intent | <=400 words, no files |
+| `thesis-delta` / P7 | existing ticker refresh | changed entity sections; memo only if decision-changing |
+| `deep-dive` / P6 | explicit full or new-ticker deep dive | complete thin entity plus one useful analysis memo |
 
-Follow `wiki/reference/output-contract.md`: write narrative thesis, risks,
-catalysts, action reads, and caveats primarily in Thai, while preserving English
-headings, ticker/source labels, metric names, and finance terms such as `DCF`,
-`FCF`, `WACC`, `valuation`, `margin of safety`, and `upside/downside`.
+Do not use `deep-dive` merely because this skill appears inside a pipeline. Read
+existing vault context and choose the lightest profile.
 
-## Research Checklist
+## Workflow
 
-Track progress internally:
+1. Identify company, ticker, exchange, currency, latest period, and profile.
+2. Build a compact source map and gather the minimum filing, call material, and
+   financial data needed for the research question.
+3. Analyze business model, segment drivers, profitability, capital allocation,
+   balance sheet, management commentary, and material Q&A signals.
+4. Separate facts from assumptions. State thesis, key debate, measurable KPIs,
+   risks, catalysts, and what changes the view.
+5. Use news only after official coverage and cross-check decision-changing
+   numbers.
+6. Update the entity once, by delta. Link source, fundamentals, valuation, and
+   decision files instead of copying their tables or source maps.
+7. Create one category memo only when the result has durable analysis not owned
+   by another file. Append one workflow bullet to `log.md`.
 
-```text
-Official Source Research Progress:
-- [ ] Step 1: Identify company, ticker, exchange, currency, and latest period
-- [ ] Step 2: Build source map in priority order
-- [ ] Step 3: Gather latest filing, transcript/call material, and financial data
-- [ ] Step 4: Extract revenue, margins, EPS, cash flow, capex, balance sheet, guidance
-- [ ] Step 5: Analyze segment drivers, profitability, capital allocation, and balance sheet
-- [ ] Step 6: Extract management commentary and Q&A signals from transcript
-- [ ] Step 7: Add news context only after official sources are covered
-- [ ] Step 8: Cross-check important numbers across sources when possible
-- [ ] Step 9: Update Obsidian entity/memo and log durable changes
-- [ ] Step 10: State caveats, gaps, and what would change the thesis
-```
+## Earnings Read
 
-## Analysis Guidance
+Compare only compatible prior periods, separate operational drivers from
+one-time items, and connect guidance, demand, margins, capex, and FCF. Explain
+whether cash flow confirms earnings.
 
-For earnings reviews:
+## Valuation Boundary
 
-- Compare latest results with prior-year and prior-quarter figures when source
-  labels support it.
-- Separate operational drivers from one-time items.
-- Highlight guidance, backlog/RPO, demand indicators, pricing, margin pressure,
-  capex, and free cash flow.
-- Explain whether cash flow confirms or contradicts earnings.
+Use source-backed financials and assumptions, but route a full valuation to
+`dcf-valuation`. Do not restate its input table or calculate a precise target
+from incomplete data.
 
-For thesis work:
+## Entity Budget
 
-- State bull case, bear case, and key debate.
-- Separate facts from assumptions.
-- Identify measurable KPIs.
-- Include what would change the view.
+Keep a lean delta at 250-400 narrative words and full entity narrative at or
+below 700 words. Omit empty legacy sections; preserve compatible existing local
+structure when updating an old page.
 
-For valuation work:
+## Chat Handoff
 
-- Use source-backed financials, share count, net debt/cash, FCF, guidance, and
-  scenario assumptions.
-- Label valuation as a scenario, not a company-disclosed fact.
-- Do not present a precise target price if source data is incomplete.
-
-## Durable Output Rules
-
-For a single company, update or create:
-
-- `wiki/entities/TICKER.md`
-- source note in `raw/imports/` when new sources were gathered
-- normalized facts in `raw/financials/` when financial tables were extracted
-- analysis memo in the relevant `wiki/analysis/<category>/` folder when the
-  result is a decision, transcript digest, source audit, comparison, or thesis
-  refresh
-- `log.md`
-
-## Entity Note Sections
-
-Use this structure unless the existing entity page has a compatible local style:
-
-- Snapshot
-- Source Map
-- Business Model
-- Segments / Revenue Mix
-- Financial Facts
-- Charts
-- Transcript / Management Commentary
-- Thesis
-- Risks
-- Catalysts
-- Valuation Watch Items
-- Reports / Source Notes
-- Follow-Up
-- Missing / Unverified Data
-
-## Answer Format
-
-After file updates, answer briefly:
-
-1. What was updated.
-2. The current thesis/action read if relevant.
-3. Important source gaps or caveats.
-4. Paths to created/updated notes.
+After durable work, answer in under 200 words: updated files, current thesis or
+action implication, and the most important caveat.
