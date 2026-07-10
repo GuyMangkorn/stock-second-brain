@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "40d4461177acb8a0",
+        "id": "286bdfc821ba4948",
         "type": "tabs",
         "children": [
           {
-            "id": "89b231859fa95932",
+            "id": "f5dee5aff47c48c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/analysis/README.md",
+                "file": "wiki/entities/JNJ.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "JNJ"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 302
   },
   "right": {
     "id": "7e670d1b42012c7d",
@@ -156,20 +156,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.MD",
+                "file": "wiki/entities/JNJ.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of JNJ"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 294,
     "collapsed": true
   },
   "left-ribbon": {
@@ -180,47 +181,48 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "infranodus-graph-view:InfraNodus Graph View": false
     }
   },
-  "active": "89b231859fa95932",
+  "active": "f5dee5aff47c48c8",
   "lastOpenFiles": [
-    "wiki/analysis/valuations/README.md",
-    "wiki/analysis/valuations/JNJ DCF Valuation 2026-05-19.md",
-    "wiki/analysis/valuations/MSFT DCF Valuation 2026-05-18.md",
-    "wiki/analysis/valuations/GOOGL DCF Valuation 2026-05-18.md",
-    "wiki/analysis/decisions/JNJ Decision Memo 2026-05-19.md",
-    "wiki/analysis/decisions/GOOGL Decision Memo 2026-05-18.md",
-    "wiki/analysis/audits/README.md",
-    "wiki/analysis/sentiment/README.md",
-    "wiki/analysis/comparisons/README.md",
-    "wiki/analysis/catalysts/README.md",
-    "wiki/analysis/earnings/README.md",
-    "wiki/analysis/decisions/README.md",
-    "wiki/analysis/decisions/MSFT Decision Memo 2026-05-18.md",
-    "wiki/analysis/MSFT Decision Memo 2026-05-18.md",
-    "wiki/analysis/audits/Source Integrity Audit 2026-05-19.md",
-    "wiki/analysis/audits",
-    "wiki/analysis/sentiment",
-    "wiki/analysis/comparisons",
-    "wiki/analysis/catalysts",
-    "wiki/analysis/earnings",
-    "wiki/analysis/valuations",
-    "wiki/analysis/decisions",
-    "wiki/analysis/JNJ Decision Memo 2026-05-19.md",
-    "wiki/analysis/GOOGL Decision Memo 2026-05-18.md",
-    "wiki/analysis/GOOGL DCF Valuation 2026-05-18.md",
-    "raw/imports/GOOGL_latest_results_source.md",
-    "raw/imports/JNJ_latest_results_source.md",
-    "raw/imports/MSFT_company_deep_dive_2026-05-17.md",
-    "raw/imports/MSFT_latest_results_source.md",
-    "raw/imports/README.md",
-    "raw/financials/README.md",
-    "raw/financials/MSFT_fundamentals.md",
-    "raw/financials/JNJ_fundamentals.md",
-    "Untitled.canvas",
+    "wiki/analysis/audits/Source Integrity Audit 2026-07-11.md",
+    "wiki/entities/ETF Index.md",
+    "wiki/entities/ETF_NASDAQ_VIGI.md",
+    "wiki/entities/ETF_AMEX_VIG.md",
+    "wiki/entities/ETF_AMEX_DGRO.md",
+    "wiki/analysis/decisions/AAPL Decision Memo 2026-06-11.md",
+    "raw/imports/US_covered_equities_market_quote_2026-06-28.md",
+    "wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md",
+    "wiki/overview/macro/Macro Index.md",
+    "wiki/overview/macro",
+    "wiki/overview/themes/Theme Index.md",
+    "wiki/overview/themes",
+    "wiki/analysis/decisions/JNJ Decision Memo 2026-07-09.md",
+    "raw/imports/JNJ_market_quote_2026-07-09.md",
+    "wiki/analysis/decisions/SMIC Decision Memo 2026-07-09.md",
+    "wiki/analysis/valuations/SMIC DCF Valuation 2026-07-09.md",
+    "wiki/entities/SMIC.md",
+    "raw/financials/SMIC_fundamentals.md",
+    "raw/imports/SMIC_market_quote_2026-07-09.md",
+    "raw/imports/SMIC_latest_results_source.md",
+    "wiki/analysis/decisions/US Covered Equities Decision Refresh 2026-07-03.md",
+    "raw/imports/US_covered_equities_market_quote_2026-07-03.md",
+    "wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md",
+    "wiki/analysis/comparisons/Dividend ETF Triage 2026-06-28.md",
+    "wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md",
+    "raw/imports/ETF_top10_holdings_sources_2026-07-01.md",
+    "wiki/analysis/valuations/UL DCF Valuation 2026-06-28.md",
+    "raw/assets/ETF ที่เน้นการจ่ายเงินปันผล.md",
+    "raw/financials/UL_fundamentals.json",
+    "raw/financials/KO_fundamentals.json",
+    "raw/financials/NVDA_fundamentals.json",
     "Untitled.base",
-    "raw/financials/JNJ_fundamentals.json",
-    "raw/financials/GOOGL_fundamentals.json"
+    "Untitled.canvas",
+    "wiki/analysis/earnings/AAPL Earnings Deep Dive 2026-06-11.html",
+    "raw/financials/BABA_fundamentals.json",
+    "raw/financials/AAPL_fundamentals.json",
+    "raw/financials/META_fundamentals.json"
   ]
 }

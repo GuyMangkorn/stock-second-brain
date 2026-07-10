@@ -46,10 +46,11 @@ tags:
 | Latest quarterly net income | USD 29,578 million |
 | Latest quarterly operating income | USD 35,885 million |
 | TTM free cash flow | USD 129,174 million |
-| Fresh price check | USD 292.15 on 2026-06-10 1:01 PM EDT |
+| Fresh price check | USD 291.58 at close on 2026-06-10 4:00 PM EDT |
 | Normalized file | [[AAPL_fundamentals]] |
 | Latest source note | [[AAPL_latest_results_source]] |
 | Market quote note | [[AAPL_market_quote_2026-06-11]] |
+| Latest earnings memo | [[AAPL Earnings Deep Dive 2026-06-11]] |
 | Latest valuation memo | [[AAPL DCF Valuation 2026-06-11]] |
 | Bullish valuation scenario | [[AAPL Bullish Valuation Scenario 2026-06-11]] |
 | Latest decision memo | [[AAPL Decision Memo 2026-06-11]] |
@@ -250,7 +251,7 @@ Can Apple grow FCF per share fast enough from an already huge USD 129B TTM FCF b
 
 ## Valuation Watch Items
 
-- Fresh price check: USD 292.15 on 2026-06-10 1:01 PM EDT.
+- Fresh price check: USD 291.58 at close on 2026-06-10 4:00 PM EDT; this post-earnings refresh does not change the valuation conclusion.
 - Base DCF fair value from `[[AAPL DCF Valuation 2026-06-11]]`: about USD 153 per diluted share.
 - Base-case upside/downside vs fresh price: about (48)%.
 - Bull DCF fair value: about USD 229 per diluted share, still below fresh price.
@@ -263,6 +264,7 @@ Can Apple grow FCF per share fast enough from an already huge USD 129B TTM FCF b
 - [[AAPL_latest_results_source]]
 - [[AAPL_market_quote_2026-06-11]]
 - [[AAPL_fundamentals]]
+- [[AAPL Earnings Deep Dive 2026-06-11]]
 - [[AAPL DCF Valuation 2026-06-11]]
 - [[AAPL Bullish Valuation Scenario 2026-06-11]]
 - [[AAPL Decision Memo 2026-06-11]]

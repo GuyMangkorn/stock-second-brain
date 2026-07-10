@@ -1,0 +1,133 @@
+{
+  "company": "NVIDIA Corporation",
+  "ticker": "NVDA",
+  "market": "Nasdaq Global Select Market",
+  "currency": "USD",
+  "period_type": "mixed",
+  "reporting_scope": "Q1 FY2027 quarter ended 2026-04-26 and FY2026 annual baseline",
+  "periods": ["Q1 FY2027", "Q1 FY2026", "FY2026", "FY2025", "FY2024"],
+  "provenance": [
+    {
+      "source": "NVIDIA Q1 FY2027 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "priority": 1
+    },
+    {
+      "source": "NVIDIA FY2026 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "priority": 1
+    },
+    {
+      "source": "NVIDIA Q1 FY2027 press release",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx",
+      "priority": 2
+    },
+    {
+      "source": "StockAnalysis NVDA quote",
+      "url": "https://stockanalysis.com/stocks/nvda/",
+      "priority": 3
+    }
+  ],
+  "financial_series": {
+    "quarterly": [
+      {
+        "period": "Q1 FY2027",
+        "period_end": "2026-04-26",
+        "revenue_usd_m": 81615,
+        "gross_profit_usd_m": 61157,
+        "operating_income_usd_m": 53536,
+        "net_income_usd_m": 58321,
+        "diluted_eps_usd": 2.39,
+        "diluted_shares_m": 24391,
+        "operating_cash_flow_usd_m": 50344,
+        "capex_and_intangibles_spend_usd_m": 1757,
+        "principal_payments_ppe_intangibles_usd_m": 33,
+        "free_cash_flow_usd_m": 48554
+      },
+      {
+        "period": "Q1 FY2026",
+        "period_end": "2025-04-27",
+        "revenue_usd_m": 44062,
+        "gross_profit_usd_m": 26668,
+        "operating_income_usd_m": 21638,
+        "net_income_usd_m": 18775,
+        "diluted_eps_usd": 0.76,
+        "diluted_shares_m": 24611,
+        "operating_cash_flow_usd_m": 27414,
+        "capex_and_intangibles_spend_usd_m": 1227,
+        "principal_payments_ppe_intangibles_usd_m": 52,
+        "free_cash_flow_usd_m": 26135
+      }
+    ],
+    "annual": [
+      {
+        "period": "FY2026",
+        "period_end": "2026-01-25",
+        "revenue_usd_m": 215938,
+        "net_income_usd_m": 120067,
+        "operating_cash_flow_usd_m": 102718,
+        "capex_and_intangibles_spend_usd_m": 6042,
+        "principal_payments_ppe_intangibles_usd_m": 101,
+        "free_cash_flow_usd_m": 96575
+      },
+      {
+        "period": "FY2025",
+        "period_end": "2025-01-26",
+        "revenue_usd_m": 130497,
+        "net_income_usd_m": 72880,
+        "operating_cash_flow_usd_m": 64089,
+        "capex_and_intangibles_spend_usd_m": 3236,
+        "principal_payments_ppe_intangibles_usd_m": 129,
+        "free_cash_flow_usd_m": 60724
+      },
+      {
+        "period": "FY2024",
+        "period_end": "2024-01-28",
+        "revenue_usd_m": 60922,
+        "net_income_usd_m": 29760,
+        "operating_cash_flow_usd_m": 28090,
+        "capex_and_intangibles_spend_usd_m": 1069,
+        "principal_payments_ppe_intangibles_usd_m": 74,
+        "free_cash_flow_usd_m": 26947
+      }
+    ],
+    "balance_sheet": {
+      "period_end": "2026-04-26",
+      "cash_and_equivalents_usd_m": 13237,
+      "marketable_debt_securities_usd_m": 37098,
+      "marketable_equity_securities_usd_m": 30237,
+      "short_term_debt_usd_m": 1000,
+      "long_term_debt_usd_m": 7470,
+      "total_assets_usd_m": 259474,
+      "total_liabilities_usd_m": 64000,
+      "shareholders_equity_usd_m": 195474
+    },
+    "market_data": {
+      "checked_at": "2026-06-25 12:43 PM EDT",
+      "price_usd": 195.03,
+      "market_cap_usd_t": 4.72,
+      "shares_out_b": 24.22,
+      "ttm_revenue_usd_b": 253.49,
+      "ttm_net_income_usd_b": 159.61
+    }
+  },
+  "segment_series": [
+    {"period": "FY2026", "segment": "Data Center", "revenue_usd_m": 193737},
+    {"period": "FY2026", "segment": "Gaming", "revenue_usd_m": 16042},
+    {"period": "FY2026", "segment": "Professional Visualization", "revenue_usd_m": 3191},
+    {"period": "FY2026", "segment": "Automotive", "revenue_usd_m": 2349},
+    {"period": "FY2026", "segment": "OEM and Other", "revenue_usd_m": 619}
+  ],
+  "ratios": [
+    {"period": "Q1 FY2027", "metric": "gross_profit_margin", "value": 0.749},
+    {"period": "Q1 FY2027", "metric": "operating_margin", "value": 0.656},
+    {"period": "Q1 FY2027", "metric": "net_profit_margin", "value": 0.715},
+    {"period": "Q1 FY2027", "metric": "fcf_margin", "value": 0.595}
+  ],
+  "missing_data": [
+    "Full earnings transcript / Q&A not ingested.",
+    "Named hyperscaler demand, backlog, and customer-level purchase commitments are not disclosed.",
+    "New Data Center / Edge Computing reporting framework reduces comparability with prior end-market taxonomy.",
+    "Market data should be refreshed before trading."
+  ]
+}
