@@ -15,6 +15,7 @@ tags:
 ---
 
 # VST DCF Valuation - 2026-06-03
+Entity: [[VST]]
 
 ## Bottom Line
 

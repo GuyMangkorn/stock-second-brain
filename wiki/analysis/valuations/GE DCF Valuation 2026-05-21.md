@@ -15,6 +15,7 @@ tags:
 ---
 
 # GE DCF Valuation - 2026-05-21
+Entity: [[GE]]
 
 ## Bottom Line
 

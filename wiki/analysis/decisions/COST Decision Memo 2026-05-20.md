@@ -18,6 +18,7 @@ tags:
 ---
 
 # COST Decision Memo - 2026-05-20
+Entity: [[COST]]
 
 ## Action Read
 

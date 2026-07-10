@@ -12,6 +12,7 @@ tags:
 ---
 
 # CRWV DCF Valuation - 2026-05-21
+Entity: [[CRWV]]
 
 ## Bottom Line
 

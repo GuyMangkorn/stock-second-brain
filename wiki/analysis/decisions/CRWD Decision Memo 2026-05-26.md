@@ -17,6 +17,7 @@ tags:
 ---
 
 # CRWD Decision Memo - 2026-05-26
+Entity: [[CRWD]]
 
 ## Action Read
 

@@ -9,6 +9,9 @@ custom-width: 90
 ---
 
 # Dividend ETF Overlap Groups 2026-06-28
+## Selected ETF Entities
+
+[[ETF_AMEX_DGRO]] · [[ETF_AMEX_VIG]] · [[ETF_NASDAQ_VIGI]]
 
 ## Purpose
 

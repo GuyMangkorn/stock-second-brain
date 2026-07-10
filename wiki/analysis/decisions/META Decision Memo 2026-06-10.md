@@ -19,6 +19,7 @@ tags:
 ---
 
 # META Decision Memo - 2026-06-10
+Entity: [[META]]
 
 ## Action Read
 

@@ -16,6 +16,7 @@ tags:
 ---
 
 # ATLX DCF Valuation - 2026-05-20
+Entity: [[ATLX]]
 
 ## Bottom Line
 

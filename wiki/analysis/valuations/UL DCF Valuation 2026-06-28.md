@@ -15,6 +15,7 @@ tags:
 ---
 
 # UL DCF Valuation - 2026-06-28
+Entity: [[UL]]
 
 ## Bottom Line
 

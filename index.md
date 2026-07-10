@@ -8,6 +8,7 @@ updated: 2026-07-10
 ## Navigation
 
 - Companies: [[Entity Index]]
+- ETFs: [[ETF Index]]
 - Portfolio: [[Portfolio Map]]
 - Themes: [[Theme Index]]
 - Macro / FX: [[Macro Index]]

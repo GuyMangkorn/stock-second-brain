@@ -18,6 +18,7 @@ tags:
 ---
 
 # GE Decision Memo - 2026-05-21
+Entity: [[GE]]
 
 ## Action Read
 

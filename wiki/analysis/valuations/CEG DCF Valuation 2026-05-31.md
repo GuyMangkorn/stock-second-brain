@@ -15,6 +15,7 @@ tags:
 ---
 
 # CEG DCF Valuation - 2026-05-31
+Entity: [[CEG]]
 
 ## Bottom Line
 

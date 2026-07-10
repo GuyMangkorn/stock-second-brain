@@ -18,6 +18,7 @@ tags:
 ---
 
 # JNJ Decision Memo - 2026-05-19
+Entity: [[JNJ]]
 
 ## Action Read
 

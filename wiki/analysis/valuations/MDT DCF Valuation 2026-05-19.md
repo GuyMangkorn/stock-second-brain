@@ -15,6 +15,7 @@ tags:
 ---
 
 # MDT DCF Valuation - 2026-05-19
+Entity: [[MDT]]
 
 ## Bottom Line
 

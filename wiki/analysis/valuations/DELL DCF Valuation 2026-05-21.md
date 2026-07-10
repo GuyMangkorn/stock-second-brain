@@ -12,6 +12,7 @@ tags:
 ---
 
 # DELL DCF Valuation - 2026-05-21
+Entity: [[DELL]]
 
 ## Bottom Line
 

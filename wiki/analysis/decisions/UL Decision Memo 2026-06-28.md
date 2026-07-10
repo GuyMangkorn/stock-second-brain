@@ -17,6 +17,7 @@ tags:
 ---
 
 # UL Decision Memo - 2026-06-28
+Entity: [[UL]]
 
 ## Action Read
 

@@ -15,6 +15,7 @@ tags:
 ---
 
 # GOOGL DCF Valuation - 2026-05-18
+Entity: [[GOOGL]]
 
 ## Bottom Line
 
@@ -156,4 +157,3 @@ Base projection fair value per diluted share, USD.
 ## Entity Update
 
 Updated `wiki/entities/GOOGL.md` with a valuation watch item and report link to `[[GOOGL DCF Valuation 2026-05-18]]`. The valuation changes the action read, not the fact that Alphabet remains a high-quality business.
-

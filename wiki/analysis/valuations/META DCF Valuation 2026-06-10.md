@@ -16,6 +16,7 @@ tags:
 ---
 
 # META DCF Valuation - 2026-06-10
+Entity: [[META]]
 
 ## Bottom Line
 

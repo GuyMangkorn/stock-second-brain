@@ -15,6 +15,7 @@ tags:
 ---
 
 # AMAT DCF Valuation - 2026-05-21
+Entity: [[AMAT]]
 
 ## Bottom Line
 

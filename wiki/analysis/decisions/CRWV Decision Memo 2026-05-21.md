@@ -11,6 +11,7 @@ tags:
 ---
 
 # CRWV Decision Memo - 2026-05-21
+Entity: [[CRWV]]
 
 ## Action Read
 

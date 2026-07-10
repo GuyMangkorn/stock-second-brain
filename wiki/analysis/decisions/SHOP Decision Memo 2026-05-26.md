@@ -18,6 +18,7 @@ tags:
 ---
 
 # SHOP Decision Memo - 2026-05-26
+Entity: [[SHOP]]
 
 ## Action Read
 

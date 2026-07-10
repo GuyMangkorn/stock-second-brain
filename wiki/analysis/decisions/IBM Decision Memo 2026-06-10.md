@@ -19,6 +19,7 @@ tags:
 ---
 
 # IBM Decision Memo - 2026-06-10
+Entity: [[IBM]]
 
 ## Action Read
 

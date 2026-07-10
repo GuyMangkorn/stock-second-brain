@@ -7,6 +7,9 @@ sort_rule: verified dividend yield desc, then score desc
 ---
 
 # Dividend ETF Full Universe Triage 2026-06-28
+## Selected ETF Entities
+
+[[ETF_AMEX_DGRO]] · [[ETF_AMEX_VIG]] · [[ETF_NASDAQ_VIGI]]
 
 ## Scope
 

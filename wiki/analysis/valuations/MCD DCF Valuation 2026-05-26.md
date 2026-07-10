@@ -15,6 +15,7 @@ tags:
 ---
 
 # MCD DCF Valuation - 2026-05-26
+Entity: [[MCD]]
 
 ## Bottom Line
 

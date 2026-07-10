@@ -15,6 +15,7 @@ tags:
 ---
 
 # JNJ DCF Valuation - 2026-05-19
+Entity: [[JNJ]]
 
 ## Bottom Line
 

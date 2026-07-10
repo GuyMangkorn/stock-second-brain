@@ -18,6 +18,7 @@ tags:
 ---
 
 # CSCO Decision Memo - 2026-05-20
+Entity: [[CSCO]]
 
 ## Action Read
 

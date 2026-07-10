@@ -1,5 +1,9 @@
 # Log
 
+## 2026-07-11
+
+- `source-integrity-audit`: Repaired direct entity links across company analysis and multi-ticker notes; added `[[ETF Index]]`, `[[ETF_AMEX_DGRO]]`, `[[ETF_AMEX_VIG]]`, and `[[ETF_NASDAQ_VIGI]]`; the audit records zero missing links in scope while keeping the 100-row ETF tracker unchanged.
+
 ## 2026-07-10
 
 - `skills`: Added `explain-market-move` and `market-scenario-research`,

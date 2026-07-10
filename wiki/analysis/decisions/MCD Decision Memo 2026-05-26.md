@@ -18,6 +18,7 @@ tags:
 ---
 
 # MCD Decision Memo - 2026-05-26
+Entity: [[MCD]]
 
 ## Action Read
 

@@ -16,6 +16,7 @@ tags:
 ---
 
 # AAPL DCF Valuation - 2026-06-11
+Entity: [[AAPL]]
 
 ## Bottom Line
 
