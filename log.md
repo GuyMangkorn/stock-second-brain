@@ -1,5 +1,12 @@
 # Log
 
+## 2026-07-10
+
+- `skills`: Added `explain-market-move` and `market-scenario-research`,
+  introduced chat/lean/full output contracts across the nine local skills, and
+  compacted `index.md` plus wiki routing; historical research notes were left
+  unchanged.
+
 ## 2026-07-09
 
 - `analysis`: Refreshed `wiki/entities/JNJ.md` with
@@ -14,8 +21,6 @@
   official Top 10 holdings for `KRX:315960`; marked the remaining unresolved
   ETF official lookups as `ไม่พบข้อมูลที่ยืนยันได้`, leaving description/theme
   fallback groups so all `100` ETFs have a grouping and no ETF remains pending.
-
-## 2026-07-09
 
 - `latest-results`: Created `raw/imports/SMIC_latest_results_source.md` from
   SMIC official IR Q1 2026 earnings release, quarterly statement spreadsheets,
@@ -38,8 +43,6 @@
   `raw/imports/SMIC_market_quote_2026-07-09.md` with a WATCHLIST / WAIT action
   read; updated `index.md` plus `wiki/entities/Entity Index.md` for the new
   entity.
-
-## 2026-07-09
 
 - `analysis`: Updated
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
@@ -164,6 +167,17 @@
 
 ## 2026-06-28
 
+- `decision-pipeline`: Added `[[KO]]`, normalized verified Q1 2026 / FY2025
+  facts, and created `[[KO DCF Valuation 2026-06-28]]` plus
+  `[[KO Decision Memo 2026-06-28]]`; source-backed base DCF was USD 51.53
+  versus the USD 82.63 close, producing `WAIT / AVOID-new-capital`.
+- `analysis`: Created
+  `raw/imports/US_covered_equities_market_quote_2026-06-28.md` and
+  `wiki/analysis/decisions/US Covered Equities Decision Refresh 2026-06-28.md`
+  to refresh covered-equity decision reads from the latest available Nasdaq
+  closed-market quote check; no ticker is a clear ADD under base-case margin of
+  safety discipline, while META, IBM, PG, BABA, VZ, and V are the most relevant
+  selective/watchlist candidates.
 - `latest-results`: Created `raw/imports/UL_latest_results_source.md` from
   Unilever Q1 2026 Overview, Unilever Annual Report and Accounts 2025 / Form
   20-F, StockAnalysis market data, and XE EUR/USD; P1 was limited to source note
@@ -186,8 +200,29 @@
   WAIT action read because source-backed base valuation is below current price
   and Q1 2026 full statements were not available in captured official sources.
 
+## 2026-06-26
+
+- `decision-pipeline`: Added `[[NVDA]]`, normalized verified Q1 FY2027 / FY2026
+  facts, and created `[[NVDA DCF Valuation 2026-06-26]]` plus
+  `[[NVDA Decision Memo 2026-06-26]]`; base DCF was USD 117.96 versus the USD
+  195.03 quote, producing `WAIT / HOLD-existing-quality-position`.
+
+## 2026-06-18
+
+- `analysis`: Created `raw/imports/IBM_market_quote_2026-06-18.md` and
+  `wiki/analysis/decisions/IBM Decision Memo 2026-06-18.md`; updated
+  `wiki/entities/IBM.md` with a WAIT / HOLD-existing action read after the
+  latest close fell to USD 262.35, improving risk/reward but still leaving the
+  stock above the source-backed base DCF fair value.
+
 ## 2026-06-11
 
+- `earnings`: Created `wiki/analysis/earnings/AAPL Earnings Deep Dive 2026-06-11.md`
+  and `wiki/analysis/earnings/AAPL Earnings Deep Dive 2026-06-11.html` from
+  Apple's verified Q2 FY2026 Form 10-Q, normalized vault facts, refreshed
+  StockAnalysis market data, and existing AAPL valuation memos; updated
+  `raw/imports/AAPL_market_quote_2026-06-11.md`, `[[AAPL]]`, and `index.md`
+  with the post-earnings read.
 - `research`: Created `raw/imports/BABA_latest_results_source.md`,
   `raw/imports/BABA_market_quote_2026-06-11.md`,
   `raw/financials/BABA_fundamentals.md`,
