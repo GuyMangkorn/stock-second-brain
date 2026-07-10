@@ -12,6 +12,7 @@ source_note: raw/imports/UNH_latest_results_source.md
 tags:
   - financials/fundamentals
   - ticker/UNH
+entity: "[[UNH]]"
 ---
 
 # UNH - UnitedHealth Group Incorporated

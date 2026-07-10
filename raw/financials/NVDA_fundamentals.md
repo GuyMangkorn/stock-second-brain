@@ -12,6 +12,7 @@ source_note: raw/imports/NVDA_latest_results_source.md
 tags:
   - financials/fundamentals
   - ticker/NVDA
+entity: "[[NVDA]]"
 ---
 
 # NVDA - NVIDIA Corporation
