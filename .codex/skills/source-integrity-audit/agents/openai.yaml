@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Integrity Audit"
+  short_description: "Audit vault sources, numbers, links, and charts"
+  default_prompt: "Use $source-integrity-audit to check this vault scope for source problems."

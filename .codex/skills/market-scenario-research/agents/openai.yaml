@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Scenario Research"
+  short_description: "Research market, macro, and theme scenarios"
+  default_prompt: "Use $market-scenario-research to build concise scenarios and signposts."

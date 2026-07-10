@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stock Decision Pipeline"
+  short_description: "Run a lean source-backed stock decision workflow"
+  default_prompt: "Use $stock-decision-pipeline in lean mode for this ticker."
