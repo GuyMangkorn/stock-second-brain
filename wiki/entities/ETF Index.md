@@ -1,7 +1,7 @@
 ---
 type: entity-index
 scope: etf
-updated: 2026-07-11
+updated: 2026-07-12
 tags:
   - entity/etf-index
 ---
@@ -15,6 +15,7 @@ tags:
 | [[ETF_AMEX_DGRO]] | `AMEX:DGRO` | iShares Core Dividend Growth ETF | Core candidate | [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]] |
 | [[ETF_AMEX_VIG]] | `AMEX:VIG` | Vanguard Dividend Appreciation ETF | Core candidate | [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]] |
 | [[ETF_NASDAQ_VIGI]] | `NASDAQ:VIGI` | Vanguard International Dividend Appreciation ETF | Core candidate | [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]] |
+| [[ETF_AMEX_DIVI]] | `AMEX:DIVI` | Franklin International Core Dividend Tilt Index ETF | International dividend tilt | [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]] |
 
 ## Maintenance Rule
 

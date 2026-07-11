@@ -1,6 +1,6 @@
 ---
 type: dashboard
-updated: 2026-07-10
+updated: 2026-07-12
 ---
 
 # Stock Second Brain Dashboard
@@ -24,6 +24,11 @@ The entity roster and ticker-level source gaps live in [[Entity Index]] and
 individual entity notes. Historical activity lives in [[log]].
 
 ## Recent Work
+
+- **2026-07-12 — DIVI:** Added [[ETF_AMEX_DIVI]] and refreshed official Franklin
+  factsheet/holdings/methodology; [[ETF_AMEX_DIVI Decision Memo 2026-07-12]] reads
+  `WATCH` as an international dividend-tilt candidate pending fresher same-day
+  price/NAV and a complete holdings file.
 
 - **2026-07-11 — CVS:** Completed the new-ticker decision pipeline through P13;
   [[CVS Decision Memo 2026-07-11]] reads `WATCHLIST / WAIT-for-Q2` at a latest

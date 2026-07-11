@@ -3,8 +3,8 @@ type: etf_top10_holdings_tracker
 created: 2026-07-01
 source_memo: wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md
 universe_count: 100
-official_holdings_found_count: 75
-official_lookup_failed_count: 25
+official_holdings_found_count: 76
+official_lookup_failed_count: 24
 pending_source_check_count: 0
 fallback_group_source: wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md
 custom-width: 95
@@ -13,7 +13,7 @@ custom-width: 95
 # Dividend ETF Top 10 Holdings Tracker 2026-07-01
 ## Selected ETF Entities
 
-[[ETF_AMEX_DGRO]] · [[ETF_AMEX_VIG]] · [[ETF_NASDAQ_VIGI]]
+[[ETF_AMEX_DGRO]] · [[ETF_AMEX_VIG]] · [[ETF_NASDAQ_VIGI]] · [[ETF_AMEX_DIVI]]
 
 ## Purpose
 
@@ -29,8 +29,8 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 | Status | Count |
 | --- | ---: |
-| official_holdings_found | 75 |
-| official_lookup_failed | 25 |
+| official_holdings_found | 76 |
+| official_lookup_failed | 24 |
 | pending_source_check | 0 |
 | total universe rows | 100 |
 
@@ -167,7 +167,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | 14 | `AMEX:DGRO` | iShares Core Dividend Growth ETF | 8.1 | official_holdings_found | 1. JNJ JOHNSON & JOHNSON (3.12%); 2. ABBV ABBVIE INC (3.05%); 3. JPM JPMORGAN CHASE & CO (3.03%); 4. AAPL APPLE INC (2.76%); 5. MSFT MICROSOFT CORP (2.67%); 6. XOM EXXON MOBIL CORP (2.60%); 7. AVGO BROADCOM INC (2.55%); 8. HD HOME DEPOT INC (2.33%); 9. PG PROCTER & GAMBLE (2.26%); 10. PM PHILIP MORRIS INTERNATIONAL INC (2.08%) | BlackRock/iShares official product-data API, portfolioId 264623 | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 15 | `AMEX:DLN` | WisdomTree U.S. LargeCap Dividend Fund | 7.0 | official_holdings_found | 1. Microsoft Corp (3.80%); 2. Nvidia Corp (3.54%); 3. JPMorgan Chase & Co (2.94%); 4. Apple Inc (2.22%); 5. Broadcom Inc (2.13%); 6. Johnson & Johnson (2.03%); 7. Meta Platforms Inc. Cl A (1.95%); 8. Exxon Mobil Corp (1.84%); 9. AbbVie Inc (1.75%); 10. Morgan Stanley (1.52%) | WisdomTree official product page HTML | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 16 | `AMEX:VIG` | Vanguard Dividend Appreciation ETF | 8.2 | official_holdings_found | 1. AVGO BROADCOM INC (5.41%); 2. AAPL APPLE INC (4.57%); 3. MSFT MICROSOFT CORP (4.27%); 4. LLY ELI LILLY & CO (3.85%); 5. JPM JPMORGAN CHASE (3.32%); 6. XOM EXXON MOBIL CORP (2.67%); 7. JNJ JOHNSON&JOHNSON (2.39%); 8. V VISA INC-CLASS A (2.25%); 9. WMT WALMART INC (2.23%); 10. CSCO CISCO SYSTEMS (2.09%) | Vanguard official vmf portfolio-holding API | Top 10 holdings verified | G01 U.S. dividend growth / quality core |
-| 17 | `AMEX:DIVI` | Franklin International Core Dividend Tilt Index Fund | 7.9 | official_lookup_failed | ไม่พบข้อมูลที่ยืนยันได้ใน official lookup รอบนี้; Franklin Templeton official product page opened but no parseable Top 10 holdings table or holdings download was found in captured HTML/API surface. | Franklin Templeton official product page checked; holdings not found in captured page/API links | Description/theme fallback after official lookup did not find Top 10 holdings | G07 International/global broad dividend income |
+| 17 | `AMEX:DIVI` | Franklin International Core Dividend Tilt Index ETF | 7.9 | official_holdings_found | 1. ASML HOLDING NV (3.28%); 2. HSBC HOLDINGS PLC (1.48%); 3. NESTLE SA (1.39%); 4. ROCHE HOLDING AG (1.36%); 5. ASTRAZENECA PLC (1.28%); 6. SIEMENS AG (1.17%); 7. NOVARTIS AG (1.16%); 8. TOKYO ELECTRON LTD (1.07%); 9. BHP GROUP LTD (1.06%); 10. BRITISH AMERICAN TOBACCO PLC (1.04%); top-10 sum 14.29% | Franklin Templeton official factsheet DIVI-FF | Top 10 holdings verified, as of 2026-06-30 | G07 International/global broad dividend income |
 | 18 | `SIX:CHDVD` | iShares Swiss Dividend ETF (CH) | 7.6 | official_holdings_found | 1. ZURN ZURICH INSURANCE GROUP AG (15.06%); 2. NESN NESTLE SA (14.78%); 3. NOVN NOVARTIS AG (14.65%); 4. ROP ROCHE PS PAR AG (14.60%); 5. HOLN HOLCIM LTD AG (10.01%); 6. SREN SWISS RE AG (9.79%); 7. SLHN SWISS LIFE HOLDING AG (5.81%); 8. SIKA SIKA AG (3.58%); 9. GIVN GIVAUDAN SA (3.47%); 10. HBAN HELVETIA BALOISE HOLDING N AG (3.11%) | BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 264108 | Top 10 holdings verified from official all/top holdings source | G09 Europe/UK dividend equity |
 | 19 | `AMEX:DJD` | Invesco Dow Jones Industrial Average Dividend ETF | 7.5 | official_holdings_found | 1. UNH UnitedHealth Group Inc (8.65%); 2. CVX Chevron Corp (6.49%); 3. CSCO Cisco Systems Inc (6.26%); 4. IBM International Business Machines Corp (6.22%); 5. MRK Merck & Co Inc (6.01%); 6. KO Coca-Cola Co/The (5.39%); 7. GS Goldman Sachs Group Inc/The (5.06%); 8. AMGN Amgen Inc (4.90%); 9. HD Home Depot Inc/The (4.84%); 10. PG Procter & Gamble Co/The (4.76%) | Invesco official holdings API | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 20 | `TSX:VGG` | Vanguard US Dividend Appreciation Index ETF | 7.5 | official_holdings_found | 1. Broadcom Inc. (5.4%); 2. Apple Inc. (4.6%); 3. Microsoft Corp. (4.3%); 4. Eli Lilly & Co. (3.9%); 5. JPMorgan Chase & Co. (3.3%); 6. Exxon Mobil Corp. (2.7%); 7. Johnson & Johnson (2.4%); 8. Visa Inc. (2.3%); 9. Walmart Inc. (2.2%); 10. Cisco Systems Inc. (2.1%) | Vanguard Canada official factsheet PDF | Top 10 holdings verified | G01 U.S. dividend growth / quality core |

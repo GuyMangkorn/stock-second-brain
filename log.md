@@ -1,5 +1,12 @@
 # Log
 
+## 2026-07-12
+
+- `decision-pipeline`: Added `[[ETF_AMEX_DIVI]]`, refreshed official Franklin
+  source/fund facts and holdings status, and created `[[ETF_AMEX_DIVI Decision Memo 2026-07-12]]`;
+  fund-level action read is `WATCH` pending fresher same-day price/NAV and a
+  complete holdings file.
+
 ## 2026-07-11
 
 - `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[CVS]]`; created the official source note, normalized fundamentals, entity, dated market quote, high-sensitivity DCF, and decision memo; action read is `WATCHLIST / WAIT-for-Q2 / NO-EXECUTION-without-fresh-quote` at a latest verified USD 102.83 close versus base DCF USD 76.47.
