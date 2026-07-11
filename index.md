@@ -25,6 +25,9 @@ individual entity notes. Historical activity lives in [[log]].
 
 ## Recent Work
 
+- **2026-07-11 — CVS:** Completed the new-ticker decision pipeline through P13;
+  [[CVS Decision Memo 2026-07-11]] reads `WATCHLIST / WAIT-for-Q2` at a latest
+  verified USD 102.83 close versus base DCF USD 76.47.
 - **2026-07-11 — LLY:** Completed the new-ticker decision pipeline through P13;
   [[LLY Decision Memo 2026-07-11]] reads `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-Q2-2026`
   at a USD 1,188.58 close versus base DCF USD 248.73 and bull DCF USD 385.30.
