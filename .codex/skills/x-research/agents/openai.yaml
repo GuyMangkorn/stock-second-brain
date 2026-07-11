@@ -1,4 +1,4 @@
 interface:
   display_name: "X Research"
-  short_description: "Research public X sentiment as market context"
-  default_prompt: "Use $x-research to summarize current public sentiment for this ticker."
+  short_description: "Research stock and ETF public X sentiment"
+  default_prompt: "Use $x-research to summarize current public sentiment for this stock or ETF."

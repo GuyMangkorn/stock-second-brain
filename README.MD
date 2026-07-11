@@ -1,9 +1,9 @@
 # Stock Second Brain
 
-Obsidian-native, source-backed equity research vault. The durable source of
-truth lives in `raw/` and `wiki/`; chat answers should stay short and do not
-create files unless the request asks for durable work or verified evidence
-materially changes an existing thesis.
+Obsidian-native, source-backed public-equity and equity-ETF research vault. The
+durable source of truth lives in `raw/` and `wiki/`; chat answers should stay
+short and do not create files unless the request asks for durable work or
+verified evidence materially changes an existing thesis.
 
 ## Quick Start
 
@@ -80,6 +80,46 @@ normalize verified facts, update thin entity, และสร้าง JSON เ�
 Financial tables belong in `raw/financials/`; the entity links to them instead
 of copying them. Market quotes stay in a dated market-data source or decision
 check, not normalized company facts.
+
+### Research An Equity ETF
+
+ETF v1 supports passive, index-tracking equity funds. Always provide exchange
+and ticker so listings cannot collide:
+
+```text
+ใช้ $official-source-etf-research สำหรับ AMEX:VIG
+mode: full
+สร้าง official source note, normalize fund facts, และอัปเดต thin ETF entity
+```
+
+The skill verifies sponsor, benchmark, passive status, official methodology,
+holdings, costs, AUM/liquidity, NAV/price, tracking, distributions, FX, and
+dated source compatibility. Durable files use `ETF_EXCHANGE_TICKER`:
+
+```text
+raw/imports/ETF_AMEX_VIG_fund_source_YYYY-MM-DD.md
+raw/funds/ETF_AMEX_VIG_fund_facts.md
+wiki/entities/ETF_AMEX_VIG.md
+```
+
+### Compare Or Decide On ETFs
+
+```text
+ใช้ $official-source-etf-research เปรียบเทียบ AMEX:VIG กับ AMEX:DGRO
+mode: lean
+เทียบ methodology, holdings overlap, concentration, expense, tracking และ income
+```
+
+```text
+ใช้ $stock-decision-pipeline สำหรับ AMEX:VIG
+instrument_type: ETF
+mode: lean
+refresh official ETF facts แล้วสรุป Portfolio Role + BUY/WATCH/AVOID
+```
+
+The ETF branch is `ETF research -> ETF decision`; it does not run company
+stages P1/P4/P6/P7/P11. Without user-provided portfolio holdings, it reports
+fund suitability only and does not claim portfolio fit or diversification.
 
 ### Run A New-Ticker Decision Pipeline
 
@@ -173,6 +213,20 @@ financial facts.
 Do not infer upside/downside from price movement alone. If valuation inputs are
 missing, write the blocker and prefer `wait` or `watchlist`.
 
+### Equity ETF
+
+| Situation | Flow | Main durable outputs |
+|---|---|---|
+| New supported ETF | `official-source-etf-research/deep-dive -> ETF decision` | ETF source, fund facts, entity, decision |
+| Holdings/methodology/cost/tracking stale | `official-source-etf-research/thesis-delta -> ETF decision` | updated facts/entity/decision |
+| Only price/NAV changed | fresh price/NAV check -> `ETF decision` | exchange-qualified decision memo |
+| Peer or overlap question | ETF research -> comparison -> optional decision | comparison; decision only when requested |
+| Source quality uncertain | `P10 ETF checks -> fix gaps -> ETF decision` | audit/fixes plus decision |
+
+ETF valuation uses price/NAV, premium/discount, look-through multiples, yield,
+expense drag, tracking, and compatible peers. It never creates a corporate DCF
+or intrinsic-value target.
+
 ## Supported Skills
 
 | Skill | Use when | Default output |
@@ -180,10 +234,11 @@ missing, write the blocker and prefer `wait` or `watchlist`.
 | `explain-market-move` | Why a stock, sector, ETF, index, commodity, or currency moved | chat |
 | `market-scenario-research` | AI bottlenecks, themes, macro, rates, FX, and market regimes | chat |
 | `latest-results-web` | Discover current official company results | source note |
-| `financial-facts-ingest` | Normalize a source file or verified financial facts | fundamentals + entity delta |
-| `official-source-stock-research` | Deep dive, earnings review, or thesis refresh | profile-dependent |
-| `dcf-valuation` | Fair value, DCF, multiples, or valuation sensitivity | valuation or blocker |
-| `stock-decision-pipeline` | Chain or refresh decision work | decision memo |
+| `financial-facts-ingest` | Normalize verified operating-company financial facts | fundamentals + entity delta |
+| `official-source-stock-research` | Operating-company deep dive, earnings review, or thesis refresh | profile-dependent |
+| `official-source-etf-research` | Passive equity ETF deep dive, comparison, refresh, or decision handoff | profile-dependent |
+| `dcf-valuation` | Operating-company fair value, DCF, multiples, or sensitivity | valuation or blocker |
+| `stock-decision-pipeline` | Chain or refresh company or supported ETF decision work | decision memo |
 | `x-research` | Public X/Twitter sentiment | chat or sentiment memo |
 | `source-integrity-audit` | Audit sources, numbers, links, charts, and gaps | chat or audit memo |
 
@@ -193,6 +248,8 @@ the routing and copy-paste interface.
 ## Legacy P-Code Aliases
 
 These aliases remain supported:
+
+P1/P4/P6/P7/P11 are company stages. They do not apply to ETFs.
 
 | Alias | Meaning |
 |---|---|
@@ -219,6 +276,7 @@ stock-second-brain/
   raw/
     imports/
     financials/
+    funds/
     assets/
   wiki/
     entities/
@@ -240,6 +298,7 @@ stock-second-brain/
     latest-results-web/
     financial-facts-ingest/
     official-source-stock-research/
+    official-source-etf-research/
     dcf-valuation/
     stock-decision-pipeline/
     x-research/
@@ -256,13 +315,18 @@ Source priority:
 4. News and web research
 5. X/Twitter as lower-priority context
 
+For ETFs use official issuer prospectus/product/factsheet and holdings first,
+then official index methodology, regulator/exchange materials, and reputable
+dated market data. Record separate as-of dates for each metric family.
+
 Ownership is intentionally separated:
 
 | Layer | Owns |
 |---|---|
 | `raw/imports/` | Raw evidence, source map, extraction gaps |
 | `raw/financials/` | Normalized numbers, ratios, and source-backed tables |
-| `wiki/entities/` | Thin living company summary and ticker-level gaps |
+| `raw/funds/` | Normalized ETF structure, holdings, cost, tracking, and methodology facts |
+| `wiki/entities/` | Thin living company or exchange-qualified ETF summary and instrument-level gaps |
 | `wiki/analysis/valuations/` | Valuation assumptions and calculations |
 | `wiki/analysis/decisions/` | Action read and decision-changing evidence |
 | `wiki/overview/themes/` | Living investment-theme scenarios |
@@ -278,11 +342,17 @@ reference, or shown calculation. If a value cannot be verified, write
 Stop and report the exact gap when:
 
 - ticker/company identity is ambiguous
+- ETF exchange-qualified identity, benchmark, passive status, official
+  methodology, or holdings cannot be verified
 - official or traceable primary sources cannot be found
 - period labels, currency, or units are unclear
 - source conflicts change the conclusion and cannot be resolved
 - current market data cannot be freshly checked for an action call
 - valuation inputs are incomplete or unsuitable for a point estimate
+
+ETF v1 does not support bond, commodity, multi-asset, active, leveraged,
+inverse, or derivative-heavy funds. Stop with `unsupported ETF type` rather
+than adapt company or passive-equity rules.
 
 Do not force a target price, action, or scenario probability from unsupported
 assumptions.

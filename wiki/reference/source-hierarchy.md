@@ -28,6 +28,20 @@ Use this hierarchy when choosing between sources or deciding what to trust.
    - analyst summaries
    - current event context
 
+## ETF Preferred Order
+
+For passive, index-tracking equity ETFs use:
+
+1. Official issuer prospectus, product page, factsheet, and shareholder report
+2. Official issuer holdings file and official NAV data
+3. Official index-provider methodology, constituent, and rebalance documents
+4. Regulator and listing-exchange filings or product pages
+5. Reputable market data for dated price, volume, spread, and peer context
+
+Resolve `EXCHANGE:TICKER` before collecting facts. Record separate as-of dates
+for holdings, NAV/price, AUM, distributions, performance, and methodology; page
+access date does not replace the source's data date.
+
 ## Rules
 
 - If primary and secondary sources conflict, prefer the higher-priority source.
@@ -39,6 +53,8 @@ Use this hierarchy when choosing between sources or deciding what to trust.
   transcript, release, or company page, treat it as context, not a durable fact.
 - Every durable number should point back to a source path, URL, or explicit
   calculation.
+- For ETF holdings, calculate concentration or overlap only from compatible
+  snapshots and preserve disclosed cash or derivative positions.
 
 ## When To Stop
 
@@ -50,4 +66,6 @@ Stop and report `ไม่พบข้อมูลที่ยืนยันไ
 - source data conflicts and cannot be resolved
 - ratio inputs are incomplete
 - a segment taxonomy changes enough to make period comparison unsafe
-
+- ETF benchmark, passive equity status, official methodology, or holdings
+  cannot be verified
+- the ETF is outside the supported passive equity scope

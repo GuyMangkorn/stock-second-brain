@@ -20,6 +20,9 @@ description: Use when the user asks to lint, audit, verify, clean, or inspect th
 - orphan or duplicate notes
 - unresolved gaps and stale follow-up
 - plugin-specific blocks that undermine Markdown portability
+- ETF identity collisions and ticker-only links that lose the exchange
+- ETF holdings-weight, holdings-as-of, methodology, expense-ratio, AUM,
+  price/NAV, premium/discount, distribution, and tracking freshness mismatches
 
 ## Workflow
 
@@ -27,6 +30,9 @@ description: Use when the user asks to lint, audit, verify, clean, or inspect th
    fundamentals, and memos.
 2. Inspect the requested scope and compare every selected chart with its owning
    table or JSON.
+   For ETFs, compare entity and analysis claims with `raw/funds/`, verify that
+   weight calculations use one holdings snapshot, and keep price/NAV dates
+   separate from holdings and methodology dates.
 3. Search risky numeric/current terms and trace claims to sources.
 4. Rank findings `High`, `Medium`, or `Low` and report evidence with paths.
 5. If fixes were requested, preserve facts by sourcing, relabeling, or moving

@@ -1,4 +1,4 @@
 interface:
   display_name: "Official Source Stock Research"
-  short_description: "Research a public company from official sources"
-  default_prompt: "Use $official-source-stock-research to research this ticker from official sources."
+  short_description: "Research an operating company from official sources"
+  default_prompt: "Use $official-source-stock-research to research this operating company from official sources."

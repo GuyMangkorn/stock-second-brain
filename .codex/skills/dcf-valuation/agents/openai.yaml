@@ -1,4 +1,4 @@
 interface:
   display_name: "DCF Valuation"
-  short_description: "Build source-backed DCF valuation scenarios"
-  default_prompt: "Use $dcf-valuation to value this ticker with sourced inputs."
+  short_description: "Value operating companies with source-backed DCF"
+  default_prompt: "Use $dcf-valuation to value this operating company with sourced inputs."

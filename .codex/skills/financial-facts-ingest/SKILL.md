@@ -5,6 +5,15 @@ description: Use when the user asks to ingest or normalize a source note, filing
 
 # Financial Facts Ingest
 
+## Instrument Boundary
+
+Normalize operating-company facts into `raw/financials/`. Do not place ETF
+holdings, NAV, AUM, expense, distribution, tracking, or methodology facts in a
+company fundamentals file. Route a passive, index-tracking equity ETF to
+`official-source-etf-research` and `raw/funds/`.
+For bond, commodity, multi-asset, active, leveraged, inverse, or derivative-
+heavy ETFs, stop with `unsupported ETF type` and create no artifacts.
+
 ## Required References
 
 Read `source-hierarchy.md`, `output-contract.md`, `financial-ratios.md`,

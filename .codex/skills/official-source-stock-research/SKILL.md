@@ -5,6 +5,15 @@ description: Use when the user asks for a company deep dive, earnings review, th
 
 # Official Source Stock Research
 
+## Instrument Boundary
+
+Use this skill for operating companies. If the entity has
+`instrument_type: ETF`, do not analyze it through business segments,
+profitability, capital allocation, or company guidance. Route a passive,
+index-tracking equity ETF to `official-source-etf-research`.
+For bond, commodity, multi-asset, active, leveraged, inverse, or derivative-
+heavy ETFs, stop with `unsupported ETF type` and create no artifacts.
+
 ## Source Priority
 
 Use official filings, earnings materials/transcripts, financial statements, then

@@ -1,9 +1,18 @@
 ---
 name: dcf-valuation
-description: Use when the user asks for fair value, intrinsic value, DCF, valuation sensitivity, upside/downside, price target, or whether a public stock appears under- or overvalued.
+description: Use when the user asks for fair value, intrinsic value, DCF, valuation sensitivity, upside/downside, or a price target for an operating company stock.
 ---
 
 # DCF Valuation
+
+## Instrument Boundary
+
+Use this skill for operating companies, not ETFs. If `instrument_type: ETF` or
+an exchange-qualified fund identity is detected, do not request company FCF,
+cash, debt, shares, or WACC and do not create a DCF memo. Route passive,
+index-tracking equity ETFs to `official-source-etf-research` for price/NAV,
+look-through, cost, tracking, yield, and peer-relative analysis. Return
+`unsupported ETF type` for ETF categories outside that skill's v1 scope.
 
 ## Required References
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Official Source ETF Research"
+  short_description: "Research index-tracking equity ETFs from official sources"
+  default_prompt: "Use $official-source-etf-research to research this equity ETF from official sources."

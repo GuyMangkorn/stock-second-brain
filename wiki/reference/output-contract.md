@@ -26,7 +26,8 @@ or unsupported optional sections.
 |---|---|---|
 | `raw/imports/` | Raw evidence, source map, extraction gaps | local links |
 | `raw/financials/` | Normalized numbers, ratios, period-compatible chart data | compact metric references |
-| `wiki/entities/` | Living company summary and unresolved ticker-level gaps | links to facts/reports |
+| `raw/funds/` | Normalized ETF structure, holdings, cost, tracking, and methodology facts | compact metric references |
+| `wiki/entities/` | Living company or ETF summary and unresolved instrument-level gaps | links to facts/reports |
 | `wiki/analysis/valuations/` | Assumptions and calculations | valuation conclusion/link |
 | `wiki/analysis/decisions/` | Action and decision-changing evidence | links to prior layers |
 
@@ -76,6 +77,29 @@ wiki/entities/TICKER.md
 Use `wiki/reference/entity-template.md`. The entity is a thin living hub, not a
 copy of fundamentals or analysis memos. Update only changed sections.
 
+## ETF Source And Fund Facts
+
+```text
+raw/imports/ETF_EXCHANGE_TICKER_fund_source_YYYY-MM-DD.md
+raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md
+```
+
+The source note owns the official source map, data dates, extraction blocks,
+and extraction gaps. Fund facts require `Identity & Structure`, `Cost &
+Tradability`, `Portfolio Exposure`, `Index Methodology`, `Performance &
+Income`, and `Risks & Gaps`. Keep holdings, NAV/price, AUM, distributions,
+performance, and methodology as-of dates separate.
+
+## ETF Entity
+
+```text
+wiki/entities/ETF_EXCHANGE_TICKER.md
+```
+
+Use `wiki/reference/etf-entity-template.md` and
+`entity_key: EXCHANGE:TICKER`. Link the fund-facts file instead of copying
+holdings or exposure tables.
+
 ## Valuation
 
 ```text
@@ -99,6 +123,22 @@ compact valuation read, key assumption/falsifier, action-relevant gaps, and
 local report/source links. Reference the entity's bull/bear case instead of
 restating it unless the decision changed it.
 
+## ETF Decision
+
+```text
+wiki/analysis/decisions/ETF_EXCHANGE_TICKER Decision Memo YYYY-MM-DD.md
+```
+
+Use `Portfolio Role`, `Action Read`, `Current Price / NAV Check`,
+`Peer-Relative Read`, `Valuation / Cost / Tracking Read`, `Key Falsifier`,
+`Action-Relevant Gaps`, and `Reports / Sources`. Action is `BUY`, `WATCH`, or
+`AVOID`.
+
+Do not use corporate DCF or create an intrinsic-value target. Use sourced
+price/NAV, premium/discount, look-through multiples, yield, expense drag,
+tracking, and compatible peers. Without user-provided portfolio holdings,
+state fund suitability only and do not claim portfolio fit or diversification.
+
 ## General Research Routing
 
 ```text
@@ -117,3 +157,7 @@ sources, and a dated delta log. Do not create a generic discussion folder.
 Sentiment and scoped audits default to chat. Save a sentiment memo when asked
 or when it changes durable follow-up. Save an audit memo for a requested
 durable audit or applied fixes.
+
+Use `wiki/analysis/sentiment/ETF_EXCHANGE_TICKER X Sentiment YYYY-MM-DD.md` for
+a supported ETF. Unsupported ETF types may be discussed in chat but do not
+receive durable artifacts under the v1 contract.

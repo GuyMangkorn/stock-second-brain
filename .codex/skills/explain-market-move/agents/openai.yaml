@@ -1,4 +1,4 @@
 interface:
   display_name: "Explain Market Move"
-  short_description: "Explain stock and sector price moves"
-  default_prompt: "Use $explain-market-move to explain this stock move concisely."
+  short_description: "Explain stock, ETF, and sector price moves"
+  default_prompt: "Use $explain-market-move to explain this asset move concisely."

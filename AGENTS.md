@@ -1,14 +1,15 @@
 # Stock Second Brain Agent Rules
 
-This project is an Obsidian-native stock research second brain. Maintain
-durable, source-backed investment knowledge without turning every question into
-a file-writing workflow.
+This project is an Obsidian-native public-equity and equity-ETF research second
+brain. Maintain durable, source-backed investment knowledge without turning
+every question into a file-writing workflow.
 
 ## Mission And Ownership
 
 - `raw/imports/`: source notes, filing extracts, transcripts, and raw evidence.
 - `raw/financials/`: normalized company financial facts and ratios.
-- `wiki/entities/`: one thin living company hub per ticker.
+- `raw/funds/`: normalized passive equity ETF facts, holdings, and methodology.
+- `wiki/entities/`: thin living company and exchange-qualified ETF hubs.
 - `wiki/analysis/`: decisions, valuations, earnings, catalysts, comparisons,
   sentiment, and audits.
 - `wiki/overview/themes/` and `wiki/overview/macro/`: living cross-company and
@@ -39,6 +40,11 @@ Use links instead of copying another layer's tables or narrative.
 
 Prefer Investor Relations for discovery and the underlying filing, release,
 transcript, or data table as evidence.
+
+For ETFs prefer official issuer prospectus/product/factsheet and holdings,
+official index methodology, then regulator/exchange material. Keep separate
+as-of dates for holdings, NAV/price, AUM, distributions, performance, and
+methodology.
 
 ## Language Standard
 
@@ -117,6 +123,13 @@ bullet.
 Use `.codex/skills/official-source-stock-research/SKILL.md`. Choose `chat`,
 `thesis-delta`, or `deep-dive`; do not run a deep dive for a general question.
 
+### etf-research
+
+Use `.codex/skills/official-source-etf-research/SKILL.md` for passive,
+index-tracking equity ETF research, comparison, refresh, or decision handoff.
+Resolve `entity_key: EXCHANGE:TICKER`; do not route an ETF through company
+results, financial ingest, stock research, or DCF stages.
+
 ### valuation
 
 Use `.codex/skills/dcf-valuation/SKILL.md`. Freshly verify market data and use
@@ -128,6 +141,8 @@ only when a calculation succeeds or the user explicitly asks for a gap memo.
 Use `.codex/skills/stock-decision-pipeline/SKILL.md`. Read existing vault
 context first, use the lightest sufficient flow, update the entity once, and do
 not create a valuation-gap memo when P11 cannot calculate a valuation.
+For `instrument_type: ETF`, use ETF research -> ETF decision and bypass
+P1/P4/P6/P7/P11.
 
 ### sentiment
 
@@ -150,16 +165,21 @@ duplicates, and unresolved gaps. A scoped check may be chat-only.
 ```text
 raw/imports/TICKER_source_kind_YYYY-MM-DD.md
 raw/imports/TICKER_latest_results_source.md
+raw/imports/ETF_EXCHANGE_TICKER_fund_source_YYYY-MM-DD.md
 raw/financials/TICKER_fundamentals.md
 raw/financials/TICKER_fundamentals.json
+raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md
 wiki/entities/TICKER.md
+wiki/entities/ETF_EXCHANGE_TICKER.md
 wiki/analysis/earnings/TICKER Earnings Transcript Digest YYYY-MM-DD.md
 wiki/analysis/catalysts/TICKER Catalyst Update YYYY-MM-DD.md
 wiki/analysis/catalysts/TICKER Market Move YYYY-MM-DD.md
 wiki/analysis/comparisons/Theme Memo Title YYYY-MM-DD.md
 wiki/analysis/valuations/TICKER DCF Valuation YYYY-MM-DD.md
 wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
+wiki/analysis/decisions/ETF_EXCHANGE_TICKER Decision Memo YYYY-MM-DD.md
 wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/sentiment/ETF_EXCHANGE_TICKER X Sentiment YYYY-MM-DD.md
 wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
 wiki/overview/themes/THEME.md
 wiki/overview/macro/TOPIC.md
@@ -172,13 +192,23 @@ source/report links, business model, thesis/key debate, risks, catalysts,
 valuation watch items, follow-up, and unresolved ticker-level gaps. Link to
 normalized tables and charts instead of copying them.
 
+For ETFs use `wiki/reference/etf-entity-template.md`. Keep holdings and metrics
+in `raw/funds/`; use price/NAV, look-through multiples, yield, expense drag,
+tracking, and peers rather than corporate DCF. Without user-provided portfolio
+holdings, state fund suitability only and do not claim portfolio fit.
+
 ## Missing-Data Ownership
 
 - source note: extraction gaps
 - fundamentals: normalization and period-compatibility gaps
+- fund facts: ETF normalization, holdings-snapshot, and methodology gaps
 - entity: unresolved ticker-level gaps
 - valuation: valuation blockers only
 - decision: action-relevant gaps only
+
+ETF v1 supports passive, index-tracking equity ETFs only. Stop with
+`unsupported ETF type` for bond, commodity, multi-asset, active, leveraged,
+inverse, or derivative-heavy funds.
 
 ## Log Standard
 

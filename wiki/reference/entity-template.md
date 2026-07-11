@@ -1,5 +1,9 @@
 # Entity Template
 
+This template is for operating companies. For an ETF use
+`wiki/reference/etf-entity-template.md`; do not adapt company fields such as
+business segments, corporate FCF, or DCF inputs to a fund.
+
 Use the entity as a thin living hub. Keep detailed numbers and charts in the
 linked fundamentals file and calculations in linked analysis memos.
 

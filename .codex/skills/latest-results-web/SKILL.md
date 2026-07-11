@@ -5,6 +5,15 @@ description: Use when the user asks for latest company results, the latest quart
 
 # Latest Results Web
 
+## Instrument Boundary
+
+Use this workflow for operating-company reporting. Do not treat ETF sponsor
+pages, holdings, distributions, or NAV updates as company earnings. Route a
+passive, index-tracking equity ETF to `official-source-etf-research`; do not
+create `TICKER_latest_results_source.md` for an ETF.
+For bond, commodity, multi-asset, active, leveraged, inverse, or derivative-
+heavy ETFs, stop with `unsupported ETF type` and create no artifacts.
+
 ## Source Priority
 
 1. SEC and official company filings

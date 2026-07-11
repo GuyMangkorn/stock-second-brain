@@ -1,4 +1,4 @@
 interface:
   display_name: "Latest Results Web"
-  short_description: "Find the latest official company result sources"
-  default_prompt: "Use $latest-results-web to find the latest official results for this ticker."
+  short_description: "Find latest official company result sources"
+  default_prompt: "Use $latest-results-web to find the latest official company results for this ticker."

@@ -1,6 +1,6 @@
 ---
 name: x-research
-description: Use when the user asks what people are saying on X/Twitter, CT, fintwit, or public social media about a stock, sector, company, earnings event, or market narrative.
+description: Use when the user asks what people are saying on X/Twitter, CT, fintwit, or public social media about a stock, ETF, sector, company, earnings event, or market narrative.
 ---
 
 # X Research
@@ -18,13 +18,21 @@ write no files.
 
 Use `lean` when the user asks to save or when source-backed sentiment materially
 changes a durable follow-up. Save
-`wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md`, update only entity
-follow-up, and append one workflow log bullet.
+`wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md`, or
+`wiki/analysis/sentiment/ETF_EXCHANGE_TICKER X Sentiment YYYY-MM-DD.md` for an
+ETF; update only entity follow-up, and append one workflow log bullet.
+
+Chat sentiment may cover any ETF. Durable ETF output is limited to passive,
+index-tracking equity ETFs. For bond, commodity, multi-asset, active,
+leveraged, inverse, or derivative-heavy ETFs, stay in chat and do not create or
+update ETF artifacts under the v1 contract.
 
 ## Workflow
 
 1. Define a one-day, seven-day, or post-event window.
-2. Search ticker/company plus bullish, bearish, expert, and source-linked terms.
+2. Search ticker/company/fund plus bullish, bearish, expert, and source-linked
+   terms. For an ETF, resolve `EXCHANGE:TICKER` and separate fund commentary
+   from claims about the index or underlying holdings.
 3. Prefer traceable posts with reasoning or primary-source links.
 4. Group by theme and separate retail chatter, expert commentary, news reaction,
    and independently verified posts.
@@ -46,6 +54,8 @@ Quote sparingly and link posts. Do not treat virality as evidence.
 
 Use query summary, theme groups, source-backed posts, overall sentiment,
 caveats, and follow-up. Keep company facts in their owning files.
+For ETFs, keep official fund facts in `raw/funds/` and use exchange-qualified
+identity in durable filenames and links.
 
 Stop when access is unavailable, results are too noisy, posts are untraceable,
 or rumor cannot be separated from evidence.

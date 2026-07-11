@@ -20,12 +20,21 @@ thesis, risk, catalyst, or valuation watch item. In that case, create a compact
 `wiki/analysis/catalysts/TICKER Market Move YYYY-MM-DD.md`, update the entity by
 delta, and append one workflow bullet to `log.md`.
 
+This skill may explain any ETF move in `chat`. Durable ETF output is limited to
+passive, index-tracking equity ETFs. For bond, commodity, multi-asset, active,
+leveraged, inverse, or derivative-heavy ETFs, stay in chat and do not create or
+update ETF artifacts under the v1 contract.
+
 ## Workflow
 
 1. Define the asset, exchange, session, timezone, and comparison window.
+   For an ETF, resolve `entity_key: EXCHANGE:TICKER` and use the
+   `ETF_EXCHANGE_TICKER` filename prefix for durable outputs.
 2. Freshly verify price, percentage move, and timestamp. Correct a false premise
    before explaining it.
 3. Compare the move with a relevant broad index and sector or peer basket.
+   For an ETF, also distinguish fund-specific flows, premium/discount or
+   tracking effects from benchmark and underlying-holdings moves.
 4. Build a dated event timeline from official company or regulatory sources,
    market data, and reputable reporting.
 5. Rank no more than three candidate drivers and assign one evidence label:
@@ -44,7 +53,7 @@ delta, and append one workflow bullet to `log.md`.
 4. `What to watch`: one or two falsifiers or next confirmations.
 
 Link sources beside the claims they support. Keep current price facts separate
-from company-filed fundamentals.
+from company-filed fundamentals or normalized ETF fund facts.
 
 ## Durable Output
 
@@ -52,6 +61,7 @@ The catalyst note contains only:
 
 - move and relative-performance check
 - ranked drivers with evidence labels
+- for ETFs, separate fund-, index-, and underlying-holdings-level drivers
 - thesis impact
 - falsifiers / follow-up
 - compact source links
@@ -65,4 +75,4 @@ copy their financial tables, source maps, bull/bear cases, or missing-data lists
 - Treating a nearby headline as proven causality.
 - Ignoring a market-wide or sector-wide move.
 - Mixing stale quote data with current-event attribution.
-- Saving routine price noise as durable company knowledge.
+- Saving routine price noise as durable company or ETF knowledge.
