@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[JPM]] | JPM | JPMorgan Chase & Co. | NYSE | 1Q 2026 | 3 |
 | [[SMIC]] | SMIC | Semiconductor Manufacturing International Corporation | SEHK 00981 / SSE STAR 688981 | Q1 2026 | 7 |
 | [[KO]] | KO | The Coca-Cola Company | NYSE | Q1 2026 | 6 |
 | [[NVDA]] | NVDA | NVIDIA Corporation | Nasdaq Global Select Market | Q1 FY2027 | 7 |

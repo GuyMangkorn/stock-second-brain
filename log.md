@@ -3,6 +3,7 @@
 ## 2026-07-11
 
 - `source-integrity-audit`: Repaired direct entity links across company analysis and multi-ticker notes; added `[[ETF Index]]`, `[[ETF_AMEX_DGRO]]`, `[[ETF_AMEX_VIG]]`, and `[[ETF_NASDAQ_VIGI]]`; the audit records zero missing links in scope while keeping the 100-row ETF tracker unchanged.
+- `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[JPM]]`; created the official source note, normalized fundamentals, entity, bank-specific valuation, market quote, and `[[JPM Decision Memo 2026-07-11]]`; action read is `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-2Q26` pending 2Q26 results.
 
 ## 2026-07-10
 

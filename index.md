@@ -25,6 +25,9 @@ individual entity notes. Historical activity lives in [[log]].
 
 ## Recent Work
 
+- **2026-07-11 — JPM:** Completed the new-ticker decision pipeline through P13;
+  [[JPM Decision Memo 2026-07-11]] reads `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-2Q26`
+  at a $336.47 close versus base bank-specific P/TBV value of $304.84.
 - **2026-07-09 — JNJ:** Refreshed [[JNJ Decision Memo 2026-07-09]] at a USD
   263.40 close; action remains `WAIT / DO-NOT-ADD-before-Q2-results`.
 - **2026-07-09 — SMIC:** Completed the new-ticker flow and
