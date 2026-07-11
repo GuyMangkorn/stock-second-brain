@@ -25,6 +25,9 @@ individual entity notes. Historical activity lives in [[log]].
 
 ## Recent Work
 
+- **2026-07-11 — LLY:** Completed the new-ticker decision pipeline through P13;
+  [[LLY Decision Memo 2026-07-11]] reads `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-Q2-2026`
+  at a USD 1,188.58 close versus base DCF USD 248.73 and bull DCF USD 385.30.
 - **2026-07-11 — JPM:** Completed the new-ticker decision pipeline through P13;
   [[JPM Decision Memo 2026-07-11]] reads `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-2Q26`
   at a $336.47 close versus base bank-specific P/TBV value of $304.84.

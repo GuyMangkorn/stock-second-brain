@@ -6,6 +6,7 @@ type: entity-index
 
 | Entity | Ticker | Company | Market | Latest Period | Source Gaps |
 |---|---|---|---|---|---:|
+| [[LLY]] | LLY | Eli Lilly and Company | NYSE | Q1 2026 | 9 |
 | [[JPM]] | JPM | JPMorgan Chase & Co. | NYSE | 1Q 2026 | 3 |
 | [[SMIC]] | SMIC | Semiconductor Manufacturing International Corporation | SEHK 00981 / SSE STAR 688981 | Q1 2026 | 7 |
 | [[KO]] | KO | The Coca-Cola Company | NYSE | Q1 2026 | 6 |
