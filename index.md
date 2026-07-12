@@ -17,6 +17,7 @@ updated: 2026-07-12
 - Earnings: `wiki/analysis/earnings/`
 - Catalysts / Market Moves: `wiki/analysis/catalysts/`
 - Comparisons: `wiki/analysis/comparisons/`
+- ETF Performance: [[ETF Performance Index]]
 - Sentiment: `wiki/analysis/sentiment/`
 - Source Audits: `wiki/analysis/audits/`
 
@@ -24,6 +25,11 @@ The entity roster and ticker-level source gaps live in [[Entity Index]] and
 individual entity notes. Historical activity lives in [[log]].
 
 ## Recent Work
+
+- **2026-07-12 — ETF performance:** Added the pilot performance section for
+  [[ETF_AMEX_DGRO]], [[ETF_AMEX_VIG]], [[ETF_NASDAQ_VIGI]], and [[ETF_AMEX_DIVI]];
+  [[ETF Performance Regime Matrix]] separates structural exposure from observed
+  behavior across the common 2021-2025 window.
 
 - **2026-07-12 — DIVI:** Added [[ETF_AMEX_DIVI]] and refreshed official Franklin
   factsheet/holdings/methodology; [[ETF_AMEX_DIVI Decision Memo 2026-07-12]] reads

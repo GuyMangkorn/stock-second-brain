@@ -75,6 +75,11 @@ pair was NAV `$42.72` versus market price `$42.81` (`+0.21%` premium), with a
 `24.65%` versus index `24.58%`; since inception NAV return is `11.02%` versus
 index `11.26%`. No corporate DCF is applicable.
 
+## Performance
+
+- [[ETF_AMEX_DIVI Performance]]
+- [[ETF Performance Regime Matrix]]
+
 ## Reports / Sources
 
 - [[ETF_AMEX_DIVI_fund_source_2026-07-12]]

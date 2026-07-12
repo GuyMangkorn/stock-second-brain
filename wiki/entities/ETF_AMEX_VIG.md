@@ -11,7 +11,7 @@ latest_holdings_as_of: 2026-05-31
 source_gap_count: 2
 source_gaps:
   - Current price/NAV and trading-date market data are not normalized in the vault.
-  - Expense ratio and current distribution data are not captured in the tracker source set.
+  - Current distribution data are not normalized in the entity pass.
 tags:
   - entity/etf
   - ticker/VIG
@@ -47,6 +47,11 @@ tags:
 ## Valuation Watch Items
 
 ETF valuation should be tracked through price/NAV, distribution yield, expense ratio, and holdings overlap. No DCF is created for this ETF in the current scope.
+
+## Performance
+
+- [[ETF_AMEX_VIG Performance]]
+- [[ETF Performance Regime Matrix]]
 
 ## Reports / Sources
 

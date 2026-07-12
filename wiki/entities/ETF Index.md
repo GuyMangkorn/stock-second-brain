@@ -20,3 +20,11 @@ tags:
 ## Maintenance Rule
 
 ใช้ `entity_key: EXCHANGE:TICKER` เป็น identity หลัก เพื่อไม่ให้ ticker ที่ซ้ำข้ามตลาด เช่น `TDIV` หรือ `WDIV` ชนกัน. Holdings, yield, distribution, expense ratio, และ price ต้องอ้างอิง official source ที่มี as-of date ก่อนอัปเดต entity.
+
+## Performance Tracker
+
+- [[ETF Performance Index]]
+- [[ETF Performance Regime Matrix]]
+
+Performance history belongs to `raw/funds/ETF_EXCHANGE_TICKER_performance.md`
+and its linked analysis note, not to this entity index.

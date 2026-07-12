@@ -2,6 +2,12 @@
 
 ## 2026-07-12
 
+- `etf-performance`: Added the pilot performance data owners under `raw/funds/`,
+  official/secondary source notes under `raw/imports/`, four per-ETF analysis
+  notes, [[ETF Performance Index]], and [[ETF Performance Regime Matrix]] for
+  DGRO, VIG, VIGI, and DIVI; common-window read uses official NAV total return
+  for 2021-2025 and labels monthly/drawdown context as secondary.
+
 - `source-integrity-audit`: Checked 264 Markdown files (97 analysis notes); repaired 9 orphan/backlink gaps through confirmed owner indexes and `[[UNH]]`, found no confirmed broken entity links or exact duplicate analysis files, deleted 0 files, and retained dated US refresh plus ETF analysis groups because they preserve unique sources, roles, incoming links, or unresolved context.
 
 - `decision-pipeline`: Added `[[ETF_AMEX_DIVI]]`, refreshed official Franklin
