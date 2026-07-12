@@ -31,8 +31,28 @@ tags:
 - DGRO official annual coverage in this pass begins at 2021; VIG begins at 2011;
   VIGI complete-year official coverage begins at 2017; DIVI begins at 2017.
 
+## VIGI Capture Detail
+
+- Official Vanguard annual NAV total returns and benchmark comparison: product
+  page, annual table as of 2025-12-31; 2016 is an inception-year partial.
+- Official current performance: advisor product page reports VIGI NAV YTD
+  `+4.64%` as of 2026-07-08 and 1-year NAV return `+6.06%` as of 2026-06-30.
+- Official fund factsheet: `F4415.pdf`, as of 2026-03-31; benchmark is the S&P
+  Global Ex-U.S. Dividend Growers Index (USD) NTR, expense ratio `0.07%`,
+  quarterly distributions, and 3-year monthly standard deviation `12.01%`.
+- Official benchmark methodology and return definitions: S&P Dividend Growers
+  Index Series methodology; the benchmark NTR reinvests regular dividends after
+  applicable withholding taxes.
+- Secondary risk context: PortfoliosLab last updated 2026-07-09; maximum
+  drawdown `-31.01%` on 2020-03-23 and recovery `114` trading sessions. This is
+  adjusted-price total-return context, not an official NAV series.
+
 ## Gaps
 
 - A durable issuer monthly NAV observation series is not captured for this pass.
 - Secondary monthly and drawdown figures must not replace official NAV returns.
 - Holdings-level attribution for 2022 and 2025 remains a follow-up, not a fact.
+- Vanguard current benchmark YTD is not disclosed in the same current capture;
+  no benchmark YTD is presented on the VIGI performance page.
+- Current official price/NAV quote and distribution records were not needed for
+  this performance save and remain separate from the NAV return ranking.

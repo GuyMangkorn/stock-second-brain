@@ -2,6 +2,10 @@
 
 ## 2026-07-12
 
+- `etf-performance`: Refreshed `[[ETF_NASDAQ_VIGI Performance]]` with official
+  2026 YTD NAV `+4.64%` as of 2026-07-08, updated CAGR/risk read-through, and
+  VIGI-specific source/as-of detail in `raw/imports/ETF_performance_sources_2026-07-12.md`.
+
 - `skills`: Rewrote `check-etf-performance` so `[Skills] TICKER` fetches fresh
   source-backed data in the compact one-page performance format; chat remains
   read-only and durable refreshes follow the single-page plus source-batch

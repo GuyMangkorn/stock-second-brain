@@ -15,10 +15,10 @@ tags:
 
 ## Bottom line
 
-VIGI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเต็มช่วง 2017-2025 และ CAGR ใน common window
-2021-2025 อยู่ที่ `5.46%`. ปีดีที่สุดคือ 2017 และแย่ที่สุดคือ 2022 ที่
-`-16.71%`. ใน pilot VIGI เป็นกองที่ไวต่อ FX, country และ regional risk มากที่สุด.
-2026 YTD snapshot ที่บันทึกไว้คือ `+4.12%` ณ 31 พ.ค. 2026.
+VIGI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเต็มช่วง 2017-2025; 1-year NAV Total Return
+อยู่ที่ `+6.06%` ณ 30 มิ.ย. 2026 และ 2026 YTD อยู่ที่ `+4.64%` ณ 8 ก.ค.
+2026. ปีดีที่สุดคือ 2017 ที่ `+27.80%` และแย่ที่สุดคือ 2022 ที่ `-16.71%`.
+ตัวเลข current NAV มาจาก [Vanguard advisor product page](https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf).
 
 ## Performance check
 
@@ -26,7 +26,13 @@ VIGI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเ
 - Inception: 25 ก.พ. 2016
 - Metric: `NAV Total Return` รวมเงินปันผล reinvested และ fund expenses
 - Benchmark: Spliced S&P Global Ex-U.S. Dividend Growers Index in USD NTR
+- Coverage/source note: annual rows เป็น official Vanguard returns ถึง 2025; 2016
+  เป็น official inception-year partial และ 2026 YTD เป็น official NAV ณ 8 ก.ค.
+  2026. Vanguard ยังไม่แสดง benchmark YTD ล่าสุดในฐานเดียวกัน
 - `†` คือ official inception-year partial; complete-year ranking เริ่ม 2017
+
+Annual table จาก [Vanguard product performance](https://investor.vanguard.com/investment-products/etfs/profile/vigi)
+โดยใช้ NAV Total Return เทียบกับ benchmark เดียวกัน:
 
 | ปี | VIGI TR | Benchmark |
 |---|---:|---:|
@@ -47,30 +53,31 @@ VIGI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเ
 - Least positive: 2024, **+2.62%**
 - Worst: 2022, **-16.71%**
 - Least bad down year: 2018, **-11.32%**
-- 2026 YTD snapshot: **+4.12% NAV**, as of 31 พ.ค. 2026
+- 2026 YTD: **+4.64% NAV**, as of 8 ก.ค. 2026
 
 ## Risk read-through
 
-Average monthly return `+0.77%`, positive months `66%`. Secondary maximum drawdown
-ประมาณ `-31.01%` ใน COVID crash (23 มี.ค. 2020) และใช้ `114` trading sessions
-เพื่อฟื้นกลับจุดสูงสุดเดิม. Expense ratio `0.07%`.
+CAGR ที่คำนวณจาก official annual NAV returns อยู่ที่ `8.95%` สำหรับ 2017-2025
+และ `5.46%` สำหรับ common window 2021-2025; Vanguard รายงาน since-inception
+annualized return `8.91%` ณ 31 พ.ค. 2026. Official 3-year monthly standard
+deviation อยู่ที่ `12.01%` ณ 31 มี.ค. 2026. Expense ratio `0.07%` ณ 27 ก.พ.
+2026 และ distribution schedule เป็น quarterly. [Vanguard factsheet](https://fund-docs.vanguard.com/F4415.pdf)
 
-**Classification:** Structural = international dividend growth, developed และ
-emerging markets excluding U.S. Behavioral = FX/country-sensitive, upside ต่ำกว่า
-U.S. dividend-growth pair ใน common window และ downside สูงกว่า.
+Maximum drawdown ประมาณ `-31.01%` ใน COVID crash (23 มี.ค. 2020) และใช้ `114`
+trading sessions เพื่อฟื้นกลับจุดสูงสุดเดิม ตาม secondary adjusted-price
+total-return proxy; ตัวเลขนี้ไม่ใช่ official NAV series. [PortfoliosLab](https://portfolioslab.com/symbol/VIGI)
 
-## Driver notes
-
-- **2022, confirmed event:** global inflation, Ukraine war และ global rate
-  tightening สร้าง risk-off regime; non-U.S. currency และ regional exposure
-  ขยายผลขาดทุนเป็น `-16.71%`.
-- **2020, confirmed event:** COVID ทำให้เกิด drawdown `-31.01%`; recovery เร็วกว่า
-  VIG full-history แต่ initial shock ยังมีนัยสำคัญ.
-- **2025, probable:** international/value และ currency support ช่วยให้บวก
-  `16.89%`; ต้องดู holdings attribution ก่อนสรุปว่าเป็น edge ที่ทำซ้ำได้.
+**Classification:** passive international equity ETF, large-cap dividend growth,
+ครอบคลุม developed และ emerging markets excluding U.S.; ความเสี่ยงหลักคือ FX,
+country/region และ sector exposure. ข้อจำกัดของรอบนี้คือ as-of dates ต่างกัน
+ระหว่าง YTD, month-end performance และ secondary drawdown data.
 
 ## Sources
 
 - [Vanguard VIGI product page](https://investor.vanguard.com/investment-products/etfs/profile/vigi)
-- [PortfoliosLab](https://portfolioslab.com/symbol/VIGI) และ [Total Real Returns](https://totalrealreturns.com/n/VIGI)
+- [Vanguard advisor product page](https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf)
+- [Vanguard VIGI factsheet](https://fund-docs.vanguard.com/F4415.pdf)
+- [S&P Global Ex-U.S. Dividend Growers Index](https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-global-ex-us-dividend-growers-index/)
+- [S&P Dividend Growers Index Series Methodology](https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-dividend-growers-index-series.pdf)
+- [PortfoliosLab](https://portfolioslab.com/symbol/VIGI) — secondary adjusted-price drawdown/recovery context
 - [[ETF_performance_sources_2026-07-12]] | [[ETF Performance Index]]
