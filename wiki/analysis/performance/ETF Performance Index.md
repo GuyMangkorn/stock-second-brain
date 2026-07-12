@@ -23,6 +23,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 5.46% | 4.12% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
 | [[ETF_AMEX_DIVI]] | official 2017-2025 | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 | [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
+| [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
 
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
@@ -36,6 +37,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VIGI Performance]] | 12.42% | -16.71% | 16.16% | 2.62% | 16.89% | 30.47% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
 | [[ETF_AMEX_DTD Performance]] | 26.14% | -3.81% | 10.44% | 18.75% | 14.22% | 81.75% | 4 / 1 |
+| [[ETF_AMEX_FVD Performance]] | 24.86% | -5.24% | 4.10% | 10.00% | 8.19% | 46.58% | 4 / 1 |
 
 ## Regime read
 
@@ -48,12 +50,14 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 **สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
 DGRO และ VIG เป็น U.S. quality core ที่ behavior ใกล้กัน. VIGI เพิ่ม geographic
-diversification แต่แลกกับ FX/country sensitivity และผลตอบแทนช่วงนี้ต่ำกว่า.
+diversification แต่แลกกับ FX/country sensitivity และผลตอบแทนช่วงนี้ต่ำกว่า. FVD
+เพิ่ม U.S. value/dividend income exposure แต่มี utilities และ financials tilt.
 
 ## Sources
 
 - รายละเอียดรายกอง: [[ETF_AMEX_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
-  [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]]
+  [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]],
+  [[ETF_AMEX_DTD Performance]], [[ETF_AMEX_FVD Performance]]
 - Source batch: [[ETF_performance_sources_2026-07-12]]
 - [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
 - [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)

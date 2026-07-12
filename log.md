@@ -2,6 +2,11 @@
 
 ## 2026-07-12
 
+- `etf-performance`: Created `[[ETF_AMEX_FVD Performance]]`, added FVD to
+  `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-12.md`;
+  official 2016-2025 NAV Total Return implies `9.23%` CAGR across the full table,
+  `7.95%` CAGR in 2021-2025, and current YTD `+5.76%` as of 2026-06-30.
+
 - `etf-performance`: Created `[[ETF_AMEX_DTD Performance]]`, added DTD to
   `[[ETF Performance Index]]`, and captured official 2016-2025 NAV Total Return;
   latest completed-year base is 2025 `+14.22%` after the `0.28%` expense ratio,
