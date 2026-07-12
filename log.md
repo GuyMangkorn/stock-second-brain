@@ -2,6 +2,12 @@
 
 ## 2026-07-12
 
+- `etf-performance`: Created `[[ETF_AMEX_DTD Performance]]`, added DTD to
+  `[[ETF Performance Index]]`, and captured official 2016-2025 NAV Total Return;
+  latest completed-year base is 2025 `+14.22%` after the `0.28%` expense ratio,
+  with current YTD `+10.80%` as of 2026-06-30 in
+  `raw/imports/ETF_performance_sources_2026-07-12.md`.
+
 - `etf-performance`: Refreshed `[[ETF_NASDAQ_VIGI Performance]]` with official
   2026 YTD NAV `+4.64%` as of 2026-07-08, updated CAGR/risk read-through, and
   VIGI-specific source/as-of detail in `raw/imports/ETF_performance_sources_2026-07-12.md`.
