@@ -2,6 +2,8 @@
 
 ## 2026-07-12
 
+- `source-integrity-audit`: Checked 264 Markdown files (97 analysis notes); repaired 9 orphan/backlink gaps through confirmed owner indexes and `[[UNH]]`, found no confirmed broken entity links or exact duplicate analysis files, deleted 0 files, and retained dated US refresh plus ETF analysis groups because they preserve unique sources, roles, incoming links, or unresolved context.
+
 - `decision-pipeline`: Added `[[ETF_AMEX_DIVI]]`, refreshed official Franklin
   source/fund facts and holdings status, and created `[[ETF_AMEX_DIVI Decision Memo 2026-07-12]]`;
   fund-level action read is `WATCH` pending fresher same-day price/NAV and a
