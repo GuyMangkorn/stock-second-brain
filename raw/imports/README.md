@@ -16,5 +16,6 @@ missing/unverified fields.
 
 For ETFs include `entity_key: EXCHANGE:TICKER`, fund/sponsor, benchmark,
 passive-status evidence, separate data as-of dates, official methodology and
-holdings sources, and the handoff to
-`raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md`.
+holdings sources. Performance refreshes may use one compact batch note,
+`ETF_performance_sources_YYYY-MM-DD.md`, linked from the per-ETF performance
+page.

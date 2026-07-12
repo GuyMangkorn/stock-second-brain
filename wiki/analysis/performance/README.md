@@ -1,48 +1,59 @@
-# ETF Performance Section
+# ETF Performance Convention
 
 ## Purpose
 
-นี่คือชั้น analysis สำหรับเก็บและเปรียบเทียบ performance ของ passive,
-index-tracking equity ETF โดยมีเป้าหมายระยะยาวคือดูว่า ETF ใดเหมาะกับ
-สภาวะตลาดแบบใด, จุดแข็ง/จุดอ่อนอยู่ตรงไหน, drawdown หนักเพราะอะไร และควร
-จัดกลุ่ม exposure อย่างไรเพื่อรับมือหลาย economic regime หรือวิกฤติ
+เก็บ performance ของ passive, index-tracking equity ETF ให้สั้นพอสำหรับอ่านและ
+นำไปวิเคราะห์ต่อได้ทันที. หน้า ETF หนึ่งไฟล์เป็น owner ของตัวเลขและคำแปลผล.
 
-## Ownership
+## File Convention
 
 | Layer | Owner |
 |---|---|
-| `raw/imports/ETF_*_performance_source_YYYY-MM-DD.md` | source map, as-of dates, extraction gaps |
-| `raw/funds/ETF_*_performance.md` | normalized annual returns, rolling/monthly metrics, drawdown calculations and provenance |
-| `wiki/analysis/performance/ETF_* Performance.md` | per-ETF interpretation, ranking, behavioral classification and driver notes |
-| [[ETF Performance Index]] | coverage dashboard and entry point |
-| [[ETF Performance Regime Matrix]] | cross-ETF comparison and two-axis classification |
+| `wiki/analysis/performance/ETF_EXCHANGE_TICKER Performance.md` | ตัวเลข annual return, best/worst, risk read-through, classification, driver notes และ source links |
+| [[ETF Performance Index]] | coverage dashboard และ cross-ETF comparison |
+| `raw/imports/ETF_performance_sources_YYYY-MM-DD.md` | source map รวม, as-of dates, gaps และ audit trail ต่อรอบ refresh |
+| `raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md` | holdings, methodology, cost และ fund structure; ไม่ซ้ำ performance table |
 
-อย่าคัดลอกตาราง performance เต็มจาก `raw/funds/` มาซ้ำใน entity หรือ decision
-memo ให้ลิงก์กลับมาที่ normalized owner แทน
+ไม่สร้าง `raw/funds/ETF_*_performance.md` แยกอีก. ไม่คัดลอก performance table
+เข้า entity หรือ decision memo; ให้ลิงก์ไปหน้า ETF performance เพียงหน้าเดียว.
 
 ## Metric Convention
 
-- Canonical return คือ `NAV Total Return` ซึ่งรวม reinvested distributions และ
-  fund expenses เมื่อ issuer เปิดเผยข้อมูลในรูปนี้
-- `Market Price Total Return` เก็บแยกเพื่อดูผลจากราคาซื้อขาย, premium/discount
-  และ timing
-- Benchmark ต้องใช้ return basis เดียวกันกับ ETF และต้องรักษา as-of date
+- Canonical return คือ `NAV Total Return` รวม reinvested distributions และ fund
+  expenses; benchmark ต้องใช้ basis เดียวกัน
+- ตารางหลักใช้คอลัมน์ `ETF TR` และ `Benchmark` เท่านั้น. Market-price return
+  เก็บเฉพาะเมื่อมีประเด็น premium/discount ที่ต้องวิเคราะห์
 - Calendar-year ranking ใช้เฉพาะ complete years; inception-year และ current YTD
   เป็น partial และไม่จัดอันดับรวมกับปีเต็ม
+- `*` = secondary dividend-reinvested proxy; `†` = official inception-year
+  partial. ทั้งคู่ต้องมีคำอธิบายใต้ตาราง
+- Best/worst ของ ETF รายตัวใช้ complete years ที่มีในหน้านั้นได้ โดยต้องคง marker
+  ของแหล่งข้อมูลไว้; cross-ETF comparison ใช้เฉพาะ official common window
+  เดียวกัน
 - `Best up year` คือ positive return สูงสุด; `least positive` คือ positive return
   ต่ำสุด; `worst down year` คือ negative return ติดลบมากสุด; `least bad` คือ
   negative return ที่ใกล้ศูนย์ที่สุด
 - Monthly behavior และ maximum drawdown จาก secondary provider ต้องติดป้าย
-  `secondary`; ห้ามใช้แทน official NAV facts โดยไม่เปิดเผย
+  `secondary`; ห้ามใช้แทน official NAV facts
+
+## Minimal Page Template
+
+ลำดับมาตรฐานของ `ETF_EXCHANGE_TICKER Performance.md`:
+
+1. `Bottom line` — 2-3 ประโยค: period, best/worst และ current YTD
+2. `Performance check` — identity, metric, benchmark และ annual table
+3. `Up years / Down years` — best, least positive, worst, least bad
+4. `Risk read-through` — monthly behavior, drawdown, recovery และ as-of dates
+5. `Driver notes` — ไม่เกิน 3 regime/event notes; แยก confirmed กับ probable
+6. `Sources` — official issuer และ secondary links
 
 ## Classification Model
 
-ใช้สองแกนแยกกัน:
+ใช้สองแกนในหน้า ETF และสรุปอีกครั้งใน index:
 
-1. `Structural classification`: benchmark, geography, sector/factor tilt,
-   methodology, concentration and cost
-2. `Behavioral classification`: observed return, beta/capture, positive-month
-   rate, drawdown and response in a named regime
+1. `Structural`: benchmark, geography, factor tilt, methodology และ cost
+2. `Behavioral`: observed return, positive-month rate, drawdown และ response in
+   a named regime
 
 ชื่อกลุ่มเป็น hypothesis ที่ refresh ได้ ไม่ใช่คำสัญญาว่ากองจะป้องกันวิกฤติใน
 อนาคต และไม่ใช่คำแนะนำ portfolio fit โดยไม่มี holdings ของผู้ใช้
@@ -50,16 +61,15 @@ memo ให้ลิงก์กลับมาที่ normalized owner แท
 ## Refresh Workflow
 
 1. Verify issuer identity and exchange as `EXCHANGE:TICKER`.
-2. Capture official performance/factsheet and source note first.
-3. Normalize annual and rolling/monthly metrics in `raw/funds/`.
-4. Refresh the per-ETF analysis note.
-5. Update [[ETF Performance Index]] and [[ETF Performance Regime Matrix]] only
-   when the common window or classification changes.
-6. Add one dated workflow bullet to `log.md` for a durable refresh.
+2. Capture sources in one dated batch note under `raw/imports/`.
+3. Update one per-ETF performance page; keep only metrics needed for decisions.
+4. Update [[ETF Performance Index]] when coverage, common window or grouping
+   changes.
+5. Add one dated workflow bullet to `log.md`.
 
 ## Pilot Status
 
 Pilot coverage is [[ETF_AMEX_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
-[[ETF_NASDAQ_VIGI Performance]], and [[ETF_AMEX_DIVI Performance]]. The first
-cross-ETF common window is 2021-2025. 2026 data remain partial and are shown as
-freshness context, not as a full-year ranking.
+[[ETF_NASDAQ_VIGI Performance]], and [[ETF_AMEX_DIVI Performance]]. The common
+window is 2021-2025. 2026 data remain partial and are shown as freshness context,
+not as a full-year ranking.

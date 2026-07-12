@@ -1,7 +1,7 @@
-# Normalized ETF Fund Facts
+# ETF Fund Facts
 
-This folder owns normalized, source-backed facts for passive,
-index-tracking equity ETFs.
+This folder owns normalized, source-backed structure facts for passive,
+index-tracking equity ETFs: holdings, methodology, cost, income and identity.
 
 Use `ETF_EXCHANGE_TICKER_fund_facts.md` so listings with the same ticker do not
 collide. Each file must use `entity_key: EXCHANGE:TICKER`, retain separate
@@ -10,8 +10,9 @@ methodology, and link back to its source note under `raw/imports/`.
 
 Required sections are `Identity & Structure`, `Cost & Tradability`, `Portfolio
 Exposure`, `Index Methodology`, `Performance & Income`, and `Risks & Gaps`.
-Store facts once here; ETF entities, comparisons, and decisions should link to
-this file rather than copy full tables.
+Historical performance belongs to the single page under
+`wiki/analysis/performance/ETF_EXCHANGE_TICKER Performance.md`; do not create a
+second `raw/funds/*_performance.md` table.
 
 Do not place company financial statements here. Do not normalize unsupported
 bond, commodity, multi-asset, active, leveraged, inverse, or derivative-heavy

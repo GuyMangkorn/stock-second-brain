@@ -24,7 +24,7 @@ tags:
 ## Performance Tracker
 
 - [[ETF Performance Index]]
-- [[ETF Performance Regime Matrix]]
 
-Performance history belongs to `raw/funds/ETF_EXCHANGE_TICKER_performance.md`
-and its linked analysis note, not to this entity index.
+Performance history belongs to the single page
+`wiki/analysis/performance/ETF_EXCHANGE_TICKER Performance.md`, not to this
+entity index. Fund structure and holdings remain in `raw/funds/`.

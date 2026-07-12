@@ -1,10 +1,11 @@
 ---
-type: etf-performance-analysis
+type: etf-performance
 instrument_type: ETF
 entity_key: AMEX:VIG
 ticker: VIG
 updated: 2026-07-12
-normalized_performance: raw/funds/ETF_AMEX_VIG_performance.md
+source_batch: raw/imports/ETF_performance_sources_2026-07-12.md
+return_basis: NAV total return
 tags:
   - analysis/etf-performance
   - ticker/VIG
@@ -12,50 +13,75 @@ tags:
 
 # VIG Performance
 
-## Bottom Line
+## Bottom line
 
-ใน common window 2021-2025 VIG ให้ cumulative NAV total return `70.58%` หรือ
-CAGR `11.27%`. ปีดีที่สุดคือ 2021 ที่ `+23.64%`; ปีบวกที่น้อยที่สุดคือ 2025 ที่
-`+14.18%`; ปีแย่ที่สุดและเป็นปีติดลบเดียวคือ 2022 ที่ `-9.79%`. Official history
-ยาวกว่ากองอื่นใน pilot และ secondary extension ชี้ว่า 2008 เป็นวิกฤติรุนแรง
-กว่าช่วง 2022 มาก.
+VIG มีผลตอบแทนเป็นบวก 15 จาก 19 ปีเต็มช่วง 2007-2025 โดยปีดีที่สุดคือ 2019
+และแย่ที่สุดคือ 2008*. Official 2011-2025 ให้ภาพ quality dividend-growth ที่
+ฟื้นตัวดีหลังวิกฤติ แต่ปี 2022 ยังติดลบ `-9.79%`. 2026 YTD snapshot ที่บันทึกไว้
+คือ `+7.19%` ณ 31 พ.ค. 2026.
 
-## Coverage / Data
+## Performance check
 
-- Official calendar-year NAV history in this pass: 2011-2025.
-- Secondary adjusted proxy extension: 2006 partial through 2010.
-- 2026 YTD: `+7.19%` as of 2026-05-31.
-- Monthly secondary context: average `+0.88%`, positive months `67%`.
-- Secondary full-history maximum drawdown: `-46.81%` in March 2009, with recovery
-  `491` trading sessions; COVID drawdown was `-31.72%`.
+- `entity_key: AMEX:VIG`
+- Inception: 21 เม.ย. 2006
+- Metric: `NAV Total Return` รวมเงินปันผล reinvested และ fund expenses
+- Benchmark: Spliced S&P U.S. Dividend Growers Index TR
+- ปี 2011-2025 ใช้ official NAV return ของ Vanguard; `*` คือ
+  dividend-reinvested proxy สำหรับปี 2006-2010 ที่หน้า Vanguard ปัจจุบันไม่แสดง
+  annual table ย้อนหลังถึง 2006
 
-รายละเอียดอยู่ที่ [[ETF_AMEX_VIG_performance]] และ source map ที่
-[[ETF_AMEX_VIG_performance_source_2026-07-12]].
+| ปี | VIG TR | Benchmark |
+|---|---:|---:|
+| 2006* | 8.55% | — |
+| 2007* | 5.63% | — |
+| 2008* | -26.69% | — |
+| 2009* | 19.58% | — |
+| 2010* | 14.74% | — |
+| 2011 | 6.21% | 6.32% |
+| 2012 | 11.61% | 11.73% |
+| 2013 | 28.99% | 29.03% |
+| 2014 | 10.06% | 10.12% |
+| 2015 | -1.95% | -1.88% |
+| 2016 | 11.84% | 11.93% |
+| 2017 | 22.22% | 22.29% |
+| 2018 | -2.02% | -1.98% |
+| 2019 | 29.71% | 29.75% |
+| 2020 | 15.46% | 15.62% |
+| 2021 | 23.64% | 23.71% |
+| 2022 | -9.79% | -9.70% |
+| 2023 | 14.46% | 14.52% |
+| 2024 | 17.02% | 17.07% |
+| 2025 | 14.18% | 14.24% |
 
-## Classification
+**Up years / Down years**
 
-- **Structural:** U.S. dividend appreciation / quality large-cap; benchmark is
-  the Spliced S&P U.S. Dividend Growers Index TR.
-- **Behavioral:** relatively defensive participation in broad U.S. equity moves,
-  but the long history shows that dividend growth is not a crisis hedge.
-- **Instrument-level role:** core dividend-growth candidate; this is not a
-  portfolio-fit conclusion.
+- Best: 2019, **+29.71%**
+- Least positive: 2007*, **+5.63%**
+- Worst: 2008*, **-26.69%**
+- Least bad down year: 2015, **-1.95%**
+- 2026 YTD snapshot: **+7.19% NAV**, as of 31 พ.ค. 2026
 
-## Driver Notes
+## Risk read-through
 
-- **2022, confirmed event:** Fed tightening and high inflation pressured equity
-  multiples. **Probable composition driver:** VIG's quality/large-cap profile
-  limited the loss relative to VIGI, but it still fell `-9.79%`.
-- **2020, confirmed event:** COVID caused a `-31.72%` secondary drawdown despite
-  rapid monetary support. This is a useful reminder that dividend history does
-  not equal capital preservation.
-- **2008-2009, secondary context:** VIG's maximum drawdown reached `-46.81%` and
-  took 491 sessions to recover. The period predates the other three pilot funds,
-  so it should not be used as a direct four-way comparison.
+Average monthly return `+0.88%`, positive months `67%`. Secondary maximum drawdown
+ประมาณ `-46.81%` ใน 9 มี.ค. 2009 และใช้ `491` trading sessions เพื่อฟื้นกลับ
+จุดสูงสุดเดิม. COVID drawdown อยู่ที่ `-31.72%`. Expense ratio `0.04%`.
 
-## Links
+**Classification:** Structural = U.S. dividend appreciation / quality large-cap.
+Behavioral = ค่อนข้าง defensive เมื่อเทียบกับ broad equity แต่ dividend history
+ไม่ใช่ crisis hedge.
 
-- [[ETF_AMEX_VIG]]
-- [[ETF Performance Index]]
-- [[ETF Performance Regime Matrix]]
-- [[ETF_AMEX_VIG_performance]]
+## Driver notes
+
+- **2022, confirmed event:** Fed tightening และ high inflation กดดัน equity
+  multiples; quality/large-cap ช่วยจำกัดความเสียหายแต่ยังติดลบ `-9.79%`.
+- **2020, confirmed event:** COVID ทำให้เกิด drawdown `-31.72%` แม้มี monetary
+  support อย่างรวดเร็ว.
+- **2008-2009, secondary:** drawdown ลึกและ recovery ยาวกว่าช่วง 2022 อย่างมาก;
+  ใช้เป็น historical risk context ไม่ใช่ direct four-way comparison.
+
+## Sources
+
+- [Vanguard VIG product page](https://investor.vanguard.com/investment-products/etfs/profile/vig)
+- [PortfoliosLab](https://portfolioslab.com/symbol/VIG) และ [Total Real Returns](https://totalrealreturns.com/n/VIG)
+- [[ETF_performance_sources_2026-07-12]] | [[ETF Performance Index]]

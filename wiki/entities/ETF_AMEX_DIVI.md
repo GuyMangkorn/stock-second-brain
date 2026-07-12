@@ -78,7 +78,7 @@ index `11.26%`. No corporate DCF is applicable.
 ## Performance
 
 - [[ETF_AMEX_DIVI Performance]]
-- [[ETF Performance Regime Matrix]]
+- [[ETF Performance Index]]
 
 ## Reports / Sources
 

@@ -51,7 +51,7 @@ ETF valuation should be tracked through price/NAV, distribution yield, expense r
 ## Performance
 
 - [[ETF_NASDAQ_VIGI Performance]]
-- [[ETF Performance Regime Matrix]]
+- [[ETF Performance Index]]
 
 ## Reports / Sources
 

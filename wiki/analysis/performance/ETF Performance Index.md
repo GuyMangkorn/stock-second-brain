@@ -11,44 +11,47 @@ tags:
 
 # ETF Performance Index
 
-นี่คือ dashboard สำหรับ performance coverage ของ ETF ใน vault. ตัวเลขใน
-`Common Window` ใช้ official NAV total return และไม่รวม 2026 YTD เพราะยังเป็น
-partial period. Monthly behavior และ drawdown ใช้ secondary context ตามที่ระบุ
-ในแต่ละ normalized file.
+หน้ารวมสำหรับเลือก ETF และเทียบ behavior. อ่านหน้า ETF รายตัวเพื่อดู annual
+table และ driver notes; อ่านหน้านี้เมื่อต้องการ cross-ETF analysis.
 
-## Pilot Coverage
+## Coverage
 
-| ETF | Performance note | Normalized data | Official calendar coverage | 2021-2025 CAGR | 2026 YTD (partial) | Best year in common window | Worst year in common window | Structural group | Behavioral read |
-|---|---|---|---|---:|---:|---:|---:|---|---|
-| [[ETF_AMEX_DGRO]] | [[ETF_AMEX_DGRO Performance]] | [[ETF_AMEX_DGRO_performance]] | 2021-2025; secondary extension 2014-2020 | 11.69% | 10.22% | 2021 +26.56% | 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
-| [[ETF_AMEX_VIG]] | [[ETF_AMEX_VIG Performance]] | [[ETF_AMEX_VIG_performance]] | 2011-2025; secondary extension 2007-2010 | 11.27% | 7.19% | 2021 +23.64% | 2022 -9.79% | U.S. dividend growth | quality/large-cap, defensive relative to broad equity |
-| [[ETF_NASDAQ_VIGI]] | [[ETF_NASDAQ_VIGI Performance]] | [[ETF_NASDAQ_VIGI_performance]] | 2017-2025; 2016 partial | 5.46% | 4.12% | 2025 +16.89% | 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
-| [[ETF_AMEX_DIVI]] | [[ETF_AMEX_DIVI Performance]] | [[ETF_AMEX_DIVI_performance]] | 2017-2025; 2016 partial | 13.59% | 11.38% | 2025 +34.51% | 2022 -1.74% | international dividend/value tilt | lower beta, value/financials/FX-sensitive |
+| ETF | History used | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
+|---|---|---:|---:|---|---|---|
+| [[ETF_AMEX_DGRO]] | 2014* / official 2021-2025 | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
+| [[ETF_AMEX_VIG]] | 2006* / official 2011-2025 | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
+| [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 5.46% | 4.12% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
+| [[ETF_AMEX_DIVI]] | official 2017-2025 | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 
-## Fast Read
+2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
+คือ secondary proxy; `†` คือ official inception-year partial.
 
-- ใน common window `DIVI` มี CAGR สูงสุดและ 2025 เป็นผู้นำ แต่ไม่ได้แปลว่าเป็น
-  defensive ทุก regime เพราะ international, FX และ financial-sector exposure ยัง
-  เป็นความเสี่ยงหลัก
-- `DGRO` และ `VIG` ให้ผลตอบแทนสะสมใกล้กันใน 2021-2025 โดย `DGRO` เสียหายน้อยกว่า
-  ใน 2022 แต่ต้องใช้ข้อมูล holdings/methodology ที่เทียบวันเดียวกันก่อนสรุปว่า
-  ต่างกันจาก factor ใด
-- `VIGI` เป็น international dividend-growth sleeve ที่ผลตอบแทนต่ำกว่าและ
-  drawdown สูงกว่าใน common window จึงควรวิเคราะห์เป็น regional diversifier ไม่ใช่
-  substitute แบบหนึ่งต่อหนึ่งกับ U.S. dividend-growth ETF
+## Common Window
 
-## Navigation
+| ETF | 2021 | 2022 | 2023 | 2024 | 2025 | Cumulative | Positive / Negative |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| [[ETF_AMEX_DGRO Performance]] | 26.56% | -7.85% | 10.43% | 16.61% | 15.74% | 73.82% | 4 / 1 |
+| [[ETF_AMEX_VIG Performance]] | 23.64% | -9.79% | 14.46% | 17.02% | 14.18% | 70.58% | 4 / 1 |
+| [[ETF_NASDAQ_VIGI Performance]] | 12.42% | -16.71% | 16.16% | 2.62% | 16.89% | 30.47% | 4 / 1 |
+| [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
 
-- [[ETF Performance Regime Matrix]]
-- [[ETF_AMEX_DGRO Performance]]
-- [[ETF_AMEX_VIG Performance]]
-- [[ETF_NASDAQ_VIGI Performance]]
-- [[ETF_AMEX_DIVI Performance]]
-- [[ETF Index]]
+## Regime read
 
-## Data Quality
+| Regime / question | Read-through |
+|---|---|
+| 2022 rate-hike shock | VIGI แย่สุด; DGRO/VIG มี quality cushion; DIVI ใกล้ flat จาก value/financials/ex-North-America mix |
+| 2020 COVID drawdown | Secondary drawdown: DGRO -35.10%, VIG -31.72%, VIGI -31.01%, DIVI -27.76%; ทุกกองยังมี equity risk |
+| 2025 rebound | DIVI นำที่ +34.51%; VIGI +16.89%; DGRO +15.74%; VIG +14.18% สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
+| Portfolio grouping | U.S. quality = DGRO/VIG; international growth = VIGI; international value/dividend = DIVI |
 
-- Canonical annual tables come from official issuer pages/factsheets.
-- Monthly behavior and drawdown metrics are secondary dividend-adjusted context.
-- A normalized monthly observation series is not yet captured for the pilot.
-- 2026 figures are partial and have separate as-of dates across issuers.
+**สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
+DGRO และ VIG เป็น U.S. quality core ที่ behavior ใกล้กัน. VIGI เพิ่ม geographic
+diversification แต่แลกกับ FX/country sensitivity และผลตอบแทนช่วงนี้ต่ำกว่า.
+
+## Sources
+
+- รายละเอียดรายกอง: [[ETF_AMEX_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
+  [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]]
+- Source batch: [[ETF_performance_sources_2026-07-12]]
+- [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
+- [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
