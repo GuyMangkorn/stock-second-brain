@@ -5,6 +5,15 @@
 เก็บ performance ของ passive, index-tracking equity ETF ให้สั้นพอสำหรับอ่านและ
 นำไปวิเคราะห์ต่อได้ทันที. หน้า ETF หนึ่งไฟล์เป็น owner ของตัวเลขและคำแปลผล.
 
+## Skill Route
+
+- `[Skills] TICKER` หรือ `[$check-etf-performance] TICKER` คือ trigger หลักสำหรับ
+  ดึงข้อมูลสดและตอบตาม format ด้านล่าง; default เป็น chat และไม่เขียนไฟล์
+- ใช้ `save`, `update`, `refresh` หรือ `memo` เท่านั้นเมื่อผู้ใช้ต้องการเก็บผลลง
+  vault; ให้เขียนหน้า ETF เดียวและ source batch เดียวต่อรอบ
+- Chat output และหน้า saved ต้องใช้ annual table, best/worst, risk read-through
+  และ source/as-of แบบเดียวกัน; ห้ามสร้าง performance table ซ้ำใน `raw/funds/`
+
 ## File Convention
 
 | Layer | Owner |

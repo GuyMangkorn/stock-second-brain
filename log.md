@@ -2,6 +2,11 @@
 
 ## 2026-07-12
 
+- `skills`: Rewrote `check-etf-performance` so `[Skills] TICKER` fetches fresh
+  source-backed data in the compact one-page performance format; chat remains
+  read-only and durable refreshes follow the single-page plus source-batch
+  convention.
+
 - `etf-performance`: Consolidated DGRO, VIG, VIGI, and DIVI into one compact
   performance page per ETF plus [[ETF Performance Index]]; removed duplicated
   normalized performance tables and replaced four source notes with one dated
