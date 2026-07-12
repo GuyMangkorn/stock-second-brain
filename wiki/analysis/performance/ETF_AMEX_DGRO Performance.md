@@ -16,9 +16,9 @@ tags:
 ## Bottom line
 
 DGRO มีผลตอบแทนเป็นบวก 8 จาก 11 ปีเต็มช่วง 2015-2025 โดยปีดีที่สุดคือ 2019*
-และแย่ที่สุดคือ 2022. ใน official common window 2021-2025 cumulative อยู่ที่
-`73.82%` หรือ CAGR `11.69%`. 2026 YTD snapshot ที่บันทึกไว้คือ `+10.22%`
-ณ 30 มิ.ย. 2026.
+และแย่ที่สุดคือ 2022. 10-year NAV CAGR อยู่ที่ `13.38%` ณ 30 มิ.ย. 2026 และใน
+official common window 2021-2025 cumulative อยู่ที่ `73.82%` หรือ CAGR `11.69%`.
+2026 YTD snapshot ที่บันทึกไว้คือ `+10.22%` ณ 30 มิ.ย. 2026.
 
 ## Performance check
 
@@ -56,7 +56,8 @@ DGRO มีผลตอบแทนเป็นบวก 8 จาก 11 ปี�
 
 Average monthly return `+1.05%`, positive months `67%`. Secondary maximum drawdown
 ประมาณ `-35.10%` ใน COVID crash (23 มี.ค. 2020) และใช้ `161` trading sessions
-เพื่อฟื้นกลับจุดสูงสุดเดิม. Expense ratio `0.08%`.
+เพื่อฟื้นกลับจุดสูงสุดเดิม. Expense ratio `0.08%`. **10-year NAV CAGR:** `13.38%`
+ณ 30 มิ.ย. 2026 จาก iShares official average annual total return.
 
 **Classification:** Structural = U.S. dividend growth / quality. Behavioral =
 quality large-cap ที่ downside ปานกลาง แต่ยังไวต่อ equity และ rate repricing.

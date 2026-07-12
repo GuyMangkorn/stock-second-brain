@@ -16,15 +16,17 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 ## Coverage
 
-| ETF | History used | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
-|---|---|---:|---:|---|---|---|
-| [[ETF_AMEX_DGRO]] | 2014* / official 2021-2025 | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
-| [[ETF_AMEX_VIG]] | 2006* / official 2011-2025 | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
-| [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 5.46% | 4.12% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
-| [[ETF_AMEX_DIVI]] | official 2017-2025 | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
-| [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
-| [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
+| ETF | History used | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
+|---|---|---:|---:|---:|---|---|---|
+| [[ETF_AMEX_DGRO]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
+| [[ETF_AMEX_VIG]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
+| [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.12% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
+| [[ETF_AMEX_DIVI]] | official 2017-2025 | not disclosed | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
+| [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.06% | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
+| [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 8.40% | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
 
+10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
+as-of date ต่างกัน; DIVI ยังไม่มีตัวเลข 10-year ที่ issuer เปิดเผยใน source ที่จับไว้.
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
 

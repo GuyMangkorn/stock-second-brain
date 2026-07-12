@@ -23,10 +23,10 @@ tags:
 ## Bottom line
 
 DTD ให้ cumulative NAV Total Return `+206.16%` ในช่วง complete calendar years
-2016-2025 หรือ CAGR `11.84%`; เป็นบวก 8 ปีและลบ 2 ปี. ปีดีที่สุดคือ 2019 ที่
-`+28.28%` และแย่ที่สุดคือ 2018 ที่ `-6.35%`. ฐานปีล่าสุดที่ใช้คือ 2025 ที่
-`+14.22%` ซึ่งเป็น NAV return หลัง expense ratio แล้ว. 2026 YTD ล่าสุดคือ
-`+10.80%` ณ 30 มิ.ย. 2026.
+2016-2025 หรือ CAGR `11.84%`; official rolling 10-year NAV CAGR ล่าสุดอยู่ที่
+`12.06%` ณ 30 มิ.ย. 2026. เป็นบวก 8 ปีและลบ 2 ปี. ปีดีที่สุดคือ 2019 ที่ `+28.28%`
+และแย่ที่สุดคือ 2018 ที่ `-6.35%`. ฐานปีล่าสุดที่ใช้คือ 2025 ที่ `+14.22%` ซึ่งเป็น
+NAV return หลัง expense ratio แล้ว. 2026 YTD ล่าสุดคือ `+10.80%` ณ 30 มิ.ย. 2026.
 
 ## Performance check
 
@@ -67,8 +67,8 @@ DTD ให้ cumulative NAV Total Return `+206.16%` ในช่วง complete
 ## Risk read-through
 
 2016-2025 CAGR คำนวณจาก official annual returns อยู่ที่ `11.84%`; MSCI USA IMI
-อยู่ที่ `14.41%` ในช่วงเดียวกัน. Issuer รายงาน 10-year annualized NAV return
-`12.06%` และ since-inception annualized NAV return `9.68%` ณ 30 มิ.ย. 2026.
+อยู่ที่ `14.41%` ในช่วงเดียวกัน. **10-year NAV CAGR:** `12.06%` และ
+since-inception annualized NAV return `9.68%` ณ 30 มิ.ย. 2026 ตาม issuer.
 Official since-inception standard deviation อยู่ที่ `14.71%` เทียบกับ MSCI USA IMI
 `15.71%` ณ 31 มี.ค. 2026. Secondary total-return series รายงาน maximum drawdown
 `-58.19%` เมื่อ 9 มี.ค. 2009 และ recovery `855` trading sessions; ใช้เป็น risk

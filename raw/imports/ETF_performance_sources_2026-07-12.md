@@ -100,3 +100,20 @@ tags:
   no benchmark YTD is presented on the VIGI performance page.
 - Distribution records remain separate from the NAV return ranking; current
   price/NAV as-of dates are kept on each ETF page where captured.
+
+## 10-Year NAV CAGR Detail
+
+- `AMEX:DGRO`: iShares official average annual `Total Return` is `13.38%` for
+  10 years, versus benchmark `13.46%`, as of 2026-06-30.
+- `AMEX:VIG`: Vanguard official average annual NAV return is `13.13%` for 10
+  years, versus benchmark `13.20%`, as of 2026-06-30.
+- `NASDAQ:VIGI`: Vanguard official average annual NAV return is `8.13%` for 10
+  years, versus benchmark `8.18%`, as of 2026-05-31.
+- `AMEX:DIVI`: Franklin's performance table as of 2026-05-31 shows `—` for the
+  10-year NAV return; the latest official factsheet captured as of 2026-06-30
+  reports since-inception NAV annualized return `11.02%`.
+- `NYSE Arca:DTD`: WisdomTree official average annual NAV return is `12.06%`
+  for 10 years as of 2026-06-30.
+- `NYSE Arca:FVD`: First Trust official average annual NAV return is `8.40%`
+  for 10 years as of 2026-06-30; Value Line Dividend Index is `9.23%` over the
+  same window.

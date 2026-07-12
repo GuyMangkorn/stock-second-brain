@@ -24,7 +24,8 @@ tags:
 
 FVD ให้ `NAV Total Return` `+5.76%` YTD ณ 30 มิ.ย. 2026 และเป็นบวก 7 จาก 10
 complete calendar years ในช่วง 2016-2025. ปีดีที่สุดคือ 2019 ที่ `+26.56%` และ
-แย่ที่สุดคือ 2022 ที่ `-5.24%`; latest completed year 2025 อยู่ที่ `+8.19%`.
+แย่ที่สุดคือ 2022 ที่ `-5.24%`; official rolling 10-year NAV CAGR อยู่ที่ `8.40%`
+ณ 30 มิ.ย. 2026 และ latest completed year 2025 อยู่ที่ `+8.19%`.
 
 ## Performance check
 
@@ -61,7 +62,8 @@ complete calendar years ในช่วง 2016-2025. ปีดีที่ส�
 
 ## Risk read-through
 
-2016-2025 CAGR ที่คำนวณจาก official annual returns อยู่ที่ `9.23%`; common window
+2016-2025 CAGR ที่คำนวณจาก official annual returns อยู่ที่ `9.23%`; **10-year NAV
+CAGR:** `8.40%` ณ 30 มิ.ย. 2026 ตาม First Trust official rolling return; common window
 2021-2025 cumulative `46.58%` หรือ CAGR `7.95%`. Issuerรายงาน 3-year standard
 deviation `11.07%`, beta `0.49` และ Sharpe ratio `0.41` ณ 30 มิ.ย. 2026.
 

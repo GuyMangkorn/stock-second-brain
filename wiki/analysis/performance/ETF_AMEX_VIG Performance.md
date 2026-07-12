@@ -17,8 +17,9 @@ tags:
 
 VIG มีผลตอบแทนเป็นบวก 15 จาก 19 ปีเต็มช่วง 2007-2025 โดยปีดีที่สุดคือ 2019
 และแย่ที่สุดคือ 2008*. Official 2011-2025 ให้ภาพ quality dividend-growth ที่
-ฟื้นตัวดีหลังวิกฤติ แต่ปี 2022 ยังติดลบ `-9.79%`. 2026 YTD snapshot ที่บันทึกไว้
-คือ `+7.19%` ณ 31 พ.ค. 2026.
+ฟื้นตัวดีหลังวิกฤติ แต่ปี 2022 ยังติดลบ `-9.79%`. 10-year NAV CAGR อยู่ที่
+`13.13%` ณ 30 มิ.ย. 2026. 2026 YTD snapshot ที่บันทึกไว้คือ `+7.19%` ณ 31 พ.ค.
+2026.
 
 ## Performance check
 
@@ -66,6 +67,8 @@ VIG มีผลตอบแทนเป็นบวก 15 จาก 19 ปี�
 Average monthly return `+0.88%`, positive months `67%`. Secondary maximum drawdown
 ประมาณ `-46.81%` ใน 9 มี.ค. 2009 และใช้ `491` trading sessions เพื่อฟื้นกลับ
 จุดสูงสุดเดิม. COVID drawdown อยู่ที่ `-31.72%`. Expense ratio `0.04%`.
+**10-year NAV CAGR:** `13.13%` ณ 30 มิ.ย. 2026 จาก Vanguard official average
+annual total return.
 
 **Classification:** Structural = U.S. dividend appreciation / quality large-cap.
 Behavioral = ค่อนข้าง defensive เมื่อเทียบกับ broad equity แต่ dividend history

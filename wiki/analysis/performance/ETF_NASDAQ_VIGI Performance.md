@@ -18,7 +18,7 @@ tags:
 VIGI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเต็มช่วง 2017-2025; 1-year NAV Total Return
 อยู่ที่ `+6.06%` ณ 30 มิ.ย. 2026 และ 2026 YTD อยู่ที่ `+4.64%` ณ 8 ก.ค.
 2026. ปีดีที่สุดคือ 2017 ที่ `+27.80%` และแย่ที่สุดคือ 2022 ที่ `-16.71%`.
-ตัวเลข current NAV มาจาก [Vanguard advisor product page](https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf).
+ตัวเลข current NAV มาจาก [Vanguard advisor product page](https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf). 10-year NAV CAGR อยู่ที่ `8.13%` ณ 31 พ.ค. 2026.
 
 ## Performance check
 
@@ -66,6 +66,9 @@ deviation อยู่ที่ `12.01%` ณ 31 มี.ค. 2026. Expense ratio 
 Maximum drawdown ประมาณ `-31.01%` ใน COVID crash (23 มี.ค. 2020) และใช้ `114`
 trading sessions เพื่อฟื้นกลับจุดสูงสุดเดิม ตาม secondary adjusted-price
 total-return proxy; ตัวเลขนี้ไม่ใช่ official NAV series. [PortfoliosLab](https://portfolioslab.com/symbol/VIGI)
+
+**10-year NAV CAGR:** `8.13%` ณ 31 พ.ค. 2026 จาก Vanguard official average annual
+total return.
 
 **Classification:** passive international equity ETF, large-cap dividend growth,
 ครอบคลุม developed และ emerging markets excluding U.S.; ความเสี่ยงหลักคือ FX,

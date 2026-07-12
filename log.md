@@ -2,6 +2,12 @@
 
 ## 2026-07-12
 
+- `etf-performance`: Added official rolling 10-year NAV CAGR to all six ETF
+  performance pages and `[[ETF Performance Index]]`: DGRO `13.38%`, VIG
+  `13.13%`, VIGI `8.13%`, DTD `12.06%`, FVD `8.40%`; DIVI remains `not disclosed`
+  with its latest since-inception return retained. Updated the dated ETF source
+  batch with separate as-of dates.
+
 - `etf-performance`: Created `[[ETF_AMEX_FVD Performance]]`, added FVD to
   `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-12.md`;
   official 2016-2025 NAV Total Return implies `9.23%` CAGR across the full table,

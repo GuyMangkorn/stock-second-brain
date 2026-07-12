@@ -16,9 +16,10 @@ tags:
 ## Bottom line
 
 DIVI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเต็มช่วง 2017-2025 และให้ CAGR ใน common
-window 2021-2025 ที่ `13.59%`, สูงสุดใน pilot. ปีดีที่สุดคือ 2025 ที่ `+34.51%`
-และแย่ที่สุดคือ 2018 ที่ `-6.18%`. 2026 YTD snapshot ที่บันทึกไว้คือ `+11.38%`
-ณ 30 มิ.ย. 2026.
+window 2021-2025 ที่ `13.59%`, สูงสุดใน pilot. 10-year NAV CAGR ยังเป็น `not
+disclosed` ใน issuer performance table; ปีดีที่สุดคือ 2025 ที่ `+34.51%` และแย่
+ที่สุดคือ 2018 ที่ `-6.18%`. 2026 YTD snapshot ที่บันทึกไว้คือ `+11.38%` ณ 30 มิ.ย.
+2026.
 
 ## Performance check
 
@@ -55,6 +56,9 @@ window 2021-2025 ที่ `13.59%`, สูงสุดใน pilot. ปีด�
 Average monthly return `+0.92%`, positive months `64%`. Secondary maximum drawdown
 ประมาณ `-27.76%` ใน COVID crash (12 มี.ค. 2020) และใช้ `207` trading sessions
 เพื่อฟื้นกลับจุดสูงสุดเดิม. Expense ratio `0.09%`.
+
+**10-year NAV CAGR:** `not disclosed` ใน Franklin source table as of 31 พ.ค. 2026;
+latest available since-inception NAV annualized return คือ `11.02%` ณ 30 มิ.ย. 2026.
 
 **Classification:** Structural = developed markets ex-North America dividend/value
 tilt with optimizer. Behavioral = beta ต่ำกว่า, แต่ไวต่อ value, financials, FX,
