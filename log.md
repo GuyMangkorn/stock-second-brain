@@ -42,6 +42,12 @@
 
 ## 2026-07-13
 
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_VOO Performance]]`, added VOO to
+  `[[ETF Performance Index]]`, and extended the dated source batch; official
+  2016-2025 NAV Total Return compounds to approximately `14.78%` CAGR, rolling
+  10-year NAV CAGR is `15.47%` as of 2026-06-30, and current YTD is `+9.97%`
+  as of 2026-07-09 versus S&P 500 TR `+9.98%`.
+
 - `etf-performance`: Made explicit `check-etf-performance` invocation durable,
   documented no-search reuse of the cached 2016-2025 S&P 500 Total Return
   comparator, and refreshed VIG, VIGI, DIVI, and DTD performance pages plus the

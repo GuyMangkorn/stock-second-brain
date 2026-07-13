@@ -10,6 +10,7 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_NASDAQ_VIGI Performance.md
   - wiki/analysis/performance/ETF_AMEX_DIVI Performance.md
   - wiki/analysis/performance/ETF_AMEX_DTD Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_VOO Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
@@ -207,3 +208,62 @@ the DGRO entity's tracked-index description or create a corporate valuation.
   approximate. No `*` proxy marker is used because the rows come from the issuer.
 - S&P 500 current YTD is a same-date common reference comparator, not EWC's
   tracked index; EWC's issuer benchmark remains MSCI Canada Custom Capped Index.
+
+## VOO Source Map
+
+| Scope | Official source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:VOO` | [Vanguard VOO product page](https://investor.vanguard.com/investment-products/etfs/profile/voo) | Fund identity, current NAV/price, NAV YTD, annual NAV Total Return, rolling 10-year return, expense ratio, and distributions | Annual rows 2025-12-31; rolling/YTD performance 2026-06-30 and 2026-07-09; NAV/price 2026-07-09; distribution 2026-06-30; expense ratio 2026-04-28 |
+| `NYSE Arca:VOO` | [Vanguard VOO fact sheet](https://institutional.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F0968.pdf) | Exchange, inception, passive full-replication classification, S&P 500 issuer benchmark, return definition, and 3-year standard deviation | 2026-03-31 |
+| `S&P 500 TR` | [S&P DJI index returns](https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?additionalFilterCondition=&parentIdentifier=df8ec300-24ad-4c70-81d3-a3cece0200e2&sourceIdentifier=index-family-specialization) | Same-date current YTD common-reference comparator | 2026-07-09 |
+| `S&P 500 TR cache` | [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) | Complete-year S&P 500 Total Return rows | 2016-2025; reference as-of 2025-12-31 |
+
+## VOO Reporting Scope
+
+- Currency: USD. Fund series: official pre-tax `NAV Total Return`, net of fund
+  expenses and including reinvested dividends and capital-gains distributions.
+- VOO is a supported passive, index-tracking U.S. large-cap equity ETF employing
+  full replication; issuer benchmark is `S&P 500 Index`.
+- Official annual coverage: complete calendar years 2016-2025. The cached S&P
+  500 TR convention uses the same window and return basis.
+- Latest NAV/market price: USD `690.90` / `690.69` as of 2026-07-09. This is a
+  dated verification and is not presented as a current 2026-07-13 quote.
+- Latest distribution: USD `1.9622` per share, payable 2026-06-30; distribution
+  schedule is quarterly. Distribution analysis was not requested.
+
+## VOO Extracted Facts
+
+| Year | VOO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 11.93% | 11.96% |
+| 2017 | 21.78% | 21.83% |
+| 2018 | -4.42% | -4.38% |
+| 2019 | 31.46% | 31.49% |
+| 2020 | 18.35% | 18.40% |
+| 2021 | 28.66% | 28.71% |
+| 2022 | -18.15% | -18.11% |
+| 2023 | 26.25% | 26.29% |
+| 2024 | 24.98% | 25.02% |
+| 2025 | 17.84% | 17.88% |
+
+- Official rolling 10-year VOO NAV Total Return as of 2026-06-30: cumulative
+  `321.27%`, CAGR `15.47%`; normalized shown calculation is `100.00 -> 421.27`
+  for the `2016-06-30` to `2026-06-30` window.
+- Official same-window S&P 500 benchmark: cumulative `322.71%`, CAGR `15.51%`.
+- Current VOO NAV YTD: `9.97%` as of 2026-07-09; S&P 500 TR YTD: `9.98%` on
+  the same date.
+- VOO 2016-2025 cumulative/CAGR from rounded annual rows: `296.90%` / `14.78%`;
+  cached S&P 500 TR: `298.33%` / `14.82%`.
+- VOO 2021-2025 cumulative/CAGR: `95.81%` / `14.38%`; S&P 500 TR:
+  `96.17%` / `14.43%`.
+
+## VOO Missing / Unverified Data
+
+- The Vanguard sources captured do not disclose a maximum drawdown or recovery
+  series; record as `ไม่พบข้อมูลที่ยืนยันได้` rather than calculating from
+  annual observations.
+- Vanguard does not expose raw rolling total-return index levels; the displayed
+  `100.00 -> 421.27` endpoints normalize the official cumulative return and are
+  shown calculations, not source-published index levels.
+- Do not mix Vanguard's quarterly table `Year-end` market-price returns with the
+  annual table `Total return by NAV`; this page uses the latter exclusively.
