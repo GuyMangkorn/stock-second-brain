@@ -40,6 +40,14 @@
   fund-level action read is `WATCH` pending fresher same-day price/NAV and a
   complete holdings file.
 
+## 2026-07-13
+
+- `etf-performance`: Updated `[[ETF_AMEX_DGRO Performance]]` to compare official
+  DGRO NAV Total Return against `S&P 500 Total Return` for 2021-2025; DGRO
+  returned `73.82%` cumulative versus `96.17%` for S&P 500, with the issuer
+  Morningstar benchmark retained as metadata. Added the dated comparator source
+  note `raw/imports/ETF_performance_sources_2026-07-13.md`.
+
 ## 2026-07-11
 
 - `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[CVS]]`; created the official source note, normalized fundamentals, entity, dated market quote, high-sensitivity DCF, and decision memo; action read is `WATCHLIST / WAIT-for-Q2 / NO-EXECUTION-without-fresh-quote` at a latest verified USD 102.83 close versus base DCF USD 76.47.
