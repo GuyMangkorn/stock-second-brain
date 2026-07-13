@@ -45,7 +45,7 @@
 - `etf-research`: Updated `[[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]`
   so the preliminary holdings-based groups distinguish US-listed ETFs
   (`AMEX`, `NASDAQ`, `CBOE`) from non-US listings, with every non-US ticker
-  retained for peer context and marked red.
+  retained for peer context and marked with strikethrough.
 
 - `etf-performance`: Created `[[ETF_NYSE_ARCA_VOO Performance]]`, added VOO to
   `[[ETF Performance Index]]`, and extended the dated source batch; official
