@@ -7,11 +7,12 @@ ticker: DTD
 exchange: NYSE Arca
 fund: WisdomTree U.S. Total Dividend Fund
 tracked_index: WisdomTree U.S. Dividend Index (WTDI)
-benchmark: MSCI USA IMI Total Return
-updated: 2026-07-12
+issuer_broad_benchmark: MSCI USA IMI Total Return
+benchmark: S&P 500 Total Return
+updated: 2026-07-13
 performance_as_of: 2026-06-30
 price_nav_as_of: 2026-07-10
-source_batch: raw/imports/ETF_performance_sources_2026-07-12.md
+source_batch: raw/imports/ETF_performance_sources_2026-07-13.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -26,7 +27,8 @@ DTD ให้ cumulative NAV Total Return `+206.16%` ในช่วง complete
 2016-2025 หรือ CAGR `11.84%`; official rolling 10-year NAV CAGR ล่าสุดอยู่ที่
 `12.06%` ณ 30 มิ.ย. 2026. เป็นบวก 8 ปีและลบ 2 ปี. ปีดีที่สุดคือ 2019 ที่ `+28.28%`
 และแย่ที่สุดคือ 2018 ที่ `-6.35%`. ฐานปีล่าสุดที่ใช้คือ 2025 ที่ `+14.22%` ซึ่งเป็น
-NAV return หลัง expense ratio แล้ว. 2026 YTD ล่าสุดคือ `+10.80%` ณ 30 มิ.ย. 2026.
+NAV return หลัง expense ratio แล้ว. เทียบกับ S&P 500 TR cache ในช่วงเดียวกันที่
+`298.33%` หรือ CAGR `14.82%`. 2026 YTD ล่าสุดคือ `+10.80%` ณ 30 มิ.ย. 2026.
 
 ## Performance check
 
@@ -36,24 +38,25 @@ NAV return หลัง expense ratio แล้ว. 2026 YTD ล่าสุด�
 - Expense treatment: NAV Total Return เป็นผลตอบแทนของกองทุนหลังค่าใช้จ่ายดำเนินงาน
   ที่สะท้อนใน NAV; net expense ratio คือ `0.28%` ณ 10 ก.ค. 2026. ตัวเลขของ
   benchmark/index ไม่ได้หักค่าธรรมเนียมของ DTD
-- Benchmark: `MSCI USA IMI Total Return` ซึ่ง issuer ใช้เป็น broad-based benchmark
-  ใน presentation; tracked index ของกองทุนคือ `WisdomTree U.S. Dividend Index
-  (WTDI)`
+- Tracked index: `WisdomTree U.S. Dividend Index (WTDI)`; issuer broad-based
+  benchmark คือ `MSCI USA IMI Total Return`
+- Benchmark: `S&P 500 Total Return` (USD, dividends reinvested; common reference,
+  not DTD's tracked index or issuer broad-based benchmark)
 - Annual coverage: official complete years 2016-2025; ไม่มี partial-year marker
 - Performance as-of: 30 มิ.ย. 2026. NAV/market price as-of: 10 ก.ค. 2026
 
-| ปี | DTD NAV Total Return | MSCI USA IMI Total Return |
+| ปี | DTD NAV Total Return | S&P 500 TR |
 |---|---:|---:|
-| 2016 | +16.59% | +12.66% |
-| 2017 | +17.25% | +21.28% |
-| 2018 | -6.35% | -5.20% |
-| 2019 | +28.28% | +31.14% |
-| 2020 | +2.57% | +21.10% |
-| 2021 | +26.14% | +26.12% |
-| 2022 | -3.81% | -19.22% |
-| 2023 | +10.44% | +26.25% |
-| 2024 | +18.75% | +23.82% |
-| 2025 | +14.22% | +17.25% |
+| 2016 | +16.59% | +11.96% |
+| 2017 | +17.25% | +21.83% |
+| 2018 | -6.35% | -4.38% |
+| 2019 | +28.28% | +31.49% |
+| 2020 | +2.57% | +18.40% |
+| 2021 | +26.14% | +28.71% |
+| 2022 | -3.81% | -18.11% |
+| 2023 | +10.44% | +26.29% |
+| 2024 | +18.75% | +25.02% |
+| 2025 | +14.22% | +17.88% |
 
 **Up years / Down years**
 
@@ -66,8 +69,9 @@ NAV return หลัง expense ratio แล้ว. 2026 YTD ล่าสุด�
 
 ## Risk read-through
 
-2016-2025 CAGR คำนวณจาก official annual returns อยู่ที่ `11.84%`; MSCI USA IMI
-อยู่ที่ `14.41%` ในช่วงเดียวกัน. **10-year NAV CAGR:** `12.06%` และ
+2016-2025 CAGR คำนวณจาก official annual returns อยู่ที่ `11.84%`; S&P 500 TR
+cache อยู่ที่ `14.82%` ในช่วงเดียวกัน. Issuer-reported MSCI USA IMI comparison
+ยังเก็บไว้ใน source batch เดิม. **10-year NAV CAGR:** `12.06%` และ
 since-inception annualized NAV return `9.68%` ณ 30 มิ.ย. 2026 ตาม issuer.
 Official since-inception standard deviation อยู่ที่ `14.71%` เทียบกับ MSCI USA IMI
 `15.71%` ณ 31 มี.ค. 2026. Secondary total-return series รายงาน maximum drawdown
@@ -84,5 +88,6 @@ crisis hedge.
 - [WisdomTree DTD Q1-2026 presentation](https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/presentations/equity/dtd_presentation.pdf) — official calendar returns 2016-2025 and risk statistics as of 2026-03-31
 - [WisdomTree DTD factsheet](https://www.wisdomtree.com/us/media/wisdomtree-factsheet-dtd-1005) — inception, expense ratio, NAV return definition, and benchmark disclosures
 - [WisdomTree U.S. Dividend Index](https://www.wisdomtree.com/us/indexes/wtdi) — tracked-index methodology and current index facts
+- [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common-reference identity
 - [PortfoliosLab](https://portfolioslab.com/symbol/DTD) — secondary maximum-drawdown and recovery context
-- [[ETF_performance_sources_2026-07-12]]
+- [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]] | [[ETF Performance Index]]

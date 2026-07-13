@@ -6,6 +6,11 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_AMEX_DGRO Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWC Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_FLCA Performance.md
+  - wiki/analysis/performance/ETF_AMEX_VIG Performance.md
+  - wiki/analysis/performance/ETF_NASDAQ_VIGI Performance.md
+  - wiki/analysis/performance/ETF_AMEX_DIVI Performance.md
+  - wiki/analysis/performance/ETF_AMEX_DTD Performance.md
+  - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
   - source/performance
@@ -13,6 +18,23 @@ tags:
 ---
 
 # ETF Performance Source Batch - 2026-07-13
+
+## Cached Comparator Refresh
+
+VIG, VIGI, DIVI และ DTD reuse S&P 500 Total Return cached convention โดยไม่ค้น
+เว็บใหม่. Basis คือ USD gross total return รวม reinvested dividends; reference
+as-of `2025-12-31`. ใช้เฉพาะ complete calendar years ที่ overlap กับแต่ละ ETF:
+
+| ETF | Common window | ETF cumulative / CAGR | S&P 500 TR cumulative / CAGR |
+|---|---|---:|---:|
+| VIG | 2016-2025 | 242.14% / 13.09% | 298.33% / 14.82% |
+| VIGI | 2017-2025 | 116.23% / 8.95% | 255.78% / 15.14% |
+| DIVI | 2017-2025 | 149.29% / 10.68% | 255.78% / 15.14% |
+| DTD | 2016-2025 | 206.16% / 11.84% | 298.33% / 14.82% |
+
+Original cache URLs are recorded in the `S&P 500 TR cache` rows below. Issuer
+tracked indexes and broad-based benchmarks remain metadata or in the prior
+source batch; they are not substituted for the common-reference series.
 
 ## Source Map
 

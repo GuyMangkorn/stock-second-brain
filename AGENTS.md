@@ -130,6 +130,21 @@ index-tracking equity ETF research, comparison, refresh, or decision handoff.
 Resolve `entity_key: EXCHANGE:TICKER`; do not route an ETF through company
 results, financial ingest, stock research, or DCF stages.
 
+### etf-performance
+
+Use `check-etf-performance` for passive equity ETF performance analysis.
+Explicit `[Skills] TICKER` or `$check-etf-performance` invocation defaults to
+`lean` and saves the performance page plus dated source batch; an implicit
+natural-language performance question defaults to read-only `chat`. Explicit
+`mode: chat` overrides the save default.
+
+For S&P 500 Total Return comparisons covering complete calendar years
+`2016-2025`, reuse the skill's cached S&P 500 TR convention without a new web
+search. Copy the matching cached rows into the ETF performance page and record
+the cache's original URLs, USD total-return basis, window, and as-of date in the
+dated source batch. Freshly verify current YTD, rolling date-to-date windows,
+years outside `2016-2025`, or a newly completed calendar year.
+
 ### valuation
 
 Use `.codex/skills/dcf-valuation/SKILL.md`. Freshly verify market data and use
@@ -166,6 +181,7 @@ duplicates, and unresolved gaps. A scoped check may be chat-only.
 raw/imports/TICKER_source_kind_YYYY-MM-DD.md
 raw/imports/TICKER_latest_results_source.md
 raw/imports/ETF_EXCHANGE_TICKER_fund_source_YYYY-MM-DD.md
+raw/imports/ETF_performance_sources_YYYY-MM-DD.md
 raw/financials/TICKER_fundamentals.md
 raw/financials/TICKER_fundamentals.json
 raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md
@@ -180,6 +196,7 @@ wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
 wiki/analysis/decisions/ETF_EXCHANGE_TICKER Decision Memo YYYY-MM-DD.md
 wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
 wiki/analysis/sentiment/ETF_EXCHANGE_TICKER X Sentiment YYYY-MM-DD.md
+wiki/analysis/performance/ETF_EXCHANGE_TICKER Performance.md
 wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
 wiki/overview/themes/THEME.md
 wiki/overview/macro/TOPIC.md

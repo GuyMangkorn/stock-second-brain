@@ -35,6 +35,7 @@ contract.
 | `financial-facts-ingest` | Normalize sourced financial facts | fundamentals + entity delta |
 | `official-source-stock-research` | Deep dive, earnings, or thesis refresh | profile-dependent |
 | `official-source-etf-research` | Passive equity ETF deep dive, comparison, or refresh | profile-dependent |
+| `check-etf-performance` | Historical ETF return, risk, YTD, or benchmark comparison | explicit invocation saves; implicit question is chat |
 | `dcf-valuation` | Fair value or valuation sensitivity | valuation or compact blocker |
 | `stock-decision-pipeline` | Chain or refresh a decision workflow | decision memo |
 | `x-research` | Public market sentiment | chat |

@@ -3,8 +3,8 @@ type: etf-performance
 instrument_type: ETF
 entity_key: AMEX:DIVI
 ticker: DIVI
-updated: 2026-07-12
-source_batch: raw/imports/ETF_performance_sources_2026-07-12.md
+updated: 2026-07-13
+source_batch: raw/imports/ETF_performance_sources_2026-07-13.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -19,29 +19,32 @@ DIVI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเ
 window 2021-2025 ที่ `13.59%`, สูงสุดใน pilot. 10-year NAV CAGR ยังเป็น `not
 disclosed` ใน issuer performance table; ปีดีที่สุดคือ 2025 ที่ `+34.51%` และแย่
 ที่สุดคือ 2018 ที่ `-6.18%`. 2026 YTD snapshot ที่บันทึกไว้คือ `+11.38%` ณ 30 มิ.ย.
-2026.
+2026. ใน complete-year window 2017-2025 DIVI ให้ cumulative `149.29%` หรือ CAGR
+`10.68%` เทียบกับ S&P 500 TR cache ที่ `255.78%` หรือ `15.14%`.
 
 ## Performance check
 
 - `entity_key: AMEX:DIVI`
 - Inception: 1 มิ.ย. 2016
 - Metric: `NAV Total Return` รวมเงินปันผล reinvested และ fund expenses
-- Benchmark: Morningstar Developed Markets ex-North America Dividend Enhanced
-  Select Index-NR
+- Tracked index (issuer benchmark): Morningstar Developed Markets ex-North
+  America Dividend Enhanced Select Index-NR
+- Benchmark: `S&P 500 Total Return` (USD, dividends reinvested; common reference,
+  not DIVI's tracked index)
 - Official complete-year table เริ่ม 2017; 2016 เป็น inception-year ที่ issuer
   ไม่แสดง return ที่ใช้เทียบได้
 
-| ปี | DIVI TR | Benchmark |
+| ปี | DIVI TR | S&P 500 TR |
 |---|---:|---:|
-| 2017 | 12.82% | 13.21% |
-| 2018 | -6.18% | -5.75% |
-| 2019 | 22.66% | 23.21% |
-| 2020 | 1.55% | 1.86% |
-| 2021 | 17.22% | 17.63% |
-| 2022 | -1.74% | -1.43% |
-| 2023 | 19.23% | 18.96% |
-| 2024 | 2.36% | 2.28% |
-| 2025 | 34.51% | 34.32% |
+| 2017 | 12.82% | 21.83% |
+| 2018 | -6.18% | -4.38% |
+| 2019 | 22.66% | 31.49% |
+| 2020 | 1.55% | 18.40% |
+| 2021 | 17.22% | 28.71% |
+| 2022 | -1.74% | -18.11% |
+| 2023 | 19.23% | 26.29% |
+| 2024 | 2.36% | 25.02% |
+| 2025 | 34.51% | 17.88% |
 
 **Up years / Down years**
 
@@ -77,5 +80,6 @@ country และ international cyclicality.
 ## Sources
 
 - [Franklin DIVI factsheet](https://www.franklintempleton.com/forms-literature/download/DIVI-FF)
+- [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common-reference identity
 - [PortfoliosLab](https://portfolioslab.com/symbol/DIVI) | [[ETF_performance_sources_2026-07-12]]
-- [[ETF_AMEX_DIVI_fund_facts]] | [[ETF Performance Index]]
+- [[ETF_performance_sources_2026-07-13]] | [[ETF_AMEX_DIVI_fund_facts]] | [[ETF Performance Index]]

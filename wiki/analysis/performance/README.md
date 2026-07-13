@@ -7,10 +7,12 @@
 
 ## Skill Route
 
-- `[Skills] TICKER` หรือ `[$check-etf-performance] TICKER` คือ trigger หลักสำหรับ
-  ดึงข้อมูลสดและตอบตาม format ด้านล่าง; default เป็น chat และไม่เขียนไฟล์
-- ใช้ `save`, `update`, `refresh` หรือ `memo` เท่านั้นเมื่อผู้ใช้ต้องการเก็บผลลง
-  vault; ให้เขียนหน้า ETF เดียวและ source batch เดียวต่อรอบ
+- `[Skills] TICKER` หรือ `[$check-etf-performance] TICKER` คือ explicit trigger;
+  default เป็น `lean` และบันทึกหน้า ETF กับ dated source batch
+- คำถาม performance แบบ natural language ที่เรียก skill โดย implicit default
+  เป็น read-only `chat`; `mode: chat` ยกเลิกการ save ของ explicit trigger ได้
+- ใช้ S&P 500 TR cache สำหรับ complete calendar years 2016-2025 โดยไม่ค้นเว็บซ้ำ;
+  ค้นใหม่เฉพาะ current YTD, rolling window, ปีนอกช่วง หรือ complete year ใหม่
 - Chat output และหน้า saved ต้องใช้ annual table, best/worst, risk read-through
   และ source/as-of แบบเดียวกัน; ห้ามสร้าง performance table ซ้ำใน `raw/funds/`
 

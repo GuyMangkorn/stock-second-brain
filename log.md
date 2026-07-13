@@ -42,6 +42,11 @@
 
 ## 2026-07-13
 
+- `etf-performance`: Made explicit `check-etf-performance` invocation durable,
+  documented no-search reuse of the cached 2016-2025 S&P 500 Total Return
+  comparator, and refreshed VIG, VIGI, DIVI, and DTD performance pages plus the
+  dated source batch while retaining issuer benchmarks as metadata.
+
 - `etf-performance`: Created `[[ETF_NYSE_ARCA_EWC Performance]]`, added EWC to
   `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-13.md`;
   official NAV Total Return covers 2016-2025, rolling 10-year NAV CAGR is `11.25%`,

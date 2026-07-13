@@ -3,8 +3,8 @@ type: etf-performance
 instrument_type: ETF
 entity_key: NASDAQ:VIGI
 ticker: VIGI
-updated: 2026-07-12
-source_batch: raw/imports/ETF_performance_sources_2026-07-12.md
+updated: 2026-07-13
+source_batch: raw/imports/ETF_performance_sources_2026-07-13.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -18,34 +18,39 @@ tags:
 VIGI มีผลตอบแทนเป็นบวก 7 จาก 9 ปีเต็มช่วง 2017-2025; 1-year NAV Total Return
 อยู่ที่ `+6.06%` ณ 30 มิ.ย. 2026 และ 2026 YTD อยู่ที่ `+4.64%` ณ 8 ก.ค.
 2026. ปีดีที่สุดคือ 2017 ที่ `+27.80%` และแย่ที่สุดคือ 2022 ที่ `-16.71%`.
-ตัวเลข current NAV มาจาก [Vanguard advisor product page](https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf). 10-year NAV CAGR อยู่ที่ `8.13%` ณ 31 พ.ค. 2026.
+ตัวเลข current NAV มาจาก [Vanguard advisor product page](https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf).
+10-year NAV CAGR อยู่ที่ `8.13%` ณ 31 พ.ค. 2026. ใน complete-year window
+2017-2025 VIGI ให้ cumulative `116.23%` เทียบกับ S&P 500 TR cache `255.78%`.
 
 ## Performance check
 
 - `entity_key: NASDAQ:VIGI`
 - Inception: 25 ก.พ. 2016
 - Metric: `NAV Total Return` รวมเงินปันผล reinvested และ fund expenses
-- Benchmark: Spliced S&P Global Ex-U.S. Dividend Growers Index in USD NTR
+- Tracked index (issuer benchmark): Spliced S&P Global Ex-U.S. Dividend Growers
+  Index in USD NTR
+- Benchmark: `S&P 500 Total Return` (USD, dividends reinvested; common reference,
+  not VIGI's tracked index)
 - Coverage/source note: annual rows เป็น official Vanguard returns ถึง 2025; 2016
   เป็น official inception-year partial และ 2026 YTD เป็น official NAV ณ 8 ก.ค.
   2026. Vanguard ยังไม่แสดง benchmark YTD ล่าสุดในฐานเดียวกัน
 - `†` คือ official inception-year partial; complete-year ranking เริ่ม 2017
 
-Annual table จาก [Vanguard product performance](https://investor.vanguard.com/investment-products/etfs/profile/vigi)
-โดยใช้ NAV Total Return เทียบกับ benchmark เดียวกัน:
+Annual ETF rows มาจาก [Vanguard product performance](https://investor.vanguard.com/investment-products/etfs/profile/vigi);
+comparator ใช้ S&P 500 TR cache:
 
-| ปี | VIGI TR | Benchmark |
+| ปี | VIGI TR | S&P 500 TR |
 |---|---:|---:|
 | 2016† | 6.64% | — |
-| 2017 | 27.80% | 27.64% |
-| 2018 | -11.32% | -11.34% |
-| 2019 | 27.04% | 27.32% |
-| 2020 | 15.11% | 15.35% |
-| 2021 | 12.42% | 12.82% |
-| 2022 | -16.71% | -16.81% |
-| 2023 | 16.16% | 16.25% |
-| 2024 | 2.62% | 2.87% |
-| 2025 | 16.89% | 16.37% |
+| 2017 | 27.80% | 21.83% |
+| 2018 | -11.32% | -4.38% |
+| 2019 | 27.04% | 31.49% |
+| 2020 | 15.11% | 18.40% |
+| 2021 | 12.42% | 28.71% |
+| 2022 | -16.71% | -18.11% |
+| 2023 | 16.16% | 26.29% |
+| 2024 | 2.62% | 25.02% |
+| 2025 | 16.89% | 17.88% |
 
 **Up years / Down years**
 
@@ -82,5 +87,6 @@ country/region และ sector exposure. ข้อจำกัดของร�
 - [Vanguard VIGI factsheet](https://fund-docs.vanguard.com/F4415.pdf)
 - [S&P Global Ex-U.S. Dividend Growers Index](https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-global-ex-us-dividend-growers-index/)
 - [S&P Dividend Growers Index Series Methodology](https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-dividend-growers-index-series.pdf)
+- [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common-reference identity
 - [PortfoliosLab](https://portfolioslab.com/symbol/VIGI) — secondary adjusted-price drawdown/recovery context
-- [[ETF_performance_sources_2026-07-12]] | [[ETF Performance Index]]
+- [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]] | [[ETF Performance Index]]
