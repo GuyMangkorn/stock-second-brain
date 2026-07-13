@@ -2,7 +2,9 @@
 type: source-note
 source_profile: etf-performance-delta
 accessed: 2026-07-13
-canonical_output: wiki/analysis/performance/ETF_AMEX_DGRO Performance.md
+canonical_outputs:
+  - wiki/analysis/performance/ETF_AMEX_DGRO Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_EWC Performance.md
 tags:
   - source/etf
   - source/performance
@@ -85,3 +87,50 @@ source-date details remain in `raw/imports/ETF_performance_sources_2026-07-12.md
 Update only `wiki/analysis/performance/ETF_AMEX_DGRO Performance.md` with the
 S&P 500 comparator and retain the issuer benchmark as metadata. Do not change
 the DGRO entity's tracked-index description or create a corporate valuation.
+
+## EWC Source Map
+
+| Scope | Official source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:EWC` | [iShares EWC product page](https://www.ishares.com/us/products/239615/ishares-msci-canada-etf), [EWC fact sheet](https://www.ishares.com/us/literature/fact-sheet/ewc-ishares-msci-canada-etf-fund-fact-sheet-en-us.pdf) | Fund identity, exchange, inception, expense ratio, NAV Total Return, issuer benchmark, rolling 10-year return, standard deviation, and YTD | Performance 2026-06-30; NAV/price 2026-07-10; YTD 2026-07-09 |
+| `NYSE Arca:EWC` | [BlackRock EWC calendar-year performance](https://www.blackrock.com/fi/professionals/products/239615/ishares-msci-canada-etf) | Official calendar-year NAV Total Return rows 2016-2025 | 2025-12-31 year-end rows; page accessed 2026-07-13 |
+| `S&P 500 TR` | [S&P 500 DJI returns page](https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?additionalFilterCondition=&parentIdentifier=df8ec300-24ad-4c70-81d3-a3cece0200e2&sourceIdentifier=index-family-specialization) | Same-date YTD comparator | 2026-07-09 |
+| `S&P 500 TR cache` | [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) | Reusable complete-year S&P 500 TR reference | 2025-12-31; calendar years 2016-2025 |
+| `NYSE Arca:EWC` risk context | [ETF Central EWC](https://www.etfcentral.com/fund/EWC) | Secondary maximum drawdown and drawdown duration | 2026-06-30 |
+
+## EWC Extracted Facts
+
+| Year | EWC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 24.30% | 11.96% |
+| 2017 | 16.00% | 21.83% |
+| 2018 | -17.20% | -4.38% |
+| 2019 | 27.40% | 31.49% |
+| 2020 | 5.60% | 18.40% |
+| 2021 | 26.74% | 28.71% |
+| 2022 | -12.77% | -18.11% |
+| 2023 | 14.62% | 26.29% |
+| 2024 | 12.25% | 25.02% |
+| 2025 | 36.03% | 17.88% |
+
+- Official rolling 10-year EWC NAV Total Return as of 2026-06-30: cumulative
+  `190.39%`, CAGR `11.25%`; normalized shown calculation is `100.00 -> 290.39`
+  over `10.00` years.
+- Official EWC current YTD NAV Total Return: `8.78%` as of 2026-07-09.
+- Official S&P 500 TR current YTD: `9.98%` as of 2026-07-09.
+- EWC 2021-2025 cumulative/CAGR: `93.49%` / `14.11%`; S&P 500 TR: `96.17%` /
+  `14.43%`.
+- EWC 2016-2025 cumulative/CAGR calculated from the displayed annual rows:
+  `210.78%` / `12.01%`; the 2016-2020 issuer rows are rounded to one decimal.
+- Secondary 5-year maximum drawdown: `-24.75%`; duration `834` days, as of
+  2026-06-30.
+
+## EWC Missing / Unverified Data
+
+- Issuer does not provide a full all-time maximum drawdown and recovery statistic
+  in the captured product-page performance table; record as `ไม่พบข้อมูลที่ยืนยันได้`.
+- The complete-year table's 2016-2020 values are official displayed values but
+  rounded to one decimal; cumulative and CAGR calculations using them are
+  approximate. No `*` proxy marker is used because the rows come from the issuer.
+- S&P 500 current YTD is a same-date common reference comparator, not EWC's
+  tracked index; EWC's issuer benchmark remains MSCI Canada Custom Capped Index.
