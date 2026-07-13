@@ -22,6 +22,11 @@ common window 2021-2025 DGRO ให้ cumulative `73.82%` หรือ CAGR `11
 `22.35 percentage points` แบบ cumulative. 2026 YTD snapshot ที่บันทึกไว้คือ
 `+10.22%` ณ 30 มิ.ย. 2026.
 
+สำหรับ cached 10-year reference window 2016-2025, S&P 500 TR ให้ cumulative
+`298.33%` หรือ CAGR ประมาณ `14.82%`. DGRO มี blended `10-year TR CAGR*`
+ประมาณ `13.08%` จากปี 2016-2020 ที่เป็น secondary proxy และปี 2021-2025 ที่เป็น
+official NAV TR; ตัวเลขนี้ไม่ใช่ official 10-year NAV CAGR.
+
 ## Performance check
 
 - `entity_key: AMEX:DGRO`
@@ -30,27 +35,33 @@ common window 2021-2025 DGRO ให้ cumulative `73.82%` หรือ CAGR `11
 - Tracked index (issuer benchmark): Morningstar US Dividend Growth Index
 - Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference
   benchmark, not DGRO's tracked index)
-- Official annual table: 2021-2025; `*` คือ dividend-reinvested market-price
-  proxy สำหรับ 2014-2020 เพราะหน้า issuer ที่เก็บไว้ไม่แสดง annual table ช่วงนี้
+- 10-year reference window: `2015-12-31` to `2025-12-31` (complete calendar
+  years 2016-2025)
+- S&P 500 cache: cumulative `298.33%`; CAGR `14.82%` from rounded annual inputs
+- DGRO `10-year TR CAGR*`: `13.08%`; blended proxy, not official 10-year NAV TR
+- Official annual table for DGRO: 2021-2025; supplemental S&P 500 cache:
+  2016-2025; `*` คือ dividend-reinvested market-price proxy สำหรับ 2014-2020
+  เพราะหน้า issuer ที่เก็บไว้ไม่แสดง annual table ช่วงนี้
 
 | ปี | DGRO TR | S&P 500 TR |
 |---|---:|---:|
 | 2014* | 8.56% | — |
 | 2015* | -0.69% | — |
-| 2016* | 15.20% | — |
-| 2017* | 23.00% | — |
-| 2018* | -2.38% | — |
-| 2019* | 29.87% | — |
-| 2020* | 9.50% | — |
+| 2016* | 15.20% | 11.96% |
+| 2017* | 23.00% | 21.83% |
+| 2018* | -2.38% | -4.38% |
+| 2019* | 29.87% | 31.49% |
+| 2020* | 9.50% | 18.40% |
 | 2021 | 26.56% | 28.71% |
 | 2022 | -7.85% | -18.11% |
 | 2023 | 10.43% | 26.29% |
 | 2024 | 16.61% | 25.02% |
 | 2025 | 15.74% | 17.88% |
 
-S&P 500 TR ใช้ official benchmark rows จาก IVV factsheet (as of 31 มี.ค. 2026)
-และเป็น common reference benchmark; ไม่ใช่ tracked index ของ DGRO. เนื่องจาก
-DGRO ปี 2014-2020 เป็น `*` secondary proxy จึงไม่เติม comparator ย้อนหลังในช่วงนั้น.
+S&P 500 TR ปี 2016-2025 ใช้ cached convention จาก `check-etf-performance`;
+ปี 2021-2025 cross-check กับ official IVV factsheet (as of 31 มี.ค. 2026).
+เป็น common reference benchmark ไม่ใช่ tracked index ของ DGRO. DGRO ปี 2016-2020
+เป็น `*` secondary proxy จึงต้องแยกจาก official NAV read.
 
 **Up years / Down years**
 
@@ -69,7 +80,9 @@ Average monthly return `+1.05%`, positive months `67%`. Secondary maximum drawdo
 เพื่อฟื้นกลับจุดสูงสุดเดิม. Expense ratio `0.08%`. **10-year NAV CAGR:** `13.38%`
 ณ 30 มิ.ย. 2026 จาก iShares official average annual total return. เทียบ S&P 500
 แล้ว DGRO มี downside ดีกว่าในปี 2022 แต่ participation ต่ำกว่าในปี 2021 และ
-2023-2025; นี่เป็น observed-return read-through ไม่ใช่การยืนยันว่าจะเกิดซ้ำ.
+2023-2025; ส่วน blended `10-year TR CAGR*` ที่ `13.08%` ต่ำกว่า S&P 500 cache
+ที่ `14.82%` ราว `1.74 percentage points` ต่อปี แต่ไม่ควรตีความเป็น official
+NAV-vs-index tracking result เพราะช่วง 2016-2020 ของ DGRO เป็น proxy.
 
 **Classification:** Structural = U.S. dividend growth / quality. Behavioral =
 quality large-cap ที่ downside ปานกลาง แต่ยังไวต่อ equity และ rate repricing.

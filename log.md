@@ -45,8 +45,9 @@
 - `etf-performance`: Updated `[[ETF_AMEX_DGRO Performance]]` to compare official
   DGRO NAV Total Return against `S&P 500 Total Return` for 2021-2025; DGRO
   returned `73.82%` cumulative versus `96.17%` for S&P 500, with the issuer
-  Morningstar benchmark retained as metadata. Added the dated comparator source
-  note `raw/imports/ETF_performance_sources_2026-07-13.md`.
+  Morningstar benchmark retained as metadata. Added the cached 2016-2025 S&P
+  500 reference (`298.33%` cumulative / `14.82%` CAGR) and labelled DGRO's
+  blended proxy result `13.08%` as `10-year TR CAGR*`.
 
 ## 2026-07-11
 
