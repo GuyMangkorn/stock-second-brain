@@ -5,13 +5,14 @@ accessed: 2026-07-13
 canonical_outputs:
   - wiki/analysis/performance/ETF_AMEX_DGRO Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWC Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_FLCA Performance.md
 tags:
   - source/etf
   - source/performance
   - source/benchmark
 ---
 
-# DGRO Benchmark Comparator Source - 2026-07-13
+# ETF Performance Source Batch - 2026-07-13
 
 ## Source Map
 
@@ -124,6 +125,56 @@ the DGRO entity's tracked-index description or create a corporate valuation.
   `210.78%` / `12.01%`; the 2016-2020 issuer rows are rounded to one decimal.
 - Secondary 5-year maximum drawdown: `-24.75%`; duration `834` days, as of
   2026-06-30.
+
+## FLCA Source Map
+
+| Scope | Official source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:FLCA` | [Franklin Templeton FLCA product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26364/SINGLCLASS/franklin-ftse-canada-etf/FLCA) | Fund identity, exchange, inception, issuer benchmark, expense ratio, current NAV, YTD, distribution frequency, and indexed classification | Current NAV/YTD 2026-07-06; expense ratio as of 2025-08-01 |
+| `NYSE Arca:FLCA` | [Franklin Templeton FLCA factsheet](https://www.franklintempleton.com/forms-literature/download/FLCA-FF) | Official NAV Total Return calendar-year rows, since-inception annualized return, sector exposure, and NAV risk statistics | 2026-06-30 |
+| `S&P 500 TR cache` | [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) | Reusable complete-year S&P 500 Total Return common-reference rows | 2025-12-31; calendar years 2016-2025 |
+
+## FLCA Reporting Scope
+
+- Currency: USD; return basis: official `NAV Total Return`, including reinvested
+  distributions and fund expenses.
+- Official complete-year coverage: 2018-2025. The issuer factsheet does not show a
+  2017 calendar-year partial return; no `†` value is invented.
+- Common comparison window: 2018-2025. The issuer benchmark remains `FTSE Canada
+  Capped Index-NR`; `S&P 500 Total Return` is a common reference only.
+- Current FLCA YTD NAV Total Return: `8.17%` as of 2026-07-06; same-date S&P 500 TR
+  YTD was not added because a directly verified official snapshot was not found.
+
+## FLCA Extracted Facts
+
+| Year | FLCA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2018 | -15.80% | -4.38% |
+| 2019 | 28.67% | 31.49% |
+| 2020 | 5.91% | 18.40% |
+| 2021 | 29.10% | 28.71% |
+| 2022 | -11.95% | -18.11% |
+| 2023 | 15.23% | 26.29% |
+| 2024 | 12.36% | 25.02% |
+| 2025 | 34.90% | 17.88% |
+
+## FLCA Calculations
+
+- 2018-2025 cumulative NAV Total Return: `127.81%`.
+- 2018-2025 annualized compound return: `(1 + 127.81%)^(1 / 8) - 1 = 10.84%`.
+- 2021-2025 cumulative NAV Total Return: `98.54%`.
+- 2021-2025 CAGR: `(1 + 98.54%)^(1 / 5) - 1 = 14.70%`.
+- Since-inception NAV annualized return from the factsheet: `11.37%` as of
+  2026-06-30; this is not a 10-year CAGR.
+
+## FLCA Missing / Unverified Data
+
+- Official 10-year NAV TR CAGR is not available because the fund launched on
+  2017-11-02 and has not completed ten years.
+- Max drawdown and recovery period are not disclosed in the captured issuer
+  materials; annual returns are insufficient to calculate true intra-year values.
+- Same-date S&P 500 TR YTD as of 2026-07-06 remains `ไม่พบข้อมูลที่ยืนยันได้` in the
+  captured official snapshot; no price-return proxy is substituted.
 
 ## EWC Missing / Unverified Data
 

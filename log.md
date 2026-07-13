@@ -54,6 +54,11 @@
   500 reference (`298.33%` cumulative / `14.82%` CAGR) and labelled DGRO's
   blended proxy result `13.08%` as `10-year TR CAGR*`.
 
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_FLCA Performance]]`, added FLCA to
+  `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-13.md`;
+  official NAV Total Return covers 2018-2025, 2021-2025 CAGR is `14.70%`, and
+  current YTD is `+8.17%` as of 2026-07-06.
+
 ## 2026-07-11
 
 - `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[CVS]]`; created the official source note, normalized fundamentals, entity, dated market quote, high-sensitivity DCF, and decision memo; action read is `WATCHLIST / WAIT-for-Q2 / NO-EXECUTION-without-fresh-quote` at a latest verified USD 102.83 close versus base DCF USD 76.47.
