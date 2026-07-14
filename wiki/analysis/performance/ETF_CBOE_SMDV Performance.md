@@ -24,8 +24,14 @@ official calendar-year NAV Total Return ยังไม่ครบ จึงไ
 - 10-year NAV TR CAGR: `7.15%` as of `2026-03-31` (official rolling issuer figure)
 - Coverage/source note: official calendar NAV TR table not exposed
 
+- Annual NAV TR coverage: 2016-2025 official calendar NAV TR rows not exposed; rolling 10Y CAGR retained
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |
+| 2017 | ไม่พบข้อมูลที่ยืนยันได้ | 21.83% |
+| 2018 | ไม่พบข้อมูลที่ยืนยันได้ | -4.38% |
+| 2019 | ไม่พบข้อมูลที่ยืนยันได้ | 31.49% |
+| 2020 | ไม่พบข้อมูลที่ยืนยันได้ | 18.40% |
 | 2021 | ไม่พบข้อมูลที่ยืนยันได้ | 28.71% |
 | 2022 | ไม่พบข้อมูลที่ยืนยันได้ | -18.11% |
 | 2023 | ไม่พบข้อมูลที่ยืนยันได้ | 26.29% |

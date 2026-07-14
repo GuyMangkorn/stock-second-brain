@@ -21,11 +21,17 @@ tags:
 - Metric: `NAV Total Return` รวม distributions reinvested และ fund expenses
 - Issuer benchmark: Dow Jones EPAC Select Dividend Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
-- 10-year NAV TR CAGR: `10.01%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- 10-year NAV TR CAGR: `10.10%` as of `2026-06-30` (official rolling issuer figure)
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 7.70% | 11.96% |
+| 2017 | 19.60% | 21.83% |
+| 2018 | -10.50% | -4.38% |
+| 2019 | 23.10% | 31.49% |
+| 2020 | -5.40% | 18.40% |
 | 2021 | 11.97% | 28.71% |
 | 2022 | -6.75% | -18.11% |
 | 2023 | 10.75% | 26.29% |

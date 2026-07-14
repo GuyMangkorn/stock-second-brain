@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: S-Network International Sector Dividend Dogs Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `10.38%` as of `2026-03-31` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 3.97% | 11.96% |
+| 2017 | 25.81% | 21.83% |
+| 2018 | -13.09% | -4.38% |
+| 2019 | 20.86% | 31.49% |
+| 2020 | -1.34% | 18.40% |
 | 2021 | 11.36% | 28.71% |
 | 2022 | -4.23% | -18.11% |
 | 2023 | 22.64% | 26.29% |

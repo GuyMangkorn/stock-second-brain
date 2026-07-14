@@ -108,24 +108,24 @@ futures strategy และ `MDIV` เป็น multi-asset fund-of-funds จึ�
 
 | Entity | Official source | Latest performance date used | Gap / note |
 |---|---|---|---|
-| `NYSE Arca:DEM` | [issuer](https://www.wisdomtree.com/us/products/equity/dem) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DES` | [issuer](https://www.wisdomtree.com/us/products/equity/des) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DFJ` | [issuer](https://www.wisdomtree.com/us/products/equity/dfj) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DGS` | [issuer](https://www.wisdomtree.com/us/products/equity/dgs) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DHS` | [issuer](https://www.wisdomtree.com/us/products/equity/dhs) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DLN` | [issuer](https://www.wisdomtree.com/us/products/equity/dln) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DLS` | [issuer](https://www.wisdomtree.com/us/products/equity/dls) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DON` | [issuer](https://www.wisdomtree.com/us/products/equity/don) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DTH` | [issuer](https://www.wisdomtree.com/us/products/equity/dth) | 2026-06-30 | official 2021-2025 |
-| `NYSE Arca:DWM` | [issuer](https://www.wisdomtree.com/us/products/equity/dwm) | 2026-06-30 | official 2021-2025 |
-| `Cboe BZX:DDWM` | [issuer](https://www.wisdomtree.com/us/products/equity/ddwm) | 2026-06-30 | official 2021-2025 |
-| `Cboe BZX:DDLS` | [issuer](https://www.wisdomtree.com/us/products/equity/ddls) | 2026-06-30 | 2025 secondary NAV TR* |
-| `NYSE Arca:DJD` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dow-jones-industrial-average-dividend-etf.html) | 2025-12-31 | official 2021-2025 |
-| `Nasdaq:PEY` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-high-yield-equity-dividend-achievers-etf.html) | 2026-05-31 | official 2021-2025 |
-| `Nasdaq:PFM` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dividend-achievers-etf.html) | 2026-05-31 | official 2021-2025 |
-| `Nasdaq:PID` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-international-dividend-achievers-etf.html) | 2026-03-31 | official 2021-2025 |
-| `NYSE Arca:VYM` | [issuer](https://investor.vanguard.com/investment-products/etfs/profile/vym) | 2026-06-30 | official 2021-2025 |
-| `Nasdaq:VYMI` | [issuer](https://investor.vanguard.com/investment-products/etfs/profile/vymi) | 2026-05-31 | official 2021-2024 calendar rows not exposed |
+| `NYSE Arca:DEM` | [issuer](https://www.wisdomtree.com/us/products/equity/dem) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DES` | [issuer](https://www.wisdomtree.com/us/products/equity/des) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DFJ` | [issuer](https://www.wisdomtree.com/us/products/equity/dfj) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DGS` | [issuer](https://www.wisdomtree.com/us/products/equity/dgs) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DHS` | [issuer](https://www.wisdomtree.com/us/products/equity/dhs) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DLN` | [issuer](https://www.wisdomtree.com/us/products/equity/dln) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DLS` | [issuer](https://www.wisdomtree.com/us/products/equity/dls) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DON` | [issuer](https://www.wisdomtree.com/us/products/equity/don) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DTH` | [issuer](https://www.wisdomtree.com/us/products/equity/dth) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:DWM` | [issuer](https://www.wisdomtree.com/us/products/equity/dwm) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `Cboe BZX:DDWM` | [issuer](https://www.wisdomtree.com/us/products/equity/ddwm) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `Cboe BZX:DDLS` | [issuer](https://www.wisdomtree.com/us/products/equity/ddls) | 2026-06-30 | official 2017-2024 calendar NAV TR; 2016 unavailable; 2025 secondary NAV TR* |
+| `NYSE Arca:DJD` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dow-jones-industrial-average-dividend-etf.html) | 2025-12-31 | official calendar NAV TR 2016-2025 |
+| `Nasdaq:PEY` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-high-yield-equity-dividend-achievers-etf.html) | 2026-05-31 | official calendar NAV TR 2016-2025 |
+| `Nasdaq:PFM` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dividend-achievers-etf.html) | 2026-05-31 | official calendar NAV TR 2016-2025 |
+| `Nasdaq:PID` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-international-dividend-achievers-etf.html) | 2026-03-31 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:VYM` | [issuer](https://investor.vanguard.com/investment-products/etfs/profile/vym) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `Nasdaq:VYMI` | [issuer](https://investor.vanguard.com/investment-products/etfs/profile/vymi) | 2025-12-31 | official NAV calendar rows 2016†-2025; 2016 inception-year partial |
 | `Cboe BZX:NOBL` | [issuer](https://www.proshares.com/our-etfs/strategic/nobl) | 2026-05-31 | official calendar NAV TR table not exposed |
 | `Cboe BZX:REGL` | [issuer](https://www.proshares.com/our-etfs/strategic/regl) | 2026-05-31 | official calendar NAV TR table not exposed |
 | `Cboe BZX:SMDV` | [issuer](https://www.proshares.com/our-etfs/strategic/smdv) | 2026-05-31 | official calendar NAV TR table not exposed |
@@ -136,17 +136,54 @@ futures strategy และ `MDIV` เป็น multi-asset fund-of-funds จึ�
 | `NYSE Arca:SDY` | [issuer](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-dividend-etf-sdy) | 2026-06-30 | official calendar NAV TR table not exposed |
 | `NYSE Arca:WDIV` | [issuer](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-global-dividend-etf-wdiv) | 2026-06-30 | official calendar NAV TR table not exposed |
 | `NYSE Arca:DWX` | [issuer](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-dividend-etf-dwx), [factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-dwx.pdf) | 2026-06-30 | official rolling 10Y/YTD; calendar NAV TR table not exposed |
-| `NYSE Arca:AMLP` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/amlp) | 2026-07-02 | official 2021-2025 |
-| `NYSE Arca:ENFR` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/enfr) | 2026-07-02 | official 2021-2025 |
-| `NYSE Arca:IDOG` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/idog) | 2026-07-02 | official 2021-2025 |
-| `NYSE Arca:SDOG` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/sdog) | 2026-06-18 | official 2021-2025 |
+| `NYSE Arca:AMLP` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/amlp) | 2026-07-02 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:ENFR` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/enfr) | 2026-07-02 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:IDOG` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/idog) | 2026-07-02 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:SDOG` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/sdog) | 2026-06-18 | official calendar NAV TR 2016-2025 |
 | `NYSE Arca:SDIV` | [issuer](https://www.globalxetfs.com/funds/SDIV) | 2026-07-10 | prospectus chart captured but year-label mapping was not machine-verifiable |
-| `Nasdaq:KBWD` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-high-dividend-yield-financial-etf.html) | 2025-12-31 | official 2021-2025 |
-| `Nasdaq:KBWY` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-premium-yield-equity-reit-etf.html) | 2026-03-31 | official 2021-2025 |
-| `NYSE Arca:FDD` | [issuer](https://www.ftportfolios.com/retail/etf/etfsummary.aspx?Ticker=FDD) | 2025-12-31 | official 2021-2025 |
-| `Nasdaq:TDIV` | [issuer](https://www.ftportfolios.com/retail/etf/EtfSummary.aspx?Ticker=TDIV) | 2026-06-30 | official 2021-2025 |
-| `Nasdaq:DVY` | [issuer](https://www.ishares.com/us/products/239500/ishares-select-dividend-etf) | 2026-06-30 | official 2021-2025 |
-| `Cboe BZX:IDV` | [issuer](https://www.ishares.com/us/products/239499/ishares-international-select-dividend-etf) | 2026-07-09 | official 2021-2025 |
+| `Nasdaq:KBWD` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-high-dividend-yield-financial-etf.html) | 2025-12-31 | official calendar NAV TR 2016-2025 |
+| `Nasdaq:KBWY` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-premium-yield-equity-reit-etf.html) | 2026-03-31 | official calendar NAV TR 2016-2025 |
+| `NYSE Arca:FDD` | [issuer](https://www.ftportfolios.com/retail/etf/etfsummary.aspx?Ticker=FDD), [2025 prospectus](https://www.ftportfolios.com/Funds/ETF/Prospectus/FAN) | 2026-06-30 | official calendar NAV TR 2016-2025; 10Y CAGR 9.11%; chart annual rows through 2025 |
+| `Nasdaq:TDIV` | [issuer](https://www.ftportfolios.com/retail/etf/EtfSummary.aspx?Ticker=TDIV) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `Nasdaq:DVY` | [issuer](https://www.ishares.com/us/products/239500/ishares-select-dividend-etf) | 2026-06-30 | official calendar NAV TR 2016-2025 |
+| `Cboe BZX:IDV` | [issuer](https://www.ishares.com/us/products/239499/ishares-international-select-dividend-etf), [international issuer table](https://www.ishares.com/ch/professionelle-anleger/de/produkte/239499/ishares-international-select-dividend-etf?switchLocale=Y) | 2026-06-30 | official calendar NAV TR 2016-2025; rolling 10Y 10.10% |
+
+## 2016-2020 Annual NAV TR Inputs
+
+ตัวเลขด้านล่างเป็น NAV Total Return รายปีของช่วงที่เพิ่งเติมลงใน performance
+pages; เงินปันผล reinvested และหัก fund expenses ตามนิยามของ issuer. ปี 2021-2025
+อยู่ในตารางรายกองเดิม. `*`/`†` ใช้ตามกติกาใน skill และ `ไม่พบข้อมูลที่ยืนยันได้`
+ยังคงใช้เมื่อ issuer ไม่เปิด annual row.
+
+| Ticker | 2016 | 2017 | 2018 | 2019 | 2020 | As-of / official source |
+|---|---:|---:|---:|---:|---:|---|
+| `AMLP` | 15.15% | -7.80% | -12.67% | 5.95% | -32.53% | 2026-07-02; [ALPS issuer](https://www.alpsfunds.com/exchange-traded-funds/amlp) |
+| `DEM` | 22.54% | 24.87% | -7.31% | 19.37% | -5.64% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dem-presentation) |
+| `DES` | 31.06% | 8.66% | -12.74% | 20.30% | -4.41% | 2025-12-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/des-presentation) |
+| `DFJ` | 11.04% | 31.62% | -17.63% | 17.02% | -0.06% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dfj-presentation) |
+| `DGS` | 14.91% | 35.48% | -15.39% | 17.28% | 4.14% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dgs-presentation) |
+| `DHS` | 17.85% | 11.68% | -7.25% | 22.58% | -5.68% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dhs-presentation) |
+| `DJD` | 16.93% | 21.63% | 0.11% | 22.37% | 0.94% | 2025-12-31; [Invesco issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dow-jones-industrial-average-dividend-etf.html) |
+| `DLN` | 15.37% | 18.21% | -5.77% | 29.03% | 4.55% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dln-presentation) |
+| `DLS` | 7.00% | 30.95% | -18.69% | 22.11% | -1.23% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dls-presentation) |
+| `DON` | 20.30% | 14.86% | -8.27% | 23.42% | -5.40% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/don-presentation) |
+| `DTH` | 5.10% | 20.33% | -12.57% | 17.74% | -7.05% | 2025-12-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/dth-presentation) |
+| `DWM` | 2.88% | 23.46% | -13.54% | 19.07% | -1.94% | 2026-03-31; [WisdomTree presentation](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/presentations/equity/dwm_presentation.pdf) |
+| `DDWM` | 14.18% | 18.52% | -11.05% | 21.03% | -4.20% | 2025-12-31; [WisdomTree presentation](https://www.wisdomtree.com/us/media/ddwm-presentation-pdf-c6778c) |
+| `DDLS` | ไม่พบข้อมูลที่ยืนยันได้ | 25.02% | -16.59% | 24.74% | -1.78% | 2026-06-30; [WisdomTree issuer performance](https://www.wisdomtree.com/us/products/equity/ddls) |
+| `ENFR` | 41.95% | -0.09% | -18.29% | 21.20% | -24.31% | 2026-07-02; [ALPS issuer](https://www.alpsfunds.com/exchange-traded-funds/enfr) |
+| `FDD` | 2.58% | 19.04% | -8.83% | 23.09% | -2.64% | 2025-12-31; [First Trust prospectus](https://www.ftportfolios.com/Funds/ETF/Prospectus/FAN) |
+| `IDOG` | 3.97% | 25.81% | -13.09% | 20.86% | -1.34% | 2026-07-02; [ALPS summary prospectus](https://www.alpsfunds.com/hubfs/alps-docs/reg/sum-pro/alps-international-sector-dividend-dogs-etf-idog-sum-pro.pdf) |
+| `SDOG` | 22.36% | 12.67% | -11.30% | 24.09% | -0.37% | 2026-06-18; [ALPS issuer](https://www.alpsfunds.com/exchange-traded-funds/sdog) |
+| `VYM` | 16.87% | 16.42% | -5.87% | 24.20% | 1.14% | 2026-06-30; [Vanguard issuer](https://investor.vanguard.com/investment-products/etfs/profile/vym) |
+| `DVY` | 21.50% | 15.00% | -6.30% | 22.70% | -4.90% | 2026-06-30; [iShares issuer table](https://www.ishares.com/uk/professional/en/products/239500/ishares-select-dividend-etf?siteEntryPassthrough=true&switchLocale=y) |
+| `IDV` | 7.70% | 19.60% | -10.50% | 23.10% | -5.40% | 2026-06-30; [iShares issuer table](https://www.ishares.com/ch/professionelle-anleger/de/produkte/239499/ishares-international-select-dividend-etf?switchLocale=Y) |
+| `KBWD` | 20.62% | 11.93% | -8.78% | 20.56% | -15.21% | 2025-12-31; [Invesco issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-high-dividend-yield-financial-etf.html) |
+| `KBWY` | 33.05% | 0.86% | -18.04% | 23.44% | -25.82% | 2026-03-31; [Invesco issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-premium-yield-equity-reit-etf.html) |
+| `PEY` | 31.56% | 8.64% | -7.36% | 24.61% | -3.76% | 2025-12-31; [Invesco issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-high-yield-equity-dividend-achievers-etf.html) |
+| `PFM` | 14.64% | 17.35% | -4.40% | 26.79% | 9.54% | 2025-12-31; [Invesco issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dividend-achievers-etf.html) |
+| `PID` | 9.92% | 19.03% | -11.08% | 25.44% | -6.55% | 2026-03-31; [Invesco issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-international-dividend-achievers-etf.html) |
+| `TDIV` | 19.63% | 21.90% | -3.01% | 33.31% | 17.27% | 2025-12-31; [First Trust prospectus](https://www.ftportfolios.com/Funds/ETF/Prospectus/FID) |
 
 ## Common Benchmark And Calculations
 
@@ -156,9 +193,10 @@ futures strategy และ `MDIV` เป็น multi-asset fund-of-funds จึ�
 - ETF common-window CAGR formula: `(Π(1 + annual NAV TR))^(1/5) - 1`.
 - `DDLS 2025 +29.10%*` is secondary Schwab standardized NAV return; excluded
   from strict official-only cross-fund ranking.
-- ProShares/State Street calendar tables and VYMI 2021-2024 rows were not
-  exposed in the captured official pages; rolling official figures are retained
-  and missing annual rows are shown as `ไม่พบข้อมูลที่ยืนยันได้`.
+- ProShares/State Street calendar tables remain unavailable in the captured
+  official pages; rolling official figures are retained and missing annual rows
+  are shown as `ไม่พบข้อมูลที่ยืนยันได้`. Vanguard VYMI now has official annual
+  NAV rows 2016†-2025 from the issuer page.
 - `DWX` official NAV TR as of 2026-06-30: YTD `6.97%`, 1-year `14.11%`,
   3-year `14.96%`, 5-year `7.73%`, and 10-year `7.44%`; gross expense ratio
   `0.45%`, inception `2008-02-12`.

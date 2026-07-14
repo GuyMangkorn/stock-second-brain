@@ -2,6 +2,8 @@
 
 ## 2026-07-14
 
+- `etf-performance`: เติม annual NAV Total Return rows ครบปี 2016-2025 ให้ performance pages ของ ticker ที่ไม่ถูก strike ทั้งหมด 47 หน้า; ปีที่ issuer ไม่เปิดเผยระบุ `ไม่พบข้อมูลที่ยืนยันได้` และทำเครื่องหมาย proxy/partial แยกชัดเจน. อัปเดต `[[ETF_performance_sources_2026-07-14]]` กับ `[[ETF Performance Index]]`; strict annual comparison ชี้ `TDIV` CAGR สูงสุดเหนือ S&P 500 TR และ `DJD` downside ต่ำสุด.
+
 - `etf-performance`: Extended the audit to all 47 ETF performance pages: 45 have
   numeric issuer rolling 10-year NAV TR CAGR; `TDV` and `FLCA` are explicitly
   not applicable because their inception histories are under 10 years. Corrected

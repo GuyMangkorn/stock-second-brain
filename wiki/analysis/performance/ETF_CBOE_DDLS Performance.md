@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: WisdomTree Dynamic International SmallCap Equity Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `10.18%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: 2025 secondary NAV TR*
+- Coverage/source note: 2016 unavailable; 2017-2024 official NAV TR; 2025 secondary NAV TR*
 
+- Annual NAV TR coverage: 2016 unavailable; 2017-2024 official NAV TR; 2025 secondary proxy*
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |
+| 2017 | 25.02% | 21.83% |
+| 2018 | -16.59% | -4.38% |
+| 2019 | 24.74% | 31.49% |
+| 2020 | -1.78% | 18.40% |
 | 2021 | 16.11% | 28.71% |
 | 2022 | -9.79% | -18.11% |
 | 2023 | 15.16% | 26.29% |

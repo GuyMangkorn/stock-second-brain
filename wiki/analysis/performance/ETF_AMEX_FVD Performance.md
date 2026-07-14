@@ -38,6 +38,7 @@ complete calendar years ในช่วง 2016-2025. ปีดีที่ส�
 - Performance as-of: 30 มิ.ย. 2026; closing NAV/market price as-of: 10 ก.ค. 2026
 - Coverage/source note: annual rows เป็น official complete calendar years 2016-2025; ไม่มี `*` หรือ `†`. Issuer ไม่แสดง Value Line benchmark เป็น calendar-year rows ใน current performance table จึงใช้ S&P 500 เป็น comparator context ที่ issuer แสดงไว้ และรายงาน Value Line benchmark แบบ rolling period แยกด้านล่าง
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | FVD NAV TR | S&P 500 TR (context) |
 |---|---:|---:|
 | 2016 | 19.94% | 11.96% |

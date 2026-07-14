@@ -24,8 +24,14 @@ official calendar-year NAV Total Return ยังไม่ครบ จึงไ
 - 10-year NAV TR CAGR: ไม่ applicable / ไม่พบข้อมูลที่ยืนยันได้
 - Coverage/source note: fund history shorter than 10 years; official calendar table gap
 
+- Annual NAV TR coverage: 2016-2025 unavailable; fund history shorter than 10 years
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |
+| 2017 | ไม่พบข้อมูลที่ยืนยันได้ | 21.83% |
+| 2018 | ไม่พบข้อมูลที่ยืนยันได้ | -4.38% |
+| 2019 | ไม่พบข้อมูลที่ยืนยันได้ | 31.49% |
+| 2020 | ไม่พบข้อมูลที่ยืนยันได้ | 18.40% |
 | 2021 | ไม่พบข้อมูลที่ยืนยันได้ | 28.71% |
 | 2022 | ไม่พบข้อมูลที่ยืนยันได้ | -18.11% |
 | 2023 | ไม่พบข้อมูลที่ยืนยันได้ | 26.29% |

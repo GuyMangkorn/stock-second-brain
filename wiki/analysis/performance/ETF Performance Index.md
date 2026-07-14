@@ -2,7 +2,7 @@
 type: etf-performance-index
 scope: expanded
 updated: 2026-07-14
-canonical_window: 2021-2025
+canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -91,26 +91,26 @@ diversification แต่แลกกับ FX/country sensitivity และผ�
 [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]. `QDPL` และ `MDIV` ถูกตัดออก
 ตาม guardrail เพราะ derivative-heavy และ multi-asset ตามลำดับ.
 
-| ETF | 10Y NAV CAGR | 2021-2025 CAGR | Worst year | Avg positive year | 2026 YTD | Coverage |
+| ETF | 10Y NAV CAGR | 2021-2025 CAGR | Worst (2021-2025) | Avg positive (2021-2025) | 2026 YTD | Coverage |
 |---|---:|---:|---:|---:|---:|---|
-| [[ETF_AMEX_DEM Performance]] | 9.78% | 8.97% | -10.32% | 14.60% | 15.75% | official 2021-2025 |
-| [[ETF_AMEX_DES Performance]] | 8.55% | 7.65% | -10.94% | 13.29% | 22.71% | official 2021-2025 |
-| [[ETF_AMEX_DFJ Performance]] | 9.13% | 8.57% | -8.65% | 14.06% | 10.98% | official 2021-2025 |
-| [[ETF_AMEX_DGS Performance]] | 9.57% | 8.23% | -12.15% | 14.26% | 14.19% | official 2021-2025 |
-| [[ETF_AMEX_DHS Performance]] | 9.44% | 12.05% | -0.19% | 15.47% | 13.44% | official 2021-2025 |
-| [[ETF_AMEX_DLN Performance]] | 12.53% | 12.92% | -3.79% | 17.67% | 10.41% | official 2021-2025 |
-| [[ETF_AMEX_DLS Performance]] | 8.11% | 7.97% | -17.36% | 15.95% | 5.23% | official 2021-2025 |
-| [[ETF_AMEX_DON Performance]] | 9.36% | 10.88% | -4.76% | 15.55% | 10.79% | official 2021-2025 |
-| [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official 2021-2025 |
-| [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official 2021-2025 |
-| [[ETF_CBOE_DDWM Performance]] | 10.72% | 13.41% | -1.27% | 17.63% | 7.65% | official 2021-2025 |
-| [[ETF_CBOE_DDLS Performance]] | 10.18% | 11.33% | -9.79% | 17.55% | 4.48% | 2025 secondary*; other years official |
-| [[ETF_AMEX_DJD Performance]] | 11.89% | 11.83% | -0.61% | 15.28% | ไม่พบข้อมูลที่ยืนยันได้ | official 2021-2025 |
-| [[ETF_NASDAQ_PEY Performance]] | 8.83% | 7.96% | ไม่พบข้อมูลที่ยืนยันได้ | 8.33% | 13.25% | official 2021-2025 |
-| [[ETF_NASDAQ_PFM Performance]] | 11.83% | 11.36% | -6.23% | 16.34% | 7.99% | official 2021-2025 |
-| [[ETF_NASDAQ_PID Performance]] | 8.81% | 11.28% | -6.36% | 16.54% | 2.05% | official 2021-2025 |
-| [[ETF_AMEX_VYM Performance]] | 11.61% | 12.68% | -0.42% | 16.42% | 11.49% | official 2021-2025 |
-| [[ETF_NASDAQ_VYMI Performance]] | 10.73% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 38.06% | 12.31% | official rolling; calendar gap |
+| [[ETF_AMEX_DEM Performance]] | 9.78% | 8.97% | -10.32% | 14.60% | 15.75% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DES Performance]] | 8.55% | 7.65% | -10.94% | 13.29% | 22.71% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DFJ Performance]] | 9.13% | 8.57% | -8.65% | 14.06% | 10.98% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DGS Performance]] | 9.57% | 8.23% | -12.15% | 14.26% | 14.19% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DHS Performance]] | 9.44% | 12.05% | -0.19% | 15.47% | 13.44% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DLN Performance]] | 12.53% | 12.92% | -3.79% | 17.67% | 10.41% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DLS Performance]] | 8.11% | 7.97% | -17.36% | 15.95% | 5.23% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DON Performance]] | 9.36% | 10.88% | -4.76% | 15.55% | 10.79% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official annual NAV TR 2016-2025 |
+| [[ETF_CBOE_DDWM Performance]] | 10.72% | 13.41% | -1.27% | 17.63% | 7.65% | official annual NAV TR 2016-2025 |
+| [[ETF_CBOE_DDLS Performance]] | 10.18% | 11.33% | -9.79% | 17.55% | 4.48% | 2016 gap; 2017-2024 official; 2025 secondary* |
+| [[ETF_AMEX_DJD Performance]] | 11.89% | 11.83% | -0.61% | 15.28% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_PEY Performance]] | 8.83% | 7.96% | ไม่พบข้อมูลที่ยืนยันได้ | 8.33% | 13.25% | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_PFM Performance]] | 11.83% | 11.36% | -6.23% | 16.34% | 7.99% | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_PID Performance]] | 8.81% | 11.28% | -6.36% | 16.54% | 2.05% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_VYM Performance]] | 11.61% | 12.68% | -0.42% | 16.42% | 11.49% | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_VYMI Performance]] | 10.73% | 13.06% | -6.90% | 19.22% | 12.31% | official annual NAV TR 2016†-2025 |
 | [[ETF_CBOE_NOBL Performance]] | 9.62% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 3.62% | official rolling; calendar gap |
 | [[ETF_CBOE_REGL Performance]] | 9.58% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 5.13% | official rolling; calendar gap |
 | [[ETF_CBOE_SMDV Performance]] | 7.15% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 10.38% | official rolling; calendar gap |
@@ -119,17 +119,17 @@ diversification แต่แลกกับ FX/country sensitivity และผ�
 | [[ETF_AMEX_SDY Performance]] | 9.37% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 10.77% | official rolling; calendar gap |
 | [[ETF_AMEX_WDIV Performance]] | 7.47% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 8.09% | official rolling; calendar gap |
 | [[ETF_AMEX_DWX Performance]] | 7.44% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 6.97% | official rolling; calendar gap |
-| [[ETF_AMEX_AMLP Performance]] | 8.22% | 22.43% | ไม่พบข้อมูลที่ยืนยันได้ | 22.90% | 14.86% | official 2021-2025 |
-| [[ETF_AMEX_ENFR Performance]] | 13.40% | 23.39% | ไม่พบข้อมูลที่ยืนยันได้ | 24.19% | 23.50% | official 2021-2025 |
-| [[ETF_AMEX_IDOG Performance]] | 10.38% | 13.18% | -4.23% | 18.84% | 10.58% | official 2021-2025 |
-| [[ETF_AMEX_SDOG Performance]] | 9.38% | 10.52% | -0.13% | 13.60% | 13.99% | official 2021-2025 |
+| [[ETF_AMEX_AMLP Performance]] | 8.22% | 22.43% | ไม่พบข้อมูลที่ยืนยันได้ | 22.90% | 14.86% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_ENFR Performance]] | 13.40% | 23.39% | ไม่พบข้อมูลที่ยืนยันได้ | 24.19% | 23.50% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_IDOG Performance]] | 10.38% | 13.18% | -4.23% | 18.84% | 10.58% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_SDOG Performance]] | 9.38% | 10.52% | -0.13% | 13.60% | 13.99% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_SDIV Performance]] | 0.13% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 5.50% | official rolling; calendar gap |
-| [[ETF_NASDAQ_KBWD Performance]] | 5.92% | 7.14% | -18.99% | 15.44% | ไม่พบข้อมูลที่ยืนยันได้ | official 2021-2025 |
-| [[ETF_NASDAQ_KBWY Performance]] | 0.99% | 1.85% | -18.90% | 21.94% | 1.51% | official 2021-2025 |
-| [[ETF_AMEX_FDD Performance]] | 9.11% | 13.02% | -2.64% | 19.61% | ไม่พบข้อมูลที่ยืนยันได้ | official 2021-2025 |
-| [[ETF_NASDAQ_TDIV Performance]] | 18.22% | 16.55% | -22.14% | 29.01% | 19.52% | official 2021-2025 |
-| [[ETF_NASDAQ_DVY Performance]] | 10.11% | 11.96% | ไม่พบข้อมูลที่ยืนยันได้ | 12.49% | 12.48% | official 2021-2025 |
-| [[ETF_CBOE_IDV Performance]] | 10.01% | 12.77% | -6.75% | 19.60% | 4.25% | official 2021-2025 |
+| [[ETF_NASDAQ_KBWD Performance]] | 5.92% | 7.14% | -18.99% | 15.44% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_KBWY Performance]] | 0.99% | 1.85% | -18.90% | 21.94% | 1.51% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_FDD Performance]] | 9.11% | 12.37% | -15.67% | 22.74% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_TDIV Performance]] | 18.22% | 16.55% | -22.14% | 29.01% | 19.52% | official annual NAV TR 2016-2025 |
+| [[ETF_NASDAQ_DVY Performance]] | 10.11% | 11.96% | ไม่พบข้อมูลที่ยืนยันได้ | 12.49% | 12.48% | official annual NAV TR 2016-2025 |
+| [[ETF_CBOE_IDV Performance]] | 10.10% | 12.78% | -6.75% | 19.60% | 4.25% | official annual NAV TR 2016-2025 |
 
 ### Cross-fund read
 
@@ -138,10 +138,39 @@ diversification แต่แลกกับ FX/country sensitivity และผ�
 - `DJD` ให้ balance เด่นสุด: 2016-2025 CAGR `11.89%`, worst calendar yearเพียง
   `-0.61%`, และ 2021-2025 CAGR `11.82%`; upside ต่ำกว่า S&P แต่ downside control เด่น.
 - `ENFR` นำช่วง 2021-2025 ที่ CAGR `23.39%` และไม่มีปีติดลบ แต่เป็น concentrated
-  midstream-energy regime result; rolling 10Y `13.40%` ยังต่ำกว่า S&P 500 TR `14.16%`
-  ใน issuer comparison as of 2026-03-31.
+  midstream-energy regime result; annual 2016-2025 CAGR `11.76%` ยังต่ำกว่า S&P
+  500 TR `14.82%`. Rolling 10Y `13.40%` เป็นคนละ as-of/window จึงไม่ควรจับคู่
+  ตรง ๆ กับ annual benchmark.
 - `DLN` เด่นสุดใน broad U.S. dividend subset: official rolling 10Y `12.53%`,
   common-window 2021-2025 CAGR `12.92%`, worst year `-3.79%`.
 
 การสรุป “บริหารกองทุนดี” ต้องตีความเป็น index methodology + tracking + cost control
 เพราะกองทั้งหมดใน ranking นี้เป็น passive ไม่ใช่ discretionary active management.
+
+## Annual 2016-2025 Comparison
+
+ตารางนี้คำนวณจาก annual NAV Total Return ในหน้ารายกอง โดยใช้ S&P 500 TR
+`14.82%` เป็น benchmark เดียวกัน (USD, dividends reinvested). อันดับ strict
+ใช้เฉพาะกองที่มีตัวเลขยืนยันครบทั้ง 10 ปี; `*` คือมี proxy/partial จึงไม่ใช้
+ตัดสินผู้ชนะอย่างเป็นทางการ.
+
+| ETF | 2016-2025 CAGR | เทียบ S&P 500 | Worst calendar year | Avg positive year | Up / Down | Coverage |
+|---|---:|---:|---:|---:|---:|---|
+| [[ETF_NASDAQ_TDIV Performance]] | 16.87% | +2.05 pp | -22.14% | 26.02% | 8 / 2 | official 10 years |
+| [[ETF_NYSE_ARCA_VOO Performance]] | 14.78% | -0.04 pp | -18.15% | 22.66% | 8 / 2 | official 10 years |
+| [[ETF_AMEX_VIG Performance]] | 13.09% | -1.73 pp | -9.79% | 18.57% | 8 / 2 | official 10 years |
+| [[ETF_AMEX_DGRO Performance]] | 13.08%* | -1.74 pp | -7.85% | 18.36% | 8 / 2 | 2016-2020 proxy* |
+| [[ETF_AMEX_DLN Performance]] | 12.27% | -2.55 pp | -5.77% | 17.23% | 8 / 2 | official 10 years |
+| [[ETF_AMEX_DJD Performance]] | 11.89% | -2.93 pp | -0.61% | 13.68% | 9 / 1 | official 10 years |
+| [[ETF_NASDAQ_PFM Performance]] | 11.83% | -2.99 pp | -6.23% | 16.71% | 8 / 2 | official 10 years |
+| [[ETF_AMEX_DTD Performance]] | 11.84% | -2.98 pp | -6.35% | 16.78% | 8 / 2 | official 10 years |
+| [[ETF_AMEX_ENFR Performance]] | 11.76% | -3.06 pp | -24.31% | 26.30% | 7 / 3 | official 10 years |
+| [[ETF_AMEX_VYM Performance]] | 11.32% | -3.50 pp | -5.87% | 15.54% | 8 / 2 | official 10 years |
+
+**อ่านผล:** `TDIV` มี CAGR สูงสุดและ average positive year สูงมาก แต่แลกกับ
+ปี 2022 ที่ `-22.14%`. `DJD` มี downside ต่ำสุดในกลุ่ม complete official rows
+(ปีแย่สุด `-0.61%`, ติดลบเพียง 1 ปี) แต่ CAGR ต่ำกว่า S&P. `DLN` เป็นจุดสมดุล
+ที่ downside `-5.77%` และ CAGR `12.27%`; ยังไม่ชนะ benchmark. `ENFR` มี upside
+เฉลี่ยสูงสุดในตาราง (`26.30%`) แต่ปี 2020 ลด `-24.31%` และมี energy/midstream
+concentration. สำหรับ passive ETF คำว่า “บริหารดี” จึงหมายถึงการทำตาม index,
+tracking และ cost control ไม่ใช่หลักฐานของ discretionary manager alpha.

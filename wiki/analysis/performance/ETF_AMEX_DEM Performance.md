@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: WisdomTree Emerging Markets High Dividend Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `9.78%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 22.54% | 11.96% |
+| 2017 | 24.87% | 21.83% |
+| 2018 | -7.31% | -4.38% |
+| 2019 | 19.37% | 31.49% |
+| 2020 | -5.64% | 18.40% |
 | 2021 | 11.69% | 28.71% |
 | 2022 | -10.32% | -18.11% |
 | 2023 | 20.93% | 26.29% |

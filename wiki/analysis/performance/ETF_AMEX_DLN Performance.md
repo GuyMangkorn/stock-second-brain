@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: WisdomTree U.S. LargeCap Dividend Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `12.53%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 15.37% | 11.96% |
+| 2017 | 18.21% | 21.83% |
+| 2018 | -5.77% | -4.38% |
+| 2019 | 29.03% | 31.49% |
+| 2020 | 4.55% | 18.40% |
 | 2021 | 25.60% | 28.71% |
 | 2022 | -3.79% | -18.11% |
 | 2023 | 9.93% | 26.29% |

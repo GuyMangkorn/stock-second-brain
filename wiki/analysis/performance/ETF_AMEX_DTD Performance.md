@@ -45,6 +45,7 @@ NAV return หลัง expense ratio แล้ว. เทียบกับ S&P
 - Annual coverage: official complete years 2016-2025; ไม่มี partial-year marker
 - Performance as-of: 30 มิ.ย. 2026. NAV/market price as-of: 10 ก.ค. 2026
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | DTD NAV Total Return | S&P 500 TR |
 |---|---:|---:|
 | 2016 | +16.59% | +11.96% |

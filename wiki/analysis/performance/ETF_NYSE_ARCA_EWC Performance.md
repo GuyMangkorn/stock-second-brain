@@ -49,6 +49,7 @@ EWC ให้ cumulative `NAV Total Return` ประมาณ `210.78%` ใน 
   ตัวเลข NAV จาก fact sheet ทางการ.
 - S&P 500 cache 2016-2025: cumulative `298.33%`; CAGR `14.82%` จาก rounded annual inputs
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | EWC NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | 24.30% | 11.96% |

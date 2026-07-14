@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: Nasdaq Technology Dividend Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `18.22%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 19.63% | 11.96% |
+| 2017 | 21.90% | 21.83% |
+| 2018 | -3.01% | -4.38% |
+| 2019 | 33.31% | 31.49% |
+| 2020 | 17.27% | 18.40% |
 | 2021 | 29.56% | 28.71% |
 | 2022 | -22.14% | -18.11% |
 | 2023 | 36.78% | 26.29% |

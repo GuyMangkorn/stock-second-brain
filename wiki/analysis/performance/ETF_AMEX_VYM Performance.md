@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: FTSE High Dividend Yield Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `11.61%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 16.87% | 11.96% |
+| 2017 | 16.42% | 21.83% |
+| 2018 | -5.87% | -4.38% |
+| 2019 | 24.20% | 31.49% |
+| 2020 | 1.14% | 18.40% |
 | 2021 | 26.14% | 28.71% |
 | 2022 | -0.42% | -18.11% |
 | 2023 | 6.53% | 26.29% |

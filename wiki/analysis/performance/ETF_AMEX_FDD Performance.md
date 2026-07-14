@@ -11,7 +11,7 @@ tags:
 
 ## Bottom line
 
-ช่วงร่วม 2021-2025 ให้ CAGR 13.02% จาก cumulative 84.44% เทียบ S&P 500 TR CAGR 14.43%; มี 1 ปีติดลบ.
+ช่วงร่วม 2021-2025 ให้ CAGR 12.37% จาก cumulative 79.24% เทียบ S&P 500 TR CAGR 14.43%; มี 1 ปีติดลบ.
 
 ## Performance check
 
@@ -22,25 +22,35 @@ tags:
 - Issuer benchmark: STOXX Europe Select Dividend 30 Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `9.11%` as of `2025-12-31` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
-| 2021 | 13.42% | 28.71% |
-| 2022 | -2.64% | -18.11% |
-| 2023 | 2.58% | 26.29% |
+| 2016 | 2.58% | 11.96% |
+| 2017 | 19.04% | 21.83% |
+| 2018 | -8.83% | -4.38% |
+| 2019 | 23.09% | 31.49% |
+| 2020 | -2.64% | 18.40% |
+| 2021 | 15.07% | 28.71% |
+| 2022 | -15.67% | -18.11% |
+| 2023 | 13.42% | 26.29% |
 | 2024 | 0.60% | 25.02% |
 | 2025 | 61.85% | 17.88% |
 
-**Up years / Down years**
+**Up years / Down years (2016-2025)**
 
 - Best: 61.85%; least positive: 0.60%
-- Worst: -2.64%; least bad down year: -2.64%
+- Worst: -15.67%; least bad down year: -2.64%
 - Current YTD: ไม่พบข้อมูลที่ยืนยันได้
 
 ## Risk read-through
 
-Average positive year 19.61%; worst year -2.64%. ตัวเลขสะท้อนผลของ index construction และ tracking หลังหัก fund expenses ไม่ใช่หลักฐานว่าผู้จัดการกองทุนเลือกหุ้นเชิง discretionary ได้เหนือกว่า. Classification: `Europe high-dividend equity`. อย่าใช้ CAGR อย่างเดียวตัดสินความเสี่ยง โดยเฉพาะ sector/country-concentrated funds.
+Average positive year `19.38%` ใน 2016-2025; common-window 2021-2025 อยู่ที่
+`22.74%`; worst full-window year `-15.67%`. ตัวเลขสะท้อนผลของ index construction
+และ tracking หลังหัก fund expenses ไม่ใช่หลักฐานว่าผู้จัดการกองทุนเลือกหุ้นเชิง
+discretionary ได้เหนือกว่า. Classification: `Europe high-dividend equity`.
+อย่าใช้ CAGR อย่างเดียวตัดสินความเสี่ยง โดยเฉพาะ sector/country-concentrated funds.
 
 ## Sources
 

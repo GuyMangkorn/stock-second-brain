@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: Dow Jones Industrial Average Yield Weighted Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `11.89%` as of `2025-12-31` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 16.93% | 11.96% |
+| 2017 | 21.63% | 21.83% |
+| 2018 | 0.11% | -4.38% |
+| 2019 | 22.37% | 31.49% |
+| 2020 | 0.94% | 18.40% |
 | 2021 | 22.33% | 28.71% |
 | 2022 | -0.61% | -18.11% |
 | 2023 | 9.26% | 26.29% |

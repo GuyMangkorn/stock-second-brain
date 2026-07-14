@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: KBW Nasdaq Financial Sector Dividend Yield Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `5.92%` as of `2025-12-31` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 20.62% | 11.96% |
+| 2017 | 11.93% | 21.83% |
+| 2018 | -8.78% | -4.38% |
+| 2019 | 20.56% | 31.49% |
+| 2020 | -15.21% | 18.40% |
 | 2021 | 31.85% | 28.71% |
 | 2022 | -18.99% | -18.11% |
 | 2023 | 19.98% | 26.29% |

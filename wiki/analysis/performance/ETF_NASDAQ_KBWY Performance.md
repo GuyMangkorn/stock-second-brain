@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: KBW Nasdaq Premium Yield Equity REIT Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `0.99%` as of `2025-12-31` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 33.05% | 11.96% |
+| 2017 | 0.86% | 21.83% |
+| 2018 | -18.04% | -4.38% |
+| 2019 | 23.44% | 31.49% |
+| 2020 | -25.82% | 18.40% |
 | 2021 | 31.14% | 28.71% |
 | 2022 | -18.90% | -18.11% |
 | 2023 | 12.75% | 26.29% |

@@ -43,6 +43,7 @@ official NAV TR; ตัวเลขนี้ไม่ใช่ official 10-year 
   2016-2025; `*` คือ dividend-reinvested market-price proxy สำหรับ 2014-2020
   เพราะหน้า issuer ที่เก็บไว้ไม่แสดง annual table ช่วงนี้
 
+- Annual NAV TR coverage: 2016-2020 secondary proxy*; 2021-2025 official NAV TR
 | ปี | DGRO TR | S&P 500 TR |
 |---|---:|---:|
 | 2014* | 8.56% | — |

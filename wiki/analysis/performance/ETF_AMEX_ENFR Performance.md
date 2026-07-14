@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: Alerian Midstream Energy Select Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `13.40%` as of `2026-03-31` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 41.95% | 11.96% |
+| 2017 | -0.09% | 21.83% |
+| 2018 | -18.29% | -4.38% |
+| 2019 | 21.20% | 31.49% |
+| 2020 | -24.31% | 18.40% |
 | 2021 | 39.60% | 28.71% |
 | 2022 | 18.33% | -18.11% |
 | 2023 | 15.05% | 26.29% |

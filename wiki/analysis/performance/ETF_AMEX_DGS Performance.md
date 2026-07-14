@@ -22,10 +22,16 @@ tags:
 - Issuer benchmark: WisdomTree Emerging Markets SmallCap Dividend Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
 - 10-year NAV TR CAGR: `9.57%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: official 2021-2025
+- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
+- Annual NAV TR coverage: official 2016-2025 NAV TR
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
+| 2016 | 14.91% | 11.96% |
+| 2017 | 35.48% | 21.83% |
+| 2018 | -15.39% | -4.38% |
+| 2019 | 17.28% | 31.49% |
+| 2020 | 4.14% | 18.40% |
 | 2021 | 15.60% | 28.71% |
 | 2022 | -12.15% | -18.11% |
 | 2023 | 18.92% | 26.29% |
