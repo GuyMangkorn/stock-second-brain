@@ -31,7 +31,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
 as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-30 และ raw TR endpoints
-ไม่เปิดเผย. TDV และ FLCA ไม่มี 10-year CAGR เพราะประวัติกองยังไม่ครบ 10 ปี.
+ไม่เปิดเผย. FLCA ไม่มี 10-year CAGR เพราะประวัติกองยังไม่ครบ 10 ปี.
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
 
@@ -111,19 +111,10 @@ diversification แต่แลกกับ FX/country sensitivity และผ�
 | [[ETF_NASDAQ_PID Performance]] | 8.81% | 11.28% | -6.36% | 16.54% | 2.05% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_VYM Performance]] | 11.61% | 12.68% | -0.42% | 16.42% | 11.49% | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_VYMI Performance]] | 10.73% | 13.06% | -6.90% | 19.22% | 12.31% | official annual NAV TR 2016†-2025 |
-| [[ETF_CBOE_NOBL Performance]] | 9.62% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 3.62% | official rolling; calendar gap |
-| [[ETF_CBOE_REGL Performance]] | 9.58% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 5.13% | official rolling; calendar gap |
-| [[ETF_CBOE_SMDV Performance]] | 7.15% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 10.38% | official rolling; calendar gap |
-| [[ETF_CBOE_TDV Performance]] | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 20.77% | official rolling; calendar gap |
-| [[ETF_AMEX_SPYD Performance]] | 8.81% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 10.99% | official rolling; calendar gap |
-| [[ETF_AMEX_SDY Performance]] | 9.37% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 10.77% | official rolling; calendar gap |
-| [[ETF_AMEX_WDIV Performance]] | 7.47% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 8.09% | official rolling; calendar gap |
-| [[ETF_AMEX_DWX Performance]] | 7.44% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 6.97% | official rolling; calendar gap |
 | [[ETF_AMEX_AMLP Performance]] | 8.22% | 22.43% | ไม่พบข้อมูลที่ยืนยันได้ | 22.90% | 14.86% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_ENFR Performance]] | 13.40% | 23.39% | ไม่พบข้อมูลที่ยืนยันได้ | 24.19% | 23.50% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_IDOG Performance]] | 10.38% | 13.18% | -4.23% | 18.84% | 10.58% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_SDOG Performance]] | 9.38% | 10.52% | -0.13% | 13.60% | 13.99% | official annual NAV TR 2016-2025 |
-| [[ETF_AMEX_SDIV Performance]] | 0.13% | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | ไม่พบข้อมูลที่ยืนยันได้ | 5.50% | official rolling; calendar gap |
 | [[ETF_NASDAQ_KBWD Performance]] | 5.92% | 7.14% | -18.99% | 15.44% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_KBWY Performance]] | 0.99% | 1.85% | -18.90% | 21.94% | 1.51% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_FDD Performance]] | 9.11% | 12.37% | -15.67% | 22.74% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
