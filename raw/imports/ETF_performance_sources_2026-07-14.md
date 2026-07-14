@@ -97,3 +97,73 @@ return; S&P 500 TR เป็น common reference ไม่ใช่ issuer bench
 Create `[[ETF_NASDAQ_OPPJ Performance]]`, add OPPJ to `[[ETF Performance Index]]`,
 and retain the strategy-break warning beside all long-history interpretations.
 Do not route this ETF through company financial ingest or DCF.
+
+## Preliminary Holdings Groups Expansion
+
+Batch นี้รัน `check-etf-performance` กับ 39 ticker ที่ไม่ถูกขีดฆ่าและยังไม่มี
+performance page ใน section `Preliminary Holdings-Based Groups`: 37 กองผ่าน
+passive index-tracking equity guardrail; `QDPL` เป็น derivative-heavy dividend-
+futures strategy และ `MDIV` เป็น multi-asset fund-of-funds จึงบันทึกเป็น
+`unsupported ETF type` และไม่จัดอันดับร่วม.
+
+| Entity | Official source | Latest performance date used | Gap / note |
+|---|---|---|---|
+| `NYSE Arca:DEM` | [issuer](https://www.wisdomtree.com/us/products/equity/dem) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DES` | [issuer](https://www.wisdomtree.com/us/products/equity/des) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DFJ` | [issuer](https://www.wisdomtree.com/us/products/equity/dfj) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DGS` | [issuer](https://www.wisdomtree.com/us/products/equity/dgs) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DHS` | [issuer](https://www.wisdomtree.com/us/products/equity/dhs) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DLN` | [issuer](https://www.wisdomtree.com/us/products/equity/dln) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DLS` | [issuer](https://www.wisdomtree.com/us/products/equity/dls) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DON` | [issuer](https://www.wisdomtree.com/us/products/equity/don) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DTH` | [issuer](https://www.wisdomtree.com/us/products/equity/dth) | 2026-06-30 | official 2021-2025 |
+| `NYSE Arca:DWM` | [issuer](https://www.wisdomtree.com/us/products/equity/dwm) | 2026-06-30 | official 2021-2025 |
+| `Cboe BZX:DDWM` | [issuer](https://www.wisdomtree.com/us/products/equity/ddwm) | 2026-06-30 | official 2021-2025 |
+| `Cboe BZX:DDLS` | [issuer](https://www.wisdomtree.com/us/products/equity/ddls) | 2026-06-30 | 2025 secondary NAV TR* |
+| `NYSE Arca:DJD` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dow-jones-industrial-average-dividend-etf.html) | 2025-12-31 | official 2021-2025 |
+| `Nasdaq:PEY` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-high-yield-equity-dividend-achievers-etf.html) | 2026-05-31 | official 2021-2025 |
+| `Nasdaq:PFM` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-dividend-achievers-etf.html) | 2026-05-31 | official 2021-2025 |
+| `Nasdaq:PID` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-international-dividend-achievers-etf.html) | 2026-03-31 | official 2021-2025 |
+| `NYSE Arca:VYM` | [issuer](https://investor.vanguard.com/investment-products/etfs/profile/vym) | 2026-06-30 | official 2021-2025 |
+| `Nasdaq:VYMI` | [issuer](https://investor.vanguard.com/investment-products/etfs/profile/vymi) | 2026-05-31 | official 2021-2024 calendar rows not exposed |
+| `Cboe BZX:NOBL` | [issuer](https://www.proshares.com/our-etfs/strategic/nobl) | 2026-05-31 | official calendar NAV TR table not exposed |
+| `Cboe BZX:REGL` | [issuer](https://www.proshares.com/our-etfs/strategic/regl) | 2026-05-31 | official calendar NAV TR table not exposed |
+| `Cboe BZX:SMDV` | [issuer](https://www.proshares.com/our-etfs/strategic/smdv) | 2026-05-31 | official calendar NAV TR table not exposed |
+| `Cboe BZX:TDV` | [issuer](https://www.proshares.com/our-etfs/strategic/tdv) | 2026-05-31 | fund history shorter than 10 years; official calendar table gap |
+| `NYSE Arca:SPYD` | [issuer](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-portfolio-sp-500-high-dividend-etf-spyd) | 2026-05-31 | official calendar NAV TR table not exposed |
+| `NYSE Arca:SDY` | [issuer](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-dividend-etf-sdy) | 2026-06-30 | official calendar NAV TR table not exposed |
+| `NYSE Arca:WDIV` | [issuer](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-global-dividend-etf-wdiv) | 2026-06-30 | official calendar NAV TR table not exposed |
+| `NYSE Arca:DWX` | [issuer](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-dividend-etf-dwx), [factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-dwx.pdf) | 2026-06-30 | official rolling 10Y/YTD; calendar NAV TR table not exposed |
+| `NYSE Arca:AMLP` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/amlp) | 2026-07-02 | official 2021-2025 |
+| `NYSE Arca:ENFR` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/enfr) | 2026-07-02 | official 2021-2025 |
+| `NYSE Arca:IDOG` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/idog) | 2026-07-02 | official 2021-2025 |
+| `NYSE Arca:SDOG` | [issuer](https://www.alpsfunds.com/exchange-traded-funds/sdog) | 2026-06-18 | official 2021-2025 |
+| `NYSE Arca:SDIV` | [issuer](https://www.globalxetfs.com/funds/SDIV) | 2026-07-10 | prospectus chart captured but year-label mapping was not machine-verifiable |
+| `Nasdaq:KBWD` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-high-dividend-yield-financial-etf.html) | 2025-12-31 | official 2021-2025 |
+| `Nasdaq:KBWY` | [issuer](https://www.invesco.com/us/en/financial-products/etfs/invesco-kbw-premium-yield-equity-reit-etf.html) | 2026-03-31 | official 2021-2025 |
+| `NYSE Arca:FDD` | [issuer](https://www.ftportfolios.com/retail/etf/etfsummary.aspx?Ticker=FDD) | 2025-12-31 | official 2021-2025 |
+| `Nasdaq:TDIV` | [issuer](https://www.ftportfolios.com/retail/etf/EtfSummary.aspx?Ticker=TDIV) | 2026-06-30 | official 2021-2025 |
+| `Nasdaq:DVY` | [issuer](https://www.ishares.com/us/products/239500/ishares-select-dividend-etf) | 2026-06-30 | official 2021-2025 |
+| `Cboe BZX:IDV` | [issuer](https://www.ishares.com/us/products/239499/ishares-international-select-dividend-etf) | 2026-07-09 | official 2021-2025 |
+
+## Common Benchmark And Calculations
+
+- 2021-2025 common benchmark rows copied from the cached `S&P 500 Total Return`
+  convention: `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`.
+- S&P 500 TR 2021-2025 CAGR: `14.43%`; 2016-2025 CAGR: `14.82%`.
+- ETF common-window CAGR formula: `(Π(1 + annual NAV TR))^(1/5) - 1`.
+- `DDLS 2025 +29.10%*` is secondary Schwab standardized NAV return; excluded
+  from strict official-only cross-fund ranking.
+- ProShares/State Street calendar tables and VYMI 2021-2024 rows were not
+  exposed in the captured official pages; rolling official figures are retained
+  and missing annual rows are shown as `ไม่พบข้อมูลที่ยืนยันได้`.
+- `DWX` official NAV TR as of 2026-06-30: YTD `6.97%`, 1-year `14.11%`,
+  3-year `14.96%`, 5-year `7.73%`, and 10-year `7.44%`; gross expense ratio
+  `0.45%`, inception `2008-02-12`.
+
+## Unsupported ETF Types
+
+- `NYSE Arca:QDPL`: derivative-heavy dividend-multiplier exposure through
+  S&P 500 annual dividend futures; excluded by skill guardrail.
+- `Nasdaq:MDIV`: multi-asset diversified income fund-of-funds; excluded by
+  skill guardrail.

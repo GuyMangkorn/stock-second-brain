@@ -118,6 +118,8 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 กลุ่มนี้ใช้ Top 10 holdings ที่ verify แล้วเท่านั้น. สำหรับการซื้อขายในตลาดสหรัฐ ให้ถือ `AMEX`, `NASDAQ`, และ `CBOE` เป็น US-listed; ETF ที่จดทะเบียนในตลาดอื่นยังคงไว้เพื่อเห็น peer group แต่ mark ~~ขีดฆ่ากลาง~~ = ไม่ใช่ US-listed. ETF ที่ยังไม่เจอ holdings ยังอยู่ใน `Full Universe Source Status` ด้วย description fallback group จนกว่าจะตรวจ source รายตัวครบ.
 
+ตรวจ performance แล้วสำหรับ ticker ที่ไม่ขีดฆ่าและยังไม่เคยตรวจ: 37 passive equity ETFs มีหน้ารายกองใน [[ETF Performance Index]]; `QDPL` และ `MDIV` เป็น `unsupported ETF type` ตาม guardrail และไม่ถูกนำมาจัดอันดับร่วม.
+
 | Holdings group | Basis | ETFs |
 | --- | --- | --- |
 | HG01 U.S. mega-cap dividend quality / broad large-cap overlap | AVGO, AAPL, MSFT, JPM, JNJ, XOM, LLY, WMT/NVDA overlap plus QDPL S&P dividend futures exposure; watch duplication in core U.S. dividend sleeve | `AMEX:DGRO`, `AMEX:VIG`, `AMEX:VYM`, `NASDAQ:PFM`, ~~`TSX:VGG`~~, ~~`TSX:VGH`~~, `AMEX:DTD`, `AMEX:DLN`, `AMEX:QDPL` |

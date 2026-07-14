@@ -2,6 +2,12 @@
 
 ## 2026-07-14
 
+- `etf-performance`: Checked all 39 previously unchecked, non-struck tickers in
+  `[[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]`; created 37 passive-equity
+  performance pages, expanded `[[ETF Performance Index]]` and the dated source
+  batch, and excluded derivative-heavy `QDPL` plus multi-asset `MDIV`. `TDIV`
+  led verified 2016-2025 CAGR; `DJD` had the strongest downside balance.
+
 - `etf-performance`: Created `[[ETF_NASDAQ_OPPJ Performance]]`, added OPPJ to
   `[[ETF Performance Index]]`, and captured the dated source batch; official
   2026 YTD NAV Total Return is `+24.67%` and rolling 10-year NAV CAGR is
