@@ -1,5 +1,13 @@
 # Log
 
+## 2026-07-14
+
+- `etf-performance`: Created `[[ETF_NASDAQ_OPPJ Performance]]`, added OPPJ to
+  `[[ETF Performance Index]]`, and captured the dated source batch; official
+  2026 YTD NAV Total Return is `+24.67%` and rolling 10-year NAV CAGR is
+  `17.89%` as of 2026-06-30, with the 2025 strategy conversion and secondary
+  2025 annual row explicitly flagged.
+
 ## 2026-07-12
 
 - `etf-performance`: Added official rolling 10-year NAV CAGR to all six ETF
