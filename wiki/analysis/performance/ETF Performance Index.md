@@ -21,16 +21,17 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_AMEX_DGRO]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
 | [[ETF_AMEX_VIG]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
 | [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
-| [[ETF_AMEX_DIVI]] | official 2017-2025 | not disclosed | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
+| [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
-| [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not disclosed | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
+| [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.06% | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
 | [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 8.40% | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
 | [[ETF_NYSE_ARCA_VOO Performance]] | official 2010 / official 2016-2025 | 15.47% | 14.38% | 9.97% | 2019 +31.46% / 2022 -18.15% | U.S. large-cap broad equity | S&P 500 market beta, mega-cap sensitive |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
-as-of date ต่างกัน; DIVI ยังไม่มีตัวเลข 10-year ที่ issuer เปิดเผยใน source ที่จับไว้.
+as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-30 และ raw TR endpoints
+ไม่เปิดเผย. TDV และ FLCA ไม่มี 10-year CAGR เพราะประวัติกองยังไม่ครบ 10 ปี.
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
 

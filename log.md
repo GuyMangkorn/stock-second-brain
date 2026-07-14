@@ -2,6 +2,12 @@
 
 ## 2026-07-14
 
+- `etf-performance`: Extended the audit to all 47 ETF performance pages: 45 have
+  numeric issuer rolling 10-year NAV TR CAGR; `TDV` and `FLCA` are explicitly
+  not applicable because their inception histories are under 10 years. Corrected
+  `DIVI` to official 10-year NAV TR CAGR `11.24%` as of 2026-06-30 and linked the
+  fresh Franklin factsheet in the 2026-07-14 source batch.
+
 - `etf-performance`: Checked all 39 previously unchecked, non-struck tickers in
   `[[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]`; created 37 passive-equity
   performance pages, expanded `[[ETF Performance Index]]` and the dated source

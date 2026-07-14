@@ -130,6 +130,8 @@ futures strategy และ `MDIV` เป็น multi-asset fund-of-funds จึ�
 | `Cboe BZX:REGL` | [issuer](https://www.proshares.com/our-etfs/strategic/regl) | 2026-05-31 | official calendar NAV TR table not exposed |
 | `Cboe BZX:SMDV` | [issuer](https://www.proshares.com/our-etfs/strategic/smdv) | 2026-05-31 | official calendar NAV TR table not exposed |
 | `Cboe BZX:TDV` | [issuer](https://www.proshares.com/our-etfs/strategic/tdv) | 2026-05-31 | fund history shorter than 10 years; official calendar table gap |
+| `NYSE Arca:DIVI` | [Franklin product](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/21412/SINGLCLASS/franklin-international-core-dividend-tilt-index-etf/DIVI), [factsheet](https://www.franklintempleton.com/forms-literature/download/DIVI-FF) | 2026-06-30 | NAV TR 10Y average annual `11.24%`; inception annualized `11.02%`; raw TR endpoints not disclosed |
+| `NYSE Arca:FLCA` | [Franklin product](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26364/SINGLCLASS/franklin-ftse-canada-etf/FLCA), [factsheet](https://www.franklintempleton.com/forms-literature/download/FLCA-FF) | 2026-06-30 | NAV TR 10Y `—`; inception 2017-11-02, so history is shorter than 10 years |
 | `NYSE Arca:SPYD` | [issuer](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-portfolio-sp-500-high-dividend-etf-spyd) | 2026-05-31 | official calendar NAV TR table not exposed |
 | `NYSE Arca:SDY` | [issuer](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-dividend-etf-sdy) | 2026-06-30 | official calendar NAV TR table not exposed |
 | `NYSE Arca:WDIV` | [issuer](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-global-dividend-etf-wdiv) | 2026-06-30 | official calendar NAV TR table not exposed |
@@ -160,6 +162,9 @@ futures strategy และ `MDIV` เป็น multi-asset fund-of-funds จึ�
 - `DWX` official NAV TR as of 2026-06-30: YTD `6.97%`, 1-year `14.11%`,
   3-year `14.96%`, 5-year `7.73%`, and 10-year `7.44%`; gross expense ratio
   `0.45%`, inception `2008-02-12`.
+- `DIVI` official NAV TR as of 2026-06-30: 10-year average annual return
+  `11.24%`, since-inception annualized return `11.02%`; the latest factsheet
+  exposes calendar NAV rows for 2017-2025 but not raw 10-year TR endpoints.
 
 ## Unsupported ETF Types
 
