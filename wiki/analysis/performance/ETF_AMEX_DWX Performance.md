@@ -25,6 +25,7 @@ Official rolling 10-year NAV Total Return CAGR อยู่ที่ `7.44%` ณ
 - Current YTD NAV TR: `6.97%` as of `2026-06-30`
 
 - Annual NAV TR coverage: 2016-2025 official calendar NAV TR rows not exposed; rolling 10Y CAGR retained
+
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |

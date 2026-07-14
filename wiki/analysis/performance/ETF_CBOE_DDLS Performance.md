@@ -25,6 +25,7 @@ tags:
 - Coverage/source note: 2016 unavailable; 2017-2024 official NAV TR; 2025 secondary NAV TR*
 
 - Annual NAV TR coverage: 2016 unavailable; 2017-2024 official NAV TR; 2025 secondary proxy*
+
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |

@@ -25,6 +25,7 @@ official calendar-year NAV Total Return ยังไม่ครบ จึงไ
 - Coverage/source note: prospectus chart captured but year-label mapping was not machine-verifiable
 
 - Annual NAV TR coverage: 2016-2025 official calendar NAV TR rows not exposed; rolling 10Y CAGR retained
+
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |

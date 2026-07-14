@@ -25,6 +25,7 @@ official calendar-year NAV Total Return ยังไม่ครบ จึงไ
 - Coverage/source note: fund history shorter than 10 years; official calendar table gap
 
 - Annual NAV TR coverage: 2016-2025 unavailable; fund history shorter than 10 years
+
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |

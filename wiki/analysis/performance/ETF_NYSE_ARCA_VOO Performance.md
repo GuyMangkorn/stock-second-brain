@@ -50,6 +50,7 @@ years 2016-2025 หรือ CAGR `14.78%` จาก annual rows ทางกา
   exclude `market-price return` จากตารางและ ranking.
 
 - Annual NAV TR coverage: official 2016-2025 NAV TR
+
 | ปี | VOO NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | 11.93% | 11.96% |

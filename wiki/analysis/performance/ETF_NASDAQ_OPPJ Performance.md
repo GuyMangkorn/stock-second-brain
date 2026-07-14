@@ -44,6 +44,7 @@ Annual OPPJ rows ปี 2016-2024 มาจาก [SEC summary prospectus](https
 ปี 2025 มาจาก [Schwab standardized ETF report](https://www.schwab.wallst.com/schwab/Prospect/research/etfs/reports/reportRetrieve.asp?reportType=etfrc&symbol=OPPJ):
 
 - Annual NAV TR coverage: 2016-2024 official NAV TR; 2025 secondary proxy*
+
 | ปี | OPPJ TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | 6.88% | 11.96% |

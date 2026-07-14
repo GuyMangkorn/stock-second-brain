@@ -35,6 +35,7 @@ VIG มีผลตอบแทนเป็นบวก 15 จาก 19 ปี�
   annual table ย้อนหลังถึง 2006
 
 - Annual NAV TR coverage: official 2016-2025 NAV TR
+
 | ปี | VIG TR | S&P 500 TR |
 |---|---:|---:|
 | 2006* | 8.55% | — |

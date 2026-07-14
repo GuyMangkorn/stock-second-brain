@@ -38,6 +38,7 @@ cumulative `149.29%` หรือ CAGR
   ไม่แสดง return ที่ใช้เทียบได้
 
 - Annual NAV TR coverage: 2016 inception-year partial unavailable; 2017-2025 official NAV TR
+
 | ปี | DIVI TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |

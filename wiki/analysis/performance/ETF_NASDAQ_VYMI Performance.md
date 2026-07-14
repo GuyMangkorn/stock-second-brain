@@ -27,6 +27,7 @@ partial (`†`). ช่วงเต็ม 2021-2025 ให้ CAGR ประม�
 - Coverage/source note: official 2017-2025 calendar NAV TR; 2016 is inception-year partial `†`
 
 - Annual NAV TR coverage: 2016 inception-year partial†; 2017-2025 official calendar NAV TR
+
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016† | 15.75% | 11.96% |

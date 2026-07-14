@@ -40,6 +40,7 @@ Annual ETF rows มาจาก [Vanguard product performance](https://investor.
 comparator ใช้ S&P 500 TR cache:
 
 - Annual NAV TR coverage: 2016 inception-year partial unavailable; 2017-2025 official NAV TR
+
 | ปี | VIGI TR | S&P 500 TR |
 |---|---:|---:|
 | 2016† | 6.64% | — |

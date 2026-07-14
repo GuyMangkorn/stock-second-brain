@@ -25,6 +25,7 @@ tags:
 - Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
 
 - Annual NAV TR coverage: official 2016-2025 NAV TR
+
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | 7.70% | 11.96% |

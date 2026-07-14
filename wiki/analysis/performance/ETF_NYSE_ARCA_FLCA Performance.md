@@ -42,6 +42,7 @@ Current YTD ล่าสุดจาก issuer คือ `+8.17%` ณ 6 ก.ค.
 - Since-inception NAV annualized return: `11.37%` ณ 30 มิ.ย. 2026
 
 - Annual NAV TR coverage: 2016-2017 unavailable; 2018-2025 official NAV TR
+
 | ปี | FLCA NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | ไม่พบข้อมูลที่ยืนยันได้ | 11.96% |
