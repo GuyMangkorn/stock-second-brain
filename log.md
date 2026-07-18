@@ -1,5 +1,13 @@
 # Log
 
+## 2026-07-19
+
+- `etf-performance`: Resolved user alias `AMEX-DVYA` to `NYSE Arca:DVYA`, created
+  `[[ETF_NYSE_ARCA_DVYA Performance]]`, captured official 2021-2025 NAV Total
+  Return and rolling 10-year NAV CAGR, added DVYA to `[[ETF Performance Index]]`,
+  and recorded current NAV YTD `+14.28%` as of 2026-07-16; 2021-2025 CAGR is
+  `9.91%` versus S&P 500 TR `14.43%`.
+
 ## 2026-07-18
 
 - `etf-performance`: Resolved user alias `AMEX-KWEB` to `NYSE Arca:KWEB`, created

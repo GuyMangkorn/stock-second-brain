@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-18
+updated: 2026-07-19
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -24,6 +24,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025 | 8.26% | 6.45% | 6.36% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive, high equity risk |
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
+| [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
@@ -52,6 +53,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_VSS Performance]] | 12.81% | -21.22% | 15.25% | 2.67% | 29.99% | 36.70% | 4 / 1 |
 | [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
+| [[ETF_NYSE_ARCA_DVYA Performance]] | 4.23% | -2.12% | 13.96% | 5.99% | 30.16% | 60.39% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 1.56% | -17.36% | 19.78% | 6.80% | 25.92% | 35.20% | 4 / 1 |
