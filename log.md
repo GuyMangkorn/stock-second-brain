@@ -32,6 +32,12 @@
   NAV CAGR is `9.95%`, and current YTD is `+11.55%` as of 2026-07-13, with the
   latest secondary price trend labelled `positive medium-term / correcting short-term`.
 
+- `etf-performance`: Created `[[ETF_CBOE_BBJP Performance]]`, added BBJP to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2019-2025 NAV Total Return compounds to `9.39%` CAGR versus S&P 500 TR
+  `17.29%`, no 10-year CAGR is applicable because the fund launched in 2018, and
+  current YTD is `+14.75%` as of 2026-06-30.
+
 ## 2026-07-14
 
 - `maintenance`: ลบ performance pages ของ `NOBL`, `REGL`, `SMDV`, `TDV`, `SPYD`, `SDY`, `WDIV`, `DWX` และ `SDIV` เพราะไม่พบ annual historical NAV TR ที่ยืนยันได้; นำรายการออกจาก `[[ETF Performance Index]]` และคง source-gap records ไว้ใน `[[ETF_performance_sources_2026-07-14]]`.

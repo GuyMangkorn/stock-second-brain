@@ -7,6 +7,7 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_NASDAQ_VXUS Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWJ Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md
+  - wiki/analysis/performance/ETF_CBOE_BBJP Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
@@ -317,3 +318,79 @@ rows reuse the cached USD Total Return convention documented above.
   PortfoliosLab reports a secondary 10-year dividend-adjusted market-price max
   drawdown of `-33.14%*`, trough October 2022, recovered March 2024; it is kept
   separate from official NAV TR.
+
+## BBJP Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `Cboe BZX:BBJP` | [JPMorgan BBJP fact sheet](https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBJP.PDF) | Fund identity, passive approach, issuer benchmark, official annual NAV TR, YTD, since-inception return, expense ratio and holdings | Annual 2025-12-31; YTD/fund facts 2026-06-30 |
+| `Cboe BZX:BBJP` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1485894/000119312526071745/d800751d497k.htm) | Fund objective, indexed/passive mandate and legal disclosures | 2026-03-01 |
+| `Cboe BZX:BBJP` | [Cboe new listing notice](https://www.cboe.com/us/equities/notices/new_listings/details/?etf=true&firm_name=J.P.+Morgan+Asset+Management&first_trade_dt=2018-06-18&ipo=true&symbols=BBEU%2CBBJP%2CBBRE) | Primary exchange and first-trading-date cross-check | 2018-06-18; accessed 2026-07-18 |
+| `BBJP` risk | [ETF Central](https://www.etfcentral.com/fund/BBJP) | Secondary volatility, max drawdown and recovery proxy; not official NAV TR | Page updated 2026-06-22; risk table as-of not separately disclosed |
+| `BBJP` distribution | [StockAnalysis dividend history](https://stockanalysis.com/etf/bbjp/dividend/) | Secondary latest distribution record: $3.53701, ex-date 2025-12-23, pay date 2025-12-26 | Last checked 2026-06-27 |
+
+## BBJP Verified Fund Facts And As-Of Register
+
+- Entity resolution: `BBJP` resolves to official primary listing `Cboe BZX:BBJP`;
+  fund name `JPMorgan BetaBuilders Japan ETF`; Cboe first trade was 2018-06-18.
+- Instrument: passive, index-tracking Japan equity ETF; issuer benchmark is
+  `Morningstar Japan Target Market Exposure Index (net total return)`.
+- Fund performance inception: 2018-06-15; calendar year 2018 is partial and is
+  excluded from complete-year ranking.
+- Return basis: official NAV Total Return with dividends and capital-gains
+  distributions reinvested; NAV total return reflects management fees and
+  operating expenses. Currency shown by the issuer is USD.
+- Expense ratio: gross `0.190%`; net `0.190%`, as of 2026-06-30.
+- Current official YTD NAV TR: `14.75%` as of 2026-06-30; cumulative, not annualized.
+  JPMorgan states that YTD is measured through the last business day of the month.
+- Since-inception official NAV annualized return: `7.95%` as of 2026-06-30. A
+  10-year NAV TR CAGR is not applicable because the fund has less than 10 years of
+  performance history.
+- Latest captured distribution: `$3.53701` per share, annual, ex-date 2025-12-23
+  and pay date 2025-12-26; secondary S&P Global Market Intelligence record via
+  StockAnalysis. Distribution amount was not used in the annual table because
+  official NAV TR already includes reinvested distributions.
+- Latest issuer factsheet holdings snapshot: 173 holdings; Industrials `23.8%`,
+  Information Technology `21.7%`, Financials `17.3%`, Consumer Discretionary
+  `14.2%`; all as of 2026-06-30.
+
+## BBJP Official Annual NAV Total Return Inputs
+
+| Year | BBJP NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2019 | 18.62% | 31.49% |
+| 2020 | 15.05% | 18.40% |
+| 2021 | 1.39% | 28.71% |
+| 2022 | -16.78% | -18.11% |
+| 2023 | 20.02% | 26.29% |
+| 2024 | 7.19% | 25.02% |
+| 2025 | 26.56% | 17.88% |
+
+BBJP rows are official complete-calendar-year NAV Total Return from the June 30,
+2026 JPMorgan factsheet. S&P 500 rows reuse the cached USD Total Return convention
+documented earlier in this source batch; dividends are reinvested and the reference
+date is 2025-12-31. No market-price return is mixed into the table.
+
+## BBJP Calculations
+
+- 2019-2025 cumulative/CAGR: BBJP `87.49%` / `9.39%`; up/down: `6 / 1`.
+- S&P 500 TR 2019-2025 cumulative/CAGR: `205.41%` / `17.29%`.
+- 2021-2025 cumulative/CAGR: BBJP `37.38%` / `6.56%`; S&P 500 TR `96.17%` /
+  `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+
+## BBJP Gaps And Reconciliation
+
+- Official rolling 10-year NAV TR endpoints, daily NAV TR levels, maximum drawdown,
+  and recovery date: `ไม่พบข้อมูลที่ยืนยันได้`; the fund history is also shorter
+  than 10 years.
+- Official current YTD is only available through 2026-06-30 month-end in the
+  captured JPMorgan factsheet. ETF Central shows a conflicting secondary YTD figure
+  of `18.71%` as of 2026-06-18 with unclear return basis; it was excluded in favor of
+  the official NAV figure.
+- Secondary ETF Central 5-year risk figures (`18.44%` volatility, `-32.66%` max
+  drawdown, `504 days` recovery) are displayed on a page last updated 2026-06-22;
+  the risk table's separate as-of date is not disclosed. They are kept as a
+  labelled proxy and are not used as official NAV performance or cross-ETF ranking
+  inputs.
