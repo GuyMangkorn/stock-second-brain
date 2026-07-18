@@ -3,6 +3,7 @@ type: source-note
 source_profile: etf-performance-delta
 accessed: 2026-07-18
 canonical_outputs:
+  - wiki/analysis/performance/ETF_NYSE_ARCA_VSS Performance.md
   - wiki/analysis/performance/ETF_NASDAQ_VXUS Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
@@ -12,6 +13,83 @@ tags:
 ---
 
 # ETF Performance Source Batch - 2026-07-18
+
+## VSS Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:VSS` | [Vanguard product page](https://investor.vanguard.com/investment-products/etfs/profile/vss) | Fund identity, official annual NAV TR, rolling returns, expense ratio, benchmark, price/NAV and distributions | Annual 2025-12-31; rolling 2026-06-30; price/NAV 2026-06-22; distribution 2026-06-23 |
+| `NYSE Arca:VSS` | [Vanguard Advisors page](https://advisors.vanguard.com/investments/products/vss/vanguard-ftse-all-world-ex-us-small-cap-etf) | Fresh official YTD NAV Total Return | 2026-07-13 |
+| `NYSE Arca:VSS` | [Official fact sheet](https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3184.pdf) | NYSE Arca listing, passive index-sampling approach, return definition, risk and fund facts | 2026-03-31 |
+| `NYSE Arca:VSS` | [Official prospectus](https://fund-docs.vanguard.com/p3184.pdf) | Legal share-class name, policy, benchmark and fee effectiveness | 2026-02-27 |
+
+## VSS Verified Fund Facts And As-Of Register
+
+- Entity resolution: user alias `AMEX-VSS` resolves to official primary listing
+  `NYSE Arca:VSS`; fund name `Vanguard FTSE All-World ex-US Small-Cap ETF`.
+- Instrument: passive, index-tracking equity ETF using index sampling; issuer
+  benchmark `FTSE Global Small Cap ex US Index`; inception `2009-04-02`.
+- Return basis: official `NAV Total Return`, USD, pre-tax, net of fund expenses,
+  with dividends and capital-gains distributions reinvested.
+- Expense ratio: `0.06%` as of `2026-02-27` (effective `2026-02-02`).
+- Current YTD NAV TR: `6.36%` as of `2026-07-13`; cumulative, not annualized.
+- Rolling 10-year NAV TR: `8.26%` average annual return as of `2026-06-30`;
+  implied window `2016-06-30` to `2026-06-30`.
+- Latest official closing pair captured: market price `$157.89`, NAV `$157.53`
+  as of `2026-06-22`; stale relative to access date and not presented as current.
+- Latest captured distribution: `$0.858600` per share, ex/record date
+  `2026-06-18`, payable `2026-06-23`.
+- Holdings/portfolio characteristics snapshot: `2026-05-31`; fund facts and
+  methodology description: `2026-03-31`.
+
+## VSS Official Annual NAV Total Return Inputs
+
+| Year | VSS NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 4.37% | 11.96% |
+| 2017 | 30.26% | 21.83% |
+| 2018 | -18.43% | -4.38% |
+| 2019 | 21.73% | 31.49% |
+| 2020 | 11.95% | 18.40% |
+| 2021 | 12.81% | 28.71% |
+| 2022 | -21.22% | -18.11% |
+| 2023 | 15.25% | 26.29% |
+| 2024 | 2.67% | 25.02% |
+| 2025 | 29.99% | 17.88% |
+
+VSS rows are official complete-calendar-year NAV TR as of `2025-12-31`.
+S&P 500 rows copy the skill's cached USD Total Return convention, dividends
+reinvested, reference as of `2025-12-31`; no fresh benchmark web search was run.
+
+## VSS Calculations
+
+- VSS 2016-2025 cumulative: `106.58%`; CAGR: `7.53%`; up/down: `8 / 2`.
+- S&P 500 TR 2016-2025 cumulative: `298.33%`; CAGR: `14.82%`.
+- VSS 2021-2025 cumulative: `36.70%`; CAGR: `6.45%`.
+- S&P 500 TR 2021-2025 cumulative: `96.17%`; CAGR: `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+- Normalized rolling 10-year start `100.00`; calculated end `221.15` from the
+  rounded official CAGR: `100 x (1 + 0.0826)^10`. This is a shown calculation,
+  not a reported Vanguard endpoint.
+
+## Benchmark Cache Sources
+
+- [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true) — 2016-2019 reference rows
+- [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf) — 2018-2022 rows
+- [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/) — 2021 row
+- [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — 2022-2025 rows
+- [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — index definition and methodology
+
+## VSS Gaps And Reconciliation
+
+- Official maximum drawdown and recovery series: `ไม่พบข้อมูลที่ยืนยันได้`.
+- Vanguard did not expose raw rolling 10-year TR endpoints for `2026-06-30`;
+  the normalized endpoint in the performance page is calculated from the rounded
+  official CAGR and is labelled accordingly.
+- No secondary return series was used. Market-price return is excluded from the
+  annual table and ranking. The current YTD line uses the fresher `2026-07-13`
+  official NAV figure rather than the month-end `8.18%` as of `2026-06-30`.
 
 ## VXUS Source Map
 

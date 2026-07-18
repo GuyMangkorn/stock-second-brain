@@ -2,6 +2,12 @@
 
 ## 2026-07-18
 
+- `etf-performance`: Resolved `AMEX-VSS` to official `NYSE Arca:VSS`; created
+  `[[ETF_NYSE_ARCA_VSS Performance]]` and `[[ETF_performance_sources_2026-07-18]]`,
+  then added VSS to `[[ETF Performance Index]]`. Official 2016-2025 NAV Total
+  Return compounds to `7.53%` CAGR versus S&P 500 TR `14.82%`; current VSS YTD
+  is `+6.36%` as of 2026-07-13.
+
 - `etf-performance`: Created `[[ETF_NASDAQ_VXUS Performance]]`, added VXUS to
   `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
   official 2016-2025 NAV Total Return compounds to `8.54%` CAGR, rolling 10-year
