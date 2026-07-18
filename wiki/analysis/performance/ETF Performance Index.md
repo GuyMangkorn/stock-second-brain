@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-14
+updated: 2026-07-18
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -21,6 +21,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_AMEX_DGRO]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
 | [[ETF_AMEX_VIG]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
 | [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
+| [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
@@ -42,6 +43,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_AMEX_DGRO Performance]] | 26.56% | -7.85% | 10.43% | 16.61% | 15.74% | 73.82% | 4 / 1 |
 | [[ETF_AMEX_VIG Performance]] | 23.64% | -9.79% | 14.46% | 17.02% | 14.18% | 70.58% | 4 / 1 |
 | [[ETF_NASDAQ_VIGI Performance]] | 12.42% | -16.71% | 16.16% | 2.62% | 16.89% | 30.47% | 4 / 1 |
+| [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | 29.10% | -11.95% | 15.23% | 12.36% | 34.90% | 98.54% | 4 / 1 |
@@ -65,14 +67,15 @@ current strategy แบบต่อเนื่องห้าปี.
 |---|---|
 | 2022 rate-hike shock | VIGI แย่สุด; DGRO/VIG มี quality cushion; DIVI ใกล้ flat จาก value/financials/ex-North-America mix |
 | 2020 COVID drawdown | Secondary drawdown: DGRO -35.10%, VIG -31.72%, VIGI -31.01%, DIVI -27.76%; ทุกกองยังมี equity risk |
-| 2025 rebound | DIVI นำที่ +34.51%; VIGI +16.89%; DGRO +15.74%; VIG +14.18% สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
+| 2025 rebound | DIVI +34.51% และ broad ex-U.S. VXUS +32.23% นำ VIGI +16.89%, DGRO +15.74% และ VIG +14.18%; สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
 | OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.67% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
-| Portfolio grouping | U.S. quality = DGRO/VIG; international growth = VIGI; international value/dividend = DIVI; Canada single-country = EWC/FLCA |
+| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international value/dividend = DIVI; Canada single-country = EWC/FLCA |
 
 **สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
-DGRO และ VIG เป็น U.S. quality core ที่ behavior ใกล้กัน. VIGI เพิ่ม geographic
-diversification แต่แลกกับ FX/country sensitivity และผลตอบแทนช่วงนี้ต่ำกว่า. FVD
-เพิ่ม U.S. value/dividend income exposure แต่มี utilities และ financials tilt.
+DGRO และ VIG เป็น U.S. quality core ที่ behavior ใกล้กัน. VXUS เป็น broad ex-U.S.
+core ที่กระจายกว้างกว่า VIGI/DIVI แต่ยังมี FX/country sensitivity และ 2016-2025
+CAGR ต่ำกว่า S&P 500. FVD เพิ่ม U.S. value/dividend income exposure แต่มี
+utilities และ financials tilt.
 
 ## Sources
 
@@ -80,8 +83,9 @@ diversification แต่แลกกับ FX/country sensitivity และผ�
   [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]],
   [[ETF_NYSE_ARCA_EWC Performance]], [[ETF_AMEX_DTD Performance]],
   [[ETF_AMEX_FVD Performance]], [[ETF_NYSE_ARCA_VOO Performance]],
-  [[ETF_NASDAQ_OPPJ Performance]]
-- Source batch: [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
+  [[ETF_NASDAQ_OPPJ Performance]],
+  [[ETF_NASDAQ_VXUS Performance]]
+- Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
 - [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
 

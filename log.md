@@ -1,5 +1,13 @@
 # Log
 
+## 2026-07-18
+
+- `etf-performance`: Created `[[ETF_NASDAQ_VXUS Performance]]`, added VXUS to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2016-2025 NAV Total Return compounds to `8.54%` CAGR, rolling 10-year
+  NAV CAGR is `9.95%`, and current YTD is `+11.55%` as of 2026-07-13, with the
+  latest secondary price trend labelled `positive medium-term / correcting short-term`.
+
 ## 2026-07-14
 
 - `maintenance`: ลบ performance pages ของ `NOBL`, `REGL`, `SMDV`, `TDV`, `SPYD`, `SDY`, `WDIV`, `DWX` และ `SDIV` เพราะไม่พบ annual historical NAV TR ที่ยืนยันได้; นำรายการออกจาก `[[ETF Performance Index]]` และคง source-gap records ไว้ใน `[[ETF_performance_sources_2026-07-14]]`.
