@@ -9,6 +9,7 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md
   - wiki/analysis/performance/ETF_CBOE_BBJP Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_KWEB Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_FLJP Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
@@ -498,3 +499,70 @@ consistent year-by-year coverage and the conflict is not smoothed.
   NAV YTD remain separately reported.
 - The issuer's generic `NYSE` label and factsheet's `NYSE Arca` label are kept as
   a source-label conflict; `NYSE Arca:KWEB` is the normalized vault key.
+
+## FLJP Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:FLJP` | [Franklin Templeton FLJP product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26357/SINGLCLASS/franklin-ftse-japan-etf/FLJP?role=fp) | Fund identity, exchange, issuer benchmark, inception, expense ratio, official NAV YTD and pricing snapshot | YTD/NAV 2026-07-08; expense ratio 2025-08-01 |
+| `NYSE Arca:FLJP` | [Official FLJP factsheet](https://www.franklintempleton.com/forms-literature/download/FLJP-FF?role=fp) | Official NAV total-return definition, annual 2018-2025 returns, since-inception return, benchmark and risk statistics | 2026-06-30 |
+| `NYSE Arca:FLJP` drawdown | [PortfoliosLab FLJP](https://portfolioslab.com/symbol/FLJP) | Secondary dividend-adjusted market-price drawdown and recovery proxy; not official NAV TR | Page updated 2026-07-03; accessed 2026-07-18 |
+| Common benchmark | [S&P 500 official returns page](https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=76d0e321-60b6-4834-a4b7-68bbe72fd4ea&sourceIdentifier=index-family-specialization) | Fresh S&P 500 Total Return YTD cross-check | 2026-07-18 |
+| Common benchmark | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Index identity and methodology; annual 2018-2025 rows reuse cached skill convention | Reference 2025-12-31 |
+
+## FLJP Verified Fund Facts And As-Of Register
+
+- Entity resolution: user alias `AMEX-FLJP` resolves to official primary listing
+  `NYSE Arca:FLJP`; fund name `Franklin FTSE Japan ETF`.
+- Instrument: passive, index-tracking equity ETF with large- and mid-cap Japanese
+  exposure; issuer benchmark `FTSE Japan Capped Index-NR`; inception `2017-11-02`;
+  dividend frequency `Semi-Annual`; net expense ratio `0.09%` as of `2025-08-01`.
+- Return basis: official USD `NAV Total Return`, assuming reinvestment of all
+  distributions and deduction of all fund expenses. Annual rows are complete
+  calendar-year observations for 2018-2025; 2017 partial is omitted.
+- Official since-inception average annual NAV return: `7.83%` as of `2026-06-30`;
+  official 10-year field is `—` because the fund history is shorter than 10 years.
+- Latest official NAV YTD captured: `14.82%` as of `2026-07-08`; the captured issuer
+  page did not expose a later official NAV-YTD snapshot. Official factsheet month-end
+  YTD was `15.32%` as of `2026-06-30`; the fresher issuer value is used in the page.
+- Official 3-year standard deviation: `14.67%` as of `2026-06-30`; market price is
+  not mixed into annual NAV rankings.
+
+## FLJP Official Annual NAV Total Return Inputs
+
+| Year | FLJP NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2018 | -13.10% | -4.38% |
+| 2019 | 19.09% | 31.49% |
+| 2020 | 14.35% | 18.40% |
+| 2021 | 1.16% | 28.71% |
+| 2022 | -15.78% | -18.11% |
+| 2023 | 19.68% | 26.29% |
+| 2024 | 7.76% | 25.02% |
+| 2025 | 25.30% | 17.88% |
+
+FLJP rows are official complete-calendar-year NAV Total Return from the June 30,
+2026 factsheet. S&P 500 rows for 2018-2025 reuse the cached USD Total Return
+convention documented in the skill and earlier source batch; dividends are
+reinvested and the reference date is 2025-12-31.
+
+## FLJP Calculations
+
+- 2018-2025 cumulative/CAGR: FLJP `62.92%` / `6.29%`; up/down: `6 / 2`.
+- S&P 500 TR 2018-2025 cumulative/CAGR: `192.03%` / `14.33%`.
+- 2021-2025 cumulative/CAGR: FLJP `37.67%` / `6.60%`; S&P 500 TR `96.17%` /
+  `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+
+## FLJP Gaps And Reconciliation
+
+- Official rolling 10-year NAV TR endpoints, 10-year NAV CAGR, daily NAV TR levels,
+  maximum drawdown and recovery series: `ไม่พบข้อมูลที่ยืนยันได้`; the fund history
+  is shorter than 10 years.
+- Secondary PortfoliosLab drawdown proxy reports `-32.49%` on 2022-10-14 and
+  recovery in `348 trading sessions`; it uses dividend-adjusted market-price data
+  and is excluded from NAV TR rankings.
+- Current FLJP NAV YTD `14.82%` is as of 2026-07-08, while the freshest official
+  S&P 500 TR YTD captured is `9.64%` as of 2026-07-18; no same-date comparison is
+  claimed.

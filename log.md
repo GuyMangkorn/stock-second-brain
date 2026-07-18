@@ -16,6 +16,13 @@
   `5.96%` CAGR versus S&P 500 TR `14.82%`, rolling 10-year NAV CAGR is `6.02%`,
   and current YTD is `+6.50%` as of 2026-07-16.
 
+- `etf-performance`: Resolved user alias `AMEX-FLJP` to `NYSE Arca:FLJP`, created
+  `[[ETF_NYSE_ARCA_FLJP Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-18]]`, and added FLJP to
+  `[[ETF Performance Index]]`; official NAV TR covers 2018-2025 with `6.29%`
+  CAGR, current official NAV YTD is `+14.82%` as of 2026-07-08, and secondary
+  drawdown/recovery is labelled separately from NAV TR.
+
 - `etf-performance`: Created `[[ETF_NYSE_ARCA_EWJ Performance]]`, added EWJ to
   `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
   official 2016-2025 NAV Total Return compounds to `7.23%` CAGR, rolling 10-year
