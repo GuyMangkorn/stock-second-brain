@@ -8,6 +8,7 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWJ Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md
   - wiki/analysis/performance/ETF_CBOE_BBJP Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_KWEB Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
@@ -394,3 +395,106 @@ date is 2025-12-31. No market-price return is mixed into the table.
   the risk table's separate as-of date is not disclosed. They are kept as a
   labelled proxy and are not used as official NAV performance or cross-ETF ranking
   inputs.
+
+## KWEB Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:KWEB` | [KraneShares KWEB product page](https://kraneshares.com/etf/kweb/) | Official identity, benchmark, expense ratio, inception, daily NAV/market price, premium/discount, rolling NAV TR, holdings and listed-location exposure | NAV/market price/holdings 2026-07-17; rolling performance 2026-06-30 |
+| `NYSE Arca:KWEB` | [KraneShares KWEB factsheet](https://kraneshares.com/resources/factsheet/kweb_factsheet.pdf) | Official return definition, fund facts, expense ratio, benchmark and rolling 10-year NAV TR CAGR | 2026-06-30 |
+| `NYSE Arca:KWEB` | [Total Real Returns KWEB](https://totalrealreturns.com/n/KWEB) | Secondary dividend-reinvested market-price total-return proxy, annual rows and drawdown proxy | ending 2026-07-17 |
+| `NYSE Arca:KWEB` | [Stock Analysis KWEB history](https://stockanalysis.com/etf/kweb/history/) | Secondary closing-price history and latest close cross-check | close 2026-07-17 |
+| `NYSE Arca:KWEB` | [KraneShares 2025 China Outlook](https://kraneshares.com/2025-china-outlook-a-recipe-for-re-rating/) | Issuer commentary cross-check for the conflicting 2024 annual-return figure | published 2025-01-08; accessed 2026-07-18 |
+| Common benchmark | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common-reference index definition; 2016-2025 annual rows reuse cached skill convention | reference 2025-12-31 |
+| Market move | [Reuters report via Investing.com](https://au.investing.com/news/stock-market-news/sp-500-and-nasdaq-slip-as-chip-rout-extends-netflix-slides-4539385) | Global AI/chip risk-off context and U.S. index comparison | 2026-07-17 |
+| Market move | [ET Net Hong Kong market report](https://www.etnet.com.hk/www/eng/futures/futures_news_detail.php?newsid=20260717190) | Hang Seng / Hang Seng Tech session comparison | 2026-07-17 |
+| China macro | [China NBS Q2/H1 GDP release](https://www.stats.gov.cn/english/PressRelease/202607/t20260717_1964160.html) and [AP summary](https://apnews.com/article/china-economy-trade-exports-ai-95136222f87d5a1e62918f41efab00be) | Current China growth and domestic-demand context | released 2026-07-15 to 2026-07-17 |
+
+## KWEB Verified Fund Facts And As-Of Register
+
+- Entity resolution: user alias `AMEX-KWEB` resolves to `NYSE Arca:KWEB`; the
+  issuer page uses a generic `NYSE` label in places while the official factsheet
+  and market-data page identify `NYSE Arca`. The vault uses `NYSE Arca` as the
+  exchange-qualified key.
+- Fund: `KraneShares CSI China Internet ETF`; passive equity ETF tracking the
+  `CSI Overseas China Internet Index`; inception `2013-07-31`; expense ratio
+  `0.70%`; annual distribution frequency.
+- Return basis: official NAV Total Return includes reinvested distributions and
+  deducts fund expenses. Official rolling 10-year NAV TR CAGR is `-0.85%` as of
+  2026-06-30; issuer does not expose raw endpoint TR values in the captured page.
+- Latest official daily pair: NAV `$26.72` and market price `$26.81`, both as of
+  2026-07-17; NAV daily change `-3.15%`, market-price daily change `-2.44%`, and
+  premium `$0.09` (approximately `0.34%`).
+- Official NAV TR YTD is `-28.96%` as of 2026-06-30. A fresher secondary
+  market-price total-return proxy is `-21.26%` YTD as of 2026-07-17; the two are
+  not mixed because they have different return bases and as-of dates.
+- Holdings snapshot as of 2026-07-17: top five are Tencent `10.22%`, Alibaba
+  `8.51%`, PDD `7.96%`, Meituan `7.60%`, and NetEase `6.36%`, totaling `40.65%`.
+  Listed-location breakdown: Hong Kong `72.1%`, U.S. ADRs with secondary Hong
+  Kong listings `14.4%`, and U.S. ADRs with no secondary Hong Kong listing `13.5%`.
+- Sector snapshot as of 2026-06-30: Communication Services `42.92%` and
+  Consumer Discretionary `36.91%`; combined `79.83%`.
+
+## KWEB Annual Proxy Inputs
+
+| Year | KWEB total-return proxy* | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -8.54% | 11.96% |
+| 2017 | 69.73% | 21.83% |
+| 2018 | -33.80% | -4.38% |
+| 2019 | 29.92% | 31.49% |
+| 2020 | 58.23% | 18.40% |
+| 2021 | -49.01% | 28.71% |
+| 2022 | -17.24% | -18.11% |
+| 2023 | -9.06% | 26.29% |
+| 2024 | 12.01% | 25.02% |
+| 2025 | 23.55% | 17.88% |
+
+The annual rows are a secondary dividend-reinvested market-price total-return
+proxy, not official NAV TR. KraneShares publishes official rolling NAV TR and
+quarter/month-end figures, but the captured issuer pages do not provide a
+complete calendar-year NAV TR table. An issuer commentary reports KWEB 2024 at
+`13.25%`, which conflicts with the proxy's `12.01%`; the proxy is retained for
+consistent year-by-year coverage and the conflict is not smoothed.
+
+## KWEB Calculations
+
+- 2016-2025 proxy cumulative/CAGR: `12.19%` / `1.16%`; up/down: `5 / 5`.
+- 2021-2025 proxy cumulative/CAGR: `-46.89%` / `-11.89%`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`.
+- Secondary total-return proxy since 2013-08-01: `+31.22%`, annualized `+2.12%`,
+  ending 2026-07-17.
+- Secondary drawdown proxy: current `-68.99%` from 2021-02-17 high; worst
+  `-80.92%` on 2022-10-24. Official NAV drawdown/recovery series:
+  `ไม่พบข้อมูลที่ยืนยันได้`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+
+## KWEB Current Move Read-through
+
+- `confirmed event`: KWEB's latest NAV fell `3.15%` and market price fell
+  `2.44%` on 2026-07-17. This was consistent with Hang Seng Tech falling about
+  `4%` and Hang Seng falling about `2%`; KWEB was not an isolated ETF dislocation.
+- `probable driver` / high confidence: global AI/chip risk-off. Reuters reported
+  the S&P 500 fell `1.01%` and Nasdaq `1.40%` as investors questioned the pace and
+  payoff of AI spending; this is a close timing match for the session.
+- `probable driver` / medium-high confidence: weaker China domestic-growth
+  narrative. Q2 growth slowed to `4.3%`, while AP reported H1 retail sales growth
+  of only `1.3%`, fixed-asset investment down `5.7%`, and continued housing-price
+  pressure; this matters for KWEB's e-commerce and consumer exposure but is a
+  broader medium-term driver, not proof of a single-day cause.
+- Fund-specific flow/discount cause: not confirmed. The latest market price was
+  only about `0.34%` above NAV, so premium/discount mechanics do not explain the
+  main move. Recovery confirmation requires Hang Seng Tech to stabilize and
+  China's consumer/earnings data to improve; a renewed selloff in global AI/chip
+  shares would weaken the market-wide explanation's short-term relevance.
+
+## KWEB Gaps And Reconciliation
+
+- Official complete-calendar-year NAV TR rows, official daily NAV TR index levels,
+  volatility, maximum drawdown and recovery date: `ไม่พบข้อมูลที่ยืนยันได้`.
+- Annual proxy rows are not relabelled as NAV TR and are excluded from strict
+  official cross-ETF ranking. The official 10-year NAV CAGR and latest official
+  NAV YTD remain separately reported.
+- The issuer's generic `NYSE` label and factsheet's `NYSE Arca` label are kept as
+  a source-label conflict; `NYSE Arca:KWEB` is the normalized vault key.

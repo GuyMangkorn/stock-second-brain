@@ -2,6 +2,14 @@
 
 ## 2026-07-18
 
+- `etf-performance`: Resolved user alias `AMEX-KWEB` to `NYSE Arca:KWEB`, created
+  `[[ETF_NYSE_ARCA_KWEB Performance]]`, extended `[[ETF_performance_sources_2026-07-18]]`,
+  and added KWEB to `[[ETF Performance Index]]`; official rolling 10-year NAV CAGR
+  is `-0.85%`, official NAV YTD is `-28.96%` as of 2026-06-30, and the latest
+  market-price total-return proxy is `-21.26%` as of 2026-07-17. Current move is
+  attributed primarily to global AI/chip risk-off and weaker China growth data,
+  with no material ETF premium/discount dislocation.
+
 - `etf-performance`: Created `[[ETF_CBOE_EFAV Performance]]`, extended
   `[[ETF_performance_sources_2026-07-18]]`, and added EFAV to
   `[[ETF Performance Index]]`; official 2016-2025 NAV Total Return compounds to
