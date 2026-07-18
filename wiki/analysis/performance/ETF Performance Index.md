@@ -25,6 +25,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
+| [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.06% | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
 | [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 8.40% | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
@@ -48,6 +49,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
+| [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | 29.10% | -11.95% | 15.23% | 12.36% | 34.90% | 98.54% | 4 / 1 |
 | [[ETF_AMEX_DTD Performance]] | 26.14% | -3.81% | 10.44% | 18.75% | 14.22% | 81.75% | 4 / 1 |
 | [[ETF_AMEX_FVD Performance]] | 24.86% | -5.24% | 4.10% | 10.00% | 8.19% | 46.58% | 4 / 1 |
@@ -69,9 +71,9 @@ current strategy แบบต่อเนื่องห้าปี.
 |---|---|
 | 2022 rate-hike shock | VIGI แย่สุด; DGRO/VIG มี quality cushion; DIVI ใกล้ flat จาก value/financials/ex-North-America mix |
 | 2020 COVID drawdown | Secondary drawdown: DGRO -35.10%, VIG -31.72%, VIGI -31.01%, DIVI -27.76%; ทุกกองยังมี equity risk |
-| 2025 rebound | DIVI +34.51% และ broad ex-U.S. VXUS +32.23% นำ VIGI +16.89%, DGRO +15.74% และ VIG +14.18%; สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
+| 2025 rebound | EWG +35.15%, DIVI +34.51% และ broad ex-U.S. VXUS +32.23% นำ VIGI +16.89%, DGRO +15.74% และ VIG +14.18%; สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
 | OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.67% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
-| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS; international value/dividend = DIVI; Canada single-country = EWC/FLCA |
+| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS; international value/dividend = DIVI; single-country = Canada EWC/FLCA และ Germany EWG |
 
 **สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
 DGRO และ VIG เป็น U.S. quality core ที่ behavior ใกล้กัน. VXUS เป็น broad ex-U.S.
@@ -86,7 +88,7 @@ utilities และ financials tilt.
   [[ETF_NYSE_ARCA_EWC Performance]], [[ETF_AMEX_DTD Performance]],
   [[ETF_AMEX_FVD Performance]], [[ETF_NYSE_ARCA_VOO Performance]],
   [[ETF_NASDAQ_OPPJ Performance]], [[ETF_NYSE_ARCA_VSS Performance]],
-  [[ETF_NASDAQ_VXUS Performance]]
+  [[ETF_NASDAQ_VXUS Performance]], [[ETF_NYSE_ARCA_EWG Performance]]
 - Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
 - [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)

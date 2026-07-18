@@ -2,6 +2,12 @@
 
 ## 2026-07-18
 
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_EWG Performance]]`, added EWG to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2016-2025 NAV Total Return compounds to approximately `7.38%` CAGR,
+  rolling 10-year NAV CAGR is `8.22%`, and current YTD is `-0.85%` as of
+  2026-07-13, with unmatched benchmark dates disclosed.
+
 - `etf-performance`: Resolved `AMEX-VSS` to official `NYSE Arca:VSS`; created
   `[[ETF_NYSE_ARCA_VSS Performance]]` and `[[ETF_performance_sources_2026-07-18]]`,
   then added VSS to `[[ETF Performance Index]]`. Official 2016-2025 NAV Total

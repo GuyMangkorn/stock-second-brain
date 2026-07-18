@@ -5,6 +5,7 @@ accessed: 2026-07-18
 canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_VSS Performance.md
   - wiki/analysis/performance/ETF_NASDAQ_VXUS Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
@@ -175,3 +176,76 @@ reinvested, reference as of `2025-12-31`; market-price returns are excluded.
 - Same-date official S&P 500 TR YTD for `2026-07-13`:
   `ไม่พบข้อมูลที่ยืนยันได้`; no mismatched-date figure is presented as a strict
   current comparator.
+
+## EWG Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:EWG` | [iShares product page](https://www.ishares.com/us/products/239650/ishares-msci-germany-etf) | Fund identity, exchange, objective, benchmark, NAV/price, YTD, fee, risk metrics and distributions | YTD 2026-07-13; NAV/price 2026-07-14; risk 2026-06-30; distribution 2026-06-18 |
+| `NYSE Arca:EWG` | [iShares fact sheet](https://www.ishares.com/us/literature/fact-sheet/ewg-ishares-msci-germany-etf-fund-fact-sheet-en-us.pdf) | Official 2021-2025 NAV calendar returns, return definition and fund facts | 2026-03-31 |
+| `NYSE Arca:EWG` | [BlackRock localized performance page](https://www.blackrock.com/fi/professionals/products/239650/ishares-msci-germany-etf) | Official USD NAV Total Return rows 2016-2025 | 2025-12-31 |
+| `NYSE Arca:EWG` | [SEC-hosted summary prospectus](https://www.sec.gov/Archives/edgar/data/930667/000119312525336658/d175829d497k.htm) | Index-tracking policy, reinvestment convention, best/worst quarter | 2025-12-30 |
+| Common benchmark | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Fresh `S&P 500 (TR)` YTD, USD Total Return | 2026-07-17 |
+
+## EWG Verified Fund Facts And As-Of Register
+
+- Entity: `NYSE Arca:EWG`; fund name `iShares MSCI Germany ETF`; passive,
+  index-tracking equity ETF; inception `1996-03-12`.
+- Issuer benchmark: `MSCI Germany Index (Net)`; expense ratio `0.49%` under the
+  current prospectus.
+- Return basis: official USD `NAV Total Return`; distributions reinvested and
+  fund expenses deducted. Market-price returns remain separate.
+- Latest official EWG NAV YTD: `-0.85%` as of `2026-07-13`. Latest official
+  NAV/closing-price pair found: USD `41.34` / `41.39` as of `2026-07-14`.
+- Official rolling 10-year NAV TR as of `2026-06-30`: cumulative `120.25%`,
+  CAGR `8.22%`; normalized window `2016-06-30` to `2026-06-30`,
+  `100.00 -> 220.25`.
+- Official risk: 3-year standard deviation `16.00%` as of `2026-06-30`;
+  prospectus worst quarter `-27.07%` in Q1 2020 and best quarter `+26.67%`
+  in Q2 2020. Quarter returns are not relabelled as drawdown/recovery.
+- Latest distribution: USD `0.831581` per share, record/ex-date `2026-06-15`,
+  payable `2026-06-18`; distribution frequency is semi-annual.
+- Current common benchmark: `S&P 500 (TR)` USD Total Return YTD `+9.64%` as of
+  `2026-07-17`; this is later than EWG's `2026-07-13` YTD date and is not used
+  as a strict same-date comparator.
+
+## EWG Official Annual NAV Total Return Inputs
+
+| Year | EWG NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 2.60% | 11.96% |
+| 2017 | 27.40% | 21.83% |
+| 2018 | -22.30% | -4.38% |
+| 2019 | 20.60% | 31.49% |
+| 2020 | 11.30% | 18.40% |
+| 2021 | 4.85% | 28.71% |
+| 2022 | -22.17% | -18.11% |
+| 2023 | 22.90% | 26.29% |
+| 2024 | 10.32% | 25.02% |
+| 2025 | 35.15% | 17.88% |
+
+EWG rows are official complete-calendar-year NAV TR. The localized issuer table
+publishes 2016-2020 to one decimal; 2021-2025 use the two-decimal U.S. fact-sheet
+values. S&P 500 rows reuse the skill's cached USD Total Return convention,
+dividends reinvested, reference as of `2025-12-31`.
+
+## EWG Calculations
+
+- EWG 2016-2025 cumulative/CAGR: `103.85%` / `7.38%`; up/down: `8 / 2`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`.
+- EWG 2021-2025 cumulative/CAGR: `49.53%` / `8.38%`; S&P 500 TR
+  `96.17%` / `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+- Rolling normalized endpoint: `100 x (1 + 120.25%) = 220.25`; CAGR check
+  `= (220.25 / 100)^(1 / 10) - 1 = 8.216%`, rounded to official `8.22%`.
+
+## EWG Gaps And Reconciliation
+
+- Official NAV Total Return maximum drawdown and recovery date:
+  `ไม่พบข้อมูลที่ยืนยันได้`.
+- Official EWG NAV/market close after `2026-07-14`: `ไม่พบข้อมูลที่ยืนยันได้`
+  as of access date `2026-07-18`; the last captured values are not presented as
+  current-day prices.
+- No secondary return series was used. Market-price return is excluded from the
+  annual table and ranking.
