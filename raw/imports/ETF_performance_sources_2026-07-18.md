@@ -5,6 +5,7 @@ accessed: 2026-07-18
 canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_VSS Performance.md
   - wiki/analysis/performance/ETF_NASDAQ_VXUS Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_EWJ Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
@@ -249,3 +250,70 @@ dividends reinvested, reference as of `2025-12-31`.
   current-day prices.
 - No secondary return series was used. Market-price return is excluded from the
   annual table and ranking.
+
+## EWJ Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:EWJ` | [iShares product page](https://www.ishares.com/us/products/239665/ishares-msci-japan-etf) | Fund identity, exchange, objective, benchmark, NAV/price, current YTD, rolling returns, fee and risk metrics | YTD 2026-07-16; NAV/price 2026-07-17; rolling/risk 2026-06-30 |
+| `NYSE Arca:EWJ` | [iShares Summary Prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-japan-etf-8-31.pdf) | Passive/index-sampling policy, return definition, official calendar returns 2016-2024 and fund risks | 2025-12-30 |
+| `NYSE Arca:EWJ` | [iShares fact sheet](https://www.ishares.com/us/literature/fact-sheet/ewj-ishares-msci-japan-etf-fund-fact-sheet-en-us.pdf) | Official 2021-2025 NAV calendar returns and return-definition cross-check | 2026-03-31 |
+| `NYSE Arca:EWJ` drawdown | [PortfoliosLab](https://portfolioslab.com/symbol/EWJ) | Secondary dividend-adjusted market-price drawdown/recovery proxy; not NAV TR | 2026-07-14 |
+
+## EWJ Verified Fund Facts And As-Of Register
+
+- Entity: `NYSE Arca:EWJ`; fund name `iShares MSCI Japan ETF`; inception
+  `1996-03-12`; passive, representative-sampling equity ETF tracking
+  `MSCI Japan Index (Net)`.
+- Return basis: official before-tax `NAV Total Return`, USD, distributions
+  reinvested and fund expenses deducted; market-price return is excluded from
+  the annual table and rankings.
+- Expense ratio: `0.49%` under the current prospectus. Official 3-year standard
+  deviation: `13.32%` as of `2026-06-30`.
+- Latest official NAV YTD: `14.28%` as of `2026-07-16`. Latest NAV/closing price:
+  USD `90.53` / `90.49` as of `2026-07-17`.
+- Official rolling 10-year NAV TR as of `2026-06-30`: CAGR `9.54%`, cumulative
+  `148.81%`; normalized endpoints `100.00 -> 248.81`, window
+  `2016-06-30` to `2026-06-30`.
+- Source reconciliation: an earlier issuer search snapshot exposed YTD `16.32%`
+  as of `2026-07-15`; the directly opened issuer page refreshed to `14.28%` as
+  of `2026-07-16`, so the later official snapshot is retained.
+
+## EWJ Official Annual NAV Total Return Inputs
+
+| Year | EWJ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 1.96% | 11.96% |
+| 2017 | 23.56% | 21.83% |
+| 2018 | -13.17% | -4.38% |
+| 2019 | 19.19% | 31.49% |
+| 2020 | 14.03% | 18.40% |
+| 2021 | 1.56% | 28.71% |
+| 2022 | -17.36% | -18.11% |
+| 2023 | 19.78% | 26.29% |
+| 2024 | 6.80% | 25.02% |
+| 2025 | 25.92% | 17.88% |
+
+EWJ rows are official complete-calendar-year fund returns. The Summary Prospectus
+provides 2016-2024 and states that returns assume dividends/distributions are
+reinvested; the issuer page provides 2025 and cross-checks 2021-2024. S&P 500
+rows reuse the cached USD Total Return convention documented above.
+
+## EWJ Calculations
+
+- EWJ 2016-2025 cumulative/CAGR: `101.00%` / `7.23%`; up/down: `8 / 2`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`.
+- EWJ 2021-2025 cumulative/CAGR: `35.20%` / `6.22%`; S&P 500 TR
+  `96.17%` / `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+
+## EWJ Gaps And Reconciliation
+
+- Same-date official S&P 500 TR YTD for `2026-07-16`:
+  `ไม่พบข้อมูลที่ยืนยันได้`; no mismatched-date figure is presented as a strict
+  current comparator.
+- Official EWJ NAV maximum drawdown/recovery series: `ไม่พบข้อมูลที่ยืนยันได้`.
+  PortfoliosLab reports a secondary 10-year dividend-adjusted market-price max
+  drawdown of `-33.14%*`, trough October 2022, recovered March 2024; it is kept
+  separate from official NAV TR.

@@ -2,6 +2,18 @@
 
 ## 2026-07-18
 
+- `etf-performance`: Created `[[ETF_CBOE_EFAV Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-18]]`, and added EFAV to
+  `[[ETF Performance Index]]`; official 2016-2025 NAV Total Return compounds to
+  `5.96%` CAGR versus S&P 500 TR `14.82%`, rolling 10-year NAV CAGR is `6.02%`,
+  and current YTD is `+6.50%` as of 2026-07-16.
+
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_EWJ Performance]]`, added EWJ to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2016-2025 NAV Total Return compounds to `7.23%` CAGR, rolling 10-year
+  NAV CAGR is `9.54%`, and current YTD is `+14.28%` as of 2026-07-16, with
+  secondary drawdown and unmatched benchmark dates disclosed.
+
 - `etf-performance`: Created `[[ETF_NYSE_ARCA_EWG Performance]]`, added EWG to
   `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
   official 2016-2025 NAV Total Return compounds to approximately `7.38%` CAGR,
