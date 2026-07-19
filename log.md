@@ -15,6 +15,13 @@
   and recorded current NAV YTD `+14.28%` as of 2026-07-16; 2021-2025 CAGR is
   `9.91%` versus S&P 500 TR `14.43%`.
 
+- `etf-performance`: Resolved `FXI` to `NYSE Arca:FXI`, created
+  `[[ETF_NYSE_ARCA_FXI Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-19]]`, and added FXI to
+  `[[ETF Performance Index]]`; official 2021-2025 NAV TR compounds to `-1.67%`
+  CAGR, official rolling 10-year NAV CAGR is `1.75%`, and current NAV YTD is
+  `-9.28%` as of 2026-07-16.
+
 ## 2026-07-18
 
 - `etf-performance`: Resolved user alias `AMEX-KWEB` to `NYSE Arca:KWEB`, created

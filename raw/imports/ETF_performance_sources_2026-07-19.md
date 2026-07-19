@@ -5,11 +5,13 @@ accessed: 2026-07-19
 canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_DVYA Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_IDX Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_FXI Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
   - ticker/DVYA
   - ticker/IDX
+  - ticker/FXI
 ---
 
 # ETF Performance Source Batch - 2026-07-19
@@ -79,6 +81,52 @@ convention with dividends reinvested and reference as-of `2025-12-31`.
 - [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/) — 2021 row
 - [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — 2022-2025 rows
 - [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — index definition and methodology
+
+## FXI Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:FXI` | [iShares FXI product page](https://www.ishares.com/us/products/239536/FXI) | Fund identity, exchange, benchmark, inception, current NAV/price, YTD NAV TR, fees, holdings, sector exposure, premium/discount, trailing yield and distributions | NAV/price/premium-discount 2026-07-17; YTD/holdings 2026-07-16; standardized performance/risk/yield 2026-06-30 |
+| `NYSE Arca:FXI` | [Official FXI factsheet](https://www.ishares.com/us/literature/fact-sheet/fxi-ishares-china-large-cap-etf-fund-fact-sheet-en-us.pdf) | Official NAV total-return definition, annual NAV TR 2021-2025, benchmark, inception, expense ratio and risk facts | Factsheet 2026-03-31; annual rows through 2025-12-31 |
+| `NYSE Arca:FXI` | [iShares FXI summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-china-large-cap-etf-7-31.pdf) | Passive/index-tracking objective, NYSE Arca listing and China large-cap risk disclosures | 2025-11-28 |
+| `Secondary drawdown` | [Total Real Returns FXI](https://totalrealreturns.com/n/FXI) | Dividend-reinvested adjusted-total-return proxy for maximum drawdown, recovery and current drawdown; not official NAV TR | Accessed 2026-07-19; history through 2026-07-08 |
+| `Common benchmark current YTD` | [Slickcharts S&P 500 YTD](https://www.slickcharts.com/sp500/returns/ytd) | Secondary S&P 500 Total Return current YTD snapshot because the official current Total Return value was not text-extractable in the capture | Market close 2026-07-17 |
+| `Common benchmark definition` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | S&P 500 identity, methodology and total-return ticker; annual rows reuse the cached USD TR convention | Current page 2026-07-17; annual cache as-of 2025-12-31 |
+
+## FXI Verified Facts And As-of Register
+
+- Entity resolution: `FXI` is `iShares China Large-Cap ETF`, primary listing `NYSE Arca:FXI`; listing currency USD; fund inception `2004-10-05`.
+- Instrument: passive, index-tracking China large-cap equity ETF; issuer benchmark `FTSE China 50 Index (Net)`.
+- Return basis: official USD `NAV Total Return`, with distributions reinvested and fund expenses deducted. Market-price return is kept separate.
+- Expense ratio: `0.73%`; distribution frequency: semi-annual.
+- Latest official NAV: `$34.19` as of `2026-07-17`; closing market price `$34.13`; premium/discount `-0.18%`; 1-day NAV change `-1.29%`.
+- Latest official NAV Total Return YTD: `-9.28%` as of `2026-07-16`.
+- Official standardized NAV performance as of `2026-06-30`: 1-year `-11.84%`, 3-year `7.95%` annualized, 5-year `-5.06%` annualized, 10-year `1.75%` annualized, and since-inception `4.94%` annualized. The same issuer table reports 10-year cumulative return `18.94%`; raw daily TR endpoints are not exposed.
+- Portfolio snapshot: 50 holdings as of `2026-07-16`; 3-year standard deviation `21.41%`, P/E `11.16x`, P/B `1.38x`, and equity beta `0.34` as of the stated issuer dates. Sector mix: Financials `32.95%`, Consumer Discretionary `26.73%`, Communication `17.43%`.
+- Latest verified distribution: `$0.263439` per share, ex-date `2026-06-15`, payable `2026-06-18`; trailing yield `2.14%` as of `2026-06-30`.
+
+## FXI Official Annual NAV Total Return Inputs
+
+| Year | FXI NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | -21.04% | 28.71% |
+| 2022 | -20.40% | -18.11% |
+| 2023 | -12.87% | 26.29% |
+| 2024 | 30.10% | 25.02% |
+| 2025 | 29.01% | 17.88% |
+
+FXI rows are official complete-calendar-year NAV Total Return from the iShares
+product page/factsheet; S&P 500 rows reuse the cached USD Total Return convention
+with dividends reinvested and reference as-of `2025-12-31`.
+
+## FXI Calculations And Gaps
+
+- 2021-2025 FXI cumulative/CAGR: `-8.08%` / `-1.67%`; up/down `2 / 3`.
+- S&P 500 TR 2021-2025 cumulative/CAGR: `96.17%` / `14.43%`; FXI lagged by `104.25 percentage points` cumulative.
+- Rolling 10-year check: issuer cumulative `18.94%` normalized as `100.00 -> 118.94` over `10.00` years; `(118.94 / 100.00)^(1 / 10.00) - 1 = 1.75%`.
+- Current S&P 500 TR YTD: `+9.64%` as of `2026-07-17` from Slickcharts; this is a secondary current snapshot and is one trading day later than FXI's official YTD.
+- Secondary drawdown proxy: maximum drawdown `-72.68%` on `2008-10-27`, recovery `3,094` trading sessions through `2021-02`; current drawdown `-29.28%` as of `2026-07-08`. These are adjusted-total-return proxy values, not official NAV drawdown/recovery.
+- Official daily NAV Total Return index levels for direct maximum drawdown/recovery calculation: `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## IDX Source Map
 
