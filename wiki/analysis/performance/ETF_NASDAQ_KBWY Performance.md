@@ -5,9 +5,12 @@ updated: 2026-07-14
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/United-States
 ---
 
 # KBWY Performance
+
+> Navigation: [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

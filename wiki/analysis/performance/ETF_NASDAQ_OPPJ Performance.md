@@ -8,10 +8,13 @@ source_batch: raw/imports/ETF_performance_sources_2026-07-14.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/Japan
   - ticker/OPPJ
 ---
 
 # OPPJ Performance
+
+> Navigation: [[ETF Region Index]] → [[Japan ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

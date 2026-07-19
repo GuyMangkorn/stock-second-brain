@@ -8,10 +8,13 @@ source_batch: raw/imports/ETF_performance_sources_2026-07-13.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/International
   - ticker/VIGI
 ---
 
 # VIGI Performance
+
+> Navigation: [[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

@@ -24,6 +24,8 @@ tags:
 
 # BBJP Performance
 
+> Navigation: [[ETF Region Index]] → [[Japan ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 BBJP ให้ official `NAV Total Return` เป็นบวก 6 จาก 7 complete calendar years ในช่วง

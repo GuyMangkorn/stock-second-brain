@@ -19,12 +19,15 @@ source_batch: raw/imports/ETF_performance_sources_2026-07-19.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/Asia-Pacific
   - ticker/DVYA
   - geography/developed-asia-pacific
   - style/dividend
 ---
 
 # DVYA Performance
+
+> Navigation: [[ETF Region Index]] → [[Asia-Pacific ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

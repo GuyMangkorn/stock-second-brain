@@ -22,6 +22,8 @@ tags:
 
 # EWJ Performance
 
+> Navigation: [[ETF Region Index]] → [[Japan ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 EWJ ให้ official `NAV Total Return` เป็นบวก 8 จาก 10 complete calendar years

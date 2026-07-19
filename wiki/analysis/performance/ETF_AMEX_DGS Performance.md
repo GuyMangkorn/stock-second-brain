@@ -5,9 +5,12 @@ updated: 2026-07-14
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/Emerging-Markets
 ---
 
 # DGS Performance
+
+> Navigation: [[ETF Region Index]] → [[Emerging Markets ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

@@ -22,6 +22,8 @@ tags:
 
 # EWC Performance
 
+> Navigation: [[ETF Region Index]] → [[Canada ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 EWC ให้ cumulative `NAV Total Return` ประมาณ `210.78%` ใน complete calendar years

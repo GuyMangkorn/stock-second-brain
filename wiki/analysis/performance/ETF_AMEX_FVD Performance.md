@@ -15,10 +15,13 @@ source_batch: raw/imports/ETF_performance_sources_2026-07-12.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/United-States
   - ticker/FVD
 ---
 
 # FVD Performance
+
+> Navigation: [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

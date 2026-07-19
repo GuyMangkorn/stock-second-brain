@@ -21,6 +21,8 @@ tags:
 
 # FLCA Performance
 
+> Navigation: [[ETF Region Index]] → [[Canada ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 FLCA ให้ `NAV Total Return` เป็นบวก 6 จาก 8 complete calendar years ในช่วง

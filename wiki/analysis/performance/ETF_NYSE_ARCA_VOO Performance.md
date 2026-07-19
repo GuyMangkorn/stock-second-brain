@@ -24,6 +24,8 @@ tags:
 
 # VOO Performance
 
+> Navigation: [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 VOO ให้ cumulative `NAV Total Return` ประมาณ `296.90%` ใน complete calendar

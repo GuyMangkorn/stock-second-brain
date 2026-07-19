@@ -18,11 +18,14 @@ source_batch: raw/imports/ETF_performance_sources_2026-07-18.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/International
   - ticker/VXUS
   - geography/international-ex-US
 ---
 
 # VXUS Performance
+
+> Navigation: [[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

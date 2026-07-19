@@ -22,6 +22,8 @@ tags:
 
 # IDX Performance
 
+> Navigation: [[ETF Region Index]] → [[Indonesia ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 `IDX` ในที่นี้คือ `VanEck Indonesia Index ETF` ที่จดทะเบียนบน `NYSE Arca` ไม่ใช่

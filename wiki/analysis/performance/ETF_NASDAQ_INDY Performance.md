@@ -8,10 +8,13 @@ source_batch: raw/imports/ETF_performance_sources_2026-07-19.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/India
   - ticker/INDY
 ---
 
 # INDY Performance
+
+> Navigation: [[ETF Region Index]] → [[India ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

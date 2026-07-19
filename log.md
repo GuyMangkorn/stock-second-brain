@@ -2,6 +2,8 @@
 
 ## 2026-07-19
 
+- `etf-region-navigation`: Added [[ETF Region Index]] and 12 region pages covering all 51 ETF performance pages; added canonical geography tags/backlinks and linked regional navigation from the dashboard and performance indexes.
+
 - `etf-performance`: Resolved `INDY` to `NASDAQ:INDY`, created
   `[[ETF_NASDAQ_INDY Performance]]`, extended
   `[[ETF_performance_sources_2026-07-19]]`, and added INDY to

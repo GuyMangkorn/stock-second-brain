@@ -18,6 +18,7 @@ updated: 2026-07-12
 - Catalysts / Market Moves: `wiki/analysis/catalysts/`
 - Comparisons: `wiki/analysis/comparisons/`
 - ETF Performance: [[ETF Performance Index]]
+- ETF Performance by Region: [[ETF Region Index]]
 - Sentiment: `wiki/analysis/sentiment/`
 - Source Audits: `wiki/analysis/audits/`
 

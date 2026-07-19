@@ -22,6 +22,8 @@ tags:
 
 # EWG Performance
 
+> Navigation: [[ETF Region Index]] → [[Germany ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 EWG ให้ cumulative `NAV Total Return` ประมาณ `103.85%` ในปี 2016-2025 หรือ

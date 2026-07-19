@@ -14,6 +14,23 @@ tags:
 หน้ารวมสำหรับเลือก ETF และเทียบ behavior. อ่านหน้า ETF รายตัวเพื่อดู annual
 table และ driver notes; อ่านหน้านี้เมื่อต้องการ cross-ETF analysis.
 
+## Browse by region
+
+เริ่มจาก [[ETF Region Index]] เพื่อเลือกหน้า region แล้วเปิด performance owner ของ ETF รายตัว.
+
+- [[USA ETF]]
+- [[North America ETF]]
+- [[India ETF]]
+- [[Japan ETF]]
+- [[China ETF]]
+- [[Indonesia ETF]]
+- [[Canada ETF]]
+- [[Germany ETF]]
+- [[Europe ETF]]
+- [[Asia-Pacific ETF]]
+- [[Emerging Markets ETF]]
+- [[International ETF]]
+
 ## Coverage
 
 | ETF | History used | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |

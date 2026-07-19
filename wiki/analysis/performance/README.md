@@ -22,6 +22,7 @@
 |---|---|
 | `wiki/analysis/performance/ETF_EXCHANGE_TICKER Performance.md` | ตัวเลข annual return, best/worst, risk read-through, classification, driver notes และ source links |
 | [[ETF Performance Index]] | coverage dashboard และ cross-ETF comparison |
+| `wiki/analysis/comparisons/* ETF.md` และ [[ETF Region Index]] | navigation summary ตาม underlying exposure; ไม่ใช่ owner ของ performance numbers |
 | `raw/imports/ETF_performance_sources_YYYY-MM-DD.md` | source map รวม, as-of dates, gaps และ audit trail ต่อรอบ refresh |
 | `raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md` | holdings, methodology, cost และ fund structure; ไม่ซ้ำ performance table |
 
@@ -75,8 +76,9 @@
 2. Capture sources in one dated batch note under `raw/imports/`.
 3. Update one per-ETF performance page; keep only metrics needed for decisions.
 4. Update [[ETF Performance Index]] when coverage, common window or grouping
-   changes.
-5. Add one dated workflow bullet to `log.md`.
+changes.
+5. Update [[ETF Region Index]] และหน้า region ที่เกี่ยวข้องเมื่อเพิ่ม ETF หรือเปลี่ยน primary geography; หน้ารายกองต้องมี canonical geography tag และ backlink กลับมาที่ region page.
+6. Add one dated workflow bullet to `log.md` (one bullet per completed workflow, not per artifact).
 
 ## Pilot Status
 

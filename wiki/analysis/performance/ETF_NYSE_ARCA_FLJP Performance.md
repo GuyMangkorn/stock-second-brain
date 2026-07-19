@@ -22,6 +22,8 @@ tags:
 
 # FLJP Performance
 
+> Navigation: [[ETF Region Index]] → [[Japan ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 FLJP มี official `NAV Total Return` ครบปี 2018-2025 ให้ cumulative `62.92%` หรือ

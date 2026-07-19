@@ -28,6 +28,8 @@ tags:
 
 # FXI Performance
 
+> Navigation: [[ETF Region Index]] → [[China ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 FXI ให้ official NAV Total Return ติดลบใน 3 จาก 5 ปีช่วง 2021-2025; สะสม

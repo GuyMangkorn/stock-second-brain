@@ -5,9 +5,12 @@ updated: 2026-07-14
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
+  - geography/North-America
 ---
 
 # AMLP Performance
+
+> Navigation: [[ETF Region Index]] → [[North America ETF]] → [[ETF Performance Index]]
 
 ## Bottom line
 

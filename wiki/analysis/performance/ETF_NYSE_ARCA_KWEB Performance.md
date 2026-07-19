@@ -28,6 +28,8 @@ tags:
 
 # KWEB Performance
 
+> Navigation: [[ETF Region Index]] → [[China ETF]] → [[ETF Performance Index]]
+
 ## Bottom line
 
 KWEB ปิดที่ `$26.81` ณ 17 ก.ค. 2026 ลด `2.44%` ใน session ล่าสุด; market-price
