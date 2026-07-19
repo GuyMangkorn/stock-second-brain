@@ -7,9 +7,12 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_IDX Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_FXI Performance.md
   - wiki/analysis/performance/ETF_NASDAQ_INDY Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_EWA Performance.md
+  - wiki/analysis/comparisons/Australia ETF.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
+  - ticker/EWA
   - ticker/DVYA
   - ticker/IDX
   - ticker/FXI
@@ -83,6 +86,60 @@ convention with dividends reinvested and reference as-of `2025-12-31`.
 - [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/) — 2021 row
 - [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — 2022-2025 rows
 - [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — index definition and methodology
+
+## EWA Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:EWA` | [iShares EWA product page](https://www.ishares.com/us/products/239607/ishares-msci-australia-etf) | Fund identity, exchange, tracked index, inception, current NAV/price, YTD NAV TR, fees, holdings, sector exposure, risk, premium/discount and distribution frequency | NAV/price/holdings/exposure 2026-07-17; YTD 2026-07-16; rolling performance/risk/yield 2026-06-30 |
+| `NYSE Arca:EWA` | [Official EWA factsheet](https://www.ishares.com/us/literature/fact-sheet/ewa-ishares-msci-australia-etf-fund-fact-sheet-en-us.pdf) | Official NAV total-return definition, exact annual NAV TR 2021-2025, benchmark, inception and expense ratio | Factsheet 2026-03-31; annual rows through 2025-12-31 |
+| `NYSE Arca:EWA` | [Official iShares international performance table](https://www.ishares.com/ch/professionals/en/products/239607/ishares-msci-australia-etf?siteEntryPassthrough=true&switchLocale=n) | Official complete calendar NAV TR rows 2016-2025 and rolling performance; 2016-2020 rows are displayed to one decimal | Current table accessed 2026-07-19; annual rows through 2025-12-31; rolling as-of 2026-06-30 |
+| `Secondary drawdown` | [Total Real Returns EWA](https://totalrealreturns.com/n/EWA) | Dividend-reinvested adjusted-total-return proxy for annual history, maximum drawdown, current drawdown and recovery; not official NAV TR | Accessed 2026-07-19; history through 2026-07-17 |
+| `Common benchmark current YTD` | [Slickcharts S&P 500 YTD](https://www.slickcharts.com/sp500/returns/ytd) | Secondary S&P 500 Total Return current YTD snapshot | Market close 2026-07-17 |
+| `Common benchmark definition` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | S&P 500 identity and methodology; annual rows reuse the cached USD TR convention | Current page accessed 2026-07-19; annual cache as-of 2025-12-31 |
+
+## EWA Verified Facts And As-of Register
+
+- Entity resolution: `EWA` is `iShares MSCI Australia ETF`, primary listing `NYSE Arca:EWA`; listing currency USD; fund inception `1996-03-12`.
+- Instrument: passive, index-tracking Australia single-country equity ETF; issuer benchmark `MSCI Australia Index (Net)`; asset class Equity; 47 holdings as of 2026-07-17.
+- Return basis: official USD `NAV Total Return`, with distributions reinvested and fund expenses deducted. Market-price return is kept separate.
+- Expense ratio: `0.50%`; distribution frequency: semi-annual.
+- Latest official NAV/price: `$28.71` / `$28.75` as of 2026-07-17; issuer premium/discount `0.14%`.
+- Latest official NAV Total Return YTD: `+10.44%` as of 2026-07-16.
+- Official rolling NAV performance as of 2026-06-30: 1-year `10.42%`, 3-year `11.42%` annualized, 5-year `5.93%` annualized, 10-year `8.27%` annualized, and since inception `7.67%` annualized. The same issuer table reports 10-year cumulative return `121.36%`; raw daily TR endpoints are not exposed.
+- Portfolio/risk snapshot: 3-year standard deviation `16.51%`, equity beta `0.86`, P/E `21.45x`, P/B `2.65x` as of the stated issuer dates; sector mix as of 2026-07-17 is Financials `41.72%`, Materials `23.22%`, Consumer Discretionary `7.39%`, Industrials `5.34%`.
+- Latest four verified cash distributions: `$0.404857` ex/pay 2026-06-15/2026-06-18; `$0.443628` ex/pay 2025-12-16/2025-12-19; `$0.397339` ex/pay 2025-06-16/2025-06-20; `$0.416458` ex/pay 2024-12-17/2024-12-20. Average cash per round is `$0.415571`; this is not a forecast. Trailing yield is `3.01%` as of 2026-06-30.
+
+## EWA Official Annual NAV Total Return Inputs
+
+| Year | EWA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 11.10% | 11.96% |
+| 2017 | 19.60% | 21.83% |
+| 2018 | -12.30% | -4.38% |
+| 2019 | 22.40% | 31.49% |
+| 2020 | 8.30% | 18.40% |
+| 2021 | 9.09% | 28.71% |
+| 2022 | -5.74% | -18.11% |
+| 2023 | 13.98% | 26.29% |
+| 2024 | 0.82% | 25.02% |
+| 2025 | 14.12% | 17.88% |
+
+EWA rows are official complete-calendar-year NAV Total Return. The official
+international iShares table displays 2016-2020 to one decimal; 2021-2025 use
+the exact two-decimal NAV rows from the current US product page/factsheet. S&P
+500 rows reuse the cached USD Total Return convention with dividends reinvested
+and reference as-of `2025-12-31`.
+
+## EWA Calculations And Gaps
+
+- 2016-2025 EWA cumulative/CAGR: `108.31%` / `7.61%`; up/down `8 / 2`. Because the 2016-2020 source rows are rounded to one decimal, this CAGR is an approximate calculation from published annual rows.
+- 2021-2025 EWA cumulative/CAGR: `34.85%` / `6.16%`; S&P 500 TR `96.17%` / `14.43%`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`; S&P 500 is a common reference, not EWA's tracked index.
+- Rolling 10-year check: issuer cumulative `121.36%` normalized as `100.00 -> 221.36` over `10.00` years; `(221.36 / 100.00)^(1 / 10.00) - 1 = 8.27%`.
+- Current S&P 500 TR YTD: `+9.64%` as of `2026-07-17` from Slickcharts; this is a secondary current snapshot and is one trading day later than EWA's official YTD.
+- Secondary drawdown proxy: maximum drawdown `-66.98%` from the `2007-10-31` peak to the `2008-11-20` trough; the proxy made a new high on `2026-04-15`, implying recovery of approximately `18.46` years from the prior peak. Current drawdown is `-3.65%` as of `2026-07-17`. These are adjusted-total-return proxy values, not official NAV drawdown/recovery.
+- Official daily NAV Total Return index levels, maximum drawdown and recovery date: `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## INDY Source Map
 

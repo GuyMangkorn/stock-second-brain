@@ -18,6 +18,7 @@ driver notes ทั้งหมด
 | Region | ETFs | Navigation |
 |---|---:|---|
 | USA | 18 | [[USA ETF]] |
+| Australia | 1 | [[Australia ETF]] |
 | North America | 2 | [[North America ETF]] |
 | India | 1 | [[India ETF]] |
 | Japan | 5 | [[Japan ETF]] |

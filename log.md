@@ -4,6 +4,8 @@
 
 - `etf-region-navigation`: Added [[ETF Region Index]] and 12 region pages covering all 51 ETF performance pages; added canonical geography tags/backlinks and linked regional navigation from the dashboard and performance indexes.
 
+- `etf-performance`: Resolved `EWA` to `NYSE Arca:EWA`, created [[ETF_NYSE_ARCA_EWA Performance]] and [[Australia ETF]], extended [[ETF_performance_sources_2026-07-19]], and added EWA to [[ETF Performance Index]]; official rolling 10-year NAV CAGR is `8.27%`, 2016-2025 annual-row CAGR is approximately `7.61%`, and current NAV YTD is `+10.44%` as of 2026-07-16.
+
 - `etf-performance`: Resolved `INDY` to `NASDAQ:INDY`, created
   `[[ETF_NASDAQ_INDY Performance]]`, extended
   `[[ETF_performance_sources_2026-07-19]]`, and added INDY to
