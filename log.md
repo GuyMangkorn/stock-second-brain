@@ -2,6 +2,13 @@
 
 ## 2026-07-19
 
+- `etf-performance`: Resolved `INDY` to `NASDAQ:INDY`, created
+  `[[ETF_NASDAQ_INDY Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-19]]`, and added INDY to
+  `[[ETF Performance Index]]`; official 2021-2025 NAV TR compounds to `6.92%`
+  CAGR, rolling 10-year NAV CAGR is `6.67%`, and current NAV YTD is `-12.32%`
+  as of 2026-07-16.
+
 - `etf-performance`: Resolved `IDX` to `NYSE Arca:IDX`, created
   `[[ETF_NYSE_ARCA_IDX Performance]]`, extended
   `[[ETF_performance_sources_2026-07-19]]`, and added IDX to

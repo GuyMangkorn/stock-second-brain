@@ -6,12 +6,14 @@ canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_DVYA Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_IDX Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_FXI Performance.md
+  - wiki/analysis/performance/ETF_NASDAQ_INDY Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
   - ticker/DVYA
   - ticker/IDX
   - ticker/FXI
+  - ticker/INDY
 ---
 
 # ETF Performance Source Batch - 2026-07-19
@@ -73,6 +75,62 @@ convention with dividends reinvested and reference as-of `2025-12-31`.
 - The issuer states that the underlying index changed from the Dow Jones
   Asia/Pacific Select Dividend 30 Index to the Select Dividend 50 Index on
   `2020-06-22`; all annual rows used here are after the change.
+
+## Benchmark Cache Sources
+
+- [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true) — 2016-2019 reference rows
+- [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf) — 2018-2022 rows
+- [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/) — 2021 row
+- [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — 2022-2025 rows
+- [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — index definition and methodology
+
+## INDY Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NASDAQ:INDY` | [iShares INDY product page](https://www.ishares.com/us/products/239758/ishares-india-50-etf) | Fund identity, NASDAQ listing, Nifty 50 benchmark, inception, current NAV/price, YTD NAV TR, fees, holdings, sector exposure, risk and distributions | NAV/price/holdings/exposure 2026-07-16 to 2026-07-17; YTD 2026-07-16; rolling performance/risk 2026-06-30 |
+| `NASDAQ:INDY` | [Official iShares INDY factsheet](https://www.ishares.com/us/literature/fact-sheet/indy-ishares-india-50-etf-fund-fact-sheet-en-us.pdf) | Official NAV total-return definition, annual NAV TR 2021-2025, benchmark, inception, expense ratio and risk facts | Factsheet 2026-03-31; annual rows through 2025-12-31 |
+| `NASDAQ:INDY` | [BlackRock INDY factsheet as of 2025-06-30](https://www.blackrock.com/americas-offshore/en/literature/fact-sheet/indy-ishares-india-50-etf-fund-fact-sheet-en-lm.pdf) | Official 2020 calendar NAV TR row used to extend complete-year coverage | Factsheet 2025-06-30 |
+| `NASDAQ:INDY` | [iShares INDY summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-india-50-etf-3-31.pdf) | Passive/index-tracking objective and India single-country equity risk disclosures | Prospectus accessed 2026-07-19 |
+| `Common benchmark` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common-reference benchmark identity; annual rows reuse the cached USD total-return convention | Cache as-of 2025-12-31 |
+
+## INDY Verified Facts And As-of Register
+
+- Entity resolution: user alias `INDY (india) ETF 50` resolves to `iShares India 50 ETF`, primary listing `NASDAQ:INDY`; listing currency USD; fund inception `2009-11-18`.
+- Instrument: passive, index-tracking India large-cap equity ETF; issuer benchmark `Nifty 50 Index`; 50 holdings.
+- Return basis: official USD `NAV Total Return`, with dividends and capital-gains distributions reinvested and fund expenses deducted. Market-price return is kept separate.
+- Expense ratio: `0.65%`; distribution frequency: semi-annual.
+- Latest official NAV: `$43.50` as of `2026-07-17`; closing market price `$43.37`; premium/discount `-0.29%`; 1-day NAV change `+$0.48` / `+1.12%`.
+- Latest official NAV Total Return YTD: `-12.32%` as of `2026-07-16`.
+- Official rolling NAV performance as of `2026-06-30`: 1-year `-13.27%`, 3-year annualized `1.84%`, 5-year annualized `2.45%`, 10-year annualized `6.67%`, and since inception `4.94%`. The same issuer table reports 10-year cumulative return `90.75%`; raw daily TR endpoints are not exposed.
+- Portfolio/risk snapshot: 50 holdings; 3-year standard deviation `13.37%` and equity beta `0.38` as of `2026-06-30`; Financials `36.95%` as of `2026-07-16`.
+- Latest verified distribution: `$0.099016` per share, ex-date `2026-06-15`, payable `2026-06-18`; trailing yield `0.85%` as of `2026-06-30`.
+
+## INDY Official Annual NAV Total Return Inputs
+
+| Year | INDY NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2020 | 10.67% | 18.40% |
+| 2021 | 19.28% | 28.71% |
+| 2022 | -7.86% | -18.11% |
+| 2023 | 17.05% | 26.29% |
+| 2024 | 4.02% | 25.02% |
+| 2025 | 4.42% | 17.88% |
+
+INDY 2020 is an official complete-calendar-year NAV row from the BlackRock
+factsheet as of 2025-06-30; 2021-2025 rows are official complete-calendar-year
+NAV Total Return from the iShares product page/factsheet. S&P 500 rows reuse the
+cached USD Total Return convention with dividends reinvested and reference
+as-of `2025-12-31`.
+
+## INDY Calculations And Gaps
+
+- 2020-2025 INDY cumulative/CAGR: `54.64%` / `7.54%`; up/down `5 / 1`.
+- 2021-2025 INDY cumulative/CAGR: `39.73%` / `6.92%`; up/down `4 / 1`.
+- S&P 500 TR 2021-2025 cumulative/CAGR: `96.17%` / `14.43%`; S&P 500 is a common reference, not INDY's tracked index.
+- Rolling 10-year check: issuer cumulative `90.75%` normalized as `100.00 -> 190.75` over `10.00` years; `(190.75 / 100.00)^(1 / 10.00) - 1 = 6.67%`.
+- Official annual NAV TR rows for 2016-2019 are `ไม่พบข้อมูลที่ยืนยันได้` in the current issuer capture; no secondary proxy is inserted into the NAV ranking.
+- Official raw 10-year NAV TR endpoints, daily NAV TR index levels, maximum drawdown and recovery date: `ไม่พบข้อมูลที่ยืนยันได้`. Price-based or secondary drawdown would not be interchangeable with NAV TR.
 
 ## Benchmark Cache Sources
 
