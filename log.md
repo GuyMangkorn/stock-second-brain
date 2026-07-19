@@ -2,6 +2,13 @@
 
 ## 2026-07-19
 
+- `etf-performance`: Resolved `IDX` to `NYSE Arca:IDX`, created
+  `[[ETF_NYSE_ARCA_IDX Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-19]]`, and added IDX to
+  `[[ETF Performance Index]]`; official NAV YTD is `-36.18%` as of 2026-07-16.
+  Macro overlay finds tactical rebound potential but no confirmed sustainable
+  reversal while BI-Rate, FX, governance and earnings signposts remain mixed.
+
 - `etf-performance`: Resolved user alias `AMEX-DVYA` to `NYSE Arca:DVYA`, created
   `[[ETF_NYSE_ARCA_DVYA Performance]]`, captured official 2021-2025 NAV Total
   Return and rolling 10-year NAV CAGR, added DVYA to `[[ETF Performance Index]]`,
