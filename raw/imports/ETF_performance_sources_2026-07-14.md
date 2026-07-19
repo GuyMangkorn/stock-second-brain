@@ -200,6 +200,8 @@ pages; เงินปันผล reinvested และหัก fund expenses �
 - `DWX` official NAV TR as of 2026-06-30: YTD `6.97%`, 1-year `14.11%`,
   3-year `14.96%`, 5-year `7.73%`, and 10-year `7.44%`; gross expense ratio
   `0.45%`, inception `2008-02-12`.
+- `ENFR` issuer factsheet as of 2026-03-31 reports 10-year NAV TR `13.40%`
+  versus `S&P 500 Index - TR` `14.16%`: [ALPS ENFR factsheet](https://www.alpsfunds.com/hubfs/alps-docs/lit/fs/alerian-energy-infrastructure-etf-enfr-fs.pdf).
 - `DIVI` official NAV TR as of 2026-06-30: 10-year average annual return
   `11.24%`, since-inception annualized return `11.02%`; the latest factsheet
   exposes calendar NAV rows for 2017-2025 but not raw 10-year TR endpoints.

@@ -33,6 +33,14 @@
 
 ## 2026-07-18
 
+- `etf-performance`: Resolved user alias `AMEX-ECNS` to `NYSE Arca:ECNS`, created
+  `[[ETF_NYSE_ARCA_ECNS Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-18]]`, and added ECNS to
+  `[[ETF Performance Index]]`; official 2021-2025 NAV TR compounds to `-2.79%`
+  CAGR, current NAV YTD is `-10.26%` as of 2026-07-16, and recent weakness is
+  linked to broad China risk-off, weak domestic/property data, and small-cap
+  volatility rather than a material ETF premium/discount dislocation.
+
 - `etf-performance`: Resolved user alias `AMEX-KWEB` to `NYSE Arca:KWEB`, created
   `[[ETF_NYSE_ARCA_KWEB Performance]]`, extended `[[ETF_performance_sources_2026-07-18]]`,
   and added KWEB to `[[ETF Performance Index]]`; official rolling 10-year NAV CAGR

@@ -5,11 +5,13 @@ accessed: 2026-07-18
 canonical_outputs:
   - wiki/analysis/performance/ETF_NYSE_ARCA_VSS Performance.md
   - wiki/analysis/performance/ETF_NASDAQ_VXUS Performance.md
-  - wiki/analysis/performance/ETF_NYSE_ARCA_EWJ Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_EWJ Performance.md
+  - wiki/analysis/performance/ETF_CBOE_EFAV Performance.md
   - wiki/analysis/performance/ETF_CBOE_BBJP Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_KWEB Performance.md
   - wiki/analysis/performance/ETF_NYSE_ARCA_FLJP Performance.md
+  - wiki/analysis/performance/ETF_NYSE_ARCA_ECNS Performance.md
   - wiki/analysis/performance/ETF Performance Index.md
 tags:
   - source/etf
@@ -18,6 +20,96 @@ tags:
 ---
 
 # ETF Performance Source Batch - 2026-07-18
+
+## ECNS Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `NYSE Arca:ECNS` | [iShares ECNS product page](https://www.ishares.com/us/products/239620/ishares-msci-china-smallcap-etf) | Fund identity, exchange, benchmark, inception, current NAV/price, YTD NAV TR, fees, holdings, sector exposure, premium/discount and distributions | Current NAV/price 2026-07-17; YTD NAV TR 2026-07-16; holdings/sectors 2026-07-16; performance 2026-06-30 |
+| `NYSE Arca:ECNS` | [Official ECNS factsheet](https://www.ishares.com/us/literature/fact-sheet/ecns-ishares-msci-china-small-cap-etf-fund-fact-sheet-en-us.pdf) | Official NAV total-return definition, annual NAV TR 2021-2025, standardized 10-year NAV CAGR, expense ratio and risk facts | Fact sheet 2026-03-31; annual rows through 2025-12-31 |
+| `NYSE Arca:ECNS` | [iShares summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-small-cap-etf-8-31.pdf) | Passive/index-tracking policy and China/small-cap risk disclosures | 2025-08-31 |
+| `China macro` | [AP Q2 2026 China economy report](https://apnews.com/article/china-economy-trade-exports-ai-95136222f87d5a1e62918f41efab00be) | GDP, domestic demand, fixed-asset investment, retail sales and property context | Published 2026-07-15 |
+| `China/Hong Kong market move` | [ET Net 17 Jul 2026 close](https://www.etnet.com.hk/www/eng/futures/futures_news_detail.php?newsid=20260717190) | Same-session Hang Seng, Hang Seng China Enterprises and Hang Seng TECH move | 2026-07-17 |
+| `Common benchmark` | [S&P 500 official returns page](https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=76d0e321-60b6-4834-a4b7-68bbe72fd4ea&sourceIdentifier=index-family-specialization) | Current S&P 500 Total Return YTD cross-check | 2026-07-18 |
+
+## ECNS Verified Fund Facts And As-of Register
+
+- Entity resolution: user alias `AMEX-ECNS` resolves to official primary listing
+  `NYSE Arca:ECNS`; fund name `iShares MSCI China Small-Cap ETF`; listing currency
+  USD; fund inception `2010-09-28`.
+- Instrument: passive, index-tracking equity ETF; issuer benchmark `MSCI China
+  Small Cap Index (Net)`; the fund targets smaller Chinese equities available to
+  international investors.
+- Return basis: official USD `NAV Total Return`, with distributions reinvested and
+  fund expenses deducted. Market-price return is kept separate.
+- Expense ratio: `0.59%`.
+- Latest official NAV: `$28.18` as of `2026-07-17`; closing market price `$28.20`,
+  52-week range `$28.08-$39.84`, and premium/discount `0.08%` on the issuer page.
+- Latest official NAV Total Return YTD: `-10.26%` as of `2026-07-16`.
+- Standardized official NAV performance as of `2026-06-30`: 1-year `-4.90%`,
+  3-year `4.94%` annualized, 5-year `-8.85%` annualized, 10-year `1.05%`
+  annualized, and since-inception `0.17%` annualized. Raw 10-year TR endpoints
+  are not exposed by the issuer; no endpoint values are inferred.
+- Downside-relevant portfolio snapshot as of `2026-07-16`: 266 holdings; Health
+  Care `22.98%`, Industrials `14.12%`, Information Technology `11.41%`, Consumer
+  Discretionary `10.93%`, Real Estate `8.54%`, Materials `8.49%`; 3-year standard
+  deviation `26.43%`, P/E `11.31x`, P/B `0.88x`.
+- Comparable broad-China context: iShares MCHI NAV YTD `-9.50%` as of `2026-07-16`
+  and 3-year standard deviation `21.99%` as of `2026-06-30`; this is context only,
+  not ECNS's issuer benchmark.
+
+## ECNS Official Annual NAV Total Return Inputs
+
+| Year | ECNS NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 3.10% | 28.71% |
+| 2022 | -24.77% | -18.11% |
+| 2023 | -23.28% | 26.29% |
+| 2024 | 6.94% | 25.02% |
+| 2025 | 36.42% | 17.88% |
+
+ECNS rows are official complete-calendar-year NAV Total Return from the iShares
+factsheet as of `2026-03-31`; S&P 500 rows reuse the cached USD Total Return
+convention documented below, with dividends reinvested and reference as-of
+`2025-12-31`.
+
+## ECNS Calculations And Recent Move
+
+- 2021-2025 ECNS cumulative/CAGR: `-13.19%` / `-2.79%`; up/down `3 / 2`.
+- S&P 500 TR 2021-2025 cumulative/CAGR: `96.17%` / `14.43%`.
+- Current official ECNS NAV YTD is `-10.26%` as of `2026-07-16`; latest NAV one-day
+  change is `-3.45%` as of `2026-07-17`.
+- Current price is `29.22%` below the issuer's 52-week high: `(28.20 / 39.84) - 1`.
+  This is a price-vs-52-week-high calculation, not official maximum drawdown.
+- ECNS NAV was down `3.45%` on 17 Jul 2026 while the Hang Seng, Hang Seng China
+  Enterprises and Hang Seng TECH fell about `2.0%`, `2.4%` and `4.0%`; this supports
+  a market/China risk-off explanation for the latest session.
+- Distribution: `$0.453779` per share, ex-date `2026-06-15`, payable `2026-06-18`.
+  The distribution is about `1.61%` of the 17 Jul NAV and can create a mechanical
+  price-chart drop; it is already included in NAV Total Return.
+
+## ECNS Drivers And Gaps
+
+- `confirmed event`: the 17 Jul China/Hong Kong risk-off session and ECNS's matching
+  NAV decline; causality is attributed to market-wide movement, not a fund-specific
+  announcement.
+- `probable driver`: China Q2 2026 GDP growth slowed to `4.3%`, the slowest since
+  late 2022; H1 fixed-asset investment fell `5.7%`, retail sales rose `1.3%`, and
+  housing prices continued to fall. The link to ECNS is an inference from these
+  macro facts and the fund's domestic small-cap sector mix.
+- `probable driver`: small-cap liquidity and volatility risk; issuer 3-year standard
+  deviation is `26.43%`, versus MCHI `21.99%`. The near-zero issuer premium/discount
+  means ETF trading mechanics are not the primary confirmed cause.
+- Official daily NAV Total Return index levels, maximum drawdown and recovery date:
+  `ไม่พบข้อมูลที่ยืนยันได้`. No secondary price proxy is used in NAV rankings.
+
+## Benchmark Cache Sources
+
+- [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true) — 2016-2019 reference rows
+- [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf) — 2018-2022 rows
+- [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/) — 2021 row
+- [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — 2022-2025 rows
+- [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — index definition and methodology
 
 ## VSS Source Map
 
@@ -106,7 +198,7 @@ reinvested, reference as of `2025-12-31`; no fresh benchmark web search was run.
 | `Nasdaq:VXUS` | [Vanguard prospectus](https://personal1.vanguard.com/pub/Pdf/p3369.pdf), [SEC-hosted summary prospectus](https://www.sec.gov/Archives/edgar/data/736054/000119312526077510/f44038d1.htm) | Legal share-class name, Nasdaq listing, expense breakdown and index strategy | 2026-02-27 |
 | `Nasdaq:VXUS` trend | [Barchart performance](https://www.barchart.com/etfs-funds/quotes/VXUS/performance) | Secondary market-price trend only; not NAV Total Return | 2026-07-17 |
 
-## Verified Fund Facts And As-Of Register
+## VXUS Verified Fund Facts And As-Of Register
 
 - Entity: `Nasdaq:VXUS`; fund name `Vanguard Total International Stock ETF`;
   inception `2011-01-26`; expense ratio `0.05%` as of `2026-02-27`.
@@ -130,7 +222,7 @@ reinvested, reference as of `2025-12-31`; no fresh benchmark web search was run.
   deviation `12.60%`; financials `22.6%`, industrials `15.7%`, technology
   `14.6%`; Japan was the largest market allocation at `15.3%`.
 
-## Official Annual NAV Total Return Inputs
+## VXUS Official Annual NAV Total Return Inputs
 
 | Year | VXUS NAV TR | S&P 500 TR |
 |---|---:|---:|
@@ -146,10 +238,10 @@ reinvested, reference as of `2025-12-31`; no fresh benchmark web search was run.
 | 2025 | 32.23% | 17.88% |
 
 VXUS rows are official complete-calendar-year NAV TR as of `2025-12-31`.
-S&P 500 rows use the cached USD Total Return convention with dividends
-reinvested, reference as of `2025-12-31`; market-price returns are excluded.
+S&P 500 rows reuse the benchmark cache documented above; market-price returns
+are excluded from the table and ranking.
 
-## Calculations And Current Trend
+## VXUS Calculations And Current Trend
 
 - 2016-2025 cumulative/CAGR: `127.03%` / `8.54%`; up/down: `8 / 2`.
 - S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`; VXUS gap is
@@ -163,15 +255,7 @@ reinvested, reference as of `2025-12-31`; market-price returns are excluded.
   the 52-week high. This supports `positive medium-term / correcting short-term`
   and is not mixed into official NAV TR metrics.
 
-## Benchmark Cache Sources
-
-- [S&P 500 Low Volatility historical comparison](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true) — 2016-2019 rows
-- [S&P U.S. Equities Market Attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf) — 2018-2022 rows
-- [S&P U.S. Equities Market Attributes December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/) — 2021 row
-- [S&P U.S. Equities Market Attributes December 2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — 2022-2025 rows
-- [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — index definition
-
-## Gaps And Reconciliation
+## VXUS Gaps And Reconciliation
 
 - Official daily NAV total-return levels and maximum drawdown/recovery series:
   `ไม่พบข้อมูลที่ยืนยันได้`; no price proxy is relabelled as NAV drawdown.
@@ -320,6 +404,79 @@ rows reuse the cached USD Total Return convention documented above.
   PortfoliosLab reports a secondary 10-year dividend-adjusted market-price max
   drawdown of `-33.14%*`, trough October 2022, recovered March 2024; it is kept
   separate from official NAV TR.
+
+## EFAV Source Map
+
+| Scope | Source | Role | Data date |
+|---|---|---|---|
+| `Cboe BZX:EFAV` | [iShares product page](https://www.ishares.com/us/products/239626/ishares-msci-eafe-minimum-volatility-etf) | Fund identity, exchange, official annual/rolling/current NAV TR, fee, NAV, market price, distributions and risk metrics | Annual 2025-12-31; rolling/risk 2026-06-30; YTD/price 2026-07-16; NAV 2026-07-17; distribution paid 2026-06-18 |
+| `Cboe BZX:EFAV` | [Official fact sheet](https://www.ishares.com/us/literature/fact-sheet/efav-ishares-msci-eafe-min-vol-factor-etf-fund-fact-sheet-en-us.pdf) | Return definition, 2021-2025 NAV TR, benchmark, expense ratio and fund facts | 2026-03-31 |
+| `Cboe BZX:EFAV` | [Summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-edge-msci-min-vol-eafe-etf-7-31.pdf) | Legal exchange/benchmark, passive representative-sampling strategy, return basis and official 2016-2024 annual returns | 2025-11-28 |
+| `Cboe BZX:EFAV` | [Cboe listing](https://www.cboe.com/us/equities/listings/listed_products/symbols/EFAV) | Exchange and listing-date cross-check | Accessed 2026-07-18 |
+
+## EFAV Verified Fund Facts And As-Of Register
+
+- Entity: `Cboe BZX:EFAV`; fund name `iShares MSCI EAFE Min Vol Factor ETF`;
+  inception `2011-10-18`; Cboe listing date `2011-10-20`.
+- Instrument: passive, index-tracking developed-market equity ETF using
+  representative sampling; supported by ETF v1. Issuer benchmark is
+  `MSCI EAFE Minimum Volatility (USD) Index (Net)`.
+- Return basis: official USD `NAV Total Return`, before investor taxes, with
+  dividends/distributions reinvested and fund expenses reflected. Market-price
+  returns are excluded from the table and ranking.
+- Expense ratio: `0.20%`; management fee `0.20%`, other expenses `0.00%`.
+- Current YTD NAV TR: `6.50%` as of `2026-07-16`; cumulative, not annualized.
+- Rolling 10-year NAV TR: CAGR `6.02%`, cumulative `79.38%`, as of
+  `2026-06-30`; normalized window `2016-06-30` to `2026-06-30`,
+  `100.00 -> 179.38`.
+- Latest official NAV: USD `90.81` as of `2026-07-17`; latest displayed closing
+  price: USD `90.26` as of `2026-07-16`. Because dates differ, no current
+  premium/discount is calculated.
+- Latest distribution captured: USD `1.684140` per share, ex/record date
+  `2026-06-15`, payable `2026-06-18`. Distribution analysis was not requested.
+- Risk snapshot as of `2026-06-30`: 3-year standard deviation `10.46%`, equity
+  beta versus S&P 500 `0.28`. Holdings were reported separately as of
+  `2026-07-16`; no holdings analysis was requested.
+
+## EFAV Official Annual NAV Total Return Inputs
+
+| Year | EFAV NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -1.86% | 11.96% |
+| 2017 | 21.57% | 21.83% |
+| 2018 | -5.80% | -4.38% |
+| 2019 | 16.78% | 31.49% |
+| 2020 | 0.19% | 18.40% |
+| 2021 | 7.02% | 28.71% |
+| 2022 | -14.76% | -18.11% |
+| 2023 | 11.98% | 26.29% |
+| 2024 | 5.28% | 25.02% |
+| 2025 | 26.16% | 17.88% |
+
+EFAV 2016-2024 rows are official calendar-year returns before taxes in the
+`2025-11-28` summary prospectus; 2025 is official NAV TR from the current
+product page/fact sheet. S&P 500 rows reuse the benchmark cache documented
+above; both series cover complete calendar years and no `*`/`†` is required.
+
+## EFAV Calculations
+
+- 2016-2025 cumulative/CAGR: EFAV `78.42%` / `5.96%`; up/down: `7 / 3`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`.
+- 2021-2025 cumulative/CAGR: EFAV `35.68%` / `6.29%`; S&P 500 TR
+  `96.17%` / `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR
+  `= product(1 + annual TR)^(1 / years) - 1`.
+- Rolling 10-year check: `(179.38 / 100)^(1 / 10) - 1 = 6.0175%`, which rounds
+  to the reported `6.02%`.
+
+## EFAV Gaps And Reconciliation
+
+- Official daily NAV TR index levels, maximum drawdown and recovery date:
+  `ไม่พบข้อมูลที่ยืนยันได้`; no secondary price proxy is relabelled as NAV TR.
+- Latest official price and NAV have different dates; synchronized
+  `2026-07-17` price/NAV pair is `ไม่พบข้อมูลที่ยืนยันได้`.
+- The `2026-07-16` current YTD value replaces the older month-end `3.47%` as of
+  `2026-06-30`. Dates remain separate and no smoothing or backfill is used.
 
 ## BBJP Source Map
 

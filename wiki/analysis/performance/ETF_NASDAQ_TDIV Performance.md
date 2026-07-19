@@ -6,6 +6,7 @@ return_basis: NAV total return
 tags:
   - analysis/etf-performance
   - geography/United-States
+custom-width: 75
 ---
 
 # TDIV Performance

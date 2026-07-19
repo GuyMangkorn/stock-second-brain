@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md",
+                "file": "wiki/analysis/comparisons/Japan ETF.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dividend ETF Top 10 Holdings Tracker 2026-07-01"
+              "title": "Japan ETF"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302
+    "width": 337
   },
   "right": {
     "id": "7e670d1b42012c7d",
@@ -181,48 +181,47 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "infranodus-graph-view:InfraNodus Graph View": false
+      "bases:Create new base": false
     }
   },
   "active": "f5dee5aff47c48c8",
   "lastOpenFiles": [
-    "wiki/analysis/performance/ETF_AMEX_FVD Performance.md",
-    "wiki/analysis/performance/ETF_AMEX_DTD Performance.md",
-    "wiki/analysis/performance/ETF_AMEX_VIG Performance.md",
-    "wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md",
+    "wiki/analysis/comparisons/Indonesia ETF.md",
+    "wiki/analysis/comparisons/Germany ETF.md",
+    "wiki/analysis/comparisons/China ETF.md",
+    "wiki/analysis/comparisons/Canada ETF.md",
+    "wiki/analysis/comparisons/Asia-Pacific ETF.md",
+    "wiki/analysis/performance/ETF_NASDAQ_OPPJ Performance.md",
+    "wiki/analysis/comparisons/Japan ETF.md",
+    "wiki/analysis/comparisons/ETF Region Index.md",
+    "wiki/analysis/comparisons/Europe ETF.md",
+    "wiki/analysis/comparisons/North America ETF.md",
+    "wiki/analysis/comparisons/India ETF.md",
     "wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md",
-    "wiki/analysis/performance/ETF Performance Index.md",
-    "wiki/analysis/performance/ETF_AMEX_DIVI Performance.md",
-    "wiki/analysis/performance/ETF_NASDAQ_VIGI Performance.md",
-    "wiki/analysis/performance/ETF_AMEX_DGRO Performance.md",
-    "wiki/analysis/performance/ETF Performance Regime Matrix.md",
-    "raw/imports/ETF_performance_sources_2026-07-12.md",
-    "raw/funds/ETF_AMEX_VIG_performance.md",
-    "raw/funds/ETF_AMEX_DIVI_performance.md",
-    "raw/funds/ETF_AMEX_DIVI_fund_facts.md",
-    "raw/funds/ETF_AMEX_DGRO_performance.md",
-    "wiki/analysis/performance/README.md",
-    "raw/funds/ETF_NASDAQ_VIGI_performance.md",
-    "raw/imports/ETF_AMEX_DIVI_performance_source_2026-07-12.md",
-    "raw/imports/ETF_NASDAQ_VIGI_performance_source_2026-07-12.md",
-    "raw/imports/ETF_AMEX_VIG_performance_source_2026-07-12.md",
-    "raw/imports/ETF_AMEX_DGRO_performance_source_2026-07-12.md",
-    "wiki/analysis/performance",
-    "wiki/analysis/decisions/ETF_AMEX_DIVI Decision Memo 2026-07-12.md",
-    "wiki/analysis/audits/Source Integrity Audit 2026-07-12.md",
-    "wiki/entities/ETF_AMEX_DIVI.md",
-    "raw/imports/ETF_AMEX_DIVI_fund_source_2026-07-12.md",
     "wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md",
+    "wiki/analysis/audits/Source Integrity Audit 2026-05-19.md",
+    "wiki/analysis/comparisons/International ETF.md",
+    "wiki/analysis/comparisons/Emerging Markets ETF.md",
+    "wiki/analysis/comparisons/USA ETF.md",
+    "wiki/analysis/performance/ETF Performance Regime Matrix.md",
+    "wiki/analysis/performance/ETF_NASDAQ_INDY Performance.md",
+    "wiki/analysis/performance/ETF_NYSE_ARCA_FXI Performance.md",
+    "wiki/analysis/performance/ETF_NYSE_ARCA_IDX Performance.md",
+    "DVYA_INDEX_UNSTAGE.patch",
+    "DVYA_INDEX_STAGE.patch",
+    "raw/imports/ETF_performance_sources_2026-07-19.md",
+    "wiki/analysis/performance/ETF_NYSE_ARCA_DVYA Performance.md",
+    "wiki/analysis/performance/ETF_NYSE_ARCA_ECNS Performance.md",
+    "wiki/analysis/performance/ETF_NYSE_ARCA_FLJP Performance.md",
+    "wiki/analysis/performance/ETF_NASDAQ_PFM Performance.md",
+    "tmp_generate_etf_performance.rb",
+    "wiki/analysis/performance",
     "raw/funds",
     "Untitled.base",
     "wiki/overview/macro",
     "wiki/overview/themes",
     "raw/financials/UL_fundamentals.json",
     "raw/financials/KO_fundamentals.json",
-    "raw/financials/NVDA_fundamentals.json",
-    "Untitled.canvas",
-    "wiki/analysis/earnings/AAPL Earnings Deep Dive 2026-06-11.html",
-    "raw/financials/BABA_fundamentals.json"
+    "Untitled.canvas"
   ]
 }

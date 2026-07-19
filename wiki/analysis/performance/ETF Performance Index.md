@@ -40,16 +40,18 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025 | 8.26% | 6.45% | 6.36% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive, high equity risk |
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
+| [[ETF_CBOE_EFAV Performance]] | official 2011 / official 2016-2025 | 6.02% | 6.29% | 6.50% | 2025 +26.16% / 2022 -14.76% | developed ex-U.S./Canada minimum volatility | low-vol factor; country/FX-sensitive, lower recent beta |
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
-| [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NASDAQ_INDY Performance]] | official 2020-2025 / rolling official 2016-2026 | 6.67% | 6.92% | -12.32% | 2021 +19.28% / 2022 -7.86% | India single-country large-cap equity | India/financials/FX-sensitive; emerging-market cyclicality |
+| [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
 | [[ETF_CBOE_BBJP Performance]] | official 2019-2025 | not applicable (<10y history) | 6.56% | 14.75% | 2025 +26.56% / 2022 -16.78% | Japan single-country large/mid-cap equity | sector/country/FX-sensitive; broad indexed exposure |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
-| [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | 2013 / secondary 2016-2025* | -0.85% | -11.89%* | -28.96% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive |
+| [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
+| [[ETF_NYSE_ARCA_ECNS Performance]] | official 2021-2025 | 1.05% | -2.79% | -10.26% | 2025 +36.42% / 2022 -24.77% | China small-cap single-country equity | high volatility; domestic demand/property/liquidity/FX-sensitive |
 | [[ETF_NYSE_ARCA_IDX Performance]] | secondary 2016-2025* | -5.49% | -1.56%* | -36.18% | 2017 +19.25%* / 2018 -10.46%* | Indonesia single-country emerging-market equity | high volatility; financials/materials/energy/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.06% | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
@@ -72,16 +74,18 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NASDAQ_VIGI Performance]] | 12.42% | -16.71% | 16.16% | 2.62% | 16.89% | 30.47% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VSS Performance]] | 12.81% | -21.22% | 15.25% | 2.67% | 29.99% | 36.70% | 4 / 1 |
 | [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
+| [[ETF_CBOE_EFAV Performance]] | 7.02% | -14.76% | 11.98% | 5.28% | 26.16% | 35.68% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
+| [[ETF_NASDAQ_INDY Performance]] | 19.28% | -7.86% | 17.05% | 4.02% | 4.42% | 39.73% | 4 / 1 |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | 4.23% | -2.12% | 13.96% | 5.99% | 30.16% | 60.39% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
-| [[ETF_NASDAQ_INDY Performance]] | 19.28% | -7.86% | 17.05% | 4.02% | 4.42% | 39.73% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 1.56% | -17.36% | 19.78% | 6.80% | 25.92% | 35.20% | 4 / 1 |
 | [[ETF_CBOE_BBJP Performance]] | 1.39% | -16.78% | 20.02% | 7.19% | 26.56% | 37.38% | 4 / 1 |
-| [[ETF_NYSE_ARCA_FXI Performance]] | -21.04% | -20.40% | -12.87% | 30.10% | 29.01% | -8.08% | 2 / 3 |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | 1.16% | -15.78% | 19.68% | 7.76% | 25.30% | 37.67% | 4 / 1 |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | -49.01%* | -17.24%* | -9.06%* | 12.01%* | 23.55%* | -46.89%* | 2 / 3 |
+| [[ETF_NYSE_ARCA_FXI Performance]] | -21.04% | -20.40% | -12.87% | 30.10% | 29.01% | -8.08% | 2 / 3 |
+| [[ETF_NYSE_ARCA_ECNS Performance]] | 3.10% | -24.77% | -23.28% | 6.94% | 36.42% | -13.19% | 3 / 2 |
 | [[ETF_NYSE_ARCA_IDX Performance]] | -2.60%* | -9.39%* | 1.97%* | -9.75%* | 13.83%* | -7.55%* | 2 / 3 |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | 29.10% | -11.95% | 15.23% | 12.36% | 34.90% | 98.54% | 4 / 1 |
 | [[ETF_AMEX_DTD Performance]] | 26.14% | -3.81% | 10.44% | 18.75% | 14.22% | 81.75% | 4 / 1 |
@@ -103,11 +107,13 @@ current strategy แบบต่อเนื่องห้าปี.
 | Regime / question | Read-through |
 |---|---|
 | 2022 rate-hike shock | VIGI แย่สุด; DGRO/VIG มี quality cushion; DIVI ใกล้ flat จาก value/financials/ex-North-America mix |
-| FXI China large-cap | 2024-2025 rebound `+30.10%` / `+29.01%` แต่ 2026 YTD กลับมา `-9.28%`; single-country concentration and FX/policy risk remain the dominant behavioral labels |
 | 2020 COVID drawdown | Secondary drawdown: DGRO -35.10%, VIG -31.72%, VIGI -31.01%, DIVI -27.76%; ทุกกองยังมี equity risk |
 | 2025 rebound | EWG +35.15%, DIVI +34.51% และ broad ex-U.S. VXUS +32.23% นำ VIGI +16.89%, DGRO +15.74% และ VIG +14.18%; สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
 | OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.67% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
+| FXI China large-cap | 2024-2025 rebound `+30.10%` / `+29.01%` แต่ 2026 YTD กลับมา `-9.28%`; single-country concentration and FX/policy risk remain the dominant behavioral labels |
+| ECNS China small-cap | 2025 rebound `+36.42%` ตามด้วย 2026 YTD `-10.26%`; higher 3-year standard deviation than MCHI และ exposure กระจายไป healthcare, industrials, consumer, real estate ไม่ใช่ pure China internet |
 | Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS; international value/dividend = DIVI; single-country = Canada EWC/FLCA, Germany EWG และ Japan EWJ/BBJP/FLJP |
+| EFAV minimum volatility | 2016-2025 CAGR `5.96%` ต่ำกว่า S&P 500 TR `14.82%`; 3-year beta `0.28` สนับสนุน lower-beta behavior ล่าสุด แต่ไม่ใช่ guarantee ของ downside protection |
 
 **สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
 DGRO และ VIG เป็น U.S. quality core ที่ behavior ใกล้กัน. VXUS เป็น broad ex-U.S.
@@ -119,23 +125,23 @@ utilities และ financials tilt.
 
 - รายละเอียดรายกอง: [[ETF_AMEX_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
   [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]],
-  [[ETF_NYSE_ARCA_FXI Performance]],
   [[ETF_NYSE_ARCA_EWC Performance]], [[ETF_AMEX_DTD Performance]],
   [[ETF_AMEX_FVD Performance]], [[ETF_NYSE_ARCA_VOO Performance]],
   [[ETF_NASDAQ_OPPJ Performance]], [[ETF_NYSE_ARCA_VSS Performance]],
-  [[ETF_NASDAQ_VXUS Performance]], [[ETF_NYSE_ARCA_EWG Performance]],
-  [[ETF_NYSE_ARCA_EWJ Performance]],
-  [[ETF_CBOE_BBJP Performance]]
+  [[ETF_NASDAQ_VXUS Performance]], [[ETF_CBOE_EFAV Performance]],
+  [[ETF_NYSE_ARCA_EWG Performance]],
+  [[ETF_NYSE_ARCA_EWJ Performance]], [[ETF_CBOE_BBJP Performance]],
   [[ETF_NYSE_ARCA_FLJP Performance]],
-- Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
-- [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
-- [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
-
-## Preliminary Holdings Groups Batch
   [[ETF_NYSE_ARCA_KWEB Performance]], [[ETF_NYSE_ARCA_FXI Performance]],
   [[ETF_NYSE_ARCA_ECNS Performance]],
   [[ETF_NYSE_ARCA_IDX Performance]], [[ETF_NYSE_ARCA_DVYA Performance]],
   [[ETF_NASDAQ_INDY Performance]]
+- Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
+- Source batch: [[ETF_performance_sources_2026-07-19]]
+- [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
+- [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
+
+## Preliminary Holdings Groups Batch
 
 เพิ่ม `check-etf-performance` สำหรับ 37 passive equity ETFs ที่ยังไม่เคยตรวจใน
 [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]. `QDPL` และ `MDIV` ถูกตัดออก
