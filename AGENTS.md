@@ -145,6 +145,21 @@ the cache's original URLs, USD total-return basis, window, and as-of date in the
 dated source batch. Freshly verify current YTD, rolling date-to-date windows,
 years outside `2016-2025`, or a newly completed calendar year.
 
+For ETF region navigation, assign each performance page one primary region from
+its underlying exposure. Keep region pages under
+`wiki/analysis/comparisons/` and use `wiki/analysis/performance/` pages as the
+numeric source of truth. When a new region section is needed and no matching
+`<Region> ETF.md` exists, create that region file before completing the update;
+do not place it under `performance/` or create a duplicate performance page.
+Every region page must be a static navigation summary with wikilinks to the
+affected ETF pages, link back to `[[ETF Region Index]]`, and link forward to
+`[[ETF Performance Index]]`. Add the new region to `ETF Region Index.md` and
+the `Browse by region` links in `ETF Performance Index.md`. Keep the graph
+connected with the breadcrumb `[[ETF Region Index]] → [[<Region> ETF]] →
+[[ETF Performance Index]]` on each affected ETF page, add the canonical
+`geography/<Region-Slug>` tag without removing legacy tags, and verify that every
+ETF appears in exactly one primary region and every wikilink resolves.
+
 ### valuation
 
 Use `.codex/skills/dcf-valuation/SKILL.md`. Freshly verify market data and use
