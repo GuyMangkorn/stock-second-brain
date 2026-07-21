@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-21
+updated: 2026-07-22
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -50,6 +50,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
+| [[ETF_LSE_DXJ Performance]] | official 2015 / official 2016-2025 | 13.94% | 24.77% | 21.90% | 2023 +40.46% / 2018 -18.71% | Japan single-country dividend/export tilt, USD/JPY hedged | country/sector/value/hedge-cost-sensitive; OTC alias liquidity gap |
 | [[ETF_CBOE_BBJP Performance]] | official 2019-2025 | not applicable (<10y history) | 6.56% | 14.75% | 2025 +26.56% / 2022 -16.78% | Japan single-country large/mid-cap equity | sector/country/FX-sensitive; broad indexed exposure |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | 2013 / secondary 2016-2025* | -0.85% | -11.89%* | -28.96% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive |
@@ -86,6 +87,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 1.56% | -17.36% | 19.78% | 6.80% | 25.92% | 35.20% | 4 / 1 |
+| [[ETF_LSE_DXJ Performance]] | 18.07% | 6.48% | 40.46% | 30.55% | 31.19% | 202.44% | 5 / 0 |
 | [[ETF_CBOE_BBJP Performance]] | 1.39% | -16.78% | 20.02% | 7.19% | 26.56% | 37.38% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | 1.16% | -15.78% | 19.68% | 7.76% | 25.30% | 37.67% | 4 / 1 |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | -49.01%* | -17.24%* | -9.06%* | 12.01%* | 23.55%* | -46.89%* | 2 / 3 |
@@ -136,7 +138,7 @@ utilities และ financials tilt.
   [[ETF_NASDAQ_OPPJ Performance]], [[ETF_NYSE_ARCA_VSS Performance]],
   [[ETF_NASDAQ_VXUS Performance]], [[ETF_CBOE_EFAV Performance]],
   [[ETF_NYSE_ARCA_EWG Performance]],
-  [[ETF_NYSE_ARCA_EWJ Performance]], [[ETF_CBOE_BBJP Performance]],
+  [[ETF_NYSE_ARCA_EWJ Performance]], [[ETF_LSE_DXJ Performance]], [[ETF_CBOE_BBJP Performance]],
   [[ETF_NYSE_ARCA_FLJP Performance]],
   [[ETF_NYSE_ARCA_KWEB Performance]], [[ETF_NYSE_ARCA_FXI Performance]],
   [[ETF_NYSE_ARCA_EWH Performance]],
@@ -217,6 +219,7 @@ official complete-year coverage เริ่มที่ 2018; ใช้ดู�
 |---|---:|---:|---:|---:|---:|---|
 | [[ETF_NASDAQ_TDIV Performance]] | 16.87% | +2.05 pp | -22.14% | 26.02% | 8 / 2 | official 10 years |
 | [[ETF_NYSE_ARCA_VOO Performance]] | 14.78% | -0.04 pp | -18.15% | 22.66% | 8 / 2 | official 10 years |
+| [[ETF_LSE_DXJ Performance]] | 13.94% | -0.88 pp | -18.71% | 19.00% | 9 / 1 | official 10 years; rounded annual inputs |
 | [[ETF_AMEX_VIG Performance]] | 13.09% | -1.73 pp | -9.79% | 18.57% | 8 / 2 | official 10 years |
 | [[ETF_AMEX_DGRO Performance]] | 13.08%* | -1.74 pp | -7.85% | 18.36% | 8 / 2 | 2016-2020 proxy* |
 | [[ETF_AMEX_DLN Performance]] | 12.27% | -2.55 pp | -5.77% | 17.23% | 8 / 2 | official 10 years |

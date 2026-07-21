@@ -1,5 +1,9 @@
 # Log
 
+## 2026-07-22
+
+- `etf-performance`: Resolved `DXJJF` to canonical `LSE:DXJ` for WisdomTree Japan Equity UCITS ETF - USD Hedged; created [[ETF_LSE_DXJ Performance]] and [[ETF_performance_sources_2026-07-22]], added Japan navigation/index rows, and verified official 2016-2025 NAV TR CAGR approximately `13.94%`, 2021-2025 CAGR `24.77%`, and YTD `+21.90%` as of 2026-06-30; OTC liquidity and post-June YTD remain unresolved.
+
 ## 2026-07-21
 
 - `etf-performance`: Resolved `EWH` to `NYSE Arca:EWH`, created [[ETF_NYSE_ARCA_EWH Performance]] and [[Hong Kong ETF]], created [[ETF_performance_sources_2026-07-21]], and added EWH to [[ETF Performance Index]]; official 2016-2025 NAV TR compounds to approximately `4.27%` CAGR from rounded inputs, rolling 10-year NAV CAGR is `4.20%`, and current NAV YTD is `+5.44%` as of 2026-07-17.
