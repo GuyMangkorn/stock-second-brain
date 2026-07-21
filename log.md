@@ -1,5 +1,9 @@
 # Log
 
+## 2026-07-21
+
+- `etf-performance`: Resolved `EWH` to `NYSE Arca:EWH`, created [[ETF_NYSE_ARCA_EWH Performance]] and [[Hong Kong ETF]], created [[ETF_performance_sources_2026-07-21]], and added EWH to [[ETF Performance Index]]; official 2016-2025 NAV TR compounds to approximately `4.27%` CAGR from rounded inputs, rolling 10-year NAV CAGR is `4.20%`, and current NAV YTD is `+5.44%` as of 2026-07-17.
+
 ## 2026-07-19
 
 - `etf-region-navigation`: Added [[ETF Region Index]] and 12 region pages covering all 51 ETF performance pages; added canonical geography tags/backlinks and linked regional navigation from the dashboard and performance indexes.

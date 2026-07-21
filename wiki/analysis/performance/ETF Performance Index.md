@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-19
+updated: 2026-07-21
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -23,6 +23,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[India ETF]]
 - [[Japan ETF]]
 - [[China ETF]]
+- [[Hong Kong ETF]]
 - [[Indonesia ETF]]
 - [[Canada ETF]]
 - [[Germany ETF]]
@@ -53,6 +54,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | 2013 / secondary 2016-2025* | -0.85% | -11.89%* | -28.96% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive |
 | [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
+| [[ETF_NYSE_ARCA_EWH Performance]] | official 1996 / official 2016-2025 | 4.20% | 0.89% | 5.44% | 2017 +35.60% / 2023 -14.04% | Hong Kong single-country equity | financials/real-estate/utilities concentration; country/FX/liquidity-sensitive |
 | [[ETF_NYSE_ARCA_ECNS Performance]] | official 2021-2025 | 1.05% | -2.79% | -10.26% | 2025 +36.42% / 2022 -24.77% | China small-cap single-country equity | high volatility; domestic demand/property/liquidity/FX-sensitive |
 | [[ETF_NYSE_ARCA_IDX Performance]] | secondary 2016-2025* | -5.49% | -1.56%* | -36.18% | 2017 +19.25%* / 2018 -10.46%* | Indonesia single-country emerging-market equity | high volatility; financials/materials/energy/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
@@ -88,6 +90,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_FLJP Performance]] | 1.16% | -15.78% | 19.68% | 7.76% | 25.30% | 37.67% | 4 / 1 |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | -49.01%* | -17.24%* | -9.06%* | 12.01%* | 23.55%* | -46.89%* | 2 / 3 |
 | [[ETF_NYSE_ARCA_FXI Performance]] | -21.04% | -20.40% | -12.87% | 30.10% | 29.01% | -8.08% | 2 / 3 |
+| [[ETF_NYSE_ARCA_EWH Performance]] | -3.43% | -6.72% | -14.04% | 0.10% | 34.89% | 4.55% | 2 / 3 |
 | [[ETF_NYSE_ARCA_ECNS Performance]] | 3.10% | -24.77% | -23.28% | 6.94% | 36.42% | -13.19% | 3 / 2 |
 | [[ETF_NYSE_ARCA_IDX Performance]] | -2.60%* | -9.39%* | 1.97%* | -9.75%* | 13.83%* | -7.55%* | 2 / 3 |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | 29.10% | -11.95% | 15.23% | 12.36% | 34.90% | 98.54% | 4 / 1 |
@@ -136,11 +139,13 @@ utilities และ financials tilt.
   [[ETF_NYSE_ARCA_EWJ Performance]], [[ETF_CBOE_BBJP Performance]],
   [[ETF_NYSE_ARCA_FLJP Performance]],
   [[ETF_NYSE_ARCA_KWEB Performance]], [[ETF_NYSE_ARCA_FXI Performance]],
+  [[ETF_NYSE_ARCA_EWH Performance]],
   [[ETF_NYSE_ARCA_ECNS Performance]],
   [[ETF_NYSE_ARCA_IDX Performance]], [[ETF_NYSE_ARCA_DVYA Performance]],
   [[ETF_NASDAQ_INDY Performance]]
 - Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - Source batch: [[ETF_performance_sources_2026-07-19]]
+- Source batch: [[ETF_performance_sources_2026-07-21]]
 - [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
 - [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
 

@@ -1,6 +1,6 @@
 ---
 type: etf-region-index
-updated: 2026-07-19
+updated: 2026-07-21
 scope: ETF performance navigation
 tags:
   - analysis/etf-region
@@ -23,6 +23,7 @@ driver notes ทั้งหมด
 | India | 1 | [[India ETF]] |
 | Japan | 5 | [[Japan ETF]] |
 | China | 3 | [[China ETF]] |
+| Hong Kong | 1 | [[Hong Kong ETF]] |
 | Indonesia | 1 | [[Indonesia ETF]] |
 | Canada | 2 | [[Canada ETF]] |
 | Germany | 1 | [[Germany ETF]] |
