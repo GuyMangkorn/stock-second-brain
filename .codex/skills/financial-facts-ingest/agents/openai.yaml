@@ -1,0 +1,4 @@
+interface:
+  display_name: "Financial Facts Ingest"
+  short_description: "Normalize verified company financial facts"
+  default_prompt: "Use $financial-facts-ingest to ingest this company source into verified vault facts."

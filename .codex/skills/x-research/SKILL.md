@@ -1,96 +1,61 @@
 ---
 name: x-research
-description: Research public X/Twitter sentiment for a stock, sector, company, or market event, saving it as lower-priority market context rather than durable company fact.
+description: Use when the user asks what people are saying on X/Twitter, CT, fintwit, or public social media about a stock, ETF, sector, company, earnings event, or market narrative.
 ---
 
 # X Research
 
-Use this skill when the user asks what people are saying on X/Twitter, public
-sentiment, CT, fintwit, market chatter, expert posts, or community reaction to a
-stock, sector, earnings result, or market event.
-
-This is adapted from Dexter's `x-research` skill, but in this vault sentiment is
-treated as context, not a primary fact source.
-
-## Language Standard
-
-Follow `wiki/reference/output-contract.md`: summarize sentiment themes,
-caveats, and follow-up in Thai, while keeping source labels, account handles,
-tickers, links, and market/finance terms in English.
-
 ## Source Position
 
-X/Twitter is below the normal source stack:
+Treat X as market context below filings, earnings materials, financial facts,
+and reputable news. Independently verify any post that claims revenue, EPS,
+guidance, valuation, insider activity, or filing facts.
 
-1. SEC filings and official company filings
-2. Earnings transcripts and call materials
-3. Financial statements and metrics
-4. News and web research
-5. X/Twitter sentiment and public market chatter
+## Default Mode
 
-Do not use X posts as the source for revenue, EPS, valuation, guidance, segment
-data, insider activity, or filing facts unless the post links to a primary
-source that is independently checked.
+Use `chat`: define the time window, summarize themes in at most 400 words, and
+write no files.
 
-## Research Loop
+Use `lean` when the user asks to save or when source-backed sentiment materially
+changes a durable follow-up. Save
+`wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md`, or
+`wiki/analysis/sentiment/ETF_EXCHANGE_TICKER X Sentiment YYYY-MM-DD.md` for an
+ETF; update only entity follow-up, and append one workflow log bullet.
 
-1. Define the time window, usually last 1 day, 7 days, or post-event window.
-2. Build 3-5 targeted queries:
-   - core ticker: `$TICKER` or company name
-   - bullish signal: `bullish OR upside OR catalyst OR beat`
-   - bearish signal: `risk OR miss OR overvalued OR concern`
-   - expert signal: known analyst/investor accounts if relevant
-   - source-backed signal: posts with links or screenshots
-3. Prefer posts with links, primary-source references, or clear reasoning.
-4. Group findings by theme, not by chronology.
-5. Separate retail chatter, expert commentary, news reaction, and source-backed
-   posts.
-6. Save a sentiment memo only when the result is durable.
+Chat sentiment may cover any ETF. Durable ETF output is limited to passive,
+index-tracking equity ETFs. For bond, commodity, multi-asset, active,
+leveraged, inverse, or derivative-heavy ETFs, stay in chat and do not create or
+update ETF artifacts under the v1 contract.
 
-## Output File
+## Workflow
 
-Save durable sentiment work as:
+1. Define a one-day, seven-day, or post-event window.
+2. Search ticker/company/fund plus bullish, bearish, expert, and source-linked
+   terms. For an ETF, resolve `EXCHANGE:TICKER` and separate fund commentary
+   from claims about the index or underlying holdings.
+3. Prefer traceable posts with reasoning or primary-source links.
+4. Group by theme and separate retail chatter, expert commentary, news reaction,
+   and independently verified posts.
+5. Label overall sentiment `bullish`, `bearish`, `mixed`, or `neutral` with
+   `low`, `medium`, or `high` confidence.
+6. State sample bias, low volume, bot/spam, rumor, or event-noise limitations.
 
-```text
-wiki/analysis/sentiment/TICKER X Sentiment YYYY-MM-DD.md
-```
+## Chat Recipe
 
-For sector or theme sentiment:
+- query/window summary
+- up to three bullish and three bearish themes
+- source-backed signals
+- overall sentiment + confidence
+- caveat and next confirmation
 
-```text
-wiki/analysis/sentiment/THEME X Sentiment YYYY-MM-DD.md
-```
+Quote sparingly and link posts. Do not treat virality as evidence.
 
-Append `log.md`.
+## Durable Memo
 
-## Memo Sections
+Use query summary, theme groups, source-backed posts, overall sentiment,
+caveats, and follow-up. Keep company facts in their owning files.
+For ETFs, keep official fund facts in `raw/funds/` and use exchange-qualified
+identity in durable filenames and links.
 
-- `# TICKER X Sentiment - YYYY-MM-DD`
-- `## Query Summary`
-- `## Bullish Themes`
-- `## Bearish Themes`
-- `## Neutral / Mixed Themes`
-- `## Source-Backed Posts`
-- `## Overall Sentiment`
-- `## Caveats`
-- `## Follow-Up`
-
-## Output Rules
-
-- Quote sparingly and link to posts when possible.
-- Do not over-weight viral posts without evidence.
-- Mark sentiment as `bullish`, `bearish`, `mixed`, or `neutral`.
-- Include confidence: `low`, `medium`, or `high`.
-- State why confidence is limited, such as sample bias, low volume, bot/spam
-  risk, or event-driven noise.
-- If sentiment changes thesis or follow-up items, update the entity page with a
-  short note under `Follow-Up`, not as a financial fact.
-
-## Stop Conditions
-
-Stop and report gaps when:
-
-- X/search access is unavailable
-- query results are too noisy to summarize honestly
-- posts cannot be linked or traced
-- the topic is being driven by rumors with no source-backed confirmation
+Stop when access is unavailable, results are too noisy, posts are untraceable,
+or rumor cannot be separated from evidence.

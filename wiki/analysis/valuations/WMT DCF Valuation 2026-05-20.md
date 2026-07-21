@@ -15,6 +15,7 @@ tags:
 ---
 
 # WMT DCF Valuation - 2026-05-20
+Entity: [[WMT]]
 
 ## Bottom Line
 

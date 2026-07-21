@@ -16,6 +16,7 @@ tags:
 ---
 
 # SMIC DCF Valuation - 2026-07-09
+Entity: [[SMIC]]
 
 ## Bottom Line
 

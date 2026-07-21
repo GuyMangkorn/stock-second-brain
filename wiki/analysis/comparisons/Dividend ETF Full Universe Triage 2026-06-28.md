@@ -4,9 +4,13 @@ created: 2026-06-28
 source_file: raw/assets/ETF ที่เน้นการจ่ายเงินปันผล.md
 universe_count: 100
 sort_rule: verified dividend yield desc, then score desc
+custom-width: 80
 ---
 
 # Dividend ETF Full Universe Triage 2026-06-28
+## Selected ETF Entities
+
+[[ETF_AMEX_DGRO]] · [[ETF_AMEX_VIG]] · [[ETF_NASDAQ_VIGI]]
 
 ## Scope
 

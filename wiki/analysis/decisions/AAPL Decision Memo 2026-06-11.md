@@ -19,6 +19,7 @@ tags:
 ---
 
 # AAPL Decision Memo - 2026-06-11
+Entity: [[AAPL]]
 
 ## Action Read
 

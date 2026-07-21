@@ -11,6 +11,7 @@ tags:
 ---
 
 # DELL Decision Memo - 2026-05-21
+Entity: [[DELL]]
 
 ## Action Read
 

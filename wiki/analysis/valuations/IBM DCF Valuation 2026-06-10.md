@@ -16,6 +16,7 @@ tags:
 ---
 
 # IBM DCF Valuation - 2026-06-10
+Entity: [[IBM]]
 
 ## Bottom Line
 

@@ -17,6 +17,7 @@ tags:
 ---
 
 # AXON Decision Memo - 2026-06-03
+Entity: [[AXON]]
 
 ## Action Read
 

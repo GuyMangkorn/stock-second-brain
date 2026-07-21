@@ -18,6 +18,7 @@ tags:
 ---
 
 # PG Decision Memo - 2026-05-21
+Entity: [[PG]]
 
 ## Action Read
 

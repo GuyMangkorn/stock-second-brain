@@ -18,6 +18,7 @@ tags:
 ---
 
 # BABA DCF Valuation - 2026-06-18
+Entity: [[BABA]]
 
 ## Bottom Line
 

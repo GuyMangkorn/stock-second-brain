@@ -15,6 +15,7 @@ tags:
 ---
 
 # PG DCF Valuation - 2026-05-21
+Entity: [[PG]]
 
 ## Bottom Line
 

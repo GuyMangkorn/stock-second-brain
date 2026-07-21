@@ -15,6 +15,7 @@ tags:
 ---
 
 # GEV DCF Valuation - 2026-05-21
+Entity: [[GEV]]
 
 ## Bottom Line
 

@@ -1,0 +1,160 @@
+{
+  "company": "The Coca-Cola Company",
+  "ticker": "KO",
+  "market": "NYSE",
+  "currency": "USD",
+  "period_type": "quarterly + annual",
+  "reporting_scope": "Q1 2026 and FY2025 annual baseline",
+  "periods": [
+    {
+      "label": "Q1 2026",
+      "period_end": "2026-04-03",
+      "source": "KO Q1 2026 Form 10-Q"
+    },
+    {
+      "label": "Q1 2025",
+      "period_end": "2025-03-28",
+      "source": "KO Q1 2026 Form 10-Q"
+    },
+    {
+      "label": "FY2025",
+      "period_end": "2025-12-31",
+      "source": "KO FY2025 Form 10-K"
+    }
+  ],
+  "provenance": [
+    {
+      "source": "KO Q1 2026 Form 10-Q",
+      "url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001628280-26-028802/ko-20260403.htm",
+      "uses": ["income_statement", "cash_flow", "balance_sheet", "segment_revenue", "shares"]
+    },
+    {
+      "source": "KO Q1 2026 earnings release",
+      "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1158/coca-cola-reports-first-quarter-2026-results-and-updates-full-year-guidance",
+      "uses": ["guidance", "official_commentary", "non_gaap_metrics"]
+    },
+    {
+      "source": "KO FY2025 Form 10-K",
+      "url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001628280-26-010047/ko-20251231.htm",
+      "uses": ["annual_baseline", "business_model", "annual_cash_flow"]
+    },
+    {
+      "source": "KO market quote 2026-06-28",
+      "url": "raw/imports/KO_market_quote_2026-06-28.md",
+      "uses": ["fresh_price", "market_cap", "valuation_inputs"]
+    }
+  ],
+  "financial_series": {
+    "quarterly": [
+      {
+        "period": "Q1 2026",
+        "net_operating_revenues_usd_m": 12472,
+        "gross_profit_usd_m": 7852,
+        "operating_income_usd_m": 4359,
+        "net_income_usd_m": 3966,
+        "net_income_attributable_usd_m": 3924,
+        "diluted_eps_usd": 0.91,
+        "diluted_weighted_average_shares_m": 4314,
+        "operating_cash_flow_usd_m": 2021,
+        "capex_spend_usd_m": 266,
+        "simple_fcf_usd_m": 1755
+      },
+      {
+        "period": "Q1 2025",
+        "net_operating_revenues_usd_m": 11129,
+        "gross_profit_usd_m": 6805,
+        "operating_income_usd_m": 2542,
+        "net_income_usd_m": 2403,
+        "net_income_attributable_usd_m": 2361,
+        "diluted_eps_usd": 0.55,
+        "diluted_weighted_average_shares_m": 4309,
+        "operating_cash_flow_usd_m": -5202,
+        "capex_spend_usd_m": 309,
+        "simple_fcf_usd_m": -5511
+      }
+    ],
+    "annual": [
+      {
+        "period": "FY2025",
+        "net_operating_revenues_usd_m": 47061,
+        "gross_profit_usd_m": 28580,
+        "operating_income_usd_m": 11543,
+        "net_income_attributable_usd_m": 10631,
+        "diluted_eps_usd": 2.46,
+        "operating_cash_flow_usd_m": 7408,
+        "capex_spend_usd_m": 2112,
+        "simple_fcf_usd_m": 5296
+      },
+      {
+        "period": "FY2024",
+        "net_operating_revenues_usd_m": 47061,
+        "gross_profit_usd_m": 28956,
+        "operating_income_usd_m": 9992,
+        "net_income_attributable_usd_m": 10714,
+        "diluted_eps_usd": 2.47,
+        "operating_cash_flow_usd_m": 6805,
+        "capex_spend_usd_m": 2064,
+        "simple_fcf_usd_m": 4741
+      },
+      {
+        "period": "FY2023",
+        "net_operating_revenues_usd_m": 45754,
+        "gross_profit_usd_m": 27234,
+        "operating_income_usd_m": 11311,
+        "net_income_attributable_usd_m": 10714,
+        "diluted_eps_usd": 2.47,
+        "operating_cash_flow_usd_m": 11599,
+        "capex_spend_usd_m": 1852,
+        "simple_fcf_usd_m": 9747
+      }
+    ],
+    "balance_sheet": [
+      {
+        "date": "2026-04-03",
+        "cash_and_equivalents_usd_m": 9316,
+        "short_term_investments_usd_m": 1767,
+        "cash_and_short_term_investments_usd_m": 11083,
+        "total_assets_usd_m": 106327,
+        "loans_and_notes_payable_usd_m": 332,
+        "current_maturities_long_term_debt_usd_m": 4493,
+        "long_term_debt_usd_m": 39065,
+        "total_debt_used_for_valuation_usd_m": 43890,
+        "total_liabilities_usd_m": 79059,
+        "total_equity_usd_m": 27268,
+        "common_shares_outstanding_m": 4302.482
+      }
+    ],
+    "market_data": {
+      "checked_date": "2026-06-28",
+      "latest_close_date": "2026-06-26",
+      "price_usd": 82.63,
+      "source_market_cap_usd_b": 355.54,
+      "calculated_market_cap_usd_b": 355.51,
+      "forward_fcf_guidance_usd_b": 12.2,
+      "forward_fcf_yield": 0.0343,
+      "forward_ev_to_guided_fcf": 31.83
+    }
+  },
+  "segment_series": [
+    {"period": "Q1 2026", "segment": "Europe, Middle East & Africa", "net_operating_revenues_usd_m": 2807},
+    {"period": "Q1 2026", "segment": "Latin America", "net_operating_revenues_usd_m": 1678},
+    {"period": "Q1 2026", "segment": "North America", "net_operating_revenues_usd_m": 4891},
+    {"period": "Q1 2026", "segment": "Asia Pacific", "net_operating_revenues_usd_m": 1426},
+    {"period": "Q1 2026", "segment": "Bottling Investments", "net_operating_revenues_usd_m": 1638},
+    {"period": "Q1 2026", "segment": "Corporate", "net_operating_revenues_usd_m": 32}
+  ],
+  "ratios": [
+    {"ratio": "gross_margin", "period": "Q1 2026", "value": 0.6295},
+    {"ratio": "operating_margin", "period": "Q1 2026", "value": 0.3495},
+    {"ratio": "net_profit_margin", "period": "Q1 2026", "value": 0.3180},
+    {"ratio": "forward_fcf_yield", "period": "2026-06-26 close", "value": 0.0343},
+    {"ratio": "forward_ev_to_guided_fcf", "period": "2026-06-26 close", "value": 31.83}
+  ],
+  "missing_data": [
+    "Official Q1 2026 earnings call transcript text: ไม่พบข้อมูลที่ยืนยันได้",
+    "Product/category-level profitability: not disclosed",
+    "Sequential quarterly trend: ไม่พบข้อมูลที่ยืนยันได้",
+    "Detailed bridge from FY2025 FCF to FY2026 FCF guidance: not disclosed",
+    "Real-time quote after 2026-06-26 close: ไม่พบข้อมูลที่ยืนยันได้"
+  ]
+}

@@ -18,6 +18,7 @@ tags:
 ---
 
 # UNH Decision Memo - 2026-05-20
+Entity: [[UNH]]
 
 ## Action Read
 

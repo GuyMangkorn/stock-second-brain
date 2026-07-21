@@ -18,6 +18,7 @@ tags:
 ---
 
 # WMT Decision Memo - 2026-05-20
+Entity: [[WMT]]
 
 ## Action Read
 

@@ -3,14 +3,17 @@ type: etf_top10_holdings_tracker
 created: 2026-07-01
 source_memo: wiki/analysis/comparisons/Dividend ETF Full Universe Triage 2026-06-28.md
 universe_count: 100
-official_holdings_found_count: 75
-official_lookup_failed_count: 25
+official_holdings_found_count: 76
+official_lookup_failed_count: 24
 pending_source_check_count: 0
 fallback_group_source: wiki/analysis/comparisons/Dividend ETF Overlap Groups 2026-06-28.md
 custom-width: 95
 ---
 
 # Dividend ETF Top 10 Holdings Tracker 2026-07-01
+## Selected ETF Entities
+
+[[ETF_AMEX_DGRO]] · [[ETF_AMEX_VIG]] · [[ETF_NASDAQ_VIGI]] · [[ETF_AMEX_DIVI]]
 
 ## Purpose
 
@@ -26,8 +29,8 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 | Status | Count |
 | --- | ---: |
-| official_holdings_found | 75 |
-| official_lookup_failed | 25 |
+| official_holdings_found | 76 |
+| official_lookup_failed | 24 |
 | pending_source_check | 0 |
 | total universe rows | 100 |
 
@@ -113,31 +116,33 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 
 ## Preliminary Holdings-Based Groups (Verified ETFs)
 
-กลุ่มนี้ใช้ Top 10 holdings ที่ verify แล้วเท่านั้น. ETF ที่ยังไม่เจอ holdings ยังอยู่ใน `Full Universe Source Status` ด้วย description fallback group จนกว่าจะตรวจ source รายตัวครบ.
+กลุ่มนี้ใช้ Top 10 holdings ที่ verify แล้วเท่านั้น. สำหรับการซื้อขายในตลาดสหรัฐ ให้ถือ `AMEX`, `NASDAQ`, และ `CBOE` เป็น US-listed; ETF ที่จดทะเบียนในตลาดอื่นยังคงไว้เพื่อเห็น peer group แต่ mark ~~ขีดฆ่ากลาง~~ = ไม่ใช่ US-listed. ETF ที่ยังไม่เจอ holdings ยังอยู่ใน `Full Universe Source Status` ด้วย description fallback group จนกว่าจะตรวจ source รายตัวครบ.
+
+ตรวจ performance แล้วสำหรับ ticker ที่ไม่ขีดฆ่าและยังไม่เคยตรวจ: 37 passive equity ETFs มีหน้ารายกองใน [[ETF Performance Index]]; `QDPL` และ `MDIV` เป็น `unsupported ETF type` ตาม guardrail และไม่ถูกนำมาจัดอันดับร่วม.
 
 | Holdings group | Basis | ETFs |
 | --- | --- | --- |
-| HG01 U.S. mega-cap dividend quality / broad large-cap overlap | AVGO, AAPL, MSFT, JPM, JNJ, XOM, LLY, WMT/NVDA overlap plus QDPL S&P dividend futures exposure; watch duplication in core U.S. dividend sleeve | `AMEX:DGRO`, `AMEX:VIG`, `AMEX:VYM`, `NASDAQ:PFM`, `TSX:VGG`, `TSX:VGH`, `AMEX:DTD`, `AMEX:DLN`, `AMEX:QDPL` |
+| HG01 U.S. mega-cap dividend quality / broad large-cap overlap | AVGO, AAPL, MSFT, JPM, JNJ, XOM, LLY, WMT/NVDA overlap plus QDPL S&P dividend futures exposure; watch duplication in core U.S. dividend sleeve | `AMEX:DGRO`, `AMEX:VIG`, `AMEX:VYM`, `NASDAQ:PFM`, ~~`TSX:VGG`~~, ~~`TSX:VGH`~~, `AMEX:DTD`, `AMEX:DLN`, `AMEX:QDPL` |
 | HG02 U.S. dividend aristocrats / equal-weight quality income | many low-single-weight defensive/industrial/financial dividend growers; less mega-cap concentration | `CBOE:NOBL`, `AMEX:FVD`, `AMEX:SDOG` |
-| HG03 U.S. high-dividend value / defensive income | high-yield U.S. equity income with healthcare, staples, telecom, energy, REIT/value tilt | `AMEX:SPYD`, `AMEX:SDY`, `NASDAQ:PEY`, `AMEX:DJD`, `NASDAQ:DVY`, `XETR:EXX5`, `AMEX:DHS` |
-| HG04 U.S. technology dividend / semiconductor-income tilt | IBM, AVGO, MSFT, TXN, QCOM, AMAT, KLAC, LRCX/NVDA/AAPL overlap; avoid stacking tech-dividend ETFs blindly | `CBOE:TDV`, `NASDAQ:TDIV`, `XETR:QDVD` |
+| HG03 U.S. high-dividend value / defensive income | high-yield U.S. equity income with healthcare, staples, telecom, energy, REIT/value tilt | `AMEX:SPYD`, `AMEX:SDY`, `NASDAQ:PEY`, `AMEX:DJD`, `NASDAQ:DVY`, ~~`XETR:EXX5`~~, `AMEX:DHS` |
+| HG04 U.S. technology dividend / semiconductor-income tilt | IBM, AVGO, MSFT, TXN, QCOM, AMAT, KLAC, LRCX/NVDA/AAPL overlap; avoid stacking tech-dividend ETFs blindly | `CBOE:TDV`, `NASDAQ:TDIV`, ~~`XETR:QDVD`~~ |
 | HG05 U.S. mid/small dividend growers | mid/small-cap dividend growers/yielders with little mega-cap overlap | `CBOE:REGL`, `CBOE:SMDV`, `AMEX:DES`, `AMEX:DON` |
-| HG06 REIT / property income | property/REIT-heavy holdings; duplicates with IIPR, PK, HIW/property exposure matter | `NASDAQ:KBWY`, `AMEX:SDIV`, `LSE:DPYA` |
+| HG06 REIT / property income | property/REIT-heavy holdings; duplicates with IIPR, PK, HIW/property exposure matter | `NASDAQ:KBWY`, `AMEX:SDIV`, ~~`LSE:DPYA`~~ |
 | HG07 Financials / mortgage REIT / BDC income | mREIT/BDC/financial yield exposure, structurally different from broad dividend equity | `NASDAQ:KBWD` |
-| HG08 Energy / MLP infrastructure income | pipeline/MLP-heavy exposure with ET, EPD, MPLX overlap; commodity/infrastructure risk bucket | `AMEX:ENFR`, `AMEX:AMLP`, `LSE:MLPD` |
+| HG08 Energy / MLP infrastructure income | pipeline/MLP-heavy exposure with ET, EPD, MPLX overlap; commodity/infrastructure risk bucket | `AMEX:ENFR`, `AMEX:AMLP`, ~~`LSE:MLPD`~~ |
 | HG09 International dividend growth / quality | non-U.S. quality/dividend growers with banks, pharma, staples, industrials; VIGI is quality-growth tilted | `NASDAQ:VIGI` |
-| HG10 International/global high-dividend equity | international high-dividend/value holdings with banks, telecom, energy, autos, tobacco, insurers overlap | `CBOE:IDV`, `NASDAQ:VYMI`, `NASDAQ:PID`, `AMEX:IDOG`, `AMEX:WDIV`, `ASX:WDIV`, `AMEX:DWX`, `XETR:ZPRG`, `TSX:FCID`, `TSX:VIDY`, `LSE:VHYA`, `CBOE:DDWM`, `AMEX:DWM`, `AMEX:DTH` |
-| HG11 Europe dividend aristocrats / high-dividend equity | Europe/UK high-dividend holdings with insurers, banks, industrials, telecom, and healthcare concentration; ISPA currently overlaps FDD/IUKD-style names such as LGEN, Taylor Wimpey, Aegon, ABN, NatWest, Signify | `AMEX:FDD`, `XETR:SPYW`, `XETR:EXSB`, `XETR:EXSG`, `LSE:IUKD`, `XETR:EL4G`, `XETR:EL4X`, `XETR:ISPA` |
-| HG12 Asia-Pacific dividend equity | Asia-Pacific/Australia high-dividend holdings; bank/infrastructure/telecom/auto/REIT concentration differs from global dividend ETFs | `XETR:ZPRA`, `ASX:SYI`, `XETR:EXXW` |
-| HG13 Canada dividend equity | Canada dividend holdings with banks, pipelines, energy, utilities, telecom, and insurers; watch overlap with Canada-specific dividend ETFs | `TSX:FCCD`, `TSX:VDY`, `TSX:XEI`, `TSX:CDZ` |
+| HG10 International/global high-dividend equity | international high-dividend/value holdings with banks, telecom, energy, autos, tobacco, insurers overlap | `CBOE:IDV`, `NASDAQ:VYMI`, `NASDAQ:PID`, `AMEX:IDOG`, `AMEX:WDIV`, ~~`ASX:WDIV`~~, `AMEX:DWX`, ~~`XETR:ZPRG`~~, ~~`TSX:FCID`~~, ~~`TSX:VIDY`~~, ~~`LSE:VHYA`~~, `CBOE:DDWM`, `AMEX:DWM`, `AMEX:DTH` |
+| HG11 Europe dividend aristocrats / high-dividend equity | Europe/UK high-dividend holdings with insurers, banks, industrials, telecom, and healthcare concentration; ISPA currently overlaps FDD/IUKD-style names such as LGEN, Taylor Wimpey, Aegon, ABN, NatWest, Signify | `AMEX:FDD`, ~~`XETR:SPYW`~~, ~~`XETR:EXSB`~~, ~~`XETR:EXSG`~~, ~~`LSE:IUKD`~~, ~~`XETR:EL4G`~~, ~~`XETR:EL4X`~~, ~~`XETR:ISPA`~~ |
+| HG12 Asia-Pacific dividend equity | Asia-Pacific/Australia high-dividend holdings; bank/infrastructure/telecom/auto/REIT concentration differs from global dividend ETFs | ~~`XETR:ZPRA`~~, ~~`ASX:SYI`~~, ~~`XETR:EXXW`~~ |
+| HG13 Canada dividend equity | Canada dividend holdings with banks, pipelines, energy, utilities, telecom, and insurers; watch overlap with Canada-specific dividend ETFs | ~~`TSX:FCCD`~~, ~~`TSX:VDY`~~, ~~`TSX:XEI`~~, ~~`TSX:CDZ`~~ |
 | HG14 Multi-asset income / fund-of-funds hybrid | income sleeve includes ETF holdings, REITs, MLPs, mortgage REITs, and other high-yield assets; do not compare as pure equity dividend ETF | `NASDAQ:MDIV` |
-| HG15 Canadian bank-only income | concentrated Canadian bank exposure; materially different from diversified Canada dividend ETFs even when some bank holdings overlap | `TSX:RBNK` |
+| HG15 Canadian bank-only income | concentrated Canadian bank exposure; materially different from diversified Canada dividend ETFs even when some bank holdings overlap | ~~`TSX:RBNK`~~ |
 | HG16 Emerging-market dividend equity | EM dividend exposure with Taiwan/China/EM financials, semiconductors, and cyclicals; compare together before adding broad EM dividend sleeves | `AMEX:DEM`, `AMEX:DGS` |
 | HG17 International small-cap dividend equity | developed international small-cap dividend holdings with near-identical overlap in Elecnor, Hoegh Autoliners, Plus500/Taiyo Yuden, Hafnia, and Man Group | `AMEX:DLS`, `CBOE:DDLS` |
 | HG18 Japan small-cap dividend equity | Japan small-cap dividend holdings; differs from broad Japan high-yield large/mid-cap ETFs despite same country bucket | `AMEX:DFJ` |
-| HG19 Swiss dividend defensive / financial-healthcare concentration | Switzerland-only dividend exposure; very concentrated in Zurich Insurance, Nestle, Novartis, Roche, Holcim, Swiss Re and Swiss Life, so avoid treating it as broad Europe dividend exposure | `SIX:CHDVD` |
-| HG20 Japan high-dividend large/mid equity | Japan high-dividend equity exposure with Honda, Dai-ichi Life, SMFG, Takeda, Japan Tobacco, financials, autos, shipping and industrial overlap; compare before stacking Japan dividend ETFs | `TSE:1489`, `TSE:1577`, `TSE:2564` |
-| HG21 Korea large-cap high-dividend equity | Korea-only high-dividend large-cap exposure concentrated in SK hynix, Samsung Electronics, Hyundai Motor, Samsung Life, KB Financial, Kia, Shinhan, Hana Financial, POSCO Holdings, and Woori Financial; avoid treating it as broad EM dividend exposure | `KRX:315960` |
+| HG19 Swiss dividend defensive / financial-healthcare concentration | Switzerland-only dividend exposure; very concentrated in Zurich Insurance, Nestle, Novartis, Roche, Holcim, Swiss Re and Swiss Life, so avoid treating it as broad Europe dividend exposure | ~~`SIX:CHDVD`~~ |
+| HG20 Japan high-dividend large/mid equity | Japan high-dividend equity exposure with Honda, Dai-ichi Life, SMFG, Takeda, Japan Tobacco, financials, autos, shipping and industrial overlap; compare before stacking Japan dividend ETFs | ~~`TSE:1489`~~, ~~`TSE:1577`~~, ~~`TSE:2564`~~ |
+| HG21 Korea large-cap high-dividend equity | Korea-only high-dividend large-cap exposure concentrated in SK hynix, Samsung Electronics, Hyundai Motor, Samsung Life, KB Financial, Kia, Shinhan, Hana Financial, POSCO Holdings, and Woori Financial; avoid treating it as broad EM dividend exposure | ~~`KRX:315960`~~ |
 
 
 
@@ -164,7 +169,7 @@ Tracker นี้เป็นฐานข้อมูลสำหรับ goal 
 | 14 | `AMEX:DGRO` | iShares Core Dividend Growth ETF | 8.1 | official_holdings_found | 1. JNJ JOHNSON & JOHNSON (3.12%); 2. ABBV ABBVIE INC (3.05%); 3. JPM JPMORGAN CHASE & CO (3.03%); 4. AAPL APPLE INC (2.76%); 5. MSFT MICROSOFT CORP (2.67%); 6. XOM EXXON MOBIL CORP (2.60%); 7. AVGO BROADCOM INC (2.55%); 8. HD HOME DEPOT INC (2.33%); 9. PG PROCTER & GAMBLE (2.26%); 10. PM PHILIP MORRIS INTERNATIONAL INC (2.08%) | BlackRock/iShares official product-data API, portfolioId 264623 | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 15 | `AMEX:DLN` | WisdomTree U.S. LargeCap Dividend Fund | 7.0 | official_holdings_found | 1. Microsoft Corp (3.80%); 2. Nvidia Corp (3.54%); 3. JPMorgan Chase & Co (2.94%); 4. Apple Inc (2.22%); 5. Broadcom Inc (2.13%); 6. Johnson & Johnson (2.03%); 7. Meta Platforms Inc. Cl A (1.95%); 8. Exxon Mobil Corp (1.84%); 9. AbbVie Inc (1.75%); 10. Morgan Stanley (1.52%) | WisdomTree official product page HTML | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 16 | `AMEX:VIG` | Vanguard Dividend Appreciation ETF | 8.2 | official_holdings_found | 1. AVGO BROADCOM INC (5.41%); 2. AAPL APPLE INC (4.57%); 3. MSFT MICROSOFT CORP (4.27%); 4. LLY ELI LILLY & CO (3.85%); 5. JPM JPMORGAN CHASE (3.32%); 6. XOM EXXON MOBIL CORP (2.67%); 7. JNJ JOHNSON&JOHNSON (2.39%); 8. V VISA INC-CLASS A (2.25%); 9. WMT WALMART INC (2.23%); 10. CSCO CISCO SYSTEMS (2.09%) | Vanguard official vmf portfolio-holding API | Top 10 holdings verified | G01 U.S. dividend growth / quality core |
-| 17 | `AMEX:DIVI` | Franklin International Core Dividend Tilt Index Fund | 7.9 | official_lookup_failed | ไม่พบข้อมูลที่ยืนยันได้ใน official lookup รอบนี้; Franklin Templeton official product page opened but no parseable Top 10 holdings table or holdings download was found in captured HTML/API surface. | Franklin Templeton official product page checked; holdings not found in captured page/API links | Description/theme fallback after official lookup did not find Top 10 holdings | G07 International/global broad dividend income |
+| 17 | `AMEX:DIVI` | Franklin International Core Dividend Tilt Index ETF | 7.9 | official_holdings_found | 1. ASML HOLDING NV (3.28%); 2. HSBC HOLDINGS PLC (1.48%); 3. NESTLE SA (1.39%); 4. ROCHE HOLDING AG (1.36%); 5. ASTRAZENECA PLC (1.28%); 6. SIEMENS AG (1.17%); 7. NOVARTIS AG (1.16%); 8. TOKYO ELECTRON LTD (1.07%); 9. BHP GROUP LTD (1.06%); 10. BRITISH AMERICAN TOBACCO PLC (1.04%); top-10 sum 14.29% | Franklin Templeton official factsheet DIVI-FF | Top 10 holdings verified, as of 2026-06-30 | G07 International/global broad dividend income |
 | 18 | `SIX:CHDVD` | iShares Swiss Dividend ETF (CH) | 7.6 | official_holdings_found | 1. ZURN ZURICH INSURANCE GROUP AG (15.06%); 2. NESN NESTLE SA (14.78%); 3. NOVN NOVARTIS AG (14.65%); 4. ROP ROCHE PS PAR AG (14.60%); 5. HOLN HOLCIM LTD AG (10.01%); 6. SREN SWISS RE AG (9.79%); 7. SLHN SWISS LIFE HOLDING AG (5.81%); 8. SIKA SIKA AG (3.58%); 9. GIVN GIVAUDAN SA (3.47%); 10. HBAN HELVETIA BALOISE HOLDING N AG (3.11%) | BlackRock/iShares Switzerland official all-holdings JSON, portfolioId 264108 | Top 10 holdings verified from official all/top holdings source | G09 Europe/UK dividend equity |
 | 19 | `AMEX:DJD` | Invesco Dow Jones Industrial Average Dividend ETF | 7.5 | official_holdings_found | 1. UNH UnitedHealth Group Inc (8.65%); 2. CVX Chevron Corp (6.49%); 3. CSCO Cisco Systems Inc (6.26%); 4. IBM International Business Machines Corp (6.22%); 5. MRK Merck & Co Inc (6.01%); 6. KO Coca-Cola Co/The (5.39%); 7. GS Goldman Sachs Group Inc/The (5.06%); 8. AMGN Amgen Inc (4.90%); 9. HD Home Depot Inc/The (4.84%); 10. PG Procter & Gamble Co/The (4.76%) | Invesco official holdings API | Top 10 holdings verified | G02 U.S. broad dividend large-cap income |
 | 20 | `TSX:VGG` | Vanguard US Dividend Appreciation Index ETF | 7.5 | official_holdings_found | 1. Broadcom Inc. (5.4%); 2. Apple Inc. (4.6%); 3. Microsoft Corp. (4.3%); 4. Eli Lilly & Co. (3.9%); 5. JPMorgan Chase & Co. (3.3%); 6. Exxon Mobil Corp. (2.7%); 7. Johnson & Johnson (2.4%); 8. Visa Inc. (2.3%); 9. Walmart Inc. (2.2%); 10. Cisco Systems Inc. (2.1%) | Vanguard Canada official factsheet PDF | Top 10 holdings verified | G01 U.S. dividend growth / quality core |

@@ -1,90 +1,58 @@
 ---
 name: source-integrity-audit
-description: Audit stock-second-brain for uncited numbers, stale market data, source conflicts, chart/table mismatches, orphan notes, missing entity links, and unresolved source gaps.
+description: Use when the user asks to lint, audit, verify, clean, or inspect the stock-second-brain vault for unsupported numbers, stale data, conflicts, mismatched charts, missing links, or unresolved source gaps.
 ---
 
 # Source Integrity Audit
 
-Use this skill when the user asks to lint, audit, clean, verify, inspect source
-quality, find stale data, find hallucinations, or maintain the vault.
+## Modes
 
-## Language Standard
+- `chat`: default for a scoped read-only check; at most 400 words, no memo.
+- `lean`: save when the user asks for a durable audit or fixes are applied.
+- `full`: explicit vault-wide audit with a durable memo.
 
-Follow `wiki/reference/output-contract.md`: write findings, severity rationale,
-fix explanations, and follow-up notes primarily in Thai, while keeping file
-paths, headings, source labels, metric names, and finance terms in English.
+## Checks
 
-## Audit Scope
+- unsupported numbers, stale current claims, and weak provenance
+- conflicts and calculations without formulas or denominators
+- chart/table/JSON mismatches
+- missing source/entity/analysis backlinks and log entries
+- orphan or duplicate notes
+- unresolved gaps and stale follow-up
+- plugin-specific blocks that undermine Markdown portability
+- ETF identity collisions and ticker-only links that lose the exchange
+- ETF holdings-weight, holdings-as-of, methodology, expense-ratio, AUM,
+  price/NAV, premium/discount, distribution, and tracking freshness mismatches
 
-Check:
+## Workflow
 
-- unsupported or uncited numbers
-- current-data claims that are stale or lack date/time
-- source conflicts
-- calculations without formula or denominator
-- charts whose data does not match the nearby Markdown table or normalized file
-- entity pages without source notes or normalized financial facts
-- source notes not linked from entity pages
-- analysis memos not linked back to relevant entities
-- missing `log.md` entries
-- orphan files
-- duplicated ticker pages
-- unresolved `Missing / Unverified Data`
-- Dataview/plugin-specific blocks if the vault is intended to stay Markdown-first
+1. Read `index.md` and `log.md`; inventory relevant entities, sources,
+   fundamentals, and memos.
+2. Inspect the requested scope and compare every selected chart with its owning
+   table or JSON.
+   For ETFs, compare entity and analysis claims with `raw/funds/`, verify that
+   weight calculations use one holdings snapshot, and keep price/NAV dates
+   separate from holdings and methodology dates.
+3. Search risky numeric/current terms and trace claims to sources.
+4. Rank findings `High`, `Medium`, or `Low` and report evidence with paths.
+5. If fixes were requested, preserve facts by sourcing, relabeling, or moving
+   them to the owning gap section; do not silently delete.
+6. For durable output, save
+   `wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md` and append one
+   workflow bullet to `log.md`.
 
-## Required Workflow
-
-1. Read `index.md` and `log.md`.
-2. List entity pages, source notes, financial facts, and analysis memos.
-3. Sample or inspect each relevant file depending on scope.
-4. Check every chart block against nearby tables or JSON sidecar when present.
-5. Search for risky terms and uncited numeric claims:
-   - `%`, `$`, `USD`, `revenue`, `EPS`, `P/E`, `target`, `upside`, `downside`
-   - `rough`, `estimate`, `implied`, `proxy`, `not verified`
-6. Separate findings by severity.
-7. If the user asked for fixes, patch the files and update `log.md`.
-8. Always save an audit memo unless the user asks for chat-only output.
-
-## Output File
-
-```text
-wiki/analysis/audits/Source Integrity Audit YYYY-MM-DD.md
-```
-
-Append `log.md`.
-
-## Severity Levels
+## Severity
 
 | Severity | Meaning |
 |---|---|
-| High | Unsupported number, source conflict, wrong chart data, stale current market data presented as current, or thesis-changing issue. |
-| Medium | Missing source link, weak provenance, unclear calculation, missing entity/source backlink. |
-| Low | Formatting drift, stale follow-up, minor naming inconsistency, dashboard table not updated. |
+| High | Unsupported or conflicting number, wrong chart, stale current value, or thesis-changing issue. |
+| Medium | Missing link, weak provenance, unclear calculation, or ownership mismatch. |
+| Low | Formatting drift, stale follow-up, or minor naming/dashboard issue. |
 
-## Memo Sections
+## Durable Memo
 
-- `# Source Integrity Audit - YYYY-MM-DD`
-- `## Scope`
-- `## High Severity Findings`
-- `## Medium Severity Findings`
-- `## Low Severity Findings`
-- `## Chart / Table Checks`
-- `## Source Gap Summary`
-- `## Fixes Applied`
-- `## Follow-Up`
+Use scope, findings by severity, chart/table checks, source-gap summary, fixes,
+and follow-up. Omit empty severity sections. Keep the final chat handoff under
+200 words.
 
-## Fix Rules
-
-- Do not silently delete facts. Either add the source, mark the claim as
-  unverified, or move it into `Missing / Unverified Data`.
-- If a chart and table disagree, prefer the source table and fix the chart.
-- If a current-data value is stale, either refresh it or label the date clearly.
-- If a source conflict cannot be resolved, record both sources and the conflict.
-
-## Stop Conditions
-
-Stop and ask for a narrower scope when:
-
-- the vault is too large for one pass and the user did not specify a subset
-- required files are missing or unreadable
-- a source conflict requires fresh web research but web access is unavailable
+Ask for a narrower scope only when a full pass cannot be completed honestly.

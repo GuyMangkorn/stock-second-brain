@@ -18,6 +18,7 @@ tags:
 ---
 
 # GOOGL Decision Memo - 2026-05-18
+Entity: [[GOOGL]]
 
 ## Action Read
 

@@ -1,174 +1,148 @@
 ---
 name: stock-decision-pipeline
-description: Orchestrate the common stock-second-brain decision-grade ticker workflow, chaining source discovery, financial ingest, company research, DCF valuation, and decision memo refreshes with fresh current price checks.
+description: Use when the user asks to chain stock-second-brain stages, run or refresh a company or passive equity ETF decision workflow, or use legacy P1/P4/P6/P7/P10/P11/P13 aliases.
 ---
 
 # Stock Decision Pipeline
 
-Use this skill when the user asks to chain prompts, run a full decision-grade
-workflow, go from a new ticker to a decision memo, or refresh an existing
-decision memo using the current stock price.
+## Mode Selection
 
-This skill coordinates other stock-second-brain skills. It should not replace
-their source integrity rules.
+- Explicit `mode:` wins.
+- Save/update/refresh without `full` uses `lean`.
+- Explicit full/deep-dive/archive or legacy `full new-ticker` uses `full`.
 
-## Language Standard
+Both durable modes use one evidence set and links; `full` adds depth, not copied
+tables or repeated narrative.
 
-Follow `wiki/reference/output-contract.md`: decision memo narratives should be
-Thai-first, while headings, ticker labels, source labels, market data fields,
-and finance/valuation terms remain English for precision and searchability.
+## Instrument Gate
 
-## Non-Negotiables
+Resolve identity and `instrument_type` before selecting stages.
 
-- Use source-backed facts before writing durable notes.
-- Keep facts, assumptions, calculations, and judgment separate.
-- Freshly check current price, market cap, shares, and other market data before
-  any valuation or action call.
-- Do not force a DCF, fair value target, or action recommendation when required
-  inputs are missing or the business model makes a point-estimate DCF fragile.
-- Append `log.md` for every durable source note, financial ingest, valuation
-  memo, decision memo, entity update, or audit memo.
+- `company`: use the legacy P-code routes below.
+- `ETF`: require `entity_key: EXCHANGE:TICKER` and verify passive,
+  index-tracking equity status. Use the ETF route below.
+- Unsupported or unresolved instrument: stop and report the exact identity or
+  scope gap.
 
-## Full New-Ticker Pipeline
+Never send an ETF through P1, P4, P6, P7, or P11. These stages own company
+results, company financials, company research, and corporate valuation.
 
-Use when the ticker does not yet have a reliable entity page or normalized
-financial facts.
+## Stage Aliases
+
+P1 source discovery; P4 ingest; P6 new-ticker deep dive; P7 existing-ticker
+thesis refresh; P10 audit; P11 valuation; P13 decision.
+
+## New-Ticker Flow
 
 ```text
-P1 -> P4 -> P6 -> P11 -> P13 -> optional P10
+P1 -> P4 -> P6 -> P11 stage gate -> P13 -> optional P10
 ```
 
-Execution order:
+1. P1 creates the official source note once.
+2. P4 creates normalized fundamentals and a skeletal thin entity.
+3. P6 completes the entity using the same evidence. Do not create a separate
+   research memo unless it owns durable analysis not covered elsewhere.
+4. P11 creates a valuation memo only when calculation-ready. If blocked, pass a
+   short valuation blocker directly to P13.
+5. P13 creates one decision memo and updates the entity once with the final
+   action-relevant delta.
+6. Append one pipeline bullet to `log.md`, not one per stage.
 
-1. Use `latest-results-web` to create
-   `raw/imports/TICKER_latest_results_source.md`.
-   - This step is source discovery only.
-   - Do not normalize statements or update the entity page here unless the user
-     explicitly asks for a one-step ingest.
-2. Use `financial-facts-ingest` on that source note to create or update
-   `raw/financials/TICKER_fundamentals.md`,
-   optional `raw/financials/TICKER_fundamentals.json`, `wiki/entities/TICKER.md`,
-   and `log.md`.
-3. Use `official-source-stock-research` for the company deep dive and thesis
-   work, updating `wiki/entities/TICKER.md` and creating an analysis memo only
-   when useful.
-4. Use `dcf-valuation` only after core inputs are verified: current price,
-   FCF or OCF minus capex, cash, debt, diluted shares, and assumptions. If DCF
-   inputs are unstable, treat P11 as a valuation-gap or multi-method valuation
-   read instead of forcing a point estimate.
-5. Create `wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md` with an
-   action read: add, hold, wait, trim, or avoid/watchlist.
-6. Use `source-integrity-audit` before or after P13 when the decision depends
-   on fragile source coverage, old notes, or many linked files.
+## Existing-Ticker Routing
 
-## Existing-Data Decision Refresh
-
-Use when the vault already has some data and the user wants an updated decision
-memo with the current price.
-
-Read first:
-
-- `index.md`
-- `wiki/entities/TICKER.md`
-- `raw/financials/TICKER_fundamentals.md`
-- latest relevant valuation, thesis, decision, catalyst, and audit memos in
-  the relevant `wiki/analysis/<category>/` folder
-
-Then choose the lightest sufficient flow:
+Read `index.md`, entity, fundamentals, and latest relevant analysis first.
 
 | Situation | Flow |
 |---|---|
-| Entity/fundamentals and latest DCF are still valid; only price changed | P13 only, with a fresh current price check |
-| Valuation inputs or upside/downside are stale | P11 -> P13 |
-| Thesis may be stale but financials are not newly reported | P7 -> P11 -> P13 |
-| New quarter/year was reported | P1 -> P4 -> P7 -> P11 -> P13 |
-| Source quality is uncertain before a real decision | P10 -> fix gaps -> P13 |
+| Only price changed | P13 with fresh market data |
+| Valuation stale | P11 -> P13 |
+| Thesis stale, no new results | P7 -> optional P11 -> P13 |
+| New results | P1 -> P4 -> P7 -> optional P11 -> P13 |
+| Source quality uncertain | P10 -> fix decision-critical gaps -> P13 |
 
-If no reliable valuation exists, do not infer upside/downside from price alone.
-Either run P11 first or write the decision memo as a watchlist/hold-style memo
-with valuation gaps clearly labeled.
+## ETF Routing
 
-## Multi-Method Valuation Policy
+Read `ETF Index`, the exchange-qualified ETF entity, normalized fund facts,
+latest comparisons, and latest decision before choosing work.
 
-DCF is one valuation lens, not a required anchor for every decision memo. Use a
-DCF-led `Valuation Read` only when normalized FCF, reinvestment needs, capital
-structure, share count, and terminal assumptions are reliable enough to support
-the output.
+| Situation | Flow |
+|---|---|
+| New supported ETF | `official-source-etf-research/deep-dive -> ETF decision` |
+| Holdings, methodology, costs, or tracking stale | `official-source-etf-research/thesis-delta -> ETF decision` |
+| Only current price/NAV changed | fresh market/NAV check -> `ETF decision` |
+| Explicit peer or overlap question | ETF research -> comparison -> optional ETF decision |
+| Source quality uncertain | P10 ETF checks -> fix decision-critical gaps -> ETF decision |
 
-For high-growth, pre-profit, optionality-heavy, cyclical, financial-sector, or
-otherwise hard-to-normalize companies, do not force a precise DCF. Use a
-multi-method valuation read and label each lens clearly:
-
-- `DCF Read` when input quality supports it.
-- `Reverse DCF Read` to identify what growth, margin, and FCF conversion the
-  current price implies.
-- `Multiple Read` using sourced peer or historical valuation ranges when
-  available.
-- `Growth-Adjusted Read` such as EV/Sales, EV/Gross Profit, or P/FCF relative
-  to growth, margin, scale, and quality.
-- `Unit Economics / Cohort Read` for SaaS, marketplaces, fintech, and other
-  cohort-driven businesses.
-- `Scenario / Optionality Read` for outcomes with wide dispersion or meaningful
-  product, platform, regulatory, or cycle optionality.
-- `Margin of Safety / Position Sizing Read` to connect valuation uncertainty to
-  portfolio action.
-
-Keep the decision humble when valuation dispersion is wide. Prefer `wait`,
-`watchlist`, smaller sizing, or explicit follow-up triggers over a false-precise
-fair value.
-
-## Decision Memo Requirements
-
-Save as:
+Save ETF outputs as:
 
 ```text
-wiki/analysis/decisions/TICKER Decision Memo YYYY-MM-DD.md
+raw/imports/ETF_EXCHANGE_TICKER_fund_source_YYYY-MM-DD.md
+raw/funds/ETF_EXCHANGE_TICKER_fund_facts.md
+wiki/entities/ETF_EXCHANGE_TICKER.md
+wiki/analysis/decisions/ETF_EXCHANGE_TICKER Decision Memo YYYY-MM-DD.md
 ```
 
-Recommended sections:
+Create a comparison memo only when the question needs peers or overlap. Whole-
+portfolio overlap and fit require user-provided portfolio holdings.
+Apply the ETF entity delta once after the decision so it links the current fund
+facts, comparison when present, and latest decision. Append one pipeline log
+bullet for the entire ETF workflow.
 
-- `# TICKER Decision Memo - YYYY-MM-DD`
-- `## Action Read`
-- `## Current Price / Market Data Check`
-- `## Evidence From Vault`
-- `## Valuation Read`
-- `## Bull Case`
-- `## Bear Case`
-- `## Key Assumptions`
-- `## What Would Change The Decision`
-- `## Missing / Unverified Data`
-- `## Source Map`
+## Valuation Stage Gate
 
-`Valuation Read` should state which lenses were used and why. If DCF is skipped,
-explain why and use other source-backed valuation lenses rather than implying a
-fair value from price movement alone.
+Use DCF only with reliable FCF, reinvestment, capital structure, shares, and
+terminal assumptions. Otherwise use a sourced reverse DCF, multiple, growth-
+adjusted, unit-economics, or scenario read. If those inputs are also missing,
+state the blocker in P13 and prefer `wait` or `watchlist`.
 
-Decision language should be explicit but humble. Prefer `wait` or `watchlist`
-when source gaps or valuation uncertainty are material.
-
-## Example Prompts
+## Decision Memo Recipe
 
 ```text
-ใช้ skill stock-decision-pipeline สำหรับ MSFT
-รัน full new-ticker decision-grade flow: P1 -> P4 -> P6 -> P11 -> P13
-ถ้าขั้นไหน source ไม่พอ ให้หยุดและเขียน missing data แทนการเดา
+# TICKER Decision Memo - YYYY-MM-DD
+## Action Read
+## Current Price / Market Data Check
+## Decision-Changing Evidence
+## Valuation Read
+## Key Assumption / Falsifier
+## Action-Relevant Gaps
+## Reports / Sources
 ```
 
+Reference the entity thesis and valuation calculation. Restate bull/bear only
+when the decision changes them.
+
+Budgets: lean decision 400-500 words; full decision at most 800. Lean entity +
+valuation + decision narrative must stay at or below 1,400 words; full at or
+below 2,400. Tables are exempt.
+
+## ETF Decision Memo Recipe
+
 ```text
-ใช้ skill stock-decision-pipeline สำหรับ MSFT
-vault มี data และ DCF แล้ว ช่วยอัปเดต decision memo ด้วยราคาปัจจุบัน
-ถ้า valuation assumptions ยัง valid ให้รัน P13 เท่านั้น
-ถ้า valuation stale ให้รัน P11 -> P13
+# ETF_EXCHANGE_TICKER Decision Memo - YYYY-MM-DD
+## Portfolio Role
+## Action Read
+## Current Price / NAV Check
+## Peer-Relative Read
+## Valuation / Cost / Tracking Read
+## Key Falsifier
+## Action-Relevant Gaps
+## Reports / Sources
 ```
+
+Use `BUY`, `WATCH`, or `AVOID`. Without portfolio holdings, describe fund
+suitability only and do not claim portfolio fit or diversification benefit.
+ETF valuation is not a DCF: use sourced price/NAV, premium/discount,
+look-through multiples, yield, expense drag, tracking, and compatible peers.
 
 ## Stop Conditions
 
-Stop and report gaps when:
+Stop on ambiguous identity, unavailable current market data for an action call,
+decision-changing source conflict, or no durable source base. Record the exact
+gap; do not force a target or recommendation.
 
-- ticker identity is ambiguous
-- current price or market data cannot be freshly checked for a decision memo
-- FCF, cash/debt, or share count is missing for a DCF-dependent decision
-- the business requires a non-DCF valuation lens but the needed peer,
-  unit-economics, scenario, or market-data inputs are unavailable
-- source notes conflict and the conflict changes the decision
-- the user asks for an action call but the vault has no durable source base
+For ETFs also stop when exchange-qualified identity, benchmark, passive equity
+status, official methodology, or holdings cannot be verified; snapshots are
+incompatible or too stale for the conclusion; or the fund is bond, commodity,
+multi-asset, active, leveraged, inverse, or derivative-heavy.
+For an unsupported ETF, do not create source, fund-facts, entity, comparison,
+valuation, or decision artifacts.

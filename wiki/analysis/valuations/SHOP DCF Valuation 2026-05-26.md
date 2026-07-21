@@ -15,6 +15,7 @@ tags:
 ---
 
 # SHOP DCF Valuation - 2026-05-26
+Entity: [[SHOP]]
 
 ## Bottom Line
 

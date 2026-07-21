@@ -14,6 +14,7 @@ tags:
 ---
 
 # MSFT DCF Valuation - 2026-05-18
+Entity: [[MSFT]]
 
 ## Bottom Line
 

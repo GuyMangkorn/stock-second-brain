@@ -20,6 +20,7 @@ tags:
 |---|---|---|---|
 | StockAnalysis AAPL statistics | https://stockanalysis.com/stocks/aapl/statistics/ | 2026-06-10 1:01 PM EDT, market open | Fresh price, market cap, shares, valuation ratios, cash/debt cross-check. |
 | StockAnalysis AAPL overview | https://stockanalysis.com/stocks/aapl/ | 2026-06-10 11:36 AM EDT, market open | Intraday quote and market-data cross-check. |
+| StockAnalysis AAPL overview | https://stockanalysis.com/stocks/aapl/ | Opened 2026-06-11 Bangkok; close from 2026-06-10 4:00 PM EDT | Latest checked close for post-earnings memo. |
 | StockAnalysis AAPL financials | https://stockanalysis.com/stocks/aapl/financials/ | Last checked by provider 2026-06-09 | TTM standardized financial cross-check. |
 | SEC Q2 FY2026 Form 10-Q | https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm | Filed 2026-05-01 | Official share count, cash, marketable securities, and debt inputs. |
 
@@ -54,6 +55,19 @@ tags:
 | Market capitalization | USD 4.29T | StockAnalysis overview page, checked 2026-06-10. |
 | Shares outstanding | 14.69B | StockAnalysis overview page, checked 2026-06-10. |
 | Analyst average price target | USD 311.55 | StockAnalysis overview page; secondary market context only. |
+
+## Latest Close Refresh For Earnings Memo
+
+| Item | Value | Source |
+|---|---:|---|
+| Latest checked close | USD 291.58 | StockAnalysis overview page, at close 2026-06-10 4:00 PM EDT; opened 2026-06-11 Bangkok. |
+| After-hours quote | USD 290.83 | StockAnalysis overview page, 2026-06-10 7:59 PM EDT; opened 2026-06-11 Bangkok. |
+| Market capitalization | USD 4.28T | StockAnalysis overview page, opened 2026-06-11 Bangkok. |
+| Shares outstanding | 14.69B | StockAnalysis overview page, opened 2026-06-11 Bangkok. |
+| P/FCF | 33.15x | StockAnalysis statistics page, opened 2026-06-11 Bangkok. |
+| EV/FCF | 32.67x | StockAnalysis statistics page, opened 2026-06-11 Bangkok. |
+| FCF yield | 3.02% | StockAnalysis statistics page, opened 2026-06-11 Bangkok. |
+| Next estimated earnings date | 2026-07-30 after market close | StockAnalysis statistics page, opened 2026-06-11 Bangkok; market-data provider estimate, not company guidance. |
 
 ## Missing / Unverified Data
 

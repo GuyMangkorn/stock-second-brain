@@ -18,6 +18,7 @@ tags:
 ---
 
 # VST Decision Memo - 2026-06-03
+Entity: [[VST]]
 
 ## Action Read
 

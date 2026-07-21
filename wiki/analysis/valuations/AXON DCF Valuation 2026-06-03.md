@@ -15,6 +15,7 @@ tags:
 ---
 
 # AXON DCF Valuation - 2026-06-03
+Entity: [[AXON]]
 
 ## Bottom Line
 

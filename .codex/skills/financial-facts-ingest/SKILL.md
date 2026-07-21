@@ -1,108 +1,70 @@
 ---
 name: financial-facts-ingest
-description: Ingest source notes, filings, transcripts, financial tables, Markdown, or CSV into Obsidian financial facts and entity pages without inventing missing values.
+description: Use when the user asks to ingest or normalize a source note, filing, transcript, financial table, Markdown file, CSV, or verified company facts into the stock-second-brain vault.
 ---
 
 # Financial Facts Ingest
 
-Use this skill to normalize source-backed company facts into the
-`stock-second-brain` vault.
+## Instrument Boundary
 
-## Non-Negotiables
-
-- Never make up financial values, segment labels, period labels, or denominator
-  assumptions.
-- If a value cannot be verified, write `ไม่พบข้อมูลที่ยืนยันได้`.
-- Every number must trace back to a source path, URL, or explicit calculation.
-- Derive reporting scope from source titles, headers, tables, or filing periods.
-- Support `annual`, `quarterly`, or `mixed` output when the source supports it.
+Normalize operating-company facts into `raw/financials/`. Do not place ETF
+holdings, NAV, AUM, expense, distribution, tracking, or methodology facts in a
+company fundamentals file. Route a passive, index-tracking equity ETF to
+`official-source-etf-research` and `raw/funds/`.
+For bond, commodity, multi-asset, active, leveraged, inverse, or derivative-
+heavy ETFs, stop with `unsupported ETF type` and create no artifacts.
 
 ## Required References
 
-Read these before writing durable output:
+Read `source-hierarchy.md`, `output-contract.md`, `financial-ratios.md`,
+`chart-conventions.md`, and `entity-template.md` from `wiki/reference/`.
 
-- `wiki/reference/source-hierarchy.md`
-- `wiki/reference/output-contract.md`
-- `wiki/reference/financial-ratios.md`
-- `wiki/reference/chart-conventions.md`
-- `wiki/reference/entity-template.md`
+## Non-Negotiables
 
-Follow the output contract's language standard. Keep structured fields,
-financial tables, JSON keys, headings, and metric labels in English; use Thai
-mainly for explanatory notes, missing-data explanations, thesis commentary, and
-judgment sections.
+- Never invent values, period labels, segments, units, or denominators.
+- Trace every number to a source path, URL, or shown calculation.
+- Compute only complete, period-compatible ratios.
+- Put market quotes outside normalized company facts.
 
-## Required Workflow
+## Workflow
 
-1. Confirm the input file exists or the source URL is accessible.
-2. Identify ticker, company name, market, currency, period type, reporting
-   scope, and period labels.
-3. Extract financial facts into source-declared periods.
-4. Record provenance for each extracted block.
-5. Compute only ratios whose inputs are complete and period-compatible.
-6. Write or update:
-   - `raw/financials/TICKER_fundamentals.md`
-   - optional `raw/financials/TICKER_fundamentals.json`
-   - `wiki/entities/TICKER.md`
-   - `log.md`
-7. Keep entity pages idempotent: update existing sections instead of duplicating
-   them.
-8. Audit for unsupported numbers before finishing.
+1. Confirm the input exists or is accessible and identify ticker, company,
+   market, currency, scope, units, and source periods.
+2. Normalize verified facts into source-declared periods and record provenance
+   once per source block.
+3. Write or update `raw/financials/TICKER_fundamentals.md`.
+4. Create `TICKER_fundamentals.json` only when the user requests it or a named
+   downstream machine workflow requires it.
+5. Update `wiki/entities/TICKER.md` once using the thin entity template and only
+   changed sections. Link the fundamentals table and chart rather than copying.
+6. Add the single most decision-relevant chart in `lean`; add at most three in
+   `full`. Omit unsupported chart sections.
+7. Audit unsupported numbers and append one workflow bullet to `log.md`.
 
-## Markdown Output Sections
+## Fundamentals Shape
 
-`raw/financials/TICKER_fundamentals.md` should contain:
+Required:
 
-- `## Snapshot`
-- `## Provenance`
-- `## Reporting Scope`
-- `## Financial Table`
-- `## Key Ratios`
-- `## Quarterly YoY Comparison` when same-quarter data exists
-- `## Quarterly Trend` when sequential quarterly data exists
-- `## YTD Comparison` when year-to-date comparable periods exist
-- `## Annual Trend` when complete fiscal-year data exists
-- `## Segment Revenue Chart`
-- `## Cash Flow And Capex Chart` when cash flow data exists
-- `## Balance Sheet Snapshot Chart` when balance sheet snapshots exist
-- `## Missing / Unverified Data`
+- `Snapshot`
+- `Provenance`
+- `Reporting Scope`
+- `Financial Table`
+- supported `Key Ratios`
+- normalization-specific `Missing / Unverified Data`
 
-## Chart Rules
+Add a quarterly, YTD, annual, segment, cash-flow, or balance-sheet comparison
+only when the periods are compatible. The table is the source of truth; a chart
+is a view.
 
-- Plot every comparable verified dataset that helps compare quarters or years.
-- Keep single-quarter, year-to-date, annual, and balance-sheet snapshot periods
-  in separate charts.
-- Do not mix `FY26 Q3` with `9M FY26` or full-year `FY2026` in the same chart
-  unless the chart title explicitly says it is a mixed-scope chart. Prefer
-  separate charts.
-- For same-quarter comparisons, use labels like `FY25 Q3` and `FY26 Q3`.
-- For annual trends, use only complete fiscal years such as `FY2023`, `FY2024`,
-  and `FY2025`.
-- Use source labels exactly as reported.
-- If there is no comparable data, write a short note under
-  `Missing / Unverified Data` instead of drawing a placeholder chart.
+## Entity Delta
 
-## Entity Update Rules
-
-Update `wiki/entities/TICKER.md` with:
-
-- source map
-- latest verified period
-- financial facts summary
-- chart blocks or chart links for comparable quarterly, YTD, annual, segment,
-  cash-flow, and balance-sheet data
-- transcript or management commentary summary when relevant
-- missing/unverified data
-- links to raw source note and normalized financial facts
-- follow-up items
+Update latest period, compact financial read, thesis-relevant management
+commentary, report links, follow-up, and unresolved ticker-level gaps. Keep new
+lean narrative between 250 and 400 words. Detailed numbers remain in
+fundamentals.
 
 ## Stop Conditions
 
-Stop and report gaps when:
-
-- input file is missing
-- ticker is ambiguous
-- units or currency are unclear
-- ratio inputs are incomplete
-- source data conflicts and cannot be resolved
-- segment taxonomy makes comparison unsafe
+Stop on missing input, ambiguous ticker, unclear units/currency, incompatible
+ratio periods, unresolved source conflict, or unsafe segment comparison. Record
+the gap instead of forcing normalization.

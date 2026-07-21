@@ -18,6 +18,7 @@ tags:
 ---
 
 # AAPL Bullish Valuation Scenario - 2026-06-11
+Entity: [[AAPL]]
 
 ## Bottom Line
 

@@ -12,6 +12,7 @@ tags:
 ---
 
 # EW Decision Memo - 2026-05-20
+Entity: [[EW]]
 
 ## Action Read
 

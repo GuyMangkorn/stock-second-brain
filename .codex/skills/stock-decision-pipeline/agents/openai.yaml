@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stock Decision Pipeline"
+  short_description: "Run company or equity ETF decision workflows"
+  default_prompt: "Use $stock-decision-pipeline in lean mode for this company or supported equity ETF."

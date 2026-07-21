@@ -1,5 +1,212 @@
 # Log
 
+## 2026-07-19
+
+- `etf-region-navigation`: Added [[ETF Region Index]] and 12 region pages covering all 51 ETF performance pages; added canonical geography tags/backlinks and linked regional navigation from the dashboard and performance indexes.
+
+- `etf-performance`: Resolved `EWA` to `NYSE Arca:EWA`, created [[ETF_NYSE_ARCA_EWA Performance]] and [[Australia ETF]], extended [[ETF_performance_sources_2026-07-19]], and added EWA to [[ETF Performance Index]]; official rolling 10-year NAV CAGR is `8.27%`, 2016-2025 annual-row CAGR is approximately `7.61%`, and current NAV YTD is `+10.44%` as of 2026-07-16.
+
+- `etf-performance`: Resolved `INDY` to `NASDAQ:INDY`, created
+  `[[ETF_NASDAQ_INDY Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-19]]`, and added INDY to
+  `[[ETF Performance Index]]`; official 2021-2025 NAV TR compounds to `6.92%`
+  CAGR, rolling 10-year NAV CAGR is `6.67%`, and current NAV YTD is `-12.32%`
+  as of 2026-07-16.
+
+- `etf-performance`: Resolved `IDX` to `NYSE Arca:IDX`, created
+  `[[ETF_NYSE_ARCA_IDX Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-19]]`, and added IDX to
+  `[[ETF Performance Index]]`; official NAV YTD is `-36.18%` as of 2026-07-16.
+  Macro overlay finds tactical rebound potential but no confirmed sustainable
+  reversal while BI-Rate, FX, governance and earnings signposts remain mixed.
+
+- `etf-performance`: Resolved user alias `AMEX-DVYA` to `NYSE Arca:DVYA`, created
+  `[[ETF_NYSE_ARCA_DVYA Performance]]`, captured official 2021-2025 NAV Total
+  Return and rolling 10-year NAV CAGR, added DVYA to `[[ETF Performance Index]]`,
+  and recorded current NAV YTD `+14.28%` as of 2026-07-16; 2021-2025 CAGR is
+  `9.91%` versus S&P 500 TR `14.43%`.
+
+- `etf-performance`: Resolved `FXI` to `NYSE Arca:FXI`, created
+  `[[ETF_NYSE_ARCA_FXI Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-19]]`, and added FXI to
+  `[[ETF Performance Index]]`; official 2021-2025 NAV TR compounds to `-1.67%`
+  CAGR, official rolling 10-year NAV CAGR is `1.75%`, and current NAV YTD is
+  `-9.28%` as of 2026-07-16.
+
+## 2026-07-18
+
+- `etf-performance`: Resolved user alias `AMEX-ECNS` to `NYSE Arca:ECNS`, created
+  `[[ETF_NYSE_ARCA_ECNS Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-18]]`, and added ECNS to
+  `[[ETF Performance Index]]`; official 2021-2025 NAV TR compounds to `-2.79%`
+  CAGR, current NAV YTD is `-10.26%` as of 2026-07-16, and recent weakness is
+  linked to broad China risk-off, weak domestic/property data, and small-cap
+  volatility rather than a material ETF premium/discount dislocation.
+
+- `etf-performance`: Resolved user alias `AMEX-KWEB` to `NYSE Arca:KWEB`, created
+  `[[ETF_NYSE_ARCA_KWEB Performance]]`, extended `[[ETF_performance_sources_2026-07-18]]`,
+  and added KWEB to `[[ETF Performance Index]]`; official rolling 10-year NAV CAGR
+  is `-0.85%`, official NAV YTD is `-28.96%` as of 2026-06-30, and the latest
+  market-price total-return proxy is `-21.26%` as of 2026-07-17. Current move is
+  attributed primarily to global AI/chip risk-off and weaker China growth data,
+  with no material ETF premium/discount dislocation.
+
+- `etf-performance`: Created `[[ETF_CBOE_EFAV Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-18]]`, and added EFAV to
+  `[[ETF Performance Index]]`; official 2016-2025 NAV Total Return compounds to
+  `5.96%` CAGR versus S&P 500 TR `14.82%`, rolling 10-year NAV CAGR is `6.02%`,
+  and current YTD is `+6.50%` as of 2026-07-16.
+
+- `etf-performance`: Resolved user alias `AMEX-FLJP` to `NYSE Arca:FLJP`, created
+  `[[ETF_NYSE_ARCA_FLJP Performance]]`, extended
+  `[[ETF_performance_sources_2026-07-18]]`, and added FLJP to
+  `[[ETF Performance Index]]`; official NAV TR covers 2018-2025 with `6.29%`
+  CAGR, current official NAV YTD is `+14.82%` as of 2026-07-08, and secondary
+  drawdown/recovery is labelled separately from NAV TR.
+
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_EWJ Performance]]`, added EWJ to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2016-2025 NAV Total Return compounds to `7.23%` CAGR, rolling 10-year
+  NAV CAGR is `9.54%`, and current YTD is `+14.28%` as of 2026-07-16, with
+  secondary drawdown and unmatched benchmark dates disclosed.
+
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_EWG Performance]]`, added EWG to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2016-2025 NAV Total Return compounds to approximately `7.38%` CAGR,
+  rolling 10-year NAV CAGR is `8.22%`, and current YTD is `-0.85%` as of
+  2026-07-13, with unmatched benchmark dates disclosed.
+
+- `etf-performance`: Resolved `AMEX-VSS` to official `NYSE Arca:VSS`; created
+  `[[ETF_NYSE_ARCA_VSS Performance]]` and `[[ETF_performance_sources_2026-07-18]]`,
+  then added VSS to `[[ETF Performance Index]]`. Official 2016-2025 NAV Total
+  Return compounds to `7.53%` CAGR versus S&P 500 TR `14.82%`; current VSS YTD
+  is `+6.36%` as of 2026-07-13.
+
+- `etf-performance`: Created `[[ETF_NASDAQ_VXUS Performance]]`, added VXUS to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2016-2025 NAV Total Return compounds to `8.54%` CAGR, rolling 10-year
+  NAV CAGR is `9.95%`, and current YTD is `+11.55%` as of 2026-07-13, with the
+  latest secondary price trend labelled `positive medium-term / correcting short-term`.
+
+- `etf-performance`: Created `[[ETF_CBOE_BBJP Performance]]`, added BBJP to
+  `[[ETF Performance Index]]`, and extended `[[ETF_performance_sources_2026-07-18]]`;
+  official 2019-2025 NAV Total Return compounds to `9.39%` CAGR versus S&P 500 TR
+  `17.29%`, no 10-year CAGR is applicable because the fund launched in 2018, and
+  current YTD is `+14.75%` as of 2026-06-30.
+
+## 2026-07-14
+
+- `maintenance`: ลบ performance pages ของ `NOBL`, `REGL`, `SMDV`, `TDV`, `SPYD`, `SDY`, `WDIV`, `DWX` และ `SDIV` เพราะไม่พบ annual historical NAV TR ที่ยืนยันได้; นำรายการออกจาก `[[ETF Performance Index]]` และคง source-gap records ไว้ใน `[[ETF_performance_sources_2026-07-14]]`.
+
+- `etf-performance`: เติม annual NAV Total Return rows ครบปี 2016-2025 ให้ performance pages ของ ticker ที่ไม่ถูก strike ทั้งหมด 47 หน้า; ปีที่ issuer ไม่เปิดเผยระบุ `ไม่พบข้อมูลที่ยืนยันได้` และทำเครื่องหมาย proxy/partial แยกชัดเจน. อัปเดต `[[ETF_performance_sources_2026-07-14]]` กับ `[[ETF Performance Index]]`; strict annual comparison ชี้ `TDIV` CAGR สูงสุดเหนือ S&P 500 TR และ `DJD` downside ต่ำสุด.
+
+- `etf-performance`: Extended the audit to all 47 ETF performance pages: 45 have
+  numeric issuer rolling 10-year NAV TR CAGR; `TDV` and `FLCA` are explicitly
+  not applicable because their inception histories are under 10 years. Corrected
+  `DIVI` to official 10-year NAV TR CAGR `11.24%` as of 2026-06-30 and linked the
+  fresh Franklin factsheet in the 2026-07-14 source batch.
+
+- `etf-performance`: Checked all 39 previously unchecked, non-struck tickers in
+  `[[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]`; created 37 passive-equity
+  performance pages, expanded `[[ETF Performance Index]]` and the dated source
+  batch, and excluded derivative-heavy `QDPL` plus multi-asset `MDIV`. `TDIV`
+  led verified 2016-2025 CAGR; `DJD` had the strongest downside balance.
+
+- `etf-performance`: Created `[[ETF_NASDAQ_OPPJ Performance]]`, added OPPJ to
+  `[[ETF Performance Index]]`, and captured the dated source batch; official
+  2026 YTD NAV Total Return is `+24.67%` and rolling 10-year NAV CAGR is
+  `17.89%` as of 2026-06-30, with the 2025 strategy conversion and secondary
+  2025 annual row explicitly flagged.
+
+## 2026-07-12
+
+- `etf-performance`: Added official rolling 10-year NAV CAGR to all six ETF
+  performance pages and `[[ETF Performance Index]]`: DGRO `13.38%`, VIG
+  `13.13%`, VIGI `8.13%`, DTD `12.06%`, FVD `8.40%`; DIVI remains `not disclosed`
+  with its latest since-inception return retained. Updated the dated ETF source
+  batch with separate as-of dates.
+
+- `etf-performance`: Created `[[ETF_AMEX_FVD Performance]]`, added FVD to
+  `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-12.md`;
+  official 2016-2025 NAV Total Return implies `9.23%` CAGR across the full table,
+  `7.95%` CAGR in 2021-2025, and current YTD `+5.76%` as of 2026-06-30.
+
+- `etf-performance`: Created `[[ETF_AMEX_DTD Performance]]`, added DTD to
+  `[[ETF Performance Index]]`, and captured official 2016-2025 NAV Total Return;
+  latest completed-year base is 2025 `+14.22%` after the `0.28%` expense ratio,
+  with current YTD `+10.80%` as of 2026-06-30 in
+  `raw/imports/ETF_performance_sources_2026-07-12.md`.
+
+- `etf-performance`: Refreshed `[[ETF_NASDAQ_VIGI Performance]]` with official
+  2026 YTD NAV `+4.64%` as of 2026-07-08, updated CAGR/risk read-through, and
+  VIGI-specific source/as-of detail in `raw/imports/ETF_performance_sources_2026-07-12.md`.
+
+- `skills`: Rewrote `check-etf-performance` so `[Skills] TICKER` fetches fresh
+  source-backed data in the compact one-page performance format; chat remains
+  read-only and durable refreshes follow the single-page plus source-batch
+  convention.
+
+- `etf-performance`: Consolidated DGRO, VIG, VIGI, and DIVI into one compact
+  performance page per ETF plus [[ETF Performance Index]]; removed duplicated
+  normalized performance tables and replaced four source notes with one dated
+  batch source map while retaining official NAV and secondary labels.
+
+- `source-integrity-audit`: Checked 264 Markdown files (97 analysis notes); repaired 9 orphan/backlink gaps through confirmed owner indexes and `[[UNH]]`, found no confirmed broken entity links or exact duplicate analysis files, deleted 0 files, and retained dated US refresh plus ETF analysis groups because they preserve unique sources, roles, incoming links, or unresolved context.
+
+- `decision-pipeline`: Added `[[ETF_AMEX_DIVI]]`, refreshed official Franklin
+  source/fund facts and holdings status, and created `[[ETF_AMEX_DIVI Decision Memo 2026-07-12]]`;
+  fund-level action read is `WATCH` pending fresher same-day price/NAV and a
+  complete holdings file.
+
+## 2026-07-13
+
+- `etf-research`: Updated `[[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]`
+  so the preliminary holdings-based groups distinguish US-listed ETFs
+  (`AMEX`, `NASDAQ`, `CBOE`) from non-US listings, with every non-US ticker
+  retained for peer context and marked with strikethrough.
+
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_VOO Performance]]`, added VOO to
+  `[[ETF Performance Index]]`, and extended the dated source batch; official
+  2016-2025 NAV Total Return compounds to approximately `14.78%` CAGR, rolling
+  10-year NAV CAGR is `15.47%` as of 2026-06-30, and current YTD is `+9.97%`
+  as of 2026-07-09 versus S&P 500 TR `+9.98%`.
+
+- `etf-performance`: Made explicit `check-etf-performance` invocation durable,
+  documented no-search reuse of the cached 2016-2025 S&P 500 Total Return
+  comparator, and refreshed VIG, VIGI, DIVI, and DTD performance pages plus the
+  dated source batch while retaining issuer benchmarks as metadata.
+
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_EWC Performance]]`, added EWC to
+  `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-13.md`;
+  official NAV Total Return covers 2016-2025, rolling 10-year NAV CAGR is `11.25%`,
+  and 2026 YTD is `+8.78%` as of 2026-07-09.
+
+- `etf-performance`: Updated `[[ETF_AMEX_DGRO Performance]]` to compare official
+  DGRO NAV Total Return against `S&P 500 Total Return` for 2021-2025; DGRO
+  returned `73.82%` cumulative versus `96.17%` for S&P 500, with the issuer
+  Morningstar benchmark retained as metadata. Added the cached 2016-2025 S&P
+  500 reference (`298.33%` cumulative / `14.82%` CAGR) and labelled DGRO's
+  blended proxy result `13.08%` as `10-year TR CAGR*`.
+
+- `etf-performance`: Created `[[ETF_NYSE_ARCA_FLCA Performance]]`, added FLCA to
+  `[[ETF Performance Index]]`, and extended `raw/imports/ETF_performance_sources_2026-07-13.md`;
+  official NAV Total Return covers 2018-2025, 2021-2025 CAGR is `14.70%`, and
+  current YTD is `+8.17%` as of 2026-07-06.
+
+## 2026-07-11
+
+- `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[CVS]]`; created the official source note, normalized fundamentals, entity, dated market quote, high-sensitivity DCF, and decision memo; action read is `WATCHLIST / WAIT-for-Q2 / NO-EXECUTION-without-fresh-quote` at a latest verified USD 102.83 close versus base DCF USD 76.47.
+- `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[LLY]]`; created the official source note, normalized fundamentals, entity, market quote, DCF valuation, and decision memo; action read is `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-Q2-2026` at USD 1,188.58 versus base DCF USD 248.73.
+- `source-integrity-audit`: Repaired direct entity links across company analysis and multi-ticker notes; added `[[ETF Index]]`, `[[ETF_AMEX_DGRO]]`, `[[ETF_AMEX_VIG]]`, and `[[ETF_NASDAQ_VIGI]]`; the audit records zero missing links in scope while keeping the 100-row ETF tracker unchanged.
+- `decision-pipeline`: Completed P1 -> P4 -> P6 -> P11 -> P13 for `[[JPM]]`; created the official source note, normalized fundamentals, entity, bank-specific valuation, market quote, and `[[JPM Decision Memo 2026-07-11]]`; action read is `WATCHLIST / WAIT / NO-NEW-CAPITAL-before-2Q26` pending 2Q26 results.
+
+## 2026-07-10
+
+- `skills`: Added `explain-market-move` and `market-scenario-research`,
+  introduced chat/lean/full output contracts across the nine local skills, and
+  compacted `index.md` plus wiki routing; historical research notes were left
+  unchanged.
+
 ## 2026-07-09
 
 - `analysis`: Refreshed `wiki/entities/JNJ.md` with
@@ -14,8 +221,6 @@
   official Top 10 holdings for `KRX:315960`; marked the remaining unresolved
   ETF official lookups as `ไม่พบข้อมูลที่ยืนยันได้`, leaving description/theme
   fallback groups so all `100` ETFs have a grouping and no ETF remains pending.
-
-## 2026-07-09
 
 - `latest-results`: Created `raw/imports/SMIC_latest_results_source.md` from
   SMIC official IR Q1 2026 earnings release, quarterly statement spreadsheets,
@@ -38,8 +243,6 @@
   `raw/imports/SMIC_market_quote_2026-07-09.md` with a WATCHLIST / WAIT action
   read; updated `index.md` plus `wiki/entities/Entity Index.md` for the new
   entity.
-
-## 2026-07-09
 
 - `analysis`: Updated
   `wiki/analysis/comparisons/Dividend ETF Top 10 Holdings Tracker 2026-07-01.md`
@@ -164,6 +367,17 @@
 
 ## 2026-06-28
 
+- `decision-pipeline`: Added `[[KO]]`, normalized verified Q1 2026 / FY2025
+  facts, and created `[[KO DCF Valuation 2026-06-28]]` plus
+  `[[KO Decision Memo 2026-06-28]]`; source-backed base DCF was USD 51.53
+  versus the USD 82.63 close, producing `WAIT / AVOID-new-capital`.
+- `analysis`: Created
+  `raw/imports/US_covered_equities_market_quote_2026-06-28.md` and
+  `wiki/analysis/decisions/US Covered Equities Decision Refresh 2026-06-28.md`
+  to refresh covered-equity decision reads from the latest available Nasdaq
+  closed-market quote check; no ticker is a clear ADD under base-case margin of
+  safety discipline, while META, IBM, PG, BABA, VZ, and V are the most relevant
+  selective/watchlist candidates.
 - `latest-results`: Created `raw/imports/UL_latest_results_source.md` from
   Unilever Q1 2026 Overview, Unilever Annual Report and Accounts 2025 / Form
   20-F, StockAnalysis market data, and XE EUR/USD; P1 was limited to source note
@@ -186,8 +400,29 @@
   WAIT action read because source-backed base valuation is below current price
   and Q1 2026 full statements were not available in captured official sources.
 
+## 2026-06-26
+
+- `decision-pipeline`: Added `[[NVDA]]`, normalized verified Q1 FY2027 / FY2026
+  facts, and created `[[NVDA DCF Valuation 2026-06-26]]` plus
+  `[[NVDA Decision Memo 2026-06-26]]`; base DCF was USD 117.96 versus the USD
+  195.03 quote, producing `WAIT / HOLD-existing-quality-position`.
+
+## 2026-06-18
+
+- `analysis`: Created `raw/imports/IBM_market_quote_2026-06-18.md` and
+  `wiki/analysis/decisions/IBM Decision Memo 2026-06-18.md`; updated
+  `wiki/entities/IBM.md` with a WAIT / HOLD-existing action read after the
+  latest close fell to USD 262.35, improving risk/reward but still leaving the
+  stock above the source-backed base DCF fair value.
+
 ## 2026-06-11
 
+- `earnings`: Created `wiki/analysis/earnings/AAPL Earnings Deep Dive 2026-06-11.md`
+  and `wiki/analysis/earnings/AAPL Earnings Deep Dive 2026-06-11.html` from
+  Apple's verified Q2 FY2026 Form 10-Q, normalized vault facts, refreshed
+  StockAnalysis market data, and existing AAPL valuation memos; updated
+  `raw/imports/AAPL_market_quote_2026-06-11.md`, `[[AAPL]]`, and `index.md`
+  with the post-earnings read.
 - `research`: Created `raw/imports/BABA_latest_results_source.md`,
   `raw/imports/BABA_market_quote_2026-06-11.md`,
   `raw/financials/BABA_fundamentals.md`,

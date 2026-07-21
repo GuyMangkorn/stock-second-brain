@@ -18,6 +18,7 @@ tags:
 ---
 
 # BABA Decision Memo - 2026-06-11
+Entity: [[BABA]]
 
 ## Action Read
 

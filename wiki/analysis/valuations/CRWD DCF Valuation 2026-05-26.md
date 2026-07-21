@@ -15,6 +15,7 @@ tags:
 ---
 
 # CRWD DCF Valuation - 2026-05-26
+Entity: [[CRWD]]
 
 ## Bottom Line
 

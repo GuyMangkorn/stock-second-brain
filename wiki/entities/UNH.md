@@ -43,8 +43,8 @@ tags:
 | Reporting scope | Q1 2026 plus FY2025 annual baseline |
 | Normalized file | `raw/financials/UNH_fundamentals.md` |
 | Latest source note | `raw/imports/UNH_latest_results_source.md` |
-| Latest valuation | `wiki/analysis/valuations/UNH DCF Valuation 2026-05-20.md` |
-| Latest decision memo | `wiki/analysis/decisions/UNH Decision Memo 2026-05-20.md` |
+| Latest valuation | [[UNH DCF Valuation 2026-05-20]] |
+| Latest decision memo | [[UNH Decision Memo 2026-05-20]] |
 
 ## Source Map
 
@@ -176,8 +176,8 @@ DCF base case ที่ใช้ FY2025 FCF เป็น anchor ยังให�
 - `raw/imports/UNH_latest_results_source.md`
 - `raw/financials/UNH_fundamentals.md`
 - `raw/financials/UNH_fundamentals.json`
-- `wiki/analysis/valuations/UNH DCF Valuation 2026-05-20.md`
-- `wiki/analysis/decisions/UNH Decision Memo 2026-05-20.md`
+- [[UNH DCF Valuation 2026-05-20]]
+- [[UNH Decision Memo 2026-05-20]]
 
 ## Follow-Up
 

@@ -15,6 +15,7 @@ tags:
 ---
 
 # COST DCF Valuation - 2026-05-20
+Entity: [[COST]]
 
 ## Bottom Line
 
