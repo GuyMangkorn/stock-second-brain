@@ -16,7 +16,7 @@ Add an independent, pre-save quality gate to `check-etf-performance` so durable 
 
 ## Reviewer Contract
 
-The packet contains the resolved entity key, requested period, metric definitions, sourced observations and URLs, as-of dates, calculations/endpoints, the proposed markdown, and planned vault paths. The reviewer must not perform broad duplicate research or write files. It validates source-to-claim mapping, return-basis and time-window consistency, calculation reproducibility, table/ranking correctness, required sections, filenames, wikilinks, breadcrumbs, tags, region navigation, and planned index/log changes.
+The packet contains the canonical exchange-qualified human-readable `entity_key`, requested period, metric definitions, sourced observations and URLs, as-of dates, calculations/endpoints, the proposed markdown, the complete proposed contents of every planned durable file, and planned vault paths. The reviewer must not perform broad duplicate research or write files. It validates source-to-claim mapping, return-basis and time-window consistency, calculation reproducibility, table/ranking correctness, required sections, filenames, wikilinks, breadcrumbs, tags, region navigation, and planned index/log changes.
 
 ## Failure Handling
 
