@@ -47,6 +47,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_INDY Performance]] | official 2020-2025 / rolling official 2016-2026 | 6.67% | 6.92% | -12.32% | 2021 +19.28% / 2022 -7.86% | India single-country large-cap equity | India/financials/FX-sensitive; emerging-market cyclicality |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
+| [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 7.34% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
@@ -84,6 +85,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NASDAQ_INDY Performance]] | 19.28% | -7.86% | 17.05% | 4.02% | 4.42% | 39.73% | 4 / 1 |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | 4.23% | -2.12% | 13.96% | 5.99% | 30.16% | 60.39% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWA Performance]] | 9.09% | -5.74% | 13.98% | 0.82% | 14.12% | 34.85% | 4 / 1 |
+| [[ETF_NYSE_ARCA_FLAU Performance]] | 9.93% | -5.42% | 13.38% | 0.92% | 16.47% | 38.56% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 1.56% | -17.36% | 19.78% | 6.80% | 25.92% | 35.20% | 4 / 1 |

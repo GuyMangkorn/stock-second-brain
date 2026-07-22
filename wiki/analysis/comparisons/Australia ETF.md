@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Australia
-updated: 2026-07-19
+updated: 2026-07-22
 tags:
   - analysis/etf-region
   - geography/Australia
@@ -18,9 +18,11 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | EWA | iShares MSCI Australia ETF | Australia single-country broad equity | 8.27% | 6.16% | 10.44% | [[ETF_NYSE_ARCA_EWA Performance]] |
+| FLAU | Franklin FTSE Australia ETF | Australia single-country broad equity | not applicable (<10y history) | 6.74% | 7.34% | [[ETF_NYSE_ARCA_FLAU Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้า
-[[ETF_NYSE_ARCA_EWA Performance]]; as-of date อาจต่างกันตาม source batch.
+[[ETF_NYSE_ARCA_EWA Performance]] และ [[ETF_NYSE_ARCA_FLAU Performance]];
+as-of date อาจต่างกันตาม source batch.
 
 ## Navigation
 
