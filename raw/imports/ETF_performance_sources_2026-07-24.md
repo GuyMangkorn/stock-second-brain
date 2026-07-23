@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `47/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `48/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -45,6 +45,7 @@ tags:
 | ASHS | supported | NYSE Arca:ASHS | China | 3.36% (2026-03-31) | https://etf.dws.com/download/asset/1bfed1b5-c933-4199-bdcc-30b0ed651740 | official rolling 10Y NAV TR CAGR `1.96%` for 2016-03-31 to 2026-03-31; annual NAV/index rows not disclosed in reviewed official capture; current NAV TR YTD `3.36%` as of 2026-03-31; 2026-06-30 current YTD not disclosed |
 | PGJ | supported | NASDAQ:PGJ | China | not disclosed | https://www.invesco.com/us/en/financial-products/etfs/invesco-golden-dragon-china-etf.html | official rolling 10Y NAV TR CAGR `0.35%` for 2015-12-31 to 2025-12-31; official 2016-2025 NAV/index/benchmark rows; 2021-2025 CAGR `-12.65%`; current 2026 NAV TR YTD not disclosed |
 | VFJUF | supported | LSE:VJPU | Japan | 19.41% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9541/ftse-japan-ucits-etf-usd-hedged-accumulating | OTC alias resolved to Vanguard FTSE Japan UCITS ETF USD Hedged Accumulating; official inception `2020-01-31`, `10-year NAV TR unavailable`; available-period NAV TR CAGR `20.29%` for 2020-01-31 to 2026-05-31; rolling 12-month NAV rows disclosed; current 2026-07-22 YTD not disclosed |
+| MCHS | unsupported ETF type | NASDAQ:MCHS | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-innovators-active-etf/ | Matthews identifies MCHS as an active/fundamental China equity ETF; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1296,4 +1297,24 @@ tags:
 ### VFJUF Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE mapping, ISIN/share-class identity, passive-equity classification, inception and mandatory 10-year audit, official NAV TR/reinvestment/expense basis, rolling-period labels, available-period gap, S&P 500 basis/window, current-YTD as-of date, canonical filename, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## MCHS Sequential Queue Record
+
+- Input row: `48/125`; input ticker: `MCHS`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NASDAQ:MCHS`; Matthews' official product page identifies Matthews China Innovators Active ETF (formerly Matthews China Discovery Active ETF), ticker `MCHS`, primary exchange `NASDAQ`, inception `2024-01-10`, and China geographic focus.
+- Type gate: official objective and strategy state that the fund invests at least 80% in companies Matthews believes are innovators, using an active/fundamental approach. Matthews' launch material describes MCHS as an active ETF. This fails the required passive/index-tracking equity gate; it is not processed for historical NAV TR.
+- No performance page, region/index performance row, annual table, S&P 500 comparison or 10-year audit was created because the type gate terminated the ticker as `unsupported ETF type`.
+
+### MCHS Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:MCHS` | [Matthews China Innovators Active ETF product page](https://www.matthewsasia.com/funds/etfs/china-innovators-active-etf/) | Canonical exchange/ticker, current fund name, former name, inception, active strategy and geographic focus | Page accessed `2026-07-24`; performance page current capture as of `2026-06-30` |
+| `NASDAQ:MCHS` | [Matthews MCHS factsheet](https://www.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_mchs.pdf) | Official active classification, ticker, primary exchange, inception and expense ratios | Factsheet as of `2026-03-31` |
+| `NASDAQ:MCHS` | [Matthews launch announcement](https://www.matthewsasia.com/about/our-story/press-releases/new-discovery-active-etfs/) | Independent issuer wording that MCHS launched as an active ETF on Nasdaq | Published `2024-01-11` |
+
+### MCHS Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
