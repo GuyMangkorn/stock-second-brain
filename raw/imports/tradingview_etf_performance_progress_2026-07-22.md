@@ -48,6 +48,6 @@ updated: 2026-07-24
 ## Queue pointer
 
 - Completed: `28/125`
-- Next ticker: `GXC` (row `29`)
+- Next ticker: `IHSEF` (row `29`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 - No ticker after `GSJY` was searched, compared, dispatched, or processed in this round.
