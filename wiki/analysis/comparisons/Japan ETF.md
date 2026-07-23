@@ -21,6 +21,7 @@ tags:
 | DBJP | Xtrackers MSCI Japan Hedged Equity ETF | Japan single-country equity / USD hedged | 17.28% | not disclosed | not disclosed | [[ETF_NYSE_ARCA_DBJP Performance]] |
 | DFJ | WisdomTree Japan SmallCap Dividend Fund | Japan small-cap dividend | 9.13% | 8.57% | 10.98% | [[ETF_AMEX_DFJ Performance]] |
 | EWJ | iShares MSCI Japan ETF | Japan single-country large/mid-cap equity | 9.54% | 6.22% | 14.28% | [[ETF_NYSE_ARCA_EWJ Performance]] |
+| JPXN | iShares JPX-Nikkei 400 ETF | Japan large-cap equity / index-tracking | 9.28% | 6.19% | 15.60% | [[ETF_NYSE_ARCA_JPXN Performance]] |
 | HEWJ | iShares Currency Hedged MSCI Japan ETF | Japan large/mid-cap equity / USD hedged | 17.27% | 19.11% | 18.81% | [[ETF_NYSE_ARCA_HEWJ Performance]] |
 | SJPA / IHREF | iShares Core MSCI Japan IMI UCITS ETF | Japan broad large/mid/small-cap equity, USD accumulating | 9.50% | 6.33% | 12.55% | [[ETF_LSE_SJPA Performance]] |
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
@@ -40,6 +41,13 @@ YTD อยู่ที่ 18.81% ณ 2026-07-17; SJPA/IHREF current date-to-date
 
 - [[ETF Region Index]]
 - [[ETF Performance Index]]
+
+
+## 2026-07-24 Verified Coverage Additions
+
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+|---|---|---|---:|---:|---:|---|
+| JPXN | iShares JPX-Nikkei 400 ETF | Japan equity / index-tracking | 9.28% | 6.19% | 15.60% | [[ETF_NYSE_ARCA_JPXN Performance]] |
 
 
 ## 2026-07-23 Verified Coverage Additions

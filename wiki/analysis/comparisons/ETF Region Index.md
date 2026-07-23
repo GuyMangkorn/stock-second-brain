@@ -21,7 +21,7 @@ driver notes ทั้งหมด
 | Australia | 3 | [[Australia ETF]] |
 | North America | 2 | [[North America ETF]] |
 | India | 15 | [[India ETF]] |
-| Japan | 17 | [[Japan ETF]] |
+| Japan | 18 | [[Japan ETF]] |
 | China | 25 | [[China ETF]] |
 | Hong Kong | 2 | [[Hong Kong ETF]] |
 | Indonesia | 2 | [[Indonesia ETF]] |

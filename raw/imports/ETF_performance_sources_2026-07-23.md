@@ -4,9 +4,9 @@ topic: ETF performance
 accessed: 2026-07-23
 input_source: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-verified_passive_pages: 79
+verified_passive_pages: 80
 existing_canonical_alias_coverage: 1
-unresolved_or_unsupported: 45
+unresolved_or_unsupported: 44
 review_gate: INDEPENDENT_REVIEW_PASS_AFTER_REGION_COUNT_AND_INDEX_DEDUP_FIX
 tags:
   - source/etf
@@ -100,7 +100,7 @@ tags:
 | JAPN | unsupported | NYSE Arca:JAPN | Japan | not applicable | https://horizonkinetics.com/products/etf/japn/ | active equity |
 | JCHI | unsupported | NYSE Arca:JCHI | China | not applicable | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JCHI.PDF | active equity |
 | JPAN | unsupported | NYSE Arca:JPAN | Japan | not applicable | https://us.matthewsasia.com/funds/etfs/japan-active-etf/ | active equity |
-| JPXN | unresolved | TSE:1364 | Japan | not applicable | https://www.blackrock.com/jp/individual-en/en/literature/fact-sheet/1364-ishares-jpx-nikkei-400-etf-fund-fact-sheet-en-jp.pdf | input alias not resolved to canonical ticker |
+| JPXN | supported | NYSE Arca:JPXN | Japan | 15.60% (2026-07-21) | https://www.blackrock.com/us/financial-professionals/products/239831/ishares-japan-largecap-etf | official rolling 10Y NAV TR cumulative 142.85% / CAGR 9.28% (2026-06-30); official 2021-2025 rows; Japanese TSE:1364 is a separate listing/product |
 | JPY | unsupported | NYSE Arca:JPY | Japan | not applicable | https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/108/6244 | active equity |
 | KBA | supported | NYSE:KBA | China | 11.37% (2026-06-30) | https://kraneshares.com/etf/kba/ | annual rows and raw 10Y endpoints not disclosed |
 | KBUF | unsupported | NYSE:KBUF | China | not applicable | https://kraneshares.com/etf/kbuf/ | derivative-heavy defined outcome |
@@ -158,7 +158,7 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 - Missing values remain not disclosed; no annual return was inferred from price return, fiscal-year return, or a shorter rolling period.
 - Cleanup on 2026-07-23 removed 45 empty annual NAV Total Return placeholder rows (`| — | not disclosed | not disclosed |`) from the corresponding performance pages; no sourced numeric values were changed.
 - Existing canonical coverage: DXJJF is the OTC alias for existing ETF_LSE_DXJ Performance; no duplicate page was created.
-- Unresolved aliases retained in the register: JPXN, VNFGF, IHRMF, KRANF and the Vanguard/iShares OTC symbols.
+- Unresolved aliases retained in the register: VNFGF, IHRMF, KRANF and the Vanguard/iShares OTC symbols.
 
 ## EWY Sequential Queue Record
 
@@ -680,4 +680,41 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### EWT Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, passive-equity gate, NAV Total Return definition with reinvestment/expenses, official annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate as-of dates, best/worst ranking, filenames, Taiwan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## JPXN Sequential Queue Record
+
+- Input row: `14/125`; input ticker: `JPXN`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:JPXN`; the official U.S. iShares page explicitly identifies ticker `JPXN`, exchange `NYSE Arca`, fund launch `2001-10-23`, asset class `Equity`, and the `JPX-Nikkei Index 400` benchmark. The previously noted `TSE:1364` is a separate Japan-domiciled iShares listing/product with a different official page and was not substituted for the input ticker.
+- Classification: supported passive/index-tracking Japan equity ETF. The issuer objective is to track an index of Japanese equities screened for profitability and shareholder-friendly practices; the product is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, or derivative-heavy.
+- Official current observations: NAV `US$98.72` as of `2026-07-22`; NAV Total Return YTD `15.60%` as of `2026-07-21`; 389 holdings as of `2026-07-22`; 3-year standard deviation `13.54%` and equity beta `0.66` as of `2026-06-30`; expense ratio `0.48%`.
+
+### JPXN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:JPXN` | [iShares JPXN U.S. product and performance page](https://www.blackrock.com/us/financial-professionals/products/239831/ishares-japan-largecap-etf) | Fund identity, ticker, exchange, benchmark, launch date, fee, NAV Total Return definition, current NAV/YTD, rolling NAV Total Return, annual rows and risk fields | Page accessed `2026-07-24`; NAV/holdings `2026-07-22`; current YTD `2026-07-21`; performance table/standardized YTD/risk fields `2026-06-30` |
+| `NYSE Arca:JPXN` | [iShares JPXN factsheet](https://www.blackrock.com/us/individual/literature/fact-sheet/jpxn-ishares-japan-largecap-etf-fund-fact-sheet-en-us.pdf) | Corroborates benchmark wording and NAV Total Return convention | Factsheet as of `2026-03-31`; not used for fresher current observations |
+| `TSE:1364` | [iShares Japan 1364 product page](https://www.blackrock.com/jp/individual-en/en/products/270795/) | Official same-name Japan listing checked to resolve the source conflict; not used for JPXN performance | Separate Japan product, fund inception `2014-12-01`, base currency JPY |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### JPXN Raw Observations And Calculations
+
+| Year | JPXN NAV TR (USD) | S&P 500 TR (USD) |
+|---|---:|---:|
+| 2021 | 0.40% | 28.71% |
+| 2022 | -16.04% | -18.11% |
+| 2023 | 19.47% | 26.29% |
+| 2024 | 6.37% | 25.02% |
+| 2025 | 26.05% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `142.85%` and average annual/CAGR `9.28%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual coverage is `10.00 calendar years` / `3,652 days`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `242.85`; `(242.85 / 100.00)^(1 / 10.00) - 1 ≈ 9.28%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+35.03%` and annualize to `6.19%` over `5` years. S&P 500 TR compounds to `+96.17%` and annualizes to `14.43%`; JPXN trails by approximately `8.24 pp` CAGR. Up/down years are `4 / 1`; best `2025 +26.05%`; least positive `2021 +0.40%`; worst and least bad down year `2022 -16.04%`.
+- Official current date-to-date NAV Total Return YTD is `+15.60%` as of `2026-07-21`; NAV is `US$98.72` as of `2026-07-22`. Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### JPXN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, same-name TSE:1364 conflict resolution, passive-equity gate, NAV Total Return definition with reinvestment/expenses, official annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
