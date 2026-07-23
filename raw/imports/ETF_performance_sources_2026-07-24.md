@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `28/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `29/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -27,6 +27,7 @@ tags:
 | VNFGF | supported | LSE:VDJP | Japan | 16.30% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9504/ftse-japan-ucits-etf-usd-distributing | OTC alias resolved to USD LSE ticker VDJP by ISIN IE00B95PGT31; official rolling 10Y NAV TR CAGR 9.45% as of 2026-05-31; official rolling 12-month rows; current-page NAV US$50.23 as of 2026-07-22 |
 | CSKRF | supported | LSE:CSKR | South Korea | 70.53% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/253733/cskr | OTC alias; official rolling 10Y NAV TR cumulative 369.63% / CAGR 16.73% as of 2026-06-30; official calendar NAV rows 2016-2025; benchmark change 2020-02-11 |
 | GSJY | supported | NYSE Arca:GSJY | Japan | 12.86% (2026-06-30) | https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e | official rolling 10Y NAV TR CAGR 9.29% as of 2026-06-30; official calendar NAV/ActiveBeta index rows 2017-2025; 2016 inception partial; rules-based index and not actively managed |
+| IHSEF | supported | LSE:IAPD | Asia-Pacific | 14.55% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251567/iapd?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official LSE:IAPD listing; official rolling 10Y NAV TR CAGR 6.75% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.59% |
 
 ## CSKRF Sequential Queue Record
 
@@ -111,6 +112,49 @@ tags:
 ### GSJY Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## IHSEF Sequential Queue Record
+
+- Input row: `29/125`; input ticker: `IHSEF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:IAPD`; the input OTC alias is resolved by iShares' official listing table to the iShares Asia Pacific Dividend UCITS ETF, ISIN `IE00B14X4T88`, with London Stock Exchange ticker `IAPD` in GBP and the same fund's USD line `IDAP`. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page already had calendar rows but lacked verified benchmark, inception, rolling 10-year calculation, fee and current-source details. Rechecking the current official iShares product page and factsheet confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page-data gap, not a history gap.
+- Type gate: official iShares identifies the asset class as Equity, the product as physical/replicated, and the objective as tracking an index of 50 high-dividend Asia-Pacific stocks. It is a passive/index-tracking equity ETF, not a bond, commodity, currency trust, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Official rolling performance: iShares reports NAV Total Return annualised `6.75%` for the 10-year window as of `2026-06-30`. Raw NAV endpoints are not disclosed; normalized TR `100.00` to `192.17` is calculated from the rounded CAGR.
+- Official calendar observations: NAV rows 2016-2025 are `20.5%`, `16.6%`, `-15.1%`, `14.4%`, `-10.2%`, `4.0%`, `-2.3%`, `13.8%`, `5.9%`, and `29.7%`; the official benchmark rows are `21.0%`, `16.8%`, `-14.8%`, `14.9%`, `-9.6%`, `4.4%`, `-1.9%`, `14.3%`, `6.5%`, and `30.4%`. NAV 2016-2025 rows compound to approximately `94.63%` / CAGR `6.89%`; common 2021-2025 rows compound to `58.82%` / CAGR `9.69%`; positive/negative years are `4/1` in the common window.
+- Benchmark caveat: iShares notes that the Fund used a different benchmark before `2020-06-22`; the official benchmark rows are retained separately from the fund NAV TR metric.
+- S&P 500 rows use the cached USD TR convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so IHSEF trails by approximately `4.74 pp` CAGR.
+- Official current observations: NAV TR YTD is `14.55%` and NAV is `US$31.26`, both as of `2026-07-21`; TER is `0.59%`, holdings are `50` as of `2026-07-16`, and 3-year standard deviation is `14.36%` as of `2026-06-30`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### IHSEF / IAPD Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:IAPD` | [iShares IAPD official product and performance page](https://www.ishares.com/uk/professional/en/products/251567/iapd?siteEntryPassthrough=true&switchLocale=y) | canonical listing, ISIN, fund identity, equity/passive physical-replicated classification, benchmark, inception, NAV TR, annual rows, current NAV/YTD, fee and risk data | Page accessed `2026-07-24`; rolling summary `2026-06-30`; NAV/YTD `2026-07-21`; holdings `2026-07-16` |
+| `LSE:IAPD` | [iShares IAPD official factsheet](https://www.ishares.com/uk/professional/en/literature/fact-sheet/iapd-ishares-asia-pacific-dividend-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y) | corroborates share class, passive objective, ISIN, fee, distribution policy, benchmark and fund structure | Factsheet March 2026; performance/portfolio data through `2026-03-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | cached USD TR rows as of `2025-12-31` |
+
+### IHSEF / IAPD Raw Observations And Calculations
+
+| Year | IAPD NAV TR | Dow Jones Asia/Pacific Select Dividend 50 Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 20.5% | 21.0% | 11.96% |
+| 2017 | 16.6% | 16.8% | 21.83% |
+| 2018 | -15.1% | -14.8% | -4.38% |
+| 2019 | 14.4% | 14.9% | 31.49% |
+| 2020 | -10.2% | -9.6% | 18.40% |
+| 2021 | 4.0% | 4.4% | 28.71% |
+| 2022 | -2.3% | -1.9% | -18.11% |
+| 2023 | 13.8% | 14.3% | 26.29% |
+| 2024 | 5.9% | 6.5% | 25.02% |
+| 2025 | 29.7% | 30.4% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `6.75%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `192.17`, actual years `10.00`. The normalized end is calculated from the rounded issuer CAGR; raw endpoints are not disclosed.
+- Calendar rows `2016-2025` compound to approximately `94.63%` / CAGR `6.89%`; common rows `2021-2025` compound to `58.82%` / CAGR `9.69%`.
+
+### IHSEF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark-change caveat, as-of dates, rankings, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## VNFGF Sequential Queue Record

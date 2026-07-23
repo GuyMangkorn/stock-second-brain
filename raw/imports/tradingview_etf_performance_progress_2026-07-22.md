@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 28
-remaining_count: 97
+processed_count: 29
+remaining_count: 96
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `26` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `29` แล้ว.
 
 ## Terminal status register
 
@@ -44,10 +44,11 @@ updated: 2026-07-24
 | 26 | VNFGF | `completed_10Y` | `LSE:VDJP` | OTC alias resolved by Vanguard's official share-class mapping: ISIN `IE00B95PGT31`, USD London Stock Exchange ticker `VDJP`; passive physical Japan equity ETF. Official rolling 10Y NAV TR CAGR `9.45%` for 2016-06-01 to 2026-05-31; official rolling 12-month NAV rows; latest standardized official YTD `16.30%` as of 2026-05-31. | [[ETF_LSE_VDJP Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 27 | CSKRF | `completed_10Y` | `LSE:CSKR` | OTC alias for iShares MSCI Korea UCITS ETF USD (Acc); official listing table maps ISIN `IE00B5W4TY14` to London Stock Exchange USD ticker `CSKR`; passive physical/replicated equity ETF. Official rolling 10Y NAV TR cumulative `369.63%` / CAGR `16.73%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; 2021-2025 CAGR `3.94%`; current NAV TR YTD `70.53%` as of 2026-07-21. | [[ETF_LSE_CSKR Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 28 | GSJY | `completed_10Y` | `NYSE Arca:GSJY` | Rules-based smart-beta/passive Japan equity ETF; official prospectus says the fund is not actively managed; official rolling 10Y NAV TR CAGR `9.29%` for 2016-06-30 to 2026-06-30; official calendar rows 2017-2025 with 2016 treated as inception-year partial; 2021-2025 CAGR `6.62%`; current NAV TR YTD `12.86%` as of 2026-06-30. | [[ETF_NYSE_ARCA_GSJY Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 29 | IHSEF | `completed_10Y` | `LSE:IAPD` | OTC alias resolved to iShares' official LSE:IAPD listing for iShares Asia Pacific Dividend UCITS ETF, ISIN `IE00B14X4T88`; physical/replicated passive Asia-Pacific dividend equity ETF tracking Dow Jones Asia/Pacific Select Dividend 50 Index (Net). Official rolling 10Y NAV TR CAGR `6.75%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; 2021-2025 CAGR `9.69%`; current NAV TR YTD `14.55%` as of 2026-07-21. | [[ETF_LSE_IAPD Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `28/125`
-- Next ticker: `IHSEF` (row `29`)
+- Completed: `29/125`
+- Next ticker: `MINV` (row `30`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `GSJY` was searched, compared, dispatched, or processed in this round.
+- No ticker after `IHSEF` was searched, compared, dispatched, or processed in this round.
