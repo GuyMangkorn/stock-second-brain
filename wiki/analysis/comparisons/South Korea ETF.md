@@ -20,7 +20,7 @@ tags:
 | CSKRF / CSKR | iShares MSCI Korea UCITS ETF USD (Acc) | South Korea single-country equity / index-tracking | 16.73% | 3.94% | 70.53% | [[ETF_LSE_CSKR Performance]] |
 | EWY | iShares MSCI South Korea ETF | South Korea equity / index-tracking | 16.72% | 4.77% | 75.82% | [[ETF_NYSE_ARCA_EWY Performance]] |
 | FLKR | Franklin FTSE South Korea ETF | South Korea equity / index-tracking | not applicable (<10y history) | 4.59% | 86.35% | [[ETF_NYSE_ARCA_FLKR Performance]] |
-| KDEF | PLUS Korea Defense Industry Index ETF | South Korea equity / index-tracking | not disclosed | not disclosed | -8.13% | [[ETF_NYSE_ARCA_KDEF Performance]] |
+| KDEF | PLUS Korea Defense Industry Index ETF | South Korea defense-industry equity / index-tracking | not applicable (<10y history) | not disclosed | -8.13% | [[ETF_NYSE_ARCA_KDEF Performance]] |
 | KMCA | PLUS Korea Manufacturing Core Alliance Index ETF | South Korea equity / index-tracking | not disclosed | not disclosed | -5.14% | [[ETF_NYSE_ARCA_KMCA Performance]] |
 
 ## Navigation

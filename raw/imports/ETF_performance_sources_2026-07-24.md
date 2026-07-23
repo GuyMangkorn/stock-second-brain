@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `36/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `37/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -34,6 +34,7 @@ tags:
 | EWJV | supported | NASDAQ:EWJV | Japan | 18.04% (2026-07-22) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | official inception 2019-03-05; official 10-year field unavailable; available official since-inception NAV TR annualised 12.13% as of 2026-06-30; official 2021-2025 rows; passive index-tracking value equity |
 | VGUDF | supported | LSE:VDPX | Asia-Pacific | not disclosed | https://www.vanguard.co.uk/professional/product/etf/equity/9522/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-distributing | OTC alias resolved to official USD-distributing share class ISIN IE00B9F5YL18 / LSE:VDPX; official 10Y NAV TR CAGR 8.80% for 2016-03-31 to 2026-03-31; calendar NAV rows 2016-2025; current YTD not disclosed in reviewed official capture |
 | INDA | supported | Cboe BZX:INDA | India | -10.12% (2026-07-20) | https://www.ishares.com/us/products/239659/ishares-msci-india-etf | official rolling 10Y NAV TR cumulative 98.09% / CAGR 7.07% as of 2026-06-30; official calendar NAV/benchmark rows 2021-2025; 2016-2020 calendar rows not disclosed; current YTD -10.12% as of 2026-07-20 |
+| KDEF | supported | NYSE Arca:KDEF | South Korea | -8.13% (2026-06-30) | https://plusetf.com/kdef | official inception 2025-02-05; 10-year NAV TR unavailable; official since-inception NAV TR cumulative 105.69% / annualized 67.39% as of 2026-06-30; complete-calendar annual NAV rows not disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -817,4 +818,39 @@ tags:
 ### INDA Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of dates, rankings, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## KDEF Sequential Queue Record
+
+- Input row: `37/125`; input ticker: `KDEF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:KDEF`; official PLUS product page and SEC summary prospectus identify the PLUS Korea Defense Industry Index ETF, principal listing exchange NYSE Arca, ticker KDEF, CUSIP `30151E491`, inception `2025-02-05`, and tracked index Korea Defense Industry Index. No provider slug or guessed exchange is used.
+- Type gate: official prospectus says the fund normally invests at least 80% of net assets in securities comprising the index and is not actively managed. It is a passive, index-tracking equity ETF; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: reviewed the existing page, official PLUS product/performance page, official SEC summary prospectus, inception date, index objective and exchange identity. Inception `2025-02-05` to `2026-06-30` is `510` elapsed days, approximately `1.40` years, so `10-year NAV TR unavailable` is an actual history gap rather than a page-only gap.
+- Official available-period performance: PLUS reports Fund NAV total return cumulative `105.69%` and since-inception annualized `67.39%` as of `2026-06-30`; normalized TR is `100.00` to `205.69`. Raw NAV endpoints and a complete-calendar annual NAV table are not disclosed.
+- Official current observation: PLUS reports NAV `US$38.83` as of `2026-07-17`; standardized NAV TR YTD is `-8.13%` as of `2026-06-30`; current YTD as of 2026-07-17 is `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed official capture.
+- S&P 500 rows use the cached USD Total Return convention for the complete 2025 calendar year (`17.88%`). A matching S&P 500 TR series for KDEF's exact inception-to-date period and current 2026 YTD was not disclosed in the reviewed official source set; no proxy is created and the comparison table keeps the gap explicit.
+
+### KDEF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KDEF` | [PLUS ETF KDEF product and performance page](https://plusetf.com/kdef) | Canonical exchange/ticker, fund identity, inception, index, NAV TR, available-period performance, current NAV, holdings, fee and risk disclosures | Page accessed `2026-07-24`; performance summary `2026-06-30`; NAV/holdings `2026-07-17` |
+| `NYSE Arca:KDEF` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1547950/000121390026036312/ea0282658-04_497k.htm) | Objective, passive/index classification, 80% policy, concentration, non-diversified status, index methodology and fee | Prospectus dated `2026-03-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and complete 2025 row | Cached USD Total Return row as of `2025-12-31`; current 2026 TR YTD not disclosed in reviewed official capture |
+
+### KDEF Raw Observations And Calculations
+
+| Period | KDEF NAV TR | S&P 500 TR | Note |
+|---|---:|---:|---|
+| 2025 calendar year | not disclosed | 17.88% | KDEF began 2025-02-05; official complete-calendar KDEF NAV row not disclosed |
+| 2026 YTD through 2026-06-30 | -8.13% | not disclosed | Official KDEF issuer YTD; matching S&P 500 TR YTD not disclosed in reviewed official source set |
+| 2025-02-05 to 2026-06-30 | 105.69% cumulative / 67.39% annualized | not disclosed | Official KDEF since-inception period; no same-window S&P 500 TR series |
+
+- `10-year NAV TR unavailable`; inception-to-as-of period is approximately `1.40` years, not 10 years.
+- Official since-inception NAV TR cumulative is `+105.69%`; official issuer annualized value is `67.39%`; normalized end value `205.69` is based on the official cumulative return.
+- Up years / down years, best/worst complete calendar year and drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้` because the official capture does not disclose a complete annual NAV history or daily NAV series.
+
+### KDEF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period table, S&P 500 basis/window and explicit gaps, current-YTD as-of date, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
