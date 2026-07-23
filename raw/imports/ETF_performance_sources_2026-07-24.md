@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `52/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `53/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -50,6 +50,7 @@ tags:
 | ASIA | unsupported ETF type | NYSE Arca:ASIA | Asia-Pacific | not applicable | https://www.matthewsasia.com/funds/etfs/pacific-tiger-active-etf/ | Matthews identifies ASIA as Pacific Tiger Active ETF with a high-conviction, all-cap fundamental approach; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | VFPAF | supported | LSE:VAPU | Asia-Pacific | 47.09% (2026-06-30) | https://www.vanguard.co.uk/uk-fund-directory/product/etf/equity/9676/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-accumulating | OTC alias resolved to official USD LSE ticker VAPU for ISIN IE00BK5BQZ41; share-class inception 2019-09-24 means 10-year NAV TR unavailable; official available-period NAV TR CAGR 13.96% through 2026-06-30; rolling 12-month rows disclosed; current 2026-07-22 YTD not disclosed |
 | NBCE | unsupported ETF type | NYSE Arca:NBCE | China | not applicable | https://www.nb.com/products/etfs/china-equity-etf | Neuberger identifies NBCE as an actively managed China equity ETF using fundamental/security-selection research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
+| JPY | unsupported ETF type | NASDAQ:JPY | Japan | not applicable | https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/etfs/japanese-equity-etf | Lazard identifies JPY as an actively managed Japanese equity ETF using bottom-up stock selection and fundamental research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1402,6 +1403,26 @@ tags:
 | `Neuberger Berman ETF Trust` | [ETF Statement of Additional Information](https://www.nb.com/handlers/documents.ashx?id=47663e8f-0b22-4bda-b97c-4b535e979cab&name=Statement+of+Additional+Information+NBDS+NBCC+NBCT) | Legal/fund and exchange/ticker cross-check | SAI dated `2025-12-18` |
 
 ### NBCE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## JPY Sequential Queue Record
+
+- Input row: `53/125`; input ticker: `JPY`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NASDAQ:JPY`; Lazard's official Japanese Equity ETF materials identify ticker `JPY`, CUSIP `52110K103`, NASDAQ exchange, inception `2025-04-04`, listing date `2025-04-07`, equity asset class, benchmark TOPIX with Dividend Index, and net expense ratio `0.60%`. No provider slug or guessed exchange is used.
+- Type gate: Lazard describes JPY as an actively managed ETF designed to uncover opportunities and capitalize on market inefficiencies in Japanese equities, using a bottom-up stock-selection strategy. It fails the required passive/index-tracking equity gate and terminates as `unsupported ETF type`.
+- No performance page, annual table, S&P 500 comparison, 10-year audit, region snapshot row or performance-index row was created because the type gate terminated the ticker.
+
+### JPY Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:JPY` | [Lazard Japanese Equity ETF product page](https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/etfs/japanese-equity-etf) | Canonical exchange/ticker, fund identity, active classification and strategy | Page accessed `2026-07-24`; current product page |
+| `NASDAQ:JPY` | [Lazard JPY 1Q26 factsheet](https://www.lazardassetmanagement.com/content/dam/lazard-asset-management/lmap-documents/253582/294521.pdf) | Official active strategy, inception, exchange, benchmark and fee cross-check | Factsheet as of `2026-03-31` |
+| `NASDAQ:JPY` | [Lazard active ETF launch release](https://www.lazardassetmanagement.com/ams/en_us/about/media-relations/press-releases/lazard-asset-management-launches-its-first-three-active-etfs-in-the-us) | Independent issuer wording that JPY launched as an actively managed ETF | Published `2025-04-07` |
+
+### JPY Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
