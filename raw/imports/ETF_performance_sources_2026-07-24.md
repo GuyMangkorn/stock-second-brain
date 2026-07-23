@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `26/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `27/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -25,6 +25,51 @@ tags:
 | SCJ | supported | NYSE Arca:SCJ | Japan | 16.10% (2026-07-21) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | official rolling 10Y NAV TR 119.60% / CAGR 8.18% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | EEMA | supported | NASDAQ:EEMA | Emerging Markets | 20.51% (2026-07-22) | https://www.ishares.com/us/products/239629/ishares-msci-emerging-markets-asia-etf | official rolling 10Y NAV TR 172.29% / CAGR 10.54% as of 2026-06-30; official NAV rows 2016-2025; index change on 2018-06-01 |
 | VNFGF | supported | LSE:VDJP | Japan | 16.30% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9504/ftse-japan-ucits-etf-usd-distributing | OTC alias resolved to USD LSE ticker VDJP by ISIN IE00B95PGT31; official rolling 10Y NAV TR CAGR 9.45% as of 2026-05-31; official rolling 12-month rows; current-page NAV US$50.23 as of 2026-07-22 |
+| CSKRF | supported | LSE:CSKR | South Korea | 70.53% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/253733/cskr | OTC alias; official rolling 10Y NAV TR cumulative 369.63% / CAGR 16.73% as of 2026-06-30; official calendar NAV rows 2016-2025; benchmark change 2020-02-11 |
+
+## CSKRF Sequential Queue Record
+
+- Input row: `27/125`; input ticker: `CSKRF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:CSKR`; iShares' official product page maps ISIN `IE00B5W4TY14` to London Stock Exchange USD ticker `CSKR`, identifies the share class as iShares MSCI Korea UCITS ETF USD (Acc), issuing company iShares VII plc, physical/replicated, benchmark MSCI Korea 20/35 Index, and launch `2010-08-24`. `CSKRF` is retained as the input OTC alias; no provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page had stale YTD and no benchmark, inception, rolling 10-year result, or annual table. Rechecking the current official product page, March 2026 factsheet and official annual-report/document links confirms a genuine `10.00` elapsed-year NAV TR window; this was a page gap, not a history gap.
+- Official rolling performance: iShares reports NAV Total Return cumulative `369.63%` and average annual `16.73%` for `2016-06-30` to `2026-06-30`. Normalized TR is `100.00` to `469.63`; raw NAV endpoints are not disclosed.
+- Official calendar observations: iShares publishes NAV and benchmark rows for `2016-2025`. NAV rows compound to `141.88%` / CAGR `9.23%`; common `2021-2025` rows compound to `21.32%` / CAGR `3.94%`; positive / negative years are `2 / 3`. S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`.
+- Benchmark caveat: iShares states that the benchmark changed from MSCI Korea Index to MSCI Korea 20/35 Index on `2020-02-11`; benchmark rows are kept separate from the fund NAV TR metric.
+- Official current observation: iShares reports NAV `US$462.74` and NAV Total Return YTD `70.53%` as of `2026-07-21`; total expense ratio `0.65%`, 77 holdings as of `2026-07-20`, and 3-year standard deviation `44.57%` as of `2026-06-30`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### CSKRF / CSKR Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:CSKR` | [iShares CSKR product and performance page](https://www.ishares.com/uk/professional/en/products/253733/cskr) | Canonical listing, ISIN/share class, fund identity, physical/replicated classification, benchmark, inception, annual NAV/benchmark rows, rolling 10Y NAV TR, current NAV/YTD, fees and risks | Page accessed `2026-07-24`; rolling summary `2026-06-30`; current NAV/YTD `2026-07-21`; holdings `2026-07-20` |
+| `LSE:CSKR` | [iShares CSKR factsheet](https://www.ishares.com/uk/professional/en/literature/fact-sheet/cskr-ishares-msci-korea-ucits-etf-usd-acc-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y) | Corroborates passive/physical/replicated structure, benchmark change, launch date, fee, NAV basis and risk disclosures | Factsheet March 2026; performance data through `2026-03-31` |
+| `iShares VII plc` | Official annual report/document links on the CSKR product page | Legal structure and document cross-check | Page accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### CSKRF / CSKR Raw Observations And Calculations
+
+| Year | CSKR NAV TR | MSCI Korea benchmark TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 8.0% | 8.7% | 11.96% |
+| 2017 | 46.4% | 47.3% | 21.83% |
+| 2018 | -21.4% | -20.9% | -4.38% |
+| 2019 | 11.8% | 12.5% | 31.49% |
+| 2020 | 43.5% | 44.7% | 18.40% |
+| 2021 | -8.4% | -8.0% | 28.71% |
+| 2022 | -29.2% | -29.0% | -18.11% |
+| 2023 | 21.8% | 22.9% | 26.29% |
+| 2024 | -22.9% | -22.5% | 25.02% |
+| 2025 | 99.2% | 99.8% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+369.63%` with CAGR `16.73%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `469.63`, actual years `10.00`.
+- Official calendar rows `2016-2025` compound to `+141.88%` and annualize to `9.23%` over 10 complete calendar years. Common rows `2021-2025` compound to `+21.32%` and annualize to `3.94%`; positive / negative years are `2 / 3`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; CSKR trails by approximately `10.49 pp` CAGR in that common window.
+- Official current NAV TR YTD is `+70.53%` as of `2026-07-21`; market-price return is kept separate. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### CSKRF / CSKR Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark change, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## VNFGF Sequential Queue Record
 

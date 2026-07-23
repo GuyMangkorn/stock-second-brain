@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| CSKRF | ISHARES VII PLC MSCI KOREA UCITS ETF USD (ACC) | South Korea equity / index-tracking | not disclosed | not disclosed | 70.53% | [[ETF_LSE_CSKR Performance]] |
+| CSKRF / CSKR | iShares MSCI Korea UCITS ETF USD (Acc) | South Korea single-country equity / index-tracking | 16.73% | 3.94% | 70.53% | [[ETF_LSE_CSKR Performance]] |
 | EWY | iShares MSCI South Korea ETF | South Korea equity / index-tracking | 16.72% | 4.77% | 75.82% | [[ETF_NYSE_ARCA_EWY Performance]] |
 | FLKR | Franklin FTSE South Korea ETF | South Korea equity / index-tracking | not applicable (<10y history) | 4.59% | 86.35% | [[ETF_NYSE_ARCA_FLKR Performance]] |
 | KDEF | PLUS Korea Defense Industry Index ETF | South Korea equity / index-tracking | not disclosed | not disclosed | -8.13% | [[ETF_NYSE_ARCA_KDEF Performance]] |
@@ -27,3 +27,9 @@ tags:
 
 - [[ETF Region Index]]
 - [[ETF Performance Index]]
+
+## 2026-07-24 Verified Coverage Additions
+
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+|---|---|---|---:|---:|---:|---|
+| CSKRF / CSKR | iShares MSCI Korea UCITS ETF USD (Acc) | South Korea equity / index-tracking | 16.73% | 3.94% | 70.53% | [[ETF_LSE_CSKR Performance]] |
