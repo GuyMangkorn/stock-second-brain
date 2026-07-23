@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 75
-remaining_count: 50
+processed_count: 76
+remaining_count: 49
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -91,11 +91,12 @@ updated: 2026-07-24
 | 73 | JCHI | `unsupported ETF type` | `NYSE Arca:JCHI` | Official JPMorgan factsheet identifies JPMorgan Active China ETF and a bottom-up stock-selection approach; SEC shareholder-report data identify NYSE Arca listing. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 74 | MCH | `unsupported ETF type` | `NYSE Arca:MCH` | Official Matthews page identifies MCH as Matthews China Active ETF, primary exchange NYSE Arca, and an all-cap fundamental GARP strategy driven by proprietary research. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 75 | CGRO | `unsupported ETF type` | `NYSE Arca:CGRO` | Official CoreValues summary prospectus identifies CGRO as an actively managed Greater China growth ETF and lists NYSE Arca; current website displays NYSE but formal prospectus is retained for canonical exchange resolution. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 76 | KBUF | `unsupported ETF type` | `NYSE Arca:KBUF` | Official KraneShares sources identify KBUF as a defined-outcome ETF using FLEX options, a cap and a 90% downside buffer on KWEB. It is derivative-heavy and fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `75/125`
-- Next ticker: `row 76` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `76/125`
+- Next ticker: `row 77` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `CGRO` was searched, compared, dispatched, or processed in this round.
+No ticker after `KBUF` was searched, compared, dispatched, or processed in this round.

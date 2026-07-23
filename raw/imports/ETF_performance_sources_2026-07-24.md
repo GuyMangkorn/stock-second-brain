@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `75/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `76/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -73,6 +73,7 @@ tags:
 | JCHI | unsupported ETF type | NYSE Arca:JCHI | China | not applicable | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JCHI.PDF | official JPMorgan factsheet identifies JPMorgan Active China ETF and a bottom-up stock-selection approach; SEC shareholder-report data identify NYSE Arca listing; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | MCH | unsupported ETF type | NYSE Arca:MCH | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-active-etf/ | official Matthews page identifies MCH as Matthews China Active ETF, primary exchange NYSE Arca, and an all-cap fundamental GARP strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | CGRO | unsupported ETF type | NYSE Arca:CGRO | China | not applicable | https://www.cvafunds.com/cgro/ | official CoreValues summary prospectus identifies CGRO as an actively managed Greater China growth ETF and lists NYSE Arca; current website displays `NYSE`, but the formal prospectus is retained for canonical exchange resolution; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
+| KBUF | unsupported ETF type | NYSE Arca:KBUF | China | not applicable | https://kraneshares.com/etf/kbuf/ | official KraneShares sources identify KBUF as a defined-outcome ETF using FLEX options, an upside cap and a 90% downside buffer on KWEB; derivative-heavy/active strategy scope excludes it; no performance page or region/index row created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2153,3 +2154,23 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because CGRO failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## KBUF Sequential Queue Record
+
+- Input row: `76/125`; input ticker: `KBUF`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:KBUF`; the official summary prospectus and factsheet identify KBUF as listed on `NYSE Arca`, while the current product page displays `Primary Exchange NYSE`; the formal fund documents are used for the canonical key and the conflict is disclosed. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. KraneShares describes KBUF as a defined-outcome ETF that uses the underlying KWEB ETF plus `FLEX options` to seek a predetermined upside cap and a `90% downside buffer` over a specified outcome period. It is derivative-heavy and actively managed around an outcome structure, not a passive/index-tracking equity ETF.
+- Per the type gate, no 10-year historical performance calculation, annual NAV TR table, performance page, region row, index row, or S&P 500 comparison was created. Status is terminal under the requested ETF v1 scope.
+
+### KBUF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KBUF` | [KraneShares KBUF official product/performance page](https://kraneshares.com/etf/kbuf/) | Official defined-outcome strategy, FLEX-option structure, cap/buffer, current product-page exchange field and outcome-period data | Page accessed `2026-07-24`; fund/outcome data through `2026-07-21`; current outcome period `2025-01-27` to `2027-01-15`; product page exchange field `NYSE` |
+| `NYSE Arca:KBUF` | [KraneShares KBUF factsheet](https://kraneshares.com/resources/factsheet/kbuf_factsheet.pdf) | Official primary exchange and defined-outcome strategy cross-check | Factsheet dated `2026-01-30`; primary exchange `NYSE Arca, Inc.`; 90% buffer / 40.01% starting cap |
+| `NYSE Arca:KBUF` | [SEC KBUF summary prospectus](https://www.sec.gov/Archives/edgar/data/1547576/000182912625005548/kraneshares_497k.htm) | Official principal listing exchange and explicit options/defined-outcome classification | Prospectus dated `2025-08-01`; principal listing `NYSE Arca`; uses options including FLEX options |
+
+### KBUF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund identity, passive-versus-derivative-heavy classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because KBUF failed the passive/index-tracking equity gate as derivative-heavy, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
