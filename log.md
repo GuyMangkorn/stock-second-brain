@@ -6,6 +6,7 @@
 - `etf-performance-cleanup`: Removed 45 empty `not disclosed | not disclosed` annual NAV Total Return placeholder rows from the 2026-07-23 performance pages; retained all source gaps and numeric data.
 - `etf-performance`: Sequential queue row `1/125` completed for `EWY`; refreshed [[ETF_NYSE_ARCA_EWY Performance]] with official 2016-2025 NAV TR rows, rolling 10-year NAV TR CAGR `16.72%` as of 2026-06-30, current NAV YTD `+75.82%` as of 2026-07-21, updated [[South Korea ETF]] / [[ETF Performance Index]], and recorded the local pre-save review fallback in [[ETF_performance_sources_2026-07-23]]. Next queue ticker: `DBJP`.
 - `etf-performance`: Sequential queue row `2/125` completed for `DBJP`; refreshed [[ETF_NYSE_ARCA_DBJP Performance]] with official rolling 10-year NAV TR CAGR `17.28%` as of 2026-06-30, official calendar NAV TR rows 2016-2024, documented 2025/current-YTD gaps, updated [[Japan ETF]] / [[ETF Performance Index]], and extended [[ETF_performance_sources_2026-07-23]]. Next queue ticker: `WDTRF`.
+- `etf-performance`: Sequential queue row `3/125` completed for `WDTRF`; resolved the OTC input alias to canonical [[ETF_LSE_DXJA Performance]] (`LSE:DXJA`), recorded official 2018-2025 NAV TR rows, available-period since-inception CAGR `17.07%`, current YTD `21.90%` as of 2026-06-30, and updated [[Japan ETF]] / [[ETF Performance Index]] plus [[ETF_performance_sources_2026-07-23]]. Next queue ticker: `FLTW`.
 
 ## 2026-07-22
 

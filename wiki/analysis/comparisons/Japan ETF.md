@@ -22,6 +22,7 @@ tags:
 | DFJ | WisdomTree Japan SmallCap Dividend Fund | Japan small-cap dividend | 9.13% | 8.57% | 10.98% | [[ETF_AMEX_DFJ Performance]] |
 | EWJ | iShares MSCI Japan ETF | Japan single-country large/mid-cap equity | 9.54% | 6.22% | 14.28% | [[ETF_NYSE_ARCA_EWJ Performance]] |
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
+| WDTRF | WisdomTree Japan Equity UCITS ETF - USD Hedged Acc | Japan single-country dividend/export tilt, USD hedged, accumulating | not applicable (<10y history) | 24.84% | 21.90% | [[ETF_LSE_DXJA Performance]] |
 | FLJP | Franklin FTSE Japan ETF | Japan single-country large/mid-cap equity | not applicable (<10y history) | 6.60% | 14.82% | [[ETF_NYSE_ARCA_FLJP Performance]] |
 | OPPJ | ไม่พบข้อมูลที่ยืนยันได้ | Japan opportunities, dynamic FX hedge | 17.89% | 21.87%* | 24.67% | [[ETF_NASDAQ_OPPJ Performance]] |
 
@@ -49,4 +50,4 @@ tags:
 | IMSCF | IShares VII PLC | Japan equity / index-tracking | not disclosed | not disclosed | 12.11% | [[ETF_LSE_CJPU Performance]] |
 | ISRVF | IShares Plc. | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_LSE_IJPD Performance]] |
 | SCJ | iShares MSCI Japan Sm Cap | Japan equity / index-tracking | not disclosed | 5.20% | 14.73% | [[ETF_NYSE_ARCA_SCJ Performance]] |
-| WDTRF | WISDOMTREE ISSUER ICAV WISDOMTREE JPN EQTY UCITS ETF USD ACC HG | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_LSE_DXJA Performance]] |
+| WDTRF | WisdomTree Japan Equity UCITS ETF - USD Hedged Acc | Japan single-country dividend/export tilt, USD hedged, accumulating | not applicable (<10y history) | 24.84% | 21.90% | [[ETF_LSE_DXJA Performance]] |

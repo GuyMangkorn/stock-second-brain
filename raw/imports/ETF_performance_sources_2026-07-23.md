@@ -146,7 +146,7 @@ tags:
 | VNM | supported | NYSE Arca:VNM | Vietnam | -2.31% (2026-06-23) | https://www.vaneck.com/us/en/investments/vietnam-etf-vnm/ | inception, fee, annual rows not disclosed; current snapshot stale |
 | VPL | supported | NYSE Arca:VPL | Asia-Pacific | 28.39% (2026-05-31) | https://investor.vanguard.com/investment-products/etfs/profile/vpl | current NAV and annual rows not disclosed |
 | WDAF | supported | Nasdaq:WDAF | Asia-Pacific | 6.77% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/wdaf | new fund; annual rows not disclosed |
-| WDTRF | supported | LSE:DXJA | Japan | not disclosed (not disclosed) | https://www.wisdomtree.eu/-/media/eu-media-files/key-documents/factsheet/wt/factsheet-wisdomtree-japan-equity-ucits-etf-usd-hedged-acc.pdf?sc_lang=de-de | OTC alias; current performance and annual rows not disclosed |
+| WDTRF | supported | LSE:DXJA | Japan | 21.90% (2026-06-30) | https://dataspanapi.wisdomtree.com/pdr/documents/FACTSHEET/UCITS/EU/EN-GB/IE00BYQCZD50/ | OTC alias; official 2018-2025 annual rows; history under 10 years; since-inception NAV TR CAGR 17.07% |
 
 ## Benchmark convention
 
@@ -201,6 +201,48 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### EWY Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, distributions, annual rows, rolling 10-year endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## WDTRF Sequential Queue Record
+
+- Input row: `3/125`; input ticker: `WDTRF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `LSE:DXJA`; official WisdomTree product and London Stock Exchange pages identify the LSE ticker `DXJA` for ISIN `IE00BYQCZD50`. `WDTRF` is retained as the input OTC alias and is not used as the canonical exchange-qualified key.
+- Classification: supported passive/index-tracking single-country Japan equity ETF. The share class is accumulating and physically fully replicated; the USD/JPY hedge uses currency forward contracts, which is a hedging overlay rather than derivative-heavy classification.
+- Issuer benchmark: `WisdomTree Japan Hedged Equity UCITS Index`. Inception: `2017-03-07`. Total expense ratio: `0.48%` as of `2026-07-22`. Distribution frequency: `N/A` because the share class is accumulating.
+
+### WDTRF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:DXJA` | [WisdomTree UK DXJA product page](https://www.wisdomtree.com/gb/products/equities/wisdomtree-japan-equity-ucits-etf---usd-hedged-acc) | Canonical product identity, current NAV/AUM, TER, structure, holdings, risk context and official listings | Product data as of `2026-07-22`; NAV `US$70.719`; LSE ticker `DXJA` |
+| `LSE:DXJA` | [WisdomTree DXJA factsheet](https://dataspanapi.wisdomtree.com/pdr/documents/FACTSHEET/UCITS/EU/EN-GB/IE00BYQCZD50/) | Official NAV performance, index, inception and annual calendar returns | Document date `2026-06-30`; YTD `21.90%`, since-inception CAGR `17.07%`, annual rows `2018-2025` |
+| `LSE:DXJA` | [London Stock Exchange DXJA company page](https://www.londonstockexchange.com/stock/DXJA/wisdomtree/company-page) | Exchange/listing verification | LSE listing and ISIN `IE00BYQCZD50`; page accessed `2026-07-23` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### WDTRF Raw Observations And Calculations
+
+| Year | WDTRF / DXJA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2018 | -18.62% | -4.38% |
+| 2019 | 18.47% | 31.49% |
+| 2020 | 2.79% | 18.40% |
+| 2021 | 18.04% | 28.71% |
+| 2022 | 6.58% | -18.11% |
+| 2023 | 40.52% | 26.29% |
+| 2024 | 30.79% | 25.02% |
+| 2025 | 31.14% | 17.88% |
+
+- Official 10-year NAV TR is unavailable: inception `2017-03-07` to latest official performance date `2026-06-30` is `3,402` days / `9.31` years, below the required `10.00 elapsed years`; no 10-year proxy was created.
+- Official available-period NAV TR CAGR: `17.07%` since inception as of `2026-06-30`; the issuer does not disclose raw start/end TR levels in the factsheet.
+- Official current YTD NAV TR: `21.90%` as of `2026-06-30`; official 1-year NAV TR `52.96%` and 3-year annualized NAV TR `31.38%` as of the same date.
+- Complete official calendar rows `2018-2025` compound to `+200.49%` and annualize to `14.74%` over `8` years. Complete rows `2021-2025` compound to `+203.22%` and annualize to `24.84%` over `5` years. Both calculations use rounded issuer annual inputs.
+- Up/down years among complete rows: `7 / 1`. Best `2023 +40.52%`; least positive `2020 +2.79%`; worst and least bad down year `2018 -18.62%`.
+- Exact date-to-date S&P 500 TR for the since-inception window is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### WDTRF Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/alias and exchange resolution, passive-equity classification, accumulating NAV Total Return basis, annual rows and partial-year exclusion, available-period coverage and elapsed-years test, since-inception CAGR, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
 
 ## DBJP Sequential Queue Record
