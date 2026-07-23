@@ -106,6 +106,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | 2013 / secondary 2016-2025* | -0.85% | -11.89%* | -28.96% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive |
 | [[ETF_NYSE_ARCA_CQQQ Performance]] | official 2009 / official complete 2016-2025* | 4.44%* | -8.27% | not disclosed | 2017 +72.54% / 2018 -34.21% | China technology equity | non-diversified; China tech/policy/VIE/FX-sensitive; predecessor/index breaks |
+| [[ETF_CBOE_BZX_CNYA Performance]] | official 2016 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 6.71% | -1.75% | 5.39% | 2025 +25.59% / 2022 -26.31% | China A-share single-country equity | A-share/Stock Connect/policy/geopolitical/country/sector/FX-sensitive; benchmark change 2018-04-26 |
 | [[ETF_NYSE_ARCA_CNXT Performance]] | official 2014 / official rolling 2016-2026; calendar rows not disclosed | 7.37% | not disclosed | 16.05% | not disclosed / not disclosed | China A-share ChiNext equity | China A-share/technology/industrial concentration; methodology/index break 2021-12-10 |
 | [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
 | [[ETF_NYSE_ARCA_ASHS Performance]] | official 2014 / official rolling 2016-03 to 2026-03; annual rows not disclosed | 1.96% | not disclosed | 3.36% | not disclosed / not disclosed | China A-share small-cap equity | China policy/A-share access/small-cap liquidity/sector/FX-sensitive; 497 holdings |
@@ -424,3 +425,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
+- [[ETF_CBOE_BZX_CNYA Performance]] — CNYA (China)

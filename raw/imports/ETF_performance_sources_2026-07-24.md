@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `61/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `62/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -59,6 +59,7 @@ tags:
 | RAYJ | unsupported ETF type | NYSE Arca:RAYJ | Japan | not applicable | https://funds.rayliant.com/rayj/ | Rayliant identifies RAYJ as an active Japan equity strategy using SMDAM fundamental research and Rayliant quantitative models; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | THD | supported | NYSE Arca:THD | Thailand | 25.53% (2026-07-22) | https://www.ishares.com/us/products/239688/ishares-msci-thailand-capped-etf | passive/index-tracking equity ETF; official rolling 10Y NAV TR CAGR 3.35% for 2016-06-30 to 2026-06-30 (`10.00` years); 2021-2025 NAV rows compound to -10.24% / CAGR -2.14%; 2016-2020 annual rows and raw rolling endpoints not disclosed; benchmark/index change 2013-02-12 |
 | FLIN | supported | NYSE Arca:FLIN | India | -8.34% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26348/SINGLCLASS/franklin-ftse-india-etf/FLIN | passive/index-tracking equity ETF; inception 2018-02-06; official 10-year field `—`; available-period NAV TR annualized 5.91% for 2018-02-06 to 2026-06-30 (`8.39` years); 2019-2025 NAV rows compound to 88.74% / CAGR 9.50%; 2021-2025 CAGR 9.33%; current standardized NAV TR YTD -8.34% |
+| CNYA | supported | Cboe BZX:CNYA | China | 5.39% (2026-07-21) | https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf | passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR cumulative 91.51% / CAGR 6.71% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/benchmark rows; 2016-2020 annual rows not disclosed; current NAV TR YTD 5.39% as of 2026-07-21; benchmark change 2018-04-26 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1789,4 +1790,48 @@ tags:
 ### FLIN Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and under-10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period normalized endpoint disclosure, annual rows, partial inception-year marker, S&P 500 basis/window, current-YTD as-of date, rankings, canonical filename, India region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## CNYA Sequential Queue Record
+
+- Input row: `62/125`; input ticker: `CNYA`; terminal status: `completed_10Y`.
+- Canonical entity key: `Cboe BZX:CNYA`; iShares' official product page identifies iShares MSCI China A ETF, Cboe BZX listing, inception `2016-06-13`, asset class Equity, benchmark `MSCI China A Inclusion Index`, and expense ratio `0.60%`. No provider slug or guessed exchange is used.
+- Type gate: official iShares materials describe a passive/index-tracking equity ETF investing in Chinese equities traded on the Shanghai or Shenzhen exchanges. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF. The fund uses Stock Connect to access A-shares; the prospectus remains the source for detailed permitted instruments and risks.
+- Mandatory 10-year audit: official iShares performance data provides a genuine `10.00` elapsed-year NAV Total Return window from `2016-06-30` to `2026-06-30`. The issuer reports NAV/Total Return cumulative `91.51%` and CAGR `6.71%`; raw start/end NAV TR values are not disclosed. Normalized TR is `100.00` to `191.51` from the published cumulative result.
+- Official calendar observations: iShares provides CNYA NAV rows `2.96%`, `-26.31%`, `-13.51%`, `11.08%`, `25.59%` for `2021-2025`; benchmark rows are `3.20%`, `-25.90%`, `-13.47%`, `11.70%`, `26.48%`. Rows for `2016-2020` are not disclosed in the reviewed current product/factsheet capture; `2016` is retained as a partial inception marker.
+- Common `2021-2025` CNYA NAV rows compound to `-8.46%` / CAGR `-1.75%`; benchmark rows compound to `-6.52%` / CAGR `-1.34%`; S&P 500 cached USD Total Return rows compound to `+96.17%` / CAGR `14.43%`; CNYA trails S&P by approximately `16.18 pp` CAGR. Positive / negative years are `3 / 2`; best is `2025 +25.59%`, worst is `2022 -26.31%`.
+- Benchmark caveat: iShares states that CNYA began tracking `MSCI China A Inclusion Index (Net)` on `2018-04-26`; historical index data before that date is for MSCI China A International Index. Benchmark rows are kept separate from the fund NAV TR metric and the common S&P 500 comparison.
+- Official current observation: iShares reports NAV Total Return YTD `5.39%` as of `2026-07-21`; NAV is `$36.26` as of `2026-07-21`. The standardized month-end performance table separately reports 2026 YTD `12.01%` and benchmark `11.74%` as of `2026-06-30`; these dates are not mixed. Current page reports 411 holdings as of `2026-07-21`, 3-year standard deviation `19.36%` as of `2026-06-30`, P/E `18.42`, and P/B `2.02` as of `2026-07-21`. Daily NAV history sufficient for fund-level max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### CNYA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Cboe BZX:CNYA` | [iShares CNYA product and performance page](https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf) | Canonical listing, fund identity, passive-equity classification, benchmark, inception, fee, rolling 10Y NAV TR, annual rows, current NAV/YTD, holdings and risk data | Page accessed `2026-07-24`; rolling/annual performance `2026-06-30`; current NAV/YTD `2026-07-21` |
+| `Cboe BZX:CNYA` | [iShares CNYA factsheet](https://www.ishares.com/us/literature/fact-sheet/cnya-ishares-msci-china-a-etf-fund-fact-sheet-en-us.pdf) | Official factsheet cross-check for objective, benchmark, index change, fee, calendar rows, NAV TR basis and risk data | Factsheet as of `2026-03-31`; accessed `2026-07-24` |
+| `Cboe BZX:CNYA` | [iShares CNYA summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-a-etf-7-31.pdf) | Legal/fund objective and passive/indexing structure, Stock Connect and risk cross-check | Prospectus dated `2025-11-28`; accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; rows reused for `2016-2025` without a new search |
+
+### CNYA Raw Observations And Calculations
+
+| Year | CNYA NAV TR | MSCI China A Inclusion Index (Net) TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not applicable (partial inception year) | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | 2.96% | 3.20% | 28.71% |
+| 2022 | -26.31% | -25.90% | -18.11% |
+| 2023 | -13.51% | -13.47% | 26.29% |
+| 2024 | 11.08% | 11.70% | 25.02% |
+| 2025 | 25.59% | 26.48% | 17.88% |
+
+- Official rolling 10-year NAV TR cumulative is `+91.51%` with CAGR `6.71%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; normalized TR is `100.00` to `191.51`; raw endpoints are not disclosed.
+- Common `2021-2025` CNYA NAV rows compound to `-8.46%` / CAGR `-1.75%`; issuer benchmark rows compound to `-6.52%` / CAGR `-1.34%`; S&P 500 TR rows compound to `+96.17%` / CAGR `14.43%`; CNYA trails by approximately `16.18 pp` CAGR.
+- Positive / negative years in the complete CNYA rows are `3 / 2`; best `2025 +25.59%`; worst `2022 -26.31%`. Current official NAV TR YTD is `+5.39%` as of `2026-07-21`; it is not treated as a complete calendar year.
+
+### CNYA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized endpoint disclosure, annual-row gap, S&P 500 basis/window, current-YTD as-of date separation, benchmark change, rankings, canonical filename, China region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
