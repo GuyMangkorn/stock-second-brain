@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `51/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `52/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -49,6 +49,7 @@ tags:
 | IPAC | supported | NYSE Arca:IPAC | Asia-Pacific | 13.75% (2026-07-22) | https://www.ishares.com/us/products/264619/ishares-core-msci-pacific-etf | official rolling 10Y NAV TR cumulative 141.81% / CAGR 9.23% for 2016-06-30 to 2026-06-30; official annual NAV/benchmark rows 2021-2025; 2016-2020 annual rows not disclosed; current YTD 13.75% as of 2026-07-22 |
 | ASIA | unsupported ETF type | NYSE Arca:ASIA | Asia-Pacific | not applicable | https://www.matthewsasia.com/funds/etfs/pacific-tiger-active-etf/ | Matthews identifies ASIA as Pacific Tiger Active ETF with a high-conviction, all-cap fundamental approach; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | VFPAF | supported | LSE:VAPU | Asia-Pacific | 47.09% (2026-06-30) | https://www.vanguard.co.uk/uk-fund-directory/product/etf/equity/9676/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-accumulating | OTC alias resolved to official USD LSE ticker VAPU for ISIN IE00BK5BQZ41; share-class inception 2019-09-24 means 10-year NAV TR unavailable; official available-period NAV TR CAGR 13.96% through 2026-06-30; rolling 12-month rows disclosed; current 2026-07-22 YTD not disclosed |
+| NBCE | unsupported ETF type | NYSE Arca:NBCE | China | not applicable | https://www.nb.com/products/etfs/china-equity-etf | Neuberger identifies NBCE as an actively managed China equity ETF using fundamental/security-selection research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1383,6 +1384,26 @@ tags:
 ### VFPAF / VAPU Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and mandatory 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period and rolling rows, S&P 500 basis/window, current-YTD gap, rankings, canonical filename, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, old-link check, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## NBCE Sequential Queue Record
+
+- Input row: `52/125`; input ticker: `NBCE`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:NBCE`; Neuberger's official China Equity ETF page identifies ticker `NBCE`, CUSIP `64135A507`, primary exchange NYSE Arca, ETF listing date `2023-10-16`, predecessor inception `2013-07-17`, equity asset class and reference benchmark MSCI China A Onshore Index (Net). No provider slug or guessed exchange is used.
+- Type gate: the official issuer describes NBCE as an actively managed ETF that seeks broad onshore China equity exposure through fundamental/security-selection research; the issuer page explicitly labels the fund `Actively Managed`. It fails the required passive/index-tracking equity gate and terminates as `unsupported ETF type`.
+- No performance page, annual table, S&P 500 comparison, 10-year audit, region snapshot row or performance-index row was created because the type gate terminated the ticker.
+
+### NBCE Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:NBCE` | [Neuberger China Equity ETF product page](https://www.nb.com/products/etfs/china-equity-etf) | Canonical exchange/ticker, fund identity, active classification, listing date, predecessor inception, benchmark and fund facts | Page accessed `2026-07-24`; fund facts capture as of `2026-06-22` |
+| `NYSE Arca:NBCE` | [Neuberger China Equity ETF factsheet](https://www.nb.com/handlers/documents.ashx?id=7455304d-2402-468d-bb78-92032237edd6&name=China+Equity+ETF+-+Factsheet) | Official active strategy and fund-facts cross-check | Factsheet as of `2026-03-31` |
+| `Neuberger Berman ETF Trust` | [ETF Statement of Additional Information](https://www.nb.com/handlers/documents.ashx?id=47663e8f-0b22-4bda-b97c-4b535e979cab&name=Statement+of+Additional+Information+NBDS+NBCC+NBCT) | Legal/fund and exchange/ticker cross-check | SAI dated `2025-12-18` |
+
+### NBCE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## IPAC Sequential Queue Record
