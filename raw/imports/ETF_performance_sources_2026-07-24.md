@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `33/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `34/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -32,6 +32,7 @@ tags:
 | IMSCF | supported | LSE:CJPU | Japan | 12.11% (2026-07-17) | https://www.ishares.com/uk/professional/en/products/253732/ishares-msci-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official LSE:CJPU USD listing; official rolling 10Y NAV TR CAGR 9.46% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
 | IHRMF | supported | LSE:IJPU | Japan | 15.45% (2026-07-22) | https://www.ishares.com/uk/professional/en/products/251866/ijpn?siteEntryPassthrough=true | OTC alias resolved to official LSE:IJPU USD listing; official rolling 10Y NAV TR CAGR 9.36% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
 | EWJV | supported | NASDAQ:EWJV | Japan | 18.04% (2026-07-22) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | official inception 2019-03-05; official 10-year field unavailable; available official since-inception NAV TR annualised 12.13% as of 2026-06-30; official 2021-2025 rows; passive index-tracking value equity |
+| VGUDF | supported | LSE:VDPX | Asia-Pacific | not disclosed | https://www.vanguard.co.uk/professional/product/etf/equity/9522/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-distributing | OTC alias resolved to official USD-distributing share class ISIN IE00B9F5YL18 / LSE:VDPX; official 10Y NAV TR CAGR 8.80% for 2016-03-31 to 2026-03-31; calendar NAV rows 2016-2025; current YTD not disclosed in reviewed official capture |
 
 ## CSKRF Sequential Queue Record
 
@@ -679,4 +680,49 @@ tags:
 ### VPL Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## VGUDF Sequential Queue Record
+
+- Input row: `34/125`; input ticker: `VGUDF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:VDPX`; Vanguard's official USD-distributing factsheet identifies the fund as Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing, ISIN `IE00B9F5YL18`, with London Stock Exchange USD ticker `VDPX`. The OTC alias `VGUDF` is cross-checked to the same fund name/share class; no provider slug or guessed exchange is used.
+- Type gate: official Vanguard identifies an Irish UCITS, physical, passive/index-tracking equity ETF that seeks to track the FTSE Developed Asia Pacific ex Japan Index. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the existing source register had VGUDF unresolved. Rechecking the issuer product page, official factsheet, share-class identifiers and current product data resolves the page/alias gap and confirms a genuine `10.00` elapsed-year NAV TR window `2016-03-31` to `2026-03-31`; this is not a history gap.
+- Official rolling performance: Vanguard reports NAV Total Return annualised `8.80%` for the 10-year window. Raw NAV endpoints are not disclosed; normalized TR is `100.00` to `232.43`, calculated from the rounded CAGR.
+- Official calendar observations: Vanguard's official factsheet provides NAV and FTSE Developed Asia Pacific ex Japan Index total-return rows for `2016-2025`. Fund rows compound to `122.03%` / CAGR `8.30%`; common `2021-2025` rows compound to `30.23%` / CAGR `5.42%`; positive/negative years are `4/1` in the common window.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common `2021-2025` CAGR is `14.43%`, so VDPX trails by approximately `9.00 pp` CAGR.
+- Official current observation: Vanguard's product page shows latest NAV `US$42.5244` as of `2026-07-20`; current YTD NAV TR is `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed official capture and is not inferred from price or distribution data.
+
+### VGUDF / VDPX Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:VDPX` | [Vanguard VDPX product and performance page](https://www.vanguard.co.uk/professional/product/etf/equity/9522/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-distributing) | Fund identity, passive physical equity classification, benchmark, inception, current NAV, holdings and regional exposure | Page accessed `2026-07-24`; portfolio data `2026-06-30`; latest NAV `2026-07-20` |
+| `LSE:VDPX` | [Vanguard VDPX official factsheet](https://fund-docs.vanguard.com/FTSE_Developed_Asia_Pacific_ex_Japan_UCITS_ETF_USD_Distributing_9522_EU_INT_UK_EN.pdf?management-style=Index) | ISIN/share-class and exchange mapping, official NAV TR basis, 10-year result, calendar NAV/benchmark rows, fee and distribution policy | Factsheet performance through `2026-03-31`; calendar rows `2016-2025` |
+| `VGUDF` alias | [Schwab VGUDF OTC chart page](https://www.schwab.wallst.com/schwab/Prospect/charts/interactive/popup.asp?symbol=VGUDF) | Secondary OTC alias/name cross-check only; not used as the NAV TR source | Page accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### VGUDF / VDPX Raw Observations And Calculations
+
+| Year | VDPX NAV TR | FTSE Developed Asia Pacific ex Japan Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 8.49% | 8.62% | 11.96% |
+| 2017 | 32.21% | 32.41% | 21.83% |
+| 2018 | -14.37% | -14.23% | -4.38% |
+| 2019 | 16.97% | 17.09% | 31.49% |
+| 2020 | 18.67% | 18.59% | 18.40% |
+| 2021 | 1.05% | 1.25% | 28.71% |
+| 2022 | -12.65% | -12.62% | -18.11% |
+| 2023 | 11.00% | 11.03% | 26.29% |
+| 2024 | -5.67% | -5.59% | 25.02% |
+| 2025 | 40.91% | 40.99% | 17.88% |
+
+- Official rolling 10-year NAV TR is `8.80%` annualised for `2016-03-31` to `2026-03-31`; normalized TR is `100.00` to `232.43`, actual years `10.00`. The normalized end is calculated from the rounded issuer CAGR; raw endpoints are not disclosed.
+- Official calendar rows `2016-2025` compound to `+122.03%` and annualize to `8.30%` over 10 complete calendar years. Common rows `2021-2025` compound to `+30.23%` and annualize to `5.42%`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; VDPX trails by approximately `9.00 pp` CAGR in that common window.
+- Official current NAV is `US$42.5244` as of `2026-07-20`; current YTD NAV TR is `ไม่พบข้อมูลที่ยืนยันได้` in this reviewed capture. Daily NAV history sufficient for max drawdown and recovery is also `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### VGUDF / VDPX Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD gap disclosure, as-of dates, rankings, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

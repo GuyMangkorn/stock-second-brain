@@ -62,6 +62,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_GMF Performance]] | official 2007 / official rolling 2016-2026; annual rows calculated from official NAV/distributions | 9.94% | 4.20% | 12.56% | 2025 +21.94% / 2022 -19.00% | emerging Asia-Pacific broad equity | country/FX/emerging-market/sector-sensitive |
 | [[ETF_LSE_IAPD Performance]] | official 2006 / official 2016-2025; official rolling 2016-2026 | 6.75% | 9.69% | 14.55% | 2025 +29.7% / 2018 -15.1% | Asia-Pacific dividend equity | country/sector/currency/dividend-factor-sensitive; 50 holdings |
 | [[ETF_NYSE_ARCA_VPL Performance]] | official 2005 / official rolling 2016-2026; official 2016-2025 | 10.74% | 6.05% | 19.62% | 2025 +33.16% / 2018 -13.85% | developed Asia-Pacific broad equity | Japan/Korea/Australia and FX/sector-sensitive |
+| [[ETF_LSE_VDPX Performance]] | official 2013 / official rolling 2016-03 to 2026-03; official 2016-2025 | 8.80% | 5.42% | not disclosed | 2025 +40.91% / 2022 -12.65% | developed Asia-Pacific ex-Japan broad equity, USD distributing | Korea/Australia and technology/financials/country/FX-sensitive; OTC alias resolved to LSE:VDPX |
 | [[ETF_NASDAQ_AAXJ Performance]] | official 2008 / official 2021-2025; rolling 2016-2026 | 10.21% | 2.84% | 21.30% | 2025 +32.09% / 2022 -20.18% | Asia ex Japan broad large/mid-cap equity | Taiwan/China/Korea/India and technology concentrated; country/sector/FX-sensitive |
 | [[ETF_NASDAQ_AIA Performance]] | official 2007 / official 2021-2025; rolling 2016-2026 | 14.84% | 4.69% | 40.47% | 2025 +47.01% / 2022 -24.07% | Asia ex Japan large-cap equity | Taiwan/Korea/China and technology concentrated; country/sector/FX-sensitive |
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
@@ -145,6 +146,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NASDAQ_EWJV Performance]] | 6.16% | -5.68% | 23.05% | 11.77% | 33.56% | 83.93% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VPL Performance]] | 1.51% | -15.21% | 15.58% | 1.27% | 33.16% | 34.15% | 4 / 1 |
 | [[ETF_LSE_IAPD Performance]] | 4.0% | -2.3% | 13.8% | 5.9% | 29.7% | 58.82% | 4 / 1 |
+| [[ETF_LSE_VDPX Performance]] | 1.05% | -12.65% | 11.00% | -5.67% | 40.91% | 30.23% | 4 / 1 |
 | [[ETF_LSE_DXJ Performance]] | 18.07% | 6.48% | 40.46% | 30.55% | 31.19% | 202.44% | 5 / 0 |
 | [[ETF_LSE_VDJP Performance]] | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed |
 | [[ETF_NASDAQ_AIA Performance]] | -10.75% | -24.07% | 4.84% | 20.42% | 47.01% | 25.77% | 3 / 2 |
@@ -390,3 +392,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_VPL Performance]] — VPL (Asia-Pacific)
 - [[ETF_NASDAQ_WDAF Performance]] — WDAF (Asia-Pacific)
 - [[ETF_LSE_DXJA Performance]] — WDTRF (Japan)
+
+## 2026-07-24 Coverage Addition
+
+- [[ETF_LSE_VDPX Performance]] — VGUDF / VDPX (Asia-Pacific)

@@ -22,6 +22,7 @@ tags:
 | GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.94% | 4.20% | 12.56% | [[ETF_NYSE_ARCA_GMF Performance]] |
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VPL | Vanguard FTSE Pacific ETF | Asia-Pacific equity / index-tracking | 10.74% | 6.05% | 19.62% | [[ETF_NYSE_ARCA_VPL Performance]] |
+| VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -37,6 +38,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
+| VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
 
 
 ## 2026-07-23 Verified Coverage Additions
