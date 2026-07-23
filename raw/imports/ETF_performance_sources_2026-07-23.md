@@ -45,7 +45,7 @@ tags:
 | CXSE | supported | NASDAQ:CXSE | China | -3.69% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/cxse | annual rows and raw 10Y endpoints not disclosed |
 | DBJP | supported | NYSE Arca:DBJP | Japan | not disclosed (not disclosed) | https://etf.dws.com/en-us/AssetDownload/Index/f0a852db-a1b3-40a7-8a97-5dca027cf1b0/DBJP-Fact-Sheet.pdf | annual NAV rows and current NAV/YTD not disclosed |
 | DGIN | supported | NYSE Arca:DGIN | India | -12.56% (2026-06-22) | https://www.vaneck.com/us/en/investments/digital-india-etf-dgin/overview/ | current data stale; annual rows not disclosed |
-| DXJJF | existing | LSE:DXJ | Japan | not applicable | https://www.wisdomtree.com/gb/products/equities/wisdomtree-japan-equity-ucits-etf---usd-hedged | existing canonical page covers OTC alias |
+| DXJJF | supported | LSE:DXJ | Japan | 21.90% (2026-06-30) | https://www.wisdomtree.com/gb/products/equities/wisdomtree-japan-equity-ucits-etf---usd-hedged | existing canonical page refreshed; official 2016-2025 NAV TR rows and normalized 10-year calculation; latest NAV US$55.035 (2026-07-22); OTC alias retained |
 | EEMA | supported | NASDAQ:EEMA | Emerging Markets | 17.88% (2026-07-17) | https://www.ishares.com/us/products/239629/ishares-msci-emerging-markets-asia-etf | raw 10Y endpoints not disclosed |
 | EIDO | supported | NYSE Arca:EIDO | Indonesia | -30.08% (2026-07-21) | https://www.ishares.com/ch/professionals/en/products/239661/ishares-msci-indonesia-etf?switchLocale=Y | raw 10Y endpoints not disclosed; earlier annual rows not surfaced |
 | ENZL | supported | NASDAQ:ENZL | New Zealand | 3.45% (2026-07-21) | https://www.ishares.com/us/products/239672/ishares-msci-new-zealand-capped-etf | raw 10Y endpoints not disclosed |
@@ -244,6 +244,50 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### EPP Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from check-etf-performance/workflow.md before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, income reinvestment and expenses, annual rows and source precision, rolling 10-year coverage/endpoints/formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: PASS; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable lean workflow.
+
+## DXJJF Sequential Queue Record
+
+- Input row: 7/125; input ticker: DXJJF; terminal status: completed_10Y.
+- Canonical entity key: LSE:DXJ. WisdomTree's official page identifies LSE ticker DXJ, ISIN IE00BVXC4854, and the same USD-distributing share class; the input DXJJF is retained as an OTC alias and is not used as the canonical displayed key.
+- Classification: supported passive/index-tracking single-country Japan equity ETF. The fund is physical and fully replicated; monthly currency forwards are a JPY/USD hedge overlay, not a derivative-heavy classification. It is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, or single-stock.
+- Issuer benchmark: WisdomTree Japan Hedged Equity UCITS Index, USD, Bloomberg WTIDJHUT. Inception: 2015-05-18. TER: 0.48% as of 2026-07-22. Distribution frequency: semi-annual; use of income: distributing.
+
+### DXJJF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| LSE:DXJ | [WisdomTree official product page](https://www.wisdomtree.com/gb/products/equities/wisdomtree-japan-equity-ucits-etf---usd-hedged) | Canonical listing, ISIN, identity, passive physical structure, inception, current NAV, TER, holdings, sector/country exposure and index | Page accessed 2026-07-23; product/NAV/holdings/sector fields as of 2026-07-22; NAV US$55.035 |
+| LSE:DXJ | [Official WisdomTree factsheet](https://dataspanapi.wisdomtree.com/pdr/documents/FACTSHEET/UCITS/EU/EN-GB/IE00BVXC4854/) | Official NAV Total Return basis, annual 2016-2025 rows, current YTD, benchmark and fees | Document/data as of 2026-06-30; YTD 21.90%; annual rows net of fees |
+| LSE:DXJ | [WisdomTree performance definition](https://www.wisdomtree.eu/de-de/etfs/export-tilted/wisdomtree-japan-equity-ucits-etf-usd-hedged) | Daily NAV, net-of-fees, dividend-reinvestment convention | Page accessed 2026-07-23 |
+| S&P 500 TR | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of 2025-12-31 |
+
+### DXJJF Raw Observations And Calculations
+
+| Year | DXJ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 0.73% | 11.96% |
+| 2017 | 22.17% | 21.83% |
+| 2018 | -18.71% | -4.38% |
+| 2019 | 18.53% | 31.49% |
+| 2020 | 2.82% | 18.40% |
+| 2021 | 18.07% | 28.71% |
+| 2022 | 6.48% | -18.11% |
+| 2023 | 40.46% | 26.29% |
+| 2024 | 30.55% | 25.02% |
+| 2025 | 31.19% | 17.88% |
+
+- Ten official complete calendar-year rows 2016-2025 compound to cumulative 268.73% and CAGR 13.94% over 10 years. Start date is 2015-12-31, end date is 2025-12-31, normalized start/end TR values are 100.00 and 368.73, and actual years are 10.00. Raw NAV endpoint levels are ไม่พบข้อมูลที่ยืนยันได้.
+- Formula: (368.73 / 100.00)^(1 / 10.00) - 1 = approximately 13.94%; the normalized end value and CAGR use rounded official annual inputs.
+- Rows 2021-2025 compound to cumulative 202.44% and CAGR 24.77%; corresponding cached S&P 500 TR is 96.17% and 14.43%.
+- Up/down years among complete rows: 9 / 1. Best 2023 +40.46%; least positive 2016 +0.73%; worst and least bad down year 2018 -18.71%.
+- Official NAV Total Return YTD: 21.90% as of 2026-06-30. Official performance beyond that date is ไม่พบข้อมูลที่ยืนยันได้. Latest issuer NAV is US$55.035 as of 2026-07-22 and is not a return metric.
+- Annual-return population standard deviation from rounded rows: 16.69%; this is a calculation, not an issuer 3-year volatility statistic.
+- Official daily NAV history sufficient to reproduce max drawdown and recovery: ไม่พบข้อมูลที่ยืนยันได้. OTC quote history is not used for NAV TR.
+
+### DXJJF Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from check-etf-performance/workflow.md before writing: ticker/alias and exchange resolution, passive-equity classification, NAV Total Return definition, distributions and expenses, annual rows and complete-year eligibility, normalized endpoints and formula, S&P 500 basis/window, visible as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, existing-page ownership, and link targets.
 - Local verdict: PASS; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable lean workflow.
 ## ISRVF Sequential Queue Record
 
