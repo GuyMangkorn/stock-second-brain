@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `57/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `58/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -55,6 +55,7 @@ tags:
 | CXSE | supported | NASDAQ:CXSE | China | -3.69% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/cxse | passive/index-tracking China equity ETF; official rolling 10Y NAV TR CAGR 6.85% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 82.98% / CAGR 6.23%; 2021-2025 CAGR -8.00%; 2015-07-01 objective/index change disclosed; current standardized YTD -3.69% as of 2026-06-30 |
 | ADVE | unsupported ETF type | NYSE Arca:ADVE | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-dividend-active-etf/ | Matthews identifies ADVE as an unconstrained all-cap active Asia equity ETF with a quality bias; official strategy requires at least 80% in dividend-paying equity securities; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | FLAX | supported | NYSE Arca:FLAX | Asia ex Japan | 24.71% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26346/SINGLCLASS/franklin-ftse-asia-ex-japan-etf/FLAX | passive/index-tracking Asia ex Japan equity ETF; official inception 2018-02-06; 10-year field `—`; available-period NAV TR CAGR 7.85% for 2018-02-06 to 2026-06-30; official 2019-2025 NAV rows compound to 77.17% / CAGR 8.51%; current standardized YTD 24.71% |
+| VGDTF | supported | XETRA:VJPA | Japan | 15.27% (2026-06-30) | https://www.vanguard.co.uk/professional/product/etf/equity/9674/vanguard-ftse-japan-ucits-etf-usd-accumulating | OTC alias cross-checked to Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN IE00BFMXYX26; official Deutsche Börse EUR line VJPA; passive physical/index-tracking equity; inception 2019-09-24; 10-year field `—`; since-inception NAV TR CAGR 9.96%; official KIID 2020-2025 calendar rows; current standardized YTD 15.27% |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -144,6 +145,50 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period date window, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, primary region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## VGDTF Sequential Queue Record
+
+- Input row: `58/125`; input ticker: `VGDTF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `XETRA:VJPA`; the official Vanguard factsheet maps share class ISIN `IE00BFMXYX26` to the EUR Deutsche Börse trading line `VJPA` and also lists the same share class on Borsa Italiana as `VJPA`. Because the input is an OTC alias labelled as the EUR accumulating line, the canonical record uses the Deutsche Börse/Xetra line and retains `VGDTF` as the input alias. The OTC alias cross-check is secondary; NAV TR data comes from Vanguard.
+- Type gate: Vanguard identifies the fund as an equity ETF using a passive/indexing approach, physical acquisition of FTSE Japan Index constituents, and sampling only when full replication is not practicable. It is not bond, commodity, currency, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock exposure.
+- Mandatory 10-year coverage audit: share-class inception is `2019-09-24`; the June 2026 factsheet reports 10-year NAV performance as `—`, so `10-year NAV TR unavailable`. Available-period official NAV TR coverage is `2019-09-24` to `2026-06-30`, approximately `6.77` elapsed years.
+- Official available-period performance: Vanguard reports NAV Total Return since-inception CAGR `9.96%`, net of fees with gross income reinvested. Raw NAV TR start/end values are not disclosed. A normalized calculation from the official CAGR gives `100.00` to approximately `190.09`; this is explicitly a calculated normalized illustration, not a raw endpoint or proxy.
+- Official calendar observations: KIID rows for complete years `2020-2025` are reported to one decimal: `14.1%`, `1.1%`, `-15.9%`, `19.5%`, `7.7%`, and `25.2%`, respectively. These rounded rows compound to approximately `56.32%` / CAGR `7.73%`; common `2021-2025` rows compound to approximately `37.00%` / CAGR `6.50%`.
+- S&P 500 comparison: cached USD Total Return rows are used for complete calendar years `2020-2025` and `2021-2025`; VJPA trails by approximately `7.35 pp` and `7.93 pp` CAGR, respectively. The 2026 S&P row is not used because the current-year cache is not complete.
+- Official current observation: NAV TR YTD `15.27%` as of `2026-06-30`; latest issuer NAV `US$81.79` as of `2026-07-22`; 476 stocks and Japan exposure `100.00%` as of `2026-06-30`; P/E `18.9x` and P/B `1.9x` as of `2026-06-30`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### VGDTF / VJPA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `XETRA:VJPA` | [Vanguard FTSE Japan UCITS ETF (USD) Accumulating product page](https://www.vanguard.co.uk/professional/product/etf/equity/9674/vanguard-ftse-japan-ucits-etf-usd-accumulating) | Official share-class identity, passive/index classification, physical method, FTSE Japan benchmark, inception, current NAV, holdings, valuation and exchange-code routes | Page accessed `2026-07-24`; current NAV `2026-07-22`; portfolio/valuation data `2026-06-30` |
+| `XETRA:VJPA` | [Vanguard FTSE Japan UCITS ETF June 2026 factsheet](https://fund-docs.vanguard.com/FTSE_Japan_UCITS_ETF_USD_Accumulating_9674_EU_INT_EN.pdf) | Official ISIN, Deutsche Börse EUR VJPA mapping, OCF, available-period NAV TR CAGR, annualized performance and rolling-period data | Factsheet dated `2026-06-30`; performance calculated on closing NAV `2026-06-30` |
+| `XETRA:VJPA` | [Vanguard KIID for ISIN IE00BFMXYX26](https://fund-docs.vanguard.com/ie00bfmxyx26-en.pdf) | Official calendar-year fund/index returns for 2020-2025; rounded one-decimal rows | KIID accessed `2026-07-24`; calendar rows through `2025` |
+| `OTC:VGDTF` | [OTC alias cross-check](https://stockanalysis.com/quote/otc/VGDTF/) | Secondary mapping evidence for the input OTC alias; not used for NAV TR or performance calculations | Page accessed `2026-07-24`; delayed market-data page |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### VGDTF / VJPA Raw Observations And Calculations
+
+| Year | VJPA NAV TR | FTSE Japan Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2019 | not disclosed (partial inception year) | not disclosed | not comparable; ETF partial |
+| 2020 | 14.1% | 14.2% | 18.40% |
+| 2021 | 1.1% | 1.2% | 28.71% |
+| 2022 | -15.9% | -15.8% | -18.11% |
+| 2023 | 19.5% | 19.6% | 26.29% |
+| 2024 | 7.7% | 7.8% | 25.02% |
+| 2025 | 25.2% | 25.3% | 17.88% |
+| 2026 YTD | 15.27% | not disclosed in reviewed capture | not comparable; current year not cached |
+
+- Available-period official NAV TR CAGR: `9.96%`; actual date window `2019-09-24` to `2026-06-30`; elapsed years approximately `6.77`; normalized calculated endpoint approximately `190.09` from a `100.00` starting value; raw NAV endpoints `not disclosed`.
+- Complete-calendar `2020-2025`: VJPA rounded-row cumulative approximately `56.32%`, CAGR `7.73%`; S&P 500 TR cumulative `132.26%`, CAGR `15.08%`; difference approximately `-7.35 pp`.
+- Common `2021-2025`: VJPA rounded-row cumulative approximately `37.00%`, CAGR `6.50%`; S&P 500 TR cumulative `96.17%`, CAGR `14.43%`; difference approximately `-7.93 pp`.
+- Current standardized NAV TR YTD: `15.27%` as of `2026-06-30`. The issuer page's current NAV observation at `2026-07-22` is retained separately from the month-end performance convention.
+
+### VGDTF / VJPA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias/share-class/ISIN mapping, canonical exchange selection from issuer-listed EUR line, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-row precision caveat, available-period date window, normalized-endpoint disclosure, S&P 500 basis/window, current-YTD as-of date, Japan region assignment, canonical filename, geography tags, breadcrumbs, stale unresolved-state replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. The prior `2026-07-23` unresolved record is superseded by this issuer/share-class mapping; the underlying OTC alias remains disclosed as a gap in the source map.
 
 ## FLJH Sequential Queue Record
 

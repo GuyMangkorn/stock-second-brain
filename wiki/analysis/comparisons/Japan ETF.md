@@ -28,6 +28,7 @@ tags:
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
 | VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan single-country large/mid-cap equity, USD distributing | 9.45% | not disclosed (rolling periods) | 16.30% | [[ETF_LSE_VDJP Performance]] |
 | VFJUF / VJPU | Vanguard FTSE Japan UCITS ETF - USD Hedged Accumulating | Japan single-country large/mid-cap equity, USD hedged accumulating | not applicable (<10y history) | not disclosed (rolling periods) | 19.41% | [[ETF_LSE_VJPU Performance]] |
+| VGDTF / VJPA | Vanguard FTSE Japan UCITS ETF - USD Accumulating | Japan single-country large/mid-cap equity, physical/index-tracking; history under 10 years | not applicable (<10y history) | 6.50% | 15.27% | [[ETF_XETRA_VJPA Performance]] |
 | GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan rules-based smart-beta equity / index-tracking | 9.29% | 6.62% | 12.86% | [[ETF_NYSE_ARCA_GSJY Performance]] |
 | IMSCF / CJPU | iShares MSCI Japan UCITS ETF | Japan single-country large/mid-cap equity, USD accumulating | 9.46% | 6.27% | 12.11% | [[ETF_LSE_CJPU Performance]] |
 | IHRMF / IJPU | iShares MSCI Japan UCITS ETF USD (Dist) | Japan single-country large/mid-cap equity, USD distributing | 9.36% | 6.21% | 15.45% | [[ETF_LSE_IJPU Performance]] |
@@ -60,6 +61,7 @@ YTD อยู่ที่ 18.81% ณ 2026-07-17; SJPA/IHREF current date-to-date
 | VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan equity / passive physical index-tracking | 9.45% | not disclosed (rolling periods) | 16.30% | [[ETF_LSE_VDJP Performance]] |
 | IMSCF / CJPU | iShares MSCI Japan UCITS ETF | Japan equity / passive physical-replicated index-tracking | 9.46% | 6.27% | 12.11% | [[ETF_LSE_CJPU Performance]] |
 | IHRMF / IJPU | iShares MSCI Japan UCITS ETF USD (Dist) | Japan equity / passive physical-replicated index-tracking | 9.36% | 6.21% | 15.45% | [[ETF_LSE_IJPU Performance]] |
+| VGDTF / VJPA | Vanguard FTSE Japan UCITS ETF - USD Accumulating | Japan equity / passive physical index-tracking; history under 10 years | not applicable (<10y history) | 6.50% | 15.27% | [[ETF_XETRA_VJPA Performance]] |
 | EWJV | iShares MSCI Japan Value ETF | Japan value-factor equity / passive index-tracking | not applicable (<10y history) | 12.96% | 18.04% | [[ETF_NASDAQ_EWJV Performance]] |
 | VFJUF / VJPU | Vanguard FTSE Japan UCITS ETF - USD Hedged Accumulating | Japan equity / passive physical index-tracking; history under 10 years | not applicable (<10y history) | not disclosed (rolling periods) | 19.41% | [[ETF_LSE_VJPU Performance]] |
 
