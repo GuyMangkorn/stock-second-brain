@@ -24,6 +24,7 @@ tags:
 | ISSSF | supported | LSE:SAUS | Australia | 10.27% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251851/ishares-msci-australia-ucits-etf | OTC alias; official rolling 10Y NAV TR 121.17% / CAGR 8.26% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | SCJ | supported | NYSE Arca:SCJ | Japan | 16.10% (2026-07-21) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | official rolling 10Y NAV TR 119.60% / CAGR 8.18% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | CQQQ | supported | NYSE Arca:CQQQ | China | not disclosed (not disclosed) | https://www.invesco.com/us/en/financial-products/etfs/invesco-china-technology-etf.html | official complete calendar NAV TR rows 2016-2025; 10Y calendar CAGR 4.44%; predecessor/index methodology breaks disclosed; current NAV/YTD not disclosed |
+| ISMJF | supported | LSE:CPXJ | Asia-Pacific | 8.15% (2026-07-08) | https://www.ishares.com/uk/professional/en/products/253735/ishares-core-msci-pacific-ex-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias; official rolling 10Y NAV TR 108.94% / CAGR 7.65% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 
 ## FLKR Sequential Queue Record
 
@@ -61,6 +62,48 @@ tags:
 ### FLKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## ISMJF Sequential Queue Record
+
+- Input row: `23/125`; input ticker: `ISMJF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:CPXJ`; iShares' official listing table maps the input OTC alias to London Stock Exchange ticker `CPXJ`, ISIN `IE00B52MJY50`. The official product page identifies the share class as iShares Core MSCI Pacific ex-Japan UCITS ETF, issued by iShares VII plc. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page lacked annual rows, inception, benchmark and rolling performance. Rechecking the official iShares product/performance view and factsheet confirms physical/replicated passive equity structure, inception `2010-01-12`, and official 10.00-year NAV TR coverage; this was a page gap, not a history gap.
+- Official rolling performance: iShares reports NAV Total Return cumulative `108.94%` and annualised `7.65%` for `2016-06-30` to `2026-06-30`. Normalized TR is `100.00` to `208.94`; actual years `10.00`.
+- Official annual observations: iShares calendar NAV rows `2016-2025` and issuer benchmark rows were captured from the official performance view. The source states performance is NAV-based with gross income reinvested where applicable.
+- Official current observation: iShares reports NAV `US$237.50` and NAV Total Return YTD `8.15%` as of `2026-07-08`; market-price return is kept separate.
+
+### ISMJF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:CPXJ` | [iShares CPXJ product and performance page](https://www.ishares.com/uk/professional/en/products/253735/ishares-core-msci-pacific-ex-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y) | Canonical identity/listing, passive physical/replicated classification, benchmark, inception, fee, holdings, annual NAV TR, rolling 10Y and current NAV/YTD | Page accessed `2026-07-24`; rolling summary `2026-06-30`; current NAV/YTD `2026-07-08` |
+| `LSE:CPXJ` | [iShares CPXJ factsheet](https://www.ishares.com/nl/professionele-belegger/nl/literature/fact-sheet/cspxj-ishares-core-msci-pacific-ex-japan-ucits-etf-fund-fact-sheet-en-nl.pdf?siteEntryPassthrough=true&switchLocale=y) | Corroborates passive structure, benchmark, launch/fee and NAV-return basis | Issuer factsheet 2026-Q1/2026-03-31 |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### ISMJF Raw Observations And Calculations
+
+| Year | ISMJF / CPXJ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.70% | 11.96% |
+| 2017 | 25.80% | 21.83% |
+| 2018 | -10.40% | -4.38% |
+| 2019 | 18.20% | 31.49% |
+| 2020 | 6.40% | 18.40% |
+| 2021 | 4.70% | 28.71% |
+| 2022 | -6.10% | -18.11% |
+| 2023 | 6.30% | 26.29% |
+| 2024 | 4.50% | 25.02% |
+| 2025 | 20.40% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+108.94%` with CAGR `7.65%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `208.94`, actual years `10.00`.
+- Official calendar rows `2016-2025` compound to `+100.75%` and annualize to `7.22%` over 10 complete calendar years. Common rows `2021-2025` compound to `+31.49%` and annualize to `5.63%`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; ISMJF/CPXJ trails by approximately `8.80 pp` CAGR.
+- Official current NAV TR YTD is `+8.15%` as of `2026-07-08`; market-price return is kept separate. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### ISMJF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## CQQQ Sequential Queue Record

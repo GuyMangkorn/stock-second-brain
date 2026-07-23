@@ -42,6 +42,7 @@ tags:
 | GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.94% | 4.20% | 12.56% | [[ETF_NYSE_ARCA_GMF Performance]] |
 | IHSEF | IShares Plc. | Asia-Pacific equity / index-tracking | not disclosed | 9.70% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | not disclosed | 6.25% | 13.97% | [[ETF_NYSE_ARCA_IPAC Performance]] |
-| ISMJF | IShares VII PLC | Asia-Pacific equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_LSE_CPXJ Performance]] |
+| ISMJF | iShares Core MSCI Pacific ex-Japan UCITS ETF | Asia-Pacific equity / index-tracking | 7.65% | 5.63% | 8.15% | [[ETF_LSE_CPXJ Performance]] |
+| ISMJF | iShares Core MSCI Pacific ex-Japan UCITS ETF | Asia-Pacific equity / index-tracking | 7.65% | 5.63% | 8.15% | [[ETF_LSE_CPXJ Performance]] |
 | VPL | Vanguard FTSE Pacific ETF | Asia-Pacific equity / index-tracking | 10.74% | 6.05% | 19.62% | [[ETF_NYSE_ARCA_VPL Performance]] |
 | WDAF | WisdomTree Asia Defense Fund | Asia-Pacific equity / index-tracking | not disclosed | not disclosed | 6.77% | [[ETF_NASDAQ_WDAF Performance]] |
