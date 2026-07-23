@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: China
-updated: 2026-07-19
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/China
@@ -21,6 +21,7 @@ tags:
 | FXI | iShares China Large-Cap ETF | China single-country large-cap equity | 1.75% | -1.67% | -9.28% | [[ETF_NYSE_ARCA_FXI Performance]] |
 | KWEB | KraneShares CSI China Internet ETF | China internet single-country equity | -0.85% | -11.89%* | -28.96% | [[ETF_NYSE_ARCA_KWEB Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
+| CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -41,7 +42,7 @@ tags:
 | ASHS | Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF | China equity / index-tracking | not disclosed | not disclosed | 3.36% | [[ETF_NYSE_ASHS Performance]] |
 | CHIQ | Global X MSCI China Consumer Discretionary ETF | China equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_CHIQ Performance]] |
 | CNQQ | Rayliant-ChinaAMC Transformative China Tech ETF | China equity / index-tracking | not disclosed | not disclosed | 14.95% | [[ETF_NASDAQ_CNQQ Performance]] |
-| CNXT | VanEck ChiNext Innovators ETF | China equity / index-tracking | not disclosed | not disclosed | 18.65% | [[ETF_NYSE_ARCA_CNXT Performance]] |
+| CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | CNYA | iShares MSCI China A ETF | China equity / index-tracking | not disclosed | not disclosed | 1.13% | [[ETF_CBOE_BZX_CNYA Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 | CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | not disclosed | not disclosed | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |

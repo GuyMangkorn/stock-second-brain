@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 23
-remaining_count: 102
-queue_policy: sequential; one ticker per user continuation
+processed_count: 24
+remaining_count: 101
+queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-18` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `24` แล้ว.
 
 ## Terminal status register
 
@@ -39,10 +39,11 @@ updated: 2026-07-24
 | 21 | SCJ | `completed_10Y` | `NYSE Arca:SCJ` | Passive/index-tracking Japan small-cap equity ETF; official rolling 10Y NAV TR cumulative `119.60%` / CAGR `8.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `92.14%` / CAGR `6.75%`; 2021-2025 CAGR `5.20%`; current NAV TR YTD `16.10%` as of 2026-07-21. | [[ETF_NYSE_ARCA_SCJ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 22 | CQQQ | `completed_10Y` | `NYSE Arca:CQQQ` | Passive/full-replication China technology equity ETF; official complete calendar NAV TR rows 2016-2025 compound to `54.48%` / CAGR `4.44%`; 2021-2025 CAGR `-8.27%`; current NAV/YTD `ไม่พบข้อมูลที่ยืนยันได้`; predecessor and index-methodology breaks are disclosed. | [[ETF_NYSE_ARCA_CQQQ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 23 | ISMJF | `completed_10Y` | `LSE:CPXJ` | OTC alias for iShares Core MSCI Pacific ex-Japan UCITS ETF; official rolling 10Y NAV TR cumulative `108.94%` / CAGR `7.65%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `100.75%` / CAGR `7.22%`; 2021-2025 CAGR `5.63%`; current NAV TR YTD `8.15%` as of 2026-07-08. | [[ETF_LSE_CPXJ Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 24 | CNXT | `completed_10Y` | `NYSE Arca:CNXT` | Passive/index-tracking China A-share/ChiNext equity ETF; official rolling 10Y NAV TR CAGR `7.37%` for 2016-06-30 to 2026-06-30; raw endpoints and calendar-year NAV rows not disclosed; current NAV TR YTD `16.05%` as of 2026-07-22; official methodology/index break disclosed from 2021-12-10. | [[ETF_NYSE_ARCA_CNXT Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `23/125`
-- Next ticker: `CNXT` (row `24`)
+- Completed: `24/125`
+- Next ticker: `EEMA` (row `25`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `ISMJF` was searched, compared, dispatched, or processed in this round.
+- No ticker after `CNXT` was searched, compared, dispatched, or processed in this round.

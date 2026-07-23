@@ -64,6 +64,47 @@ tags:
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
+## CNXT Sequential Queue Record
+
+- Input row: `24/125`; input ticker: `CNXT`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:CNXT`; VanEck's official product page and factsheet identify `CNXT` on NYSE Arca, inception `2014-07-23`, passive/index-tracking equity exposure, and the `ChiNext Index (SZ988107)`. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page had stale YTD data and no benchmark, inception, rolling 10-year result, or annual table. Rechecking the current official product page and factsheet confirms a genuine `10.00` elapsed-year NAV TR window; this was a page gap, not a history gap. The issuer also discloses a methodology/index change: before market close `2021-12-10`, the table reflects SME-ChiNext 100 Index (CNI6109); thereafter it reflects ChiNext Index (SZ988107).
+- Official rolling performance: VanEck reports CNXT NAV average annual total return `7.37%` for the month ended `2026-06-30`, used as the 10-year CAGR for `2016-06-30` to `2026-06-30`. Raw start/end NAV TR values are not disclosed. Normalized TR is `100.00` to `203.62`, calculated as `100 × (1 + 7.37%)^10` from the rounded issuer CAGR and explicitly not treated as an official endpoint.
+- Official calendar-year NAV rows: not disclosed in the reviewed issuer capture, so 2016-2025 CNXT rows, 2021-2025 CAGR, best/worst years, and common-window cumulative return remain `not disclosed`. S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`.
+- Official current observation: VanEck reports NAV `US$51.14` and NAV YTD `16.05%` as of `2026-07-22`; net expense ratio `0.65%`, gross `1.00%`, and 99 holdings as of the same date. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### CNXT Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:CNXT` | [VanEck CNXT product and performance page](https://www.vaneck.com/us/en/investments/chinext-innovators-etf-cnxt/) | Fund identity, exchange, passive/index classification, benchmark, inception, rolling NAV TR CAGR, current NAV/YTD, fees, holdings and methodology break | Page accessed `2026-07-24`; rolling/annual performance `2026-06-30`; current NAV/YTD and holdings `2026-07-22` |
+| `NYSE Arca:CNXT` | [VanEck CNXT factsheet](https://www.vaneck.com/us/en/investments/chinext-innovators-etf-cnxt-fact-sheet.pdf/) | Corroborates index, inception, NAV return basis, fees, holdings and issuer performance table | Factsheet as of `2026-06-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### CNXT Raw Observations And Calculations
+
+| Year | CNXT NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not disclosed | 11.96% |
+| 2017 | not disclosed | 21.83% |
+| 2018 | not disclosed | -4.38% |
+| 2019 | not disclosed | 31.49% |
+| 2020 | not disclosed | 18.40% |
+| 2021 | not disclosed | 28.71% |
+| 2022 | not disclosed | -18.11% |
+| 2023 | not disclosed | 26.29% |
+| 2024 | not disclosed | 25.02% |
+| 2025 | not disclosed | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `7.37%` for `2016-06-30` to `2026-06-30`; actual years `10.00`; normalized end `203.62` is derived from the rounded CAGR, not an official raw endpoint.
+- 2021-2025 common-window CAGR and cumulative return: `not disclosed` because annual CNXT NAV TR rows are not disclosed.
+- Current NAV TR YTD is `16.05%` as of `2026-07-22`; market-price return is kept separate. Daily NAV history for max drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### CNXT Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, calendar-row gap, S&P 500 basis/window, methodology/index break, as-of dates, rankings, filenames, China region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
 ## ISMJF Sequential Queue Record
 
 - Input row: `23/125`; input ticker: `ISMJF`; terminal status: `completed_10Y`.
