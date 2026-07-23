@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `32/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `33/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -31,6 +31,7 @@ tags:
 | MINV | unsupported ETF type | NYSE Arca:MINV | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-innovators-active-etf/ | Matthews identifies MINV as an active, high-conviction, all-cap fundamental equity ETF; active share 74.8% as of 2026-06-30; passive ETF scope excludes active funds |
 | IMSCF | supported | LSE:CJPU | Japan | 12.11% (2026-07-17) | https://www.ishares.com/uk/professional/en/products/253732/ishares-msci-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official LSE:CJPU USD listing; official rolling 10Y NAV TR CAGR 9.46% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
 | IHRMF | supported | LSE:IJPU | Japan | 15.45% (2026-07-22) | https://www.ishares.com/uk/professional/en/products/251866/ijpn?siteEntryPassthrough=true | OTC alias resolved to official LSE:IJPU USD listing; official rolling 10Y NAV TR CAGR 9.36% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
+| EWJV | supported | NASDAQ:EWJV | Japan | 18.04% (2026-07-22) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | official inception 2019-03-05; official 10-year field unavailable; available official since-inception NAV TR annualised 12.13% as of 2026-06-30; official 2021-2025 rows; passive index-tracking value equity |
 
 ## CSKRF Sequential Queue Record
 
@@ -261,6 +262,42 @@ tags:
 ### IHRMF Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## EWJV Sequential Queue Record
+
+- Input row: `33/125`; input ticker: `EWJV`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NASDAQ:EWJV`; iShares' official U.S. product page identifies the exchange, fund, benchmark `MSCI Japan Value Index (USD) (Net)`, asset class Equity, inception `2019-03-05`, and passive index-tracking objective. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page had only 2021-2025 rows and stale current YTD. Rechecking the issuer product page, current performance table, prospectus/factsheet links and inception date confirms actual history is under 10 years; official 10-year fields are `—`. This is a genuine history gap, so the status is `completed_available_period_no_10Y`, not `completed_10Y`.
+- Official available-period performance: iShares reports NAV Total Return since-inception annualised `12.13%` as of `2026-06-30`; the period is `2019-03-05` to `2026-06-30`, approximately `7.32` elapsed years. Raw NAV endpoints are not disclosed; normalized TR `100.00` to `231.22` is calculated from the rounded since-inception CAGR. `10-year NAV TR unavailable` is stated explicitly.
+- Official calendar observations: NAV rows 2021-2025 are `6.16%`, `-5.68%`, `23.05%`, `11.77%`, and `33.56%`; benchmark rows are `5.88%`, `-5.26%`, `23.11%`, `12.76%`, and `32.00%`. NAV rows compound to `83.93%` / CAGR `12.96%`; positive/negative years are `4/1`.
+- S&P 500 rows use the cached USD TR convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so EWJV trails by approximately `1.47 pp` CAGR.
+- Official current observations: NAV TR YTD is `18.04%` and NAV is `US$46.21`, both as of `2026-07-22`; expense ratio `0.15%`, holdings `109` as of `2026-07-22`, 3-year standard deviation `12.83%`, and 3-year beta `0.42` as of `2026-06-30`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EWJV Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:EWJV` | [iShares EWJV official product and performance page](https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf) | identity, exchange, inception, passive objective, benchmark, NAV TR, available-period performance, annual rows, current NAV/YTD, fee and risk data | Page accessed `2026-07-24`; since-inception/annual summary `2026-06-30`; NAV/YTD/holdings `2026-07-22` |
+| `NASDAQ:EWJV` | [iShares EWJV factsheet](https://www.ishares.com/us/literature/fact-sheet/ewjv-ishares-msci-japan-value-etf-fund-fact-sheet-en-us.pdf) | corroborates fund description, inception, benchmark, fee, value-factor structure and performance basis | Factsheet as of `2026-03-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | cached USD TR rows as of `2025-12-31` |
+
+### EWJV Raw Observations And Calculations
+
+| Year | EWJV NAV TR | MSCI Japan Value Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2021 | 6.16% | 5.88% | 28.71% |
+| 2022 | -5.68% | -5.26% | -18.11% |
+| 2023 | 23.05% | 23.11% | 26.29% |
+| 2024 | 11.77% | 12.76% | 25.02% |
+| 2025 | 33.56% | 32.00% | 17.88% |
+
+- Official available-period NAV TR annualised return is `12.13%` for `2019-03-05` to `2026-06-30`, actual years approximately `7.32`; normalized end `231.22` is calculated from the rounded issuer CAGR. `10-year NAV TR unavailable`.
+- Calendar rows `2021-2025` compound to `83.93%` / CAGR `12.96%`; this is not a 10-year result.
+
+### EWJV Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and mandatory 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, explicit no-10Y labeling, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## VNFGF Sequential Queue Record

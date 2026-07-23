@@ -81,6 +81,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_GSJY Performance]] | official 2016 / official rolling 2016-2026; official calendar rows 2017-2025 (2016 partial) | 9.29% | 6.62% | 12.86% | 2017 +24.52% / 2022 -15.60% | Japan rules-based smart-beta equity | factor/sector/country/FX-sensitive; rules-based index, not actively managed |
 | [[ETF_LSE_CJPU Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 9.46% | 6.27% | 12.11% | 2017 +23.4% / 2022 -17.0% | Japan single-country large/mid-cap equity, accumulating | country/sector/valuation/FX-sensitive; physical replicated |
 | [[ETF_LSE_IJPU Performance]] | official 2004 / official rolling 2016-2026; official 2016-2025 | 9.36% | 6.21% | 15.45% | 2017 +23.3% / 2022 -17.1% | Japan single-country large/mid-cap equity, distributing | country/sector/valuation/FX-sensitive; physical replicated |
+| [[ETF_NASDAQ_EWJV Performance]] | official 2019 / official 2021-2025; history under 10 years | not applicable (<10y history) | 12.96% | 18.04% | 2025 +33.56% / 2022 -5.68% | Japan value-factor equity | financials/value/country/FX-sensitive; 109 holdings |
 | [[ETF_LSE_DXJ Performance]] | official 2015 / official 2016-2025 | 13.94% | 24.77% | 21.90% | 2023 +40.46% / 2018 -18.71% | Japan single-country dividend/export tilt, USD/JPY hedged | country/sector/value/hedge-cost-sensitive; OTC alias liquidity gap |
 | [[ETF_LSE_VDJP Performance]] | official 2013 / official rolling Jun-2016 to May-2026; calendar rows not disclosed | 9.45% | not disclosed | 16.30% | 2025-26 +32.20% / 2021-22 -13.73% | Japan large/mid-cap equity, USD distributing | country/sector/FX-sensitive; OTC alias resolved to LSE:VDJP |
 | [[ETF_NYSE_ARCA_DBJP Performance]] | official 2011 / official 2016-2024; rolling 2016-2026 | 17.28% | not disclosed | not disclosed | 2023 +34.97% / 2018 -14.03% | Japan single-country equity, USD/JPY hedged | country/sector/hedging-cost-sensitive |
@@ -141,6 +142,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_GSJY Performance]] | 0.60% | -15.60% | 18.92% | 9.09% | 25.07% | 37.76% | 3 / 2 |
 | [[ETF_LSE_CJPU Performance]] | 1.2% | -17.0% | 19.8% | 8.2% | 24.5% | 35.55% | 4 / 1 |
 | [[ETF_LSE_IJPU Performance]] | 1.1% | -17.1% | 19.7% | 8.2% | 24.5% | 35.14% | 4 / 1 |
+| [[ETF_NASDAQ_EWJV Performance]] | 6.16% | -5.68% | 23.05% | 11.77% | 33.56% | 83.93% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VPL Performance]] | 1.51% | -15.21% | 15.58% | 1.27% | 33.16% | 34.15% | 4 / 1 |
 | [[ETF_LSE_IAPD Performance]] | 4.0% | -2.3% | 13.8% | 5.9% | 29.7% | 58.82% | 4 / 1 |
 | [[ETF_LSE_DXJ Performance]] | 18.07% | 6.48% | 40.46% | 30.55% | 31.19% | 202.44% | 5 / 0 |

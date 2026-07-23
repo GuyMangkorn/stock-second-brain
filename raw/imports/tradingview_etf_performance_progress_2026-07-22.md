@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 32
-remaining_count: 93
+processed_count: 33
+remaining_count: 92
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `32` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `33` แล้ว.
 
 ## Terminal status register
 
@@ -48,10 +48,11 @@ updated: 2026-07-24
 | 30 | MINV | `unsupported ETF type` | `NYSE Arca:MINV` | Matthews' official page identifies MINV as the Asia Innovators Active ETF with a high-conviction, all-cap fundamental strategy; active share is `74.8%` as of 2026-06-30. Active equity ETF is outside the passive/index-tracking equity scope; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 31 | IMSCF | `completed_10Y` | `LSE:CJPU` | OTC alias resolved to iShares' official LSE:CJPU USD listing for iShares MSCI Japan UCITS ETF, ISIN `IE00B53QDK08`; physical/replicated passive Japan equity ETF tracking MSCI Japan Index (Net). Official rolling 10Y NAV TR CAGR `9.46%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; 2021-2025 CAGR `6.27%`; current NAV TR YTD `12.11%` as of 2026-07-17. | [[ETF_LSE_CJPU Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 32 | IHRMF | `completed_10Y` | `LSE:IJPU` | OTC alias resolved to iShares' official LSE:IJPU USD listing for iShares MSCI Japan UCITS ETF USD (Dist), ISIN `IE00B02KXH56`; physical/replicated passive Japan equity ETF tracking MSCI Japan Index (Net). Official rolling 10Y NAV TR CAGR `9.36%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; 2021-2025 CAGR `6.21%`; current NAV TR YTD `15.45%` as of 2026-07-22. | [[ETF_LSE_IJPU Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 33 | EWJV | `completed_available_period_no_10Y` | `NASDAQ:EWJV` | Passive/index-tracking Japan value equity ETF; official inception `2019-03-05`, so `10-year NAV TR unavailable`. Official since-inception NAV TR annualised `12.13%` for 2019-03-05 to 2026-06-30 (about `7.32` years); official 2021-2025 NAV rows compound to `83.93%` / CAGR `12.96%`; current NAV TR YTD `18.04%` as of 2026-07-22. | [[ETF_NASDAQ_EWJV Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `32/125`
-- Next ticker: `EWJV` (row `33`)
+- Completed: `33/125`
+- Next ticker: `VGUDF` (row `34`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `IHRMF` was searched, compared, dispatched, or processed in this round.
+- No ticker after `EWJV` was searched, compared, dispatched, or processed in this round.

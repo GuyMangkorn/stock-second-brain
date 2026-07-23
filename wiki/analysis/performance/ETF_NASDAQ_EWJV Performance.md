@@ -5,12 +5,12 @@ entity_key: NASDAQ:EWJV
 ticker: EWJV
 exchange: NASDAQ
 fund: iShares MSCI Japan Value ETF
-tracked_index: not disclosed in compact capture
+tracked_index: MSCI Japan Value Index (USD) (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-07-23
-performance_as_of: 2026-07-21
-current_ytd_as_of: 2026-07-21
-source_batch: raw/imports/ETF_performance_sources_2026-07-23.md
+updated: 2026-07-24
+performance_as_of: 2026-06-30
+current_ytd_as_of: 2026-07-22
+source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -24,42 +24,47 @@ tags:
 
 ## Bottom line
 
-EWJV มี official annual NAV Total Return ในช่วง 2021-2025; เป็นบวก 4 ปีและลบ 1 ปี, best คือ 2025 33.56% และ worst คือ 2022 -5.68%. Current NAV YTD คือ 17.90% ณ 2026-07-21.
+EWJV เป็น passive/index-tracking NASDAQ equity ETF ที่ track MSCI Japan Value Index (USD) (Net). Fund inception คือ 2019-03-05 จึงยังไม่มี 10-year NAV Total Return: `10-year NAV TR unavailable`. Official iShares page ณ 2026-06-30 รายงาน available-period NAV TR since-inception annualized `12.13%` จาก 2019-03-05 ถึง 2026-06-30 หรือประมาณ `7.32` elapsed years. Raw NAV endpoints ไม่ได้เปิดเผย; normalized TR start `100.00` และ end ประมาณ `231.22` เป็นค่าคำนวณจาก CAGR ที่ issuer ปัดเศษ. Official calendar rows ที่ยืนยันได้คือ 2021-2025; current NAV TR YTD คือ `18.04%` ณ 2026-07-22.
 
 ## Performance check
 
 - entity_key: NASDAQ:EWJV
-- Inception: not disclosed in compact capture
-- Metric: NAV Total Return including reinvested distributions and fund expenses
-- Tracked index (issuer benchmark): not disclosed in compact capture
-- Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark)
-- 10-year NAV TR CAGR: not disclosed for reproducibility; raw endpoints not disclosed in source capture
-- Coverage/source note: official complete calendar years 2021-2025; S&P 500 rows reuse cached USD Total Return convention as of 2025-12-31; market-price return is not mixed
+- Inception: 2019-03-05
+- Metric: NAV Total Return; distributions reinvested and fund expenses deducted in the standard NAV total-return presentation; market-price return is separate
+- Tracked index: MSCI Japan Value Index (USD) (Net)
+- Structure: passive/index-tracking equity ETF; semi-annual distributions; expense ratio `0.15%`
+- 10-year NAV TR coverage: unavailable because actual fund history is under 10 years
+- Status: `completed_available_period_no_10Y`
+- Available-period NAV TR: 2019-03-05 to 2026-06-30; actual years approximately `7.32`; official since-inception annualized return `12.13%`
+- Normalized available-period TR: start `100.00`; end `231.22` (calculated as `100 × (1 + 12.13%)^7.32`; raw endpoints not disclosed)
+- Coverage/source note: official calendar rows are available for 2021-2025. This page does not label the available period as 10-year and does not backfill 2019-2020 calendar rows.
 
-| Year | ETF NAV TR | S&P 500 TR |
-|---|---:|---:|
-| 2021 | 6.16% | 28.71% |
-| 2022 | -5.68% | -18.11% |
-| 2023 | 23.05% | 26.29% |
-| 2024 | 11.77% | 25.02% |
-| 2025 | 33.56% | 17.88% |
+| Year | EWJV NAV TR | MSCI Japan Value Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2021 | 6.16% | 5.88% | 28.71% |
+| 2022 | -5.68% | -5.26% | -18.11% |
+| 2023 | 23.05% | 23.11% | 26.29% |
+| 2024 | 11.77% | 12.76% | 25.02% |
+| 2025 | 33.56% | 32.00% | 17.88% |
 
 ## Up years / Down years
 
-- Up years / Down years: 4 / 1
-- Best: 2025, 33.56%
-- Least positive: 2021, 6.16%
-- Worst: 2022, -5.68%
-- Least bad down year: 2022, -5.68%
-- Available-period cumulative/CAGR: 83.93% / 12.96% จาก published annual rows
-- Current YTD: 17.90% as of 2026-07-21
+- Up years / Down years: `4 / 1` over the five complete calendar years 2021-2025
+- Best complete calendar year: 2025, `33.56%`
+- Least positive complete calendar year: 2021, `6.16%`
+- Worst complete calendar year: 2022, `-5.68%`
+- Least bad down year: 2022, `-5.68%`
+- 2021-2025 NAV rows compound to `83.93%` / CAGR `12.96%`; this is a five-year calendar window, not a 10-year result
+- S&P 500 common-window CAGR is `14.43%`, so EWJV trails by approximately `1.47 pp` CAGR over 2021-2025
+- Current NAV TR YTD: `18.04%` as of 2026-07-22; NAV `US$46.21` as of 2026-07-22
 
 ## Risk read-through
 
-EWJV เป็น passive/index-tracking equity ETF ใน primary region Japan. Expense ratio, issuer benchmark, daily NAV Total Return drawdown และ recovery: not disclosed in this compact capture. ข้อจำกัดสำคัญ: fund under 10 years; raw 10Y not available.
+EWJV เป็น Japan value-factor equity ETF with meaningful financials and industrials exposure. Official holdings มี `109` ตัว ณ 2026-07-22; financials `33.95%`, industrials `18.91%`, consumer discretionary `14.97%`; 3-year standard deviation `12.83%` และ beta `0.42` ณ 2026-06-30. Daily NAV history สำหรับ max drawdown และ recovery: `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Sources
 
-- Official issuer source: https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf
-- Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-23]] | [[ETF Performance Index]]
+- [Official iShares EWJV product and performance page](https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf)
+- [Official iShares EWJV factsheet](https://www.ishares.com/us/literature/fact-sheet/ewjv-ishares-msci-japan-value-etf-fund-fact-sheet-en-us.pdf)
+- [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
+- ETF source batch: [[ETF_performance_sources_2026-07-24]] | [[ETF Performance Index]]
