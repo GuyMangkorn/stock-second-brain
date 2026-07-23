@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `54/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `55/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -52,6 +52,7 @@ tags:
 | NBCE | unsupported ETF type | NYSE Arca:NBCE | China | not applicable | https://www.nb.com/products/etfs/china-equity-etf | Neuberger identifies NBCE as an actively managed China equity ETF using fundamental/security-selection research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | JPY | unsupported ETF type | NASDAQ:JPY | Japan | not applicable | https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/etfs/japanese-equity-etf | Lazard identifies JPY as an actively managed Japanese equity ETF using bottom-up stock selection and fundamental research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | FPA | supported | NASDAQ:FPA | Asia-Pacific | 42.71% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FPA | official rolling 10Y NAV TR CAGR 10.31% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows from prospectus compound to 89.03% / CAGR 6.57%; 2021-2025 CAGR 7.23%; index changed 2015-10-13; current standardized YTD 42.71% as of 2026-06-30 |
+| CXSE | supported | NASDAQ:CXSE | China | -3.69% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/cxse | passive/index-tracking China equity ETF; official rolling 10Y NAV TR CAGR 6.85% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 82.98% / CAGR 6.23%; 2021-2025 CAGR -8.00%; 2015-07-01 objective/index change disclosed; current standardized YTD -3.69% as of 2026-06-30 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1473,6 +1474,54 @@ tags:
 ### FPA Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive/index-fund classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of date, index-methodology break, rankings, canonical filename, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## CXSE Sequential Queue Record
+
+- Input row: `55/125`; input ticker: `CXSE`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:CXSE`; WisdomTree's official product page and factsheet identify WisdomTree China ex-State-Owned Enterprises Fund, NASDAQ listing, CUSIP `97717X719`, inception `2012-09-19`, tracked index `WisdomTree China ex-State-Owned Enterprises Index` / Bloomberg symbol `CHXSOE`, and net expense ratio `0.32%` as of `2026-07-22`. No provider slug or guessed exchange is used.
+- Type gate: the official prospectus describes passive management/indexing with representative sampling and at least 80% of assets in index constituents or substantially identical securities. CXSE is a passive/index-tracking equity ETF, not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: rechecked the current WisdomTree product/performance page, 2025-12-31 official factsheet, 2024 and 2025 SEC summary prospectuses, and the official CHXSOE index page. The issuer's current month-end performance field confirms a genuine `10.00` elapsed-year NAV TR window from `2016-06-30` to `2026-06-30`; this is not a short-period proxy.
+- Official rolling performance: WisdomTree reports NAV Total Return CAGR `6.85%` for the 10-year window; raw start/end TR values and cumulative rolling return are not disclosed.
+- Official calendar observations: SEC prospectus charts provide CXSE NAV TR rows `2016-2024` of `-1.20%`, `78.04%`, `-27.95%`, `36.44%`, `60.58%`, `-23.77%`, `-28.89%`, `-18.67%`, and `9.59%`; the official WisdomTree factsheet as of `2025-12-31` provides 2025 `36.39%`. These compound to `82.98%` / CAGR `6.23%`; common `2021-2025` rows compound to `-34.10%` / CAGR `-8.00%`.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common `2021-2025` S&P CAGR is `14.43%`, so CXSE trails by approximately `22.43 pp` CAGR. S&P is kept separate from CXSE's issuer benchmark.
+- Methodology gap: the SEC prospectus states the fund objective changed on `2015-07-01`; performance before that date reflects the former WisdomTree China Dividend ex-Financials Fund and its former index. The 2016-2025 table is post-change history.
+- Official current observation: WisdomTree reports NAV TR YTD `-3.69%` as of `2026-06-30` and latest NAV `US$38.035` as of `2026-07-22`; later current date-to-date YTD and daily NAV history sufficient for max drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed official capture.
+
+### CXSE Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:CXSE` | [WisdomTree CXSE product/performance page](https://www.wisdomtree.com/us/products/equity/cxse) | Canonical listing, fund identity, passive/indexing objective, tracked index, inception, fee, rolling 10Y NAV TR, YTD, NAV and portfolio risk data | Page accessed `2026-07-24`; performance as of `2026-06-30`; product/NAV/holdings data through `2026-07-22` |
+| `NASDAQ:CXSE` | [WisdomTree CXSE factsheet as of 2025-12-31](https://www.wisdomtree.com/nb-no/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-cxse-1061.pdf) | Official 2025 NAV annual return and fund/exchange/fee cross-check | Factsheet as of `2025-12-31` |
+| `NASDAQ:CXSE` | [SEC CXSE summary prospectus, August 1, 2024](https://www.sec.gov/Archives/edgar/data/1350487/000121465924013472/cxse73024497k.htm) | Passive strategy, index definition, objective-change caveat and official 2016-2023 chart | Filing dated `2024-08-01`; chart through `2023-12-31` |
+| `NASDAQ:CXSE` | [SEC CXSE summary prospectus, August 1, 2025](https://www.sec.gov/Archives/edgar/data/1350487/000121465925011285/cxse73125497k.htm) | Official 2016-2024 chart and latest SEC performance disclosures | Filing dated `2025-08-01`; chart through `2024-12-31` |
+| `NASDAQ:CXSE` | [WisdomTree CHXSOE index page](https://www.wisdomtree.com/us/indexes/chxsoe) | Index definition, total-return convention and index facts | Page accessed `2026-07-24`; index facts through `2026-07-14` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### CXSE Raw Observations And Calculations
+
+| Year | CXSE NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -1.20% | 11.96% |
+| 2017 | 78.04% | 21.83% |
+| 2018 | -27.95% | -4.38% |
+| 2019 | 36.44% | 31.49% |
+| 2020 | 60.58% | 18.40% |
+| 2021 | -23.77% | 28.71% |
+| 2022 | -28.89% | -18.11% |
+| 2023 | -18.67% | 26.29% |
+| 2024 | 9.59% | 25.02% |
+| 2025 | 36.39% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `6.85%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`.
+- Official calendar rows `2016-2025` compound to `+82.98%` and annualize to `6.23%`; positive / negative years are `5 / 5`.
+- Common `2021-2025` CXSE rows compound to `-34.10%` / CAGR `-8.00%`; S&P 500 rows compound to `+96.17%` / CAGR `14.43%`; CXSE trails by approximately `22.43 pp` CAGR.
+- Official current NAV TR YTD is `-3.69%` as of `2026-06-30`; later current date-to-date YTD and daily NAV history sufficient for max drawdown and recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### CXSE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive/indexing classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of date, objective/index change, rankings, canonical filename, China region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## IPAC Sequential Queue Record

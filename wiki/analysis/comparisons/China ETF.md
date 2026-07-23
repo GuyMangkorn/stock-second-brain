@@ -24,6 +24,7 @@ tags:
 | CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | ASHS | Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF | China A-share small-cap equity / index-tracking | 1.96% | not disclosed | 3.36% | [[ETF_NYSE_ARCA_ASHS Performance]] |
 | PGJ | Invesco Golden Dragon China ETF | China equity / index-tracking | 0.35% | -12.65% | not disclosed | [[ETF_NASDAQ_PGJ Performance]] |
+| CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | 6.85% | -8.00% | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -34,6 +35,12 @@ tags:
 - [[ETF Region Index]]
 - [[ETF Performance Index]]
 
+
+## 2026-07-24 Verified Coverage Additions
+
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+|---|---|---|---:|---:|---:|---|
+| CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | 6.85% | -8.00% | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
 
 ## 2026-07-23 Verified Coverage Additions
 
@@ -47,7 +54,7 @@ tags:
 | CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | CNYA | iShares MSCI China A ETF | China equity / index-tracking | not disclosed | not disclosed | 1.13% | [[ETF_CBOE_BZX_CNYA Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
-| CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | not disclosed | not disclosed | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
+| CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | 6.85% | -8.00% | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
 | GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | FCA | First Trust China AlphaDEX Fund | China equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_FCA Performance]] |
 | FLCH | Franklin FTSE China ETF | China equity / index-tracking | not disclosed | not disclosed | -10.65% | [[ETF_NYSE_ARCA_FLCH Performance]] |

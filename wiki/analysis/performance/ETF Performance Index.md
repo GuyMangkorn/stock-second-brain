@@ -341,7 +341,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_CBOE_BZX_CNYA Performance]] — CNYA (China)
 - [[ETF_NYSE_ARCA_CQQQ Performance]] — CQQQ (China)
 - [[ETF_LSE_CSKR Performance]] — CSKRF (South Korea)
-- [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
 - [[ETF_NYSE_ARCA_DBJP Performance]] — DBJP (Japan)
 - [[ETF_NYSE_ARCA_DGIN Performance]] — DGIN (India)
 - [[ETF_NASDAQ_EEMA Performance]] — EEMA (Emerging Markets)
@@ -418,3 +417,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)
 - [[ETF_LSE_VAPU Performance]] — VFPAF / VAPU (Asia-Pacific)
 - [[ETF_NASDAQ_FPA Performance]] — FPA (Asia-Pacific)
+- [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
