@@ -417,3 +417,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
 - [[ETF_LSE_VJPU Performance]] — VFJUF / VJPU (Japan)
 - [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)
+- [[ETF_LSE_VAPU Performance]] — VFPAF / VAPU (Asia-Pacific)

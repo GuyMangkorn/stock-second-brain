@@ -24,6 +24,7 @@ tags:
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VPL | Vanguard FTSE Pacific ETF | Asia-Pacific equity / index-tracking | 10.74% | 6.05% | 19.62% | [[ETF_NYSE_ARCA_VPL Performance]] |
 | VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
+| VFPAF / VAPU | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Accumulating | Asia-Pacific equity / passive physical index-tracking | 10-year NAV TR unavailable | not disclosed | 47.09% | [[ETF_LSE_VAPU Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -41,6 +42,7 @@ tags:
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
 | IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 13.75% | [[ETF_NYSE_ARCA_IPAC Performance]] |
+| VFPAF / VAPU | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Accumulating | Asia-Pacific equity / passive physical index-tracking | 10-year NAV TR unavailable | not disclosed | 47.09% | [[ETF_LSE_VAPU Performance]] |
 
 
 ## 2026-07-23 Verified Coverage Additions

@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `50/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `51/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -48,6 +48,7 @@ tags:
 | MCHS | unsupported ETF type | NASDAQ:MCHS | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-innovators-active-etf/ | Matthews identifies MCHS as an active/fundamental China equity ETF; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | IPAC | supported | NYSE Arca:IPAC | Asia-Pacific | 13.75% (2026-07-22) | https://www.ishares.com/us/products/264619/ishares-core-msci-pacific-etf | official rolling 10Y NAV TR cumulative 141.81% / CAGR 9.23% for 2016-06-30 to 2026-06-30; official annual NAV/benchmark rows 2021-2025; 2016-2020 annual rows not disclosed; current YTD 13.75% as of 2026-07-22 |
 | ASIA | unsupported ETF type | NYSE Arca:ASIA | Asia-Pacific | not applicable | https://www.matthewsasia.com/funds/etfs/pacific-tiger-active-etf/ | Matthews identifies ASIA as Pacific Tiger Active ETF with a high-conviction, all-cap fundamental approach; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
+| VFPAF | supported | LSE:VAPU | Asia-Pacific | 47.09% (2026-06-30) | https://www.vanguard.co.uk/uk-fund-directory/product/etf/equity/9676/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-accumulating | OTC alias resolved to official USD LSE ticker VAPU for ISIN IE00BK5BQZ41; share-class inception 2019-09-24 means 10-year NAV TR unavailable; official available-period NAV TR CAGR 13.96% through 2026-06-30; rolling 12-month rows disclosed; current 2026-07-22 YTD not disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1339,6 +1340,49 @@ tags:
 ### ASIA Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## VFPAF Sequential Queue Record
+
+- Input row: `51/125`; input ticker: `VFPAF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `LSE:VAPU`; Vanguard's official USD accumulating share-class page and factsheet identify the fund as Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Accumulating, ISIN `IE00BK5BQZ41`, London Stock Exchange USD ticker `VAPU`, share-class inception `2019-09-24`, physical investment method, and OCF `0.15%`. `VFPAF` is retained as the input OTC alias; the canonical issuer listing is not an OTC provider slug.
+- Type gate: Vanguard describes a passive/indexing equity approach through physical acquisition or sampling of securities to track the FTSE Developed Asia Pacific ex Japan Index. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: rechecked the official product page, June 2026 factsheet and Vanguard Funds plc annual report/prospectus. The share-class inception is `2019-09-24`, and the official 10-year field is `—`; inception to `2026-06-30` is approximately `6.765` years. This is an actual history gap, not only a page gap, so `10-year NAV TR unavailable` is recorded.
+- Official available-period performance: Vanguard reports since-inception NAV TR CAGR `13.96%` for the available share-class history through `2026-06-30`; raw start/end TR values and cumulative return are not disclosed. The official five-year NAV TR CAGR is `11.95%` as of `2026-06-30`; it is not a 10-year result.
+- Official rolling 12-month observations: fund NAV TR net of expenses `44.95%`, `-21.91%`, `7.54%`, `7.31%`, `12.95%`, `72.75%` for `2020-07-01 to 2026-06-30` successive periods; corresponding benchmark rows are `45.13%`, `-21.88%`, `7.62%`, `7.41%`, `12.97%`, `72.97%`. Complete calendar-year NAV rows were not disclosed in the reviewed official capture.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; calendar reference `2020-2025` compounds to `132.26%` / CAGR `15.08%`, but this is not date-aligned with the fund's `2019-09-24` to `2026-06-30` available-period window.
+- Official current observation: Vanguard reports NAV `US$55.71` as of `2026-07-22` and standardized NAV TR YTD `47.09%` as of `2026-06-30`; current `2026-07-22` date-to-date YTD and daily NAV history sufficient for drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### VFPAF / VAPU Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:VAPU` | [Vanguard VAPU product page](https://www.vanguard.co.uk/uk-fund-directory/product/etf/equity/9676/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-accumulating) | Canonical share-class mapping, LSE ticker, ISIN, fund identity, passive/physical classification, benchmark, inception, current NAV, holdings and risk data | Page accessed `2026-07-24`; NAV `2026-07-22`; holdings/risk `2026-06-30` |
+| `LSE:VAPU` | [Vanguard VAPU June 2026 factsheet](https://fund-docs.vanguard.com/FTSE_Developed_Asia_Pacific_ex_Japan_UCITS_ETF_USD_Accumulating_9676_EU_INT_UK_EN.pdf) | Official NAV TR basis, available-period CAGR, five-year CAGR, YTD, rolling 12-month rows, fee and share-class details | Factsheet as of `2026-06-30` |
+| `Vanguard Funds plc` | [Vanguard Funds plc annual report](https://fund-docs.vanguard.com/etf-annual-report.pdf) | Annual-report cross-check for passive strategy, fund legal structure and tracking-error disclosure | Reporting period ended `2025-06-30` |
+| `Vanguard Funds plc` | [Vanguard ETF prospectus](https://fund-docs.vanguard.com/etf-prospectus-en.pdf) | Legal/fund objective and risk cross-check | Current document accessed `2026-07-24` |
+| `OTC:VFPAF` | [OTC VFPAF market identity cross-check](https://stockanalysis.com/quote/otc/VFPAF/) | Secondary alias/name/inception cross-check only; not used as NAV TR source | Page accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### VFPAF / VAPU Raw Observations And Calculations
+
+| Period | VAPU NAV TR | FTSE Developed Asia Pacific ex Japan Index TR |
+|---|---:|---:|
+| 2020-07-01 to 2021-06-30 | 44.95% | 45.13% |
+| 2021-07-01 to 2022-06-30 | -21.91% | -21.88% |
+| 2022-07-01 to 2023-06-30 | 7.54% | 7.62% |
+| 2023-07-01 to 2024-06-30 | 7.31% | 7.41% |
+| 2024-07-01 to 2025-06-30 | 12.95% | 12.97% |
+| 2025-07-01 to 2026-06-30 | 72.75% | 72.97% |
+
+- Available-period official NAV TR CAGR is `13.96%` for `2019-09-24` to `2026-06-30`, actual years `6.765`; raw endpoints/cumulative return are `not disclosed`.
+- Official five-year NAV TR CAGR is `11.95%` as of `2026-06-30`; the official 10-year field is `—`, so the performance page is explicitly marked `10-year NAV TR unavailable`.
+- S&P 500 cached rows for calendar `2020-2025` are `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; these compound to `132.26%` / CAGR `15.08%`, but the dates do not align with the fund's available-period window.
+- Official current NAV TR YTD is `47.09%` as of `2026-06-30`; current `2026-07-22` date-to-date YTD and daily NAV history sufficient for max drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### VFPAF / VAPU Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and mandatory 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period and rolling rows, S&P 500 basis/window, current-YTD gap, rankings, canonical filename, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, old-link check, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## IPAC Sequential Queue Record
