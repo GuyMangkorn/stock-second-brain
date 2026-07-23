@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 5
-remaining_count: 120
+processed_count: 6
+remaining_count: 119
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-23
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-5` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-6` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
 
 ## Terminal status register
 
@@ -21,10 +21,11 @@ updated: 2026-07-23
 | 3 | WDTRF | `completed_available_period_no_10Y` | `LSE:DXJA` | Input OTC alias for WisdomTree Japan Equity UCITS ETF - USD Hedged Acc; official annual NAV TR rows 2018-2025, available-period 2017-03-07 to 2026-06-30 (9.31 years), since-inception NAV TR CAGR `17.07%`, current YTD `21.90%` as of 2026-06-30; 10-year NAV TR unavailable. | [[ETF_LSE_DXJA Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 4 | FLTW | `completed_available_period_no_10Y` | `NYSE Arca:FLTW` | Passive/indexed Taiwan equity ETF; official NAV TR rows 2018-2025, available-period inception 2017-11-02 to 2026-06-30 (8.66 years), 2018-2025 annualized return `14.36%`, 2021-2025 CAGR `13.48%`, current YTD `63.10%` as of 2026-07-10; 10-year NAV TR unavailable. | [[ETF_NYSE_ARCA_FLTW Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 5 | ISRVF | `completed_10Y` | `LSE:IJPD` | Input OTC alias for iShares MSCI Japan USD Hedged UCITS ETF (Acc); official rolling 10Y NAV TR cumulative `381.35%` and CAGR `17.02%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; current YTD `17.84%` as of 2026-07-20. | [[ETF_LSE_IJPD Performance]] | [[ETF_performance_sources_2026-07-23]] |
+| 6 | EPP | `completed_10Y` | `NYSE Arca:EPP` | Official iShares passive/index-tracking equity ETF; official rolling 10Y NAV TR cumulative `103.63%` and CAGR `7.37%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; current YTD `11.23%` as of 2026-07-21. | [[ETF_NYSE_ARCA_EPP Performance]] | [[ETF_performance_sources_2026-07-23]] |
 
 ## Queue pointer
 
-- Completed: `5/125`
-- Next ticker: `EPP` (row `6`)
+- Completed: `6/125`
+- Next ticker: `DXJJF` (row `7`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `ISRVF` was searched, compared, dispatched, or processed in this round.
+- No ticker after `EPP` was searched, compared, dispatched, or processed in this round.

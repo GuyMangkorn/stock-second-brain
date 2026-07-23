@@ -51,7 +51,7 @@ tags:
 | ENZL | supported | NASDAQ:ENZL | New Zealand | 3.45% (2026-07-21) | https://www.ishares.com/us/products/239672/ishares-msci-new-zealand-capped-etf | raw 10Y endpoints not disclosed |
 | EPHE | supported | NYSE Arca:EPHE | Philippines | 3.93% (2026-07-21) | https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf | raw 10Y endpoints not disclosed; earlier annual rows not shown |
 | EPI | supported | NYSE Arca:EPI | India | -7.91% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/epi | raw 10Y endpoints not disclosed |
-| EPP | supported | NYSE Arca:EPP | Asia-Pacific | 10.77% (2026-07-17) | https://www.ishares.com/us/products/239674/ishares-msci-pacific-ex-japan-etf | annual rows and raw 10Y endpoints not disclosed |
+| EPP | supported | NYSE Arca:EPP | Asia-Pacific | 11.23% (2026-07-21) | https://www.ishares.com/us/products/239674/ishares-msci-pacific-ex-japan-etf | official rolling 10Y NAV TR cumulative 103.63% / CAGR 7.37%; annual rows 2016-2025; raw NAV endpoint levels not disclosed |
 | EWJV | supported | NASDAQ:EWJV | Japan | 17.90% (2026-07-21) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | fund under 10 years; raw 10Y not available |
 | EWM | supported | NYSE Arca:EWM | Malaysia | 4.62% (2026-07-17) | https://www.ishares.com/us/products/239669/EWM | raw 10Y endpoints not disclosed; earlier annual rows not surfaced |
 | EWS | supported | NYSE Arca:EWS | Singapore | 16.50% (2026-07-21) | https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf | raw 10Y endpoints not disclosed; earlier annual rows not shown |
@@ -203,6 +203,48 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, distributions, annual rows, rolling 10-year endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
 
+## EPP Sequential Queue Record
+
+- Input row: 6/125; input ticker: EPP; terminal status: completed_10Y.
+- Canonical entity key: NYSE Arca:EPP; the official iShares product page identifies the NYSE Arca listing, EPP ticker, fund identity, equity asset class, and MSCI Pacific ex Japan Index (Net). No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking developed Asia-Pacific equity ETF. The issuer objective is to track Pacific region developed-market equities excluding Japan; it is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock.
+- Inception: 2001-10-25. Expense ratio: 0.47%. Distribution frequency: semi-annual. Current NAV: US$55.53 as of 2026-07-22; current NAV Total Return YTD: 11.23% as of 2026-07-21.
+
+### EPP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:EPP | [iShares US EPP product page](https://www.ishares.com/us/products/239674/ishares-msci-pacific-ex-japan-etf) | Canonical listing, identity, asset class, tracked index, inception, current NAV/YTD, fee, holdings, exposure, risk and performance | Page accessed 2026-07-23; NAV 2026-07-22; YTD 2026-07-21; risk/portfolio fields 2026-06-30 and 2026-07-22 |
+| NYSE Arca:EPP | [iShares EPP professional performance page](https://www.ishares.com/ch/professionals/en/products/239674/ishares-msci-pacific-ex-japan-etf) | Official NAV Total Return basis, calendar rows 2016-2025 and rolling 10-year return | Performance as of 2026-06-30; 2016-2020 issuer display is one decimal; 2021-2025 rows are shown at two decimals in current rendering |
+| S&P 500 TR | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common-reference benchmark identity and annual rows | Cached USD Total Return rows as of 2025-12-31 |
+
+### EPP Raw Observations And Calculations
+
+| Year | EPP NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.40% | 11.96% |
+| 2017 | 25.40% | 21.83% |
+| 2018 | -10.70% | -4.38% |
+| 2019 | 17.90% | 31.49% |
+| 2020 | 6.00% | 18.40% |
+| 2021 | 4.42% | 28.71% |
+| 2022 | -6.45% | -18.11% |
+| 2023 | 5.92% | 26.29% |
+| 2024 | 4.04% | 25.02% |
+| 2025 | 20.16% | 17.88% |
+
+- Official rolling 10-year cumulative NAV Total Return: 103.63% as of 2026-06-30, represented by 2016-06-30 to 2026-06-30; actual elapsed years 10.00. Raw NAV endpoint levels are ไม่พบข้อมูลที่ยืนยันได้.
+- Normalized calculation used on the performance page: start 100.00; end 203.63; (203.63 / 100.00)^(1 / 10.00) - 1 = 7.37%. The normalized endpoints represent the issuer cumulative display, not published NAV levels.
+- Rounded complete calendar rows 2016-2025 compound to 94.42% and annualize to 6.87% over 10 years. Rows 2021-2025 compound to 29.35% and annualize to 5.28% over 5 years.
+- Up/down years among complete rows: 8 / 2. Best 2017 +25.40%; least positive 2024 +4.04%; worst 2018 -10.70%; least bad down year 2022 -6.45%.
+- Official current NAV Total Return YTD: 11.23% as of 2026-07-21. This is kept separate from the NAV level of US$55.53 as of 2026-07-22.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoints is ไม่พบข้อมูลที่ยืนยันได้; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is ไม่พบข้อมูลที่ยืนยันได้.
+
+### EPP Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from check-etf-performance/workflow.md before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, income reinvestment and expenses, annual rows and source precision, rolling 10-year coverage/endpoints/formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: PASS; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable lean workflow.
 ## ISRVF Sequential Queue Record
 
 - Input row: `5/125`; input ticker: `ISRVF`; terminal status: `completed_10Y`.

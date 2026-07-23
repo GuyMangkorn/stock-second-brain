@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Asia-Pacific
-updated: 2026-07-19
+updated: 2026-07-23
 tags:
   - analysis/etf-region
   - geography/Asia-Pacific
@@ -18,6 +18,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | DVYA | iShares Asia/Pacific Dividend ETF | developed Asia-Pacific dividend equity | 6.90% | 9.91% | 14.28% | [[ETF_NYSE_ARCA_DVYA Performance]] |
+| EPP | iShares MSCI Pacific ex Japan ETF | Asia-Pacific equity / index-tracking | 7.37% | 5.28% | 11.23% | [[ETF_NYSE_ARCA_EPP Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -35,7 +36,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | BBAX | JPMorgan BetaBuilders Developed Asia Pacific-ex Japan ETF | Asia-Pacific equity / index-tracking | not disclosed | 5.47% | 8.20% | [[ETF_NYSE_ARCA_BBAX Performance]] |
-| EPP | iShares MSCI Pacific Ex-Japan Index Fund | Asia-Pacific equity / index-tracking | not disclosed | not disclosed | 10.77% | [[ETF_NYSE_ARCA_EPP Performance]] |
+| EPP | iShares MSCI Pacific ex Japan ETF | Asia-Pacific equity / index-tracking | 7.37% | 5.28% | 11.23% | [[ETF_NYSE_ARCA_EPP Performance]] |
 | GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific equity / index-tracking | not disclosed | not disclosed | 12.56% | [[ETF_NYSE_ARCA_GMF Performance]] |
 | IHSEF | IShares Plc. | Asia-Pacific equity / index-tracking | not disclosed | 9.70% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | not disclosed | 6.25% | 13.97% | [[ETF_NYSE_ARCA_IPAC Performance]] |
