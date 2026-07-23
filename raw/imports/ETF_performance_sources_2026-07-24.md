@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `58/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `59/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -56,6 +56,7 @@ tags:
 | ADVE | unsupported ETF type | NYSE Arca:ADVE | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-dividend-active-etf/ | Matthews identifies ADVE as an unconstrained all-cap active Asia equity ETF with a quality bias; official strategy requires at least 80% in dividend-paying equity securities; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | FLAX | supported | NYSE Arca:FLAX | Asia ex Japan | 24.71% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26346/SINGLCLASS/franklin-ftse-asia-ex-japan-etf/FLAX | passive/index-tracking Asia ex Japan equity ETF; official inception 2018-02-06; 10-year field `—`; available-period NAV TR CAGR 7.85% for 2018-02-06 to 2026-06-30; official 2019-2025 NAV rows compound to 77.17% / CAGR 8.51%; current standardized YTD 24.71% |
 | VGDTF | supported | XETRA:VJPA | Japan | 15.27% (2026-06-30) | https://www.vanguard.co.uk/professional/product/etf/equity/9674/vanguard-ftse-japan-ucits-etf-usd-accumulating | OTC alias cross-checked to Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN IE00BFMXYX26; official Deutsche Börse EUR line VJPA; passive physical/index-tracking equity; inception 2019-09-24; 10-year field `—`; since-inception NAV TR CAGR 9.96%; official KIID 2020-2025 calendar rows; current standardized YTD 15.27% |
+| RAYJ | unsupported ETF type | NYSE Arca:RAYJ | Japan | not applicable | https://funds.rayliant.com/rayj/ | Rayliant identifies RAYJ as an active Japan equity strategy using SMDAM fundamental research and Rayliant quantitative models; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -189,6 +190,26 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias/share-class/ISIN mapping, canonical exchange selection from issuer-listed EUR line, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-row precision caveat, available-period date window, normalized-endpoint disclosure, S&P 500 basis/window, current-YTD as-of date, Japan region assignment, canonical filename, geography tags, breadcrumbs, stale unresolved-state replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. The prior `2026-07-23` unresolved record is superseded by this issuer/share-class mapping; the underlying OTC alias remains disclosed as a gap in the source map.
+
+## RAYJ Sequential Queue Record
+
+- Input row: `59/125`; input ticker: `RAYJ`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:RAYJ`; Rayliant's official fund page identifies the ticker and reports the primary exchange as NYSE, while the official prospectus identifies the principal listing exchange as NYSE Arca, Inc. The issuer-qualified canonical record uses `NYSE Arca:RAYJ`.
+- Type gate: Rayliant explicitly identifies RAYJ as an active strategy for pursuing growth in Japan's stock market. The strategy uses Sumitomo Mitsui DS Asset Management's fundamental research and local portfolio-management insights together with Rayliant's quantitative models. The official prospectus names Rayliant Investment Research as adviser and SMDAM as sub-adviser. This is active management, not passive/index tracking, so the workflow stops at the type gate.
+- Mandatory 10-year coverage audit: not applicable after the confirmed unsupported-type classification. No NAV Total Return history, annual-return table, S&P 500 comparison, or proxy was created.
+- Official page observations retained only for classification context: inception `2024-04-04`, net expense ratio `0.72%`, and NAV YTD `25.42%` as of `2026-06-30`; these figures are not used in a performance page because RAYJ is outside the supported ETF scope.
+
+### RAYJ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:RAYJ` | [Rayliant RAYJ official fund page](https://funds.rayliant.com/rayj/) | Canonical ticker/fund identity, exchange context, inception, active strategy, current facts and performance context | Page accessed `2026-07-24`; performance table as of `2026-06-30`; page last updated `2026-07-07` |
+| `NYSE Arca:RAYJ` | [RAYJ official prospectus](https://funds.rayliant.com/wp-content/uploads/ETF/RAYJ/Rayliant-RAYJ-Prospectus.pdf) | Principal listing exchange, adviser/sub-adviser and official active-fund description | Prospectus dated `2024-04-01`, supplemented `2024-07-29` |
+
+### RAYJ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, unsupported-type reason, no accidental performance-page creation, source URLs, ledger update, queue pointer, and no region/index navigation update for an unsupported ETF.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## FLJH Sequential Queue Record
 

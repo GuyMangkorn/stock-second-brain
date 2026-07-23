@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 58
-remaining_count: 67
+processed_count: 59
+remaining_count: 66
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `58` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `59` แล้ว.
 
 ## Terminal status register
 
@@ -74,11 +74,12 @@ updated: 2026-07-24
 | 56 | ADVE | `unsupported ETF type` | `NYSE Arca:ADVE` | Matthews Asia Dividend Active ETF; official issuer identifies an unconstrained all-cap, actively managed Asia equity strategy with a quality bias and at least 80% in dividend-paying equity securities. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 57 | FLAX | `completed_available_period_no_10Y` | `NYSE Arca:FLAX` | Passive/index-tracking Asia ex Japan equity ETF tracking FTSE Asia ex Japan Capped Index-NR; official inception `2018-02-06`, 10-year field `—`, and official available-period NAV TR CAGR `7.85%` from 2018-02-06 to 2026-06-30 (`8.39` years); official 2019-2025 NAV rows compound to `77.17%` / CAGR `8.51%`; 2021-2025 CAGR `3.86%`; current standardized NAV TR YTD `24.71%` as of 2026-06-30. | [[ETF_NYSE_ARCA_FLAX Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 58 | VGDTF | `completed_available_period_no_10Y` | `XETRA:VJPA` | OTC alias resolved to the Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN `IE00BFMXYX26`; official Deutsche Börse EUR trading line `VJPA`; passive physical/index-tracking Japan equity ETF; inception `2019-09-24`, 10-year field `—`, official available-period NAV TR CAGR `9.96%` from 2019-09-24 to 2026-06-30 (`6.77` years); official 2020-2025 KIID rows compound to approximately `56.32%` / CAGR `7.73%`; 2021-2025 approximately `6.50%`; current standardized NAV TR YTD `15.27%` as of 2026-06-30. | [[ETF_XETRA_VJPA Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 59 | RAYJ | `unsupported ETF type` | `NYSE Arca:RAYJ` | Rayliant SMDAM Japan Equity ETF; official issuer identifies an active Japan equity strategy combining SMDAM fundamental research and Rayliant quantitative models. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `58/125`
-- Next ticker: `RAYJ` (row `59`)
+- Completed: `59/125`
+- Next ticker: `THD` (row `60`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `VGDTF` was searched, compared, dispatched, or processed in this round.
+No ticker after `RAYJ` was searched, compared, dispatched, or processed in this round.
