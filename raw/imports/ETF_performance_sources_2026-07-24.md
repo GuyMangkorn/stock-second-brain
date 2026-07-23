@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `46/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `47/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -44,6 +44,7 @@ tags:
 | EPI | supported | NYSE Arca:EPI | India | -7.91% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/epi | official rolling 10Y NAV TR CAGR `9.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows; 2021-2025 CAGR `11.52%`; current NAV TR YTD `-7.91%` as of 2026-06-30 |
 | ASHS | supported | NYSE Arca:ASHS | China | 3.36% (2026-03-31) | https://etf.dws.com/download/asset/1bfed1b5-c933-4199-bdcc-30b0ed651740 | official rolling 10Y NAV TR CAGR `1.96%` for 2016-03-31 to 2026-03-31; annual NAV/index rows not disclosed in reviewed official capture; current NAV TR YTD `3.36%` as of 2026-03-31; 2026-06-30 current YTD not disclosed |
 | PGJ | supported | NASDAQ:PGJ | China | not disclosed | https://www.invesco.com/us/en/financial-products/etfs/invesco-golden-dragon-china-etf.html | official rolling 10Y NAV TR CAGR `0.35%` for 2015-12-31 to 2025-12-31; official 2016-2025 NAV/index/benchmark rows; 2021-2025 CAGR `-12.65%`; current 2026 NAV TR YTD not disclosed |
+| VFJUF | supported | LSE:VJPU | Japan | 19.41% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9541/ftse-japan-ucits-etf-usd-hedged-accumulating | OTC alias resolved to Vanguard FTSE Japan UCITS ETF USD Hedged Accumulating; official inception `2020-01-31`, `10-year NAV TR unavailable`; available-period NAV TR CAGR `20.29%` for 2020-01-31 to 2026-05-31; rolling 12-month NAV rows disclosed; current 2026-07-22 YTD not disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1253,4 +1254,46 @@ tags:
 ### PGJ Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, tracked-index and issuer-benchmark separation, annual rows, S&P 500 basis/window, current-YTD gap, rankings, filename, China region assignment, canonical geography tag, breadcrumbs, duplicate old-link removal, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## VFJUF Sequential Queue Record
+
+- Input row: `47/125`; input ticker: `VFJUF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `LSE:VJPU`; Vanguard's official product page and factsheet identify the fund as Vanguard FTSE Japan UCITS ETF - USD Hedged Accumulating, ISIN `IE00BFMXZJ56`, London Stock Exchange USD ticker `VJPU`, share-class inception `2020-01-31`, Vanguard Funds plc as legal entity, physical/index strategy, and OCF `0.13%`. `VFJUF` is retained as the input OTC alias; no provider slug or guessed exchange is used.
+- Type gate: official objective is passive/indexing through physical acquisition of securities to track the FTSE Japan Index; the USD share class uses currency hedging. It is an equity ETF and is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy.
+- Mandatory 10-year audit: rechecked the official product page, May 2026 factsheet and FY2025 annual report. The share class began on `2020-01-31`; the factsheet's 10-year field is `—`, and the annual report identifies USD-Hedged Accumulating since inception from `2020-01-31`. Therefore the 10-year gap is an actual history gap, not only a page gap.
+- Official available-period performance: Vanguard reports NAV TR since-inception CAGR `20.29%` for `2020-01-31` to `2026-05-31`, actual years approximately `6.33`; raw endpoints/cumulative return are not disclosed. Normalized end approximately `322.00` from the published rounded CAGR is a calculation, not a disclosed NAV endpoint.
+- Official rolling 12-month observations from the 2026-05-31 factsheet are `26.97%`, `1.54%`, `17.88%`, `39.31%`, `6.90%`, and `50.56%` for 2020-06-01 to 2026-05-31; corresponding hedged FTSE Japan Index returns are `27.16%`, `1.94%`, `18.26%`, `39.68%`, `6.83%`, and `51.02%`. Complete calendar-year NAV rows were not disclosed in the reviewed official capture, so no calendar-year CAGR or up/down count is fabricated.
+- S&P 500 TR uses cached USD rows as of `2025-12-31`; complete calendar years 2020-2025 compound to `132.26%` / CAGR `15.08%`. This is a reference-only comparison because dates do not match the fund's available-period window. Vanguard's official five-year NAV TR CAGR is `21.83%` as of `2026-05-31`; it is not a 10-year result.
+- Official current observation: NAV `US$81.79` as of `2026-07-22`; latest standardized NAV TR YTD `19.41%` as of `2026-05-31`; 2026-07-22 YTD and daily history sufficient for drawdown/recovery are not disclosed in the reviewed official capture.
+
+### VFJUF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:VJPU` | [Vanguard VJPU product page](https://www.vanguard.co.uk/professional/product/etf/equity/9541/ftse-japan-ucits-etf-usd-hedged-accumulating) | Canonical share-class mapping, LSE ticker, ISIN, fund identity, passive/physical classification, benchmark, inception, current NAV, holdings and risk data | Page accessed `2026-07-24`; NAV `2026-07-22`; holdings/risk `2026-06-30` |
+| `OTC:VFJUF` | [OTC VFJUF market identity cross-check](https://stockanalysis.com/quote/otc/VFJUF/) | Secondary exchange-alias cross-check linking the input OTC symbol to Vanguard FTSE Japan UCITS ETF; canonical issuer share class remains `LSE:VJPU` | Page accessed `2026-07-24`; delayed market page, not used for NAV TR |
+| `LSE:VJPU` | [Vanguard VJPU May 2026 factsheet](https://fund-docs.vanguard.com/FTSE_Japan_UCITS_ETF_USD_Hedged_Accumulating_9541_EU_INT_UK_EN.pdf) | Official NAV TR basis, available-period CAGR, five-year CAGR, YTD, rolling 12-month rows, fee and share-class details | Factsheet as of `2026-05-31` |
+| `Vanguard Funds plc` | [Vanguard Funds plc annual report](https://fund-docs.vanguard.com/etf-annual-report.pdf) | Annual-report cross-check for USD-Hedged Accumulating inception and NAV total-return treatment | Reporting period ended `2025-06-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### VFJUF Raw Observations And Calculations
+
+| Period | VJPU NAV TR | FTSE Japan Index Hedged in USD TR |
+|---|---:|---:|
+| 2020-06-01 to 2021-05-31 | 26.97% | 27.16% |
+| 2021-06-01 to 2022-05-31 | 1.54% | 1.94% |
+| 2022-06-01 to 2023-05-31 | 17.88% | 18.26% |
+| 2023-06-01 to 2024-05-31 | 39.31% | 39.68% |
+| 2024-06-01 to 2025-05-31 | 6.90% | 6.83% |
+| 2025-06-01 to 2026-05-31 | 50.56% | 51.02% |
+
+- Available-period official NAV TR CAGR is `20.29%` for `2020-01-31` to `2026-05-31`, actual years approximately `6.33`; normalized end is approximately `322.00` from `100 × (1 + 20.29%)^6.33`; raw endpoints are not disclosed.
+- Official five-year NAV TR CAGR is `21.83%` as of `2026-05-31`; the official 10-year field is `—`, so the page is explicitly marked `10-year NAV TR unavailable`.
+- S&P 500 cached rows for 2020-2025 are `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; these compound to `132.26%` / CAGR `15.08%`, but the date window is not aligned with the fund's available-period return.
+- Official current NAV TR YTD is `19.41%` as of `2026-05-31`; current `2026-07-22` YTD and daily history sufficient for max drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### VFJUF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE mapping, ISIN/share-class identity, passive-equity classification, inception and mandatory 10-year audit, official NAV TR/reinvestment/expense basis, rolling-period labels, available-period gap, S&P 500 basis/window, current-YTD as-of date, canonical filename, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

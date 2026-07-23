@@ -93,6 +93,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_FLJH Performance]] | official inception 2017 / official 2018-2025; history under 10 years | not applicable (<10y history) | 19.58% | 22.91% | 2023 +35.04% / 2018 -13.96% | Japan large/mid-cap equity, USD hedged | country/sector/hedge-cost/JPY-sensitive; 478 holdings; semi-annual rebalance |
 | [[ETF_LSE_DXJ Performance]] | official 2015 / official 2016-2025 | 13.94% | 24.77% | 21.90% | 2023 +40.46% / 2018 -18.71% | Japan single-country dividend/export tilt, USD/JPY hedged | country/sector/value/hedge-cost-sensitive; OTC alias liquidity gap |
 | [[ETF_LSE_VDJP Performance]] | official 2013 / official rolling Jun-2016 to May-2026; calendar rows not disclosed | 9.45% | not disclosed | 16.30% | 2025-26 +32.20% / 2021-22 -13.73% | Japan large/mid-cap equity, USD distributing | country/sector/FX-sensitive; OTC alias resolved to LSE:VDJP |
+| [[ETF_LSE_VJPU Performance]] | official 2020 / official available 2020-01 to 2026-05; history under 10 years | not applicable (<10y history) | not disclosed (rolling periods) | 19.41% | 2025-26 +50.56% / 2021-22 +1.54% | Japan large/mid-cap equity, USD hedged accumulating | country/sector/hedge-cost/JPY-sensitive; OTC alias resolved to LSE:VJPU |
 | [[ETF_NYSE_ARCA_DBJP Performance]] | official 2011 / official 2016-2024; rolling 2016-2026 | 17.28% | not disclosed | not disclosed | 2023 +34.97% / 2018 -14.03% | Japan single-country equity, USD/JPY hedged | country/sector/hedging-cost-sensitive |
 | [[ETF_LSE_DXJA Performance]] | official 2017 / official 2018-2025; available through 2026-06-30 | not applicable (<10y history) | 24.84% | 21.90% | 2023 +40.52% / 2018 -18.62% | Japan dividend/export equity, USD hedged, accumulating | country/sector/hedge-cost-sensitive; OTC alias/liquidity gap |
 | [[ETF_NYSE_ARCA_FLTW Performance]] | official 2017 / official 2018-2025; available through 2026-07-10 | not applicable (<10y history) | 13.48% | 63.10% | 2025 +31.91% / 2022 -27.74% | Taiwan single-country indexed equity | IT/semiconductor/country/geopolitical/FX-sensitive |
@@ -415,3 +416,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
 - [[ETF_NYSE_ARCA_ASHS Performance]] — ASHS (China)
 - [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
+- [[ETF_LSE_VJPU Performance]] — VFJUF / VJPU (Japan)
