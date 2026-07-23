@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `31/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `32/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -30,6 +30,7 @@ tags:
 | IHSEF | supported | LSE:IAPD | Asia-Pacific | 14.55% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251567/iapd?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official LSE:IAPD listing; official rolling 10Y NAV TR CAGR 6.75% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.59% |
 | MINV | unsupported ETF type | NYSE Arca:MINV | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-innovators-active-etf/ | Matthews identifies MINV as an active, high-conviction, all-cap fundamental equity ETF; active share 74.8% as of 2026-06-30; passive ETF scope excludes active funds |
 | IMSCF | supported | LSE:CJPU | Japan | 12.11% (2026-07-17) | https://www.ishares.com/uk/professional/en/products/253732/ishares-msci-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official LSE:CJPU USD listing; official rolling 10Y NAV TR CAGR 9.46% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
+| IHRMF | supported | LSE:IJPU | Japan | 15.45% (2026-07-22) | https://www.ishares.com/uk/professional/en/products/251866/ijpn?siteEntryPassthrough=true | OTC alias resolved to official LSE:IJPU USD listing; official rolling 10Y NAV TR CAGR 9.36% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
 
 ## CSKRF Sequential Queue Record
 
@@ -216,6 +217,48 @@ tags:
 - Calendar rows `2016-2025` compound to approximately `100.65%` / CAGR `7.21%`; common rows `2021-2025` compound to `35.55%` / CAGR `6.27%`.
 
 ### IMSCF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## IHRMF Sequential Queue Record
+
+- Input row: `32/125`; input ticker: `IHRMF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:IJPU`; iShares' official listing table maps the input OTC alias to London Stock Exchange ticker `IJPU` in USD for iShares MSCI Japan UCITS ETF USD (Dist), ISIN `IE00B02KXH56`, issued by iShares plc. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the prior register marked IHRMF unresolved because the primary listing code was not verified. Rechecking the current official iShares product page and factsheet confirms the IJPU listing, fund identity, and a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a listing-resolution/page gap, not a history gap.
+- Type gate: official iShares identifies the asset class as Equity, product structure Physical, methodology Replicated, and objective to track an index of Japanese companies. It is a passive/index-tracking equity ETF.
+- Official rolling performance: iShares reports NAV Total Return annualised `9.36%` for the 10-year window as of `2026-06-30`. Raw NAV endpoints are not disclosed; normalized TR `100.00` to `244.67` is calculated from the rounded CAGR.
+- Official calendar observations: NAV rows 2016-2025 are `1.8%`, `23.3%`, `-13.4%`, `19.0%`, `13.8%`, `1.1%`, `-17.1%`, `19.7%`, `8.2%`, and `24.5%`; the official MSCI Japan benchmark rows are `2.4%`, `24.0%`, `-12.9%`, `19.6%`, `14.5%`, `1.7%`, `-16.6%`, `20.3%`, `8.3%`, and `24.6%`. NAV 2016-2025 rows compound to approximately `98.94%` / CAGR `7.12%`; common 2021-2025 rows compound to `35.14%` / CAGR `6.21%`; positive/negative years are `4/1` in the common window.
+- S&P 500 rows use the cached USD TR convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so IHRMF trails by approximately `8.22 pp` CAGR.
+- Official current observations: NAV TR YTD is `15.45%` and NAV is `US$24.18`, both as of `2026-07-22`; TER `0.12%`, holdings `168` as of `2026-07-14`, and 3-year standard deviation `15.00%` as of `2026-06-30`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### IHRMF / IJPU Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:IJPU` | [iShares IJPU official product and performance page](https://www.ishares.com/uk/professional/en/products/251866/ijpn?siteEntryPassthrough=true) | canonical listing, ISIN, fund identity, equity/passive physical-replicated classification, benchmark, inception, NAV TR, annual rows, current NAV/YTD, fee and risk data | Page accessed `2026-07-24`; rolling summary `2026-06-30`; NAV/YTD `2026-07-22`; holdings `2026-07-14` |
+| `LSE:IJPU` | [iShares IJPU official factsheet](https://www.ishares.com/uk/individual/en/literature/fact-sheet/ijpn-ishares-msci-japan-ucits-etf-usd-dist-fund-fact-sheet-en-gb.pdf) | corroborates share class, passive objective, ISIN, fee, distributing policy, benchmark and fund structure | Factsheet April 2026; performance/portfolio data through `2026-04-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | cached USD TR rows as of `2025-12-31` |
+
+### IHRMF / IJPU Raw Observations And Calculations
+
+| Year | IJPU NAV TR | MSCI Japan Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 1.8% | 2.4% | 11.96% |
+| 2017 | 23.3% | 24.0% | 21.83% |
+| 2018 | -13.4% | -12.9% | -4.38% |
+| 2019 | 19.0% | 19.6% | 31.49% |
+| 2020 | 13.8% | 14.5% | 18.40% |
+| 2021 | 1.1% | 1.7% | 28.71% |
+| 2022 | -17.1% | -16.6% | -18.11% |
+| 2023 | 19.7% | 20.3% | 26.29% |
+| 2024 | 8.2% | 8.3% | 25.02% |
+| 2025 | 24.5% | 24.6% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `9.36%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `244.67`, actual years `10.00`. The normalized end is calculated from the rounded issuer CAGR; raw endpoints are not disclosed.
+- Calendar rows `2016-2025` compound to approximately `98.94%` / CAGR `7.12%`; common rows `2021-2025` compound to `35.14%` / CAGR `6.21%`.
+
+### IHRMF Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
