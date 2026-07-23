@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `63/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `64/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -1856,4 +1856,27 @@ tags:
 ### NBJP Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, unsupported-type reason, no accidental performance-page creation, source URLs, ledger update, queue pointer, and no region/index navigation update for an unsupported ETF.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## ASHR Sequential Queue Record
+
+- Input row: `64/125`; input ticker: `ASHR`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:ASHR`; DWS official prospectus identifies the Xtrackers Harvest CSI 300 China A-Shares ETF on NYSE Arca with ticker `ASHR`. No provider slug or guessed exchange is used.
+- Type gate: the prospectus describes a passive/indexing investment approach, a policy of investing at least `80%` in A-shares or qualifying exposure instruments, and tracking of the `CSI 300 Index`. The reviewed strategy is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock ETF.
+- Mandatory 10-year coverage audit: the official DWS Q2 2026 factsheet reports ETF-at-NAV 10-year NAV Total Return CAGR `5.84%` for `2016-06-30` to `2026-06-30`, actual elapsed years `10.00`, as of `2026-06-30`. Raw start/end NAV TR values and issuer cumulative rolling return are not disclosed in the reviewed capture. A normalized illustration from `100.00` to approximately `176.40` is derived only from the disclosed CAGR and is labeled as such; it is not a proxy.
+- Annual NAV Total Return: the official DWS prospectus discloses calendar rows through `2024`: 2016 `-15.06%`, 2017 `31.81%`, 2018 `-28.05%`, 2019 `35.57%`, 2020 `37.42%`, 2021 `-2.17%`, 2022 `-26.98%`, 2023 `-13.07%`, and 2024 `12.55%`. The reviewed official materials do not disclose an ASHR 2025 calendar NAV row, current NAV TR YTD, or CSI 300 annual TR rows; these are recorded as `not disclosed` rather than backfilled.
+- Calculations from disclosed rows: 2016-2024 ASHR NAV TR compounds to `+4.89%` / CAGR `+0.53%` over 9 complete years; common 2021-2024 ASHR compounds to `-30.11%` / CAGR `-8.57%`, versus cached S&P 500 TR `+66.41%` / CAGR `+13.58%`, a difference of approximately `-22.15 pp` CAGR. ASHR has `4` positive and `5` negative years in 2016-2024; best year `2020 +37.42%`; worst year `2018 -28.05%`.
+- Current-YTD check: `ไม่พบข้อมูลที่ยืนยันได้` / `not disclosed` in the reviewed official Q2 2026 factsheet/product capture; no short window is labeled as 10-year performance.
+
+### ASHR Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ASHR` | [DWS Xtrackers Q2 2026 factsheet](https://etf.dws.com/download/asset/e73aaa93-92c6-4a51-9233-38ccb329e09b) | Official NAV Total Return rolling-period table, inception, index, holdings, assets, expenses and current disclosure check | Q2 `2026-06-30`; 10-year NAV TR CAGR `5.84%` |
+| `NYSE Arca:ASHR` | [DWS Xtrackers Harvest CSI 300 China A-Shares ETF prospectus](https://etf.dws.com/en-us/AssetDownload/Index/ce51b065-fc18-496f-9b88-8996a37d16b3/CHINA-1-Prospectus.pdf) | Canonical exchange/ticker, passive/indexing strategy, 80% policy and official calendar-year NAV Total Return rows | Prospectus reviewed `2026-07-24`; calendar rows through `2024-12-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common benchmark identity; cached USD Total Return convention for complete calendar years | Cached rows `2016-2025`, as of `2025-12-31`; no new search used |
+
+### ASHR Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, primary China region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
