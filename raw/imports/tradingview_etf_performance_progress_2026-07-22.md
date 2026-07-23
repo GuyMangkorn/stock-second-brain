@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 18
-remaining_count: 107
+processed_count: 19
+remaining_count: 106
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-24
 ---
@@ -34,10 +34,11 @@ updated: 2026-07-24
 | 16 | AAXJ | `completed_10Y` | `NASDAQ:AAXJ` | Passive/index-tracking Asia ex Japan equity ETF; official rolling 10Y NAV TR cumulative `164.36%` / CAGR `10.21%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to `15.04%` / CAGR `2.84%`; current NAV `US$113.07` and NAV TR YTD `21.30%` as of 2026-07-22. | [[ETF_NASDAQ_AAXJ Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 17 | MKOR | `unsupported ETF type` | `NYSE Arca:MKOR` | Official Matthews Korea Active ETF; issuer confirms Primary Exchange `NYSE Arca` and an unconstrained all-cap, fundamental bottom-up active strategy. It fails the passive/index-tracking equity gate; no performance page or 10-year NAV TR comparison created. | not applicable | [[ETF_performance_sources_2026-07-23]] |
 | 18 | FLKR | `completed_available_period_no_10Y` | `NYSE Arca:FLKR` | Passive/index-tracking South Korea equity ETF; official inception `2017-11-02` and issuer 10-year field `—`; official 2018-2025 NAV TR rows compound to `53.85%` / CAGR `5.53%`; 2021-2025 CAGR `4.59%`; current NAV TR YTD `86.35%` as of 2026-07-07. | [[ETF_NYSE_ARCA_FLKR Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 19 | VPL | `completed_10Y` | `NYSE Arca:VPL` | Passive/index-tracking developed Asia-Pacific equity ETF; official rolling 10Y NAV TR cumulative `177.37%` / CAGR `10.74%` for 2016-05-31 to 2026-05-31; official 2016-2025 rows compound to `114.60%` / CAGR `7.94%`; 2021-2025 CAGR `6.05%`; current NAV TR YTD `19.62%` as of 2026-07-17. | [[ETF_NYSE_ARCA_VPL Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `18/125`
-- Next ticker: `VPL` (row `19`)
+- Completed: `19/125`
+- Next ticker: `ISSSF` (row `20`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `FLKR` was searched, compared, dispatched, or processed in this round.
+- No ticker after `VPL` was searched, compared, dispatched, or processed in this round.
