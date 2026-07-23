@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: India
-updated: 2026-07-23
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/India
@@ -19,10 +19,14 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -12.32% | [[ETF_NASDAQ_INDY Performance]] |
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
+| SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
-และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
+และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม.
+
+SMIN current date-to-date NAV TR YTD อยู่ที่ -0.58% ณ 2026-07-21; standardized
+month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 
 ## Navigation
 
@@ -48,4 +52,4 @@ tags:
 | INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
 | INQQ | INQQ The India Internet ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_INQQ Performance]] |
 | NFTY | First Trust India Nifty 50 Equal Weight ETF | India equity / index-tracking | not disclosed | 10.81% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
-| SMIN | Ishares MSCI India Small Cap ETF | India equity / index-tracking | not disclosed | not disclosed | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
+| SMIN | iShares MSCI India Small-Cap ETF | India equity / index-tracking | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |

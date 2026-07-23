@@ -132,7 +132,7 @@ tags:
 | RAYJ | unsupported | NYSE:RAYJ | Japan | not applicable | https://funds.rayliant.com/rayj/ | active equity |
 | SCJ | supported | NYSE Arca:SCJ | Japan | 14.73% (2026-07-17) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | raw 10Y endpoints not disclosed |
 | SMHC | supported | NASDAQ:SMHC | China | not disclosed (not disclosed) | https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/ | new fund; no complete annual history and current YTD not disclosed |
-| SMIN | supported | Cboe BZX:SMIN | India | -0.58% (2026-07-21) | https://www.ishares.com/us/products/239660/SMIN | annual rows and raw 10Y endpoints not disclosed |
+| SMIN | supported | Cboe BZX:SMIN | India | NAV US$69.69; date-to-date YTD -0.58% (2026-07-21) | https://www.ishares.com/us/products/239660/ishares-msci-india-small-cap-etf | official rolling 10Y NAV TR cumulative 152.70% / CAGR 9.71% (2026-06-30); standardized month-end YTD -0.02% (2026-06-30); raw endpoints not disclosed |
 | TCHI | supported | NASDAQ:TCHI | China | -0.38% (2026-07-20) | https://www.ishares.com/us/products/325390/ishares-msci-china-multisector-tech-etf | fund under 10 years; raw 10Y not available |
 | THD | supported | NYSE Arca:THD | Thailand | 26.86% (2026-07-21) | https://www.ishares.com/us/products/239688/ishares-msci-thailand-capped-etf | raw 10Y endpoints not disclosed |
 | TMH | unsupported | NYSE Arca:TMH | Japan | not applicable | https://adrhedged.com/security/toyota-motor-corporation-adrhedged/ | single-stock ADR-hedged ETF |
@@ -570,4 +570,41 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### HEWJ Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, currency-hedge overlay versus derivative-heavy classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## SMIN Sequential Queue Record
+
+- Input row: `11/125`; input ticker: `SMIN`; terminal status: `completed_10Y`.
+- Canonical entity key: `Cboe BZX:SMIN`; the official iShares product page identifies the Cboe BZX listing and iShares MSCI India Small-Cap ETF. No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking India small-cap equity ETF. Issuer benchmark: `MSCI India Small Cap Index (Net)`. Inception: `2012-02-08`. Expense ratio: `0.74%` (current prospectus; exact fee as-of date not disclosed). Distribution frequency: semi-annual.
+- Official current observations: NAV `US$69.69` as of `2026-07-21`; date-to-date NAV Total Return YTD `-0.58%` as of `2026-07-21`; 459 holdings as of `2026-07-21`; 3-year standard deviation `18.98%` and equity beta `0.47` as of `2026-06-30`.
+
+### SMIN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Cboe BZX:SMIN` | [iShares US SMIN product and performance page](https://www.ishares.com/us/products/239660/ishares-msci-india-small-cap-etf) | Fund identity, exchange, benchmark, inception, NAV, fee, classification, current YTD, rolling NAV Total Return, annual rows and risk fields | Page accessed `2026-07-24`; NAV/current YTD/holdings `2026-07-21`; performance table/standardized YTD/risk fields `2026-06-30` |
+| `Cboe BZX:SMIN` | [iShares SMIN factsheet](https://www.ishares.com/us/literature/fact-sheet/smin-ishares-msci-india-small-cap-etf-fund-fact-sheet-en-us.pdf) | NAV return definition and historical return corroboration | Factsheet as of `2026-03-31`; not used for fresher current observations |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### SMIN Raw Observations And Calculations
+
+| Year | SMIN NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 44.69% | 28.71% |
+| 2022 | -13.98% | -18.11% |
+| 2023 | 34.80% | 26.29% |
+| 2024 | 17.34% | 25.02% |
+| 2025 | -6.82% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `152.70%` and average annual/CAGR `9.71%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual elapsed years `10.00`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `252.70`; `(252.70 / 100.00)^(1 / 10.00) - 1 ≈ 9.71%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+83.44%` and annualize to `12.90%` over `5` years. Up/down years are `3 / 2`; best `2021 +44.69%`; least positive `2024 +17.34%`; worst `2022 -13.98%`; least bad down year `2025 -6.82%`.
+- Official current date-to-date NAV Total Return YTD is `-0.58%` as of `2026-07-21`; standardized month-end YTD is `-0.02%` as of `2026-06-30`. These are separate observations and are not mixed.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### SMIN Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
