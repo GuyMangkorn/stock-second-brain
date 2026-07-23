@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `66/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `67/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -64,6 +64,7 @@ tags:
 | ASHR | supported | NYSE Arca:ASHR | China | not disclosed | https://etf.dws.com/download/asset/e73aaa93-92c6-4a51-9233-38ccb329e09b | passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR CAGR 5.84% for 2016-06-30 to 2026-06-30; normalized endpoint approx. 176.40; official 2016-2024 NAV rows compound to 4.89% / CAGR 0.53%; 2025/current YTD and CSI 300 annual rows not disclosed |
 | ASEA | supported | NYSE Arca:ASEA | Southeast Asia | 8.67% (2026-05-31) | https://www.globalxetfs.com/funds/asea | passive/index-tracking Southeast Asia equity ETF; official rolling 10Y NAV TR CAGR 7.12% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 102.43% / CAGR 7.31%; latest official factsheet YTD 8.67% as of 2026-05-31; 2021-2025 CAGR 8.82%; index annual rows not disclosed |
 | KCAI | supported | NYSE Arca:KCAI | China | 4.27% (2026-06-30) | https://kraneshares.com/etf/kcai/ | passive/rules-based index-tracking China A-share equity ETF; official inception 2024-08-27 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 76.27% / annualized 36.06% as of 2026-06-30; official current YTD 4.27%; current product page says NYSE while official prospectus/factsheet/annual report say NYSE Arca, so NYSE Arca is used and conflict is disclosed |
+| EWS | supported | NYSE Arca:EWS | Singapore | 16.50% (2026-07-21) | https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf | passive/index-tracking Singapore equity ETF; official rolling 10Y NAV TR cumulative 112.54% / CAGR 7.83% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/index rows; 2016-2020 annual NAV rows not disclosed; current NAV TR YTD 16.50% as of 2026-07-21; benchmark change to MSCI Singapore 25/50 Index (Net) on 2016-12-01 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1932,3 +1933,26 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period date window, normalized-endpoint disclosure, annual-row gap, S&P 500 basis/window, current-YTD as-of date, primary China region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, old filename/link replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Exchange-source conflict and the 10-year history gap are disclosed here as required.
+
+## EWS Sequential Queue Record
+
+- Input row: `67/125`; input ticker: `EWS`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:EWS`; iShares' official product page identifies EWS on NYSE Arca, fund inception `1996-03-12`, asset class Equity, and benchmark `MSCI Singapore 25/50 Index`. No provider slug or guessed exchange is used.
+- Type gate: the official product page states that EWS seeks to track an index composed of Singaporean equities. It is a passive/index-tracking single-country equity ETF, not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock ETF.
+- Mandatory 10-year coverage audit: iShares reports NAV Total Return cumulative `112.54%` and average annual `7.83%` for the 10-year period ended `2026-06-30`, corresponding to `2016-06-30` to `2026-06-30`, actual years `10.00`. Raw start/end NAV TR values are not disclosed. Normalized TR is `100.00` to the official cumulative endpoint `212.54`; no proxy is used.
+- Annual NAV Total Return: iShares discloses Fund NAV and benchmark rows for complete calendar years `2021-2025`: Fund `5.22%`, `-9.15%`, `5.27%`, `22.53%`, `31.56%`; benchmark `5.65%`, `-8.76%`, `6.10%`, `23.15%`, `32.17%`. Fund rows for `2016-2020` are not disclosed in the reviewed current official capture. The benchmark changed to MSCI Singapore 25/50 Index (Net) on `2016-12-01`; benchmark rows remain separate from the NAV TR metric.
+- Calculations: EWS 2021-2025 NAV rows compound to `62.22%` / CAGR `10.16%`; issuer benchmark rows compound to `67.32%` / CAGR `10.83%`; cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%`. EWS trails S&P by approximately `4.27 pp` CAGR in the common 2021-2025 window. Positive / negative EWS years are `4 / 1`; best `2025 +31.56%`; worst `2022 -9.15%`.
+- Current-YTD check: official iShares NAV Total Return YTD is `16.50%` as of `2026-07-21`; the current month-end performance table is as of `2026-06-30` and reports calendar/rolling figures separately.
+
+### EWS Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EWS` | [iShares EWS product page](https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf) | Canonical exchange/fund identity, index, inception, expense ratio, current NAV/YTD, rolling 10-year and annual performance tables | Page accessed `2026-07-24`; current NAV/YTD through `2026-07-21`; month-end performance through `2026-06-30` |
+| `NYSE Arca:EWS` | [iShares EWS factsheet](https://www.ishares.com/us/literature/fact-sheet/ews-ishares-msci-singapore-etf-fund-fact-sheet-en-us.pdf) | Official NAV/index calendar rows 2021-2025, annualized performance and benchmark-change note | Factsheet accessed `2026-07-24`; data through `2025-12-31` / current quarter-end fields |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common benchmark identity; cached USD Total Return rows for complete calendar years | Cached rows `2016-2025`, as of `2025-12-31`; no new search used |
+
+### EWS Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date separation, benchmark/index-change note, primary Singapore region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

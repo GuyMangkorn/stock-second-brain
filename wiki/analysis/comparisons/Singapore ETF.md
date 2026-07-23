@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Singapore
-updated: 2026-07-23
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/Singapore
@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EWS | iShares MSCI Singapore ETF | Singapore equity / index-tracking | not disclosed | 10.16% | 16.50% | [[ETF_NYSE_ARCA_EWS Performance]] |
+| EWS | iShares MSCI Singapore ETF | Singapore equity / index-tracking | 7.83% | 10.16% | 16.50% | [[ETF_NYSE_ARCA_EWS Performance]] |
 
 ## Navigation
 
