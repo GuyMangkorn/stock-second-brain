@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `59/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `60/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -57,6 +57,7 @@ tags:
 | FLAX | supported | NYSE Arca:FLAX | Asia ex Japan | 24.71% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26346/SINGLCLASS/franklin-ftse-asia-ex-japan-etf/FLAX | passive/index-tracking Asia ex Japan equity ETF; official inception 2018-02-06; 10-year field `—`; available-period NAV TR CAGR 7.85% for 2018-02-06 to 2026-06-30; official 2019-2025 NAV rows compound to 77.17% / CAGR 8.51%; current standardized YTD 24.71% |
 | VGDTF | supported | XETRA:VJPA | Japan | 15.27% (2026-06-30) | https://www.vanguard.co.uk/professional/product/etf/equity/9674/vanguard-ftse-japan-ucits-etf-usd-accumulating | OTC alias cross-checked to Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN IE00BFMXYX26; official Deutsche Börse EUR line VJPA; passive physical/index-tracking equity; inception 2019-09-24; 10-year field `—`; since-inception NAV TR CAGR 9.96%; official KIID 2020-2025 calendar rows; current standardized YTD 15.27% |
 | RAYJ | unsupported ETF type | NYSE Arca:RAYJ | Japan | not applicable | https://funds.rayliant.com/rayj/ | Rayliant identifies RAYJ as an active Japan equity strategy using SMDAM fundamental research and Rayliant quantitative models; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
+| THD | supported | NYSE Arca:THD | Thailand | 25.53% (2026-07-22) | https://www.ishares.com/us/products/239688/ishares-msci-thailand-capped-etf | passive/index-tracking equity ETF; official rolling 10Y NAV TR CAGR 3.35% for 2016-06-30 to 2026-06-30 (`10.00` years); 2021-2025 NAV rows compound to -10.24% / CAGR -2.14%; 2016-2020 annual rows and raw rolling endpoints not disclosed; benchmark/index change 2013-02-12 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1700,4 +1701,48 @@ tags:
 ### ADVE Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, unsupported-type reason, no accidental performance-page creation, source URLs, ledger update, queue pointer, and no region/index navigation update for an unsupported ETF.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## THD Sequential Queue Record
+
+- Input row: `60/125`; input ticker: `THD`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:THD`; iShares' official product page identifies iShares MSCI Thailand ETF, primary exchange NYSE Arca, inception `2008-03-26`, asset class Equity, tracked index `MSCI Thailand IMI 25/50 Index (Net)`, and expense ratio `0.59%`. The input ticker is already the issuer-qualified U.S. listing; no provider slug or guessed exchange is used.
+- Type gate: official iShares materials describe a passive/indexing approach for Thai equities. The fund is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF. The summary prospectus states that at least 80% of assets normally goes to index constituents or economically equivalent DRs, with limited permitted use of futures/options/swaps/cash.
+- Mandatory 10-year audit: official iShares performance data provides a genuine `10.00` elapsed-year NAV Total Return window from `2016-06-30` to `2026-06-30`. The issuer reports NAV TR average annual return/CAGR `3.35%`; raw start/end NAV TR values are not disclosed. Normalized calculation is `100.00 × (1 + 3.35%)^10.00 = 139.03`, clearly labeled as derived from the official CAGR rather than raw NAV.
+- Official calendar observations: factsheet rows provide THD NAV TR `1.66%`, `1.55%`, `-12.18%`, `-1.85%`, `0.87%` for `2021-2025`; issuer benchmark rows are `1.89%`, `1.80%`, `-12.20%`, `-1.69%`, `1.00%`. Current factsheet capture did not disclose THD or benchmark rows for `2016-2020`; those cells remain `not disclosed`.
+- Common `2021-2025` THD NAV rows compound to `-10.24%` / CAGR `-2.14%`; S&P 500 cached USD Total Return rows compound to `+96.17%` / CAGR `14.43%`; THD trails by approximately `16.56 pp` CAGR. Positive / negative years are `2 / 3`; best is `2022` at `1.55%`, worst is `2023` at `-12.18%`.
+- Benchmark caveat: iShares states that THD began tracking `MSCI Thailand IMI 25/50 Index` on `2013-02-12`; earlier history used MSCI Thailand Investable Market Index (Net). The issuer benchmark remains separate from the common S&P 500 comparison.
+- Official current observation: product page reports NAV Total Return YTD `25.53%` as of `2026-07-22`, 82 holdings as of `2026-07-22`, 3-year standard deviation `21.96%`, P/E `17.92`, and P/B `1.82` on the current page. Daily NAV history sufficient for fund-level max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### THD Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:THD` | [iShares THD product and performance page](https://www.ishares.com/us/products/239688/ishares-msci-thailand-capped-etf) | Canonical listing, fund identity, passive/index classification, tracked index, inception, fee, rolling 10Y NAV TR, current NAV/YTD, holdings and risk data | Page accessed `2026-07-24`; rolling/annual performance `2026-06-30`; current NAV/YTD and current metrics `2026-07-22` |
+| `NYSE Arca:THD` | [iShares THD factsheet](https://www.ishares.com/us/literature/fact-sheet/thd-ishares-msci-thailand-etf-fund-fact-sheet-en-us.pdf) | Official factsheet cross-check for objective, benchmark, index-history change, NAV TR basis, annual rows and rolling performance | Factsheet accessed `2026-07-24`; performance through `2026-06-30` |
+| `NYSE Arca:THD` | [iShares THD summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-thailand-capped-etf-8-31.pdf) | Legal/fund objective and passive/indexing structure, sampling and permitted derivative-use cross-check | Prospectus accessed `2026-07-24`; current prospectus dated `2025-08-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; rows reused for `2016-2025` without a new search |
+
+### THD Raw Observations And Calculations
+
+| Year | THD NAV TR | MSCI Thailand IMI 25/50 Index (Net) TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | 1.66% | 1.89% | 28.71% |
+| 2022 | 1.55% | 1.80% | -18.11% |
+| 2023 | -12.18% | -12.20% | 26.29% |
+| 2024 | -1.85% | -1.69% | 25.02% |
+| 2025 | 0.87% | 1.00% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `3.35%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; normalized TR is `100.00` to approximately `139.03`; raw endpoints are not disclosed.
+- THD official `2021-2025` rows compound to `-10.24%` and annualize to `-2.14%`; S&P 500 TR rows compound to `+96.17%` and annualize to `14.43%`; THD trails by approximately `16.56 pp` CAGR.
+- Positive / negative years in the complete THD rows are `2 / 3`; best is `2022 +1.55%`; worst is `2023 -12.18%`. Current official NAV TR YTD is `+25.53%` as of `2026-07-22`; it is not treated as a complete calendar year.
+
+### THD Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized endpoint disclosure, annual-row gaps, S&P 500 basis/window, benchmark/index change, current-YTD as-of date, rankings, canonical filename, Thailand region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

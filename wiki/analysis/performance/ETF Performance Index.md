@@ -82,6 +82,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_LSE_SJPA Performance]] | official 2009 / official 2016-2025; rolling 2016-2026 | 9.50% | 6.33% | 12.55% | 2025 +25.36% / 2022 -15.88% | Japan broad large/mid/small-cap equity, accumulating | country/sector/FX-sensitive; OTC alias/liquidity gap |
 | [[ETF_NYSE_ARCA_SCJ Performance]] | official 2007 / official rolling 2016-2026; official 2016-2025 | 8.18% | 5.20% | 16.10% | 2017 +30.90% / 2018 -16.40% | Japan small-cap equity | small-cap/liquidity/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWY Performance]] | official 2000 / official 2016-2025 and rolling 2016-2026 | 16.72% | 4.77% | 75.82% | 2025 +97.57% / 2022 -26.70% | South Korea single-country equity | high volatility; IT/semiconductor/country/FX-sensitive |
+| [[ETF_NYSE_ARCA_THD Performance]] | official 2008 / official rolling 2016-2026; official 2021-2025 | 3.35% | -2.14% | 25.53% | 2022 +1.55% / 2023 -12.18% | Thailand single-country equity | country/sector/FX/emerging-market-sensitive; benchmark change 2013-02-12 |
 | [[ETF_NYSE_ARCA_FLKR Performance]] | official 2017 / official 2018-2025; history under 10 years | not applicable (<10y history) | 4.59% | 86.35% | 2025 +91.79% / 2022 -28.31% | South Korea broad large/mid-cap equity | high volatility; IT/semiconductor/country/FX-sensitive |
 | [[ETF_LSE_CSKR Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 16.73% | 3.94% | 70.53% | 2025 +99.2% / 2022 -29.2% | South Korea single-country equity | very high volatility; technology/semiconductor/country/FX-sensitive; benchmark change 2020-02-11 |
 | [[ETF_NYSE_ARCA_KDEF Performance]] | official inception 2025-02-05; history under 10 years; official available-period 2025-02 to 2026-06 | not applicable (<10y history) | not disclosed | -8.13% | inception cumulative +105.69% / 2026 YTD -8.13% | South Korea defense-industry thematic equity | non-diversified; defense-sector/country/currency/limited-history-sensitive |
@@ -420,3 +421,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_FPA Performance]] — FPA (Asia-Pacific)
 - [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
 - [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
+- [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
