@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อจาก row `17/125`. รอบนี้ตรวจ FLKR และ VPL ตามลำดับทีละ ticker, ทำ mandatory 10-year coverage audit จาก official product page/factsheet, และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `25/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -23,6 +23,51 @@ tags:
 | VPL | supported | NYSE Arca:VPL | Asia-Pacific | 19.62% (2026-07-17) | https://investor.vanguard.com/investment-products/etfs/profile/vpl | official rolling 10Y NAV TR 177.37% / CAGR 10.74% as of 2026-05-31; annual NAV TR rows 2016-2025 |
 | ISSSF | supported | LSE:SAUS | Australia | 10.27% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251851/ishares-msci-australia-ucits-etf | OTC alias; official rolling 10Y NAV TR 121.17% / CAGR 8.26% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | SCJ | supported | NYSE Arca:SCJ | Japan | 16.10% (2026-07-21) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | official rolling 10Y NAV TR 119.60% / CAGR 8.18% as of 2026-06-30; annual NAV TR rows 2016-2025 |
+| EEMA | supported | NASDAQ:EEMA | Emerging Markets | 20.51% (2026-07-22) | https://www.ishares.com/us/products/239629/ishares-msci-emerging-markets-asia-etf | official rolling 10Y NAV TR 172.29% / CAGR 10.54% as of 2026-06-30; official NAV rows 2016-2025; index change on 2018-06-01 |
+
+## EEMA Sequential Queue Record
+
+- Input row: `25/125`; input ticker: `EEMA`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:EEMA`; iShares' official product page and factsheet identify ticker `EEMA` on NASDAQ, fund inception `2012-02-08`, asset class `Equity`, passive/index-tracking exposure, and benchmark `MSCI EM Asia Custom Capped Index (Net)`. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page had only 2021-2025 annual rows, stale YTD, and no benchmark, inception, or rolling 10-year calculation. Rechecking the current official product page, official factsheet, summary prospectus, and official document links confirms a genuine `10.00` elapsed-year NAV TR window; this was a page gap, not a history gap.
+- Official rolling performance: iShares reports NAV Total Return cumulative `172.29%` and average annual `10.54%` for `2016-06-30` to `2026-06-30`. Normalized TR is `100.00` to `272.29`; raw NAV endpoints are not disclosed.
+- Official calendar observations: NAV rows `2016-2020` were recovered from the official summary prospectus, while `2021-2025` rows were confirmed in the current official product page and March 2026 factsheet. Calendar rows compound to `121.24%` / CAGR `8.26%`; common `2021-2025` rows compound to `17.94%` / CAGR `3.36%`. S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`.
+- Index/source caveat: the official factsheet and prospectus state that on `2018-06-01` EEMA began tracking MSCI EM Asia Custom Capped Index (Net); historical index data before that date is MSCI Emerging Markets Asia Index (Net). The rolling 10-year fund NAV TR remains the primary metric; benchmark rows are kept separate.
+- Official current observation: iShares reports NAV `US$112.84` and NAV Total Return YTD `20.51%` as of `2026-07-22`; expense ratio `0.49%`, 879 holdings, and key geography exposures China `31.53%`, Taiwan `31.06%`, South Korea `16.82%`, India `16.09%` as of the same date. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EEMA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:EEMA` | [iShares EEMA product and performance page](https://www.ishares.com/us/products/239629/ishares-msci-emerging-markets-asia-etf) | Canonical listing, fund identity, passive/index classification, benchmark, inception, rolling NAV TR, current NAV/YTD, annual 2021-2025 rows, fees and exposures | Page accessed `2026-07-24`; rolling/annual performance `2026-06-30` / `2025-12-31`; current NAV/YTD `2026-07-22` |
+| `NASDAQ:EEMA` | [iShares EEMA factsheet](https://www.ishares.com/us/literature/fact-sheet/eema-ishares-msci-emerging-markets-asia-etf-fund-fact-sheet-en-us.pdf) | Corroborates passive structure, benchmark, launch date, 2021-2025 NAV rows, index change, fee and risk basis | Factsheet as of `2026-03-31`; its 10-year field is older and not used instead of the current product-page figure |
+| `NASDAQ:EEMA` | [iShares EEMA summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-emerging-markets-asia-etf-8-31.pdf) | Historical calendar rows 2016-2020, fund performance basis, index splice and inception confirmation | Prospectus accessed `2026-07-24`; performance table through `2024-12-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### EEMA Raw Observations And Calculations
+
+| Year | EEMA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 5.59% | 11.96% |
+| 2017 | 41.94% | 21.83% |
+| 2018 | -15.54% | -4.38% |
+| 2019 | 18.36% | 31.49% |
+| 2020 | 25.20% | 18.40% |
+| 2021 | -4.19% | 28.71% |
+| 2022 | -21.45% | -18.11% |
+| 2023 | 6.98% | 26.29% |
+| 2024 | 10.71% | 25.02% |
+| 2025 | 32.32% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+172.29%` with CAGR `10.54%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `272.29`, actual years `10.00`.
+- Official calendar rows `2016-2025` compound to `+121.24%` and annualize to `8.26%` over 10 complete calendar years. Common rows `2021-2025` compound to `+17.94%` and annualize to `3.36%`; positive / negative years are `3 / 2`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; EEMA trails by approximately `11.07 pp` CAGR in that common window.
+- Official current NAV TR YTD is `+20.51%` as of `2026-07-22`; market-price return is kept separate. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EEMA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows from official documents, S&P 500 basis/window, index splice, as-of dates, rankings, filenames, Emerging Markets region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 | CQQQ | supported | NYSE Arca:CQQQ | China | not disclosed (not disclosed) | https://www.invesco.com/us/en/financial-products/etfs/invesco-china-technology-etf.html | official complete calendar NAV TR rows 2016-2025; 10Y calendar CAGR 4.44%; predecessor/index methodology breaks disclosed; current NAV/YTD not disclosed |
 | ISMJF | supported | LSE:CPXJ | Asia-Pacific | 8.15% (2026-07-08) | https://www.ishares.com/uk/professional/en/products/253735/ishares-core-msci-pacific-ex-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias; official rolling 10Y NAV TR 108.94% / CAGR 7.65% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 

@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Emerging Markets
-updated: 2026-07-19
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/Emerging-Markets
@@ -30,9 +30,9 @@ tags:
 - [[ETF Performance Index]]
 
 
-## 2026-07-23 Verified Coverage Additions
+## 2026-07-24 Verified Coverage Additions
 
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EEMA | iShares MSCI Emerging Markets Asia ETF | Emerging Markets equity / index-tracking | not disclosed | 3.36% | 17.88% | [[ETF_NASDAQ_EEMA Performance]] |
+| EEMA | iShares MSCI Emerging Markets Asia ETF | Emerging Markets Asia equity / index-tracking | 10.54% | 3.36% | 20.51% | [[ETF_NASDAQ_EEMA Performance]] |
