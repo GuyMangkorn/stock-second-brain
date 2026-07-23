@@ -355,7 +355,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_EWY Performance]] — EWY (South Korea)
 - [[ETF_NASDAQ_FCA Performance]] — FCA (China)
 - [[ETF_NASDAQ_FJP Performance]] — FJP (Japan)
-- [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
 - [[ETF_NYSE_ARCA_FLCH Performance]] — FLCH (China)
 - [[ETF_OTC_MARKETS_FLIBF Performance]] — FLIBF (India)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
@@ -418,3 +417,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_VAPU Performance]] — VFPAF / VAPU (Asia-Pacific)
 - [[ETF_NASDAQ_FPA Performance]] — FPA (Asia-Pacific)
 - [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
+- [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)

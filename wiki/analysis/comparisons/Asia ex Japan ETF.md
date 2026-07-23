@@ -19,7 +19,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | AAXJ | iShares MSCI All Country Asia ex Japan ETF | Asia ex Japan equity / index-tracking | 10.21% | 2.84% | 21.30% | [[ETF_NASDAQ_AAXJ Performance]] |
 | AIA | iShares Asia 50 ETF | Asia ex Japan equity / index-tracking | 14.84% | 4.69% | 40.47% | [[ETF_NASDAQ_AIA Performance]] |
-| FLAX | Franklin FTSE Asia ex Japan ETF | Asia ex Japan equity / index-tracking | not disclosed | not disclosed | 22.35% | [[ETF_NYSE_ARCA_FLAX Performance]] |
+| FLAX | Franklin FTSE Asia ex Japan ETF | Asia ex Japan equity / index-tracking | 7.85% available-period | 3.86% | 24.71% | [[ETF_NYSE_ARCA_FLAX Performance]] |
 | FPA | First Trust Asia Pacific Ex-Japan AlphaDEX Fund | Asia ex Japan equity / index-tracking | not disclosed | 7.23% | 42.71% | [[ETF_NASDAQ_FPA Performance]] |
 
 หมายเหตุ: AIA current date-to-date NAV TR YTD 40.47% ณ 2026-07-21; official

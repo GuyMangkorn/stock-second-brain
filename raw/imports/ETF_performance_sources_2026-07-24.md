@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `56/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `57/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -54,6 +54,7 @@ tags:
 | FPA | supported | NASDAQ:FPA | Asia-Pacific | 42.71% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FPA | official rolling 10Y NAV TR CAGR 10.31% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows from prospectus compound to 89.03% / CAGR 6.57%; 2021-2025 CAGR 7.23%; index changed 2015-10-13; current standardized YTD 42.71% as of 2026-06-30 |
 | CXSE | supported | NASDAQ:CXSE | China | -3.69% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/cxse | passive/index-tracking China equity ETF; official rolling 10Y NAV TR CAGR 6.85% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 82.98% / CAGR 6.23%; 2021-2025 CAGR -8.00%; 2015-07-01 objective/index change disclosed; current standardized YTD -3.69% as of 2026-06-30 |
 | ADVE | unsupported ETF type | NYSE Arca:ADVE | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-dividend-active-etf/ | Matthews identifies ADVE as an unconstrained all-cap active Asia equity ETF with a quality bias; official strategy requires at least 80% in dividend-paying equity securities; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
+| FLAX | supported | NYSE Arca:FLAX | Asia ex Japan | 24.71% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26346/SINGLCLASS/franklin-ftse-asia-ex-japan-etf/FLAX | passive/index-tracking Asia ex Japan equity ETF; official inception 2018-02-06; 10-year field `—`; available-period NAV TR CAGR 7.85% for 2018-02-06 to 2026-06-30; official 2019-2025 NAV rows compound to 77.17% / CAGR 8.51%; current standardized YTD 24.71% |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -98,6 +99,50 @@ tags:
 ### CSKRF / CSKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark change, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## FLAX Sequential Queue Record
+
+- Input row: `57/125`; input ticker: `FLAX`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:FLAX`; Franklin's official product page and June 2026 factsheet identify the listing exchange, ticker, CUSIP `35473P660`, and ISIN `US35473P6604`. No provider slug or guessed exchange is used.
+- Type gate: Franklin classifies FLAX as an indexed equity ETF. The official prospectus says the fund uses a passive/indexing approach, invests at least 80% of assets in FTSE Asia ex Japan Capped Index component securities or related depositary receipts, and may use replication or representative sampling.
+- Mandatory 10-year coverage audit: official inception is `2018-02-06`; the June 2026 factsheet reports the 10-year NAV field as `—`, so `10-year NAV TR unavailable`. Available-period official NAV TR coverage is `2018-02-06` to `2026-06-30`, approximately `8.39` elapsed years.
+- Official available-period performance: NAV Total Return average annual return `7.85%`. Raw NAV TR start/end values are not disclosed. A normalized calculation from the official CAGR gives `100.00` to approximately `188.58`; this is explicitly a calculated normalized illustration, not a raw endpoint or proxy.
+- Official calendar observations: NAV TR rows are disclosed for complete years `2019-2025`: `17.32%`, `24.96%`, `-3.72%`, `-19.01%`, `6.39%`, `10.92%`, and `31.33%`, respectively. The 2018 inception year is partial and shown as not disclosed on the performance page/factsheet. These rows compound to `77.17%` / CAGR `8.51%`; common `2021-2025` rows compound to `20.85%` / CAGR `3.86%`.
+- S&P 500 comparison: cached USD Total Return rows are used for complete calendar years `2019-2025` and `2021-2025`; FLAX trails by `8.78 pp` and `10.57 pp` CAGR, respectively. The 2026 S&P row is not used because the current-year cache is not complete.
+- Official current observation: NAV TR YTD `24.71%` as of `2026-06-30`; 3-year NAV standard deviation `18.07%`; country exposures as of `2026-06-30` include Taiwan `28.97%`, South Korea `24.81%`, China `22.63%`, and India `13.69%`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### FLAX Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FLAX` | [Franklin FLAX product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26346/SINGLCLASS/franklin-ftse-asia-ex-japan-etf/FLAX) | Canonical listing, fund identity, passive/indexed classification, benchmark, inception, expense ratio, current NAV/YTD and official performance fields | Page accessed `2026-07-24`; current page observations through `2026-07-10`; month-end performance through `2026-06-30` |
+| `NYSE Arca:FLAX` | [Franklin FLAX June 2026 factsheet](https://www.franklintempleton.com/forms-literature/download/FLAX-FF) | Official NAV Total Return basis, available-period CAGR, calendar NAV/index rows, holdings, exposure and risk statistics | Factsheet dated `2026-06-30`; performance data through `2026-06-30` |
+| `NYSE Arca:FLAX` | [Franklin passive-funds prospectus](https://www.franklintempleton.com/forms-literature/download/ETF5-P) | Passive/indexing strategy, 80% policy, replication/sampling, benchmark definition and risks | Prospectus accessed `2026-07-24`; fund summary dated `2025-08-01` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### FLAX Raw Observations And Calculations
+
+| Year | FLAX NAV TR | FTSE Asia ex Japan Capped Index-NR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2018 | not disclosed (partial inception year) | not disclosed | not comparable; ETF partial |
+| 2019 | 17.32% | 17.60% | 31.49% |
+| 2020 | 24.96% | 25.40% | 18.40% |
+| 2021 | -3.72% | -3.10% | 28.71% |
+| 2022 | -19.01% | -18.86% | -18.11% |
+| 2023 | 6.39% | 7.04% | 26.29% |
+| 2024 | 10.92% | 11.75% | 25.02% |
+| 2025 | 31.33% | 31.67% | 17.88% |
+| 2026 YTD | 24.71% | 24.30% | not comparable; current year not cached |
+
+- Available-period official NAV TR CAGR: `7.85%`; actual date window `2018-02-06` to `2026-06-30`; elapsed years approximately `8.39`; normalized calculated endpoint approximately `188.58` from a `100.00` starting value; raw NAV endpoints `not disclosed`.
+- Complete-calendar `2019-2025`: FLAX cumulative `77.17%`, CAGR `8.51%`; S&P 500 TR cumulative `205.41%`, CAGR `17.29%`; difference `-8.78 pp`.
+- Common `2021-2025`: FLAX cumulative `20.85%`, CAGR `3.86%`; S&P 500 TR cumulative `96.17%`, CAGR `14.43%`; difference `-10.57 pp`.
+- Current standardized NAV TR YTD: `24.71%` as of `2026-06-30`. The product page's later date-to-date capture is not substituted for the month-end convention used in the page's annual comparison.
+
+### FLAX Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period date window, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, primary region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## FLJH Sequential Queue Record
