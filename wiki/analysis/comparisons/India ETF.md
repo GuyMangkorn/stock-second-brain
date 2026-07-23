@@ -20,6 +20,7 @@ tags:
 | INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -12.32% | [[ETF_NASDAQ_INDY Performance]] |
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
+| INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -47,7 +48,7 @@ month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 | IMVP | Invesco India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_IMVP Performance]] |
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | IND | Xtrackers Nifty 500 India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_IND Performance]] |
-| INDA | iShares MSCI India ETF | India equity / index-tracking | not disclosed | 7.80% | -9.33% | [[ETF_CBOE_BZX_INDA Performance]] |
+| INDA | iShares MSCI India ETF | India equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
 | INDH | WisdomTree India Hedged Equity Fund | India equity / index-tracking | not disclosed | not disclosed | -9.04% | [[ETF_NASDAQ_INDH Performance]] |
 | INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
 | INQQ | INQQ The India Internet ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_INQQ Performance]] |

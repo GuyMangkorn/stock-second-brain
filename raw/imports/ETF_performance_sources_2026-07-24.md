@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `34/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `36/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -33,6 +33,7 @@ tags:
 | IHRMF | supported | LSE:IJPU | Japan | 15.45% (2026-07-22) | https://www.ishares.com/uk/professional/en/products/251866/ijpn?siteEntryPassthrough=true | OTC alias resolved to official LSE:IJPU USD listing; official rolling 10Y NAV TR CAGR 9.36% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
 | EWJV | supported | NASDAQ:EWJV | Japan | 18.04% (2026-07-22) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | official inception 2019-03-05; official 10-year field unavailable; available official since-inception NAV TR annualised 12.13% as of 2026-06-30; official 2021-2025 rows; passive index-tracking value equity |
 | VGUDF | supported | LSE:VDPX | Asia-Pacific | not disclosed | https://www.vanguard.co.uk/professional/product/etf/equity/9522/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-distributing | OTC alias resolved to official USD-distributing share class ISIN IE00B9F5YL18 / LSE:VDPX; official 10Y NAV TR CAGR 8.80% for 2016-03-31 to 2026-03-31; calendar NAV rows 2016-2025; current YTD not disclosed in reviewed official capture |
+| INDA | supported | Cboe BZX:INDA | India | -10.12% (2026-07-20) | https://www.ishares.com/us/products/239659/ishares-msci-india-etf | official rolling 10Y NAV TR cumulative 98.09% / CAGR 7.07% as of 2026-06-30; official calendar NAV/benchmark rows 2021-2025; 2016-2020 calendar rows not disclosed; current YTD -10.12% as of 2026-07-20 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -772,4 +773,48 @@ tags:
 ### CETFF / CEMA Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of date, rankings, filenames, Emerging Markets region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## INDA Sequential Queue Record
+
+- Input row: `36/125`; input ticker: `INDA`; terminal status: `completed_10Y`.
+- Canonical entity key: `Cboe BZX:INDA`; iShares' official U.S. product page identifies iShares MSCI India ETF, Cboe BZX listing, ISIN `US46429B5984`, inception `2012-02-02`, benchmark MSCI India Index (Net), equity asset class, 165 holdings, and expense ratio `0.61%` as of the reviewed current page. No provider slug is used.
+- Type gate: official iShares identifies a passive/index-tracking equity ETF. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had only 2021-2025 annual rows and no 10-year field. Rechecking the official product page, factsheet, summary prospectus, inception and benchmark/share-class identifiers confirms a genuine rolling `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page-data gap, not an actual history gap. Official calendar rows for 2016-2020 remain not disclosed in the reviewed current official capture.
+- Official rolling performance: iShares reports NAV Total Return cumulative `98.09%` and annualised `7.07%` for the 10-year window. Normalized TR is `100.00` to `198.09`; raw NAV endpoints are not disclosed. The official method reflects reinvested distributions and fund expenses.
+- Official calendar observations: iShares provides 2021-2025 INDA NAV TR rows `22.41%`, `-9.38%`, `17.49%`, `8.99%`, `2.47%`; matching MSCI India Index (Net) rows are `26.23%`, `-7.95%`, `20.81%`, `11.22%`, `2.62%`. The 2021-2025 INDA rows compound to `45.55%` / CAGR `7.80%`; positive/negative years are `4/1`.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so INDA trails by approximately `6.63 pp` CAGR. S&P rows are shown as a common reference benchmark, not the issuer benchmark.
+- Official current observation: iShares reports latest NAV `US$48.65` and current NAV TR YTD `-10.12%` as of `2026-07-20`. The standardized month-end YTD shown on the official performance table is `-9.09%` as of `2026-06-30`; these are kept separate by as-of date. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### INDA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Cboe BZX:INDA` | [iShares INDA product and performance page](https://www.ishares.com/us/products/239659/ishares-msci-india-etf) | Canonical listing, fund identity, passive/index classification, benchmark, inception, rolling 10Y NAV TR, annual 2021-2025 rows, current NAV/YTD, fee, holdings and risk data | Page accessed `2026-07-24`; rolling/annual summary `2026-06-30`; current NAV/YTD `2026-07-20` |
+| `Cboe BZX:INDA` | [iShares INDA factsheet](https://www.ishares.com/us/literature/fact-sheet/inda-ishares-msci-india-etf-fund-fact-sheet-en-us.pdf) | Corroborates equity asset class, benchmark, launch date, exchange, fee, and hypothetical-growth total-return basis | Factsheet as of `2026-03-31` |
+| `Cboe BZX:INDA` | [iShares INDA summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-india-etf-8-31.pdf) | Prospectus and historical-performance/document cross-check for legal structure, benchmark and history audit | Official document accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### INDA Raw Observations And Calculations
+
+| Year | INDA NAV TR | MSCI India Index (Net) TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | 22.41% | 26.23% | 28.71% |
+| 2022 | -9.38% | -7.95% | -18.11% |
+| 2023 | 17.49% | 20.81% | 26.29% |
+| 2024 | 8.99% | 11.22% | 25.02% |
+| 2025 | 2.47% | 2.62% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+98.09%` with CAGR `7.07%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `198.09`, actual years `10.00`.
+- Official calendar rows `2021-2025` compound to `+45.55%` and annualize to `7.80%`; S&P 500 TR rows in the same window compound to `+96.17%` and annualize to `14.43%`; INDA trails by approximately `6.63 pp` CAGR.
+- Current official NAV TR YTD is `-10.12%` as of `2026-07-20`; standardized month-end YTD is `-9.09%` as of `2026-06-30`. Annual NAV/benchmark rows for `2016-2020` are `not disclosed` in the reviewed official capture and no proxy is created.
+
+### INDA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of dates, rankings, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

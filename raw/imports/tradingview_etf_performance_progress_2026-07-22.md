@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 35
-remaining_count: 90
+processed_count: 36
+remaining_count: 89
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `35` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `36` แล้ว.
 
 ## Terminal status register
 
@@ -51,10 +51,12 @@ updated: 2026-07-24
 | 33 | EWJV | `completed_available_period_no_10Y` | `NASDAQ:EWJV` | Passive/index-tracking Japan value equity ETF; official inception `2019-03-05`, so `10-year NAV TR unavailable`. Official since-inception NAV TR annualised `12.13%` for 2019-03-05 to 2026-06-30 (about `7.32` years); official 2021-2025 NAV rows compound to `83.93%` / CAGR `12.96%`; current NAV TR YTD `18.04%` as of 2026-07-22. | [[ETF_NASDAQ_EWJV Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 34 | VGUDF | `completed_10Y` | `LSE:VDPX` | OTC alias resolved to Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing, ISIN `IE00B9F5YL18`; passive physical equity ETF. Official rolling 10Y NAV TR CAGR `8.80%` for 2016-03-31 to 2026-03-31; official calendar rows 2016-2025 compound to `122.03%` / CAGR `8.30%`; 2021-2025 CAGR `5.42%`; current YTD not disclosed in reviewed official capture. | [[ETF_LSE_VDPX Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 35 | CETFF | `completed_10Y` | `LSE:CEMA` | OTC alias resolved to iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN `IE00B5L8K969`; passive physical/replicated equity ETF. Official rolling 10Y NAV TR cumulative `185.06%` / CAGR `11.04%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025 compound to `126.95%` / CAGR `8.54%`; 2021-2025 CAGR `3.62%`; current NAV TR YTD `28.17%` as of 2026-06-30. | [[ETF_LSE_CEMA Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 36 | INDA | `completed_10Y` | `Cboe BZX:INDA` | Official rolling 10-year NAV TR cumulative `98.09%` / CAGR `7.07%` for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/benchmark rows; 2016-2020 calendar rows not disclosed; current NAV TR YTD `-10.12%` as of 2026-07-20. | [[ETF_CBOE_BZX_INDA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `35/125`
-- Next ticker: `INDA` (row `36`)
+- Completed: `36/125`
+- Next ticker: `KDEF` (row `37`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `CETFF` was searched, compared, dispatched, or processed in this round.
+
+No ticker after `INDA` was searched, compared, dispatched, or processed in this round.
