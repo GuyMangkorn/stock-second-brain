@@ -71,6 +71,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_HEWJ Performance]] | official 2014 / official 2021-2025; rolling 2016-2026 | 17.27% | 19.11% | 18.81% | 2023 +36.20% / 2022 -3.91% | Japan large/mid-cap equity, USD hedged | country/sector/FX/hedging-cost-sensitive |
 | [[ETF_LSE_SJPA Performance]] | official 2009 / official 2016-2025; rolling 2016-2026 | 9.50% | 6.33% | 12.55% | 2025 +25.36% / 2022 -15.88% | Japan broad large/mid/small-cap equity, accumulating | country/sector/FX-sensitive; OTC alias/liquidity gap |
 | [[ETF_NYSE_ARCA_EWY Performance]] | official 2000 / official 2016-2025 and rolling 2016-2026 | 16.72% | 4.77% | 75.82% | 2025 +97.57% / 2022 -26.70% | South Korea single-country equity | high volatility; IT/semiconductor/country/FX-sensitive |
+| [[ETF_NYSE_ARCA_FLKR Performance]] | official 2017 / official 2018-2025; history under 10 years | not applicable (<10y history) | 4.59% | 86.35% | 2025 +91.79% / 2022 -28.31% | South Korea broad large/mid-cap equity | high volatility; IT/semiconductor/country/FX-sensitive |
 | [[ETF_LSE_DXJ Performance]] | official 2015 / official 2016-2025 | 13.94% | 24.77% | 21.90% | 2023 +40.46% / 2018 -18.71% | Japan single-country dividend/export tilt, USD/JPY hedged | country/sector/value/hedge-cost-sensitive; OTC alias liquidity gap |
 | [[ETF_NYSE_ARCA_DBJP Performance]] | official 2011 / official 2016-2024; rolling 2016-2026 | 17.28% | not disclosed | not disclosed | 2023 +34.97% / 2018 -14.03% | Japan single-country equity, USD/JPY hedged | country/sector/hedging-cost-sensitive |
 | [[ETF_LSE_DXJA Performance]] | official 2017 / official 2018-2025; available through 2026-06-30 | not applicable (<10y history) | 24.84% | 21.90% | 2023 +40.52% / 2018 -18.62% | Japan dividend/export equity, USD hedged, accumulating | country/sector/hedge-cost-sensitive; OTC alias/liquidity gap |
@@ -120,6 +121,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_HEWJ Performance]] | 12.79% | -3.91% | 36.20% | 24.87% | 30.08% | 139.77% | 4 / 1 |
 | [[ETF_LSE_SJPA Performance]] | 0.92% | -15.88% | 18.86% | 7.47% | 25.36% | 35.94% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWY Performance]] | -7.56% | -26.70% | 19.05% | -20.79% | 97.57% | 26.24% | 2 / 3 |
+| [[ETF_NYSE_ARCA_FLKR Performance]] | -6.59% | -28.31% | 20.99% | -19.46% | 91.79% | 25.15% | 2 / 3 |
 | [[ETF_LSE_DXJ Performance]] | 18.07% | 6.48% | 40.46% | 30.55% | 31.19% | 202.44% | 5 / 0 |
 | [[ETF_NASDAQ_AIA Performance]] | -10.75% | -24.07% | 4.84% | 20.42% | 47.01% | 25.77% | 3 / 2 |
 | [[ETF_NASDAQ_AAXJ Performance]] | -5.89% | -20.18% | 4.94% | 10.48% | 32.09% | 15.04% | 3 / 2 |
