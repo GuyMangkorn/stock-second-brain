@@ -27,6 +27,7 @@ tags:
 | SCJ | iShares MSCI Japan Small-Cap ETF | Japan small-cap equity / index-tracking | 8.18% | 5.20% | 16.10% | [[ETF_NYSE_ARCA_SCJ Performance]] |
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
 | VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan single-country large/mid-cap equity, USD distributing | 9.45% | not disclosed (rolling periods) | 16.30% | [[ETF_LSE_VDJP Performance]] |
+| GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan rules-based smart-beta equity / index-tracking | 9.29% | 6.62% | 12.86% | [[ETF_NYSE_ARCA_GSJY Performance]] |
 | WDTRF | WisdomTree Japan Equity UCITS ETF - USD Hedged Acc | Japan single-country dividend/export tilt, USD hedged, accumulating | not applicable (<10y history) | 24.84% | 21.90% | [[ETF_LSE_DXJA Performance]] |
 | ISRVF | iShares MSCI Japan USD Hedged UCITS ETF (Acc) | Japan single-country USD-hedged equity, accumulating | 17.02% | 18.81% | 17.84% | [[ETF_LSE_IJPD Performance]] |
 | FLJP | Franklin FTSE Japan ETF | Japan single-country large/mid-cap equity | not applicable (<10y history) | 6.60% | 14.82% | [[ETF_NYSE_ARCA_FLJP Performance]] |
@@ -62,7 +63,7 @@ YTD อยู่ที่ 18.81% ณ 2026-07-17; SJPA/IHREF current date-to-date
 | EWJV | iShares MSCI Japan Value ETF | Japan equity / index-tracking | not disclosed | 12.96% | 17.90% | [[ETF_NASDAQ_EWJV Performance]] |
 | FJP | First Trust Japan AlphaDEX Fund | Japan equity / index-tracking | not disclosed | 8.38% | 14.26% | [[ETF_NASDAQ_FJP Performance]] |
 | FLJH | Franklin FTSE Japan Hedged ETF | Japan equity / index-tracking | not disclosed | not disclosed | 22.91% | [[ETF_NYSE_ARCA_FLJH Performance]] |
-| GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_GSJY Performance]] |
+| GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan rules-based smart-beta equity / index-tracking | 9.29% | 6.62% | 12.86% | [[ETF_NYSE_ARCA_GSJY Performance]] |
 | HEWJ | iShares Currency Hedged MSCI Japan ETF | Japan equity / index-tracking | 17.27% | 19.11% | 18.81% | [[ETF_NYSE_ARCA_HEWJ Performance]] |
 | SJPA / IHREF | iShares Core MSCI Japan IMI UCITS ETF | Japan equity / index-tracking, USD accumulating | 9.50% | 6.33% | 12.55% | [[ETF_LSE_SJPA Performance]] |
 | IMSCF | IShares VII PLC | Japan equity / index-tracking | not disclosed | not disclosed | 12.11% | [[ETF_LSE_CJPU Performance]] |

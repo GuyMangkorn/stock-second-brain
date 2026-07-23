@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `27/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `28/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -26,6 +26,7 @@ tags:
 | EEMA | supported | NASDAQ:EEMA | Emerging Markets | 20.51% (2026-07-22) | https://www.ishares.com/us/products/239629/ishares-msci-emerging-markets-asia-etf | official rolling 10Y NAV TR 172.29% / CAGR 10.54% as of 2026-06-30; official NAV rows 2016-2025; index change on 2018-06-01 |
 | VNFGF | supported | LSE:VDJP | Japan | 16.30% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9504/ftse-japan-ucits-etf-usd-distributing | OTC alias resolved to USD LSE ticker VDJP by ISIN IE00B95PGT31; official rolling 10Y NAV TR CAGR 9.45% as of 2026-05-31; official rolling 12-month rows; current-page NAV US$50.23 as of 2026-07-22 |
 | CSKRF | supported | LSE:CSKR | South Korea | 70.53% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/253733/cskr | OTC alias; official rolling 10Y NAV TR cumulative 369.63% / CAGR 16.73% as of 2026-06-30; official calendar NAV rows 2016-2025; benchmark change 2020-02-11 |
+| GSJY | supported | NYSE Arca:GSJY | Japan | 12.86% (2026-06-30) | https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e | official rolling 10Y NAV TR CAGR 9.29% as of 2026-06-30; official calendar NAV/ActiveBeta index rows 2017-2025; 2016 inception partial; rules-based index and not actively managed |
 
 ## CSKRF Sequential Queue Record
 
@@ -69,6 +70,47 @@ tags:
 ### CSKRF / CSKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark change, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## GSJY Sequential Queue Record
+
+- Input row: `28/125`; input ticker: `GSJY`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:GSJY`; Goldman Sachs' official factsheet identifies ticker GSJY, NYSE Arca, inception `2016-03-02`, and the Goldman Sachs ActiveBeta Japan Equity Index. The official summary prospectus states the Fund is not actively managed; this is a rules-based smart-beta/index-tracking equity ETF.
+- Mandatory coverage audit: the existing page lacked the benchmark, inception, rolling 10-year result and annual rows. Rechecking the official June 2026 factsheet and summary prospectus confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; 2016 calendar year remains partial and is not labeled complete.
+- Official rolling performance: Goldman Sachs reports NAV 10-year annualized total return `9.29%` as of `2026-06-30`. Raw endpoints/cumulative are not disclosed; normalized TR `100.00` to `243.11` is calculated from the rounded CAGR.
+- Official calendar observations: NAV rows are 2017 `24.52%`, 2018 `-10.52%`, 2019 `18.28%`, 2020 `12.52%`, 2021 `0.60%`, 2022 `-15.60%`, 2023 `18.92%`, 2024 `9.09%`, and 2025 `25.07%`; the corresponding ActiveBeta index rows are `23.99%`, `-12.88%`, `19.61%`, `14.44%`, `1.71%`, `-16.65%`, `20.32%`, `8.28%`, and `24.60%`. NAV 2017-2025 cumulative is `104.29%` / CAGR `8.26%`; common 2021-2025 cumulative is `37.76%` / CAGR `6.62%`; positive/negative years are `3/2` in the common window.
+- S&P 500 rows use the cached USD TR convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so GSJY trails by `7.81 pp` CAGR.
+- Official current observation: NAV YTD is `12.86%` as of `2026-06-30`; latest NAV price is `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed capture; total expense ratio is `0.25%` and holdings are `155`.
+
+### GSJY Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:GSJY` | [Goldman Sachs GSJY factsheet](https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e) | identity, exchange, inception, passive/not actively managed classification, index, NAV TR, annual rows, fees and risk | Factsheet as of `2026-06-30` |
+| `NYSE Arca:GSJY` | [Goldman Sachs summary prospectus](https://am.gs.com/public-assets/documents/179d857b-24e3-11ef-ad18-377468fbef87?view=true) | objective, not-actively-managed classification, fund structure and risk | Prospectus accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | cached USD TR rows as of `2025-12-31` |
+
+### GSJY Raw Observations And Calculations
+
+| Year | GSJY NAV TR | ActiveBeta Japan Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed (partial inception year) | not disclosed | 11.96% |
+| 2017 | 24.52% | 23.99% | 21.83% |
+| 2018 | -10.52% | -12.88% | -4.38% |
+| 2019 | 18.28% | 19.61% | 31.49% |
+| 2020 | 12.52% | 14.44% | 18.40% |
+| 2021 | 0.60% | 1.71% | 28.71% |
+| 2022 | -15.60% | -16.65% | -18.11% |
+| 2023 | 18.92% | 20.32% | 26.29% |
+| 2024 | 9.09% | 8.28% | 25.02% |
+| 2025 | 25.07% | 24.60% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `9.29%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `243.11`, actual years `10.00`. The normalized end is calculated from the rounded issuer CAGR; raw endpoints are not disclosed.
+- Official calendar rows `2017-2025` compound to `104.29%` / CAGR `8.26%`; common rows `2021-2025` compound to `37.76%` / CAGR `6.62%`.
+
+### GSJY Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## VNFGF Sequential Queue Record
