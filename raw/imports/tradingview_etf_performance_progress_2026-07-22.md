@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 19
-remaining_count: 106
+processed_count: 20
+remaining_count: 105
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-24
 ---
@@ -35,10 +35,11 @@ updated: 2026-07-24
 | 17 | MKOR | `unsupported ETF type` | `NYSE Arca:MKOR` | Official Matthews Korea Active ETF; issuer confirms Primary Exchange `NYSE Arca` and an unconstrained all-cap, fundamental bottom-up active strategy. It fails the passive/index-tracking equity gate; no performance page or 10-year NAV TR comparison created. | not applicable | [[ETF_performance_sources_2026-07-23]] |
 | 18 | FLKR | `completed_available_period_no_10Y` | `NYSE Arca:FLKR` | Passive/index-tracking South Korea equity ETF; official inception `2017-11-02` and issuer 10-year field `—`; official 2018-2025 NAV TR rows compound to `53.85%` / CAGR `5.53%`; 2021-2025 CAGR `4.59%`; current NAV TR YTD `86.35%` as of 2026-07-07. | [[ETF_NYSE_ARCA_FLKR Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 19 | VPL | `completed_10Y` | `NYSE Arca:VPL` | Passive/index-tracking developed Asia-Pacific equity ETF; official rolling 10Y NAV TR cumulative `177.37%` / CAGR `10.74%` for 2016-05-31 to 2026-05-31; official 2016-2025 rows compound to `114.60%` / CAGR `7.94%`; 2021-2025 CAGR `6.05%`; current NAV TR YTD `19.62%` as of 2026-07-17. | [[ETF_NYSE_ARCA_VPL Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 20 | ISSSF | `completed_10Y` | `LSE:SAUS` | OTC alias for iShares MSCI Australia UCITS ETF; official passive/replicated equity fund with 10-year NAV TR cumulative `121.17%` / CAGR `8.26%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `109.27%` / CAGR `7.66%`; 2021-2025 CAGR `6.24%`; current NAV TR YTD `10.27%` as of 2026-07-21. | [[ETF_LSE_SAUS Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `19/125`
-- Next ticker: `ISSSF` (row `20`)
+- Completed: `20/125`
+- Next ticker: `SCJ` (row `21`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `VPL` was searched, compared, dispatched, or processed in this round.
+- No ticker after `ISSSF` was searched, compared, dispatched, or processed in this round.

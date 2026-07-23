@@ -4,13 +4,13 @@ instrument_type: ETF
 entity_key: LSE:SAUS
 ticker: ISSSF
 exchange: LSE
-fund: Ishares III Plc
-tracked_index: not disclosed in compact capture
+fund: iShares MSCI Australia UCITS ETF
+tracked_index: MSCI Australia Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-07-23
-performance_as_of: 2026-05-07
-current_ytd_as_of: 2026-05-07
-source_batch: raw/imports/ETF_performance_sources_2026-07-23.md
+updated: 2026-07-24
+performance_as_of: 2026-06-30
+current_ytd_as_of: 2026-07-21
+source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -24,19 +24,30 @@ tags:
 
 ## Bottom line
 
-ISSSF มี official annual NAV Total Return ในช่วง 2016-2025; เป็นบวก 8 ปีและลบ 2 ปี, best คือ 2019 22.50% และ worst คือ 2018 -12.30%. Current NAV YTD คือ 14.49% ณ 2026-05-07.
+ISSSF เป็น OTC alias ของ iShares MSCI Australia UCITS ETF ซึ่งมี canonical
+listing เป็น `LSE:SAUS`. กองเป็น passive, physically replicated/index-tracking
+equity ETF ที่ติดตาม MSCI Australia Index (Net). Official rolling NAV Total
+Return 10 ปี ณ 2026-06-30 อยู่ที่ cumulative `121.17%` และ CAGR `8.26%` จาก
+normalized TR 100.00 เป็น 221.17 ใน 10.00 ปี. Official calendar NAV TR rows
+2016-2025 compound ได้ `109.27%` หรือ CAGR `7.66%`; common window 2021-2025
+ได้ CAGR `6.24%` เทียบกับ S&P 500 TR `14.43%`. Current NAV TR YTD ล่าสุดที่
+ยืนยันได้คือ `10.27%` ณ 2026-07-21.
 
 ## Performance check
 
+- input ticker: ISSSF
 - entity_key: LSE:SAUS
-- Inception: not disclosed in compact capture
-- Metric: NAV Total Return including reinvested distributions and fund expenses
-- Tracked index (issuer benchmark): not disclosed in compact capture
+- Inception: 2010-01-22
+- Metric: NAV Total Return with gross income reinvested where applicable; NAV performance is kept separate from market price
+- Tracked index (issuer benchmark): MSCI Australia Index (Net)
 - Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark)
-- 10-year NAV TR CAGR: not disclosed for reproducibility; raw endpoints not disclosed in source capture
-- Coverage/source note: official complete calendar years 2016-2025; S&P 500 rows reuse cached USD Total Return convention as of 2025-12-31; market-price return is not mixed
+- 10-year window: 2016-06-30 to 2026-06-30
+- 10-year NAV TR CAGR: 8.26%; start TR value 100.00 and end TR value 221.17 เป็น normalized levels จาก official cumulative return; actual years 10.00
+- Formula: (221.17 / 100.00)^(1 / 10.00) - 1 = 8.26%
+- Calendar-row calculation: official rows 2016-2025 compound to 109.27% and CAGR 7.66%; rows 2021-2025 compound to 35.36% and CAGR 6.24%
+- Coverage/source note: rolling return is as of 2026-06-30; annual rows are as of 2025-12-31; current YTD is as of 2026-07-21. Raw NAV endpoint levels are not disclosed.
 
-| Year | ETF NAV TR | S&P 500 TR |
+| Year | ISSSF / SAUS NAV TR | S&P 500 TR |
 |---|---:|---:|
 | 2016 | 11.00% | 11.96% |
 | 2017 | 19.60% | 21.83% |
@@ -49,22 +60,32 @@ ISSSF มี official annual NAV Total Return ในช่วง 2016-2025; เ�
 | 2024 | 0.80% | 25.02% |
 | 2025 | 14.30% | 17.88% |
 
+S&P 500 เป็น common reference benchmark ไม่ใช่ issuer benchmark ของ SAUS;
+ตาราง S&P ใช้ cached USD Total Return convention ณ 2025-12-31.
+
 ## Up years / Down years
 
 - Up years / Down years: 8 / 2
-- Best: 2019, 22.50%
-- Least positive: 2024, 0.80%
+- Best: 2019, +22.50%
+- Least positive: 2024, +0.80%
 - Worst: 2018, -12.30%
 - Least bad down year: 2022, -5.70%
-- Available-period cumulative/CAGR: 109.27% / 7.66% จาก published annual rows
-- Current YTD: 14.49% as of 2026-05-07
+- Current YTD: +10.27% as of 2026-07-21
 
 ## Risk read-through
 
-ISSSF เป็น passive/index-tracking equity ETF ใน primary region Australia. Expense ratio, issuer benchmark, daily NAV Total Return drawdown และ recovery: not disclosed in this compact capture. ข้อจำกัดสำคัญ: OTC alias; current data only as of May 2026.
+SAUS เป็น single-country Australia equity ETF จึงมี country, currency,
+commodity และ sector concentration. Expense ratio อยู่ที่ 0.50%; official
+page ระบุ 47 holdings และ 3-year standard deviation 17.36% ณ 2026-06-30.
+Daily NAV history สำหรับการคำนวณ max drawdown และ recovery: ไม่พบข้อมูลที่
+ยืนยันได้ใน lean capture.
 
 ## Sources
 
-- Official issuer source: https://www.ishares.com/uk/professional/en/products/251851/saus
-- Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-23]] | [[ETF Performance Index]]
+- Official issuer product and performance page:
+  https://www.ishares.com/uk/professional/en/products/251851/ishares-msci-australia-ucits-etf
+- Official issuer factsheet:
+  https://www.ishares.com/uk/individual/en/literature/fact-sheet/saus-ishares-msci-australia-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y
+- Official S&P 500 index page:
+  https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+- ETF source batch: [[ETF_performance_sources_2026-07-24]] | [[ETF Performance Index]]
