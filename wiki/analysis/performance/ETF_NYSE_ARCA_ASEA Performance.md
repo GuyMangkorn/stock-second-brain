@@ -38,7 +38,6 @@ ASEA ยังมี annual NAV Total Return ที่ยืนยันได�
 
 | Year | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
-| — | not disclosed | not disclosed |
 
 ## Up years / Down years
 

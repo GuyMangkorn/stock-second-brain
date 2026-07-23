@@ -156,5 +156,6 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 
 - Numeric owner is each wiki/analysis/performance/ETF_* Performance.md page; region pages are static navigation summaries only.
 - Missing values remain not disclosed; no annual return was inferred from price return, fiscal-year return, or a shorter rolling period.
+- Cleanup on 2026-07-23 removed 45 empty annual NAV Total Return placeholder rows (`| — | not disclosed | not disclosed |`) from the corresponding performance pages; no sourced numeric values were changed.
 - Existing canonical coverage: DXJJF is the OTC alias for existing ETF_LSE_DXJ Performance; no duplicate page was created.
 - Unresolved aliases retained in the register: IHREF, JPXN, VNFGF, IHRMF, KRANF and the Vanguard/iShares OTC symbols.

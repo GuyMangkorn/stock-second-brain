@@ -3,6 +3,7 @@
 ## 2026-07-23
 
 - `etf-performance`: Processed all 125 input tickers; created 78 verified passive-equity performance pages, maintained the existing DXJJF canonical page, added region navigation/index coverage, and recorded 46 unsupported or unresolved items in [[ETF_performance_sources_2026-07-23]]. Local pre-save checklist passed after the independent reviewer returned no verdict.
+- `etf-performance-cleanup`: Removed 45 empty `not disclosed | not disclosed` annual NAV Total Return placeholder rows from the 2026-07-23 performance pages; retained all source gaps and numeric data.
 
 ## 2026-07-22
 
