@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 55
-remaining_count: 70
+processed_count: 56
+remaining_count: 69
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `55` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `56` แล้ว.
 
 ## Terminal status register
 
@@ -71,11 +71,12 @@ updated: 2026-07-24
 | 53 | JPY | `unsupported ETF type` | `NASDAQ:JPY` | Lazard Japanese Equity ETF; official issuer materials identify an actively managed Japanese equity strategy using bottom-up stock selection and fundamental research. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 54 | FPA | `completed_10Y` | `NASDAQ:FPA` | Passive/index fund tracking Nasdaq AlphaDEX Asia Pacific Ex-Japan Index; official rolling 10Y NAV TR CAGR `10.31%` for 2016-06-30 to 2026-06-30 (`10.00` elapsed years); official 2016-2025 NAV rows compound to `89.03%` / CAGR `6.57%`; 2021-2025 CAGR `7.23%`; index changed 2015-10-13; current standardized NAV TR YTD `42.71%` as of 2026-06-30. | [[ETF_NASDAQ_FPA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 55 | CXSE | `completed_10Y` | `NASDAQ:CXSE` | Passive/index-tracking China equity ETF tracking WisdomTree China ex-State-Owned Enterprises Index; official rolling 10Y NAV TR CAGR `6.85%` for 2016-06-30 to 2026-06-30 (`10.00` elapsed years); official 2016-2025 NAV rows compound to `82.98%` / CAGR `6.23%`; 2021-2025 CAGR `-8.00%`; objective/index changed 2015-07-01; current standardized NAV TR YTD `-3.69%` as of 2026-06-30. | [[ETF_NASDAQ_CXSE Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 56 | ADVE | `unsupported ETF type` | `NYSE Arca:ADVE` | Matthews Asia Dividend Active ETF; official issuer identifies an unconstrained all-cap, actively managed Asia equity strategy with a quality bias and at least 80% in dividend-paying equity securities. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `55/125`
-- Next ticker: `ADVE` (row `56`)
+- Completed: `56/125`
+- Next ticker: `FLAX` (row `57`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `CXSE` was searched, compared, dispatched, or processed in this round.
+No ticker after `ADVE` was searched, compared, dispatched, or processed in this round.
