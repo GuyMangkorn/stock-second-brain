@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 45
-remaining_count: 80
+processed_count: 46
+remaining_count: 79
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `45` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `46` แล้ว.
 
 ## Terminal status register
 
@@ -61,11 +61,12 @@ updated: 2026-07-24
 | 43 | JPAN | `unsupported ETF type` | `NYSE Arca:JPAN` | Matthews' official page and factsheet identify JPAN as a high-conviction, unconstrained all-cap fundamental active Japan ETF; active equity ETF is outside the passive/index-tracking equity scope; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 44 | EPI | `completed_10Y` | `NYSE Arca:EPI` | Passive/index-tracking India equity ETF tracking WisdomTree India Earnings Index; official rolling 10Y NAV TR CAGR `9.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `163.67%` / CAGR `10.18%`; 2021-2025 CAGR `11.52%`; current NAV TR YTD `-7.91%` as of 2026-06-30. | [[ETF_NYSE_ARCA_EPI Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 45 | ASHS | `completed_10Y` | `NYSE Arca:ASHS` | Passive/index-tracking China A-share small-cap ETF tracking CSI 500 Index; official rolling 10Y NAV TR CAGR `1.96%` for 2016-03-31 to 2026-03-31; official annual NAV/index rows not disclosed; current NAV TR YTD `3.36%` as of 2026-03-31; 2026-06-30 YTD not disclosed. | [[ETF_NYSE_ARCA_ASHS Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 46 | PGJ | `completed_10Y` | `NASDAQ:PGJ` | Passive/index-tracking China equity ETF tracking Nasdaq Golden Dragon China Index; official rolling 10Y NAV TR CAGR `0.35%` for 2015-12-31 to 2025-12-31; official 2016-2025 NAV/index/benchmark rows compound to `3.50%` / CAGR `0.34%`; 2021-2025 CAGR `-12.65%`; current 2026 NAV TR YTD not disclosed. | [[ETF_NASDAQ_PGJ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `45/125`
-- Next ticker: `PGJ` (row `46`)
+- Completed: `46/125`
+- Next ticker: `VFJUF` (row `47`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `ASHS` was searched, compared, dispatched, or processed in this round.
+No ticker after `PGJ` was searched, compared, dispatched, or processed in this round.

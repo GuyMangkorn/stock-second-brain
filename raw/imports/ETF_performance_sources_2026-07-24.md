@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `45/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `46/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -43,6 +43,7 @@ tags:
 | JPAN | unsupported ETF type | NYSE Arca:JPAN | Japan | not applicable | https://us.matthewsasia.com/funds/etfs/japan-active-etf/ | Matthews identifies JPAN as a high-conviction, unconstrained all-cap fundamental active Japan ETF; outside passive/index-tracking equity scope; no performance page created |
 | EPI | supported | NYSE Arca:EPI | India | -7.91% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/epi | official rolling 10Y NAV TR CAGR `9.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows; 2021-2025 CAGR `11.52%`; current NAV TR YTD `-7.91%` as of 2026-06-30 |
 | ASHS | supported | NYSE Arca:ASHS | China | 3.36% (2026-03-31) | https://etf.dws.com/download/asset/1bfed1b5-c933-4199-bdcc-30b0ed651740 | official rolling 10Y NAV TR CAGR `1.96%` for 2016-03-31 to 2026-03-31; annual NAV/index rows not disclosed in reviewed official capture; current NAV TR YTD `3.36%` as of 2026-03-31; 2026-06-30 current YTD not disclosed |
+| PGJ | supported | NASDAQ:PGJ | China | not disclosed | https://www.invesco.com/us/en/financial-products/etfs/invesco-golden-dragon-china-etf.html | official rolling 10Y NAV TR CAGR `0.35%` for 2015-12-31 to 2025-12-31; official 2016-2025 NAV/index/benchmark rows; 2021-2025 CAGR `-12.65%`; current 2026 NAV TR YTD not disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1206,4 +1207,50 @@ tags:
 ### ASHS Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, exchange correction from `NYSE` to issuer-confirmed `NYSE Arca`, CUSIP/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-row gap, S&P 500 basis/window, current-YTD as-of date, rankings, canonical filename, China region assignment, canonical geography tag, breadcrumbs, old-link removal, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## PGJ Sequential Queue Record
+
+- Input row: `46/125`; input ticker: `PGJ`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:PGJ`; Invesco's official product page/report and SEC filing identify Invesco Golden Dragon China ETF, ticker PGJ, Nasdaq listing, inception `2004-12-09`, CUSIP `46137V571`, and total expense ratio `0.70%`. No provider slug or guessed exchange is used.
+- Type gate: the official objective is to track the Nasdaq Golden Dragon China Index, with at least 90% in equity securities of U.S.-listed companies headquartered or incorporated in China. The fund is passive/index-tracking equity; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had annual rows but no tracked index, inception, benchmark or rolling 10-year result. Rechecking Invesco's current product page, Q4 2025 report, SEC filing and index description confirms a genuine `10.00` elapsed-year NAV TR window `2015-12-31` to `2025-12-31`; this was a page gap, not an actual history gap.
+- Official rolling performance: Invesco reports NAV TR CAGR `0.35%` for the 10-year window as of `2025-12-31`; raw rolling start/end TR values and cumulative return are not disclosed. The shown implied cumulative return is approximately `3.55%` from the published CAGR, not a substitute for raw endpoints.
+- Official calendar observations: Invesco's Q4 2025 report provides PGJ NAV TR rows `2016-2025` of `-11.36%`, `59.97%`, `-29.16%`, `31.91%`, `53.58%`, `-42.76%`, `-24.36%`, `-2.45%`, `5.88%`, `13.73%`. These compound to `3.50%` / CAGR `0.34%`; common `2021-2025` rows compound to `-49.14%` / CAGR `-12.65%`; positive/negative years are `5/5` over 2016-2025.
+- Benchmark caveat: the issuer benchmark is FTSE China 50 Index (USD); it is kept separate from the tracked Nasdaq Golden Dragon China Index and the common S&P 500 reference.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; S&P 500 common `2021-2025` CAGR is `14.43%`, so PGJ trails by approximately `27.08 pp` CAGR.
+- Official current observation: current 2026 NAV TR YTD was not disclosed in the reviewed official Invesco capture; the latest standardized report is as of `2025-12-31`.
+
+### PGJ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:PGJ` | [Invesco PGJ product and performance page](https://www.invesco.com/us/en/financial-products/etfs/invesco-golden-dragon-china-etf.html) | Canonical listing/fund identity, index objective, exchange and current product/document route | Page accessed `2026-07-24`; dynamic performance fields not readable in capture |
+| `NASDAQ:PGJ` | [Invesco PGJ Q4 2025 report](https://www.invesco.com/us-rest/contentdetail?contentId=bc42fd05f0e21410VgnVCM100000c2f1bf0aRCRD&dnsName=us) | Official NAV TR 10-year result, 2016-2025 NAV/index/FTSE China 50 rows, inception and fund facts | Performance and facts as of `2025-12-31` |
+| `NASDAQ:PGJ` | [SEC PGJ filing cross-check](https://www.sec.gov/Archives/edgar/data/1209466/000120946625000313/edgar.htm) | Regulator-hosted legal/fund and holdings cross-check | Filing data through `2025-07-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### PGJ Raw Observations And Calculations
+
+| Year | PGJ NAV TR | Nasdaq Golden Dragon China Index TR | FTSE China 50 Index TR | S&P 500 TR |
+|---|---:|---:|---:|---:|
+| 2016 | -11.36% | -11.13% | 2.87% | 11.96% |
+| 2017 | 59.97% | 60.51% | 35.99% | 21.83% |
+| 2018 | -29.16% | -28.84% | -11.51% | -4.38% |
+| 2019 | 31.91% | 32.42% | 14.89% | 31.49% |
+| 2020 | 53.58% | 54.41% | 11.52% | 18.40% |
+| 2021 | -42.76% | -42.60% | -19.82% | 28.71% |
+| 2022 | -24.36% | -24.24% | -19.32% | -18.11% |
+| 2023 | -2.45% | -2.72% | -12.66% | 26.29% |
+| 2024 | 5.88% | 5.89% | 32.41% | 25.02% |
+| 2025 | 13.73% | 13.25% | 29.51% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `0.35%` for `2015-12-31` to `2025-12-31`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`; implied cumulative from CAGR is approximately `3.55%`.
+- Official calendar rows `2016-2025` compound to `+3.50%` and annualize to `0.34%`; S&P 500 TR rows in the same window compound to `+298.33%` and annualize to `14.82%`.
+- Common rows `2021-2025` compound to `-49.14%` / CAGR `-12.65%`; S&P 500 compounds to `+96.17%` / CAGR `14.43%`; PGJ trails by approximately `27.08 pp` CAGR.
+- Official current 2026 NAV TR YTD is `ไม่พบข้อมูลที่ยืนยันได้`; daily NAV history sufficient for max drawdown and recovery is also `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### PGJ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, tracked-index and issuer-benchmark separation, annual rows, S&P 500 basis/window, current-YTD gap, rankings, filename, China region assignment, canonical geography tag, breadcrumbs, duplicate old-link removal, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

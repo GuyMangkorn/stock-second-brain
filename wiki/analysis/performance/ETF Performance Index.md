@@ -105,6 +105,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_CNXT Performance]] | official 2014 / official rolling 2016-2026; calendar rows not disclosed | 7.37% | not disclosed | 16.05% | not disclosed / not disclosed | China A-share ChiNext equity | China A-share/technology/industrial concentration; methodology/index break 2021-12-10 |
 | [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
 | [[ETF_NYSE_ARCA_ASHS Performance]] | official 2014 / official rolling 2016-03 to 2026-03; annual rows not disclosed | 1.96% | not disclosed | 3.36% | not disclosed / not disclosed | China A-share small-cap equity | China policy/A-share access/small-cap liquidity/sector/FX-sensitive; 497 holdings |
+| [[ETF_NASDAQ_PGJ Performance]] | official 2004 / official rolling 2015-2025; official 2016-2025 | 0.35% | -12.65% | not disclosed | 2017 +59.97% / 2021 -42.76% | China U.S.-listed ADR equity | China policy/ADR/VIE/country/sector/FX-sensitive; non-diversified |
 | [[ETF_LSE_CPXJ Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 7.65% | 5.63% | 8.15% | 2017 +25.80% / 2018 -10.40% | developed Asia-Pacific ex-Japan broad equity | Australia/HK/Singapore and financials/materials/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
 | [[ETF_NYSE_ARCA_EWH Performance]] | official 1996 / official 2016-2025 | 4.20% | 0.89% | 5.44% | 2017 +35.60% / 2023 -14.04% | Hong Kong single-country equity | financials/real-estate/utilities concentration; country/FX/liquidity-sensitive |
@@ -173,6 +174,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_CQQQ Performance]] | -25.13% | -29.74% | -16.97% | 11.24% | 33.65% | -35.06% | 2 / 3 |
 | [[ETF_NYSE_ARCA_CNXT Performance]] | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed |
 | [[ETF_NYSE_ARCA_GXC Performance]] | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed | not disclosed |
+| [[ETF_NASDAQ_PGJ Performance]] | -42.76% | -24.36% | -2.45% | 5.88% | 13.73% | -49.14% | 2 / 3 |
 | [[ETF_LSE_CPXJ Performance]] | 4.70% | -6.10% | 6.30% | 4.50% | 20.40% | 31.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FXI Performance]] | -21.04% | -20.40% | -12.87% | 30.10% | 29.01% | -8.08% | 2 / 3 |
 | [[ETF_NYSE_ARCA_EWH Performance]] | -3.43% | -6.72% | -14.04% | 0.10% | 34.89% | 4.55% | 2 / 3 |
@@ -395,7 +397,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_KURE Performance]] — KURE (China)
 - [[ETF_NASDAQ_MCHI Performance]] — MCHI (China)
 - [[ETF_NASDAQ_NFTY Performance]] — NFTY (India)
-- [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
 - [[ETF_NYSE_ARCA_SCJ Performance]] — SCJ (Japan)
 - [[ETF_NASDAQ_SMHC Performance]] — SMHC (China)
 - [[ETF_CBOE_BZX_SMIN Performance]] — SMIN (India)
@@ -413,3 +414,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_CEMA Performance]] — CETFF / CEMA (Emerging Markets)
 - [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
 - [[ETF_NYSE_ARCA_ASHS Performance]] — ASHS (China)
+- [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
