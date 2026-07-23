@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `53/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `54/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -51,6 +51,7 @@ tags:
 | VFPAF | supported | LSE:VAPU | Asia-Pacific | 47.09% (2026-06-30) | https://www.vanguard.co.uk/uk-fund-directory/product/etf/equity/9676/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-accumulating | OTC alias resolved to official USD LSE ticker VAPU for ISIN IE00BK5BQZ41; share-class inception 2019-09-24 means 10-year NAV TR unavailable; official available-period NAV TR CAGR 13.96% through 2026-06-30; rolling 12-month rows disclosed; current 2026-07-22 YTD not disclosed |
 | NBCE | unsupported ETF type | NYSE Arca:NBCE | China | not applicable | https://www.nb.com/products/etfs/china-equity-etf | Neuberger identifies NBCE as an actively managed China equity ETF using fundamental/security-selection research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | JPY | unsupported ETF type | NASDAQ:JPY | Japan | not applicable | https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/etfs/japanese-equity-etf | Lazard identifies JPY as an actively managed Japanese equity ETF using bottom-up stock selection and fundamental research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
+| FPA | supported | NASDAQ:FPA | Asia-Pacific | 42.71% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FPA | official rolling 10Y NAV TR CAGR 10.31% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows from prospectus compound to 89.03% / CAGR 6.57%; 2021-2025 CAGR 7.23%; index changed 2015-10-13; current standardized YTD 42.71% as of 2026-06-30 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1425,6 +1426,53 @@ tags:
 ### JPY Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## FPA Sequential Queue Record
+
+- Input row: `54/125`; input ticker: `FPA`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:FPA`; First Trust's official product page identifies First Trust Asia Pacific ex-Japan AlphaDEX Fund, CUSIP `33737J109`, ISIN `US33737J1097`, Nasdaq exchange, inception `2011-04-18`, tracked index Nasdaq AlphaDEX Asia Pacific Ex-Japan Index, and total expense ratio `0.80%` as of `2026-05-01`. No provider slug or guessed exchange is used.
+- Type gate: the official prospectus states the fund is an exchange-traded index fund, not actively managed, seeking to correspond to the Nasdaq AlphaDEX Asia Pacific Ex-Japan Index. It is a passive/index-tracking equity ETF, not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: rechecked the current official product page, June 2026 monthly performance report and May 2026 prospectus. The official rolling 10-year field is `10.31%` as of `2026-06-30`; the window `2016-06-30` to `2026-06-30` is `10.00` elapsed years. This is confirmed 10-year coverage, not a proxy.
+- Official rolling performance: First Trust reports NAV Total Return CAGR `10.31%` for the latest 10-year window; raw start/end TR values and cumulative rolling return are not disclosed.
+- Official calendar observations: the May 2026 prospectus provides FPA NAV TR rows `2016-2025` of `0.29%`, `35.93%`, `-20.71%`, `7.35%`, `14.89%`, `2.75%`, `-15.62%`, `10.67%`, `3.84%`, and `42.31%`. These compound to `89.03%` / CAGR `6.57%`; common `2021-2025` rows compound to `41.79%` / CAGR `7.23%`.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common `2021-2025` S&P CAGR is `14.43%`, so FPA trails by approximately `7.20 pp` CAGR. S&P is kept separate from the issuer's Nasdaq AlphaDEX benchmark.
+- Methodology gap: First Trust states the underlying index changed from Defined Asia Pacific Ex-Japan Index to Nasdaq AlphaDEX Asia Pacific Ex-Japan Index on `2015-10-13`; the page discloses this break and does not present pre-change returns as a pure current-index backtest.
+- Official current observation: First Trust's June 2026 monthly performance report gives NAV TR YTD `42.71%` as of `2026-06-30`; later current date-to-date YTD and daily NAV history sufficient for max drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed official capture.
+
+### FPA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:FPA` | [First Trust FPA product/performance page](https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FPA) | Canonical listing, fund identity, Nasdaq exchange, inception, index objective, fees, holdings, risk and performance route | Page accessed `2026-07-24`; standardized product data through `2026-05-29` in page capture |
+| `NASDAQ:FPA` | [First Trust June 2026 monthly performance report](https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=b363655b-cc73-4f42-a7b1-4c1e00306c7c) | Latest official standardized NAV TR 10-year CAGR, YTD, rolling performance and benchmark rows | Returns as of `2026-06-30` |
+| `NASDAQ:FPA` | [First Trust Exchange-Traded AlphaDEX Fund II prospectus](https://www.ftportfolios.com/LoadContent/gradkqbz8r4y) | Passive/index-fund classification, calendar-year NAV TR rows `2016-2025`, index-change disclosure, expense and fund objective | Prospectus dated `2026-05-01`; calendar observations through `2025-12-31` |
+| `NASDAQ:FPA` | [FPA fund documents route](https://www.ftportfolios.com/fund-documents/etf/FPA) | Official factsheet, prospectus, annual-report and disclosure route | Page accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### FPA Raw Observations And Calculations
+
+| Year | FPA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 0.29% | 11.96% |
+| 2017 | 35.93% | 21.83% |
+| 2018 | -20.71% | -4.38% |
+| 2019 | 7.35% | 31.49% |
+| 2020 | 14.89% | 18.40% |
+| 2021 | 2.75% | 28.71% |
+| 2022 | -15.62% | -18.11% |
+| 2023 | 10.67% | 26.29% |
+| 2024 | 3.84% | 25.02% |
+| 2025 | 42.31% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `10.31%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`.
+- Official calendar rows `2016-2025` compound to `+89.03%` and annualize to `6.57%`; positive / negative years are `8 / 2`.
+- Common `2021-2025` FPA rows compound to `+41.79%` / CAGR `7.23%`; S&P 500 rows compound to `+96.17%` / CAGR `14.43%`; FPA trails by approximately `7.20 pp` CAGR.
+- Official current NAV TR YTD is `+42.71%` as of `2026-06-30`; later current date-to-date YTD and daily NAV history sufficient for max drawdown and recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### FPA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive/index-fund classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of date, index-methodology break, rankings, canonical filename, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## IPAC Sequential Queue Record

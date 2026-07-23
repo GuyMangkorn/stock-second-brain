@@ -363,7 +363,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_FLJH Performance]] — FLJH (Japan)
 - [[ETF_NYSE_ARCA_FLKR Performance]] — FLKR (South Korea)
 - [[ETF_NYSE_ARCA_FLTW Performance]] — FLTW (Taiwan)
-- [[ETF_NASDAQ_FPA Performance]] — FPA (Asia ex Japan)
 - [[ETF_NYSE_ARCA_GLIN Performance]] — GLIN (India)
 - [[ETF_NYSE_ARCA_GMF Performance]] — GMF (Asia-Pacific)
 - [[ETF_NYSE_ARCA_GSJY Performance]] — GSJY (Japan)
@@ -418,3 +417,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_VJPU Performance]] — VFJUF / VJPU (Japan)
 - [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)
 - [[ETF_LSE_VAPU Performance]] — VFPAF / VAPU (Asia-Pacific)
+- [[ETF_NASDAQ_FPA Performance]] — FPA (Asia-Pacific)
