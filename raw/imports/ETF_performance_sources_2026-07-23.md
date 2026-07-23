@@ -74,7 +74,7 @@ tags:
 | GMF | supported | NYSE Arca:GMF | Asia-Pacific | 12.56% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-emerging-asia-pacific-etf-gmf | annual rows and current YTD refresh not disclosed |
 | GSJY | supported | NYSE Arca:GSJY | Japan | not disclosed (not disclosed) | https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e | current performance and annual rows not disclosed |
 | GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | current NAV and annual rows not disclosed; raw 10Y endpoints not disclosed |
-| HEWJ | supported | NYSE Arca:HEWJ | Japan | 18.81% (2026-07-17) | https://www.ishares.com/us/products/259624/ishares-currency-hedged-msci-japan-etf | raw 10Y endpoints not disclosed |
+| HEWJ | supported | NYSE Arca:HEWJ | Japan | NAV US$62.22; date-to-date YTD 18.81% (2026-07-17) | https://www.ishares.com/us/products/259624/ishares-currency-hedged-msci-japan-etf | official rolling 10Y NAV TR cumulative 391.99% / CAGR 17.27% (2026-06-30); standardized month-end YTD 22.41% (2026-06-30); raw endpoints not disclosed |
 | ICNYF | unsupported | LSE:CNYB | China | not applicable | https://www.ishares.com/uk/individual/en/literature/fact-sheet/cnyb-ishares-china-cny-bond-ucits-etf-fund-fact-sheet-en-gb.pdf | bond ETF and input alias unresolved |
 | IHREF | unresolved | OTC Markets:IHREF | Japan | not applicable | https://www.ishares.com/uk/individual/en/literature/fact-sheet/sjpa-ishares-core-msci-japan-imi-ucits-etf-fund-fact-sheet-en-gb.pdf | primary listing code not verified |
 | IHRMF | unresolved | OTC Markets:IHRMF | Japan | not applicable | https://www.ishares.com/uk/individual/en/products/251866/ishares-msci-japan-ucits-etf-inc-fund | primary listing code not verified |
@@ -533,4 +533,41 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### AIA Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Asia ex Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## HEWJ Sequential Queue Record
+
+- Input row: `10/125`; input ticker: `HEWJ`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:HEWJ`; the official iShares product page identifies the NYSE Arca listing and iShares Currency Hedged MSCI Japan ETF. No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking Japan equity ETF. Issuer benchmark: `MSCI Japan 100% Hedged to USD Index (Net)`. Inception: `2014-01-31`. Expense ratio: `1.02%`; net expense ratio `0.49%` (current prospectus; exact fee as-of date not disclosed). Distribution frequency: semi-annual. Currency forwards are a hedge overlay, not derivative-heavy classification.
+- Official current observations: NAV `US$62.22` as of `2026-07-20`; date-to-date NAV Total Return YTD `+18.81%` as of `2026-07-17`; 3-year standard deviation `11.64%` and equity beta `0.41` as of `2026-06-30`.
+
+### HEWJ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:HEWJ` | [iShares US HEWJ product and performance page](https://www.ishares.com/us/products/259624/ishares-currency-hedged-msci-japan-etf) | Fund identity, exchange, benchmark, inception, NAV, fee, classification, current YTD, rolling NAV Total Return, annual rows and risk fields | Page accessed `2026-07-24`; NAV `2026-07-20`; current YTD `2026-07-17`; performance table/risk fields `2026-06-30` |
+| `NYSE Arca:HEWJ` | [iShares HEWJ factsheet](https://www.ishares.com/us/literature/fact-sheet/hewj-ishares-currency-hedged-msci-japan-etf-fund-fact-sheet-en-us.pdf) | NAV return definition and historical return corroboration | Factsheet as of `2026-03-31`; not used for fresher current observations |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### HEWJ Raw Observations And Calculations
+
+| Year | HEWJ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 12.79% | 28.71% |
+| 2022 | -3.91% | -18.11% |
+| 2023 | 36.20% | 26.29% |
+| 2024 | 24.87% | 25.02% |
+| 2025 | 30.08% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `391.99%` and average annual/CAGR `17.27%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual elapsed years `10.00`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `491.99`; `(491.99 / 100.00)^(1 / 10.00) - 1 ≈ 17.27%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+139.77%` and annualize to `19.11%` over `5` years. Up/down years are `4 / 1`; best `2023 +36.20%`; least positive `2021 +12.79%`; worst and least bad down year `2022 -3.91%`.
+- Official current date-to-date NAV Total Return YTD is `+18.81%` as of `2026-07-17`; standardized month-end YTD is `+22.41%` as of `2026-06-30`. These are separate observations and are not mixed.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### HEWJ Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, currency-hedge overlay versus derivative-heavy classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
