@@ -65,7 +65,7 @@ tags:
 | FLIN | supported | NYSE Arca:FLIN | India | not disclosed (not disclosed) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26348/SINGLCLASS/franklin-ftse-india-etf/FLIN | current performance and annual rows not disclosed; fund under 10 years |
 | FLJH | supported | NYSE Arca:FLJH | Japan | 22.91% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26355/SINGLCLASS/franklin-ftse-japan-hedged-etf/FLJH | annual rows not disclosed; current snapshot stale |
 | FLKR | supported | NYSE Arca:FLKR | South Korea | 86.35% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26353/SINGLCLASS/franklin-ftse-south-korea-etf/FLKR | raw 10Y unavailable; current snapshot 2026-07-07 |
-| FLTW | supported | NYSE Arca:FLTW | Taiwan | 63.10% (2026-07-10) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26351/SINGLCLASS/franklin-ftse-taiwan-etf/FLTW | annual NAV rows not disclosed; fund under 10 years |
+| FLTW | supported | NYSE Arca:FLTW | Taiwan | 63.10% (2026-07-10) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26351/SINGLCLASS/franklin-ftse-taiwan-etf/FLTW | official NAV annual rows 2018-2025; history under 10 years; 2021-2025 CAGR 13.48% |
 | FPA | supported | NASDAQ:FPA | Asia ex Japan | 42.71% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/EtfSummary.aspx?Ticker=FPA | raw 10Y endpoints not disclosed; methodology changed |
 | FXA | unsupported | NYSE Arca:FXA | Australia | not applicable | https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-australian-dollar-trust.html | currency trust |
 | FXY | unsupported | NYSE Arca:FXY | Japan | not applicable | https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-japanese-yen-trust.html | currency trust |
@@ -201,6 +201,47 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### EWY Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, distributions, annual rows, rolling 10-year endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## FLTW Sequential Queue Record
+
+- Input row: `4/125`; input ticker: `FLTW`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:FLTW`; the official Franklin product page identifies the fund, ticker, and NYSE Arca listing. No provider slug or guessed exchange is used.
+- Classification: supported passive/indexed single-country Taiwan equity ETF. Franklin describes passive index exposure, an indexed ETF type, and a market-cap weighted large/mid-cap index. It is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock.
+- Issuer benchmark: `FTSE Taiwan Capped Index-NR`. Inception: `2017-11-02`. Net expense ratio: `0.19%` as of `2025-08-01`. Distribution frequency: semi-annual.
+
+### FLTW Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FLTW` | [Franklin FLTW product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26351/SINGLCLASS/franklin-ftse-taiwan-etf/FLTW) | Fund identity, exchange, benchmark, inception, indexed classification, current NAV/YTD, expenses and portfolio snapshot | Product data as of `2026-07-10`; YTD NAV TR `63.10%`; portfolio snapshot `2026-07-10` / `2026-07-12` |
+| `NYSE Arca:FLTW` | [Franklin FLTW factsheet](https://www.franklintempleton.com/forms-literature/download/FLTW-FF) | Official NAV Returns and calendar-year returns | Factsheet as of `2026-03-31`; annual rows `2018-2025`; NAV basis assumes distributions reinvested and expenses deducted |
+| `NYSE Arca:FLTW` | [Franklin FLTW annual shareholder report](https://www.franklintempleton.com/forms-literature/download-preview/FLTW-ATSR) | Regulatory corroboration of indexed fund structure and NAV performance | Period ended `2026-03-31`; not used for calendar rows because it is a fiscal-year period |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### FLTW Raw Observations And Calculations
+
+| Year | FLTW NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2018 | -8.93% | -4.38% |
+| 2019 | 30.89% | 31.49% |
+| 2020 | 30.41% | 18.40% |
+| 2021 | 29.72% | 28.71% |
+| 2022 | -27.74% | -18.11% |
+| 2023 | 29.78% | 26.29% |
+| 2024 | 17.29% | 25.02% |
+| 2025 | 31.91% | 17.88% |
+
+- Official 10-year NAV TR is unavailable: inception `2017-11-02` to latest official annual-performance date `2026-06-30` is `3,162` days / `8.66` years, below the required `10.00 elapsed years`; no 10-year proxy was created.
+- Complete official calendar rows `2018-2025` compound to `+192.58%` and annualize to `14.36%` over `8` years. Complete rows `2021-2025` compound to `+88.21%` and annualize to `13.48%` over `5` years. Calculations use rounded official NAV inputs.
+- Up/down years among complete rows: `6 / 2`. Best `2025 +31.91%`; least positive `2024 +17.29%`; worst `2022 -27.74%`; least bad down year `2018 -8.93%`.
+- Official current YTD NAV TR: `63.10%` as of `2026-07-10`; this is an aggregate NAV total return, not an annualized return.
+- Exact date-to-date S&P 500 TR for the available since-inception window is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### FLTW Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive/indexed-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, inception/elapsed-years test, 10-year-unavailable statement, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, Taiwan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
 
 ## WDTRF Sequential Queue Record

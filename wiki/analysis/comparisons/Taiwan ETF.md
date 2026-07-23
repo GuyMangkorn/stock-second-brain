@@ -18,7 +18,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | EWT | iShares MSCI Taiwan ETF | Taiwan equity / index-tracking | not disclosed | 12.01% | 54.11% | [[ETF_NYSE_ARCA_EWT Performance]] |
-| FLTW | Franklin FTSE Taiwan ETF | Taiwan equity / index-tracking | not disclosed | not disclosed | 63.10% | [[ETF_NYSE_ARCA_FLTW Performance]] |
+| FLTW | Franklin FTSE Taiwan ETF | Taiwan single-country equity / indexed | not applicable (<10y history) | 13.48% | 63.10% | [[ETF_NYSE_ARCA_FLTW Performance]] |
 
 ## Navigation
 
