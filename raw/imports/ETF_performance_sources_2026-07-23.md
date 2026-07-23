@@ -4,9 +4,9 @@ topic: ETF performance
 accessed: 2026-07-23
 input_source: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-verified_passive_pages: 78
+verified_passive_pages: 79
 existing_canonical_alias_coverage: 1
-unresolved_or_unsupported: 46
+unresolved_or_unsupported: 45
 review_gate: INDEPENDENT_REVIEW_PASS_AFTER_REGION_COUNT_AND_INDEX_DEDUP_FIX
 tags:
   - source/etf
@@ -76,7 +76,7 @@ tags:
 | GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | current NAV and annual rows not disclosed; raw 10Y endpoints not disclosed |
 | HEWJ | supported | NYSE Arca:HEWJ | Japan | NAV US$62.22; date-to-date YTD 18.81% (2026-07-17) | https://www.ishares.com/us/products/259624/ishares-currency-hedged-msci-japan-etf | official rolling 10Y NAV TR cumulative 391.99% / CAGR 17.27% (2026-06-30); standardized month-end YTD 22.41% (2026-06-30); raw endpoints not disclosed |
 | ICNYF | unsupported | LSE:CNYB | China | not applicable | https://www.ishares.com/uk/individual/en/literature/fact-sheet/cnyb-ishares-china-cny-bond-ucits-etf-fund-fact-sheet-en-gb.pdf | bond ETF and input alias unresolved |
-| IHREF | unresolved | OTC Markets:IHREF | Japan | not applicable | https://www.ishares.com/uk/individual/en/literature/fact-sheet/sjpa-ishares-core-msci-japan-imi-ucits-etf-fund-fact-sheet-en-gb.pdf | primary listing code not verified |
+| IHREF | supported | LSE:SJPA | Japan | NAV US$77.53; date-to-date YTD 12.55% (2026-07-17) | https://www.ishares.com/uk/professional/en/products/251867/ishares-core-msci-japan-imi-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias mapped to official LSE:SJPA for ISIN IE00B4L5YX21; official rolling 10Y NAV TR cumulative 147.80% / CAGR 9.50% (2026-06-30); standardized month-end YTD 15.88% (2026-06-30); raw endpoints not disclosed |
 | IHRMF | unresolved | OTC Markets:IHRMF | Japan | not applicable | https://www.ishares.com/uk/individual/en/products/251866/ishares-msci-japan-ucits-etf-inc-fund | primary listing code not verified |
 | IHRPF | supported | OTC Markets:IHRPF | China | not disclosed (not disclosed) | https://www.ishares.com/uk/individual/en/products/251798/ishares-china-large-cap-ucits-etf | OTC alias; official listings FXC/IDFX; current NAV/YTD not disclosed |
 | IHSEF | supported | LSE:IAPD | Asia-Pacific | 14.55% (2026-07-21) | https://www.ishares.com/uk/individual/en/products/251567/ishares-asia-pacific-dividend-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias; fee and raw 10Y endpoints not disclosed |
@@ -158,7 +158,7 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 - Missing values remain not disclosed; no annual return was inferred from price return, fiscal-year return, or a shorter rolling period.
 - Cleanup on 2026-07-23 removed 45 empty annual NAV Total Return placeholder rows (`| — | not disclosed | not disclosed |`) from the corresponding performance pages; no sourced numeric values were changed.
 - Existing canonical coverage: DXJJF is the OTC alias for existing ETF_LSE_DXJ Performance; no duplicate page was created.
-- Unresolved aliases retained in the register: IHREF, JPXN, VNFGF, IHRMF, KRANF and the Vanguard/iShares OTC symbols.
+- Unresolved aliases retained in the register: JPXN, VNFGF, IHRMF, KRANF and the Vanguard/iShares OTC symbols.
 
 ## EWY Sequential Queue Record
 
@@ -607,4 +607,42 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### SMIN Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## IHREF Sequential Queue Record
+
+- Input row: `12/125`; input ticker: `IHREF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:SJPA`; the official iShares product page identifies the London Stock Exchange ticker `SJPA` for iShares Core MSCI Japan IMI UCITS ETF, ISIN `IE00B4L5YX21`. Secondary OTC identity data maps input `IHREF` to the same fund; the OTC alias is retained only as supporting metadata and no provider slug is used as the canonical key.
+- Classification: supported passive/index-tracking Japan equity ETF. Issuer benchmark: `MSCI Japan Investable Market Net Index (USD)`. Inception: `2009-09-25`. Total Expense Ratio: `0.12%`. Use of income: accumulating. Product structure: physical; methodology: optimised.
+- Official current observations: NAV `US$77.53` as of `2026-07-17`; date-to-date NAV Total Return YTD `+12.55%` as of `2026-07-17`; 955 holdings as of `2026-07-17`; 3-year standard deviation `14.81%` and equity beta `0.993` as of `2026-06-30`.
+
+### IHREF / SJPA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:SJPA` | [iShares UK SJPA product and performance page](https://www.ishares.com/uk/professional/en/products/251867/ishares-core-msci-japan-imi-ucits-etf?siteEntryPassthrough=true&switchLocale=y) | Canonical LSE ticker, ISIN, fund identity, benchmark, inception, TER, structure, current NAV/YTD, rolling NAV Total Return and risk fields | Page accessed `2026-07-24`; NAV/current YTD/holdings `2026-07-17`; performance table/standardized YTD/risk fields `2026-06-30` |
+| `LSE:SJPA` | [iShares SJPA factsheet](https://www.ishares.com/uk/individual/en/literature/fact-sheet/sjpa-ishares-core-msci-japan-imi-ucits-etf-fund-fact-sheet-en-gb.pdf) | NAV return definition and two-decimal calendar-year corroboration | Factsheet as of `2026-04-30`; not used for fresher current observations |
+| `OTC:IHREF` | [Secondary OTC identity page](https://stockanalysis.com/quote/otc/IHREF/) | Corroborates that input IHREF names the same iShares Core MSCI Japan IMI UCITS ETF; not used for performance numbers | Page last checked `2026-06-19`; OTC alias only |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### IHREF / SJPA Raw Observations And Calculations
+
+| Year | SJPA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 0.92% | 28.71% |
+| 2022 | -15.88% | -18.11% |
+| 2023 | 18.86% | 26.29% |
+| 2024 | 7.47% | 25.02% |
+| 2025 | 25.36% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `147.80%` and average annual/CAGR `9.50%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual elapsed years `10.00`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `247.80`; `(247.80 / 100.00)^(1 / 10.00) - 1 ≈ 9.50%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+35.94%` and annualize to `6.33%` over `5` years. Up/down years are `4 / 1`; best `2025 +25.36%`; least positive `2021 +0.92%`; worst and least bad down year `2022 -15.88%`.
+- Official current date-to-date NAV Total Return YTD is `+12.55%` as of `2026-07-17`; standardized month-end YTD is `+15.88%` as of `2026-06-30`. These are separate observations and are not mixed.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### IHREF / SJPA Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: OTC-alias-to-LSE mapping, ticker/exchange, passive-equity classification, accumulating NAV Total Return definition, reinvested income and expense disclosure gap, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tags, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.

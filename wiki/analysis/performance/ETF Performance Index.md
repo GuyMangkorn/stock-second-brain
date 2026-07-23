@@ -66,6 +66,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
 | [[ETF_NYSE_ARCA_HEWJ Performance]] | official 2014 / official 2021-2025; rolling 2016-2026 | 17.27% | 19.11% | 18.81% | 2023 +36.20% / 2022 -3.91% | Japan large/mid-cap equity, USD hedged | country/sector/FX/hedging-cost-sensitive |
+| [[ETF_LSE_SJPA Performance]] | official 2009 / official 2016-2025; rolling 2016-2026 | 9.50% | 6.33% | 12.55% | 2025 +25.36% / 2022 -15.88% | Japan broad large/mid/small-cap equity, accumulating | country/sector/FX-sensitive; OTC alias/liquidity gap |
 | [[ETF_NYSE_ARCA_EWY Performance]] | official 2000 / official 2016-2025 and rolling 2016-2026 | 16.72% | 4.77% | 75.82% | 2025 +97.57% / 2022 -26.70% | South Korea single-country equity | high volatility; IT/semiconductor/country/FX-sensitive |
 | [[ETF_LSE_DXJ Performance]] | official 2015 / official 2016-2025 | 13.94% | 24.77% | 21.90% | 2023 +40.46% / 2018 -18.71% | Japan single-country dividend/export tilt, USD/JPY hedged | country/sector/value/hedge-cost-sensitive; OTC alias liquidity gap |
 | [[ETF_NYSE_ARCA_DBJP Performance]] | official 2011 / official 2016-2024; rolling 2016-2026 | 17.28% | not disclosed | not disclosed | 2023 +34.97% / 2018 -14.03% | Japan single-country equity, USD/JPY hedged | country/sector/hedging-cost-sensitive |
@@ -111,6 +112,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 1.56% | -17.36% | 19.78% | 6.80% | 25.92% | 35.20% | 4 / 1 |
 | [[ETF_NYSE_ARCA_HEWJ Performance]] | 12.79% | -3.91% | 36.20% | 24.87% | 30.08% | 139.77% | 4 / 1 |
+| [[ETF_LSE_SJPA Performance]] | 0.92% | -15.88% | 18.86% | 7.47% | 25.36% | 35.94% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWY Performance]] | -7.56% | -26.70% | 19.05% | -20.79% | 97.57% | 26.24% | 2 / 3 |
 | [[ETF_LSE_DXJ Performance]] | 18.07% | 6.48% | 40.46% | 30.55% | 31.19% | 202.44% | 5 / 0 |
 | [[ETF_NASDAQ_AIA Performance]] | -10.75% | -24.07% | 4.84% | 20.42% | 47.01% | 25.77% | 3 / 2 |
@@ -310,6 +312,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_GSJY Performance]] — GSJY (Japan)
 - [[ETF_NYSE_ARCA_GXC Performance]] — GXC (China)
 - [[ETF_NYSE_ARCA_HEWJ Performance]] — HEWJ (Japan)
+- [[ETF_LSE_SJPA Performance]] — IHREF / SJPA (Japan)
 - [[ETF_OTC_MARKETS_IHRPF Performance]] — IHRPF (China)
 - [[ETF_LSE_IAPD Performance]] — IHSEF (Asia-Pacific)
 - [[ETF_LSE_CJPU Performance]] — IMSCF (Japan)
