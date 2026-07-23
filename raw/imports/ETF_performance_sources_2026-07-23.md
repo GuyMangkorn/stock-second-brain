@@ -94,7 +94,7 @@ tags:
 | IPAC | supported | NYSE Arca:IPAC | Asia-Pacific | 13.97% (2026-07-21) | https://www.ishares.com/us/products/264619/ishares-core-msci-pacific-etf | raw 10Y endpoints not disclosed |
 | ISAGF | unsupported | OTC Markets:ISAGF | Emerging Markets | not applicable | https://www.ishares.com/uk/individual/en/products/251723/ishares-emerging-asia-local-government-bond-ucits-etf | bond ETF and official listing SGEA |
 | ISMJF | supported | LSE:CPXJ | Asia-Pacific | not disclosed (not disclosed) | https://www.ishares.com/uk/professional/en/products/253735/ishares-core-msci-pacific-ex-japan-ucits-etf-acc-fund?siteEntryPassthrough=true&switchLocale=y | OTC alias; inception/current performance not disclosed |
-| ISRVF | supported | LSE:IJPD | Japan | not disclosed (not disclosed) | https://www.ishares.com/uk/individual/en/products/257514/ishares-msci-japan-usd-hedged-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias; current performance and annual rows not disclosed |
+| ISRVF | supported | LSE:IJPD | Japan | 17.84% (2026-07-20) | https://www.ishares.com/uk/professional/en/products/257514/ijpd?siteEntryPassthrough=true | OTC alias; official rolling 10Y NAV TR CAGR 17.02%; calendar rows 2016-2025; currency-hedge derivatives are an overlay |
 | ISSSF | supported | LSE:SAUS | Australia | 14.49% (2026-05-07) | https://www.ishares.com/uk/professional/en/products/251851/saus | OTC alias; current data only as of May 2026 |
 | ISVBF | supported | OTC Markets:ISVBF | China | -9.29% (2026-07-20) | https://www.ishares.com/uk/individual/en/products/308751/ishares-msci-china-ucits-etf | OTC alias; official listing ICHN; raw endpoints not disclosed |
 | JAPN | unsupported | NYSE Arca:JAPN | Japan | not applicable | https://horizonkinetics.com/products/etf/japn/ | active equity |
@@ -201,6 +201,49 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### EWY Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, distributions, annual rows, rolling 10-year endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## ISRVF Sequential Queue Record
+
+- Input row: `5/125`; input ticker: `ISRVF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:IJPD`; official iShares product and performance pages identify the London Stock Exchange ticker `IJPD` for ISIN `IE00BCLWRG39`. `ISRVF` is retained as the input OTC alias and is not used as the canonical exchange-qualified key.
+- Classification: supported passive/index-tracking single-country Japan equity ETF. The share class is accumulating and physical/optimised. It uses derivatives for monthly JPY/USD currency hedging; this is a currency hedge overlay, not a derivative-heavy product classification.
+- Issuer benchmark: `MSCI Japan 100% Hedged to USD Index (Net)`. Fund launch: `2013-09-30`. Total expense ratio: `0.64%`. Rebalance frequency: quarterly.
+
+### ISRVF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:IJPD` | [iShares UK professional IJPD page](https://www.ishares.com/uk/professional/en/products/257514/ijpd?siteEntryPassthrough=true) | Canonical listing, identity, benchmark, structure, fee, risk fields, annual/rolling performance and current NAV/YTD | Rolling performance as of `2026-06-30`; current NAV/YTD snapshot as of `2026-07-20`; YTD `17.84%` |
+| `LSE:IJPD` | [iShares IJPD factsheet](https://www.ishares.com/ch/individual/en/literature/fact-sheet/ijpd-ishares-msci-japan-usd-hedged-ucits-etf-acc-fund-fact-sheet-en-ch.pdf) | Passive classification, NAV return definition, accumulating structure, physical/optimised methodology and fee | Performance as of `2026-02-28`; other data as of `2026-03-05` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### ISRVF Raw Observations And Calculations
+
+| Year | ISRVF / IJPD NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -1.90% | 11.96% |
+| 2017 | 20.70% | 21.83% |
+| 2018 | -14.10% | -4.38% |
+| 2019 | 20.40% | 31.49% |
+| 2020 | 9.00% | 18.40% |
+| 2021 | 12.80% | 28.71% |
+| 2022 | -2.70% | -18.11% |
+| 2023 | 34.50% | 26.29% |
+| 2024 | 25.60% | 25.02% |
+| 2025 | 27.70% | 17.88% |
+
+- Official rolling 10-year cumulative NAV TR: `381.35%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual elapsed years `10.00`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation used on the performance page: start `100.00`; end `481.35`; `(481.35 / 100.00)^(1 / 10.00) - 1 = 17.02%`. The normalized endpoints represent the issuer's cumulative total-return display, not published NAV levels.
+- Rounded complete calendar rows `2016-2025` compound to `+216.04%` and annualize to `12.20%` over `10` years. Rows `2021-2025` compound to `+136.77%` and annualize to `18.81%` over `5` years.
+- Up/down years among complete rows: `7 / 3`. Best `2023 +34.50%`; least positive `2019 +20.40%`; worst `2018 -14.10%`; least bad down year `2022 -2.70%`.
+- Official current YTD NAV TR: `17.84%` as of `2026-07-20`. This is a NAV total-return figure and is kept separate from the market price/NAV level.
+- Exact June-to-June S&P 500 TR for the rolling 10-year window is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### ISRVF Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/alias and exchange resolution, passive-equity classification, NAV Total Return definition, income reinvestment, annual rows and source precision, rolling 10-year cumulative endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, hedge-overlay classification, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
 
 ## FLTW Sequential Queue Record
