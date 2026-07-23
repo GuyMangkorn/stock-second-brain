@@ -33,6 +33,7 @@ tags:
 | IHRMF | supported | LSE:IJPU | Japan | 15.45% (2026-07-22) | https://www.ishares.com/uk/professional/en/products/251866/ijpn?siteEntryPassthrough=true | OTC alias resolved to official LSE:IJPU USD listing; official rolling 10Y NAV TR CAGR 9.36% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.12% |
 | EWJV | supported | NASDAQ:EWJV | Japan | 18.04% (2026-07-22) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | official inception 2019-03-05; official 10-year field unavailable; available official since-inception NAV TR annualised 12.13% as of 2026-06-30; official 2021-2025 rows; passive index-tracking value equity |
 | VGUDF | supported | LSE:VDPX | Asia-Pacific | not disclosed | https://www.vanguard.co.uk/professional/product/etf/equity/9522/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-distributing | OTC alias resolved to official USD-distributing share class ISIN IE00B9F5YL18 / LSE:VDPX; official 10Y NAV TR CAGR 8.80% for 2016-03-31 to 2026-03-31; calendar NAV rows 2016-2025; current YTD not disclosed in reviewed official capture |
+| CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
 
@@ -725,4 +726,50 @@ tags:
 ### VGUDF / VDPX Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD gap disclosure, as-of dates, rankings, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## CETFF Sequential Queue Record
+
+- Input row: `35/125`; input ticker: `CETFF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:CEMA`; iShares' official product page identifies CEMA / Bloomberg `CEMA LN`, ISIN `IE00B5L8K969`, iShares MSCI EM Asia UCITS ETF USD (Acc), issuing company iShares VII plc. The OTC alias `CETFF` is cross-checked to the same fund and ISIN; no provider slug or guessed exchange is used.
+- Type gate: official iShares identifies an equity, physical, replicated, passively managed UCITS ETF tracking MSCI EM Asia Index Net. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the previous source register marked CETFF unresolved. Rechecking the official iShares product page, current returns table, factsheet, KIID and share-class identifiers resolves the alias gap and confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this is not a history gap.
+- Official rolling performance: iShares reports NAV Total Return cumulative `185.06%` and annualised `11.04%` for the 10-year window. Normalized TR is `100.00` to `285.06`; raw NAV endpoints are not disclosed.
+- Official calendar observations: iShares provides precise 2016-2025 NAV and MSCI EM Asia Index Net rows in the official factsheet. NAV rows compound to `126.95%` / CAGR `8.54%`; common `2021-2025` rows compound to `19.44%` / CAGR `3.62%`; positive/negative years are `3/2` in the common window.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common `2021-2025` CAGR is `14.43%`, so CEMA trails by approximately `10.81 pp` CAGR.
+- Official current observation: iShares reports NAV Total Return YTD `28.17%` as of `2026-06-30`; later current NAV/YTD was not exposed in the reviewed official capture and is not inferred from OTC price data.
+
+### CETFF / CEMA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:CEMA` | [iShares CEMA product and performance page](https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y) | Canonical ticker/share class, ISIN, passive physical/replicated classification, benchmark, inception, rolling 10Y NAV TR, annual rows, current NAV TR YTD, fee, holdings and risk data | Page accessed `2026-07-24`; rolling/current summary `2026-06-30`; holdings `2026-07-20` |
+| `LSE:CEMA` | [iShares CEMA factsheet](https://www.ishares.com/uk/professional/en/literature/fact-sheet/csemas-ishares-msci-em-asia-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y) | Corroborates ISIN, passive objective, launch date, benchmark, fee and precise 2016-2025 NAV/benchmark rows | Factsheet April 2026; annual performance through `2025-12-31` |
+| `LSE:CEMA` | [iShares CEMA KIID](https://www.ishares.com/uk/individual/en/literature/kiid/ucits_kiid-ishares-msci-em-asia-ucits-etf-usd-acc-gb-ie00b5l8k969-en.pdf?siteEntryPassthrough=true&switchLocale=y) | Confirms passive management, equity exposure, share-class identity and index objective | Document dated `2026-04-09` |
+| `CETFF` alias | [StockAnalysis CETFF OTC page](https://stockanalysis.com/quote/otc/CETFF/) | Secondary OTC alias/name/ISIN cross-check only; not used as NAV TR source | Page accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### CETFF / CEMA Raw Observations And Calculations
+
+| Year | CEMA NAV TR | MSCI EM Asia Index Net TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 5.48% | 6.14% | 11.96% |
+| 2017 | 41.88% | 42.83% | 21.83% |
+| 2018 | -15.99% | -15.45% | -4.38% |
+| 2019 | 18.47% | 19.24% | 31.49% |
+| 2020 | 27.57% | 28.38% | 18.40% |
+| 2021 | -5.20% | -5.08% | 28.71% |
+| 2022 | -21.00% | -21.11% | -18.11% |
+| 2023 | 7.57% | 7.76% | 26.29% |
+| 2024 | 11.98% | 11.96% | 25.02% |
+| 2025 | 32.40% | 32.11% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+185.06%` with CAGR `11.04%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `285.06`, actual years `10.00`.
+- Official calendar rows `2016-2025` compound to `+126.95%` and annualize to `8.54%` over 10 complete calendar years. Common rows `2021-2025` compound to `+19.44%` and annualize to `3.62%`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; CEMA trails by approximately `10.81 pp` CAGR in that common window.
+- Official current NAV TR YTD is `+28.17%` as of `2026-06-30`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### CETFF / CEMA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, current-YTD as-of date, rankings, filenames, Emerging Markets region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

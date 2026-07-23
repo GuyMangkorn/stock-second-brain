@@ -66,6 +66,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_AAXJ Performance]] | official 2008 / official 2021-2025; rolling 2016-2026 | 10.21% | 2.84% | 21.30% | 2025 +32.09% / 2022 -20.18% | Asia ex Japan broad large/mid-cap equity | Taiwan/China/Korea/India and technology concentrated; country/sector/FX-sensitive |
 | [[ETF_NASDAQ_AIA Performance]] | official 2007 / official 2021-2025; rolling 2016-2026 | 14.84% | 4.69% | 40.47% | 2025 +47.01% / 2022 -24.07% | Asia ex Japan large-cap equity | Taiwan/Korea/China and technology concentrated; country/sector/FX-sensitive |
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
+| [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 7.34% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
 | [[ETF_LSE_SAUS Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 8.26% | 6.24% | 10.27% | 2019 +22.50% / 2018 -12.30% | Australia single-country broad equity | financials/materials/commodity/country/FX-sensitive |
@@ -152,6 +153,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NASDAQ_AIA Performance]] | -10.75% | -24.07% | 4.84% | 20.42% | 47.01% | 25.77% | 3 / 2 |
 | [[ETF_NASDAQ_AAXJ Performance]] | -5.89% | -20.18% | 4.94% | 10.48% | 32.09% | 15.04% | 3 / 2 |
 | [[ETF_NASDAQ_EEMA Performance]] | -4.19% | -21.45% | 6.98% | 10.71% | 32.32% | 17.94% | 3 / 2 |
+| [[ETF_LSE_CEMA Performance]] | -5.20% | -21.00% | 7.57% | 11.98% | 32.40% | 19.44% | 3 / 2 |
 | [[ETF_CBOE_BBJP Performance]] | 1.39% | -16.78% | 20.02% | 7.19% | 26.56% | 37.38% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | 1.16% | -15.78% | 19.68% | 7.76% | 25.30% | 37.67% | 4 / 1 |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | -49.01%* | -17.24%* | -9.06%* | 12.01%* | 23.55%* | -46.89%* | 2 / 3 |
@@ -396,3 +398,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 ## 2026-07-24 Coverage Addition
 
 - [[ETF_LSE_VDPX Performance]] — VGUDF / VDPX (Asia-Pacific)
+- [[ETF_LSE_CEMA Performance]] — CETFF / CEMA (Emerging Markets)
