@@ -27,3 +27,11 @@ tags:
 
 - [[ETF Region Index]]
 - [[ETF Performance Index]]
+
+
+## 2026-07-23 Verified Coverage Additions
+
+
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+|---|---|---|---:|---:|---:|---|
+| EIDO | iShares MSCI Indonesia ETF | Indonesia equity / index-tracking | not disclosed | -1.33% | -30.08% | [[ETF_NYSE_ARCA_EIDO Performance]] |

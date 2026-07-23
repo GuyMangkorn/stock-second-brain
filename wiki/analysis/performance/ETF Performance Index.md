@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-22
+updated: 2026-07-23
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -239,3 +239,100 @@ official complete-year coverage เริ่มที่ 2018; ใช้ดู�
 เฉลี่ยสูงสุดในตาราง (`26.30%`) แต่ปี 2020 ลด `-24.31%` และมี energy/midstream
 concentration. สำหรับ passive ETF คำว่า “บริหารดี” จึงหมายถึงการทำตาม index,
 tracking และ cost control ไม่ใช่หลักฐานของ discretionary manager alpha.
+
+
+## 2026-07-23 Coverage Additions
+
+เพิ่ม performance owner สำหรับ 78 ticker ที่ผ่าน passive/index-tracking equity gate; ตัวเลขในหน้ารายกองเป็น source of truth.
+
+- [[ETF_NASDAQ_AAXJ Performance]] — AAXJ (Asia ex Japan)
+- [[ETF_NASDAQ_AIA Performance]] — AIA (Asia ex Japan)
+- [[ETF_NYSE_ARCA_ASEA Performance]] — ASEA (Southeast Asia)
+- [[ETF_NYSE_ARCA_ASHR Performance]] — ASHR (China)
+- [[ETF_NYSE_ASHS Performance]] — ASHS (China)
+- [[ETF_NYSE_ARCA_BBAX Performance]] — BBAX (Asia-Pacific)
+- [[ETF_NYSE_ARCA_CHIQ Performance]] — CHIQ (China)
+- [[ETF_NASDAQ_CNQQ Performance]] — CNQQ (China)
+- [[ETF_NYSE_ARCA_CNXT Performance]] — CNXT (China)
+- [[ETF_CBOE_BZX_CNYA Performance]] — CNYA (China)
+- [[ETF_NYSE_ARCA_CQQQ Performance]] — CQQQ (China)
+- [[ETF_LSE_CSKR Performance]] — CSKRF (South Korea)
+- [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
+- [[ETF_NYSE_ARCA_DBJP Performance]] — DBJP (Japan)
+- [[ETF_NYSE_ARCA_DGIN Performance]] — DGIN (India)
+- [[ETF_NASDAQ_EEMA Performance]] — EEMA (Emerging Markets)
+- [[ETF_NYSE_ARCA_EIDO Performance]] — EIDO (Indonesia)
+- [[ETF_NASDAQ_ENZL Performance]] — ENZL (New Zealand)
+- [[ETF_NYSE_ARCA_EPHE Performance]] — EPHE (Philippines)
+- [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
+- [[ETF_NYSE_ARCA_EPP Performance]] — EPP (Asia-Pacific)
+- [[ETF_NASDAQ_EWJV Performance]] — EWJV (Japan)
+- [[ETF_NYSE_ARCA_EWM Performance]] — EWM (Malaysia)
+- [[ETF_NYSE_ARCA_EWS Performance]] — EWS (Singapore)
+- [[ETF_NYSE_ARCA_EWT Performance]] — EWT (Taiwan)
+- [[ETF_NYSE_ARCA_EWY Performance]] — EWY (South Korea)
+- [[ETF_NASDAQ_FCA Performance]] — FCA (China)
+- [[ETF_NASDAQ_FJP Performance]] — FJP (Japan)
+- [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
+- [[ETF_NYSE_ARCA_FLCH Performance]] — FLCH (China)
+- [[ETF_OTC_MARKETS_FLIBF Performance]] — FLIBF (India)
+- [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
+- [[ETF_NYSE_ARCA_FLJH Performance]] — FLJH (Japan)
+- [[ETF_NYSE_ARCA_FLKR Performance]] — FLKR (South Korea)
+- [[ETF_NYSE_ARCA_FLTW Performance]] — FLTW (Taiwan)
+- [[ETF_NASDAQ_FPA Performance]] — FPA (Asia ex Japan)
+- [[ETF_NYSE_ARCA_GLIN Performance]] — GLIN (India)
+- [[ETF_NYSE_ARCA_GMF Performance]] — GMF (Asia-Pacific)
+- [[ETF_NYSE_ARCA_GSJY Performance]] — GSJY (Japan)
+- [[ETF_NYSE_ARCA_GXC Performance]] — GXC (China)
+- [[ETF_NYSE_ARCA_HEWJ Performance]] — HEWJ (Japan)
+- [[ETF_OTC_MARKETS_IHRPF Performance]] — IHRPF (China)
+- [[ETF_LSE_IAPD Performance]] — IHSEF (Asia-Pacific)
+- [[ETF_LSE_CJPU Performance]] — IMSCF (Japan)
+- [[ETF_NYSE_ARCA_IMVP Performance]] — IMVP (India)
+- [[ETF_NYSE_ARCA_INCO Performance]] — INCO (India)
+- [[ETF_NASDAQ_IND Performance]] — IND (India)
+- [[ETF_CBOE_BZX_INDA Performance]] — INDA (India)
+- [[ETF_NASDAQ_INDH Performance]] — INDH (India)
+- [[ETF_NASDAQ_INDQ Performance]] — INDQ (India)
+- [[ETF_NYSE_ARCA_INQQ Performance]] — INQQ (India)
+- [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)
+- [[ETF_LSE_CPXJ Performance]] — ISMJF (Asia-Pacific)
+- [[ETF_LSE_IJPD Performance]] — ISRVF (Japan)
+- [[ETF_LSE_SAUS Performance]] — ISSSF (Australia)
+- [[ETF_OTC_MARKETS_ISVBF Performance]] — ISVBF (China)
+- [[ETF_NYSE_KBA Performance]] — KBA (China)
+- [[ETF_NYSE_KCAI Performance]] — KCAI (China)
+- [[ETF_NYSE_ARCA_KDEF Performance]] — KDEF (South Korea)
+- [[ETF_NYSE_ARCA_KGRN Performance]] — KGRN (China)
+- [[ETF_NYSE_ARCA_KMCA Performance]] — KMCA (South Korea)
+- [[ETF_NYSE_ARCA_KPHO Performance]] — KPHO (Vietnam)
+- [[ETF_NYSE_ARCA_KSTR Performance]] — KSTR (China)
+- [[ETF_NYSE_ARCA_KTEC Performance]] — KTEC (Hong Kong)
+- [[ETF_NYSE_ARCA_KURE Performance]] — KURE (China)
+- [[ETF_NASDAQ_MCHI Performance]] — MCHI (China)
+- [[ETF_NASDAQ_NFTY Performance]] — NFTY (India)
+- [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
+- [[ETF_NYSE_ARCA_SCJ Performance]] — SCJ (Japan)
+- [[ETF_NASDAQ_SMHC Performance]] — SMHC (China)
+- [[ETF_CBOE_BZX_SMIN Performance]] — SMIN (India)
+- [[ETF_NASDAQ_TCHI Performance]] — TCHI (China)
+- [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
+- [[ETF_NYSE_ARCA_VNAM Performance]] — VNAM (Vietnam)
+- [[ETF_NYSE_ARCA_VNM Performance]] — VNM (Vietnam)
+- [[ETF_NYSE_ARCA_VPL Performance]] — VPL (Asia-Pacific)
+- [[ETF_NASDAQ_WDAF Performance]] — WDAF (Asia-Pacific)
+- [[ETF_LSE_DXJA Performance]] — WDTRF (Japan)
+
+### Browse by region additions
+
+- [[Asia ex Japan ETF]]
+- [[Malaysia ETF]]
+- [[New Zealand ETF]]
+- [[Philippines ETF]]
+- [[Singapore ETF]]
+- [[South Korea ETF]]
+- [[Southeast Asia ETF]]
+- [[Taiwan ETF]]
+- [[Thailand ETF]]
+- [[Vietnam ETF]]

@@ -1,5 +1,9 @@
 # Log
 
+## 2026-07-23
+
+- `etf-performance`: Processed all 125 input tickers; created 78 verified passive-equity performance pages, maintained the existing DXJJF canonical page, added region navigation/index coverage, and recorded 46 unsupported or unresolved items in [[ETF_performance_sources_2026-07-23]]. Local pre-save checklist passed after the independent reviewer returned no verdict.
+
 ## 2026-07-22
 
 - `etf-performance`: Resolved `DXJJF` to canonical `LSE:DXJ` for WisdomTree Japan Equity UCITS ETF - USD Hedged; created [[ETF_LSE_DXJ Performance]] and [[ETF_performance_sources_2026-07-22]], added Japan navigation/index rows, and verified official 2016-2025 NAV TR CAGR approximately `13.94%`, 2021-2025 CAGR `24.77%`, and YTD `+21.90%` as of 2026-06-30; OTC liquidity and post-June YTD remain unresolved.

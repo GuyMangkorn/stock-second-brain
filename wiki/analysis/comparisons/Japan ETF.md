@@ -32,3 +32,20 @@ tags:
 
 - [[ETF Region Index]]
 - [[ETF Performance Index]]
+
+
+## 2026-07-23 Verified Coverage Additions
+
+
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+|---|---|---|---:|---:|---:|---|
+| DBJP | Xtrackers MSCI Japan Hedged Equity ETF | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_DBJP Performance]] |
+| EWJV | iShares MSCI Japan Value ETF | Japan equity / index-tracking | not disclosed | 12.96% | 17.90% | [[ETF_NASDAQ_EWJV Performance]] |
+| FJP | First Trust Japan AlphaDEX Fund | Japan equity / index-tracking | not disclosed | 8.38% | 14.26% | [[ETF_NASDAQ_FJP Performance]] |
+| FLJH | Franklin FTSE Japan Hedged ETF | Japan equity / index-tracking | not disclosed | not disclosed | 22.91% | [[ETF_NYSE_ARCA_FLJH Performance]] |
+| GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_GSJY Performance]] |
+| HEWJ | iShares Currency Hedged MSCI Japan ETF | Japan equity / index-tracking | not disclosed | 19.11% | 18.81% | [[ETF_NYSE_ARCA_HEWJ Performance]] |
+| IMSCF | IShares VII PLC | Japan equity / index-tracking | not disclosed | not disclosed | 12.11% | [[ETF_LSE_CJPU Performance]] |
+| ISRVF | IShares Plc. | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_LSE_IJPD Performance]] |
+| SCJ | iShares MSCI Japan Sm Cap | Japan equity / index-tracking | not disclosed | 5.20% | 14.73% | [[ETF_NYSE_ARCA_SCJ Performance]] |
+| WDTRF | WISDOMTREE ISSUER ICAV WISDOMTREE JPN EQTY UCITS ETF USD ACC HG | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_LSE_DXJA Performance]] |

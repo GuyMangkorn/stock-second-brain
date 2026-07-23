@@ -27,3 +27,11 @@ As-of register: 10Y NAV CAGR `4.20%` à¸“ `2026-06-30`; 2021-2025 CAGR `0.89%` à¸
 
 - [[ETF Region Index]]
 - [[ETF Performance Index]]
+
+
+## 2026-07-23 Verified Coverage Additions
+
+
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+|---|---|---|---:|---:|---:|---|
+| KTEC | KraneShares Hang Seng TECH Index ETF | Hong Kong equity / index-tracking | not disclosed | not disclosed | -22.88% | [[ETF_NYSE_ARCA_KTEC Performance]] |
