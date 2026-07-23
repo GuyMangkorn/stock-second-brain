@@ -21,6 +21,7 @@ tags:
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
 | INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
+| NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.99% | 10.83% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -52,5 +53,5 @@ month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 | INDH | WisdomTree India Hedged Equity Fund | India equity / index-tracking | not disclosed | not disclosed | -9.04% | [[ETF_NASDAQ_INDH Performance]] |
 | INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
 | INQQ | INQQ The India Internet ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_INQQ Performance]] |
-| NFTY | First Trust India Nifty 50 Equal Weight ETF | India equity / index-tracking | not disclosed | 10.81% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
+| NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.99% | 10.83% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India equity / index-tracking | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |

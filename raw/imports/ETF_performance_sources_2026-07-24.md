@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `39/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `40/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -37,6 +37,7 @@ tags:
 | KDEF | supported | NYSE Arca:KDEF | South Korea | -8.13% (2026-06-30) | https://plusetf.com/kdef | official inception 2025-02-05; 10-year NAV TR unavailable; official since-inception NAV TR cumulative 105.69% / annualized 67.39% as of 2026-06-30; complete-calendar annual NAV rows not disclosed |
 | ENZL | supported | NASDAQ:ENZL | New Zealand | 3.45% (2026-07-21) | https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf | official rolling 10Y NAV TR cumulative 38.78% / CAGR 3.33% as of 2026-06-30; official calendar NAV rows 2021-2025; 2016-2020 and annual benchmark rows not disclosed; current YTD 3.45% as of 2026-07-21 |
 | FJP | supported | NASDAQ:FJP | Japan | 14.26% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FJP | official rolling 10Y NAV TR CAGR 7.55% as of 2026-06-30; official calendar NAV rows 2016-2025; 2021-2025 CAGR 8.38%; current YTD 14.26% as of 2026-06-30; index changed 2015-07-14 |
+| NFTY | supported | NASDAQ:NFTY | India | -7.45% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=NFTY | official rolling 10Y NAV TR CAGR 7.99% for 2016-06-30 to 2026-06-30; raw endpoints not disclosed; official calendar NAV rows 2016-2025; 2021-2025 CAGR 10.83%; index changed 2018-04-17; current YTD -7.45% as of 2026-06-30 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -81,6 +82,53 @@ tags:
 ### CSKRF / CSKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark change, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## NFTY Sequential Queue Record
+
+- Input row: `40/125`; input ticker: `NFTY`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:NFTY`; First Trust's official summary and May 1, 2026 summary prospectus identify First Trust India NIFTY 50 Equal Weight ETF, Nasdaq listing, CUSIP `33737J802`, ISIN `US33737J8027`, inception `2012-02-14`, total expense ratio `0.80%`, and tracked index NIFTY 50 Equal Weight Index. No provider slug or guessed exchange is used.
+- Type gate: the official objective is to seek results corresponding to the price and yield of an equity index, normally investing at least 90% in index securities and using an indexing approach. It is a passive, index-tracking equity ETF; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had annual rows but lacked verified inception, tracked index, rolling 10-year dates and issuer benchmark. Rechecking the current First Trust summary, June 2026 factsheet, May 1, 2026 summary prospectus and SEC XBRL records confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page gap, not an actual history gap.
+- Official rolling performance: First Trust reports NAV Total Return CAGR `7.99%` for the 10-year window as of `2026-06-30`; raw start/end TR values and raw cumulative rolling return are not disclosed. The implied cumulative return from the official CAGR is approximately `115.69%`, explicitly shown as a calculation rather than a raw endpoint.
+- Official calendar observations from the latest factsheet: NFTY rows `2016-2025` are `10.31%`, `22.54%`, `-2.67%`, `0.88%`, `10.83%`, `26.22%`, `-4.45%`, `24.39%`, `5.30%`, `5.84%`. These rows compound to `145.94%` / CAGR `9.42%`; common `2021-2025` rows compound to `67.19%` / CAGR `10.83%`; positive/negative years are `8/2`. Annual NIFTY 50 Equal Weight rows were not disclosed in the reviewed official capture.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so NFTY trails by approximately `3.60 pp` CAGR. S&P rows are shown as a common reference benchmark, not the issuer benchmark.
+- Official current observation: First Trust reports NAV TR YTD `-7.45%` as of `2026-06-30`; latest summary-page NAV/holdings capture is dated `2026-07-21`. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+- Methodology caveat: the underlying index changed from Nasdaq AlphaDEX Taiwan Index to NIFTY 50 Equal Weight Index on `2018-04-17`; earlier fund NAV history remains fund history but is not a pure current-index backtest. The NIFTY 50 Equal Weight Index inception is `2017-04-13`.
+
+### NFTY Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:NFTY` | [First Trust NFTY summary page](https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=NFTY) | Canonical listing, identity, inception, index, NAV TR, current NAV/YTD, holdings, fee and risk data | Page accessed `2026-07-24`; rolling/annual summary `2026-06-30`; NAV/holdings `2026-07-21` |
+| `NASDAQ:NFTY` | [First Trust NFTY factsheet](https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=4ce8e98a-434e-452d-89fb-89f33f070e32) | Fund identity, passive objective, inception, fee, index inception, 10-year NAV TR, current YTD and 2016-2025 annual rows | Factsheet as of `2026-06-30` |
+| `NASDAQ:NFTY` | [First Trust summary prospectus](https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=9c00e478-c2d3-49d2-b8db-229055716c36) | Indexing approach, 90% policy, fee, risk and index-history caveat | Prospectus dated `2026-05-01` |
+| `NASDAQ:NFTY` | [SEC annual-return XBRL record](https://www.sec.gov/Archives/edgar/data/1510337/000144554626003180/R11.htm) and [average-annual-return XBRL record](https://www.sec.gov/Archives/edgar/data/1510337/000144554626003180/R12.htm) | SEC cross-check of annual and 10-year NAV total return disclosures | Performance through `2025-12-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### NFTY Raw Observations And Calculations
+
+| Year | NFTY NAV TR | NIFTY 50 Equal Weight TR | NIFTY 50 TR | MSCI India TR | S&P 500 TR |
+|---|---:|---:|---:|---:|---:|
+| 2016 | 10.31% | not disclosed | 1.89% | -1.43% | 11.96% |
+| 2017 | 22.54% | not disclosed | 37.95% | 38.75% | 21.83% |
+| 2018 | -2.67% | not disclosed | -3.76% | -7.30% | -4.38% |
+| 2019 | 0.88% | not disclosed | 11.88% | 7.58% | 31.49% |
+| 2020 | 10.83% | not disclosed | 12.50% | 15.55% | 18.40% |
+| 2021 | 26.22% | not disclosed | 23.48% | 26.23% | 28.71% |
+| 2022 | -4.45% | not disclosed | -5.14% | -7.95% | -18.11% |
+| 2023 | 24.39% | not disclosed | 20.82% | 20.81% | 26.29% |
+| 2024 | 5.30% | not disclosed | 7.00% | 11.21% | 25.02% |
+| 2025 | 5.84% | not disclosed | 6.57% | 2.62% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `7.99%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints are `not disclosed`; implied cumulative from CAGR is approximately `115.69%`.
+- Official calendar rows `2016-2025` compound to `+145.94%` / CAGR `9.42%`; S&P 500 TR rows in the same window compound to `+298.33%` / CAGR `14.82%`.
+- Common rows `2021-2025` compound to `+67.19%` / CAGR `10.83%`; S&P 500 compounds to `+96.17%` / CAGR `14.43%`; NFTY trails by approximately `3.60 pp` CAGR.
+- Official current NAV TR YTD is `-7.45%` as of `2026-06-30`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### NFTY Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, issuer benchmark and index-history caveat, S&P 500 basis/window, current-YTD as-of date, calculations, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## GSJY Sequential Queue Record

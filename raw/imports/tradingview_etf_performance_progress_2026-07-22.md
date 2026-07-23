@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 39
-remaining_count: 86
+processed_count: 40
+remaining_count: 85
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -55,11 +55,12 @@ updated: 2026-07-24
 | 37 | KDEF | `completed_available_period_no_10Y` | `NYSE Arca:KDEF` | Official inception `2025-02-05`; `10-year NAV TR unavailable`; since-inception NAV TR cumulative `105.69%` / annualized `67.39%` for 2025-02-05 to 2026-06-30; current NAV TR YTD `-8.13%` as of 2026-06-30; complete-calendar annual NAV rows not disclosed. | [[ETF_NYSE_ARCA_KDEF Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 38 | ENZL | `completed_10Y` | `NASDAQ:ENZL` | Official rolling 10-year NAV TR cumulative `38.78%` / CAGR `3.33%` for 2016-06-30 to 2026-06-30; official 2021-2025 NAV rows compound to `-25.33%` / CAGR `-5.67%`; 2016-2020 and annual benchmark rows not disclosed; current NAV TR YTD `3.45%` as of 2026-07-21. | [[ETF_NASDAQ_ENZL Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 39 | FJP | `completed_10Y` | `NASDAQ:FJP` | Official rolling 10-year NAV TR CAGR `7.55%` for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to `76.82%` / CAGR `5.87%`; 2021-2025 CAGR `8.38%`; annual Nasdaq AlphaDEX rows not disclosed; current NAV TR YTD `14.26%` as of 2026-06-30; 2015-07-14 index change noted. | [[ETF_NASDAQ_FJP Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 40 | NFTY | `completed_10Y` | `NASDAQ:NFTY` | Official rolling 10-year NAV TR CAGR `7.99%` for 2016-06-30 to 2026-06-30; raw endpoints not disclosed; official 2016-2025 NAV rows compound to `145.94%` / CAGR `9.42%`; 2021-2025 CAGR `10.83%`; annual NIFTY 50 Equal Weight rows not disclosed; current NAV TR YTD `-7.45%` as of 2026-06-30; 2018-04-17 index change noted. | [[ETF_NASDAQ_NFTY Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `39/125`
-- Next ticker: `NFTY` (row `40`)
+- Completed: `40/125`
+- Next ticker: `FLJH` (row `41`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `FJP` was searched, compared, dispatched, or processed in this round.
+No ticker after `NFTY` was searched, compared, dispatched, or processed in this round.

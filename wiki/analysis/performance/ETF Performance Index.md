@@ -58,6 +58,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_INCO Performance]] | official 2011 / issuer 10-year as of 2026-05-31; official 2021-2025 rows | 8.72% | 11.16% | -9.92% | 2023 +34.12% / 2022 -7.40% | India consumer thematic equity | consumer/India/sector concentration; country/FX-sensitive |
 | [[ETF_CBOE_BZX_SMIN Performance]] | official 2012 / official 2021-2025; rolling 2016-2026 | 9.71% | 12.90% | -0.58% | 2021 +44.69% / 2022 -13.98% | India single-country small-cap equity | small-cap liquidity; India/country/sector/valuation/FX-sensitive |
 | [[ETF_CBOE_BZX_INDA Performance]] | official 2012 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 7.07% | 7.80% | -10.12% | 2021 +22.41% / 2022 -9.38% | India single-country equity | India/country/financials/valuation/FX-sensitive |
+| [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EPP Performance]] | official 2001 / official 2016-2025; rolling 2016-2026 | 7.37% | 5.28% | 11.23% | 2017 +25.40% / 2018 -10.70% | developed Asia-Pacific equity ex-Japan | Australia/HK/Singapore and financials/materials concentrated; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_GMF Performance]] | official 2007 / official rolling 2016-2026; annual rows calculated from official NAV/distributions | 9.94% | 4.20% | 12.56% | 2025 +21.94% / 2022 -19.00% | emerging Asia-Pacific broad equity | country/FX/emerging-market/sector-sensitive |
@@ -131,6 +132,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NASDAQ_INDY Performance]] | 19.28% | -7.86% | 17.05% | 4.02% | 4.42% | 39.73% | 4 / 1 |
 | [[ETF_CBOE_BZX_SMIN Performance]] | 44.69% | -13.98% | 34.80% | 17.34% | -6.82% | 83.44% | 3 / 2 |
 | [[ETF_CBOE_BZX_INDA Performance]] | 22.41% | -9.38% | 17.49% | 8.99% | 2.47% | 45.55% | 4 / 1 |
+| [[ETF_NASDAQ_NFTY Performance]] | 26.22% | -4.45% | 24.39% | 5.30% | 5.84% | 67.19% | 4 / 1 |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | 4.23% | -2.12% | 13.96% | 5.99% | 30.16% | 60.39% | 4 / 1 |
 | [[ETF_NYSE_ARCA_GMF Performance]] | -1.49% | -19.00% | 7.88% | 17.01% | 21.94% | 22.83% | 3 / 2 |
 | [[ETF_NYSE_ARCA_EWA Performance]] | 9.09% | -5.74% | 13.98% | 0.82% | 14.12% | 34.85% | 4 / 1 |
