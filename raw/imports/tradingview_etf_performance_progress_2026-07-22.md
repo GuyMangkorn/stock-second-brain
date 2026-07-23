@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 12
-remaining_count: 113
+processed_count: 13
+remaining_count: 112
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-24
 ---
