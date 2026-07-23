@@ -122,7 +122,7 @@ tags:
 | MCHS | unsupported | NYSE Arca:MCHS | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-innovators-active-etf/ | active equity |
 | MINV | unsupported | NYSE Arca:MINV | Asia ex Japan | not applicable | https://us.matthewsasia.com/funds/etfs/asia-innovators-active-etf/ | active equity |
 | MJSC | unsupported | NYSE Arca:MJSC | Japan | not applicable | https://www.mufgetfs.com/mjsc | active equity |
-| MKOR | unsupported | NYSE:MKOR | South Korea | not applicable | https://us.matthewsasia.com/funds/etfs/korea-active-etf/ | active equity |
+| MKOR | unsupported | NYSE Arca:MKOR | South Korea | not applicable | https://www.matthewsasia.com/funds/etfs/korea-active-etf/ | active equity; official Matthews page confirms Primary Exchange NYSE Arca and active fundamental bottom-up strategy |
 | NBCE | unsupported | NYSE Arca:NBCE | China | not applicable | https://www.nb.com/products/etfs/china-equity-etf | active equity |
 | NBJP | unsupported | NYSE Arca:NBJP | Japan | not applicable | https://www.nb.com/products/etfs/japan-equity-etf | active equity |
 | NDIA | unsupported | NYSE Arca:NDIA | India | not applicable | https://www.globalxetfs.com/funds/ndia | active equity |
@@ -789,4 +789,25 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### AAXJ Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, passive-equity gate, NAV Total Return definition with reinvested distributions and expenses, official annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Asia ex Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## MKOR Sequential Queue Record
+
+- Input row: `17/125`; input ticker: `MKOR`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:MKOR`; the official Matthews product page identifies ticker `MKOR`, fund name `Matthews Korea Active ETF`, listing date `2023-07-17`, inception `2010-10-29`, and `Primary Exchange NYSE Arca`. The prior `NYSE:MKOR` source-register label was corrected to the issuer-confirmed exchange.
+- Classification: unsupported active equity ETF. Matthews describes its ETFs as taking an active approach beyond indexing; MKOR uses an unconstrained all-cap, fundamental bottom-up strategy and invests at least 80% of net assets in South Korean common and preferred stocks. It therefore fails the ETF v1 passive/index-tracking equity gate.
+- Official page also reports benchmark `MSCI Korea 25/50 Index`, gross expense ratio `0.79%`, NAV `US$57.48`, and NAV YTD `65.12%`, all as of `2026-07-22`; these figures are retained as classification context only and were not used for a performance page or NAV TR comparison.
+- No performance page, 10-year NAV TR calculation, S&P 500 comparison, or South Korea region/index performance row was created because the product is unsupported under the requested scope. No provider slug was used.
+
+### MKOR Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:MKOR` | [Matthews Korea Active ETF official product page](https://www.matthewsasia.com/funds/etfs/korea-active-etf/) | Fund identity, ticker, listing exchange, active strategy, benchmark, inception, fee, and current snapshot | Page accessed `2026-07-24`; current NAV/YTD `2026-07-22` |
+| `NYSE Arca:MKOR` | [Matthews MKOR factsheet](https://www.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_mkor.pdf) | Official corroboration of active strategy, ticker, primary exchange, inception, and expense ratio | Factsheet dated `2026-03-31` |
+| `NYSE Arca:MKOR` | [Matthews ETF prospectus](https://www.matthewsasia.com/siteassets/resources/fund-documents/prospectus/etf-prospectus.pdf) | Official fund-document classification and NYSE Arca listing | Prospectus dated `2026-04-30` |
+
+### MKOR Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical human-readable exchange, fund identity, passive-equity gate, active-strategy evidence, unsupported reason, source URLs and as-of dates, no performance-page creation, no region/index mutation, ledger pointer, exact filenames, and one log bullet.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

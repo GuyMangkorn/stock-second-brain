@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 16
-remaining_count: 109
+processed_count: 17
+remaining_count: 108
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-16` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-17` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
 
 ## Terminal status register
 
@@ -32,10 +32,11 @@ updated: 2026-07-24
 | 14 | JPXN | `completed_10Y` | `NYSE Arca:JPXN` | Passive/index-tracking Japan equity ETF; official U.S. iShares page resolves the input ticker to NYSE Arca (not separate TSE:1364); official rolling 10-year NAV TR cumulative `142.85%` / CAGR `9.28%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to 5-year CAGR `6.19%`; current date-to-date YTD `15.60%` as of 2026-07-21; NAV US$98.72 as of 2026-07-22. | [[ETF_NYSE_ARCA_JPXN Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 15 | GMF | `completed_10Y` | `NYSE Arca:GMF` | Passive/index-sampling emerging Asia-Pacific equity ETF; official State Street 10-year NAV TR average annual return `9.94%` for 2016-06-30 to 2026-06-30; official NAV/distribution workbooks calculate cumulative `158.00%` and 2021-2025 CAGR `4.20%`; latest standardized NAV TR YTD `12.56%` as of 2026-06-30; NAV US$152.77 as of 2026-07-22. | [[ETF_NYSE_ARCA_GMF Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 16 | AAXJ | `completed_10Y` | `NASDAQ:AAXJ` | Passive/index-tracking Asia ex Japan equity ETF; official rolling 10Y NAV TR cumulative `164.36%` / CAGR `10.21%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to `15.04%` / CAGR `2.84%`; current NAV `US$113.07` and NAV TR YTD `21.30%` as of 2026-07-22. | [[ETF_NASDAQ_AAXJ Performance]] | [[ETF_performance_sources_2026-07-23]] |
+| 17 | MKOR | `unsupported ETF type` | `NYSE Arca:MKOR` | Official Matthews Korea Active ETF; issuer confirms Primary Exchange `NYSE Arca` and an unconstrained all-cap, fundamental bottom-up active strategy. It fails the passive/index-tracking equity gate; no performance page or 10-year NAV TR comparison created. | not applicable | [[ETF_performance_sources_2026-07-23]] |
 
 ## Queue pointer
 
-- Completed: `16/125`
-- Next ticker: `MKOR` (row `17`)
+- Completed: `17/125`
+- Next ticker: `FLKR` (row `18`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `AAXJ` was searched, compared, dispatched, or processed in this round.
+- No ticker after `MKOR` was searched, compared, dispatched, or processed in this round.
