@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: India
-updated: 2026-07-19
+updated: 2026-07-23
 tags:
   - analysis/etf-region
   - geography/India
@@ -18,6 +18,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -12.32% | [[ETF_NASDAQ_INDY Performance]] |
+| INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -40,7 +41,7 @@ tags:
 | FLIN | Franklin FTSE India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_FLIN Performance]] |
 | GLIN | VanEck India Growth Leaders ETF | India equity / index-tracking | not disclosed | not disclosed | 0.47% | [[ETF_NYSE_ARCA_GLIN Performance]] |
 | IMVP | Invesco India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_IMVP Performance]] |
-| INCO | Columbia India Consumer ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_INCO Performance]] |
+| INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | IND | Xtrackers Nifty 500 India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_IND Performance]] |
 | INDA | iShares MSCI India ETF | India equity / index-tracking | not disclosed | 7.80% | -9.33% | [[ETF_CBOE_BZX_INDA Performance]] |
 | INDH | WisdomTree India Hedged Equity Fund | India equity / index-tracking | not disclosed | not disclosed | -9.04% | [[ETF_NASDAQ_INDH Performance]] |

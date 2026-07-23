@@ -82,7 +82,7 @@ tags:
 | IHSEF | supported | LSE:IAPD | Asia-Pacific | 14.55% (2026-07-21) | https://www.ishares.com/uk/individual/en/products/251567/ishares-asia-pacific-dividend-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias; fee and raw 10Y endpoints not disclosed |
 | IMSCF | supported | LSE:CJPU | Japan | 12.11% (2026-07-17) | https://www.ishares.com/uk/professional/en/products/253732/ishares-msci-japan-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias; annual rows and 10Y not disclosed |
 | IMVP | supported | NYSE Arca:IMVP | India | not disclosed (not disclosed) | https://www.sec.gov/Archives/edgar/data/1419139/000119312526062436/d71791d497k.htm | ticker changed from PIN; current NAV/YTD and annual rows not disclosed |
-| INCO | supported | NYSE Arca:INCO | India | not disclosed (not disclosed) | https://www.columbiathreadneedleus.com/investment-products/mutual-funds/columbia-india-consumer-etf/class-/details?cusip=19762B707 | inception, fee, current performance and annual rows not disclosed |
+| INCO | supported | NYSE Arca:INCO | India | -9.92% (2026-05-31) | https://www.columbiathreadneedleus.com/investment-products/mutual-funds/columbia-india-consumer-etf/class-/details?cusip=19762B707 | official 10-year average annual NAV TR 8.72% as of 2026-05-31; annual rows 2021-2025; latest NAV US$59.45 as of 2026-06-23; 2016-2020 annual rows and raw endpoints not disclosed |
 | IND | supported | NASDAQ:IND | India | not disclosed (not disclosed) | https://etf.dws.com/download/asset/048952ad-b7d4-462d-95c8-e726ff2484bd | new fund; no complete annual history and current YTD not disclosed |
 | INDA | supported | Cboe BZX:INDA | India | -9.33% (2026-07-17) | https://www.ishares.com/us/products/239659/INDA | raw 10Y endpoints not disclosed |
 | INDE | unsupported | NYSE Arca:INDE | India | not applicable | https://us.matthewsasia.com/funds/etfs/india-active-etf/ | active equity |
@@ -288,6 +288,45 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### DXJJF Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from check-etf-performance/workflow.md before writing: ticker/alias and exchange resolution, passive-equity classification, NAV Total Return definition, distributions and expenses, annual rows and complete-year eligibility, normalized endpoints and formula, S&P 500 basis/window, visible as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, existing-page ownership, and link targets.
+- Local verdict: PASS; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable lean workflow.
+
+## INCO Sequential Queue Record
+
+- Input row: 8/125; input ticker: INCO; terminal status: completed_10Y.
+- Canonical entity key: NYSE Arca:INCO; the official Columbia Threadneedle page identifies the NYSE Arca exchange, INCO ticker, CUSIP 19762B707, and Columbia India Consumer ETF.
+- Classification: supported passive/index-tracking equity ETF. The issuer lists management style as Indexed and the objective seeks results corresponding to the Indxx India Consumer Index. The underlying is India consumer equity; it is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock.
+- Inception: 2011-08-10. Issuer benchmark: Indxx India Consumer Index. Net expense ratio: 0.75%; gross expense ratio: 0.76%; waiver expiration: 2026-07-31. Distribution schedule: annual.
+
+### INCO Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:INCO | [Columbia Threadneedle INCO product/performance page](https://www.columbiathreadneedleus.com/investment-products/mutual-funds/columbia-india-consumer-etf/class-/details?cusip=19762B707) | Canonical listing, indexed classification, objective, benchmark, inception, fees, NAV/YTD, return definition and annual rows | Page accessed 2026-07-23; performance as of 2026-05-31; NAV as of 2026-06-23 |
+| NYSE Arca:INCO | [Columbia India Consumer ETF factsheet](https://www.columbiathreadneedleus.com/binaries/content/assets/cti/public/columbia_india_consumer_etf_fs.pdf) | Official product and NAV-return corroboration | Factsheet as of 2026-03-31 |
+| S&P 500 TR | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common-reference benchmark identity and annual rows | Cached USD Total Return rows as of 2025-12-31 |
+
+### INCO Raw Observations And Calculations
+
+| Year | INCO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 19.70% | 28.71% |
+| 2022 | -7.40% | -18.11% |
+| 2023 | 34.12% | 26.29% |
+| 2024 | 13.78% | 25.02% |
+| 2025 | 0.35% | 17.88% |
+
+- Official issuer 10-year average annual NAV Total Return: 8.72% as of 2026-05-31. The implied date window is 2016-05-31 to 2026-05-31, actual years 10.00; raw NAV endpoint levels are ไม่พบข้อมูลที่ยืนยันได้.
+- Normalized calculation used on the performance page: start 100.00; end 230.72; (230.72 / 100.00)^(1 / 10.00) - 1 = approximately 8.72%. The normalized end is derived from the issuer's rounded 10-year annualized metric, not an issuer-published endpoint or proxy.
+- Complete disclosed calendar rows 2021-2025 compound to 69.74% and annualize to 11.16% over 5 years; corresponding cached S&P 500 TR is 96.17% and 14.43%.
+- Up/down years among disclosed complete rows: 4 / 1. Best 2023 +34.12%; least positive 2025 +0.35%; worst and least bad down year 2022 -7.40%.
+- Official current NAV Total Return YTD: -9.92% as of 2026-05-31. Latest official NAV is US$59.45 as of 2026-06-23 and is not a return metric.
+- Annual rows for 2016-2020 are ไม่พบข้อมูลที่ยืนยันได้ in the selected official source; no values were inferred.
+- Annual-return population standard deviation from rounded 2021-2025 rows: 14.59%; this is a calculation, not an issuer 3-year volatility statistic.
+- Official daily NAV history sufficient to reproduce max drawdown and recovery: ไม่พบข้อมูลที่ยืนยันได้.
+
+### INCO Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from check-etf-performance/workflow.md before writing: ticker/exchange, indexed passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, issuer 10-year eligibility and normalized endpoints, available annual rows, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: PASS; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable lean workflow.
 ## ISRVF Sequential Queue Record
 
