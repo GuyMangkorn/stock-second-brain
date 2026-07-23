@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `49/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `50/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -47,6 +47,7 @@ tags:
 | VFJUF | supported | LSE:VJPU | Japan | 19.41% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9541/ftse-japan-ucits-etf-usd-hedged-accumulating | OTC alias resolved to Vanguard FTSE Japan UCITS ETF USD Hedged Accumulating; official inception `2020-01-31`, `10-year NAV TR unavailable`; available-period NAV TR CAGR `20.29%` for 2020-01-31 to 2026-05-31; rolling 12-month NAV rows disclosed; current 2026-07-22 YTD not disclosed |
 | MCHS | unsupported ETF type | NASDAQ:MCHS | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-innovators-active-etf/ | Matthews identifies MCHS as an active/fundamental China equity ETF; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | IPAC | supported | NYSE Arca:IPAC | Asia-Pacific | 13.75% (2026-07-22) | https://www.ishares.com/us/products/264619/ishares-core-msci-pacific-etf | official rolling 10Y NAV TR cumulative 141.81% / CAGR 9.23% for 2016-06-30 to 2026-06-30; official annual NAV/benchmark rows 2021-2025; 2016-2020 annual rows not disclosed; current YTD 13.75% as of 2026-07-22 |
+| ASIA | unsupported ETF type | NYSE Arca:ASIA | Asia-Pacific | not applicable | https://www.matthewsasia.com/funds/etfs/pacific-tiger-active-etf/ | Matthews identifies ASIA as Pacific Tiger Active ETF with a high-conviction, all-cap fundamental approach; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1316,6 +1317,26 @@ tags:
 | `NASDAQ:MCHS` | [Matthews launch announcement](https://www.matthewsasia.com/about/our-story/press-releases/new-discovery-active-etfs/) | Independent issuer wording that MCHS launched as an active ETF on Nasdaq | Published `2024-01-11` |
 
 ### MCHS Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## ASIA Sequential Queue Record
+
+- Input row: `50/125`; input ticker: `ASIA`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:ASIA`; Matthews' official product page identifies Matthews Pacific Tiger Active ETF, ticker `ASIA`, primary exchange NYSE Arca, inception `2023-09-21`, benchmark MSCI All Country Asia ex Japan Index, and gross expense ratio `0.79%`. No provider slug or guessed exchange is used.
+- Type gate: Matthews describes the ETF as a high-conviction equity portfolio using an all-cap fundamental approach driven by proprietary research. The strategy invests at least 80% in common and preferred stocks of companies located in Asia ex Japan, but it is explicitly active rather than passive/index-tracking. This fails the required ETF scope and terminates the ticker as `unsupported ETF type`.
+- No performance page, annual table, S&P 500 comparison, 10-year audit, region snapshot row or performance-index row was created because the type gate terminated the ticker.
+
+### ASIA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ASIA` | [Matthews Pacific Tiger Active ETF product page](https://www.matthewsasia.com/funds/etfs/pacific-tiger-active-etf/) | Canonical exchange/ticker, fund identity, inception, active strategy, benchmark, geographic focus and fees | Page accessed `2026-07-24`; current product capture includes NAV/YTD fields as of `2026-07-16` |
+| `NYSE Arca:ASIA` | [Matthews ASIA factsheet](https://www.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_asia.pdf) | Official active classification, objective, strategy and fund facts cross-check | Factsheet accessed `2026-07-24`; current document |
+| `Matthews Pacific Tiger Active ETF` | [Matthews ETF prospectus](https://www.matthewsasia.com/siteassets/resources/fund-documents/prospectus/etf-prospectus.pdf) | Legal/fund and active-strategy risk disclosure cross-check | Prospectus accessed `2026-07-24`; current document |
+
+### ASIA Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
