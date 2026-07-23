@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `42/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `43/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -40,6 +40,7 @@ tags:
 | NFTY | supported | NASDAQ:NFTY | India | -7.45% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=NFTY | official rolling 10Y NAV TR CAGR 7.99% for 2016-06-30 to 2026-06-30; raw endpoints not disclosed; official calendar NAV rows 2016-2025; 2021-2025 CAGR 10.83%; index changed 2018-04-17; current YTD -7.45% as of 2026-06-30 |
 | FLJH | supported | NYSE Arca:FLJH | Japan | 22.91% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26355/SINGLCLASS/franklin-ftse-japan-hedged-etf/FLJH | official inception 2017-11-02; 10-year NAV TR unavailable; official available-period NAV TR annualized 13.63% through 2026-03-31; official calendar NAV rows 2018-2025; current YTD 22.91% as of 2026-07-07 |
 | GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | official rolling 10Y NAV TR CAGR 4.37% for 2016-06-30 to 2026-06-30; raw endpoints and annual NAV rows not disclosed in reviewed capture; current YTD -10.99% as of 2026-06-30 |
+| JPAN | unsupported ETF type | NYSE Arca:JPAN | Japan | not applicable | https://us.matthewsasia.com/funds/etfs/japan-active-etf/ | Matthews identifies JPAN as a high-conviction, unconstrained all-cap fundamental active Japan ETF; outside passive/index-tracking equity scope; no performance page created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -178,6 +179,26 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-data gap, issuer benchmark, S&P 500 basis/window, current-YTD as-of date, calculations, filenames, China region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## JPAN Sequential Queue Record
+
+- Input row: `43/125`; input ticker: `JPAN`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:JPAN`; Matthews' official Japan Active ETF page and March 31, 2026 factsheet identify Matthews Japan Active ETF, ticker JPAN, primary exchange NYSE Arca, CUSIP `577-130-594`, inception `2023-09-21`, benchmark MSCI Japan Index and gross expense ratio `0.79%`. No provider slug or guessed exchange is used.
+- Type gate result: Matthews describes a high-conviction growth strategy, unconstrained all-cap approach and fundamental research based on balance sheet, cash flow, management, product lines, governance and financial health. The official prospectus classifies it as an active ETF. This is outside the required passive, index-tracking equity ETF scope.
+- Terminal reason: `unsupported ETF type` — active equity ETF; no performance page, annual NAV table, 10-year audit or Japan region/index row is created.
+
+### JPAN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:JPAN` | [Matthews Japan Active ETF product page](https://us.matthewsasia.com/funds/etfs/japan-active-etf/) | Canonical exchange/ticker, active strategy, inception, benchmark, NAV/YTD and fund facts | Page accessed `2026-07-24`; current data through `2026-07-17` |
+| `NYSE Arca:JPAN` | [Matthews JPAN factsheet](https://www.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_jpan.pdf) | Active objective/strategy, equity asset class, inception, exchange, benchmark and fee | Factsheet as of `2026-03-31` |
+| `NYSE Arca:JPAN` | [Matthews ETF prospectus](https://www.matthewsasia.com/siteassets/resources/fund-documents/prospectus/etf-prospectus.pdf) | Legal structure and active-fund classification | Prospectus dated `2026-04-30` |
+
+### JPAN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange resolution, issuer identity, active/passive type gate, reason for terminal unsupported status, filename non-creation, source register, Japan region non-update, and link-scope check.
+- Local fallback verdict: `PASS`; no performance page was created because the unsupported type gate is terminal. Reviewer-availability fallback is disclosed here as required.
 
 ## NFTY Sequential Queue Record
 
