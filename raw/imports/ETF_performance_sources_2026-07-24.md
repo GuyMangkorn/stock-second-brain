@@ -22,6 +22,7 @@ tags:
 | FLKR | supported | NYSE Arca:FLKR | South Korea | 86.35% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26353/SINGLCLASS/franklin-ftse-south-korea-etf/FLKR | official inception 2017-11-02; issuer 10-year NAV return `—`; available official annual rows 2018-2025 |
 | VPL | supported | NYSE Arca:VPL | Asia-Pacific | 19.62% (2026-07-17) | https://investor.vanguard.com/investment-products/etfs/profile/vpl | official rolling 10Y NAV TR 177.37% / CAGR 10.74% as of 2026-05-31; annual NAV TR rows 2016-2025 |
 | ISSSF | supported | LSE:SAUS | Australia | 10.27% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251851/ishares-msci-australia-ucits-etf | OTC alias; official rolling 10Y NAV TR 121.17% / CAGR 8.26% as of 2026-06-30; annual NAV TR rows 2016-2025 |
+| SCJ | supported | NYSE Arca:SCJ | Japan | 16.10% (2026-07-21) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | official rolling 10Y NAV TR 119.60% / CAGR 8.18% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 
 ## FLKR Sequential Queue Record
 
@@ -59,6 +60,49 @@ tags:
 ### FLKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## SCJ Sequential Queue Record
+
+- Input row: `21/125`; input ticker: `SCJ`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:SCJ`; iShares' official U.S. page identifies the product, exchange, fund launch `2007-12-20`, asset class `Equity`, benchmark `MSCI Japan Small Cap Index (Net)`, expense ratio `0.50%`, and ticker `SCJ`. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page contained only 2021-2025 rows and no inception, benchmark or rolling calculation. Rechecking the official U.S./international performance views and factsheet confirms official 10.00-year NAV TR coverage; the existing page gap was repaired rather than treated as a history gap.
+- Official rolling performance: iShares reports NAV Total Return cumulative `119.60%` and average annual return `8.18%` for `2016-06-30` to `2026-06-30`. Normalized TR is `100.00` to `219.60`; actual years `10.00`.
+- Official annual observations: the international iShares performance view supplies NAV and issuer benchmark rows for `2016-2025`; the U.S. factsheet corroborates precise NAV rows for `2021-2025`. The source states growth-of-hypothetical-investment performance assumes reinvestment of dividends/capital gains and deducts fund expenses.
+- Official current observation: the iShares international performance view reports NAV `US$105.49` and NAV Total Return YTD `16.10%` as of `2026-07-21`; the U.S. page's earlier observation was `14.73%` as of `2026-07-17`, so the later official date is used.
+
+### SCJ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:SCJ` | [iShares SCJ U.S. product page](https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf) | Canonical exchange, fund identity, benchmark, inception, fees, current NAV/YTD and rolling standardized NAV TR | Page accessed `2026-07-24`; rolling summary `2026-06-30`; current NAV/YTD `2026-07-17` |
+| `NYSE Arca:SCJ` | [iShares SCJ international performance view](https://www.ishares.com/uk/professional/en/products/239666/ishares-msci-japan-smallcap-etf?siteEntryPassthrough=true&switchLocale=y) | 2016-2025 NAV/issuer benchmark rows and fresher current observation | Annual rows `2025-12-31`; current NAV/YTD `2026-07-21` |
+| `NYSE Arca:SCJ` | [iShares SCJ factsheet](https://www.ishares.com/us/literature/fact-sheet/scj-ishares-msci-japan-small-cap-etf-fund-fact-sheet-en-us.pdf) | Corroborates passive equity objective, benchmark, launch, fee, 2021-2025 NAV rows and reinvestment/expense basis | Factsheet as of `2026-03-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### SCJ Raw Observations And Calculations
+
+| Year | SCJ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.60% | 11.96% |
+| 2017 | 30.90% | 21.83% |
+| 2018 | -16.40% | -4.38% |
+| 2019 | 19.00% | 31.49% |
+| 2020 | 6.30% | 18.40% |
+| 2021 | -2.40% | 28.71% |
+| 2022 | -12.70% | -18.11% |
+| 2023 | 12.95% | 26.29% |
+| 2024 | 3.26% | 25.02% |
+| 2025 | 29.66% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+119.60%` with CAGR `8.18%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `219.60`, actual years `10.00`.
+- Official calendar rows `2016-2025` compound to `+92.14%` and annualize to `6.75%` over 10 complete calendar years. Precise common rows `2021-2025` compound to `+28.85%` and annualize to `5.20%`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; SCJ trails by approximately `9.23 pp` CAGR in that common window.
+- Official current NAV TR YTD is `+16.10%` as of `2026-07-21`; market-price return is kept separate. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### SCJ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## ISSSF Sequential Queue Record
