@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `41/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `42/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -39,6 +39,7 @@ tags:
 | FJP | supported | NASDAQ:FJP | Japan | 14.26% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FJP | official rolling 10Y NAV TR CAGR 7.55% as of 2026-06-30; official calendar NAV rows 2016-2025; 2021-2025 CAGR 8.38%; current YTD 14.26% as of 2026-06-30; index changed 2015-07-14 |
 | NFTY | supported | NASDAQ:NFTY | India | -7.45% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=NFTY | official rolling 10Y NAV TR CAGR 7.99% for 2016-06-30 to 2026-06-30; raw endpoints not disclosed; official calendar NAV rows 2016-2025; 2021-2025 CAGR 10.83%; index changed 2018-04-17; current YTD -7.45% as of 2026-06-30 |
 | FLJH | supported | NYSE Arca:FLJH | Japan | 22.91% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26355/SINGLCLASS/franklin-ftse-japan-hedged-etf/FLJH | official inception 2017-11-02; 10-year NAV TR unavailable; official available-period NAV TR annualized 13.63% through 2026-03-31; official calendar NAV rows 2018-2025; current YTD 22.91% as of 2026-07-07 |
+| GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | official rolling 10Y NAV TR CAGR 4.37% for 2016-06-30 to 2026-06-30; raw endpoints and annual NAV rows not disclosed in reviewed capture; current YTD -10.99% as of 2026-06-30 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -131,6 +132,51 @@ tags:
 ### FLJH Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period table, annual rows, issuer benchmark, S&P 500 basis/window, current-YTD as-of date, calculations, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## GXC Sequential Queue Record
+
+- Input row: `42/125`; input ticker: `GXC`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:GXC`; State Street's official product page and January 31, 2026 SEC summary prospectus identify State Street SPDR S&P China ETF, NYSE Arca listing, CUSIP `78463X400`, ISIN `US78463X4007`, inception `2007-03-20`, gross expense ratio `0.59%`, equity asset class and benchmark S&P China BMI Index. No provider slug or guessed exchange is used.
+- Type gate: State Street identifies the fund as passively managed and the objective as tracking the total return performance of an equity index. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund. The page's `Options Available` field refers to exchange-traded options on the ETF, not a derivative-heavy fund strategy.
+- Mandatory 10-year audit: the prior page had no verified benchmark, inception, rolling result or annual table. Rechecking the current State Street product page, June 2026 factsheet and January 31, 2026 SEC summary prospectus confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page gap, not an actual history gap.
+- Official rolling performance: State Street reports NAV TR CAGR `4.37%` for the 10-year window as of `2026-06-30`; raw start/end TR values and raw cumulative return are not disclosed. The implied cumulative return from the official CAGR is approximately `53.38%`, explicitly shown as a calculation rather than a raw endpoint.
+- Official annual-data gap: the reviewed current product page and June 2026 factsheet provide rolling performance but no readable annual NAV/index rows for `2016-2025`; no third-party annual proxy is created. Annual table rows remain `not disclosed`, while S&P 500 cached reference rows are shown separately.
+- Official current observation: State Street reports NAV `US$88.69` as of `2026-07-22`, 1,309 holdings as of `2026-07-22`, and current NAV TR YTD `-10.99%` as of `2026-06-30`. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; exact GXC annual-window CAGR and common-window spread are `not disclosed` because issuer annual rows were not disclosed in the reviewed official capture.
+
+### GXC Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:GXC` | [State Street GXC product and performance page](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc) | Canonical listing, identity, passive classification, benchmark, inception, rolling 10Y NAV TR, current NAV/YTD, holdings, fee and risk data | Page accessed `2026-07-24`; rolling/YTD summary `2026-06-30`; NAV/holdings `2026-07-22` |
+| `NYSE Arca:GXC` | [State Street GXC factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gxc.pdf) | Objective, equity/index classification, inception, fee, rolling NAV TR, holdings/sector/country data and total-return basis | Factsheet as of `2026-06-30` |
+| `NYSE Arca:GXC` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1168164/000119312526031213/d92286d497k.htm) | Objective, passive sampling, index, fee and risk disclosure; annual-return section cross-check | Prospectus dated `2026-01-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### GXC Raw Observations And Calculations
+
+| Year | GXC NAV TR | S&P China BMI TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | not disclosed | not disclosed | 28.71% |
+| 2022 | not disclosed | not disclosed | -18.11% |
+| 2023 | not disclosed | not disclosed | 26.29% |
+| 2024 | not disclosed | not disclosed | 25.02% |
+| 2025 | not disclosed | not disclosed | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `4.37%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`; implied cumulative from CAGR is approximately `53.38%`.
+- Official annual GXC NAV/index rows and 2016-2025 / 2021-2025 GXC CAGRs are `not disclosed` in the reviewed current official capture; no proxy is created.
+- S&P 500 TR rows compound to `+298.33%` / CAGR `14.82%` for `2016-2025` and `+96.17%` / CAGR `14.43%` for `2021-2025`; these are reference-only comparisons.
+- Official current NAV TR YTD is `-10.99%` as of `2026-06-30`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### GXC Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-data gap, issuer benchmark, S&P 500 basis/window, current-YTD as-of date, calculations, filenames, China region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## NFTY Sequential Queue Record

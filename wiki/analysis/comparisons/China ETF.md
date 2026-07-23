@@ -46,9 +46,10 @@ tags:
 | CNYA | iShares MSCI China A ETF | China equity / index-tracking | not disclosed | not disclosed | 1.13% | [[ETF_CBOE_BZX_CNYA Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 | CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | not disclosed | not disclosed | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
+| GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | FCA | First Trust China AlphaDEX Fund | China equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_FCA Performance]] |
 | FLCH | Franklin FTSE China ETF | China equity / index-tracking | not disclosed | not disclosed | -10.65% | [[ETF_NYSE_ARCA_FLCH Performance]] |
-| GXC | State Street SPDR S&P China ETF | China equity / index-tracking | not disclosed | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
+| GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | IHRPF | IShares Plc. | China equity / index-tracking | not disclosed | -1.64% | not disclosed | [[ETF_OTC_MARKETS_IHRPF Performance]] |
 | ISVBF | ISHARES IV PLC | China equity / index-tracking | not disclosed | -3.44% | -9.29% | [[ETF_OTC_MARKETS_ISVBF Performance]] |
 | KBA | KraneShares Bosera MSCI China A 50 Connect Index ETF | China equity / index-tracking | not disclosed | not disclosed | 11.37% | [[ETF_NYSE_KBA Performance]] |
