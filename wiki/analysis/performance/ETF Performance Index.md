@@ -104,6 +104,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_CQQQ Performance]] | official 2009 / official complete 2016-2025* | 4.44%* | -8.27% | not disclosed | 2017 +72.54% / 2018 -34.21% | China technology equity | non-diversified; China tech/policy/VIE/FX-sensitive; predecessor/index breaks |
 | [[ETF_NYSE_ARCA_CNXT Performance]] | official 2014 / official rolling 2016-2026; calendar rows not disclosed | 7.37% | not disclosed | 16.05% | not disclosed / not disclosed | China A-share ChiNext equity | China A-share/technology/industrial concentration; methodology/index break 2021-12-10 |
 | [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
+| [[ETF_NYSE_ARCA_ASHS Performance]] | official 2014 / official rolling 2016-03 to 2026-03; annual rows not disclosed | 1.96% | not disclosed | 3.36% | not disclosed / not disclosed | China A-share small-cap equity | China policy/A-share access/small-cap liquidity/sector/FX-sensitive; 497 holdings |
 | [[ETF_LSE_CPXJ Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 7.65% | 5.63% | 8.15% | 2017 +25.80% / 2018 -10.40% | developed Asia-Pacific ex-Japan broad equity | Australia/HK/Singapore and financials/materials/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
 | [[ETF_NYSE_ARCA_EWH Performance]] | official 1996 / official 2016-2025 | 4.20% | 0.89% | 5.44% | 2017 +35.60% / 2023 -14.04% | Hong Kong single-country equity | financials/real-estate/utilities concentration; country/FX/liquidity-sensitive |
@@ -330,7 +331,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_AIA Performance]] — AIA (Asia ex Japan)
 - [[ETF_NYSE_ARCA_ASEA Performance]] — ASEA (Southeast Asia)
 - [[ETF_NYSE_ARCA_ASHR Performance]] — ASHR (China)
-- [[ETF_NYSE_ASHS Performance]] — ASHS (China)
 - [[ETF_NYSE_ARCA_BBAX Performance]] — BBAX (Asia-Pacific)
 - [[ETF_NYSE_ARCA_CHIQ Performance]] — CHIQ (China)
 - [[ETF_NASDAQ_CNQQ Performance]] — CNQQ (China)
@@ -412,3 +412,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_VDPX Performance]] — VGUDF / VDPX (Asia-Pacific)
 - [[ETF_LSE_CEMA Performance]] — CETFF / CEMA (Emerging Markets)
 - [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
+- [[ETF_NYSE_ARCA_ASHS Performance]] — ASHS (China)

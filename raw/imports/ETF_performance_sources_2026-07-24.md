@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `44/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `45/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -42,6 +42,7 @@ tags:
 | GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | official rolling 10Y NAV TR CAGR 4.37% for 2016-06-30 to 2026-06-30; raw endpoints and annual NAV rows not disclosed in reviewed capture; current YTD -10.99% as of 2026-06-30 |
 | JPAN | unsupported ETF type | NYSE Arca:JPAN | Japan | not applicable | https://us.matthewsasia.com/funds/etfs/japan-active-etf/ | Matthews identifies JPAN as a high-conviction, unconstrained all-cap fundamental active Japan ETF; outside passive/index-tracking equity scope; no performance page created |
 | EPI | supported | NYSE Arca:EPI | India | -7.91% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/epi | official rolling 10Y NAV TR CAGR `9.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows; 2021-2025 CAGR `11.52%`; current NAV TR YTD `-7.91%` as of 2026-06-30 |
+| ASHS | supported | NYSE Arca:ASHS | China | 3.36% (2026-03-31) | https://etf.dws.com/download/asset/1bfed1b5-c933-4199-bdcc-30b0ed651740 | official rolling 10Y NAV TR CAGR `1.96%` for 2016-03-31 to 2026-03-31; annual NAV/index rows not disclosed in reviewed official capture; current NAV TR YTD `3.36%` as of 2026-03-31; 2026-06-30 current YTD not disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1158,4 +1159,51 @@ tags:
 ### EPI Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, issuer-index gap, S&P 500 basis/window, current-YTD as-of date, rankings, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## ASHS Sequential Queue Record
+
+- Input row: `45/125`; input ticker: `ASHS`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:ASHS`; DWS/Xtrackers and SEC identify Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF, ticker ASHS, NYSE Arca listing, inception `2014-05-20`, CUSIP `233051754`, and expense ratio `0.65%`. No provider slug or guessed exchange is used.
+- Type gate: the official objective is to track the CSI 500 Index, composed of predominantly small-cap China A-share companies. The fund uses a passive/indexing approach and is an equity ETF; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had an incorrect exchange key, no inception/index and no rolling result. Rechecking the current DWS product finder, Q1 2026 factsheet, October 2025 summary prospectus, SEC prospectus cross-check and annual shareholder report confirms a genuine `10.00` elapsed-year NAV TR window `2016-03-31` to `2026-03-31`; this was a page gap, not an actual history gap.
+- Official rolling performance: DWS reports NAV TR CAGR `1.96%` for the 10-year window as of `2026-03-31`; raw rolling start/end TR values and cumulative return are not disclosed. The shown implied cumulative return is approximately `21.42%` from the published CAGR, not a substitute for raw endpoints.
+- Official annual-data audit: the Q1 2026 factsheet discloses 1-, 3-, 5- and 10-year standardized periods but not readable annual NAV/index rows. The 2025 annual shareholder report provides a growth-of-$10,000 chart, not a complete annual return table. No chart-derived proxy or third-party annual series is substituted; 2016-2025 and 2021-2025 fund CAGRs remain `not disclosed`.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; S&P 500 reference CAGR is `14.82%` for 2016-2025 and `14.43%` for 2021-2025, but no ASHS spread is calculated because fund annual rows are missing.
+- Official current observation: DWS reports NAV TR YTD `3.36%` as of `2026-03-31`; a `2026-06-30` current NAV TR YTD value was not disclosed in the reviewed official source capture.
+
+### ASHS Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ASHS` | [Xtrackers ASHS product finder](https://etf.dws.com/en-us/etf-products/) | Official product discovery/current issuer source, fund identity and performance-document route | Page accessed `2026-07-24`; dynamic product data not readable in capture |
+| `NYSE Arca:ASHS` | [Xtrackers ASHS Q1 2026 factsheet](https://etf.dws.com/download/asset/1bfed1b5-c933-4199-bdcc-30b0ed651740) | Canonical ticker/exchange, objective, index, inception, passive classification, NAV TR standardized performance, holdings, fee and risk data | Factsheet as of `2026-03-31` |
+| `NYSE Arca:ASHS` | [Xtrackers ASHS summary prospectus](https://etf.dws.com/download/asset/7a928aa7-d2cc-490b-a3de-fb6144afc0cb) | Objective, passive/indexing strategy, exchange, fee, A-share access and risk disclosures | Prospectus dated `2025-10-01` |
+| `NYSE Arca:ASHS` | [SEC ASHS summary prospectus cross-check](https://www.sec.gov/Archives/edgar/data/1503123/000008805324000976/k100124ashs.htm) | Independent regulator-hosted cross-check of canonical exchange, objective and historical-performance disclosure limitations | Prospectus dated `2024-10-01` |
+| `NYSE Arca:ASHS` | [Xtrackers ASHS annual shareholder report](https://etf.dws.com/download/asset/cd4f449d-b77e-49df-8486-46f48efe43cc) | Growth-of-$10,000 and annual-report performance cross-check; confirms chart rather than complete annual-row disclosure | Reporting period ended `2025-05-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### ASHS Raw Observations And Calculations
+
+| Year | ASHS NAV TR | CSI 500 Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | not disclosed | not disclosed | 28.71% |
+| 2022 | not disclosed | not disclosed | -18.11% |
+| 2023 | not disclosed | not disclosed | 26.29% |
+| 2024 | not disclosed | not disclosed | 25.02% |
+| 2025 | not disclosed | not disclosed | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `1.96%` for `2016-03-31` to `2026-03-31`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`; implied cumulative from CAGR is approximately `21.42%`.
+- ASHS annual NAV/index rows for `2016-2025` and `2021-2025` are `not disclosed` in the reviewed official capture, so fund CAGRs, up/down counts and best/worst years are not calculated.
+- S&P 500 TR rows in the common reference windows compound to `+298.33%` / CAGR `14.82%` for `2016-2025` and `+96.17%` / CAGR `14.43%` for `2021-2025`.
+- Official current NAV TR YTD is `+3.36%` as of `2026-03-31`; current `2026-06-30` value and daily NAV history sufficient for max drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### ASHS Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, exchange correction from `NYSE` to issuer-confirmed `NYSE Arca`, CUSIP/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-row gap, S&P 500 basis/window, current-YTD as-of date, rankings, canonical filename, China region assignment, canonical geography tag, breadcrumbs, old-link removal, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
