@@ -202,3 +202,48 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, distributions, annual rows, rolling 10-year endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## DBJP Sequential Queue Record
+
+- Input row: `2/125`; input ticker: `DBJP`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:DBJP`; the official DWS factsheet and summary prospectus identify the NYSE Arca listing and Xtrackers MSCI Japan Hedged Equity ETF. No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking single-country Japan equity ETF. The fund uses USD/JPY forward contracts for currency hedging; this is a hedging overlay, not a derivative-heavy product classification.
+- Issuer benchmark: `MSCI Japan US Dollar Hedged Index`. Inception: `2011-06-08`. Expense ratio: `0.45%` as of `2026-06-30`. Distribution schedule: annual.
+
+### DBJP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:DBJP` | [DWS Q2 2026 DBJP factsheet](https://www.dws.com/US/EN/resources/Xtrackers-MSCI-Japan-Hedged-Equity-ETF/DBJP_fact-sheet.pdf) | Fund identity, exchange, tracked index, inception, NAV Total Return, expense ratio, holdings and risk fields | Factsheet as of `2026-06-30`; official NAV TR 10-year `17.28%` |
+| `NYSE Arca:DBJP` | [DWS summary prospectus](https://etf.dws.com/en-us/AssetDownload/Index/c7bca405-12a0-486d-8a66-5d3558c23fa0/DBJP-SUM.pdf) | Passive/indexing approach and calendar-year total returns | Official NAV rows `2015-2024`; rows used in page `2016-2024` |
+| `NYSE Arca:DBJP` | [DWS 2025 dividend schedule](https://etf.dws.com/en-us/AssetDownload/Index/6b4403da-1256-4e11-8e8a-14254534db91/Dividend-Schedule.pdf) | Distribution timing/frequency context | 2025 annual distribution schedule |
+| `NYSE Arca:DBJP` | [DWS currency-hedged ETF explanation](https://etf.dws.com/en-us/etf-knowledge/focus-topics-etf-investment-strategies/currency-hedged-etfs-mitigating-currency-risks-from-international-equities/) | USD/JPY hedge mechanism | Educational issuer page accessed `2026-07-23` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### DBJP Raw Observations And Calculations
+
+| Year | DBJP NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -2.00% | 11.96% |
+| 2017 | 20.83% | 21.83% |
+| 2018 | -14.03% | -4.38% |
+| 2019 | 20.78% | 31.49% |
+| 2020 | 9.49% | 18.40% |
+| 2021 | 12.89% | 28.71% |
+| 2022 | -2.54% | -18.11% |
+| 2023 | 34.97% | 26.29% |
+| 2024 | 26.05% | 25.02% |
+| 2025 | not disclosed | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR: `17.28%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual elapsed years `10.00`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `(1 + 0.1728)^10 = 492.31`; normalized cumulative return `+392.31%`; `(492.31 / 100.00)^(1 / 10.00) - 1 ≈ 17.28%`. The end value is derived from the issuer's rounded annualized return, not an issuer-published NAV level.
+- Complete official calendar rows `2016-2024` compound to `+51.99%` and annualize to `10.81%` over `9` years. This is not the rolling 10-year CAGR.
+- Up/down years among complete rows: `6 / 3`. Best `2023 +34.97%`; least positive `2020 +9.49%`; worst `2018 -14.03%`; least bad down year `2022 -2.54%`.
+- Official issuer current YTD is `ไม่พบข้อมูลที่ยืนยันได้` in the latest factsheet. A secondary Schwab report shows `+21.80%` NAV cumulative YTD as of `2026-06-30`, but it is not used as the primary page claim because the issuer factsheet omits YTD.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### DBJP Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and formula, S&P 500 basis/window, as-of dates, best/worst ranking, 2025/current-YTD gaps, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.

@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Japan
-updated: 2026-07-22
+updated: 2026-07-23
 tags:
   - analysis/etf-region
   - geography/Japan
@@ -18,6 +18,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | BBJP | JPMorgan BetaBuilders Japan ETF | Japan single-country large/mid-cap equity | not applicable (<10y history) | 6.56% | 14.75% | [[ETF_CBOE_BBJP Performance]] |
+| DBJP | Xtrackers MSCI Japan Hedged Equity ETF | Japan single-country equity / USD hedged | 17.28% | not disclosed | not disclosed | [[ETF_NYSE_ARCA_DBJP Performance]] |
 | DFJ | WisdomTree Japan SmallCap Dividend Fund | Japan small-cap dividend | 9.13% | 8.57% | 10.98% | [[ETF_AMEX_DFJ Performance]] |
 | EWJ | iShares MSCI Japan ETF | Japan single-country large/mid-cap equity | 9.54% | 6.22% | 14.28% | [[ETF_NYSE_ARCA_EWJ Performance]] |
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
@@ -39,7 +40,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| DBJP | Xtrackers MSCI Japan Hedged Equity ETF | Japan equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_DBJP Performance]] |
+| DBJP | Xtrackers MSCI Japan Hedged Equity ETF | Japan single-country equity / USD hedged | 17.28% | not disclosed | not disclosed | [[ETF_NYSE_ARCA_DBJP Performance]] |
 | EWJV | iShares MSCI Japan Value ETF | Japan equity / index-tracking | not disclosed | 12.96% | 17.90% | [[ETF_NASDAQ_EWJV Performance]] |
 | FJP | First Trust Japan AlphaDEX Fund | Japan equity / index-tracking | not disclosed | 8.38% | 14.26% | [[ETF_NASDAQ_FJP Performance]] |
 | FLJH | Franklin FTSE Japan Hedged ETF | Japan equity / index-tracking | not disclosed | not disclosed | 22.91% | [[ETF_NYSE_ARCA_FLJH Performance]] |
