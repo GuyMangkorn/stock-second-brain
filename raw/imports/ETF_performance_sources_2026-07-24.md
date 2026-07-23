@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `60/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `61/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -58,6 +58,7 @@ tags:
 | VGDTF | supported | XETRA:VJPA | Japan | 15.27% (2026-06-30) | https://www.vanguard.co.uk/professional/product/etf/equity/9674/vanguard-ftse-japan-ucits-etf-usd-accumulating | OTC alias cross-checked to Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN IE00BFMXYX26; official Deutsche Börse EUR line VJPA; passive physical/index-tracking equity; inception 2019-09-24; 10-year field `—`; since-inception NAV TR CAGR 9.96%; official KIID 2020-2025 calendar rows; current standardized YTD 15.27% |
 | RAYJ | unsupported ETF type | NYSE Arca:RAYJ | Japan | not applicable | https://funds.rayliant.com/rayj/ | Rayliant identifies RAYJ as an active Japan equity strategy using SMDAM fundamental research and Rayliant quantitative models; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | THD | supported | NYSE Arca:THD | Thailand | 25.53% (2026-07-22) | https://www.ishares.com/us/products/239688/ishares-msci-thailand-capped-etf | passive/index-tracking equity ETF; official rolling 10Y NAV TR CAGR 3.35% for 2016-06-30 to 2026-06-30 (`10.00` years); 2021-2025 NAV rows compound to -10.24% / CAGR -2.14%; 2016-2020 annual rows and raw rolling endpoints not disclosed; benchmark/index change 2013-02-12 |
+| FLIN | supported | NYSE Arca:FLIN | India | -8.34% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26348/SINGLCLASS/franklin-ftse-india-etf/FLIN | passive/index-tracking equity ETF; inception 2018-02-06; official 10-year field `—`; available-period NAV TR annualized 5.91% for 2018-02-06 to 2026-06-30 (`8.39` years); 2019-2025 NAV rows compound to 88.74% / CAGR 9.50%; 2021-2025 CAGR 9.33%; current standardized NAV TR YTD -8.34% |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1745,4 +1746,47 @@ tags:
 ### THD Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized endpoint disclosure, annual-row gaps, S&P 500 basis/window, benchmark/index change, current-YTD as-of date, rankings, canonical filename, Thailand region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## FLIN Sequential Queue Record
+
+- Input row: `61/125`; input ticker: `FLIN`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:FLIN`; Franklin's official product page identifies Franklin FTSE India ETF, primary exchange NYSE Arca, ticker FLIN, inception `2018-02-06`, asset class Equity, ETF type Indexed, benchmark `FTSE India Capped Index-NR`, and net expense ratio `0.19%`. No provider slug or guessed exchange is used.
+- Type gate: Franklin describes passive index exposure to a market-cap weighted large- and mid-cap India index. The summary prospectus states that at least 80% of assets normally goes to FTSE India Capped Index components or related depositary receipts. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF.
+- Mandatory 10-year audit: official Franklin product page and June 2026 factsheet show the 10-year field as `—`; inception `2018-02-06` means the available period through `2026-06-30` is only `8.39` years. The workflow therefore records `10-year NAV TR unavailable`, not a shorter period labeled as 10-year.
+- Official available-period performance: Franklin reports NAV Returns annualized `5.91%` from `2018-02-06` through `2026-06-30`. Raw start/end NAV TR values are not disclosed. Normalized calculation is `100.00 × (1 + 5.91%)^8.394 = 161.93`, clearly labeled as derived from the issuer-reported available-period annualized return.
+- Official calendar observations: factsheet NAV rows are `4.93%`, `15.16%`, `24.82%`, `-8.19%`, `20.71%`, `10.47%`, `2.21%` for `2019-2025`; matching benchmark rows are `6.38%`, `16.53%`, `28.77%`, `-8.36%`, `25.30%`, `12.99%`, `3.84%`. The `2018` inception year is partial and retained as `not applicable`, not ranked as a complete year.
+- Complete `2019-2025` FLIN NAV rows compound to `88.74%` / CAGR `9.50%`; benchmark rows compound to `115.06%` / CAGR `11.56%`. Common `2021-2025` FLIN NAV rows compound to `56.19%` / CAGR `9.33%`; S&P 500 cached USD Total Return rows compound to `96.17%` / CAGR `14.43%`; FLIN trails by approximately `5.10 pp` CAGR. Positive / negative years are `4 / 1`; best is `2021 +24.82%`, worst is `2022 -8.19%`.
+- Official current observation: Franklin factsheet reports NAV TR YTD `-8.34%` as of `2026-06-30`; the product page separately shows NAV `$35.30` and YTD `-8.31%` as of `2026-06-23`, which is earlier and is not mixed into the month-end standardized metric. Factsheet reports 283 holdings, 3-year NAV standard deviation `15.09%`, P/E `21.58x`, and P/B `3.34x` as of `2026-06-30`. Daily NAV history sufficient for fund-level max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### FLIN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FLIN` | [Franklin FLIN product and performance page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26348/SINGLCLASS/franklin-ftse-india-etf/FLIN) | Canonical listing, fund identity, passive/index classification, benchmark, inception, fee, current NAV/YTD and performance field | Page accessed `2026-07-24`; current snapshot NAV/YTD `2026-06-23`; standardized performance field `2026-05-31` |
+| `NYSE Arca:FLIN` | [Franklin FLIN factsheet](https://www.franklintempleton.com/forms-literature/download/FLIN-FF) | Official factsheet for objective, benchmark, equity/index classification, inception, fee, annual NAV/index rows, available-period NAV TR, current YTD and risk statistics | Factsheet as of `2026-06-30`; accessed `2026-07-24` |
+| `NYSE Arca:FLIN` | [Franklin FLIN summary prospectus](https://www.franklintempleton.com/tools-and-resources/literature/info/FLIN-PSUM) | Legal/fund objective and passive 80% index-investment structure, index construction and risks | Publication August `2025`; accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; rows reused for `2016-2025` without a new search |
+
+### FLIN Raw Observations And Calculations
+
+| Year | FLIN NAV TR | FTSE India Capped Index-NR TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2018 | not applicable (partial inception year) | not applicable (partial inception year) | -4.38% |
+| 2019 | 4.93% | 6.38% | 31.49% |
+| 2020 | 15.16% | 16.53% | 18.40% |
+| 2021 | 24.82% | 28.77% | 28.71% |
+| 2022 | -8.19% | -8.36% | -18.11% |
+| 2023 | 20.71% | 25.30% | 26.29% |
+| 2024 | 10.47% | 12.99% | 25.02% |
+| 2025 | 2.21% | 3.84% | 17.88% |
+
+- Official available-period NAV TR annualized return is `5.91%` for `2018-02-06` to `2026-06-30`, actual years `8.394` (displayed as `8.39`); normalized TR is `100.00` to approximately `161.93`; raw endpoints are not disclosed. `10-year NAV TR unavailable`.
+- Complete `2019-2025` FLIN rows compound to `+88.74%` / CAGR `9.50%`; matching benchmark rows compound to `+115.06%` / CAGR `11.56%`.
+- Common `2021-2025` FLIN rows compound to `+56.19%` / CAGR `9.33%`; S&P 500 TR rows compound to `+96.17%` / CAGR `14.43%`; FLIN trails by approximately `5.10 pp` CAGR. Positive / negative years are `4 / 1`; best `2021 +24.82%`; worst `2022 -8.19%`.
+- Official standardized NAV TR YTD is `-8.34%` as of `2026-06-30`; it is not treated as a complete calendar year.
+
+### FLIN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and under-10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period normalized endpoint disclosure, annual rows, partial inception-year marker, S&P 500 basis/window, current-YTD as-of date, rankings, canonical filename, India region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

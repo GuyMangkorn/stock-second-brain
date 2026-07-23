@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 60
-remaining_count: 65
+processed_count: 61
+remaining_count: 64
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -76,11 +76,12 @@ updated: 2026-07-24
 | 58 | VGDTF | `completed_available_period_no_10Y` | `XETRA:VJPA` | OTC alias resolved to the Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN `IE00BFMXYX26`; official Deutsche Börse EUR trading line `VJPA`; passive physical/index-tracking Japan equity ETF; inception `2019-09-24`, 10-year field `—`, official available-period NAV TR CAGR `9.96%` from 2019-09-24 to 2026-06-30 (`6.77` years); official 2020-2025 KIID rows compound to approximately `56.32%` / CAGR `7.73%`; 2021-2025 approximately `6.50%`; current standardized NAV TR YTD `15.27%` as of 2026-06-30. | [[ETF_XETRA_VJPA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 59 | RAYJ | `unsupported ETF type` | `NYSE Arca:RAYJ` | Rayliant SMDAM Japan Equity ETF; official issuer identifies an active Japan equity strategy combining SMDAM fundamental research and Rayliant quantitative models. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 60 | THD | `completed_10Y` | `NYSE Arca:THD` | Passive/index-tracking Thailand equity ETF; official rolling 10Y NAV TR CAGR `3.35%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint approx. `139.03` from 100.00; official 2021-2025 NAV rows compound to `-10.24%` / CAGR `-2.14%`; current NAV TR YTD `25.53%` as of 2026-07-22; raw endpoints and 2016-2020 annual rows not disclosed. | [[ETF_NYSE_ARCA_THD Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 61 | FLIN | `completed_available_period_no_10Y` | `NYSE Arca:FLIN` | Passive/index-tracking India equity ETF; official inception `2018-02-06`, so `10-year NAV TR unavailable`; official available-period NAV TR annualized `5.91%` for 2018-02-06 to 2026-06-30 (`8.39` years), normalized endpoint approx. `161.93`; official 2019-2025 rows compound to `88.74%` / CAGR `9.50%`; 2021-2025 CAGR `9.33%`; current NAV TR YTD `-8.34%` as of 2026-06-30. | [[ETF_NYSE_ARCA_FLIN Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `60/125`
-- Next ticker: `row 61` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `61/125`
+- Next ticker: `row 62` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `THD` was searched, compared, dispatched, or processed in this round.
+No ticker after `FLIN` was searched, compared, dispatched, or processed in this round.

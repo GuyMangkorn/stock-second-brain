@@ -59,6 +59,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_EPI Performance]] | official 2008 / official rolling 2016-2026; official 2016-2025 | 9.18% | 11.52% | -7.91% | 2017 +39.03% / 2018 -10.44% | India earnings-weighted equity | India/country/sector/valuation/FX-sensitive; index annual rows not disclosed |
 | [[ETF_CBOE_BZX_SMIN Performance]] | official 2012 / official 2021-2025; rolling 2016-2026 | 9.71% | 12.90% | -0.58% | 2021 +44.69% / 2022 -13.98% | India single-country small-cap equity | small-cap liquidity; India/country/sector/valuation/FX-sensitive |
 | [[ETF_CBOE_BZX_INDA Performance]] | official 2012 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 7.07% | 7.80% | -10.12% | 2021 +22.41% / 2022 -9.38% | India single-country equity | India/country/financials/valuation/FX-sensitive |
+| [[ETF_NYSE_ARCA_FLIN Performance]] | official 2018 / official available 2018-02 to 2026-06; history under 10 years | not applicable (<10y history) | 9.33% | -8.34% | 2021 +24.82% / 2022 -8.19% | India large/mid-cap equity | India/country/financials/valuation/FX/emerging-market-sensitive |
 | [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EPP Performance]] | official 2001 / official 2016-2025; rolling 2016-2026 | 7.37% | 5.28% | 11.23% | 2017 +25.40% / 2018 -10.70% | developed Asia-Pacific equity ex-Japan | Australia/HK/Singapore and financials/materials concentrated; country/FX-sensitive |
@@ -422,3 +423,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
 - [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
+- [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
