@@ -71,7 +71,7 @@ tags:
 | FXY | unsupported | NYSE Arca:FXY | Japan | not applicable | https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-japanese-yen-trust.html | currency trust |
 | GIND | unsupported | NASDAQ:GIND | India | not applicable | https://am.gs.com/public-assets/documents/16dd63b3-1093-11f0-a26b-87cd5783a190?view=true | active semi-transparent equity |
 | GLIN | supported | NYSE Arca:GLIN | India | 0.47% (2026-06-24) | https://www.vaneck.com/us/en/investments/india-growth-leaders-etf-glin/ | annual rows and current July data not disclosed |
-| GMF | supported | NYSE Arca:GMF | Asia-Pacific | 12.56% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-emerging-asia-pacific-etf-gmf | annual rows and current YTD refresh not disclosed |
+| GMF | supported | NYSE Arca:GMF | Asia-Pacific | 12.56% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-emerging-asia-pacific-etf-gmf | official 10Y NAV TR CAGR 9.94% (2026-06-30); annual rows calculated from official NAV/distribution workbooks; current NAV US$152.77 (2026-07-22) |
 | GSJY | supported | NYSE Arca:GSJY | Japan | not disclosed (not disclosed) | https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e | current performance and annual rows not disclosed |
 | GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | current NAV and annual rows not disclosed; raw 10Y endpoints not disclosed |
 | HEWJ | supported | NYSE Arca:HEWJ | Japan | NAV US$62.22; date-to-date YTD 18.81% (2026-07-17) | https://www.ishares.com/us/products/259624/ishares-currency-hedged-msci-japan-etf | official rolling 10Y NAV TR cumulative 391.99% / CAGR 17.27% (2026-06-30); standardized month-end YTD 22.41% (2026-06-30); raw endpoints not disclosed |
@@ -717,4 +717,41 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### JPXN Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, same-name TSE:1364 conflict resolution, passive-equity gate, NAV Total Return definition with reinvestment/expenses, official annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## GMF Sequential Queue Record
+
+- Input row: `15/125`; input ticker: `GMF`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:GMF`; State Street's official page identifies ticker `GMF`, NYSE Arca listing, asset class `Equity`, inception `2007-03-20`, base currency USD, and benchmark `S&P Emerging Asia Pacific BMI Index`.
+- Classification: supported passive/index-sampling emerging Asia-Pacific equity ETF. State Street states that the fund is passively managed and samples the index; it is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, or derivative-heavy.
+- Official current observations: NAV `US$152.77` as of `2026-07-22`; standardized NAV Total Return YTD `12.56%` as of `2026-06-30`; 1,281 holdings as of `2026-07-21`; gross expense ratio `0.49%`; official 10-year NAV annualized return `9.94%` as of `2026-06-30`.
+
+### GMF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:GMF` | [State Street GMF product and performance page](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-emerging-asia-pacific-etf-gmf) | Fund identity, exchange, benchmark, inception, NAV, fee, passive classification, standardized NAV TR and portfolio snapshot | Page accessed `2026-07-24`; NAV `2026-07-22`; holdings/country/sector `2026-07-21`; standardized performance `2026-06-30` |
+| `NYSE Arca:GMF` | [State Street GMF factsheet, June 2026](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gmf.pdf) | NAV TR definition, fee, holdings and country/sector corroboration | Factsheet as of `2026-06-30` |
+| `NYSE Arca:GMF` | [Official GMF NAV history workbook](https://www.ssga.com/library-content/products/fund-data/etfs/us/navhist-us-en-gmf.xlsx) | Daily NAV inputs for annual and rolling NAV TR calculations | Latest NAV date `2026-07-22`; downloaded `2026-07-24` |
+| `NYSE Arca:GMF` | [Official State Street historical distributions workbook](https://www.ssga.com/library-content/products/fund-data/etfs/us/spdr-etf-historical-distributions.xlsx) | Official ex-date, payable-date and distribution inputs for reinvested NAV TR | GMF distribution history through `2026-06-22`; downloaded `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### GMF Raw Observations And Calculations
+
+| Year | GMF NAV TR (USD) | S&P 500 TR (USD) |
+|---|---:|---:|
+| 2021 | -1.49% | 28.71% |
+| 2022 | -19.00% | -18.11% |
+| 2023 | 7.88% | 26.29% |
+| 2024 | 17.01% | 25.02% |
+| 2025 | 21.94% | 17.88% |
+
+- Official State Street standardized 10-year NAV Total Return is average annual `9.94%` as of `2026-06-30`. Official raw workbooks show start NAV `74.630855` on `2016-06-30`, end NAV `156.481539` on `2026-06-30`, and reinvested-share factor `1.2304970771` using payable-date NAVs. The resulting normalized TR index is `100.00` to `258.0033`, cumulative `158.0033%` / `158.00%`, and CAGR `9.9417%` / `9.94%`, matching the issuer's published 10-year return.
+- Complete calendar rows `2021-2025` calculated from unrounded values in the same official workbooks compound to `+22.83%` and annualize to `4.20%` over `5` years. S&P 500 TR compounds to `+96.17%` and annualizes to `14.43%`; GMF trails by `10.23 pp` CAGR. The displayed two-decimal annual rows may compound to `22.82%` because of rounding. Up/down years are `3 / 2`; best `2025 +21.94%`; least positive `2023 +7.88%`; worst `2022 -19.00%`; least bad down year `2021 -1.49%`.
+- Official standardized NAV Total Return YTD is `+12.56%` as of `2026-06-30`; the same raw-input convention calculates `+12.5581%` before rounding. Current official NAV is `US$152.77` as of `2026-07-22`; market-price return is kept separate.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is available in the issuer workbook but no max-drawdown/recovery calculation was requested or added to this lean page; those fields remain `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### GMF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, passive-equity classification, NAV Total Return net-of-fees definition, official NAV/distribution workbook provenance, payable-date reinvestment calculation, 10-year coverage/endpoints/actual years, annual rows, S&P 500 basis/window, separate as-of dates, best/worst ranking, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 14
-remaining_count: 111
+processed_count: 15
+remaining_count: 110
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-14` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-15` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
 
 ## Terminal status register
 
@@ -30,10 +30,11 @@ updated: 2026-07-24
 | 12 | IHREF | `completed_10Y` | `LSE:SJPA` | Input OTC alias for iShares Core MSCI Japan IMI UCITS ETF; official LSE:SJPA listing for ISIN `IE00B4L5YX21`; official rolling 10-year NAV TR cumulative `147.80%` / CAGR `9.50%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to 5-year CAGR `6.33%`; current date-to-date YTD `12.55%` as of 2026-07-17; NAV US$77.53 as of 2026-07-17. | [[ETF_LSE_SJPA Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 13 | EWT | `completed_10Y` | `NYSE Arca:EWT` | Passive/index-tracking Taiwan single-country equity ETF; official rolling 10-year NAV TR cumulative `552.21%` / CAGR `20.63%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to 5-year CAGR `12.01%`; current date-to-date YTD `50.68%` as of 2026-07-20; NAV US$95.76 as of 2026-07-20. | [[ETF_NYSE_ARCA_EWT Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 14 | JPXN | `completed_10Y` | `NYSE Arca:JPXN` | Passive/index-tracking Japan equity ETF; official U.S. iShares page resolves the input ticker to NYSE Arca (not separate TSE:1364); official rolling 10-year NAV TR cumulative `142.85%` / CAGR `9.28%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to 5-year CAGR `6.19%`; current date-to-date YTD `15.60%` as of 2026-07-21; NAV US$98.72 as of 2026-07-22. | [[ETF_NYSE_ARCA_JPXN Performance]] | [[ETF_performance_sources_2026-07-23]] |
+| 15 | GMF | `completed_10Y` | `NYSE Arca:GMF` | Passive/index-sampling emerging Asia-Pacific equity ETF; official State Street 10-year NAV TR average annual return `9.94%` for 2016-06-30 to 2026-06-30; official NAV/distribution workbooks calculate cumulative `158.00%` and 2021-2025 CAGR `4.20%`; latest standardized NAV TR YTD `12.56%` as of 2026-06-30; NAV US$152.77 as of 2026-07-22. | [[ETF_NYSE_ARCA_GMF Performance]] | [[ETF_performance_sources_2026-07-23]] |
 
 ## Queue pointer
 
-- Completed: `14/125`
-- Next ticker: `GMF` (row `15`)
+- Completed: `15/125`
+- Next ticker: `AAXJ` (row `16`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `JPXN` was searched, compared, dispatched, or processed in this round.
+- No ticker after `GMF` was searched, compared, dispatched, or processed in this round.
