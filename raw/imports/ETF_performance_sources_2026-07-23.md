@@ -7,7 +7,7 @@ input_count: 125
 verified_passive_pages: 78
 existing_canonical_alias_coverage: 1
 unresolved_or_unsupported: 46
-review_gate: LOCAL_PASS_REVIEWER_UNAVAILABLE
+review_gate: INDEPENDENT_REVIEW_PASS_AFTER_REGION_COUNT_AND_INDEX_DEDUP_FIX
 tags:
   - source/etf
 ---
@@ -16,7 +16,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ check-etf-performance กับ ticker ทั้ง 125 รายการจาก input source. แยก NAV Total Return ออกจาก market price และใช้ S&P 500 Total Return cache 2016-2025 เป็น common reference เมื่อมี annual rows. unsupported ETF type หมายถึง active, derivative-heavy, bond, currency, multi-strategy หรือ single-stock product ที่อยู่นอก ETF v1; unresolved หมายถึงยังยืนยัน canonical issuer/exchange ticker ไม่ได้. Pre-save reviewer status: independent reviewer was dispatched but returned no verdict after bounded waits; local checklist PASS was applied before saving.
+ใช้ check-etf-performance กับ ticker ทั้ง 125 รายการจาก input source. แยก NAV Total Return ออกจาก market price และใช้ S&P 500 Total Return cache 2016-2025 เป็น common reference เมื่อมี annual rows. unsupported ETF type หมายถึง active, derivative-heavy, bond, currency, multi-strategy หรือ single-stock product ที่อยู่นอก ETF v1; unresolved หมายถึงยังยืนยัน canonical issuer/exchange ticker ไม่ได้. Independent reviewer and final re-review returned `PASS`; findings on stale region totals, the `DXJ / DXJJF` alias count, and duplicate region links were corrected.
 
 ## Complete evidence register
 

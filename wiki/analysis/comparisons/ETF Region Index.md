@@ -18,19 +18,29 @@ driver notes ทั้งหมด
 | Region | ETFs | Navigation |
 |---|---:|---|
 | USA | 18 | [[USA ETF]] |
-| Australia | 2 | [[Australia ETF]] |
+| Australia | 3 | [[Australia ETF]] |
 | North America | 2 | [[North America ETF]] |
-| India | 1 | [[India ETF]] |
-| Japan | 6 | [[Japan ETF]] |
-| China | 3 | [[China ETF]] |
-| Hong Kong | 1 | [[Hong Kong ETF]] |
-| Indonesia | 1 | [[Indonesia ETF]] |
+| India | 15 | [[India ETF]] |
+| Japan | 17 | [[Japan ETF]] |
+| China | 25 | [[China ETF]] |
+| Hong Kong | 2 | [[Hong Kong ETF]] |
+| Indonesia | 2 | [[Indonesia ETF]] |
 | Canada | 2 | [[Canada ETF]] |
 | Germany | 1 | [[Germany ETF]] |
 | Europe | 1 | [[Europe ETF]] |
-| Asia-Pacific | 1 | [[Asia-Pacific ETF]] |
-| Emerging Markets | 2 | [[Emerging Markets ETF]] |
+| Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
+| Asia-Pacific | 9 | [[Asia-Pacific ETF]] |
+| Emerging Markets | 3 | [[Emerging Markets ETF]] |
 | International | 14 | [[International ETF]] |
+| Malaysia | 1 | [[Malaysia ETF]] |
+| New Zealand | 1 | [[New Zealand ETF]] |
+| Philippines | 1 | [[Philippines ETF]] |
+| Singapore | 1 | [[Singapore ETF]] |
+| South Korea | 5 | [[South Korea ETF]] |
+| Southeast Asia | 1 | [[Southeast Asia ETF]] |
+| Taiwan | 2 | [[Taiwan ETF]] |
+| Thailand | 1 | [[Thailand ETF]] |
+| Vietnam | 3 | [[Vietnam ETF]] |
 
 ## Coverage policy
 
@@ -46,27 +56,6 @@ driver notes ทั้งหมด
 - [[wiki/analysis/comparisons/README|Comparison Notes]]
 
 
-## 2026-07-23 Coverage Additions
-
-| Region | New ETFs | Navigation |
-|---|---:|---|
-| Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
-| Asia-Pacific | 8 | [[Asia-Pacific ETF]] |
-| Australia | 1 | [[Australia ETF]] |
-| China | 22 | [[China ETF]] |
-| Emerging Markets | 1 | [[Emerging Markets ETF]] |
-| Hong Kong | 1 | [[Hong Kong ETF]] |
-| India | 14 | [[India ETF]] |
-| Indonesia | 1 | [[Indonesia ETF]] |
-| Japan | 10 | [[Japan ETF]] |
-| Malaysia | 1 | [[Malaysia ETF]] |
-| New Zealand | 1 | [[New Zealand ETF]] |
-| Philippines | 1 | [[Philippines ETF]] |
-| Singapore | 1 | [[Singapore ETF]] |
-| South Korea | 5 | [[South Korea ETF]] |
-| Southeast Asia | 1 | [[Southeast Asia ETF]] |
-| Taiwan | 2 | [[Taiwan ETF]] |
-| Thailand | 1 | [[Thailand ETF]] |
-| Vietnam | 3 | [[Vietnam ETF]] |
-
-Unresolved/unsupported input tickers are retained in the dated source batch and are not assigned a performance page under ETF v1.
+Coverage additions from the 2026-07-23 batch are already folded into the
+canonical totals above. Unresolved/unsupported input tickers are retained in
+the dated source batch and are not assigned a performance page under ETF v1.

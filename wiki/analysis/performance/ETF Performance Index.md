@@ -20,18 +20,28 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 - [[USA ETF]]
 - [[North America ETF]]
-- [[India ETF]]
-- [[Japan ETF]]
-- [[China ETF]]
-- [[Hong Kong ETF]]
-- [[Indonesia ETF]]
-- [[Canada ETF]]
-- [[Germany ETF]]
-- [[Europe ETF]]
+- [[Asia ex Japan ETF]]
 - [[Asia-Pacific ETF]]
 - [[Australia ETF]]
+- [[Canada ETF]]
+- [[China ETF]]
 - [[Emerging Markets ETF]]
+- [[Europe ETF]]
+- [[Germany ETF]]
+- [[Hong Kong ETF]]
+- [[India ETF]]
+- [[Indonesia ETF]]
 - [[International ETF]]
+- [[Japan ETF]]
+- [[Malaysia ETF]]
+- [[New Zealand ETF]]
+- [[Philippines ETF]]
+- [[Singapore ETF]]
+- [[South Korea ETF]]
+- [[Southeast Asia ETF]]
+- [[Taiwan ETF]]
+- [[Thailand ETF]]
+- [[Vietnam ETF]]
 
 ## Coverage
 
@@ -323,16 +333,3 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_VPL Performance]] — VPL (Asia-Pacific)
 - [[ETF_NASDAQ_WDAF Performance]] — WDAF (Asia-Pacific)
 - [[ETF_LSE_DXJA Performance]] — WDTRF (Japan)
-
-### Browse by region additions
-
-- [[Asia ex Japan ETF]]
-- [[Malaysia ETF]]
-- [[New Zealand ETF]]
-- [[Philippines ETF]]
-- [[Singapore ETF]]
-- [[South Korea ETF]]
-- [[Southeast Asia ETF]]
-- [[Taiwan ETF]]
-- [[Thailand ETF]]
-- [[Vietnam ETF]]
