@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 21
-remaining_count: 104
+processed_count: 22
+remaining_count: 103
 queue_policy: sequential; one ticker per user continuation
 updated: 2026-07-24
 ---
@@ -37,10 +37,11 @@ updated: 2026-07-24
 | 19 | VPL | `completed_10Y` | `NYSE Arca:VPL` | Passive/index-tracking developed Asia-Pacific equity ETF; official rolling 10Y NAV TR cumulative `177.37%` / CAGR `10.74%` for 2016-05-31 to 2026-05-31; official 2016-2025 rows compound to `114.60%` / CAGR `7.94%`; 2021-2025 CAGR `6.05%`; current NAV TR YTD `19.62%` as of 2026-07-17. | [[ETF_NYSE_ARCA_VPL Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 20 | ISSSF | `completed_10Y` | `LSE:SAUS` | OTC alias for iShares MSCI Australia UCITS ETF; official passive/replicated equity fund with 10-year NAV TR cumulative `121.17%` / CAGR `8.26%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `109.27%` / CAGR `7.66%`; 2021-2025 CAGR `6.24%`; current NAV TR YTD `10.27%` as of 2026-07-21. | [[ETF_LSE_SAUS Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 21 | SCJ | `completed_10Y` | `NYSE Arca:SCJ` | Passive/index-tracking Japan small-cap equity ETF; official rolling 10Y NAV TR cumulative `119.60%` / CAGR `8.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `92.14%` / CAGR `6.75%`; 2021-2025 CAGR `5.20%`; current NAV TR YTD `16.10%` as of 2026-07-21. | [[ETF_NYSE_ARCA_SCJ Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 22 | CQQQ | `completed_10Y` | `NYSE Arca:CQQQ` | Passive/full-replication China technology equity ETF; official complete calendar NAV TR rows 2016-2025 compound to `54.48%` / CAGR `4.44%`; 2021-2025 CAGR `-8.27%`; current NAV/YTD `ไม่พบข้อมูลที่ยืนยันได้`; predecessor and index-methodology breaks are disclosed. | [[ETF_NYSE_ARCA_CQQQ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `21/125`
-- Next ticker: `CQQQ` (row `22`)
+- Completed: `22/125`
+- Next ticker: `ISMJF` (row `23`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `SCJ` was searched, compared, dispatched, or processed in this round.
+- No ticker after `CQQQ` was searched, compared, dispatched, or processed in this round.

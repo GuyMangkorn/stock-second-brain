@@ -23,6 +23,7 @@ tags:
 | VPL | supported | NYSE Arca:VPL | Asia-Pacific | 19.62% (2026-07-17) | https://investor.vanguard.com/investment-products/etfs/profile/vpl | official rolling 10Y NAV TR 177.37% / CAGR 10.74% as of 2026-05-31; annual NAV TR rows 2016-2025 |
 | ISSSF | supported | LSE:SAUS | Australia | 10.27% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251851/ishares-msci-australia-ucits-etf | OTC alias; official rolling 10Y NAV TR 121.17% / CAGR 8.26% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | SCJ | supported | NYSE Arca:SCJ | Japan | 16.10% (2026-07-21) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | official rolling 10Y NAV TR 119.60% / CAGR 8.18% as of 2026-06-30; annual NAV TR rows 2016-2025 |
+| CQQQ | supported | NYSE Arca:CQQQ | China | not disclosed (not disclosed) | https://www.invesco.com/us/en/financial-products/etfs/invesco-china-technology-etf.html | official complete calendar NAV TR rows 2016-2025; 10Y calendar CAGR 4.44%; predecessor/index methodology breaks disclosed; current NAV/YTD not disclosed |
 
 ## FLKR Sequential Queue Record
 
@@ -60,6 +61,48 @@ tags:
 ### FLKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## CQQQ Sequential Queue Record
+
+- Input row: `22/125`; input ticker: `CQQQ`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:CQQQ`; Invesco's SEC summary prospectus identifies CQQQ on NYSE Arca, inception `2009-12-08`, asset class equity exposure, full-replication implementation and the `FTSE China Incl A 25% Technology Capped Index`. No provider slug or guessed exchange is used.
+- Mandatory coverage audit: the existing page already contained 2016-2025 annual rows but lacked the official benchmark, inception, rolling/complete-window calculation and continuity caveat. Rechecking the Invesco product link, official factsheet link and SEC prospectus confirms 10 complete calendar years of NAV performance; this is a data/documentation gap, not a history-length gap.
+- Strategy continuity audit: the SEC prospectus states CQQQ succeeded the Guggenheim China Technology ETF after the `2018-05-18` reorganization and that performance before that date belongs to the predecessor. It also states the current FTSE index began `2019-06-22`, with a blended AlphaShares/FTSE series before then. The 10-year result is therefore accepted as historical calendar coverage with an explicit strategy/index break, not as a continuous current-methodology series.
+- Official annual observations: calendar NAV TR rows `2016-2025` were retained from the verified Invesco performance capture. Official annual rows compound to `+54.48%`; normalized TR is `100.00` to `154.48`; actual coverage is `10.00` complete calendar years and CAGR `4.44%`.
+- Official current observation: current NAV/YTD was `ไม่พบข้อมูลที่ยืนยันได้` in the Invesco capture as of `2026-07-24`; no value is backfilled from a secondary provider.
+
+### CQQQ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:CQQQ` | [Invesco CQQQ product page](https://www.invesco.com/us/en/financial-products/etfs/invesco-china-technology-etf.html) | Issuer product identity and official performance-document entry point | Page accessed `2026-07-24`; current NAV/YTD not disclosed in capture |
+| `NYSE Arca:CQQQ` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1378872/000119312525040714/d834062d497k.htm) | Exchange, inception, index, full-replication/passive structure, fee, predecessor and methodology continuity | Prospectus dated `2025-02-28`; performance periods through `2024-12-31` |
+| `NYSE Arca:CQQQ` | [Invesco CQQQ factsheet](https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/cqqq-invesco-china-technology-etf-fact-sheet.pdf) | Official issuer performance document link for calendar and standardized NAV returns | Latest indexed issuer factsheet capture `2026-Q1`; current extraction did not expose current NAV/YTD |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### CQQQ Raw Observations And Calculations
+
+| Year | CQQQ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -0.07% | 11.96% |
+| 2017 | 72.54% | 21.83% |
+| 2018 | -34.21% | -4.38% |
+| 2019 | 32.46% | 31.49% |
+| 2020 | 58.33% | 18.40% |
+| 2021 | -25.13% | 28.71% |
+| 2022 | -29.74% | -18.11% |
+| 2023 | -16.97% | 26.29% |
+| 2024 | 11.24% | 25.02% |
+| 2025 | 33.65% | 17.88% |
+
+- Official complete calendar rows `2016-2025` compound to `+54.48%` and annualize to `4.44%` over `10.00` complete calendar years. Normalized TR is `100.00` to `154.48`.
+- Common rows `2021-2025` compound to `-35.06%` and annualize to `-8.27%`. S&P 500 TR compounds to `+96.17%` and annualizes to `14.43%`; CQQQ trails by approximately `22.70 pp` CAGR.
+- Current NAV/YTD: `ไม่พบข้อมูลที่ยืนยันได้`; daily NAV history sufficient for max drawdown and recovery is also `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### CQQQ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, issuer identity, passive-equity classification, inception and 10-calendar-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, predecessor/index breaks, as-of dates, rankings, filenames, China region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## SCJ Sequential Queue Record

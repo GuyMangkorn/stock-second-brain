@@ -84,6 +84,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_CBOE_BBJP Performance]] | official 2019-2025 | not applicable (<10y history) | 6.56% | 14.75% | 2025 +26.56% / 2022 -16.78% | Japan single-country large/mid-cap equity | sector/country/FX-sensitive; broad indexed exposure |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | 2013 / secondary 2016-2025* | -0.85% | -11.89%* | -28.96% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive |
+| [[ETF_NYSE_ARCA_CQQQ Performance]] | official 2009 / official complete 2016-2025* | 4.44%* | -8.27% | not disclosed | 2017 +72.54% / 2018 -34.21% | China technology equity | non-diversified; China tech/policy/VIE/FX-sensitive; predecessor/index breaks |
 | [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
 | [[ETF_NYSE_ARCA_EWH Performance]] | official 1996 / official 2016-2025 | 4.20% | 0.89% | 5.44% | 2017 +35.60% / 2023 -14.04% | Hong Kong single-country equity | financials/real-estate/utilities concentration; country/FX/liquidity-sensitive |
 | [[ETF_NYSE_ARCA_ECNS Performance]] | official 2021-2025 | 1.05% | -2.79% | -10.26% | 2025 +36.42% / 2022 -24.77% | China small-cap single-country equity | high volatility; domestic demand/property/liquidity/FX-sensitive |
@@ -134,6 +135,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_CBOE_BBJP Performance]] | 1.39% | -16.78% | 20.02% | 7.19% | 26.56% | 37.38% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | 1.16% | -15.78% | 19.68% | 7.76% | 25.30% | 37.67% | 4 / 1 |
 | [[ETF_NYSE_ARCA_KWEB Performance]] | -49.01%* | -17.24%* | -9.06%* | 12.01%* | 23.55%* | -46.89%* | 2 / 3 |
+| [[ETF_NYSE_ARCA_CQQQ Performance]] | -25.13% | -29.74% | -16.97% | 11.24% | 33.65% | -35.06% | 2 / 3 |
 | [[ETF_NYSE_ARCA_FXI Performance]] | -21.04% | -20.40% | -12.87% | 30.10% | 29.01% | -8.08% | 2 / 3 |
 | [[ETF_NYSE_ARCA_EWH Performance]] | -3.43% | -6.72% | -14.04% | 0.10% | 34.89% | 4.55% | 2 / 3 |
 | [[ETF_NYSE_ARCA_ECNS Performance]] | 3.10% | -24.77% | -23.28% | 6.94% | 36.42% | -13.19% | 3 / 2 |

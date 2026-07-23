@@ -20,6 +20,7 @@ tags:
 | ECNS | iShares MSCI China Small-Cap ETF | China small-cap single-country equity | 1.05% | -2.79% | -10.26% | [[ETF_NYSE_ARCA_ECNS Performance]] |
 | FXI | iShares China Large-Cap ETF | China single-country large-cap equity | 1.75% | -1.67% | -9.28% | [[ETF_NYSE_ARCA_FXI Performance]] |
 | KWEB | KraneShares CSI China Internet ETF | China internet single-country equity | -0.85% | -11.89%* | -28.96% | [[ETF_NYSE_ARCA_KWEB Performance]] |
+| CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -42,7 +43,7 @@ tags:
 | CNQQ | Rayliant-ChinaAMC Transformative China Tech ETF | China equity / index-tracking | not disclosed | not disclosed | 14.95% | [[ETF_NASDAQ_CNQQ Performance]] |
 | CNXT | VanEck ChiNext Innovators ETF | China equity / index-tracking | not disclosed | not disclosed | 18.65% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | CNYA | iShares MSCI China A ETF | China equity / index-tracking | not disclosed | not disclosed | 1.13% | [[ETF_CBOE_BZX_CNYA Performance]] |
-| CQQQ | Invesco China Technology ETF | China equity / index-tracking | not disclosed | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
+| CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 | CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | not disclosed | not disclosed | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
 | FCA | First Trust China AlphaDEX Fund | China equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_FCA Performance]] |
 | FLCH | Franklin FTSE China ETF | China equity / index-tracking | not disclosed | not disclosed | -10.65% | [[ETF_NYSE_ARCA_FLCH Performance]] |
