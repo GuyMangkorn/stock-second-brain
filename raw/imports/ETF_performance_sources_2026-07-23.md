@@ -159,3 +159,46 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 - Cleanup on 2026-07-23 removed 45 empty annual NAV Total Return placeholder rows (`| — | not disclosed | not disclosed |`) from the corresponding performance pages; no sourced numeric values were changed.
 - Existing canonical coverage: DXJJF is the OTC alias for existing ETF_LSE_DXJ Performance; no duplicate page was created.
 - Unresolved aliases retained in the register: IHREF, JPXN, VNFGF, IHRMF, KRANF and the Vanguard/iShares OTC symbols.
+
+## EWY Sequential Queue Record
+
+- Input row: `1/125`; input ticker: `EWY`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:EWY`; issuer page explicitly identifies the exchange and fund as iShares MSCI South Korea ETF. No provider slug or unverified exchange alias is used.
+- Classification: supported passive/index-tracking single-country South Korea equity ETF. Issuer benchmark: `MSCI Korea 25/50 Index (Net)`. Inception: `2000-05-09`. Expense ratio: `0.59%`. Distribution frequency: annual.
+- Official current observations: NAV `US$169.65` as of `2026-07-22`; NAV Total Return YTD `+75.82%` as of `2026-07-21`; 3-year standard deviation `41.20%` and equity beta `1.87` as of `2026-06-30`.
+
+### EWY Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EWY` | [iShares US product page](https://www.ishares.com/us/products/239681/ishares-msci-south-korea-capped-etf) | Fund identity, exchange, benchmark, inception, current NAV/YTD, expense ratio, classification and risk statistics | Page accessed `2026-07-23`; NAV `2026-07-22`; YTD `2026-07-21`; risk fields `2026-06-30` / `2026-07-22` |
+| `NYSE Arca:EWY` | [iShares UK professional performance page](https://www.ishares.com/uk/professional/en/products/239681/ewy?siteEntryPassthrough=true&switchLocale=y) | Official calendar-year NAV Total Return rows 2016-2025 and rolling 10-year performance | Performance as of `2026-06-30`; 2016-2020 issuer display is one decimal; 2021-2025 rows corroborated by US factsheet |
+| `NYSE Arca:EWY` | [iShares EWY US factsheet](https://www.ishares.com/us/literature/fact-sheet/ewy-ishares-msci-south-korea-etf-fund-fact-sheet-en-us.pdf) | NAV return definition, distributions reinvested, expenses deducted, annual rows 2021-2025 and fee | Factsheet as of `2026-06-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached source batch convention | Common-reference benchmark identity and 2016-2025 annual rows | Cached benchmark as of `2025-12-31`; USD Total Return with dividends reinvested |
+
+### EWY Raw Observations And Calculations
+
+| Year | EWY NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.10% | 11.96% |
+| 2017 | 44.40% | 21.83% |
+| 2018 | -20.30% | -4.38% |
+| 2019 | 8.30% | 31.49% |
+| 2020 | 39.70% | 18.40% |
+| 2021 | -7.56% | 28.71% |
+| 2022 | -26.70% | -18.11% |
+| 2023 | 19.05% | 26.29% |
+| 2024 | -20.79% | 25.02% |
+| 2025 | 97.57% | 17.88% |
+
+- Official rolling 10-year cumulative NAV Total Return: `369.17%` as of `2026-06-30`; normalized start/end values are `100.00` and `469.17` for `2016-06-30` to `2026-06-30`, actual elapsed `10.00` years. Raw NAV TR endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Official rolling 10-year NAV TR CAGR: `(469.17 / 100.00)^(1 / 10.00) - 1 = 16.72%`, using the issuer's rounded cumulative display. This is not the 2016-2025 calendar-row CAGR.
+- Rounded 2016-2025 calendar rows compound to cumulative `135.42%` and CAGR `8.94%`; 2021-2025 rows compound to `26.24%` and CAGR `4.77%`; up/down years are `6 / 4`.
+- Best / least positive / worst / least bad down year: `2025 +97.57%` / `2019 +8.30%` / `2022 -26.70%` / `2021 -7.56%`.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoints is `ไม่พบข้อมูลที่ยืนยันได้`; S&P rows in the performance page are the cached complete calendar-year comparison only.
+- Official daily NAV history sufficient to reproduce max drawdown and recovery: `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EWY Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, distributions, annual rows, rolling 10-year endpoints and formula, S&P 500 basis/window, as-of dates, best/worst ranking, filenames, region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
