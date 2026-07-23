@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `37/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `39/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -36,6 +36,7 @@ tags:
 | INDA | supported | Cboe BZX:INDA | India | -10.12% (2026-07-20) | https://www.ishares.com/us/products/239659/ishares-msci-india-etf | official rolling 10Y NAV TR cumulative 98.09% / CAGR 7.07% as of 2026-06-30; official calendar NAV/benchmark rows 2021-2025; 2016-2020 calendar rows not disclosed; current YTD -10.12% as of 2026-07-20 |
 | KDEF | supported | NYSE Arca:KDEF | South Korea | -8.13% (2026-06-30) | https://plusetf.com/kdef | official inception 2025-02-05; 10-year NAV TR unavailable; official since-inception NAV TR cumulative 105.69% / annualized 67.39% as of 2026-06-30; complete-calendar annual NAV rows not disclosed |
 | ENZL | supported | NASDAQ:ENZL | New Zealand | 3.45% (2026-07-21) | https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf | official rolling 10Y NAV TR cumulative 38.78% / CAGR 3.33% as of 2026-06-30; official calendar NAV rows 2021-2025; 2016-2020 and annual benchmark rows not disclosed; current YTD 3.45% as of 2026-07-21 |
+| FJP | supported | NASDAQ:FJP | Japan | 14.26% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FJP | official rolling 10Y NAV TR CAGR 7.55% as of 2026-06-30; official calendar NAV rows 2016-2025; 2021-2025 CAGR 8.38%; current YTD 14.26% as of 2026-06-30; index changed 2015-07-14 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -899,4 +900,51 @@ tags:
 ### ENZL Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, benchmark splice, S&P 500 basis/window, current-YTD as-of dates, rankings, filenames, New Zealand region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## FJP Sequential Queue Record
+
+- Input row: `39/125`; input ticker: `FJP`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:FJP`; official First Trust summary page and SEC summary prospectus identify First Trust Japan AlphaDEX Fund, ticker FJP, Nasdaq listing, ISIN `US33737J1584`, CUSIP `33737J158`, inception `2011-04-18`, expense ratio `0.80%`, and tracked index Nasdaq AlphaDEX Japan Index. No provider slug or guessed exchange is used.
+- Type gate: official objective is to seek results corresponding to the price and yield of an equity index, with semi-annual index reconstitution/rebalance. It is a passive, index-tracking equity ETF; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had annual rows but no tracked index, inception or rolling 10-year result. Rechecking the official summary page, factsheet, SEC summary prospectus, annual-report performance cross-check and index-change disclosure confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page gap, not an actual history gap.
+- Official rolling performance: First Trust reports NAV TR CAGR `7.55%` for the 10-year window as of `2026-06-30`; raw rolling endpoints and cumulative return are not disclosed. The official factsheet's complete calendar rows `2016-2025` compound to `76.82%` / CAGR `5.87%`; the current rolling result is kept separate from the calendar-window calculation.
+- Official calendar observations: First Trust factsheet provides FJP rows `2016-2025` of `2.91%`, `26.70%`, `-17.66%`, `8.27%`, `1.71%`, `-0.69%`, `-12.04%`, `22.42%`, `5.84%`, `32.14%`. The same factsheet provides MSCI Japan reference rows; annual Nasdaq AlphaDEX Japan rows are not disclosed in the reviewed capture. FJP's 2021-2025 rows compound to `49.56%` / CAGR `8.38%`; positive/negative years are `3/2`.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so FJP trails by approximately `6.04 pp` CAGR. S&P rows are shown as a common reference benchmark, not the issuer benchmark.
+- Official current observation: First Trust reports NAV `US$73.56` as of `2026-07-21`; standardized NAV TR YTD is `14.26%` as of `2026-06-30`; current YTD as of 2026-07-21 is `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed official capture.
+- Methodology caveat: the fund's underlying index changed from Defined Japan Index to Nasdaq AlphaDEX Japan Index on `2015-07-14`; pre-change FJP history remains fund NAV history but is not a pure current-index backtest.
+
+### FJP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:FJP` | [First Trust FJP summary page](https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FJP) | Canonical listing, identity, inception, index, NAV TR, current NAV, YTD, holdings, fee and risk data | Page accessed `2026-07-24`; rolling/annual summary `2026-06-30`; NAV/holdings `2026-07-21` |
+| `NASDAQ:FJP` | [First Trust FJP factsheet](https://www.ftportfolios.jp/content/funds/etf/fjp/firsttrustjapanfactsheetinstitutional) | Corroborates fund identity, passive index objective, inception, fee, 2016-2025 NAV/MSCI Japan rows, risk data and index-change caveat | Factsheet as of `2026-03-31`; annual rows through `2025-12-31` |
+| `NASDAQ:FJP` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1510337/000144554626003319/fjp_497k.htm) | Objective, equity/index classification, fee, annual-return methodology and 2015-07-14 index-change disclosure | Prospectus dated `2026-05-01` |
+| `NASDAQ:FJP` | [SEC annual report / N-CSR performance cross-check](https://www.sec.gov/Archives/edgar/data/1510337/000144554626001916/adex2_ncsr.htm) | Cross-checks 2021-2025 performance and annual-report fund statistics | Performance as of `2025-12-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### FJP Raw Observations And Calculations
+
+| Year | FJP NAV TR | Nasdaq AlphaDEX Japan TR | MSCI Japan TR | S&P 500 TR |
+|---|---:|---:|---:|---:|
+| 2016 | 2.91% | not disclosed | 2.38% | 11.96% |
+| 2017 | 26.70% | not disclosed | 23.99% | 21.83% |
+| 2018 | -17.66% | not disclosed | -12.88% | -4.38% |
+| 2019 | 8.27% | not disclosed | 19.61% | 31.49% |
+| 2020 | 1.71% | not disclosed | 14.48% | 18.40% |
+| 2021 | -0.69% | not disclosed | 1.71% | 28.71% |
+| 2022 | -12.04% | not disclosed | -16.65% | -18.11% |
+| 2023 | 22.42% | not disclosed | 20.32% | 26.29% |
+| 2024 | 5.84% | not disclosed | 8.31% | 25.02% |
+| 2025 | 32.14% | not disclosed | 24.60% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `7.55%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`.
+- Official calendar rows `2016-2025` compound to `+76.82%` and annualize to `5.87%`; S&P 500 TR rows in the same window compound to `+298.33%` and annualize to `14.82%`.
+- Common rows `2021-2025` compound to `+49.56%` / CAGR `8.38%`; S&P 500 compounds to `+96.17%` / CAGR `14.43%`; FJP trails by approximately `6.04 pp` CAGR.
+- Official current NAV TR YTD is `+14.26%` as of `2026-06-30`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### FJP Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, index-change caveat, S&P 500 basis/window, current-YTD as-of date, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
