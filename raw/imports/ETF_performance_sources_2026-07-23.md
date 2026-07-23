@@ -22,7 +22,7 @@ tags:
 
 | Input ticker | Status | Canonical entity key | Primary region | Current NAV YTD / as-of | Source URL | Gap / resolution note |
 |---|---|---|---|---|---|---|
-| AAXJ | supported | NASDAQ:AAXJ | Asia ex Japan | 20.12% (2026-07-16) | https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf | raw 10Y endpoints not disclosed |
+| AAXJ | supported | NASDAQ:AAXJ | Asia ex Japan | 21.30% (2026-07-22) | https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf | official rolling 10Y NAV TR cumulative 164.36% / CAGR 10.21% (2016-06-30 to 2026-06-30); 2021-2025 rows; raw NAV endpoint levels not disclosed |
 | ADIV | unsupported | NYSE Arca:ADIV | Asia-Pacific | not applicable | https://www.gafunds.com/our-funds/ | active equity |
 | ADVE | unsupported | NYSE Arca:ADVE | Asia-Pacific | not applicable | https://www.matthewsasia.com/funds/etfs/asia-dividend-active-etf/ | active equity |
 | AIA | supported | NASDAQ:AIA | Asia ex Japan | NAV US$136.34; date-to-date YTD 40.47% (2026-07-21) | https://www.ishares.com/us/products/239730/ishares-asia-50-etf | official rolling 10Y NAV TR cumulative 298.99% / CAGR 14.84% (2026-06-30); standardized month-end YTD 46.79% (2026-06-30); raw endpoints not disclosed |
@@ -754,4 +754,39 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### GMF Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, passive-equity classification, NAV Total Return net-of-fees definition, official NAV/distribution workbook provenance, payable-date reinvestment calculation, 10-year coverage/endpoints/actual years, annual rows, S&P 500 basis/window, separate as-of dates, best/worst ranking, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## AAXJ Sequential Queue Record
+
+- Input row: `16/125`; input ticker: `AAXJ`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:AAXJ`; the official iShares product page identifies the NASDAQ listing, fund name, asset class `Equity`, benchmark `MSCI AC Asia ex Japan Index (Net)`, and inception `2008-08-13`. No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking Asia ex Japan equity ETF. The issuer objective is to track large- and mid-cap equities from developed and emerging Asian countries excluding Japan; it is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, or derivative-heavy.
+- Official current observations: NAV `US$113.07` and NAV Total Return YTD `+21.30%` as of `2026-07-22`; 941 holdings as of `2026-07-22`; 3-year standard deviation `16.71%` and equity beta `0.87` as of `2026-06-30`; expense ratio `0.72%`.
+
+### AAXJ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:AAXJ` | [iShares AAXJ product and performance page](https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf) | Fund identity, exchange, benchmark, inception, fee, passive-equity classification, current NAV/YTD, rolling NAV Total Return, annual rows and risk fields | Page accessed `2026-07-24`; NAV/YTD/holdings/exposure `2026-07-22`; performance table/standardized YTD/risk fields `2026-06-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### AAXJ Raw Observations And Calculations
+
+| Year | AAXJ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | -5.89% | 28.71% |
+| 2022 | -20.18% | -18.11% |
+| 2023 | 4.94% | 26.29% |
+| 2024 | 10.48% | 25.02% |
+| 2025 | 32.09% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `164.36%` and average annual/CAGR `10.21%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual coverage `10.00 calendar years`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation for the performance page: start `100.00`; end `264.36`; `(264.36 / 100.00)^(1 / 10.00) - 1 ≈ 10.21%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+15.04%` and annualize to `2.84%` over `5` years. S&P 500 TR compounds to `+96.17%` and annualizes to `14.43%`; AAXJ trails by approximately `11.59 pp` CAGR. Up/down years are `3 / 2`; best `2025 +32.09%`; least positive `2023 +4.94%`; worst `2022 -20.18%`; least bad down year `2021 -5.89%`.
+- Official current date-to-date NAV Total Return YTD is `+21.30%` as of `2026-07-22`; NAV is `US$113.07` as of the same date. Market-price return is kept separate. Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### AAXJ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, passive-equity gate, NAV Total Return definition with reinvested distributions and expenses, official annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Asia ex Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

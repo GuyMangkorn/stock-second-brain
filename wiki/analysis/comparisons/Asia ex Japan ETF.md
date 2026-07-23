@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| AAXJ | iShares MSCI All Country Asia ex Japan ETF | Asia ex Japan equity / index-tracking | not disclosed | 2.84% | 20.12% | [[ETF_NASDAQ_AAXJ Performance]] |
+| AAXJ | iShares MSCI All Country Asia ex Japan ETF | Asia ex Japan equity / index-tracking | 10.21% | 2.84% | 21.30% | [[ETF_NASDAQ_AAXJ Performance]] |
 | AIA | iShares Asia 50 ETF | Asia ex Japan equity / index-tracking | 14.84% | 4.69% | 40.47% | [[ETF_NASDAQ_AIA Performance]] |
 | FLAX | Franklin FTSE Asia ex Japan ETF | Asia ex Japan equity / index-tracking | not disclosed | not disclosed | 22.35% | [[ETF_NYSE_ARCA_FLAX Performance]] |
 | FPA | First Trust Asia Pacific Ex-Japan AlphaDEX Fund | Asia ex Japan equity / index-tracking | not disclosed | 7.23% | 42.71% | [[ETF_NASDAQ_FPA Performance]] |
