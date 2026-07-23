@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `40/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `41/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -38,6 +38,7 @@ tags:
 | ENZL | supported | NASDAQ:ENZL | New Zealand | 3.45% (2026-07-21) | https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf | official rolling 10Y NAV TR cumulative 38.78% / CAGR 3.33% as of 2026-06-30; official calendar NAV rows 2021-2025; 2016-2020 and annual benchmark rows not disclosed; current YTD 3.45% as of 2026-07-21 |
 | FJP | supported | NASDAQ:FJP | Japan | 14.26% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FJP | official rolling 10Y NAV TR CAGR 7.55% as of 2026-06-30; official calendar NAV rows 2016-2025; 2021-2025 CAGR 8.38%; current YTD 14.26% as of 2026-06-30; index changed 2015-07-14 |
 | NFTY | supported | NASDAQ:NFTY | India | -7.45% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=NFTY | official rolling 10Y NAV TR CAGR 7.99% for 2016-06-30 to 2026-06-30; raw endpoints not disclosed; official calendar NAV rows 2016-2025; 2021-2025 CAGR 10.83%; index changed 2018-04-17; current YTD -7.45% as of 2026-06-30 |
+| FLJH | supported | NYSE Arca:FLJH | Japan | 22.91% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26355/SINGLCLASS/franklin-ftse-japan-hedged-etf/FLJH | official inception 2017-11-02; 10-year NAV TR unavailable; official available-period NAV TR annualized 13.63% through 2026-03-31; official calendar NAV rows 2018-2025; current YTD 22.91% as of 2026-07-07 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -82,6 +83,54 @@ tags:
 ### CSKRF / CSKR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark change, as-of dates, rankings, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## FLJH Sequential Queue Record
+
+- Input row: `41/125`; input ticker: `FLJH`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:FLJH`; Franklin's official product page and factsheet identify Franklin FTSE Japan Hedged ETF, NYSE Arca listing, CUSIP `35473P637`, ISIN `US35473P6372`, inception `2017-11-02`, expense ratio `0.09%`, equity asset class, and benchmark FTSE Japan RIC Capped Hedged to USD Index. No provider slug or guessed exchange is used.
+- Type gate: official materials describe a passive/indexed equity ETF tracking a market-capitalization-weighted Japan large/mid-cap index with currency hedging. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had a stale YTD and no verified benchmark, inception or annual rows. Rechecking the official product page, March 2026 factsheet, annual report/total-return report and summary prospectus confirms inception `2017-11-02`; the official 10-year field is `—`, and inception through `2026-03-31` is approximately `8.41` years. This is an actual history gap, so `10-year NAV TR unavailable` is recorded.
+- Official available-period performance: Franklin reports NAV TR annualized `13.63%` from inception through `2026-03-31`; raw start/end TR values and cumulative return are not disclosed. The 2018-2025 complete calendar rows compound to `177.49%` / CAGR `13.61%`.
+- Official calendar observations: Franklin factsheet provides FLJH NAV rows `2018-2025` of `-13.96%`, `20.52%`, `9.44%`, `12.78%`, `-1.47%`, `35.04%`, `26.07%`, `29.25%`; matching FTSE Japan Capped Hedged Index rows are `-14.00%`, `20.79%`, `9.46%`, `12.82%`, `-1.35%`, `34.92%`, `25.98%`, `29.20%`. Common `2021-2025` FLJH rows compound to `144.52%` / CAGR `19.58%`; positive/negative years are `7/1` in complete rows.
+- S&P 500 rows use the cached USD Total Return convention; common 2021-2025 CAGR is `14.43%`, so FLJH leads by approximately `5.15 pp` CAGR. S&P rows are shown as a common reference benchmark, not the issuer benchmark.
+- Official current observation: Franklin reports NAV TR YTD `22.91%` as of `2026-07-07`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+- Hedging caveat: the fund seeks to reduce Yen currency risk, so hedge costs, hedge timing and basis differences can cause returns to diverge from unhedged Japan equity funds and from the local-currency index.
+
+### FLJH Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FLJH` | [Franklin FLJH product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26355/SINGLCLASS/franklin-ftse-japan-hedged-etf/FLJH) | Canonical listing, identity, passive/index classification, benchmark, inception, current NAV/YTD, holdings, fee and risk data | Page accessed `2026-07-24`; current NAV/YTD `2026-07-07`; rolling summary `2026-05-31` |
+| `NYSE Arca:FLJH` | [Franklin FLJH factsheet](https://www.franklintempleton.com/forms-literature/download/FLJH-FF) | Fund objective, equity/index classification, inception, fee, benchmark, annual NAV/index rows and available-period NAV TR | Factsheet as of `2026-03-31` |
+| `NYSE Arca:FLJH` | [Franklin FLJH annual report / total-return report](https://www.franklintempleton.com/tools-and-resources/literature/info/FLJH-ATSR) | Historical performance and annual-report cross-check | Publication `2026-03`; report periods through `2025-03-31` in reviewed capture |
+| `NYSE Arca:FLJH` | [Franklin FLJH summary prospectus](https://www.franklintempleton.com/forms-literature/download-preview/FLJH-PSUM) | Passive strategy, fee, currency-hedging and risk disclosures | Prospectus dated `2025-08-01` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### FLJH Raw Observations And Calculations
+
+| Year | FLJH NAV TR | FTSE Japan Capped Hedged TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not applicable (pre-inception) | not applicable | 11.96% |
+| 2017 | not applicable (partial inception year) | not applicable | 21.83% |
+| 2018 | -13.96% | -14.00% | -4.38% |
+| 2019 | 20.52% | 20.79% | 31.49% |
+| 2020 | 9.44% | 9.46% | 18.40% |
+| 2021 | 12.78% | 12.82% | 28.71% |
+| 2022 | -1.47% | -1.35% | -18.11% |
+| 2023 | 35.04% | 34.92% | 26.29% |
+| 2024 | 26.07% | 25.98% | 25.02% |
+| 2025 | 29.25% | 29.20% | 17.88% |
+
+- `10-year NAV TR unavailable`; inception `2017-11-02` to factsheet as-of `2026-03-31` is approximately `8.41` years.
+- Official available-period NAV TR annualized return is `13.63%`; raw start/end values and raw cumulative return are `not disclosed`.
+- Official calendar rows `2018-2025` compound to `+177.49%` / CAGR `13.61%`; S&P 500 TR rows compound to `+192.03%` / CAGR `14.33%`.
+- Common rows `2021-2025` compound to `+144.52%` / CAGR `19.58%`; S&P 500 compounds to `+96.17%` / CAGR `14.43%`; FLJH leads by approximately `5.15 pp` CAGR.
+- Official current NAV TR YTD is `+22.91%` as of `2026-07-07`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### FLJH Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period table, annual rows, issuer benchmark, S&P 500 basis/window, current-YTD as-of date, calculations, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## NFTY Sequential Queue Record
