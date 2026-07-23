@@ -61,7 +61,7 @@ tags:
 | GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | IHRPF | IShares Plc. | China equity / index-tracking | not disclosed | -1.64% | not disclosed | [[ETF_OTC_MARKETS_IHRPF Performance]] |
 | ISVBF | ISHARES IV PLC | China equity / index-tracking | not disclosed | -3.44% | -9.29% | [[ETF_OTC_MARKETS_ISVBF Performance]] |
-| KBA | KraneShares Bosera MSCI China A 50 Connect Index ETF | China equity / index-tracking | not disclosed | not disclosed | 11.37% | [[ETF_NYSE_KBA Performance]] |
+| KBA | KraneShares Bosera MSCI China A 50 Connect Index ETF | China equity / index-tracking | 6.90% | not disclosed | 11.37% | [[ETF_NYSE_ARCA_KBA Performance]] |
 | KCAI | KraneShares China Alpha Index ETF | China equity / index-tracking | not applicable (<10y history) | not disclosed | 4.27% | [[ETF_NYSE_ARCA_KCAI Performance]] |
 | KGRN | KraneShares MSCI China Clean Technology Index ETF | China equity / index-tracking | not disclosed | not disclosed | -13.22% | [[ETF_NYSE_ARCA_KGRN Performance]] |
 | KSTR | KraneShares China Technology & Semiconductor STAR 50 Index ETF | China equity / index-tracking | not disclosed | not disclosed | 71.70% | [[ETF_NYSE_ARCA_KSTR Performance]] |

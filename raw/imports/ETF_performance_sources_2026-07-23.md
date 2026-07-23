@@ -102,7 +102,7 @@ tags:
 | JPAN | unsupported | NYSE Arca:JPAN | Japan | not applicable | https://us.matthewsasia.com/funds/etfs/japan-active-etf/ | active equity |
 | JPXN | supported | NYSE Arca:JPXN | Japan | 15.60% (2026-07-21) | https://www.blackrock.com/us/financial-professionals/products/239831/ishares-japan-largecap-etf | official rolling 10Y NAV TR cumulative 142.85% / CAGR 9.28% (2026-06-30); official 2021-2025 rows; Japanese TSE:1364 is a separate listing/product |
 | JPY | unsupported | NYSE Arca:JPY | Japan | not applicable | https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/108/6244 | active equity |
-| KBA | supported | NYSE:KBA | China | 11.37% (2026-06-30) | https://kraneshares.com/etf/kba/ | annual rows and raw 10Y endpoints not disclosed |
+| KBA | supported | NYSE Arca:KBA | China | 11.37% (2026-06-30) | https://kraneshares.com/etf/kba/ | prior compact capture used a stale `NYSE` label; official prospectus/annual report confirm `NYSE Arca`; current 2026-07-24 page refresh supplies the 10Y CAGR and 2016-2024 annual rows |
 | KBUF | unsupported | NYSE:KBUF | China | not applicable | https://kraneshares.com/etf/kbuf/ | derivative-heavy defined outcome |
 | KCAI | supported | NYSE:KCAI | China | 4.27% (2026-06-30) | https://kraneshares.com/etf/kcai/ | new fund; calendar rows and net expense not disclosed |
 | KDEF | supported | NYSE Arca:KDEF | South Korea | -8.13% (2026-06-30) | https://plusetf.com/kdef | new fund; no complete annual NAV rows |

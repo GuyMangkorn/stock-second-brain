@@ -69,6 +69,7 @@ tags:
 | PCCE | unsupported ETF type | NYSE Arca:PCCE | China | not applicable | https://www.polencapital.com/perspectives/polen-expands-active-etf-lineup-two-credit-etfs | official Polen/SEC materials identify PCCE as an actively managed China equity ETF; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | MJSC | unsupported ETF type | NYSE Arca:MJSC | Japan | not applicable | https://www.mufgetfs.com/mjsc | official MUFG product page confirms NYSE Arca listing, `Active ETF` classification and an actively managed Japan small-cap strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | INDE | unsupported ETF type | NYSE Arca:INDE | India | not applicable | https://us.matthewsasia.com/funds/etfs/india-active-etf/ | official Matthews factsheet/page identify NYSE Arca listing and an actively managed all-cap India equity strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
+| KBA | supported | NYSE Arca:KBA | China | 11.37% (2026-06-30) | https://kraneshares.com/etf/kba/ | passive/index-tracking China A-share ETF tracking MSCI China A 50 Connect Index; official rolling 10Y NAV TR CAGR 6.90% for 2016-06-30 to 2026-06-30; official 2016-2024 calendar NAV rows; 2025 calendar row not disclosed; current product page says `NYSE` while official prospectus/annual report say `NYSE Arca`, so the canonical key is corrected to NYSE Arca:KBA |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2045,3 +2046,47 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because INDE failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## KBA Sequential Queue Record
+
+- Input row: `72/125`; input ticker: `KBA`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:KBA`; the official 2026 summary prospectus and annual shareholder report identify the principal listing exchange as `NYSE Arca` and ticker `KBA`. The current product page displays `Primary Exchange NYSE`; this conflict is retained in the record and resolved in favor of the formal fund documents. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking equity ETF. The official prospectus states that KBA seeks to track the price and yield performance of the `MSCI China A 50 Connect Index` and normally invests at least 80% in underlying-index securities or economically similar instruments. The index covers large-cap Shanghai/Shenzhen A-shares accessible through Stock Connect. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy or single-stock fund.
+- Mandatory coverage audit: official KraneShares performance history reports NAV average annualized return `6.90%` for the 10-year period ended `2026-06-30`; official inception is `2014-03-04`, so the window covers `10.00` elapsed years. Normalized TR is `100.00` to approximately `194.88`, calculated from the official CAGR because raw endpoints and cumulative rolling NAV TR are not disclosed.
+- Official calendar observations: the current reviewed summary prospectus discloses KBA NAV TR rows for `2015-2024`; the page uses `2016-2024` for the complete disclosed comparison. The 2025 calendar NAV row is `not disclosed`. The `2016-2024` rows compound to `6.41%` / CAGR `0.69%`; the common disclosed `2021-2024` rows compound to `128.27%` / CAGR `22.92%`.
+- S&P 500 comparison: cached USD Total Return rows are used for complete calendar years `2016-2025`; the common `2021-2024` S&P window compounds to `66.41%` / CAGR `13.58%`. No 2026 S&P value is manufactured.
+- Official current observation: KBA NAV TR YTD is `11.37%` as of `2026-06-30`; gross expense ratio is `0.79%`, net expense after fee waiver is `0.56%` through `2026-08-01`. The official index history changed from earlier MSCI China A variants to MSCI China A 50 Connect on `2022-01-05`; this is disclosed on the performance page.
+
+### KBA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KBA` | [KraneShares KBA official product/performance page](https://kraneshares.com/etf/kba/) | Fund identity, current product-page exchange field, index, inception, expense ratio, NAV TR performance, current NAV/YTD and distribution history | Page accessed `2026-07-24`; current NAV/product data through `2026-07-22`; performance summary through `2026-06-30` |
+| `NYSE Arca:KBA` | [KraneShares KBA summary prospectus](https://kraneshares.com/resources/compliance/2026_02_20_kba_summary.prospectus.pdf) | Formal principal listing exchange, passive/index-tracking objective, 80% policy, expenses, 2015-2024 calendar return chart, index-history footnote and reinvestment basis | Prospectus package dated `2025-08-01` with supplement filed `2026-02-20`; calendar return chart through `2024-12-31` |
+| `NYSE Arca:KBA` | [KraneShares KBA annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_kba_annual.TSR.report.pdf) | Independent official listing cross-check and separate 10-year return cross-check | Report period ended `2026-03-31`; separate 10-year NAV return `4.68%` and $10,000 ending value `$15,800`; not mixed with the current `2026-06-30` series |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### KBA Raw Observations And Calculations
+
+| Year | KBA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -19.37% | 11.96% |
+| 2017 | 28.64% | 21.83% |
+| 2018 | -26.25% | -4.38% |
+| 2019 | -26.49% | 31.49% |
+| 2020 | -17.10% | 18.40% |
+| 2021 | 34.50% | 28.71% |
+| 2022 | 2.70% | -18.11% |
+| 2023 | 16.06% | 26.29% |
+| 2024 | 42.39% | 25.02% |
+| 2025 | not disclosed | 17.88% |
+| 2026 YTD | 11.37% | not comparable; current year not cached |
+
+- Official rolling 10-year NAV TR CAGR is `6.90%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to approximately `194.88`, actual years `10.00`.
+- Complete disclosed calendar rows `2016-2024` compound to `6.41%` / CAGR `0.69%`; S&P 500 TR over the same nine-year window compounds to `237.91%` / CAGR `14.49%`; KBA trails by `13.80 pp` CAGR.
+- Common disclosed rows `2021-2024` compound to `128.27%` / CAGR `22.92%`; S&P 500 TR compounds to `66.41%` / CAGR `13.58%`; KBA leads by `9.34 pp` CAGR. This is not labeled a five-year `2021-2025` result because KBA's 2025 row is not disclosed.
+
+### KBA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund/index identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, index-history caveat, stale old filename/link replacement, China region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
