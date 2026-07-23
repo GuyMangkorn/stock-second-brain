@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 43
-remaining_count: 82
+processed_count: 44
+remaining_count: 81
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `39` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `44` แล้ว.
 
 ## Terminal status register
 
@@ -59,11 +59,12 @@ updated: 2026-07-24
 | 41 | FLJH | `completed_available_period_no_10Y` | `NYSE Arca:FLJH` | Official inception `2017-11-02`; `10-year NAV TR unavailable`; official available-period NAV TR annualized `13.63%` through 2026-03-31; official 2018-2025 NAV rows compound to `177.49%` / CAGR `13.61%`; 2021-2025 CAGR `19.58%`; current NAV TR YTD `22.91%` as of 2026-07-07. | [[ETF_NYSE_ARCA_FLJH Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 42 | GXC | `completed_10Y` | `NYSE Arca:GXC` | Official rolling 10-year NAV TR CAGR `4.37%` for 2016-06-30 to 2026-06-30; raw endpoints and annual NAV rows not disclosed in reviewed official capture; current NAV TR YTD `-10.99%` as of 2026-06-30. | [[ETF_NYSE_ARCA_GXC Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 43 | JPAN | `unsupported ETF type` | `NYSE Arca:JPAN` | Matthews' official page and factsheet identify JPAN as a high-conviction, unconstrained all-cap fundamental active Japan ETF; active equity ETF is outside the passive/index-tracking equity scope; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 44 | EPI | `completed_10Y` | `NYSE Arca:EPI` | Passive/index-tracking India equity ETF tracking WisdomTree India Earnings Index; official rolling 10Y NAV TR CAGR `9.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 rows compound to `163.67%` / CAGR `10.18%`; 2021-2025 CAGR `11.52%`; current NAV TR YTD `-7.91%` as of 2026-06-30. | [[ETF_NYSE_ARCA_EPI Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `43/125`
-- Next ticker: `EPI` (row `44`)
+- Completed: `44/125`
+- Next ticker: `ASHS` (row `45`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `JPAN` was searched, compared, dispatched, or processed in this round.
+No ticker after `EPI` was searched, compared, dispatched, or processed in this round.

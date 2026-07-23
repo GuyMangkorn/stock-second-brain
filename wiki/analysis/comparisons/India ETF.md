@@ -18,6 +18,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -12.32% | [[ETF_NASDAQ_INDY Performance]] |
+| EPI | WisdomTree India Earnings Fund | India earnings-weighted / index-tracking equity | 9.18% | 11.52% | -7.91% | [[ETF_NYSE_ARCA_EPI Performance]] |
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
 | INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
@@ -42,7 +43,7 @@ month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | DGIN | VanEck Digital India ETF | India equity / index-tracking | not disclosed | not disclosed | -12.56% | [[ETF_NYSE_ARCA_DGIN Performance]] |
-| EPI | WisdomTree India Earnings Fund | India equity / index-tracking | not disclosed | 11.52% | -7.91% | [[ETF_NYSE_ARCA_EPI Performance]] |
+| EPI | WisdomTree India Earnings Fund | India earnings-weighted / index-tracking equity | 9.18% | 11.52% | -7.91% | [[ETF_NYSE_ARCA_EPI Performance]] |
 | FLIBF | FRANKLIN TEMPLETON ICAV FRK FTSE INDIA UCITS ETF (USD) | India equity / index-tracking | not disclosed | 9.83% | -9.47% | [[ETF_OTC_MARKETS_FLIBF Performance]] |
 | FLIN | Franklin FTSE India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_FLIN Performance]] |
 | GLIN | VanEck India Growth Leaders ETF | India equity / index-tracking | not disclosed | not disclosed | 0.47% | [[ETF_NYSE_ARCA_GLIN Performance]] |

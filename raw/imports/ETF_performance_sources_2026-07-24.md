@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `43/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `44/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -41,6 +41,7 @@ tags:
 | FLJH | supported | NYSE Arca:FLJH | Japan | 22.91% (2026-07-07) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26355/SINGLCLASS/franklin-ftse-japan-hedged-etf/FLJH | official inception 2017-11-02; 10-year NAV TR unavailable; official available-period NAV TR annualized 13.63% through 2026-03-31; official calendar NAV rows 2018-2025; current YTD 22.91% as of 2026-07-07 |
 | GXC | supported | NYSE Arca:GXC | China | -10.99% (2026-06-30) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-china-etf-gxc | official rolling 10Y NAV TR CAGR 4.37% for 2016-06-30 to 2026-06-30; raw endpoints and annual NAV rows not disclosed in reviewed capture; current YTD -10.99% as of 2026-06-30 |
 | JPAN | unsupported ETF type | NYSE Arca:JPAN | Japan | not applicable | https://us.matthewsasia.com/funds/etfs/japan-active-etf/ | Matthews identifies JPAN as a high-conviction, unconstrained all-cap fundamental active Japan ETF; outside passive/index-tracking equity scope; no performance page created |
+| EPI | supported | NYSE Arca:EPI | India | -7.91% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/epi | official rolling 10Y NAV TR CAGR `9.18%` for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows; 2021-2025 CAGR `11.52%`; current NAV TR YTD `-7.91%` as of 2026-06-30 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1111,4 +1112,50 @@ tags:
 ### FJP Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, index-change caveat, S&P 500 basis/window, current-YTD as-of date, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## EPI Sequential Queue Record
+
+- Input row: `44/125`; input ticker: `EPI`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:EPI`; WisdomTree's official product page, factsheet and prospectus identify WisdomTree India Earnings Fund, ticker EPI, NYSE Arca listing, inception `2008-02-22`, expense ratio `0.84%`, and the WisdomTree India Earnings Index. No provider slug or guessed exchange is used.
+- Type gate: the official objective is to track the investment results of profitable companies in the Indian equity market through the WisdomTree India Earnings Index. The fund is a passive, index-tracking equity ETF; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had annual rows but no tracked index, inception or rolling 10-year result. Rechecking the current WisdomTree product/performance page, the March 2026 factsheet, the Q1 2026 presentation and the SEC summary prospectus confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page gap, not an actual history gap.
+- Official rolling performance: WisdomTree reports NAV TR CAGR `9.18%` for the 10-year window as of `2026-06-30`; raw rolling start/end TR values and cumulative return are not disclosed. The shown implied cumulative return is approximately `140.67%` from the published CAGR, not a substitute for raw endpoints.
+- Official calendar observations: WisdomTree's Q1 2026 presentation provides EPI NAV TR rows `2016-2025` of `2.24%`, `39.03%`, `-10.44%`, `1.70%`, `18.07%`, `28.02%`, `-5.72%`, `26.31%`, `11.11%`, `1.83%`. These compound to `163.67%` / CAGR `10.18%`; common `2021-2025` rows compound to `72.49%` / CAGR `11.52%`; positive/negative years are `8/2`. Annual WisdomTree India Earnings Index rows were not disclosed in the reviewed official capture. MSCI India rows are retained as an additional official reference, not as the issuer benchmark.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; S&P 500 common `2021-2025` CAGR is `14.43%`, so EPI trails by approximately `2.91 pp` CAGR. S&P rows are shown as a common reference benchmark, not the issuer benchmark.
+- Official current observation: WisdomTree reports NAV `US$42.028` as of `2026-07-22` and standardized NAV TR YTD `-7.91%` for the month-end period ended `2026-06-30`.
+
+### EPI Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EPI` | [WisdomTree EPI product and performance page](https://www.wisdomtree.com/us/products/equity/epi) | Canonical listing/fund identity, passive/index objective, inception, NAV TR, rolling 10Y CAGR, current NAV/YTD, fee, holdings and risk data | Page accessed `2026-07-24`; product/NAV data `2026-07-22`; performance summary `2026-06-30` |
+| `NYSE Arca:EPI` | [WisdomTree EPI quarterly factsheet](https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-epi-1066.pdf?la=en) | Corroborates exchange, passive objective, tracked index, inception, fee, NAV TR methodology and standardized performance | Factsheet performance as of `2026-03-31` |
+| `NYSE Arca:EPI` | [WisdomTree Q1 2026 India-equity presentation](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/presentations/equity/epi_indh_presentation.pdf) | Official 2016-2025 calendar NAV rows, MSCI India reference rows and 10-year standardized performance cross-check | Performance through `2026-03-31` |
+| `NYSE Arca:EPI` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1350487/000121465924020138/epi120924497k.htm) | Objective, legal structure, index-tracking classification, fee and historical-performance cross-check | Prospectus dated `2024-12-10` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### EPI Raw Observations And Calculations
+
+| Year | EPI NAV TR | WisdomTree India Earnings Index TR | MSCI India TR | S&P 500 TR |
+|---|---:|---:|---:|---:|
+| 2016 | 2.24% | not disclosed | -1.43% | 11.96% |
+| 2017 | 39.03% | not disclosed | 38.75% | 21.83% |
+| 2018 | -10.44% | not disclosed | -7.30% | -4.38% |
+| 2019 | 1.70% | not disclosed | 7.58% | 31.49% |
+| 2020 | 18.07% | not disclosed | 15.55% | 18.40% |
+| 2021 | 28.02% | not disclosed | 26.23% | 28.71% |
+| 2022 | -5.72% | not disclosed | -7.95% | -18.11% |
+| 2023 | 26.31% | not disclosed | 20.81% | 26.29% |
+| 2024 | 11.11% | not disclosed | 11.21% | 25.02% |
+| 2025 | 1.83% | not disclosed | 2.62% | 17.88% |
+
+- Official rolling 10-year NAV TR CAGR is `9.18%` for `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints/cumulative rolling return are `not disclosed`; implied cumulative from CAGR is approximately `140.67%`.
+- Official calendar rows `2016-2025` compound to `+163.67%` and annualize to `10.18%`; S&P 500 TR rows in the same window compound to `+298.33%` and annualize to `14.82%`.
+- Common rows `2021-2025` compound to `+72.49%` / CAGR `11.52%`; S&P 500 compounds to `+96.17%` / CAGR `14.43%`; EPI trails by approximately `2.91 pp` CAGR.
+- Official current NAV TR YTD is `-7.91%` as of `2026-06-30`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### EPI Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, issuer-index gap, S&P 500 basis/window, current-YTD as-of date, rankings, filenames, India region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

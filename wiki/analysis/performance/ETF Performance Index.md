@@ -56,6 +56,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 | [[ETF_NASDAQ_INDY Performance]] | official 2020-2025 / rolling official 2016-2026 | 6.67% | 6.92% | -12.32% | 2021 +19.28% / 2022 -7.86% | India single-country large-cap equity | India/financials/FX-sensitive; emerging-market cyclicality |
 | [[ETF_NYSE_ARCA_INCO Performance]] | official 2011 / issuer 10-year as of 2026-05-31; official 2021-2025 rows | 8.72% | 11.16% | -9.92% | 2023 +34.12% / 2022 -7.40% | India consumer thematic equity | consumer/India/sector concentration; country/FX-sensitive |
+| [[ETF_NYSE_ARCA_EPI Performance]] | official 2008 / official rolling 2016-2026; official 2016-2025 | 9.18% | 11.52% | -7.91% | 2017 +39.03% / 2018 -10.44% | India earnings-weighted equity | India/country/sector/valuation/FX-sensitive; index annual rows not disclosed |
 | [[ETF_CBOE_BZX_SMIN Performance]] | official 2012 / official 2021-2025; rolling 2016-2026 | 9.71% | 12.90% | -0.58% | 2021 +44.69% / 2022 -13.98% | India single-country small-cap equity | small-cap liquidity; India/country/sector/valuation/FX-sensitive |
 | [[ETF_CBOE_BZX_INDA Performance]] | official 2012 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 7.07% | 7.80% | -10.12% | 2021 +22.41% / 2022 -9.38% | India single-country equity | India/country/financials/valuation/FX-sensitive |
 | [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
@@ -135,6 +136,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_CBOE_BZX_SMIN Performance]] | 44.69% | -13.98% | 34.80% | 17.34% | -6.82% | 83.44% | 3 / 2 |
 | [[ETF_CBOE_BZX_INDA Performance]] | 22.41% | -9.38% | 17.49% | 8.99% | 2.47% | 45.55% | 4 / 1 |
 | [[ETF_NASDAQ_NFTY Performance]] | 26.22% | -4.45% | 24.39% | 5.30% | 5.84% | 67.19% | 4 / 1 |
+| [[ETF_NYSE_ARCA_EPI Performance]] | 28.02% | -5.72% | 26.31% | 11.11% | 1.83% | 72.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | 4.23% | -2.12% | 13.96% | 5.99% | 30.16% | 60.39% | 4 / 1 |
 | [[ETF_NYSE_ARCA_GMF Performance]] | -1.49% | -19.00% | 7.88% | 17.01% | 21.94% | 22.83% | 3 / 2 |
 | [[ETF_NYSE_ARCA_EWA Performance]] | 9.09% | -5.74% | 13.98% | 0.82% | 14.12% | 34.85% | 4 / 1 |
@@ -343,7 +345,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_EIDO Performance]] — EIDO (Indonesia)
 - [[ETF_NASDAQ_ENZL Performance]] — ENZL (New Zealand)
 - [[ETF_NYSE_ARCA_EPHE Performance]] — EPHE (Philippines)
-- [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
 - [[ETF_NYSE_ARCA_EPP Performance]] — EPP (Asia-Pacific)
 - [[ETF_NASDAQ_EWJV Performance]] — EWJV (Japan)
 - [[ETF_NYSE_ARCA_EWM Performance]] — EWM (Malaysia)
@@ -410,3 +411,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 
 - [[ETF_LSE_VDPX Performance]] — VGUDF / VDPX (Asia-Pacific)
 - [[ETF_LSE_CEMA Performance]] — CETFF / CEMA (Emerging Markets)
+- [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
