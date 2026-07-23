@@ -10,7 +10,7 @@ updated: 2026-07-24
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-12` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-13` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
 
 ## Terminal status register
 
@@ -28,10 +28,11 @@ updated: 2026-07-24
 | 10 | HEWJ | `completed_10Y` | `NYSE Arca:HEWJ` | Passive/index-tracking Japan equity ETF with USD hedge overlay; official rolling 10-year NAV TR cumulative `391.99%` / CAGR `17.27%` for 2016-06-30 to 2026-06-30; official annual rows 2021-2025; current date-to-date YTD `18.81%` as of 2026-07-17; NAV US$62.22 as of 2026-07-20. | [[ETF_NYSE_ARCA_HEWJ Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 11 | SMIN | `completed_10Y` | `Cboe BZX:SMIN` | Passive/index-tracking India small-cap equity ETF; official rolling 10-year NAV TR cumulative `152.70%` / CAGR `9.71%` for 2016-06-30 to 2026-06-30; official annual rows 2021-2025 compound to 5-year CAGR `12.90%`; current date-to-date YTD `-0.58%` as of 2026-07-21; NAV US$69.69 as of 2026-07-21. | [[ETF_CBOE_BZX_SMIN Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 12 | IHREF | `completed_10Y` | `LSE:SJPA` | Input OTC alias for iShares Core MSCI Japan IMI UCITS ETF; official LSE:SJPA listing for ISIN `IE00B4L5YX21`; official rolling 10-year NAV TR cumulative `147.80%` / CAGR `9.50%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to 5-year CAGR `6.33%`; current date-to-date YTD `12.55%` as of 2026-07-17; NAV US$77.53 as of 2026-07-17. | [[ETF_LSE_SJPA Performance]] | [[ETF_performance_sources_2026-07-23]] |
+| 13 | EWT | `completed_10Y` | `NYSE Arca:EWT` | Passive/index-tracking Taiwan single-country equity ETF; official rolling 10-year NAV TR cumulative `552.21%` / CAGR `20.63%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to 5-year CAGR `12.01%`; current date-to-date YTD `50.68%` as of 2026-07-20; NAV US$95.76 as of 2026-07-20. | [[ETF_NYSE_ARCA_EWT Performance]] | [[ETF_performance_sources_2026-07-23]] |
 
 ## Queue pointer
 
-- Completed: `12/125`
-- Next ticker: `EWT` (row `13`)
+- Completed: `13/125`
+- Next ticker: `JPXN` (row `14`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `IHREF` was searched, compared, dispatched, or processed in this round.
+- No ticker after `EWT` was searched, compared, dispatched, or processed in this round.

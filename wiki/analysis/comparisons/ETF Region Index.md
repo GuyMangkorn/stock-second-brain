@@ -1,6 +1,6 @@
 ---
 type: etf-region-index
-updated: 2026-07-23
+updated: 2026-07-24
 scope: ETF performance navigation
 tags:
   - analysis/etf-region

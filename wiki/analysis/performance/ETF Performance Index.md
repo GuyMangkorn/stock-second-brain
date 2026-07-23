@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-23
+updated: 2026-07-24
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -72,6 +72,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_DBJP Performance]] | official 2011 / official 2016-2024; rolling 2016-2026 | 17.28% | not disclosed | not disclosed | 2023 +34.97% / 2018 -14.03% | Japan single-country equity, USD/JPY hedged | country/sector/hedging-cost-sensitive |
 | [[ETF_LSE_DXJA Performance]] | official 2017 / official 2018-2025; available through 2026-06-30 | not applicable (<10y history) | 24.84% | 21.90% | 2023 +40.52% / 2018 -18.62% | Japan dividend/export equity, USD hedged, accumulating | country/sector/hedge-cost-sensitive; OTC alias/liquidity gap |
 | [[ETF_NYSE_ARCA_FLTW Performance]] | official 2017 / official 2018-2025; available through 2026-07-10 | not applicable (<10y history) | 13.48% | 63.10% | 2025 +31.91% / 2022 -27.74% | Taiwan single-country indexed equity | IT/semiconductor/country/geopolitical/FX-sensitive |
+| [[ETF_NYSE_ARCA_EWT Performance]] | official 2000 / official rolling 2016-2026 | 20.63% | 12.01% | 50.68% | 2023 +29.15% / 2022 -28.75% | Taiwan single-country equity | IT/semiconductor/country/geopolitical/FX-sensitive |
 | [[ETF_LSE_IJPD Performance]] | official 2013 / official 2016-2025; rolling 2016-2026 | 17.02% | 18.81% | 17.84% | 2023 +34.50% / 2018 -14.10% | Japan single-country USD-hedged equity, accumulating | country/sector/FX/hedge-cost-sensitive |
 | [[ETF_CBOE_BBJP Performance]] | official 2019-2025 | not applicable (<10y history) | 6.56% | 14.75% | 2025 +26.56% / 2022 -16.78% | Japan single-country large/mid-cap equity | sector/country/FX-sensitive; broad indexed exposure |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
@@ -124,6 +125,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 | [[ETF_NYSE_ARCA_ECNS Performance]] | 3.10% | -24.77% | -23.28% | 6.94% | 36.42% | -13.19% | 3 / 2 |
 | [[ETF_NYSE_ARCA_IDX Performance]] | -2.60%* | -9.39%* | 1.97%* | -9.75%* | 13.83%* | -7.55%* | 2 / 3 |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | 29.10% | -11.95% | 15.23% | 12.36% | 34.90% | 98.54% | 4 / 1 |
+| [[ETF_NYSE_ARCA_EWT Performance]] | 28.38% | -28.75% | 29.15% | 16.79% | 27.81% | 76.34% | 4 / 1 |
 | [[ETF_AMEX_DTD Performance]] | 26.14% | -3.81% | 10.44% | 18.75% | 14.22% | 81.75% | 4 / 1 |
 | [[ETF_AMEX_FVD Performance]] | 24.86% | -5.24% | 4.10% | 10.00% | 8.19% | 46.58% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VOO Performance]] | 28.66% | -18.15% | 26.25% | 24.98% | 17.84% | 95.81% | 4 / 1 |

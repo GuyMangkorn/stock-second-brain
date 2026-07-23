@@ -55,7 +55,7 @@ tags:
 | EWJV | supported | NASDAQ:EWJV | Japan | 17.90% (2026-07-21) | https://www.ishares.com/us/products/307263/ishares-msci-japan-value-etf | fund under 10 years; raw 10Y not available |
 | EWM | supported | NYSE Arca:EWM | Malaysia | 4.62% (2026-07-17) | https://www.ishares.com/us/products/239669/EWM | raw 10Y endpoints not disclosed; earlier annual rows not surfaced |
 | EWS | supported | NYSE Arca:EWS | Singapore | 16.50% (2026-07-21) | https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf | raw 10Y endpoints not disclosed; earlier annual rows not shown |
-| EWT | supported | NYSE Arca:EWT | Taiwan | 54.11% (2026-07-17) | https://www.ishares.com/us/products/239686/EWT | raw 10Y endpoints not disclosed |
+| EWT | supported | NYSE Arca:EWT | Taiwan | 50.68% (2026-07-20) | https://www.ishares.com/us/products/239686/EWT | official rolling 10Y NAV TR cumulative 552.21% / CAGR 20.63% (2026-06-30); official 2021-2025 rows; raw endpoint levels not disclosed |
 | EWY | supported | NYSE Arca:EWY | South Korea | 75.82% (2026-07-21) | https://www.ishares.com/us/products/239681/ | raw endpoints not disclosed |
 | FCA | supported | NASDAQ:FCA | China | not disclosed (not disclosed) | https://www.ftportfolios.com/Retail/etf/ETFsummary.aspx?Ticker=FCA | annual rows and current YTD not disclosed |
 | FJP | supported | NASDAQ:FJP | Japan | 14.26% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FJP | raw 10Y endpoints not disclosed; methodology changed |
@@ -646,3 +646,38 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: OTC-alias-to-LSE mapping, ticker/exchange, passive-equity classification, accumulating NAV Total Return definition, reinvested income and expense disclosure gap, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Japan region assignment, canonical geography tags, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## EWT Sequential Queue Record
+
+- Input row: `13/125`; input ticker: `EWT`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:EWT`; the official iShares product page identifies the NYSE Arca listing, fund name, asset class `Equity`, benchmark `MSCI Taiwan 25/50 Index`, and inception `2000-06-20`. No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking Taiwan single-country equity ETF. This classification follows the issuer objective to track an index composed of Taiwanese equities; the fund is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, or derivative-heavy.
+- Official current observations: NAV `US$95.76` and NAV Total Return YTD `50.68%` as of `2026-07-20`; 79 holdings as of `2026-07-20`; 3-year standard deviation `23.22%` and equity beta `1.28` as of `2026-06-30`; expense ratio `0.59%`.
+
+### EWT Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EWT` | [iShares EWT product and performance page](https://www.ishares.com/us/products/239686/EWT) | Fund identity, exchange, benchmark, inception, fee, NAV Total Return definition, current NAV/YTD, rolling NAV Total Return, annual rows and risk fields | Page accessed `2026-07-24`; NAV/current YTD/holdings `2026-07-20`; performance table/standardized YTD/risk fields `2026-06-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### EWT Raw Observations And Calculations
+
+| Year | EWT NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 28.38% | 28.71% |
+| 2022 | -28.75% | -18.11% |
+| 2023 | 29.15% | 26.29% |
+| 2024 | 16.79% | 25.02% |
+| 2025 | 27.81% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `552.21%` and average annual/CAGR `20.63%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual coverage is `10.00 calendar years` / `3,652 days`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `652.21`; `(652.21 / 100.00)^(1 / 10.00) - 1 ≈ 20.63%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+76.34%` and annualize to `12.01%` over `5` years. S&P 500 TR compounds to `+96.17%` and annualizes to `14.43%`; EWT trails by approximately `2.42 pp` CAGR. Up/down years are `4 / 1`; best `2023 +29.15%`; least positive `2024 +16.79%`; worst and least bad down year `2022 -28.75%`.
+- Official current date-to-date NAV Total Return YTD is `+50.68%` as of `2026-07-20`; the earlier `+54.11%` observation as of `2026-07-17` was replaced by this fresher official observation. Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EWT Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the complete local checklist from `check-etf-performance/workflow.md`: canonical ticker/exchange, passive-equity gate, NAV Total Return definition with reinvestment/expenses, official annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate as-of dates, best/worst ranking, filenames, Taiwan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

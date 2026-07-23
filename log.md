@@ -17,6 +17,10 @@
 - `etf-performance`: Sequential queue row `11/125` completed for `SMIN`; refreshed [[ETF_CBOE_BZX_SMIN Performance]] with official rolling 10-year NAV TR cumulative `152.70%` / CAGR `9.71%`, 2021-2025 rows and 5-year CAGR `12.90%`, current date-to-date YTD `-0.58%` as of 2026-07-21, updated [[India ETF]] / [[ETF Performance Index]], and extended [[ETF_performance_sources_2026-07-23]]. Next queue ticker: `IHREF`.
 - `etf-performance`: Sequential queue row `12/125` completed for `IHREF`; resolved the OTC input alias to canonical [[ETF_LSE_SJPA Performance]] (`LSE:SJPA`, ISIN `IE00B4L5YX21`), recorded official rolling 10-year NAV TR cumulative `147.80%` / CAGR `9.50%`, 2021-2025 rows and 5-year CAGR `6.33%`, current date-to-date YTD `12.55%` as of 2026-07-17, updated [[Japan ETF]] / [[ETF Performance Index]], and extended [[ETF_performance_sources_2026-07-23]]. Next queue ticker: `EWT`.
 
+## 2026-07-24
+
+- `etf-performance`: Sequential queue row `13/125` completed for `EWT`; refreshed [[ETF_NYSE_ARCA_EWT Performance]] with official rolling 10-year NAV TR cumulative `552.21%` / CAGR `20.63%`, official 2021-2025 rows and 5-year CAGR `12.01%`, current NAV TR YTD `50.68%` as of 2026-07-20, updated [[Taiwan ETF]] / [[ETF Performance Index]], and extended [[ETF_performance_sources_2026-07-23]] with the local pre-save fallback. Next queue ticker: `JPXN`.
+
 ## 2026-07-22
 
 - `etf-performance`: Resolved `DXJJF` to canonical `LSE:DXJ` for WisdomTree Japan Equity UCITS ETF - USD Hedged; created [[ETF_LSE_DXJ Performance]] and [[ETF_performance_sources_2026-07-22]], added Japan navigation/index rows, and verified official 2016-2025 NAV TR CAGR approximately `13.94%`, 2021-2025 CAGR `24.77%`, and YTD `+21.90%` as of 2026-06-30; OTC liquidity and post-June YTD remain unresolved.
