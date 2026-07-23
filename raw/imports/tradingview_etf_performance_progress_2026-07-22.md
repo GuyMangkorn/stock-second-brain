@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 68
-remaining_count: 57
+processed_count: 69
+remaining_count: 56
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `68` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `69` แล้ว.
 
 ## Terminal status register
 
@@ -84,11 +84,12 @@ updated: 2026-07-24
 | 66 | KCAI | `completed_available_period_no_10Y` | `NYSE Arca:KCAI` | Passive/rules-based index-tracking China A-share equity ETF; official inception `2024-08-27`, so `10-year NAV TR unavailable`; official since-inception NAV TR cumulative `76.27%` / annualized `36.06%` for 2024-08-27 to 2026-06-30 (`1.84` years); latest NAV TR YTD `4.27%` as of 2026-06-30; official calendar annual NAV rows not disclosed; current product page's `NYSE` exchange field conflicts with official prospectus/factsheet/annual-report `NYSE Arca` listing, so `NYSE Arca:KCAI` is retained with conflict disclosed. | [[ETF_NYSE_ARCA_KCAI Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 67 | EWS | `completed_10Y` | `NYSE Arca:EWS` | Passive/index-tracking Singapore equity ETF; official rolling 10Y NAV TR cumulative `112.54%` / CAGR `7.83%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint `212.54`; official 2021-2025 NAV rows compound to `62.22%` / CAGR `10.16%`; issuer benchmark rows compound to `67.32%` / CAGR `10.83%`; current NAV TR YTD `16.50%` as of 2026-07-21; 2016-2020 annual NAV rows not disclosed; benchmark changed to MSCI Singapore 25/50 Index (Net) on 2016-12-01. | [[ETF_NYSE_ARCA_EWS Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 68 | BBAX | `completed_available_period_no_10Y` | `Cboe BZX:BBAX` | Passive/index-tracking developed Asia-Pacific equity ETF; Cboe/JPMorgan/SEC sources identify the canonical listing as Cboe BZX; official class launch `2018-08-07` means `10-year NAV TR unavailable`; official available-period NAV TR cumulative `64.48%` / annualized CAGR `6.50%` from 2018-08-07 to 2026-06-30 (`7.90` years), normalized from the official $10,000 growth chart; official 2019-2025 NAV rows compound to `67.26%` / CAGR `7.62%`; 2021-2025 CAGR `5.47%`; current NAV TR YTD `8.20%` as of 2026-06-30. | [[ETF_CBOE_BZX_BBAX Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 69 | PCCE | `unsupported ETF type` | `NYSE Arca:PCCE` | Official SEC summary prospectus identifies PCCE as a non-diversified, actively managed ETF investing in Chinese-company equities; Polen's official materials place PCCE in its active ETF lineup. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `68/125`
-- Next ticker: `row 69` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `69/125`
+- Next ticker: `row 70` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `BBAX` was searched, compared, dispatched, or processed in this round.
+No ticker after `PCCE` was searched, compared, dispatched, or processed in this round.

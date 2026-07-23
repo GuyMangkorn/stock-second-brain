@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `68/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `69/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -66,6 +66,7 @@ tags:
 | KCAI | supported | NYSE Arca:KCAI | China | 4.27% (2026-06-30) | https://kraneshares.com/etf/kcai/ | passive/rules-based index-tracking China A-share equity ETF; official inception 2024-08-27 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 76.27% / annualized 36.06% as of 2026-06-30; official current YTD 4.27%; current product page says NYSE while official prospectus/factsheet/annual report say NYSE Arca, so NYSE Arca is used and conflict is disclosed |
 | EWS | supported | NYSE Arca:EWS | Singapore | 16.50% (2026-07-21) | https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf | passive/index-tracking Singapore equity ETF; official rolling 10Y NAV TR cumulative 112.54% / CAGR 7.83% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/index rows; 2016-2020 annual NAV rows not disclosed; current NAV TR YTD 16.50% as of 2026-07-21; benchmark change to MSCI Singapore 25/50 Index (Net) on 2016-12-01 |
 | BBAX | supported | Cboe BZX:BBAX | Asia-Pacific | 8.20% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF | passive/index-tracking developed Asia-Pacific equity ETF; official class launch 2018-08-07 means 10-year NAV TR unavailable; available-period NAV TR cumulative 64.48% / annualized CAGR 6.50% through 2026-06-30; official 2019-2025 NAV rows; Cboe/SEC listing confirmation |
+| PCCE | unsupported ETF type | NYSE Arca:PCCE | China | not applicable | https://www.polencapital.com/perspectives/polen-expands-active-etf-lineup-two-credit-etfs | official Polen/SEC materials identify PCCE as an actively managed China equity ETF; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1983,3 +1984,23 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, primary Asia-Pacific region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, old filename/link replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. The earlier `NYSE Arca` label and `current NAV and 10Y not disclosed` compact capture were corrected from the current official Cboe/JPMorgan/SEC evidence; reviewer-availability fallback is disclosed here as required.
+
+## PCCE Sequential Queue Record
+
+- Input row: `69/125`; input ticker: `PCCE`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:PCCE`; Polen's official 2025 active-ETF announcement places PCCE in the existing NYSE Arca active ETF lineup, and the official SEC 2026 shareholder-report data identifies PCCE's security exchange as `NYSEArca`. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. The SEC April 30, 2026 summary prospectus describes PCCE as a non-diversified, `actively-managed` ETF seeking long-term capital growth through a portfolio of Chinese-company equity securities selected in the sub-advisor's opinion. Polen's official materials also describe its active ETF framework. It is not a passive/index-tracking equity ETF.
+- Per the type gate, no 10-year historical performance calculation, annual NAV TR table, performance page, region row, index row, or S&P 500 comparison was created. Status is terminal under the requested ETF v1 scope.
+
+### PCCE Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:PCCE` | [Polen Capital active ETF lineup announcement](https://www.polencapital.com/perspectives/polen-expands-active-etf-lineup-two-credit-etfs) | Official issuer exchange context and active ETF classification | Announcement dated `2025-03-24`; PCCE listed in the existing NYSE Arca active ETF lineup |
+| `NYSE Arca:PCCE` | [SEC 2026 shareholder-report data](https://www.sec.gov/Archives/edgar/data/1020425/000119312526100256/R2.htm) | Official ticker/exchange record and fund report context | Report data filed `2026`; `Security Exchange Name: NYSEArca`; 2025 NAV return `21.83%` is not used because the fund fails the type gate |
+| `NYSE Arca:PCCE` | [SEC April 30, 2026 summary prospectus](https://www.sec.gov/Archives/edgar/data/1020425/000119312526197037/d119372d497k.htm) | Official active/non-diversified strategy classification | Prospectus dated `2026-04-30`; actively managed China equity ETF |
+
+### PCCE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because PCCE failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
