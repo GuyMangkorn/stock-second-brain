@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 48
-remaining_count: 77
+processed_count: 49
+remaining_count: 76
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `48` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `49` แล้ว.
 
 ## Terminal status register
 
@@ -64,11 +64,12 @@ updated: 2026-07-24
 | 46 | PGJ | `completed_10Y` | `NASDAQ:PGJ` | Passive/index-tracking China equity ETF tracking Nasdaq Golden Dragon China Index; official rolling 10Y NAV TR CAGR `0.35%` for 2015-12-31 to 2025-12-31; official 2016-2025 NAV/index/benchmark rows compound to `3.50%` / CAGR `0.34%`; 2021-2025 CAGR `-12.65%`; current 2026 NAV TR YTD not disclosed. | [[ETF_NASDAQ_PGJ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 47 | VFJUF | `completed_available_period_no_10Y` | `LSE:VJPU` | OTC alias for Vanguard FTSE Japan UCITS ETF - USD Hedged Accumulating; official share-class inception `2020-01-31`, so `10-year NAV TR unavailable`; official available-period NAV TR CAGR `20.29%` for 2020-01-31 to 2026-05-31 (about `6.33` years); rolling 12-month NAV TR rows disclosed; latest standardized YTD `19.41%` as of 2026-05-31; 2026-07-22 YTD not disclosed. | [[ETF_LSE_VJPU Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 48 | MCHS | `unsupported ETF type` | `NASDAQ:MCHS` | Matthews China Innovators Active ETF (formerly Matthews China Discovery Active ETF); official issuer materials identify an active/fundamental strategy investing in companies Matthews selects as innovators. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 49 | IPAC | `completed_10Y` | `NYSE Arca:IPAC` | Passive/index-tracking Pacific equity ETF tracking MSCI Pacific IMI Index (Net); official rolling 10Y NAV TR cumulative `141.81%` / CAGR `9.23%` for 2016-06-30 to 2026-06-30 (`10.00` elapsed years); official annual NAV/benchmark rows 2021-2025 compound to `35.41%` / CAGR `6.25%`; 2016-2020 annual rows not disclosed; current NAV TR YTD `13.75%` as of 2026-07-22. | [[ETF_NYSE_ARCA_IPAC Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `48/125`
-- Next ticker: `IPAC` (row `49`)
+- Completed: `49/125`
+- Next ticker: `ASIA` (row `50`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `MCHS` was searched, compared, dispatched, or processed in this round.
+No ticker after `IPAC` was searched, compared, dispatched, or processed in this round.

@@ -381,7 +381,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_INDH Performance]] — INDH (India)
 - [[ETF_NASDAQ_INDQ Performance]] — INDQ (India)
 - [[ETF_NYSE_ARCA_INQQ Performance]] — INQQ (India)
-- [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)
 - [[ETF_LSE_CPXJ Performance]] — ISMJF (Asia-Pacific)
 - [[ETF_LSE_IJPD Performance]] — ISRVF (Japan)
 - [[ETF_NYSE_ARCA_JPXN Performance]] — JPXN (Japan)
@@ -417,3 +416,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_ASHS Performance]] — ASHS (China)
 - [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
 - [[ETF_LSE_VJPU Performance]] — VFJUF / VJPU (Japan)
+- [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)

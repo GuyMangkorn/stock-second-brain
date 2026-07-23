@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `48/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `49/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -46,6 +46,7 @@ tags:
 | PGJ | supported | NASDAQ:PGJ | China | not disclosed | https://www.invesco.com/us/en/financial-products/etfs/invesco-golden-dragon-china-etf.html | official rolling 10Y NAV TR CAGR `0.35%` for 2015-12-31 to 2025-12-31; official 2016-2025 NAV/index/benchmark rows; 2021-2025 CAGR `-12.65%`; current 2026 NAV TR YTD not disclosed |
 | VFJUF | supported | LSE:VJPU | Japan | 19.41% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9541/ftse-japan-ucits-etf-usd-hedged-accumulating | OTC alias resolved to Vanguard FTSE Japan UCITS ETF USD Hedged Accumulating; official inception `2020-01-31`, `10-year NAV TR unavailable`; available-period NAV TR CAGR `20.29%` for 2020-01-31 to 2026-05-31; rolling 12-month NAV rows disclosed; current 2026-07-22 YTD not disclosed |
 | MCHS | unsupported ETF type | NASDAQ:MCHS | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-innovators-active-etf/ | Matthews identifies MCHS as an active/fundamental China equity ETF; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
+| IPAC | supported | NYSE Arca:IPAC | Asia-Pacific | 13.75% (2026-07-22) | https://www.ishares.com/us/products/264619/ishares-core-msci-pacific-etf | official rolling 10Y NAV TR cumulative 141.81% / CAGR 9.23% for 2016-06-30 to 2026-06-30; official annual NAV/benchmark rows 2021-2025; 2016-2020 annual rows not disclosed; current YTD 13.75% as of 2026-07-22 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1317,4 +1318,51 @@ tags:
 ### MCHS Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/ticker, issuer/fund identity, active-versus-passive type gate, unsupported-type reason, no-performance-page decision, source links/as-of dates, and next queue pointer.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## IPAC Sequential Queue Record
+
+- Input row: `49/125`; input ticker: `IPAC`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:IPAC`; iShares' official product page identifies iShares Core MSCI Pacific ETF, primary exchange NYSE Arca, inception `2014-06-10`, asset class Equity, tracked index MSCI Pacific IMI Index (Net), and expense ratio `0.09%`. No provider slug or guessed exchange is used.
+- Type gate: official iShares materials describe a passive/index-tracking equity ETF. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had no verified inception, tracked index or rolling 10-year result. Rechecking the current official product page, factsheet, summary prospectus and semi-annual report confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page gap, not an actual history gap.
+- Official rolling performance: iShares reports NAV Total Return cumulative `141.81%` and average annual `9.23%` for the 10-year window. Raw start/end NAV TR values are not disclosed; normalized TR is `100.00` to `241.81` from the published cumulative result.
+- Official calendar observations: the reviewed iShares performance capture provides NAV and MSCI Pacific IMI Index (Net) rows for `2021-2025`: NAV `3.03%`, `-13.31%`, `14.33%`, `5.56%`, `25.62%`; benchmark `2.53%`, `-13.06%`, `14.36%`, `6.26%`, `24.42%`. Rows for `2016-2020` are not disclosed and are left as `not disclosed`.
+- Common `2021-2025` IPAC NAV rows compound to `35.41%` / CAGR `6.25%`; S&P 500 cached USD Total Return rows compound to `96.17%` / CAGR `14.43%`; IPAC trails by approximately `8.18 pp` CAGR.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; this is a common reference benchmark, kept separate from IPAC's issuer benchmark.
+- Official current observation: iShares reports NAV Total Return YTD `13.75%` as of `2026-07-22`; the prior page's `13.97%` observation was stale and is superseded by the later official as-of date. Daily NAV history sufficient for max drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### IPAC Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:IPAC` | [iShares IPAC product and performance page](https://www.ishares.com/us/products/264619/ishares-core-msci-pacific-etf) | Canonical listing, fund identity, passive-equity classification, tracked index, inception, fees, rolling 10Y NAV TR, annual rows, current YTD and risk/holdings data | Page accessed `2026-07-24`; rolling/annual performance `2026-06-30`; current YTD `2026-07-22`; holdings/risk `2026-07-22` |
+| `NYSE Arca:IPAC` | [iShares IPAC factsheet](https://www.ishares.com/us/literature/fact-sheet/ipac-ishares-core-msci-pacific-etf-fund-fact-sheet-en-us.pdf) | Official factsheet cross-check for fund identity, benchmark, fee, performance and calendar observations | Factsheet accessed `2026-07-24`; performance through `2026-06-30` |
+| `NYSE Arca:IPAC` | [iShares IPAC summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-core-msci-pacific-etf-7-31.pdf) | Legal/fund objective and passive/index-tracking structure cross-check | Prospectus accessed `2026-07-24` |
+| `NYSE Arca:IPAC` | [iShares semi-annual report](https://www.ishares.com/us/literature/semi-annual-report/sar-ipac-en.pdf) | Issuer report and NAV/performance-document route cross-check | Report accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### IPAC Raw Observations And Calculations
+
+| Year | IPAC NAV TR | MSCI Pacific IMI Index (Net) TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | 3.03% | 2.53% | 28.71% |
+| 2022 | -13.31% | -13.06% | -18.11% |
+| 2023 | 14.33% | 14.36% | 26.29% |
+| 2024 | 5.56% | 6.26% | 25.02% |
+| 2025 | 25.62% | 24.42% | 17.88% |
+
+- Official rolling 10-year NAV TR is `+141.81%` with CAGR `9.23%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `241.81`, actual years `10.00`; raw endpoints are not disclosed.
+- Official disclosed calendar rows `2021-2025` compound to `+35.41%` and annualize to `6.25%`; positive / negative years are `4 / 1`.
+- S&P 500 TR rows `2021-2025` compound to `+96.17%` and annualize to `14.43%`; IPAC trails by approximately `8.18 pp` CAGR in that common window.
+- Official current NAV TR YTD is `+13.75%` as of `2026-07-22`; daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### IPAC Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual-row gap, S&P 500 basis/window, current-YTD as-of date, rankings, canonical filename, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

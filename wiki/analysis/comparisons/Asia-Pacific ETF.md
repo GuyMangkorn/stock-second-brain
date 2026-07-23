@@ -20,6 +20,7 @@ tags:
 | DVYA | iShares Asia/Pacific Dividend ETF | developed Asia-Pacific dividend equity | 6.90% | 9.91% | 14.28% | [[ETF_NYSE_ARCA_DVYA Performance]] |
 | EPP | iShares MSCI Pacific ex Japan ETF | Asia-Pacific equity / index-tracking | 7.37% | 5.28% | 11.23% | [[ETF_NYSE_ARCA_EPP Performance]] |
 | GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.94% | 4.20% | 12.56% | [[ETF_NYSE_ARCA_GMF Performance]] |
+| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 13.75% | [[ETF_NYSE_ARCA_IPAC Performance]] |
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VPL | Vanguard FTSE Pacific ETF | Asia-Pacific equity / index-tracking | 10.74% | 6.05% | 19.62% | [[ETF_NYSE_ARCA_VPL Performance]] |
 | VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
@@ -39,6 +40,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
+| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 13.75% | [[ETF_NYSE_ARCA_IPAC Performance]] |
 
 
 ## 2026-07-23 Verified Coverage Additions
@@ -50,7 +52,6 @@ tags:
 | EPP | iShares MSCI Pacific ex Japan ETF | Asia-Pacific equity / index-tracking | 7.37% | 5.28% | 11.23% | [[ETF_NYSE_ARCA_EPP Performance]] |
 | GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.94% | 4.20% | 12.56% | [[ETF_NYSE_ARCA_GMF Performance]] |
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
-| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | not disclosed | 6.25% | 13.97% | [[ETF_NYSE_ARCA_IPAC Performance]] |
 | ISMJF | iShares Core MSCI Pacific ex-Japan UCITS ETF | Asia-Pacific equity / index-tracking | 7.65% | 5.63% | 8.15% | [[ETF_LSE_CPXJ Performance]] |
 | ISMJF | iShares Core MSCI Pacific ex-Japan UCITS ETF | Asia-Pacific equity / index-tracking | 7.65% | 5.63% | 8.15% | [[ETF_LSE_CPXJ Performance]] |
 | VPL | Vanguard FTSE Pacific ETF | Asia-Pacific equity / index-tracking | 10.74% | 6.05% | 19.62% | [[ETF_NYSE_ARCA_VPL Performance]] |
