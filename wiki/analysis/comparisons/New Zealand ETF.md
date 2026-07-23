@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: New Zealand
-updated: 2026-07-23
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/New-Zealand
@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| ENZL | iShares MSCI New Zealand ETF | New Zealand equity / index-tracking | not disclosed | -5.67% | 3.45% | [[ETF_NASDAQ_ENZL Performance]] |
+| ENZL | iShares MSCI New Zealand ETF | New Zealand equity / index-tracking | 3.33% | -5.67% | 3.45% | [[ETF_NASDAQ_ENZL Performance]] |
 
 ## Navigation
 

@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 37
-remaining_count: 88
+processed_count: 38
+remaining_count: 87
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `37` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `38` แล้ว.
 
 ## Terminal status register
 
@@ -53,11 +53,12 @@ updated: 2026-07-24
 | 35 | CETFF | `completed_10Y` | `LSE:CEMA` | OTC alias resolved to iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN `IE00B5L8K969`; passive physical/replicated equity ETF. Official rolling 10Y NAV TR cumulative `185.06%` / CAGR `11.04%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025 compound to `126.95%` / CAGR `8.54%`; 2021-2025 CAGR `3.62%`; current NAV TR YTD `28.17%` as of 2026-06-30. | [[ETF_LSE_CEMA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 36 | INDA | `completed_10Y` | `Cboe BZX:INDA` | Official rolling 10-year NAV TR cumulative `98.09%` / CAGR `7.07%` for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/benchmark rows; 2016-2020 calendar rows not disclosed; current NAV TR YTD `-10.12%` as of 2026-07-20. | [[ETF_CBOE_BZX_INDA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 37 | KDEF | `completed_available_period_no_10Y` | `NYSE Arca:KDEF` | Official inception `2025-02-05`; `10-year NAV TR unavailable`; since-inception NAV TR cumulative `105.69%` / annualized `67.39%` for 2025-02-05 to 2026-06-30; current NAV TR YTD `-8.13%` as of 2026-06-30; complete-calendar annual NAV rows not disclosed. | [[ETF_NYSE_ARCA_KDEF Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 38 | ENZL | `completed_10Y` | `NASDAQ:ENZL` | Official rolling 10-year NAV TR cumulative `38.78%` / CAGR `3.33%` for 2016-06-30 to 2026-06-30; official 2021-2025 NAV rows compound to `-25.33%` / CAGR `-5.67%`; 2016-2020 and annual benchmark rows not disclosed; current NAV TR YTD `3.45%` as of 2026-07-21. | [[ETF_NASDAQ_ENZL Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `37/125`
-- Next ticker: `ENZL` (row `38`)
+- Completed: `38/125`
+- Next ticker: `FJP` (row `39`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `KDEF` was searched, compared, dispatched, or processed in this round.
+No ticker after `ENZL` was searched, compared, dispatched, or processed in this round.

@@ -35,6 +35,7 @@ tags:
 | VGUDF | supported | LSE:VDPX | Asia-Pacific | not disclosed | https://www.vanguard.co.uk/professional/product/etf/equity/9522/ftse-developed-asia-pacific-ex-japan-ucits-etf-usd-distributing | OTC alias resolved to official USD-distributing share class ISIN IE00B9F5YL18 / LSE:VDPX; official 10Y NAV TR CAGR 8.80% for 2016-03-31 to 2026-03-31; calendar NAV rows 2016-2025; current YTD not disclosed in reviewed official capture |
 | INDA | supported | Cboe BZX:INDA | India | -10.12% (2026-07-20) | https://www.ishares.com/us/products/239659/ishares-msci-india-etf | official rolling 10Y NAV TR cumulative 98.09% / CAGR 7.07% as of 2026-06-30; official calendar NAV/benchmark rows 2021-2025; 2016-2020 calendar rows not disclosed; current YTD -10.12% as of 2026-07-20 |
 | KDEF | supported | NYSE Arca:KDEF | South Korea | -8.13% (2026-06-30) | https://plusetf.com/kdef | official inception 2025-02-05; 10-year NAV TR unavailable; official since-inception NAV TR cumulative 105.69% / annualized 67.39% as of 2026-06-30; complete-calendar annual NAV rows not disclosed |
+| ENZL | supported | NASDAQ:ENZL | New Zealand | 3.45% (2026-07-21) | https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf | official rolling 10Y NAV TR cumulative 38.78% / CAGR 3.33% as of 2026-06-30; official calendar NAV rows 2021-2025; 2016-2020 and annual benchmark rows not disclosed; current YTD 3.45% as of 2026-07-21 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -853,4 +854,49 @@ tags:
 ### KDEF Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period table, S&P 500 basis/window and explicit gaps, current-YTD as-of date, filenames, South Korea region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## ENZL Sequential Queue Record
+
+- Input row: `38/125`; input ticker: `ENZL`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:ENZL`; official iShares U.S. product page identifies iShares MSCI New Zealand ETF, Nasdaq listing, CUSIP `464289123`, inception `2010-09-01`, equity asset class and benchmark MSCI New Zealand All Cap Top 25 Capped Index (Net). No provider slug or guessed exchange is used.
+- Type gate: official prospectus identifies a passive/indexing approach, representative sampling and at least 80% investment in underlying-index securities. It is a passive, index-tracking equity ETF; it is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: the prior page had no tracked index, inception or 10-year result. Rechecking the official product page, factsheet, summary prospectus and annual report confirms a genuine `10.00` elapsed-year NAV TR window `2016-06-30` to `2026-06-30`; this was a page gap, not an actual history gap. The benchmark splice caveat from `2024-09-03` is recorded.
+- Official rolling performance: iShares current standardized table reports NAV Total Return cumulative `38.78%` and average annual `3.33%` for the 10-year window. Normalized TR is `100.00` to `138.78`; raw NAV endpoints are not disclosed. The factsheet's March 2026 snapshot reports `3.25%` 10-year annualized performance, which is kept as a separate as-of observation and not mixed with the June window.
+- Official calendar observations: iShares factsheet provides ENZL NAV TR rows `2021-2025` of `-10.86%`, `-16.63%`, `3.53%`, `-4.55%`, `1.68%`; annual rows for `2016-2020` and annual MSCI benchmark rows are not disclosed in the reviewed official capture. The 2021-2025 ENZL rows compound to `-25.33%` / CAGR `-5.67%`; positive/negative years are `2/3`.
+- S&P 500 rows use the cached USD Total Return convention as of `2025-12-31`; common 2021-2025 CAGR is `14.43%`, so ENZL trails by approximately `20.10 pp` CAGR. S&P rows are shown as a common reference benchmark, not the issuer benchmark.
+- Official current observation: iShares reports NAV `US$46.36` and current NAV TR YTD `3.45%` as of `2026-07-21`; the standardized month-end YTD table is `-0.07%` as of `2026-06-30`. These are kept separate by as-of date. Daily NAV history sufficient for max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้` in this lean capture.
+
+### ENZL Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:ENZL` | [iShares ENZL product and performance page](https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf) | Canonical listing, fund identity, equity/passive classification, benchmark, inception, rolling 10Y NAV TR, annual rows, current NAV/YTD, fee, holdings and risk data | Page accessed `2026-07-24`; rolling/annual summary `2026-06-30`; current NAV/YTD `2026-07-21` |
+| `NASDAQ:ENZL` | [iShares ENZL factsheet](https://www.ishares.com/us/literature/fact-sheet/enzl-ishares-msci-new-zealand-etf-fund-fact-sheet-en-us.pdf) | Corroborates equity class, launch date, exchange, expense ratio, 2021-2025 NAV rows, holdings/risk data, reinvestment/expense basis and benchmark splice | Factsheet as of `2026-03-31`; annual rows through `2025-12-31` |
+| `NASDAQ:ENZL` | [iShares ENZL summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-new-zealand-capped-etf-8-31.pdf) | Objective, passive indexing/representative sampling, 80% policy, index composition, fees and risk | Prospectus dated `2025-12-30` |
+| `NASDAQ:ENZL` | [iShares ENZL annual report](https://www.blackrock.com/us/individual/literature/annual-report/ar-enzl-en.pdf) | Annual report performance cross-check and index-splice documentation | Reporting period ended `2025-08-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### ENZL Raw Observations And Calculations
+
+| Year | ENZL NAV TR | MSCI New Zealand Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | not disclosed | not disclosed | 11.96% |
+| 2017 | not disclosed | not disclosed | 21.83% |
+| 2018 | not disclosed | not disclosed | -4.38% |
+| 2019 | not disclosed | not disclosed | 31.49% |
+| 2020 | not disclosed | not disclosed | 18.40% |
+| 2021 | -10.86% | not disclosed | 28.71% |
+| 2022 | -16.63% | not disclosed | -18.11% |
+| 2023 | 3.53% | not disclosed | 26.29% |
+| 2024 | -4.55% | not disclosed | 25.02% |
+| 2025 | 1.68% | not disclosed | 17.88% |
+
+- Official rolling 10-year NAV TR is `+38.78%` with CAGR `3.33%` for `2016-06-30` to `2026-06-30`; normalized TR is `100.00` to `138.78`, actual years `10.00`.
+- Official calendar rows `2021-2025` compound to `-25.33%` and annualize to `-5.67%`; S&P 500 TR rows in the same window compound to `+96.17%` and annualize to `14.43%`; ENZL trails by approximately `20.10 pp` CAGR.
+- Official current NAV TR YTD is `+3.45%` as of `2026-07-21`; standardized month-end YTD is `-0.07%` as of `2026-06-30`. Annual NAV/benchmark rows for `2016-2020` / annual benchmark observations are `not disclosed` in the reviewed official capture and no proxy is created.
+
+### ENZL Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange and share-class resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, benchmark splice, S&P 500 basis/window, current-YTD as-of dates, rankings, filenames, New Zealand region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
