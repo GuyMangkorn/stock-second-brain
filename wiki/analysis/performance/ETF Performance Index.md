@@ -63,6 +63,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EPP Performance]] | official 2001 / official 2016-2025; rolling 2016-2026 | 7.37% | 5.28% | 11.23% | 2017 +25.40% / 2018 -10.70% | developed Asia-Pacific equity ex-Japan | Australia/HK/Singapore and financials/materials concentrated; country/FX-sensitive |
+| [[ETF_CBOE_BZX_BBAX Performance]] | official 2018 / official 2019-2025; available through 2026-06; history under 10 years | not applicable (<10y history) | 5.47% | 8.20% | 2025 +20.73% / 2022 -4.45% | developed Asia-Pacific equity, index-tracking | Australia/HK/Singapore and financials/materials/country/FX-sensitive; 10-year NAV TR unavailable |
 | [[ETF_NYSE_ARCA_GMF Performance]] | official 2007 / official rolling 2016-2026; annual rows calculated from official NAV/distributions | 9.94% | 4.20% | 12.56% | 2025 +21.94% / 2022 -19.00% | emerging Asia-Pacific broad equity | country/FX/emerging-market/sector-sensitive |
 | [[ETF_LSE_IAPD Performance]] | official 2006 / official 2016-2025; official rolling 2016-2026 | 6.75% | 9.69% | 14.55% | 2025 +29.7% / 2018 -15.1% | Asia-Pacific dividend equity | country/sector/currency/dividend-factor-sensitive; 50 holdings |
 | [[ETF_NYSE_ARCA_VPL Performance]] | official 2005 / official rolling 2016-2026; official 2016-2025 | 10.74% | 6.05% | 19.62% | 2025 +33.16% / 2018 -13.85% | developed Asia-Pacific broad equity | Japan/Korea/Australia and FX/sector-sensitive |
@@ -343,7 +344,6 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_AIA Performance]] — AIA (Asia ex Japan)
 - [[ETF_NYSE_ARCA_ASEA Performance]] — ASEA (Southeast Asia)
 - [[ETF_NYSE_ARCA_ASHR Performance]] — ASHR (China)
-- [[ETF_NYSE_ARCA_BBAX Performance]] — BBAX (Asia-Pacific)
 - [[ETF_NYSE_ARCA_CHIQ Performance]] — CHIQ (China)
 - [[ETF_NASDAQ_CNQQ Performance]] — CNQQ (China)
 - [[ETF_NYSE_ARCA_CNXT Performance]] — CNXT (China)
@@ -416,6 +416,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 
 ## 2026-07-24 Coverage Addition
 
+- [[ETF_CBOE_BZX_BBAX Performance]] — BBAX (Asia-Pacific)
 - [[ETF_LSE_VDPX Performance]] — VGUDF / VDPX (Asia-Pacific)
 - [[ETF_LSE_CEMA Performance]] — CETFF / CEMA (Emerging Markets)
 - [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)

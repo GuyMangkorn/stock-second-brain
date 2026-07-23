@@ -31,7 +31,7 @@ tags:
 | ASHS | supported | NYSE:ASHS | China | 3.36% (2026-03-31) | https://etf.dws.com/en-us/AssetDownload/Index/1bfed1b5-c933-4199-bdcc-30b0ed651740/ASHS-Fact-Sheet.pdf | current data stale; annual rows and raw 10Y endpoints not disclosed |
 | ASIA | unsupported | NYSE Arca:ASIA | Asia ex Japan | not applicable | https://www.matthewsasia.com/funds/etfs/pacific-tiger-active-etf/ | active equity |
 | BABO | unsupported | NYSE Arca:BABO | China | not applicable | https://yieldmaxetfs.com/wp-content/uploads/Annual%20TSR/YieldMax%E2%84%A2%20BABA%20Option%20Income%20Strategy%20ETF.pdf | active option-income/derivative |
-| BBAX | supported | NYSE Arca:BBAX | Asia-Pacific | 8.20% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF | current NAV and 10Y not disclosed |
+| BBAX | supported | Cboe BZX:BBAX | Asia-Pacific | 8.20% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF | 2026-07-24 correction: Cboe/SEC sources confirm Cboe BZX listing; official available-period NAV TR cumulative 64.48% / annualized 6.50% from 2018-08-07 to 2026-06-30; 10-year NAV TR unavailable; official 2019-2025 annual rows disclosed |
 | CAS | unsupported | NYSE:CAS | China | not applicable | https://www.simplify.us/etfs/cas-simplify-china-shares-plus-income-etf | derivative-heavy/multi-strategy |
 | CBON | unsupported | NYSE Arca:CBON | China | not applicable | https://www.vaneck.com/us/en/investments/chinaamc-china-bond-etf-cbon/overview/?redirectVE=generic | bond ETF |
 | CETFF | unresolved | OTC Markets:CETFF | Unresolved | not applicable | https://www.ishares.com/us/products | exact sub-fund not disclosed |

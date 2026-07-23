@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `67/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `68/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -65,6 +65,7 @@ tags:
 | ASEA | supported | NYSE Arca:ASEA | Southeast Asia | 8.67% (2026-05-31) | https://www.globalxetfs.com/funds/asea | passive/index-tracking Southeast Asia equity ETF; official rolling 10Y NAV TR CAGR 7.12% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 102.43% / CAGR 7.31%; latest official factsheet YTD 8.67% as of 2026-05-31; 2021-2025 CAGR 8.82%; index annual rows not disclosed |
 | KCAI | supported | NYSE Arca:KCAI | China | 4.27% (2026-06-30) | https://kraneshares.com/etf/kcai/ | passive/rules-based index-tracking China A-share equity ETF; official inception 2024-08-27 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 76.27% / annualized 36.06% as of 2026-06-30; official current YTD 4.27%; current product page says NYSE while official prospectus/factsheet/annual report say NYSE Arca, so NYSE Arca is used and conflict is disclosed |
 | EWS | supported | NYSE Arca:EWS | Singapore | 16.50% (2026-07-21) | https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf | passive/index-tracking Singapore equity ETF; official rolling 10Y NAV TR cumulative 112.54% / CAGR 7.83% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/index rows; 2016-2020 annual NAV rows not disclosed; current NAV TR YTD 16.50% as of 2026-07-21; benchmark change to MSCI Singapore 25/50 Index (Net) on 2016-12-01 |
+| BBAX | supported | Cboe BZX:BBAX | Asia-Pacific | 8.20% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF | passive/index-tracking developed Asia-Pacific equity ETF; official class launch 2018-08-07 means 10-year NAV TR unavailable; available-period NAV TR cumulative 64.48% / annualized CAGR 6.50% through 2026-06-30; official 2019-2025 NAV rows; Cboe/SEC listing confirmation |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1956,3 +1957,29 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date separation, benchmark/index-change note, primary Singapore region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## BBAX Sequential Queue Record
+
+- Input row: `68/125`; input ticker: `BBAX`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `Cboe BZX:BBAX`; the current Cboe issuer listing identifies JPMorgan BetaBuilders Developed Asia Pacific ex-Japan ETF as listed on Cboe, and the official SEC prospectus identifies the listing exchange as `Cboe BZX Exchange, Inc.`. The earlier compact capture used `NYSE Arca:BBAX`; that stale exchange label is corrected here and the old duplicate performance path is removed. No provider slug or guessed exchange is used.
+- Type gate: JPMorgan's official June 2026 factsheet describes an indexed approach and a `passive` investment approach that attempts to replicate the Morningstar Developed Asia Pacific ex-Japan Target Market Exposure Index. The exposure is equity in Australia, Hong Kong, New Zealand and Singapore. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock ETF.
+- Mandatory 10-year coverage audit: official class launch / fund performance inception is `2018-08-07`; the official factsheet ends at `2026-06-30`, only `2,884 / 365.25 = 7.90` elapsed years later. Therefore `10-year NAV TR unavailable`; no shorter period is relabeled as 10-year.
+- Available-period NAV Total Return: JPMorgan's official growth-of-$10,000 chart shows an ending value of `$16,448` from the `2018-08-07` launch to `2026-06-30`. The performance page normalizes this to start `100.00` and end `164.48`, giving available-period cumulative return `64.48%` and official launch average annual return `6.50%`; raw NAV TR endpoints are not disclosed. The normalized endpoint is derived from the official chart, not a proxy.
+- Official current performance: NAV Total Return YTD `8.20%` as of `2026-06-30`; 3-month `2.02%`, 1-year `14.20%`, 3-year annualized `12.04%`, 5-year annualized `5.22%`, and launch annualized `6.50%`. NAV total return assumes reinvested distributions and includes management fees and operating expenses according to the fact sheet disclosure; market-price returns remain separate.
+- Annual NAV Total Return: the official factsheet discloses F1 NAV rows for 2019 `18.44%`, 2020 `8.20%`, 2021 `5.36%`, 2022 `-4.45%`, 2023 `5.60%`, 2024 `1.69%`, and 2025 `20.73%`. These rows compound to `67.26%` / CAGR `7.62%`; the common 2021-2025 rows compound to `30.52%` / CAGR `5.47%`. S&P 500 TR uses the cached USD dividend-reinvested convention: 2021-2025 cumulative `96.17%` / CAGR `14.43%`, a BBAX gap of approximately `-8.96 pp` CAGR.
+- S&P 500 comparison: the annual table uses cached complete-calendar S&P 500 Total Return rows for 2019-2025, as of `2025-12-31`; the 2019-2025 S&P rows compound to `205.41%` / CAGR `17.29%`. The benchmark is a common reference, not BBAX's issuer benchmark.
+- Risk/gap notes: the official factsheet reports gross and net annual expenses `0.190%`, fund assets `$6.25 B`, and 97 holdings as of `2026-06-30`. It describes Asia-Pacific liquidity, currency and volatility risks. Daily NAV TR observations needed for fund-level drawdown/recovery are `not disclosed` in the reviewed official capture.
+
+### BBAX Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Cboe BZX:BBAX` | [JPMorgan BBAX fact sheet](https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF) | Official fund identity, passive/index approach, Morningstar index, inception, NAV TR, expenses, holdings and risk disclosures | Fact sheet dated `2026-06-30`; NAV TR YTD `8.20%`; launch annualized `6.50%`; growth-of-$10,000 ending value `$16,448` |
+| `Cboe BZX:BBAX` | [Cboe JPMorgan issuer listing](https://www.cboe.com/us/equities/listings/listed_products/issuer_detail/JMAM/) | Current exchange/ticker confirmation | Cboe listing page accessed `2026-07-24`; BBAX listed/transfer date `2018-08-08` |
+| `Cboe BZX:BBAX` | [SEC JPMorgan ETF prospectus](https://www.sec.gov/Archives/edgar/data/1485894/000119312523046804/d439474d485bpos.htm) | Official listing-exchange confirmation | Prospectus dated `2023-03-01`; listing exchange `Cboe BZX Exchange, Inc.` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common benchmark identity; cached USD Total Return convention for complete calendar years | Cached rows `2016-2025`, as of `2025-12-31`; no new search used |
+
+### BBAX Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, primary Asia-Pacific region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, old filename/link replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. The earlier `NYSE Arca` label and `current NAV and 10Y not disclosed` compact capture were corrected from the current official Cboe/JPMorgan/SEC evidence; reviewer-availability fallback is disclosed here as required.
