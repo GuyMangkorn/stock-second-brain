@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `73/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `74/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -71,6 +71,7 @@ tags:
 | INDE | unsupported ETF type | NYSE Arca:INDE | India | not applicable | https://us.matthewsasia.com/funds/etfs/india-active-etf/ | official Matthews factsheet/page identify NYSE Arca listing and an actively managed all-cap India equity strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | KBA | supported | NYSE Arca:KBA | China | 11.37% (2026-06-30) | https://kraneshares.com/etf/kba/ | passive/index-tracking China A-share ETF tracking MSCI China A 50 Connect Index; official rolling 10Y NAV TR CAGR 6.90% for 2016-06-30 to 2026-06-30; official 2016-2024 calendar NAV rows; 2025 calendar row not disclosed; current product page says `NYSE` while official prospectus/annual report say `NYSE Arca`, so the canonical key is corrected to NYSE Arca:KBA |
 | JCHI | unsupported ETF type | NYSE Arca:JCHI | China | not applicable | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JCHI.PDF | official JPMorgan factsheet identifies JPMorgan Active China ETF and a bottom-up stock-selection approach; SEC shareholder-report data identify NYSE Arca listing; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
+| MCH | unsupported ETF type | NYSE Arca:MCH | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-active-etf/ | official Matthews page identifies MCH as Matthews China Active ETF, primary exchange NYSE Arca, and an all-cap fundamental GARP strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2111,3 +2112,23 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because JCHI failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## MCH Sequential Queue Record
+
+- Input row: `74/125`; input ticker: `MCH`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:MCH`; Matthews' official fund page identifies the primary exchange as `NYSE Arca` and ticker `MCH`. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. Matthews names the fund `Matthews China Active ETF` and describes a high-conviction, all-cap fundamental GARP approach driven by on-the-ground proprietary research; the strategy invests at least 80% in China company stocks selected using fundamental characteristics. It is actively managed, not a passive/index-tracking equity ETF.
+- Per the type gate, no 10-year historical performance calculation, annual NAV TR table, performance page, region row, index row, or S&P 500 comparison was created. Status is terminal under the requested ETF v1 scope.
+
+### MCH Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:MCH` | [Matthews China Active ETF official page](https://www.matthewsasia.com/funds/etfs/china-active-etf/) | Official fund identity, primary exchange, active strategy, inception, benchmark and current performance context | Page accessed `2026-07-24`; fund facts/assets through `2026-07-20`; performance through `2026-06-30`; inception `2022-07-13` |
+| `NYSE Arca:MCH` | [Matthews MCH factsheet](https://us.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_mch.pdf) | Official active-equity strategy and fund facts cross-check | Factsheet accessed `2026-07-24`; gross/net expense and performance disclosures as dated in the factsheet |
+| `NYSE Arca:MCH` | [Matthews ETF prospectus](https://www.matthewsasia.com/siteassets/resources/fund-documents/prospectus/etf-prospectus.pdf) | Official active ETF lineup and exchange context | Prospectus dated `2026-04-30`; MCH listed on `NYSE Arca` |
+
+### MCH Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because MCH failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.

@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 73
-remaining_count: 52
+processed_count: 74
+remaining_count: 51
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -89,11 +89,12 @@ updated: 2026-07-24
 | 71 | INDE | `unsupported ETF type` | `NYSE Arca:INDE` | Official Matthews factsheet identifies primary exchange NYSE Arca; official Matthews page describes INDE as an unconstrained all-cap, fundamental bottom-up, actively managed India equity ETF with 80% India securities policy. It fails passive/index-tracking scope; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 72 | KBA | `completed_10Y` | `NYSE Arca:KBA` | Official KraneShares product page reports 10-year NAV TR CAGR `6.90%` for 2016-06-30 to 2026-06-30; official prospectus and annual shareholder report identify NYSE Arca listing and passive index-tracking strategy. Official calendar NAV rows are available for 2016-2024; 2025 calendar row is not disclosed; current NAV TR YTD `11.37%` as of 2026-06-30. | [[ETF_NYSE_ARCA_KBA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 73 | JCHI | `unsupported ETF type` | `NYSE Arca:JCHI` | Official JPMorgan factsheet identifies JPMorgan Active China ETF and a bottom-up stock-selection approach; SEC shareholder-report data identify NYSE Arca listing. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 74 | MCH | `unsupported ETF type` | `NYSE Arca:MCH` | Official Matthews page identifies MCH as Matthews China Active ETF, primary exchange NYSE Arca, and an all-cap fundamental GARP strategy driven by proprietary research. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `73/125`
-- Next ticker: `row 74` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `74/125`
+- Next ticker: `row 75` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `JCHI` was searched, compared, dispatched, or processed in this round.
+No ticker after `MCH` was searched, compared, dispatched, or processed in this round.
