@@ -69,6 +69,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_LSE_VDPX Performance]] | official 2013 / official rolling 2016-03 to 2026-03; official 2016-2025 | 8.80% | 5.42% | not disclosed | 2025 +40.91% / 2022 -12.65% | developed Asia-Pacific ex-Japan broad equity, USD distributing | Korea/Australia and technology/financials/country/FX-sensitive; OTC alias resolved to LSE:VDPX |
 | [[ETF_NASDAQ_AAXJ Performance]] | official 2008 / official 2021-2025; rolling 2016-2026 | 10.21% | 2.84% | 21.30% | 2025 +32.09% / 2022 -20.18% | Asia ex Japan broad large/mid-cap equity | Taiwan/China/Korea/India and technology concentrated; country/sector/FX-sensitive |
 | [[ETF_NASDAQ_AIA Performance]] | official 2007 / official 2021-2025; rolling 2016-2026 | 14.84% | 4.69% | 40.47% | 2025 +47.01% / 2022 -24.07% | Asia ex Japan large-cap equity | Taiwan/Korea/China and technology concentrated; country/sector/FX-sensitive |
+| [[ETF_NYSE_ARCA_ASEA Performance]] | official 2011 / official rolling 2016-2026; official 2016-2025 calendar rows | 7.12% | 8.82% | 8.67% | 2017 +31.89% / 2020 -8.05% | Southeast Asia broad equity | financials/country/FX/emerging-market-sensitive; latest YTD disclosure as of 2026-05-31; non-diversified |
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
 | [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
@@ -128,6 +129,7 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 ไม่เปิดเผย. FLCA ไม่มี 10-year CAGR เพราะประวัติกองยังไม่ครบ 10 ปี.
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
+ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`; the newer product-page table as of `2026-06-30` does not expose a separate YTD field.
 
 ## Common Window
 

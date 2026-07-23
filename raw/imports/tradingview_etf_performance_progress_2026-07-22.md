@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 64
-remaining_count: 61
+processed_count: 65
+remaining_count: 60
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `64` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `65` แล้ว.
 
 ## Terminal status register
 
@@ -80,11 +80,12 @@ updated: 2026-07-24
 | 62 | CNYA | `completed_10Y` | `Cboe BZX:CNYA` | Passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR cumulative `91.51%` / CAGR `6.71%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint `191.51`; official 2021-2025 NAV rows compound to `-8.46%` / CAGR `-1.75%`; current NAV TR YTD `5.39%` as of 2026-07-21; 2016-2020 annual rows not disclosed; benchmark change 2018-04-26. | [[ETF_CBOE_BZX_CNYA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 63 | NBJP | `unsupported ETF type` | `NYSE Arca:NBJP` | Neuberger Japan Equity ETF; official issuer materials describe an actively managed, all-cap Japan equity strategy using a proprietary scoring system and direct company engagements; official factsheet reports active share `63.87%` as of 2026-03-31. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 64 | ASHR | `completed_10Y` | `NYSE Arca:ASHR` | Passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR CAGR `5.84%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint approx. `176.40`; official 2016-2024 NAV rows compound to `4.89%` / CAGR `0.53%`; 2025/current YTD and CSI 300 annual rows not disclosed; 2021-2024 CAGR `-8.57%`. | [[ETF_NYSE_ARCA_ASHR Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 65 | ASEA | `completed_10Y` | `NYSE Arca:ASEA` | Passive/index-tracking Southeast Asia equity ETF; official rolling 10Y NAV TR CAGR `7.12%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint approx. `198.93`; official 2016-2025 NAV rows compound to `102.43%` / CAGR `7.31%`; latest official factsheet NAV TR YTD `8.67%` as of 2026-05-31; 2021-2025 CAGR `8.82%`; index annual rows not disclosed. | [[ETF_NYSE_ARCA_ASEA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `64/125`
-- Next ticker: `row 65` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `65/125`
+- Next ticker: `row 66` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `ASHR` was searched, compared, dispatched, or processed in this round.
+No ticker after `ASEA` was searched, compared, dispatched, or processed in this round.

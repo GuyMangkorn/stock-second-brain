@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `64/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `65/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -61,6 +61,8 @@ tags:
 | FLIN | supported | NYSE Arca:FLIN | India | -8.34% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26348/SINGLCLASS/franklin-ftse-india-etf/FLIN | passive/index-tracking equity ETF; inception 2018-02-06; official 10-year field `—`; available-period NAV TR annualized 5.91% for 2018-02-06 to 2026-06-30 (`8.39` years); 2019-2025 NAV rows compound to 88.74% / CAGR 9.50%; 2021-2025 CAGR 9.33%; current standardized NAV TR YTD -8.34% |
 | CNYA | supported | Cboe BZX:CNYA | China | 5.39% (2026-07-21) | https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf | passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR cumulative 91.51% / CAGR 6.71% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/benchmark rows; 2016-2020 annual rows not disclosed; current NAV TR YTD 5.39% as of 2026-07-21; benchmark change 2018-04-26 |
 | NBJP | unsupported ETF type | NYSE Arca:NBJP | Japan | not applicable | https://www.nb.com/products/etfs/japan-equity-etf | Neuberger identifies NBJP as an actively managed, all-cap Japan equity ETF using a proprietary scoring system and direct engagements; official factsheet reports active share 63.87% as of 2026-03-31; outside passive/index-tracking ETF scope, so no performance page or NAV TR comparison is created |
+| ASHR | supported | NYSE Arca:ASHR | China | not disclosed | https://etf.dws.com/download/asset/e73aaa93-92c6-4a51-9233-38ccb329e09b | passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR CAGR 5.84% for 2016-06-30 to 2026-06-30; normalized endpoint approx. 176.40; official 2016-2024 NAV rows compound to 4.89% / CAGR 0.53%; 2025/current YTD and CSI 300 annual rows not disclosed |
+| ASEA | supported | NYSE Arca:ASEA | Southeast Asia | 8.67% (2026-05-31) | https://www.globalxetfs.com/funds/asea | passive/index-tracking Southeast Asia equity ETF; official rolling 10Y NAV TR CAGR 7.12% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 102.43% / CAGR 7.31%; latest official factsheet YTD 8.67% as of 2026-05-31; 2021-2025 CAGR 8.82%; index annual rows not disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1879,4 +1881,28 @@ tags:
 ### ASHR Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date, primary China region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## ASEA Sequential Queue Record
+
+- Input row: `65/125`; input ticker: `ASEA`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:ASEA`; Global X's official product page and March 2026 summary prospectus identify the Global X FTSE Southeast Asia ETF on NYSE Arca with ticker `ASEA`. No provider slug or guessed exchange is used.
+- Type gate: the official prospectus describes an indexing approach, an at-least-80% policy in FTSE/ASEAN 40 Index securities or related ADR/GDR exposure, and equity exposure to Singapore, Malaysia, Indonesia, Thailand and the Philippines. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy, or single-stock ETF.
+- Mandatory 10-year coverage audit: Global X's official product page reports Fund NAV annualized total return `7.12%` for `10 Years` as of `2026-06-30`, so the elapsed window is `2016-06-30` to `2026-06-30`, actual years `10.00`. The page does not disclose raw start/end NAV TR values or a cumulative rolling figure. A normalized illustration from `100.00` to approximately `198.93` is derived only from the disclosed CAGR and is labeled as such; it is not a proxy.
+- Annual NAV Total Return: the March 2026 summary prospectus bar chart discloses calendar rows: 2016 `8.39%`, 2017 `31.89%`, 2018 `-6.35%`, 2019 `7.78%`, 2020 `-8.05%`, 2021 `5.26%`, 2022 `5.16%`, 2023 `4.43%`, 2024 `11.42%`, and 2025 `18.46%`. Annual FTSE/ASEAN 40 Index rows are not disclosed in the reviewed official capture and remain `not disclosed`.
+- Calculations from disclosed rows: complete-calendar `2016-2025` ASEA NAV TR compounds to `+102.43%` / CAGR `+7.31%`; common `2021-2025` compounds to `+52.57%` / CAGR `+8.82%`, versus cached S&P 500 TR `+96.17%` / CAGR `+14.43%`, a difference of approximately `-5.61 pp` CAGR. Over `2016-2025`, ASEA has `8` positive and `2` negative years; best year `2017 +31.89%`; worst year `2020 -8.05%`.
+- Current-YTD check: the latest official Global X factsheet in the reviewed capture reports NAV TR YTD `8.67%` as of `2026-05-31`. The newer product-page performance table is as of `2026-06-30` but does not expose a separate YTD field, so the page labels the YTD as-of date explicitly and does not extrapolate it to 2026-07-24.
+
+### ASEA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ASEA` | [Global X ASEA product page](https://www.globalxetfs.com/funds/asea) | Official exchange/ticker, index objective, inception, expenses, current holdings and rolling NAV Total Return table | Page accessed `2026-07-24`; current facts as of `2026-07-22`; rolling performance as of `2026-06-30`; 10-year NAV TR CAGR `7.12%` |
+| `NYSE Arca:ASEA` | [Global X ASEA factsheet](https://assets.globalxetfs.com/funds/documents/asea/Fact-Sheet_ASEA.pdf) | Official NAV TR YTD and cross-check of index, exchange, inception, expenses and region exposure | Factsheet as of `2026-05-31`; NAV TR YTD `8.67%`, 10-year NAV TR CAGR `7.67%` |
+| `NYSE Arca:ASEA` | [Global X ASEA 2026 summary prospectus](https://assets.globalxetfs.com/funds/documents/asea/prospectus-regulatory/Summary-Prospectus_ASEA.pdf) | Passive/indexing classification, 80% policy and annual total-return bar-chart rows | Prospectus dated `2026-03-01`; annual rows through `2025-12-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common benchmark identity; cached USD Total Return convention for complete calendar years | Cached rows `2016-2025`, as of `2025-12-31`; no new search used |
+
+### ASEA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date separation, primary Southeast Asia region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.

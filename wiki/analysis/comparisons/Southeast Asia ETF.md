@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Southeast Asia
-updated: 2026-07-23
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/Southeast-Asia
@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| ASEA | Global X FTSE Southeast Asia ETF | Southeast Asia equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_ASEA Performance]] |
+| ASEA | Global X FTSE Southeast Asia ETF | Southeast Asia equity / index-tracking | 7.12% | 8.82% | 8.67% | [[ETF_NYSE_ARCA_ASEA Performance]] |
 
 ## Navigation
 
