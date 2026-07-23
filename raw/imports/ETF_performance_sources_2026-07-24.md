@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `74/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `75/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -72,6 +72,7 @@ tags:
 | KBA | supported | NYSE Arca:KBA | China | 11.37% (2026-06-30) | https://kraneshares.com/etf/kba/ | passive/index-tracking China A-share ETF tracking MSCI China A 50 Connect Index; official rolling 10Y NAV TR CAGR 6.90% for 2016-06-30 to 2026-06-30; official 2016-2024 calendar NAV rows; 2025 calendar row not disclosed; current product page says `NYSE` while official prospectus/annual report say `NYSE Arca`, so the canonical key is corrected to NYSE Arca:KBA |
 | JCHI | unsupported ETF type | NYSE Arca:JCHI | China | not applicable | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JCHI.PDF | official JPMorgan factsheet identifies JPMorgan Active China ETF and a bottom-up stock-selection approach; SEC shareholder-report data identify NYSE Arca listing; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | MCH | unsupported ETF type | NYSE Arca:MCH | China | not applicable | https://www.matthewsasia.com/funds/etfs/china-active-etf/ | official Matthews page identifies MCH as Matthews China Active ETF, primary exchange NYSE Arca, and an all-cap fundamental GARP strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
+| CGRO | unsupported ETF type | NYSE Arca:CGRO | China | not applicable | https://www.cvafunds.com/cgro/ | official CoreValues summary prospectus identifies CGRO as an actively managed Greater China growth ETF and lists NYSE Arca; current website displays `NYSE`, but the formal prospectus is retained for canonical exchange resolution; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2132,3 +2133,23 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because MCH failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## CGRO Sequential Queue Record
+
+- Input row: `75/125`; input ticker: `CGRO`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:CGRO`; CoreValues' current product page displays `Exchange NYSE`, while the official February 2026 summary prospectus identifies the trading symbol `CGRO` as listed on `NYSE Arca, Inc.`. The formal prospectus is used for the canonical key and the conflict is disclosed. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. The official summary prospectus states that CGRO is an `actively managed exchange-traded fund`; its portfolio is built through the sub-adviser's core-values approach, top-down macro research, on-ground due diligence and bottom-up fundamental company analysis. It is not a passive/index-tracking equity ETF.
+- Per the type gate, no 10-year historical performance calculation, annual NAV TR table, performance page, region row, index row, or S&P 500 comparison was created. Status is terminal under the requested ETF v1 scope.
+
+### CGRO Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:CGRO` | [CoreValues CGRO official product page](https://www.cvafunds.com/cgro/) | Official fund identity, current website exchange field, inception, holdings and current fund details | Page accessed `2026-07-24`; profile/market data through `2026-07-22`; current website exchange field `NYSE`; inception `2023-10-16` |
+| `NYSE Arca:CGRO` | [CoreValues CGRO February 2026 summary prospectus](https://www.cvafunds.com/wp-content/uploads/fund-docs/CGRO/CGRO_SummaryProspectus.pdf) | Formal listing exchange, explicit active classification, investment process, Greater China policy and performance context | Prospectus dated `2026-02-02`; incorporated prospectus dated `2026-02-01`; listed on `NYSE Arca`; actively managed; at least 80% Greater China equity policy |
+| `NYSE Arca:CGRO` | [CGRO 2024 annual shareholder report](https://www.sec.gov/Archives/edgar/data/1924868/000183988224044108/corevalues-ncsr_093024.htm) | SEC listing cross-check and fund-history context | Report period ended `2024-09-30`; identifies CGRO as listed on `NYSE Arca` |
+
+### CGRO Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because CGRO failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.

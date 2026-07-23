@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 74
-remaining_count: 51
+processed_count: 75
+remaining_count: 50
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -90,11 +90,12 @@ updated: 2026-07-24
 | 72 | KBA | `completed_10Y` | `NYSE Arca:KBA` | Official KraneShares product page reports 10-year NAV TR CAGR `6.90%` for 2016-06-30 to 2026-06-30; official prospectus and annual shareholder report identify NYSE Arca listing and passive index-tracking strategy. Official calendar NAV rows are available for 2016-2024; 2025 calendar row is not disclosed; current NAV TR YTD `11.37%` as of 2026-06-30. | [[ETF_NYSE_ARCA_KBA Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 73 | JCHI | `unsupported ETF type` | `NYSE Arca:JCHI` | Official JPMorgan factsheet identifies JPMorgan Active China ETF and a bottom-up stock-selection approach; SEC shareholder-report data identify NYSE Arca listing. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 74 | MCH | `unsupported ETF type` | `NYSE Arca:MCH` | Official Matthews page identifies MCH as Matthews China Active ETF, primary exchange NYSE Arca, and an all-cap fundamental GARP strategy driven by proprietary research. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 75 | CGRO | `unsupported ETF type` | `NYSE Arca:CGRO` | Official CoreValues summary prospectus identifies CGRO as an actively managed Greater China growth ETF and lists NYSE Arca; current website displays NYSE but formal prospectus is retained for canonical exchange resolution. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `74/125`
-- Next ticker: `row 75` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `75/125`
+- Next ticker: `row 76` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `MCH` was searched, compared, dispatched, or processed in this round.
+No ticker after `CGRO` was searched, compared, dispatched, or processed in this round.
