@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 70
-remaining_count: 55
+processed_count: 71
+remaining_count: 54
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -86,11 +86,12 @@ updated: 2026-07-24
 | 68 | BBAX | `completed_available_period_no_10Y` | `Cboe BZX:BBAX` | Passive/index-tracking developed Asia-Pacific equity ETF; Cboe/JPMorgan/SEC sources identify the canonical listing as Cboe BZX; official class launch `2018-08-07` means `10-year NAV TR unavailable`; official available-period NAV TR cumulative `64.48%` / annualized CAGR `6.50%` from 2018-08-07 to 2026-06-30 (`7.90` years), normalized from the official $10,000 growth chart; official 2019-2025 NAV rows compound to `67.26%` / CAGR `7.62%`; 2021-2025 CAGR `5.47%`; current NAV TR YTD `8.20%` as of 2026-06-30. | [[ETF_CBOE_BZX_BBAX Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 69 | PCCE | `unsupported ETF type` | `NYSE Arca:PCCE` | Official SEC summary prospectus identifies PCCE as a non-diversified, actively managed ETF investing in Chinese-company equities; Polen's official materials place PCCE in its active ETF lineup. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 70 | MJSC | `unsupported ETF type` | `NYSE Arca:MJSC` | Official MUFG product page identifies MJSC as the NYSE Arca-listed MUFG Japan Small Cap Active ETF; the issuer describes an actively managed, research-intensive small-cap strategy. It fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 71 | INDE | `unsupported ETF type` | `NYSE Arca:INDE` | Official Matthews factsheet identifies primary exchange NYSE Arca; official Matthews page describes INDE as an unconstrained all-cap, fundamental bottom-up, actively managed India equity ETF with 80% India securities policy. It fails passive/index-tracking scope; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `70/125`
-- Next ticker: `row 71` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `71/125`
+- Next ticker: `row 72` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `MJSC` was searched, compared, dispatched, or processed in this round.
+No ticker after `INDE` was searched, compared, dispatched, or processed in this round.

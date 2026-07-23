@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `70/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `71/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -68,6 +68,7 @@ tags:
 | BBAX | supported | Cboe BZX:BBAX | Asia-Pacific | 8.20% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF | passive/index-tracking developed Asia-Pacific equity ETF; official class launch 2018-08-07 means 10-year NAV TR unavailable; available-period NAV TR cumulative 64.48% / annualized CAGR 6.50% through 2026-06-30; official 2019-2025 NAV rows; Cboe/SEC listing confirmation |
 | PCCE | unsupported ETF type | NYSE Arca:PCCE | China | not applicable | https://www.polencapital.com/perspectives/polen-expands-active-etf-lineup-two-credit-etfs | official Polen/SEC materials identify PCCE as an actively managed China equity ETF; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | MJSC | unsupported ETF type | NYSE Arca:MJSC | Japan | not applicable | https://www.mufgetfs.com/mjsc | official MUFG product page confirms NYSE Arca listing, `Active ETF` classification and an actively managed Japan small-cap strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
+| INDE | unsupported ETF type | NYSE Arca:INDE | India | not applicable | https://us.matthewsasia.com/funds/etfs/india-active-etf/ | official Matthews factsheet/page identify NYSE Arca listing and an actively managed all-cap India equity strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2024,3 +2025,23 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because MJSC failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## INDE Sequential Queue Record
+
+- Input row: `71/125`; input ticker: `INDE`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:INDE`; Matthews' official factsheet identifies the primary exchange as `NYSE Arca`, ticker `INDE`. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. Matthews' official page describes INDE as an unconstrained all-cap strategy using fundamental bottom-up research, seeking companies with sustainable competitive edge and pricing power; the official active-ETF materials explicitly position the ETF as active and the strategy invests at least 80% in Indian securities. It is not a passive/index-tracking equity ETF.
+- Per the type gate, no 10-year historical performance calculation, annual NAV TR table, performance page, region row, index row, or S&P 500 comparison was created. Status is terminal under the requested ETF v1 scope.
+
+### INDE Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:INDE` | [Matthews India Active ETF official page](https://us.matthewsasia.com/funds/etfs/india-active-etf/) | Official fund identity, active strategy, inception, current performance and portfolio characteristics | Page accessed `2026-07-24`; performance/current data through `2026-06-30` / `2026-07-17`; active share `58.9` as of `2026-06-30` |
+| `NYSE Arca:INDE` | [Matthews INDE factsheet](https://www.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_inde.pdf) | Official primary exchange, inception, 80% India strategy, expense and benchmark metadata | Factsheet dated `2026-03-31`; primary exchange `NYSE Arca`; gross expense ratio `0.79%`; benchmark change to MSCI India on `2024-04-29` |
+| `NYSE Arca:INDE` | [Matthews active ETF overview](https://www.matthewsasia.com/active-etfs/explore/) | Official active ETF classification and active-vs-indexing distinction | Page accessed `2026-07-24`; active ETF lineup |
+
+### INDE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because INDE failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
