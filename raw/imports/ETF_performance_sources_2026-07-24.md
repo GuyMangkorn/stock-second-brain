@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `25/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `26/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -24,6 +24,51 @@ tags:
 | ISSSF | supported | LSE:SAUS | Australia | 10.27% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251851/ishares-msci-australia-ucits-etf | OTC alias; official rolling 10Y NAV TR 121.17% / CAGR 8.26% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | SCJ | supported | NYSE Arca:SCJ | Japan | 16.10% (2026-07-21) | https://www.ishares.com/us/products/239666/ishares-msci-japan-smallcap-etf | official rolling 10Y NAV TR 119.60% / CAGR 8.18% as of 2026-06-30; annual NAV TR rows 2016-2025 |
 | EEMA | supported | NASDAQ:EEMA | Emerging Markets | 20.51% (2026-07-22) | https://www.ishares.com/us/products/239629/ishares-msci-emerging-markets-asia-etf | official rolling 10Y NAV TR 172.29% / CAGR 10.54% as of 2026-06-30; official NAV rows 2016-2025; index change on 2018-06-01 |
+| VNFGF | supported | LSE:VDJP | Japan | 16.30% (2026-05-31) | https://www.vanguard.co.uk/professional/product/etf/equity/9504/ftse-japan-ucits-etf-usd-distributing | OTC alias resolved to USD LSE ticker VDJP by ISIN IE00B95PGT31; official rolling 10Y NAV TR CAGR 9.45% as of 2026-05-31; official rolling 12-month rows; current-page NAV US$50.23 as of 2026-07-22 |
+
+## VNFGF Sequential Queue Record
+
+- Input row: `26/125`; input ticker: `VNFGF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:VDJP`; Vanguard's official product page and May 2026 factsheet identify Vanguard FTSE Japan UCITS ETF (USD) Distributing, ISIN `IE00B95PGT31`, USD London Stock Exchange ticker `VDJP`, benchmark `FTSE Japan Index`, inception `2013-05-21`, passive physical/index strategy, and Vanguard Funds PLC as legal entity. `VNFGF` is retained as the input OTC alias; no provider slug or guessed exchange is used.
+- Mandatory coverage audit: the previous source register left VNFGF unresolved because the primary listing code was not verified. Rechecking Vanguard's product page, factsheet, current prospectus and annual-report links resolves the share class to LSE:VDJP and confirms a genuine `10.00` elapsed-year NAV TR window. This was an alias/listing-resolution gap, not a history gap.
+- Official rolling performance: Vanguard reports NAV-to-NAV total returns with gross income invested and all dividends/capital-gains distributions reinvested. The factsheet as of `2026-05-31` reports 10-year NAV annualized performance `9.45%` for `2016-06-01` to `2026-05-31`; normalized TR is `100.00` to `246.69`, calculated as `100 × (1 + 9.45%)^10` from the rounded issuer CAGR, not an official raw endpoint.
+- Official annual observations: Vanguard publishes rolling 12-month NAV rows `2016-06-01 to 2026-05-31`, which compound to approximately `146.61%` and annualize to `9.45%` using the displayed rounded rows. These are not calendar-year rows; calendar 2021-2025 CAGR remains `not disclosed`. The official FTSE Japan benchmark rows are kept beside them.
+- S&P 500 comparison: cached complete-calendar-year USD Total Return rows 2016-2025 are shown separately; they compound to `298.33%` / CAGR `14.82%`. This is directional only because the S&P window is calendar-year and the VDJP window is June-May.
+- Official current observations: Vanguard's product page reports NAV `US$50.23` at closure `2026-07-22`; the latest standardized YTD disclosed in the official factsheet is `16.30%` as of `2026-05-31`. Ongoing charges figure is `0.10%`, Japan exposure `100.0%`, and holdings `476` as of `2026-06-30`. Daily NAV history sufficient for drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### VNFGF / VDJP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:VDJP` | [Vanguard FTSE Japan UCITS ETF USD Distributing product page](https://www.vanguard.co.uk/professional/product/etf/equity/9504/ftse-japan-ucits-etf-usd-distributing) | Canonical share-class mapping, exchange tickers, ISIN, fund identity, passive/physical classification, benchmark, inception, current NAV and holdings | Page accessed `2026-07-24`; current NAV `2026-07-22`; portfolio data `2026-06-30` |
+| `LSE:VDJP` | [Vanguard VDJP factsheet](https://fund-docs.vanguard.com/FTSE_Japan_UCITS_ETF_USD_Distributing_9504_EU_INT_UK_EN.pdf) | Rolling 12-month NAV TR rows, 10-year NAV CAGR, reinvestment/NAV basis, fees, benchmark, exchange tickers and ISIN | Factsheet as of `2026-05-31` |
+| `Vanguard Funds PLC` | [Vanguard ETF prospectus](https://fund-docs.vanguard.com/etf-prospectus-en.pdf) and annual-report link | Legal structure and official document cross-check | Prospectus dated `2026-06-02`; annual-report link accessed `2026-07-24` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### VNFGF / VDJP Raw Observations And Calculations
+
+| Official rolling 12-month period | VDJP NAV TR | FTSE Japan Index TR |
+|---|---:|---:|
+| 2016-06-01 to 2017-05-31 | 15.56% | 15.76% |
+| 2017-06-01 to 2018-05-31 | 14.79% | 14.94% |
+| 2018-06-01 to 2019-05-31 | -10.92% | -10.74% |
+| 2019-06-01 to 2020-05-31 | 6.92% | 7.06% |
+| 2020-06-01 to 2021-05-31 | 24.81% | 24.97% |
+| 2021-06-01 to 2022-05-31 | -13.73% | -13.64% |
+| 2022-06-01 to 2023-05-31 | 4.48% | 4.57% |
+| 2023-06-01 to 2024-05-31 | 17.73% | 17.85% |
+| 2024-06-01 to 2025-05-31 | 11.48% | 11.59% |
+| 2025-06-01 to 2026-05-31 | 32.20% | 32.31% |
+
+- Official rolling 10-year NAV TR CAGR is `9.45%` for `2016-06-01` to `2026-05-31`; actual years `10.00`; normalized end `246.69` is derived from the rounded CAGR.
+- Official displayed rolling rows compound to approximately `+146.61%` and annualize to `9.45%`; calendar-year 2021-2025 CAGR is `not disclosed`.
+- S&P 500 TR calendar rows 2016-2025 compound to `+298.33%` / CAGR `14.82%`; this comparison is not date-aligned.
+- Latest standardized NAV TR YTD is `+16.30%` as of `2026-05-31`; current-page NAV is `US$50.23` as of `2026-07-22`. Market-price return is kept separate.
+
+### VNFGF / VDJP Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, rolling annual rows, S&P 500 basis/window, as-of dates, rankings, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## EEMA Sequential Queue Record
 
