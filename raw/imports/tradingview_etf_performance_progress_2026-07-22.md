@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 62
-remaining_count: 63
+processed_count: 63
+remaining_count: 62
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -78,11 +78,12 @@ updated: 2026-07-24
 | 60 | THD | `completed_10Y` | `NYSE Arca:THD` | Passive/index-tracking Thailand equity ETF; official rolling 10Y NAV TR CAGR `3.35%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint approx. `139.03` from 100.00; official 2021-2025 NAV rows compound to `-10.24%` / CAGR `-2.14%`; current NAV TR YTD `25.53%` as of 2026-07-22; raw endpoints and 2016-2020 annual rows not disclosed. | [[ETF_NYSE_ARCA_THD Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 61 | FLIN | `completed_available_period_no_10Y` | `NYSE Arca:FLIN` | Passive/index-tracking India equity ETF; official inception `2018-02-06`, so `10-year NAV TR unavailable`; official available-period NAV TR annualized `5.91%` for 2018-02-06 to 2026-06-30 (`8.39` years), normalized endpoint approx. `161.93`; official 2019-2025 rows compound to `88.74%` / CAGR `9.50%`; 2021-2025 CAGR `9.33%`; current NAV TR YTD `-8.34%` as of 2026-06-30. | [[ETF_NYSE_ARCA_FLIN Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 62 | CNYA | `completed_10Y` | `Cboe BZX:CNYA` | Passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR cumulative `91.51%` / CAGR `6.71%` for 2016-06-30 to 2026-06-30 (`10.00` years), normalized endpoint `191.51`; official 2021-2025 NAV rows compound to `-8.46%` / CAGR `-1.75%`; current NAV TR YTD `5.39%` as of 2026-07-21; 2016-2020 annual rows not disclosed; benchmark change 2018-04-26. | [[ETF_CBOE_BZX_CNYA Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 63 | NBJP | `unsupported ETF type` | `NYSE Arca:NBJP` | Neuberger Japan Equity ETF; official issuer materials describe an actively managed, all-cap Japan equity strategy using a proprietary scoring system and direct company engagements; official factsheet reports active share `63.87%` as of 2026-03-31. It fails the passive/index-tracking equity gate; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `62/125`
-- Next ticker: `row 63` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `63/125`
+- Next ticker: `row 64` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `CNYA` was searched, compared, dispatched, or processed in this round.
+No ticker after `NBJP` was searched, compared, dispatched, or processed in this round.

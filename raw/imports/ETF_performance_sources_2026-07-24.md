@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `62/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `63/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -60,6 +60,7 @@ tags:
 | THD | supported | NYSE Arca:THD | Thailand | 25.53% (2026-07-22) | https://www.ishares.com/us/products/239688/ishares-msci-thailand-capped-etf | passive/index-tracking equity ETF; official rolling 10Y NAV TR CAGR 3.35% for 2016-06-30 to 2026-06-30 (`10.00` years); 2021-2025 NAV rows compound to -10.24% / CAGR -2.14%; 2016-2020 annual rows and raw rolling endpoints not disclosed; benchmark/index change 2013-02-12 |
 | FLIN | supported | NYSE Arca:FLIN | India | -8.34% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26348/SINGLCLASS/franklin-ftse-india-etf/FLIN | passive/index-tracking equity ETF; inception 2018-02-06; official 10-year field `—`; available-period NAV TR annualized 5.91% for 2018-02-06 to 2026-06-30 (`8.39` years); 2019-2025 NAV rows compound to 88.74% / CAGR 9.50%; 2021-2025 CAGR 9.33%; current standardized NAV TR YTD -8.34% |
 | CNYA | supported | Cboe BZX:CNYA | China | 5.39% (2026-07-21) | https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf | passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR cumulative 91.51% / CAGR 6.71% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/benchmark rows; 2016-2020 annual rows not disclosed; current NAV TR YTD 5.39% as of 2026-07-21; benchmark change 2018-04-26 |
+| NBJP | unsupported ETF type | NYSE Arca:NBJP | Japan | not applicable | https://www.nb.com/products/etfs/japan-equity-etf | Neuberger identifies NBJP as an actively managed, all-cap Japan equity ETF using a proprietary scoring system and direct engagements; official factsheet reports active share 63.87% as of 2026-03-31; outside passive/index-tracking ETF scope, so no performance page or NAV TR comparison is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1834,4 +1835,25 @@ tags:
 ### CNYA Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized endpoint disclosure, annual-row gap, S&P 500 basis/window, current-YTD as-of date separation, benchmark change, rankings, canonical filename, China region assignment, canonical geography tag, breadcrumbs, stale-value replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## NBJP Sequential Queue Record
+
+- Input row: `63/125`; input ticker: `NBJP`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:NBJP`; Neuberger's official Japan Equity ETF factsheet identifies NBJP and the listed exchange as NYSE Arca. No provider slug or guessed exchange is used.
+- Type gate: Neuberger's official product materials describe NBJP as an actively managed, all-cap Japan equity ETF. The strategy seeks high-quality Japanese companies positioned for durable growth, uses a proprietary scoring system, and relies on direct collaborative engagements by active portfolio managers. The March 2026 factsheet reports active share `63.87%` as of `2026-03-31`. This is active management, not passive/index tracking, so the workflow stops at the type gate.
+- Mandatory 10-year coverage audit: not applicable after the confirmed unsupported-type classification. No NAV Total Return history, annual-return table, S&P 500 comparison, or proxy was created.
+- Classification context only: official factsheet identifies benchmark MSCI Japan (Net), `62` holdings, and standard deviation `18.63` as of `2026-03-31`; these figures are not used to create a performance page because NBJP is outside supported ETF scope.
+
+### NBJP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:NBJP` | [Neuberger Japan Equity ETF product page](https://www.nb.com/products/etfs/japan-equity-etf) | Canonical fund identity, active strategy, investment approach and risk context | Page accessed `2026-07-24`; current issuer page and product materials |
+| `NYSE Arca:NBJP` | [Neuberger NBJP factsheet](https://www.nb.com/handlers/documents.ashx?item_id=180e87bb-9bfe-4095-afb8-16e775b3427f) | Exchange, active-share evidence, benchmark, holdings and risk-statistics cross-check | Factsheet `1Q26` as of `2026-03-31` |
+| `NYSE Arca:NBJP` | [Neuberger official prospectus/SAI document route](https://www.nb.com/handlers/documents.ashx?id=47663e8f-0b22-4bda-b97c-4b535e979cab&name=Statement+of+Additional+Information+NBDS+NBCC+NBCT) | Adviser/portfolio-management and active-fund documentation route | Prospectus dated `2025-12-18`, supplemented `2026-01-26`; document route accessed `2026-07-24` |
+
+### NBJP Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, unsupported-type reason, no accidental performance-page creation, source URLs, ledger update, queue pointer, and no region/index navigation update for an unsupported ETF.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
