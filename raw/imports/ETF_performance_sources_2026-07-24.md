@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `65/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `66/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -63,6 +63,7 @@ tags:
 | NBJP | unsupported ETF type | NYSE Arca:NBJP | Japan | not applicable | https://www.nb.com/products/etfs/japan-equity-etf | Neuberger identifies NBJP as an actively managed, all-cap Japan equity ETF using a proprietary scoring system and direct engagements; official factsheet reports active share 63.87% as of 2026-03-31; outside passive/index-tracking ETF scope, so no performance page or NAV TR comparison is created |
 | ASHR | supported | NYSE Arca:ASHR | China | not disclosed | https://etf.dws.com/download/asset/e73aaa93-92c6-4a51-9233-38ccb329e09b | passive/index-tracking China A-share equity ETF; official rolling 10Y NAV TR CAGR 5.84% for 2016-06-30 to 2026-06-30; normalized endpoint approx. 176.40; official 2016-2024 NAV rows compound to 4.89% / CAGR 0.53%; 2025/current YTD and CSI 300 annual rows not disclosed |
 | ASEA | supported | NYSE Arca:ASEA | Southeast Asia | 8.67% (2026-05-31) | https://www.globalxetfs.com/funds/asea | passive/index-tracking Southeast Asia equity ETF; official rolling 10Y NAV TR CAGR 7.12% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 102.43% / CAGR 7.31%; latest official factsheet YTD 8.67% as of 2026-05-31; 2021-2025 CAGR 8.82%; index annual rows not disclosed |
+| KCAI | supported | NYSE Arca:KCAI | China | 4.27% (2026-06-30) | https://kraneshares.com/etf/kcai/ | passive/rules-based index-tracking China A-share equity ETF; official inception 2024-08-27 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 76.27% / annualized 36.06% as of 2026-06-30; official current YTD 4.27%; current product page says NYSE while official prospectus/factsheet/annual report say NYSE Arca, so NYSE Arca is used and conflict is disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -1906,3 +1907,28 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, normalized-endpoint disclosure, annual-row completeness, S&P 500 basis/window, current-YTD as-of date separation, primary Southeast Asia region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, and link targets.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## KCAI Sequential Queue Record
+
+- Input row: `66/125`; input ticker: `KCAI`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:KCAI`; KraneShares' official prospectus, factsheet and March 2026 annual shareholder report identify the principal listing exchange as NYSE Arca. The current product page displays `Primary Exchange NYSE`; this is recorded as an issuer-source conflict. The prospectus/factsheet/annual-report listing is retained because it is the repeated principal-listing disclosure in the official fund documents. No provider slug or guessed exchange is used.
+- Type gate: the official prospectus describes a passive index strategy, an at-least-80% policy in Qi China Alpha Index securities or economically similar instruments, long-only China A-share selection from the CSI 300 universe, and monthly rebalancing. It also states the fund is not actively managed. The fund is not a bond, commodity, currency trust, multi-asset, leveraged, inverse, option-income, derivative-heavy, or single-stock ETF.
+- Mandatory 10-year coverage audit: official inception is `2024-08-27`, so `10-year NAV TR unavailable`. Official KraneShares performance as of `2026-06-30` reports since-inception Fund NAV Total Return cumulative `76.27%` and annualized `36.06%` for approximately `1.84` elapsed years (`2024-08-27` to `2026-06-30`). Raw NAV start/end values are not disclosed. The performance page uses `100.00` as a normalized start and `176.27` as the endpoint derived from disclosed cumulative return; this is not a proxy.
+- Available-period performance: official NAV TR YTD `4.27%` as of `2026-06-30`; official 1-year NAV TR `42.84%` as of `2026-06-30`; official since-inception NAV TR annualized `36.06%`. No short period is labeled as 10-year performance.
+- Annual NAV Total Return: official product page, factsheet and reviewed annual report do not disclose complete calendar-year Fund NAV rows for 2024 or 2025. The page therefore records `2024` as `not disclosed (partial inception year)`, `2025` as `not disclosed`, and `2026 YTD` as `4.27%`. S&P 500 rows are shown only as a common reference and are not treated as a same-window ETF proxy.
+- Window comparison: since-inception KCAI NAV TR cumulative `76.27%` / annualized `36.06%` cannot be compared to complete calendar-year S&P 500 CAGR without introducing a mismatched start-date proxy. The annual table keeps S&P rows separate and marks unavailable KCAI calendar rows explicitly.
+
+### KCAI Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KCAI` | [KraneShares KCAI product page](https://kraneshares.com/etf/kcai/) | Current fund identity, strategy, current performance table, YTD, inception, expense and current holdings; also records the conflicting current `Primary Exchange NYSE` field | Page accessed `2026-07-24`; current facts as of `2026-07-20/22`; performance as of `2026-06-30` |
+| `NYSE Arca:KCAI` | [KraneShares KCAI factsheet](https://kraneshares.com/resources/factsheet/kcai_factsheet.pdf) | Official principal exchange, inception, index, expenses, holdings and since-inception/YTD NAV TR | Factsheet as of `2026-06-30`; cumulative `76.27%`, annualized `36.06%`, YTD `4.27%` |
+| `NYSE Arca:KCAI` | [KraneShares KCAI 2026 annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_kcai_annual.TSR.report.pdf) | Principal listing exchange and official NAV/market-price/index total-return cross-check | Report for period ended `2026-03-31`; since-inception NAV annualized `42.01%` at that earlier as-of date |
+| `NYSE Arca:KCAI` | [KraneShares KCAI statutory prospectus](https://kraneshares.com/resources/compliance/2024_08_28_kcai_statutory.prospectus.pdf) | Passive/index strategy, 80% policy, index construction, inception-period scope and principal listing exchange | Prospectus dated `2024-08-26`; fund commenced operations `2024-08-27` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) | Common benchmark identity; cached USD Total Return convention for complete calendar years | Cached rows `2024-2025`, as of `2025-12-31`; not used as a proxy for KCAI's since-inception period |
+
+### KCAI Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, available-period date window, normalized-endpoint disclosure, annual-row gap, S&P 500 basis/window, current-YTD as-of date, primary China region assignment, canonical filename, geography tag, breadcrumbs, stale-value replacement, old filename/link replacement, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Exchange-source conflict and the 10-year history gap are disclosed here as required.

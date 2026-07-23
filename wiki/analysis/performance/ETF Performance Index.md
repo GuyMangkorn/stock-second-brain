@@ -110,6 +110,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_CBOE_BZX_CNYA Performance]] | official 2016 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 6.71% | -1.75% | 5.39% | 2025 +25.59% / 2022 -26.31% | China A-share single-country equity | A-share/Stock Connect/policy/geopolitical/country/sector/FX-sensitive; benchmark change 2018-04-26 |
 | [[ETF_NYSE_ARCA_CNXT Performance]] | official 2014 / official rolling 2016-2026; calendar rows not disclosed | 7.37% | not disclosed | 16.05% | not disclosed / not disclosed | China A-share ChiNext equity | China A-share/technology/industrial concentration; methodology/index break 2021-12-10 |
 | [[ETF_NYSE_ARCA_ASHR Performance]] | official 2013 / official rolling 2016-2026; official 2016-2024 calendar rows; 2025/current YTD not disclosed | 5.84% | not disclosed | not disclosed | 2020 +37.42% / 2018 -28.05% | China A-share broad equity | A-share/Stock Connect/QFI/policy/geopolitical/country/sector/FX-sensitive; 2025/current YTD and CSI 300 annual-row gaps |
+| [[ETF_NYSE_ARCA_KCAI Performance]] | official inception 2024-08-27; history under 10 years; available through 2026-06-30 | not applicable (<10y history) | not disclosed | 4.27% | since inception +76.27% / not disclosed | China A-share rules-based AI index equity | non-diversified; China A-share/Stock Connect/AI-model/country/sector/FX/liquidity-sensitive; exchange conflict disclosed |
 | [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
 | [[ETF_NYSE_ARCA_ASHS Performance]] | official 2014 / official rolling 2016-03 to 2026-03; annual rows not disclosed | 1.96% | not disclosed | 3.36% | not disclosed / not disclosed | China A-share small-cap equity | China policy/A-share access/small-cap liquidity/sector/FX-sensitive; 497 holdings |
 | [[ETF_NASDAQ_PGJ Performance]] | official 2004 / official rolling 2015-2025; official 2016-2025 | 0.35% | -12.65% | not disclosed | 2017 +59.97% / 2021 -42.76% | China U.S.-listed ADR equity | China policy/ADR/VIE/country/sector/FX-sensitive; non-diversified |
@@ -391,7 +392,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_SAUS Performance]] — ISSSF (Australia)
 - [[ETF_OTC_MARKETS_ISVBF Performance]] — ISVBF (China)
 - [[ETF_NYSE_KBA Performance]] — KBA (China)
-- [[ETF_NYSE_KCAI Performance]] — KCAI (China)
+- [[ETF_NYSE_ARCA_KCAI Performance]] — KCAI (China)
 - [[ETF_NYSE_ARCA_KDEF Performance]] — KDEF (South Korea)
 - [[ETF_NYSE_ARCA_KGRN Performance]] — KGRN (China)
 - [[ETF_NYSE_ARCA_KMCA Performance]] — KMCA (South Korea)
