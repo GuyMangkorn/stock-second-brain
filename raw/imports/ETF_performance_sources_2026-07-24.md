@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `69/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `70/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -67,6 +67,7 @@ tags:
 | EWS | supported | NYSE Arca:EWS | Singapore | 16.50% (2026-07-21) | https://www.ishares.com/us/products/239678/ishares-msci-singapore-capped-etf | passive/index-tracking Singapore equity ETF; official rolling 10Y NAV TR cumulative 112.54% / CAGR 7.83% for 2016-06-30 to 2026-06-30; official 2021-2025 NAV/index rows; 2016-2020 annual NAV rows not disclosed; current NAV TR YTD 16.50% as of 2026-07-21; benchmark change to MSCI Singapore 25/50 Index (Net) on 2016-12-01 |
 | BBAX | supported | Cboe BZX:BBAX | Asia-Pacific | 8.20% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBAX.PDF | passive/index-tracking developed Asia-Pacific equity ETF; official class launch 2018-08-07 means 10-year NAV TR unavailable; available-period NAV TR cumulative 64.48% / annualized CAGR 6.50% through 2026-06-30; official 2019-2025 NAV rows; Cboe/SEC listing confirmation |
 | PCCE | unsupported ETF type | NYSE Arca:PCCE | China | not applicable | https://www.polencapital.com/perspectives/polen-expands-active-etf-lineup-two-credit-etfs | official Polen/SEC materials identify PCCE as an actively managed China equity ETF; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
+| MJSC | unsupported ETF type | NYSE Arca:MJSC | Japan | not applicable | https://www.mufgetfs.com/mjsc | official MUFG product page confirms NYSE Arca listing, `Active ETF` classification and an actively managed Japan small-cap strategy; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2004,3 +2005,22 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because PCCE failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## MJSC Sequential Queue Record
+
+- Input row: `70/125`; input ticker: `MJSC`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:MJSC`; MUFG's official product page identifies the primary exchange as `NYSE ARCA`, ticker `MJSC`, and the issuer launch announcement identifies the same listing. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. The official product page names it the `MUFG Japan Small Cap Active ETF`, describes a research-intensive strategy seeking companies with pioneering business models and long-term growth potential at reasonable valuations, and explicitly states that it is an actively managed ETF. The issuer launch notice further describes an actively managed all-Japan equity strategy using thematic analysis and portfolio-manager selection. It is not a passive/index-tracking equity ETF.
+- Per the type gate, no 10-year historical performance calculation, annual NAV TR table, performance page, region row, index row, or S&P 500 comparison was created. Status is terminal under the requested ETF v1 scope.
+
+### MJSC Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:MJSC` | [MUFG MJSC official product page](https://www.mufgetfs.com/mjsc) | Official primary exchange/ticker, active classification, strategy, inception, current fund details and performance gap | Page accessed `2026-07-24`; fund details as of `2026-07-16`; inception `2025-09-16` |
+| `NYSE Arca:MJSC` | [MUFG/Clearbrook launch announcement](https://www.mufgetfs.com/posts/mufg-clearbrook-launch-first-etf-mjsc-nyse-arca) | Official issuer exchange and active-strategy confirmation | Announcement dated `2025-09-17`; active all-Japan equity strategy |
+
+### MJSC Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange/fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because MJSC failed the passive/index-tracking equity gate, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
