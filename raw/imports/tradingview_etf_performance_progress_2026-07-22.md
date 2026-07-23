@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 8
-remaining_count: 117
+processed_count: 9
+remaining_count: 116
 queue_policy: sequential; one ticker per user continuation
-updated: 2026-07-23
+updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-8` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. รอบนี้ประมวลผลเฉพาะ row `1-9` และหยุดตามกติกา sequential queue; rows หลังจากนี้ยังไม่ถูกประมวลผลใน ledger นี้.
 
 ## Terminal status register
 
@@ -24,10 +24,11 @@ updated: 2026-07-23
 | 6 | EPP | `completed_10Y` | `NYSE Arca:EPP` | Official iShares passive/index-tracking equity ETF; official rolling 10Y NAV TR cumulative `103.63%` and CAGR `7.37%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; current YTD `11.23%` as of 2026-07-21. | [[ETF_NYSE_ARCA_EPP Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 7 | DXJJF | `completed_10Y` | `LSE:DXJ` | Input OTC alias for WisdomTree Japan Equity UCITS ETF - USD Hedged; official ten complete calendar-year NAV TR rows 2016-2025 compound to cumulative `268.73%` and CAGR `13.94%`; current official YTD `21.90%` as of 2026-06-30; latest issuer NAV US$55.035 as of 2026-07-22. | [[ETF_LSE_DXJ Performance]] | [[ETF_performance_sources_2026-07-23]] |
 | 8 | INCO | `completed_10Y` | `NYSE Arca:INCO` | Official Columbia indexed/passive India consumer equity ETF; issuer 10-year average annual NAV TR `8.72%` as of 2026-05-31; disclosed annual rows 2021-2025 compound to 5-year CAGR `11.16%`; current YTD `-9.92%` as of 2026-05-31; latest NAV US$59.45 as of 2026-06-23. | [[ETF_NYSE_ARCA_INCO Performance]] | [[ETF_performance_sources_2026-07-23]] |
+| 9 | AIA | `completed_10Y` | `NASDAQ:AIA` | Passive/index-tracking Asia ex Japan equity ETF; official rolling 10-year NAV TR cumulative `298.99%` / CAGR `14.84%` for 2016-06-30 to 2026-06-30; official annual rows 2021-2025; current date-to-date YTD `40.47%` as of 2026-07-21; NAV US$136.34 as of 2026-07-21. | [[ETF_NASDAQ_AIA Performance]] | [[ETF_performance_sources_2026-07-23]] |
 
 ## Queue pointer
 
-- Completed: `8/125`
-- Next ticker: `AIA` (row `9`)
+- Completed: `9/125`
+- Next ticker: `ASEA` (row `10`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `INCO` was searched, compared, dispatched, or processed in this round.
+- No ticker after `AIA` was searched, compared, dispatched, or processed in this round.

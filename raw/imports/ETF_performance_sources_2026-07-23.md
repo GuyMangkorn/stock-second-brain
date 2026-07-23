@@ -25,7 +25,7 @@ tags:
 | AAXJ | supported | NASDAQ:AAXJ | Asia ex Japan | 20.12% (2026-07-16) | https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf | raw 10Y endpoints not disclosed |
 | ADIV | unsupported | NYSE Arca:ADIV | Asia-Pacific | not applicable | https://www.gafunds.com/our-funds/ | active equity |
 | ADVE | unsupported | NYSE Arca:ADVE | Asia-Pacific | not applicable | https://www.matthewsasia.com/funds/etfs/asia-dividend-active-etf/ | active equity |
-| AIA | supported | NASDAQ:AIA | Asia ex Japan | 34.89% (2026-07-17) | https://www.ishares.com/us/products/239730/AIA | raw 10Y endpoints not disclosed |
+| AIA | supported | NASDAQ:AIA | Asia ex Japan | NAV US$136.34; date-to-date YTD 40.47% (2026-07-21) | https://www.ishares.com/us/products/239730/ishares-asia-50-etf | official rolling 10Y NAV TR cumulative 298.99% / CAGR 14.84% (2026-06-30); standardized month-end YTD 46.79% (2026-06-30); raw endpoints not disclosed |
 | ASEA | supported | NYSE Arca:ASEA | Southeast Asia | not disclosed (not disclosed) | https://www.globalxetfs.com/funds/asea | calendar rows and current YTD not disclosed |
 | ASHR | supported | NYSE Arca:ASHR | China | not disclosed (not disclosed) | https://etf.dws.com/en-us/AssetDownload/Index/e73aaa93-92c6-4a51-9233-38ccb329e09b/ASHR-Fact-Sheet.pdf | 2025 annual row and current NAV/YTD not disclosed |
 | ASHS | supported | NYSE:ASHS | China | 3.36% (2026-03-31) | https://etf.dws.com/en-us/AssetDownload/Index/1bfed1b5-c933-4199-bdcc-30b0ed651740/ASHS-Fact-Sheet.pdf | current data stale; annual rows and raw 10Y endpoints not disclosed |
@@ -497,4 +497,40 @@ Annual benchmark rows use S&P 500 Total Return in USD with dividends reinvested,
 ### DBJP Pre-save Review Note
 
 - No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and formula, S&P 500 basis/window, as-of dates, best/worst ranking, 2025/current-YTD gaps, filenames, Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
+
+## AIA Sequential Queue Record
+
+- Input row: `9/125`; input ticker: `AIA`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:AIA`; the official iShares product page identifies the NASDAQ listing and iShares Asia 50 ETF. No provider slug or guessed exchange is used.
+- Classification: supported passive/index-tracking Asia ex Japan equity ETF. Issuer benchmark: `S&P Asia 50 Capped Index (Net)`. Inception: `2007-11-13`. Expense ratio: `0.50%`. Distribution frequency: semi-annual.
+- Official current observations: NAV `US$136.34` as of `2026-07-21`; date-to-date NAV Total Return YTD `+40.47%` as of `2026-07-21`; exposure as of the same date includes Taiwan `37.23%`, South Korea `26.21%`, and China `25.48%`.
+
+### AIA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:AIA` | [iShares US AIA product and performance page](https://www.ishares.com/us/products/239730/ishares-asia-50-etf) | Fund identity, exchange, benchmark, inception, NAV, fee, classification, current YTD, rolling NAV Total Return and calendar rows | Page accessed `2026-07-24`; NAV/current YTD and exposure `2026-07-21`; performance table `2026-06-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### AIA Raw Observations And Calculations
+
+| Year | AIA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | -10.75% | 28.71% |
+| 2022 | -24.07% | -18.11% |
+| 2023 | 4.84% | 26.29% |
+| 2024 | 20.42% | 25.02% |
+| 2025 | 47.01% | 17.88% |
+
+- Official rolling 10-year NAV TR: cumulative `298.99%` and average annual/CAGR `14.84%` as of `2026-06-30`, represented by `2016-06-30` to `2026-06-30`; actual elapsed years `10.00`. Raw NAV endpoint levels are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Normalized calculation required for the performance page: start `100.00`; end `398.99`; `(398.99 / 100.00)^(1 / 10.00) - 1 ≈ 14.84%`. The normalized endpoint is derived from the rounded official cumulative return, not an issuer-published NAV level.
+- Complete official calendar rows `2021-2025` compound to `+25.77%` and annualize to `4.69%` over `5` years. Up/down years are `3 / 2`; best `2025 +47.01%`; least positive `2023 +4.84%`; worst `2022 -24.07%`; least bad down year `2021 -10.75%`.
+- Official current date-to-date NAV Total Return YTD is `+40.47%` as of `2026-07-21`; standardized month-end YTD is `+46.79%` as of `2026-06-30`. These are separate observations and are not mixed.
+- Exact June-to-June S&P 500 TR for the rolling 10-year endpoint is `ไม่พบข้อมูลที่ยืนยันได้`; annual S&P rows are the cached complete-calendar-year comparison only.
+- Daily NAV history sufficient to reproduce max drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### AIA Pre-save Review Note
+
+- No multi-agent reviewer was available in this thread. The main agent performed the complete local checklist from `check-etf-performance/workflow.md` before writing: ticker/exchange, passive-equity classification, NAV Total Return definition, reinvested distributions and expenses, annual rows, rolling 10-year coverage and normalized formula, S&P 500 basis/window, separate current/month-end as-of dates, best/worst ranking, filenames, Asia ex Japan region assignment, canonical geography tag, breadcrumbs, and link targets.
 - Local verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required by the durable `lean` workflow.
