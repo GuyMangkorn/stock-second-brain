@@ -2,8 +2,8 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 29
-remaining_count: 96
+processed_count: 30
+remaining_count: 95
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
@@ -45,10 +45,11 @@ updated: 2026-07-24
 | 27 | CSKRF | `completed_10Y` | `LSE:CSKR` | OTC alias for iShares MSCI Korea UCITS ETF USD (Acc); official listing table maps ISIN `IE00B5W4TY14` to London Stock Exchange USD ticker `CSKR`; passive physical/replicated equity ETF. Official rolling 10Y NAV TR cumulative `369.63%` / CAGR `16.73%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; 2021-2025 CAGR `3.94%`; current NAV TR YTD `70.53%` as of 2026-07-21. | [[ETF_LSE_CSKR Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 28 | GSJY | `completed_10Y` | `NYSE Arca:GSJY` | Rules-based smart-beta/passive Japan equity ETF; official prospectus says the fund is not actively managed; official rolling 10Y NAV TR CAGR `9.29%` for 2016-06-30 to 2026-06-30; official calendar rows 2017-2025 with 2016 treated as inception-year partial; 2021-2025 CAGR `6.62%`; current NAV TR YTD `12.86%` as of 2026-06-30. | [[ETF_NYSE_ARCA_GSJY Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 29 | IHSEF | `completed_10Y` | `LSE:IAPD` | OTC alias resolved to iShares' official LSE:IAPD listing for iShares Asia Pacific Dividend UCITS ETF, ISIN `IE00B14X4T88`; physical/replicated passive Asia-Pacific dividend equity ETF tracking Dow Jones Asia/Pacific Select Dividend 50 Index (Net). Official rolling 10Y NAV TR CAGR `6.75%` for 2016-06-30 to 2026-06-30; official calendar rows 2016-2025; 2021-2025 CAGR `9.69%`; current NAV TR YTD `14.55%` as of 2026-07-21. | [[ETF_LSE_IAPD Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 30 | MINV | `unsupported ETF type` | `NYSE Arca:MINV` | Matthews' official page identifies MINV as the Asia Innovators Active ETF with a high-conviction, all-cap fundamental strategy; active share is `74.8%` as of 2026-06-30. Active equity ETF is outside the passive/index-tracking equity scope; no performance page created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `29/125`
-- Next ticker: `MINV` (row `30`)
+- Completed: `30/125`
+- Next ticker: `IMSCF` (row `31`)
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
-- No ticker after `IHSEF` was searched, compared, dispatched, or processed in this round.
+- No ticker after `MINV` was searched, compared, dispatched, or processed in this round.

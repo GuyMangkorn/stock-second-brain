@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `29/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `30/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -28,6 +28,7 @@ tags:
 | CSKRF | supported | LSE:CSKR | South Korea | 70.53% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/253733/cskr | OTC alias; official rolling 10Y NAV TR cumulative 369.63% / CAGR 16.73% as of 2026-06-30; official calendar NAV rows 2016-2025; benchmark change 2020-02-11 |
 | GSJY | supported | NYSE Arca:GSJY | Japan | 12.86% (2026-06-30) | https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e | official rolling 10Y NAV TR CAGR 9.29% as of 2026-06-30; official calendar NAV/ActiveBeta index rows 2017-2025; 2016 inception partial; rules-based index and not actively managed |
 | IHSEF | supported | LSE:IAPD | Asia-Pacific | 14.55% (2026-07-21) | https://www.ishares.com/uk/professional/en/products/251567/iapd?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official LSE:IAPD listing; official rolling 10Y NAV TR CAGR 6.75% as of 2026-06-30; official calendar NAV/benchmark rows 2016-2025; physical/replicated passive equity; TER 0.59% |
+| MINV | unsupported ETF type | NYSE Arca:MINV | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-innovators-active-etf/ | Matthews identifies MINV as an active, high-conviction, all-cap fundamental equity ETF; active share 74.8% as of 2026-06-30; passive ETF scope excludes active funds |
 
 ## CSKRF Sequential Queue Record
 
@@ -155,6 +156,25 @@ tags:
 ### IHSEF Pre-save Review Note
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, OTC-alias-to-LSE canonical resolution, ISIN/share-class match, fund identity, passive-equity classification, inception and 10-year eligibility audit, official NAV TR/reinvestment/expense basis, annual rows, S&P 500 basis/window, benchmark-change caveat, as-of dates, rankings, filenames, Asia-Pacific region assignment, canonical geography tag, breadcrumbs, and link targets.
+- Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
+
+## MINV Sequential Queue Record
+
+- Input row: `30/125`; input ticker: `MINV`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:MINV`; Matthews' official fund page identifies the ticker, primary exchange, inception `2022-07-13`, benchmark `MSCI All Country Asia ex Japan Index`, and the Matthews Asia Innovators Active ETF. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. The official strategy is an active, high-conviction, all-cap fundamental approach investing at least 80% of net assets in companies Matthews believes are innovators. Official portfolio characteristics report active share `74.8%` as of `2026-06-30`; the page explicitly labels the product `Active ETF`. This is outside the required passive/index-tracking equity ETF scope.
+- Per the type gate, no 10-year historical performance calculation, annual table, performance page, region performance row or S&P 500 comparison was created. Official current observations are not used as a performance deliverable.
+
+### MINV Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:MINV` | [Matthews Asia Innovators Active ETF official page](https://us.matthewsasia.com/funds/etfs/asia-innovators-active-etf/) | canonical ticker/exchange, active classification, strategy, inception, benchmark and active share | Page accessed `2026-07-24`; portfolio characteristics `2026-06-30` |
+| `NYSE Arca:MINV` | [Matthews MINV factsheet](https://us.matthewsasia.com/siteassets/resources/fund-documents/factsheets/etfs/fact_sheet_minv.pdf) | corroborates active strategy, inception, exchange, benchmark and fee | Factsheet March 2026 |
+
+### MINV Pre-save Review Note
+
+- No performance page save was required after the unsupported type gate. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Reviewer-availability fallback is disclosed here as required.
 
 ## VNFGF Sequential Queue Record
