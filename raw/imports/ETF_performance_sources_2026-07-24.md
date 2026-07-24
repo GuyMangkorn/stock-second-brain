@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `89/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `90/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -87,6 +87,7 @@ tags:
 | INDQ | supported | Nasdaq:INDQ | India | not disclosed (official field N/A) | https://www.paceretfs.com/products/indq | passive/rules-based India equity ETF tracking ActiveAlpha India Quality Index; official inception 2026-03-31 means 10-year NAV TR unavailable; official Pacer page/factsheet show available-period NAV TR and YTD fields as N/A; no proxy used |
 | ICNYF | unsupported | LSE:CNYB | China | not applicable | https://www.ishares.com/uk/individual/en/products/308851/ishares-china-cny-bond-ucits-etf?siteEntryPassthrough=true | OTC alias resolved to iShares China CNY Bond UCITS ETF USD (Dist), ISIN IE00BYPC1H27 / LSE:CNYB; official fund is fixed income/bond exposure to Chinese government and policy-bank bonds, outside passive/index-tracking equity scope |
 | CNQQ | supported | NASDAQ:CNQQ | China | 14.95% (2026-06-30) | https://funds.rayliant.com/cnqq/ | passive/index-tracking China technology equity ETF tracking Solactive ChinaAMC Transformative China Tech Index; inception 2025-09-24 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 6.54% / derived annualized 8.65% through 2026-06-30; total-return-swap implementation and factsheet one-day inception conflict disclosed |
+| INDH | supported | Nasdaq:INDH | India | -9.04% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/indh | passive/index-tracking India equity ETF with INR hedge; official inception 2024-05-09 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 1.84% / average annual 0.85% through 2026-06-30; annual rows not disclosed; aggregate hedge ratio 100.25% as of 2026-07-17 |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2606,3 +2607,49 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized short-period endpoint, derived annualization, 2025 incomplete-year gap, 2026 YTD as-of date, inception-date conflict and swap implementation are explicitly disclosed.
+
+## INDH Sequential Queue Record
+
+- Input row: `90/125`; input ticker: `INDH`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `Nasdaq:INDH`; WisdomTree's official product page, factsheet and SEC summary prospectus identify the NASDAQ listing. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking India equity ETF with a currency-hedge overlay. WisdomTree states that INDH tracks the `WisdomTree India Hedged Equity Index`, does not attempt to outperform its index, and hedges USD/INR exposure.
+- Mandatory coverage audit: the existing page had no verified inception, index or reproducible return. Official WisdomTree materials confirm inception `2024-05-09`, so `10-year NAV TR unavailable`. The official month-end table reports since-inception NAV return `1.84%` cumulative and `0.85%` average annual through `2026-06-30`; current NAV TR YTD is `-9.04%` through the same date.
+- Available-period window: `2024-05-09` to `2026-06-30`, `782 days / 2.141043 years`; normalized NAV TR `100.00` to `101.84`; official CAGR/average annual `0.85%`. Raw NAV endpoints are not disclosed as a time series.
+- Annual observations: complete calendar-year NAV rows are not disclosed in the reviewed official capture; 2024 is an incomplete inception year and 2025 remains `not disclosed`.
+
+### INDH Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:INDH` | [WisdomTree INDH official product/performance page](https://www.wisdomtree.com/us/products/equity/indh) | identity, exchange, inception, index, expense ratio, month-end NAV TR, current YTD, hedge ratio and exposures | Page accessed `2026-07-24`; month-end performance through `2026-06-30`; current fund/holdings data as of `2026-07-17`; inception `2024-05-09`; expense `0.64%`; YTD `-9.04%` |
+| `Nasdaq:INDH` | [WisdomTree INDH factsheet](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-indh.pdf) | passive/index-tracking classification, index, exchange, inception, expense and since-inception return cross-check | Factsheet as of `2026-03-31`; inception `2024-05-09`; NASDAQ; NAV since inception `-0.98%` as of `2026-03-31`; performance less than one year cumulative note |
+| `Nasdaq:INDH` | [SEC INDH summary prospectus](https://www.sec.gov/Archives/edgar/data/1350487/000121465925011298/indh73125497k.htm) | formal listing, index objective, 80% policy and hedge/index implementation | Prospectus dated `2025-08-01`; NASDAQ listing; tracks WisdomTree India Hedged Equity Index |
+| `Nasdaq:INDH` | [WisdomTree India Hedged Equity Index](https://www.wisdomtree.com/indexes/wtieqh) | index methodology and constituent universe context | Page accessed `2026-07-24`; index includes the 75 largest Indian companies |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### INDH Raw Observations And Calculations
+
+| Period | INDH NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not applicable; before inception | -18.11% |
+| 2023 | not applicable; before inception | 26.29% |
+| 2024 | not disclosed; incomplete inception year | 25.02% |
+| 2025 | not disclosed | 17.88% |
+| 2026 YTD | -9.04% as of 2026-06-30 | not comparable; current year not cached |
+
+- Available-period NAV TR: cumulative `1.84%`, `2024-05-09` to `2026-06-30`.
+- `101.84 = 100.00 × (1 + 1.84%)`; actual years `782 / 365.2425 = 2.141043`.
+- `CAGR = (101.84 / 100.00)^(1 / 2.141043) - 1 = 0.85%`, agreeing with the issuer's average annual since-inception return.
+- One-year NAV TR: `-7.52%` through `2026-06-30`; 3-, 5- and 10-year fields are N/A.
+- Aggregate hedge ratio: `100.25%` as of `2026-07-17`.
+
+### INDH Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, hedge-overlay disclosure, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized available-period endpoint, annual-row gap, current-YTD date, index hedge and hedge-ratio facts are explicitly disclosed.
