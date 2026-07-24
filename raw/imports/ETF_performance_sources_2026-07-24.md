@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `77/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `79/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -75,6 +75,8 @@ tags:
 | CGRO | unsupported ETF type | NYSE Arca:CGRO | China | not applicable | https://www.cvafunds.com/cgro/ | official CoreValues summary prospectus identifies CGRO as an actively managed Greater China growth ETF and lists NYSE Arca; current website displays `NYSE`, but the formal prospectus is retained for canonical exchange resolution; passive/index-tracking equity scope excludes it; no performance page or region/index row created |
 | KBUF | unsupported ETF type | NYSE Arca:KBUF | China | not applicable | https://kraneshares.com/etf/kbuf/ | official KraneShares sources identify KBUF as a defined-outcome ETF using FLEX options, an upside cap and a 90% downside buffer on KWEB; derivative-heavy/active strategy scope excludes it; no performance page or region/index row created |
 | KPRO | unsupported ETF type | NYSE Arca:KPRO | China | not applicable | https://kraneshares.com/etf/kpro/ | official KraneShares sources identify KPRO as a defined-outcome ETF using FLEX options, a 20.01% upside cap and a 100% downside buffer on KWEB; derivative-heavy/active strategy scope excludes it; no performance page or region/index row created |
+| KSTR | supported | NYSE Arca:KSTR | China | 71.70% (2026-06-30) | https://kraneshares.com/etf/kstr/ | passive/index-tracking China STAR 50 technology/semi equity ETF; official inception 2021-01-26 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 27.40% / annualized 4.56% through 2026-06-30; calendar NAV rows not disclosed |
+| NDIA | unsupported | NYSE Arca:NDIA | India | not applicable | https://www.globalxetfs.com/funds/NDIA | official Global X sources identify NDIA as the actively managed Global X India Active ETF; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2195,3 +2197,65 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange conflict resolution, fund identity, passive-versus-derivative-heavy classification, terminal-status selection, source URL, filename decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical or high-severity finding remained. Because KPRO failed the passive/index-tracking equity gate as derivative-heavy, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed here as required.
+
+## KSTR Sequential Queue Record
+
+- Input row: `78/125`; input ticker: `KSTR`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:KSTR`; official product page, factsheet and annual shareholder report identify the NYSE Arca listing. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking equity ETF. KraneShares says KSTR seeks to track the SSE Science and Technology Innovation Board 50 Index, representing 50 large STAR Market companies by market capitalization and liquidity. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy or single-stock fund. Derivatives may be permitted for implementation or risk management but are not the fund's defining structure.
+- Mandatory coverage audit: official inception `2021-01-26`; as of `2026-06-30` only approximately `5.43` years, so `10-year NAV TR unavailable`. Official since-inception NAV TR cumulative `27.40%` / annualized `4.56%`; normalized TR `100.00` to `127.40`; raw endpoints not disclosed.
+- Official calendar observations: current official page/factsheet disclose rolling, YTD and since-inception performance but no complete calendar-year NAV rows in the reviewed capture; annual table leaves 2021-2025 `not disclosed`; current YTD is `71.70%` as of 2026-06-30.
+- S&P 500 comparison: cached USD Total Return rows are used for 2021-2025 common reference only; no 2026 S&P value is used.
+- Official current observation: NAV TR YTD `71.70%` as of `2026-06-30`; 1-year `131.80%`; 3-year `29.49%`; 5-year `3.10%`; since inception `4.56%`; gross/net expense `0.89%/0.65%`; 53 holdings and Information Technology sector `92.90%` in the June factsheet. The annual report's separate March 31 2026 trailing values are retained as a cross-check and not mixed into the current June series.
+
+### KSTR Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KSTR` | [KraneShares KSTR official product/performance page](https://kraneshares.com/etf/kstr/) | identity, index, exchange, inception, fees, current NAV/YTD and rolling/available-period NAV TR | Page accessed `2026-07-24`; product data through `2026-07-22`; performance summary through `2026-06-30` |
+| `NYSE Arca:KSTR` | [KraneShares KSTR factsheet](https://kraneshares.com/resources/factsheet/kstr_factsheet.pdf) | passive/index-tracking classification, official NAV TR basis, since-inception/rolling performance, fees, holdings/sector risk | Factsheet dated `2026-06-30`; performance through `2026-06-30`; 53 holdings |
+| `NYSE Arca:KSTR` | [KraneShares KSTR annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_kstr_annual.TSR.report.pdf) | official listing cross-check and separate fiscal trailing performance cross-check | Report period ended `2026-03-31`; KSTR 12-month NAV return `28.85%`; not mixed with current June series |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### KSTR Raw Observations And Calculations
+
+| Period | KSTR NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | not disclosed (partial inception year) | 28.71% |
+| 2022 | not disclosed | -18.11% |
+| 2023 | not disclosed | 26.29% |
+| 2024 | not disclosed | 25.02% |
+| 2025 | not disclosed | 17.88% |
+| 2026 YTD | 71.70% | not comparable; current year not cached |
+
+- `10-year NAV TR unavailable`: official inception `2021-01-26` is under 10 years as of `2026-06-30`.
+- Available-period official NAV TR: cumulative `27.40%`; issuer annualized return `4.56%`; actual elapsed period approximately `5.43` years; normalized start/end `100.00`/`127.40`; raw endpoints not disclosed.
+- Annual NAV rows `2021-2025` are not disclosed in the reviewed official capture; no annual CAGR or best/worst year ranking is manufactured.
+- Current NAV TR YTD `71.70%` as of `2026-06-30`; S&P current year not used.
+
+### KSTR Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period normalized endpoint, annual-row gaps, S&P cache, current-YTD, region/index links, stale-value replacement, filename/tags/breadcrumbs/link targets.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Reviewer-availability fallback is disclosed as required.
+
+## NDIA Sequential Queue Record
+
+- Input row: `79/125`; input ticker: `NDIA`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:NDIA`; Global X's official product page, current factsheet, summary prospectus and annual shareholder report identify the NYSE Arca listing. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. Global X explicitly labels NDIA the `Global X India Active ETF`, describes it as an actively managed ETF, and states that its strategy uses stock picking and portfolio management across sectors. The factsheet labels the category `Equity - International - Single Country` and the prospectus objective is long-term capital growth rather than tracking a disclosed index. It therefore fails the required passive/index-tracking equity gate.
+- Per the type gate, no 10-year coverage calculation, annual NAV TR table, S&P 500 comparison, performance page, region row or performance-index coverage row was created. Any official performance figures reviewed remain source context only and are not treated as ETF v1 performance coverage.
+- Official current context: product-page NAV total-return summary shows since-inception annualized `4.88%` through `2026-06-30`, current product details as of `2026-07-17` show inception `2023-08-17`, total expense ratio `0.75%`, 30 holdings and primary exchange NYSE Arca. These values are not used for the unsupported ETF performance artifact.
+
+### NDIA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:NDIA` | [Global X NDIA official product page](https://www.globalxetfs.com/funds/NDIA) | identity, explicit active classification, objective, inception, current fund details and official performance context | Page accessed `2026-07-24`; fund details through `2026-07-17`; performance summary through `2026-06-30` |
+| `NYSE Arca:NDIA` | [Global X NDIA factsheet](https://assets.globalxetfs.com/funds/documents/ndia/Fact-Sheet_NDIA.pdf) | official active strategy, exchange, inception, expense ratio and fund classification | Factsheet dated `2026-04-30`; 30 holdings; total expense ratio `0.75%` |
+| `NYSE Arca:NDIA` | [Global X NDIA summary prospectus](https://assets.globalxetfs.com/funds/documents/ndia/prospectus-regulatory/Summary-Prospectus.pdf) | formal listing and explicit investment objective / fund structure | Prospectus dated `2025-04-01`; ticker NDIA; exchange NYSE Arca; management fee `0.75%` and total annual operating expenses `0.76%` in that document |
+| `NYSE Arca:NDIA` | [Global X NDIA annual shareholder report](https://assets.globalxetfs.com/funds/documents/ndia/prospectus-regulatory/Annual-Shareholder-Report.pdf) | principal listing and active-fund cross-check | Report period ended `2025-11-30`; principal listing exchange NYSE Arca; annual report calls NDIA actively managed |
+
+### NDIA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Because NDIA failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
