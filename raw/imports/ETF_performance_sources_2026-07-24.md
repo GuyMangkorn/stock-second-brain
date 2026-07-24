@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `87/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `88/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -85,6 +85,7 @@ tags:
 | CAS | unsupported | NYSE Arca:CAS | China | not applicable | https://www.simplify.us/etfs/cas-simplify-china-shares-plus-income-etf | official Simplify page and formal prospectus identify CAS as actively managed with China A-share exposure via total return swaps plus an options overlay; derivative-heavy/option-income/multi-strategy, outside passive/index-tracking equity scope; formal prospectus says NYSE Arca while 1Q26 factsheet compact field says NYSE |
 | INDZ | unsupported | NYSE Arca:INDZ | India | not applicable | https://www.vaneck.com/us/en/investments/india-select-etf-indz/ | official VanEck product page, factsheet and summary prospectus identify INDZ as actively managed with a multi-step/security-selection process for Indian companies; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | INDQ | supported | Nasdaq:INDQ | India | not disclosed (official field N/A) | https://www.paceretfs.com/products/indq | passive/rules-based India equity ETF tracking ActiveAlpha India Quality Index; official inception 2026-03-31 means 10-year NAV TR unavailable; official Pacer page/factsheet show available-period NAV TR and YTD fields as N/A; no proxy used |
+| ICNYF | unsupported | LSE:CNYB | China | not applicable | https://www.ishares.com/uk/individual/en/products/308851/ishares-china-cny-bond-ucits-etf?siteEntryPassthrough=true | OTC alias resolved to iShares China CNY Bond UCITS ETF USD (Dist), ISIN IE00BYPC1H27 / LSE:CNYB; official fund is fixed income/bond exposure to Chinese government and policy-bank bonds, outside passive/index-tracking equity scope |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2537,3 +2538,23 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD gap, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, official N/A performance fields, NAV-level-versus-total-return distinction, and no-proxy decision are explicitly disclosed.
+
+## ICNYF Sequential Queue Record
+
+- Input row: `88/125`; input ticker: `ICNYF`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `LSE:CNYB`; iShares' official listings identify the USD distributing share class as `CNYB` on the London Stock Exchange, ISIN `IE00BYPC1H27`, with share-class launch date `2019-07-24`. The input OTC symbol `ICNYF` is treated as an alias; the canonical exchange-qualified key is not a provider slug.
+- Type-gate result: `unsupported ETF type`. iShares identifies the fund as fixed income and states that it tracks an index of fixed-rate PRC Ministry of Finance treasury bonds and Chinese policy-bank debt. It is a bond ETF, outside the passive/index-tracking equity ETF scope.
+- Because the fund failed the asset-class gate, the `check-etf-performance` calculation step is not run and no 10-year NAV TR table, S&P 500 comparison, performance page, region row or performance-index coverage row is created.
+
+### ICNYF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:CNYB` | [iShares China CNY Bond UCITS ETF official listing/performance page](https://www.ishares.com/uk/individual/en/products/308851/ishares-china-cny-bond-ucits-etf?siteEntryPassthrough=true) | identity, share-class/listing mapping, fixed-income classification, benchmark and holdings | Page accessed `2026-07-24`; listings and portfolio data through `2026-07-17`; LSE ticker CNYB; ISIN IE00BYPC1H27 |
+| `LSE:CNYB` | [iShares CNYB factsheet](https://www.ishares.com/uk/individual/en/literature/fact-sheet/cnyb-ishares-china-cny-bond-ucits-etf-fund-fact-sheet-en-gb.pdf) | formal share-class identity, passive bond objective, LSE listing and fixed-income exposure | Factsheet dated `May 2026`; performance/portfolio data through `2026-05-31`; share-class launch `2019-07-24`; TER `0.35%` |
+| `LSE:CNYB` | [London Stock Exchange CNYB company page](https://www.londonstockexchange.com/stock/CNYB/ishares/company-page) | exchange-level cross-check for canonical LSE ticker and fund name | Page accessed `2026-07-24`; CNYB listed as iShares China CNY Bond UCITS ETF (Dist) |
+
+### ICNYF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, OTC-alias resolution, canonical exchange, exact share class, asset-class/type gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Because ICNYF resolved to a fixed-income bond ETF, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.

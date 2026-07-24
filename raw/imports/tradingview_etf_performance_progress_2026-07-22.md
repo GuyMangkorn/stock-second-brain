@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 87
-remaining_count: 38
+processed_count: 88
+remaining_count: 37
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `87` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `88` แล้ว.
 
 ## Terminal status register
 
@@ -103,11 +103,12 @@ updated: 2026-07-24
 | 85 | CAS | `unsupported ETF type` | `NYSE Arca:CAS` | Official Simplify sources identify CAS as actively managed and using a risk-managed options overlay on China A-share exposure obtained through total return swaps; the strategy writes short-term spreads on equity, fixed-income and commodity indices/ETFs. It is derivative-heavy/option-income and outside passive/index-tracking equity scope. Formal prospectus confirms NYSE Arca; a factsheet compact field says NYSE, so the formal listing is retained as canonical. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 86 | INDZ | `unsupported ETF type` | `NYSE Arca:INDZ` | Official VanEck product page, factsheet and summary prospectus identify INDZ as the actively managed VanEck India Select ETF using fundamental research and a multi-step process to select Indian companies across market caps. It fails the passive/index-tracking equity gate; no performance page or 10-year NAV TR comparison created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 87 | INDQ | `completed_available_period_no_10Y` | `Nasdaq:INDQ` | Passive/rules-based India equity ETF tracking ActiveAlpha India Quality Index; official inception `2026-03-31` means `10-year NAV TR unavailable`; official Pacer performance table and factsheet show numeric NAV TR fields as `N/A`, so available-period NAV TR, CAGR and current YTD are `not disclosed` rather than inferred. | [[ETF_NASDAQ_INDQ Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 88 | ICNYF | `unsupported ETF type` | `LSE:CNYB` | Official iShares listings and factsheet resolve the OTC input alias to iShares China CNY Bond UCITS ETF USD (Dist), LSE ticker `CNYB`, ISIN `IE00BYPC1H27`. The fund tracks Chinese government/policy-bank bonds, so it is a bond ETF outside passive index-tracking equity scope; no performance page or 10-year NAV TR comparison created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `87/125`
-- Next ticker: `row 88` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `88/125`
+- Next ticker: `row 89` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `INDQ` was searched, compared, dispatched, or processed in this round.
+No ticker after `ICNYF` was searched, compared, dispatched, or processed in this round.
