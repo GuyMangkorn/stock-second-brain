@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `86/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `87/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -84,6 +84,7 @@ tags:
 | EPHE | supported | NYSE Arca:EPHE | Philippines | 3.93% (2026-07-21) | https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf | passive/index-tracking Philippines equity ETF; official rolling 10Y NAV TR cumulative -28.05% / CAGR -3.24% through 2026-06-30; official 2021-2025 annual rows; 2016-2020 rows not disclosed; index change 2020-12-01; expense ratio 0.59% |
 | CAS | unsupported | NYSE Arca:CAS | China | not applicable | https://www.simplify.us/etfs/cas-simplify-china-shares-plus-income-etf | official Simplify page and formal prospectus identify CAS as actively managed with China A-share exposure via total return swaps plus an options overlay; derivative-heavy/option-income/multi-strategy, outside passive/index-tracking equity scope; formal prospectus says NYSE Arca while 1Q26 factsheet compact field says NYSE |
 | INDZ | unsupported | NYSE Arca:INDZ | India | not applicable | https://www.vaneck.com/us/en/investments/india-select-etf-indz/ | official VanEck product page, factsheet and summary prospectus identify INDZ as actively managed with a multi-step/security-selection process for Indian companies; it fails the passive/index-tracking equity gate and no performance artifact is created |
+| INDQ | supported | Nasdaq:INDQ | India | not disclosed (official field N/A) | https://www.paceretfs.com/products/indq | passive/rules-based India equity ETF tracking ActiveAlpha India Quality Index; official inception 2026-03-31 means 10-year NAV TR unavailable; official Pacer page/factsheet show available-period NAV TR and YTD fields as N/A; no proxy used |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2492,3 +2493,47 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. Because INDZ failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
+
+## INDQ Sequential Queue Record
+
+- Input row: `87/125`; input ticker: `INDQ`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `Nasdaq:INDQ`; Pacer's official factsheet and SEC SAI identify the listing as Nasdaq Stock Market LLC. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/rules-based India equity ETF. Pacer states that INDQ seeks to track the total return performance of the `ActiveAlpha India Quality Index`; the strategy uses objective quality, value and momentum screens and quarterly reconstitution rather than discretionary stock selection.
+- Mandatory coverage audit: the existing page had no verified inception, index or return values. Official Pacer product/factsheet/prospectus materials confirm inception `2026-03-31`, so `10-year NAV TR unavailable`. The official performance table and factsheet show the numeric NAV TR fields as `N/A`; available-period NAV TR, CAGR and current YTD are therefore recorded as `not disclosed`, not calculated from the quoted NAV.
+- The official factsheet discloses NAV `$25.00` and expense ratio `0.88%` as of `2026-03-31`, but a NAV level alone is not a total-return endpoint and is not used to create a proxy return.
+
+### INDQ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:INDQ` | [Pacer INDQ official product/performance page](https://www.paceretfs.com/products/indq) | identity, passive/rules-based strategy, related index, inception, expense ratio, NAV-return convention and performance-data gap | Page accessed `2026-07-24`; performance snapshot dated `2026-03-31`; inception `2026-03-31`; expense ratio `0.88%`; numeric performance fields N/A |
+| `Nasdaq:INDQ` | [Pacer INDQ factsheet](https://www.paceretfs.com/media/indq.pdf) | passive classification, index, exchange, inception, NAV/expense snapshot, distributions-reinvestment convention and official N/A performance table | Factsheet data as of `2026-03-31`; NAV `$25.00`; expense ratio `0.88%`; exchange Nasdaq; NAV TR fields N/A |
+| `Nasdaq:INDQ` | [Pacer INDQ documents](https://docs.paceretfs.com/indq) | official document hub and summary-prospectus access | Accessed `2026-07-24`; summary prospectus dated `2025-12-22` |
+| `Nasdaq:INDQ` | [SEC INDQ statement of additional information](https://www.sec.gov/Archives/edgar/data/1616668/000089418926007588/paceractivealphaindiaquali.htm) | formal listing, index-tracking objective, adviser/sub-adviser and fund-structure cross-check | SAI dated `2025-12-22`, amended `2026-03-05`; Nasdaq listing |
+| `Nasdaq:INDQ` | [Pacer INDQ launch release](https://www.paceretfs.com/media/Pacer_ETFs_INDQ_Launch_Press_Release.pdf) | launch date and factor-based passive strategy context | Release dated `2026-04-01`; launch/inception context |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### INDQ Raw Observations And Calculations
+
+| Period | INDQ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not applicable; before inception | -18.11% |
+| 2023 | not applicable; before inception | 26.29% |
+| 2024 | not applicable; before inception | 25.02% |
+| 2025 | not applicable; before inception | 17.88% |
+| 2026 YTD | not disclosed; official field N/A | not comparable; current year not cached |
+
+- `10-year NAV TR unavailable`: official inception is `2026-03-31`.
+- Available-period endpoints and annual NAV TR rows: `not disclosed` / official fields `N/A`.
+- No CAGR, cumulative return, up/down count, best/worst year or proxy was calculated.
+
+### INDQ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD gap, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, official N/A performance fields, NAV-level-versus-total-return distinction, and no-proxy decision are explicitly disclosed.

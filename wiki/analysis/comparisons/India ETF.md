@@ -53,7 +53,7 @@ month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 | IND | Xtrackers Nifty 500 India ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_IND Performance]] |
 | INDA | iShares MSCI India ETF | India equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
 | INDH | WisdomTree India Hedged Equity Fund | India equity / index-tracking | not disclosed | not disclosed | -9.04% | [[ETF_NASDAQ_INDH Performance]] |
-| INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
+| INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking | not applicable (<10y history) | not applicable (inception 2026-03-31) | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
 | INQQ | INQQ The India Internet ETF | India equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NYSE_ARCA_INQQ Performance]] |
 | NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.99% | 10.83% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India equity / index-tracking | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
