@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `83/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `84/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -81,6 +81,7 @@ tags:
 | IOPP | unsupported | NYSE Arca:IOPP | India | not applicable | https://www.simplify.us/etfs/iopp-simplify-tara-india-opportunities-etf | official Simplify sources identify IOPP as an actively managed India equity ETF using bottom-up stock selection and a goal of outperforming MSCI India; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | MCHI | supported | NASDAQ:MCHI | China | -9.33% (2026-07-21) | https://www.ishares.com/us/products/239619/ishares-msci-china-etf | passive/index-tracking China equity ETF; official rolling 10Y NAV TR cumulative 45.52% / CAGR 3.82% through 2026-06-30; official 2021-2025 annual NAV rows; 2016-2020 rows not disclosed in reviewed capture; expense ratio 0.59% |
 | ADIV | unsupported | NYSE Arca:ADIV | Asia-Pacific | not applicable | https://www.gafunds.com/our-funds/ | official Guinness Atkinson prospectus identifies ADIV as actively managed using proprietary research and fundamental analysis; it fails the passive/index-tracking equity gate and no performance artifact is created |
+| EPHE | supported | NYSE Arca:EPHE | Philippines | 3.93% (2026-07-21) | https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf | passive/index-tracking Philippines equity ETF; official rolling 10Y NAV TR cumulative -28.05% / CAGR -3.24% through 2026-06-30; official 2021-2025 annual rows; 2016-2020 rows not disclosed; index change 2020-12-01; expense ratio 0.59% |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2399,3 +2400,51 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. Because ADIV failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
+
+## EPHE Sequential Queue Record
+
+- Input row: `84/125`; input ticker: `EPHE`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:EPHE`; official iShares product/data pages identify the exchange, fund and ticker. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking Philippines equity ETF. iShares states that EPHE seeks to track an index composed of Philippine equities and identifies the benchmark as `MSCI Philippines IMI 25/50 Index (USD) (Net)`.
+- Mandatory coverage audit: the stale page had only 2021-2025 annual rows and did not identify the benchmark. Rechecking the official product page, data page, factsheet, prospectus and shareholder report confirmed official rolling 10-year NAV TR coverage, so the fund qualifies for `completed_10Y`.
+- Rolling 10-year window: `2016-06-30` to `2026-06-30`, `10.00 elapsed years`; official cumulative NAV TR `-28.05%` and average annual/CAGR `-3.24%`. Raw endpoints are not disclosed. The page uses normalized `100.00` to `71.95` only to represent the published cumulative return.
+- Annual observations: official NAV TR rows 2021 `-2.10%`, 2022 `-14.37%`, 2023 `-0.27%`, 2024 `1.08%`, 2025 `-0.54%`; 2016-2020 annual rows remain `not disclosed`. The disclosed 2021-2025 rows compound to `-15.95%` / CAGR `-3.42%`.
+- Current official observation: NAV TR YTD `3.93%` as of `2026-07-21`; the month-end page also reports YTD `0.06%` as of `2026-06-30`. These are retained as separate as-of observations.
+- Index-history gap: iShares states that EPHE began tracking the current MSCI Philippines IMI 25/50 Index (Net) on `2020-12-01`; the performance page discloses this change and does not treat earlier history as perfectly like-for-like.
+
+### EPHE Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EPHE` | [iShares EPHE official product/performance page](https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf) | identity, exchange, inception, benchmark, expense ratio, current YTD, rolling NAV TR, annual rows and sector exposure | Page accessed `2026-07-24`; current YTD `3.93%` as of `2026-07-21`; rolling/standardized data through `2026-06-30`; exposure as of `2026-07-17` |
+| `NYSE Arca:EPHE` | [iShares EPHE official data page](https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239675&seoSlug=ishares-msci-philippines-etf) | current NAV/YTD cross-check | Current YTD `3.93%` and NAV as of `2026-07-21` |
+| `NYSE Arca:EPHE` | [iShares EPHE factsheet](https://www.ishares.com/us/literature/fact-sheet/ephe-ishares-msci-philippines-etf-fund-fact-sheet-en-us.pdf) | passive classification, benchmark, expense ratio, annual NAV rows and index-change disclosure | Factsheet accessed `2026-07-24`; annual rows through `2025-12-31`; current-index tracking from `2020-12-01` |
+| `NYSE Arca:EPHE` | [iShares EPHE prospectus material](https://www.ishares.com/uk/individual/en/literature/prospectus/p-ishares-trust-emerging-8-31-emea.pdf?siteEntryPassthrough=true&switchLocale=y) | objective and index implementation cross-check | Official prospectus material accessed `2026-07-24` |
+| `NYSE Arca:EPHE` | [BlackRock EPHE annual shareholder report](https://www.blackrock.com/us/individual/literature/annual-report/ar-ephe-en.pdf) | legal fund identity and annual-report cross-check | Annual report for period ended `2025-08-31` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### EPHE Raw Observations And Calculations
+
+| Period | EPHE NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not disclosed | 11.96% |
+| 2017 | not disclosed | 21.83% |
+| 2018 | not disclosed | -4.38% |
+| 2019 | not disclosed | 31.49% |
+| 2020 | not disclosed | 18.40% |
+| 2021 | -2.10% | 28.71% |
+| 2022 | -14.37% | -18.11% |
+| 2023 | -0.27% | 26.29% |
+| 2024 | 1.08% | 25.02% |
+| 2025 | -0.54% | 17.88% |
+| 2026 YTD | 3.93% as of 2026-07-21 | not comparable; current year not cached |
+
+- Rolling 10Y official NAV TR: cumulative `-28.05%`, annualized `-3.24%`, 2016-06-30 to 2026-06-30; normalized endpoint `71.95` from `100.00`.
+- `71.95 = 100.00 × (1 - 28.05%)`; `CAGR = (71.95 / 100.00)^(1 / 10.00) - 1`, with the issuer's rounded CAGR retained.
+- 2021-2025 disclosed calendar slice: cumulative `-15.95%`, CAGR `-3.42%`.
+- Disclosed best/worst rows are `2024 +1.08%` and `2022 -14.37%`; full 10-year ranking is not claimed because 2016-2020 rows are not disclosed.
+
+### EPHE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, rolling and annual windows, S&P 500 cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The 2016-2020 annual-row gap, 2020-12-01 index change, rolling-versus-calendar as-of difference, current-YTD date, normalized endpoint disclosure and benchmark cache boundary are explicitly recorded.

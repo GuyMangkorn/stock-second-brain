@@ -63,6 +63,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EPP Performance]] | official 2001 / official 2016-2025; rolling 2016-2026 | 7.37% | 5.28% | 11.23% | 2017 +25.40% / 2018 -10.70% | developed Asia-Pacific equity ex-Japan | Australia/HK/Singapore and financials/materials concentrated; country/FX-sensitive |
+| [[ETF_NYSE_ARCA_EPHE Performance]] | official 2010 / official rolling 2016-06 to 2026-06; official 2021-2025; 2016-2020 annual rows not disclosed; index change 2020-12-01 | -3.24% | -3.42% | 3.93% | disclosed best 2024 +1.08% / disclosed worst 2022 -14.37% | Philippines single-country equity | industrials/financials/utilities/real estate and country/FX/liquidity-sensitive; index change disclosed |
 | [[ETF_CBOE_BZX_BBAX Performance]] | official 2018 / official 2019-2025; available through 2026-06; history under 10 years | not applicable (<10y history) | 5.47% | 8.20% | 2025 +20.73% / 2022 -4.45% | developed Asia-Pacific equity, index-tracking | Australia/HK/Singapore and financials/materials/country/FX-sensitive; 10-year NAV TR unavailable |
 | [[ETF_NYSE_ARCA_GMF Performance]] | official 2007 / official rolling 2016-2026; annual rows calculated from official NAV/distributions | 9.94% | 4.20% | 12.56% | 2025 +21.94% / 2022 -19.00% | emerging Asia-Pacific broad equity | country/FX/emerging-market/sector-sensitive |
 | [[ETF_LSE_IAPD Performance]] | official 2006 / official 2016-2025; official rolling 2016-2026 | 6.75% | 9.69% | 14.55% | 2025 +29.7% / 2018 -15.1% | Asia-Pacific dividend equity | country/sector/currency/dividend-factor-sensitive; 50 holdings |
@@ -436,6 +437,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_KSTR Performance]] — KSTR (China; available-period NAV TR only, 10-year history unavailable)
 - [[ETF_NYSE_ARCA_CHIQ Performance]] — CHIQ (China; 10 complete calendar years and rolling 10Y NAV TR refreshed)
 - [[ETF_NASDAQ_MCHI Performance]] — MCHI (China; rolling 10Y NAV TR refreshed, 2016-2020 annual-row gap disclosed)
+- [[ETF_NYSE_ARCA_EPHE Performance]] — EPHE (Philippines; rolling 10Y NAV TR refreshed, 2016-2020 annual-row gap disclosed)
 - [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)

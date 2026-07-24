@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Philippines
-updated: 2026-07-23
+updated: 2026-07-24
 tags:
   - analysis/etf-region
   - geography/Philippines
@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EPHE | iShares MSCI Philippines ETF | Philippines equity / index-tracking | not disclosed | -3.42% | 3.93% | [[ETF_NYSE_ARCA_EPHE Performance]] |
+| EPHE | iShares MSCI Philippines ETF | Philippines equity / index-tracking | -3.24% | -3.42% | 3.93% | [[ETF_NYSE_ARCA_EPHE Performance]] |
 
 ## Navigation
 
