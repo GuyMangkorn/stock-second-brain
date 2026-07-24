@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 79
-remaining_count: 46
+processed_count: 80
+remaining_count: 45
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `79` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `80` แล้ว.
 
 ## Terminal status register
 
@@ -95,11 +95,12 @@ updated: 2026-07-24
 | 77 | KPRO | `unsupported ETF type` | `NYSE Arca:KPRO` | Official KraneShares sources identify KPRO as a defined-outcome ETF using FLEX options, a 20.01% upside cap and a 100% downside buffer on KWEB. It is derivative-heavy and fails the passive/index-tracking equity gate; no performance page or region/index row created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 78 | KSTR | `completed_available_period_no_10Y` | `NYSE Arca:KSTR` | Passive/index-tracking China STAR Market technology/semi equity ETF; official inception 2021-01-26 gives approximately 5.43 years through 2026-06-30, so `10-year NAV TR unavailable`; official since-inception NAV TR cumulative 27.40% / annualized 4.56%; current YTD 71.70% as of 2026-06-30; annual NAV rows 2021-2025 not disclosed. | [[ETF_NYSE_ARCA_KSTR Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 79 | NDIA | `unsupported ETF type` | `NYSE Arca:NDIA` | Official Global X product page, factsheet, summary prospectus and annual shareholder report identify NDIA as the actively managed Global X India Active ETF; it fails the passive/index-tracking equity gate. No performance page or 10-year NAV TR comparison created. | not created | [[ETF_performance_sources_2026-07-24]] |
+| 80 | CHIQ | `completed_10Y` | `NYSE Arca:CHIQ` | Passive/index-tracking China consumer discretionary equity ETF; official 10 complete calendar NAV TR rows 2016-2025 compound to cumulative 99.05% / CAGR 7.13% for 2015-12-31 to 2025-12-31; official rolling 10Y NAV TR CAGR 5.31% through 2026-06-30; current YTD -25.23% as of 2026-07-21; index/strategy changed effective 2018-12-06 and is disclosed. | [[ETF_NYSE_ARCA_CHIQ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `79/125`
-- Next ticker: `row 80` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `80/125`
+- Next ticker: `row 81` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `NDIA` was searched, compared, dispatched, or processed in this round.
+No ticker after `CHIQ` was searched, compared, dispatched, or processed in this round.

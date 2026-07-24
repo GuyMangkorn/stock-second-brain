@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `79/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `80/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -77,6 +77,7 @@ tags:
 | KPRO | unsupported ETF type | NYSE Arca:KPRO | China | not applicable | https://kraneshares.com/etf/kpro/ | official KraneShares sources identify KPRO as a defined-outcome ETF using FLEX options, a 20.01% upside cap and a 100% downside buffer on KWEB; derivative-heavy/active strategy scope excludes it; no performance page or region/index row created |
 | KSTR | supported | NYSE Arca:KSTR | China | 71.70% (2026-06-30) | https://kraneshares.com/etf/kstr/ | passive/index-tracking China STAR 50 technology/semi equity ETF; official inception 2021-01-26 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 27.40% / annualized 4.56% through 2026-06-30; calendar NAV rows not disclosed |
 | NDIA | unsupported | NYSE Arca:NDIA | India | not applicable | https://www.globalxetfs.com/funds/NDIA | official Global X sources identify NDIA as the actively managed Global X India Active ETF; it fails the passive/index-tracking equity gate and no performance artifact is created |
+| CHIQ | supported | NYSE Arca:CHIQ | China | -25.23% (2026-07-21) | https://www.globalxetfs.com/funds/CHIQ | passive/index-tracking China consumer discretionary equity ETF; official 10 complete calendar NAV TR rows 2016-2025 compound to 99.05% / CAGR 7.13%; official rolling 10Y NAV TR CAGR 5.31% through 2026-06-30; benchmark/strategy change effective 2018-12-06 disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2259,3 +2260,50 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. Because NDIA failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
+
+## CHIQ Sequential Queue Record
+
+- Input row: `80/125`; input ticker: `CHIQ`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:CHIQ`; Global X's official product page, factsheet, summary prospectus and annual shareholder report identify the NYSE Arca listing. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking equity ETF. Global X states that CHIQ seeks to provide investment results corresponding generally to the price and yield performance of the MSCI China Consumer Discretionary 10/50 Index; the annual shareholder report states the fund is passively managed and generally seeks full replication.
+- Mandatory coverage audit: the stale page had no verified annual rows. Rechecking the official 2026 summary prospectus, current product page, factsheet and annual shareholder report found ten complete official calendar-year NAV total-return observations for 2016-2025, so 10-year coverage is accepted. The fund's name/objective/strategy and underlying index changed effective 2018-12-06; pre-change returns use the predecessor Solactive China Consumer Total Return Index and post-change returns use MSCI China Consumer Discretionary 10/50 Index. This break is disclosed rather than silently treated as one unchanged index history.
+- Calendar-window calculation: 2015-12-31 to 2025-12-31, actual `10.00` years; normalized TR `100.00` to `199.05`; cumulative `99.05%`; CAGR `7.13%`. The normalized endpoint is calculated from official annual NAV TR rows and is not a proxy.
+- Current rolling observation: official Global X product page reports NAV TR CAGR `5.31%` for the rolling 10-year period through `2026-06-30`; raw rolling endpoints are not disclosed, so this is shown separately from the calendar-window calculation. Official Explore data reports current NAV TR YTD `-25.23%` as of `2026-07-21`.
+- Annual NAV observations: 2016 `-5.88%`, 2017 `65.28%`, 2018 `-27.72%`, 2019 `43.06%`, 2020 `93.43%`, 2021 `-27.23%`, 2022 `-22.07%`, 2023 `-10.92%`, 2024 `12.16%`, 2025 `12.91%`; 2021-2025 CAGR `-8.55%`.
+- S&P 500 comparison: cached USD Total Return rows are used for 2016-2025 common reference only; no 2026 S&P value is used.
+
+### CHIQ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:CHIQ` | [Global X CHIQ official product/performance page](https://www.globalxetfs.com/funds/CHIQ) | identity, index, exchange, inception, fees, current NAV/YTD and rolling NAV TR | Page accessed `2026-07-24`; product/holdings data through `2026-07-21`; performance summary through `2026-06-30` |
+| `NYSE Arca:CHIQ` | [Global X CHIQ factsheet](https://assets.globalxetfs.com/funds/documents/chiq/Fact-Sheet_CHIQ.pdf) | passive/index-tracking classification, NAV TR basis, inception, benchmark, fee and index-change disclosure | Factsheet dated `2026-03-31`; historical performance through `2026-03-31`; 10Y NAV CAGR in that factsheet `6.92%` as of its date |
+| `NYSE Arca:CHIQ` | [Global X CHIQ 2026 summary prospectus](https://assets.globalxetfs.com/funds/documents/chiq/prospectus-regulatory/Summary-Prospectus_CHIQ.pdf) | official annual NAV total-return rows 2016-2025, formal listing, objective, fee and benchmark/index history | Prospectus dated `2026-03-01`; annual returns through `2025-12-31`; 10Y NAV return `7.13%` through `2025-12-31` |
+| `NYSE Arca:CHIQ` | [Global X CHIQ annual shareholder report](https://assets.globalxetfs.com/funds/documents/chiq/prospectus-regulatory/Annual-Shareholder-Report.pdf) | passive/full-replication and annual performance cross-check | Report period ended `2025-10-31`; one-year NAV return `14.55%`; 10Y NAV return `7.10%` as of report date; not mixed into the calendar-year window |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### CHIQ Raw Observations And Calculations
+
+| Period | CHIQ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -5.88% | 11.96% |
+| 2017 | 65.28% | 21.83% |
+| 2018 | -27.72% | -4.38% |
+| 2019 | 43.06% | 31.49% |
+| 2020 | 93.43% | 18.40% |
+| 2021 | -27.23% | 28.71% |
+| 2022 | -22.07% | -18.11% |
+| 2023 | -10.92% | 26.29% |
+| 2024 | 12.16% | 25.02% |
+| 2025 | 12.91% | 17.88% |
+| 2026 YTD | -25.23% | not comparable; current year not cached |
+
+- Calendar TR product: `100.00 × 1.99053623 = 199.05`; cumulative `99.05%`; `CAGR = (1.99053623^(1/10)) - 1 = 7.13%`.
+- 2021-2025 comparison slice: product `0.63974613 - 1 = -36.03%`; CAGR `-8.55%`.
+- Rolling official 10Y NAV TR CAGR: `5.31%` through `2026-06-30`; normalized endpoint from the rounded issuer CAGR would be approximately `167.76`, but raw endpoints are not disclosed and this normalized check is not mixed with the calendar-window endpoint.
+- Best calendar year: `2020 +93.43%`; worst: `2022 -22.07%`.
+
+### CHIQ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, calendar and rolling windows, benchmark cache, current-YTD, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The 2018 index/strategy change, rolling-versus-calendar as-of difference, current YTD date, and benchmark cache boundary are explicitly disclosed.
