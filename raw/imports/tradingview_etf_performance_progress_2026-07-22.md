@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 82
-remaining_count: 43
+processed_count: 83
+remaining_count: 42
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `82` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `83` แล้ว.
 
 ## Terminal status register
 
@@ -98,11 +98,12 @@ updated: 2026-07-24
 | 80 | CHIQ | `completed_10Y` | `NYSE Arca:CHIQ` | Passive/index-tracking China consumer discretionary equity ETF; official 10 complete calendar NAV TR rows 2016-2025 compound to cumulative 99.05% / CAGR 7.13% for 2015-12-31 to 2025-12-31; official rolling 10Y NAV TR CAGR 5.31% through 2026-06-30; current YTD -25.23% as of 2026-07-21; index/strategy changed effective 2018-12-06 and is disclosed. | [[ETF_NYSE_ARCA_CHIQ Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 81 | IOPP | `unsupported ETF type` | `NYSE Arca:IOPP` | Official Simplify product page, factsheet and prospectus identify IOPP as the actively managed Simplify Tara India Opportunities ETF using bottom-up stock selection and a goal of outperforming MSCI India; it fails the passive/index-tracking equity gate. No performance page or 10-year NAV TR comparison created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 82 | MCHI | `completed_10Y` | `NASDAQ:MCHI` | Passive/index-tracking China equity ETF; official rolling 10Y NAV TR cumulative 45.52% / CAGR 3.82% for 2016-06-30 to 2026-06-30; official annual NAV rows 2021-2025, earlier 2016-2020 rows not disclosed in reviewed capture; current NAV TR YTD -9.33% as of 2026-07-21; expense ratio 0.59%. | [[ETF_NASDAQ_MCHI Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 83 | ADIV | `unsupported ETF type` | `NYSE Arca:ADIV` | Official Guinness Atkinson prospectus identifies ADIV as actively managed: the adviser selects dividend-producing holdings through proprietary research and fundamental analysis; it fails the passive/index-tracking equity gate. No performance page or 10-year NAV TR comparison created. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `82/125`
-- Next ticker: `row 83` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `83/125`
+- Next ticker: `row 84` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `MCHI` was searched, compared, dispatched, or processed in this round.
+No ticker after `ADIV` was searched, compared, dispatched, or processed in this round.

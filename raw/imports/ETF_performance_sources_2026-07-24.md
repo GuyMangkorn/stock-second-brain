@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `82/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `83/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -80,6 +80,7 @@ tags:
 | CHIQ | supported | NYSE Arca:CHIQ | China | -25.23% (2026-07-21) | https://www.globalxetfs.com/funds/CHIQ | passive/index-tracking China consumer discretionary equity ETF; official 10 complete calendar NAV TR rows 2016-2025 compound to 99.05% / CAGR 7.13%; official rolling 10Y NAV TR CAGR 5.31% through 2026-06-30; benchmark/strategy change effective 2018-12-06 disclosed |
 | IOPP | unsupported | NYSE Arca:IOPP | India | not applicable | https://www.simplify.us/etfs/iopp-simplify-tara-india-opportunities-etf | official Simplify sources identify IOPP as an actively managed India equity ETF using bottom-up stock selection and a goal of outperforming MSCI India; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | MCHI | supported | NASDAQ:MCHI | China | -9.33% (2026-07-21) | https://www.ishares.com/us/products/239619/ishares-msci-china-etf | passive/index-tracking China equity ETF; official rolling 10Y NAV TR cumulative 45.52% / CAGR 3.82% through 2026-06-30; official 2021-2025 annual NAV rows; 2016-2020 rows not disclosed in reviewed capture; expense ratio 0.59% |
+| ADIV | unsupported | NYSE Arca:ADIV | Asia-Pacific | not applicable | https://www.gafunds.com/our-funds/ | official Guinness Atkinson prospectus identifies ADIV as actively managed using proprietary research and fundamental analysis; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2377,3 +2378,24 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, rolling and annual windows, benchmark cache, current-YTD, region/index links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. The 10-year rolling window, 2021-2025 annual disclosure, 2016-2020 gap, current-versus-month-end YTD difference, and futures implementation note are explicitly disclosed.
+
+## ADIV Sequential Queue Record
+
+- Input row: `83/125`; input ticker: `ADIV`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:ADIV`; Guinness Atkinson's April 30, 2026 prospectus and summary prospectus identify ADIV as listed on NYSE Arca. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. The official prospectus says ADIV invests in dividend-producing Asia-Pacific equity securities but is `actively managed`; the adviser selects holdings using proprietary and independent research and traditional fundamental analysis of business prospects, valuation, dividend history, leverage and dividend-growth potential. It is not a passive/index-tracking equity ETF.
+- The fund's official page lists inception `2021-03-27` for the ETF series/reorganization, current gross/net expense ratios `1.95%/0.78%` as of `2026-07-20`, and a predecessor mutual-fund performance history. These facts are classification context only. Per the type gate, no 10-year coverage calculation, annual NAV TR table, S&P 500 comparison, performance page, region row or performance-index coverage row was created.
+- The prospectus also records a primary benchmark change effective `2026-05-01` from MSCI AC Pacific ex Japan Net Return to MSCI AC Asia Pacific ex Japan Net Return; this does not change the active classification and is not used to create a performance artifact.
+
+### ADIV Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ADIV` | [Guinness Atkinson funds page](https://www.gafunds.com/our-funds/) | official identity, current NAV/fees, fund name and current product context | Page accessed `2026-07-24`; data as of `2026-07-20`; gross/net expense `1.95%/0.78%` |
+| `NYSE Arca:ADIV` | [Guinness Atkinson ADIV summary prospectus](https://www.sec.gov/Archives/edgar/data/919160/000121390026052640/ea0287226-07_497k.htm) | formal listing, active classification, investment process, fees, predecessor history and benchmark-change disclosure | Prospectus dated `2026-04-30`; NYSE Arca; active management; primary benchmark changed `2026-05-01` |
+| `NYSE Arca:ADIV` | [Guinness Atkinson ADIV annual shareholder report](https://www.sec.gov/Archives/edgar/data/919160/000139834426004881/fp0097165-1_ncsrixbrl.htm) | legal fund identity, ETF/predecessor mutual-fund structure and annual-report cross-check | Report for year ended `2025-12-31`; identifies the ETF series and predecessor reorganization dated `2021-03-27` |
+
+### ADIV Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Because ADIV failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
