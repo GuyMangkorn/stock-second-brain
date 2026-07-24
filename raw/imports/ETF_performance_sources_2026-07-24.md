@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `80/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `81/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -78,6 +78,7 @@ tags:
 | KSTR | supported | NYSE Arca:KSTR | China | 71.70% (2026-06-30) | https://kraneshares.com/etf/kstr/ | passive/index-tracking China STAR 50 technology/semi equity ETF; official inception 2021-01-26 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 27.40% / annualized 4.56% through 2026-06-30; calendar NAV rows not disclosed |
 | NDIA | unsupported | NYSE Arca:NDIA | India | not applicable | https://www.globalxetfs.com/funds/NDIA | official Global X sources identify NDIA as the actively managed Global X India Active ETF; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | CHIQ | supported | NYSE Arca:CHIQ | China | -25.23% (2026-07-21) | https://www.globalxetfs.com/funds/CHIQ | passive/index-tracking China consumer discretionary equity ETF; official 10 complete calendar NAV TR rows 2016-2025 compound to 99.05% / CAGR 7.13%; official rolling 10Y NAV TR CAGR 5.31% through 2026-06-30; benchmark/strategy change effective 2018-12-06 disclosed |
+| IOPP | unsupported | NYSE Arca:IOPP | India | not applicable | https://www.simplify.us/etfs/iopp-simplify-tara-india-opportunities-etf | official Simplify sources identify IOPP as an actively managed India equity ETF using bottom-up stock selection and a goal of outperforming MSCI India; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2307,3 +2308,24 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, calendar and rolling windows, benchmark cache, current-YTD, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. The 2018 index/strategy change, rolling-versus-calendar as-of difference, current YTD date, and benchmark cache boundary are explicitly disclosed.
+
+## IOPP Sequential Queue Record
+
+- Input row: `81/125`; input ticker: `IOPP`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:IOPP`; the official Simplify summary prospectus states that shares are listed and traded on NYSE Arca, Inc.; the prospectus and current fund page identify ticker IOPP. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. Simplify labels IOPP the `Simplify Tara India Opportunities ETF`, says it is actively managed with a goal of outperforming the MSCI India Index, and describes bottom-up company-specific research, factor screening, portfolio-manager judgment and flexible position changes. It is an active India equity ETF, not a passive/index-tracking equity ETF.
+- The official page identifies inception `2024-03-04`, current gross/net expense ratios `1.03%/0.73%` as of `2026-07-17`, and no options available. These facts are recorded as classification context only. Per the type gate, no 10-year coverage calculation, annual NAV TR table, S&P 500 comparison, performance page, region row or performance-index coverage row was created.
+
+### IOPP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:IOPP` | [Simplify IOPP official product page](https://www.simplify.us/etfs/iopp-simplify-tara-india-opportunities-etf) | identity, explicit active classification, objective, current fund details, expense ratio and limited-history context | Page accessed `2026-07-24`; fund details through `2026-07-17`; performance summary through `2026-06-30` |
+| `NYSE Arca:IOPP` | [Simplify IOPP 1Q26 factsheet](https://www.simplify.us/sites/default/files/etfs/factsheet/2026-04/IOPP-Fact-Sheet-1Q26.pdf) | active strategy, bottom-up/high-conviction process, inception, exchange, fees and risk context | Factsheet dated `2026-03-31`; gross expense `1.03%`; net expense `0.73%`; inception `2024-03-04` |
+| `NYSE Arca:IOPP` | [SEC IOPP summary prospectus](https://www.sec.gov/Archives/edgar/data/1810747/000182912625008758/simplifyetf-iopp_497k.htm) | formal listing exchange, explicit active classification, investment process, fee table and risk disclosures | Prospectus dated `2025-11-01`; shares listed on NYSE Arca; actively managed; fee waiver through at least `2026-10-31` |
+| `NYSE Arca:IOPP` | [Simplify IOPP prospectus](https://www.simplify.us/sites/default/files/etfs/prospectus/2024-10/Simplify_IOPP_Prospectus.pdf) | original formal listing and fund-structure cross-check | Prospectus dated `2024-11-01`; ticker/exchange `IOPP (NYSE Arca, Inc.)`; inception-period financial highlights |
+
+### IOPP Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Because IOPP failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
