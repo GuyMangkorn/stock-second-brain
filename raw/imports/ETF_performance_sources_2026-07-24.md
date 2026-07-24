@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `85/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `86/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -83,6 +83,7 @@ tags:
 | ADIV | unsupported | NYSE Arca:ADIV | Asia-Pacific | not applicable | https://www.gafunds.com/our-funds/ | official Guinness Atkinson prospectus identifies ADIV as actively managed using proprietary research and fundamental analysis; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | EPHE | supported | NYSE Arca:EPHE | Philippines | 3.93% (2026-07-21) | https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf | passive/index-tracking Philippines equity ETF; official rolling 10Y NAV TR cumulative -28.05% / CAGR -3.24% through 2026-06-30; official 2021-2025 annual rows; 2016-2020 rows not disclosed; index change 2020-12-01; expense ratio 0.59% |
 | CAS | unsupported | NYSE Arca:CAS | China | not applicable | https://www.simplify.us/etfs/cas-simplify-china-shares-plus-income-etf | official Simplify page and formal prospectus identify CAS as actively managed with China A-share exposure via total return swaps plus an options overlay; derivative-heavy/option-income/multi-strategy, outside passive/index-tracking equity scope; formal prospectus says NYSE Arca while 1Q26 factsheet compact field says NYSE |
+| INDZ | unsupported | NYSE Arca:INDZ | India | not applicable | https://www.vaneck.com/us/en/investments/india-select-etf-indz/ | official VanEck product page, factsheet and summary prospectus identify INDZ as actively managed with a multi-step/security-selection process for Indian companies; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2470,3 +2471,24 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange and conflict, fund identity, passive-versus-active classification, derivative-heavy/option-income gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. Because CAS failed the passive/index-tracking equity gate as actively managed and derivative-heavy/option-income, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
+
+## INDZ Sequential Queue Record
+
+- Input row: `86/125`; input ticker: `INDZ`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:INDZ`; VanEck's May 1, 2026 summary prospectus identifies the principal U.S. listing exchange as NYSE Arca. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. VanEck identifies INDZ as the actively managed VanEck India Select ETF. The strategy uses fundamental research and a disciplined multi-step process to select Indian companies with strong long-term return profiles, high capital efficiency and resilient business models, across small-, mid- and large-capitalization issuers. It is not a passive/index-tracking equity ETF.
+- The official product page lists inception `2026-02-18`, performance since inception, and an expense waiver limiting operating expenses to `0.75%` through at least `2027-05-01`; these facts are classification context only. Per the type gate, no 10-year NAV TR calculation, annual NAV TR table, S&P 500 comparison, performance page, region row or performance-index coverage row is created.
+
+### INDZ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:INDZ` | [VanEck INDZ official product page](https://www.vaneck.com/us/en/investments/india-select-etf-indz/) | identity, active classification, investment process, inception, current NAV/performance context and fee waiver | Page accessed `2026-07-24`; product data through `2026-06-22`; inception `2026-02-18`; expense waiver cap `0.75%` through at least `2027-05-01` |
+| `NYSE Arca:INDZ` | [SEC VanEck INDZ summary prospectus](https://www.sec.gov/Archives/edgar/data/768847/000076884726000084/vefvaneckindiaselectetfsum.htm) | formal listing exchange, investment objective, active strategy and fee disclosure | Prospectus dated `2026-05-01`; principal U.S. listing exchange NYSE Arca |
+| `NYSE Arca:INDZ` | [VanEck INDZ factsheet](https://www.vaneck.com/us/en/investments/india-select-etf-indz-fact-sheet.pdf) | explicit active classification, exchange, inception and portfolio context | Factsheet as of `2026-02-28`; exchange NYSE Arca; inception `2026-02-18`; options `No` |
+| `NYSE Arca:INDZ` | [VanEck INDZ launch release](https://www.vaneck.com/us/en/press-releases/vaneck-expands-emerging-market-and-sector-investing-suites-with-launch-of-india-select-etf-indz-and-communications-services-trusector-etf-truc/) | issuer confirmation of active, research-led security selection | Release dated `2026-02-19` |
+
+### INDZ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Because INDZ failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
