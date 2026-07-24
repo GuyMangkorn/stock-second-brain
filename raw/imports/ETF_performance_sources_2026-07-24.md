@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `84/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `85/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -82,6 +82,7 @@ tags:
 | MCHI | supported | NASDAQ:MCHI | China | -9.33% (2026-07-21) | https://www.ishares.com/us/products/239619/ishares-msci-china-etf | passive/index-tracking China equity ETF; official rolling 10Y NAV TR cumulative 45.52% / CAGR 3.82% through 2026-06-30; official 2021-2025 annual NAV rows; 2016-2020 rows not disclosed in reviewed capture; expense ratio 0.59% |
 | ADIV | unsupported | NYSE Arca:ADIV | Asia-Pacific | not applicable | https://www.gafunds.com/our-funds/ | official Guinness Atkinson prospectus identifies ADIV as actively managed using proprietary research and fundamental analysis; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | EPHE | supported | NYSE Arca:EPHE | Philippines | 3.93% (2026-07-21) | https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf | passive/index-tracking Philippines equity ETF; official rolling 10Y NAV TR cumulative -28.05% / CAGR -3.24% through 2026-06-30; official 2021-2025 annual rows; 2016-2020 rows not disclosed; index change 2020-12-01; expense ratio 0.59% |
+| CAS | unsupported | NYSE Arca:CAS | China | not applicable | https://www.simplify.us/etfs/cas-simplify-china-shares-plus-income-etf | official Simplify page and formal prospectus identify CAS as actively managed with China A-share exposure via total return swaps plus an options overlay; derivative-heavy/option-income/multi-strategy, outside passive/index-tracking equity scope; formal prospectus says NYSE Arca while 1Q26 factsheet compact field says NYSE |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2448,3 +2449,24 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, rolling and annual windows, S&P 500 cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. The 2016-2020 annual-row gap, 2020-12-01 index change, rolling-versus-calendar as-of difference, current-YTD date, normalized endpoint disclosure and benchmark cache boundary are explicitly recorded.
+
+## CAS Sequential Queue Record
+
+- Input row: `85/125`; input ticker: `CAS`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:CAS`; Simplify's formal summary prospectus identifies CAS as listed and traded on NYSE Arca. The 1Q26 factsheet compact details field says `NYSE`, so the exchange-field conflict is disclosed and the formal prospectus is retained as canonical. No provider slug or guessed exchange is used.
+- Type-gate result: `unsupported ETF type`. Simplify describes CAS as actively managed, with China A-share exposure obtained through total return swaps and a risk-managed options strategy layered on top. The strategy writes short-term spreads on equity, fixed-income and commodity indices or ETFs. This is derivative-heavy/option-income/multi-strategy exposure, not a passive/index-tracking equity ETF.
+- The official product page lists inception `2025-01-13`, expense ratio `0.88%`, and fund overview data as of `2026-07-17`; these facts are classification context only. Per the type gate, the `check-etf-performance` calculation step is not run, and no 10-year NAV TR table, S&P 500 comparison, performance page, region row or performance-index coverage row is created.
+
+### CAS Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:CAS` | [Simplify CAS official product page](https://www.simplify.us/etfs/cas-simplify-china-shares-plus-income-etf) | identity, current fund details, explicit active classification, total-return-swap implementation, options overlay, expense ratio and inception | Page accessed `2026-07-24`; fund overview as of `2026-07-17`; inception `2025-01-13`; expense ratio `0.88%` |
+| `NYSE Arca:CAS` | [SEC CAS summary prospectus](https://www.sec.gov/Archives/edgar/data/1810747/000182912625008765/simplifyetf-cas_497k.htm) | formal listing exchange, investment objective, active-management classification and fee table | Prospectus dated `2025-11-01`; shares listed and traded on NYSE Arca |
+| `NYSE Arca:CAS` | [Simplify CAS 1Q26 factsheet](https://www.simplify.us/sites/default/files/etfs/factsheet/2026-04/CAS-Fact-Sheet-1Q26.pdf) | strategy, options overlay, inception, fee and compact exchange-field cross-check | Factsheet dated `2026-03-31`; compact exchange field says `NYSE`; inception `2025-01-13`; expense ratio `0.88%` |
+| `NYSE Arca:CAS` | [Simplify CAS launch announcement](https://www.simplify.us/news-media/simplify-introduces-cas-china-shares-plus-income-etf) | issuer description of active China A-share strategy, total-return swaps and options overlay | Announcement dated `2025-01-14`; identifies CAS as actively managed |
+
+### CAS Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange and conflict, fund identity, passive-versus-active classification, derivative-heavy/option-income gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Because CAS failed the passive/index-tracking equity gate as actively managed and derivative-heavy/option-income, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.

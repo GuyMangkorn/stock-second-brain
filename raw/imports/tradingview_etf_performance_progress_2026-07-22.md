@@ -2,15 +2,15 @@
 type: progress-ledger
 input: raw/imports/tradingview_etf_list_filtered_2026-07-22.md
 input_count: 125
-processed_count: 84
-remaining_count: 41
+processed_count: 85
+remaining_count: 40
 queue_policy: sequential; exactly one ticker at a time; autonomous continuation
 updated: 2026-07-24
 ---
 
 # TradingView ETF Performance Progress
 
-รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `84` แล้ว.
+รายการอ้างอิงคือ `Remaining ETFs` ใน [[tradingview_etf_list_filtered_2026-07-22]] และมีทั้งหมด `125` rows. รายการ `Removed as Already Researched` ไม่อยู่ใน queue นี้. Ledger นี้ประมวลผลตามลำดับเดิมทีละ ticker; ณ ตอนนี้ถึง row `85` แล้ว.
 
 ## Terminal status register
 
@@ -100,11 +100,12 @@ updated: 2026-07-24
 | 82 | MCHI | `completed_10Y` | `NASDAQ:MCHI` | Passive/index-tracking China equity ETF; official rolling 10Y NAV TR cumulative 45.52% / CAGR 3.82% for 2016-06-30 to 2026-06-30; official annual NAV rows 2021-2025, earlier 2016-2020 rows not disclosed in reviewed capture; current NAV TR YTD -9.33% as of 2026-07-21; expense ratio 0.59%. | [[ETF_NASDAQ_MCHI Performance]] | [[ETF_performance_sources_2026-07-24]] |
 | 83 | ADIV | `unsupported ETF type` | `NYSE Arca:ADIV` | Official Guinness Atkinson prospectus identifies ADIV as actively managed: the adviser selects dividend-producing holdings through proprietary research and fundamental analysis; it fails the passive/index-tracking equity gate. No performance page or 10-year NAV TR comparison created. | not created | [[ETF_performance_sources_2026-07-24]] |
 | 84 | EPHE | `completed_10Y` | `NYSE Arca:EPHE` | Passive/index-tracking Philippines equity ETF tracking MSCI Philippines IMI 25/50 Index (USD) (Net); official rolling 10Y NAV TR cumulative `-28.05%` / CAGR `-3.24%` for 2016-06-30 to 2026-06-30; official 2021-2025 rows compound to `-15.95%` / CAGR `-3.42%`; 2016-2020 annual rows not disclosed; current NAV TR YTD `3.93%` as of 2026-07-21; index change 2020-12-01 disclosed. | [[ETF_NYSE_ARCA_EPHE Performance]] | [[ETF_performance_sources_2026-07-24]] |
+| 85 | CAS | `unsupported ETF type` | `NYSE Arca:CAS` | Official Simplify sources identify CAS as actively managed and using a risk-managed options overlay on China A-share exposure obtained through total return swaps; the strategy writes short-term spreads on equity, fixed-income and commodity indices/ETFs. It is derivative-heavy/option-income and outside passive/index-tracking equity scope. Formal prospectus confirms NYSE Arca; a factsheet compact field says NYSE, so the formal listing is retained as canonical. | not created | [[ETF_performance_sources_2026-07-24]] |
 
 ## Queue pointer
 
-- Completed: `84/125`
-- Next ticker: `row 85` from the original Remaining ETFs queue; resolve locally before processing
+- Completed: `85/125`
+- Next ticker: `row 86` from the original Remaining ETFs queue; resolve locally before processing
 - Allowed terminal statuses: `completed_10Y`, `completed_available_period_no_10Y`, `unsupported ETF type`, `unresolved ticker/data gap`
 
-No ticker after `EPHE` was searched, compared, dispatched, or processed in this round.
+No ticker after `CAS` was searched, compared, dispatched, or processed in this round.
