@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `88/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `89/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -86,6 +86,7 @@ tags:
 | INDZ | unsupported | NYSE Arca:INDZ | India | not applicable | https://www.vaneck.com/us/en/investments/india-select-etf-indz/ | official VanEck product page, factsheet and summary prospectus identify INDZ as actively managed with a multi-step/security-selection process for Indian companies; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | INDQ | supported | Nasdaq:INDQ | India | not disclosed (official field N/A) | https://www.paceretfs.com/products/indq | passive/rules-based India equity ETF tracking ActiveAlpha India Quality Index; official inception 2026-03-31 means 10-year NAV TR unavailable; official Pacer page/factsheet show available-period NAV TR and YTD fields as N/A; no proxy used |
 | ICNYF | unsupported | LSE:CNYB | China | not applicable | https://www.ishares.com/uk/individual/en/products/308851/ishares-china-cny-bond-ucits-etf?siteEntryPassthrough=true | OTC alias resolved to iShares China CNY Bond UCITS ETF USD (Dist), ISIN IE00BYPC1H27 / LSE:CNYB; official fund is fixed income/bond exposure to Chinese government and policy-bank bonds, outside passive/index-tracking equity scope |
+| CNQQ | supported | NASDAQ:CNQQ | China | 14.95% (2026-06-30) | https://funds.rayliant.com/cnqq/ | passive/index-tracking China technology equity ETF tracking Solactive ChinaAMC Transformative China Tech Index; inception 2025-09-24 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 6.54% / derived annualized 8.65% through 2026-06-30; total-return-swap implementation and factsheet one-day inception conflict disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2558,3 +2559,50 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, OTC-alias resolution, canonical exchange, exact share class, asset-class/type gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. Because ICNYF resolved to a fixed-income bond ETF, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
+
+## CNQQ Sequential Queue Record
+
+- Input row: `89/125`; input ticker: `CNQQ`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NASDAQ:CNQQ`; Rayliant's official product page and SEC summary prospectus identify the primary exchange as NASDAQ. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking China technology equity ETF. Rayliant states that CNQQ seeks to track the `Solactive ChinaAMC Transformative China Tech Index`; the fund generally invests at least 80% in index securities or participatory notes. Total-return swaps may be used for index exposure and are disclosed as implementation/counterparty risk, not as the fund's classification.
+- Mandatory coverage audit: the existing page had no verified inception, index or reproducible return. Official product page, summary prospectus and annual report confirm inception `2025-09-24`, so `10-year NAV TR unavailable`. The latest official product-page table reports NAV since-inception cumulative `6.54%` and YTD `14.95%` as of `2026-06-30`.
+- Available-period window: `2025-09-24` to `2026-06-30`, `279 days / 0.763876 years`; normalized NAV TR `100.00` to `106.54`; derived annualized CAGR `8.65%`. This is a short-period annualization and is not labeled as 10-year performance.
+- Inception-date conflict: the factsheet says `2025-09-25`, while the official product page, summary prospectus and annual shareholder report use `2025-09-24`; the formal product/prospectus date is used and the conflict is disclosed.
+- Annual observations: no complete calendar-year NAV TR row is disclosed since inception; 2025 is an incomplete inception year. The factsheet's earlier since-inception NAV return was `-15.16%` as of `2026-03-31`; the later product-page observation `6.54%` as of `2026-06-30` is used for the current record.
+
+### CNQQ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:CNQQ` | [Rayliant CNQQ official product/performance page](https://funds.rayliant.com/cnqq/) | identity, exchange, inception, index objective, current NAV/YTD, since-inception NAV return, strategy and swap disclosure | Page last updated `2026-07-07`; performance as of `2026-06-30`; NAV TR since inception `6.54%`; YTD `14.95%`; expense ratio `0.75%` |
+| `NASDAQ:CNQQ` | [Rayliant CNQQ factsheet](https://funds.rayliant.com/wp-content/uploads/FactSheets/Rayliant-CNQQ-ETF.pdf) | passive/index-tracking classification, index, fee, holdings and earlier performance cross-check | Factsheet data as of `2026-03-31`; since-inception NAV return `-15.16%`; factsheet inception `2025-09-25` |
+| `NASDAQ:CNQQ` | [SEC CNQQ summary prospectus](https://www.sec.gov/Archives/edgar/data/2061770/000158064226000606/rayliantchinaetf497k.htm) | formal listing, investment objective, index tracking, fee table and derivative implementation | Prospectus dated `2026-01-28`; NASDAQ listing; inception `2025-09-24` in formal fund history |
+| `NASDAQ:CNQQ` | [Rayliant CNQQ prospectus](https://funds.rayliant.com/wp-content/uploads/ETF/CNQQ/Rayliant-CAMC-CNQQ-Prospectus.pdf) | audited financial highlights and reinvested-distribution total-return convention | Financial highlights for period ended `2025-09-30`; inception date `2025-09-24`; NAV total return `1.84%` for the short period |
+| `NASDAQ:CNQQ` | [Rayliant CNQQ annual shareholder report](https://funds.rayliant.com/wp-content/uploads/ETF/CNQQ/Rayliant-CNQQ-Annual-Shareholder-Report.pdf) | annual-report cross-check for fund identity and benchmark | Report accessed `2026-07-24`; period ended `2025-09-30` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### CNQQ Raw Observations And Calculations
+
+| Period | CNQQ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not applicable; before inception | -18.11% |
+| 2023 | not applicable; before inception | 26.29% |
+| 2024 | not applicable; before inception | 25.02% |
+| 2025 | not disclosed; incomplete inception year | 17.88% |
+| 2026 YTD | 14.95% as of 2026-06-30 | not comparable; current year not cached |
+
+- Available-period NAV TR: cumulative `6.54%`, `2025-09-24` to `2026-06-30`.
+- `106.54 = 100.00 × (1 + 6.54%)`; actual years `279 / 365.2425 = 0.763876`.
+- `CAGR = (106.54 / 100.00)^(1 / 0.763876) - 1 = 8.65%`; derived and short-period only.
+- Complete calendar-year up/down count and best/worst year: not disclosed.
+
+### CNQQ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized short-period endpoint, derived annualization, 2025 incomplete-year gap, 2026 YTD as-of date, inception-date conflict and swap implementation are explicitly disclosed.

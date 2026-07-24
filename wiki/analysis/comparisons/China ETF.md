@@ -50,7 +50,7 @@ tags:
 | ASHR | Xtrackers Harvest CSI 300 China A-Shares ETF | China equity / index-tracking | 5.84% | not disclosed | not disclosed | [[ETF_NYSE_ARCA_ASHR Performance]] |
 | ASHS | Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF | China A-share small-cap equity / index-tracking | 1.96% | not disclosed | 3.36% | [[ETF_NYSE_ARCA_ASHS Performance]] |
 | CHIQ | Global X MSCI China Consumer Discretionary ETF | China equity / index-tracking | 7.13% | -8.55% | -25.23% | [[ETF_NYSE_ARCA_CHIQ Performance]] |
-| CNQQ | Rayliant-ChinaAMC Transformative China Tech ETF | China equity / index-tracking | not disclosed | not disclosed | 14.95% | [[ETF_NASDAQ_CNQQ Performance]] |
+| CNQQ | Rayliant-ChinaAMC Transformative China Tech ETF | China technology equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-09-24) | 14.95% | [[ETF_NASDAQ_CNQQ Performance]] |
 | CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | CNYA | iShares MSCI China A ETF | China equity / index-tracking | 6.71% | -1.75% | 5.39% | [[ETF_CBOE_BZX_CNYA Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
