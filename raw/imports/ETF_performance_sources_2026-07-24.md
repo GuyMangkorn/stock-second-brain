@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `81/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `82/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -79,6 +79,7 @@ tags:
 | NDIA | unsupported | NYSE Arca:NDIA | India | not applicable | https://www.globalxetfs.com/funds/NDIA | official Global X sources identify NDIA as the actively managed Global X India Active ETF; it fails the passive/index-tracking equity gate and no performance artifact is created |
 | CHIQ | supported | NYSE Arca:CHIQ | China | -25.23% (2026-07-21) | https://www.globalxetfs.com/funds/CHIQ | passive/index-tracking China consumer discretionary equity ETF; official 10 complete calendar NAV TR rows 2016-2025 compound to 99.05% / CAGR 7.13%; official rolling 10Y NAV TR CAGR 5.31% through 2026-06-30; benchmark/strategy change effective 2018-12-06 disclosed |
 | IOPP | unsupported | NYSE Arca:IOPP | India | not applicable | https://www.simplify.us/etfs/iopp-simplify-tara-india-opportunities-etf | official Simplify sources identify IOPP as an actively managed India equity ETF using bottom-up stock selection and a goal of outperforming MSCI India; it fails the passive/index-tracking equity gate and no performance artifact is created |
+| MCHI | supported | NASDAQ:MCHI | China | -9.33% (2026-07-21) | https://www.ishares.com/us/products/239619/ishares-msci-china-etf | passive/index-tracking China equity ETF; official rolling 10Y NAV TR cumulative 45.52% / CAGR 3.82% through 2026-06-30; official 2021-2025 annual NAV rows; 2016-2020 rows not disclosed in reviewed capture; expense ratio 0.59% |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2329,3 +2330,50 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, fund identity, passive-versus-active classification, terminal-status selection, source URL/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. Because IOPP failed the passive/index-tracking equity gate as actively managed, no performance artifact or graph-navigation update was required; reviewer-availability fallback is disclosed as required.
+
+## MCHI Sequential Queue Record
+
+- Input row: `82/125`; input ticker: `MCHI`; terminal status: `completed_10Y`.
+- Canonical entity key: `NASDAQ:MCHI`; iShares' official product page, factsheet and summary prospectus identify NASDAQ as the exchange. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking equity ETF. iShares states that MCHI seeks to track an index composed of Chinese equities available to international investors; the benchmark is MSCI China Index (Net). Exchange-traded index futures may be used to offset cash/receivables for tracking, but the fund is not derivative-heavy by strategy.
+- Mandatory coverage audit: the existing page had annual NAV rows only for 2021-2025. Rechecking the official iShares product page, current factsheet, summary prospectus, annual financial statements and distribution/performance disclosures confirms official rolling 10-year NAV TR coverage, so the fund qualifies for `completed_10Y`. The current page reports 10-year NAV TR cumulative `45.52%` / annualized `3.82%` for 2016-06-30 to 2026-06-30.
+- 10-year calculation: normalized TR `100.00` to `145.52`; raw NAV endpoints are not disclosed. `145.52 = 100.00 × (1 + 45.52%)`; `CAGR = (145.52/100.00)^(1/10)-1 = 3.82%` using the issuer's rounded cumulative and annualized figures.
+- Annual observations: official current capture discloses 2021 `-22.38%`, 2022 `-22.53%`, 2023 `-11.07%`, 2024 `18.06%`, 2025 `31.07%`; 2016-2020 annual NAV rows remain `not disclosed`. The disclosed 2021-2025 rows compound to `-17.25%` / CAGR `-3.72%`.
+- Current official observation: NAV TR YTD `-9.33%` as of `2026-07-21`; iShares also reports month-end YTD `-14.65%` as of `2026-06-30`. These are kept separate by as-of date.
+- S&P 500 comparison: cached USD Total Return rows are used for 2021-2025 common reference and for the displayed 2016-2020 benchmark comparison; no 2026 S&P value is used.
+
+### MCHI Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:MCHI` | [iShares MCHI official product/performance page](https://www.ishares.com/us/products/239619/ishares-msci-china-etf) | identity, exchange, inception, benchmark, fees, current NAV/YTD, rolling NAV TR, disclosed calendar rows, holdings and exposures | Page accessed `2026-07-24`; NAV/current YTD through `2026-07-21` / NAV as of `2026-07-22`; standardized performance through `2026-06-30` |
+| `NASDAQ:MCHI` | [iShares MCHI factsheet](https://www.ishares.com/us/literature/fact-sheet/mchi-ishares-msci-china-etf-fund-fact-sheet-en-us.pdf) | passive/index-tracking classification, benchmark, inception, expense ratio and official annual rows 2021-2025 | Factsheet dated `2026-03-31`; annual rows through `2025-12-31`; expense ratio `0.59%` |
+| `NASDAQ:MCHI` | [iShares MCHI summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-etf-8-31.pdf) | formal listing, investment objective, index strategy and fund risk/implementation disclosures | Prospectus dated `2025-12-30`; NASDAQ listing; MSCI China Index (Net) objective |
+| `NASDAQ:MCHI` | [iShares MCHI 2025 annual financial statements](https://www.ishares.com/us/literature/annual-financial-statements/afs-ishares-trust-msci-country-etfs-book1-08-31-en.pdf) | annual financial/document cross-check and legal fund identity | Annual statements dated `2025-08-31`; MCHI listed on NASDAQ; not used to fill missing annual NAV rows |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### MCHI Raw Observations And Calculations
+
+| Period | MCHI NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not disclosed | 11.96% |
+| 2017 | not disclosed | 21.83% |
+| 2018 | not disclosed | -4.38% |
+| 2019 | not disclosed | 31.49% |
+| 2020 | not disclosed | 18.40% |
+| 2021 | -22.38% | 28.71% |
+| 2022 | -22.53% | -18.11% |
+| 2023 | -11.07% | 26.29% |
+| 2024 | 18.06% | 25.02% |
+| 2025 | 31.07% | 17.88% |
+| 2026 YTD | -9.33% as of 2026-07-21 | not comparable; current year not cached |
+
+- Rolling 10Y official NAV TR: cumulative `45.52%`, annualized `3.82%`, 2016-06-30 to 2026-06-30; normalized endpoint `145.52` from `100.00`.
+- 2021-2025 disclosed calendar slice: cumulative `-17.25%`, CAGR `-3.72%`.
+- 2026-06-30 month-end official YTD `-14.65%` is retained as a separate as-of observation from latest current YTD `-9.33%` at 2026-07-21.
+- Among disclosed annual rows, best is `2025 +31.07%`; worst is `2022 -22.53%`. Full 10-year best/worst ranking is not claimed because 2016-2020 rows are not disclosed.
+
+### MCHI Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, rolling and annual windows, benchmark cache, current-YTD, region/index links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The 10-year rolling window, 2021-2025 annual disclosure, 2016-2020 gap, current-versus-month-end YTD difference, and futures implementation note are explicitly disclosed.

@@ -66,7 +66,7 @@ tags:
 | KGRN | KraneShares MSCI China Clean Technology Index ETF | China equity / index-tracking | not disclosed | not disclosed | -13.22% | [[ETF_NYSE_ARCA_KGRN Performance]] |
 | KSTR | KraneShares China Technology & Semiconductor STAR 50 Index ETF | China equity / index-tracking | not applicable (<10y history) | not disclosed | 71.70% | [[ETF_NYSE_ARCA_KSTR Performance]] |
 | KURE | KraneShares MSCI All China Health Care Index ETF | China equity / index-tracking | not disclosed | not disclosed | -8.80% | [[ETF_NYSE_ARCA_KURE Performance]] |
-| MCHI | iShares MSCI China ETF | China equity / index-tracking | not disclosed | -3.72% | -9.33% | [[ETF_NASDAQ_MCHI Performance]] |
+| MCHI | iShares MSCI China ETF | China equity / index-tracking | 3.82% | -3.72% | -9.33% | [[ETF_NASDAQ_MCHI Performance]] |
 | PGJ | Invesco Golden Dragon China ETF | China equity / index-tracking | 0.35% | -12.65% | not disclosed | [[ETF_NASDAQ_PGJ Performance]] |
 | SMHC | VanEck China Semiconductor ETF | China equity / index-tracking | not disclosed | not disclosed | not disclosed | [[ETF_NASDAQ_SMHC Performance]] |
 | TCHI | iShares MSCI China Multisector Tech ETF | China equity / index-tracking | not disclosed | not disclosed | -0.38% | [[ETF_NASDAQ_TCHI Performance]] |

@@ -115,6 +115,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_KCAI Performance]] | official inception 2024-08-27; history under 10 years; available through 2026-06-30 | not applicable (<10y history) | not disclosed | 4.27% | since inception +76.27% / not disclosed | China A-share rules-based AI index equity | non-diversified; China A-share/Stock Connect/AI-model/country/sector/FX/liquidity-sensitive; exchange conflict disclosed |
 | [[ETF_NYSE_ARCA_KSTR Performance]] | official inception 2021-01-26; history under 10 years; available through 2026-06-30 | not applicable (<10y history) | not disclosed | 71.70% | since inception +27.40% / annualized 4.56% | China STAR 50 technology/semi equity | non-diversified; technology/China/A-share/sector/country/FX/liquidity-sensitive; 10-year NAV TR unavailable |
 | [[ETF_NYSE_ARCA_CHIQ Performance]] | official 2009 / official complete 2016-2025; official rolling 2016-06 to 2026-06; index/strategy change 2018-12-06 | 7.13% | -8.55% | -25.23% | 2020 +93.43% / 2022 -22.07% | China consumer discretionary equity | non-diversified; consumer/China/A-share/foreign-listing/country/sector/FX-sensitive; index/strategy break disclosed |
+| [[ETF_NASDAQ_MCHI Performance]] | official 2011 / official rolling 2016-06 to 2026-06; official annual rows 2021-2025; 2016-2020 annual rows not disclosed | 3.82% | -3.72% | -9.33% | disclosed best 2025 +31.07% / disclosed worst 2022 -22.53% | China broad equity | single-country/China policy/geopolitical/A-share/H-share/ADR/country/sector/FX-sensitive; systematic fair-value and futures implementation notes |
 | [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
 | [[ETF_NYSE_ARCA_ASHS Performance]] | official 2014 / official rolling 2016-03 to 2026-03; annual rows not disclosed | 1.96% | not disclosed | 3.36% | not disclosed / not disclosed | China A-share small-cap equity | China policy/A-share access/small-cap liquidity/sector/FX-sensitive; 497 holdings |
 | [[ETF_NASDAQ_PGJ Performance]] | official 2004 / official rolling 2015-2025; official 2016-2025 | 0.35% | -12.65% | not disclosed | 2017 +59.97% / 2021 -42.76% | China U.S.-listed ADR equity | China policy/ADR/VIE/country/sector/FX-sensitive; non-diversified |
@@ -434,6 +435,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_KBA Performance]] — KBA (China; canonical exchange corrected and performance coverage refreshed)
 - [[ETF_NYSE_ARCA_KSTR Performance]] — KSTR (China; available-period NAV TR only, 10-year history unavailable)
 - [[ETF_NYSE_ARCA_CHIQ Performance]] — CHIQ (China; 10 complete calendar years and rolling 10Y NAV TR refreshed)
+- [[ETF_NASDAQ_MCHI Performance]] — MCHI (China; rolling 10Y NAV TR refreshed, 2016-2020 annual-row gap disclosed)
 - [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
