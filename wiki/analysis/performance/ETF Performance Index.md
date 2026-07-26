@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-07-24
+updated: 2026-07-26
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -59,17 +59,25 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_EPI Performance]] | official 2008 / official rolling 2016-2026; official 2016-2025 | 9.18% | 11.52% | -7.91% | 2017 +39.03% / 2018 -10.44% | India earnings-weighted equity | India/country/sector/valuation/FX-sensitive; index annual rows not disclosed |
 | [[ETF_CBOE_BZX_SMIN Performance]] | official 2012 / official 2021-2025; rolling 2016-2026 | 9.71% | 12.90% | -0.58% | 2021 +44.69% / 2022 -13.98% | India single-country small-cap equity | small-cap liquidity; India/country/sector/valuation/FX-sensitive |
 | [[ETF_CBOE_BZX_INDA Performance]] | official 2012 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 7.07% | 7.80% | -10.12% | 2021 +22.41% / 2022 -9.38% | India single-country equity | India/country/financials/valuation/FX-sensitive |
+| [[ETF_NASDAQ_IND Performance]] | official inception 2025-11-24; history under 10 years; official 3-month NAV TR through 2026-03-31; inception-to-date/current-YTD fields not disclosed | not applicable (<10y history) | not applicable | not disclosed | not disclosed / not disclosed | India broad large/mid/small-cap equity | India/country/INR-USD FX/emerging-market/sector/liquidity/new-fund-sensitive; official 3-month NAV TR -18.41% |
 | [[ETF_NASDAQ_INDH Performance]] | official inception 2024-05-09; history under 10 years; available 2024-05 to 2026-06 | not applicable (<10y history) | not disclosed | -9.04% | not disclosed / not disclosed | India broad equity, INR hedged | India/country/financials/energy/IT/FX/hedge-cost-sensitive; available-period NAV TR 1.84% / CAGR 0.85% |
+| [[ETF_NYSE_ARCA_INQQ Performance]] | official inception 2022-04-05; available official numeric performance through 2026-03-31; history under 10 years; calendar NAV rows not disclosed | not applicable (<10y history) | not applicable | -26.17% | not disclosed / not disclosed | India internet/e-commerce thematic equity | non-diversified; India/technology/foreign-ownership/liquidity/FX-sensitive; available-period NAV TR annualized -7.83%; later month-end numeric YTD not disclosed in reviewed official capture |
+| [[ETF_NYSE_ARCA_GLIN Performance]] | official rolling 2016-2026; official 2016-2025 calendar NAV rows; index changed 2020-04-30 | 1.92% | 8.55% | -4.15% | 2017 +66.88% / 2018 -38.00% | India factor/growth leaders equity | India/country/factor/model/sector/FX/emerging-market-sensitive; prior MVIS small-cap index period disclosed |
 | [[ETF_NYSE_ARCA_FLIN Performance]] | official 2018 / official available 2018-02 to 2026-06; history under 10 years | not applicable (<10y history) | 9.33% | -8.34% | 2021 +24.82% / 2022 -8.19% | India large/mid-cap equity | India/country/financials/valuation/FX/emerging-market-sensitive |
+| [[ETF_LSE_FLXI Performance]] | official inception 2019-06-25 / official 2020-2025; available through 2026-06-30; history under 10 years | not applicable (<10y history) | 9.83% | -8.42% | 2021 +24.89% / 2022 -7.89% | India large-/mid-cap equity | India/country/sector/FX/emerging-market-sensitive; available-period NAV TR cumulative 64.43% / issuer annualized 7.35%; input alias FLIBF |
 | [[ETF_NASDAQ_INDQ Performance]] | official inception 2026-03-31; history under 10 years; official NAV TR/YTD fields N/A | not applicable (<10y history) | not applicable | not disclosed | not disclosed | not disclosed / not disclosed | India rules-based factor equity | India/country/FX/factor/small-/mid-cap/liquidity-sensitive; official available-period NAV TR not disclosed |
+| [[ETF_NYSE_ARCA_DGIN Performance]] | official inception 2022-02-15; standardized performance through 2026-05-31; history under 10 years | not applicable (<10y history) | not disclosed | -14.23% | not disclosed / not disclosed | India digital-economy thematic equity | communication/financials/consumer-discretionary and India/country/sector/valuation/FX/emerging-market-sensitive; index methodology change 2026-03-20 |
 | [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EPP Performance]] | official 2001 / official 2016-2025; rolling 2016-2026 | 7.37% | 5.28% | 11.23% | 2017 +25.40% / 2018 -10.70% | developed Asia-Pacific equity ex-Japan | Australia/HK/Singapore and financials/materials concentrated; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_EPHE Performance]] | official 2010 / official rolling 2016-06 to 2026-06; official 2021-2025; 2016-2020 annual rows not disclosed; index change 2020-12-01 | -3.24% | -3.42% | 3.93% | disclosed best 2024 +1.08% / disclosed worst 2022 -14.37% | Philippines single-country equity | industrials/financials/utilities/real estate and country/FX/liquidity-sensitive; index change disclosed |
+| [[ETF_NYSE_ARCA_VNAM Performance]] | official inception 2021-12-07; available through 2026-06-30; history under 10 years; annual NAV rows not disclosed | not applicable (<10y history) | not disclosed | not disclosed | not disclosed / not disclosed | Vietnam single-country equity | non-diversified; real estate/financials/country/frontier-market/FX/liquidity-sensitive; since-inception NAV TR annualized 0.34% |
+| [[ETF_NYSE_KPHO Performance]] | official inception 2025-12-02; available through 2026-06-30; history under one year; no complete calendar year | not applicable (<10y history) | not applicable | -2.52% | not applicable / not applicable | Vietnam growth equity/index-tracking | new-fund/country/frontier-to-emerging-market/liquidity/foreign-ownership-limit/FX-sensitive; available-period NAV TR cumulative -4.05%; no annualization |
 | [[ETF_CBOE_BZX_BBAX Performance]] | official 2018 / official 2019-2025; available through 2026-06; history under 10 years | not applicable (<10y history) | 5.47% | 8.20% | 2025 +20.73% / 2022 -4.45% | developed Asia-Pacific equity, index-tracking | Australia/HK/Singapore and financials/materials/country/FX-sensitive; 10-year NAV TR unavailable |
 | [[ETF_NYSE_ARCA_GMF Performance]] | official 2007 / official rolling 2016-2026; annual rows calculated from official NAV/distributions | 9.94% | 4.20% | 12.56% | 2025 +21.94% / 2022 -19.00% | emerging Asia-Pacific broad equity | country/FX/emerging-market/sector-sensitive |
 | [[ETF_LSE_IAPD Performance]] | official 2006 / official 2016-2025; official rolling 2016-2026 | 6.75% | 9.69% | 14.55% | 2025 +29.7% / 2018 -15.1% | Asia-Pacific dividend equity | country/sector/currency/dividend-factor-sensitive; 50 holdings |
 | [[ETF_NYSE_ARCA_VPL Performance]] | official 2005 / official rolling 2016-2026; official 2016-2025 | 10.74% | 6.05% | 19.62% | 2025 +33.16% / 2018 -13.85% | developed Asia-Pacific broad equity | Japan/Korea/Australia and FX/sector-sensitive |
+| [[ETF_NASDAQ_WDAF Performance]] | official inception 2025-09-12; available through 2026-06-30; history under 10 years | not applicable (<10y history) | not applicable | 6.77% | not disclosed / not disclosed | Asia-Pacific defense thematic equity | Industrials 91.02%; country/defense/geopolitical/FX/emerging-market-sensitive; since-inception NAV TR 0.56% / derived annualized 0.70% |
 | [[ETF_LSE_VDPX Performance]] | official 2013 / official rolling 2016-03 to 2026-03; official 2016-2025 | 8.80% | 5.42% | not disclosed | 2025 +40.91% / 2022 -12.65% | developed Asia-Pacific ex-Japan broad equity, USD distributing | Korea/Australia and technology/financials/country/FX-sensitive; OTC alias resolved to LSE:VDPX |
 | [[ETF_NASDAQ_AAXJ Performance]] | official 2008 / official 2021-2025; rolling 2016-2026 | 10.21% | 2.84% | 21.30% | 2025 +32.09% / 2022 -20.18% | Asia ex Japan broad large/mid-cap equity | Taiwan/China/Korea/India and technology concentrated; country/sector/FX-sensitive |
 | [[ETF_NASDAQ_AIA Performance]] | official 2007 / official 2021-2025; rolling 2016-2026 | 14.84% | 4.69% | 40.47% | 2025 +47.01% / 2022 -24.07% | Asia ex Japan large-cap equity | Taiwan/Korea/China and technology concentrated; country/sector/FX-sensitive |
@@ -117,18 +125,27 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_KBA Performance]] | official 2014 / official rolling 2016-2026; official 2016-2024 calendar rows; 2025 row not disclosed | 6.90% | not disclosed | 11.37% | 2024 +42.39% / 2019 -26.49% | China A-share large-cap equity | A-share/Stock Connect/policy/geopolitical/country/sector/FX-sensitive; index history changes disclosed |
 | [[ETF_NYSE_ARCA_KCAI Performance]] | official inception 2024-08-27; history under 10 years; available through 2026-06-30 | not applicable (<10y history) | not disclosed | 4.27% | since inception +76.27% / not disclosed | China A-share rules-based AI index equity | non-diversified; China A-share/Stock Connect/AI-model/country/sector/FX/liquidity-sensitive; exchange conflict disclosed |
 | [[ETF_NYSE_ARCA_KSTR Performance]] | official inception 2021-01-26; history under 10 years; available through 2026-06-30 | not applicable (<10y history) | not disclosed | 71.70% | since inception +27.40% / annualized 4.56% | China STAR 50 technology/semi equity | non-diversified; technology/China/A-share/sector/country/FX/liquidity-sensitive; 10-year NAV TR unavailable |
+| [[ETF_NYSE_ARCA_KGRN Performance]] | official inception 2017-10-12; available through 2026-06-30; history under 10 years; annual calendar rows not disclosed | not applicable (<10y history) | not disclosed | -13.22% | not disclosed / not disclosed | China clean-technology thematic equity | China policy/clean-tech cycle/subsidy/sector/valuation/FX/emerging-market-sensitive; exchange conflict resolved to NYSE Arca |
+| [[ETF_NASDAQ_SMHC Performance]] | official inception 2026-06-23; official fund NAV TR/YTD fields not disclosed; history under 10 years | not applicable (<10y history) | not applicable (inception 2026-06-23) | not disclosed | not disclosed / not disclosed | China semiconductor thematic equity | semiconductor/China policy/export-control/geopolitical/FX/liquidity/new-fund-sensitive; underlying-index return not used as ETF proxy |
 | [[ETF_NYSE_ARCA_CHIQ Performance]] | official 2009 / official complete 2016-2025; official rolling 2016-06 to 2026-06; index/strategy change 2018-12-06 | 7.13% | -8.55% | -25.23% | 2020 +93.43% / 2022 -22.07% | China consumer discretionary equity | non-diversified; consumer/China/A-share/foreign-listing/country/sector/FX-sensitive; index/strategy break disclosed |
 | [[ETF_NASDAQ_CNQQ Performance]] | official inception 2025-09-24; history under 10 years; available 2025-09 to 2026-06 | not applicable (<10y history) | not applicable | 14.95% | not disclosed / not disclosed | China technology/innovation equity | China tech/policy/geopolitical/A-share/H-share/FX/counterparty-sensitive; total-return-swap implementation and short history |
 | [[ETF_NASDAQ_MCHI Performance]] | official 2011 / official rolling 2016-06 to 2026-06; official annual rows 2021-2025; 2016-2020 annual rows not disclosed | 3.82% | -3.72% | -9.33% | disclosed best 2025 +31.07% / disclosed worst 2022 -22.53% | China broad equity | single-country/China policy/geopolitical/A-share/H-share/ADR/country/sector/FX-sensitive; systematic fair-value and futures implementation notes |
+| [[ETF_NASDAQ_TCHI Performance]] | official inception 2022-01-25; official 2023-2025 NAV rows; history under 10 years; current YTD through 2026-07-17 | not applicable (<10y history) | not disclosed (2021-2022 unavailable) | -0.45% | 2025 +33.36% / 2023 -5.69% | China technology/multisector equity | IT/communication/consumer-discretionary concentration; China policy/geopolitical/technology/valuation/FX-sensitive; systematic fair-value note |
 | [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
+| [[ETF_NASDAQ_FCA Performance]] | official 2011 / official rolling 2016-2026; official calendar NAV rows 2016-2025; index changed 2015-07-14 | 8.19% | 4.16% | -1.23% | 2017 +58.35% / 2022 -17.10% | China rules-based AlphaDEX equity | China policy/VIE/ADR/geopolitical/country/sector/FX/emerging-market-sensitive; 10Y annual-row and rolling-window endpoints use separate official windows |
+| [[ETF_NYSE_ARCA_FLCH Performance]] | official inception 2017-11-02 / official 2018-2025 calendar NAV rows; available through 2026-06-30; history under 10 years | not applicable (<10y history) | -3.25% | -10.65% | 2025 +31.61% / 2022 -22.25% | China large-/mid-cap equity | China policy/geopolitical/country/sector/FX-sensitive; available-period issuer average annual NAV TR -0.24%; current YTD as of 2026-07-10 |
+| [[ETF_LSE_FXC Performance]] | official share-class launch 2004-10-21 / official rolling 2016-06 to 2026-06; official 2016-2025 calendar NAV rows; benchmark changed 2014-09-19 | 1.72% | -1.64% | -17.31% | 2017 +34.51% / 2021 -20.70% | China large-cap equity | China policy/geopolitical/country/sector/FX-sensitive; input alias IHRPF resolved to USD LSE:FXC; official 10Y cumulative 18.61% |
 | [[ETF_NYSE_ARCA_ASHS Performance]] | official 2014 / official rolling 2016-03 to 2026-03; annual rows not disclosed | 1.96% | not disclosed | 3.36% | not disclosed / not disclosed | China A-share small-cap equity | China policy/A-share access/small-cap liquidity/sector/FX-sensitive; 497 holdings |
 | [[ETF_NASDAQ_PGJ Performance]] | official 2004 / official rolling 2015-2025; official 2016-2025 | 0.35% | -12.65% | not disclosed | 2017 +59.97% / 2021 -42.76% | China U.S.-listed ADR equity | China policy/ADR/VIE/country/sector/FX-sensitive; non-diversified |
 | [[ETF_LSE_CPXJ Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 7.65% | 5.63% | 8.15% | 2017 +25.80% / 2018 -10.40% | developed Asia-Pacific ex-Japan broad equity | Australia/HK/Singapore and financials/materials/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_FXI Performance]] | official 2004 / official 2021-2025 | 1.75% | -1.67% | -9.28% | 2024 +30.10% / 2021 -21.04% | China single-country large-cap equity | high country/policy/FX risk; Financials/consumer/communication concentrated |
 | [[ETF_NYSE_ARCA_EWH Performance]] | official 1996 / official 2016-2025 | 4.20% | 0.89% | 5.44% | 2017 +35.60% / 2023 -14.04% | Hong Kong single-country equity | financials/real-estate/utilities concentration; country/FX/liquidity-sensitive |
+| [[ETF_NYSE_ARCA_KTEC Performance]] | official inception 2021-06-08; official 2022-2024; history under 10 years; 2025 annual NAV row not disclosed | not applicable (<10y history) | not disclosed | -22.88% | 2024 +18.46% / 2022 -25.01% | Hong Kong technology equity / index-tracking | technology/China/Hong Kong/geopolitical/country/FX/liquidity-sensitive; available-period NAV TR -49.08% cumulative / -12.48% annualized |
+| [[ETF_NYSE_ARCA_EWM Performance]] | official 1996 / official rolling 2016-2026; official 2021-2025 calendar rows | 2.22% | 3.17% | 4.62% | 2024 +20.13% / 2021 -6.30% | Malaysia single-country equity | financials/utilities/materials/country/FX/emerging-market-sensitive; raw rolling endpoints and earlier annual rows not disclosed |
 | [[ETF_NYSE_ARCA_EWS Performance]] | official 1996 / official rolling 2016-2026; official 2021-2025 calendar rows | 7.83% | 10.16% | 16.50% | 2025 +31.56% / 2022 -9.15% | Singapore single-country equity | financials/industrials/real estate/country/FX-sensitive; benchmark change 2016-12-01 |
 | [[ETF_NYSE_ARCA_ECNS Performance]] | official 2021-2025 | 1.05% | -2.79% | -10.26% | 2025 +36.42% / 2022 -24.77% | China small-cap single-country equity | high volatility; domestic demand/property/liquidity/FX-sensitive |
 | [[ETF_NYSE_ARCA_IDX Performance]] | secondary 2016-2025* | -5.49% | -1.56%* | -36.18% | 2017 +19.25%* / 2018 -10.46%* | Indonesia single-country emerging-market equity | high volatility; financials/materials/energy/country/FX-sensitive |
+| [[ETF_NYSE_ARCA_EIDO Performance]] | official rolling 2016-2026; official 2016-2025 calendar NAV rows | -5.11% | -1.33% | -31.36% | 2017 +18.43% / 2018 -10.58% | Indonesia single-country equity | financials/materials/energy/country/FX/emerging-market/liquidity-sensitive; 2026 YTD date-to-date differs from June month-end |
 | [[ETF_NYSE_ARCA_FLCA Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 14.70% | 8.17% | 2025 +34.90% / 2018 -15.80% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_AMEX_DTD Performance]] | official 2006 / official 2016-2025 | 12.06% | 12.69% | 10.80% | 2021 +26.14% / 2022 -3.81% | U.S. all-cap dividend | broad dividend/value tilt, still equity-risk sensitive |
 | [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 8.40% | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
@@ -373,7 +390,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_FCA Performance]] — FCA (China)
 - [[ETF_NASDAQ_FJP Performance]] — FJP (Japan)
 - [[ETF_NYSE_ARCA_FLCH Performance]] — FLCH (China)
-- [[ETF_OTC_MARKETS_FLIBF Performance]] — FLIBF (India)
+- [[ETF_LSE_FLXI Performance]] — FLIBF / FLXI (India)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
 - [[ETF_NYSE_ARCA_FLJH Performance]] — FLJH (Japan)
 - [[ETF_NYSE_ARCA_FLKR Performance]] — FLKR (South Korea)
@@ -384,7 +401,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_GXC Performance]] — GXC (China)
 - [[ETF_NYSE_ARCA_HEWJ Performance]] — HEWJ (Japan)
 - [[ETF_LSE_SJPA Performance]] — IHREF / SJPA (Japan)
-- [[ETF_OTC_MARKETS_IHRPF Performance]] — IHRPF (China)
+- [[ETF_LSE_FXC Performance]] — IHRPF / FXC (China)
 - [[ETF_LSE_IAPD Performance]] — IHSEF (Asia-Pacific)
 - [[ETF_LSE_CJPU Performance]] — IMSCF (Japan)
 - [[ETF_LSE_IJPU Performance]] — IHRMF (Japan)
@@ -399,16 +416,17 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_IJPD Performance]] — ISRVF (Japan)
 - [[ETF_NYSE_ARCA_JPXN Performance]] — JPXN (Japan)
 - [[ETF_LSE_SAUS Performance]] — ISSSF (Australia)
-- [[ETF_OTC_MARKETS_ISVBF Performance]] — ISVBF (China)
+- [[ETF_EURONEXT_AMSTERDAM_ICHN Performance]] — ISVBF / ICHN (China)
 - [[ETF_NYSE_ARCA_KBA Performance]] — KBA (China)
 - [[ETF_NYSE_ARCA_KCAI Performance]] — KCAI (China)
 - [[ETF_NYSE_ARCA_KDEF Performance]] — KDEF (South Korea)
 - [[ETF_NYSE_ARCA_KGRN Performance]] — KGRN (China)
 - [[ETF_NYSE_ARCA_KMCA Performance]] — KMCA (South Korea)
-- [[ETF_NYSE_ARCA_KPHO Performance]] — KPHO (Vietnam)
+- [[ETF_NYSE_KPHO Performance]] — KPHO (Vietnam)
 - [[ETF_NYSE_ARCA_KSTR Performance]] — KSTR (China)
 - [[ETF_NYSE_ARCA_KTEC Performance]] — KTEC (Hong Kong)
 - [[ETF_NYSE_ARCA_KURE Performance]] — KURE (China)
+- [[ETF_LSE_KWEB Performance]] — KRANF / KWEB (China)
 - [[ETF_NASDAQ_MCHI Performance]] — MCHI (China)
 - [[ETF_NASDAQ_NFTY Performance]] — NFTY (India)
 - [[ETF_NYSE_ARCA_SCJ Performance]] — SCJ (Japan)
@@ -417,10 +435,66 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_TCHI Performance]] — TCHI (China)
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
 - [[ETF_NYSE_ARCA_VNAM Performance]] — VNAM (Vietnam)
-- [[ETF_NYSE_ARCA_VNM Performance]] — VNM (Vietnam)
+- [[ETF_CBOE_BZX_VNM Performance]] — VNM (Vietnam)
 - [[ETF_NYSE_ARCA_VPL Performance]] — VPL (Asia-Pacific)
 - [[ETF_NASDAQ_WDAF Performance]] — WDAF (Asia-Pacific)
 - [[ETF_LSE_DXJA Performance]] — WDTRF (Japan)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NASDAQ_FCA Performance]] — FCA (China; official rolling 10Y NAV TR CAGR 8.19%, current YTD -1.23% as of 2026-06-30)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NASDAQ_IND Performance]] — IND (India; inception 2025-11-24, official 3-month NAV TR -18.41% through 2026-03-31, current YTD not disclosed)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_VNAM Performance]] — VNAM (Vietnam; inception 2021-12-07, official since-inception NAV TR annualized 0.34% as of 2026-06-30, 10-year NAV TR unavailable, current YTD not disclosed)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_KPHO Performance]] — KPHO (Vietnam; inception 2025-12-02, 10-year NAV TR unavailable, available-period NAV TR cumulative -4.05% through 2026-06-30, current YTD -2.52% as of 2026-06-30; no annualization for the sub-one-year period)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_INQQ Performance]] — INQQ (India; inception 2022-04-05, 10-year NAV TR unavailable, official available-period NAV TR annualized -7.83% and numeric YTD -26.17% as of 2026-03-31; calendar NAV rows and later numeric month-end YTD not disclosed in reviewed official capture)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_LSE_FLXI Performance]] — FLIBF / FLXI (India; input OTC alias resolved to USD LSE line, available-period NAV TR cumulative 64.43% / issuer annualized 7.35%, current YTD -8.42% as of 2026-06-30)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_LSE_FXC Performance]] — IHRPF / FXC (China; input OTC alias resolved to official USD LSE line, rolling 10Y NAV TR cumulative 18.61% / CAGR 1.72% for 2016-06-30 to 2026-06-30, current YTD -17.31% as of 2026-06-30)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_FLCH Performance]] — FLCH (China; inception 2017-11-02, 10-year NAV TR unavailable, official available-period NAV TR average annual -0.24% through 2026-06-30, 2018-2025 CAGR 1.33%, current YTD -10.65% as of 2026-07-10)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_EIDO Performance]] — EIDO (Indonesia; official rolling 10Y NAV TR cumulative -40.80% / CAGR -5.11% for 2016-06-30 to 2026-06-30, official 2016-2025 NAV rows, 2021-2025 CAGR -1.33%, current YTD -31.36% as of 2026-07-23)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_GLIN Performance]] — GLIN (India; official rolling 10Y NAV TR CAGR 1.92% for 2016-06-30 to 2026-06-30, official 2016-2025 NAV rows, 2021-2025 CAGR 8.55%, current YTD -4.15% as of 2026-07-24)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_KTEC Performance]] — KTEC (Hong Kong; inception 2021-06-08, 10-year NAV TR unavailable, available-period NAV TR cumulative -49.08% / issuer annualized -12.48% through 2026-06-30, current YTD -22.88%; official 2022-2024 annual rows)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_EWM Performance]] — EWM (Malaysia; official rolling 10Y NAV TR CAGR 2.22% for 2016-06-30 to 2026-06-30, official 2021-2025 annual NAV rows, 2021-2025 CAGR 3.17%, current YTD 4.62% as of 2026-07-17)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_NYSE_ARCA_KURE Performance]] — KURE (China; inception 2018-01-31, 10-year NAV TR unavailable, official available-period NAV TR cumulative -23.43% / annualized -3.12% through 2026-06-30, current YTD -8.80%)
+
+## 2026-07-26 Coverage Addition
+
+- [[ETF_LSE_KWEB Performance]] — KRANF / KWEB (China; OTC alias resolved to official LSE USD UCITS line, inception 2018-11-21, 10-year NAV TR unavailable, available-period NAV TR cumulative -26.60% / annualized -3.98% through 2026-06-30, 2019-2025 annual rows, current YTD -28.96%)
 
 ## 2026-07-24 Coverage Addition
 
@@ -430,12 +504,14 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_EPI Performance]] — EPI (India)
 - [[ETF_NYSE_ARCA_ASHS Performance]] — ASHS (China)
 - [[ETF_NASDAQ_PGJ Performance]] — PGJ (China)
+- [[ETF_NASDAQ_TCHI Performance]] — TCHI (China; inception 2022-01-25, 10-year NAV TR unavailable)
 - [[ETF_LSE_VJPU Performance]] — VFJUF / VJPU (Japan)
 - [[ETF_XETRA_VJPA Performance]] — VGDTF / VJPA (Japan)
 - [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific)
 - [[ETF_LSE_VAPU Performance]] — VFPAF / VAPU (Asia-Pacific)
 - [[ETF_NASDAQ_FPA Performance]] — FPA (Asia-Pacific)
 - [[ETF_NASDAQ_CXSE Performance]] — CXSE (China)
+- [[ETF_NASDAQ_SMHC Performance]] — SMHC (China; inception 2026-06-23, official fund NAV TR/YTD not disclosed)
 - [[ETF_NYSE_ARCA_KBA Performance]] — KBA (China; canonical exchange corrected and performance coverage refreshed)
 - [[ETF_NYSE_ARCA_KSTR Performance]] — KSTR (China; available-period NAV TR only, 10-year history unavailable)
 - [[ETF_NYSE_ARCA_CHIQ Performance]] — CHIQ (China; 10 complete calendar years and rolling 10Y NAV TR refreshed)

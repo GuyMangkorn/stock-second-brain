@@ -13,7 +13,7 @@ tags:
 
 ## Scope and gate
 
-ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `90/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/presentation/prospectus และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
+ใช้ `check-etf-performance` sequential queue ต่อเนื่องตามลำดับทีละ ticker. รอบนี้รวมผลถึง row `125/125`, ทำ mandatory 10-year coverage audit จาก official product page/factsheet/SEC prospectus/annual report และใช้ local pre-save fallback เนื่องจากไม่มี independent reviewer.
 
 ## Complete evidence register
 
@@ -53,6 +53,32 @@ tags:
 | JPY | unsupported ETF type | NASDAQ:JPY | Japan | not applicable | https://www.lazardassetmanagement.com/us/en_us/investment-solutions/how-to-invest/etfs/japanese-equity-etf | Lazard identifies JPY as an actively managed Japanese equity ETF using bottom-up stock selection and fundamental research; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | FPA | supported | NASDAQ:FPA | Asia-Pacific | 42.71% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FPA | official rolling 10Y NAV TR CAGR 10.31% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows from prospectus compound to 89.03% / CAGR 6.57%; 2021-2025 CAGR 7.23%; index changed 2015-10-13; current standardized YTD 42.71% as of 2026-06-30 |
 | CXSE | supported | NASDAQ:CXSE | China | -3.69% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/cxse | passive/index-tracking China equity ETF; official rolling 10Y NAV TR CAGR 6.85% for 2016-06-30 to 2026-06-30; official 2016-2025 NAV rows compound to 82.98% / CAGR 6.23%; 2021-2025 CAGR -8.00%; 2015-07-01 objective/index change disclosed; current standardized YTD -3.69% as of 2026-06-30 |
+| SMHC | supported | Nasdaq:SMHC | China | not disclosed | https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/ | passive/index-tracking China semiconductor equity ETF; official inception 2026-06-23; 10-year NAV TR unavailable; official fund NAV/market-price rows and current NAV YTD not disclosed; underlying-index 1-month return not used as ETF proxy; new-fund history gap |
+| FCA | supported | Nasdaq:FCA | China | -1.23% (2026-06-30) | https://www.ftportfolios.com/Retail/etf/ETFsummary.aspx?Ticker=FCA | passive/index-tracking China equity ETF; official rolling 10Y NAV TR CAGR 8.19% for 2016-06-30 to 2026-06-30; official calendar NAV rows 2016-2025; 2021-2025 CAGR 4.16%; 2015-07-14 index change; factsheet 2024/2025 annual-row conflict resolved in favor of annual report/summary prospectus |
+| IND | supported | Nasdaq:IND | India | not disclosed | https://etf.dws.com/download/asset/048952ad-b7d4-462d-95c8-e726ff2484bd | passive/index-tracking India broad equity ETF tracking Nifty 500 Index; official inception 2025-11-24 (listing/commencement 2025-11-25); 10-year NAV TR unavailable; latest official 3-month NAV TR -18.41% through 2026-03-31; inception-to-date endpoints and current YTD not disclosed; no annualization of short-period return |
+| VNAM | supported | NYSE Arca:VNAM | Vietnam | not disclosed | https://www.globalxetfs.com/funds/vnam?download_full_holdings=true | passive/index-tracking Vietnam equity ETF tracking MSCI Vietnam Select 25-50 Index; official inception 2021-12-07; 10-year NAV TR unavailable; official available-period NAV TR annualized 0.34% since inception, 1Y 45.10% and 3Y 15.86% as of 2026-06-30; raw endpoints, annual NAV rows and current YTD not disclosed |
+| ISAGF | unsupported ETF type | LSE:IGEA | not applicable | not applicable | https://www.ishares.com/ch/professionals/en/products/251723/ishares-emerging-asia-local-government-bond-ucits-etf | Input OTC alias `ISAGF` maps to the official USD London Stock Exchange line `IGEA` for ISIN `IE00B6QGFW01`; iShares classifies the fund as `Fixed Income` and tracks local-currency government bonds from Asian Emerging Market countries; bond ETF is outside passive/index-tracking equity scope; no performance artifact created |
+| FLIBF | supported | LSE:FLXI | India | -8.42% (2026-06-30) | https://www.franklintempleton.co.uk/our-funds/etf/price-and-performance/products/27853/SINGLCLASS/franklin-ftse-india-ucits-etf/IE00BHZRQZ17 | Input OTC alias `FLIBF` resolves to the official USD London Stock Exchange line `FLXI` for ISIN `IE00BHZRQZ17`; passive/indexed physical full-replication India equity ETF tracking FTSE India 30/18 Capped Index-NR; inception 2019-06-25; 10-year NAV TR unavailable; official June 2026 factsheet gives available-period NAV TR cumulative 64.43% / annualized 7.35%, calendar NAV rows 2020-2025, and YTD -8.42% |
+| IHRPF | supported | LSE:FXC | China | -17.31% (2026-06-30) | https://www.ishares.com/ch/individual/en/products/251798/ishares-china-large-cap-ucits-etf | Input OTC alias `IHRPF` resolves to the official USD London Stock Exchange line `FXC` for ISIN `IE00B02KXK85`; passive/physical China large-cap equity ETF tracking FTSE China 50 Index - USD Net Div; official rolling 10Y NAV TR cumulative 18.61% / CAGR 1.72% for 2016-06-30 to 2026-06-30; official 2016-2025 calendar NAV rows; benchmark changed 2014-09-19 |
+| FLCH | supported | NYSE Arca:FLCH | China | -10.65% (2026-07-10) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26362/SINGLCLASS/franklin-ftse-china-etf/FLCH | Passive/indexed physical China large-/mid-cap equity ETF tracking FTSE China RIC Capped Index; inception 2017-11-02 means 10-year NAV TR unavailable; official available-period NAV TR average annual -0.24% through 2026-06-30; official calendar rows 2018-2025; current YTD -10.65% as of 2026-07-10 |
+| KPHO | supported | NYSE:KPHO | Vietnam | -2.52% (2026-06-30) | https://kraneshares.com/etf/kpho/ | Passive/index-tracking Vietnam equity ETF tracking Dragon Capital MerQube Vietnam Growth Total Return Index; inception 2025-12-02 means 10-year NAV TR unavailable; official available-period NAV TR cumulative -4.05% through 2026-06-30; no annualization because period is under one year; current page/report says NYSE while older prospectus says NYSE Arca |
+| INQQ | supported | NYSE Arca:INQQ | India | -26.17% (2026-03-31; latest numeric official static capture) | https://emqqglobaletfs.com/inqq-fund-materials | Passive/index-tracking non-diversified India internet/e-commerce equity ETF; inception 2022-04-05 means 10-year NAV TR unavailable; official available-period NAV TR annualized -7.83% and numeric YTD -26.17% as of 2026-03-31; calendar NAV rows and later numeric month-end YTD not disclosed in reviewed official capture; current page/factsheet use NYSE while SEC/report/factsheet formal listing says NYSE Arca |
+| TSMY | unsupported ETF type | NYSE Arca:TSMY | Taiwan single-stock/options | not applicable | https://yieldmaxetfs.com/our-etfs/tsmy/ | YieldMax identifies TSMY as an actively managed option-income ETF selling call spreads on Taiwan Semiconductor Manufacturing Co. (TSM); single-issuer and derivative/option-income structure is outside passive/index-tracking equity ETF scope; no performance page or region/index row created |
+| IMVP | completed_10Y | NYSE Arca:IMVP | India | not disclosed (2026-07-26) | https://www.sec.gov/Archives/edgar/data/1419139/000119312526062436/d71791d497k.htm | Passive/index-tracking Invesco India ETF; official NAV TR 10Y CAGR `9.19%` for 2015-12-31 to 2025-12-31; official calendar rows 2016-2025; current post-change 2026 YTD not disclosed; PIN → IMVP and FTSE → Bloomberg index change disclosed |
+| KMCA | completed_available_period_no_10Y | NYSE Arca:KMCA | South Korea | -5.14% (2026-06-30) | https://plusetf.com/kmca | Passive/index-tracking South Korea thematic equity ETF tracking Akros Korea Manufacturing Core Alliance Index; inception `2026-05-06`; 10-year NAV TR unavailable; official Fund NAV since-inception/YTD `-5.14%` through `2026-06-30`; no complete calendar year and no annualization of 55-day period |
+| MAGC | unsupported ETF type | Cboe BZX:MAGC | China | not applicable | https://www.roundhillinvestments.com/etf/magc/ | Roundhill identifies MAGC as actively managed; the fund uses total-return swaps and concentrated China single-country/sector exposure, outside the required passive/index-tracking equity ETF scope; no performance page or region/index row created |
+| ISVBF | completed_available_period_no_10Y | Euronext Amsterdam:ICHN | China | -8.79% (2026-07-21) | https://www.ishares.com/uk/individual/en/products/308751/ishares-msci-china-ucits-etf?siteEntryPassthrough=true | OTC alias maps by ISIN `IE00BJ5JPG56` to the official Euronext Amsterdam USD line `ICHN`; passive physical/replicated China equity ETF; inception `2019-06-20`; official 2020-2025 rows compound to `8.36%` / `1.35%` CAGR; 10-year NAV TR unavailable; 2016-2019 rows and raw endpoints not disclosed |
+| KURE | completed_available_period_no_10Y | NYSE Arca:KURE | China | -8.80% (2026-06-30) | https://kraneshares.com/etf/kure/ | Passive/index-tracking China healthcare equity ETF tracking MSCI China All Shares Health Care 10/40 Index; inception `2018-01-31`; 10-year NAV TR unavailable; official since-inception NAV TR cumulative `-23.43%` / annualized `-3.12%` through `2026-06-30`; exact calendar NAV rows not disclosed in reviewed official capture; current NAV `US$17.53` as of `2026-07-23` |
+| FXY | unsupported ETF type | NYSE Arca:FXY | not applicable | not applicable | https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-japanese-yen-trust.html | Invesco identifies FXY as a CurrencyShares Japanese Yen Trust designed to track the Japanese yen; SEC identifies it as a grantor trust holding Japanese yen. Currency trust/FX exposure is outside the required passive index-tracking equity ETF scope; no performance page or region/index row created |
+| KRANF | completed_available_period_no_10Y | LSE:KWEB | China | -28.96% (2026-06-30) | https://kraneshares.eu/etf/kwebln/ | OTC alias resolves by fund identity to the official USD UCITS line `KWEB LN`, ISIN `IE00BFXR7892`; passive physical/index-tracking China internet equity ETF; inception `2018-11-21`; 10-year NAV TR unavailable; official since-inception NAV TR cumulative `-26.60%` / annualized `-3.98%`; corrected KIID annual rows 2019-2025; current NAV `US$19.82` as of `2026-07-24` |
+| KHYB | unsupported ETF type | NYSE:KHYB | not applicable | not applicable | https://kraneshares.com/etf/khyb/ | KraneShares identifies KHYB as an active ETF investing in USD-denominated Asian high-yield debt; fixed-income and active management are outside the required passive index-tracking equity ETF scope. Current issuer page says NYSE; 2025 SEC prospectus says NYSE Arca, and the conflict is disclosed. No performance page or region/index row created |
+| VNM | completed_10Y | Cboe BZX:VNM | Vietnam | -12.07% (2026-07-24) | https://www.vaneck.com/us/en/investments/vietnam-etf-vnm/ | Current prospectus identifies Cboe BZX; passive Vietnam equity ETF; official rolling 10Y NAV TR CAGR `3.65%` for 2016-06-30 to 2026-06-30; official annual NAV rows 2016-2025; June month-end YTD `-1.41%` versus later current snapshot `-12.07%` |
+| EIDO | completed_10Y | NYSE Arca:EIDO | Indonesia | -31.36% (2026-07-23) | https://www.ishares.com/us/products/239661/ishares-msci-indonesia-etf | Passive/index-tracking Indonesia equity ETF; official rolling 10Y NAV TR cumulative `-40.80%` / CAGR `-5.11%` for 2016-06-30 to 2026-06-30; official 2016-2025 annual NAV rows; June month-end YTD `-38.53%` versus later current snapshot `-31.36%` |
+| GLIN | completed_10Y | NYSE Arca:GLIN | India | -4.15% (2026-07-24) | https://www.vaneck.com/us/en/investments/india-growth-leaders-etf-glin/ | Passive/index-tracking India factor/growth-leaders equity ETF; official rolling 10Y NAV TR CAGR `1.92%` for 2016-06-30 to 2026-06-30; official 2016-2025 annual NAV rows; June month-end YTD `0.25%` versus later current snapshot `-4.15%` |
+| KTEC | completed_available_period_no_10Y | NYSE Arca:KTEC | Hong Kong | -22.88% (2026-06-30) | https://kraneshares.com/etf/ktec/ | Passive/index-tracking Hong Kong technology equity ETF; inception `2021-06-08`; 10-year NAV TR unavailable; available-period NAV TR `-49.08%` cumulative / issuer annualized `-12.48%`; official 2022-2024 annual rows; 2025 row not disclosed; current-page exchange wording `NYSE` versus formal `NYSE Arca` disclosed |
+| EWM | completed_10Y | NYSE Arca:EWM | Malaysia | 4.62% (2026-07-17) | https://www.ishares.com/us/products/239669/ishares-msci-malaysia-etf | Passive/index-tracking Malaysia equity ETF; official rolling 10Y NAV TR cumulative `24.54%` / CAGR `2.22%` for 2016-06-30 to 2026-06-30; official 2021-2025 annual NAV rows; earlier annual rows/raw rolling endpoints not disclosed |
+| BABO | unsupported ETF type | NYSE Arca:BABO | not applicable | not applicable | https://yieldmaxetfs.com/our-etfs/babo/ | YieldMax identifies BABO as actively managed, single-issuer BABA option-income ETF selling call spreads; derivative/option-income structure fails the passive index-tracking equity scope; no performance artifact created |
+| KLIP | unsupported ETF type | NYSE Arca:KLIP | not applicable | not applicable | https://kraneshares.com/etf/klip/ | KraneShares identifies KLIP as active covered-call/buy-write ETF owning KWEB and selling KWEB call options; formal prospectus says NYSE Arca while current page says NYSE; covered-call/derivative structure fails passive index-tracking equity scope; no performance artifact created |
 | ADVE | unsupported ETF type | NYSE Arca:ADVE | Asia | not applicable | https://us.matthewsasia.com/funds/etfs/asia-dividend-active-etf/ | Matthews identifies ADVE as an unconstrained all-cap active Asia equity ETF with a quality bias; official strategy requires at least 80% in dividend-paying equity securities; it fails the passive/index-tracking equity gate, so no performance page or NAV TR comparison is created |
 | FLAX | supported | NYSE Arca:FLAX | Asia ex Japan | 24.71% (2026-06-30) | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26346/SINGLCLASS/franklin-ftse-asia-ex-japan-etf/FLAX | passive/index-tracking Asia ex Japan equity ETF; official inception 2018-02-06; 10-year field `—`; available-period NAV TR CAGR 7.85% for 2018-02-06 to 2026-06-30; official 2019-2025 NAV rows compound to 77.17% / CAGR 8.51%; current standardized YTD 24.71% |
 | VGDTF | supported | XETRA:VJPA | Japan | 15.27% (2026-06-30) | https://www.vanguard.co.uk/professional/product/etf/equity/9674/vanguard-ftse-japan-ucits-etf-usd-accumulating | OTC alias cross-checked to Vanguard FTSE Japan UCITS ETF (USD) Accumulating, ISIN IE00BFMXYX26; official Deutsche Börse EUR line VJPA; passive physical/index-tracking equity; inception 2019-09-24; 10-year field `—`; since-inception NAV TR CAGR 9.96%; official KIID 2020-2025 calendar rows; current standardized YTD 15.27% |
@@ -88,6 +114,15 @@ tags:
 | ICNYF | unsupported | LSE:CNYB | China | not applicable | https://www.ishares.com/uk/individual/en/products/308851/ishares-china-cny-bond-ucits-etf?siteEntryPassthrough=true | OTC alias resolved to iShares China CNY Bond UCITS ETF USD (Dist), ISIN IE00BYPC1H27 / LSE:CNYB; official fund is fixed income/bond exposure to Chinese government and policy-bank bonds, outside passive/index-tracking equity scope |
 | CNQQ | supported | NASDAQ:CNQQ | China | 14.95% (2026-06-30) | https://funds.rayliant.com/cnqq/ | passive/index-tracking China technology equity ETF tracking Solactive ChinaAMC Transformative China Tech Index; inception 2025-09-24 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 6.54% / derived annualized 8.65% through 2026-06-30; total-return-swap implementation and factsheet one-day inception conflict disclosed |
 | INDH | supported | Nasdaq:INDH | India | -9.04% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/indh | passive/index-tracking India equity ETF with INR hedge; official inception 2024-05-09 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 1.84% / average annual 0.85% through 2026-06-30; annual rows not disclosed; aggregate hedge ratio 100.25% as of 2026-07-17 |
+| DGIN | supported | NYSE Arca:DGIN | India | -14.23% (2026-06-23) | https://www.vaneck.com/us/en/investments/digital-india-etf-dgin/overview/ | passive/index-tracking India digital-economy equity ETF; official inception 2022-02-15 means 10-year NAV TR unavailable; standardized since-inception NAV TR average annual -0.37% through 2026-05-31; latest product-page YTD -14.23% through 2026-06-23; raw endpoints and complete annual rows not disclosed; stale 2026-03-31 performance block and 2026-03-20 index-methodology change disclosed |
+| CBON | unsupported ETF type | NYSE Arca:CBON | China | not applicable | https://www.vaneck.com/us/en/investments/chinaamc-china-bond-etf-cbon/overview/ | official issuer/factsheet identify CBON as a fixed-income China bond ETF tracking FTSE Chinese Broad Bond 0-10 Diversified Select Index; bond exposure is outside passive/index-tracking equity scope; no performance page or region/index row created |
+| TMH | unsupported ETF type | NYSE Arca:TMH | Japan | not applicable | https://adrhedged.com/security/toyota-motor-corporation-adrhedged/ | input name resolves to Toyota Motor Corporation ADRhedged; official issuer says the series invests at least 95% in Toyota ADRs plus a currency hedge contract; single-stock/derivative-heavy structure is outside passive/index-tracking equity scope; no performance page or region/index row created |
+| WDAF | supported | Nasdaq:WDAF | Asia-Pacific | 6.77% (2026-06-30) | https://www.wisdomtree.com/us/products/equity/wdaf | passive/index-tracking Asia-Pacific defense thematic equity ETF tracking WisdomTree Asia Defense Index; official inception 2025-09-12 means 10-year NAV TR unavailable; official since-inception NAV TR cumulative 0.56% through 2026-06-30; derived short-period CAGR 0.70%; complete annual rows unavailable because 2025 is an incomplete inception year |
+| GIND | unsupported ETF type | Nasdaq:GIND | India | not applicable | https://am.gs.com/public-assets/documents/93d0d388-7dee-11f0-8231-f3a13ac1f6ac?view=true | official Goldman Sachs materials identify GIND as an active, local stock-picking India equity ETF seeking to go beyond the benchmark; active/discretionary management is outside passive/index-tracking equity scope; no performance page or region/index row created |
+| TCHI | supported | NASDAQ:TCHI | China | -0.45% (2026-07-17) | https://www.ishares.com/us/products/325390/ishares-msci-china-multisector-tech-etf | passive/index-tracking China technology/multisector equity ETF tracking MSCI China Technology Sub-Industries Select Capped Index; official inception 2022-01-25 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 18.39% / average annual 3.88% through 2026-06-30; official 2023-2025 NAV rows; latest current YTD -0.45% as of 2026-07-17; month-end standardized YTD 13.46% as of 2026-06-30 disclosed separately |
+| JAPN | unsupported ETF type | NASDAQ:JAPN | Japan | not applicable | https://horizonkinetics.com/products/etf/japn/ | official Horizon Kinetics/SEC sources identify JAPN as an actively managed Japan owner-operator equity ETF using fundamental selection; active/discretionary management is outside passive/index-tracking equity scope; no performance page or region/index row created |
+| FXA | unsupported ETF type | NYSE Arca:FXA | Australia | not applicable | https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-australian-dollar-trust.html | official Invesco sources identify FXA as a CurrencyShares grantor trust designed to track the Australian dollar plus accrued interest, not an equity ETF; currency trust/FX exposure is outside passive/index-tracking equity scope; no performance page or region/index row created |
+| KGRN | supported | NYSE Arca:KGRN | China | -13.22% (2026-06-30) | https://kraneshares.com/etf/kgrn/ | passive/index-tracking China clean-technology thematic equity ETF tracking MSCI China IMI Environment 10/40 Index; official inception 2017-10-12 means 10-year NAV TR unavailable; official available-period NAV TR cumulative 7.53% / annualized 0.84% through 2026-06-30; current YTD -13.22%; complete calendar-year rows not disclosed; current-page NYSE vs formal NYSE Arca conflict disclosed |
 | CETFF | supported | LSE:CEMA | Emerging Markets | 28.17% (2026-06-30) | https://www.ishares.com/uk/professional/en/products/253723/ishares-msci-em-asia-ucits-etf?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official iShares MSCI EM Asia UCITS ETF USD (Acc), ISIN IE00B5L8K969 / LSE:CEMA; official rolling 10Y NAV TR cumulative 185.06% / CAGR 11.04% as of 2026-06-30; official calendar rows 2016-2025 |
 
 ## CSKRF Sequential Queue Record
@@ -2653,3 +2688,1212 @@ tags:
 
 - No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, hedge-overlay disclosure, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
 - Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized available-period endpoint, annual-row gap, current-YTD date, index hedge and hedge-ratio facts are explicitly disclosed.
+
+## DGIN Sequential Queue Record
+
+- Input row: `91/125`; input ticker: `DGIN`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:DGIN`; VanEck's official product page, factsheet and SEC summary prospectus identify the NYSE Arca listing. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking India thematic equity ETF. VanEck states that DGIN seeks to track the `MVIS Digital India Index (MVDINDTR)` before fees and expenses.
+- Mandatory coverage audit: official inception is `2022-02-15`, so `10-year NAV TR unavailable`. The official May 31 performance table reports since-inception NAV TR average annual return `-0.37%`; the latest official product snapshot reports current YTD `-14.23%` as of `2026-06-23`.
+- Available-period window: `2022-02-15` to `2026-05-31`, `1,566 days / 4.287562 years`; raw TR endpoints are not disclosed. A normalized start of `100.00` and derived endpoint `98.42` imply approximate cumulative `-1.58%`; the official CAGR/average annual return remains `-0.37%`.
+- Annual observations: complete calendar-year NAV TR rows for 2023-2025 are not disclosed; 2022 is an incomplete inception year. S&P 500 TR rows for 2016-2025 reuse the cached USD convention.
+- Source-quality choice: the current product page's June 23 YTD is used for the latest YTD field; the dated May factsheet is used for standardized since-inception performance. VanEck's page also exposes an older block consistent with the 2026-03-31 fund profile (`-25.12%` YTD and `-3.25%` life), which is retained as a disclosed stale/conflicting observation and not mixed into the primary record.
+
+### DGIN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:DGIN` | [VanEck DGIN official product page](https://www.vaneck.com/us/en/investments/digital-india-etf-dgin/overview/) | identity, exchange, index objective, inception, current YTD and expense ratio | Current snapshot as of `2026-06-23`; inception `2022-02-15`; YTD `-14.23%`; expense `0.70%` |
+| `NYSE Arca:DGIN` | [VanEck DGIN official performance page](https://www.vaneck.com/us/en/investments/digital-india-etf-dgin/performance/) | NAV TR table, sector/country exposure and distribution history | Standardized NAV table through `2026-05-31`; sector/country data as of `2026-05-31`; stale comparison block also disclosed |
+| `NYSE Arca:DGIN` | [VanEck DGIN factsheet](https://www.vaneck.com/us/en/investments/digital-india-etf-dgin-fact-sheet.pdf) | passive/index-tracking classification and standardized return cross-check | As of `2026-05-31`; NAV life average annual `-0.37%`; 10-year field unavailable |
+| `NYSE Arca:DGIN` | [SEC DGIN summary prospectus](https://www.sec.gov/Archives/edgar/data/1137360/000113736023000421/vaneckdigitalindiaetfdgin-.htm) | formal listing and investment objective | Prospectus confirms NYSE Arca and index-tracking objective |
+| `NYSE Arca:DGIN` | [SEC DGIN index-methodology supplement](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000237/ck0001137360-20260227.htm) | methodology-change gap | Change effective `2026-03-20` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### DGIN Raw Observations And Calculations
+
+| Period | DGIN NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not disclosed; incomplete inception year | -18.11% |
+| 2023 | not disclosed | 26.29% |
+| 2024 | not disclosed | 25.02% |
+| 2025 | not disclosed | 17.88% |
+| 2026 YTD | -14.23% as of 2026-06-23 | not comparable; current year not cached |
+
+- Available-period NAV TR: official average annual `-0.37%`, `2022-02-15` to `2026-05-31`.
+- Actual years: `1,566 / 365.2425 = 4.287562`.
+- Normalized endpoint: `100 × (1 - 0.0037)^4.287562 = 98.42`; derived cumulative is approximately `-1.58%` and depends on the issuer's rounded CAGR.
+- Complete-calendar up/down count and best/worst year: not disclosed.
+
+### DGIN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized endpoint, rounded-CAGR limitation, unavailable raw endpoints/annual rows, separate YTD and standardized as-of dates, stale block, and methodology-change gap are explicitly disclosed.
+
+## CBON Sequential Queue Record
+
+- Input row: `92/125`; input ticker: `CBON`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:CBON`; VanEck's official factsheet identifies the exchange as NYSE Arca and the official product page identifies the fund as VanEck China Bond ETF. No provider slug or guessed exchange is used.
+- Type-gate result: unsupported — bond ETF. VanEck states that CBON tracks the `FTSE Chinese Broad Bond 0-10 Diversified Select Index`, composed of RMB-denominated fixed-rate bonds issued by Chinese credit, governmental and quasi-governmental issuers. Bond exposure is outside the required passive/index-tracking equity ETF scope.
+- Because the type gate failed, `check-etf-performance` was not called for CBON, and no NAV TR/10-year equity comparison, performance page, region page update, or performance-index row was created.
+
+### CBON Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:CBON` | [VanEck CBON official product page](https://www.vaneck.com/us/en/investments/chinaamc-china-bond-etf-cbon/overview/) | identity, exchange-level product identity, bond objective and tracked index | Page accessed `2026-07-24`; fixed-rate RMB bond exposure; index `FTSE Chinese Broad Bond 0-10 Diversified Select Index` |
+| `NYSE Arca:CBON` | [VanEck CBON factsheet](https://www.vaneck.com/us/en/investments/chinaamc-china-bond-etf-cbon-fact-sheet.pdf) | formal exchange, inception and asset-class cross-check | Factsheet as of `2026-04-30`; exchange `NYSE Arca`; inception `2014-11-10`; bond ETF |
+| `NYSE Arca:CBON` | [VanEck CBON fund profile](https://www.vaneck.com/us/en/cbon-access-chinas-onshore-bonds-fund-profile.pdf) | fixed-income strategy and performance context, not used for equity analysis | Profile as of `2026-03-31`; bond-index performance only |
+
+### CBON Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, asset-class/type gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. CBON is explicitly recorded as an unsupported bond ETF and no equity-performance artifact was created.
+
+## TMH Sequential Queue Record
+
+- Input row: `93/125`; input ticker: `TMH`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:TMH`; the official ADRhedged page identifies the `Toyota Motor Corporation ADRhedged` series and Nasdaq's official listing circular identifies TMH as an exchange-traded fund; exchange-level fund references identify NYSE Arca. The input description `Toyota Motor Corporation` is retained as an alias/context, not treated as the ordinary Toyota stock ticker `TM`.
+- Type-gate result: unsupported — single-stock and derivative-heavy structure. The official issuer states that the series normally invests at least 95% of net assets in Toyota ADRs and uses a currency hedge contract. It therefore fails the required diversified passive/index-tracking equity ETF gate.
+- Because the type gate failed, `check-etf-performance` was not called for TMH, and no NAV TR/10-year comparison, performance page, region page update, or performance-index row was created.
+
+### TMH Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:TMH` | [ADRhedged Toyota Motor Corporation ADRhedged official page](https://adrhedged.com/security/toyota-motor-corporation-adrhedged/) | identity, objective, holdings, structure, inception and fee | Page updated `2026-07-06`; inception `2025-03-13`; Toyota ADR `97.47%` and cash `2.53%` as of `2026-07-06`; expense `0.19%` |
+| `NYSE Arca:TMH` | [Nasdaq official TMH information circular](https://www.nasdaqtrader.com/content/newsalerts/2025/infocircular/TMH_Circular.pdf) | formal ETF/listing and investment-structure cross-check | Circular dated `2025-03-14`; TMH identified as Toyota Motor Corporation ADRhedged exchange-traded fund |
+
+### TMH Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/index-tracking gate, single-stock/derivative-heavy test, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. TMH is explicitly recorded as an unsupported single-stock/hedged ETF and no equity-performance artifact was created.
+
+## WDAF Sequential Queue Record
+
+- Input row: `94/125`; input ticker: `WDAF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `Nasdaq:WDAF`; WisdomTree's official investment case and launch materials identify Nasdaq as the exchange and the product page identifies the U.S. fund. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking Asia-Pacific thematic equity ETF. WisdomTree states that WDAF seeks to track the `WisdomTree Asia Defense Index (WTADEFN)` before fees and expenses and does not attempt to outperform its index.
+- Mandatory coverage audit: official inception `2025-09-12` means `10-year NAV TR unavailable`. The official month-end table reports NAV since-inception cumulative return `0.56%` and current standardized YTD `6.77%` through `2026-06-30`.
+- Available-period window: `2025-09-12` to `2026-06-30`, `291 days / 0.796731 years`; normalized NAV TR `100.00` to `100.56`; official cumulative `0.56%`; derived annualized CAGR `0.70%`. It is a short-period annualization and is not labeled 10-year performance.
+- Annual observations: 2025 is an incomplete inception year; no complete calendar-year NAV TR row is available. S&P 500 TR rows for 2016-2025 reuse the cached USD convention.
+
+### WDAF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:WDAF` | [WisdomTree WDAF official product page](https://www.wisdomtree.com/us/products/equity/wdaf) | identity, index, inception, fee, NAV TR, YTD and holdings | Product page accessed `2026-07-24`; performance through `2026-06-30`; inception `2025-09-12`; NAV since inception `0.56%`; YTD `6.77%`; net expense `0.45%` as of `2026-07-20` |
+| `Nasdaq:WDAF` | [WisdomTree WDAF factsheet](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-wdaf.pdf) | passive/index-tracking classification and return cross-check | Factsheet capture through `2026-03-31`; inception `2025-09-12`; index `WTADEFN`; 10-year field unavailable |
+| `Nasdaq:WDAF` | [WisdomTree WDAF investment case](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/investment-case/the-case-for-asia-defense-fund-wdaf.pdf) | formal exchange and index objective | Investment case identifies exchange `Nasdaq`; objective tracks WisdomTree Asia Defense Index |
+| `Nasdaq:WDAF` | [WisdomTree Asia Defense Index](https://www.wisdomtree.com/us/indexes/wtadef) | index universe and methodology context | Page accessed `2026-07-24`; developed/emerging Asia-Pacific defense-related companies |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### WDAF Raw Observations And Calculations
+
+| Period | WDAF NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not applicable; before inception | -18.11% |
+| 2023 | not applicable; before inception | 26.29% |
+| 2024 | not applicable; before inception | 25.02% |
+| 2025 | not disclosed; incomplete inception year | 17.88% |
+| 2026 YTD | 6.77% as of 2026-06-30 | not comparable; current year not cached |
+
+- Available-period NAV TR: cumulative `0.56%`, `2025-09-12` to `2026-06-30`.
+- Actual years: `291 / 365.2425 = 0.796731`.
+- Normalized endpoint: `100.00 × (1 + 0.0056) = 100.56`.
+- Derived CAGR: `(100.56 / 100.00)^(1 / 0.796731) - 1 = 0.70%`; short-period only.
+- Complete-calendar up/down count and best/worst year: not disclosed.
+
+### WDAF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized endpoint, derived short-period CAGR, incomplete 2025 year, current-YTD as-of date, and benchmark cache convention are explicitly disclosed.
+
+## GIND Sequential Queue Record
+
+- Input row: `95/125`; input ticker: `GIND`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `Nasdaq:GIND`; Goldman Sachs' official factsheet and summary prospectus identify the NASDAQ listing and GIND share class. No provider slug or guessed exchange is used.
+- Type-gate result: unsupported — active equity ETF. The official factsheet presents “The Benefits of an Active,” “Local Stock-Picking,” and “Beyond the Benchmark”; the prospectus describes a discretionary India equity portfolio and permits derivatives. It fails the required passive/index-tracking equity ETF gate.
+- Because the type gate failed, `check-etf-performance` was not called for GIND, and no NAV TR/10-year comparison, performance page, region page update, or performance-index row was created.
+
+### GIND Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:GIND` | [Goldman Sachs GIND factsheet](https://am.gs.com/public-assets/documents/93d0d388-7dee-11f0-8231-f3a13ac1f6ac?view=true) | active classification, exchange, inception and fee | Factsheet as of `2026-05-31`; NASDAQ listing; inception `2025-04-01`; total annual fund operating expenses `0.75%`; active/local stock-picking positioning |
+| `Nasdaq:GIND` | [Goldman Sachs GIND summary prospectus](https://am.gs.com/public-assets/documents/16dd63b3-1093-11f0-a26b-87cd5783a190?view=true) | formal listing, objective and strategy/derivative disclosure | Prospectus dated `2025-12-29`; NASDAQ; discretionary India equity strategy; options/futures/forwards may be used |
+
+### GIND Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/active gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. GIND is explicitly recorded as an unsupported active ETF and no equity-performance artifact was created.
+
+## TCHI Sequential Queue Record
+
+- Input row: `96/125`; input ticker: `TCHI`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NASDAQ:TCHI`; iShares' official product page and factsheet identify the NASDAQ listing and TCHI share class. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking China technology/multisector equity ETF. iShares states that TCHI seeks to track the `MSCI China Technology Sub-Industries Select Capped Index (USD) (Net)`.
+- Mandatory coverage audit: official inception `2022-01-25` means `10-year NAV TR unavailable`. The official performance table reports NAV since-inception cumulative `18.39%` and average annual `3.88%` through `2026-06-30`; the latest current-page NAV TR YTD is `-0.45%` as of `2026-07-17`.
+- Available-period window: `2022-01-25` to `2026-06-30`, `1,617 days / 4.427196 years`; normalized NAV TR `100.00` to `118.39`; official cumulative `18.39%`; official average annual `3.88%`; endpoint-derived CAGR `3.89%` after rounding.
+- Annual observations: official NAV TR rows are disclosed for 2023 `-5.69%`, 2024 `9.08%`, and 2025 `33.36%`; 2022 is an incomplete inception year. S&P 500 TR rows for 2016-2025 reuse the cached USD convention.
+- As-of separation: the later current/date-to-date YTD `-0.45%` as of `2026-07-17` is used for the latest-YTD field; the standardized month-end YTD `13.46%` as of `2026-06-30` is retained separately and not mixed into the same window.
+
+### TCHI Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:TCHI` | [iShares TCHI official product and performance page](https://www.ishares.com/us/products/325390/ishares-msci-china-multisector-tech-etf) | identity, exchange, index, inception, NAV TR, current YTD and exposures | Page accessed `2026-07-24`; standardized performance through `2026-06-30`; current NAV TR YTD `-0.45%` as of `2026-07-17`; inception `2022-01-25`; expense `0.59%` |
+| `NASDAQ:TCHI` | [iShares TCHI factsheet](https://www.ishares.com/us/literature/fact-sheet/tchi-ishares-msci-china-multisector-tech-etf-fund-fact-sheet-en-us.pdf) | passive/index-tracking classification and fund-detail cross-check | Factsheet as of `2026-03-31`; exchange `NASDAQ`; index and inception confirmed |
+| `NASDAQ:TCHI` | [iShares TCHI summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-multisector-tech-etf-8-31.pdf) | formal investment objective and index tracking | Prospectus dated `2025-12-30`; tracks an index of Chinese technology-related equities |
+| `iShares TCHI` | [iShares TCHI annual report](https://www.ishares.com/us/literature/annual-report/ar-tchi-en.pdf) | fund identity and reporting cross-check | Annual report accessed `2026-07-24`; reporting period includes 2025 |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### TCHI Raw Observations And Calculations
+
+| Period | TCHI NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not disclosed; incomplete inception year | -18.11% |
+| 2023 | -5.69% | 26.29% |
+| 2024 | 9.08% | 25.02% |
+| 2025 | 33.36% | 17.88% |
+| 2026 YTD | -0.45% as of 2026-07-17 | not comparable; current year not cached |
+
+- Available-period NAV TR: cumulative `18.39%`, official average annual `3.88%`, `2022-01-25` to `2026-06-30`.
+- Actual years: `1,617 / 365.2425 = 4.427196`.
+- Normalized endpoint: `100.00 × (1 + 0.1839) = 118.39`.
+- Endpoint-derived CAGR: `(118.39 / 100.00)^(1 / 4.427196) - 1 = 3.89%`; official average annual `3.88%` is retained as the primary issuer metric.
+- Disclosed annual rows 2023-2025 compound to `37.19%`; complete 2021-2025 CAGR is not calculable because 2021-2022 are not available.
+
+### TCHI Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized endpoint, official/derived CAGR distinction, 2022 incomplete-year gap, 2023-2025 rows, separate current/month-end YTD dates, and systematic-fair-value note are explicitly disclosed.
+
+## JAPN Sequential Queue Record
+
+- Input row: `97/125`; input ticker: `JAPN`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NASDAQ:JAPN`; Horizon Kinetics' official product page and SEC/Nasdaq materials identify the NASDAQ listing. No provider slug or guessed exchange is used.
+- Type-gate result: unsupported — active equity ETF. Horizon Kinetics labels JAPN an `Active Equity ETF` and states that it invests primarily in Japanese companies operated by individuals with significant ownership, using a discretionary owner-operator selection process. It fails the required passive/index-tracking equity ETF gate.
+- Because the type gate failed, `check-etf-performance` was not called for JAPN, and no NAV TR/10-year comparison, performance page, region page update, or performance-index row was created.
+
+### JAPN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:JAPN` | [Horizon Kinetics JAPN official product page](https://horizonkinetics.com/products/etf/japn/) | active classification, exchange, inception, strategy and holdings | Page data as of `2026-07-21`; `Active Equity ETF`; NASDAQ; inception `2025-05-12`; expense `0.85%` |
+| `NASDAQ:JAPN` | [SEC JAPN summary prospectus](https://www.sec.gov/Archives/edgar/data/1683471/000114554925055230/horizonkineticsjapnsummary.htm) | formal listing, objective and active strategy | Prospectus dated `2025-05-04`; listed on Nasdaq; actively managed owner-operator Japan equity strategy |
+| `NASDAQ:JAPN` | [Nasdaq official JAPN information circular](https://www.nasdaqtrader.com/content/newsalerts/2025/InfoCircular/JAPN_Circular_NQ.pdf) | exchange-level launch and ETF classification cross-check | Circular anticipates Nasdaq trading from `2025-05-13`; explicitly calls JAPN an actively managed ETF |
+
+### JAPN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/active gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. JAPN is explicitly recorded as an unsupported active ETF and no equity-performance artifact was created.
+
+## FXA Sequential Queue Record
+
+- Input row: `98/125`; input ticker: `FXA`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:FXA`; Invesco's official product page identifies FXA, and the official filing confirms its primary listing on NYSE Arca. No provider slug or guessed exchange is used.
+- Type-gate result: unsupported — currency trust/FX exposure. Invesco states that the CurrencyShares Australian Dollar Trust is designed to track the price of the Australian dollar plus accrued interest, less trust expenses; it holds Australian dollars rather than an equity portfolio. Currency trusts are outside the required passive/index-tracking equity ETF scope.
+- Because the type gate failed, `check-etf-performance` was not called for FXA, and no NAV TR/10-year equity comparison, performance page, region page update, or performance-index row was created.
+
+### FXA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FXA` | [Invesco FXA official product page](https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-australian-dollar-trust.html) | identity, currency-trust objective, exchange, inception and expense | Page accessed `2026-07-24`; NYSE Arca; inception `2006-06-21`; total expense ratio `0.40%`; designed to track Australian dollar price plus accrued interest |
+| `NYSE Arca:FXA` | [Invesco FXA 10-Q / official filing](https://www.invesco.com/us-rest/contentdetail?contentId=a95d37e7-4857-49ec-90d9-a57915fb4c68&dnsName=us) | formal grantor-trust and listing confirmation | Filing states grantor trust, primary listing transferred to NYSE Arca on `2007-10-30`, and no derivative products held or used |
+| `NYSE Arca:FXA` | [Invesco FXA factsheet](https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/fxa-invesco-currencyshares-australian-dollar-trust-fact-sheet.pdf) | asset-class and benchmark cross-check | Factsheet as of `2025-06-30`; FXA tracks WM/Reuters Australian Dollar Closing Spot Rate; listing exchange NYSE Arca |
+
+### FXA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact trust identity, asset-class/type gate, terminal-status selection, source URLs/as-of dates, no-performance-file decision, no-region/index update decision, and ledger/source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. FXA is explicitly recorded as an unsupported currency trust and no equity-performance artifact was created.
+
+## KGRN Sequential Queue Record
+
+- Input row: `99/125`; input ticker: `KGRN`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:KGRN`; KraneShares' formal annual shareholder report identifies NYSE Arca as the principal listing exchange. The current product page displays `NYSE`; the formal document is retained as canonical and the conflict is disclosed.
+- Type-gate result: supported passive/index-tracking China clean-technology thematic equity ETF. KraneShares states that KGRN seeks to track the `MSCI China IMI Environment 10/40 Index`, whose constituents derive at least 50% of revenue from environmentally beneficial products/services.
+- Mandatory coverage audit: official inception `2017-10-12` means `10-year NAV TR unavailable` through 2026-06-30. Official NAV TR since inception is cumulative `7.53%` and annualized `0.84%`; current standardized YTD is `-13.22%` through 2026-06-30.
+- Available-period window: `2017-10-12` to `2026-06-30`, `3,183 days / 8.714758 years`; normalized NAV TR `100.00` to `107.53`; official cumulative `7.53%`; official annualized `0.84%`. Raw endpoints are not disclosed.
+- Annual observations: complete calendar-year NAV TR rows are not disclosed in the current official performance history. The 2025 annual shareholder report's `27.07%` is a fiscal-year period ended 2025-03-31 and is not used as calendar-year 2025.
+
+### KGRN Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KGRN` | [KraneShares KGRN official product/performance page](https://kraneshares.com/etf/kgrn/) | identity, index, current NAV/YTD, inception, fee and current exchange-page field | Page data as of `2026-07-20`; primary exchange displayed `NYSE`; inception `2017-10-12`; NAV YTD `-13.22%` as of `2026-06-30`; expense `0.79%` |
+| `NYSE Arca:KGRN` | [KraneShares KGRN factsheet](https://kraneshares.com/resources/factsheet/kgrn_factsheet.pdf) | passive/index-tracking classification and index methodology | Factsheet accessed `2026-07-24`; MSCI China IMI Environment 10/40 Index |
+| `NYSE Arca:KGRN` | [KraneShares KGRN annual shareholder report](https://kraneshares.com/resources/compliance/2025_05_28_kgrn_annual.TSR.report.pdf) | formal principal listing and fiscal-year context | Report period ended `2025-03-31`; principal exchange `NYSE Arca`; fiscal-year NAV return `27.07%` not used as calendar-year data |
+| `NYSE Arca:KGRN` | [KraneShares KGRN listing announcement](https://kraneshares.com/kraneshares-msci-china-environment-etf-ticker-kgrn-lists-on-the-new-york-stock-exchange/) | original listing and index-objective cross-check | Launch/listing announcement; former name and index objective disclosed |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### KGRN Raw Observations And Calculations
+
+| Period | KGRN NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not disclosed; incomplete inception year | 21.83% |
+| 2018 | not disclosed | -4.38% |
+| 2019 | not disclosed | 31.49% |
+| 2020 | not disclosed | 18.40% |
+| 2021 | not disclosed | 28.71% |
+| 2022 | not disclosed | -18.11% |
+| 2023 | not disclosed | 26.29% |
+| 2024 | not disclosed | 25.02% |
+| 2025 | not disclosed; fiscal-year observation not calendar-comparable | 17.88% |
+| 2026 YTD | -13.22% as of 2026-06-30 | not comparable; current year not cached |
+
+- Available-period NAV TR: cumulative `7.53%`, official annualized `0.84%`, `2017-10-12` to `2026-06-30`.
+- Actual years: `3,183 / 365.2425 = 8.714758`.
+- Normalized endpoint: `100.00 × (1 + 0.0753) = 107.53`.
+- Complete-calendar up/down count and best/worst year: not disclosed.
+
+### KGRN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, passive classification, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD dates, index/region links, stale-value replacement, filename/tags/breadcrumbs/link targets, and source-batch consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The sub-10-year history, normalized endpoint, unavailable calendar rows, fiscal-year/calendar distinction, exchange conflict, and current-YTD as-of date are explicitly disclosed.
+
+## SMHC Sequential Queue Record
+
+- Input row: `100/125`; input ticker: `SMHC`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `Nasdaq:SMHC`; VanEck's official launch release identifies the fund as `Nasdaq:SMHC`. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking China semiconductor equity ETF. VanEck states that SMHC tracks the MarketVector China Semiconductor 25 Index (`MVSMHCTR`) and its Q&A explicitly describes SMHC as passively managed. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: official inception `2026-06-23` means `10-year NAV TR unavailable`. The reviewed official product page shows SMHC fund NAV and market-price performance rows as `--` and does not disclose current fund NAV YTD. The underlying index's 1-month `20.18%` observation is not used as an ETF NAV TR proxy.
+- Available-period window: `2026-06-23` to `2026-07-20`, `27 days / 0.073973 years`; start/end NAV TR values, cumulative return and CAGR are not disclosed. No value is inferred from the index or market price.
+- Annual observations: 2016-2025 are not applicable before inception; 2026 YTD NAV TR is not disclosed. S&P 500 cached USD Total Return rows for 2016-2025 are shown separately only as a common benchmark reference.
+
+### SMHC Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:SMHC` | [VanEck SMHC official product/performance page](https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/) | identity, passive/index-tracking objective, index, inception, expense and fund performance-field audit | Reviewed `2026-07-24`; inception `2026-06-23`; MarketVector China Semiconductor 25 Index; total expense ratio `0.65%`; fund NAV/market-price performance rows `--`; current NAV YTD not disclosed |
+| `Nasdaq:SMHC` | [VanEck SMHC launch release](https://www.vaneck.com/us/en/press-releases/vaneck-launches-smhc-offering-pure-play-access-to-chinas-semiconductor-build-out/) | formal ticker/exchange, fund identity and new-fund risk cross-check | Release dated `2026-06-24`; Nasdaq: SMHC; exposure to 25 Chinese semiconductor companies; new-fund/no-active-market risk disclosed |
+| `Nasdaq:SMHC` | [VanEck SMHC Q&A](https://www.vaneck.com/us/en/blogs/thematic-investing/smhc-etf-question-answer/) | passive classification and index cross-check | Reviewed `2026-07-24`; explicitly states SMHC is passively managed and tracks MVSMHCTR |
+| `Nasdaq:SMHC` | [VanEck SMHC fund profile](https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/smhc-chinas-race-to-the-future-fund-profile.pdf) | inception, index ticker, fee and performance-field cross-check | Profile data as of `2026-03-31`; inception `2026-06-23`; index ticker `MVSMHCTR`; expense `0.65%`; return fields `-` because fund was new |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### SMHC Raw Observations And Calculations
+
+| Period | SMHC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not applicable; before inception | 11.96% |
+| 2017 | not applicable; before inception | 21.83% |
+| 2018 | not applicable; before inception | -4.38% |
+| 2019 | not applicable; before inception | 31.49% |
+| 2020 | not applicable; before inception | 18.40% |
+| 2021 | not applicable; before inception | 28.71% |
+| 2022 | not applicable; before inception | -18.11% |
+| 2023 | not applicable; before inception | 26.29% |
+| 2024 | not applicable; before inception | 25.02% |
+| 2025 | not applicable; before inception | 17.88% |
+| 2026 YTD | not disclosed | not comparable; current year not cached |
+
+- Available-period NAV TR: not disclosed for `2026-06-23` to `2026-07-20`; actual elapsed time is `27 / 365.2425 = 0.073973` years.
+- No normalized endpoint, cumulative return, CAGR, up/down count or best/worst year is calculated because official start/end fund NAV TR values are not disclosed.
+- The official underlying-index 1-month return `20.18%` is intentionally excluded from ETF performance calculations.
+
+### SMHC Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/index-tracking gate, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period and annual windows, benchmark cache, current-YTD disclosure, index/region links, filename/tags/breadcrumbs/link targets, no-proxy rule, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The verified new-fund identity, sub-10-year history, unavailable official fund NAV fields, non-use of the underlying-index proxy, S&P cache convention, and explicit no-CAGR gap are disclosed.
+
+## FCA Sequential Queue Record
+
+- Input row: `101/125`; input ticker: `FCA`; terminal status: `completed_10Y`.
+- Canonical entity key: `Nasdaq:FCA`; First Trust's official product page, factsheet and summary prospectus identify the primary listing as Nasdaq. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking China equity ETF. First Trust states that FCA seeks to track the equity index Nasdaq AlphaDEX China Index (`NQDXCNN`), and the official prospectus describes the fund as an exchange-traded index fund. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: official inception `2011-04-18` and the First Trust monthly performance report provide a genuine `10.00` elapsed-year NAV TR window from `2016-06-30` to `2026-06-30`. Official rolling 10-year NAV TR CAGR is `8.19%`; raw rolling start/end NAV TR values are not disclosed.
+- Rolling-window calculation: normalized start `100.00`; implied normalized end `100 × (1 + 0.0819)^10 = 219.72`. This is derived from the official CAGR and is not presented as a raw endpoint.
+- Official current YTD: NAV TR `-1.23%` as of `2026-06-30`; market-price YTD `-1.27%` is kept separate and is not used as the primary metric.
+- Official calendar NAV TR observations from the May 2026 summary prospectus: 2016 `-4.96%`, 2017 `58.35%`, 2018 `-17.87%`, 2019 `17.34%`, 2020 `13.58%`, 2021 `-1.18%`, 2022 `-17.10%`, 2023 `-9.32%`, 2024 `15.43%`, 2025 `42.95%`. These compound to `101.92%` / CAGR `7.28%`; 2021-2025 compounds to `22.58%` / CAGR `4.16%`.
+- Source conflict: the First Trust factsheet as of `2025-12-31` shows 2024 `14.98%` and 2025 `43.51%`, while the annual shareholder report and May 2026 summary prospectus show 2025 `42.95%`. The annual report/summary-prospectus values are used for the durable annual table because they are the formal reporting documents; the conflict is retained rather than smoothed.
+
+### FCA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:FCA` | [First Trust FCA official product/performance page](https://www.ftportfolios.com/Retail/etf/ETFsummary.aspx?Ticker=FCA) | identity, objective, index, listing, inception, expense, current fund data and performance fields | Page reviewed `2026-07-26`; Nasdaq; inception `2011-04-18`; index Nasdaq AlphaDEX China Index; total expense `0.80%`; current page performance capture includes 2026-06-30 NAV TR YTD `-1.23%` and 10Y `8.19%` |
+| `Nasdaq:FCA` | [First Trust FCA factsheet](https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=091b3012-692d-4750-966f-8e1e69ce35bf) | passive/index objective, listing, inception, index, fee, annual-row cross-check and index-change note | Factsheet as of `2025-12-31`; Nasdaq; inception `2011-04-18`; expense `0.80%`; factsheet rows conflict with formal report for 2024/2025 and are not chosen for the durable annual table |
+| `Nasdaq:FCA` | [First Trust monthly performance report](https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=b363655b-cc73-4f42-a7b1-4c1e00306c7c) | current NAV TR YTD, rolling 10Y NAV TR and market-price separation | Returns as of `2026-06-30`; NAV YTD `-1.23%`; NAV 10Y `8.19%`; market-price YTD `-1.27%`; tracked-index 10Y `9.38%` |
+| `Nasdaq:FCA` | [FCA May 2026 summary prospectus](https://www.sec.gov/Archives/edgar/data/1510337/000144554626003311/fca_497k.htm) | formal calendar-year NAV rows, 10Y annualized return, inception and current-index change | Prospectus dated `2026-05-01`; calendar NAV rows 2016-2025; 10Y return as of `2025-12-31` `7.28%`; inception `2011-04-18`; index changed `2015-07-14` |
+| `Nasdaq:FCA` | [FCA 2025 annual shareholder report](https://www.sec.gov/Archives/edgar/data/1510337/000144554626001916/adex2_ncsr.htm) | formal annual-report cross-check for 2025 total return and fund costs | Period ended `2025-12-31`; NAV return `42.95%`; cost example expense ratio `0.80%` excluding extraordinary expenses |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used for annual comparison |
+
+### FCA Raw Observations And Calculations
+
+| Period | FCA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -4.96% | 11.96% |
+| 2017 | 58.35% | 21.83% |
+| 2018 | -17.87% | -4.38% |
+| 2019 | 17.34% | 31.49% |
+| 2020 | 13.58% | 18.40% |
+| 2021 | -1.18% | 28.71% |
+| 2022 | -17.10% | -18.11% |
+| 2023 | -9.32% | 26.29% |
+| 2024 | 15.43% | 25.02% |
+| 2025 | 42.95% | 17.88% |
+| 2016-2025 compound / CAGR | 101.92% / 7.28% | 298.33% / 14.82% |
+| 2021-2025 compound / CAGR | 22.58% / 4.16% | 96.17% / 14.43% |
+| 2026 YTD | -1.23% as of 2026-06-30 | not comparable; current year not cached |
+
+- 10-year rolling NAV TR CAGR: `8.19%` for `2016-06-30` to `2026-06-30`.
+- Actual elapsed years: `(2026-06-30 − 2016-06-30) / 365.2425 = 10.000000` years.
+- CAGR formula: `(end TR value / start TR value)^(1 / actual years) − 1`; raw endpoint values are not disclosed, so the official CAGR is primary and `219.72` is an implied normalized endpoint only.
+- 2016-2025 up/down count: `5 / 5`; best `2017 +58.35%`; worst `2022 -17.10%`.
+- 10-year rolling comparison versus S&P 500 TR: FCA `8.19%` versus S&P 500 TR `14.82%`, a `-6.63` percentage-point difference. The annual-row CAGR is a separate calendar window and is not substituted for the rolling 10-year figure.
+
+### FCA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/index-tracking gate, inception/10Y audit, NAV TR/reinvestment/expense basis, raw-endpoint disclosure, annual NAV rows, S&P cache, current-YTD dates, index-change caveat, index/region links, conflict disclosure, filename/tags/breadcrumbs/link targets, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The separate rolling and calendar windows, raw-endpoint gap, factsheet/report annual-row conflict, index-change break, market-price separation, and current-YTD as-of date are explicitly disclosed.
+
+## IND Sequential Queue Record
+
+- Input row: `102/125`; input ticker: `IND`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `Nasdaq:IND`; the DWS prospectus and Nasdaq listing alert identify the Xtrackers Nifty 500 India ETF on Nasdaq. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking India equity ETF. DWS states that the fund uses a passive/indexing approach to track the Nifty 500 Index, an equity index covering large-, mid- and small-cap companies traded on India's NSE. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: official inception is `2025-11-24` on the Q1 factsheet; DWS launch/Nasdaq listing and the first holdings report identify listing/commencement on `2025-11-25`. Either date confirms a history far shorter than 10 years. `10-year NAV TR unavailable`.
+- Latest official performance observation: the Q1 factsheet reports 3-month NAV TR `-18.41%` through `2026-03-31`; the factsheet does not disclose raw start/end NAV TR values or an inception-to-date cumulative result. Actual 3-month date window is `2025-12-31` to `2026-03-31`, `90 days / 0.246412 years`.
+- No CAGR is calculated from the rounded 3-month snapshot, and the value is not relabelled as current 2026 YTD. Current NAV TR YTD through the current review date is `not disclosed` in the reviewed official sources.
+- Annual observations: no complete calendar-year NAV TR table is available. 2025 is an incomplete inception year and is marked not disclosed; 2026 YTD is not disclosed.
+
+### IND Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Nasdaq:IND` | [DWS Xtrackers IND Q1 2026 factsheet](https://etf.dws.com/download/asset/048952ad-b7d4-462d-95c8-e726ff2484bd) | fund identity, passive/index classification, index, inception, fee, latest official performance snapshot and holdings | Factsheet as of `2026-03-31`; ticker IND; Nifty 500 Index; inception `2025-11-24`; 3-month NAV TR `-18.41%`; 499 holdings; net/gross expense `0.19%` |
+| `Nasdaq:IND` | [DWS launch release](https://www.dws.com/en-us/about-us/media/media-releases/xtrackers-by-dws-launches-nifty-500-india-etf-nasdaq-ind/) | formal launch date, ticker/exchange, index objective and fee cross-check | Release dated `2025-11-24`; Nasdaq trading begins `2025-11-25`; Nifty 500 Index; net/gross expense `0.19%` |
+| `Nasdaq:IND` | [SEC/DBX ETF Trust prospectus and SAI](https://www.sec.gov/Archives/edgar/data/1503123/000008805325000603/dbxetf-20250531.htm) | formal passive strategy, listing, expenses and no-prior-performance disclosure | Prospectus dated `2025-07-29`; Nasdaq; passive/indexing approach; total annual fund operating expenses `0.19%`; no performance reported because fund had not commenced operations at prospectus date |
+| `Nasdaq:IND` | [Nasdaq IND listing alert](https://www.nasdaqtrader.com/TraderNews.aspx?id=ETP2025-204) | exchange-level ticker and commencement cross-check | Alert dated `2025-11-24`; listing effective `2025-11-25`; daily valuation dissemination begins `2025-11-25` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 not used |
+
+### IND Raw Observations And Calculations
+
+| Period | IND NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016-2024 | not applicable; fund had not launched | cached reference rows available separately |
+| 2025 | not disclosed; incomplete inception year | 17.88% |
+| 2025-12-31 to 2026-03-31 | -18.41% official 3-month NAV TR snapshot | not comparable to this short fund observation |
+| 2026 YTD | not disclosed | not comparable; current year not cached |
+
+- Available-period observation: official 3-month cumulative NAV TR `-18.41%`; raw endpoints are not disclosed.
+- Actual years for the disclosed 3-month observation: `90 / 365.2425 = 0.246412` years.
+- No normalized endpoint, inception-to-date cumulative return, CAGR, up/down count or best/worst year is calculated because the issuer does not disclose compatible inception-to-date NAV TR endpoints or a complete annual table.
+- The official Q1 3-month return is kept distinct from current YTD, and no market-price return is substituted.
+
+### IND Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/index-tracking gate, inception/10Y audit, NAV TR/reinvestment/expense basis, short-period labeling, raw-endpoint disclosure, annual/YTD gaps, S&P cache, index/region links, filename/tags/breadcrumbs/link targets, no-proxy/no-annualization rule, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The inception/listing-date distinction, short-period result, unavailable inception-to-date and current-YTD fields, no-CAGR decision, and new-fund gap are explicitly disclosed.
+
+## VNAM Sequential Queue Record
+
+- Input row: `103/125`; input ticker: `VNAM`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:VNAM`; Global X's product page and SEC summary prospectus identify the primary exchange. No provider slug or guessed exchange is used.
+- Type-gate result: supported passive/index-tracking Vietnam equity ETF. The SEC prospectus states that the adviser uses an indexing approach, generally replicates the `MSCI Vietnam Select 25-50 Index`, and does not attempt to outperform it. The fund is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF.
+- Mandatory 10-year audit: official inception `2021-12-07`; latest reviewed month-end is `2026-06-30`, only `4.561259` elapsed years. `10-year NAV TR unavailable`.
+- Official available-period observations: Global X reports Fund NAV total-return performance, annualized, of `45.10%` for 1Y, `15.86%` for 3Y, and `0.34%` since inception, all as of `2026-06-30`. The page defines performance as total return with gross income reinvested where applicable and separates cumulative from annualized return. Raw start/end NAV TR values are not disclosed, so no independent cumulative result or CAGR is derived.
+- Current NAV TR YTD through the review date is `not disclosed` in the reviewed official capture. The official product page's latest performance table has no YTD column. A Schwab secondary page was reviewed but its visible table was stale as of `2025-10-31`, so it was not used to fill the current-YTD gap.
+- Annual observations: no complete calendar-year NAV TR rows were available in the reviewed official capture. 2021 is an incomplete inception year; 2022-2025 remain `not disclosed`. No up/down count or best/worst ranking is inferred.
+- Risk observations used in the page: total expense ratio `0.51%`; 70 holdings; sector exposure as of `2026-06-30` of real estate `32.1%` and financials `29.2%`; largest holding `23.61%` as of `2026-07-17`; standard deviation `24.40%` as of `2026-06-30`.
+
+### VNAM Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:VNAM` | [Global X VNAM official product/performance page](https://www.globalxetfs.com/funds/vnam?download_full_holdings=true) | identity, objective, index, inception, expense, official NAV TR, holdings, exposure and risk statistics | Page reviewed `2026-07-26`; primary exchange `NYSE Arca`; inception `2021-12-07`; expense `0.51%`; performance table as of `2026-06-30`: NAV 1Y `45.10%`, 3Y `15.86%`, since inception `0.34%`; performance basis is total return with gross income reinvested where applicable |
+| `NYSE Arca:VNAM` | [SEC 2026 Summary Prospectus](https://www.sec.gov/Archives/edgar/data/1432353/000143235326000195/a497kmscivietnam.htm) | formal exchange, passive/indexing approach, index strategy, expenses, methodology and risk cross-check | Prospectus dated `2026-03-01`; ticker/exchange `VNAM / NYSE Arca`; total annual fund operating expenses `0.51%`; indexing approach and replication/representative-sampling language; index/name-methodology change effective `2023-12-01` |
+| `NYSE Arca:VNAM` | [Global X launch article](https://www.globalxetfs.com/articles/introducing-the-global-x-msci-vietnam-etf-vnam) | listing-date cross-check | Launch article states NYSE Arca listing on `2021-12-09`; retained as a listing-date distinction from product-page inception `2021-12-07` |
+| `NYSE Arca:VNAM` | [Schwab VNAM performance page](https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=vnam) | secondary current-YTD check | Reviewed `2026-07-26`; visible performance table is as of `2025-10-31`, so it is stale and not used for current YTD |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 current YTD not used |
+
+### VNAM Raw Observations And Calculations
+
+| Period | VNAM NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016-2020 | not applicable; before inception | cached reference rows available separately |
+| 2021 | not disclosed; incomplete inception year | 28.71% |
+| 2022 | not disclosed | -18.11% |
+| 2023 | not disclosed | 26.29% |
+| 2024 | not disclosed | 25.02% |
+| 2025 | not disclosed | 17.88% |
+| 2026 YTD | not disclosed | not comparable; current year not cached |
+
+- Actual elapsed years: `(2026-06-30 − 2021-12-07) / 365.25 = 4.561259` years (`1666` days).
+- The official since-inception annualized NAV TR is `0.34%`; raw endpoints are not disclosed. No normalized endpoint, endpoint-derived CAGR, short-period annualization, or proxy is created.
+- The official 1Y and 3Y NAV TR values are annualized observations, not complete calendar-year rows. They are kept separate from the S&P 500 cached calendar-year convention and are not presented as same-window S&P comparisons.
+
+### VNAM Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: row/order, canonical exchange, exact fund identity, passive/index-tracking gate, inception/10Y audit, NAV TR/reinvestment/expense basis, annualized-versus-cumulative labels, raw-endpoint disclosure, annual/YTD gaps, S&P cache, index/region links, filename/tags/breadcrumbs/link targets, stale-secondary rejection, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The inception/listing-date distinction, short history, official annualized available-period figures, raw-endpoint gap, unavailable annual rows/current YTD, stale secondary page, and no-proxy/no-CAGR decision are explicitly disclosed.
+
+## ISAGF Sequential Queue Record
+
+- Input row: `104/125`; input ticker: `ISAGF`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `LSE:IGEA`. The input is an OTC alias. iShares' official listing table maps ISIN `IE00B6QGFW01` to London Stock Exchange ticker `IGEA` in USD; the same share class is also cross-listed on Xetra, SIX and Bolsa Mexicana. The USD LSE line is retained as the canonical exchange-qualified key; `OTC:ISAGF` is not used as the durable key.
+- Type-gate result: unsupported. iShares identifies the fund as `iShares Emerging Asia Local Govt Bond UCITS ETF`, with asset class `Fixed Income`, objective to track an index of local-currency government bonds from Asian emerging-market countries, and benchmark `BBG EM Asia Local Currency Govt Country Cap NET Index`. The product is passive, but it is a bond ETF rather than a passive/index-tracking equity ETF, so it is outside scope.
+- Official factsheet/page observations: share-class launch `2012-03-02`; total expense ratio `0.50%`; use of income `Distributing`; physical, sampled methodology; official page data as of `2026-07-21` show 156 holdings and 3-year standard deviation `8.22%`. These figures are recorded only as classification evidence; no NAV TR performance analysis is created.
+- No 10-year NAV TR calculation, annual return table, current YTD comparison, S&P 500 comparison, performance page, region page update or performance-index row is applicable after the bond type gate.
+
+### ISAGF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:IGEA` | [iShares official product page / listings](https://www.ishares.com/ch/professionals/en/products/251723/ishares-emerging-asia-local-government-bond-ucits-etf) | identity, ISIN, asset class, objective, benchmark, expenses, methodology and exchange-qualified alias resolution | Page reviewed `2026-07-26`; ISIN `IE00B6QGFW01`; asset class `Fixed Income`; LSE USD ticker `IGEA`; share-class launch `2012-03-02`; TER `0.50%`; LSE/Xetra/SIX/Mexico listings; holdings as of `2026-07-21` |
+| `LSE:IGEA` | [iShares official UK product page](https://www.ishares.com/uk/individual/en/products/251723/ishares-emerging-asia-local-government-bond-ucits-etf) | issuer objective and fixed-income classification cross-check | Reviewed `2026-07-26`; objective is local-currency government bonds from Asian Emerging Market countries; asset class `Fixed Income`; issuing company `iShares III plc`; Bloomberg London ticker `SGEA LN` / page listing table separately identifies `IGEA` USD |
+| `LSE:IGEA` | [iShares official March 2026 factsheet](https://www.ishares.com/uk/individual/en/literature/fact-sheet/sgea-ishares-emerging-asia-local-govt-bond-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y) | share-class launch, passive bond objective, TER and issuer naming cross-check | Factsheet dated `2026-03`; ISIN `IE00B6QGFW01`; share-class launch `2012-03-02`; asset class `Fixed Income`; TER `0.50%`; iShares III plc; objective is Asian emerging-market government bonds |
+| `LSE:IGEA` | [iShares official KIID](https://www.ishares.com/uk/individual/en/literature/kiid/ucits_kiid-ishares-emerging-asia-local-govt-bond-ucits-etf-usd-dist-gb-ie00b6qgfw01-en.pdf?siteEntryPassthrough=true&switchLocale=y) | legal product and passive fixed-income wording | KIID dated `2026-04-09`; ISIN `IE00B6QGFW01`; sub-fund of iShares III plc; passively managed; invests in fixed-income securities such as bonds |
+
+### ISAGF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue order, exact OTC-alias resolution, official exchange listing, fund identity, asset-class/type gate, issuer objective, benchmark, fee, return-basis separation, source dates, no-performance-page rule for unsupported products, and ledger/source-batch/log consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The official fixed-income classification and government-bond objective are sufficient to stop before performance analysis; no equity NAV TR, CAGR, YTD or proxy value is inferred.
+
+## FLIBF Sequential Queue Record
+
+- Input row: `105/125`; input ticker: `FLIBF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `LSE:FLXI`. The input is an OTC alias. Franklin's official June 2026 factsheet maps ISIN `IE00BHZRQZ17` to the USD London Stock Exchange ticker `FLXI`; `FRIN` is the separate GBP London line, while other EUR/CHF lines are also cross-listed. The USD LSE line is retained as the canonical exchange-qualified key.
+- Type-gate result: supported passive/index-tracking India equity ETF. Franklin identifies the ETF as `Indexed`, physical and full replication, investing in medium- and large-capitalisation Indian equities and targeting the `FTSE India 30/18 Capped Index-NR`. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy fund.
+- Mandatory 10-year audit: official fund inception `2019-06-25`; the latest official factsheet performance date is `2026-06-30`, only `7.014374` elapsed years. The official 10-year field is unavailable; `10-year NAV TR unavailable`.
+- Latest official performance: Franklin's June 2026 factsheet reports USD NAV total returns of YTD `-8.42%`, 1-month `1.16%`, 3-month `9.66%`, 1-year `-10.72%`, 3-year cumulative `20.28%`, 5-year cumulative `29.22%`, and since-inception cumulative `64.43%` / average annual `7.35%`, all as of `2026-06-30`. Raw start/end NAV TR values are not disclosed.
+- Annual observations: official complete calendar NAV rows are `2020-2025`: `12.48%`, `24.89%`, `-7.89%`, `22.37%`, `10.61%`, `2.63%`. 2019 is a partial inception year and is excluded from up/down ranking. Rounded-row compound for 2020-2025 is `79.74%` / CAGR `10.27%`; S&P 500 cached comparison is `132.26%` / `15.08%`.
+- Current NAV is `US$41.63` as of `2026-07-07`; this is a NAV observation, not a return. The earlier May 2026 product-page snapshot showed YTD `-9.47%` and inception cumulative `62.54%`; the newer June 2026 factsheet is used for the durable current snapshot and the as-of difference is retained as a source-date refresh, not blended.
+
+### FLIBF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:FLXI` | [Franklin Templeton official June 2026 factsheet](https://www.franklintempletonoffshore.com/download/en-os/factsheet/eb953849-e3ab-40a6-b777-15a7ba704486/Factsheet-FranklinFTSEIndiaUCITSETF-27853-FF-NRC-en-OS.PDF) | USD/LSE ticker mapping, fund identity, indexed equity classification, inception, benchmark, TER, annual rows, YTD and available-period NAV TR | Factsheet as of `2026-06-30`; ISIN `IE00BHZRQZ17`; LSE `FLXI` USD; inception `2019-06-25`; benchmark FTSE India 30/18 Capped Index-NR; physical/full replication; cumulative inception `64.43%`; average annual inception `7.35%`; YTD `-8.42%`; TER `0.19%` |
+| `LSE:FLXI` | [Franklin Templeton official product/performance page](https://www.franklintempleton.co.uk/our-funds/etf/price-and-performance/products/27853/SINGLCLASS/franklin-ftse-india-ucits-etf/IE00BHZRQZ17) | current identity/NAV, indexed equity classification and official month-end performance cross-check | Page reviewed `2026-07-26`; current NAV `US$41.63` as of `2026-07-07`; page's latest standardized month-end table is as of `2026-05-31` and shows YTD `-9.47%`, inception cumulative `62.54%`, and 10-year `—`; newer June factsheet is chosen for durable current performance |
+| `LSE:FLXI` | [Franklin Templeton official KIID](https://www.franklintempleton.co.uk/download/en-gb/KIID/36ada32a-c060-4f7d-87ad-83346b67d733/KIID_IE00BHZRQZ17_en_GB.pdf) | objective, accumulating share class and index-tracking policy | KIID for ISIN `IE00BHZRQZ17`; fund is a sub-fund of Franklin Templeton ICAV; accumulating USD share class and objective to track the FTSE India 30/18 Capped Index-NR |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 current YTD not used |
+
+### FLIBF Raw Observations And Calculations
+
+| Period | FLIBF / FLXI NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2019† | not disclosed; partial inception year | 31.49% |
+| 2020 | 12.48% | 18.40% |
+| 2021 | 24.89% | 28.71% |
+| 2022 | -7.89% | -18.11% |
+| 2023 | 22.37% | 26.29% |
+| 2024 | 10.61% | 25.02% |
+| 2025 | 2.63% | 17.88% |
+| 2026 YTD | -8.42% as of 2026-06-30 | not comparable; current year not cached |
+
+- Actual available-period years: `(2026-06-30 − 2019-06-25) / 365.25 = 7.014374` years (`2562` days).
+- Issuer available-period result: cumulative `64.43%`; average annual `7.35%`. Using the rounded cumulative figure, `(1 + 0.6443)^(1 / 7.014374) − 1 = 7.35%` approximately; raw NAV endpoints remain not disclosed.
+- Complete calendar-year rows `2020-2025` compound to `79.74%` / CAGR `10.27%`; S&P 500 TR compounds to `132.26%` / CAGR `15.08%` over the same six complete years. For `2021-2025`, ETF `59.80%` / `9.83%` versus S&P `96.17%` / `14.43%`.
+
+### FLIBF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, OTC-alias and USD-share-class resolution, canonical exchange, exact fund identity, passive/indexing gate, inception/10Y audit, NAV TR/expense/currency basis, annual rows, current-YTD and NAV as-of dates, S&P cache, index/region links, filename/tags/breadcrumbs/link targets, source-date conflict handling, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The USD LSE line versus GBP/EUR/CHF cross-listings, shorter-than-10-year history, partial inception year, latest June-vs-May source refresh, raw-endpoint gap, and no-proxy/no-10Y relabelling rule are explicitly disclosed.
+
+## IHRPF Sequential Queue Record
+
+- Input row: `106/125`; input ticker: `IHRPF`; terminal status: `completed_10Y`.
+- Canonical entity key: `LSE:FXC`. The input is an OTC alias. iShares' official trading-information table maps ISIN `IE00B02KXK85` to ticker `FXC` on the London Stock Exchange in USD; the same fund is cross-listed in other currencies/exchanges. The USD LSE line is retained as the durable key; no OTC/provider slug is used.
+- Type-gate result: supported passive/index-tracking China equity ETF. iShares identifies the asset class as Equity, physical replication, distributing share class, 50 holdings, and benchmark `FTSE China 50 Index - USD Net Div (USD)`. The product is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF.
+- Mandatory 10-year audit: official rolling window `2016-06-30` to `2026-06-30` equals `10.00` elapsed years. `10-year NAV TR available`.
+- Official rolling result: NAV Total Return cumulative `18.61%`, annualized/CAGR `1.72%`, current NAV TR YTD `-17.31%`, all from the current iShares performance page as of `2026-06-30`. iShares states that performance is on a NAV basis with gross income reinvested where applicable.
+- Endpoint disclosure: raw start/end TR values are not disclosed. The page reports the official cumulative return and CAGR, shows the dates and actual years, and leaves both endpoint values as `not disclosed`; no normalized endpoint is invented.
+- Official annual observations: iShares factsheet rows for `2016-2025` are `1.80%`, `34.51%`, `-12.39%`, `13.76%`, `10.06%`, `-20.70%`, `-20.01%`, `-13.57%`, `31.03%`, `28.16%`. Current iShares page confirms the same series rounded to one decimal as of `2026-06-30`; the two-decimal rows are retained from the official factsheet dated `2026-03-31`.
+- Calculations from complete calendar rows: 2016-2025 ETF NAV TR cumulative `38.28%` / CAGR `3.29%`; 2021-2025 ETF NAV TR cumulative `-7.93%` / CAGR `-1.64%`. S&P 500 cached USD Total Return for 2021-2025 compounds to `96.17%` / CAGR `14.43%`; ETF gap is approximately `-16.07` percentage points.
+- Structural source caveat: iShares states that the benchmark changed from FTSE China 25 to FTSE China 50 effective at the close of `2014-09-19`; this benchmark splice is disclosed and no pre-change proxy is created.
+
+### IHRPF Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `LSE:FXC` | [iShares official product/performance page](https://www.ishares.com/ch/individual/en/products/251798/ishares-china-large-cap-ucits-etf) | identity, USD/LSE alias resolution, asset class, objective, benchmark, NAV TR, current NAV and risk facts | Page reviewed `2026-07-26`; ISIN `IE00B02KXK85`; share-class launch `2004-10-21`; asset class Equity; physical; 50 holdings; TER `0.74%`; NAV TR rolling window and YTD as of `2026-06-30`; latest NAV `US$91.61` as of `2026-07-02` |
+| `LSE:FXC` | [iShares official FXC factsheet](https://www.ishares.com/ch/professionals/en/literature/fact-sheet/fxc-ishares-china-large-cap-ucits-etf-fund-fact-sheet-en-ch-institutional.pdf) | exact annual NAV/benchmark rows, inception and listing table cross-check | Factsheet reviewed `2026-07-26`; annual rows as of `2026-03-31`; ticker `FXC` on LSE in USD; benchmark `FTSE China 50 Index - USD Net Div (USD)`; annual NAV rows `2016-2025` |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 current YTD not used |
+
+### IHRPF Raw Observations And Calculations
+
+| Period | IHRPF / FXC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 1.80% | 11.96% |
+| 2017 | 34.51% | 21.83% |
+| 2018 | -12.39% | -4.38% |
+| 2019 | 13.76% | 31.49% |
+| 2020 | 10.06% | 18.40% |
+| 2021 | -20.70% | 28.71% |
+| 2022 | -20.01% | -18.11% |
+| 2023 | -13.57% | 26.29% |
+| 2024 | 31.03% | 25.02% |
+| 2025 | 28.16% | 17.88% |
+| 2026 YTD | -17.31% as of 2026-06-30 | not comparable; current year not cached |
+
+- 10-year actual period: `(2026-06-30 − 2016-06-30) / 365.25 = 10.000000` years (`3652` days); official cumulative `18.61%` and CAGR `1.72%`. Raw start/end TR values are `not disclosed`.
+- Complete calendar rows `2016-2025` compound to `38.28%` / CAGR `3.29%`; positive / negative years are `6 / 4`. Best `2017 +34.51%`; worst `2021 -20.70%`.
+- Common `2021-2025` rows compound to `-7.93%` / CAGR `-1.64%`; S&P 500 TR compounds to `+96.17%` / CAGR `+14.43%` over the same five complete years.
+
+### IHRPF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, OTC-alias and USD-share-class resolution, canonical exchange, exact fund identity, passive/indexing gate, inception/10Y audit, NAV TR/reinvestment/expense basis, endpoint disclosure, annual/YTD dates, S&P cache, benchmark-change disclosure, index/region links, filename/tags/breadcrumbs/link targets, no-proxy rule, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The USD LSE listing choice, factsheet-vs-current-page date separation, 10.00-year rolling window, undisclosed endpoint levels, benchmark splice, raw return basis, and no-market-price-proxy rule are explicitly disclosed.
+
+## FLCH Sequential Queue Record
+
+- Input row: `107/125`; input ticker: `FLCH`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:FLCH`. Franklin's official product page and SEC summary prospectus identify the ticker and primary listing exchange; no guessed exchange or provider slug is used.
+- Type-gate result: supported passive/index-tracking China equity ETF. Franklin classifies the ETF as `Indexed`, with physical index exposure to large- and mid-cap Chinese equities and objective to track the `FTSE China RIC Capped Index` / `FTSE China Capped Index-NR`. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF.
+- Mandatory 10-year audit: official fund inception `2017-11-02`; latest complete official month-end `2026-06-30` is only `8.657084` elapsed years (`3162` days). The official 10-year field is `—`; `10-year NAV TR unavailable`.
+- Official available-period result: Franklin's June 2026 factsheet reports NAV total-return average annual `-0.24%` since inception through `2026-06-30`. Raw start/end NAV TR values and cumulative inception NAV TR are not disclosed, so no cumulative proxy or endpoint-derived CAGR is invented.
+- Return basis: Franklin states total returns assume reinvestment of all distributions and deduction of all fund expenses. The product page separately shows the latest current NAV TR YTD `-10.65%` as of `2026-07-10`; the factsheet's month-end YTD is `-13.94%` as of `2026-06-30`, and the two source dates are not blended.
+- Official annual observations: NAV rows for complete calendar years `2018-2025` are `-18.28%`, `22.92%`, `30.60%`, `-21.04%`, `-22.25%`, `-11.98%`, `19.17%`, `31.61%`. 2017 is a partial inception year and is excluded from rankings.
+- Calculations from complete calendar rows: 2018-2025 ETF NAV TR cumulative `11.18%` / CAGR `1.33%`; 2021-2025 ETF NAV TR cumulative `-15.25%` / CAGR `-3.25%`. S&P 500 cached USD Total Return for 2021-2025 compounds to `96.17%` / CAGR `14.43%`; ETF gap is approximately `-17.68` percentage points.
+
+### FLCH Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FLCH` | [Franklin official product/performance page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26362/SINGLCLASS/franklin-ftse-china-etf/FLCH) | identity, listing, indexed equity classification, objective, benchmark, inception, fees, current NAV/YTD and portfolio risk | Page reviewed `2026-07-26`; ticker `FLCH`; exchange `NYSE Arca`; inception `2017-11-02`; benchmark `FTSE China Capped Index-NR`; gross/net expense `0.19%`; current YTD NAV TR `-10.65%` as of `2026-07-10`; NAV `US$21.16` as of `2026-07-10` |
+| `NYSE Arca:FLCH` | [Franklin official June 2026 factsheet](https://www.franklintempleton.com/forms-literature/download/FLCH-FF) | NAV TR basis, available-period return, annual NAV/benchmark rows, holdings and sector observations | Factsheet as of `2026-06-30`; NAV average annual inception `-0.24%`; NAV YTD `-13.94%`; annual NAV rows `2018-2025`; total returns reinvest distributions and deduct fund expenses; holdings/sector snapshot as of `2026-06-30` |
+| `NYSE Arca:FLCH` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1655589/000137949118006818/filing173807320.htm) | formal exchange and passive investment-goal cross-check | Prospectus identifies `FLCH` on `NYSE Arca` and objective to track the FTSE China RIC Capped Index |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 current YTD not used |
+
+### FLCH Raw Observations And Calculations
+
+| Period | FLCH NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2017† | not disclosed; partial inception year | 21.83% |
+| 2018 | -18.28% | -4.38% |
+| 2019 | 22.92% | 31.49% |
+| 2020 | 30.60% | 18.40% |
+| 2021 | -21.04% | 28.71% |
+| 2022 | -22.25% | -18.11% |
+| 2023 | -11.98% | 26.29% |
+| 2024 | 19.17% | 25.02% |
+| 2025 | 31.61% | 17.88% |
+| 2026 YTD | -10.65% as of 2026-07-10; factsheet month-end -13.94% as of 2026-06-30 | not comparable; current year not cached |
+
+- Available-period actual years: `(2026-06-30 − 2017-11-02) / 365.25 = 8.657084` years (`3162` days). Official average annual NAV TR is `-0.24%`; raw endpoints and cumulative inception NAV TR are `not disclosed`.
+- Complete calendar rows `2018-2025` compound to `+11.18%` / CAGR `+1.33%`; positive / negative years are `4 / 4`. Best `2025 +31.61%`; worst `2022 -22.25%`.
+- Common `2021-2025` rows compound to `-15.25%` / CAGR `-3.25%`; S&P 500 TR compounds to `+96.17%` / CAGR `+14.43%` over the same five complete years.
+
+### FLCH Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange, exact fund identity, passive/indexing gate, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period labeling, partial-year handling, current-YTD and factsheet as-of separation, S&P cache, index/region links, filename/tags/breadcrumbs/link targets, no-proxy/no-annualization rule, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The 8.657084-year history, official unavailable 10-year field, annualized-versus-cumulative distinction, June month-end versus July current-YTD refresh, partial 2017 year, raw-endpoint gap, and no-market-price-proxy rule are explicitly disclosed.
+
+## KPHO Sequential Queue Record
+
+- Input row: `108/125`; input ticker: `KPHO`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE:KPHO`. KraneShares' current product page and March 2026 annual shareholder report identify the primary exchange as `NYSE`; an October 2025 summary prospectus says `NYSE Arca`. The latest issuer page/report are used for the canonical key and the official exchange conflict is disclosed; no guessed exchange or provider slug is used.
+- Type-gate result: supported passive/index-tracking Vietnam equity ETF. The prospectus says the fund seeks to correspond generally to the Dragon Capital MerQube Vietnam Growth Index, invests at least 80% in index securities/economic equivalents, and the issuer describes the strategy as an indexed Vietnam equity ETF. The index uses rules-based market-capitalization, liquidity and growth/fundamental screens; this is not an active discretionary fund. The current portfolio is equity/foreign-ETF exposure, not bond, commodity, currency trust, multi-asset, leveraged, inverse, option-income or derivative-heavy exposure.
+- Mandatory 10-year audit: official inception `2025-12-02`; latest official month-end `2026-06-30` is only `0.574949` elapsed years (`210` days). `10-year NAV TR unavailable` and there is no complete calendar year.
+- Official available-period result: KraneShares reports cumulative Fund NAV TR `-4.05%` from inception through `2026-06-30`; raw start/end NAV TR values are not disclosed. Because the period is under one year, no CAGR or annualized return is calculated.
+- Current official NAV TR YTD is `-2.52%` as of `2026-06-30`; latest daily NAV is `US$21.46` as of `2026-07-23`. Market-price return is kept separate (`-5.01%` since inception and `-4.51%` YTD in the issuer table) and is not used as the NAV metric.
+- Annual observations: no complete calendar-year NAV TR rows are available. The 2025 inception/operations period is partial and 2026 is an incomplete current year; no best/worst annual ranking is inferred.
+- S&P 500 comparison: cached complete-calendar S&P rows are not a compatible same-window comparison for the sub-one-year KPHO history; no proxy or short-period annualization is created.
+- Structural caveat: the factsheet reports `DCVFMVN DIAMOND ETF` at `24.01%` of holdings as of `2026-06-30`, and the prospectus notes that the fund may use other investment companies and derivatives within its tracking portfolio. This is recorded as an implementation/tracking risk, not classified as derivative-heavy based on the reviewed portfolio and index mandate.
+
+### KPHO Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE:KPHO` | [KraneShares official product/performance page](https://kraneshares.com/etf/kpho/) | current identity, primary exchange, index, inception, expenses, NAV, NAV TR/YTD, portfolio and implementation | Page reviewed `2026-07-26`; primary exchange `NYSE`; inception `2025-12-02`; total annual operating expense `1.03%`; index `Dragon Capital MerQube Vietnam Growth Index`; NAV `US$21.46` as of `2026-07-23`; NAV TR YTD `-2.52%` and since-inception `-4.05%` as of `2026-06-30` |
+| `NYSE:KPHO` | [KraneShares official factsheet](https://kraneshares.com/resources/factsheet/kpho_factsheet.pdf) | indexed-equity description, expense, inception, holdings, official NAV TR and underlying-index rows | Factsheet reviewed `2026-07-26`; data as of `2026-06-30`; primary exchange `NYSE`; inception `2025-12-02`; 38 holdings; DCVFMVN Diamond ETF `24.01%`; Fund NAV TR YTD/since inception `-2.52%` / `-4.05%` |
+| `NYSE:KPHO` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1547576/000182912625008303/kraneshares_497k.htm) | formal objective, passive/index strategy, 80% policy, implementation and exchange cross-check | Prospectus dated `2025-10-20`; principal listing says `NYSE Arca`; current index is Dragon Capital MerQube Vietnam Growth Index; 80% policy; up to 20% may include other investments/derivatives/ETFs; total expenses `1.03%` including acquired-fund fees/expenses `0.24%` |
+| `NYSE:KPHO` | [KraneShares annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_kpho_annual.TSR.report.pdf) | historical return and exchange cross-check | Report for period from commencement `2025-12-03` to `2026-03-31`; principal listing `NYSE`; NAV return `-5.25%` since commencement; not used for current month-end because newer June factsheet is available |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 current YTD not used |
+
+### KPHO Raw Observations And Calculations
+
+| Period | KPHO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2025† | not disclosed; partial inception/operations period | 17.88% (not comparable) |
+| 2026 YTD | -2.52% as of 2026-06-30 | not comparable; current year not cached |
+| Since inception | -4.05% cumulative as of 2026-06-30 | not comparable |
+
+- Available-period actual years: `(2026-06-30 − 2025-12-02) / 365.25 = 0.574949` years (`210` days). No CAGR or annualized return is calculated because the period is under one year.
+- Complete calendar-year up/down count, best year, worst year and annual CAGR: `not applicable`; no complete calendar year exists.
+- The annual report's `-5.25%` NAV return from commencement `2025-12-03` to `2026-03-31` is retained as a source-date cross-check only, not blended with the June 2026 month-end result.
+
+### KPHO Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange and conflict resolution, exact fund identity, passive/indexing gate, inception/10Y audit, NAV TR/reinvestment/expense basis, under-one-year no-annualization rule, partial-period handling, current-YTD/NAV dates, S&P cache, implementation risk, index/region links, filename/tags/breadcrumbs/link targets, no-proxy rule, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The NYSE-versus-NYSE-Arca source conflict, 0.574949-year history, official cumulative-only available-period result, no annual table, separate market-price return, acquired-fund/ETF implementation, and no-CAGR/no-proxy decision are explicitly disclosed.
+
+## INQQ Sequential Queue Record
+
+- Input row: `109/125`; input ticker: `INQQ`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:INQQ`. SEC summary prospectus, factsheet and annual shareholder report identify `NYSE Arca` as the principal listing exchange. The EMQQ Global current materials page and factsheet marketing text also display `NYSE`; this conflict is retained and the formal prospectus/report listing is used for the durable key.
+- Type-gate result: supported passive/index-tracking non-diversified India internet/e-commerce equity ETF. The SEC objective is to correspond generally to the price and yield performance of the `INQQ The India Internet Index`; the fund invests in index securities or depositary receipts and uses a rules-based eligibility/liquidity/market-cap process. It is not a bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income or derivative-heavy ETF.
+- Mandatory 10-year audit: official inception `2022-04-05`; latest official numeric static performance is as of `2026-03-31`, `3.986311` elapsed years (`1456` days). `10-year NAV TR unavailable`.
+- Official available-period result: the March 2026 factsheet reports NAV average annual since-inception return `-7.83%`; the raw start/end NAV TR values and cumulative endpoint level are not disclosed. The August 2025 annual report separately reports fiscal-year NAV total return `-0.40%` and average annual since inception `-0.21%` as of `2025-08-31`; this older fiscal-period snapshot is not blended with March data.
+- Official numeric YTD: NAV `-26.17%` as of `2026-03-31`. The later official fund-materials page is live but its reviewed HTML exposes placeholders (`nav_me_ytd`, `me_date`) rather than numeric values; a secondary Schwab capture was reviewed but not used to fill the later YTD gap.
+- Return basis: issuer materials state total returns assume reinvestment of dividends/distributions; the SEC prospectus and fund materials describe returns before fees/expenses and the expense ratio is `0.86%`. Market-price values are kept separate.
+- Annual observations: complete calendar NAV rows are not disclosed in the reviewed official capture. No up/down count or best/worst calendar-year ranking is inferred. The fiscal-year `-0.40%` is preserved only as a source-native annual report observation.
+- S&P 500 comparison: cached S&P 500 rows are shown only as a common reference; no same-window 2022-2026 CAGR or proxy is calculated because fund calendar rows/current numeric month-end data are unavailable.
+
+### INQQ Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:INQQ` | [EMQQ Global / INQQ official fund-materials page](https://emqqglobaletfs.com/inqq-fund-materials) | current identity, objective, exchange/page fields, inception, expense, official performance endpoint and data-gap check | Page reviewed `2026-07-26`; page identifies INQQ and primary exchange `NYSE`, inception `2022-04-05`, expense `0.86%`; later performance fields are placeholders in the reviewed HTML, so no later numeric YTD is inferred |
+| `NYSE Arca:INQQ` | [Official INQQ factsheet](https://21674083.fs1.hubspotusercontent-na1.net/hubfs/21674083/Fund%20Documents/Fact%20Sheets/INQQ%20ETF%20Fact%20Sheet.pdf) | formal exchange, indexed-equity profile, available-period NAV TR, numeric YTD and holdings/sector snapshot | Factsheet reviewed `2026-07-26`; all data as of `2026-03-31`; exchange `NYSE Arca`; launch `2022-04-06`; 28 holdings; expense ratio `0.86%`; NAV annualized since inception `-7.83%`; NAV YTD `-26.17%`; India exposure `100%` |
+| `NYSE Arca:INQQ` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1452937/000121390024113356/ea0224782-04_497k.htm) | formal listing, passive/index objective, index strategy, fees and risk cross-check | Prospectus dated `2024-12-30`; principal listing `NYSE Arca`; objective tracks INQQ The India Internet Index; management fee/total expenses `0.86%`; index universe uses India internet/e-commerce companies and liquidity/eligibility screens |
+| `NYSE Arca:INQQ` | [Official annual shareholder report](https://emqqglobaletfs.com/hubfs/Fund%20Documents/Annual%20Report/INQQ%20Annual%20Report.pdf?hsLang=en) | fiscal-year NAV return and historical exchange cross-check | Fiscal year ended `2025-08-31`; principal listing `NYSE Arca`; NAV total return `-0.40%`; average annual since inception `-0.21%`; older fiscal-period observation not used as current month-end |
+| `S&P 500 TR` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | common reference benchmark | Cached USD Total Return rows as of `2025-12-31`; 2026 current YTD not used |
+
+### INQQ Raw Observations And Calculations
+
+| Period | INQQ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2022 | not disclosed; partial inception year | -18.11% (not comparable) |
+| 2023 | not disclosed | 26.29% (not comparable) |
+| 2024 | not disclosed | 25.02% (not comparable) |
+| 2025 | not disclosed | 17.88% (not comparable) |
+| FY ended 2025-08-31 | -0.40% | not comparable; fiscal-period result |
+| 2026 YTD | -26.17% as of 2026-03-31 | not comparable; later current-year cache not used |
+| Since inception | annualized -7.83% as of 2026-03-31 | not comparable |
+
+- Available-period actual years: `(2026-03-31 − 2022-04-05) / 365.25 = 3.986311` years (`1456` days). Issuer annualized NAV TR is `-7.83%`; raw endpoints and cumulative since-inception NAV TR are `not disclosed`.
+- Calendar-year up/down count, best year, worst year and calendar CAGR: `not disclosed`; official calendar NAV rows are unavailable in the reviewed capture.
+- Fiscal-year cross-check: `-0.40%` NAV total return for `2024-09-01` to `2025-08-31`; this is not a calendar-year row and is not used to construct a 2021-2025 CAGR.
+
+### INQQ Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange conflict resolution, exact fund identity, passive/indexing gate, inception/10Y audit, NAV TR/reinvestment/expense basis, available-period labeling, annual/fiscal-period distinction, current-YTD/date validation, S&P cache, source-gap handling, index/region links, filename/tags/breadcrumbs/link targets, no-proxy/no-annualization rule, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The NYSE-versus-NYSE-Arca conflict, one-day launch-date discrepancy, 3.986311-year history, official annualized available-period result, fiscal-year versus calendar-year separation, later dynamic-page numeric gap, raw-endpoint gap, and no-market-price-proxy rule are explicitly disclosed.
+
+## TSMY Sequential Queue Record
+
+- Input row: `110/125`; input ticker: `TSMY`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `NYSE Arca:TSMY`. YieldMax's official fund page identifies the primary exchange as NYSE Arca; the SEC summary prospectus also identifies the fund as listed on NYSE Arca. No provider slug or guessed exchange is used.
+- Type-gate result: unsupported. YieldMax describes TSMY as an actively managed option-income ETF designed to generate weekly income by selling call spreads on Taiwan Semiconductor Manufacturing Co. (`TSM`). The fund does not invest directly in TSM, uses a derivative/option strategy, and carries single-issuer exposure. Active management, option-income and derivative-heavy structure are each outside the required passive/index-tracking equity ETF scope.
+- Official classification observations: inception `2024-08-20`; gross expense ratio `1.01%`; latest reviewed NAV `US$15.77` as of `2026-07-22`; official page notes that the strategy captures only part of potential TSM upside while remaining exposed to losses if TSM declines. These observations are classification evidence only.
+- No NAV TR/CAGR/annual table/S&P 500 comparison, performance page, region page update or ETF Performance Index row is created after the type gate. The official option-income distribution rate is not treated as a performance metric.
+
+### TSMY Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:TSMY` | [YieldMax official TSMY product page](https://yieldmaxetfs.com/our-etfs/tsmy/) | issuer identity, exchange, strategy, option-income classification, single-issuer risk, inception, fee and current NAV | Page reviewed `2026-07-26`; primary exchange `NYSE Arca`; inception `2024-08-20`; gross expense ratio `1.01%`; NAV `US$15.77` as of `2026-07-22`; strategy sells call spreads on TSM and does not invest directly in TSM |
+| `NYSE Arca:TSMY` | [SEC official summary prospectus](https://www.sec.gov/Archives/edgar/data/1924868/000199937125002066/tsmy-497k_022825.htm) | formal listing and active synthetic covered-call/option strategy cross-check | Prospectus dated `2025-02-28`; listed on NYSE Arca; primary objective current income; secondary objective indirect TSM ADR exposure; actively managed; synthetic covered-call/call-spread strategy |
+
+### TSMY Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange, exact fund identity, asset-class/type gate, active/option-income/derivative-heavy classification, no-performance-page rule, no-region/index-update rule, source dates, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The official active management, call-spread strategy, single-issuer exposure and indirect TSM objective are sufficient to stop before performance analysis; no NAV TR, CAGR, YTD or proxy value is inferred.
+
+## IMVP Sequential Queue Record
+
+- Input row: `111/125`; input ticker: `IMVP`; terminal status: `completed_10Y`.
+- Canonical entity key: `NYSE Arca:IMVP`. Invesco's official Q4 2025 product sheet identifies the fund's listing exchange as NYSE Arca; the current SEC summary prospectus identifies the current ticker `IMVP` and the same exchange. No provider slug or guessed exchange is used.
+- Type-gate result: supported. The current SEC summary prospectus states that IMVP seeks to track the Bloomberg India MVP Index, generally invests at least 90% in index securities/ADRs/GDRs, and is non-diversified. The Invesco sheet states that the shares are not actively managed.
+- Official identity/history: legal fund inception `2008-03-05`; the official Q4 2025 sheet reports the former ticker `PIN`, FTSE India Quality and Yield Select Index, total expense ratio `0.78%`, and NAV performance through `2025-12-31`. The SEC supplement says the ticker changed `PIN` → `IMVP` and the underlying index changed `FTSE India Quality and Yield Select Index` → `Bloomberg India MVP Index`, effective on/about `2026-02-23`.
+- Mandatory 10-year coverage audit: official NAV performance data begin 10 years before the ending date `2025-12-31`; official NAV 10Y return is `9.19%` CAGR. The official calendar rows cover `2016-2025`, so the row satisfies the 10-year requirement. Normalized start/end TR values are `100.00` / `240.90`, with the end value calculated as `100 × (1 + 9.19%)^10`; raw issuer NAV endpoint levels are not disclosed.
+- Current official 2026 NAV TR YTD: `not disclosed` in the reviewed Invesco capture as of `2026-07-26`. Secondary snippets were reviewed only as a gap check and were not used as the metric. No proxy, invented value or short-period annualization is created.
+
+### IMVP Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:IMVP` / former `PIN` | [Invesco official Q4 2025 performance PDF](https://www.invesco.com/us-rest/contentdetail?contentId=7d42fd05f0e21410VgnVCM100000c2f1bf0aRCRD) | Fund inception, exchange, passive status, fee, NAV TR definition/performance, 10Y CAGR and annual NAV rows | Reported through `2025-12-31`; former ticker `PIN`; 10Y NAV CAGR `9.19%`; annual rows `2016-2025` |
+| `NYSE Arca:IMVP` | [SEC official current summary prospectus](https://www.sec.gov/Archives/edgar/data/1419139/000119312526062436/d71791d497k.htm) | Current identity, ticker, exchange, Bloomberg India MVP Index, passive/index-tracking strategy and 90% policy | Effective/current prospectus dated `2026-02-23`; current ticker `IMVP` |
+| `NYSE Arca:IMVP` / former `PIN` | [SEC official ticker/index-change supplement](https://www.sec.gov/Archives/edgar/data/1419139/000110465925123131/tm2533678d1_497.htm) | Ticker and index transition, effective date and new index construction | Supplement dated `2025-12-19`; changes effective on/about `2026-02-23` |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31` |
+
+### IMVP Raw Observations And Calculations
+
+| Year | IMVP / PIN NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 0.11% | 11.96% |
+| 2017 | 37.12% | 21.83% |
+| 2018 | -8.10% | -4.38% |
+| 2019 | 4.83% | 31.49% |
+| 2020 | 18.96% | 18.40% |
+| 2021 | 23.94% | 28.71% |
+| 2022 | -9.54% | -18.11% |
+| 2023 | 22.61% | 26.29% |
+| 2024 | 9.52% | 25.02% |
+| 2025 | 1.72% | 17.88% |
+
+- 2016-2025 IMVP/PIN NAV TR: `140.92%` cumulative / `9.19%` CAGR from `Π(1 + annual NAV TR) - 1`; S&P 500: `298.33%` / `14.82%`.
+- 2021-2025 IMVP/PIN NAV TR: `53.14%` cumulative / `8.90%` CAGR; S&P 500: `96.17%` / `14.43%`; IMVP trails by approximately `5.53 pp` CAGR.
+- Up/down years in 2016-2025: `8 / 2`; best `2017 +37.12%`; worst `2018 -8.10%`.
+- Methodology break: 2016-2025 NAV rows are historical official NAV returns for the same legal fund under the former PIN/FTSE setup. They are not backfilled or proxied as post-change Bloomberg India MVP Index performance. The exact post-change 2026 YTD NAV TR is `not disclosed`.
+
+### IMVP Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange and identity, passive/type gate, official NAV TR metric, 10-year coverage, calendar table, S&P 500 comparison, index/ticker break, current-YTD gap, source dates, region/index links, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The official 10-year NAV TR and annual rows pass the coverage gate; post-change current YTD remains explicitly `not disclosed`, and no proxy or invented value is written.
+
+## KMCA Sequential Queue Record
+
+- Input row: `112/125`; input ticker: `KMCA`; terminal status: `completed_available_period_no_10Y`.
+- Canonical entity key: `NYSE Arca:KMCA`. The official PLUS product page identifies the primary exchange as NYSE ARCA and ticker `KMCA`; the SEC summary prospectus independently identifies NYSE Arca, Inc. as the principal listing exchange. No provider slug or guessed exchange is used.
+- Type-gate result: supported. The SEC prospectus states that KMCA seeks to track the `Akros Korea Manufacturing Core Alliance Index`, normally invests at least 80% of net assets in index securities, and is not actively managed. It is a non-diversified South Korea equity ETF, not a bond, commodity, currency, multi-asset, leveraged, inverse, option-income or derivative-heavy product.
+- Official identity: inception `2026-05-06`; management fee and total annual fund operating expenses `0.65%`; the PLUS page reports 36 holdings and NAV `US$18.78` as of `2026-07-23`.
+- Mandatory 10-year coverage audit: the existing page had only an undisclosed-data placeholder. Rechecking the official PLUS performance table and the April 2026 SEC prospectus confirms the fund is new and has no complete calendar-year performance history; the SEC prospectus explicitly says the fund has no performance history until it completes a full calendar year. Therefore `10-year NAV TR unavailable` is a genuine history gap, not merely a page gap.
+- Official available-period NAV TR: Fund NAV `-5.14%` cumulative from inception through `2026-06-30`; the PLUS page also reports `-5.14%` YTD at that month-end. The period is `55 days`, or `0.150582` years using `55 / 365.25`; returns under one year are explicitly not annualized. Normalized TR values are `100.00` / `94.86`, with raw issuer endpoints not disclosed.
+- Official current YTD gap: the latest numeric official performance remains `-5.14%` as of `2026-06-30`; the page's later `2026-07-23` snapshot exposes current NAV but not a newer NAV TR YTD. No proxy, annualized value, invented annual row or mixed market-price return is used.
+
+### KMCA Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:KMCA` | [PLUS official KMCA product and performance page](https://plusetf.com/kmca) | Primary exchange, fund identity, inception, index/product description, holdings, fee, NAV, official Fund NAV/market-price performance and as-of dates | Page data as of `2026-07-23`; performance month/quarter end `2026-06-30`; inception `2026-05-06`; Fund NAV TR/YTD `-5.14%`; NAV `US$18.78` |
+| `NYSE Arca:KMCA` | [SEC official summary prospectus](https://www.sec.gov/Archives/edgar/data/1547950/000121390026047871/ea0286568-02_497k.htm) | Principal exchange, objective, index, 80% policy, passive classification, fee, non-diversification, industry concentration and no-performance-history disclosure | Prospectus dated `2026-04-27` |
+| `NYSE Arca:KMCA` | [SEC official prospectus and SAI filing](https://www.sec.gov/Archives/edgar/data/1547950/000121390026047633/ea0286568-01_485bpos.htm) | Formal listing and methodology/risk cross-check | Filing dated `2026-04-27` |
+| `NYSE Arca:KMCA` | [Official NYSE Arca listing circular](https://www.nasdaqtrader.com/content/newsalerts/2026/infocircular/KMCA_Circular.pdf) | Listing-market and ticker cross-check | Circular reviewed `2026-07-26` |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached convention | Common reference benchmark identity and annual rows | Cached USD Total Return rows as of `2025-12-31`; same-window 2026-06-30 TR not disclosed in reviewed official capture |
+
+### KMCA Raw Observations And Calculations
+
+| Period | KMCA NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2026 YTD / since inception, 2026-05-06 to 2026-06-30 | -5.14% cumulative | not disclosed for the same official date window |
+
+- Available-period normalized TR: `100.00 → 94.86`, calculated as `100 × (1 - 0.0514)` from the official cumulative Fund NAV return.
+- Elapsed period: `55 days / 365.25 = 0.150582 years`; no CAGR is calculated because the issuer explicitly states returns for periods under one year are not annualized.
+- Complete calendar-year observations: none; up/down/best/worst-year statistics are not applicable.
+- Benchmark gap: the S&P 500 comparison is retained as a common reference, but no same-window numeric S&P 500 TR is inserted because it was not disclosed in the reviewed official benchmark capture. Cached 2016-2025 rows cannot be substituted for KMCA's 55-day period.
+
+### KMCA Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange and identity, passive/type gate, official NAV TR metric, inception/history audit, available-period dates and formula, annualization rule, S&P 500 comparison, current-YTD gap, source dates, region/index links, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. The fund's new status and official 55-day NAV TR are recorded as an available-period result, with `10-year NAV TR unavailable`, no annualization, no proxy, and no invented calendar-year values.
+
+## MAGC Sequential Queue Record
+
+- Input row: `113/125`; input ticker: `MAGC`; terminal status: `unsupported ETF type`.
+- Canonical entity key: `Cboe BZX:MAGC`. Roundhill's official product page identifies the primary exchange as Cboe BZX and the ticker as `MAGC`; the SEC summary prospectus identifies the same formal listing. The former ticker `DRAG` and name `Roundhill China Dragons ETF` changed to `MAGC` / `Roundhill China Magnificent Seven ETF` after market close on `2025-09-30`; the current canonical key is retained.
+- Type-gate result: unsupported. Roundhill explicitly labels MAGC as `Actively Managed`. The official page also states that the fund uses total-return swaps to maintain compliance with RIC diversification tests; the strategy is concentrated in a small basket of seven Chinese companies. Active management and derivative-heavy total-return-swap exposure are outside the required passive/index-tracking equity ETF scope.
+- Official observations: launch `2024-10-03`; gross/total expense ratio `0.59%`; Cboe BZX listing; no NAV TR/CAGR/annual table/S&P 500 comparison is created after the type gate.
+- No performance page, China region row, or ETF Performance Index row is created or modified for MAGC. The former ticker/name change is retained as identity evidence only, not as a reason to merge the fund with another product.
+
+### MAGC Official Source Map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Cboe BZX:MAGC` | [Roundhill official MAGC product page](https://www.roundhillinvestments.com/etf/magc/) | Current identity, primary exchange, active-management classification, total-return-swap rationale, inception, fee, strategy and holdings description | Page reviewed `2026-07-26`; launch `2024-10-03`; expense ratio `0.59%`; former `DRAG`/China Dragons change effective `2025-09-30` |
+| `Cboe BZX:MAGC` | [SEC official summary prospectus](https://www.sec.gov/Archives/edgar/data/1976517/000139834425018708/fp0095512-2_497k.htm) | Formal listing, active investment objective/strategy, fees and risks | Prospectus dated `2025-09-30` |
+| `Cboe BZX:MAGC` | [SEC official strategy/name/ticker supplement](https://www.sec.gov/Archives/edgar/data/1976517/000139834425018574/fp0095511-1_497.htm) | DRAG → MAGC transition and active strategy confirmation | Supplement dated `2025-09-26`; effective after market close `2025-09-30` |
+
+### MAGC Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. Main agent performed the local checklist from `check-etf-performance/workflow.md`: queue/order, canonical exchange and identity, ticker/name change, passive/type gate, active-management test, derivative-heavy test, no-performance-page rule, no-region/index-update rule, source dates, and source-batch/ledger consistency.
+- Local fallback verdict: `PASS`; no critical/high finding remained. Active management plus total-return-swap exposure is sufficient to stop before performance analysis; no NAV TR, CAGR, YTD or proxy value is inferred.
+
+## ISVBF Sequential Queue Record
+
+- Input row: `114/125`; input ticker: `ISVBF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical identity: `Euronext Amsterdam:ICHN`, the official USD listing for ISIN `IE00BJ5JPG56`. The input OTC alias `ISVBF` is retained as the queue label and identity bridge; the same share class is also listed on SIX Swiss Exchange as `ICHN`, Xetra as `ICGA`, and other venues. The canonical page uses the issuer/exchange-qualified Euronext Amsterdam identity, not an OTC provider slug.
+- Type gate: supported passive, physical/replicated, accumulating equity ETF tracking `MSCI China Index (USD)`. iShares identifies the asset class as Equity, benchmark and TER as `0.28%`, and share-class launch as `2019-06-20`.
+- 10-year coverage audit: `10-year NAV TR unavailable` because the share class launched in 2019. Official complete-calendar NAV TR rows are available for `2020-2025`; 2016-2019 rows are not disclosed. The six displayed rows compound from normalized `100.00` to `108.36`, or `8.36%` cumulative / `1.35%` CAGR over `6.00` complete calendar years. No incomplete 2019 period is annualized and no proxy is created.
+- Comparison: the page includes the cached USD S&P 500 Total Return rows for `2020-2025`; S&P compounds to `132.26%` / `15.08%` CAGR. For `2021-2025`, ICHN is `-16.06%` cumulative / `-3.44%` CAGR versus S&P `96.17%` / `14.43%` CAGR. Latest official rolling 12-month NAV TR is `-5.07%` through `2026-06-30`; current official NAV TR YTD is `-8.79%` and NAV is `US$5.61`, both as of `2026-07-21`.
+- Raw NAV endpoint levels, a directly calculated inception-to-date CAGR from the partial 2019 start, and 2016-2019 calendar rows are `not disclosed`; no values are filled or smoothed.
+
+### ISVBF Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `Euronext Amsterdam:ICHN` | [iShares official ICHN product and performance page](https://www.ishares.com/uk/individual/en/products/308751/ishares-msci-china-ucits-etf?siteEntryPassthrough=true) | Fund identity, ISIN, official listings, equity/passive profile, benchmark, TER, share-class launch, NAV TR basis, annual NAV/benchmark rows, rolling 12-month rows, current NAV and YTD | Page reviewed `2026-07-26`; annual rows `2020-2025`; rolling window through `2026-06-30`; NAV/YTD as of `2026-07-21` |
+| `Euronext Amsterdam:ICHN` | [iShares official ICHN factsheet](https://www.ishares.com/uk/individual/en/literature/fact-sheet/ichn-ishares-msci-china-ucits-etf-fund-fact-sheet-en-gb.pdf) | Passive physical/replicated classification, accumulating share class, ISIN, benchmark, TER and launch cross-check | Factsheet performance capture as of `2026-04-30`; reviewed `2026-07-26` |
+| `Euronext Amsterdam:ICHN` | [Euronext Amsterdam official instrument page](https://live.euronext.com/en/product/etfs/IE00BJ5JPG56-XAMC/market-information) | Exchange-qualified canonical line, legal name, ISIN, USD ticker and listing cross-check | Page reviewed `2026-07-26`; listing/launch `2019-06-24` |
+| `Euronext Amsterdam:ICHN` | [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) plus cached source-batch convention | USD S&P 500 Total Return comparison for complete calendar years `2020-2025` | Cache convention as of `2025-12-31`; no new web search required for this window |
+| `OTC Markets:ISVBF` → `Euronext Amsterdam:ICHN` | [OTC identity/ISIN bridge](https://www.otcmarkets.com/stock/ISVBF/overview) | Secondary identity check linking input OTC alias to ISIN `IE00BJ5JPG56`; not used as the canonical performance source | Reviewed `2026-07-26`; official issuer/exchange sources take priority |
+
+### ISVBF Raw Observations and Calculations
+
+- Official annual NAV TR rows: `2020 29.10%`, `2021 -22.00%`, `2022 -22.10%`, `2023 -11.40%`, `2024 19.20%`, `2025 30.80%`.
+- Official benchmark rows: `2020 29.50%`, `2021 -21.70%`, `2022 -21.90%`, `2023 -11.20%`, `2024 19.40%`, `2025 31.20%`.
+- Calculation: `100 × Π(1 + annual NAV TR) = 108.361753`; cumulative `8.361753%` → `8.36%`; six-year CAGR `(108.361753 / 100)^(1/6) - 1 = 1.347414%` → `1.35%`.
+- S&P cache rows for `2020-2025`: `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; cumulative `132.264828%` → `132.26%`; six-year CAGR `15.079308%` → `15.08%`.
+
+### ISVBF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `114/125`, canonical exchange-qualified entity key, OTC-to-ISIN identity bridge, issuer/fund identity, passive-equity type gate, official NAV TR basis, 10-year coverage threshold, available-period calculations, annual table and S&P comparison, source URLs/as-of dates, explicit gaps, page/index/region links, ledger status and next queue pointer.
+- Result: local fallback `PASS`. Performance artifact and navigation updates were saved only after the checklist passed.
+
+## KURE Sequential Queue Record
+
+- Input row: `115/125`; input ticker: `KURE`; terminal status: `completed_available_period_no_10Y`.
+- Canonical identity: `NYSE Arca:KURE`. KraneShares' official product page identifies KURE, its primary exchange as NYSE Arca, ISIN `US5007678353`, and inception date `2018-01-31`; no provider slug or guessed exchange is used.
+- Type gate: supported passive/index-tracking equity ETF. The fund seeks to track the `MSCI China All Shares Health Care 10/40 Index (USD)` and the prospectus requires at least 80% of net assets in instruments in the underlying index or similar instruments. Exposure is to Chinese healthcare companies listed in Mainland China, Hong Kong and the United States.
+- Metric: official Fund NAV Total Return. KraneShares' growth-of-$10,000 methodology assumes reinvestment of dividends and capital gains and deducts fund expenses; the SEC prospectus states that performance returns include reinvestment of dividends and distributions. Gross expense is `0.79%`; net after waiver is `0.65%` in the reviewed materials.
+- 10-year coverage audit: `10-year NAV TR unavailable`; inception `2018-01-31` to performance date `2026-06-30` is `3,072 days / 365.25 = 8.410678` years and contains fewer than 10 complete calendar years. Official available-period Fund NAV TR is cumulative `-23.43%` and annualized `-3.12%`. Normalized TR is `100.00 → 76.57`; derived CAGR `-3.1243%` rounds to the official `-3.12%`.
+- Official performance observations as of `2026-06-30`: Fund NAV cumulative 1M `-2.98%`, 3M `-7.56%`, 6M/YTD `-8.80%`, since inception `-23.43%`; average annualized 1Y `-3.15%`, 3Y `-2.80%`, 5Y `-16.07%`, since inception `-3.12%`. Daily NAV is `US$17.53` as of `2026-07-23`.
+- Annual NAV TR rows: exact calendar-year Fund NAV rows are not disclosed in the reviewed current issuer text capture. The SEC summary prospectus exposes a calendar-return bar-chart image but exact rows were not extracted or reconstructed; the page retains `not disclosed` rather than inventing annual values.
+- S&P comparison: cached USD S&P 500 TR rows for complete calendar years `2018-2025` are `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; they compound to `192.03%` / `14.33%` CAGR. Exact same-start/same-end S&P TR for `2018-01-31` to `2026-06-30` is not disclosed, so the table labels the calendar reference as non-identical window.
+- No annualized proxy, market-price return, or synthetic calendar NAV row is substituted for the unavailable official Fund NAV rows.
+
+### KURE Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:KURE` | [KraneShares official KURE product and performance page](https://kraneshares.com/etf/kure/) | Fund identity, primary exchange, ISIN, inception, index, passive objective, fees, official NAV TR windows, current NAV/YTD, distributions and methodology | Page reviewed `2026-07-26`; fund details/NAV as of `2026-07-23`; performance table as of `2026-06-30` |
+| `NYSE Arca:KURE` | [KraneShares official KURE factsheet](https://kraneshares.com/resources/factsheet/kure_factsheet.pdf) | Passive/index strategy, exchange, ISIN, inception, index and expense cross-check | Official factsheet capture as of `2026-01-30`; reviewed `2026-07-26` |
+| `NYSE Arca:KURE` | [SEC official KURE summary prospectus](https://www.sec.gov/Archives/edgar/data/1547576/000182912625005533/kraneshares_497k.htm) | Objective, 80% policy, fee structure, risk/type gate, return basis and existence of calendar-return chart | Prospectus dated `2025-08-01`; performance text as of `2025-06-30` / average-return table through `2024-12-31` |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached source-batch convention | Common USD total-return reference for complete calendar years `2018-2025` | Cache convention as of `2025-12-31`; exact KURE start/end window not cached |
+
+### KURE Raw Observations and Calculations
+
+- Official cumulative Fund NAV rows: `1M -2.98%`, `3M -7.56%`, `6M -8.80%`, `YTD -8.80%`, `since inception -23.43%`, all as of `2026-06-30`.
+- Official annualized Fund NAV rows: `1Y -3.15%`, `3Y -2.80%`, `5Y -16.07%`, `since inception -3.12%`, as of quarter end `2026-06-30`.
+- Available-period calculation: `100 × (1 - 0.2343) = 76.57`; actual years `3,072 / 365.25 = 8.410678`; derived CAGR `(76.57 / 100)^(1 / 8.410678) - 1 = -3.1243%`.
+- Cached S&P 500 TR reference: `2018 -4.38%`, `2019 31.49%`, `2020 18.40%`, `2021 28.71%`, `2022 -18.11%`, `2023 26.29%`, `2024 25.02%`, `2025 17.88%`; 2018-2025 cumulative `192.03%` / CAGR `14.33%`.
+
+### KURE Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `115/125`, canonical exchange-qualified identity, issuer/fund identity, passive-equity type gate, official NAV TR/reinvestment/expense basis, inception and 10-year threshold, available-period start/end values and CAGR, annual-row gap, S&P reference and window caveat, current-YTD as-of date, source URLs/as-of dates, page/index/region links, ledger status and next queue pointer.
+- Result: local fallback `PASS`. The page records the official available-period NAV TR and explicit calendar-row gap; no synthetic annual values or same-window S&P proxy is inserted.
+
+## FXY Sequential Queue Record
+
+- Input row: `116/125`; input ticker: `FXY`; terminal status: `unsupported ETF type`.
+- Canonical identity: `NYSE Arca:FXY`. Invesco's official product page identifies the ticker, exchange, ISIN `US46138W1071`, inception `2007-02-12`, and CurrencyShares Japanese Yen Trust name. SEC's 2025 Form 10-K confirms the primary listing was transferred to NYSE Arca on `2007-10-30`.
+- Type gate: unsupported. The product is a currency trust/grantor trust designed to reflect the USD price of Japanese yen plus accrued interest, less trust expenses. SEC states that the Trust holds Japanese yen and does not hold or use derivative products; this does not make it an equity ETF. Currency/FX exposure is expressly outside the required passive index-tracking equity ETF scope.
+- No NAV Total Return, 10-year CAGR, annual equity-return table, S&P 500 comparison, performance page, region row, or ETF Performance Index addition is created after the type gate. Any current FXY return data would be irrelevant to the required equity-ETF performance output.
+
+### FXY Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:FXY` | [Invesco official FXY product page](https://www.invesco.com/us/en/financial-products/etfs/invesco-currencyshares-japanese-yen-trust.html) | Current fund identity, ticker, primary exchange, ISIN, inception, trust objective, currency exposure and expense ratio | Page reviewed `2026-07-26`; official page shows YTD NAV return as of `2026-05-31`, but it is not used after the type gate |
+| `NYSE Arca:FXY` | [SEC 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1353613/000119312526083566/fxy-20251231.htm) | Grantor-trust structure, Japanese-yen holdings, listing history, passive vehicle description and no-derivatives statement | Fiscal year ended `2025-12-31`; filed `2026` |
+| `NYSE Arca:FXY` | [Invesco official FXY factsheet](https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/etf-snapshot/fxy-invesco-currencyshares-japanese-yen-trust-fact-sheet.pdf) | Secondary issuer cross-check for fund description, listing exchange, CUSIP and expense ratio | Factsheet as of `2025-06-30`; reviewed `2026-07-26` |
+
+### FXY Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `116/125`, canonical exchange-qualified identity, issuer/trust identity, equity-versus-currency type gate, unsupported-type reason, no-performance-page rule, no-region/index-update rule, source URLs/as-of dates, ledger status and next queue pointer.
+- Result: local fallback `PASS`. The currency-trust classification is sufficient to stop before performance analysis; no NAV TR, CAGR, YTD, proxy, or synthetic equity comparison is inferred.
+
+## KRANF Sequential Queue Record
+
+- Input row: `117/125`; input ticker: `KRANF`; terminal status: `completed_available_period_no_10Y`.
+- Canonical identity: `LSE:KWEB`, the official USD London Stock Exchange line `KWEB LN` for ISIN `IE00BFXR7892`. KraneShares' current listing table also shows the same USD share class on Euronext Amsterdam as `KWEB NA`. The OTC input label `KRANF` is retained as the queue alias and is bridged by the fund name, inception, index and share-class identity; the US-listed KWEB product is not merged because it has a different ISIN.
+- Type gate: supported passive, physical/index-tracking China internet equity UCITS ETF. The current KIID states that the fund is passively managed, tracks `CSI Overseas China Internet Index`, normally invests at least 80% in index securities or depositary receipts, reinvests income, and does not intend to use financial derivatives or total-return swaps.
+- 10-year coverage audit: current product page, current KIID, and official annual financial reports confirm a USD share-class launch of `2018-11-21`; the fund launch date is shown as `2018-11-20` in the KIID. The verified period through `2026-06-30` is `2,778 days / 365.25 = 7.605749` years, so `10-year NAV TR unavailable` and no 10-year label is used.
+- Official available-period Fund NAV TR: cumulative `-26.60%` and annualized `-3.98%` through `2026-06-30`. Normalized TR is `100.00 → 73.40`; derived CAGR `(73.40 / 100)^(1 / 7.605749) - 1 = -3.9844%`, matching the official rounded value.
+- Official current performance: YTD `-28.96%` and 6-month `-28.96%`, both as of `2026-06-30`; 1Y `-24.33%`, 3Y `0.51%`, 5Y `-15.80%`, and since-inception annualized `-3.98%`. Daily USD-share-class NAV is `US$19.82` as of `2026-07-24`.
+- Corrected KIID annual NAV rows for complete calendar years: `2019 28.20%`, `2020 59.50%`, `2021 -49.20%`, `2022 -16.40%`, `2023 -9.90%`, `2024 13.20%`, `2025 23.80%`. The same KIID gives index rows `29.20%`, `60.90%`, `-49.00%`, `-16.40%`, `-10.00%`, `11.90%`, `23.30%`. The KIID explicitly corrects the 2019 values; the corrected values are used.
+- Complete calendar calculations: KWEB `2019-2025` compounds to `9.650487%` / `1.324809%` CAGR; `2021-2025` compounds to `-46.375673%` / `-11.717958%` CAGR. Cached S&P 500 USD TR `2019-2025` compounds to `205.405021%` / `17.291901%` CAGR; `2021-2025` is `96.169618%` / `14.426430%` CAGR.
+- No market-price return, incomplete 2018 annual proxy, or non-USD share-class result is substituted for the official USD NAV TR metric.
+
+### KRANF Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `LSE:KWEB` | [KraneShares Europe official KWEB UCITS product and performance page](https://kraneshares.eu/etf/kwebln/) | USD share-class identity, ISIN, listings, inception, passive structure, index, fee, official NAV TR windows, current NAV/YTD and as-of dates | Page reviewed `2026-07-26`; fund/listing/NAV as of `2026-07-24`; performance as of `2026-06-30` |
+| `LSE:KWEB` | [Current official KWEB USD KIID](https://kraneshares.eu/resources/compliance/kiids/2026_02_20_kwebln_kiid_english_usd.pdf) | Passive/index policy, 80% policy, income reinvestment, no-derivatives statement, expense basis, corrected annual performance rows and launch dates | KIID accurate as of `2026-01-29`; annual rows through `2025` |
+| `LSE:KWEB` | [Official KraneShares 2025 annual financial report](https://kraneshares.eu/resources/compliance/2026_01_29_europe_annual.financials.and.other.information.pdf) | Fiscal-year NAV-return cross-check and index methodology | Reporting period ended `2025-09-30`; reviewed `2026-07-26`; fiscal-year figures kept separate from calendar rows |
+| `LSE:KWEB` | [Official London Stock Exchange KWEB page](https://www.londonstockexchange.com/stock/KWEB/kraneshares-icav/company-page) | Exchange-qualified USD listing and legal fund identity cross-check | Page reviewed `2026-07-26` |
+| `OTC:KRANF` → `LSE:KWEB` | [Secondary OTC alias page](https://stockanalysis.com/quote/otc/KRANF/) | Input alias/name, OTC ticker, inception and index identity bridge only | Reviewed `2026-07-26`; secondary source not used for NAV TR or current YTD |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached source-batch convention | Common USD total-return reference for complete calendar years `2019-2025` and `2021-2025` | Cache convention as of `2025-12-31`; same inception-to-date window not cached |
+
+### KRANF Raw Observations and Calculations
+
+- Available-period calculation: `100 × (1 - 0.2660) = 73.40`; `2,778 / 365.25 = 7.605749`; derived CAGR `-3.9844%`.
+- Annual Fund NAV TR / index TR: `2019 28.20% / 29.20%`; `2020 59.50% / 60.90%`; `2021 -49.20% / -49.00%`; `2022 -16.40% / -16.40%`; `2023 -9.90% / -10.00%`; `2024 13.20% / 11.90%`; `2025 23.80% / 23.30%`.
+- S&P cache rows for the same complete calendar years: `2019 31.49%`, `2020 18.40%`, `2021 28.71%`, `2022 -18.11%`, `2023 26.29%`, `2024 25.02%`, `2025 17.88%`.
+
+### KRANF Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `117/125`, OTC-to-official-LSE identity bridge, distinct US KWEB share-class check, passive-equity type gate, official NAV TR/reinvestment/expense basis, 10-year threshold, available-period dates/end value/formula, annual KIID rows and correction note, S&P comparison, current-YTD as-of date, source URLs/as-of dates, page/index/region links, region count, ledger status and next queue pointer.
+- Result: local fallback `PASS`. The official USD UCITS page is saved under the canonical LSE identity, with the OTC alias retained and no US KWEB data merged into it.
+
+## KHYB Sequential Queue Record
+
+- Input row: `118/125`; input ticker: `KHYB`; terminal status: `unsupported ETF type`.
+- Canonical identity: `NYSE:KHYB` based on the current KraneShares product page, which identifies the current primary exchange as NYSE, ticker `KHYB`, ISIN `US5007678437`, and inception `2018-06-26`. The 2025 SEC summary prospectus identifies the principal listing exchange as NYSE Arca; this exchange conflict is retained rather than guessed away.
+- Type gate: unsupported for two independent reasons. KraneShares labels KHYB an `active ETF` managed by Amova Asset Management and describes exposure to USD-denominated Asia high-yield debt securities. It is a fixed-income bond ETF, not a passive index-tracking equity ETF; active management is also outside scope.
+- The official page notes prior names/strategy history: KraneShares CCBS China Corporate High Yield Bond USD ETF before `2021-08-01`, KraneShares Asia Pacific High Income Bond ETF from `2021-08-02` to `2024-08-01`, and current KraneShares Asia Pacific High Income USD Bond ETF thereafter. This history does not change the terminal type classification.
+- No NAV Total Return, 10-year CAGR, annual equity-return table, S&P 500 comparison, performance page, region row, or ETF Performance Index addition is created after the type gate.
+
+### KHYB Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE:KHYB` | [Current KraneShares official KHYB product and performance page](https://kraneshares.com/etf/khyb/) | Current fund identity, ticker, current issuer exchange field, ISIN, inception, active-management classification, bond objective, benchmark, fees and current data | Page reviewed `2026-07-26`; fund/current NAV/yield data as of `2026-07-23`; current page says primary exchange `NYSE` |
+| `NYSE Arca:KHYB` | [SEC 2025 summary prospectus](https://www.sec.gov/Archives/edgar/data/1547576/000182912625005532/kraneshares_497k.htm) | Principal listing exchange, objective, active management and fixed-income classification cross-check | Prospectus dated `2025-07-29`; SEC field says NYSE Arca |
+| `NYSE Arca:KHYB` | [KraneShares 2026 annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_khyb_annual.TSR.report.pdf) | Annual-report identity and NAV/market-price return context; not used after type gate | Reporting period ended `2026-03-31`; principal listing exchange stated as NYSE Arca |
+
+### KHYB Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `118/125`, canonical issuer identity, exchange conflict capture, fund/name history, active-versus-passive gate, equity-versus-bond gate, unsupported-type reason, no-performance-page rule, no-region/index-update rule, source URLs/as-of dates, ledger status and next queue pointer.
+- Result: local fallback `PASS`. Bond exposure plus active management is sufficient to stop before performance analysis; no NAV TR, CAGR, YTD, proxy, or equity comparison is inferred.
+
+## VNM Sequential Queue Record
+
+- Input row: `119/125`; input ticker: `VNM`; terminal status: `completed_10Y`.
+- Canonical identity: `Cboe BZX:VNM`. The current SEC summary prospectus identifies the principal U.S. listing exchange as Cboe BZX Exchange, Inc.; VanEck's current fact sheet labels the exchange `CBOE`. The stale `NYSE Arca:VNM` page is superseded and not used as the canonical identity.
+- Type gate: supported passive/index-tracking Vietnam equity ETF. VanEck states that VNM seeks to replicate the MarketVector Vietnam Local Index; the SEC prospectus says the fund uses a passive/indexing approach, normally invests at least 80% in benchmark securities, and is not actively managed. It is not bond, commodity, currency trust, multi-asset, leveraged, inverse, option-income, derivative-heavy or single-stock exposure.
+- Official rolling 10-year NAV TR: fact sheet reports `3.65%` average annual total return for `2016-06-30` to `2026-06-30`; actual years `10.00`. Raw NAV endpoints are not disclosed. Normalized `100.00 → 143.12` is an implied calculation from `100 × (1.0365^10)`, not a raw endpoint.
+- Official calendar NAV TR: SEC annual chart reports `2016 -9.78%`, `2017 35.76%`, `2018 -14.14%`, `2019 8.86%`, `2020 9.72%`, `2021 22.52%`, `2022 -44.47%`, `2023 15.95%`, `2024 -10.19%`, `2025 62.42%`. These compound to `44.54%` / CAGR `3.75%` over 10 complete calendar years. Common `2021-2025` rows compound to `15.07%` / CAGR `2.85%`.
+- S&P 500 comparison uses cached USD Total Return rows for `2016-2025` (`11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`); cumulative `298.33%` / CAGR `14.82%`. Common `2021-2025` S&P cumulative is `96.17%` / CAGR `14.43%`; VNM trails by approximately `11.58 pp` CAGR.
+- Current observations: official VanEck product snapshot gives NAV `US$16.56` and YTD `-12.07%` as of `2026-07-24`; the June factsheet gives standardized month-end YTD `-1.41%` as of `2026-06-30`. The date/convention difference is disclosed; no value is blended or backfilled.
+
+### VNM Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `Cboe BZX:VNM` | [VanEck official VNM product and performance page](https://www.vaneck.com/us/en/investments/vietnam-etf-vnm/) | Current fund identity, objective, current NAV/YTD, fee and current performance snapshot | Page reviewed `2026-07-26`; NAV/YTD `US$16.56` / `-12.07%` as of `2026-07-24` |
+| `Cboe BZX:VNM` | [VanEck VNM fact sheet](https://www.vaneck.com/us/en/investments/vietnam-etf-vnm-fact-sheet.pdf) | Official NAV TR basis, rolling 10Y CAGR, annualized benchmark comparison, inception, exchange and fee | Fact sheet as of `2026-06-30`; rolling 10Y NAV CAGR `3.65%`; standardized YTD `-1.41%` |
+| `Cboe BZX:VNM` | [SEC VNM summary prospectus](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000473/vaneckvietnametfvnmsumpro-.htm) | Principal listing, passive/indexing classification, 80% policy, benchmark transition and annual NAV TR chart | Prospectus dated `2026-05-01`; annual chart through `2025` |
+| `Cboe BZX:VNM` | [VanEck VNM annual shareholder report](https://vaneck.onlineprospectus.net/VanEck/MOB_library/MOB_data/LIB_SummaryProspectus/vnmar/vnmar.pdf) | NAV total-return and hypothetical-$10,000 cross-check | Reporting period ended `2025-12-31`; Fund value `$14,454` from `$10,000` over the 10-year chart |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) plus cached source-batch convention | Common USD Total Return reference and annual rows | Cached rows as of `2025-12-31`; 2026 not used |
+
+### VNM Raw Observations And Calculations
+
+| Year | VNM NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -9.78% | 11.96% |
+| 2017 | 35.76% | 21.83% |
+| 2018 | -14.14% | -4.38% |
+| 2019 | 8.86% | 31.49% |
+| 2020 | 9.72% | 18.40% |
+| 2021 | 22.52% | 28.71% |
+| 2022 | -44.47% | -18.11% |
+| 2023 | 15.95% | 26.29% |
+| 2024 | -10.19% | 25.02% |
+| 2025 | 62.42% | 17.88% |
+
+- Rolling official 10Y NAV TR: `3.65%` CAGR, `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints not disclosed; implied normalized endpoint `100.00 → 143.12`.
+- Calendar calculation: `100 × Π(1 + annual NAV TR) = 144.540410`; cumulative `44.54%`; CAGR `(144.540410 / 100)^(1/10) - 1 = 3.752586%` → `3.75%`.
+- Common-window calculation: `2021-2025` VNM cumulative `15.071988%` / CAGR `2.847544%` → `2.85%`; S&P cumulative `96.169618%` / CAGR `14.426430%` → `14.43%`.
+- S&P reference calculation: `2016-2025` cumulative `298.329111%` / CAGR `14.821761%` → `14.82%`.
+- Current NAV TR YTD is `-12.07%` as of `2026-07-24`; standardized June month-end YTD is `-1.41%` as of `2026-06-30`. Daily NAV drawdown/recovery history is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### VNM Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `119/125`, canonical exchange-qualified identity, current-versus-stale exchange check, fund identity, passive-equity type gate, official NAV TR/reinvestment/expense basis, rolling 10-year threshold, normalized endpoint disclosure, annual NAV rows, S&P 500 cached basis/window, benchmark change, current-YTD as-of dates, filenames, Vietnam region assignment, canonical geography tag, breadcrumbs, stale-page replacement, ledger status and next queue pointer.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The current Cboe BZX canonical listing replaces the stale NYSE Arca page, while the two official YTD observations remain separately labeled by as-of date.
+
+## EIDO Sequential Queue Record
+
+- Input row: `120/125`; input ticker: `EIDO`; terminal status: `completed_10Y`.
+- Canonical identity: `NYSE Arca:EIDO`. iShares' current product page and December 30, 2025 summary prospectus both identify EIDO and NYSE Arca; no provider slug or guessed exchange is used.
+- Type gate: supported passive/index-tracking Indonesia equity ETF. iShares identifies the asset class as Equity, tracks `MSCI Indonesia IMI 25/50 Index (USD) (Net)`, uses representative sampling/indexing, and generally invests at least 80% in index securities or substantially identical instruments. It is not bond, commodity, currency trust, multi-asset, active, leveraged, inverse, option-income, derivative-heavy or single-stock exposure.
+- Official rolling 10-year NAV TR: iShares reports cumulative `-40.80%` and average annual `-5.11%` for `2016-06-30` to `2026-06-30`; actual years `10.00`; normalized `100.00 → 59.20` from the official cumulative value.
+- Official calendar NAV TR: SEC summary prospectus chart reports `2016 16.83%`, `2017 18.43%`, `2018 -10.58%`, `2019 5.01%`, `2020 -8.09%`, `2021 0.87%`, `2022 -0.43%`, `2023 2.09%`, `2024 -11.41%`; June 2026 fact sheet reports `2025 2.98%`. These compound to `11.70%` / CAGR `1.11%` over 10 complete calendar years. Common `2021-2025` rows compound to `-6.46%` / CAGR `-1.33%`.
+- S&P 500 comparison uses cached USD Total Return rows for `2016-2025`; cumulative `298.33%` / CAGR `14.82%`. Common `2021-2025` S&P cumulative is `96.17%` / CAGR `14.43%`; EIDO trails by approximately `15.75 pp` CAGR.
+- Current observations: iShares current product snapshot gives NAV `US$12.30` as of `2026-07-24` and NAV TR YTD `-31.36%` as of `2026-07-23`; standardized June month-end YTD is `-38.53%` as of `2026-06-30`. The date/convention difference is disclosed; no value is blended or backfilled.
+
+### EIDO Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:EIDO` | [iShares official EIDO product and performance page](https://www.ishares.com/us/products/239661/ishares-msci-indonesia-etf) | Current identity, NYSE Arca listing, benchmark, inception, fee, rolling/calendar NAV TR and current NAV/YTD | Page reviewed `2026-07-26`; NAV `US$12.30` as of `2026-07-24`; current YTD `-31.36%` as of `2026-07-23`; standardized performance through `2026-06-30` |
+| `NYSE Arca:EIDO` | [iShares EIDO June 2026 fact sheet](https://www.ishares.com/us/literature/fact-sheet/eido-ishares-msci-indonesia-etf-fund-fact-sheet-en-us.pdf) | Official 2021-2025 calendar NAV rows, 10-year NAV TR, index rows, fee and fund facts | Fact sheet as of `2026-06-30`; 2025 NAV `2.98%`; 10Y NAV CAGR `-5.11%` |
+| `NYSE Arca:EIDO` | [iShares EIDO summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-indonesia-etf-8-31.pdf) | Listing, indexing/representative sampling strategy, 80% policy, risks and 2016-2024 annual NAV chart | Prospectus dated `2025-12-30`; chart through `2024` |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) plus cached source-batch convention | Common USD Total Return reference and annual rows | Cached rows as of `2025-12-31`; 2026 not used |
+
+### EIDO Raw Observations And Calculations
+
+| Year | EIDO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 16.83% | 11.96% |
+| 2017 | 18.43% | 21.83% |
+| 2018 | -10.58% | -4.38% |
+| 2019 | 5.01% | 31.49% |
+| 2020 | -8.09% | 18.40% |
+| 2021 | 0.87% | 28.71% |
+| 2022 | -0.43% | -18.11% |
+| 2023 | 2.09% | 26.29% |
+| 2024 | -11.41% | 25.02% |
+| 2025 | 2.98% | 17.88% |
+
+- Rolling official 10Y NAV TR: cumulative `-40.80%`; normalized `100.00 → 59.20`; actual years `10.00`; CAGR `-5.11%`; raw NAV endpoints are not disclosed.
+- Calendar calculation: `100 × Π(1 + annual NAV TR) = 111.700603`; cumulative `11.70%`; CAGR `(111.700603 / 100)^(1/10) - 1 = 1.112664%` → `1.11%`.
+- Common-window calculation: `2021-2025` EIDO cumulative `-6.456994%` / CAGR `-1.326107%` → `-1.33%`; S&P cumulative `96.169618%` / CAGR `14.426430%` → `14.43%`.
+- S&P reference calculation: `2016-2025` cumulative `298.329111%` / CAGR `14.821761%` → `14.82%`.
+- Current NAV TR YTD is `-31.36%` as of `2026-07-23`; standardized June month-end YTD is `-38.53%` as of `2026-06-30`. Daily NAV drawdown/recovery history is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EIDO Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `120/125`, canonical exchange-qualified identity, fund identity, passive-equity type gate, official NAV TR/reinvestment/expense basis, rolling 10-year threshold, normalized endpoint disclosure, annual NAV rows from two official documents, S&P 500 cached basis/window, benchmark change, current-YTD as-of dates, filenames, Indonesia region assignment, canonical geography tag, breadcrumbs, stale-page replacement, ledger status and next queue pointer.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The 2016-2024 annual rows are sourced from the official prospectus chart and 2025 from the official June 2026 fact sheet; the two current YTD observations remain separately labeled by as-of date.
+
+## GLIN Sequential Queue Record
+
+- Input row: `121/125`; input ticker: `GLIN`; terminal status: `completed_10Y`.
+- Canonical identity: `NYSE Arca:GLIN`. VanEck's current fact sheet and May 1, 2026 SEC summary prospectus identify the NYSE Arca listing, ticker and fund; no provider slug or guessed exchange is used.
+- Type gate: supported passive/index-tracking India equity ETF. VanEck's prospectus identifies a passive/indexing approach, at least 80% exposure to the MarketGrader India All-Cap Growth Leaders Index through a Mauritius subsidiary, and no attempt to beat the index. The factor name does not make the fund active.
+- Official rolling 10-year NAV TR: June 2026 fact sheet reports average annual `1.92%` for `2016-06-30` to `2026-06-30`; actual years `10.00`. Raw NAV endpoints are not disclosed. Normalized `100.00 → 120.95` is an implied calculation from `100 × (1.0192^10)`, not a raw endpoint.
+- Official calendar NAV TR: SEC annual chart reports `2016 -4.70%`, `2017 66.88%`, `2018 -38.00%`, `2019 0.80%`, `2020 -21.65%`, `2021 -21.99%`, `2022 29.15%`, `2023 35.50%`, `2024 -4.92%`, `2025 16.11%`. These compound to `17.36%` / CAGR `1.61%` over 10 complete calendar years. Common `2021-2025` rows compound to `50.71%` / CAGR `8.55%`.
+- S&P 500 comparison uses cached USD Total Return rows for `2016-2025`; cumulative `298.33%` / CAGR `14.82%`. Common `2021-2025` S&P cumulative is `96.17%` / CAGR `14.43%`; GLIN trails by approximately `5.88 pp` CAGR.
+- Current observations: official VanEck product snapshot gives NAV `US$44.35` and YTD `-4.15%` as of `2026-07-24`; the June fact sheet gives standardized month-end YTD `0.25%` as of `2026-06-30`. The date/convention difference is disclosed; no value is blended or backfilled.
+
+### GLIN Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:GLIN` | [VanEck official GLIN product and performance page](https://www.vaneck.com/us/en/investments/india-growth-leaders-etf-glin/) | Current identity, objective, current NAV/YTD, fee and current performance snapshot | Page reviewed `2026-07-26`; NAV/YTD `US$44.35` / `-4.15%` as of `2026-07-24` |
+| `NYSE Arca:GLIN` | [VanEck GLIN fact sheet](https://www.vaneck.com/us/en/investments/india-growth-leaders-etf-glin-fact-sheet.pdf) | Official NAV TR basis, rolling 10Y CAGR, benchmark comparison, inception, exchange, fees and exposures | Fact sheet as of `2026-06-30`; rolling 10Y NAV CAGR `1.92%`; standardized YTD `0.25%` |
+| `NYSE Arca:GLIN` | [SEC GLIN summary prospectus](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000467/vaneckindiagrowthleaderset.htm) | Listing, passive/indexing classification, subsidiary/80% policy, index change and annual NAV TR chart | Prospectus dated `2026-05-01`; annual chart through `2025` |
+| `NYSE Arca:GLIN` | [VanEck GLIN annual shareholder report](https://vaneck.onlineprospectus.net/VanEck/MOB_library/MOB_data/LIB_SummaryProspectus/glinar/glinar.pdf) | NAV total-return and hypothetical-$10,000 cross-check | Reporting period ended `2025-12-31`; official 10Y NAV CAGR `1.61%` in the report table |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) plus cached source-batch convention | Common USD Total Return reference and annual rows | Cached rows as of `2025-12-31`; 2026 not used |
+
+### GLIN Raw Observations And Calculations
+
+| Year | GLIN NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | -4.70% | 11.96% |
+| 2017 | 66.88% | 21.83% |
+| 2018 | -38.00% | -4.38% |
+| 2019 | 0.80% | 31.49% |
+| 2020 | -21.65% | 18.40% |
+| 2021 | -21.99% | 28.71% |
+| 2022 | 29.15% | -18.11% |
+| 2023 | 35.50% | 26.29% |
+| 2024 | -4.92% | 25.02% |
+| 2025 | 16.11% | 17.88% |
+
+- Rolling official 10Y NAV TR: `1.92%` CAGR, `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints not disclosed; implied normalized endpoint `100.00 → 120.95`.
+- Calendar calculation: `100 × Π(1 + annual NAV TR) = 117.362998`; cumulative `17.36%`; CAGR `(117.362998 / 100)^(1/10) - 1 = 1.613900%` → `1.61%`.
+- Common-window calculation: `2021-2025` GLIN cumulative `50.710247%` / CAGR `8.549682%` → `8.55%`; S&P cumulative `96.169618%` / CAGR `14.426430%` → `14.43%`.
+- S&P reference calculation: `2016-2025` cumulative `298.329111%` / CAGR `14.821761%` → `14.82%`.
+- Current NAV TR YTD is `-4.15%` as of `2026-07-24`; standardized June month-end YTD is `0.25%` as of `2026-06-30`. Daily NAV drawdown/recovery history is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### GLIN Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `121/125`, canonical exchange-qualified identity, fund identity, passive-equity type gate, official NAV TR/reinvestment/expense basis, rolling 10-year threshold, normalized endpoint disclosure, annual NAV rows, prior-index change, S&P 500 cached basis/window, current-YTD as-of dates, filenames, India region assignment, canonical geography tag, breadcrumbs, stale-page replacement, ledger status and next queue pointer.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The factor/index methodology is retained as passive, and the two official YTD observations remain separately labeled by as-of date.
+
+## KTEC Sequential Queue Record
+
+- Input row: `122/125`; input ticker: `KTEC`; terminal status: `completed_available_period_no_10Y`.
+- Canonical identity: `NYSE Arca:KTEC`. The 2025 SEC summary prospectus and the 2026 KraneShares factsheet identify the principal listing exchange as NYSE Arca; the current product page displays a shortened `NYSE` field, which is retained as a disclosed current-page wording conflict rather than used to replace the formal canonical key.
+- Type gate: supported passive/index-tracking Hong Kong technology equity ETF. The official prospectus says KTEC seeks to track the price and yield performance of the Hang Seng TECH Index; the index is composed of 30 Hong Kong-listed technology companies, and the fund is not active, leveraged, inverse, option-income, bond, commodity, currency-trust, multi-asset or single-stock.
+- Official available-period NAV TR: KraneShares reports Fund NAV cumulative `-49.08%` from inception through `2026-06-30`, with issuer-reported since-inception annualized return `-12.48%`; inception `2021-06-08`; elapsed years `(2026-06-30 - 2021-06-08) / 365.25 = 5.059548`, shown as `5.06`. Raw start/end TR values are not disclosed. Implied normalized endpoint `100.00 → 50.92` is calculated only from the disclosed cumulative return.
+- Official calendar NAV TR: SEC summary prospectus chart provides complete rows `2022 -25.01%`, `2023 -11.21%`, `2024 18.46%`; the 2021 inception-year partial row and 2025 calendar NAV row are `not disclosed` in the reviewed current official materials. These rows compound to `-21.13%` / CAGR `-7.61%` over the three disclosed complete years; this is not a 10-year metric.
+- Current observations: current KraneShares product page gives NAV `US$12.87` as of `2026-07-24`; official month-end NAV TR YTD is `-22.88%` as of `2026-06-30`. Market-price returns remain separate and are not mixed into the NAV TR metric.
+- S&P 500 comparison: cached USD Total Return rows are used for the disclosed common calendar rows `2022-2024`: `-18.11%`, `26.29%`, `25.02%`; cumulative `29.29%` / CAGR `8.94%`. This is a common-reference comparison only, not a 10-year comparison. The ETF's 2025 row is not disclosed, so 2025 is excluded from the common-window calculation.
+
+### KTEC Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:KTEC` | [KraneShares official KTEC product/performance page](https://kraneshares.com/etf/ktec/) | Current identity, strategy, current page exchange wording, NAV, current data, issuer performance table and distributions | Page reviewed `2026-07-26`; current NAV `US$12.87` as of `2026-07-24`; performance table as of `2026-06-30` |
+| `NYSE Arca:KTEC` | [KraneShares official KTEC factsheet](https://kraneshares.com/resources/factsheet/ktec_factsheet.pdf) | Formal exchange, inception, index, expense, NAV TR basis and available-period performance | Factsheet data as of `2026-06-30`; primary exchange `NYSE Arca, Inc.`; inception `2021-06-08`; expense `0.69%`; NAV TR since inception `-49.08%` / annualized `-12.48%` |
+| `NYSE Arca:KTEC` | [SEC/KraneShares summary prospectus](https://kraneshares.com/resources/compliance/2026_02_20_ktec_summary.prospectus.pdf) | Formal listing, passive/index-tracking objective, index composition, fees and annual NAV TR chart | Prospectus dated `2025-08-01`; annual chart through `2024`; rows `2022-2024`; 2021 partial/2025 row not disclosed in reviewed capture |
+| `NYSE Arca:KTEC` | [KraneShares annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_ktec_annual.TSR.report.pdf) | Total-return definition, reinvestment disclosure, fiscal-year NAV cross-check and since-inception graph | Reporting period ended `2026-03-31`; fund NAV return `-14.71%` for the fiscal year; since-inception annualized `-11.40%` to that fiscal period; not substituted for the June month-end calendar window |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) plus cached source-batch convention | Common USD Total Return reference and annual rows | Cached rows as of `2025-12-31`; only `2022-2024` used for KTEC common-window calculation |
+
+### KTEC Raw Observations And Calculations
+
+| Year | KTEC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2022 | -25.01% | -18.11% |
+| 2023 | -11.21% | 26.29% |
+| 2024 | 18.46% | 25.02% |
+| 2025 | not disclosed | 17.88% |
+
+- Available-period calculation: `(2026-06-30 - 2021-06-08) / 365.25 = 5.059548 years`; official cumulative NAV TR `-49.08%`; normalized implied endpoint `100.00 × (1 - 0.4908) = 50.92`; issuer-reported annualized NAV TR `-12.48%`. Raw start/end TR values remain `not disclosed`.
+- Calendar calculation: `100 × (1 - 0.2501) × (1 - 0.1121) × (1 + 0.1846) = 78.874957`; cumulative `-21.13%`; CAGR `(78.874957 / 100)^(1/3) - 1 = -7.605445%` → `-7.61%`.
+- S&P common-window calculation: `100 × (1 - 0.1811) × (1 + 0.2629) × (1 + 0.2502) = 129.294285`; cumulative `29.29%`; CAGR `8.941496%` → `8.94%`.
+- Current NAV TR YTD is `-22.88%` as of `2026-06-30`; current NAV is `US$12.87` as of `2026-07-24`; daily NAV drawdown/recovery history is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### KTEC Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `122/125`, canonical exchange-qualified identity, formal/current exchange conflict, fund identity, passive-equity type gate, official NAV TR/reinvestment/expense basis, available-period threshold and actual years, explicit 10-year gap, normalized endpoint disclosure, annual NAV rows, S&P 500 cached basis/window, current NAV/YTD as-of dates, filenames, Hong Kong region assignment, canonical geography tag, breadcrumbs, ledger status and next queue pointer.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The 2021 partial and 2025 annual-row gaps are explicit, and the fiscal-year annual-report return is kept separate from the June calendar performance window.
+
+## EWM Sequential Queue Record
+
+- Input row: `123/125`; input ticker: `EWM`; terminal status: `completed_10Y`.
+- Canonical identity: `NYSE Arca:EWM`. iShares current product page and SEC filing materials identify EWM as an NYSE Arca equity ETF; no provider slug or guessed exchange is used.
+- Type gate: supported passive/index-tracking Malaysia equity ETF. iShares states that EWM seeks to track the MSCI Malaysia Index; current key facts classify it as `Equity`, with no active, leveraged, inverse, option-income, derivative-heavy, bond, commodity, currency-trust, multi-asset or single-stock structure identified in the reviewed official materials.
+- Official rolling 10-year NAV TR: iShares performance table reports cumulative `24.54%` and average annual NAV total return `2.22%` for `2016-06-30` to `2026-06-30`; actual years `10.00`. Raw NAV TR endpoints are not disclosed. Normalized `100.00 → 124.54` is an implied endpoint from the official cumulative return, not a raw endpoint.
+- Official calendar NAV TR: iShares current performance table reports `2021 -6.30%`, `2022 -6.25%`, `2023 -4.01%`, `2024 20.13%`, `2025 15.37%`. These compound to `16.86%` / CAGR `3.17%` over five complete calendar years. Earlier 2016-2020 annual rows are not surfaced in the reviewed current official capture.
+- Current observations: official iShares page gives NAV `US$28.11` as of `2026-07-17` and NAV TR YTD `4.62%` as of `2026-07-17`; expense ratio `0.50%`, benchmark `MSCI Malaysia Index`, inception `1996-03-12`, distribution frequency semi-annual. Market-price return remains separate.
+- S&P 500 comparison: cached USD Total Return rows are used for the same complete calendar years `2021-2025`; EWM cumulative `16.86%` / CAGR `3.17%` versus S&P cumulative `96.17%` / CAGR `14.43%`, a CAGR gap of approximately `-11.26 pp`. The cached full 2016-2025 S&P reference is `14.82%` CAGR, but it is not presented as an exact date-to-date match for EWM's rolling 2016-06-30 to 2026-06-30 window.
+
+### EWM Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:EWM` | [iShares official EWM product/performance page](https://www.ishares.com/us/products/239669/ishares-msci-malaysia-etf) | Current identity, equity classification, exchange, benchmark, inception, NAV/YTD, rolling NAV TR, annual NAV TR rows, fees and distributions | Page reviewed `2026-07-26`; NAV/YTD `US$28.11` / `4.62%` as of `2026-07-17`; performance table through `2026-06-30` |
+| `NYSE Arca:EWM` | [iShares EWM factsheet](https://www.ishares.com/us/literature/fact-sheet/ewm-ishares-msci-malaysia-etf-fund-fact-sheet-en-us.pdf) | Passive/index profile, benchmark, exchange, inception, expense and NAV TR basis cross-check | Official factsheet URL; reviewed `2026-07-26`; latest available factsheet capture is older than the product-page performance table |
+| `NYSE Arca:EWM` | [SEC summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-malaysia-etf-8-31.pdf) | Formal fund identity, passive/index objective, listing and fee disclosures | Current summary prospectus dated `2025-12-30` |
+| `NYSE Arca:EWM` | [iShares annual shareholder report](https://www.ishares.com/us/literature/annual-report/ar-ewm-en.pdf) | Official shareholder-report cross-check and total-return convention | Reporting period ending `2025-08-31`; not used to replace the latest June 2026 calendar performance |
+| `S&P 500 TR` | [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) plus cached source-batch convention | Common USD Total Return reference and annual rows | Cached rows as of `2025-12-31`; same calendar years `2021-2025` used |
+
+### EWM Raw Observations And Calculations
+
+| Year | EWM NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | -6.30% | 28.71% |
+| 2022 | -6.25% | -18.11% |
+| 2023 | -4.01% | 26.29% |
+| 2024 | 20.13% | 25.02% |
+| 2025 | 15.37% | 17.88% |
+
+- Rolling official 10Y NAV TR: cumulative `24.54%`, CAGR `2.22%`, `2016-06-30` to `2026-06-30`, actual years `10.00`; raw endpoints not disclosed; implied normalized endpoint `100.00 → 124.54`.
+- Calendar calculation: `100 × Π(1 + annual NAV TR) = 116.864130`; cumulative `16.86%`; CAGR `(116.864130 / 100)^(1/5) - 1 = 3.165918%` → `3.17%`.
+- Common-window S&P calculation: cumulative `96.169618%` / CAGR `14.426430%` → `14.43%`; EWM trails by `11.260513 pp` CAGR.
+- Current NAV TR YTD is `4.62%` as of `2026-07-17`; raw daily drawdown/recovery history is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### EWM Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `123/125`, canonical exchange-qualified identity, fund identity, passive-equity type gate, official NAV TR/reinvestment/expense basis, rolling 10-year threshold, normalized endpoint disclosure, annual NAV rows, S&P 500 cached basis/window, current NAV/YTD as-of dates, filenames, Malaysia region assignment, canonical geography tag, breadcrumbs, ledger status and next queue pointer.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The earlier annual-row gap and non-disclosed raw rolling endpoints are explicit; annual NAV and market-price returns are not mixed.
+
+## BABO Sequential Queue Record
+
+- Input row: `124/125`; input ticker: `BABO`; terminal status: `unsupported ETF type`.
+- Canonical identity: `NYSE Arca:BABO`. YieldMax's current official product page and SEC summary prospectus identify the ticker and NYSE Arca listing.
+- Type gate: unsupported. YieldMax identifies BABO as an `actively managed` ETF designed to generate weekly income by selling call spreads on Alibaba Group Holding Ltd. The official description also states that the fund does not invest directly in BABA, has single-issuer risk, and uses an option-income/derivative implementation. This fails the required passive, index-tracking equity ETF scope; no NAV TR performance artifact, region row, or performance-index row is created.
+- Current issuer observations retained only for classification evidence: fund inception `2024-08-07`, gross expense ratio `1.00%`, NAV `US$8.42` and net assets `$14.32M` as of `2026-06-30`, current page data reviewed `2026-07-26`. Distribution rate and option-income figures are not used as performance metrics.
+
+### BABO Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:BABO` | [YieldMax official BABO product page](https://yieldmaxetfs.com/our-etfs/babo/) | Current fund identity, active-management classification, option-income strategy, single-issuer risk, exchange, inception, fee and current fund fields | Page reviewed `2026-07-26`; fund details as of `2026-06-30`; current distribution snapshot as of `2026-07-22` not used as a return metric |
+| `NYSE Arca:BABO` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1924868/000199937126004549/babo-497k_022726.htm) | Formal listing, investment objectives and option-income/underlying-security strategy | Prospectus dated `2026-02-27`; current filing for BABO |
+| `NYSE Arca:BABO` | [YieldMax 2025 annual shareholder report](https://www.yieldmaxetfs.com/wp-content/uploads/Annual%20TSR/YieldMax%20BABA%20Option%20Income%20Strategy%20ETF.pdf) | Secondary official report identity cross-check only | Reporting period ended `2025-10-31`; not used to calculate ETF performance because type gate fails |
+
+### BABO Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `124/125`, canonical exchange-qualified identity, active/passive classification, single-issuer risk, option-income/derivative structure, exclusion from NAV TR analysis, no performance page/region/index artifacts, ledger status and next queue pointer.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The unsupported-type reason is source-backed and no performance values were inferred or saved.
+
+## KLIP Sequential Queue Record
+
+- Input row: `125/125`; input ticker: `KLIP`; terminal status: `unsupported ETF type`.
+- Canonical identity: `NYSE Arca:KLIP`. KraneShares' formal summary prospectus and factsheet identify NYSE Arca; the current product page displays a shortened `NYSE` field, and the exchange wording conflict is disclosed rather than silently resolved to the current-page field.
+- Type gate: unsupported. KraneShares identifies KLIP as an active covered-call/buy-write ETF. It buys shares of KWEB and writes/sells corresponding call options on KWEB; the formal prospectus states that the fund employs a covered-call strategy and writes FLEX call options. Covered-call/option-income and derivative-heavy implementation, plus active management, fail the required passive, index-tracking equity ETF scope.
+- Current issuer observations retained only for classification evidence: fund inception `2023-01-11`, total annual fund operating expense `0.95%`, primary exchange formal `NYSE Arca`, and current page NAV `US$24.13` as of `2026-07-23`; distribution rate/SEC yield are not used as performance metrics. No performance page, region row, or ETF performance-index row is created.
+
+### KLIP Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:KLIP` | [KraneShares official KLIP product/performance page](https://kraneshares.com/etf/klip/) | Current fund identity, current-page exchange wording, covered-call strategy, active management, current NAV, fee and fund fields | Page reviewed `2026-07-26`; NAV/performance snapshot as of `2026-07-23` and performance table through `2026-06-30` not used after type gate |
+| `NYSE Arca:KLIP` | [KraneShares KLIP factsheet](https://kraneshares.com/resources/factsheet/klip_factsheet.pdf) | Covered-call/buy-write structure and formal exchange cross-check | Factsheet data as of `2026-01-30`; primary exchange `NYSE Arca, Inc.` |
+| `NYSE Arca:KLIP` | [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1547576/000182912625005546/kraneshares_497k.htm) | Formal listing, active current-income objective, covered-call strategy, KWEB investment and FLEX options | Prospectus dated `2025-08-01`; current fund name and formal strategy |
+| `NYSE Arca:KLIP` | [KraneShares annual shareholder report](https://kraneshares.com/resources/compliance/2026_05_29_klip_annual.TSR.report.pdf) | Active-management and covered-call strategy cross-check | Reporting period ended `2026-03-31`; report explicitly notes the fund is actively managed and does not track an underlying index |
+
+### KLIP Pre-save Review Note
+
+- No independent reviewer or multi-agent reviewer was available in this single-ticker turn. The main agent performed the local checklist from `check-etf-performance/workflow.md`: input row/order `125/125`, canonical exchange-qualified identity, formal/current exchange conflict, active/passive classification, covered-call/option-income and FLEX-derivative structure, exclusion from NAV TR analysis, no performance page/region/index artifacts, ledger terminal status, queue completion and source-batch record.
+- Result: local fallback `PASS`; no critical or high-severity finding remained. The queue now has terminal status for all 125 Remaining ETFs rows; no values were inferred for this unsupported fund.

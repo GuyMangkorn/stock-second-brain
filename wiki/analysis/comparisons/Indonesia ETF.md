@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Indonesia
-updated: 2026-07-19
+updated: 2026-07-26
 tags:
   - analysis/etf-region
   - geography/Indonesia
@@ -18,6 +18,7 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | IDX | VanEck Indonesia Index ETF | Indonesia single-country emerging-market equity | -5.49% | -1.56%* | -36.18% | [[ETF_NYSE_ARCA_IDX Performance]] |
+| EIDO | iShares MSCI Indonesia ETF | Indonesia equity / index-tracking | -5.11% rolling / 1.11% calendar | -1.33% | -31.36% | [[ETF_NYSE_ARCA_EIDO Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -29,9 +30,9 @@ tags:
 - [[ETF Performance Index]]
 
 
-## 2026-07-23 Verified Coverage Additions
+## 2026-07-26 Verified Coverage Addition
 
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EIDO | iShares MSCI Indonesia ETF | Indonesia equity / index-tracking | not disclosed | -1.33% | -30.08% | [[ETF_NYSE_ARCA_EIDO Performance]] |
+| EIDO | iShares MSCI Indonesia ETF | Indonesia equity / index-tracking | -5.11% rolling / 1.11% calendar | -1.33% | -31.36% | [[ETF_NYSE_ARCA_EIDO Performance]] |
