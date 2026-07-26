@@ -7,10 +7,10 @@ exchange: NYSE Arca
 fund: iShares MSCI Philippines ETF
 tracked_index: MSCI Philippines IMI 25/50 Index (USD) (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
+updated: 2026-07-26
 performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-21
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
+current_ytd_as_of: 2026-07-23
+source_batch: raw/imports/ETF_performance_sources_2026-07-26.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -28,8 +28,8 @@ EPHE เป็น passive/index-tracking Philippines equity ETF ของ iShare
 `MSCI Philippines IMI 25/50 Index (USD) (Net)`. Official rolling 10-year NAV Total
 Return (รวมการนำ distributions กลับไปลงทุนและ fund expenses) จาก 2026-06-30
 ย้อนถึง 2016-06-30 มี cumulative return `-28.05%` และ CAGR `-3.24%` จากช่วงเวลา
-จริง `10.00 elapsed years`. Current official NAV TR YTD ล่าสุดคือ `3.93%` ณ
-2026-07-21. ตัวเลข 2021-2025 ที่เปิดเผยรวมกันเป็น cumulative `-15.95%` / CAGR
+จริง `10.00 elapsed years`. Current official NAV TR YTD ล่าสุดคือ `2.76%` ณ
+2026-07-23. ตัวเลข 2021-2025 ที่เปิดเผยรวมกันเป็น cumulative `-15.95%` / CAGR
 `-3.42%`; 2016-2020 annual NAV rows ไม่ได้เปิดเผยใน capture ที่ยืนยันได้.
 
 ## Performance check
@@ -57,7 +57,7 @@ published cumulative return, not a proxy or a market-price series.
 - `71.95 = 100.00 × (1 - 28.05%)`.
 - `CAGR = (71.95 / 100.00)^(1 / 10.00) - 1`; the displayed CAGR uses the issuer's rounded `-3.24%`.
 - Official 5-year NAV TR: cumulative `-12.55%`, average annual `-2.65%`, through `2026-06-30`.
-- Month-end NAV TR YTD: `0.06%` as of `2026-06-30`; latest current-page YTD: `3.93%` as of `2026-07-21`. These are separate as-of observations.
+- Month-end NAV TR YTD: `0.06%` as of `2026-06-30`; latest current-page YTD: `2.76%` as of `2026-07-23`. These are separate as-of observations.
 
 ### Annual NAV TR vs S&P 500 TR
 
@@ -77,7 +77,7 @@ Return convention recorded in the dated source batch. EPHE annual NAV rows for
 | 2023 | -0.27% | 26.29% |
 | 2024 | 1.08% | 25.02% |
 | 2025 | -0.54% | 17.88% |
-| 2026 YTD | 3.93% as of 2026-07-21 | not comparable; current-year S&P row not cached |
+| 2026 YTD | 2.76% as of 2026-07-23 | not comparable; current-year S&P row not cached |
 
 ## Up years / Down years
 
@@ -104,4 +104,4 @@ Utilities `11.80%` และ Real Estate `10.81%`; sector concentration นี�
 - [Official EPHE factsheet](https://www.ishares.com/us/literature/fact-sheet/ephe-ishares-msci-philippines-etf-fund-fact-sheet-en-us.pdf)
 - [Official EPHE prospectus material](https://www.ishares.com/uk/individual/en/literature/prospectus/p-ishares-trust-emerging-8-31-emea.pdf?siteEntryPassthrough=true&switchLocale=y)
 - [Official EPHE annual shareholder report](https://www.blackrock.com/us/individual/literature/annual-report/ar-ephe-en.pdf)
-- [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); complete-year rows use the cached convention documented in [[ETF_performance_sources_2026-07-24]].
+ - [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); complete-year rows use the cached convention documented in [[ETF_performance_sources_2026-07-24]].

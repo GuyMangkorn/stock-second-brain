@@ -47,9 +47,9 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 | ETF | History used | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
 |---|---|---:|---:|---:|---|---|---|
-| [[ETF_AMEX_DGRO]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
-| [[ETF_AMEX_VIG]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
-| [[ETF_NASDAQ_VIGI]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
+| [[ETF_AMEX_DGRO Performance]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
+| [[ETF_AMEX_VIG Performance]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
+| [[ETF_NASDAQ_VIGI Performance]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025 | 8.26% | 6.45% | 6.36% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive, high equity risk |
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
 | [[ETF_CBOE_EFAV Performance]] | official 2011 / official 2016-2025 | 6.02% | 6.29% | 6.50% | 2025 +26.16% / 2022 -14.76% | developed ex-U.S./Canada minimum volatility | low-vol factor; country/FX-sensitive, lower recent beta |
@@ -70,7 +70,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_NFTY Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025; 2018-04-17 index change | 7.99% | 10.83% | -7.45% | 2021 +26.22% / 2022 -4.45% | India large-cap equal-weight equity | country/sector/FX/emerging-market-sensitive; 50 holdings; quarterly rebalance |
 | [[ETF_NYSE_ARCA_DVYA Performance]] | official 2012 / official 2021-2025 | 6.90% | 9.91% | 14.28% | 2025 +30.16% / 2022 -2.12% | developed Asia-Pacific dividend equity | Australia/HK/Singapore and financials concentrated; FX/commodity-sensitive |
 | [[ETF_NYSE_ARCA_EPP Performance]] | official 2001 / official 2016-2025; rolling 2016-2026 | 7.37% | 5.28% | 11.23% | 2017 +25.40% / 2018 -10.70% | developed Asia-Pacific equity ex-Japan | Australia/HK/Singapore and financials/materials concentrated; country/FX-sensitive |
-| [[ETF_NYSE_ARCA_EPHE Performance]] | official 2010 / official rolling 2016-06 to 2026-06; official 2021-2025; 2016-2020 annual rows not disclosed; index change 2020-12-01 | -3.24% | -3.42% | 3.93% | disclosed best 2024 +1.08% / disclosed worst 2022 -14.37% | Philippines single-country equity | industrials/financials/utilities/real estate and country/FX/liquidity-sensitive; index change disclosed |
+| [[ETF_NYSE_ARCA_EPHE Performance]] | official 2010 / official rolling 2016-06 to 2026-06; official 2021-2025; 2016-2020 annual rows not disclosed; index change 2020-12-01 | -3.24% | -3.42% | 2.76% | disclosed best 2024 +1.08% / disclosed worst 2022 -14.37% | Philippines single-country equity | industrials/financials/utilities/real estate and country/FX/liquidity-sensitive; index change disclosed |
 | [[ETF_NYSE_ARCA_VNAM Performance]] | official inception 2021-12-07; available through 2026-06-30; history under 10 years; annual NAV rows not disclosed | not applicable (<10y history) | not disclosed | not disclosed | not disclosed / not disclosed | Vietnam single-country equity | non-diversified; real estate/financials/country/frontier-market/FX/liquidity-sensitive; since-inception NAV TR annualized 0.34% |
 | [[ETF_NYSE_KPHO Performance]] | official inception 2025-12-02; available through 2026-06-30; history under one year; no complete calendar year | not applicable (<10y history) | not applicable | -2.52% | not applicable / not applicable | Vietnam growth equity/index-tracking | new-fund/country/frontier-to-emerging-market/liquidity/foreign-ownership-limit/FX-sensitive; available-period NAV TR cumulative -4.05%; no annualization |
 | [[ETF_CBOE_BZX_BBAX Performance]] | official 2018 / official 2019-2025; available through 2026-06; history under 10 years | not applicable (<10y history) | 5.47% | 8.20% | 2025 +20.73% / 2022 -4.45% | developed Asia-Pacific equity, index-tracking | Australia/HK/Singapore and financials/materials/country/FX-sensitive; 10-year NAV TR unavailable |
@@ -85,7 +85,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
 | [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
-| [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 7.34% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
+| [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 9.50% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
 | [[ETF_LSE_SAUS Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 8.26% | 6.24% | 10.27% | 2019 +22.50% / 2018 -12.30% | Australia single-country broad equity | financials/materials/commodity/country/FX-sensitive |
 | [[ETF_NASDAQ_ENZL Performance]] | official 2010 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 3.33% | -5.67% | 3.45% | 2023 +3.53% / 2022 -16.63% | New Zealand single-country equity | health care/industrials/utilities/real estate/country/FX-sensitive; benchmark splice 2024-09-03 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
@@ -275,7 +275,7 @@ utilities และ financials tilt.
 
 ## Preliminary Holdings Groups Batch
 
-เพิ่ม `check-etf-performance` สำหรับ 37 passive equity ETFs ที่ยังไม่เคยตรวจใน
+เพิ่ม `check-etf-performance` สำหรับ 28 passive equity ETFs ที่ยังไม่เคยตรวจใน
 [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]. `QDPL` และ `MDIV` ถูกตัดออก
 ตาม guardrail เพราะ derivative-heavy และ multi-asset ตามลำดับ.
 
@@ -520,4 +520,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_FLAX Performance]] — FLAX (Asia ex Japan)
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
-- [[ETF_CBOE_BZX_CNYA Performance]] — CNYA (China)
+ - [[ETF_CBOE_BZX_CNYA Performance]] — CNYA (China)

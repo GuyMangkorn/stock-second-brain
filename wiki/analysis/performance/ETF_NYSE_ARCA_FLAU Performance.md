@@ -7,11 +7,11 @@ exchange: NYSE Arca
 fund: Franklin FTSE Australia ETF
 tracked_index: FTSE Australia Capped Index-NR
 benchmark: S&P 500 Total Return
-updated: 2026-07-22
+updated: 2026-07-26
 performance_as_of: 2026-03-31
-current_ytd_as_of: 2026-07-02
+current_ytd_as_of: 2026-07-17
 price_nav_as_of: 2026-07-17
-source_batch: raw/imports/ETF_performance_sources_2026-07-22.md
+source_batch: raw/imports/ETF_performance_sources_2026-07-26.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -28,8 +28,8 @@ tags:
 FLAU ให้ `NAV Total Return` เป็นบวก 6 จาก 8 complete calendar years ในช่วง
 2018-2025; การทบต้นจาก annual rows ให้ cumulative `66.33%` หรือ CAGR `6.57%`.
 ปีดีที่สุดคือ 2019 ที่ `+23.20%` และแย่ที่สุดคือ 2018 ที่ `-12.25%`. Official
-issuer YTD ล่าสุดที่ยืนยันได้คือ `+7.34%` ณ 2 ก.ค. 2026; issuer แสดง NAV ล่าสุด
-`US$34.04` ณ 17 ก.ค. 2026 แต่ยังไม่เปิดเผย YTD ใหม่ใน capture เดียวกัน. Secondary
+issuer YTD ล่าสุดที่ยืนยันได้คือ `+9.50%` ณ 17 ก.ค. 2026; issuer แสดง NAV ล่าสุด
+`US$34.04` ณ 17 ก.ค. 2026. Secondary
 total-return proxy ล่าสุดอยู่ที่ `+10.91%*` ณ 15 ก.ค. 2026 และไม่ใช่ official NAV.
 
 ## Performance check
@@ -43,7 +43,7 @@ total-return proxy ล่าสุดอยู่ที่ `+10.91%*` ณ 15 ก
 - 10-year NAV TR CAGR: `ไม่พบข้อมูลที่ยืนยันได้` เพราะ official history ยังไม่ครบ
   10 ปี; 2016 อยู่ก่อนกองทุนเริ่มต้นและ 2017 เป็น inception-year partial ที่
   factsheet ไม่แสดงเป็นตัวเลข
-- Since-inception NAV annualized return: `7.88%` ณ 31 พ.ค. 2026 จาก issuer
+- Since-inception NAV annualized return: `7.53%` ณ 30 มิ.ย. 2026 จาก issuer
 - Annual coverage: official complete calendar years 2018-2025 จาก [issuer factsheet](https://www.franklintempleton.com/forms-literature/download/FLAU-FF); annual-row CAGR เป็น calculation จากตัวเลขที่ issuer ปัดเศษ
 - S&P 500 cache 2018-2025: cumulative `192.03%`; CAGR `14.33%` จาก rounded
   annual inputs; เป็น common reference ไม่ใช่ issuer benchmark
@@ -70,7 +70,7 @@ total-return proxy ล่าสุดอยู่ที่ `+10.91%*` ณ 15 ก
   `14.33%`
 - 2021-2025 cumulative / CAGR: FLAU `38.56%` / `6.74%`; S&P 500 TR `96.17%` /
   `14.43%`
-- Current YTD: official FLAU NAV `+7.34%` ณ 2 ก.ค. 2026 จาก [issuer product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26365/SINGLCLASS/franklin-ftse-australia-etf); latest official NAV `US$34.04` ณ 17 ก.ค. 2026. Secondary total-return proxy `+10.91%*` ณ 15 ก.ค. 2026 จาก [FinanceCharts](https://www.financecharts.com/etfs/FLAU/performance) is separate and not used in NAV rankings.
+- Current YTD: official FLAU NAV `+9.50%` ณ 17 ก.ค. 2026 จาก [issuer product page](https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26365/SINGLCLASS/franklin-ftse-australia-etf); latest official NAV `US$34.04` ณ 17 ก.ค. 2026. Secondary total-return proxy `+10.91%*` ณ 15 ก.ค. 2026 จาก [FinanceCharts](https://www.financecharts.com/etfs/FLAU/performance) is separate and not used in NAV rankings.
 
 ## Risk read-through
 
@@ -92,4 +92,4 @@ official NAV series.
 - [FinanceCharts FLAU performance](https://www.financecharts.com/etfs/FLAU/performance) — secondary current total-return proxy, as of 15 ก.ค. 2026; not NAV
 - [Official S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common-reference index identity and methodology
 - [S&P U.S. Equities Market Attributes](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — cached S&P 500 TR reference through 2025
-- [[ETF_performance_sources_2026-07-22]] | [[ETF Performance Index]]
+ - [[ETF_performance_sources_2026-07-26]] | [[ETF_performance_sources_2026-07-22]] | [[ETF Performance Index]]
