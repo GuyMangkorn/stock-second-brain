@@ -1,9 +1,9 @@
 ---
 type: etf-performance
 instrument_type: ETF
-entity_key: AMEX:VIG
+entity_key: NYSE Arca:VIG
 ticker: VIG
-updated: 2026-07-13
+updated: 2026-08-07
 source_batch: raw/imports/ETF_performance_sources_2026-07-13.md
 return_basis: NAV total return
 tags:
@@ -27,7 +27,7 @@ VIG มีผลตอบแทนเป็นบวก 15 จาก 19 ปี�
 
 ## Performance check
 
-- `entity_key: AMEX:VIG`
+- `entity_key: NYSE Arca:VIG`
 - Inception: 21 เม.ย. 2006
 - Metric: `NAV Total Return` รวมเงินปันผล reinvested และ fund expenses
 - Tracked index (issuer benchmark): Spliced S&P U.S. Dividend Growers Index TR

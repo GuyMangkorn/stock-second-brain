@@ -1,9 +1,9 @@
 ---
 type: entity
 instrument_type: ETF
-entity_key: AMEX:VIG
+entity_key: NYSE Arca:VIG
 ticker: VIG
-exchange: AMEX
+exchange: NYSE Arca
 fund: Vanguard Dividend Appreciation ETF
 market: U.S. listed ETF
 currency: USD
@@ -15,7 +15,7 @@ source_gaps:
 tags:
   - entity/etf
   - ticker/VIG
-  - exchange/AMEX
+  - exchange/NYSE-Arca
 ---
 
 # VIG - Vanguard Dividend Appreciation ETF
@@ -24,7 +24,7 @@ tags:
 
 | Item | Value |
 |---|---|
-| Instrument key | `AMEX:VIG` |
+| Instrument key | `NYSE Arca:VIG` |
 | Strategy | U.S. dividend growth / quality |
 | Role | Core candidate |
 | Triage score | 8.2 / 10 |

@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-07
+
+- `etf-performance-ranking`: Applied the approved 2016-2025 NAV TR screen; added [[ETF Performance Ranking 2026-08-07]] and [[ETF_performance_ranking_sources_2026-08-07]], embedded the reusable prompt in [[ETF Index]], and selected USA Top 10 plus five distinct non-U.S. regional winners from 60 eligible pages.
+
 ## 2026-07-26
 
 - `etf-performance-audit`: Audited 143 canonical ETF performance pages one ETF at a time; 106 `EXPANDED_TO_10Y`, 37 `ACCEPTED_SHORT_HISTORY`, 0 unresolved/unsupported; refreshed FLAU and EPHE current official NAV TR snapshots and updated [[Source Integrity Audit 2026-07-26]].

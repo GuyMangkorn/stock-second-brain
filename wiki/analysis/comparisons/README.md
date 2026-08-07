@@ -12,6 +12,8 @@ wiki/analysis/comparisons/Screener Triage YYYY-MM-DD.md
 ## Comparison Index
 
 - [[ETF Region Index]] — ETF performance navigation by underlying exposure
+- [[ETF Performance Ranking 2026-08-07]] — reproducible 2016-2025 USA Top 10 and non-U.S. Regional Top 5
+- [[ETF_performance_ranking_sources_2026-08-07]] — source-confidence and exclusion ledger
 
 - [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]
 - [[Dividend ETF Overlap Groups 2026-06-28]]
