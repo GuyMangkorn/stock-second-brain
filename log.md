@@ -2,6 +2,7 @@
 
 ## 2026-08-09
 
+- `source-verifier`: Added `.codex/agents/source-verifier.toml` and the mandatory pre-save gate in `AGENTS.md`; the read-only reviewer compares primary/corroborating sources, blocks High/Medium findings, and warns on Low findings. TOML parsing, cross-file verdict checks, and `git diff --check` passed.
 - `source-integrity-audit`: ตรวจ 441 Markdown และ 271 analysis notes; ซ่อม KPHO backlink กับ entity backlinks ของ DGRO/DIVI/VIG/VIGI, ลบ 0 ไฟล์, และบันทึกผลไว้ที่ [[Source Integrity Audit 2026-08-09]]. กลุ่ม US refresh/Dividend ETF ยังเก็บไว้เพราะบทบาทและ source snapshot ต่างกัน; ติดตาม ETF performance pages ที่ยังไม่มี entity hub.
 
 ## 2026-08-07

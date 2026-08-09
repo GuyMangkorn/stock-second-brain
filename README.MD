@@ -303,6 +303,8 @@ stock-second-brain/
     stock-decision-pipeline/
     x-research/
     source-integrity-audit/
+  .codex/agents/
+    source-verifier.toml
 ```
 
 ## Source And Output Rules

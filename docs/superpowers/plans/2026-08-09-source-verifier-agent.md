@@ -29,23 +29,23 @@
 - Consumes: an evidence packet containing candidate files, claims, calculations, sources, and as-of dates.
 - Produces: a read-only review report with `PASS`, `CHANGES_REQUIRED`, or `WARNING` and evidence for every finding.
 
-- [ ] **Step 1: Define the required TOML identity fields**
+- [x] **Step 1: Define the required TOML identity fields**
 
 Set `name = "source_verifier"`, a description that says it is an independent
 read-only source and data reviewer, and a multiline `developer_instructions`
 value.
 
-- [ ] **Step 2: Set read-only behavior**
+- [x] **Step 2: Set read-only behavior**
 
 Set `sandbox_mode = "read-only"`; do not add write-capable tools or instructions.
 
-- [ ] **Step 3: Encode the comparison and verdict contract**
+- [x] **Step 3: Encode the comparison and verdict contract**
 
 Require source hierarchy, independent comparison, period/unit/currency/definition
 reconciliation, source-date checks, calculation checks, severity classification,
 and the exact save verdict behavior defined in the design spec.
 
-- [ ] **Step 4: Validate TOML syntax**
+- [x] **Step 4: Validate TOML syntax**
 
 Run:
 
@@ -65,24 +65,24 @@ Expected: `valid source verifier TOML`.
 - Consumes: the custom agent from Task 1 and the existing source-integrity rules.
 - Produces: an explicit project-wide trigger and a discoverable `.codex/agents/` directory.
 
-- [ ] **Step 1: Add the pre-save protocol**
+- [x] **Step 1: Add the pre-save protocol**
 
 Document candidate drafting, evidence-packet preparation, dispatch of
 `source_verifier`, waiting for its result, and the rule that only the main agent
 may write durable files.
 
-- [ ] **Step 2: Add verdict handling**
+- [x] **Step 2: Add verdict handling**
 
 Document that `CHANGES_REQUIRED` for High/Medium blocks writing and requires
 correction plus re-review; `WARNING` for Low pauses for user confirmation;
 `PASS` permits saving.
 
-- [ ] **Step 3: Add fallback and chat boundary**
+- [x] **Step 3: Add fallback and chat boundary**
 
 Document the local checklist fallback when the sub-agent is unavailable and keep
 read-only `chat` responses outside the pre-save gate.
 
-- [ ] **Step 4: Update the README structure**
+- [x] **Step 4: Update the README structure**
 
 Add `.codex/agents/source-verifier.toml` beside `.codex/skills/` without
 duplicating the full protocol.
@@ -98,12 +98,12 @@ duplicating the full protocol.
 - Consumes: the approved design and completed implementation files.
 - Produces: traceable project documentation and one workflow log bullet.
 
-- [ ] **Step 1: Keep the design and implementation plan aligned**
+- [x] **Step 1: Keep the design and implementation plan aligned**
 
 Confirm that the verdict names, severity behavior, single-writer rule, and
 fallback language match across the spec, plan, `AGENTS.md`, and TOML.
 
-- [ ] **Step 2: Add one concise log entry**
+- [x] **Step 2: Add one concise log entry**
 
 Record the agent file, pre-save gate, and validation outcome in one dated bullet;
 do not add one bullet per artifact.
@@ -117,7 +117,7 @@ do not add one bullet per artifact.
 - Consumes: all completed files from Tasks 1–3.
 - Produces: verified diff and a concise commit.
 
-- [ ] **Step 1: Run structural checks**
+- [x] **Step 1: Run structural checks**
 
 Run the TOML parser command from Task 1 with `python3.12` and:
 
@@ -127,17 +127,17 @@ rg -n "source_verifier|source-verifier|Pre-Save|pre-save|CHANGES_REQUIRED|WARNIN
 
 Expected: the agent identity, gate, verdicts, and design references are present.
 
-- [ ] **Step 2: Review the diff and status**
+- [x] **Step 2: Review the diff and status**
 
 Run `git diff --check`, `git diff --stat`, and `git status --short`; confirm no
 unrelated files are changed and no placeholders remain in the spec or plan.
 
-- [ ] **Step 3: Stage only scoped files**
+- [x] **Step 3: Stage only scoped files**
 
 Stage the agent, `AGENTS.md`, `README.MD`, `log.md`, and the two documentation
 files, excluding unrelated changes.
 
-- [ ] **Step 4: Commit the implementation**
+- [x] **Step 4: Commit the implementation**
 
 Run:
 

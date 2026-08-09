@@ -30,6 +30,29 @@ Use links instead of copying another layer's tables or narrative.
 6. Freshly check prices, multiples, targets, news, laws, and market data.
 7. Preserve raw source meaning during ingest.
 
+## Pre-Save Verification Gate
+
+Before writing any durable project file, the main agent must complete the
+research draft and prepare an evidence packet containing the candidate claims,
+periods, units, currencies, metric definitions, as-of dates, calculations,
+source URLs/paths, and the complete proposed contents of every file it plans to
+write. It must then dispatch the project-scoped `source_verifier` sub-agent
+from `.codex/agents/source-verifier.toml` and wait for its structured review.
+
+- `PASS` permits the main agent to write the planned durable files.
+- `CHANGES_REQUIRED` for `High` or `Medium` findings blocks all writes; the
+  main agent must correct or narrow-refresh the evidence and run the reviewer
+  again before saving.
+- `WARNING` for `Low` findings pauses the workflow and requires explicit user
+  confirmation before saving; preserve the warning or gap in the owning
+  artifact when relevant.
+- The reviewer is read-only and must not edit evidence, vault notes, indexes,
+  or logs. The main agent remains the sole durable-file writer.
+- If the sub-agent is unavailable, the main agent must perform the same
+  checklist locally, disclose the fallback, and apply the same blocking and
+  confirmation rules. A read-only `chat` response with no durable write does
+  not require this pre-save gate.
+
 ## Source Priority
 
 1. SEC and official company filings
