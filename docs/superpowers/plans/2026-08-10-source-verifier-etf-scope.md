@@ -27,26 +27,26 @@
 - Consumes: the existing source-integrity rules and `check-etf-performance` workflow.
 - Produces: a conditional ETF performance pre-save gate with no project-wide reviewer mandate.
 
-- [ ] **Step 1: Rewrite the gate heading and trigger**
+- [x] **Step 1: Rewrite the gate heading and trigger**
 
 Replace `## Pre-Save Verification Gate` with a section that states the gate
 applies only to a research-bearing invocation of `check-etf-performance` that
 will write durable performance outputs. State explicitly that read-only chat
 and every other workflow must not dispatch `source_verifier`.
 
-- [ ] **Step 2: Preserve the evidence packet requirements**
+- [x] **Step 2: Preserve the evidence packet requirements**
 
 Keep the required packet fields, but describe them in ETF-performance terms:
 candidate performance claims, return basis, benchmark, dates, units/currency,
 calculations, source URLs/paths, gaps, and complete proposed performance files.
 
-- [ ] **Step 3: Preserve verdict and fallback behavior**
+- [x] **Step 3: Preserve verdict and fallback behavior**
 
 Keep `PASS`, `CHANGES_REQUIRED`, `WARNING`, the single-writer rule, and the
 local fallback checklist, while scoping each rule to the conditional
 `check-etf-performance` gate.
 
-- [ ] **Step 4: Check the gate text before editing the agent**
+- [x] **Step 4: Check the gate text before editing the agent**
 
 Run:
 
@@ -68,13 +68,13 @@ Expected: the gate names `check-etf-performance`; no sentence requires
   `check-etf-performance`.
 - Produces: the existing structured review report for ETF performance only.
 
-- [ ] **Step 1: Narrow the identity and description**
+- [x] **Step 1: Narrow the identity and description**
 
 Set the description to identify `source_verifier` as an independent,
 read-only reviewer for `check-etf-performance` ETF performance evidence before
 durable save. Remove the broad `stock-second-brain` reviewer wording.
 
-- [ ] **Step 2: Add an explicit scope gate**
+- [x] **Step 2: Add an explicit scope gate**
 
 At the beginning of `developer_instructions`, require an exact workflow marker
 such as `workflow: check-etf-performance` in the parent packet. If the marker
@@ -82,7 +82,7 @@ is missing or names another workflow, do not perform source analysis; return a
 structured `CHANGES_REQUIRED` report stating that the packet is out of scope
 and must not be routed to this agent.
 
-- [ ] **Step 3: Limit review criteria to ETF performance**
+- [x] **Step 3: Limit review criteria to ETF performance**
 
 Retain checks for issuer/exchange identity, NAV/price total return, benchmark,
 calendar-year returns, CAGR, drawdown, recovery, distributions, expense ratio,
@@ -91,13 +91,13 @@ exclude standalone stock financials, DCF, thesis/decision, market-move,
 sentiment, source-integrity audits, and ETF fund facts/holdings/methodology
 unless they are directly needed to validate the ETF performance packet.
 
-- [ ] **Step 4: Preserve read-only and verdict contract**
+- [x] **Step 4: Preserve read-only and verdict contract**
 
 Keep `sandbox_mode = "read-only"`, the source hierarchy, severity definitions,
 and exact report sections. Ensure no instruction permits writing, staging, or
 editing project files.
 
-- [ ] **Step 5: Validate TOML syntax**
+- [x] **Step 5: Validate TOML syntax**
 
 Run:
 
@@ -116,7 +116,7 @@ Expected: `valid scoped source verifier TOML`.
 - Consumes: the completed `AGENTS.md` and agent-scope changes.
 - Produces: one concise chronological workflow entry.
 
-- [ ] **Step 1: Add one dated log bullet**
+- [x] **Step 1: Add one dated log bullet**
 
 Record that `source_verifier` was restricted to `check-etf-performance` ETF
 performance saves, that other workflows no longer dispatch it, and that TOML,
@@ -131,7 +131,7 @@ reference-scan, and whitespace checks passed. Do not add one bullet per file.
 - Consumes: all changes from Tasks 1–3.
 - Produces: a clean, scoped diff ready for commit.
 
-- [ ] **Step 1: Scan all project references**
+- [x] **Step 1: Scan all project references**
 
 Run:
 
@@ -143,7 +143,7 @@ Expected: only the ETF-performance gate in `AGENTS.md`, the ETF-performance
 agent instructions, and historical/log references remain; no broad pre-save
 directive remains.
 
-- [ ] **Step 2: Check whitespace and status**
+- [x] **Step 2: Check whitespace and status**
 
 Run:
 
@@ -155,7 +155,7 @@ git status --short
 Expected: no whitespace errors and only the scoped files are modified after
 the already-committed spec.
 
-- [ ] **Step 3: Review the final diff**
+- [x] **Step 3: Review the final diff**
 
 Run:
 
@@ -166,7 +166,7 @@ git diff -- AGENTS.md .codex/agents/source-verifier.toml log.md
 Confirm the diff does not alter ETF performance calculations, research
 delegation, or unrelated source-integrity behavior.
 
-- [ ] **Step 4: Commit the implementation**
+- [x] **Step 4: Commit the implementation**
 
 Run:
 

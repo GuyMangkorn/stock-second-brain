@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-10
+
+- `project-config`: Restricted `source_verifier` to `check-etf-performance` ETF performance durable saves; other workflows no longer dispatch it. Scoped TOML parsing, reference scan, and whitespace verification passed.
+
 ## 2026-08-09
 
 - `source-verifier`: Added `.codex/agents/source-verifier.toml` and the mandatory pre-save gate in `AGENTS.md`; the read-only reviewer compares primary/corroborating sources, blocks High/Medium findings, and warns on Low findings. TOML parsing, cross-file verdict checks, and `git diff --check` passed.
