@@ -1,6 +1,6 @@
 ---
 name: trello-etf-batch
-description: "Orchestrate sequential ETF performance batches from Trello parent cards and local Markdown ticker lists, maintaining checklists, exception cards, resume/retry state, and invoking check-etf-performance in lean mode. Use when the user asks to run or resume a Trello ETF batch, process a card with workflow: trello-etf-batch, or loop through ETF symbols from a list file."
+description: "Orchestrate sequential ETF performance batches from a specific Trello parent card whose description contains workflow: trello-etf-batch, maintaining checklists, exception cards, resume/retry state, and invoking check-etf-performance in lean mode. Use when the user asks to run or resume a Trello ETF batch from that parent card; a Markdown list file alone must not trigger execution."
 ---
 
 # Trello ETF Batch
@@ -30,7 +30,10 @@ Use for prompts such as:
 
 - `[$trello-etf-batch] https://trello.com/c/<card>`
 - `Run trello-etf-batch on the filtered ETF batch card`
-- An automation prompt that names this skill and the target board/card.
+- An automation prompt that names this skill and the specific parent card.
+
+Do not start from a list file alone. Require a specific parent card URL or
+ARI, or a prompt that otherwise points to one exact parent card.
 
 The parent card must contain the exact configuration key:
 
@@ -72,15 +75,16 @@ Accept optional one-line overrides: `board:`, `ready_list:`,
 ## Queue input and checklist
 
 Read the Markdown input file and parse the table column named `Symbol`,
-case-insensitively. Preserve source order, trim whitespace/backticks, and
-deduplicate repeated symbols by keeping the first occurrence.
+case-insensitively. Preserve source order, trim whitespace/backticks, convert
+to uppercase, and deduplicate repeated symbols by keeping the first canonical
+occurrence.
 
 - Fail globally when the file is missing, unreadable, has no Symbol column, or
   has a malformed/empty ticker row.
 - Ignore every other column for queue construction and evidence.
 - Create one checklist named `ETF queue` when it does not exist.
 - When the checklist exists, preserve checked states and match items by exact
-  ticker name.
+  canonical uppercase ticker name.
 - Add only missing source tickers. If the existing checklist contains unknown,
   duplicate, or checked items no longer present in the source, stop with a
   checklist mismatch instead of silently deleting or unchecking work.
@@ -105,12 +109,14 @@ list. Use this name:
 
 Its short description must contain:
 
-`workflow: trello-etf-batch-exception`
-`parent: <parent card URL>`
-`ticker: <TICKER>`
-`failure: <stable failure code>`
-`reason: <one concise sentence>`
-`retry: move parent to Ready for AI`
+```text
+workflow: trello-etf-batch-exception
+parent: <parent card URL>
+ticker: <TICKER>
+failure: <stable failure code>
+reason: <one concise sentence>
+retry: move parent to Ready for AI
+```
 
 Reuse an existing exception card only when both its name and parent URL match.
 Move a retried exception to the active list while it is running; move it to
@@ -137,8 +143,9 @@ cards for the same parent/ticker.
 7. On an item-level failure, create/update the exception card and leave the
    checklist item unchecked. Continue with the next unblocked ticker.
 8. On a global failure, stop immediately, preserve the current item unchecked,
-   record the concise reason on its exception card, and move the parent to
-   Blocked.
+   record the concise batch failure/status reason on the parent card, and move
+   the parent to Blocked. Do not create a ticker exception card for a global
+   failure.
 9. For an interactive/manual invocation, repeat steps 4–8 until no eligible
    ticker remains. For an automation invocation, process exactly one ticker and
    return the updated state.
@@ -160,14 +167,14 @@ downstream quality gate.
 ## Automation contract
 
 The skill does not create automations. A recurring automation should explicitly
-invoke this skill, identify the board or parent card, and say:
+invoke this skill, identify the exact parent card URL or ARI, and say:
 
 `Process exactly one unchecked ETF, update the Trello parent/checklist state,
 create an exception card only if needed, and stop after that ETF.`
 
 If the parent is left In Progress after an automation run, the next run may
-continue that claimed batch. If a run is abandoned, move the parent to Ready
-for AI before retrying.
+continue that claimed batch only when it targets that same explicit parent
+card. If a run is abandoned, move the parent to Ready for AI before retrying.
 
 ## Completion response
 
