@@ -15,6 +15,7 @@ tags:
 # VIG Performance
 
 > Navigation: [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]
+> Entity: [[ETF_AMEX_VIG]]
 
 ## Bottom line
 

@@ -15,6 +15,7 @@ tags:
 # DGRO Performance
 
 > Navigation: [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]
+> Entity: [[ETF_AMEX_DGRO]]
 
 ## Bottom line
 

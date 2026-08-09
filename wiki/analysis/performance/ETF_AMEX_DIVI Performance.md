@@ -15,6 +15,7 @@ tags:
 # DIVI Performance
 
 > Navigation: [[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]
+> Entity: [[ETF_AMEX_DIVI]]
 
 ## Bottom line
 

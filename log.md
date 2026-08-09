@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-09
+
+- `source-integrity-audit`: ตรวจ 441 Markdown และ 271 analysis notes; ซ่อม KPHO backlink กับ entity backlinks ของ DGRO/DIVI/VIG/VIGI, ลบ 0 ไฟล์, และบันทึกผลไว้ที่ [[Source Integrity Audit 2026-08-09]]. กลุ่ม US refresh/Dividend ETF ยังเก็บไว้เพราะบทบาทและ source snapshot ต่างกัน; ติดตาม ETF performance pages ที่ยังไม่มี entity hub.
+
 ## 2026-08-07
 
 - `etf-performance-ranking`: Applied the approved 2016-2025 NAV TR screen; added [[ETF Performance Ranking 2026-08-07]] and [[ETF_performance_ranking_sources_2026-08-07]], embedded the reusable prompt in [[ETF Index]], and selected USA Top 10 plus five distinct non-U.S. regional winners from 60 eligible pages.
@@ -8,7 +12,7 @@
 
 - `etf-performance-audit`: Audited 143 canonical ETF performance pages one ETF at a time; 106 `EXPANDED_TO_10Y`, 37 `ACCEPTED_SHORT_HISTORY`, 0 unresolved/unsupported; refreshed FLAU and EPHE current official NAV TR snapshots and updated [[Source Integrity Audit 2026-07-26]].
 
-- `source-integrity-audit`: Cleaned the ETF performance batch by removing the superseded orphan `[[ETF_NYSE_ARCA_KPHO Performance]]`, retaining canonical `[[ETF_NYSE_KPHO Performance]]`, correcting Japan/Asia-Pacific region counts to 22/12, and removing the duplicate `ISMJF` navigation row; recorded checks in [[Source Integrity Audit 2026-07-26]].
+- `source-integrity-audit`: Cleaned the ETF performance batch by removing the superseded orphan `ETF_NYSE_ARCA_KPHO Performance`, retaining canonical `[[ETF_NYSE_KPHO Performance]]`, correcting Japan/Asia-Pacific region counts to 22/12, and removing the duplicate `ISMJF` navigation row; recorded checks in [[Source Integrity Audit 2026-07-26]].
 - `etf-performance`: Sequential queue row `101/125` completed for `FCA`; refreshed [[ETF_NASDAQ_FCA Performance]] with official rolling 10Y NAV TR CAGR `8.19%` for `2016-06-30` to `2026-06-30`, official 2016-2025 NAV rows and 2021-2025 CAGR `4.16%`, current NAV TR YTD `-1.23%` as of `2026-06-30`, and disclosed the 2015-07-14 index change plus factsheet/report conflict. Updated [[China ETF]] / [[ETF Performance Index]] and appended [[ETF_performance_sources_2026-07-24]] with the local pre-save fallback. Next queue ticker: row `102` `IND`.
 - `etf-performance`: Sequential queue row `102/125` completed for `IND`; refreshed [[ETF_NASDAQ_IND Performance]] after confirming passive/index-tracking Nifty 500 exposure, official inception `2025-11-24`, and `10-year NAV TR unavailable`; latest official 3-month NAV TR is `-18.41%` through `2026-03-31`, while inception-to-date endpoints and current YTD remain not disclosed, so no CAGR or proxy was inferred. Updated [[India ETF]] / [[ETF Performance Index]] and appended [[ETF_performance_sources_2026-07-24]] with the local pre-save fallback. Next queue ticker: row `103` `VNAM`.
 - `etf-performance`: Sequential queue row `103/125` completed for `VNAM`; resolved `NYSE Arca:VNAM`, confirmed passive/index tracking of the MSCI Vietnam Select 25-50 Index, and recorded official since-inception NAV TR annualized `0.34%` as of `2026-06-30`; `10-year NAV TR unavailable`, annual rows and current YTD not disclosed. Updated [[ETF_NYSE_ARCA_VNAM Performance]], [[Vietnam ETF]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-07-24]] with the local pre-save fallback. Next queue ticker: row `104` `ISAGF`.

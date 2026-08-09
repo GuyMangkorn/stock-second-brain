@@ -15,6 +15,7 @@ tags:
 # VIGI Performance
 
 > Navigation: [[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]
+> Entity: [[ETF_NASDAQ_VIGI]]
 
 ## Bottom line
 
