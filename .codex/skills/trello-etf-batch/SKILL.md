@@ -188,5 +188,3 @@ Return a compact status containing:
 
 Do not paste the full ETF performance report into Trello or the chat when a
 durable output link is available.
-
-## End of complete candidate durable file: .codex/skills/trello-etf-batch/SKILL.md
