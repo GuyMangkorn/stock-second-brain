@@ -13,10 +13,10 @@ assert_contains() {
 
 assert_not_contains() {
   local needle="$1"
-  rg -Fq "$needle" "$skill_file" && {
+  if rg -Fq "$needle" "$skill_file"; then
     echo "unexpected contract: $needle" >&2
     exit 1
-  }
+  fi
 }
 
 assert_contains 'A checked item means the ticker has been handled'

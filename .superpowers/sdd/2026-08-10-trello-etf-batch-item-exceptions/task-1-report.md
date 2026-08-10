@@ -42,3 +42,21 @@ Observed failures:
 ## Notes
 
 - Next step is the GREEN phase: update the Trello ETF batch skill to satisfy these contract assertions.
+
+## Fix round 1
+
+Updated only `assert_not_contains()` in `.codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh` to avoid `&&` under `set -euo pipefail`.
+
+Commands run:
+
+```bash
+bash .codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh
+bash .codex/skills/trello-etf-batch/tests/test_batch_size_contract.sh
+bash -n .codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh
+```
+
+Outputs:
+
+- `bash .codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh` → no output, exit 0
+- `bash .codex/skills/trello-etf-batch/tests/test_batch_size_contract.sh` → no output, exit 0
+- `bash -n .codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh` → no output, exit 0
