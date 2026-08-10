@@ -53,6 +53,18 @@ card has no conflicting value. If neither supplies it, default to `manual`.
 or from a card list. An invalid or conflicting value is a global pre-claim
 configuration error.
 
+The optional one-line `batch_size: <positive integer>` may appear in the
+parent description. If it is absent, default to `1`. Parse it as one positive
+base-10 integer matching `[1-9][0-9]*`. A duplicate or conflicting
+`batch_size`, or a zero, negative, fractional, or non-numeric value, is a
+pre-claim `workflow-config-mismatch`. The card value is authoritative: an
+invocation or scheduler must not override it or infer a different count from
+the title, list, queue length, or generic automation wording. For
+`run_mode: automation`, process up to `batch_size` items in one claimed run;
+the effective count is smaller when fewer eligible queue items remain. Manual
+mode retains its existing behavior of processing all unattempted work in the
+same claim.
+
 Use these defaults unless the card supplies an override:
 
 - Expected board: `stock-analysis-task`
@@ -140,7 +152,8 @@ Every parent transition writes all status fields, not a partial patch:
 
 - claim: `running`, current token, `failure_scope: none`, empty `failure`,
   and the derived retry flag;
-- item result while a manual claim continues: `running`, current token,
+- item result while a manual or bounded automation claim continues: `running`,
+  current token,
   `failure_scope: item`, the normalized item code (or `none` after success),
   and the derived retry flag;
 - automation release: `ready`, empty token, `failure_scope: none`, empty
@@ -238,9 +251,11 @@ silent removal or replacement of a queue item.
 ## Execution loop
 
 1. Read and validate the exact parent target, board/list IDs, configuration,
-   effective `run_mode`, controlled status block, and local input file. Build
-   the nonempty canonical source sequence `S` before any queue or exception
-   mutation. Resolve the parent before mutating Trello.
+   effective `run_mode`, optional `batch_size`, controlled status block, and
+   local input file. Build the nonempty canonical source sequence `S` before
+   any queue or exception mutation. Resolve the parent before mutating Trello.
+   For automation, resolve `batch_limit` from the card's `batch_size` or the
+   default `1`; manual mode keeps its existing unbounded per-claim behavior.
 2. If the parent is Done, read its single `ETF queue` checklist and accept a
    no-op only when its labels equal `S` exactly and every item is checked. A
    missing, duplicate, mismatched, or incomplete checklist is a global state
@@ -251,8 +266,10 @@ silent removal or replacement of a queue item.
    does not seize or block a parent; a post-claim global failure must block it.
 4. Build or reconcile the ETF queue checklist. Read only the exception cards
    needed to classify unchecked tickers as open-retry or normal-pending.
-5. Keep an in-memory `attempted_this_run` set so an item-level failure is not
-   selected repeatedly in the same manual invocation. Compute:
+5. Keep an in-memory `attempted_this_run` set so an item is not selected
+   repeatedly in the same invocation, plus `processed_count` for downstream
+   item attempts. In automation, select up to `batch_size` items sequentially
+   and stop selecting when `processed_count` reaches `batch_limit`. Compute:
    - `normal_pending`: unchecked tickers with no open exception and not already
      attempted in this run;
    - `retry_pending`: unchecked tickers with an open exception whose
@@ -261,33 +278,38 @@ silent removal or replacement of a queue item.
    - `confirmation_pending`: unchecked open exceptions whose
      `confirmation` is `required` but not yet `confirmed`.
    - `terminal_pending`: unchecked open exceptions with `terminal: true`.
-6. The status flag `retry_pending: true` is a scheduling preference, not proof
+6. At the start of each selection pass, if automation has reached
+   `batch_limit`, finalize using step 12. The status flag `retry_pending: true`
+   is a scheduling preference, not proof
    that a retry exists. If it is true but the actual retry set is empty, clear
    it while keeping `state: running` and the current claim, then recompute.
    Select the first unattempted retry when the flag is true and one exists;
    otherwise select the first unattempted normal item. If manual work remains
    only in the other set, select its first item. If no unattempted work
    remains, finalize using step 12.
-7. For a retry, move/reuse its exception card in the active list. Invoke
-   `$check-etf-performance <TICKER>` with `mode: lean`. Wait for its research
-   delegation, reconciliation, pre-save review, and durable-write result. Do
-   not perform those steps locally. Require the downstream handoff envelope
-   defined in `Failure classification`; missing or ambiguous fields are a
-   global result. Never invoke downstream for a `confirmation_pending` item;
-   it becomes eligible only after the user changes that exception line to
+7. For each selected retry, move/reuse its exception card in the active list.
+   For each selected ticker, invoke `$check-etf-performance <TICKER>` with
+   `mode: lean` one ticker at a time. Wait for its research delegation,
+   reconciliation, pre-save review, and durable-write result. Do not perform
+   those steps locally. Require the downstream handoff envelope defined in
+   `Failure classification`; missing or ambiguous fields are a global result.
+   Never invoke downstream for a `confirmation_pending` item; it becomes
+   eligible only after the user changes that exception line to
    `confirmation: confirmed` and moves the parent to Ready for AI.
 8. Mark the checklist item checked only for `status: PASS`, `scope: item`,
    and `durable_write: completed` in that envelope. On success, close any
-   matching exception by moving it to Done and marking it complete.
+   matching exception by moving it to Done and marking it complete, then
+   increment `processed_count` once for the successful item.
 9. On an explicit downstream item-level failure, leave the item unchecked,
    create/update the one exception card, set `confirmation: required` only
    for `confirmation_required` and otherwise `confirmation: none`, set
    `terminal: true` only for `unsupported-etf-type` and otherwise `false`,
-   add the ticker to `attempted_this_run`, and move/update the exception in
-   the configured Blocked list after the failure. If that exception state
-   change fails, classify the run as global. Continue to another unattempted
-   item only in a manual run. In automation mode, release/finalize after this
-   one item.
+   add the ticker to `attempted_this_run`, increment `processed_count`, and
+   move/update the exception in the configured Blocked list after the failure.
+   If that exception state change fails, classify the run as global. In
+   automation, continue to another unattempted item while batch capacity remains;
+   otherwise finalize after this bounded batch. Manual mode continues while
+   unattempted work remains.
 10. On a global failure after this invocation owns the claim, update only the
     controlled parent status block with `state: blocked`, empty
     `claim_token`, `retry_pending: true` only when any retryable open item
@@ -300,8 +322,8 @@ silent removal or replacement of a queue item.
 11. For manual mode, retain `state: running` and the claim while unattempted
     work remains and repeat steps 5–10. Do not write `state: ready` while the
     parent stays In Progress.
-12. After an item or after the final queue inspection, use these mutually
-    exclusive branches:
+12. After an item, when automation reaches its batch capacity, or after the
+    final queue inspection, use these mutually exclusive branches:
     - if every checklist item is checked, write `state: done`,
       `retry_pending: false`, empty token and failure fields, move the parent
       to Done, and mark it complete;
@@ -327,15 +349,16 @@ exception tickers that do not require unconfirmed user confirmation. If no
 eligible open retry exists, the flag is cleared before selection; a terminal
 or confirmation-pending exception still keeps the parent blocked when no
 normal work remains. When an
-automation run releases a non-terminal parent with normal work, it writes
-`retry_pending: false`, so open exceptions are skipped until normal work is
-exhausted. Manual mode processes all unattempted normal and retry work in the
-same invocation, while each ticker is attempted at most once per invocation.
+automation run releases a non-terminal parent with normal work after its
+configured batch capacity, it writes `retry_pending: false`, so open
+exceptions are skipped until normal work is exhausted. Manual mode processes
+all unattempted normal and retry work in the same invocation, while each
+ticker is attempted at most once per invocation.
 
 ## Failure classification
 
 Treat these as global failures: missing/ambiguous exact parent target,
-workflow/configuration/run-mode mismatch, Trello authentication/tool failure,
+workflow/configuration/run-mode/batch-size mismatch, Trello authentication/tool failure,
 board/list resolution failure, unreadable/malformed input, checklist mismatch,
 an owned claim state error, or `research sub-agent unavailable` from the
 downstream workflow. A lost claim is a non-mutating abort, not a global
@@ -343,8 +366,8 @@ failure to write to the parent. A pre-claim configuration/Trello failure is
 reported without seizing or blocking a parent; a post-claim global failure
 blocks the owned parent when the required Trello writes succeed.
 
-The downstream handoff must be normalized to this explicit envelope for the
-single ticker invocation:
+The downstream handoff must be normalized to this explicit envelope for each
+single-ticker invocation within the batch:
 
 `status: PASS|WARNING|CHANGES_REQUIRED|BLOCKED|ERROR`
 `scope: item|global|unknown`
@@ -410,9 +433,13 @@ The skill does not create automations. A recurring automation must explicitly
 invoke this skill with the exact parent card URL or ARI and
 `run_mode: automation`, and say:
 
-`Process exactly one eligible ETF, update the Trello parent/checklist state,
+```text
+Process up to the parent card’s `batch_size` eligible ETFs sequentially
+(default 1); update the Trello parent/checklist state after each ticker,
 release a non-terminal parent back to Ready for AI, create an exception card
-only for an explicit item-level block, and stop after that ETF.`
+only for an explicit item-level block, and stop after that capacity or queue
+exhaustion. Generic scheduler text must respect the parent card’s `batch_size`.
+```
 
 Never schedule overlapping automation workers for the same parent.
 
@@ -421,7 +448,7 @@ Never schedule overlapping automation workers for the same parent.
 Return a compact status containing:
 
 - parent card and current list;
-- ticker processed in this invocation, if any;
+- tickers processed in this invocation, if any;
 - counts of checked, normal-pending, retry-pending, and blocked items;
 - any exception card URL/name;
 - downstream output links only when the downstream skill returned them.
