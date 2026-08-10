@@ -413,12 +413,18 @@ After that precedence check, apply this closed mapping:
   `exhausted: false`, `confirmation: none`, and a success code. A disclosed
   gap remains a successful result when downstream says so.
 - `WARNING` + `scope: item` + `durable_write: not_completed` is
-  `confirmation_required`: keep the item unchecked and record the required
-  user confirmation in its exception card. This preserves the project rule
-  that a reviewer warning pauses a save. It also requires
-  `exhausted: false`, `confirmation: required`, and a warning code. A
-  scope-free or `scope: unknown` warning is global because the coordinator
-  cannot safely assign ownership.
+  `confirmation_required`: treat it as the same safe item-level exception
+  flow used for other explicit item blocks. Create or update the one
+  exception card, write the required user confirmation plus full metadata
+  including `reason`, move it to the configured Blocked list, and only then
+  mark the matching `ETF queue` item checked. The exception remains open, the
+  item stays handled but not successfully cleared, `Done` remains blocked
+  while that open confirmation exception exists, and the current run may
+  continue while capacity remains. This preserves the project rule that a
+  reviewer warning pauses a save without falling out of the handled-item
+  model. It also requires `exhausted: false`, `confirmation: required`, and
+  a warning code. A scope-free or `scope: unknown` warning is global because
+  the coordinator cannot safely assign ownership.
 - `CHANGES_REQUIRED` or `BLOCKED` with explicit `scope: item` is
   `item_blocked` only with `durable_write: not_completed`,
   `exhausted: true`, `confirmation: none`, and an item code; this includes the

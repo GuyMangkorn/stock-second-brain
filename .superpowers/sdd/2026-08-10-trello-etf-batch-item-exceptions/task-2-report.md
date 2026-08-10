@@ -82,3 +82,70 @@ Before stopping, I manually confirmed that the two forbidden legacy phrases are 
 ## Commit
 
 Commit created after staging the scoped files from this task.
+
+## GREEN verification after Task 1 fix
+
+Task 1 fix `a316dbd` corrected the negative-assertion helper in
+`.codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh`.
+
+Fresh verification run against the existing committed Task 2 skill change
+`aef71a8`:
+
+```bash
+bash .codex/skills/trello-etf-batch/tests/test_batch_size_contract.sh
+bash .codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh
+git diff --check -- .codex/skills/trello-etf-batch/SKILL.md .codex/skills/trello-etf-batch/tests
+```
+
+Results:
+
+- `test_batch_size_contract.sh`: passed (`exit 0`)
+- `test_item_exception_contract.sh`: passed (`exit 0`)
+- `git diff --check -- .codex/skills/trello-etf-batch/SKILL.md .codex/skills/trello-etf-batch/tests`: passed (`exit 0`)
+
+No additional contract gaps were revealed, so `.codex/skills/trello-etf-batch/SKILL.md`
+did not require any further edits.
+
+## Final status
+
+DONE
+
+## Fix round 1 — confirmation_required handled-item contract
+
+Reviewer finding addressed:
+
+- The `confirmation_required` mapping in
+  `.codex/skills/trello-etf-batch/SKILL.md` still said to keep the queue item
+  unchecked, which contradicted the handled-item/open-exception contract used
+  everywhere else in the coordinator.
+
+Scoped fix applied:
+
+- Updated only `.codex/skills/trello-etf-batch/SKILL.md`.
+- Changed the `WARNING` + `scope: item` + `durable_write: not_completed`
+  mapping so `confirmation_required` follows the same safe item-level
+  exception order as other explicit item blocks:
+  - create or update the one exception card,
+  - write confirmation metadata plus `reason`,
+  - move it to `Blocked`,
+  - only then check the matching `ETF queue` item,
+  - leave the exception open so it remains handled, blocks `Done`, and still
+    allows the current run to continue while capacity remains.
+- Preserved the existing global-failure rule for scope-free or
+  `scope: unknown` warnings.
+
+Fresh verification for this fix round:
+
+```bash
+bash .codex/skills/trello-etf-batch/tests/test_batch_size_contract.sh
+bash .codex/skills/trello-etf-batch/tests/test_item_exception_contract.sh
+git diff --check -- .codex/skills/trello-etf-batch/SKILL.md .codex/skills/trello-etf-batch/tests
+```
+
+Results:
+
+- `test_batch_size_contract.sh`: passed (`exit 0`)
+- `test_item_exception_contract.sh`: passed (`exit 0`)
+- `git diff --check -- .codex/skills/trello-etf-batch/SKILL.md .codex/skills/trello-etf-batch/tests`: passed (`exit 0`)
+
+Fix round 1 status: DONE
