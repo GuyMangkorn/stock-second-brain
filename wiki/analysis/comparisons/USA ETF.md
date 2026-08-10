@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-07-19
+updated: 2026-08-10
 tags:
   - analysis/etf-region
   - geography/United-States
@@ -35,6 +35,7 @@ tags:
 | TDIV | First Trust NASDAQ Technology Dividend Index Fund | technology dividend and semiconductors | 18.22% | 16.55% | 19.52% | [[ETF_NASDAQ_TDIV Performance]] |
 | VYM | Vanguard High Dividend Yield ETF | U.S. broad high dividend | 11.61% | 12.68% | 11.49% | [[ETF_AMEX_VYM Performance]] |
 | VOO | Vanguard S&P 500 ETF | U.S. large-cap broad equity | 15.47% | 14.38% | 9.97% | [[ETF_NYSE_ARCA_VOO Performance]] |
+| VB | Vanguard Morningstar Small-Cap ETF | U.S. small-cap broad equity | 10.90% | 7.35% | 19.48% | [[ETF_NYSE_ARCA_VB Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable

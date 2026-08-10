@@ -3,6 +3,7 @@
 ## 2026-08-10
 
 - `project-config`: Restricted `source_verifier` to `check-etf-performance` ETF performance durable saves; other workflows no longer dispatch it. Scoped TOML parsing, reference scan, and whitespace verification passed.
+- `check-etf-performance`: Added [[ETF_NYSE_ARCA_VB Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]] from official Vanguard VB returns; current YTD is 19.48% as of 2026-08-07, with S&P current-YTD comparison 13.58% as of 2026-08-05 and a disclosed date gap.
 
 ## 2026-08-09
 
