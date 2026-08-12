@@ -280,18 +280,16 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
    and stop selecting when `processed_count` reaches `batch_limit`. Compute:
    - `normal_pending`: unchecked tickers with no open exception and not already
      attempted in this run;
-   - `retry_pending`: checked tickers with an open exception whose
-     `terminal` is `false`, whose `confirmation` is `none` or `confirmed`, and
-     whose ticker is not already attempted in this run;
+   - `retryable_open`: all open non-terminal item exceptions with `confirmation: none` or `confirmation: confirmed`;
+   - `selectable_retries`: entries from `retryable_open` whose ticker is not in `attempted_this_run`;
    - `confirmation_pending`: checked tickers with an open exception whose
      `confirmation` is `required` but not yet `confirmed`.
    - `terminal_pending`: checked tickers with an open exception whose
      `terminal` is `true`.
 6. At the start of each selection pass, if automation has reached
    `batch_limit`, finalize using step 12. Always select normal items before eligible retries: choose the first unattempted normal item when one exists,
-   otherwise choose the first unattempted retry. `retry_pending` is only the
-   computed set/count from step 5, never a parent flag. If no unattempted work
-   remains, finalize using step 12.
+   otherwise choose the first entry in `selectable_retries`. Use `selectable_retries` for selection and `retryable_open` for finalization. If no unattempted
+   work remains, finalize using step 12.
 7. For each selected retry, move/reuse its exception card in the active list.
    For each selected ticker, invoke `$check-etf-performance <TICKER>` with
    `mode: lean` one ticker at a time. Wait for its research delegation,
@@ -334,9 +332,7 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
     - If every queue item is checked and no exception is open, move the parent to `Done` and mark it complete; this is the `all items checked and no open exception` branch;
     - else if unfinished normal work remains, manual mode continues with the
       parent in `In Progress`; automation moves the parent to `Ready for AI`;
-    - else if an eligible retryable exception remains, manual mode continues
-      with the parent in `In Progress`; automation moves the parent to
-      `Ready for AI`;
+    - else if `retryable_open` is nonempty, an eligible retryable exception remains; move the parent to `Ready for AI`. Manual mode reaches this branch only after every retryable entry is in `attempted_this_run`, so it does not retry a ticker twice in one invocation; a later invocation may select it again;
     - else if only terminal or unconfirmed confirmation exceptions remain,
       move the parent to `Blocked` and do not mark it complete;
     - otherwise report a global checklist/state inconsistency and, because the
@@ -471,7 +467,8 @@ Return a compact status containing:
 
 - parent card and current list;
 - tickers processed in this invocation, if any;
-- counts of checked, normal-pending, retry-pending, and blocked items;
+- counts of checked, normal-pending, retry-pending, and blocked items; derive
+  any reported retry-pending count from `retryable_open`;
 - any exception card URL/name;
 - downstream output links only when the downstream skill returned them.
 
