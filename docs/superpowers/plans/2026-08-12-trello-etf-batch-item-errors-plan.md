@@ -4,7 +4,7 @@
 
 **Goal:** Route ticker-scoped downstream `ERROR` results through the same child-card, checklist, and continue flow as item blockers, while preserving global stops for coordinator/state failures.
 
-**Architecture:** Keep Trello mutation ownership in `trello-etf-batch`. Extend the closed handoff mapping so `ERROR + scope:item + accepted item error code` becomes a retryable item exception. Keep `scope:global|unknown`, invalid envelopes, and Trello/claim/configuration failures global. Mirror the contract in the local automation prompt and update the installed automation prompt through the automation tool.
+**Architecture:** Keep Trello mutation ownership in `trello-etf-batch`. Extend the closed handoff mapping so a selected single-ticker `ERROR` with `research-sub-agent-unavailable` or `item-downstream-error` becomes a retryable item exception even when the downstream reports `scope:global`; `scope:unknown`, invalid envelopes, global codes, and Trello/claim/configuration failures remain global. Mirror the contract in the local automation prompt and update the installed automation prompt through the automation tool.
 
 **Tech Stack:** Markdown skill contracts, Bash/Ripgrep static contract tests, Codex automation tool, Trello connector.
 
@@ -14,7 +14,7 @@
 - Write complete child metadata before moving the child to `Blocked`.
 - Check only the matching ETF queue item after child mutation succeeds.
 - Continue to the next eligible ticker while `batch_size` capacity remains.
-- Treat Trello/tool/auth/board-list/configuration/input/checklist/claim and exception-card mutation failures as global.
+- Treat `scope:unknown`, global codes, Trello/tool/auth/board-list/configuration/input/checklist/claim and exception-card mutation failures as global.
 - Do not create durable ETF vault outputs in the coordinator.
 
 ---
@@ -74,9 +74,9 @@ git commit -m "test: require item-level ETF error routing"
 
 - [ ] **Step 1: Update blocker routing and failure classification**
 
-Document that `ERROR + scope:item + durable_write:not_completed + exhausted:false + confirmation:none` is accepted only with `research-sub-agent-unavailable` or `item-downstream-error`. State that the coordinator maps it to retryable `item_blocked`, writes `terminal:false`, moves the child to `Blocked`, checks the matching queue item after child mutation, increments `processed_count`, and continues.
+Document that a selected single-ticker `ERROR` with `scope:item` or a reported `scope:global`, `durable_write:not_completed`, `exhausted:false`, and `confirmation:none` is accepted only with `research-sub-agent-unavailable` or `item-downstream-error`. State that the coordinator normalizes it to retryable `item_blocked`, writes `terminal:false`, moves the child to `Blocked`, checks the matching queue item after child mutation, increments `processed_count`, and continues.
 
-Replace the blanket rule that every `status: ERROR` is global with a precedence rule: `scope:global|unknown`, global codes, missing/contradictory fields, and coordinator/Trello state failures remain global; only the explicit item envelope is item-level.
+Replace the blanket rule that every `status: ERROR` is global with a precedence rule: `scope:unknown`, global codes, missing/contradictory fields, and coordinator/Trello state failures remain global; only the explicit single-ticker error envelope may normalize a reported `scope:global` to item-level.
 
 - [ ] **Step 2: Update execution and retry language**
 
@@ -168,4 +168,3 @@ git add .codex/skills/trello-etf-batch/SKILL.md \
   docs/superpowers/plans/2026-08-12-trello-etf-batch-item-errors-plan.md
 git commit -m "feat: continue ETF batches after item errors"
 ```
-

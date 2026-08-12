@@ -23,16 +23,19 @@ For every ticker, validate the complete downstream handoff envelope before any c
 - Continue while batch capacity remains.
 
 2. Item-level blocker:
-- This means an accepted item-scoped WARNING with required confirmation, or an item-scoped CHANGES_REQUIRED/BLOCKED result with an accepted item code.
+- This means an accepted item-scoped WARNING with required confirmation, an item-scoped CHANGES_REQUIRED/BLOCKED result with an accepted item code, or an accepted item-level error.
+- A known ticker-scoped downstream `ERROR` is item-level when the selected single-ticker call has `scope: item` or `scope: global`, `durable_write: not_completed`, `exhausted: false`, `confirmation: none`, and code `research-sub-agent-unavailable` or `item-downstream-error`; the coordinator normalizes a reported `scope: global` for these codes to item-level.
+- An item-level error is `status: ERROR` with `scope: item` and `durable_write: not_completed`, `exhausted: false`, `confirmation: none`, and code `research-sub-agent-unavailable` or `item-downstream-error`; `research-sub-agent-unavailable` may be item-level when the single-ticker downstream handoff says `scope: item`.
 - Create or reuse exactly one child named `[BLOCKED][ETF] <TICKER> | check-etf-performance`.
 - Put complete parent/ticker/failure/reason/confirmation/terminal/retry metadata on the child.
 - Move only the child card to `Blocked`.
-- After the child update and move both succeed, check only that ticker’s ETF queue item.
+- After the child update and move both succeed, check only the matching `ETF queue` item.
 - Count the handled ticker and continue to the next eligible ticker while batch capacity remains.
 - `unsupported-etf-type` is still item-level: create the child and check the queue item, but mark the child terminal and do not retry it automatically.
+- The item-level error sequence is exactly `create or reuse exactly one exception card` → `check only the matching `ETF queue` item` → `continue to the next eligible ticker`.
 
 3. Global blocker:
-- This includes status ERROR, scope global or unknown, any global code including `research-sub-agent-unavailable`, missing/ambiguous/contradictory handoff fields, Trello/tool/auth failures, board/list/configuration/input/checklist/claim failures, or an exception-card state mutation failure.
+- This includes `ERROR` with scope unknown, any global code, invalid/ambiguous/contradictory handoff fields, Trello/tool/auth failures, board/list/configuration/input/checklist/claim failures, or an exception-card state mutation failure. A reported scope global remains global unless it is one of the two accepted ticker-scoped downstream error codes above. `Trello/tool/auth failures remain global` even when a ticker was being processed.
 - Do not create a ticker child card.
 - Leave the affected ETF queue item unchecked.
 - Do not continue to another ticker.

@@ -23,7 +23,10 @@ assert_not_contains() {
 }
 
 for contract_file in "$skill_file" "$prompt_file"; do
-  assert_contains "$contract_file" 'ERROR + `scope: item`'
+  assert_contains "$contract_file" 'item-level error is `status: ERROR` with `scope: item`'
+  assert_contains "$contract_file" 'known ticker-scoped downstream `ERROR`'
+  assert_contains "$contract_file" 'reported `scope: global`'
+  assert_contains "$contract_file" 'scope: item` or `scope: global`'
   assert_contains "$contract_file" '`research-sub-agent-unavailable` may be item-level'
   assert_contains "$contract_file" 'item-level error'
   assert_contains "$contract_file" 'create or reuse exactly one exception card'

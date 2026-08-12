@@ -260,22 +260,37 @@ The word “blocker” is not by itself an item-level result. Route each ticker
 only after validating the complete downstream handoff envelope:
 
 - `item-level`: an accepted `WARNING` with `scope: item` and
-  `confirmation: required`, or an accepted `CHANGES_REQUIRED`/`BLOCKED` with
-  `scope: item` and an accepted item code. These results are ticker-specific:
-  create or reuse exactly one exception card, write its complete metadata,
-  move the child to `Blocked`, then check only the matching `ETF queue` item
-  and continue to the next eligible ticker while `batch_size` capacity
-  remains.
+  `confirmation: required`, an accepted `CHANGES_REQUIRED`/`BLOCKED` with
+  `scope: item` and an accepted item code, or an accepted item-level error.
+  A known ticker-scoped downstream `ERROR` is an item-level error when the
+  selected single-ticker call reports `research-sub-agent-unavailable` or
+  `item-downstream-error`, has `durable_write: not_completed`,
+  `exhausted: false`, `confirmation: none`, and `scope: item` or
+  `scope: global`.
+  Accepted scope values for this item-error branch are `scope: item` or `scope: global`.
+  The coordinator owns the selected ticker, so it normalizes a reported
+  `scope: global` for these two downstream-only codes to item-level. An
+  item-level error is `status: ERROR` with `scope: item` and
+  `durable_write: not_completed`, `exhausted: false`, `confirmation: none`,
+  and `research-sub-agent-unavailable` or `item-downstream-error`.
+  `research-sub-agent-unavailable` may be item-level even when the selected
+  single-ticker handoff reports `scope: global`. These results are
+  ticker-specific: create or reuse exactly one exception card, write its
+  complete metadata, move the child to `Blocked`, then check only the matching
+  `ETF queue` item and continue to the next eligible ticker while `batch_size`
+  capacity remains.
+  The item-level error sequence is exactly `create or reuse exactly one exception card` → `check only the matching `ETF queue` item` → `continue to the next eligible ticker`; `Trello/tool/auth failures remain global`.
 - `terminal item-level`: `unsupported-etf-type` still follows the child-card
   and checklist flow above, but its child is not retryable. If terminal or
   unconfirmed-confirmation exceptions are the only remaining work, the parent
   ends in `Blocked`.
-- `global-level`: `status: ERROR`, `scope: global|unknown`, any accepted
-  global code (including `research-sub-agent-unavailable`), a missing or
-  contradictory envelope, or a Trello/board/input/claim failure. Do not create
-  a ticker exception, do not check the affected queue item, do not continue to
-  another ticker, and block the owned parent. A global failure has no safe
-  ticker identity and must not be represented as an item child.
+- `global-level`: `scope: unknown`, any accepted global code, a missing or
+  contradictory envelope, or a Trello/board/input/claim failure. An `ERROR`
+  with a reported `scope: global` is global unless it passes the explicit
+  known ticker-scoped downstream error envelope above. Do not create a ticker
+  exception, do not check the affected queue item, do not continue to another
+  ticker, and block the owned parent. A global failure has no safe ticker
+  identity and must not be represented as an item child.
 
 Therefore, “create child → move child to `Blocked` → check queue item →
 continue” applies only after the item-level branch succeeds. The coordinator
@@ -328,17 +343,19 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
    reconciliation, pre-save review, and durable-write result. Do not perform
    those steps locally. Require the downstream handoff envelope defined in
    `Failure classification`; missing or ambiguous fields are a global result.
-   Never invoke downstream for a `confirmation_pending` item; it becomes
-   eligible only after the user changes that exception line to
-   `confirmation: confirmed` and moves the parent to Ready for AI.
-8. Mark the checklist item checked only for `status: PASS`, `scope: item`,
-   and `durable_write: completed` in that envelope. On success, close any
-   matching exception by moving it to Done and marking it complete, then
-   increment `processed_count` once for the successful item.
+   A valid item-level `ERROR` is handled through the item exception flow and
+   does not stop the batch. Never invoke downstream for a
+   `confirmation_pending` item; it becomes eligible only after the user
+   changes that exception line to `confirmation: confirmed` and moves the
+   parent to Ready for AI.
+8. For a successful item, mark the checklist item checked only for
+   `status: PASS`, `scope: item`, and `durable_write: completed` in that
+   envelope. On success, close any matching exception by moving it to Done and
+   marking it complete, then increment `processed_count` once for the successful item. An accepted item-level blocker or item-level error may
+   check the item only after its child exception mutation succeeds.
 9. On a downstream handoff that passes the explicit item-level routing
    contract, keep the parent claim,
-   create/update the one exception card, write the complete metadata set
-   including `reason`, set `confirmation: required` only for
+   create or reuse exactly one exception card, write its complete metadata including `reason`, set `confirmation: required` only for
    `confirmation_required` and otherwise `confirmation: none`, set
    `terminal: true` only for `unsupported-etf-type` and otherwise `false`,
    Move the exception card to the configured `Blocked` list, and only after
@@ -353,11 +370,11 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
     controlled parent status block with `state: blocked`, empty
     `claim_token`, `retry_pending: true` only when any retryable open item
     exception exists,
-    `failure_scope: global`, and the short failure code; move the parent to
-    Blocked. Do not create a ticker exception card. A global failure before
-    exact parent resolution, or a lost claim, returns without pretending to
-    update Trello. If a required state update/move fails, report that state
-    change failure and stop. A global failure leaves the affected checklist item unchanged.
+   `failure_scope: global`, and the short failure code; move the parent to
+   Blocked. Do not create a ticker exception card. A global failure before
+   exact parent resolution, or a lost claim, returns without pretending to
+   update Trello. If a required state update/move fails, report that state
+   change failure and stop. A global failure leaves the affected checklist item unchanged.
 11. For manual mode, retain `state: running` and the claim while unattempted
     work remains and repeat steps 5–10. Do not write `state: ready` while the
     parent stays In Progress.
@@ -396,11 +413,16 @@ ticker is attempted at most once per invocation. The scheduler continues to insp
 Treat these as global failures: missing/ambiguous exact parent target,
 workflow/configuration/run-mode/batch-size mismatch, Trello authentication/tool failure,
 board/list resolution failure, unreadable/malformed input, checklist mismatch,
-an owned claim state error, or `research sub-agent unavailable` from the
-downstream workflow. A lost claim is a non-mutating abort, not a global
-failure to write to the parent. A pre-claim configuration/Trello failure is
-reported without seizing or blocking a parent; a post-claim global failure
-blocks the owned parent when the required Trello writes succeed.
+an owned claim state error, or a downstream handoff with `scope: unknown`, a
+global code, or an unrecognized/invalid error envelope. A known ticker-scoped
+downstream `ERROR` with code `research-sub-agent-unavailable` or
+`item-downstream-error` may be item-level when the complete accepted item
+envelope is present, even when the downstream reports `scope: global`; this
+normalization is limited to the selected single-ticker call. A lost claim is
+a non-mutating abort, not a global failure to write to the parent. A pre-claim
+configuration/Trello failure is reported without seizing or blocking a
+parent; a post-claim global failure blocks the owned parent when the required
+Trello writes succeed.
 
 The downstream handoff must be normalized to this explicit envelope for each
 single-ticker invocation within the batch:
@@ -421,17 +443,21 @@ codes are:
 - success: `success`, `durable-write-complete`;
 - warning: `review-warning`, `confirmation-required`;
 - item: `unsupported-etf-type`, `item-pre-save-non-pass`,
-  `item-hard-data-gap`;
-- global: `research-sub-agent-unavailable`, `trello-tool-failure`,
+  `item-hard-data-gap`, `research-sub-agent-unavailable`,
+  `item-downstream-error`;
+- global: `trello-tool-failure`,
   `trello-auth-failure`, `board-list-resolution-failure`,
   `workflow-config-mismatch`, `input-malformed`, `checklist-mismatch`,
   `claim-state-error`, `global-error`, `unknown-result`.
 
-Apply precedence before mapping: any global code, `status: ERROR`, or
-`scope: global|unknown` is always `global_blocked`, even if other fields
-incorrectly say PASS. A global code also overrides a contradictory item scope.
-Reject unknown codes, missing fields, and contradictory combinations as global;
-never let a contradictory PASS reach the checklist.
+Apply precedence before mapping: any global code or `scope: unknown` is always
+`global_blocked`, even if other fields incorrectly say PASS. For a selected
+single-ticker call, a known ticker-scoped `ERROR` code may override a reported
+`scope: global` only when the complete item-level error envelope passes.
+Any other `status: ERROR`, including an invalid or contradictory envelope, is
+global. A global code also overrides a contradictory item scope. Reject unknown
+codes, missing fields, and contradictory combinations as global; never let a
+contradictory PASS reach the checklist.
 
 After that precedence check, apply this closed mapping:
 
@@ -460,9 +486,17 @@ After that precedence check, apply this closed mapping:
   non-PASS after downstream's correction/re-review policy. Create or reuse the
   exception card. `unsupported-etf-type` must set `terminal: true` and is not
   eligible for retry; other accepted item codes set `terminal: false`.
-- A known global code, `scope: global|unknown`, `status: ERROR`, or a
+- `ERROR` with `scope: item` or reported `scope: global` is `item_blocked` only
+  for the selected single-ticker call, with
+  `durable_write: not_completed`, `exhausted: false`, `confirmation: none`,
+  and `research-sub-agent-unavailable` or `item-downstream-error`. Use the
+  same child-card metadata, `Blocked` move, matching queue-item check, and
+  continue flow as other item-level blockers; set `terminal: false` so the
+  child can be retried.
+- A known global code, `scope: unknown`, an invalid `ERROR` envelope, or a
   Trello/tool/auth failure is `global_blocked`; block the parent and create no
-  ticker exception.
+  ticker exception. A reported `scope: global` is also global when its code is
+  not one of the two explicitly accepted ticker-scoped downstream error codes.
 - Any unknown status, missing required field, contradictory combination (for
   example PASS without completed durable writes), or scope-free non-warning
   failure is global. Do not infer item failure from a disclosed data gap or
@@ -484,14 +518,7 @@ exactly one exception card named `[BLOCKED][ETF] <TICKER> |
 check-etf-performance`, write complete metadata, move only that child to
 `Blocked`, check only that ticker's queue item after the child mutation
 succeeds (this flow checks that queue item only after the child state update),
-and continue to the next ticker while capacity remains. This allows the current batch to continue. After capacity, release a non-terminal parent back to Ready for AI. For
-`status: ERROR`, `scope: global|unknown`, global codes such as
-`research-sub-agent-unavailable`, or any ambiguous/invalid envelope, create
-no child, leave the affected queue item unchecked, block the parent, and stop
-the run. After batch capacity or queue exhaustion, release a non-terminal
-parent back to `Ready for AI`; keep terminal or unconfirmed-confirmation item
-exceptions in `Blocked`. Generic scheduler text must respect the parent
-card’s `batch_size`.
+and continue to the next ticker while capacity remains. This allows the current batch to continue. After capacity, release a non-terminal parent back to Ready for AI. For a selected single-ticker call, a complete `ERROR` envelope with `research-sub-agent-unavailable` or `item-downstream-error` may be handled as item-level even when it reports `scope: global`; use the child/check/continue sequence above. For `ERROR` with `scope: unknown`, a global code, or any ambiguous/invalid envelope, create no child, leave the affected queue item unchecked, block the parent, and stop the run. Trello/tool/auth failures remain global. After batch capacity or queue exhaustion, release a non-terminal parent back to `Ready for AI`; keep terminal or unconfirmed-confirmation item exceptions in `Blocked`. Generic scheduler text must respect the parent card’s `batch_size`.
 ```
 
 Never schedule overlapping automation workers for the same parent.

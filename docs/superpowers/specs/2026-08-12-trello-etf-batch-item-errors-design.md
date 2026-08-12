@@ -27,13 +27,19 @@ item-level exception เพื่อให้ parent checklist แสดงว�
 
 2. `global error`: Trello/tool/auth, board/list, configuration/input,
    checklist, claim, หรือ exception-card mutation error; รวมถึง downstream
-   handoff ที่ยัง `scope: global|unknown` หรือไม่มี envelope ที่ยืนยัน ticker
-   ได้. กรณีนี้ไม่สร้าง child, ไม่ check queue item, block parent และหยุด.
+   handoff ที่เป็น `scope: unknown`, global code, invalid envelope หรือไม่ใช่
+   known ticker-scoped code. กรณีนี้ไม่สร้าง child, ไม่ check queue item, block
+   parent และหยุด. Reported `scope: global` ยังเป็น global เว้นแต่เป็น
+   `research-sub-agent-unavailable` หรือ `item-downstream-error` จาก selected
+   single-ticker call ที่ผ่าน envelope ครบ.
 
-`research-sub-agent-unavailable` ที่เกิดภายใน single-ticker downstream run
-จะถูกส่งกลับเป็น `ERROR` + `scope: item` พร้อม reason ของ tickerนั้น เพื่อให้
-batch ไปต่อได้. ถ้าเกิดจาก coordinator/runtime ที่ไม่สามารถผูกกับ tickerหรือ
-ไม่สามารถควบคุม Trello ได้ ให้คงเป็น global.
+`research-sub-agent-unavailable` หรือ `item-downstream-error` ที่เกิดภายใน
+single-ticker downstream run จะถูกถือเป็น ticker-scoped error พร้อม reason ของ
+tickerนั้น แม้ downstream จะรายงาน `scope: global` เพราะ coordinator เป็นผู้
+เลือก ticker และมี identity ที่แน่นอน. Coordinator จะ normalize เป็น item-level
+เพื่อให้ batch ไปต่อได้. `scope: unknown`, global control codes, หรือ error ที่
+เกิดจาก coordinator/runtime ของ Trello ที่ไม่สามารถควบคุม state ได้ยังคงเป็น
+global.
 
 ## State and retry
 
@@ -53,7 +59,7 @@ batch ไปต่อได้. ถ้าเกิดจาก coordinator/runti
 
 ```text
 status: ERROR
-scope: item
+scope: item | global
 durable_write: not_completed
 exhausted: false
 confirmation: none
@@ -61,8 +67,9 @@ code: research-sub-agent-unavailable | item-downstream-error
 reason: <concise ticker-specific reason>
 ```
 
-`ERROR` + `scope: global|unknown`, missing fields, contradictory fields, or
-unknown codes ยังคงเป็น global.
+`ERROR` + `scope: unknown`, missing fields, contradictory fields, global codes,
+หรือ unknown codes ยังคงเป็น global. `scope: global` จะถูก normalize เป็น
+item-level เฉพาะสอง ticker-scoped codes ที่ระบุข้างต้นใน single-ticker call.
 
 ## Verification
 
