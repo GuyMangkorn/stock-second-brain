@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-10
+updated: 2026-08-12
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -157,6 +157,8 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 8.40% | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
 | [[ETF_NYSE_ARCA_VOO Performance]] | official 2010 / official 2016-2025 | 15.47% | 14.38% | 9.97% | 2019 +31.46% / 2022 -18.15% | U.S. large-cap broad equity | S&P 500 market beta, mega-cap sensitive |
 | [[ETF_NYSE_ARCA_VB Performance]] | official 2004 / official 2016-2025; official rolling 10-year as of 2026-07-31 | 10.90% | 7.35% | 19.48% | 2019 +27.37% / 2022 -17.60% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 8 / 2 positive/negative years |
+| [[ETF_NYSE_ARCA_SPSM Performance]] | issuer 10-year annualized field as of 2026-06-30; calendar rows not disclosed | 11.61% | not disclosed | 23.89% | not disclosed / not disclosed | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; low-cost tracking |
+| [[ETF_NYSE_ARCA_VBR Performance]] | official 2004 / official 2016-2025; rolling 10-year as of 2026-06-30 | 10.99% | 10.56% | 15.83% | 2021 +28.07% / 2018 -12.22% | U.S. small-cap value equity | small-cap/value/cyclical; 8 / 2 positive/negative years |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -229,6 +231,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_AMEX_FVD Performance]] | 24.86% | -5.24% | 4.10% | 10.00% | 8.19% | 46.58% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VOO Performance]] | 28.66% | -18.15% | 26.25% | 24.98% | 17.84% | 95.81% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VB Performance]] | 17.72% | -17.60% | 18.21% | 14.23% | 8.83% | 42.55% | 4 / 1 |
+| [[ETF_NYSE_ARCA_VBR Performance]] | 28.07% | -9.29% | 16.00% | 12.39% | 9.09% | 65.22% | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 

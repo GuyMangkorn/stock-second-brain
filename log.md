@@ -1,5 +1,10 @@
 # Log
 
+## 2026-08-12
+
+- `etf-performance`: Created [[ETF_NYSE_ARCA_SPSM Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official SPSM 10-year NAV TR annualized `11.61%` plus current YTD `23.89%` as of 2026-06-30; official calendar-year NAV rows and raw 10-year endpoints remain not disclosed. Project-scoped source verifier returned `PASS`.
+- `etf-performance`: Created [[ETF_NYSE_ARCA_VBR Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official 2016-2025 NAV TR CAGR `10.15%`, rolling 10-year NAV TR annualized `10.99%`, and current NAV YTD `15.83%` for VBR; benchmark naming continuity and newer quote gaps remain disclosed. Project-scoped source verifier returned `PASS`.
+
 ## 2026-08-10
 
 - `project-config`: Restricted `source_verifier` to `check-etf-performance` ETF performance durable saves; other workflows no longer dispatch it. Scoped TOML parsing, reference scan, and whitespace verification passed.

@@ -1,6 +1,6 @@
 ---
 type: etf-region-index
-updated: 2026-08-10
+updated: 2026-08-12
 scope: ETF performance navigation
 tags:
   - analysis/etf-region
@@ -17,7 +17,7 @@ driver notes ทั้งหมด
 
 | Region | ETFs | Navigation |
 |---|---:|---|
-| USA | 19 | [[USA ETF]] |
+| USA | 21 | [[USA ETF]] |
 | Australia | 3 | [[Australia ETF]] |
 | North America | 2 | [[North America ETF]] |
 | India | 15 | [[India ETF]] |
