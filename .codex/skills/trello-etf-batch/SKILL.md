@@ -119,81 +119,36 @@ successfully cleared, so it must not make the parent eligible for `Done`. A
 disclosed `not disclosed` or `ไม่พบข้อมูลที่ยืนยันได้` field is not by itself a
 failure.
 
-## Controlled parent status and claim protocol
+## Lane-only parent state and claim protocol
 
-Preserve all user configuration text and maintain one replaceable status block
-at the end of the parent description:
+The parent card's Trello lane is the sole runtime state:
 
-`<!-- trello-etf-batch-status
-state: ready|running|blocked|done
-retry_pending: true|false
-claim_token: <opaque token or empty>
-failure_scope: none|item|global
-failure: <short code or empty>
--->`
+- `Ready for AI` is the only eligible parent lane.
+- `In Progress` means a worker may be active; do not mutate the parent,
+  checklist, or exception cards from a new invocation.
+- `Blocked` means user action is required; the user must move the parent to
+  `Ready for AI` to retry.
+- `Done` is a validated no-op only when the queue is complete and no exception is open.
 
-Parent states must match both the list and the status block:
+Do not read, validate, write, or delete legacy `trello-etf-batch-status` blocks.
+They are inert text retained only for backward compatibility. Preserve all
+other user configuration text in the parent description.
 
-- `Ready for AI` + `ready` + empty token: unclaimed and eligible.
-- `In Progress` + `running` + nonempty token: claimed by one invocation.
-- `Blocked` + `blocked` + empty token: unresolved blocker; retry requires a
-  user move back to `Ready for AI`.
-- `Done` + `done` + empty token: all queue items checked and no open
-  exception; mark complete.
+Validate the exact parent target, board/list IDs, configuration, input file,
+and canonical source sequence before claiming. To claim an eligible parent:
 
-There must be exactly one complete status block. If it is absent on a Ready
-parent, initialize all fields as `state: ready`, `retry_pending: false`,
-empty `claim_token`, `failure_scope: none`, and empty `failure`. If a user
-moves a Blocked parent to Ready for AI, accept that one explicit reset
-transition: clear the token and old failure fields, set `state: ready`, and
-derive `retry_pending` from retryable open exceptions. Any other list/block
-disagreement is a global state error before downstream work. An In Progress
-parent is never eligible for a new invocation; return `batch already claimed`.
-A Blocked parent is never retried in place. A Done parent is a no-op only
-after the input and exact complete checklist validation in the execution loop.
+1. Confirm that its current lane is `Ready for AI`, then move it to `In Progress`.
+2. Immediately read the exact parent directly again.
+3. Continue only when that direct read still shows `In Progress`.
 
-Every parent transition writes all status fields, not a partial patch:
+If the lane does not match after the move, stop without any further Trello
+mutation or downstream call. If the parent is already in `In Progress`, return `batch already claimed` without mutating it. A parent in `Blocked` is never
+retried in place.
 
-- claim: `running`, current token, `failure_scope: none`, empty `failure`,
-  and the derived retry flag;
-- item result while a manual or bounded automation claim continues: `running`,
-  current token,
-  `failure_scope: item`, the normalized item code (or `none` after success),
-  and the derived retry flag;
-- automation release: `ready`, empty token, `failure_scope: none`, empty
-  `failure`, and `retry_pending` set by the finalization rule;
-- item-blocked stop: `blocked`, empty token, `failure_scope: item`, the
-  normalized blocker code, and `retry_pending: true` only when a retryable
-  open exception remains;
-- global stop: `blocked`, empty token, `failure_scope: global`, the global
-  code, and the derived retry flag;
-- done: `done`, `retry_pending: false`, empty token, `failure_scope: none`,
-  and empty `failure`.
-
-Validate the block's keys, enum values, and uniqueness before any downstream
-call. Do not leave a stale claim or failure value in a Ready or Done state.
-
-To claim a Ready parent:
-
-1. Move it to `In Progress`.
-2. Write a fresh opaque `claim_token` and `state: running`; clear the old
-   failure fields while preserving the configuration text.
-3. Read the exact parent directly again. The invocation owns the claim only if
-   the list is `In Progress` and the token exactly matches its token.
-
-If the token is missing or different, this invocation lost the claim. It must
-make no further Trello mutation: no status update, move, checklist edit,
-exception card, or downstream call. Return the non-mutating result
-`claim lost; another invocation owns the parent`.
-
-Trello does not expose an atomic compare-and-set operation. This workflow
-therefore requires at most one automation worker per parent and treats the
-claim token plus second read as an operational ownership check, not an
-exactly-once distributed lock. A second invocation must never process an
-`In Progress` parent. If a worker is abandoned, the user must confirm it is
-inactive and move the parent to `Ready for AI`; the skill must not auto-reset a
-stale claim. A claim-collision/lost-claim result is not a global blocker for
-the parent because the losing invocation does not own it.
+Trello does not expose an atomic compare-and-set operation, so the lane is not
+an exactly-once distributed lock. This workflow requires at most one automation worker per parent. If a worker is abandoned, the user must confirm it is
+inactive before moving the parent to `Ready for AI`; the skill must not reset
+the lane automatically.
 
 ## Exception cards
 
@@ -248,8 +203,8 @@ successful work.
 
 `unsupported-etf-type` is terminal for the current queue entry: write
 `terminal: true` and `retry: correct the input or create a corrected parent;
-do not retry automatically`. Exclude terminal exceptions from
-`retry_pending`. To requeue after correcting the input, the user must make an
+do not retry automatically`. Exclude terminal exceptions from the computed
+`retry_pending` set. To requeue after correcting the input, the user must make an
 explicit operator correction and set the exception to `terminal: false` (or
 create a corrected parent); the prefix/checklist drift guard still rejects
 silent removal or replacement of a queue item.
@@ -299,19 +254,23 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
 ## Execution loop
 
 1. Read and validate the exact parent target, board/list IDs, configuration,
-   effective `run_mode`, optional `batch_size`, controlled status block, and
-   local input file. Build the nonempty canonical source sequence `S` before
-   any queue or exception mutation. Resolve the parent before mutating Trello.
+   effective `run_mode`, optional `batch_size`, and local input file. Build the
+   nonempty canonical source sequence `S` before claiming or making any queue
+   or exception mutation. Resolve the parent before mutating Trello.
    For automation, resolve `batch_limit` from the card's `batch_size` or the
    default `1`; manual mode keeps its existing unbounded per-claim behavior.
-2. If the parent is Done, read its single `ETF queue` checklist and accept a
-   no-op only when its labels equal `S` exactly and every item is checked. A
-   missing, duplicate, mismatched, or incomplete checklist is a global state
-   error; never accept an empty or unvalidated input as Done. If the parent is
-   In Progress, stop with `batch already claimed`. If it is Blocked, require
-   the user to move it to Ready for AI.
-3. Claim the Ready parent using the claim protocol above. A pre-claim error
-   does not seize or block a parent; a post-claim global failure must block it.
+2. Inspect the parent lane only after configuration and input validation.
+   `Ready for AI` is the only lane eligible for selection. If the parent is in
+   `Done`, read its single `ETF queue` checklist and matching exception cards;
+   accept a no-op only when the labels equal `S` exactly, every item is
+   checked, and no exception is open. A missing, duplicate, mismatched, or
+   incomplete checklist or any open exception is a global state error; never
+   accept an empty or unvalidated input as Done. If the parent is already in `In Progress`, return `batch already claimed` without mutating it. If it is in
+   `Blocked`, require the user to move it to `Ready for AI` without mutating it.
+3. Claim the Ready parent using the lane-only protocol above. A pre-claim error
+   does not seize or block a parent. After moving it to `In Progress`, perform
+   the required direct re-read and stop without further mutation if the lane
+   differs.
 4. Build or reconcile the ETF queue checklist. Read only the exception cards
    needed to classify unchecked tickers as normal-pending and handled checked
    tickers as open-retry, confirmation-pending, or terminal-pending.
@@ -329,14 +288,10 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
    - `terminal_pending`: checked tickers with an open exception whose
      `terminal` is `true`.
 6. At the start of each selection pass, if automation has reached
-   `batch_limit`, finalize using step 12. The status flag `retry_pending: true`
-   is a scheduling preference, not proof
-   that a retry exists. If it is true but the actual retry set is empty, clear
-   it while keeping `state: running` and the current claim, then recompute.
-   Select the first unattempted normal item when one exists; otherwise select
-   the first unattempted retry when one exists. If manual work remains only in
-   the other set, select its first item. If no unattempted work remains,
-   finalize using step 12.
+   `batch_limit`, finalize using step 12. Always select normal items before eligible retries: choose the first unattempted normal item when one exists,
+   otherwise choose the first unattempted retry. `retry_pending` is only the
+   computed set/count from step 5, never a parent flag. If no unattempted work
+   remains, finalize using step 12.
 7. For each selected retry, move/reuse its exception card in the active list.
    For each selected ticker, invoke `$check-etf-performance <TICKER>` with
    `mode: lean` one ticker at a time. Wait for its research delegation,
@@ -354,7 +309,7 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
    marking it complete, then increment `processed_count` once for the successful item. An accepted item-level blocker or item-level error may
    check the item only after its child exception mutation succeeds.
 9. On a downstream handoff that passes the explicit item-level routing
-   contract, keep the parent claim,
+   contract, keep the parent in `In Progress`,
    create or reuse exactly one exception card, write its complete metadata including `reason`, set `confirmation: required` only for
    `confirmation_required` and otherwise `confirmation: none`, set
    `terminal: true` only for `unsupported-etf-type` and otherwise `false`,
@@ -366,63 +321,50 @@ must respect the parent card’s `batch_size`. The parent card’s `batch_size` 
    `processed_count`, and continue to the next unattempted eligible ticker
    while batch capacity remains. Manual mode continues while unattempted work
    remains.
-10. On a global failure after this invocation owns the claim, update only the
-    controlled parent status block with `state: blocked`, empty
-    `claim_token`, `retry_pending: true` only when any retryable open item
-    exception exists,
-   `failure_scope: global`, and the short failure code; move the parent to
-   Blocked. Do not create a ticker exception card. A global failure before
-   exact parent resolution, or a lost claim, returns without pretending to
-   update Trello. If a required state update/move fails, report that state
-   change failure and stop. A global failure leaves the affected checklist item unchanged.
-11. For manual mode, retain `state: running` and the claim while unattempted
-    work remains and repeat steps 5–10. Do not write `state: ready` while the
-    parent stays In Progress.
+10. On a global failure after this invocation moved the parent to `In Progress`
+    and the direct re-read confirmed that lane, move the parent to `Blocked`.
+    Do not create a ticker exception card. A global failure before exact parent
+    resolution or before a confirmed lane claim returns without pretending to
+    update Trello. If a required lane move fails, report `claim-state-error`
+    and stop. A global failure leaves the affected checklist item unchanged.
+11. Keep the parent in `In Progress` while processing. In manual mode, repeat
+    steps 5–10 while unattempted work remains.
 12. After an item, when automation reaches its batch capacity, or after the
     final queue inspection, use these mutually exclusive branches:
-    - if all items checked and no open exception, write `state: done`,
-      `retry_pending: false`, empty token and failure fields, move the parent
-      to Done, and mark it complete;
+    - If every queue item is checked and no exception is open, move the parent to `Done` and mark it complete; this is the `all items checked and no open exception` branch;
     - else if unfinished normal work remains, manual mode continues with the
-      running claim; automation writes `state: ready`, clears the token, moves
-      the parent to Ready for AI, and sets `retry_pending: false`;
+      parent in `In Progress`; automation moves the parent to `Ready for AI`;
     - else if an eligible retryable exception remains, manual mode continues
-      with the running claim; automation writes `state: ready`, clears the
-      token, moves the parent to Ready for AI, and sets `retry_pending: true`;
+      with the parent in `In Progress`; automation moves the parent to
+      `Ready for AI`;
     - else if only terminal or unconfirmed confirmation exceptions remain,
-      write `state: blocked`, `retry_pending: false`, `failure_scope: item`,
-      the terminal/confirmation code, clear the token, move the parent to
-      Blocked, and do not mark it complete;
+      move the parent to `Blocked` and do not mark it complete;
     - otherwise report a global checklist/state inconsistency and, because the
-      claim is owned, block the parent without creating an exception card.
+      invocation moved the parent to `In Progress`, move the parent to
+      `Blocked` without creating an exception card.
 
-When a user moves a Blocked parent to Ready for AI, its status block may keep
-`retry_pending: true`; the next invocation prioritizes non-terminal open
-exception tickers that do not require unconfirmed user confirmation. If no
-eligible open retry exists, the flag is cleared before selection; a terminal
-or confirmation-pending exception still keeps the parent blocked when no
-normal work remains. When an
-automation run releases a non-terminal parent with normal work after its
-configured batch capacity, it writes `retry_pending: false`, so open
-exceptions are skipped until normal work is exhausted. Manual mode processes
-all unattempted normal and retry work in the same invocation, while each
-ticker is attempted at most once per invocation. The scheduler continues to inspect only `Ready for AI`.
+When a user moves a Blocked parent to Ready for AI, derive retry eligibility from the checklist and open exception cards. Do not infer retry work from the
+parent description. A terminal or confirmation-pending exception still keeps
+the parent blocked when no normal work remains. Manual mode processes all
+unattempted normal and retry work in the same invocation, while each ticker is
+attempted at most once per invocation. The scheduler continues to inspect only `Ready for AI`.
 
 ## Failure classification
 
 Treat these as global failures: missing/ambiguous exact parent target,
 workflow/configuration/run-mode/batch-size mismatch, Trello authentication/tool failure,
 board/list resolution failure, unreadable/malformed input, checklist mismatch,
-an owned claim state error, or a downstream handoff with `scope: unknown`, a
+an owned lane/ownership transition failure, or a downstream handoff with `scope: unknown`, a
 global code, or an unrecognized/invalid error envelope. A known ticker-scoped
 downstream `ERROR` with code `research-sub-agent-unavailable` or
 `item-downstream-error` may be item-level when the complete accepted item
 envelope is present, even when the downstream reports `scope: global`; this
-normalization is limited to the selected single-ticker call. A lost claim is
-a non-mutating abort, not a global failure to write to the parent. A pre-claim
-configuration/Trello failure is reported without seizing or blocking a
-parent; a post-claim global failure blocks the owned parent when the required
-Trello writes succeed.
+normalization is limited to the selected single-ticker call.
+`claim-state-error` remains an accepted global failure code for a lane or
+ownership transition failure after this invocation moved the parent. A
+pre-claim configuration/Trello failure is reported without seizing or
+blocking a parent; a post-claim global failure moves the parent to `Blocked`
+when the required Trello lane mutation succeeds.
 
 The downstream handoff must be normalized to this explicit envelope for each
 single-ticker invocation within the batch:
