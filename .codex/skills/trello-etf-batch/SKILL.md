@@ -254,6 +254,33 @@ explicit operator correction and set the exception to `terminal: false` (or
 create a corrected parent); the prefix/checklist drift guard still rejects
 silent removal or replacement of a queue item.
 
+## Blocker routing contract
+
+The word “blocker” is not by itself an item-level result. Route each ticker
+only after validating the complete downstream handoff envelope:
+
+- `item-level`: an accepted `WARNING` with `scope: item` and
+  `confirmation: required`, or an accepted `CHANGES_REQUIRED`/`BLOCKED` with
+  `scope: item` and an accepted item code. These results are ticker-specific:
+  create or reuse exactly one exception card, write its complete metadata,
+  move the child to `Blocked`, then check only the matching `ETF queue` item
+  and continue to the next eligible ticker while `batch_size` capacity
+  remains.
+- `terminal item-level`: `unsupported-etf-type` still follows the child-card
+  and checklist flow above, but its child is not retryable. If terminal or
+  unconfirmed-confirmation exceptions are the only remaining work, the parent
+  ends in `Blocked`.
+- `global-level`: `status: ERROR`, `scope: global|unknown`, any accepted
+  global code (including `research-sub-agent-unavailable`), a missing or
+  contradictory envelope, or a Trello/board/input/claim failure. Do not create
+  a ticker exception, do not check the affected queue item, do not continue to
+  another ticker, and block the owned parent. A global failure has no safe
+  ticker identity and must not be represented as an item child.
+
+Therefore, “create child → move child to `Blocked` → check queue item →
+continue” applies only after the item-level branch succeeds. The coordinator
+must respect the parent card’s `batch_size`. The parent card’s `batch_size` does not override a global stop.
+
 ## Execution loop
 
 1. Read and validate the exact parent target, board/list IDs, configuration,
@@ -308,7 +335,8 @@ silent removal or replacement of a queue item.
    and `durable_write: completed` in that envelope. On success, close any
    matching exception by moving it to Done and marking it complete, then
    increment `processed_count` once for the successful item.
-9. On an explicit downstream item-level failure, keep the parent claim,
+9. On a downstream handoff that passes the explicit item-level routing
+   contract, keep the parent claim,
    create/update the one exception card, write the complete metadata set
    including `reason`, set `confirmation: required` only for
    `confirmation_required` and otherwise `confirmation: none`, set
@@ -450,9 +478,20 @@ invoke this skill with the exact parent card URL or ARI and
 ```text
 Process up to the parent card’s `batch_size` eligible ETFs sequentially
 (default 1); update the Trello parent/checklist state after each ticker,
-create or reuse exactly one exception card only for an explicit item-level
-block, checks that queue item, allows the current batch to continue, release a non-terminal parent back to Ready for AI, and stop after that capacity or
-queue exhaustion. Generic scheduler text must respect the parent card’s `batch_size`.
+classify each downstream handoff before mutating Trello; for an accepted
+item-level `WARNING`/`CHANGES_REQUIRED`/`BLOCKED` result, create or reuse
+exactly one exception card named `[BLOCKED][ETF] <TICKER> |
+check-etf-performance`, write complete metadata, move only that child to
+`Blocked`, check only that ticker's queue item after the child mutation
+succeeds (this flow checks that queue item only after the child state update),
+and continue to the next ticker while capacity remains. This allows the current batch to continue. After capacity, release a non-terminal parent back to Ready for AI. For
+`status: ERROR`, `scope: global|unknown`, global codes such as
+`research-sub-agent-unavailable`, or any ambiguous/invalid envelope, create
+no child, leave the affected queue item unchecked, block the parent, and stop
+the run. After batch capacity or queue exhaustion, release a non-terminal
+parent back to `Ready for AI`; keep terminal or unconfirmed-confirmation item
+exceptions in `Blocked`. Generic scheduler text must respect the parent
+card’s `batch_size`.
 ```
 
 Never schedule overlapping automation workers for the same parent.
