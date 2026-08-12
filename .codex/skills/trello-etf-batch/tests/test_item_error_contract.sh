@@ -35,3 +35,10 @@ for contract_file in "$skill_file" "$prompt_file"; do
   assert_contains "$contract_file" 'Trello/tool/auth failures remain global'
   assert_not_contains "$contract_file" 'any `status: ERROR` is always global'
 done
+
+assert_contains "$prompt_file" 'Configuration, input, target, board, list, checklist, and claim failures before a confirmed lane claim return without any Trello mutation'
+assert_contains "$prompt_file" 'Only a global failure after this invocation moved the parent to `In Progress` and the direct re-read confirmed that lane may move the parent to `Blocked`'
+assert_contains "$prompt_file" 'An accepted `WARNING` requires `scope: item`, `durable_write: not_completed`, `exhausted: false`, `confirmation: required`, and code `review-warning` or `confirmation-required`'
+assert_contains "$prompt_file" 'An accepted `CHANGES_REQUIRED` or `BLOCKED` requires `scope: item`, `durable_write: not_completed`, `exhausted: true`, `confirmation: none`, and an accepted item code'
+assert_contains "$prompt_file" 'Before its downstream call, move each selected retry exception card to the configured active list; if that move or update fails, treat it as a global failure and stop the run'
+assert_contains "$prompt_file" 'not an exactly-once distributed lock'

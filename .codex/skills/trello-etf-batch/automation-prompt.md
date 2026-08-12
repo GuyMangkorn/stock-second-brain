@@ -22,12 +22,14 @@ other user configuration text in the parent description. Never schedule
 overlapping workers: this workflow requires at most one automation worker per parent.
 
 Validate the selected parent’s board/list IDs, configuration, input file, and
-canonical source sequence before claiming. To claim the parent, confirm its
+canonical source sequence before claiming. Configuration, input, target, board, list, checklist, and claim failures before a confirmed lane claim return without any Trello mutation. To claim the parent, confirm its
 current lane is `Ready for AI`, move it to `In Progress`, then immediately
 read the exact parent directly again. Continue only if that direct read still
 shows `In Progress`; otherwise stop without any further Trello mutation or
 downstream call. If the parent is already in `In Progress`, return `batch already claimed` without mutating it. A parent in `Blocked` is never retried
 in place; the user must first move it to `Ready for AI`.
+
+Trello does not expose an atomic compare-and-set operation, so lane claiming is operational and not an exactly-once distributed lock. A claim failure after a move but before the direct reread confirms the lane stops without any further Trello mutation. Only a global failure after this invocation moved the parent to `In Progress` and the direct re-read confirmed that lane may move the parent to `Blocked`.
 
 `Done` is a validated no-op only when the queue is complete and no exception is open.
 For a Done parent, validate its one `ETF queue` checklist against the canonical
@@ -56,6 +58,7 @@ Always select normal items before eligible retries: choose the first
 unattempted normal item when one exists; otherwise choose the first entry in
 `selectable_retries`. Use `selectable_retries` for selection and `retryable_open` for finalization.
 Never invoke downstream for confirmation-pending work. When a user moves a Blocked parent to Ready for AI, derive retry eligibility from the checklist and open exception cards; do not infer retry work from the parent description.
+Before its downstream call, move each selected retry exception card to the configured active list; if that move or update fails, treat it as a global failure and stop the run.
 
 For every ticker, validate the complete downstream handoff envelope before any
 checklist mutation. Route outcomes exactly as follows:
@@ -73,6 +76,12 @@ checklist mutation. Route outcomes exactly as follows:
 - This means an accepted item-scoped WARNING with required confirmation, an
   item-scoped CHANGES_REQUIRED/BLOCKED result with an accepted item code, or an
   accepted item-level error.
+- An accepted `WARNING` requires `scope: item`, `durable_write: not_completed`, `exhausted: false`, `confirmation: required`, and code `review-warning` or `confirmation-required`.
+- An accepted `CHANGES_REQUIRED` or `BLOCKED` requires `scope: item`, `durable_write: not_completed`, `exhausted: true`, `confirmation: none`, and an accepted item code.
+- An accepted item-level `ERROR` requires `status: ERROR`, `scope: item` or
+  reported `scope: global`, `durable_write: not_completed`, `exhausted: false`,
+  `confirmation: none`, and code `research-sub-agent-unavailable` or
+  `item-downstream-error`.
 - A known ticker-scoped downstream `ERROR` is item-level when the selected
   single-ticker call has `scope: item` or `scope: global`,
   `durable_write: not_completed`, `exhausted: false`, `confirmation: none`,
@@ -103,9 +112,10 @@ checklist mutation. Route outcomes exactly as follows:
   state mutation failure. A reported scope global remains global unless it is
   one of the two accepted ticker-scoped downstream error codes above.
   Trello/tool/auth failures remain global even when a ticker was being processed.
+- Missing, contradictory, or unknown handoff fields remain global.
 - Do not create a ticker child card. Leave the affected `ETF queue` item
   unchecked and do not continue to another ticker.
-- On a global blocker, move the parent to `Blocked` and stop the run.
+- On a global blocker after a confirmed lane claim, move the parent to `Blocked` and stop the run.
 
 A generic “blocker” is not automatically item-level. Only the explicit
 item-level envelope above may create a child and check a queue item.
