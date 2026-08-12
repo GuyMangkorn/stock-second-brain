@@ -92,13 +92,17 @@ read.
 
 ## Queue input and checklist
 
-Read the Markdown input file and parse the table column named `Symbol`,
-case-insensitively. Trim whitespace and backticks, normalize each symbol to
-uppercase, preserve source order, and deduplicate repeated symbols by keeping
-the first canonical occurrence. The canonical source sequence is `S`.
+Read the Markdown input file and resolve exactly one table column named `Symbol`
+or `Ticker`, case-insensitively; treat the two aliases as equivalent. Both
+aliases are ambiguous and neither alias is malformed: reject either state as a
+global `input-malformed` result before any claim, checklist, or Trello mutation;
+trim whitespace and backticks, normalize each symbol to uppercase,
+preserve source order, and deduplicate repeated symbols by keeping the first
+canonical occurrence. The canonical source sequence is `S`.
 
-- Fail globally when the file is missing, unreadable, has no `Symbol` column,
-  has a malformed/empty ticker row, or produces no canonical symbols.
+- Fail globally when the file is missing, unreadable, has both aliases or
+  neither alias, has a malformed/empty ticker row, or produces no canonical
+  symbols; the invalid alias states return `input-malformed`.
 - Ignore every other column for queue construction and evidence.
 - Create one checklist named `ETF queue` with the full canonical sequence when
   it does not exist.

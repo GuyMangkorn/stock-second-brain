@@ -21,8 +21,7 @@ They are inert text retained only for backward compatibility. Preserve all
 other user configuration text in the parent description. Never schedule
 overlapping workers: this workflow requires at most one automation worker per parent.
 
-Validate the selected parent’s board/list IDs, configuration, input file, and
-canonical source sequence before claiming. Configuration, input, target, board, list, and checklist failures before moving the parent to In Progress return without any Trello mutation. To claim the parent, confirm its
+Validate the selected parent’s board/list IDs, configuration, input file, and canonical source sequence before claiming. Configuration, input, target, board, list, and checklist failures before moving the parent to In Progress return without any Trello mutation. For the Markdown input table, resolve exactly one column named `Symbol` or `Ticker`, case-insensitively, and treat the aliases as equivalent. Both aliases are ambiguous and neither alias is malformed; reject either state as a global `input-malformed` result before any claim, checklist, or Trello mutation. Preserve the existing input normalization: trim whitespace and backticks, normalize each symbol to uppercase, preserve source order, and deduplicate repeated symbols by keeping the first canonical occurrence. To claim the parent, confirm its
 current lane is `Ready for AI`, move it to `In Progress`, then immediately
 read the exact parent directly again. If the move succeeds but the direct reread does not confirm In Progress, stop without any further Trello mutation or downstream call. Continue only if that direct read still shows `In Progress`. If the parent is already in `In Progress`, return `batch already claimed` without mutating it. A parent in `Blocked` is never retried
 in place; the user must first move it to `Ready for AI`.
