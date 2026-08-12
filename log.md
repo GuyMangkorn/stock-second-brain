@@ -4,6 +4,8 @@
 
 - `etf-performance`: Created [[ETF_NYSE_ARCA_SPSM Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official SPSM 10-year NAV TR annualized `11.61%` plus current YTD `23.89%` as of 2026-06-30; official calendar-year NAV rows and raw 10-year endpoints remain not disclosed. Project-scoped source verifier returned `PASS`.
 - `etf-performance`: Created [[ETF_NYSE_ARCA_VBR Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official 2016-2025 NAV TR CAGR `10.15%`, rolling 10-year NAV TR annualized `10.99%`, and current NAV YTD `15.83%` for VBR; benchmark naming continuity and newer quote gaps remain disclosed. Project-scoped source verifier returned `PASS`.
+- `etf-performance`: Refreshed [[ETF_NYSE_ARCA_VSS Performance]] from official Vanguard annual NAV TR and current quote/YTD evidence; calendar 2016-2025 remains `106.58%` / `7.53%` CAGR, rolling 10-year official annualized `7.42%` as of 2026-07-31, NAV YTD `10.86%` as of 2026-08-11; secondary price drawdown and unsupported NAV recovery remain disclosed. Project-scoped source verifier timed out, so the documented local checklist fallback returned `PASS`.
+- `etf-performance`: Created [[ETF_NYSE_ARCA_IJR Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official 2016-2025 NAV TR cumulative `153.87%` / CAGR `9.76%`, 2021-2025 CAGR `7.23%`, and current NAV YTD `23.66%` as of 2026-08-10; secondary drawdown/recovery methodology differences remain disclosed. Project-scoped source verifier timed out, so the documented local checklist fallback returned `PASS`.
 
 ## 2026-08-10
 

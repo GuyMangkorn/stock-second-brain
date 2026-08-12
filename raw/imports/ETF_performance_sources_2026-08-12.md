@@ -4,11 +4,13 @@ workflow: check-etf-performance
 tickers:
   - SPSM
   - VBR
+  - VSS
+  - IJR
 mode: lean
 run_date: 2026-08-12
 return_basis: NAV total return
 benchmark_basis: S&P 500 Total Return, USD, dividends reinvested
-review_status: PASS after project-scoped source_verifier
+review_status: PASS; VSS and IJR local checklist fallback after source_verifier timeout
 ---
 
 # SPSM Performance Sources — 2026-08-12
@@ -99,3 +101,122 @@ review_status: PASS after project-scoped source_verifier
 ## Review record
 
 - Project-scoped `source_verifier` returned `PASS` after the corrections above; durable VBR outputs were written only after `PASS`.
+
+# VSS Performance Sources — 2026-08-12
+
+## Source map
+
+| Source | Type | As-of / access date | Claims used |
+|---|---|---|---|
+| https://advisors.vanguard.com/investments/products/vss/vanguard-ftse-all-world-ex-us-small-cap-etf | Official Vanguard product/quote page | accessed 2026-08-12; annual performance 2025-12-31; rolling return 2026-07-31; price/NAV and YTD 2026-08-11 | identity, exchange, fund facts, benchmark, expense ratio, official annual NAV TR, rolling annualized NAV TR, current price/NAV, NAV and market-price YTD |
+| https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3184.pdf | Official Vanguard factsheet | 2026-03-31; fee effective 2026-02-27 | passive index-sampling structure, NAV TR definition, expense ratio, standard deviation and risk disclosures |
+| https://fund-docs.vanguard.com/p3184.pdf | Official Vanguard prospectus | 2026-02-27 | legal fund identity, benchmark and policy context |
+| https://totalrealreturns.com/n/VSS | Secondary total-return history | data ending 2026-08-10 | price-based dividend-reinvested drawdown proxy only; not NAV Total Return |
+
+## Verified observations
+
+- Canonical identity: `NYSE Arca:VSS`; Vanguard FTSE All-World ex-US Small-Cap ETF; passive/index-tracking equity ETF using index sampling; inception `2009-04-02`.
+- Issuer benchmark: `FTSE Global Small Cap ex US Index (TGPVA09U)`; expense ratio `0.06%` as of `2026-02-27`.
+- Official NAV Total Return is USD, pre-tax, net of fund expenses, with dividends and capital-gains distributions reinvested.
+- Current official closing market price: `US$158.81`; NAV: `US$158.05`; calculated premium `0.48%`; current NAV YTD `+10.86%` and market-price YTD `+11.40%`, all as of `2026-08-11`.
+- Official rolling 10-year NAV TR average annual return: `7.42%` as of `2026-07-31`; raw TR endpoints and exact endpoint-derived cumulative value were not disclosed.
+- Official three-year standard deviation: VSS `13.76%` versus issuer benchmark `14.26%`, based on monthly returns as of `2026-03-31`.
+
+## Official annual NAV Total Return inputs
+
+| Year | VSS NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 4.37% | 11.96% |
+| 2017 | 30.26% | 21.83% |
+| 2018 | -18.43% | -4.38% |
+| 2019 | 21.73% | 31.49% |
+| 2020 | 11.95% | 18.40% |
+| 2021 | 12.81% | 28.71% |
+| 2022 | -21.22% | -18.11% |
+| 2023 | 15.25% | 26.29% |
+| 2024 | 2.67% | 25.02% |
+| 2025 | 29.99% | 17.88% |
+
+VSS rows are official complete-calendar-year NAV TR as of `2025-12-31`.
+S&P 500 rows reuse the cached USD Total Return convention, dividends reinvested,
+with reference as-of `2025-12-31`; no new benchmark search was run.
+
+## Calculations and risk
+
+- VSS 2016-2025 cumulative: `106.58%`; CAGR: `7.53%`; up/down: `8 / 2`.
+- VSS 2021-2025 cumulative: `36.70%`; CAGR: `6.45%`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`; 2021-2025: `96.17%` / `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR `= product(1 + annual TR)^(1 / years) - 1`.
+- Secondary price total-return history reports worst drawdown `-43.51%` on `2020-03-23` from the `2018-01-26` peak, and current drawdown `-2.11%` from the `2026-05-11` peak, with data ending `2026-08-10`. This is not NAV-specific.
+- Official NAV maximum drawdown and recovery date: `ไม่พบข้อมูลที่ยืนยันได้`; no recovery date is inferred.
+
+## Benchmark cache sources
+
+- https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true
+- https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf
+- https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/
+- https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+
+## VSS Review record
+
+- Project-scoped `source_verifier` was dispatched but did not return a verdict after bounded wait. The main agent completed the documented local checklist fallback on 2026-08-12; no critical/high findings remained, and no source research was substituted locally.
+
+# IJR Performance Sources — 2026-08-12
+
+## Source map
+
+| Source | Type | As-of / access date | Claims used |
+|---|---|---|---|
+| https://www.ishares.com/us/products/239774/ishares-core-sp-smallcap-etf?fundSearch=true&qt=IJR | Official iShares product page | accessed 2026-08-12; price/NAV 2026-08-11; NAV YTD 2026-08-10 | identity, exchange, benchmark, inception, expense ratio, current NAV/price, premium/discount, current NAV YTD |
+| https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-core-s-and-p-small-cap-etf-3-31.pdf | Official iShares summary prospectus | 2026-07-31 | passive representative-sampling structure, official 2016-2025 annual NAV TR, return definition, fund facts |
+| https://www.ishares.com/us/literature/fact-sheet/ijr-ishares-core-s-p-small-cap-etf-fund-fact-sheet-en-us.pdf | Official iShares factsheet | 2026-07-31 | 2021-2025 annual NAV TR corroboration and 3-year standard deviation |
+| https://totalrealreturns.com/s/IJR | Secondary total-return history | data ending 2026-08-12 | inflation-adjusted dividend-reinvested drawdown context only |
+| https://assetsanalyzer.com/etf/IJR/performance | Secondary performance history | accessed 2026-08-12 | alternate drawdown/recovery context; methodology differs and is not authoritative NAV |
+
+## Verified observations
+
+- Canonical identity: `NYSE Arca:IJR`; iShares Core S&P Small-Cap ETF, an equity passive index-tracking fund using representative sampling; inception `2000-05-22`; issuer benchmark `S&P SmallCap 600 Index`; expense ratio `0.06%`; currency USD.
+- Official NAV Total Return includes reinvested dividends/distributions and reflects fund expenses. Complete calendar-year observations are through `2025-12-31`.
+- Current official NAV: `US$148.34`; closing market price: `US$148.41`; calculated premium `0.05%`; all as of `2026-08-11`.
+- Current official NAV YTD Total Return: `+23.66%` as of `2026-08-10`.
+- Official three-year standard deviation: `19.36%` as of `2026-07-31`; official best quarter `+31.29%` (2020-12-31) and worst quarter `-32.65%` (2020-03-31).
+
+## Official annual NAV Total Return inputs
+
+| Year | IJR NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 26.49% | 11.96% |
+| 2017 | 13.20% | 21.83% |
+| 2018 | -8.43% | -4.38% |
+| 2019 | 22.79% | 31.49% |
+| 2020 | 11.24% | 18.40% |
+| 2021 | 26.69% | 28.71% |
+| 2022 | -16.20% | -18.11% |
+| 2023 | 16.03% | 26.29% |
+| 2024 | 8.61% | 25.02% |
+| 2025 | 5.95% | 17.88% |
+
+IJR rows are official complete-calendar-year NAV TR from the iShares summary
+prospectus, periods ended `2025-12-31`; 2021-2025 rows are corroborated by the
+official factsheet. S&P 500 rows reuse the cached USD Total Return convention,
+dividends reinvested, reference as-of `2025-12-31`; no new benchmark search was run.
+
+## Calculations and risk
+
+- IJR 2016-2025 cumulative: `153.87%`; CAGR: `9.76%`; up/down: `8 / 2`.
+- IJR 2021-2025 cumulative: `41.75%`; CAGR: `7.23%`.
+- S&P 500 TR 2016-2025 cumulative/CAGR: `298.33%` / `14.82%`; 2021-2025: `96.17%` / `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; CAGR `= product(1 + annual TR)^(1 / years) - 1`.
+- Secondary inflation-adjusted dividend-reinvested history reports maximum drawdown `-58.94%` on `2009-03-09` from the `2007-07-19` peak.
+- AssetsAnalyzer reports an alternate `-58.15%` drawdown and 484 trading sessions to recovery; methodologies differ, so no nominal NAV max-drawdown/recovery figure is treated as authoritative.
+
+## Benchmark cache sources
+
+- https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true
+- https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf
+- https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/
+- https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+
+## IJR Review record
+
+- Project-scoped `source_verifier` was dispatched but did not return a verdict after bounded wait. The main agent completed the documented local checklist fallback on 2026-08-12; no critical/high findings remained, and no source research was substituted locally.

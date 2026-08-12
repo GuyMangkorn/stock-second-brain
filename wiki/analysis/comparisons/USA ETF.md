@@ -38,6 +38,7 @@ tags:
 | VB | Vanguard Morningstar Small-Cap ETF | U.S. small-cap broad equity | 10.90% | 7.35% | 19.48% | [[ETF_NYSE_ARCA_VB Performance]] |
 | SPSM | State Street SPDR Portfolio S&P 600 Small Cap ETF | U.S. small-cap broad equity | 11.61% | ไม่พบข้อมูลที่ยืนยันได้ | 23.89% | [[ETF_NYSE_ARCA_SPSM Performance]] |
 | VBR | Vanguard Small-Cap Value ETF | U.S. small-cap value equity | 10.99% | 10.56% | 15.83% | [[ETF_NYSE_ARCA_VBR Performance]] |
+| IJR | iShares Core S&P Small-Cap ETF | U.S. small-cap broad equity | 9.76% | 7.23% | 23.66% | [[ETF_NYSE_ARCA_IJR Performance]] |
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
