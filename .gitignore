@@ -10,4 +10,5 @@
 
 # Accidental nested checkout/worktree inside this vault
 /stock-second-brain/
+.worktrees/
 .venv/
