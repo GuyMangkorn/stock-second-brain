@@ -11,7 +11,7 @@ This skill owns input parsing and child-card creation for a Trello ETF master ca
 
 Require exactly one resolved master card in the `Backlog` list. Its description must contain an input block with `workflow: trello-etf-backlog`. Accept legacy workflow: trello-etf-batch only when the card is in Backlog and has input. Resolve project-relative paths from the `stock-second-brain` root.
 
-Read the referenced local Markdown ETF list before any Trello mutation; the parser must resolve exactly one Markdown table column named Symbol or Ticker and normalize each nonempty value to uppercase after trimming whitespace/backticks, preserve source order, and deduplicate by first occurrence. Missing or unreadable files, both aliases, neither alias, empty rows, or zero canonical symbols return `input-malformed` without mutation.
+Read the referenced local Markdown ETF list before any Trello mutation; the parser must resolve exactly one Markdown table column named Symbol or Ticker, with the header named Symbol or Ticker matched case-insensitively, and normalize each nonempty value to uppercase after trimming whitespace/backticks, preserve source order, and deduplicate by first occurrence. Both aliases or neither alias are `input-malformed`; missing or unreadable files, empty rows, or zero canonical symbols also return `input-malformed` without mutation.
 
 ## Split and reconcile
 
@@ -24,5 +24,7 @@ ticker: <CANONICAL_UPPERCASE_TICKER>
 ```
 
 If an item-specific create error occurs, record it and provide continuation through remaining missing tickers after an item-specific create error. Keep the master in Backlog if any identity is missing. When every identity exists, move master to Done and complete it. A child in Blocked or Done counts as created.
+
+An authentication, Trello, board, list, lookup, mutation, or configuration failure that is not an item-specific child-create error is a global failure. Stop without continuing mutations, leave every not-yet-confirmed ticker unclaimed, and report only confirmed master and child state. Do not claim that a failed master move or completion succeeded.
 
 Return the created, already-present, and failed ticker identities, plus the final master-card state. Never mutate child result state.

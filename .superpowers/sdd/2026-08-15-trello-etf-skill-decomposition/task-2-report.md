@@ -35,3 +35,27 @@ Complete.
 ## Scope review and concerns
 
 Only the requested new skill directory was staged in the implementation commit. No manager, processing, result skills, tests, historical docs, vault files, or live Trello data were modified. No concerns remain for this task; live Trello access was intentionally not used.
+
+## Fix round 1
+
+### Corrections
+
+- Added case-insensitive matching for exactly one `Symbol` or `Ticker` header and explicit `input-malformed` handling when both aliases or neither alias are present.
+- Added the global-failure branch: authentication, Trello, board, list, lookup, mutation, and configuration failures stop further mutations; not-yet-confirmed tickers remain unclaimed; only confirmed master/child state is reported; failed master move/completion is never reported as successful.
+- Added focused regression assertions for both contracts.
+
+### Exact verification commands and output
+
+Command:
+
+```bash
+bash .codex/skills/trello-etf-batch/tests/test_backlog_split_contract.sh && python3 /Users/mangkornkatawong/.codex/skills/.system/skill-creator/scripts/quick_validate.py .codex/skills/trello-etf-backlog && git diff --check
+```
+
+Output:
+
+```text
+Skill is valid!
+```
+
+The focused contract test is silent on success and exited with status 0; `quick_validate.py` printed `Skill is valid!`; `git diff --check` was silent and exited with status 0.
