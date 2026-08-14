@@ -1,0 +1,6 @@
+interface:
+  display_name: "Trello ETF Backlog Splitter"
+  short_description: "Split a Trello ETF master card into ticker cards"
+  default_prompt: "Use $trello-etf-backlog on an eligible master card in Backlog."
+policy:
+  allow_implicit_invocation: false
