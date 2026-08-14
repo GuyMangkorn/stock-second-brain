@@ -22,6 +22,8 @@ done
 
 assert_contains "$skill_file" 'task: backlog|etf-performance'
 assert_contains "$skill_file" 'count: <positive base-10 integer>'
+assert_contains "$skill_file" 'count must be a positive base-10 integer'
+assert_contains "$skill_file" 'Reject missing, duplicate, zero, negative, fractional or nonnumeric values'
 assert_contains "$skill_file" 'at most count'
 assert_contains "$skill_file" 'For task backlog'
 assert_contains "$skill_file" '$trello-etf-backlog'

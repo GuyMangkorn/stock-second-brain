@@ -21,8 +21,10 @@ assert_not_contains() {
 
 assert_contains 'one exact child card in Ready for AI'
 assert_contains 'workflow: trello-etf-item'
-assert_contains 'parent_ari'
-assert_contains 'ticker'
+assert_contains 'validate workflow trello-etf-item, parent_ari and ticker'
+assert_contains 'match the child identity parent_ari + ticker'
+assert_contains 'canonical uppercase ticker'
+assert_contains 'title equal to ticker'
 assert_contains 'move to In Progress'
 assert_contains 'directly reread the same card'
 assert_contains '$check-etf-performance <TICKER>'
