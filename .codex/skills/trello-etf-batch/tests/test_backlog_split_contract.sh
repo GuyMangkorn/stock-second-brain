@@ -20,7 +20,16 @@ assert_not_contains() {
 }
 
 assert_contains 'workflow: trello-etf-backlog'
-assert_contains 'Accept legacy workflow: trello-etf-batch only when the card is in Backlog and has input'
+assert_contains 'Accept only'
+assert_contains '`workflow: trello-etf-backlog`, or the legacy `workflow: trello-etf-batch` when'
+assert_contains 'when'
+assert_contains 'card is in `Backlog`'
+assert_contains 'exactly one accepted workflow line and exactly one'
+assert_contains 'nonempty `input:` path/config line'
+assert_contains 'Duplicate, missing, blank, unknown, or conflicting'
+assert_contains 'workflow/input lines are'
+assert_contains 'stop'
+assert_contains 'before reading a file or mutating Trello'
 assert_contains 'resolve exactly one Markdown table column named Symbol or Ticker'
 assert_contains 'header named Symbol or Ticker matched case-insensitively'
 assert_contains 'Both aliases or neither alias are `input-malformed`'

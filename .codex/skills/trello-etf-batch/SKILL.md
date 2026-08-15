@@ -49,6 +49,13 @@ selection. Trello authentication, board/list resolution, malformed card
 metadata, and other configuration failures are global failures: stop without
 claiming additional work and do not report an unconfirmed mutation.
 
+Before reading or selecting any card, the scheduler/runtime must acquire an
+exclusive board-scoped manager lock keyed by the resolved board ARI (and the
+selected task). Hold it for the entire sequential run and release it only
+after the final delegated result is confirmed. If the lock is unavailable,
+return `manager-overlap` as a global configuration failure before any card
+mutation; never start a second manager worker for the same board.
+
 ## Selection and routing
 
 Maintain an in-memory `attempted_this_run` set. Selection is oldest-first by
@@ -114,7 +121,9 @@ or select it twice in this run.
 ## Overlap and completion
 
 The manager must not overlap manager workers and must not schedule overlapping
-workers for the same board.
+workers for the same board. The board-scoped manager lock above is the
+enforceable runtime serialization boundary; the lane reread remains the
+per-card claim confirmation.
 The scheduler and any manual caller must provide one explicit task and count;
 the manager processes only the requested number sequentially. A lane claim by
 the processing skill is the concurrency boundary for a child. Return a

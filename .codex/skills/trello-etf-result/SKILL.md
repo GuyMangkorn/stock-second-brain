@@ -42,6 +42,11 @@ with hyphens. A missing, malformed, unknown, or contradictory field makes the
 envelope invalid. The invalid-envelope routing rule below applies only after
 the exact child target and child identity have already been resolved.
 
+Before any description update or lane mutation, directly reread the resolved
+child and require its current lane to be `In Progress`. If the reread does not
+confirm `In Progress`, return global `claim-state-error`/state error with no
+card mutation. Never reprocess a child in `Ready for AI`, `Blocked`, or `Done`.
+
 ## Strict success contract
 
 Only this combination is success: PASS + scope item + durable_write completed + exhausted false + confirmation none + success or durable-write-complete
@@ -64,6 +69,30 @@ fields and the exact combination above are required.
 
 Non-success results are WARNING, CHANGES_REQUIRED, BLOCKED, or ERROR.
 
+## Closed result decision matrix
+
+After recognizing the invalid-envelope sentinel below, accept only these
+item-scoped combinations as ordinary results:
+
+- `PASS` + `scope: item` + `durable_write: completed` + `exhausted: false` +
+  `confirmation: none` + `code: success|durable-write-complete` is strict
+  success.
+- `WARNING` + `scope: item` + `durable_write: not_completed` +
+  `exhausted: false` + `confirmation: required` +
+  `code: review-warning|confirmation-required` is an accepted item block.
+- `CHANGES_REQUIRED` or `BLOCKED` + `scope: item` +
+  `durable_write: not_completed` + `exhausted: true` + `confirmation: none` +
+  `code: unsupported-etf-type|item-pre-save-non-pass|item-hard-data-gap|item-downstream-error`
+  is an accepted item block.
+- `ERROR` + `scope: item` + `durable_write: not_completed` +
+  `exhausted: false` + `confirmation: none` +
+  `code: research-sub-agent-unavailable|item-downstream-error` is an accepted
+  item block.
+
+Do not accept `scope: global` or `scope: unknown` as an ordinary item result.
+Any other status, field combination, or stable code is contradictory/invalid
+and follows the known-child global-stop rule below.
+
 ## Blocked routing contract
 
 For every non-success or invalid envelope, append/update result_status, result_scope, result_code, result_reason, durable_write and confirmation in the child description. For every non-success or invalid envelope, append or update these result
@@ -80,6 +109,19 @@ confirmation: <none|required|confirmed>
 
 ## Invalid-envelope global stop
 
+Before applying the ordinary matrix, recognize this exact complete envelope as
+the normalized invalid-envelope global-stop sentinel:
+
+```text
+status: ERROR
+scope: global
+durable_write: unknown
+exhausted: false
+confirmation: none
+code: unknown-result
+reason: <missing, malformed, or contradictory downstream result>
+```
+
 When the exact child target and child identity are already resolved, an invalid or contradictory envelope is a known-child failure. Persist this exact safe
 failure metadata on that selected child:
 
@@ -92,7 +134,10 @@ durable_write: unknown
 confirmation: none
 ```
 
-Then move that child to `Blocked`. Return `global_blocked` to the manager only after the description update and lane move are each confirmed. The manager must stop and not continue to other cards after `global_blocked`. Do not claim any unconfirmed mutation. If the exact child target or child identity was not
+Then move that child to `Blocked`. Return `global_blocked` to the manager only
+after the description update and lane move are each confirmed. The manager
+must stop and not continue to other cards after `global_blocked`. Do not claim
+any unconfirmed mutation. If the exact child target or child identity was not
 resolved, stop as a global pre-mutation failure without changing a card.
 
 An invalid or contradictory envelope is therefore global_blocked for the

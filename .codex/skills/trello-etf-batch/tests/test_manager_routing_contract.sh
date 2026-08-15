@@ -27,6 +27,8 @@ assert_contains "$skill_file" 'Reject missing, duplicate, zero, negative, fracti
 assert_contains "$skill_file" 'at most count'
 assert_contains "$skill_file" 'For task backlog'
 assert_contains "$skill_file" '$trello-etf-backlog'
+assert_contains "$skill_file" 'exclusive board-scoped manager lock keyed by the resolved board ARI'
+assert_contains "$skill_file" 'manager-overlap'
 assert_contains "$skill_file" 'For task etf-performance'
 assert_contains "$skill_file" 'trello-etf-processing(child card)'
 assert_contains "$skill_file" '→ trello-etf-result(child card, processing result)'

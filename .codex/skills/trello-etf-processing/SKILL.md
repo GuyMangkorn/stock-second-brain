@@ -37,15 +37,20 @@ If the lane does not confirm In Progress, return global claim-state-error and do
 
 ## Single-ticker processing handoff
 
-After a confirmed claim, invoke exactly one ticker performance check:
+After a confirmed claim, invoke exactly one ticker performance check and ask it
+for the caller-owned machine-readable handoff block:
 
 ```text
 $check-etf-performance <TICKER>
 mode: lean
+caller: trello-etf-processing
+handoff: trello_handoff
 ```
 
-Wait for research delegation, reconciliation, pre-save review and durable-write
-result. Require the complete result envelope with all seven fields:
+The downstream skill still owns research delegation, reconciliation, pre-save
+review, durable writes, and its normal human-facing result. After that work it
+must return exactly one structured `trello_handoff` block with the complete
+seven-field envelope:
 
 ```text
 status: PASS|WARNING|CHANGES_REQUIRED|BLOCKED|ERROR
@@ -56,6 +61,11 @@ confirmation: none|required|confirmed
 code: <normalized-stable-code>
 reason: <concise-one-sentence-reason>
 ```
+
+Skill 3 is the deterministic adapter at this boundary. Accept only the
+complete structured block; never infer success or failure from prose, links,
+file existence, or a human-facing report. Normalize `code` by trimming,
+lowercasing, and replacing spaces and underscores with hyphens before forwarding.
 
 Missing, contradictory, or malformed output is normalized to:
 
@@ -69,6 +79,9 @@ code: unknown-result
 reason: Downstream result was missing, malformed, or contradictory.
 ```
 
-Forward it to trello-etf-result as this complete normalized envelope together with any downstream output links. never move the child to Done/Blocked directly. This
-skill does not decide the final child lane; `trello-etf-result` owns that
-transition.
+This complete normalized envelope is the `invalid-envelope global-stop
+sentinel` for Skill 2; it must not be treated as an ordinary item-level error.
+Forward it to trello-etf-result as this complete envelope together with any
+downstream output links. Forward it to trello-etf-result exactly once; never
+move the child to Done/Blocked directly. This skill does not decide the final
+child lane; `trello-etf-result` owns that transition.

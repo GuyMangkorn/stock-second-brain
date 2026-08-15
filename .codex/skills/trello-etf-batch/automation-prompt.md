@@ -21,6 +21,12 @@ invalid value. A missing or invalid task/count is `workflow-config-mismatch`
 and must cause no Trello mutation. The only supported tasks are
 `backlog|etf-performance`.
 
+Before selecting cards, the scheduler/runtime must acquire an exclusive
+board-scoped manager lock keyed by the resolved board ARI and selected task.
+Hold that lock for the entire sequential run; if it is unavailable, return
+`manager-overlap` before any card mutation. The scheduler must not overlap
+manager workers for the same board.
+
 For `task: etf-performance`, invoke `trello-etf-processing(child card)` once
 for each selected child. Skill 3 owns the internal result handoff and invokes
 `trello-etf-result(child card, processing result)` exactly once:

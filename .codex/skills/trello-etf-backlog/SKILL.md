@@ -9,7 +9,15 @@ This skill owns input parsing and child-card creation for a Trello ETF master ca
 
 ## Eligibility and input
 
-Require exactly one resolved master card in the `Backlog` list. Its description must contain an input block with `workflow: trello-etf-backlog`. Accept legacy workflow: trello-etf-batch only when the card is in Backlog and has input. Resolve project-relative paths from the `stock-second-brain` root.
+Require exactly one resolved master card in the `Backlog` list. Its
+description must contain exactly one accepted workflow line and exactly one
+nonempty `input:` path/config line. Accept only
+`workflow: trello-etf-backlog`, or the legacy `workflow: trello-etf-batch` when
+the card is in `Backlog`. Duplicate, missing, blank, unknown, or conflicting
+workflow/input lines are `input-malformed`/`workflow-config-mismatch`; stop
+before reading a file or mutating Trello. Accept workflow matching
+case-insensitively, then normalize it to the canonical workflow internally.
+Resolve project-relative paths from the `stock-second-brain` root.
 
 Read the referenced local Markdown ETF list before any Trello mutation; the parser must resolve exactly one Markdown table column named Symbol or Ticker, with the header named Symbol or Ticker matched case-insensitively, and normalize each nonempty value to uppercase after trimming whitespace/backticks, preserve source order, and deduplicate by first occurrence. Both aliases or neither alias are `input-malformed`; missing or unreadable files, empty rows, or zero canonical symbols also return `input-malformed` without mutation.
 
