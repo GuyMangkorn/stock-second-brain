@@ -39,10 +39,8 @@ reason: <concise-one-sentence-reason>
 
 Normalize `code` by trimming, lowercasing, and replacing spaces and underscores
 with hyphens. A missing, malformed, unknown, or contradictory field makes the
-envelope invalid. Missing, unknown, or contradictory fields are global
-failures; contradictory result envelopes are global failures. Missing, unknown, or contradictory fields are global failures. Do not mutate a
-card when the exact target, child identity, or result envelope cannot be
-validated.
+envelope invalid. The invalid-envelope routing rule below applies only after
+the exact child target and child identity have already been resolved.
 
 ## Strict success contract
 
@@ -80,11 +78,31 @@ durable_write: <completed|not_completed|unknown>
 confirmation: <none|required|confirmed>
 ```
 
+## Invalid-envelope global stop
+
+When the exact child target and child identity are already resolved, an invalid or contradictory envelope is a known-child failure. Persist this exact safe
+failure metadata on that selected child:
+
+```text
+result_status: BLOCKED
+result_scope: global
+result_code: unknown-result
+result_reason: <concise validation-failure reason>
+durable_write: unknown
+confirmation: none
+```
+
+Then move that child to `Blocked`. Return `global_blocked` to the manager only after the description update and lane move are each confirmed. The manager must stop and not continue to other cards after `global_blocked`. Do not claim any unconfirmed mutation. If the exact child target or child identity was not
+resolved, stop as a global pre-mutation failure without changing a card.
+
+An invalid or contradictory envelope is therefore global_blocked for the
+manager but still uses the selected child as the safe persistence owner.
+
 Keep the existing child metadata intact, especially `workflow`, `parent_ari`,
-and `ticker`. For an invalid envelope, write the validated values that are
-available and use `unknown` for missing or untrusted values; use a concise
-reason identifying the validation failure. Then move the child to `Blocked`.
-For every non-success or invalid envelope, move to Blocked.
+and `ticker`. For a valid non-success envelope, persist its normalized result
+fields and concise reason, then move the child to `Blocked`. For an invalid or
+contradictory envelope, use the exact `unknown-result` metadata and
+`global_blocked` stop above. For every non-success or invalid envelope, move to Blocked.
 preserve workflow/parent_ari/ticker. Do not complete it. Exception-card
 creation is prohibited: the selected child owns its own failure state.
 
