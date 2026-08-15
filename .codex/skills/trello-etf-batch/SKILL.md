@@ -62,7 +62,14 @@ cards without the identity required by the selected route.
 ### `task: backlog`
 
 For task backlog, select masters only from `Backlog` and route them to the
-focused backlog skill.
+focused backlog skill. Before selection, a valid master must have one exact
+resolved master ARI/card identity, be open and unarchived in `Backlog`, use
+`workflow: trello-etf-backlog` or the legacy `workflow: trello-etf-batch`
+(case-insensitive), and contain exactly one nonempty `input:` path/config
+field in its description. A missing, ambiguous, malformed, or otherwise
+invalid workflow or input is a global `workflow-config-mismatch`; do not
+select, infer, repair, or mutate that card in the manager. Detailed input
+parsing and child creation remain owned by `$trello-etf-backlog`.
 
 Select at most `count` open master cards in `Backlog` with valid backlog
 configuration. Invoke `$trello-etf-backlog` for one master at a time, wait for
@@ -84,17 +91,22 @@ by last activity. A valid child has the required `workflow: trello-etf-item`,
 `parent_ari`, and canonical `ticker` identity. Track `attempted_this_run` by
 child ARI and never select a child from another lane. Never touch other lanes.
 
-For each selected child, run the focused skills sequentially:
+For each selected child, invoke `trello-etf-processing(child card)` exactly
+once. Skill 3 owns the internal handoff and invokes
+`trello-etf-result(child card, processing result)` exactly once:
+The logical chain is `trello-etf-processing(child card) → trello-etf-result(child card, processing result)`, but the second call is internal to Skill 3.
 
 ```text
 trello-etf-processing(child card)
-→ trello-etf-result(child card, processing result)
+→ (inside Skill 3) trello-etf-result(child card, processing result)
 ```
 
 The processing skill must claim the child before invoking
 `$check-etf-performance <TICKER>` with `mode: lean`; the result skill owns the
-final `Done` or `Blocked` transition. If the result skill blocks the child
-for an accepted ticker-specific failure, continue to the next selected child.
+final `Done` or `Blocked` transition. The manager does not invoke Skill 2
+separately, create a second result-routing call, or duplicate a result
+mutation. If the result skill blocks the child for an accepted
+ticker-specific failure, continue to the next selected child.
 Stop the global run on Trello, authentication, board/list, configuration,
 claim-state, or contradictory-result failures. Do not retry the failed child
 or select it twice in this run.
