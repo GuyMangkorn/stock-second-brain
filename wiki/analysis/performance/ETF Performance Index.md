@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-12
+updated: 2026-08-15
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -160,6 +160,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_SPSM Performance]] | issuer 10-year annualized field as of 2026-06-30; calendar rows not disclosed | 11.61% | not disclosed | 23.89% | not disclosed / not disclosed | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; low-cost tracking |
 | [[ETF_NYSE_ARCA_VBR Performance]] | official 2004 / official 2016-2025; rolling 10-year as of 2026-06-30 | 10.99% | 10.56% | 15.83% | 2021 +28.07% / 2018 -12.22% | U.S. small-cap value equity | small-cap/value/cyclical; 8 / 2 positive/negative years |
 | [[ETF_NYSE_ARCA_IJR Performance]] | official 2000 / official 2016-2025 | 9.76% | 7.23% | 23.66% | 2021 +26.69% / 2022 -16.20% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; official 3-year standard deviation 19.36% |
+| [[ETF_CBOE_BZX_ESML Performance]] | official 2019-2025; inception 2018 partial not disclosed | not applicable (<10y) | 7.47% | 23.07% | 2019 +28.53% / 2022 -17.22% | U.S. ESG small-cap equity | small-cap/cyclicality/ESG-screen/liquidity-sensitive; daily NAV drawdown and 2018 partial gap |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -234,6 +235,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_NYSE_ARCA_VB Performance]] | 17.72% | -17.60% | 18.21% | 14.23% | 8.83% | 42.55% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VBR Performance]] | 28.07% | -9.29% | 16.00% | 12.39% | 9.09% | 65.22% | 4 / 1 |
 | [[ETF_NYSE_ARCA_IJR Performance]] | 26.69% | -16.20% | 16.03% | 8.61% | 5.95% | 41.75% | 4 / 1 |
+| [[ETF_CBOE_BZX_ESML Performance]] | 19.31% | -17.22% | 17.31% | 11.86% | 10.62% | 43.37% | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 

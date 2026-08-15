@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-08-12
+updated: 2026-08-15
 tags:
   - analysis/etf-region
   - geography/United-States
@@ -39,6 +39,7 @@ tags:
 | SPSM | State Street SPDR Portfolio S&P 600 Small Cap ETF | U.S. small-cap broad equity | 11.61% | ไม่พบข้อมูลที่ยืนยันได้ | 23.89% | [[ETF_NYSE_ARCA_SPSM Performance]] |
 | VBR | Vanguard Small-Cap Value ETF | U.S. small-cap value equity | 10.99% | 10.56% | 15.83% | [[ETF_NYSE_ARCA_VBR Performance]] |
 | IJR | iShares Core S&P Small-Cap ETF | U.S. small-cap broad equity | 9.76% | 7.23% | 23.66% | [[ETF_NYSE_ARCA_IJR Performance]] |
+| ESML | iShares ESG Aware MSCI USA Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 7.47% | 23.07% | [[ETF_CBOE_BZX_ESML Performance]] |
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable

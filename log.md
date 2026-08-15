@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-15
+
+- `etf-performance`: Created [[ETF_CBOE_BZX_ESML Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official ESML NAV TR for 2019-2025 (120.70% cumulative / 11.97% rounded-input CAGR), 2021-2025 CAGR 7.47%, and current NAV TR YTD 23.07% as of 2026-08-13; 10-year history and official daily NAV drawdown/recovery remain not applicable or not disclosed. Project-scoped source verifier timed out, so the documented local checklist fallback returned `PASS`.
+
 ## 2026-08-12
 
 - `etf-performance`: Created [[ETF_NYSE_ARCA_SPSM Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official SPSM 10-year NAV TR annualized `11.61%` plus current YTD `23.89%` as of 2026-06-30; official calendar-year NAV rows and raw 10-year endpoints remain not disclosed. Project-scoped source verifier returned `PASS`.
