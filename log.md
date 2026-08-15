@@ -3,6 +3,7 @@
 ## 2026-08-15
 
 - `etf-performance`: Created [[ETF_CBOE_BZX_ESML Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official ESML NAV TR for 2019-2025 (120.70% cumulative / 11.97% rounded-input CAGR), 2021-2025 CAGR 7.47%, and current NAV TR YTD 23.07% as of 2026-08-13; 10-year history and official daily NAV drawdown/recovery remain not applicable or not disclosed. Project-scoped source verifier timed out, so the documented local checklist fallback returned `PASS`.
+- `etf-performance`: Created [[ETF_NASDAQ_IJT Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official IJT 2016-2025 NAV TR cumulative `150.04%` / CAGR `9.60%`, rolling 10-year NAV TR `11.82%` as of 2026-06-30, and current NAV TR YTD `26.03%` as of 2026-08-13; current S&P TR fallback and historical exchange discrepancy remain disclosed. Project-scoped source verifier timed out, so the documented local checklist fallback returned `PASS`.
 
 ## 2026-08-12
 

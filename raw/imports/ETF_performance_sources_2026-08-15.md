@@ -3,6 +3,7 @@ type: etf-performance-source-batch
 workflow: check-etf-performance
 tickers:
   - ESML
+  - IJT
 mode: lean
 run_date: 2026-08-15
 return_basis: NAV total return
@@ -61,3 +62,52 @@ review_status: PASS; source_verifier timed out, local checklist fallback passed
 ## Review record
 
 - Project-scoped `source_verifier` was dispatched with the complete packet but timed out after bounded waits. The documented local checklist fallback passed: source/as-of mapping, return-basis separation, calculations, file paths, and graph/index links were checked before saving. No research was performed locally; both research lanes returned source-backed evidence.
+
+# IJT Performance Sources — 2026-08-15
+
+## Source map
+
+| Source | Type | As-of / access date | Claims used |
+|---|---|---|---|
+| https://www.ishares.com/us/products/239773/ishares-sp-smallcap-600-growth-etf | Official issuer product page | current facts through 2026-08-14 | identity, current exchange, benchmark, NAV, assets, current performance |
+| https://www.ishares.com/us/literature/fact-sheet/ijt-ishares-sp-smallcap-600-growth-etf-fact-sheet-en-us.pdf | Official issuer factsheet | 2026-06-30 / 2026-07-31 fields | return basis, rolling 10-year return, risk, distributions, fund facts |
+| https://www.sec.gov/Archives/edgar/data/1100663/000119312523190469/R67.htm | SEC filing, official prospectus performance table | accessed 2026-08-15 | annual NAV total-return rows 2013-2022 and benchmark comparison |
+| https://www.sec.gov/Archives/edgar/data/1100663/000119312525171574/d921702d497k.htm | SEC filing, official summary prospectus | accessed 2026-08-15 | 2023-2024 annual return and benchmark rows; risk and return definitions |
+| https://www.spglobal.com/spdji/en/indices/equity/sp-smallcap-600-growth-index/ | Official index provider | accessed 2026-08-15 | tracked benchmark identity and index context |
+| https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot | Official S&P DJI index-return report | current page unavailable in research lane | current S&P 500 TR comparison target; no exact official value used |
+| https://www.slickcharts.com/sp500/returns | Secondary benchmark source | 2026-08-14 | secondary S&P 500 total-return comparison only |
+| https://koalagains.com/dimension-portfolio/etf/ijt | Secondary performance context | accessed 2026-08-15 | cross-check only; not used as primary annual return source |
+
+## Verified observations
+
+- Canonical identity: NASDAQ:IJT; iShares S&P Small-Cap 600 Growth ETF; passive/index-tracking U.S. equity ETF; inception 2000-07-24; USD; expense ratio 0.18%; quarterly distributions.
+- Issuer benchmark: S&P SmallCap 600 Growth Index, index symbol SPTRSG. Current issuer materials identify NASDAQ as the exchange; older SEC text refers to NYSE Arca. The historical exchange discrepancy is disclosed rather than silently normalized.
+- Official annual IJT NAV total-return rows: 2013 42.62%, 2014 3.71%, 2015 2.65%, 2016 22.00%, 2017 14.57%, 2018 -4.28%, 2019 20.82%, 2020 19.17%, 2021 22.40%, 2022 -21.24%, 2023 16.97%, 2024 9.42%, 2025 5.20%.
+- Latest official NAV is 178.49 USD as of 2026-08-14; official IJT NAV total-return YTD is 26.03% as of 2026-08-13; net assets are 8.434 billion USD as of 2026-08-14.
+- Official issuer rolling 10-year return as of 2026-06-30 is 205.63% cumulative / 11.82% annualized. The raw endpoints were not disclosed in the source.
+- Official issuer risk fields as of 2026-07-31 include 3-year standard deviation 19.48% and beta 1.09. Official quarterly extremes are +29.74% in Q4 2020 and -28.21% in Q1 2020.
+- Latest four official distributions total 1.211989 USD per share; trailing distribution yield is 0.70% as of 2026-07-31.
+- Current S&P 500 total-return comparison uses a secondary +14.54% value as of 2026-08-14 because the official dynamic S&P DJI page was unavailable in the research lane. It is not presented as an official issuer benchmark figure.
+
+## Cached benchmark
+
+- S&P 500 TR annual cache: 2016 11.96%, 2017 21.83%, 2018 -4.38%, 2019 31.49%, 2020 18.40%, 2021 28.71%, 2022 -18.11%, 2023 26.29%, 2024 25.02%, 2025 17.88%; USD, dividends reinvested, reference as-of 2025-12-31.
+- The cached rows are a common comparison convention and are kept separate from IJT's issuer benchmark.
+
+## Calculations and gaps
+
+- IJT 2016-2025 cumulative NAV TR: product(1 + annual TR) - 1 = 150.04%; rounded-input CAGR = 9.60%.
+- IJT 2021-2025 cumulative NAV TR: 29.80%; rounded-input CAGR = 5.35%.
+- Up/down years for 2016-2025: 8 / 2; best 2021 +22.40%; worst 2022 -21.24%; least positive 2025 +5.20%; least-bad down year 2018 -4.28%.
+- Official annual rows before 2013 were not located in the checked source set. Exact official daily NAV maximum drawdown and recovery date were not disclosed. Raw endpoints for the issuer's rolling 10-year field were not disclosed.
+- The historical exchange discrepancy and the secondary current S&P comparison are retained as explicit source-quality gaps.
+
+## Planned durable outputs
+
+- Created `wiki/analysis/performance/ETF_NASDAQ_IJT Performance.md`.
+- Updated `wiki/analysis/comparisons/USA ETF.md`, `ETF Region Index.md`, and `ETF Performance Index.md`, and appended one `etf-performance` bullet to `log.md`.
+- Assigned primary region USA; added breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]` and `geography/United-States` tag.
+
+## Review record
+
+- Project-scoped `source_verifier` was dispatched with the complete IJT packet but timed out after bounded waits. The documented local checklist fallback passed: source/as-of mapping, exchange conflict, return-basis separation, calculations, file paths, and graph/index links were checked before saving. No research was performed locally; the research worker returned source-backed evidence.
