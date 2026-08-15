@@ -22,8 +22,9 @@ and must cause no Trello mutation. The only supported tasks are
 `backlog|etf-performance`.
 
 Before selecting cards, the scheduler/runtime must acquire an exclusive
-board-scoped manager lock keyed by the resolved board ARI and selected task.
-Hold that lock for the entire sequential run; if it is unavailable, return
+board-scoped manager lock keyed by the resolved board ARI alone. The lock key
+is the board ARI alone, so backlog and etf-performance workers
+cannot overlap on one board. Hold that lock for the entire sequential run; if it is unavailable, return
 `manager-overlap` before any card mutation. The scheduler must not overlap
 manager workers for the same board.
 
