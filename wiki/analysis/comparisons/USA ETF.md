@@ -41,10 +41,12 @@ tags:
 | IJR | iShares Core S&P Small-Cap ETF | U.S. small-cap broad equity | 9.76% | 7.23% | 23.66% | [[ETF_NYSE_ARCA_IJR Performance]] |
 | ESML | iShares ESG Aware MSCI USA Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 7.47% | 23.07% | [[ETF_CBOE_BZX_ESML Performance]] |
 | IJT | iShares S&P Small-Cap 600 Growth ETF | U.S. small-cap growth equity | 11.82% | 5.35% | 26.03% | [[ETF_NASDAQ_IJT Performance]] |
+| IJS | iShares S&P Small-Cap 600 Value ETF | U.S. small-cap value equity | 10.60% | 8.71% | 23.99% | [[ETF_NYSE_ARCA_IJS Performance]] |
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
+ค่า cumulative/CAGR ของ IJS ที่คำนวณจาก annual rows เป็น rounded-input approximation ตาม source batch.
 
 ## Navigation
 

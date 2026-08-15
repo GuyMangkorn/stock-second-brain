@@ -4,11 +4,12 @@ workflow: check-etf-performance
 tickers:
   - ESML
   - IJT
+  - IJS
 mode: lean
 run_date: 2026-08-15
 return_basis: NAV total return
 benchmark_basis: S&P 500 Total Return, USD, dividends reinvested
-review_status: PASS; source_verifier timed out, local checklist fallback passed
+review_status: PASS; ESML/IJT/IJS source_verifier timed out with documented local checklist fallback passed
 ---
 
 # ESML Performance Sources — 2026-08-15
@@ -62,6 +63,55 @@ review_status: PASS; source_verifier timed out, local checklist fallback passed
 ## Review record
 
 - Project-scoped `source_verifier` was dispatched with the complete packet but timed out after bounded waits. The documented local checklist fallback passed: source/as-of mapping, return-basis separation, calculations, file paths, and graph/index links were checked before saving. No research was performed locally; both research lanes returned source-backed evidence.
+
+# IJS Performance Sources — 2026-08-15
+
+## Source map
+
+| Source | Type | As-of / access date | Claims used |
+|---|---|---|---|
+| https://www.ishares.com/us/products/239775/ishares-sp-smallcap-600-value-etf | Official issuer product page | current fields 2026-08-14; YTD 2026-08-13 | identity, exchange, NAV, price, rolling return, current NAV TR YTD |
+| https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-s-and-p-small-cap-600-value-etf-3-31.pdf | Official summary prospectus | accessed 2026-08-15; dated July 31, 2026 | annual NAV TR, benchmark/market-price cross-check, return definition, risk |
+| https://www.ishares.com/us/literature/fact-sheet/ijs-ishares-s-p-small-cap-600-value-etf-fund-fact-sheet-en-us.pdf | Official factsheet | 2026-06-30 / 2026-07-31 fields | expense ratio, rolling return, risk, yields |
+| https://www.ishares.com/us/literature/annual-report/ar-ijs-en.pdf | Official annual report | accessed 2026-08-15 | fallback source only |
+| https://www.spglobal.com/spdji/en/indices/equity/sp-smallcap-600-value/ | Official index provider | accessed 2026-08-15 | tracked benchmark identity |
+| https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?additionalFilterCondition=&parentIdentifier=df8ec300-24ad-4c70-81d3-a3cece0200e2&sourceIdentifier=index-family-specialization | Official S&P DJI returns page | page dated 2026-08-15 | current S&P 500 TR reference 14.54% |
+| Project S&P 500 TR cache | Official cached convention | reference 2025-12-31 | common annual comparison rows |
+
+## Verified observations
+
+- Canonical identity: NYSE Arca:IJS; iShares S&P Small-Cap 600 Value ETF; passive/index-tracking U.S. equity ETF; inception 2000-07-24; USD; expense ratio 0.18%; quarterly distributions.
+- Issuer benchmark: S&P SmallCap 600 Value Index (SPTRSV). NAV TR includes reinvested distributions and fund expenses; market-price TR is kept separate.
+- Official annual IJS NAV TR rows: 2016 31.17%, 2017 11.36%, 2018 -12.80%, 2019 24.25%, 2020 2.56%, 2021 30.47%, 2022 -11.32%, 2023 14.64%, 2024 7.42%, 2025 6.55%.
+- Official benchmark rows are 2021 30.95%, 2022 -11.04%, 2023 14.89%, 2024 7.56%, 2025 6.70%; 2016-2020 are not disclosed and were not backfilled.
+- Official market-price TR rows are 2021 30.53%, 2022 -11.33%, 2023 14.69%, 2024 7.35%, 2025 6.54%; 2016-2020 are not disclosed.
+- Official current NAV is $140.69 and closing market price $140.68 as of 2026-08-14; NAV TR YTD is +23.99% as of 2026-08-13.
+- Official rolling 10-year NAV TR window is 2016-06-30 → 2026-06-30, 10.00 years; issuer-reported 173.99% cumulative / 10.60% annualized; normalized 100.00 → 273.99; raw endpoints are not disclosed.
+- Official risk fields are 3-year standard deviation 19.74% and beta 1.07 as of 2026-07-31; best quarter +32.92% Q4 2020 and worst quarter -37.36% Q1 2020.
+- Latest four official distributions are $0.539899, $0.204616, $0.544229, and $0.511064 on ex-dates 2026-06-15, 2026-03-17, 2025-12-16, and 2025-09-16; total $1.799808/share; zero capital gains/ROC. Issuer trailing yield is 1.32% as of 2026-07-31.
+- Current S&P 500 TR reference is +14.54% as of 2026-08-15; it is not synchronized with IJS's 2026-08-13 YTD.
+
+## Cached benchmark
+
+- S&P 500 TR annual cache: 2016 11.96%, 2017 21.83%, 2018 -4.38%, 2019 31.49%, 2020 18.40%, 2021 28.71%, 2022 -18.11%, 2023 26.29%, 2024 25.02%, 2025 17.88%; USD, dividends reinvested, reference as-of 2025-12-31.
+- S&P 500 cache 2021-2025 rounded-input approximation compounds to 96.17% / CAGR 14.43%; it is common reference only, not IJS's tracked benchmark.
+
+## Calculations and gaps
+
+- IJS 2016-2025 rounded-input approximation: product(1 + annual TR) - 1 = 146.41%; CAGR = 9.44%. Inputs: 31.17%, 11.36%, -12.80%, 24.25%, 2.56%, 30.47%, -11.32%, 14.64%, 7.42%, 6.55%.
+- IJS 2021-2025 rounded-input approximation: product(1 + annual TR) - 1 = 51.81%; CAGR = 8.71%. Inputs: 30.47%, -11.32%, 14.64%, 7.42%, 6.55%.
+- Up/down years in 2016-2025: 8 / 2; best 2016 +31.17%; worst 2018 -12.80%; least positive 2025 +6.55%; least-bad down year 2022 -11.32%.
+- No official daily NAV TR series was used; exact maximum drawdown and recovery date remain not disclosed. Market-price and issuer-benchmark annual rows for 2016-2020 remain not disclosed.
+
+## Planned durable outputs
+
+- Create wiki/analysis/performance/ETF_NYSE_ARCA_IJS Performance.md.
+- Update wiki/analysis/comparisons/USA ETF.md, ETF Region Index.md, and ETF Performance Index.md; append one etf-performance bullet to log.md.
+- Assign primary region USA; add breadcrumb [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]] and geography/United-States tag.
+
+## Review record
+
+- Project-scoped source_verifier timed out after bounded waits. The documented local checklist fallback passed after the arithmetic correction and explicit rolling-window/as-of/rounded-input disclosure; no research was performed locally.
 
 # IJT Performance Sources — 2026-08-15
 

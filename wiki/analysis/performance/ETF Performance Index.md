@@ -162,6 +162,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_IJR Performance]] | official 2000 / official 2016-2025 | 9.76% | 7.23% | 23.66% | 2021 +26.69% / 2022 -16.20% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; official 3-year standard deviation 19.36% |
 | [[ETF_CBOE_BZX_ESML Performance]] | official 2019-2025; inception 2018 partial not disclosed | not applicable (<10y) | 7.47% | 23.07% | 2019 +28.53% / 2022 -17.22% | U.S. ESG small-cap equity | small-cap/cyclicality/ESG-screen/liquidity-sensitive; daily NAV drawdown and 2018 partial gap |
 | [[ETF_NASDAQ_IJT Performance]] | official 2013-2025; official rolling 10-year as of 2026-06-30 | 11.82% | 5.35% | 26.03% | 2021 +22.40% / 2022 -21.24% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; historical exchange discrepancy and NAV drawdown gap |
+| [[ETF_NYSE_ARCA_IJS Performance]] | official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.60% | 8.71% | 23.99% | 2016 +31.17% / 2018 -12.80% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -238,12 +239,16 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_NYSE_ARCA_IJR Performance]] | 26.69% | -16.20% | 16.03% | 8.61% | 5.95% | 41.75% | 4 / 1 |
 | [[ETF_CBOE_BZX_ESML Performance]] | 19.31% | -17.22% | 17.31% | 11.86% | 10.62% | 43.37% | 4 / 1 |
 | [[ETF_NASDAQ_IJT Performance]] | 22.40% | -21.24% | 16.97% | 9.42% | 5.20% | 29.80% | 4 / 1 |
+| [[ETF_NYSE_ARCA_IJS Performance]] | 30.47% | -11.32% | 14.64% | 7.42% | 6.55% | 51.81% | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
 reinvested, reference as-of `2025-12-31`; it is a common reference benchmark,
 not the tracked index of every ETF.
+
+IJS cumulative and CAGR fields derived from rounded annual rows are rounded-input
+approximations; see the IJS performance page and source batch for formulas and inputs.
 
 OPPJ `2025*` เป็น secondary standardized NAV return; common window ของ OPPJ
 ยังคร่อมการเปลี่ยน objective/index เมื่อ 30 มิ.ย. 2025 จึงไม่ใช่ record ของ
