@@ -1,6 +1,0 @@
-interface:
-  display_name: "Trello ETF Batch"
-  short_description: "Run ETF performance batches from Trello cards"
-  default_prompt: "Use $trello-etf-batch on a specific Trello parent card with workflow: trello-etf-batch."
-policy:
-  allow_implicit_invocation: false
