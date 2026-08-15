@@ -46,3 +46,11 @@ python3 /Users/mangkornkatawong/.codex/skills/.system/skill-creator/scripts/quic
 ## Commit
 
 `feat: add Trello ETF processing skill` (final commit hash reported by the task handoff)
+
+## Round 1 fix
+
+Updated the malformed/contradictory downstream-result fallback to a complete
+seven-field envelope: `ERROR`, global scope, `durable_write: unknown`,
+`exhausted: false`, `confirmation: none`, `unknown-result`, and a concise
+reason. The skill now explicitly forwards this complete normalized envelope to
+`trello-etf-result`. No tests or unrelated files were changed.

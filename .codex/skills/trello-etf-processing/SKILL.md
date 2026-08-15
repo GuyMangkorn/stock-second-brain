@@ -62,9 +62,13 @@ Missing, contradictory, or malformed output is normalized to:
 ```text
 status: ERROR
 scope: global
+durable_write: unknown
+exhausted: false
+confirmation: none
 code: unknown-result
+reason: Downstream result was missing, malformed, or contradictory.
 ```
 
-Forward it to trello-etf-result together with the complete envelope and any downstream output links. never move the child to Done/Blocked directly. This
+Forward it to trello-etf-result as this complete normalized envelope together with any downstream output links. never move the child to Done/Blocked directly. This
 skill does not decide the final child lane; `trello-etf-result` owns that
 transition.
