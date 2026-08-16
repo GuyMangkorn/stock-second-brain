@@ -44,23 +44,36 @@ research draft and prepare an evidence packet containing the ETF identity and
 exchange, return basis, benchmark, candidate performance claims, periods,
 units, currencies, metric definitions, as-of dates, calculations, source
 URLs/paths, unresolved gaps, and the complete proposed contents of every file
-it plans to write. It must then dispatch the project-scoped
-`source_verifier` sub-agent from `.codex/agents/source-verifier.toml` and wait
-for its structured review.
+it plans to write. Apply the review route selected by `execution_profile`:
+
+- For `interactive-delegated` (including an omitted profile), dispatch the
+  project-scoped `source_verifier` sub-agent from
+  `.codex/agents/source-verifier.toml` and wait for its structured review.
+- For `scheduled-inline`, do not dispatch `source_verifier`, a research worker,
+  reviewer, or any other sub-agent. Perform the same complete checklist locally
+  in the current top-level context before writing, and record these exact lines
+  in the dated source batch:
+
+  ```text
+  verification_mode: scheduled-local
+  reviewer_dispatch: not-attempted-by-design
+  ```
 
 - `PASS` permits the main agent to write the planned ETF performance files.
 - `CHANGES_REQUIRED` for `High` or `Medium` findings blocks all writes; the
-  main agent must correct or narrow-refresh the evidence and run the reviewer
-  again before saving.
+  main agent must correct or narrow-refresh the evidence and rerun the same
+  profile-specific review route before saving.
 - `WARNING` for `Low` findings pauses the workflow and requires explicit user
   confirmation before saving; preserve the warning or gap in the owning
   artifact when relevant.
 - The reviewer is read-only and must not edit evidence, performance pages,
   source batches, indexes, regions, or logs. The main agent remains the sole
   durable-file writer.
-- If the sub-agent is unavailable, the main agent must perform the same
-  checklist locally, disclose the fallback in the dated source batch, and
-  apply the same blocking and confirmation rules.
+- Under `interactive-delegated`, if the sub-agent is unavailable, the main
+  agent must perform the same checklist locally, disclose the fallback in the
+  dated source batch, and apply the same blocking and confirmation rules.
+- Under `scheduled-inline`, local review is required by design and must not be
+  described as a reviewer-unavailability fallback.
 
 ## Source Priority
 
