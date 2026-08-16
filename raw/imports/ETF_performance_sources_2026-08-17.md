@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC
-input_count: 6
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF
+input_count: 7
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; current NAV/YTD fields through 2026-07-31, NUSC through 2026-06-30"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; current NAV/YTD fields through 2026-08-13"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, and NUSC. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, and IMWSF. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -35,6 +35,7 @@ reviewer_dispatch: not-attempted-by-design
 | SSEUF | supported | LSE:R2US | USA | 18.69% (2026-07-31) | https://www.ssga.com/uk/en_gb/institutional/etfs/state-street-spdr-russell-2000-us-small-cap-ucits-etf-acc-zprr-gy | OTC alias for official USD LSE line; passive/index-tracking U.S. small-cap equity; daily NAV drawdown/recovery not disclosed |
 | FNDA | supported | NYSE Arca:FNDA | USA | 21.18% (2026-06-30) | https://www.schwabassetmanagement.com/products/fnda | passive/index-tracking U.S. small-cap fundamental equity; annual calendar rows are secondary total-return proxy; daily NAV drawdown/recovery not disclosed |
 | NUSC | supported | Cboe BZX:NUSC | USA | 16.76% (2026-06-30) | https://documents.nuveen.com/Documents/Nuveen/Viewer.aspx?uniqueId=8238272c-9326-4c32-93cb-40d80e4fc4a9 | passive/index-tracking U.S. small-cap ESG equity; history under 10 years; Nuveen HTML performance table rendered no records, official PDF factsheet used; daily NAV drawdown/recovery not disclosed |
+| IMWSF | supported | LSE:WSML | International | 19.00% (2026-08-13) | https://www.ishares.com/uk/professionals/en/products/296576/ishares-msci-world-small-cap-ucits-etf-fund?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official USD LSE line by ISIN `IE00BF4RFH31`; passive/global developed small-cap equity; history under 10 years; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -235,7 +236,8 @@ reviewer_dispatch: not-attempted-by-design
 - FNDA-specific local checklist: verified passive/index classification, exchange, inception, fee, current tracked index, official NAV 10Y/YTD fields, secondary annual-row basis, 2024 benchmark splice, 8/2 up/down count, risk metrics, source conflict, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
 - ZPRVF-specific local checklist: resolved the OTC input alias to official USD `LSE:USSC` by ISIN `IE00BSPLC413`, verified passive/index-tracking equity classification, inception, TER, accumulation, issuer benchmark, official 2016-2025 Fund Net rows, rolling 10-year NAV TR, current YTD, S&P cache window/basis, current benchmark date mismatch, 8/2 up/down count, risk metrics, graph breadcrumb, USA primary-region ownership, and no unsupported drawdown/recovery inference.
 - NUSC-specific local checklist: verified Cboe BZX identity, passive/index classification, inception, 0.31% fee, Nuveen ESG USA Small-Cap Index, official 2017-2025 NAV/index rows, official 2026 YTD NAV/index fields, under-10-year history, SEC best/worst-quarter corroboration, S&P cache window/basis, 7/2 up/down count, HTML/PDF performance-rendering conflict, graph breadcrumb, USA primary-region ownership, and no unsupported drawdown/recovery inference.
-- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_LSE_USSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, `wiki/analysis/performance/ETF_CBOE_BZX_NUSC Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
+- IMWSF-specific local checklist: resolved OTC `IMWSF` to USD `LSE:WSML` by ISIN `IE00BF4RFH31`, verified passive/physical/optimised UCITS structure, inception, TER, accumulating treatment, official 2019-2025 NAV/index rows, current product-page NAV/YTD, factsheet July YTD, S&P cache/current date mismatch, 6/1 up/down count, 3-year standard deviation and beta, graph breadcrumb, International primary-region ownership, and no unsupported drawdown/recovery inference.
+- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_LSE_USSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, `wiki/analysis/performance/ETF_CBOE_BZX_NUSC Performance.md`, `wiki/analysis/performance/ETF_LSE_WSML Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
 
 ## ZPRVF / USSC official source map
 
@@ -324,5 +326,47 @@ reviewer_dispatch: not-attempted-by-design
 - Inception was 13 Dec 2016, so 2016 is a partial inception period and the fund has not reached a full 10-year history as of 2026-06-30; no 10-year NAV CAGR is claimed.
 - Nuveen's HTML product page rendered `No Records Available` for the performance component in the reviewed capture, while the official PDF factsheet dated 2026-06-30 supplied numeric calendar/YTD fields; the factsheet is used for performance and the rendering conflict is preserved here.
 - The latest official NUSC performance field reviewed is `16.76%` NAV TR YTD as of 2026-06-30; the common S&P cache has no synchronized 2026 current-year row, so no current S&P YTD comparison is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## IMWSF / WSML official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| LSE:WSML / input IMWSF | https://www.ishares.com/uk/professionals/en/products/296576/ishares-msci-world-small-cap-ucits-etf-fund?siteEntryPassthrough=true&switchLocale=y | Official iShares product page: USD share-class identity, listings, benchmark, TER, structure, current NAV/YTD, holdings and risk metrics | Current page observations: NAV 2026-08-14; NAV TR YTD 2026-08-13; portfolio/risk fields through 2026-07-31 |
+| LSE:WSML / input IMWSF | https://www.ishares.com/gls-download/literature/fact-sheet/wsml-ishares-msci-world-small-cap-ucits-etf-fund-fact-sheet-en-gb.pdf | Official iShares factsheet: ISIN, launch, USD accumulating share class, physical/optimised structure, annual NAV/index rows, July YTD and listings | Factsheet dated July 2026; performance and NAV data as of 2026-07-31; other data as of 2026-08-07 |
+| Input IMWSF alias | https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=IMWSF | Secondary OTC alias / ISIN cross-check; not used for NAV Total Return ranking | OTC identity checked 2026-08-17 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR current | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=f33eb5c2-5231-4c16-bc59-38407c3d2f2f&sourceIdentifier=home-page | Official current S&P 500 TR YTD cross-check | 14.04% as of 2026-08-16; not synchronized with WSML 2026-08-13 YTD |
+
+## IMWSF / WSML raw observations and calculations
+
+| Year | WSML NAV TR | MSCI World Small Cap Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2019 | 25.73% | 26.19% | 31.49% |
+| 2020 | 15.83% | 15.96% | 18.40% |
+| 2021 | 15.81% | 15.75% | 28.71% |
+| 2022 | -18.64% | -18.75% | -18.11% |
+| 2023 | 16.02% | 15.76% | 26.29% |
+| 2024 | 7.93% | 8.15% | 25.02% |
+| 2025 | 19.84% | 19.88% | 17.88% |
+| 2026 YTD | 19.00% (official NAV) | not available from same-date official product-page field | 14.04% (official current page, as of 2026-08-16; not same date) |
+
+- Metric basis: official iShares NAV total return is shown on NAV basis with gross income reinvested where applicable; the accumulating USD share class retains income in NAV.
+- Issuer benchmark: `MSCI World Small Cap Index (Net)`; retained as metadata and not substituted for the common S&P 500 reference.
+- WSML 2019-2025 compound: `105.92%` cumulative; rounded-input CAGR `10.87%`.
+- WSML 2021-2025 compound: `41.39%` cumulative; rounded-input CAGR `7.17%`.
+- Issuer index 2019-2025 compound: `106.54%` cumulative; rounded-input CAGR `10.92%`; 2021-2025 CAGR `7.14%`.
+- S&P 500 cached 2019-2025 compound: `205.41%` cumulative; rounded-input CAGR `17.29%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official risk fields: 3-year standard deviation `16.16%` and beta `1.000` as of 2026-06-30; holdings `3,558` as of 2026-07-30; official daily NAV history for maximum drawdown/recovery was not verified.
+
+## IMWSF / WSML gaps and conflicts
+
+- The OTC input `IMWSF` is not the canonical issuer listing. Official iShares listings for ISIN `IE00BF4RFH31` identify the USD line as `LSE:WSML`, with additional GBP/CHF/EUR listings; the durable key uses `LSE:WSML` while preserving the input alias.
+- Inception was 27 Mar 2018; 2018 is a partial/inception period whose annual return is not disclosed in the reviewed official materials, and no 10-year NAV CAGR is claimed.
+- The July factsheet reports NAV YTD `13.88%` as of 2026-07-31 while the newer product page reports `19.00%` as of 2026-08-13; these are separate as-of dates, so the newer product-page field is used as current and both observations are preserved.
+- The current official S&P 500 TR page reports `14.04%` as of 2026-08-16, one date after the ETF current YTD; no synchronized current benchmark comparison is asserted.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.

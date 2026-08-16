@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-16
+updated: 2026-08-17
 tags:
   - analysis/etf-region
   - geography/International
@@ -30,13 +30,17 @@ tags:
 | VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.13% | 5.46% | 4.64% | [[ETF_NASDAQ_VIGI Performance]] |
 | VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 8.26% | 6.45% | 6.36% | [[ETF_NYSE_ARCA_VSS Performance]] |
 | SCHC | Schwab International Small-Cap Equity ETF | developed international ex-U.S. small-cap | 8.23% | 7.10% | 6.15% | [[ETF_NYSE_ARCA_SCHC Performance]] |
+| IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
 | VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.73% | 13.06% | 12.31% | [[ETF_NASDAQ_VYMI Performance]] |
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31.
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
-โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
+โดย as-of date อาจต่างกันตาม source batch. IMWSF เป็น OTC alias ของ USD
+`LSE:WSML`; `19.00%` เป็น official current NAV TR YTD ณ 2026-08-13 ขณะที่
+official factsheet annual rows และ YTD field ใช้ as-of 2026-07-31. ประวัติยังไม่
+ครบ 10 ปี และ 2018 partial return ไม่ถูกนำมาคำนวณ. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
 
 ## Navigation
