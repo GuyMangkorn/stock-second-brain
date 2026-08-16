@@ -24,6 +24,7 @@ tags:
 | DTH | WisdomTree International High Dividend Fund | international high dividend | 9.06% | 12.22% | 8.21% | [[ETF_AMEX_DTH Performance]] |
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
 | EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 6.50% | [[ETF_CBOE_EFAV Performance]] |
+| FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
 | PID | Invesco International Dividend Achievers ETF | international dividend achievers | 8.81% | 11.28% | 2.05% | [[ETF_NASDAQ_PID Performance]] |
@@ -37,7 +38,9 @@ tags:
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31.
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
-โดย as-of date อาจต่างกันตาม source batch. IMWSF เป็น OTC alias ของ USD
+โดย as-of date อาจต่างกันตาม source batch. FNDC `8.48%` เป็น issuer-reported
+rolling 10-year average annual NAV TR ณ 2026-07-31; calendar-window CAGR จาก
+annual rows 2016-2025 คือ `8.11%`. IMWSF เป็น OTC alias ของ USD
 `LSE:WSML`; `19.00%` เป็น official current NAV TR YTD ณ 2026-08-13 ขณะที่
 official factsheet annual rows และ YTD field ใช้ as-of 2026-07-31. ประวัติยังไม่
 ครบ 10 ปี และ 2018 partial return ไม่ถูกนำมาคำนวณ. ค่า *, †, not applicable

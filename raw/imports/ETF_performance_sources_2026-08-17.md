@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES
-input_count: 8
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC
+input_count: 9
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, and DES. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, and FNDC. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -36,6 +36,8 @@ reviewer_dispatch: not-attempted-by-design
 | FNDA | supported | NYSE Arca:FNDA | USA | 21.18% (2026-06-30) | https://www.schwabassetmanagement.com/products/fnda | passive/index-tracking U.S. small-cap fundamental equity; annual calendar rows are secondary total-return proxy; daily NAV drawdown/recovery not disclosed |
 | NUSC | supported | Cboe BZX:NUSC | USA | 16.76% (2026-06-30) | https://documents.nuveen.com/Documents/Nuveen/Viewer.aspx?uniqueId=8238272c-9326-4c32-93cb-40d80e4fc4a9 | passive/index-tracking U.S. small-cap ESG equity; history under 10 years; Nuveen HTML performance table rendered no records, official PDF factsheet used; daily NAV drawdown/recovery not disclosed |
 | IMWSF | supported | LSE:WSML | International | 19.00% (2026-08-13) | https://www.ishares.com/uk/professionals/en/products/296576/ishares-msci-world-small-cap-ucits-etf-fund?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official USD LSE line by ISIN `IE00BF4RFH31`; passive/global developed small-cap equity; history under 10 years; daily NAV drawdown/recovery not disclosed |
+| DES | supported | NYSE Arca:DES | USA | 22.93% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/des | passive/index-tracking U.S. small-cap dividend equity; official 2016-2025 annual NAV rows; current S&P cross-check is not same-date; daily NAV drawdown/recovery not disclosed |
+| FNDC | supported | NYSE Arca:FNDC | International | 10.96% (2026-07-31) | https://www.schwabassetmanagement.com/products/fndc | passive/index-tracking developed ex-U.S. small-cap fundamental equity; benchmark changed effective 2024-06-21; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -81,6 +83,61 @@ reviewer_dispatch: not-attempted-by-design
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - The latest official NAV TR YTD field located is 21.33% as of 2026-06-30. A later secondary snapshot reports a different YTD figure with an unclear return basis, so it is not mixed into the NAV table.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## FNDC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:FNDC | https://www.schwabassetmanagement.com/products/fndc | Official product page: fund identity, passive management style, index, expense, NAV, rolling/YTD performance, risk fields, and portfolio snapshot | NAV/quote fields through 2026-08-14; performance and risk fields through 2026-07-31 |
+| NYSE Arca:FNDC | https://www.schwabassetmanagement.com/products/fndc/documents?page=0 | Official document hub and performance/factsheet entry points | Hub reviewed 2026-08-17; performance summary entry updated 2026-07-31; factsheet entry updated 2026-06-30 |
+| NYSE Arca:FNDC | https://www.sec.gov/Archives/edgar/data/1454889/000088454626000301/c497k.htm | SEC summary prospectus: annual total returns, index methodology, passive/index-fund treatment, benchmark change, and return definitions | Prospectus dated 2026-06-26; annual rows through 2025 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common benchmark definition | USD total return, dividends reinvested; page reviewed 2026-08-17 |
+| S&P 500 TR current | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=f33eb5c2-5231-4c16-bc59-38407c3d2f2f&sourceIdentifier=home-page | Official current cross-check | `14.04%` YTD displayed on page dated 2026-08-10; not synchronized with FNDC YTD 2026-07-31 |
+| S&P 500 TR cached annual rows | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true; https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-2021/; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached project convention for complete calendar years | 2016-2025 USD gross total return, dividends reinvested, as of 2025-12-31 |
+
+## FNDC raw observations and calculations
+
+| Year | FNDC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 8.87% | 11.96% |
+| 2017 | 29.04% | 21.83% |
+| 2018 | -18.77% | -4.38% |
+| 2019 | 20.02% | 31.49% |
+| 2020 | 7.11% | 18.40% |
+| 2021 | 9.83% | 28.71% |
+| 2022 | -14.82% | -18.11% |
+| 2023 | 15.21% | 26.29% |
+| 2024 | 1.57% (source precision 1.5698548%) | 25.02% |
+| 2025 | 35.79% (source precision 35.7881285%) | 17.88% |
+| 2026 YTD | 10.96% (official NAV, 2026-07-31) | 14.04% (official current page dated 2026-08-10; not same date) |
+
+- FNDC 2016-2025 compound: `118.08%` cumulative; rounded-input CAGR `8.11%`.
+- FNDC 2021-2025 compound: `48.65%` cumulative; rounded-input CAGR `8.25%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- The official rolling 10-year FNDC NAV TR field is `8.48%` as of 2026-07-31; raw rolling endpoints were not disclosed in the reviewed issuer capture. The `8.11%` figure is the separate 2016-2025 calendar-window calculation using the SEC annual rows.
+- Annual-row sample standard deviation is `17.24%`; issuer-reported 3-year standard deviation is `15.14%` as of 2026-07-31. These are different windows and neither is daily maximum drawdown.
+- Year-end cumulative-path drawdown approximation is `-18.77%` at the 2018 year-end observation, with recovery above the prior year-end high by 2020; no daily maximum drawdown is claimed.
+- The 2024 and 2025 source rows retain additional precision in this batch, while page/index displays are rounded to two decimals.
+
+## FNDC pre-save checklist
+
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- Entity and exchange reconciled as `NYSE Arca:FNDC`; passive/index-fund classification confirmed from Schwab and SEC sources.
+- Return basis, USD currency, issuer benchmark, common benchmark, annual coverage, current-field as-of dates, rolling-vs-calendar distinction, and separate distribution-yield field were checked before write.
+- Benchmark/index change effective 2024-06-21 is disclosed; the historical fund NAV return series is not spliced with an unverified proxy.
+- Every durable number above maps to an official URL or the cached S&P convention; rounded-input calculations are labeled and no synchronized S&P current-YTD spread is asserted.
+- Existing international-region navigation was updated with canonical `NYSE Arca:FNDC`; no duplicate performance page was found.
+- Local pre-save result: `PASS`.
+
+## FNDC gaps and conflicts
+
+- The issuer changed the comparative index effective 2024-06-21; pre-change and post-change benchmark identities are preserved rather than treated as one unchanged index series.
+- FNDC YTD is as of 2026-07-31 while the official S&P current cross-check is displayed for 2026-08-10; no same-date benchmark spread is claimed.
+- Annual issuer rows are rounded in the page display; source precision for 2024 and 2025 is retained, and cumulative/CAGR/annual-row volatility calculations remain input-dependent.
+- Official daily NAV history sufficient for a daily maximum-drawdown and recovery statistic was not verified; only the labeled year-end observation approximation is retained.
 
 ## DES official source map
 
