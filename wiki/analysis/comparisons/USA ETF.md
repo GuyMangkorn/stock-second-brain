@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-08-15
+updated: 2026-08-16
 tags:
   - analysis/etf-region
   - geography/United-States
@@ -15,7 +15,7 @@ tags:
 
 ## Performance snapshot
 
-| Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
+| Ticker | Fund | Exposure / Style | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | DGRO | iShares Core Dividend Growth ETF | U.S. dividend growth | 13.38% | 11.69% | 10.22% | [[ETF_AMEX_DGRO Performance]] |
 | VIG | Vanguard Dividend Appreciation ETF | U.S. dividend growth | 13.13% | 11.27% | 7.19% | [[ETF_AMEX_VIG Performance]] |
@@ -42,11 +42,12 @@ tags:
 | ESML | iShares ESG Aware MSCI USA Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 7.47% | 23.07% | [[ETF_CBOE_BZX_ESML Performance]] |
 | IJT | iShares S&P Small-Cap 600 Growth ETF | U.S. small-cap growth equity | 11.82% | 5.35% | 26.03% | [[ETF_NASDAQ_IJT Performance]] |
 | IJS | iShares S&P Small-Cap 600 Value ETF | U.S. small-cap value equity | 10.60% | 8.71% | 23.99% | [[ETF_NYSE_ARCA_IJS Performance]] |
+| CALF | Pacer US Small Cap Cash Cows ETF | U.S. small-cap free-cash-flow equity | not applicable (<10y) | 8.88%† | 10.60%‡ | [[ETF_CBOE_BZX_CALF Performance]] |
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
-โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
+โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, ‡, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
-ค่า cumulative/CAGR ของ IJS ที่คำนวณจาก annual rows เป็น rounded-input approximation ตาม source batch.
+ค่า cumulative/CAGR ของ IJS ที่คำนวณจาก annual rows เป็น rounded-input approximation ตาม source batch. CALF 2021-2025 CAGR 8.88%† เป็น rounded-input approximation และ 2026 YTD 10.60%‡ เป็น stale NAV snapshot ณ 2026-06-22; มีอีก snapshot 12.78% ณ 2026-06-16 และไม่พบตัวเลข as-of 2026-08-16.
 
 ## Navigation
 

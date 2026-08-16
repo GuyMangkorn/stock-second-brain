@@ -164,6 +164,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_CBOE_BZX_ESML Performance]] | official 2019-2025; inception 2018 partial not disclosed | not applicable (<10y) | 7.47% | 23.07% | 2019 +28.53% / 2022 -17.22% | U.S. ESG small-cap equity | small-cap/cyclicality/ESG-screen/liquidity-sensitive; daily NAV drawdown and 2018 partial gap |
 | [[ETF_NASDAQ_IJT Performance]] | official 2013-2025; official rolling 10-year as of 2026-06-30 | 11.82% | 5.35% | 26.03% | 2021 +22.40% / 2022 -21.24% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; historical exchange discrepancy and NAV drawdown gap |
 | [[ETF_NYSE_ARCA_IJS Performance]] | official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.60% | 8.71% | 23.99% | 2016 +31.17% / 2018 -12.80% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; daily NAV drawdown/recovery gap |
+| [[ETF_CBOE_BZX_CALF Performance]] | official inception 2017-06-16 / official 2018-2024; 2025 issuer 1 Year/YTD ending 2025-12-31; history under 10 years | not applicable (<10y) | 8.88%† | 10.60%‡ | 2021 +40.50% / 2022 -15.18% | U.S. small-cap free-cash-flow equity | small-cap/sector/turnover/liquidity-sensitive; 2025 row caveat; NAV drawdown/recovery not disclosed |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -259,6 +260,8 @@ current strategy แบบต่อเนื่องห้าปี.
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31.
 
+† CALF 2021-2025 CAGR 8.88% is a rounded-input approximation; the 2025 row is an issuer 1 Year/YTD field ending 2025-12-31, not separately labelled as a calendar-year row. ‡ CALF NAV TR YTD is 10.60% as of 2026-06-22; a separate stale snapshot is 12.78% as of 2026-06-16 and no 2026-08-16 figure was located.
+
 ## Regime read
 
 | Regime / question | Read-through |
@@ -293,7 +296,7 @@ utilities และ financials tilt.
   [[ETF_NYSE_ARCA_EWH Performance]],
   [[ETF_NYSE_ARCA_ECNS Performance]],
   [[ETF_NYSE_ARCA_IDX Performance]], [[ETF_NYSE_ARCA_DVYA Performance]],
-  [[ETF_NASDAQ_INDY Performance]]
+  [[ETF_NASDAQ_INDY Performance]], [[ETF_CBOE_BZX_CALF Performance]]
 - Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - Source batch: [[ETF_performance_sources_2026-07-19]]
 - Source batch: [[ETF_performance_sources_2026-07-21]]
@@ -302,7 +305,7 @@ utilities และ financials tilt.
 
 ## Preliminary Holdings Groups Batch
 
-เพิ่ม `check-etf-performance` สำหรับ 28 passive equity ETFs ที่ยังไม่เคยตรวจใน
+เพิ่ม `check-etf-performance` สำหรับ 29 passive equity ETFs ที่ยังไม่เคยตรวจใน
 [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]. `QDPL` และ `MDIV` ถูกตัดออก
 ตาม guardrail เพราะ derivative-heavy และ multi-asset ตามลำดับ.
 
@@ -315,6 +318,7 @@ utilities และ financials tilt.
 | [[ETF_AMEX_DHS Performance]] | 9.44% | 12.05% | -0.19% | 15.47% | 13.44% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DLN Performance]] | 12.53% | 12.92% | -3.79% | 17.67% | 10.41% | official annual NAV TR 2016-2025 |
 | [[ETF_NYSE_ARCA_DLS Performance]] | 7.69%† | 7.97% | -17.36% | 15.95% | 8.54%‡ | issuer-reported 10Y average annual NAV TR; annual NAV TR rows 2016-2025 |
+| [[ETF_CBOE_BZX_CALF Performance]] | not applicable (<10y) | 8.88%† | -15.18% | 26.13% | 10.60%‡ | official 2018-2024 annual NAV TR plus 2025 issuer 1 Year/YTD field; 2025 label caveat |
 | [[ETF_AMEX_DON Performance]] | 9.36% | 10.88% | -4.76% | 15.55% | 10.79% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official annual NAV TR 2016-2025 |

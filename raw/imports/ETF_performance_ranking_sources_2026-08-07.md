@@ -11,7 +11,7 @@ return_basis: NAV total return
 ## Scope and ownership
 
 - Ranking inputs are read from the current `wiki/analysis/performance/ETF_* Performance.md` owner pages; no annual return is reconstructed from YTD, price return, benchmark return, or a different currency.
-- `143` owner pages were checked; `60` passed the strict eligibility gate and `83` were excluded. The ranking page is [[ETF Performance Ranking 2026-08-07]].
+- `144` owner pages were checked; `60` passed the strict eligibility gate and `84` were excluded. The ranking page is [[ETF Performance Ranking 2026-08-07]].
 - Every eligible page has ten annual rows for 2016-2025 and `NAV Total Return` basis. All 600 eligible annual cells are labelled `official`; `official-derived`, `secondary`, and `AI-derived` counts are zero in the scored universe.
 - Confidence weights: `official = 1.00`, `official-derived = 0.80`, `secondary = 0.50`, `AI-derived = 0.25`. No AI-derived row was identified or down-weighted.
 
@@ -84,6 +84,7 @@ return_basis: NAV total return
 
 | Ticker | entity_key | Primary region | Owner page | Exact exclusion reason |
 |---|---|---|---|---|
+| `CALF` | `Cboe BZX:CALF` | USA | [[ETF_CBOE_BZX_CALF Performance|CALF]] | incomplete 2016-2025 annual NAV TR coverage; only 2018-2024 are complete calendar rows and 2025 is an issuer 1 Year/YTD field |
 | `DGRO` | `AMEX:DGRO` | USA | [[ETF_AMEX_DGRO Performance|DGRO (AMEX:DGRO)]] | only five official annual rows; 2016-2020 are secondary proxy rows, so official/official-derived coverage is 5/10 (<8) |
 | `DIVI` | `NYSE Arca:DIVI` | International | [[ETF_AMEX_DIVI Performance|DIVI (NYSE Arca:DIVI)]] | incomplete 2016-2025 annual NAV TR coverage |
 | `BBJP` | `Cboe BZX:BBJP` | Japan | [[ETF_CBOE_BBJP Performance|BBJP (Cboe BZX:BBJP)]] | incomplete 2016-2025 annual NAV TR coverage |

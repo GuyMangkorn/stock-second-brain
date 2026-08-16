@@ -2,12 +2,12 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-16
-input_source: Trello ETF child cards DGS, DLS
-input_count: 2
+input_source: Trello ETF child cards DGS, DLS, CALF
+input_count: 3
 workflow: check-etf-performance
 review_gate: PASS
 reviewer: source_verifier
-annual_rows_as_of: 2026-03-31
+annual_rows_as_of: "mixed: DGS/DLS 2026-03-31; CALF 2025-12-31"
 tags:
   - source/etf
 ---
@@ -16,7 +16,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean runs for DGS and DLS. Fresh read-only research workers returned the evidence below. The project-scoped source_verifier returned PASS after this re-review; no manager web research or durable writes were used to produce the evidence.
+Research-bearing lean runs for DGS, DLS, and CALF. Fresh read-only research workers returned the evidence below. The project-scoped source_verifier returned PASS after this review; no manager web research or durable writes were used to produce the evidence.
 
 ## Complete evidence register
 
@@ -24,6 +24,7 @@ Research-bearing lean runs for DGS and DLS. Fresh read-only research workers ret
 |---|---|---|---|---|---|---|
 | DGS | supported | NYSE Arca:DGS | Emerging Markets | 8.86% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/dgs | passive/index-tracking equity; issuer-reported 10-year average annual NAV TR 8.31%; annual NAV TR rows 2016-2025 from presentation dated 2026-03-31; official daily NAV drawdown/recovery not disclosed |
 | DLS | supported | NYSE Arca:DLS | International | 8.54% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/dls | passive/index-tracking equity; issuer-reported 10-year average annual NAV TR 7.69%; annual NAV TR rows 2016-2025 from presentation dated 2026-03-31; official daily NAV drawdown/recovery not disclosed |
+| CALF | supported | Cboe BZX:CALF | USA | 10.60% (2026-06-22) | https://www.paceretfs.com/products/CALF | passive/index-tracking equity; expense ratio 0.59%; separate 12.78% NAV YTD snapshot as of 2026-06-16; no 2026-08-16 current figure located; annual 2025 field carries issuer 1 Year/YTD label; official daily NAV drawdown/recovery not disclosed |
 
 ## DGS official source map
 
@@ -118,3 +119,53 @@ Research-bearing lean runs for DGS and DLS. Fresh read-only research workers ret
 - DLS annual NAV TR rows are sourced from the official 2026-03-31 presentation as the sole supplied full annual-row source in this packet; the SEC prospectus independently corroborates 2022 at -17.36%; no independent full annual series was verified and no conflict was established.
 - Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no numeric secondary proxy is saved.
 - S&P 500 2026 current YTD was not used because the cached convention ends at 2025-12-31 and no fresh current benchmark evidence was supplied in this packet.
+
+## CALF official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Cboe BZX:CALF | https://www.paceretfs.com/products/CALF | Official product page: identity, name change, expense ratio, NAV YTD, 1-year/10-year/since-inception fields and current product snapshot | Product-page performance fields as of 2026-06-22 and additional issuer fields as of 2026-03-31 |
+| Cboe BZX:CALF | https://www.paceretfs.com/products | Official product listing snapshot: separate current-YTD observation | NAV TR YTD 12.78% as of 2026-06-16 |
+| Cboe BZX:CALF | https://docs.paceretfs.com/assets/pdfs/Pacer_CALF_Summary.pdf | Official summary prospectus: passive objective, inception, total annual expenses, NAV return definition and risk disclosures | Prospectus dated 2025-08-31; annual rows through 2024 |
+| Cboe BZX:CALF | https://www.paceretfs.com/media/why_calf.pdf | Official performance sheet: annual NAV TR observations and 2025 issuer 1 Year/YTD field | 2018-2024 complete calendar rows; 2025 field ending 2025-12-31 |
+| Cboe BZX:CALF | https://www.spglobal.com/spdji/en/indices/strategy/pacer-us-small-cap-cash-cows-index/ | Official index methodology and administrator reference | Methodology accessed in current research; S&P DJI administration from 2024-11-18; V1/V2 launch metadata from 2025 |
+| Cboe BZX:CALF | https://www.cboe.com/us/equities/market_statistics/listed_symbols/ | Exchange listing reference | Cboe BZX listing and ticker identity |
+| Cboe BZX:CALF | https://cdn.cboe.com/resources/regulation/circulars/products/IC-2025-139.pdf | Exchange name-change reference | CALF listing/name-change evidence; fund-name change effective 2025-03-10 |
+| Cboe BZX:CALF | https://www.paceretfs.com/resources/distributions | Official distribution schedule | Distribution observations through 2026-06-04 |
+| S&P 500 TR | cached official references listed in the DGS section above | Cached benchmark annual convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+
+## CALF raw observations and calculations
+
+| Year | CALF NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not disclosed | 11.96% |
+| 2017 | not disclosed | 21.83% |
+| 2018 | -9.71% | -4.38% |
+| 2019 | 18.54% | 31.49% |
+| 2020 | 16.31% | 18.40% |
+| 2021 | 40.50% | 28.71% |
+| 2022 | -15.18% | -18.11% |
+| 2023 | 35.54% | 26.29% |
+| 2024 | -7.45% | 25.02% |
+| 2025 | 2.34%† | 17.88% |
+
+- Metric basis: CALF official NAV Total Return, USD, distributions reinvested and fund expenses reflected in NAV.
+- Issuer benchmark: Pacer US Small Cap Cash Cows Index; the methodology and S&P DJI administration are retained as metadata and not silently substituted for the common S&P 500 reference.
+- Expense ratio: 0.59%; confirmed by the Pacer product page and summary prospectus dated 2025-08-31.
+- 2018-2025 CALF compound: 90.45% cumulative; rounded-input annualized return approximately 8.39%.
+- 2021-2025 CALF compound: 52.99% cumulative; rounded-input CAGR approximately 8.88%; average positive year 26.13%.
+- S&P 500 2018-2025 compound: 192.03% cumulative; rounded-input CAGR approximately 14.33%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: CAGR = product(1 + annual return)^(1 / number of years) - 1.
+- Current NAV YTD: 10.60% as of 2026-06-22; separate 12.78% snapshot as of 2026-06-16; no 2026-08-16 figure located. These are separate dated observations, not a same-date conflict.
+- Current quote: NAV 50.50 USD and market price 50.51 USD as of 2026-06-12.
+- Recent distributions: 0.0447590 USD (2026-06-04), 0.0709307 USD (2026-03-05), 0.3314134 USD (2025-12-30, payable 2026-01-05), and 0.1600544 USD (2025-09-04); sum 0.6071575 USD.
+- Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no numeric secondary proxy is saved.
+
+## CALF gaps and conflicts
+
+- Current NAV YTD values are separate stale snapshots with different as-of dates (10.60% on 2026-06-22 and 12.78% on 2026-06-16); no 2026-08-16 current field was located.
+- The 2025 2.34% row is an issuer 1 Year/YTD field ending 2025-12-31 rather than a separately labelled complete calendar-year observation; 2018-2024 remain the complete calendar rows.
+- Raw endpoint dates and elapsed years for the issuer since-inception NAV TR 8.44% and 1-year field 21.46% are not disclosed; these are not recomputed as CAGRs.
+- Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no numeric secondary proxy is saved.
+- The CALF annual observations are rounded source values, so cumulative/annualized calculations are approximations from rounded inputs.
