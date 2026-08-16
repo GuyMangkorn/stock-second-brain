@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child card GSSC
-input_count: 1
+input_source: Trello ETF child cards GSSC, XSMO
+input_count: 2
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "2018-2025 official issuer; current NAV/YTD 2026-06-30"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; current NAV/YTD fields through 2026-06-30"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean run for GSSC. Source discovery, reading, reconciliation,
+Research-bearing lean run for GSSC and XSMO. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -31,6 +31,7 @@ reviewer_dispatch: not-attempted-by-design
 | Input ticker | Status | Canonical entity key | Primary region | Current NAV YTD / as-of | Primary source | Gap / resolution note |
 |---|---|---|---|---|---|---|
 | GSSC | supported | NYSE Arca:GSSC | USA | 21.33% (2026-06-30) | https://am.gs.com/public-assets/documents/574deb07-24d6-11ef-870d-c7a1cb19e681 | passive/index-tracking U.S. small-cap multi-factor equity; 10-year history not yet available; daily NAV drawdown/recovery not disclosed |
+| XSMO | supported | NYSE Arca:XSMO | USA | 30.50% (2026-06-30, secondary NAV) | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/xsmo-invesco-s-p-smallcap-momentum-etf-fact-sheet.pdf | passive/index-tracking U.S. small-cap momentum equity; official current YTD not located; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -77,8 +78,58 @@ reviewer_dispatch: not-attempted-by-design
 - The latest official NAV TR YTD field located is 21.33% as of 2026-06-30. A later secondary snapshot reports a different YTD figure with an unclear return basis, so it is not mixed into the NAV table.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
 
+## XSMO official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:XSMO | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/xsmo-invesco-s-p-smallcap-momentum-etf-fact-sheet.pdf | Official Invesco fact sheet: fund identity, exchange, inception, expense ratio, index, annual NAV rows, issuer average annual returns, and benchmark continuity note | Annual rows 2016-2025 and standard performance as of 2025-12-31 |
+| NYSE Arca:XSMO | https://www.invesco.com/us/en/financial-products/etfs/invesco-sp-smallcap-momentum-etf.html | Official Invesco product page and product identity cross-check | Current product page accessed 2026-08-17; current numeric YTD field not extractable |
+| NYSE Arca:XSMO | https://www.sec.gov/Archives/edgar/data/1209466/000119312525190429/d56632d497k.htm | SEC summary prospectus: passive objective, ticker/exchange, fee breakdown, index exposure, inception, and risk quarters | Filed 2025; risk/performance table through 2024-12-31 |
+| NYSE Arca:XSMO | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=xsmo | Secondary NAV performance snapshot used only for current YTD context | NAV YTD +30.5% as of 2026-06-30 |
+| NYSE Arca:XSMO | https://totalrealreturns.com/n/XSMO | Secondary total-return cross-check | Snapshot +18.10% YTD as of 2026-07-29; return basis/as-of conflict, not mixed into NAV ranking |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition | USD total return, dividends reinvested; cached convention as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached annual reference rows | 2016-2019; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached annual reference rows | 2018-2022; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached annual reference row | 2021; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/market-attributes-us-equities/ | Cached annual reference rows | 2022-2025; reused without a new search |
+
+## XSMO raw observations and calculations
+
+| Year | XSMO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.17% | 11.96% |
+| 2017 | 23.42% | 21.83% |
+| 2018 | -2.88% | -4.38% |
+| 2019 | 28.35% | 31.49% |
+| 2020 | 21.84% | 18.40% |
+| 2021 | 19.28% | 28.71% |
+| 2022 | -15.48% | -18.11% |
+| 2023 | 21.43% | 26.29% |
+| 2024 | 17.57% | 25.02% |
+| 2025 | 9.81% | 17.88% |
+| 2026 YTD | 30.50% (secondary NAV) | not available from cached current-year benchmark |
+
+- Metric basis: official XSMO NAV Total Return in USD; distributions are reinvested and fund expenses are reflected in NAV.
+- Issuer benchmark: S&P SmallCap 600 Momentum Index; retained as metadata and not substituted for the common S&P 500 reference.
+- 2016-2025 XSMO compound: `217.50%` cumulative; rounded-input CAGR `12.25%`.
+- 2021-2025 XSMO compound: `58.05%` cumulative; rounded-input CAGR `9.59%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official fact sheet reports 10-year average annual NAV TR `12.25%` and inception average annual NAV TR `8.38%` as of 2025-12-31; the 10-year issuer field is not relabelled as a raw cumulative endpoint.
+- SEC prospectus risk observations: best quarter `+23.72%` in 2Q2020; worst quarter `-25.15%` in 1Q2020.
+
+## XSMO gaps and conflicts
+
+- Official current XSMO NAV TR YTD was not located in the issuer materials read on 2026-08-17. The latest usable current snapshot is a secondary NAV return of `30.50%` as of 2026-06-30.
+- Another secondary source reports `18.10%` YTD as of 2026-07-29, but its return basis and date convention are not reconciled with the Schwab NAV snapshot; it is retained as a conflict and excluded from the ranking table.
+- The tracked-index history includes predecessor methodologies before 2019-06-21; calendar rows remain issuer fund NAV observations, not a synthetic backfilled index series.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
 ## Scheduled-inline local review
 
 - Status: `PASS`
-- Confirmed ticker/exchange, passive classification, inception, expense ratio, issuer benchmark, NAV TR definition, official annual rows, current YTD as-of, S&P cache window/basis, best/worst ranking, formulas, source links, graph breadcrumb, region ownership, and unresolved gaps.
-- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
+- Confirmed GSSC and XSMO ticker/exchange, passive classification, inception, expense ratio, issuer benchmark, NAV TR definition, official annual rows, current-YTD as-of/basis, S&P cache window/basis, best/worst ranking, formulas, source links, graph breadcrumb, region ownership, and unresolved gaps.
+- XSMO-specific local checklist: verified the official 2016-2025 annual rows, issuer 10-year average annual field, secondary current NAV snapshot, separate return-basis treatment, predecessor-index continuity note, 8/2 up/down count, and no unsupported drawdown/recovery inference.
+- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
