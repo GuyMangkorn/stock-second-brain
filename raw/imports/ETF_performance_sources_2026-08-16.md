@@ -475,3 +475,65 @@ review_gate: PASS
 ### ISCG scheduled-local pre-save checklist
 
 - PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned contents of the ISCG performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - VIOO
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### VIOO official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:VIOO | https://investor.vanguard.com/investment-products/etfs/profile/vioo | Official Vanguard product page: fund identity, tracked index, annual NAV rows, benchmark rows, rolling and cumulative return fields | Annual rows through 2025-12-31; rolling/cumulative fields as of 2026-06-30 |
+| NYSE Arca:VIOO | https://fund-docs.vanguard.com/F3345.pdf | Official Vanguard fact sheet: passive/full-replication approach, return basis, inception, expense ratio, exchange, holdings, standard deviation and sector snapshot | As of 2026-06-30 |
+| NYSE Arca:VIOO | https://advisors.vanguard.com/investments/products/vioo/vanguard-sp-small-cap-600-etf | Official Vanguard advisor page: latest current NAV TR YTD and expense ratio | NAV TR YTD 22.03% as of 2026-07-17; expense ratio 0.07% as of 2025-12-19 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### VIOO raw observations and calculations
+
+| Year | VIOO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 26.44% | 11.96% |
+| 2017 | 13.31% | 21.83% |
+| 2018 | -8.57% | -4.38% |
+| 2019 | 22.72% | 31.49% |
+| 2020 | 11.43% | 18.40% |
+| 2021 | 26.67% | 28.71% |
+| 2022 | -16.20% | -18.11% |
+| 2023 | 16.00% | 26.29% |
+| 2024 | 8.62% | 25.02% |
+| 2025 | 5.99% | 17.88% |
+| 2026 YTD | 22.03% | not available from cached current-year benchmark |
+
+- Metric basis: official VIOO NAV Total Return, USD, with dividends and capital gains reinvested; market-price return is kept separate.
+- Issuer benchmark: S&P SmallCap 600 Index; S&P 500 TR is a common reference benchmark and is not silently substituted for VIOO's tracked index.
+- Classification: passive/index-tracking equity ETF using full replication; exchange NYSE Arca; inception 2010-09-07; annual distribution; expense ratio 0.07%.
+- 2016-2025 annual NAV rows are the official Vanguard total-return table; the published precision is retained.
+- 2016-2025 VIOO compound: 153.93% cumulative; published-input CAGR 9.77%.
+- 2021-2025 VIOO compound: 41.76% cumulative; published-input CAGR 7.23%.
+- S&P 500 2016-2025 cached compound: 298.33% cumulative; rounded-input CAGR 14.82%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR: average annual 11.47% as of 2026-06-30. Raw rolling endpoints and cumulative return are not disclosed, so no normalized endpoint is calculated.
+- Official current NAV TR YTD: 22.03% as of 2026-07-17. The fact sheet also reports 23.89% as of 2026-06-30; these are dated observations, not a same-date conflict, and the newer dated field is used for the current snapshot.
+- Official fact-sheet snapshot: 607 holdings, turnover 21.8%, and three-year standard deviation 19.44% as of 2026-06-30.
+- Latest NAV/market-price quote was not available in the reviewed text extracts; no quote is used in the return calculations.
+
+### VIOO gaps and conflicts
+
+- The issuer's rolling 10-year field supplies average annual NAV TR 11.47% but not raw endpoints or elapsed-year convention; it is not recomputed as the 2016-2025 calendar-row CAGR.
+- Current YTD observations are dated 2026-06-30 (23.89%) and 2026-07-17 (22.03%); the newer 2026-07-17 value is used, and the difference is not treated as a same-date conflict.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison uses the common 2016-2025 window only.
+
+### VIOO scheduled-local pre-save checklist
+
+- PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned contents of the VIOO performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, and exact scheduled-inline verification lines reviewed locally before write.
