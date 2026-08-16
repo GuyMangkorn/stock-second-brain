@@ -48,6 +48,7 @@ tags:
 | VTWG | Vanguard Russell 2000 Growth ETF | U.S. small-cap growth equity | 12.00% | 3.20% | 16.85% | [[ETF_NASDAQ_VTWG Performance]] |
 | VTWV | Vanguard Russell 2000 Value ETF | U.S. small-cap value equity | 10.86% | 8.83% | 23.63% | [[ETF_NASDAQ_VTWV Performance]] |
 | VIOO | Vanguard S&P Small-Cap 600 ETF | U.S. small-cap broad equity | 11.47% | 7.23% | 22.03% | [[ETF_NYSE_ARCA_VIOO Performance]] |
+| RSSL | Global X Russell 2000 ETF | U.S. small-cap broad equity | not applicable (<10y) | not applicable | 22.52% | [[ETF_NYSE_ARCA_RSSL Performance]] |
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, ‡, not applicable

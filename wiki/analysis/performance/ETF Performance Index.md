@@ -171,6 +171,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VTWG Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 12.00% | 3.20% | 16.85% | 2020 +34.70% / 2022 -26.35% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; 3-year monthly standard deviation 21.30%; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_VTWV Performance]] | official 2010 / official 2016-2025; official 10-year average annual as of 2026-06-30 | 10.86% | 8.83% | 23.63% | 2016 +31.55% / 2022 -14.56% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; 3-year monthly standard deviation 19.42%; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_VIOO Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 11.47% | 7.23% | 22.03% | 2021 +26.67% / 2022 -16.20% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 3-year monthly standard deviation 19.44%; NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_RSSL Performance]] | official inception 2024-06-04; official 2025 complete year; history under 10 years | not applicable (<10y) | not applicable | 22.52% | 2025 +12.76% / not applicable | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 19.00% standard deviation and NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -569,3 +570,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_THD Performance]] — THD (Thailand)
 - [[ETF_NYSE_ARCA_FLIN Performance]] — FLIN (India)
  - [[ETF_CBOE_BZX_CNYA Performance]] — CNYA (China)
+
+## 2026-08-16 Coverage Addition
+
+- [[ETF_NYSE_ARCA_RSSL Performance]] — RSSL (USA; official 2025 NAV TR `+12.76%`, history under 10 years, current official NAV TR YTD `+22.52%` as of 2026-06-30; since-inception annualized NAV TR `+22.65%` as of 2026-06-30)

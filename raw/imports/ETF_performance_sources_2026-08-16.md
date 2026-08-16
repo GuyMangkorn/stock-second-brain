@@ -537,3 +537,53 @@ review_gate: PASS
 ### VIOO scheduled-local pre-save checklist
 
 - PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned contents of the VIOO performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - RSSL
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### RSSL official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:RSSL | https://www.globalxetfs.com/funds/RSSL | Official Global X product page: fund identity, objective, exchange, NAV/market price, expense ratio, risk fields, holdings, and performance history | NAV/price, risk and fund facts as of 2026-07-31; performance history and YTD fields through 2026-06-30 |
+| NYSE Arca:RSSL | https://assets.globalxetfs.com/funds/documents/rssl/Fact-Sheet_RSSL.pdf | Official Global X fact sheet: inception, exchange, expense ratio, distribution frequency, return basis and NAV/market-price/index performance | All performance fields as of 2026-06-30; fact sheet dated/current capture 2026-08-16 |
+| NYSE Arca:RSSL | https://www.sec.gov/Archives/edgar/data/1432353/000143235326000232/a497krussell2000.htm | SEC-hosted official summary prospectus: passive strategy, index construction, expenses and calendar-year performance | Prospectus dated 2026-03-01; calendar-year return table through 2025-12-31 |
+| NYSE Arca:RSSL | https://assets.globalxetfs.com/funds/documents/rssl/prospectus-regulatory/Annual-Shareholder-Report.pdf | Official Global X annual shareholder report: 2025 performance context and inception history | Report period ended 2025-10-31; corroborating source, not used for the 2025 calendar row |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill; only 2025 row used here from the cache |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill; only 2025 row used here from the cache |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill; only 2025 row used here from the cache |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill; 2025 row `17.88%` used here |
+
+### RSSL raw observations and calculations
+
+| Period | RSSL NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2025 complete calendar year | 12.76% | 17.88% |
+| 2026 YTD | 22.52% as of 2026-06-30 | not available from cached current-year benchmark |
+
+- Metric basis: official RSSL NAV Total Return, USD, with gross income/dividends and capital gains reinvested where applicable; fund expenses are reflected in the fund return. Market-price return is kept separate.
+- Issuer benchmark: Russell 2000 RIC Capped Index; S&P 500 TR is a common reference benchmark and is not substituted for the issuer benchmark.
+- Classification: passive/index-tracking equity ETF using an indexing approach and representative sampling; exchange NYSE Arca; inception 2024-06-04; quarterly distribution; total expense ratio 0.08%.
+- 2025 RSSL return `12.76%` is the official one-year return before taxes ended 2025-12-31; 2025 S&P 500 TR is the cached official common reference `17.88%`.
+- Relative calculation: `12.76% - 17.88% = -5.12 pp`.
+- Complete-year count: `1` up / `0` down; best and least positive are 2025 `+12.76%`; no worst or least-bad down year is applicable.
+- Official since-inception annualized NAV TR is `22.65%` as of 2026-06-30; raw TR endpoints and elapsed-year input are not disclosed, so no independent CAGR is calculated. A separate `14.97%` since-inception field in the 2026 prospectus is as of 2025-12-31 and is retained as a dated prior observation, not a same-date conflict.
+- Current official NAV TR YTD is `22.52%` as of 2026-06-30. The product page provides a later NAV level `US$114.01` and risk fields as of 2026-07-31 but does not expose a later numeric YTD field; no YTD is inferred from price.
+- Official risk snapshot: standard deviation `19.00%`, beta `1.22` versus S&P 500, and `1,960` holdings as of 2026-07-31.
+
+### RSSL gaps and conflicts
+
+- The fund commenced operations on 2024-06-04, so 10-year NAV TR is not applicable; the reviewed official sources do not disclose a year-end 2024 NAV TR row for the inception-year partial period. It is excluded from rankings rather than backfilled.
+- The issuer's 2025-12-31 prospectus since-inception annualized field (`14.97%`) and the product-page 2026-06-30 field (`22.65%`) have different as-of dates; the newer field is used for the current snapshot.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; only the 2025 common annual comparison is shown.
+
+### RSSL scheduled-local pre-save checklist
+
+- PASS — source identity, ETF type, exchange, benchmark, return basis, distributions, periods, units/currency, as-of dates, annual observation, calculations, reconciliation, dated source differences, unresolved gaps, planned contents of the RSSL performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, canonical tag, and exact scheduled-inline verification lines reviewed locally before write.
