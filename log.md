@@ -4,6 +4,7 @@
 
 - `etf-performance`: Created [[ETF_NYSE_ARCA_GSSC Performance]], updated [[USA ETF]], [[ETF Performance Index]], [[ETF Region Index]], and created/extended [[ETF_performance_sources_2026-08-17]]; recorded official GSSC 2018-2025 NAV TR cumulative `93.95%` / rounded-input CAGR `8.63%`, 2021-2025 CAGR `8.25%`, and current NAV TR YTD `21.33%` as of 2026-06-30. Scheduled-local pre-save checklist returned `PASS`; history under 10 years and official daily NAV drawdown/recovery remain disclosed.
 - `etf-performance`: Created [[ETF_NYSE_ARCA_XSMO Performance]], updated [[USA ETF]], [[ETF Performance Index]], [[ETF Region Index]], and extended [[ETF_performance_sources_2026-08-17]]; recorded official XSMO 2016-2025 NAV TR cumulative `217.50%` / rounded-input CAGR `12.25%`, 2021-2025 CAGR `9.59%`, issuer 10-year average annual NAV TR `12.25%` as of 2025-12-31, and secondary NAV return `30.50%` as of 2026-06-30. Scheduled-local pre-save checklist returned `PASS`; official current YTD and daily NAV drawdown/recovery remain gaps.
+- `etf-performance`: Created [[ETF_LSE_R2US Performance]], updated [[USA ETF]], [[ETF Performance Index]], [[ETF Region Index]], and extended [[ETF_performance_sources_2026-08-17]]; resolved input alias SSEUF to official USD `LSE:R2US`, recorded official 2016-2025 NAV/Fund Net cumulative `140.61%` / rounded-input CAGR `9.18%`, 2021-2025 CAGR `5.70%`, rolling 10-year NAV TR `10.18%`, and current YTD `18.69%` as of 2026-07-31. Scheduled-local pre-save checklist returned `PASS`; daily NAV drawdown/recovery remains a gap.
 
 ## 2026-08-16
 
