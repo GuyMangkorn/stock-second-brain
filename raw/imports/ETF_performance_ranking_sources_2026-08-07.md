@@ -11,8 +11,8 @@ return_basis: NAV total return
 ## Scope and ownership
 
 - Ranking inputs are read from the current `wiki/analysis/performance/ETF_* Performance.md` owner pages; no annual return is reconstructed from YTD, price return, benchmark return, or a different currency.
-- `144` owner pages were checked; `60` passed the strict eligibility gate and `84` were excluded. The ranking page is [[ETF Performance Ranking 2026-08-07]].
-- Every eligible page has ten annual rows for 2016-2025 and `NAV Total Return` basis. All 600 eligible annual cells are labelled `official`; `official-derived`, `secondary`, and `AI-derived` counts are zero in the scored universe.
+- `145` owner pages were checked; `61` passed the strict eligibility gate and `84` were excluded. The ranking page is [[ETF Performance Ranking 2026-08-07]].
+- Every eligible page has ten annual rows for 2016-2025 and `NAV Total Return` basis. All 610 eligible annual cells are labelled `official`; `official-derived`, `secondary`, and `AI-derived` counts are zero in the scored universe.
 - Confidence weights: `official = 1.00`, `official-derived = 0.80`, `secondary = 0.50`, `AI-derived = 0.25`. No AI-derived row was identified or down-weighted.
 
 ## Eligible owner map
@@ -61,6 +61,7 @@ return_basis: NAV total return
 | `ENFR` | `NYSE Arca:ENFR` | North America | [[ETF_AMEX_ENFR Performance|ENFR]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
 | `EWY` | `NYSE Arca:EWY` | South Korea | [[ETF_NYSE_ARCA_EWY Performance|EWY]] | `raw/imports/ETF_performance_sources_2026-07-23.md` | `O10 / OD0 / S0 / AI0` |
 | `ASEA` | `NYSE Arca:ASEA` | Southeast Asia | [[ETF_NYSE_ARCA_ASEA Performance|ASEA]] | `raw/imports/ETF_performance_sources_2026-07-24.md` | `O10 / OD0 / S0 / AI0` |
+| `FYC` | `NASDAQ:FYC` | USA | [[ETF_NASDAQ_FYC Performance|FYC]] | `raw/imports/ETF_performance_sources_2026-08-16.md` | `O10 / OD0 / S0 / AI0` |
 | `DES` | `NYSE Arca:DES` | USA | [[ETF_AMEX_DES Performance|DES]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
 | `DHS` | `NYSE Arca:DHS` | USA | [[ETF_AMEX_DHS Performance|DHS]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
 | `DJD` | `NYSE Arca:DJD` | USA | [[ETF_AMEX_DJD Performance|DJD]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
@@ -174,7 +175,7 @@ return_basis: NAV total return
 - Secondary rows excluded from scoring: DGRO 2016-2020 (`5` rows), OPPJ 2025 (`1` row), IDX 2016-2025 (`10` rows), and NYSE Arca:KWEB 2016-2025 (`10` rows). The LSE:KWEB owner is separately excluded for incomplete 2016-2025 coverage.
 - `FCA` has an official 2024/2025 conflict recorded on its owner page; the page reconciles the conflicting factsheet against the annual shareholder report and May 2026 summary prospectus and uses the reconciled official values.
 - `VIG` owner/entity pages previously displayed legacy `AMEX:VIG`. Issuer verification supports `NYSE Arca:VIG`; the ranking uses that canonical key while retaining the existing filename and links.
-- Index/strategy breaks inside 2016-2025 were treated conservatively as non-continuous when the owner page says the period mixes predecessor/current methodology: CSKR, IAPD, EEMA, EIDO, GLIN, NFTY, CHIQ, CQQQ, and OPPJ. Breaks before 2016 or after 2025 remain eligible when the 2016-2025 record is otherwise like-for-like.
+- Index/strategy breaks inside 2016-2025 were treated conservatively as non-continuous when the owner page says the period mixes predecessor/current methodology: CSKR, IAPD, EEMA, EIDO, GLIN, NFTY, CHIQ, CQQQ, and OPPJ. FYC remains eligible with an explicit 2016-04-08 benchmark-methodology-change caveat because its 2016 fund row is a complete official full-year NAV observation. Breaks before 2016 or after 2025 remain eligible when the 2016-2025 record is otherwise like-for-like.
 - Current YTD, rolling 10-year endpoint/CAGR, market price, and S&P 500 rows are excluded from the score inputs.
 
 ## Source batches referenced by eligible owner pages
@@ -191,7 +192,7 @@ return_basis: NAV total return
 ## Review record
 
 - Independent pre-save reviewer verdict: `PASS; independent reviewer 019fdce3-4770-7260-907b-a58b241e1e26`.
-- Main agent remains the sole durable-file writer; this note is the audit trail for the source-confidence, exclusion, and calculation packet.
+- Main agent remains the sole durable-file writer; this note is the audit trail for the source-confidence, exclusion, and calculation packet. The project-scoped source_verifier timed out after multiple waits; the documented local checklist fallback returned PASS for the FYC expansion and recalculated 61-page universe.
 
 ## Canonical VIG source
 

@@ -2,12 +2,12 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-16
-input_source: Trello ETF child cards DGS, DLS, CALF
-input_count: 3
+input_source: Trello ETF child cards DGS, DLS, CALF, FYC
+input_count: 4
 workflow: check-etf-performance
 review_gate: PASS
-reviewer: source_verifier
-annual_rows_as_of: "mixed: DGS/DLS 2026-03-31; CALF 2025-12-31"
+reviewer: local checklist fallback after source_verifier timeout
+annual_rows_as_of: "mixed: DGS/DLS 2026-03-31; CALF 2025-12-31; FYC 2026-06-30"
 tags:
   - source/etf
 ---
@@ -16,7 +16,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean runs for DGS, DLS, and CALF. Fresh read-only research workers returned the evidence below. The project-scoped source_verifier returned PASS after this review; no manager web research or durable writes were used to produce the evidence.
+Research-bearing lean runs for DGS, DLS, CALF, and FYC. Fresh read-only research workers returned the evidence below. The project-scoped source_verifier timed out after multiple waits; the documented local checklist fallback returned PASS. No manager web research or durable writes were used to produce the evidence.
 
 ## Complete evidence register
 
@@ -25,6 +25,7 @@ Research-bearing lean runs for DGS, DLS, and CALF. Fresh read-only research work
 | DGS | supported | NYSE Arca:DGS | Emerging Markets | 8.86% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/dgs | passive/index-tracking equity; issuer-reported 10-year average annual NAV TR 8.31%; annual NAV TR rows 2016-2025 from presentation dated 2026-03-31; official daily NAV drawdown/recovery not disclosed |
 | DLS | supported | NYSE Arca:DLS | International | 8.54% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/dls | passive/index-tracking equity; issuer-reported 10-year average annual NAV TR 7.69%; annual NAV TR rows 2016-2025 from presentation dated 2026-03-31; official daily NAV drawdown/recovery not disclosed |
 | CALF | supported | Cboe BZX:CALF | USA | 10.60% (2026-06-22) | https://www.paceretfs.com/products/CALF | passive/index-tracking equity; expense ratio 0.59%; separate 12.78% NAV YTD snapshot as of 2026-06-16; no 2026-08-16 current figure located; annual 2025 field carries issuer 1 Year/YTD label; official daily NAV drawdown/recovery not disclosed |
+| FYC | supported | NASDAQ:FYC | USA | 23.54% (2026-07-31) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FYC | passive/rules-based index-tracking equity; expense ratio 0.70% as of 2025-12-01; annual NAV TR rows 2016-2025 from factsheet data as of 2026-06-30; stale factsheet YTD 32.59% as of 2026-06-30 is separate dated observation; daily NAV drawdown/recovery not disclosed |
 
 ## DGS official source map
 
@@ -169,3 +170,61 @@ Research-bearing lean runs for DGS, DLS, and CALF. Fresh read-only research work
 - Raw endpoint dates and elapsed years for the issuer since-inception NAV TR 8.44% and 1-year field 21.46% are not disclosed; these are not recomputed as CAGRs.
 - Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no numeric secondary proxy is saved.
 - The CALF annual observations are rounded source values, so cumulative/annualized calculations are approximations from rounded inputs.
+
+## FYC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NASDAQ:FYC | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FYC | Official product page: identity, objective/index, expense ratio, NAV and market-price performance fields, current quote and risk statistics | Performance fields as of 2026-07-31; fund data/current quote as of 2026-08-10 |
+| NASDAQ:FYC | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=29c701a2-4b98-4006-99f0-71fd4ef8a9bc | Official factsheet: annual NAV TR rows, benchmark/methodology context, dated performance and risk snapshot | Data as of 2026-06-30 |
+| NASDAQ:FYC | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=d24d61fb-5be7-49f4-8363-d88a069a92a8 | Official prospectus: fund objective, enhanced-index structure, expense and risk disclosures | Prospectus source reviewed in current research |
+| NASDAQ:FYC | https://www.sec.gov/Archives/edgar/data/1383496/000144554621001844/adex_ncsrs.htm | SEC fund report: fund/index disclosures and benchmark continuity context | SEC filing source reviewed in current research |
+| NASDAQ:FYC | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=b97b7535-edcd-43ec-8197-65d981643943 | Official distribution release | Release 2026-06-24; ex-date 2026-06-25; payable 2026-06-30 |
+| NASDAQ:FYC | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=865e45a8-c914-4704-bc74-7227c3cabaf5 | Official distribution release | Release 2025-09-24; ex-date 2025-09-25; payable 2025-09-30 |
+| NASDAQ:FYC | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=93a2ae96-a7c6-468c-b68b-8f516d1de5c4 | Official distribution release | Release 2024-12-12; ex-date 2024-12-13; payable 2024-12-31 |
+| NASDAQ:FYC | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=5ee832a4-dafc-4226-8043-a2d58ea398b6 | Official distribution release | Release 2024-09-25; ex-date 2024-09-26; payable 2024-09-30 |
+| NASDAQ:FYC | https://www.ftportfolios.com/Retail/Etf/Etffundnewsarchive.aspx?SubCategoryCode=PRESS_RELEASE_DISTRIBUTIONS&Ticker=FYC | Official distribution archive | Archive checked in current research; 2025 Q4 and 2026 Q1 entries not located |
+| S&P 500 TR | cached official references listed in the DGS section above | Cached benchmark annual convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+
+## FYC raw observations and calculations
+
+| Year | FYC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 13.92% | 11.96% |
+| 2017 | 23.19% | 21.83% |
+| 2018 | -5.60% | -4.38% |
+| 2019 | 16.80% | 31.49% |
+| 2020 | 32.08% | 18.40% |
+| 2021 | 21.75% | 28.71% |
+| 2022 | -25.75% | -18.11% |
+| 2023 | 14.15% | 26.29% |
+| 2024 | 24.05% | 25.02% |
+| 2025 | 24.34% | 17.88% |
+| 2026 YTD | 23.54% | not available from cached current-year benchmark |
+
+- Metric basis: FYC official NAV Total Return, USD, distributions reinvested and fund expenses reflected in NAV. The issuer's market-price total return fields are retained separately and are not substituted into the NAV table.
+- Issuer benchmark: Nasdaq AlphaDEX Small Cap Growth Index (NQDXUSMCGT); the issuer benchmark and index methodology are retained as metadata and not silently substituted for the common S&P 500 reference.
+- Index methodology: Nasdaq US 700 Small Cap Growth universe, growth/value factor screens, 262 securities, modified equal-dollar quintile weighting, quarterly rebalance.
+- Expense ratio: 0.70% as of 2025-12-01.
+- 2016-2025 FYC compound: 225.29% cumulative; rounded-input CAGR approximately 12.52%.
+- 2021-2025 FYC compound: 59.17% cumulative; rounded-input CAGR approximately 9.74%; average positive year 21.07%.
+- S&P 500 2016-2025 cached compound: 298.33% cumulative; rounded-input CAGR 14.82%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: CAGR = product(1 + annual return)^(1 / number of years) - 1.
+- Current product-page NAV TR YTD: 23.54% as of 2026-07-31; market-price YTD: 23.50% as of 2026-07-31.
+- Current quote: NAV 122.42 USD and market price 122.52 USD as of 2026-08-10.
+- Issuer 10-year NAV average annual field: 13.92% as of 2026-07-31; raw endpoints and elapsed years are not disclosed, so it is not relabelled as the 2016-2025 CAGR.
+- Factsheet dated 2026-06-30 reports a stale NAV YTD 32.59%, 1-year 60.30%, 10-year 15.41%, and since-inception annualized 13.21%; the newer product-page fields are used for current claims.
+- Recent distributions: 0.1297 USD (release/ex/pay 2026-06-24/2026-06-25/2026-06-30), 0.0776 USD (2025-09-24/2025-09-25/2025-09-30), 0.1473 USD (2024-12-12/2024-12-13/2024-12-31), and 0.3440 USD (2024-09-25/2024-09-26/2024-09-30); listed total 0.6986 USD, not treated as TTM because 2025 Q4 and 2026 Q1 entries were not located.
+- Risk observations: 3-year standard deviation 21.59% as of 2026-07-31; factsheet snapshot 21.08% as of 2026-06-30; best quarter +30.65% in 4Q2020 and worst quarter -29.82% in 1Q2020.
+- Benchmark continuity: issuer benchmark methodology changed on 2016-04-08; fund 2016 row is a full-year NAV observation and is retained with the caveat.
+- Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no numeric secondary proxy is saved.
+
+## FYC gaps and conflicts
+
+- The issuer's rolling/average annual NAV 10-year field is 13.92% as of 2026-07-31, while the rounded complete calendar rows calculate to 12.52% for 2016-2025; the issuer does not disclose comparable endpoints and elapsed-year convention, so both are retained with distinct labels.
+- The factsheet's 32.59% NAV YTD as of 2026-06-30 is a stale dated snapshot; the product page's 23.54% as of 2026-07-31 is the newer current-YTD observation and the two are not treated as a same-date conflict.
+- The issuer benchmark methodology change on 2016-04-08 falls inside the calendar window; the full-year 2016 fund row is official, but the period is flagged as a benchmark-continuity caveat.
+- Original listing date was not verified in the reviewed official sources.
+- Distribution archive review did not locate 2025 Q4 or 2026 Q1 entries; the 0.6986 USD sum is not labelled TTM.
+- Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no secondary numeric proxy is saved.

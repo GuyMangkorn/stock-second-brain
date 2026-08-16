@@ -165,6 +165,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_IJT Performance]] | official 2013-2025; official rolling 10-year as of 2026-06-30 | 11.82% | 5.35% | 26.03% | 2021 +22.40% / 2022 -21.24% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; historical exchange discrepancy and NAV drawdown gap |
 | [[ETF_NYSE_ARCA_IJS Performance]] | official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.60% | 8.71% | 23.99% | 2016 +31.17% / 2018 -12.80% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; daily NAV drawdown/recovery gap |
 | [[ETF_CBOE_BZX_CALF Performance]] | official inception 2017-06-16 / official 2018-2024; 2025 issuer 1 Year/YTD ending 2025-12-31; history under 10 years | not applicable (<10y) | 8.88%† | 10.60%‡ | 2021 +40.50% / 2022 -15.18% | U.S. small-cap free-cash-flow equity | small-cap/sector/turnover/liquidity-sensitive; 2025 row caveat; NAV drawdown/recovery not disclosed |
+| [[ETF_NASDAQ_FYC Performance]] | official 2011 / official 2016-2025; issuer benchmark methodology change 2016-04-08 noted | 13.92%† | 9.74%‡ | 23.54%§ | 2020 +32.08% / 2022 -25.75% | U.S. small-cap growth rules-based equity | small-cap/growth/sector/liquidity/turnover-sensitive; 3-year standard deviation 21.59%; NAV drawdown/recovery not disclosed |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -242,6 +243,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_CBOE_BZX_ESML Performance]] | 19.31% | -17.22% | 17.31% | 11.86% | 10.62% | 43.37% | 4 / 1 |
 | [[ETF_NASDAQ_IJT Performance]] | 22.40% | -21.24% | 16.97% | 9.42% | 5.20% | 29.80% | 4 / 1 |
 | [[ETF_NYSE_ARCA_IJS Performance]] | 30.47% | -11.32% | 14.64% | 7.42% | 6.55% | 51.81% | 4 / 1 |
+| [[ETF_NASDAQ_FYC Performance]] | 21.75% | -25.75% | 14.15% | 24.05% | 24.34% | 59.17% | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
@@ -261,6 +263,8 @@ current strategy แบบต่อเนื่องห้าปี.
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31.
 
 † CALF 2021-2025 CAGR 8.88% is a rounded-input approximation; the 2025 row is an issuer 1 Year/YTD field ending 2025-12-31, not separately labelled as a calendar-year row. ‡ CALF NAV TR YTD is 10.60% as of 2026-06-22; a separate stale snapshot is 12.78% as of 2026-06-16 and no 2026-08-16 figure was located.
+
+† FYC 13.92% is an issuer-reported 10-year average annual NAV TR as of 2026-07-31; it is distinct from the rounded-input 2016-2025 calendar-row CAGR of 12.52%. ‡ FYC 2021-2025 CAGR 9.74% is calculated from rounded annual NAV TR inputs; § FYC NAV TR YTD is 23.54% as of 2026-07-31, while the older factsheet reports 32.59% as of 2026-06-30.
 
 ## Regime read
 
@@ -296,7 +300,7 @@ utilities และ financials tilt.
   [[ETF_NYSE_ARCA_EWH Performance]],
   [[ETF_NYSE_ARCA_ECNS Performance]],
   [[ETF_NYSE_ARCA_IDX Performance]], [[ETF_NYSE_ARCA_DVYA Performance]],
-  [[ETF_NASDAQ_INDY Performance]], [[ETF_CBOE_BZX_CALF Performance]]
+  [[ETF_NASDAQ_INDY Performance]], [[ETF_CBOE_BZX_CALF Performance]], [[ETF_NASDAQ_FYC Performance]]
 - Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - Source batch: [[ETF_performance_sources_2026-07-19]]
 - Source batch: [[ETF_performance_sources_2026-07-21]]
@@ -305,7 +309,7 @@ utilities และ financials tilt.
 
 ## Preliminary Holdings Groups Batch
 
-เพิ่ม `check-etf-performance` สำหรับ 29 passive equity ETFs ที่ยังไม่เคยตรวจใน
+เพิ่ม `check-etf-performance` สำหรับ 30 passive equity ETFs ที่ยังไม่เคยตรวจใน
 [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]. `QDPL` และ `MDIV` ถูกตัดออก
 ตาม guardrail เพราะ derivative-heavy และ multi-asset ตามลำดับ.
 
@@ -319,6 +323,7 @@ utilities และ financials tilt.
 | [[ETF_AMEX_DLN Performance]] | 12.53% | 12.92% | -3.79% | 17.67% | 10.41% | official annual NAV TR 2016-2025 |
 | [[ETF_NYSE_ARCA_DLS Performance]] | 7.69%† | 7.97% | -17.36% | 15.95% | 8.54%‡ | issuer-reported 10Y average annual NAV TR; annual NAV TR rows 2016-2025 |
 | [[ETF_CBOE_BZX_CALF Performance]] | not applicable (<10y) | 8.88%† | -15.18% | 26.13% | 10.60%‡ | official 2018-2024 annual NAV TR plus 2025 issuer 1 Year/YTD field; 2025 label caveat |
+| [[ETF_NASDAQ_FYC Performance]] | 13.92%† | 9.74%‡ | -25.75% | 21.07% | 23.54%§ | official annual NAV TR 2016-2025; issuer 10Y field and current YTD as-of dates are separate |
 | [[ETF_AMEX_DON Performance]] | 9.36% | 10.88% | -4.76% | 15.55% | 10.79% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official annual NAV TR 2016-2025 |
@@ -375,6 +380,7 @@ official complete-year coverage เริ่มที่ 2018; ใช้ดู�
 | [[ETF_LSE_DXJ Performance]] | 13.94% | -0.88 pp | -18.71% | 19.00% | 9 / 1 | official 10 years; rounded annual inputs |
 | [[ETF_AMEX_VIG Performance]] | 13.09% | -1.73 pp | -9.79% | 18.57% | 8 / 2 | official 10 years |
 | [[ETF_AMEX_DGRO Performance]] | 13.08%* | -1.74 pp | -7.85% | 18.36% | 8 / 2 | 2016-2020 proxy* |
+| [[ETF_NASDAQ_FYC Performance]] | 12.52% | -2.30 pp | -25.75% | 21.07% | 8 / 2 | official 10 years; issuer 10Y field 13.92% is a separate rolling measure† |
 | [[ETF_AMEX_DLN Performance]] | 12.27% | -2.55 pp | -5.77% | 17.23% | 8 / 2 | official 10 years |
 | [[ETF_AMEX_DJD Performance]] | 11.89% | -2.93 pp | -0.61% | 13.68% | 9 / 1 | official 10 years |
 | [[ETF_NASDAQ_PFM Performance]] | 11.83% | -2.99 pp | -6.23% | 16.71% | 8 / 2 | official 10 years |
