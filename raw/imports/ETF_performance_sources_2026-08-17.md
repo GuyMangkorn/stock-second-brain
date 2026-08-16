@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF
-input_count: 3
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA
+input_count: 4
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; current NAV/YTD fields through 2026-07-31"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; current NAV/YTD fields through 2026-07-31"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean run for GSSC, XSMO, and SSEUF. Source discovery, reading, reconciliation,
+Research-bearing lean run for GSSC, XSMO, SSEUF, and FNDA. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -33,6 +33,7 @@ reviewer_dispatch: not-attempted-by-design
 | GSSC | supported | NYSE Arca:GSSC | USA | 21.33% (2026-06-30) | https://am.gs.com/public-assets/documents/574deb07-24d6-11ef-870d-c7a1cb19e681 | passive/index-tracking U.S. small-cap multi-factor equity; 10-year history not yet available; daily NAV drawdown/recovery not disclosed |
 | XSMO | supported | NYSE Arca:XSMO | USA | 30.50% (2026-06-30, secondary NAV) | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/xsmo-invesco-s-p-smallcap-momentum-etf-fact-sheet.pdf | passive/index-tracking U.S. small-cap momentum equity; official current YTD not located; daily NAV drawdown/recovery not disclosed |
 | SSEUF | supported | LSE:R2US | USA | 18.69% (2026-07-31) | https://www.ssga.com/uk/en_gb/institutional/etfs/state-street-spdr-russell-2000-us-small-cap-ucits-etf-acc-zprr-gy | OTC alias for official USD LSE line; passive/index-tracking U.S. small-cap equity; daily NAV drawdown/recovery not disclosed |
+| FNDA | supported | NYSE Arca:FNDA | USA | 21.18% (2026-06-30) | https://www.schwabassetmanagement.com/products/fnda | passive/index-tracking U.S. small-cap fundamental equity; annual calendar rows are secondary total-return proxy; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -175,10 +176,60 @@ reviewer_dispatch: not-attempted-by-design
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
 
+## FNDA official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:FNDA | https://www.schwabassetmanagement.com/products/fnda | Official Schwab product page: objective, index, passive style, fee, current NAV/YTD, holdings, turnover, beta and standard deviation | Official NAV/YTD and risk fields as of 2026-06-30; quote/NAV profile as of 2026-07-30 |
+| NYSE Arca:FNDA | https://www.schwabassetmanagement.com/resource/fnda-fact-sheet | Official Schwab factsheet entry | Last updated 2026-06-30; PDF viewer download was not text-extractable in the web session |
+| NYSE Arca:FNDA | https://www.sec.gov/Archives/edgar/data/1454889/000110465925063127/tm2513735-8_497k.htm | SEC summary prospectus: passive objective, fee, index methodology, 2024 index change, risk quarters and official 2024 performance table | Filed 2025-06-27; performance table through 2024-12-31 |
+| NYSE Arca:FNDA | https://www.etfreplay.com/etf/fnda | Secondary dividend-adjusted total-return annual rows used for 2016-2025 common-window calculations | Data as of 2026-08-03; complete annual rows through 2025 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition | USD total return, dividends reinvested; cached convention as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached annual reference rows | 2016-2019; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached annual reference rows | 2018-2022; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached annual reference row | 2021; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/market-attributes-us-equities/ | Cached annual reference rows | 2022-2025; reused without a new search |
+
+## FNDA raw observations and calculations
+
+| Year | FNDA secondary total-return proxy | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 23.54% | 11.96% |
+| 2017 | 12.66% | 21.83% |
+| 2018 | -12.10% | -4.38% |
+| 2019 | 24.33% | 31.49% |
+| 2020 | 8.46% | 18.40% |
+| 2021 | 31.11% | 28.71% |
+| 2022 | -14.82% | -18.11% |
+| 2023 | 20.31% | 26.29% |
+| 2024 | 8.99% | 25.02% |
+| 2025 | 7.44% | 17.88% |
+| 2026 YTD | 21.18% (official NAV) | not available from cached current-year benchmark |
+
+- Metric basis for the current field: official Schwab NAV Total Return in USD; distributions are reinvested and fund expenses are reflected in NAV.
+- Annual-row basis: ETFreplay dividend-adjusted total-return proxy; it is not relabelled as official issuer NAV return.
+- Issuer benchmark: current RAFI Fundamental High Liquidity US Small Index; the fund changed from Russell RAFI US Small Company Index effective 2024-06-21.
+- Official rolling 10-year NAV TR: annualized `11.53%` as of 2026-06-30; raw endpoints are not disclosed.
+- 2016-2025 secondary proxy compound: `159.56%` cumulative; rounded-input CAGR `10.01%`.
+- 2021-2025 secondary proxy compound: `57.34%` cumulative; rounded-input CAGR `9.49%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official risk observations: best quarter `+30.46%` in 4Q2020; worst quarter `-35.49%` in 1Q2020; 3-year standard deviation `18.38%` and beta `1.00` as of 2026-06-30.
+
+## FNDA gaps and conflicts
+
+- Official current NAV/YTD and rolling 10-year fields are available only through 2026-06-30 in the product-page extract; the profile quote/NAV is newer at 2026-07-30 but is not a return metric.
+- Schwab's SEC table reports 2024 before-tax return `8.96%`; the secondary annual proxy reports `8.99%`. The values are retained as a source conflict and not silently merged.
+- Official annual NAV rows for 2016-2025 were not text-extractable from the issuer bar-chart/factsheet materials, so the common-window annual table remains explicitly secondary.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual proxy observations are rounded values; cumulative and CAGR outputs are rounded-input calculations.
+
 ## Scheduled-inline local review
 
 - Status: `PASS`
-- Confirmed GSSC, XSMO, and SSEUF ticker/exchange, passive classification, inception, expense ratio, issuer benchmark, NAV TR definition, official annual rows, current-YTD as-of/basis, S&P cache window/basis, best/worst ranking, formulas, source links, graph breadcrumb, region ownership, and unresolved gaps.
+- Confirmed GSSC, XSMO, SSEUF, and FNDA ticker/exchange, passive classification, inception, expense ratio, issuer benchmark, NAV TR definition, official annual/current fields, secondary annual proxy basis, S&P cache window/basis, best/worst ranking, formulas, source links, graph breadcrumb, region ownership, and unresolved gaps.
 - XSMO-specific local checklist: verified the official 2016-2025 annual rows, issuer 10-year average annual field, secondary current NAV snapshot, separate return-basis treatment, predecessor-index continuity note, 8/2 up/down count, and no unsupported drawdown/recovery inference.
 - SSEUF-specific local checklist: verified OTC-to-`LSE:R2US` alias mapping, ISIN/share-class currency, passive classification, official 2016-2025 rows, official 10-year/current NAV fields, S&P cache convention, 8/2 up/down count, risk metrics, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
-- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
+- FNDA-specific local checklist: verified passive/index classification, exchange, inception, fee, current tracked index, official NAV 10Y/YTD fields, secondary annual-row basis, 2024 benchmark splice, 8/2 up/down count, risk metrics, source conflict, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
+- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
