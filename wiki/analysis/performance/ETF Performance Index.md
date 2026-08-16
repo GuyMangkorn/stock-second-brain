@@ -354,7 +354,7 @@ utilities และ financials tilt.
 | ETF | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | Worst (2021-2025) | Avg positive (2021-2025) | 2026 YTD | Coverage |
 |---|---:|---:|---:|---:|---:|---|
 | [[ETF_AMEX_DEM Performance]] | 9.78% | 8.97% | -10.32% | 14.60% | 15.75% | official annual NAV TR 2016-2025 |
-| [[ETF_AMEX_DES Performance]] | 8.55% | 7.65% | -10.94% | 13.29% | 22.71% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DES Performance]] | 8.04% | 7.65% | -10.94% | 13.29% | 22.93% | official annual NAV TR 2016-2025; rolling issuer 10Y as of 2026-07-31 |
 | [[ETF_AMEX_DFJ Performance]] | 9.13% | 8.57% | -8.65% | 14.06% | 10.98% | official annual NAV TR 2016-2025 |
 | [[ETF_NYSE_ARCA_DGS Performance]] | 8.31%† | 8.23% | -12.15% | 14.26% | 8.86%‡ | issuer-reported 10Y average annual NAV TR; annual NAV TR rows 2016-2025 |
 | [[ETF_AMEX_DHS Performance]] | 9.44% | 12.05% | -0.19% | 15.47% | 13.44% | official annual NAV TR 2016-2025 |

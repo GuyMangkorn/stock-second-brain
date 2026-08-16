@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF
-input_count: 7
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES
+input_count: 8
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; current NAV/YTD fields through 2026-08-13"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, and IMWSF. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, and DES. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -81,6 +81,62 @@ reviewer_dispatch: not-attempted-by-design
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - The latest official NAV TR YTD field located is 21.33% as of 2026-06-30. A later secondary snapshot reports a different YTD figure with an unclear return basis, so it is not mixed into the NAV table.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## DES official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:DES | https://www.wisdomtree.com/us/products/equity/des | Official product page: fund identity, passive/index-tracking description, NAV/market price, rolling and YTD performance, expense, and distributions | NAV/price and expense through 2026-08-14; rolling 10Y and YTD performance through 2026-07-31; distributions through 2026-07-28 |
+| NYSE Arca:DES | https://www.wisdomtree.com/us/media/des-presentation | Official issuer presentation: calendar-year NAV total returns and methodology | 2016-2025 annual NAV rows; presentation data as of 2026-03-31 |
+| NYSE Arca:DES | https://www.wisdomtree.com/us/media/wisdomtree-factsheet-des-1008 | Official quarterly factsheet: exchange, inception, index, expense, and return definition | Factsheet data as of 2026-03-31 |
+| NYSE Arca:DES | https://www.sec.gov/Archives/edgar/data/1350487/000121465925011322/des73125497k.htm | SEC summary prospectus: passive indexing, listing, fees, and return treatment | Filing reviewed 2026-08-17 |
+| WTSDI | https://www.wisdomtree.com/us/indexes/wtsdi | Official tracked-index methodology and identity | Index methodology page reviewed 2026-08-17 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common benchmark definition | USD total return convention; page reviewed 2026-08-17 |
+| S&P 500 TR current | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=f33eb5c2-5231-4c16-bc59-38407c3d2f2f&sourceIdentifier=home-page | Official current cross-check | `14.04%` YTD displayed on page dated 2026-08-10; not synchronized with DES YTD 2026-07-31 |
+| S&P 500 TR cached annual rows | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true; https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-2021/; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached project convention for complete calendar years | 2016-2025 USD gross total return, dividends reinvested, as of 2025-12-31 |
+
+## DES raw observations and calculations
+
+| Year | DES NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 31.06% | 11.96% |
+| 2017 | 8.66% | 21.83% |
+| 2018 | -12.74% | -4.38% |
+| 2019 | 20.30% | 31.49% |
+| 2020 | -4.41% | 18.40% |
+| 2021 | 26.71% | 28.71% |
+| 2022 | -10.94% | -18.11% |
+| 2023 | 16.40% | 26.29% |
+| 2024 | 9.79% | 25.02% |
+| 2025 | 0.26% | 17.88% |
+| 2026 YTD | 22.93% (official NAV, 2026-07-31) | 14.04% (official current page dated 2026-08-10; not same date) |
+
+- DES 2016-2025 compound: `106.62%` cumulative; rounded-input CAGR `7.53%`.
+- DES 2021-2025 compound: `44.59%` cumulative; rounded-input CAGR `7.65%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- The official rolling 10-year DES NAV TR field is `8.04%` as of 2026-07-31; raw rolling endpoints were not disclosed in the reviewed issuer capture. The `7.53%` figure is the separate 2016-2025 calendar-window calculation from rounded annual rows.
+- DES annual-row sample standard deviation is `15.30%`; this is calculated from the ten rounded annual NAV TR observations and is not a daily risk measure.
+- Year-end cumulative-path drawdown approximation is `-12.74%` at the 2018 year-end observation, with recovery above the prior year-end high by 2019; no daily maximum drawdown is claimed.
+- Latest four official cash distributions reviewed sum to `$0.305`; latest listed distribution is `$0.045` ex/pay 2026-07-28/30, and the product page shows distribution yield `1.30%` as of 2026-08-14. These are separate from total return.
+
+## DES pre-save checklist
+
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- Entity and exchange reconciled as `NYSE Arca:DES`; passive/index-tracking classification confirmed from issuer and SEC sources.
+- Return basis, USD currency, issuer benchmark, common benchmark, annual coverage, current-field as-of dates, and separate NAV/price/distribution fields were checked before write.
+- Every durable number above maps to an official URL or the cached S&P convention; rounded-input calculations are labeled and no synchronized S&P current-YTD spread is asserted.
+- Existing DES performance path and USA-region navigation were updated in place; no duplicate canonical page was created.
+- Local pre-save result: `PASS`.
+
+## DES gaps and conflicts
+
+- DES official rolling 10-year performance is available, but raw endpoint values were not disclosed in the reviewed issuer capture; it is not substituted with the calendar-window CAGR.
+- DES YTD is as of 2026-07-31 while the official S&P current cross-check is displayed for 2026-08-10; no same-date benchmark spread is claimed.
+- Annual issuer rows are rounded; cumulative, CAGR, and annual-row volatility are rounded-input calculations.
+- Official daily NAV history sufficient for a daily maximum-drawdown and recovery statistic was not verified; only the labeled year-end observation approximation is retained.
 
 ## SSEUF / R2US official source map
 

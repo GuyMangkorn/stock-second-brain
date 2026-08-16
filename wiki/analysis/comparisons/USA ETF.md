@@ -19,7 +19,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | DGRO | iShares Core Dividend Growth ETF | U.S. dividend growth | 13.38% | 11.69% | 10.22% | [[ETF_AMEX_DGRO Performance]] |
 | VIG | Vanguard Dividend Appreciation ETF | U.S. dividend growth | 13.13% | 11.27% | 7.19% | [[ETF_AMEX_VIG Performance]] |
-| DES | WisdomTree U.S. SmallCap Dividend Fund | U.S. small-cap dividend | 8.55% | 7.65% | 22.71% | [[ETF_AMEX_DES Performance]] |
+| DES | WisdomTree U.S. SmallCap Dividend Fund | U.S. small-cap dividend | 8.04% | 7.65% | 22.93% | [[ETF_AMEX_DES Performance]] |
 | DHS | WisdomTree U.S. High Dividend Fund | U.S. high dividend | 9.44% | 12.05% | 13.44% | [[ETF_AMEX_DHS Performance]] |
 | DJD | Invesco Dow Jones Industrial Average Dividend ETF | Dow dividend-weighted large cap | 11.89% | 11.83% | ไม่พบข้อมูลที่ยืนยันได้ | [[ETF_AMEX_DJD Performance]] |
 | DLN | WisdomTree U.S. LargeCap Dividend Fund | U.S. large-cap dividend | 12.53% | 12.92% | 10.41% | [[ETF_AMEX_DLN Performance]] |
