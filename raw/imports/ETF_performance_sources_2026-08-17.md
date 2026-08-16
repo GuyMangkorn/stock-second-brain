@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF
-input_count: 5
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC
+input_count: 6
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; current NAV/YTD fields through 2026-07-31"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; current NAV/YTD fields through 2026-07-31, NUSC through 2026-06-30"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean run for GSSC, XSMO, SSEUF, FNDA, and ZPRVF. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, and NUSC. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -34,6 +34,7 @@ reviewer_dispatch: not-attempted-by-design
 | XSMO | supported | NYSE Arca:XSMO | USA | 30.50% (2026-06-30, secondary NAV) | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/xsmo-invesco-s-p-smallcap-momentum-etf-fact-sheet.pdf | passive/index-tracking U.S. small-cap momentum equity; official current YTD not located; daily NAV drawdown/recovery not disclosed |
 | SSEUF | supported | LSE:R2US | USA | 18.69% (2026-07-31) | https://www.ssga.com/uk/en_gb/institutional/etfs/state-street-spdr-russell-2000-us-small-cap-ucits-etf-acc-zprr-gy | OTC alias for official USD LSE line; passive/index-tracking U.S. small-cap equity; daily NAV drawdown/recovery not disclosed |
 | FNDA | supported | NYSE Arca:FNDA | USA | 21.18% (2026-06-30) | https://www.schwabassetmanagement.com/products/fnda | passive/index-tracking U.S. small-cap fundamental equity; annual calendar rows are secondary total-return proxy; daily NAV drawdown/recovery not disclosed |
+| NUSC | supported | Cboe BZX:NUSC | USA | 16.76% (2026-06-30) | https://documents.nuveen.com/Documents/Nuveen/Viewer.aspx?uniqueId=8238272c-9326-4c32-93cb-40d80e4fc4a9 | passive/index-tracking U.S. small-cap ESG equity; history under 10 years; Nuveen HTML performance table rendered no records, official PDF factsheet used; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -233,7 +234,8 @@ reviewer_dispatch: not-attempted-by-design
 - SSEUF-specific local checklist: verified OTC-to-`LSE:R2US` alias mapping, ISIN/share-class currency, passive classification, official 2016-2025 rows, official 10-year/current NAV fields, S&P cache convention, 8/2 up/down count, risk metrics, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
 - FNDA-specific local checklist: verified passive/index classification, exchange, inception, fee, current tracked index, official NAV 10Y/YTD fields, secondary annual-row basis, 2024 benchmark splice, 8/2 up/down count, risk metrics, source conflict, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
 - ZPRVF-specific local checklist: resolved the OTC input alias to official USD `LSE:USSC` by ISIN `IE00BSPLC413`, verified passive/index-tracking equity classification, inception, TER, accumulation, issuer benchmark, official 2016-2025 Fund Net rows, rolling 10-year NAV TR, current YTD, S&P cache window/basis, current benchmark date mismatch, 8/2 up/down count, risk metrics, graph breadcrumb, USA primary-region ownership, and no unsupported drawdown/recovery inference.
-- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_LSE_USSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
+- NUSC-specific local checklist: verified Cboe BZX identity, passive/index classification, inception, 0.31% fee, Nuveen ESG USA Small-Cap Index, official 2017-2025 NAV/index rows, official 2026 YTD NAV/index fields, under-10-year history, SEC best/worst-quarter corroboration, S&P cache window/basis, 7/2 up/down count, HTML/PDF performance-rendering conflict, graph breadcrumb, USA primary-region ownership, and no unsupported drawdown/recovery inference.
+- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_LSE_USSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, `wiki/analysis/performance/ETF_CBOE_BZX_NUSC Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
 
 ## ZPRVF / USSC official source map
 
@@ -281,3 +283,46 @@ reviewer_dispatch: not-attempted-by-design
 - The latest official ETF YTD field is `20.29%` as of 2026-07-31. The latest official S&P 500 TR page reviewed shows `14.04%` as of 2026-08-16; the as-of dates differ, so the current benchmark figure is disclosed but not used as a same-date annual-table comparator.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations. Market-price observations from different currency listings are not mixed into the NAV Total Return ranking.
+
+## NUSC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Cboe BZX:NUSC | https://documents.nuveen.com/Documents/Nuveen/Viewer.aspx?uniqueId=8238272c-9326-4c32-93cb-40d80e4fc4a9 | Official Nuveen factsheet: identity, passive/indexing approach, exchange, fee, NAV/index calendar returns, current YTD, holdings and risk context | Factsheet as of 2026-06-30; calendar rows 2017-2025; current NAV/index YTD 2026-06-30 |
+| Cboe BZX:NUSC | https://www.nuveen.com/en-us/exchange-traded-funds/nusc-nuveen-esg-small-cap-etf | Official product page: identity, methodology, primary exchange, fee, inception, quote/NAV snapshot and current page-rendering check | Product-page quote/NAV as of 2026-06-26; performance component rendered no records in the reviewed capture |
+| Cboe BZX:NUSC | https://www.sec.gov/Archives/edgar/data/1635073/000119312526080215/d91437d497k.htm | SEC summary prospectus: listing, objective, fees, index strategy, annual return chart and best/worst quarters | Filed 2026-02-27; annual rows through 2025; best/worst quarter history through 2025-12-31 |
+| MSCI Nuveen ESG USA Small-Cap Index | https://www.msci.com/indexes/index/711741/nuveen-esg-usa-small-cap-index | Issuer benchmark identity and index-provider cross-check | Index identity checked 2026-08-17 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## NUSC raw observations and calculations
+
+| Year | NUSC NAV TR | Nuveen ESG USA Small-Cap Index TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2017 | 16.62% | 17.13% | 21.83% |
+| 2018 | -9.28% | -8.88% | -4.38% |
+| 2019 | 26.82% | 27.37% | 31.49% |
+| 2020 | 23.48% | 23.97% | 18.40% |
+| 2021 | 17.83% | 18.26% | 28.71% |
+| 2022 | -17.68% | -17.55% | -18.11% |
+| 2023 | 15.50% | 15.80% | 26.29% |
+| 2024 | 8.48% | 8.79% | 25.02% |
+| 2025 | 7.60% | 7.85% | 17.88% |
+| 2026 YTD | 16.76% (official NAV) | 16.94% (official issuer index) | not available from cached current-year benchmark |
+
+- Metric basis: official Nuveen NAV total return includes reinvested distributions and fund expenses; the issuer index excludes fund expenses.
+- Issuer benchmark: `Nuveen ESG USA Small-Cap Index`, calculated by MSCI; retained as metadata and not substituted for the common S&P 500 reference.
+- NUSC 2017-2025 compound: `116.65%` cumulative; rounded-input CAGR `8.97%`.
+- NUSC 2021-2025 compound: `30.77%` cumulative; rounded-input CAGR `5.51%`.
+- Issuer index 2017-2025 compound: `123.26%` cumulative; rounded-input CAGR `9.33%`; 2021-2025 CAGR `5.79%`.
+- S&P 500 cached 2017-2025 compound: `255.78%` cumulative; rounded-input CAGR `15.14%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official risk observations: best quarter `+29.98%` in 4Q2020 and worst quarter `-30.76%` in 1Q2020 from the SEC summary prospectus; official daily NAV history for maximum drawdown/recovery was not verified.
+
+## NUSC gaps and conflicts
+
+- Inception was 13 Dec 2016, so 2016 is a partial inception period and the fund has not reached a full 10-year history as of 2026-06-30; no 10-year NAV CAGR is claimed.
+- Nuveen's HTML product page rendered `No Records Available` for the performance component in the reviewed capture, while the official PDF factsheet dated 2026-06-30 supplied numeric calendar/YTD fields; the factsheet is used for performance and the rendering conflict is preserved here.
+- The latest official NUSC performance field reviewed is `16.76%` NAV TR YTD as of 2026-06-30; the common S&P cache has no synchronized 2026 current-year row, so no current S&P YTD comparison is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
