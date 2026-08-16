@@ -171,6 +171,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VTWG Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 12.00% | 3.20% | 16.85% | 2020 +34.70% / 2022 -26.35% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; 3-year monthly standard deviation 21.30%; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_VTWV Performance]] | official 2010 / official 2016-2025; official 10-year average annual as of 2026-06-30 | 10.86% | 8.83% | 23.63% | 2016 +31.55% / 2022 -14.56% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; 3-year monthly standard deviation 19.42%; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_VIOO Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 11.47% | 7.23% | 22.03% | 2021 +26.67% / 2022 -16.20% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 3-year monthly standard deviation 19.44%; NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_VIOV Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.72% | 8.83% | 20.27% | 2021 +30.74% / 2018 -12.77% | U.S. small-cap value equity | small-cap/value/cyclicality/sector/liquidity-sensitive; 19.92% standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_RSSL Performance]] | official inception 2024-06-04; official 2025 complete year; history under 10 years | not applicable (<10y) | not applicable | 22.52% | 2025 +12.76% / not applicable | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 19.00% standard deviation and NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
@@ -255,6 +256,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_NASDAQ_VTWG Performance]] | 2.82% | -26.35% | 18.73% | 15.17% | 13.07% | 17.08% | 4 / 1 |
 | [[ETF_NASDAQ_VTWV Performance]] | 28.13% | -14.56% | 14.66% | 7.98% | 12.61% | 52.63% | 8 / 2 |
 | [[ETF_NYSE_ARCA_VIOO Performance]] | 26.67% | -16.20% | 16.00% | 8.62% | 5.99% | 41.76% | 4 / 1 |
+| [[ETF_NYSE_ARCA_VIOV Performance]] | 30.74% | -11.19% | 14.75% | 7.45% | 6.66% | 52.70% | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
@@ -574,3 +576,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 ## 2026-08-16 Coverage Addition
 
 - [[ETF_NYSE_ARCA_RSSL Performance]] — RSSL (USA; official 2025 NAV TR `+12.76%`, history under 10 years, current official NAV TR YTD `+22.52%` as of 2026-06-30; since-inception annualized NAV TR `+22.65%` as of 2026-06-30)
+- [[ETF_NYSE_ARCA_VIOV Performance]] — VIOV (USA; official 2016-2025 NAV TR cumulative `+148.69%` / rounded-input CAGR `9.54%`, issuer rolling 10-year NAV TR `10.72%` as of 2026-06-30, current official NAV TR YTD `+20.27%` as of 2026-07-20)

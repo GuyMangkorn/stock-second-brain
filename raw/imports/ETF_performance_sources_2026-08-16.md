@@ -587,3 +587,64 @@ review_gate: PASS
 ### RSSL scheduled-local pre-save checklist
 
 - PASS — source identity, ETF type, exchange, benchmark, return basis, distributions, periods, units/currency, as-of dates, annual observation, calculations, reconciliation, dated source differences, unresolved gaps, planned contents of the RSSL performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, canonical tag, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - VIOV
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### VIOV official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:VIOV | https://investor.vanguard.com/investment-products/etfs/profile/viov | Official Vanguard product page: fund identity, tracked index, annual NAV rows, rolling/cumulative return fields, NAV and market-price snapshot | Annual rows through 2025-12-31; rolling/cumulative fields as of 2026-06-30; quote snapshot as of 2026-07-02 |
+| NYSE Arca:VIOV | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3346.pdf | Official Vanguard fact sheet: passive/full-replication approach, return basis, inception, expense ratio, exchange, holdings, standard deviation, turnover and sector snapshot | All performance and fund facts as of 2026-06-30 |
+| NYSE Arca:VIOV | https://advisors.vanguard.com/investments/products/viov/vanguard-sp-small-cap-600-value-etf | Official Vanguard advisor page: latest current NAV TR YTD | NAV TR YTD `20.27%` as of 2026-07-20; 1-year NAV TR `39.67%` as of 2026-06-30 |
+| NYSE Arca:VIOV | https://www.sec.gov/Archives/edgar/data/891190/000168386324009372/f40257d1.htm | SEC-hosted official summary prospectus: exchange, objective, indexing/full-replication strategy and risk disclosures | Prospectus dated 2024-12-20; strategy/risk context, not used to overwrite current fund facts |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### VIOV raw observations and calculations
+
+| Year | VIOV NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 31.07% | 11.96% |
+| 2017 | 11.50% | 21.83% |
+| 2018 | -12.77% | -4.38% |
+| 2019 | 24.40% | 31.49% |
+| 2020 | 2.70% | 18.40% |
+| 2021 | 30.74% | 28.71% |
+| 2022 | -11.19% | -18.11% |
+| 2023 | 14.75% | 26.29% |
+| 2024 | 7.45% | 25.02% |
+| 2025 | 6.66% | 17.88% |
+| 2026 YTD | 20.27% | not available from cached current-year benchmark |
+
+- Metric basis: official VIOV NAV Total Return, USD, with dividends and capital gains reinvested; figures are pre-tax and net of expenses; market-price return is kept separate.
+- Issuer benchmark: S&P SmallCap 600 Value Index; S&P 500 TR is a common reference benchmark and is not substituted for the issuer benchmark.
+- Classification: passive/index-tracking equity ETF using full replication; exchange NYSE Arca; inception 2010-09-07; quarterly distribution; expense ratio 0.10%.
+- Official annual NAV rows 2016-2025 are retained at the published precision from Vanguard's annual total-return table.
+- 2016-2025 VIOV compound: `148.6943434253049%` cumulative, displayed as `148.69%`; rounded-input CAGR `9.538449870087074%`, displayed as `9.54%`.
+- 2021-2025 VIOV compound: `52.69718965560786%` cumulative, displayed as `52.70%`; rounded-input CAGR `8.83440537774094%`, displayed as `8.83%`.
+- S&P 500 2016-2025 cached compound: `298.32911147828895%` cumulative / `14.821761390659717%` CAGR, displayed as `298.33%` / `14.82%`.
+- S&P 500 2021-2025 cached compound: `96.1696180144133%` cumulative / `14.426430190446249%` CAGR, displayed as `96.17%` / `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; input rows are published to two decimal places, so calculated CAGRs are rounded-input approximations.
+- Official rolling 10-year NAV TR: `176.76%` cumulative / `10.72%` average annual as of 2026-06-30. Raw rolling endpoints are not disclosed, so the issuer field is not recomputed from calendar rows.
+- Current official NAV TR YTD: `20.27%` as of 2026-07-20. Vanguard's fact sheet reports `20.92%` as of 2026-06-30 and the investor page exposes `19.82%` as of 2026-07-02; these are dated observations, not same-date conflicts, and the newer 2026-07-20 field is used.
+- Official risk snapshot: `462` stocks, turnover `47.2%`, standard deviation `19.92%`, median market cap `$3.6B`, and ETF total net assets `$1,860m` as of 2026-06-30.
+- Best/worst annual rows: 2021 `+30.74%` / 2018 `-12.77%`; up/down count `8 / 2`.
+- Current S&P 500 YTD is not available from the cached benchmark convention; no current-year benchmark return is inferred.
+
+### VIOV gaps, conflicts and local review
+
+- The issuer rolling 10-year field supplies cumulative and average annual NAV TR but not raw endpoints or elapsed-year convention; it is kept separate from the 2016-2025 calendar-row calculation.
+- YTD fields are dated 2026-06-30 (`20.92%`), 2026-07-02 (`19.82%`) and 2026-07-20 (`20.27%`); the latest dated field is used. A Vanguard advisor webapp search result also displayed an inconsistent future inception metadata value; the current fact sheet and investor page corroborate inception `2010-09-07`, which is used.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison uses the common 2016-2025 window only.
+- PASS — source identity, ETF type, exchange, benchmark, return basis, distributions, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, complete planned contents of the VIOV performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, canonical tag, and exact scheduled-inline verification lines reviewed locally before write.
