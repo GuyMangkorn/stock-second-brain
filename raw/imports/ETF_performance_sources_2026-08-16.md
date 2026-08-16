@@ -350,3 +350,66 @@ review_gate: PASS
 ### VTWV scheduled-local pre-save checklist
 
 - PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned file contents, region links, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - SCHC
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### SCHC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:SCHC | https://www.schwabassetmanagement.com/products/schc | Official Schwab product page: objective, fund identity, current NAV/quote, expense ratio, holdings, turnover, standard deviation and current performance | Product profile and quote as of 2026-08-14; holdings as of 2026-08-13; profile risk fields as of 2026-07-31 |
+| NYSE Arca:SCHC | https://www.schwabassetmanagement.com/resource/etf-investment-performance-summary | Official Schwab ETF Investment Performance Summary | Monthly returns ended 2026-07-31; quarterly average annual returns ended 2026-06-30 |
+| NYSE Arca:SCHC | https://www.schwabassetmanagement.com/resource/schc-fact-sheet | Official Schwab fact sheet: objective, inception, exchange, expense ratio, annual NAV/market-price chart, return definition and risk statistic | All information as of 2026-06-30; complete calendar rows 2016-2025 |
+| NYSE Arca:SCHC | https://www.sec.gov/Archives/edgar/data/1454889/000110465926020712/tm266454-8_497k.htm | SEC-hosted official summary prospectus: index objective, representative sampling and risk disclosures | Summary prospectus dated 2026-02-27 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### SCHC raw observations and calculations
+
+| Year | SCHC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 3.17% | 11.96% |
+| 2017 | 29.33% | 21.83% |
+| 2018 | -18.65% | -4.38% |
+| 2019 | 22.96% | 31.49% |
+| 2020 | 10.69% | 18.40% |
+| 2021 | 12.14% | 28.71% |
+| 2022 | -21.92% | -18.11% |
+| 2023 | 14.69% | 26.29% |
+| 2024 | 1.90% | 25.02% |
+| 2025 | 37.73% | 17.88% |
+| 2026 YTD | 6.15% | not available from cached current-year benchmark |
+
+- Metric basis: official SCHC NAV Total Return, USD, with dividends and distributions reinvested; the issuer's total-return disclosure is kept separate from market-price return.
+- Issuer benchmark: FTSE Developed Small Cap ex US Liquid Index (Net); S&P 500 TR is a common reference benchmark and is not silently substituted for SCHC's tracked index.
+- Classification: passive/index-tracking equity ETF using representative sampling; exchange NYSE Arca; inception 2010-01-14; semi-annual distribution; expense ratio 0.06% effective 2026-06-11.
+- 2016-2025 SCHC compound: 108.21% cumulative; rounded-input CAGR 7.61%.
+- 2021-2025 SCHC compound: 40.94% cumulative; rounded-input CAGR 7.10%.
+- S&P 500 2016-2025 cached compound: 298.33% cumulative; rounded-input CAGR 14.82%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR: average annual 8.23% as of 2026-06-30. Raw rolling endpoints and cumulative return are not disclosed, so no normalized endpoint is calculated.
+- Official three-year standard deviation: 16.73% as of 2026-06-30 from the fact sheet; the newer product page shows 16.57% as of 2026-07-31.
+- Current official NAV TR YTD: 6.15% as of 2026-07-31. The earlier official factsheet observation was 5.25% as of 2026-06-30; these are dated observations, not a same-date conflict.
+- Current product-page NAV: US$51.24 as of 2026-08-14; bid/ask midpoint US$51.06 and premium/discount 0.24% were shown for the same date.
+
+### SCHC gaps and conflicts
+
+- The issuer's rolling 10-year field supplies average annual NAV TR 8.23% but not raw endpoints or cumulative total return; it is not recomputed as a CAGR.
+- Annual rows are official Schwab NAV total-return observations from the June 30, 2026 fact sheet; market-price rows are retained only as a separate source observation and are not mixed into the NAV calculations.
+- The February 2026 SEC summary prospectus states 0.08% operating expenses, while Schwab's current product page states the expense ratio became 0.06% effective 2026-06-11. The current 0.06% figure is used and the dated prior disclosure is preserved as a source conflict.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison uses the common 2016-2025 window only.
+
+### SCHC scheduled-local pre-save checklist
+
+- PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned contents of the SCHC performance page/source batch/International ETF/ETF Region Index/ETF Performance Index/log, region links, and exact scheduled-inline verification lines reviewed locally before write.

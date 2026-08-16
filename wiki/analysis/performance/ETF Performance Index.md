@@ -57,6 +57,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_AMEX_VIG Performance]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
 | [[ETF_NASDAQ_VIGI Performance]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025 | 8.26% | 6.45% | 6.36% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive, high equity risk |
+| [[ETF_NYSE_ARCA_SCHC Performance]] | official 2010 / official 2016-2025 | 8.23% | 7.10% | 6.15% | 2025 +37.73% / 2022 -21.92% | developed international ex-U.S. small-cap | small-cap/country/FX/liquidity-sensitive |
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
 | [[ETF_CBOE_EFAV Performance]] | official 2011 / official 2016-2025 | 6.02% | 6.29% | 6.50% | 2025 +26.16% / 2022 -14.76% | developed ex-U.S./Canada minimum volatility | low-vol factor; country/FX-sensitive, lower recent beta |
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
@@ -185,6 +186,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_AMEX_VIG Performance]] | 23.64% | -9.79% | 14.46% | 17.02% | 14.18% | 70.58% | 4 / 1 |
 | [[ETF_NASDAQ_VIGI Performance]] | 12.42% | -16.71% | 16.16% | 2.62% | 16.89% | 30.47% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VSS Performance]] | 12.81% | -21.22% | 15.25% | 2.67% | 29.99% | 36.70% | 4 / 1 |
+| [[ETF_NYSE_ARCA_SCHC Performance]] | 12.14% | -21.92% | 14.69% | 1.90% | 37.73% | 40.94% | 4 / 1 |
 | [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
 | [[ETF_CBOE_EFAV Performance]] | 7.02% | -14.76% | 11.98% | 5.28% | 26.16% | 35.68% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
@@ -280,7 +282,7 @@ current strategy แบบต่อเนื่องห้าปี.
 | OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.67% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
 | FXI China large-cap | 2024-2025 rebound `+30.10%` / `+29.01%` แต่ 2026 YTD กลับมา `-9.28%`; single-country concentration and FX/policy risk remain the dominant behavioral labels |
 | ECNS China small-cap | 2025 rebound `+36.42%` ตามด้วย 2026 YTD `-10.26%`; higher 3-year standard deviation than MCHI และ exposure กระจายไป healthcare, industrials, consumer, real estate ไม่ใช่ pure China internet |
-| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS; international value/dividend = DIVI; single-country = Canada EWC/FLCA, Germany EWG และ Japan EWJ/BBJP/FLJP |
+| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS/SCHC; international value/dividend = DIVI; single-country = Canada EWC/FLCA, Germany EWG และ Japan EWJ/BBJP/FLJP |
 | EFAV minimum volatility | 2016-2025 CAGR `5.96%` ต่ำกว่า S&P 500 TR `14.82%`; 3-year beta `0.28` สนับสนุน lower-beta behavior ล่าสุด แต่ไม่ใช่ guarantee ของ downside protection |
 
 **สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
