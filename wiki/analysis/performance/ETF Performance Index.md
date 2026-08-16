@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-15
+updated: 2026-08-16
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -51,7 +51,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 ## Coverage
 
-| ETF | History used | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
+| ETF | History used | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
 |---|---|---:|---:|---:|---|---|---|
 | [[ETF_AMEX_DGRO Performance]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
 | [[ETF_AMEX_VIG Performance]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
@@ -90,6 +90,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_ASEA Performance]] | official 2011 / official rolling 2016-2026; official 2016-2025 calendar rows | 7.12% | 8.82% | 8.67% | 2017 +31.89% / 2020 -8.05% | Southeast Asia broad equity | financials/country/FX/emerging-market-sensitive; latest YTD disclosure as of 2026-05-31; non-diversified |
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
 | [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
+| [[ETF_NYSE_ARCA_DGS Performance]] | official 2007 / official 2016-2025; issuer-reported 10Y average annual NAV TR as of 2026-07-31 | 8.31%† | 8.23% | 8.86%‡ | 2017 +35.48% / 2018 -15.39% | emerging-markets small-cap dividend | small-cap/country/FX/emerging-market-sensitive; dividend-factor and equity risk |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 9.50% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
 | [[ETF_LSE_SAUS Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 8.26% | 6.24% | 10.27% | 2019 +22.50% / 2018 -12.30% | Australia single-country broad equity | financials/materials/commodity/country/FX-sensitive |
@@ -254,6 +255,8 @@ OPPJ `2025*` เป็น secondary standardized NAV return; common window ข�
 ยังคร่อมการเปลี่ยน objective/index เมื่อ 30 มิ.ย. 2025 จึงไม่ใช่ record ของ
 current strategy แบบต่อเนื่องห้าปี.
 
+† DGS 8.31% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DGS current NAV TR YTD is 8.86% as of 2026-07-31.
+
 ## Regime read
 
 | Regime / question | Read-through |
@@ -301,12 +304,12 @@ utilities และ financials tilt.
 [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]. `QDPL` และ `MDIV` ถูกตัดออก
 ตาม guardrail เพราะ derivative-heavy และ multi-asset ตามลำดับ.
 
-| ETF | 10Y NAV CAGR | 2021-2025 CAGR | Worst (2021-2025) | Avg positive (2021-2025) | 2026 YTD | Coverage |
+| ETF | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | Worst (2021-2025) | Avg positive (2021-2025) | 2026 YTD | Coverage |
 |---|---:|---:|---:|---:|---:|---|
 | [[ETF_AMEX_DEM Performance]] | 9.78% | 8.97% | -10.32% | 14.60% | 15.75% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DES Performance]] | 8.55% | 7.65% | -10.94% | 13.29% | 22.71% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DFJ Performance]] | 9.13% | 8.57% | -8.65% | 14.06% | 10.98% | official annual NAV TR 2016-2025 |
-| [[ETF_AMEX_DGS Performance]] | 9.57% | 8.23% | -12.15% | 14.26% | 14.19% | official annual NAV TR 2016-2025 |
+| [[ETF_NYSE_ARCA_DGS Performance]] | 8.31%† | 8.23% | -12.15% | 14.26% | 8.86%‡ | issuer-reported 10Y average annual NAV TR; annual NAV TR rows 2016-2025 |
 | [[ETF_AMEX_DHS Performance]] | 9.44% | 12.05% | -0.19% | 15.47% | 13.44% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DLN Performance]] | 12.53% | 12.92% | -3.79% | 17.67% | 10.41% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DLS Performance]] | 8.11% | 7.97% | -17.36% | 15.95% | 5.23% | official annual NAV TR 2016-2025 |

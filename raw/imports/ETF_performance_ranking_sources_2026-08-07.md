@@ -33,7 +33,7 @@ return_basis: NAV total return
 | `PGJ` | `NASDAQ:PGJ` | China | [[ETF_NASDAQ_PGJ Performance|PGJ]] | `raw/imports/ETF_performance_sources_2026-07-24.md` | `O10 / OD0 / S0 / AI0` |
 | `CEMA` | `LSE:CEMA` | Emerging Markets | [[ETF_LSE_CEMA Performance|CEMA]] | `raw/imports/ETF_performance_sources_2026-07-24.md` | `O10 / OD0 / S0 / AI0` |
 | `DEM` | `NYSE Arca:DEM` | Emerging Markets | [[ETF_AMEX_DEM Performance|DEM]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
-| `DGS` | `NYSE Arca:DGS` | Emerging Markets | [[ETF_AMEX_DGS Performance|DGS]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
+| `DGS` | `NYSE Arca:DGS` | Emerging Markets | [[ETF_NYSE_ARCA_DGS Performance|DGS]] | `raw/imports/ETF_performance_sources_2026-08-16.md` | `O10 / OD0 / S0 / AI0` |
 | `FDD` | `NYSE Arca:FDD` | Europe | [[ETF_AMEX_FDD Performance|FDD]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
 | `EWG` | `NYSE Arca:EWG` | Germany | [[ETF_NYSE_ARCA_EWG Performance|EWG]] | `raw/imports/ETF_performance_sources_2026-07-18.md` | `O10 / OD0 / S0 / AI0` |
 | `EWH` | `NYSE Arca:EWH` | Hong Kong | [[ETF_NYSE_ARCA_EWH Performance|EWH]] | `raw/imports/ETF_performance_sources_2026-07-21.md` | `O10 / OD0 / S0 / AI0` |
@@ -178,6 +178,7 @@ return_basis: NAV total return
 
 ## Source batches referenced by eligible owner pages
 - `not disclosed`
+- `raw/imports/ETF_performance_sources_2026-08-16.md`
 - `raw/imports/ETF_performance_sources_2026-07-12.md`
 - `raw/imports/ETF_performance_sources_2026-07-13.md`
 - `raw/imports/ETF_performance_sources_2026-07-18.md`

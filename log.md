@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-16
+
+- `etf-performance`: Created [[ETF_NYSE_ARCA_DGS Performance]], retained the legacy AMEX-named file only as a number-free compatibility stub, updated [[Emerging Markets ETF]], [[ETF Performance Index]], and the existing ranking/audit wikilinks, and recorded official DGS 2016-2025 NAV TR cumulative 138.91% / rounded-input CAGR 9.10%, 2021-2025 CAGR 8.23%, issuer-reported 10-year average annual NAV TR 8.31% as of 2026-07-31, and current NAV TR YTD 8.86% as of 2026-07-31; official daily NAV drawdown/recovery remains not disclosed and no numeric secondary proxy is saved. Project-scoped source verifier returned PASS.
+
 ## 2026-08-15
 
 - `etf-performance`: Created [[ETF_CBOE_BZX_ESML Performance]], updated [[USA ETF]], [[ETF Performance Index]], and [[ETF Region Index]], and recorded official ESML NAV TR for 2019-2025 (120.70% cumulative / 11.97% rounded-input CAGR), 2021-2025 CAGR 7.47%, and current NAV TR YTD 23.07% as of 2026-08-13; 10-year history and official daily NAV drawdown/recovery remain not applicable or not disclosed. Project-scoped source verifier timed out, so the documented local checklist fallback returned `PASS`.
