@@ -413,3 +413,65 @@ review_gate: PASS
 ### SCHC scheduled-local pre-save checklist
 
 - PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned contents of the SCHC performance page/source batch/International ETF/ETF Region Index/ETF Performance Index/log, region links, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - ISCG
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### ISCG official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:ISCG | https://www.ishares.com/us/products/239587/ishares-morningstar-smallcap-growth-etf | Official iShares product page: objective, current NAV/price, calendar rows, current YTD, holdings, beta and standard deviation | Current NAV/price as of 2026-08-14; NAV TR YTD as of 2026-08-13; holdings as of 2026-08-13; risk fields as of 2026-07-31 |
+| NYSE Arca:ISCG | https://www.ishares.com/us/literature/fact-sheet/iscg-ishares-morningstar-small-cap-growth-etf-fund-fact-sheet-en-us.pdf | Official iShares fact sheet: return basis, 2021-2025 calendar NAV rows, rolling annualized return, benchmark and fund facts | All information as of 2026-06-30 |
+| NYSE Arca:ISCG | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-morningstar-small-cap-growth-etf-4-30.pdf | Official iShares summary prospectus: 2016-2024 calendar NAV rows, representative sampling and risk disclosures | Summary prospectus dated 2025-08-29; performance chart through 2024-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### ISCG raw observations and calculations
+
+| Year | ISCG NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 9.48% | 11.96% |
+| 2017 | 23.48% | 21.83% |
+| 2018 | -5.79% | -4.38% |
+| 2019 | 27.41% | 31.49% |
+| 2020 | 43.28% | 18.40% |
+| 2021 | -1.32% | 28.71% |
+| 2022 | -26.65% | -18.11% |
+| 2023 | 22.84% | 26.29% |
+| 2024 | 13.44% | 25.02% |
+| 2025 | 13.09% | 17.88% |
+| 2026 YTD | 19.39% | not available from cached current-year benchmark |
+
+- Metric basis: official ISCG NAV Total Return, USD, with dividends and capital gains reinvested; market-price return is kept separate.
+- Issuer benchmark: Morningstar US Small Cap Broad Growth Extended Index; S&P 500 TR is a common reference benchmark and is not silently substituted for ISCG's tracked index.
+- Classification: passive/index-tracking equity ETF using representative sampling; exchange NYSE Arca; inception 2004-06-28; quarterly distribution; expense ratio 0.06%.
+- Official annual rows 2016-2024 are from the SEC-hosted summary prospectus; 2025 is from the current iShares product page/fact sheet. The published precision is retained by source.
+- 2016-2025 ISCG compound: 165.20% cumulative; published-input CAGR 10.24%.
+- 2021-2025 ISCG compound: 14.07% cumulative; published-input CAGR 2.67%.
+- S&P 500 2016-2025 cached compound: 298.33% cumulative; rounded-input CAGR 14.82%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR: 211.14% cumulative / 12.02% annualized as of 2026-06-30. Raw endpoints are not disclosed.
+- Official standard deviation and beta: 18.69% and 1.24 as of 2026-07-31; holdings 929 as of 2026-08-13.
+- Current official NAV TR YTD: 19.39% as of 2026-08-13; current NAV 66.33 USD and closing price 66.36 USD as of 2026-08-14.
+- Official quarter extremes from the reviewed summary prospectus: best quarter +32.85% ended 2020-06-30; worst quarter -21.51% ended 2020-03-31.
+
+### ISCG gaps and conflicts
+
+- The rolling 10-year issuer field supplies cumulative and average annual NAV TR but not raw endpoints; no normalized endpoint is calculated.
+- Annual rows use two official sources with different as-of windows: 2016-2024 from the 2025-08-29 summary prospectus and 2025 from the current product page/fact sheet. The source dates and published precision are retained rather than silently backfilled.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison uses the common 2016-2025 window only.
+
+### ISCG scheduled-local pre-save checklist
+
+- PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned contents of the ISCG performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, and exact scheduled-inline verification lines reviewed locally before write.

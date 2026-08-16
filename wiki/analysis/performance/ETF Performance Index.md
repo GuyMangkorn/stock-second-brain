@@ -164,6 +164,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_IJR Performance]] | official 2000 / official 2016-2025 | 9.76% | 7.23% | 23.66% | 2021 +26.69% / 2022 -16.20% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; official 3-year standard deviation 19.36% |
 | [[ETF_CBOE_BZX_ESML Performance]] | official 2019-2025; inception 2018 partial not disclosed | not applicable (<10y) | 7.47% | 23.07% | 2019 +28.53% / 2022 -17.22% | U.S. ESG small-cap equity | small-cap/cyclicality/ESG-screen/liquidity-sensitive; daily NAV drawdown and 2018 partial gap |
 | [[ETF_NASDAQ_IJT Performance]] | official 2013-2025; official rolling 10-year as of 2026-06-30 | 11.82% | 5.35% | 26.03% | 2021 +22.40% / 2022 -21.24% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; historical exchange discrepancy and NAV drawdown gap |
+| [[ETF_NYSE_ARCA_ISCG Performance]] | official 2004 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 12.02% | 2.67% | 19.39% | 2020 +43.28% / 2022 -26.65% | U.S. small-cap growth equity | small-cap/growth/sector/valuation/liquidity-sensitive; daily NAV drawdown gap |
 | [[ETF_NYSE_ARCA_IJS Performance]] | official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.60% | 8.71% | 23.99% | 2016 +31.17% / 2018 -12.80% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; daily NAV drawdown/recovery gap |
 | [[ETF_CBOE_BZX_CALF Performance]] | official inception 2017-06-16 / official 2018-2024; 2025 issuer 1 Year/YTD ending 2025-12-31; history under 10 years | not applicable (<10y) | 8.88%† | 10.60%‡ | 2021 +40.50% / 2022 -15.18% | U.S. small-cap free-cash-flow equity | small-cap/sector/turnover/liquidity-sensitive; 2025 row caveat; NAV drawdown/recovery not disclosed |
 | [[ETF_NASDAQ_FYC Performance]] | official 2011 / official 2016-2025; issuer benchmark methodology change 2016-04-08 noted | 13.92%† | 9.74%‡ | 23.54%§ | 2020 +32.08% / 2022 -25.75% | U.S. small-cap growth rules-based equity | small-cap/growth/sector/liquidity/turnover-sensitive; 3-year standard deviation 21.59%; NAV drawdown/recovery not disclosed |
@@ -246,6 +247,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_NYSE_ARCA_IJR Performance]] | 26.69% | -16.20% | 16.03% | 8.61% | 5.95% | 41.75% | 4 / 1 |
 | [[ETF_CBOE_BZX_ESML Performance]] | 19.31% | -17.22% | 17.31% | 11.86% | 10.62% | 43.37% | 4 / 1 |
 | [[ETF_NASDAQ_IJT Performance]] | 22.40% | -21.24% | 16.97% | 9.42% | 5.20% | 29.80% | 4 / 1 |
+| [[ETF_NYSE_ARCA_ISCG Performance]] | -1.32% | -26.65% | 22.84% | 13.44% | 13.09% | 14.07% | 3 / 2 |
 | [[ETF_NYSE_ARCA_IJS Performance]] | 30.47% | -11.32% | 14.64% | 7.42% | 6.55% | 51.81% | 4 / 1 |
 | [[ETF_NASDAQ_FYC Performance]] | 21.75% | -25.75% | 14.15% | 24.05% | 24.34% | 59.17% | 4 / 1 |
 | [[ETF_NASDAQ_VTWG Performance]] | 2.82% | -26.35% | 18.73% | 15.17% | 13.07% | 17.08% | 4 / 1 |
