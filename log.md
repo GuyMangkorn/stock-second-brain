@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-17
+
+- `etf-performance`: Created [[ETF_NYSE_ARCA_GSSC Performance]], updated [[USA ETF]], [[ETF Performance Index]], [[ETF Region Index]], and created/extended [[ETF_performance_sources_2026-08-17]]; recorded official GSSC 2018-2025 NAV TR cumulative `93.95%` / rounded-input CAGR `8.63%`, 2021-2025 CAGR `8.25%`, and current NAV TR YTD `21.33%` as of 2026-06-30. Scheduled-local pre-save checklist returned `PASS`; history under 10 years and official daily NAV drawdown/recovery remain disclosed.
+
 ## 2026-08-16
 
 - `etf-performance`: Created [[ETF_NYSE_ARCA_SLYG Performance]], updated [[USA ETF]], [[ETF Performance Index]], [[ETF Region Index]], and extended [[ETF_performance_sources_2026-08-16]]; recorded official SLYG rolling 10-year NAV TR `11.89%` and current NAV TR YTD `26.92%` as of 2026-06-30, plus secondary 2016-2025 annual rows (`152.01%` cumulative / `9.68%*` rounded-input CAGR; 2021-2025 `5.40%*`). Scheduled-local pre-save checklist returned `PASS`; official annual rows and daily NAV drawdown/recovery remain unavailable.

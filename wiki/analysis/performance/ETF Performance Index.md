@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-16
+updated: 2026-08-17
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -160,6 +160,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_VOO Performance]] | official 2010 / official 2016-2025 | 15.47% | 14.38% | 9.97% | 2019 +31.46% / 2022 -18.15% | U.S. large-cap broad equity | S&P 500 market beta, mega-cap sensitive |
 | [[ETF_NYSE_ARCA_VB Performance]] | official 2004 / official 2016-2025; official rolling 10-year as of 2026-07-31 | 10.90% | 7.35% | 19.48% | 2019 +27.37% / 2022 -17.60% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 8 / 2 positive/negative years |
 | [[ETF_NYSE_ARCA_SPSM Performance]] | issuer 10-year annualized field as of 2026-06-30; calendar rows not disclosed | 11.61% | not disclosed | 23.89% | not disclosed / not disclosed | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; low-cost tracking |
+| [[ETF_NYSE_ARCA_GSSC Performance]] | official 2018-2025; inception 2017-06-28; history under 10 years | not applicable (<10y history) | 8.25% | 21.33% | 2021 +24.05% / 2022 -16.87% | U.S. small-cap multi-factor equity | small-cap/factor-regime/cyclicality/liquidity-sensitive; official daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_VBR Performance]] | official 2004 / official 2016-2025; rolling 10-year as of 2026-06-30 | 10.99% | 10.56% | 15.83% | 2021 +28.07% / 2018 -12.22% | U.S. small-cap value equity | small-cap/value/cyclical; 8 / 2 positive/negative years |
 | [[ETF_NYSE_ARCA_IJR Performance]] | official 2000 / official 2016-2025 | 9.76% | 7.23% | 23.66% | 2021 +26.69% / 2022 -16.20% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; official 3-year standard deviation 19.36% |
 | [[ETF_CBOE_BZX_ESML Performance]] | official 2019-2025; inception 2018 partial not disclosed | not applicable (<10y) | 7.47% | 23.07% | 2019 +28.53% / 2022 -17.22% | U.S. ESG small-cap equity | small-cap/cyclicality/ESG-screen/liquidity-sensitive; daily NAV drawdown and 2018 partial gap |
@@ -250,6 +251,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_AMEX_FVD Performance]] | 24.86% | -5.24% | 4.10% | 10.00% | 8.19% | 46.58% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VOO Performance]] | 28.66% | -18.15% | 26.25% | 24.98% | 17.84% | 95.81% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VB Performance]] | 17.72% | -17.60% | 18.21% | 14.23% | 8.83% | 42.55% | 4 / 1 |
+| [[ETF_NYSE_ARCA_GSSC Performance]] | 24.05% | -16.87% | 17.37% | 10.94% | 10.71% | 48.66% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VBR Performance]] | 28.07% | -9.29% | 16.00% | 12.39% | 9.09% | 65.22% | 4 / 1 |
 | [[ETF_NYSE_ARCA_IJR Performance]] | 26.69% | -16.20% | 16.03% | 8.61% | 5.95% | 41.75% | 4 / 1 |
 | [[ETF_CBOE_BZX_ESML Performance]] | 19.31% | -17.22% | 17.31% | 11.86% | 10.62% | 43.37% | 4 / 1 |
@@ -324,6 +326,7 @@ utilities และ financials tilt.
 - Source batch: [[ETF_performance_sources_2026-07-19]]
 - Source batch: [[ETF_performance_sources_2026-07-21]]
 - Source batch: [[ETF_performance_sources_2026-08-16]]
+- Source batch: [[ETF_performance_sources_2026-08-17]]
 - [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
 - [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
 
@@ -585,3 +588,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_VIOV Performance]] — VIOV (USA; official 2016-2025 NAV TR cumulative `+148.69%` / rounded-input CAGR `9.54%`, issuer rolling 10-year NAV TR `10.72%` as of 2026-06-30, current official NAV TR YTD `+20.27%` as of 2026-07-20)
 - [[ETF_NYSE_ARCA_VIOG Performance]] — VIOG (USA; official 2016-2024 plus secondary 2025 NAV/total-return rows, displayed cumulative `+151.94%` / rounded-input CAGR `9.68%`, issuer rolling 10-year NAV TR `11.89%` as of 2026-06-30, current official NAV TR YTD `+22.11%` as of 2026-07-20)
 - [[ETF_NYSE_ARCA_SLYV Performance]] — SLYV (USA; official 2016-2023 plus secondary 2024-2025 rows, displayed cumulative `+147.73%` / rounded-input CAGR `9.50%`, issuer rolling 10-year NAV TR `10.06%` as of 2026-07-31, current official NAV TR YTD `+20.17%` as of 2026-07-31)
+
+## 2026-08-17 Coverage Addition
+
+- [[ETF_NYSE_ARCA_GSSC Performance]] — GSSC (USA; official 2018-2025 NAV TR cumulative `+93.95%` / rounded-input CAGR `8.63%`, 2021-2025 CAGR `8.25%`, current official NAV TR YTD `+21.33%` as of 2026-06-30; history under 10 years and daily NAV drawdown/recovery gap)
