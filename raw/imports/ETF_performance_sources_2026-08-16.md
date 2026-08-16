@@ -286,3 +286,67 @@ review_gate: PASS
 - Current-YTD fields are not synchronized: the newer official advisor-page observation as of 2026-07-17 is used for the current claim; earlier 2026-07-02 and 2026-06-30 values remain provenance only.
 - Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
 - S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison therefore uses the common 2016-2025 window only.
+
+## Scheduled-inline run - VTWV
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### VTWV official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NASDAQ:VTWV | https://investor.vanguard.com/investment-products/etfs/profile/vtwv | Official Vanguard product page: fund identity, index objective, annual NAV/market-price returns and performance navigation | Product page accessed 2026-08-16; dynamic annual table was corroborated with official Vanguard materials below |
+| NASDAQ:VTWV | https://advisors.vanguard.com/investments/products/vtwv/vanguard-russell-2000-value-etf | Official Vanguard advisor page: current NAV YTD and expense ratio | NAV YTD 23.63% as of 2026-07-17; expense ratio 0.06% as of 2026-02-02 |
+| NASDAQ:VTWV | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3352.pdf | Official factsheet: passive full-replication classification, benchmark, inception, exchange, expense ratio, NAV-return definition and risk statistic | Factsheet as of 2026-06-30; NAV YTD 22.99%, 10-year average annual NAV TR 10.86%, standard deviation 19.42% |
+| NASDAQ:VTWV | https://fund-docs.vanguard.com/p3348.pdf | Official Vanguard prospectus chart: calendar NAV total-return observations for 2015-2024 | 2016-2024 rows used; latest prospectus chart ending 2024 |
+| NASDAQ:VTWV | https://www.sec.gov/Archives/edgar/data/1021882/000119312525325212/f43593d1.htm | SEC-hosted official summary prospectus: passive objective, index, fund identity and historical-return chart context | Summary prospectus dated 2025-12-19; 2025 YTD field through 2025-09-30 and risk disclosures |
+| NASDAQ:VTWV | https://institutional.vanguard.com/content/dam/inst/iig-transformation/pdf/total_return_chart.pdf | Official Vanguard Total Returns snapshot: 2025 calendar return and rolling 10-year average annual NAV TR | 2025 NAV TR 12.61% at 2025-12-31 snapshot; 10-year NAV TR 10.86% as of 2026-06-30 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### VTWV raw observations and calculations
+
+| Year | VTWV NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 31.55% | 11.96% |
+| 2017 | 7.78% | 21.83% |
+| 2018 | -12.92% | -4.38% |
+| 2019 | 22.33% | 31.49% |
+| 2020 | 4.74% | 18.40% |
+| 2021 | 28.13% | 28.71% |
+| 2022 | -14.56% | -18.11% |
+| 2023 | 14.66% | 26.29% |
+| 2024 | 7.98% | 25.02% |
+| 2025 | 12.61% | 17.88% |
+| 2026 YTD | 23.63% | not available from cached current-year benchmark |
+
+- Metric basis: official VTWV NAV Total Return, USD, dividends and capital-gain distributions reinvested, pre-tax and net of expenses.
+- Issuer benchmark: Russell 2000 Value Index; it is retained as metadata and not silently substituted for the common S&P 500 reference.
+- Classification: passive/index-tracking equity ETF using full replication; exchange NASDAQ; inception 2010-09-20; quarterly distribution schedule; expense ratio 0.06%.
+- 2016-2025 VTWV compound: 141.46% cumulative; rounded-input CAGR 9.22%.
+- 2021-2025 VTWV compound: 52.63% cumulative; rounded-input CAGR 8.83%.
+- S&P 500 2016-2025 cached compound: 298.33% cumulative; rounded-input CAGR 14.82%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR: average annual 10.86% as of 2026-06-30. Raw endpoints and cumulative return are not disclosed, so no normalized endpoint is calculated.
+- Official factsheet 3-year monthly standard deviation: 19.42% as of 2026-06-30.
+- Current official NAV TR YTD: 23.63% as of 2026-07-17. Earlier official factsheet snapshot was 22.99% as of 2026-06-30; these are dated observations, not a same-date conflict.
+
+### VTWV gaps and conflicts
+
+- The issuer's rolling 10-year field supplies average annual NAV TR 10.86% but not raw endpoints or cumulative total return; it is not recomputed as a CAGR.
+- Annual rows 2016-2024 are from the official prospectus chart and 2025 is from the official December 31, 2025 Total Returns snapshot; the annual series is retained as a mixed-source official series with provenance above.
+- The official advisor page exposes an inception metadata value of 2026-07-21 that conflicts with the official factsheet and fund materials. The verified inception used here is 2010-09-20; the conflicting metadata is not used in calculations.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison therefore uses the common 2016-2025 window only.
+
+### VTWV scheduled-local pre-save checklist
+
+- PASS — source identity, ETF type, exchange, benchmark, return basis, periods, units/currency, as-of dates, annual observations, calculations, reconciliation, source conflicts, unresolved gaps, planned file contents, region links, and exact scheduled-inline verification lines reviewed locally before write.
