@@ -714,3 +714,128 @@ review_gate: PASS
 - Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
 - S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison uses the common 2016-2025 window only.
 - PASS — source identity, ETF type, exchange, benchmark, return basis, distributions, periods, units/currency, as-of dates, annual observations, secondary-row quality downgrade, calculations, reconciliation, source conflicts, unresolved gaps, complete planned contents of the VIOG performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, canonical tag, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - SLYG
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### SLYG official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:SLYG | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-600-small-cap-growth-etf-slyg | Official State Street product page: fund identity, exchange, inception, issuer benchmark, expense ratio, NAV/market-price context and performance fields | Fund facts/listing through 2026-07-20; NAV/price context as of 2026-07-17; official performance fields through 2026-06-30 |
+| NYSE Arca:SLYG | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-slyg.pdf | Official State Street fact sheet: passive/index strategy, return basis, inception, expense ratio, distribution and risk disclosures | Fact sheet as of 2026-06-30 |
+| NYSE Arca:SLYG | https://www.etfreplay.com/etf/slyg | Secondary ETFreplay quarterly/annual total-return table and volatility context | 2016-2025 annual rows and secondary risk snapshot; data as of 2026-07-20 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### SLYG raw observations and calculations
+
+| Year | SLYG secondary TR* | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 22.16% | 11.96% |
+| 2017 | 14.53% | 21.83% |
+| 2018 | -4.19% | -4.38% |
+| 2019 | 20.98% | 31.49% |
+| 2020 | 19.48% | 18.40% |
+| 2021 | 22.42% | 28.71% |
+| 2022 | -21.26% | -18.11% |
+| 2023 | 17.27% | 26.29% |
+| 2024 | 9.38% | 25.02% |
+| 2025 | 5.19% | 17.88% |
+| 2026 YTD | 26.92% | not available from cached current-year benchmark |
+
+- Metric basis: official SLYG NAV Total Return is USD, assumes reinvestment of dividends and capital gains, and is net of fees; the 2016-2025 annual rows are a secondary dividend-reinvested proxy and remain separate from official issuer rolling/YTD fields.
+- Issuer benchmark: S&P SmallCap 600 Growth Index; S&P 500 TR is a common reference benchmark and is not substituted for SLYG's tracked index.
+- Classification: passive/index-tracking equity ETF using index sampling; exchange NYSE Arca; inception 2000-09-25; quarterly distribution; gross expense ratio 0.15%.
+- Official issuer rolling 10-year NAV TR: average annual 11.89% as of 2026-06-30. Raw endpoints and elapsed-year convention are not disclosed, so this issuer field is not recomputed from secondary calendar rows.
+- Official current NAV TR YTD: 26.92% as of 2026-06-30. The latest displayed NAV is US$115.32 as of 2026-07-17 and is not used in return calculations.
+- Secondary 2016-2025 compound: 152.00839241674564% cumulative; rounded-input CAGR 9.683550525749252%.
+- Secondary 2021-2025 compound: 30.06099882404707% cumulative; rounded-input CAGR 5.397283361499028%.
+- S&P 500 2016-2025 cached compound: 298.32911147828895% cumulative / 14.821761390659717% CAGR, displayed as 298.33% / 14.82%.
+- S&P 500 2021-2025 cached compound: 96.1696180144133% cumulative / 14.426430190446249% CAGR, displayed as 96.17% / 14.43%.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; secondary input rows are published to two decimals, so calculated CAGRs are rounded-input approximations.
+- Secondary ETFreplay volatility context: annualized daily-return volatility 17.9% as of 2026-07-20; not treated as official NAV volatility or a drawdown measure.
+- Best/worst annual rows: 2021 +22.42%* / 2022 -21.26%*; up/down count 8 / 2.
+
+### SLYG gaps, conflicts, planned files and local review
+
+- State Street's text-accessible product/fact-sheet extracts disclose rolling and YTD performance but do not expose the 2016-2025 calendar NAV rows; ETFreplay is therefore retained as a secondary proxy and every calendar row is marked `*`.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary drawdown/recovery proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; no current-year benchmark return is inferred.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_SLYG Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-08-16.md`, and `log.md`; no `raw/funds/` performance file and no new region page.
+- PASS — source identity, ETF type, exchange, benchmark, return basis, distributions, periods, units/currency, as-of dates, secondary-row quality downgrade, calculations, reconciliation, source conflicts, unresolved gaps, complete planned contents of the SLYG performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, canonical tag, and exact scheduled-inline verification lines reviewed locally before write.
+
+## Scheduled-inline run - SLYV
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### SLYV official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:SLYV | https://www.ssga.com/us/en/individual/etfs/state-street-sp-600-small-cap-value-etf-slyv | Official State Street product page: fund identity, tracked index, exchange, current NAV, expense ratio and standardized performance | Current NAV `110.17` and holdings `462` as of 2026-08-10; latest standardized performance through 2026-07-31 |
+| NYSE Arca:SLYV | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-slyv.pdf | Official State Street fact sheet: return basis, benchmark, inception, expense ratio, exchange, holdings, sector weights and NAV/index performance | Fund facts, sector weights and performance block as of 2026-06-30 |
+| NYSE Arca:SLYV | https://www.sec.gov/Archives/edgar/data/1064642/000119312524242957/R25.htm | SEC-hosted official summary prospectus: passive sampling strategy, risks and annual NAV returns | Official annual rows through 2023; prospectus filed 2024 |
+| NYSE Arca:SLYV | https://www.etfreplay.com/etf/slyv | Secondary standardized total-return history | Complete-year rows for 2024 `7.28%` and 2025 `6.52%`; data reviewed through 2026-07-06 |
+| NYSE Arca:SLYV | https://totalrealreturns.com/n/SLYV | Secondary corroboration | Corroborates 2024 and prior annual total-return observations; not used to override official SEC rows |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill; 2025 row `17.88%` used here |
+
+### SLYV raw observations and calculations
+
+| Year | SLYV NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 31.14% | 11.96% |
+| 2017 | 11.45% | 21.83% |
+| 2018 | -12.69% | -4.38% |
+| 2019 | 24.31% | 31.49% |
+| 2020 | 2.60% | 18.40% |
+| 2021 | 30.66% | 28.71% |
+| 2022 | -11.13% | -18.11% |
+| 2023 | 14.71% | 26.29% |
+| 2024 | 7.28%* | 25.02% |
+| 2025 | 6.52%* | 17.88% |
+| 2026 YTD | 20.17% as of 2026-07-31 | not available from cached current-year benchmark |
+
+`*` 2024–2025 are secondary standardized total-return observations; the official
+SEC annual table reviewed for SLYV ends at 2023. The secondary values are retained
+only with this source-quality downgrade and are not relabelled as issuer rows.
+
+- Metric basis: SLYV NAV Total Return, USD, with dividends and capital gains reinvested; State Street states that performance is net of fees and market-price return is separate.
+- Issuer benchmark: S&P SmallCap 600 Value Index; S&P 500 TR is a common reference benchmark and is not substituted for the issuer benchmark.
+- Classification: passive/index-tracking equity ETF using representative sampling; exchange NYSE Arca; inception 2000-09-25; quarterly distribution; gross expense ratio `0.15%`.
+- 2016-2023 annual NAV rows are from the SEC-hosted official summary prospectus. 2024–2025 use ETFReplay standardized rows `7.28%` and `6.52%`, with TotalRealReturns corroboration.
+- 2016-2025 SLYV compound: `147.7317690710622%` cumulative, displayed as `147.73%`; rounded-input CAGR `9.495978859784815%`, displayed as `9.50%`.
+- 2021-2025 SLYV compound: `52.212050454717975%` cumulative, displayed as `52.21%`; rounded-input CAGR `8.765161057525539%`, displayed as `8.77%`.
+- S&P 500 2016-2025 cached compound: `298.32911147828895%` cumulative / `14.821761390659717%` CAGR, displayed as `298.33%` / `14.82%`.
+- S&P 500 2021-2025 cached compound: `96.1696180144133%` cumulative / `14.426430190446249%` CAGR, displayed as `96.17%` / `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; published rows are rounded to two decimals, and the 2024–2025 rows are secondary, so calculated CAGRs are rounded-input approximations.
+- Official rolling 10-year NAV TR: `10.06%` average annual as of 2026-07-31; raw rolling endpoints and cumulative return are not disclosed, so no normalized endpoint is calculated.
+- Current official NAV TR YTD: `20.17%` as of 2026-07-31. The older official factsheet reports `20.85%` as of 2026-06-30; these are dated observations, not a same-date conflict, and the newer field is used.
+- Official risk snapshot: `462` holdings as of 2026-06-30; sector weights were Financials `21.55%`, Consumer Discretionary `15.90%`, Industrials `13.03%`, Information Technology `12.59%`, Health Care `7.46%`, Real Estate `7.07%`, Energy `6.01%`, Materials `5.90%`, Consumer Staples `4.31%`, Communication Services `3.94%` and Utilities `2.25%`.
+- Best/worst annual rows: 2016 `+31.14%` / 2018 `-12.69%`; up/down count `8 / 2`.
+- Current S&P 500 YTD is not available from the cached benchmark convention; no current-year benchmark return is inferred.
+
+### SLYV gaps, conflicts and local review
+
+- The official SEC annual table reviewed exposed SLYV rows through 2023; 2024–2025 are secondary standardized total-return rows and remain marked with `*` in the performance page, source batch and index summaries.
+- State Street's newer product-page fields are dated 2026-07-31, while the factsheet risk/sector snapshot is dated 2026-06-30 and the NAV quote is dated 2026-08-10; these are retained as separate as-of dates.
+- The product page's benchmark history links the S&P SmallCap 600 Value Index to a predecessor benchmark before 2010-12-17; the current tracked-index label is retained and no earlier row is backfilled.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison uses the common 2016-2025 window only.
+- PASS — source identity, ETF type, exchange, benchmark, return basis, distributions, periods, units/currency, as-of dates, annual observations, secondary-row quality downgrade, calculations, reconciliation, source conflicts, unresolved gaps, complete planned contents of the SLYV performance page/source batch/USA ETF/ETF Region Index/ETF Performance Index/log, region links, canonical tag, and exact scheduled-inline verification lines reviewed locally before write.
