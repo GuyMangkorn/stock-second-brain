@@ -40,7 +40,7 @@ return_basis: NAV total return
 | `EPI` | `NYSE Arca:EPI` | India | [[ETF_NYSE_ARCA_EPI Performance|EPI]] | `raw/imports/ETF_performance_sources_2026-07-24.md` | `O10 / OD0 / S0 / AI0` |
 | `IMVP` | `NYSE Arca:IMVP` | India | [[ETF_NYSE_ARCA_IMVP Performance|IMVP]] | `raw/imports/ETF_performance_sources_2026-07-24.md` | `O10 / OD0 / S0 / AI0` |
 | `DDWM` | `Cboe BZX:DDWM` | International | [[ETF_CBOE_DDWM Performance|DDWM]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
-| `DLS` | `NYSE Arca:DLS` | International | [[ETF_AMEX_DLS Performance|DLS]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
+| `DLS` | `NYSE Arca:DLS` | International | [[ETF_NYSE_ARCA_DLS Performance|DLS]] | `raw/imports/ETF_performance_sources_2026-08-16.md` | `O10 / OD0 / S0 / AI0` |
 | `DTH` | `NYSE Arca:DTH` | International | [[ETF_AMEX_DTH Performance|DTH]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
 | `DWM` | `NYSE Arca:DWM` | International | [[ETF_AMEX_DWM Performance|DWM]] | `not disclosed` | `O10 / OD0 / S0 / AI0` |
 | `EFAV` | `Cboe BZX:EFAV` | International | [[ETF_CBOE_EFAV Performance|EFAV]] | `raw/imports/ETF_performance_sources_2026-07-18.md` | `O10 / OD0 / S0 / AI0` |

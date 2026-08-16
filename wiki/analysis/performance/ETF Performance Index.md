@@ -257,6 +257,8 @@ current strategy แบบต่อเนื่องห้าปี.
 
 † DGS 8.31% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DGS current NAV TR YTD is 8.86% as of 2026-07-31.
 
+† DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31.
+
 ## Regime read
 
 | Regime / question | Read-through |
@@ -312,7 +314,7 @@ utilities และ financials tilt.
 | [[ETF_NYSE_ARCA_DGS Performance]] | 8.31%† | 8.23% | -12.15% | 14.26% | 8.86%‡ | issuer-reported 10Y average annual NAV TR; annual NAV TR rows 2016-2025 |
 | [[ETF_AMEX_DHS Performance]] | 9.44% | 12.05% | -0.19% | 15.47% | 13.44% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DLN Performance]] | 12.53% | 12.92% | -3.79% | 17.67% | 10.41% | official annual NAV TR 2016-2025 |
-| [[ETF_AMEX_DLS Performance]] | 8.11% | 7.97% | -17.36% | 15.95% | 5.23% | official annual NAV TR 2016-2025 |
+| [[ETF_NYSE_ARCA_DLS Performance]] | 7.69%† | 7.97% | -17.36% | 15.95% | 8.54%‡ | issuer-reported 10Y average annual NAV TR; annual NAV TR rows 2016-2025 |
 | [[ETF_AMEX_DON Performance]] | 9.36% | 10.88% | -4.76% | 15.55% | 10.79% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official annual NAV TR 2016-2025 |

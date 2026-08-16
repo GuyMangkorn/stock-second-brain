@@ -2,6 +2,8 @@
 
 ## 2026-08-16
 
+- `etf-performance`: Created [[ETF_NYSE_ARCA_DLS Performance]], retained the legacy AMEX-named file as a number-free compatibility stub, updated [[International ETF]], [[ETF Performance Index]], and DLS ranking/audit ownership links, and recorded official DLS 2016-2025 NAV TR cumulative 101.65% / rounded-input CAGR 7.27%, 2021-2025 CAGR 7.97%, issuer-reported 10-year average annual NAV TR 7.69% as of 2026-07-31, and current NAV TR YTD 8.54% as of 2026-07-31; official daily NAV drawdown/recovery remains not disclosed and no numeric secondary proxy is saved. Project-scoped source verifier returned PASS.
+
 - `etf-performance`: Created [[ETF_NYSE_ARCA_DGS Performance]], retained the legacy AMEX-named file only as a number-free compatibility stub, updated [[Emerging Markets ETF]], [[ETF Performance Index]], and the existing ranking/audit wikilinks, and recorded official DGS 2016-2025 NAV TR cumulative 138.91% / rounded-input CAGR 9.10%, 2021-2025 CAGR 8.23%, issuer-reported 10-year average annual NAV TR 8.31% as of 2026-07-31, and current NAV TR YTD 8.86% as of 2026-07-31; official daily NAV drawdown/recovery remains not disclosed and no numeric secondary proxy is saved. Project-scoped source verifier returned PASS.
 
 ## 2026-08-15
