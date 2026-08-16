@@ -166,6 +166,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_IJS Performance]] | official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.60% | 8.71% | 23.99% | 2016 +31.17% / 2018 -12.80% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; daily NAV drawdown/recovery gap |
 | [[ETF_CBOE_BZX_CALF Performance]] | official inception 2017-06-16 / official 2018-2024; 2025 issuer 1 Year/YTD ending 2025-12-31; history under 10 years | not applicable (<10y) | 8.88%† | 10.60%‡ | 2021 +40.50% / 2022 -15.18% | U.S. small-cap free-cash-flow equity | small-cap/sector/turnover/liquidity-sensitive; 2025 row caveat; NAV drawdown/recovery not disclosed |
 | [[ETF_NASDAQ_FYC Performance]] | official 2011 / official 2016-2025; issuer benchmark methodology change 2016-04-08 noted | 13.92%† | 9.74%‡ | 23.54%§ | 2020 +32.08% / 2022 -25.75% | U.S. small-cap growth rules-based equity | small-cap/growth/sector/liquidity/turnover-sensitive; 3-year standard deviation 21.59%; NAV drawdown/recovery not disclosed |
+| [[ETF_NASDAQ_VTWG Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 12.00% | 3.20% | 16.85% | 2020 +34.70% / 2022 -26.35% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; 3-year monthly standard deviation 21.30%; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
@@ -244,6 +245,7 @@ ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`
 | [[ETF_NASDAQ_IJT Performance]] | 22.40% | -21.24% | 16.97% | 9.42% | 5.20% | 29.80% | 4 / 1 |
 | [[ETF_NYSE_ARCA_IJS Performance]] | 30.47% | -11.32% | 14.64% | 7.42% | 6.55% | 51.81% | 4 / 1 |
 | [[ETF_NASDAQ_FYC Performance]] | 21.75% | -25.75% | 14.15% | 24.05% | 24.34% | 59.17% | 4 / 1 |
+| [[ETF_NASDAQ_VTWG Performance]] | 2.82% | -26.35% | 18.73% | 15.17% | 13.07% | 17.08% | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
@@ -304,6 +306,7 @@ utilities และ financials tilt.
 - Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - Source batch: [[ETF_performance_sources_2026-07-19]]
 - Source batch: [[ETF_performance_sources_2026-07-21]]
+- Source batch: [[ETF_performance_sources_2026-08-16]]
 - [Federal Reserve 2022 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm)
 - [Federal Reserve 2020 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm)
 

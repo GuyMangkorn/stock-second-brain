@@ -72,6 +72,7 @@ Research-bearing lean runs for DGS, DLS, CALF, and FYC. Fresh read-only research
 
 - Raw start/end TR values, exact endpoint dates, and elapsed years for the issuer-reported 10-year average annual NAV TR 8.31% are not disclosed; it is not relabelled as an independently calculated CAGR.
 - Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no numeric secondary proxy is saved.
+
 - S&P 500 2026 current YTD was not used because the cached convention ends at 2025-12-31 and no fresh current benchmark evidence was supplied in this packet.
 - The DGS annual observations are rounded source values, so cumulative/CAGR calculations are approximations from rounded inputs.
 
@@ -228,3 +229,60 @@ Research-bearing lean runs for DGS, DLS, CALF, and FYC. Fresh read-only research
 - Original listing date was not verified in the reviewed official sources.
 - Distribution archive review did not locate 2025 Q4 or 2026 Q1 entries; the 0.6986 USD sum is not labelled TTM.
 - Official daily NAV history sufficient for maximum drawdown and recovery is not verified; no secondary numeric proxy is saved.
+
+## Scheduled-inline run - VTWG
+
+workflow: check-etf-performance
+execution_profile: scheduled-inline
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### VTWG official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NASDAQ:VTWG | https://investor.vanguard.com/investment-products/etfs/profile/vtwg | Official Vanguard product page: fund identity, index objective, annual NAV/market-price returns, current YTD and distributions | Annual rows as of 2025-12-31; current product/YTD snapshots include 2026-07-02 and 2026-07-17 |
+| NASDAQ:VTWG | https://advisors.vanguard.com/investments/products/vtwg/vanguard-russell-2000-growth-etf | Official Vanguard advisor page: current NAV YTD observation | NAV YTD 16.85% as of 2026-07-17 |
+| NASDAQ:VTWG | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3353.pdf | Official factsheet: passive full-replication classification, benchmark, inception, exchange, expense ratio, NAV-return definition and risk statistic | Factsheet as of 2026-06-30 |
+| NASDAQ:VTWG | https://institutional.vanguard.com/content/dam/inst/iig-transformation/pdf/total_return_chart.pdf | Official Vanguard total-return chart: rolling 10-year and since-inception NAV total returns | Performance periods ended 2026-06-30 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official benchmark definition; cached common reference convention | USD total return with dividends reinvested; cache as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached source reference for 2016-2019 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached source reference for 2018-2022 rows | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached source reference for 2021 row | Reference window as documented in skill |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached source reference for 2022-2025 rows | Reference window as documented in skill |
+
+### VTWG raw observations and calculations
+
+| Year | VTWG NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 11.40% | 11.96% |
+| 2017 | 22.13% | 21.83% |
+| 2018 | -9.31% | -4.38% |
+| 2019 | 28.59% | 31.49% |
+| 2020 | 34.70% | 18.40% |
+| 2021 | 2.82% | 28.71% |
+| 2022 | -26.35% | -18.11% |
+| 2023 | 18.73% | 26.29% |
+| 2024 | 15.17% | 25.02% |
+| 2025 | 13.07% | 17.88% |
+| 2026 YTD | 16.85% | not available from cached current-year benchmark |
+
+- Metric basis: official VTWG NAV Total Return, USD, dividends and capital-gain distributions reinvested, pre-tax and net of expenses.
+- Issuer benchmark: Russell 2000 Growth Index; it is retained as metadata and not silently substituted for the common S&P 500 reference.
+- Classification: passive/index-tracking equity ETF using full replication; exchange NASDAQ; inception 2010-09-20; quarterly distribution schedule; expense ratio 0.06%.
+- 2016-2025 VTWG compound: 150.23% cumulative; rounded-input CAGR 9.61%.
+- 2021-2025 VTWG compound: 17.08% cumulative; rounded-input CAGR 3.20%.
+- S&P 500 2016-2025 cached compound: 298.33% cumulative; rounded-input CAGR 14.82%.
+- S&P 500 2021-2025 cached compound: 96.17% cumulative; rounded-input CAGR 14.43%.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR: 210.66% cumulative / 12.00% annualized as of 2026-06-30. Raw endpoints are not disclosed; normalized index representation is 100.00 at 2016-06-30 and 310.66 at 2026-06-30 over 10.00 years.
+- Official factsheet 3-year monthly standard deviation: 21.30% as of 2026-06-30.
+- Current official NAV TR YTD: 16.85% as of 2026-07-17. Earlier official snapshots were 20.04% as of 2026-07-02 and 22.23% as of 2026-06-30; these are dated observations, not a same-date conflict.
+
+### VTWG gaps and conflicts
+
+- The rolling 10-year issuer field supplies cumulative and annualized returns but not raw TR endpoint values; the normalized 100.00 → 310.66 representation is explicitly derived from the disclosed cumulative return and is not presented as raw NAV history.
+- Current-YTD fields are not synchronized: the newer official advisor-page observation as of 2026-07-17 is used for the current claim; earlier 2026-07-02 and 2026-06-30 values remain provenance only.
+- Official daily NAV history sufficient to verify maximum drawdown and recovery was not located; no numeric secondary proxy is saved.
+- S&P 500 current-year YTD is not supplied because the cached benchmark convention ends at 2025-12-31; the annual comparison therefore uses the common 2016-2025 window only.

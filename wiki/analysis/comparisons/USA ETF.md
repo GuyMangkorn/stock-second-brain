@@ -44,11 +44,12 @@ tags:
 | IJS | iShares S&P Small-Cap 600 Value ETF | U.S. small-cap value equity | 10.60% | 8.71% | 23.99% | [[ETF_NYSE_ARCA_IJS Performance]] |
 | CALF | Pacer US Small Cap Cash Cows ETF | U.S. small-cap free-cash-flow equity | not applicable (<10y) | 8.88%† | 10.60%‡ | [[ETF_CBOE_BZX_CALF Performance]] |
 | FYC | First Trust Small Cap Growth AlphaDEX® Fund | U.S. small-cap growth rules-based equity | 13.92%† | 9.74%‡ | 23.54%§ | [[ETF_NASDAQ_FYC Performance]] |
+| VTWG | Vanguard Russell 2000 Growth ETF | U.S. small-cap growth equity | 12.00% | 3.20% | 16.85% | [[ETF_NASDAQ_VTWG Performance]] |
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, ‡, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
-ค่า cumulative/CAGR ของ IJS ที่คำนวณจาก annual rows เป็น rounded-input approximation ตาม source batch. CALF 2021-2025 CAGR 8.88%† เป็น rounded-input approximation และ 2026 YTD 10.60%‡ เป็น stale NAV snapshot ณ 2026-06-22; มีอีก snapshot 12.78% ณ 2026-06-16 และไม่พบตัวเลข as-of 2026-08-16. FYC 13.92%† เป็น issuer 10-year average annual NAV TR ณ 2026-07-31 ไม่ใช่ calendar-row CAGR; 9.74%‡ เป็น rounded-input CAGR จาก 2021-2025; 23.54%§ เป็น NAV TR YTD ณ 2026-07-31 และ factsheet เก่ากว่ารายงาน 32.59% ณ 2026-06-30.
+ค่า cumulative/CAGR ของ IJS ที่คำนวณจาก annual rows เป็น rounded-input approximation ตาม source batch. CALF 2021-2025 CAGR 8.88%† เป็น rounded-input approximation และ 2026 YTD 10.60%‡ เป็น stale NAV snapshot ณ 2026-06-22; มีอีก snapshot 12.78% ณ 2026-06-16 และไม่พบตัวเลข as-of 2026-08-16. FYC 13.92%† เป็น issuer 10-year average annual NAV TR ณ 2026-07-31 ไม่ใช่ calendar-row CAGR; 9.74%‡ เป็น rounded-input CAGR จาก 2021-2025; 23.54%§ เป็น NAV TR YTD ณ 2026-07-31 และ factsheet เก่ากว่ารายงาน 32.59% ณ 2026-06-30. VTWG 12.00% เป็น issuer rolling 10-year annualized NAV TR ณ 2026-06-30; 3.20% เป็น rounded-input CAGR จาก 2021-2025 และ 16.85% เป็น official NAV TR YTD ณ 2026-07-17.
 
 ## Navigation
 
