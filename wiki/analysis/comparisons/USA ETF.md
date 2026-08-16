@@ -42,6 +42,7 @@ tags:
 | SSEUF | State Street SPDR Russell 2000 U.S. Small Cap UCITS ETF (Acc) | U.S. small-cap broad equity | 10.18% | 5.70% | 18.69% | [[ETF_LSE_R2US Performance]] |
 | FNDA | Schwab Fundamental U.S. Small Company ETF | U.S. small-cap fundamental equity | 11.53% | 9.49%* | 21.18% | [[ETF_NYSE_ARCA_FNDA Performance]] |
 | VBR | Vanguard Small-Cap Value ETF | U.S. small-cap value equity | 10.99% | 10.56% | 15.83% | [[ETF_NYSE_ARCA_VBR Performance]] |
+| ZPRVF | State Street SPDR MSCI USA Small Cap Value Weighted UCITS ETF (USD line USSC) | U.S. small-cap value equity | 12.10% | 12.97% | 20.29% | [[ETF_LSE_USSC Performance]] |
 | IJR | iShares Core S&P Small-Cap ETF | U.S. small-cap broad equity | 9.76% | 7.23% | 23.66% | [[ETF_NYSE_ARCA_IJR Performance]] |
 | ESML | iShares ESG Aware MSCI USA Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 7.47% | 23.07% | [[ETF_CBOE_BZX_ESML Performance]] |
 | IJT | iShares S&P Small-Cap 600 Growth ETF | U.S. small-cap growth equity | 11.82% | 5.35% | 26.03% | [[ETF_NASDAQ_IJT Performance]] |

@@ -2,14 +2,14 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA
-input_count: 4
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF
+input_count: 5
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; current NAV/YTD fields through 2026-07-31"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; current NAV/YTD fields through 2026-07-31"
 tags:
   - source/etf
 ---
@@ -18,7 +18,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean run for GSSC, XSMO, SSEUF, and FNDA. Source discovery, reading, reconciliation,
+Research-bearing lean run for GSSC, XSMO, SSEUF, FNDA, and ZPRVF. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -232,4 +232,52 @@ reviewer_dispatch: not-attempted-by-design
 - XSMO-specific local checklist: verified the official 2016-2025 annual rows, issuer 10-year average annual field, secondary current NAV snapshot, separate return-basis treatment, predecessor-index continuity note, 8/2 up/down count, and no unsupported drawdown/recovery inference.
 - SSEUF-specific local checklist: verified OTC-to-`LSE:R2US` alias mapping, ISIN/share-class currency, passive classification, official 2016-2025 rows, official 10-year/current NAV fields, S&P cache convention, 8/2 up/down count, risk metrics, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
 - FNDA-specific local checklist: verified passive/index classification, exchange, inception, fee, current tracked index, official NAV 10Y/YTD fields, secondary annual-row basis, 2024 benchmark splice, 8/2 up/down count, risk metrics, source conflict, graph breadcrumb, primary-region ownership, and no unsupported drawdown/recovery inference.
-- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
+- ZPRVF-specific local checklist: resolved the OTC input alias to official USD `LSE:USSC` by ISIN `IE00BSPLC413`, verified passive/index-tracking equity classification, inception, TER, accumulation, issuer benchmark, official 2016-2025 Fund Net rows, rolling 10-year NAV TR, current YTD, S&P cache window/basis, current benchmark date mismatch, 8/2 up/down count, risk metrics, graph breadcrumb, USA primary-region ownership, and no unsupported drawdown/recovery inference.
+- Planned durable files reviewed before save: `wiki/analysis/performance/ETF_NYSE_ARCA_GSSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md`, `wiki/analysis/performance/ETF_LSE_R2US Performance.md`, `wiki/analysis/performance/ETF_LSE_USSC Performance.md`, `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, this source batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `wiki/analysis/comparisons/ETF Region Index.md`, and `log.md`.
+
+## ZPRVF / USSC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| LSE:USSC / input ZPRVF | https://www.ssga.com/ie/en_gb/institutional/etfs/state-street-spdr-msci-usa-small-cap-value-weighted-ucits-etf-zprv-gy | Official State Street product page: fund identity, listings, inception, TER context, official NAV, Fund Net/NAV performance, annual rows, standard deviation and tracking error | Fund performance through 2026-07-31; NAV 2026-08-14; characteristics 2026-08-13 |
+| LSE:USSC / input ZPRVF | https://www.ssga.com/library-content/products/factsheets/etfs/emea/factsheet-emea-en_gb-zprv-gy.pdf | Official State Street factsheet: ISIN, USD LSE ticker, index, inception, TER, accumulation, optimized replication and performance | Factsheet dated 2026-06-30; performance table through 2026-07-31 |
+| Input ZPRVF alias | https://stockanalysis.com/quote/otc/ZPRVF/ | Secondary OTC identity/exchange cross-check; not used for NAV TR ranking | OTC ticker identity checked 2026-08-17 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR current | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=f33eb5c2-5231-4c16-bc59-38407c3d2f2f&sourceIdentifier=home-page | Official current S&P 500 (TR) YTD cross-check | 14.04% as of 2026-08-16; not synchronized with ETF 2026-07-31 YTD and not used in annual table |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached annual reference rows | 2016-2019; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached annual reference rows | 2018-2022; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached annual reference row | 2021; reused without a new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached annual reference rows | 2022-2025; reused without a new search |
+
+## ZPRVF / USSC raw observations and calculations
+
+| Year | USSC Fund Net / NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 25.83% | 11.96% |
+| 2017 | 9.37% | 21.83% |
+| 2018 | -14.31% | -4.38% |
+| 2019 | 23.80% | 31.49% |
+| 2020 | 8.46% | 18.40% |
+| 2021 | 35.40% | 28.71% |
+| 2022 | -10.23% | -18.11% |
+| 2023 | 21.18% | 26.29% |
+| 2024 | 9.67% | 25.02% |
+| 2025 | 13.89% | 17.88% |
+| 2026 YTD | 20.29% (official Fund Net/NAV) | 14.04% (official current page, as of 2026-08-16; not same date) |
+
+- Metric basis: official State Street Fund Net performance is NAV-based and net of fees; the accumulating USD share class retains income in NAV.
+- Issuer benchmark: `MSCI USA Small Cap Value Weighted Index` (Net Total Return); retained as metadata and not substituted for the common S&P 500 reference.
+- Official rolling 10-year NAV TR: `213.35%` cumulative / `12.10%` annualized as of 2026-07-31. Because raw NAV endpoints are not disclosed, the performance page uses a normalized index calculation `100.00 → 313.35` over `10.00` years; this is not presented as a raw provider index level.
+- 2016-2025 USSC compound: `191.31%` cumulative; rounded-input CAGR `11.28%`.
+- 2021-2025 USSC compound: `83.97%` cumulative; rounded-input CAGR `12.97%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official risk fields: 3-year standard deviation `18.28%` and annualized tracking error `0.07%` as of 2026-07-31; official NAV `US$96.48` as of 2026-08-14.
+
+## ZPRVF / USSC gaps and conflicts
+
+- The input ticker `ZPRVF` is an OTC alias. State Street's official listings for ISIN `IE00BSPLC413` identify the USD line as `LSE:USSC` and the primary EUR line as `Deutsche Börse:ZPRV`; the durable key uses `LSE:USSC` to match the USD share class while preserving the input alias in metadata.
+- The latest official ETF YTD field is `20.29%` as of 2026-07-31. The latest official S&P 500 TR page reviewed shows `14.04%` as of 2026-08-16; the as-of dates differ, so the current benchmark figure is disclosed but not used as a same-date annual-table comparator.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations. Market-price observations from different currency listings are not mixed into the NAV Total Return ranking.
