@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV
-input_count: 27
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS
+input_count: 28
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, and AVUV. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, and DFAS. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -137,6 +137,7 @@ review_gate: PASS
 | IWN | supported | NYSE Arca:IWN | USA | 25.91% (2026-08-13) | https://www.ishares.com/us/products/239712/ishares-russell-2000-value-etf | passive/index-tracking U.S. small-cap value equity; official 2016-2025 rows at 0.1% precision; daily NAV drawdown/recovery not disclosed |
 | IWO | supported | NYSE Arca:IWO | USA | 21.61% (2026-08-13) | https://www.ishares.com/us/products/239709/ishares-russell-2000-growth-etf | passive/index-tracking U.S. small-cap growth equity; official 2016-2025 rows at 0.1% precision; daily NAV drawdown/recovery not disclosed |
 | AVUV | unsupported | NYSE Arca:AVUV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm | actively managed and does not seek to replicate a specified index; outside passive index-tracking equity scope; no performance artifact created |
+| DFAS | unsupported | NYSE Arca:DFAS | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000081/c497k.htm | actively managed and does not seek to replicate a specific index; outside passive index-tracking equity scope; no performance artifact created |
 
 ## GSSC official source map
 
@@ -803,6 +804,28 @@ reviewer_dispatch: not-attempted-by-design
 | `NYSE Arca:AVUV` | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm | Official SEC summary prospectus: identity, exchange, expense ratio, active security-selection strategy, derivatives context, and no-specified-index statement | Summary Prospectus dated 2026-01-01; reviewed 2026-08-17 |
 
 ### AVUV scheduled-local review
+
+- Complete pre-save checklist reviewed locally: canonical identity/exchange, official issuer and SEC classification, active/passive type gate, index status, ETF v1 scope exclusion, source URLs/as-of dates, no-performance-artifact decision, Trello result metadata, and next-card sequencing.
+- Result: local `PASS` for the unsupported-type classification; no performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was written.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## DFAS unsupported ETF type
+
+- Input ticker: `DFAS`; canonical identity: `NYSE Arca:DFAS`; fund: Dimensional U.S. Small Cap ETF.
+- Type gate: `unsupported ETF type`. The current SEC summary prospectus identifies DFAS as an actively managed ETF that does not seek to replicate the performance of a specific index, and describes flexible portfolio-management decisions plus possible futures/options use. Dimensional's official materials also describe DFAS within its active ETF lineup. This fails ETF v1's passive, index-tracking equity scope.
+
+### DFAS Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:DFAS` | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000081/c497k.htm | Official SEC summary prospectus: identity, exchange, objective, active-management classification, index-replication exclusion, flexible process and derivative context | Summary Prospectus dated 2026-02-28; reviewed 2026-08-17 |
+| `NYSE Arca:DFAS` | https://www.dimensional.com/us-en/our-approach/dimensional-equity-solutions | Official issuer equity-solutions page: DFAS identity and placement in Dimensional's component/small-cap active ETF lineup | Issuer page reviewed 2026-08-17 |
+| `NYSE Arca:DFAS` | https://www.dimensional.com/us-en/newsroom/dimensional-lists-four-new-etfs-following-the-industrys-largest-mutual-fund-to-etf-conversion | Official issuer listing announcement: NYSE Arca listing and explicit active transparent ETF description | Published 2021-06-14; reviewed 2026-08-17 |
+
+### DFAS scheduled-local review
 
 - Complete pre-save checklist reviewed locally: canonical identity/exchange, official issuer and SEC classification, active/passive type gate, index status, ETF v1 scope exclusion, source URLs/as-of dates, no-performance-artifact decision, Trello result metadata, and next-card sequencing.
 - Result: local `PASS` for the unsupported-type classification; no performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was written.
