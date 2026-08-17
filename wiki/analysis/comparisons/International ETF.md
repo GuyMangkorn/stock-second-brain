@@ -34,12 +34,19 @@ tags:
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
+| DFIS | Dimensional International Small Cap ETF | international active systematic small-cap | not applicable (<10y history) | not applicable (2022 inception) | 14.18%* | [[ETF_CBOE_BZX_DFIS Performance]] |
+| AGSCF | Avantis Global Small Cap Value UCITS ETF (official USD LSE:AVGS) | international active systematic small-cap value | not applicable (<10y history) | not applicable (2024 inception) | 21.43% | [[ETF_LSE_AVGS Performance]] |
 | GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 7.58%† | not disclosed | 8.18% | [[ETF_NYSE_ARCA_GWX Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
 | VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.73% | 13.06% | 12.31% | [[ETF_NASDAQ_VYMI Performance]] |
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `7.58%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed.
+
+AGSCF เป็น input alias ของ official USD listing `LSE:AVGS`; `21.43%` เป็น
+official NAV TR YTD ณ 2026-07-31 เทียบกับ management benchmark `13.80%`.
+ประวัติสั้นและ official factsheet ไม่แสดง complete annual rows จึงไม่คำนวณ
+calendar CAGR หรือ hit rate.
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. FNDC `8.48%` เป็น issuer-reported
@@ -52,7 +59,9 @@ official factsheet annual rows และ YTD field ใช้ as-of 2026-07-31. �
 YTD ณ 2026-06-30 และ annual calendar rows ไม่เปิดเผย. DISV `12.90%*` เป็น
 secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใช้งานได้
 คือ 2023-2025 เพราะ 2022 เป็น inception partial และ official 2021-2025 CAGR
-จึงไม่ applicable.
+จึงไม่ applicable. DFIS `14.18%*` เป็น secondary market-price + cash-distribution
+proxy ณ 2026-08-12 ไม่ใช่ official NAV TR; official complete annual rows คือ
+2023-2025 และกองทุนเป็น active systematic long-only small-cap.
 
 ## Navigation
 

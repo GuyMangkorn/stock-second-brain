@@ -17,7 +17,7 @@ driver notes ทั้งหมด
 
 | Region | ETFs | Navigation |
 |---|---:|---|
-| USA | 52 | [[USA ETF]] |
+| USA | 66 | [[USA ETF]] |
 | Australia | 3 | [[Australia ETF]] |
 | North America | 2 | [[North America ETF]] |
 | India | 15 | [[India ETF]] |
@@ -30,8 +30,8 @@ driver notes ทั้งหมด
 | Europe | 1 | [[Europe ETF]] |
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
-| Emerging Markets | 4 | [[Emerging Markets ETF]] |
-| International | 20 | [[International ETF]] |
+| Emerging Markets | 5 | [[Emerging Markets ETF]] |
+| International | 23 | [[International ETF]] |
 | Malaysia | 1 | [[Malaysia ETF]] |
 | New Zealand | 1 | [[New Zealand ETF]] |
 | Philippines | 1 | [[Philippines ETF]] |

@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX, ISCV
-input_count: 34
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX, ISCV, EES, JPSE, XSVM, JHSC, SFLO, OSCV, SMDV, SMIN, EWX, AVSC, FESM, DFSV, PSC
+input_count: 47
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,475 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; GWX calendar rows not disclosed; ISCV official 2016-2025; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
+## AGSCF / AVGS official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| LSE:AVGS (input alias AGSCF) | https://www.avantisinvestors.com/ucitsetf/avantis-global-small-cap-value-ucits-etf/ | Official Avantis product page: fund identity, active objective, current NAV and regulatory-document links | Page reviewed 2026-08-17; product-page NAV US$29.85 as of 2026-08-14 |
+| LSE:AVGS (input alias AGSCF) | https://res.avantisinvestors.com/docs/avantis-global-small-cap-value-ucits-etf-fact-sheet.pdf | Official Avantis factsheet: active approach, inception, benchmark, OCF, NAV performance, holdings, country exposures and risk language | Marketing communication as of 2026-07-31; inception 2024-09-25; OCF 0.39%; NAV YTD 21.43%; benchmark YTD 13.80%; NAV 1-year 36.36%; benchmark 1-year 27.16% |
+| LSE:AVGS (input alias AGSCF) | https://www.londonstockexchange.com/stock/AVGS/american-century-icav/company-page | Official exchange identity cross-check | USD ticker AVGS on London Stock Exchange; listing date 2024-12-04; ISIN IE0003R87OG3 |
+| LSE:AVGS (input alias AGSCF) | https://registers.centralbank.ie/%28S%28atb1s1eysq1bdt45cyzep0nm%29%29/FundRegisterDataPage.aspx?fundReferenceNumber=C544701&register=28 | Official regulator fund-register cross-check | Avantis Global Small Cap Value UCITS ETF; UCITS ICAV sub-fund; approval 2024-08-16; page updated 2026-07-27 |
+
+## AGSCF / AVGS raw observations and calculations
+
+| Window | AVGS NAV TR | MSCI World Small Cap Value Index | Active difference |
+|---|---:|---:|---:|
+| 2026 YTD | 21.43% | 13.80% | +7.63 pp |
+| Rolling 1-year | 36.36% | 27.16% | +9.20 pp |
+
+- Metric basis: official factsheet NAV total returns; returns assume reinvestment of dividends and capital gains; currency USD; the fund is accumulating.
+- Active difference calculations: `21.43% - 13.80% = +7.63 pp`; `36.36% - 27.16% = +9.20 pp`.
+- No annual calendar rows, complete 2021-2025 window, 10-year window, ITD annualized return or compatible annual hit-rate series was disclosed in the reviewed official sources; no CAGR or hit rate is calculated.
+- Current official product-page NAV snapshot: US$29.85 as of 2026-08-14. It is retained separately from the 2026-07-31 performance factsheet.
+
+## AGSCF / AVGS gaps and scheduled-inline local review
+
+- Canonical identity resolves input alias AGSCF to official USD listing `LSE:AVGS`, Avantis Global Small Cap Value UCITS ETF, on the London Stock Exchange; ISIN IE0003R87OG3 cross-checks the share class.
+- AVGS is within supported ETF scope as an active, long-only equity UCITS ETF. The official materials state that it does not seek to replicate a specified index; the portfolio approach uses valuation and profitability tilts with broad developed-market small-cap equity exposure.
+- Management benchmark is MSCI World Small Cap Value Index, the official strategy-aligned small-cap value comparator. S&P 500 TR remains common reference context only.
+- Track record is developing-short-live-history because inception is 2024-09-25 and the reviewed performance factsheet has less than two years of live-history context.
+- Only official 2026 YTD and rolling 1-year rows are saved. Calendar-year rows, CAGR, hit rate and a synchronized S&P 500 YTD comparison remain not disclosed.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric drawdown or recovery claim is saved.
+- Planned durable paths: created `wiki/analysis/performance/ETF_LSE_AVGS Performance.md`; updated `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region International; breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; canonical tags `geography/International`, `ticker/AVGS`, and `ticker/AGSCF`; all affected wikilinks resolve after the performance page is created.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## DFIS official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Cboe BZX:DFIS | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000070/c497k.htm | Official SEC summary prospectus: identity, exchange, active classification, strategy, fees, annual NAV rows, benchmark, quarterly extremes, turnover and manager continuity | Prospectus dated 2026-02-28; annual performance rows through 2025-12-31; expense ratio 0.39%; inception 2022-03-23 |
+| Cboe BZX:DFIS | https://www.dimensional.com/us-en/funds/dfis/international-small-cap-etf | Official Dimensional product-page identity and strategy discovery | Page reviewed 2026-08-17; dynamic page retained as official discovery source |
+| Cboe BZX:DFIS | https://my.dimensional.com/chmedia/282748/source/dimensional-etf-quick-guide.pdf | Official Dimensional ETF Quick Guide: inception, expense ratio, annualized performance and management benchmark cross-check | Fund facts as of 2025-12-31; DFIS 1-year NAV TR 37.49%, since-inception annualized 9.94%; benchmark 34.07% and 7.89% |
+| Cboe BZX:DFIS | https://www.cboe.com/us/equities/listings/listed_products/symbols/DFIS/ | Official exchange listing cross-check | Listing page reviewed 2026-08-17 |
+| Cboe BZX:DFIS | https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=dfis | Secondary current price, NAV, premium/discount, distribution, assets, holdings and current rolling-performance cross-check | Price US$37.34 at 11:12am ET on 2026-08-13; previous close US$37.27; closing NAV US$37.18 on 2026-08-12; premium/discount +0.24% on 2026-08-12; cash distribution US$0.4222, ex-date 2026-06-23, pay date 2026-06-25; 3,461 holdings and 9% turnover |
+| Cboe BZX:DFIS | https://chartexchange.com/symbol/bats-dfis/historical/ | Secondary historical closing-price cross-check used only for the current YTD proxy start price | 2025-12-31 close US$32.94; 2026-01-02 close US$33.18 |
+| S&P 500 Total Return | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common-reference benchmark definition and cached annual convention | USD total return with dividends reinvested; annual rows 2023 26.29%, 2024 25.02%, 2025 17.88%, as of 2025-12-31 |
+
+## DFIS raw observations and calculations
+
+| Year / window | DFIS NAV TR | MSCI World ex USA Small Cap Index (net dividends) | S&P 500 TR | Annual active difference |
+|---|---:|---:|---:|---:|
+| 2023 | 15.04% | 12.62% | 26.29% | +2.42 pp |
+| 2024 | 3.79% | 2.76% | 25.02% | +1.03 pp |
+| 2025 | 37.49% | 34.07% | 17.88% | +3.42 pp |
+| 2023-2025 cumulative | 64.16% | 55.16% | 86.12% | — |
+| 2023-2025 CAGR | 17.97% | 15.77% | 23.01% | +2.20 pp Excess CAGR |
+
+- Metric basis: official SEC NAV Total Return includes reinvested distributions and fund expenses; market-price return remains separate. Currency is USD.
+- Cumulative calculation from displayed annual rows: `(1+15.04%) × (1+3.79%) × (1+37.49%) - 1 = 64.16%`; management benchmark `55.16%`; S&P 500 TR `86.12%`.
+- Rounded-input CAGR calculation over three complete years: `64.16%` compound gives `17.97%`; management benchmark gives `15.77%`; S&P 500 TR gives `23.01%`.
+- Relative wealth calculation: `1.64163082 / 1.55156948 - 1 = +5.80%`; annual hit rate `3 / 3 = 100%`.
+- Annual population standard deviation of DFIS rows is `14.01%`; this is a three-observation short-window descriptor, not a long-run risk estimate.
+- Current YTD proxy: `(2026-08-12 previous close 37.27 + 2026-06-25 cash distribution 0.4222) / 2025-12-31 close 32.94 - 1 = 14.18%`. It is explicitly a secondary market-price + cash-distribution proxy, not official NAV TR, and is not paired with a synchronized benchmark YTD.
+- Current secondary fields retained separately: price US$37.34 at 11:12am ET on 2026-08-13, previous close US$37.27, closing NAV US$37.18 on 2026-08-12, premium/discount +0.24%, TTM distribution yield 1.99%.
+
+## DFIS gaps and scheduled-inline local review
+
+- Canonical identity is Cboe BZX:DFIS; the SEC summary prospectus, Dimensional product materials and Cboe listing confirm Dimensional International Small Cap ETF and the Cboe BZX venue.
+- DFIS is within supported ETF scope as an active, long-only equity ETF. The official prospectus states that it is actively managed and does not seek to replicate a specific index; derivatives are described for exposure, cash management or settlement rather than a payoff-defining leveraged, inverse or option-income structure.
+- The selected management benchmark is MSCI World ex USA Small Cap Index (net dividends), the official similar-universe additional index. S&P 500 TR is retained only as common reference context.
+- Track record is provisional: inception 2022-03-23 and three complete comparable years through 2025-12-31; no 10-year or 2021-2025 strict window is claimed.
+- Current YTD is not official NAV TR. The saved `14.18%*` is a clearly labelled secondary market-price + cash-distribution proxy using independently dated observations.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric drawdown or recovery claim is saved.
+- Planned durable paths: created `wiki/analysis/performance/ETF_CBOE_BZX_DFIS Performance.md`; updated `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region International; breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; canonical tag `geography/International`; all affected wikilinks resolve after the performance page is created.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## EWX official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EWX` | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-emerging-markets-small-cap-etf-ewx | Official State Street product/performance page: identity, exchange, issuer benchmark, passive strategy, fee, NAV, market price, holdings, country weights and rolling performance | Product/listing/fund information reviewed 2026-08-17; NAV, market price and holdings as of 2026-08-14; distribution yield as of 2026-08-13; official performance through 2026-07-31 |
+| `NYSE Arca:EWX` | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-ewx.pdf | Official factsheet: standardized NAV, market-price and index returns, inception, fee, benchmark and risk fields | Factsheet as of 2026-06-30; NAV YTD 13.79%, 1-year 22.44%, 5-year annualized 6.83%, 10-year annualized 9.48% |
+| `NYSE Arca:EWX` | https://www.sec.gov/Archives/edgar/data/1168164/000119312526031211/d87745d497k.htm | Official SEC summary prospectus: passive objective, index construction, fees, sampling, risks and annual-return extremes | Prospectus dated 2026-01-31; gross expense ratio 0.65%; best quarter +25.82% in Q2 2020; worst quarter -28.68% in Q1 2020 |
+| `NYSE Arca:EWX` | https://www.etfreplay.com/etf/ewx | Secondary dividend-adjusted total-return observations for calendar-year proxy | Page reviewed 2026-08-17; annual table data as of 2026-07-08; not issuer-published NAV rows |
+| `NYSE Arca:EWX` | https://www.financecharts.com/etfs/EWX/performance | Secondary cross-check for the calendar-year proxy | Page reviewed 2026-08-17; annual observations differ from ETFreplay by 0.01–0.03 percentage points and were not mixed |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | Cached USD total-return convention with dividends reinvested; annual window 2016-2025 as of 2025-12-31 |
+
+## EWX raw observations and calculations
+
+| Year / window | EWX secondary total-return proxy* | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.94% | 11.96% |
+| 2017 | 34.10% | 21.83% |
+| 2018 | -18.74% | -4.38% |
+| 2019 | 15.59% | 31.49% |
+| 2020 | 14.86% | 18.40% |
+| 2021 | 18.16% | 28.71% |
+| 2022 | -15.00% | -18.11% |
+| 2023 | 18.15% | 26.29% |
+| 2024 | 6.84% | 25.02% |
+| 2025 | 15.44% | 17.88% |
+| 2016-2025 cumulative | 128.55% | 298.33% |
+| 2016-2025 rounded-input CAGR | 8.62% | 14.82% |
+| 2021-2025 cumulative | 46.36% | 96.17% |
+| 2021-2025 rounded-input CAGR | 7.92% | 14.43% |
+
+`*` EWX annual rows are ETFreplay dividend-adjusted total-return observations,
+not issuer-published NAV rows. S&P 500 rows reuse the cached USD Total Return
+convention as of 2025-12-31.
+
+- Metric basis: official State Street NAV Total Return includes reinvested distributions and fund expenses; USD; market-price return remains separate.
+- Identity and classification: State Street identifies EWX as the SPDR S&P Emerging Markets Small Cap ETF, listed on NYSE Arca, tracking the `S&P Emerging Under USD2 Billion Index`; the prospectus describes passive sampling and an at-least-80% index policy.
+- Official rolling fields: issuer-reported 10-year NAV TR average annual `7.95%` and current NAV TR YTD `3.91%`, both as of 2026-07-31; raw rolling endpoints and exact elapsed years are not disclosed.
+- Formula: cumulative return is `product(1 + annual return) - 1`; CAGR is `cumulative^(1/n) - 1`; displayed annual inputs are rounded, so the CAGR is labelled rounded-input.
+- Proxy calculations: 2016-2025 cumulative `128.55%`, rounded-input CAGR `8.62%`; 2021-2025 cumulative `46.36%`, rounded-input CAGR `7.92%`; annual-return population standard deviation `15.04%`; up/down years `8 / 2`; best 2017 `+34.10%`; worst 2018 `-18.74%`.
+- Current issuer fields: NAV `$72.25` and market price `$71.89` as of 2026-08-14; AUM `$700.81M` and 3,381 holdings as of 2026-08-14; fund distribution yield `2.55%` as of 2026-08-13; gross expense ratio `0.65%`.
+- The cached S&P 500 convention remains a common reference benchmark, not the issuer tracking benchmark. Current-year S&P 500 data was not paired with EWX because the captured current observations are not synchronized.
+- FinanceCharts differences were retained as a source conflict note; ETFreplay is the only secondary source used for the calendar proxy. No strict common-window NAV ranking row was added from these proxy observations.
+
+## EWX gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:EWX`; the State Street product page and SEC prospectus confirm the exchange, fund name, passive strategy and `S&P Emerging Under USD2 Billion Index` benchmark.
+- EWX is within supported ETF scope as a passive, index-tracking, long-only equity ETF. No leverage, inverse, bond, commodity, covered-call, option-income or derivative-heavy structure was found; incidental futures use is described only for index tracking and cash management.
+- Official State Street performance capture provides rolling NAV fields but not a complete 2016-2025 calendar NAV table. The annual proxy is explicitly secondary and is not added to the strict common-window NAV comparison.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric NAV drawdown or recovery proxy is saved.
+- Planned durable paths: created `wiki/analysis/performance/ETF_NYSE_ARCA_EWX Performance.md`; updated `wiki/analysis/comparisons/Emerging Markets ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region Emerging Markets; breadcrumb `[[ETF Region Index]] → [[Emerging Markets ETF]] → [[ETF Performance Index]]`; canonical tag `geography/Emerging-Markets`; all affected wikilinks resolve to existing targets.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## AVSC official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:AVSC` | https://www.avantisinvestors.com/avantis-investments/avantis-us-small-cap-equity-etf/ | Official Avantis product page: identity, active strategy, current NAV/market price, current YTD and expense ratio | Product page reviewed 2026-08-17; NAV `$75.22` and market price `$75.25` as of 2026-08-14; NAV TR YTD `23.92%` and market-price YTD `23.71%` as of 2026-07-31; gross/net expense ratio `0.25%` as of 2026-01-01 |
+| `NYSE Arca:AVSC` | https://res.avantisinvestors.com/docs/avantis-us-small-cap-equity-avsc-etf-fact-sheet.pdf | Official Avantis factsheet: rolling NAV, market-price and Russell 2000 benchmark returns, inception, fee, AUM, holdings and management team | Factsheet as of 2026-06-30; NAV 1Y `43.54%`, 3Y annualized `18.50%`, since-inception annualized `10.24%`; Russell 2000 `40.78%`, `18.60%`, `8.97%`; AUM `$3.0B`; holdings `1,516`; expense `0.25%` |
+| `NYSE Arca:AVSC` | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000415/acetftavsc497k.htm | Official SEC summary prospectus: inception, active investment process, fees, risks, turnover, official 2024 return and quarter extremes | Summary prospectus dated 2026-01-01; inception 2022-01-11; portfolio turnover `5%` for latest fiscal year; 2024 return before taxes `7.76%`; highest quarter `15.75%` in Q4 2023; lowest quarter `-4.21%` in Q2 2024 |
+| `NYSE Arca:AVSC` | https://www.aaii.com/fund/ticker/AVSC | Secondary AAII/Morningstar annual NAV total-return observations used as a compact calendar proxy | Page reviewed 2026-08-17; annual rows 2023 `19.4%`, 2024 `7.8%`, 2025 `9.4%`; current YTD `23.9%` is retained only as a cross-check |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | Cached USD total-return convention with dividends reinvested; annual window 2023-2025 as of 2025-12-31 |
+
+## AVSC raw observations and calculations
+
+| Year / window | AVSC secondary NAV total-return proxy* | S&P 500 TR |
+|---|---:|---:|
+| 2023 | 19.40% | 26.29% |
+| 2024 | 7.80% | 25.02% |
+| 2025 | 9.40% | 17.88% |
+| 2023-2025 cumulative | 40.81% | 86.12% |
+| 2023-2025 rounded-input CAGR | 12.08% | 23.01% |
+
+`*` AVSC annual rows are AAII/Morningstar secondary NAV total-return
+observations, not a complete issuer-published calendar table. S&P 500 rows
+reuse the cached USD Total Return convention as of 2025-12-31.
+
+- Metric basis: official Avantis NAV Total Return includes reinvested distributions and fund expenses; USD; market-price return remains separate.
+- Identity and classification: Avantis and SEC materials identify AVSC as Avantis U.S. Small Cap Equity ETF, listed on NYSE Arca, actively managed, and not seeking to replicate a specified index. The official factsheet names Russell 2000 as the benchmark.
+- Active process: the SEC prospectus describes selection and weighting using company financials and market data, including book value, cash flows, profitability, market capitalization, liquidity and implementation costs; the portfolio managers make buy, sell and hold decisions.
+- Official rolling fields: as of 2026-06-30 AVSC NAV TR was `43.54%` for 1Y, `18.50%` annualized for 3Y and `10.24%` annualized since inception; Russell 2000 was `40.78%`, `18.60%` and `8.97%` respectively. Reported return differences are `+2.76 pp`, `-0.10 pp` and `+1.27 pp`; these are not alpha.
+- Formula: cumulative return is `product(1 + annual return) - 1`; CAGR is `cumulative^(1/n) - 1`; displayed annual inputs are rounded, so the CAGR is labelled rounded-input.
+- Proxy calculations: 2023-2025 cumulative `40.81%`, rounded-input CAGR `12.08%`; annual-return population standard deviation `5.13%`; up/down years `3 / 0`; best 2023 `+19.40%`; least positive 2025 `+9.40%`.
+- The fund began in 2022, so the strict 2021-2025 common window is not available. No 10-year NAV CAGR, 2021-2025 CAGR, or common-window ranking row is inferred.
+- Source reconciliation: SEC 2024 official return before taxes is `7.76%`, while the secondary AAII/Morningstar row is `7.8%`; the difference is consistent with rounding and the sources are not mixed.
+- Current issuer fields: NAV `$75.22` and market price `$75.25` as of 2026-08-14; current official NAV TR YTD `23.92%` as of 2026-07-31; gross/net expense ratio `0.25%` as of 2026-01-01.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric NAV drawdown or recovery proxy is saved.
+
+## AVSC gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:AVSC`; Avantis product, factsheet and SEC prospectus confirm the exchange, fund name, active long-only structure and 2022-01-11 inception.
+- AVSC is within supported ETF scope as an active long-only equity ETF. It is not a passive/index-tracking fund, but it has no leverage, inverse, bond, commodity, covered-call, option-income or derivative-heavy structure in the reviewed official materials.
+- Management benchmark is `Russell 2000` from the official factsheet; S&P 500 remains only the common reference benchmark. One-year and since-inception reported excess returns are positive, while the three-year comparison is slightly negative; this is mixed, short-track-record evidence.
+- Complete official calendar NAV rows beyond the SEC 2024 cross-check were not captured. The 2023-2025 annual table is a single secondary proxy and is excluded from strict active-skill scoring.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; risk evidence is therefore not-verified beyond the issuer's qualitative risk disclosures and quarter extremes.
+- Planned durable paths: created `wiki/analysis/performance/ETF_NYSE_ARCA_AVSC Performance.md`; updated `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region USA; breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; canonical tag `geography/United-States`; all affected wikilinks resolve to existing targets.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## DFSV official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:DFSV` | https://www.sec.gov/Archives/edgar/data/1816125/000174177325001189/c497k.htm | Official SEC summary prospectus: identity, exchange, active strategy, fee, turnover, risks, annual 2023-2024 returns and Russell 2000 Value comparison | Prospectus dated 2025-02-28; 2023 NAV TR `19.23%`, 2024 NAV TR `7.27%`, 2024 1-year Russell 2000 Value `8.05%`, since-inception NAV `9.50%` vs Russell 2000 Value `5.16%` through 2024-12-31 |
+| `NYSE Arca:DFSV` | https://my.dimensional.com/chmedia/282748/source/dimensional-etf-quick-guide.pdf | Official Dimensional ETF quick guide: 2025 annual NAV return, since-inception return, fee, AUM, company count, inception and listing dates | Data as of 2025-12-31; NAV 1-year `8.51%`, since-inception annualized `9.25%`, gross/net expense `0.30%`/`0.30%`, AUM `$5,978M`, 1,008 companies, inception 2022-02-23, listing 2022-02-24 |
+| `NYSE Arca:DFSV` | https://www.dimensional.com/us-en/funds/dfsv/us-small-cap-value-etf | Official Dimensional fund page: current fund identity and product context | Page reviewed 2026-08-17; dynamic performance fields were not exposed in the text capture, so no unsupported current official figure is inferred |
+| `NYSE Arca:DFSV` | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=dfsv | Secondary fixed-date performance cross-check: NAV/market-price returns and current performance windows | Returns as of 2026-06-30; NAV YTD `18.7%`, 1-year `33.8%`, 3-year annualized `16.4%`, inception annualized `12.5%`; current fields are secondary, not issuer-published |
+| `NYSE Arca:DFSV` | https://www.financecharts.com/etfs/DFSV/performance/total-return | Secondary total-return cross-check for calendar rows and later snapshot | Page reviewed 2026-08-13; secondary rows 2023 `19.25%`, 2024 `7.13%`, 2025 `8.60%`; these differ from official rows and are excluded from the official calculation |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | Cached USD total-return convention with dividends reinvested; annual window 2023-2025 as of 2025-12-31 |
+
+## DFSV raw observations and calculations
+
+| Year / window | DFSV NAV TR | Russell 2000 Value | S&P 500 TR |
+|---|---:|---:|---:|
+| 2023 | 19.23% | not disclosed | 26.29% |
+| 2024 | 7.27% | 8.05% | 25.02% |
+| 2025 | 8.51% | not disclosed | 17.88% |
+| 2023-2025 cumulative | 38.78% | not disclosed | 86.12% |
+| 2023-2025 rounded-input CAGR | 11.54% | not disclosed | 23.01% |
+
+- Metric basis: official Dimensional NAV Total Return includes reinvestment of dividends and other earnings; USD; market-price return remains separate. The 2023 and 2024 rows come from the SEC summary prospectus and the 2025 row from the official Dimensional quick guide, all treated as official NAV return evidence.
+- Identity and classification: Dimensional and SEC materials identify DFSV as the Dimensional US Small Cap Value ETF, listed on NYSE Arca, actively managed, and not seeking to replicate a specific index. The strategy uses a broad, market-cap-weighted portfolio of U.S. small-cap lower-relative-price stocks and may emphasize smaller companies and higher profitability.
+- Management benchmark: the SEC performance table uses the `Russell 2000 Value Index`; S&P 500 Total Return is retained only as the common reference benchmark. The 2024 official comparison was DFSV `7.27%` versus Russell 2000 Value `8.05%`; since inception through 2024-12-31 it was `9.50%` versus `5.16%`. These are benchmark-relative observations, not alpha.
+- Current official fields: the official quick guide as of 2025-12-31 reports NAV 1-year `8.51%`, since-inception annualized `9.25%`, gross/net expense `0.30%`/`0.30%`, AUM `$5,978M`, and `1,008` companies. The SEC summary prospectus reports portfolio turnover `8%` for the latest fiscal year.
+- Current secondary fields: Schwab reports as of 2026-06-30 NAV YTD `18.7%`, 1-year `33.8%`, 3-year annualized `16.4%`, and inception annualized `12.5%`; these are retained as a secondary current snapshot because the dynamic Dimensional page did not expose a text-readable current table.
+- Formula: cumulative return is `product(1 + annual return) - 1`; CAGR is `cumulative^(1/n) - 1`; displayed annual inputs are rounded, so the calculated 2023-2025 CAGR is labelled rounded-input.
+- Calculations: official 2023-2025 cumulative `38.78%`, rounded-input CAGR `11.54%`, annual-return population standard deviation `5.37%`, up/down years `3 / 0`, best 2023 `+19.23%`, and least positive 2025 `+8.51%`. A 10-year or 2021-2025 CAGR is not calculated because the fund began in 2022.
+- Source reconciliation: FinanceCharts secondary rows `19.25%`/`7.13%`/`8.60%` differ from the official `19.23%`/`7.27%`/`8.51%` rows; the secondary series is excluded from the saved official calculation rather than mixed with it.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric NAV drawdown or recovery proxy is saved.
+
+## DFSV gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:DFSV`; the SEC prospectus and Dimensional materials confirm the exchange, fund name, active long-only equity structure, 2022-02-23 inception and 2022-02-24 listing.
+- DFSV is within supported `check-etf-performance` scope as an active long-only equity ETF. The prospectus permits limited futures/options use for adjusting equity exposure around cash flows, but the fund is not derivative-heavy, leveraged, inverse, bond, commodity, covered-call or option-income.
+- Management benchmark is `Russell 2000 Value`; official evidence is mixed and short-track-record: 2024 trailed the benchmark while since-inception through 2024-12-31 led it. No alpha claim is made.
+- Official 2023-2025 rows are complete only through two official documents with different publication dates; the 2023-2025 calculation is retained as an official-row combination with source provenance, while secondary conflicting rows are excluded.
+- Official current 2026 text-readable NAV fields and daily NAV history sufficient for maximum drawdown/recovery were not verified; current 2026 fields are explicitly secondary and the drawdown/recovery gap remains disclosed.
+- Planned durable paths: created `wiki/analysis/performance/ETF_NYSE_ARCA_DFSV Performance.md`; updated `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region USA; breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; canonical tag `geography/United-States`; all affected wikilinks resolve to existing targets.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## PSC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NASDAQ:PSC | https://www.principalam.com/us/fund/psc | Official Principal product page: identity, Nasdaq listing, active rules-based factor process, Russell 2000 benchmark, current performance, price/NAV and fund facts | Performance table as of 2026-07-31; current fund facts as of 2026-08-14; NAV YTD 18.52%, 1-year 29.43%, 3-year annualized 16.19%, 5-year annualized 9.54%, since-inception annualized 12.01%; NAV US$70.73, price US$70.76, assets US$2.4B, gross/net expense 0.38%/0.38% |
+| NASDAQ:PSC | https://brandassets.principal.com/m/2b8aa0c162042812/original/Principal-U-S-Small-Cap-ETF-Quarterly-Commentary.pdf | Official quarterly commentary: calendar NAV rows, Russell 2000 rows, current Q2 cross-check and strategy-change caveat | Q2 2026 as of 2026-06-30; official NAV rows 2017-2025; PSC Q2 22.52% vs Russell 2000 21.49%; prior strategy differed before 2022-07-08 |
+| NASDAQ:PSC | https://brandassets.principal.com/m/157c05db44e9d2ec/original/Principal-ETF-Reference-Sheet.pdf | Official ETF reference sheet: fund name, inception, exchange, benchmark and expense cross-check | PSC inception 2016-09-21; Nasdaq; Russell 2000; gross expense 0.38% |
+| NASDAQ:PSC | https://www.sec.gov/Archives/edgar/data/1572661/000139834425017144/fp0095168-1_ncsrixbrl.htm | Official SEC annual shareholder report: objective, small-cap policy and expense disclosure | Principal U.S. Small-Cap ETF; long-term growth; normally at least 80% in small-cap equity; expense cost 0.38% |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | Cached USD total-return convention with dividends reinvested; annual window 2017-2025 as of 2025-12-31 |
+
+## PSC raw observations and calculations
+
+| Year / window | PSC NAV TR | Russell 2000 TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2017 | 13.41% | 14.65% | 21.83% |
+| 2018 | -9.23% | -11.01% | -4.38% |
+| 2019 | 18.87% | 25.52% | 31.49% |
+| 2020 | 13.45% | 19.96% | 18.40% |
+| 2021 | 32.32% | 14.82% | 28.71% |
+| 2022 | -15.99% | -20.44% | -18.11% |
+| 2023 | 18.53% | 16.93% | 26.29% |
+| 2024 | 12.34% | 11.54% | 25.02% |
+| 2025 | 13.39% | 12.81% | 17.88% |
+| 2017-2025 cumulative | 133.00% | 106.48% | 255.78% |
+| 2017-2025 rounded-input CAGR | 9.85% | 8.39% | 15.14% |
+| 2021-2025 cumulative | 67.84% | 34.41% | 96.17% |
+| 2021-2025 rounded-input CAGR | 10.91% | 6.09% | 14.43% |
+
+- Metric basis: official Principal NAV Total Return includes reinvested distributions and fund expenses; USD; market-price return remains separate.
+- Identity and classification: Principal identifies PSC as an active rules-based U.S. small-cap ETF using quality, momentum and value factors, normally at least 80% in the Russell 2000 market-cap range. It is within supported active-equity-long-only scope and is not derivative-heavy.
+- Official current fields: as of 2026-07-31 NAV YTD 18.52%, 1-year 29.43%, 3-year annualized 16.19%, 5-year annualized 9.54%, since-inception annualized 12.01%; Russell 2000 18.85%, 34.18%, 15.08%, and 7.11% for the comparable windows. Product facts as of 2026-08-14 include NAV US$70.73, price US$70.76, assets US$2.4B, and SEC yield 0.56%.
+- Calculations: official 2017-2025 cumulative 133.00%, rounded-input CAGR 9.85%, annual-return population standard deviation 13.86%, up/down years 7 / 2, best 2021 +32.32%, worst 2022 -15.99%; 2021-2025 CAGR 10.91%.
+- Active comparison: annual hit rate 6 / 9, cumulative relative wealth +24.91% versus Russell 2000, and rounded-input Excess CAGR +1.47 pp. These are benchmark-relative observations, not alpha.
+- Source reconciliation: the latest product-page performance table is as of 2026-07-31, while the calendar-year table is from the official Q2 commentary as of 2026-06-30. Principal states that the strategy before 2022-07-08 differed from the current strategy; the combined 2017-2025 history is retained with that caveat.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric NAV drawdown or recovery proxy is saved.
+
+## PSC gaps and scheduled-inline local review
+
+- Canonical identity is NASDAQ:PSC; official Principal materials confirm the fund name, exchange, inception, benchmark, active rules-based process and fee.
+- PSC is within supported check-etf-performance scope as an active long-only equity ETF. The reviewed materials do not identify a leveraged, inverse, bond, commodity, covered-call, option-income or derivative-heavy structure.
+- The annual window combines the pre-2022-07-08 strategy with the current active process; current-process attribution remains provisional.
+- Daily NAV history sufficient for maximum drawdown and recovery was not verified; the gap is disclosed on the performance page.
+- Planned durable paths were written: wiki/analysis/performance/ETF_NASDAQ_PSC Performance.md, wiki/analysis/comparisons/USA ETF.md, wiki/analysis/comparisons/ETF Region Index.md, wiki/analysis/performance/ETF Performance Index.md, this source batch, and log.md.
+- Planned graph changes were applied: primary region USA; breadcrumb [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]; canonical tag geography/United-States.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## FESM official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:FESM` | https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9911747.PDF | Official Fidelity factsheet: identity, active strategy, benchmark, NAV/market-price returns, annual rows, expense ratio and risk fields | Factsheet as of 2026-06-30; NAV TR YTD `28.42%`, 1-year `52.23%`, 3-year annualized `24.57%`, 5-year annualized `11.69%`, 10-year annualized `13.28%`; Russell 2000 `22.57%`, `40.78%`, `18.60%`, `6.98%`, `11.62%` |
+| `NYSE Arca:FESM` | https://institutional.fidelity.com/app/proxy/content?literatureURL=%2FRD_QAA_7545.PDF | Official Fidelity Q&A: systematic multifactor process and quarterly performance comparison | Quarter ending 2026-06-30; confirms NAV 1-year/3-year/5-year/10-year returns and systematic, risk-aware process |
+| `NYSE Arca:FESM` | https://www.sec.gov/Archives/edgar/data/945908/000094590826000151/filing12065.htm | Official SEC name-change supplement | Filed 2025-10-30; former `Fidelity Enhanced Small Cap ETF` changed to `Fidelity Enhanced Small Cap Core ETF` effective on/about 2026-05-11 |
+| `NYSE Arca:FESM` | https://institutional.fidelity.com/advisors/investment-solutions/performance/fidelity-etfs | Official Fidelity ETF lineup: current identity, exchange, expense and fund metadata cross-check | Page reviewed 2026-08-17; current FESM Core identity and `0.28%` expense cross-check |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | Cached USD total-return convention with dividends reinvested; annual window 2016-2025 as of 2025-12-31 |
+
+## FESM raw observations and calculations
+
+| Year / window | FESM NAV TR | Russell 2000 TR | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 22.84% | 21.31% | 11.96% |
+| 2017 | 7.22% | 14.65% | 21.83% |
+| 2018 | -13.04% | -11.01% | -4.38% |
+| 2019 | 23.65% | 25.52% | 31.49% |
+| 2020 | 18.53% | 19.96% | 18.40% |
+| 2021 | 20.54% | 14.82% | 28.71% |
+| 2022 | -18.28% | -20.44% | -18.11% |
+| 2023 | 21.04% | 16.93% | 26.29% |
+| 2024 | 16.48% | 11.54% | 25.02% |
+| 2025 | 17.70% | 12.81% | 17.88% |
+| 2016-2025 cumulative | 174.39% | 150.48% | 298.33% |
+| 2016-2025 rounded-input CAGR | 10.62% | 9.62% | 14.82% |
+| 2021-2025 cumulative | 63.46% | 34.41% | 96.17% |
+| 2021-2025 rounded-input CAGR | 10.33% | 6.09% | 14.43% |
+
+- Metric basis: official Fidelity NAV Total Return includes reinvested dividends/capital gains and fund expenses; USD; market-price return remains separate. The annual NAV rows are official factsheet rows, while the S&P 500 rows reuse the cached USD Total Return convention.
+- Identity and classification: Fidelity identifies FESM as the actively managed Fidelity Enhanced Small Cap Core ETF, listed on NYSE Arca, normally investing at least 80% in Russell 2000 securities and using quantitative analysis of valuation, growth and profitability factors. Before 2026-05-11 the fund was named Fidelity Enhanced Small Cap ETF.
+- Structural caveat: the fund reorganized from a predecessor mutual fund effective 2023-11-17 and first listed as an ETF on 2023-11-20; rows before 2023-11-17 are predecessor history and should not be read as ETF-market-price history.
+- Official rolling fields: as of 2026-06-30 FESM NAV TR was `28.42%` YTD, `52.23%` for 1-year, `24.57%` annualized for 3-year, `11.69%` annualized for 5-year and `13.28%` annualized for 10-year; the matching Russell 2000 figures were `22.57%`, `40.78%`, `18.60%`, `6.98%` and `11.62%`. Reported differences are `+5.85 pp`, `+11.45 pp`, `+5.97 pp`, `+4.71 pp` and `+1.66 pp`; these are excess-return comparisons, not alpha.
+- Formula: cumulative return is `product(1 + annual return) - 1`; CAGR is `cumulative^(1/n) - 1`; displayed annual inputs are rounded, so calculated CAGRs are labelled rounded-input.
+- Calculations: 2016-2025 cumulative `174.39%`, rounded-input CAGR `10.62%`; 2021-2025 cumulative `63.46%`, rounded-input CAGR `10.33%`; annual-return population standard deviation `14.38%` versus Russell 2000 `13.91%`; active annual difference was positive in `6 / 10` years; relative wealth versus Russell 2000 was `+9.55%` cumulative and excess CAGR was `+1.00 pp`.
+- Return profile: FESM had `8` up years and `2` down years; best year was 2019 at `+23.65%`; worst year was 2018 at `-13.04%`.
+- Current issuer fields: assets `$5,784.9M`, holdings `786`, turnover `41%` for 12/25, beta `1.02`, 3-year standard deviation `20.52%`, 30-day SEC yield `0.52%`, top 10 holdings `7.97%`, and gross/net expense ratio `0.28%`/`0.28%`.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric NAV drawdown or recovery proxy is saved.
+
+## FESM gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:FESM`; Fidelity factsheet, Q&A, lineup and SEC supplement confirm the exchange, current fund name, active long-only equity structure and the 2026-05-11 name transition.
+- FESM is within supported `check-etf-performance` scope as an active long-only equity ETF. The reviewed official materials do not identify a leveraged, inverse, bond, commodity, covered-call, option-income or derivative-heavy structure.
+- The management benchmark is `Russell 2000`; S&P 500 remains only a common reference benchmark. The positive return comparisons and `6 / 10` annual hit rate are management evidence, not alpha.
+- Official calendar rows are complete for 2016-2025 but mix predecessor mutual-fund history with the current ETF period; the predecessor and 2023-11-20 first-listing caveats remain attached to the page.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; this remains a disclosed gap.
+- Planned durable paths: created `wiki/analysis/performance/ETF_NYSE_ARCA_FESM Performance.md`; updated `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region USA; breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; canonical tag `geography/United-States`; all affected wikilinks resolve to existing targets.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## SFLO official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:SFLO` | https://advisor.vcm.com/products/victoryshares-etfs/victoryshares-etfs-list/victoryshares-small-cap-free-cash-flow-etf | Official Victory product page: identity, passive/index objective, index strategy, risk context and current-performance navigation | Product page reviewed 2026-08-17; standardized performance is linked to the current factsheet; net-expense waiver through 2026-10-31 |
+| `NASDAQ:SFLO` | https://www.vcm.com/assets/etf/factsheet-pdf/VS%20SFLO%20FS.pdf | Official Victory factsheet: current NAV/market-price/index returns, expense ratio, inception, listing, holdings, index method and risk fields | Factsheet as of 2026-06-30; NAV YTD `16.54%`, market-price YTD `16.47%`, issuer-index YTD `16.95%`, 1-year NAV `31.73%`, since-inception annualized NAV `14.48%`, gross/net expense `0.56%`/`0.49%`, holdings `202` |
+| `NASDAQ:SFLO` | https://www.sec.gov/Archives/edgar/data/1547580/000119312525260722/f43139d1.htm | Official SEC summary prospectus: Nasdaq listing, passive objective, 80% index/small-cap policy, fee waiver, 2024 calendar return and inception date | Prospectus dated 2025-11-01; 2024 NAV total return before taxes `6.49%` for the year ended 2024-12-31; SEC inception date `2023-12-21` |
+| `NASDAQ:SFLO` | https://ir.vcm.com/news/news-details/2023/Victory-Capital-Adds-VictoryShares-Small-Cap-Free-Cash-Flow-ETF-to-its-ETF-Lineup/default.aspx | Official Victory Capital launch announcement: fund launch, rules-based structure and tracked index | Published 2023-12-21; launch context and index objective |
+| `Victory U.S. Small Cap Free Cash Flow Index` | https://www.vettafi.com/indexing/index/sflo | Official index provider page: index identity, equity classification, region, quarterly rebalance and linked SFLO product | Page reviewed 2026-08-17; index total-return/current fields are kept separate from fund NAV returns |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## SFLO raw observations and calculations
+
+| Year / window | SFLO NAV TR | SFLO Market Price TR | Issuer index / S&P 500 TR |
+|---|---:|---:|---:|
+| 2024 calendar year | 6.49% | not disclosed | Victory index not disclosed in SEC calendar table; S&P 500 TR 25.02% |
+| QTD 2026-06-30 | 14.24% | 14.22% | Victory index 14.45%; S&P 500 not synchronized |
+| YTD 2026-06-30 | 16.54% | 16.47% | Victory index 16.95%; S&P 500 not synchronized |
+| 1-year 2026-06-30 | 31.73% | 31.73% | Victory index 32.65%; S&P 500 not synchronized |
+| Since inception annualized 2026-06-30 | 14.48% | 14.46% | not applicable |
+
+- Metric basis: official Victory NAV Total Return includes reinvestment of dividends/capital gains and reflects fund expenses; market-price and issuer-index returns remain separate; currency USD.
+- Issuer benchmark: `Victory U.S. Small Cap Free Cash Flow Index`; the rules-based index screens profitable U.S. small-cap companies for free-cash-flow yield and growth, selects 200 stocks, and rebalances/reconstitutes quarterly.
+- Inception conflict: factsheet lists `2023-12-20`; SEC summary prospectus and Victory ETF lineup list `2023-12-21`. Both are retained; neither is used to fabricate a 10-year window.
+- 2023 is an inception-year partial and is excluded. The reviewed SEC prospectus provides the complete 2024 NAV row `6.49%`; a complete official 2025 calendar NAV row was not found.
+- 2021-2025 CAGR, up/down counts, best/worst year ranking, annual-return volatility and max drawdown/recovery are not calculated because only one complete official calendar-year NAV row is available and daily NAV history was not verified.
+- S&P 500 cached rows are retained only as the common reference table; the issuer index is retained as fund metadata and not substituted for the S&P 500 comparison.
+
+## SFLO gaps and scheduled-inline local review
+
+- Canonical identity is `NASDAQ:SFLO`; the SEC prospectus and June 2026 factsheet agree on Nasdaq listing, passive/index objective, tracked index and fee structure. The one-day inception-date difference is recorded as a source conflict.
+- SFLO is within ETF v1 scope: official materials describe a rules-based fund that seeks to track the Victory U.S. Small Cap Free Cash Flow Index, with at least 80% in index and small-cap equity securities; no active, leveraged, inverse, bond, commodity, multi-asset or derivative-heavy structure was found.
+- The latest official factsheet provides NAV/market-price/index returns through 2026-06-30. The SEC prospectus provides a 2024 calendar NAV row but not a complete 2025 row; no secondary annual proxy is saved.
+- Price/NAV, annual-return volatility, standard deviation, beta, max drawdown and recovery remain `ไม่พบข้อมูลที่ยืนยันได้` from the official source capture; the factsheet shows dashes for standard deviation, Sharpe ratio and beta, and no daily NAV history was verified.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NASDAQ_SFLO Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; preserve `geography/United-States`; link the new page from USA navigation and the performance index; keep numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## JHSC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:JHSC` | https://www.jhinvestments.com/content/dam/jhi-investments/JHINV/public/ETFs/Documents/FactSheets/InvestorFactSheet/etf-multifactor-small-cap-investor-fact-sheet-jhi.pdf | Official John Hancock investor factsheet: fund identity, objective, index, exchange, inception, rolling NAV/market-price returns, fee, holdings and risk context | Factsheet data as of 2026-06-30; NAV YTD `16.34%`, market-price YTD `16.10%`, 1-year NAV `25.93%`, 3-year NAV `14.42%`, 5-year NAV `8.00%`, since-inception annualized NAV `9.14%`, gross/net expense `0.46%`/`0.42%`, holdings `496` |
+| `NYSE Arca:JHSC` | https://www.sec.gov/Archives/edgar/data/1478482/000119312525191975/d942427d497k.htm | Official SEC summary prospectus: passive/index objective, listing, investment approach, advisor/subadvisor and risk disclosures | Prospectus dated 2025-09-01; fund seeks to track the John Hancock Dimensional Small Cap Index and normally invests at least 80% in index securities |
+| `NYSE Arca:JHSC` | https://www.jhinvestments.com/content/dam/jhi-investments/JHINV/public/ETFs/Documents/Prospectuses/StatutoryProspectus/etf-multifactor-small-cap-statutory-prospectus-jhi.pdf | Official statutory prospectus: fund and index risk context, expense disclosure and historical financial-report ownership | Official issuer document reviewed 2026-08-17; no complete 2016-2025 calendar NAV table was found in the reviewed capture |
+| `John Hancock ETFs` | https://www.jhinvestments.com/etf | Official issuer ETF lineup and product identity cross-check | Page reviewed 2026-08-17; JHSC is listed as Multifactor Small Cap ETF and Morningstar category Small Blend |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## JHSC raw observations and calculations
+
+| Window | JHSC NAV TR | JHSC Market Price TR | S&P 500 TR |
+|---|---:|---:|---:|
+| QTD 2026-06-30 | 13.64% | 13.66% | not synchronized |
+| YTD 2026-06-30 | 16.34% | 16.10% | not synchronized |
+| 1-year 2026-06-30 | 25.93% | 25.72% | not synchronized |
+| 3-year annualized 2026-06-30 | 14.42% | 14.40% | not synchronized |
+| 5-year annualized 2026-06-30 | 8.00% | 7.99% | not synchronized |
+| Since inception annualized 2026-06-30 | 9.14% | 9.14% | not applicable |
+
+- Metric basis: official John Hancock NAV Total Return includes reinvested distributions and reflects fund expenses; market-price return remains separate; currency USD.
+- Issuer benchmark: `John Hancock Dimensional Small Cap Index`; the index emphasizes smaller capitalization, lower relative price and higher profitability, with semiannual reconstitution/rebalance.
+- JHSC inception is `2017-11-08`, so a 10-year NAV TR CAGR is not applicable as of the reviewed factsheet date.
+- Complete official calendar-year NAV rows for 2016-2025 were not disclosed in the reviewed issuer materials. Therefore 2021-2025 CAGR, annual-return volatility, up/down counts, best/worst years, max drawdown and recovery are not calculated.
+- S&P 500 cached annual rows are retained only as the common reference table in the performance page; no synchronized 2026 current-year comparison is asserted against JHSC's 2026-06-30 YTD.
+
+## JHSC gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:JHSC`; the official factsheet and SEC prospectus agree on fund name, exchange, inception date and tracked index. No ticker/exchange alias conflict was found.
+- JHSC is within ETF v1 scope: the SEC prospectus describes a passive/index-tracking approach to the John Hancock Dimensional Small Cap Index; no active, leveraged, inverse, bond, commodity, multi-asset or derivative-heavy structure was found.
+- The issuer factsheet provides rolling/period performance through 2026-06-30 but not complete calendar-year NAV rows or daily NAV history. The performance page records these values as `not disclosed` rather than substituting fiscal-year returns from the annual report.
+- Price/NAV, max drawdown, recovery, volatility and positive/negative-year counts remain `ไม่พบข้อมูลที่ยืนยันได้` from the official source capture; no secondary proxy is saved.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_JHSC Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; preserve `geography/United-States`; link the new page from USA navigation and the performance index; keep numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## EES official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:EES` | https://www.wisdomtree.com/us/products/equity/ees | Official WisdomTree product page: fund identity, passive objective, WTSEI index, expense ratio, NAV/market price, annualized returns, current NAV TR YTD and distributions | Product and quote fields as of 2026-08-14; month-end performance through 2026-07-31 |
+| `NYSE Arca:EES` | https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/us-equity/wisdomtree-factsheet-ees-1012.pdf | Official factsheet: exchange, inception, fee, NAV return definition, rolling performance and fund structure | Factsheet data as of 2026-06-30; stock exchange is NYSE Arca |
+| `NYSE Arca:EES` | https://www.wisdomtree.com/us/media/ees-presentation | Official WisdomTree Q1-2026 presentation: complete 2016-2025 calendar NAV return rows | Presentation performance table as of 2026-03-31; annual rows cover 2016-2025 |
+| `WTSEI` | https://www.wisdomtree.com/us/indexes/WTSEI?index=WTSEI | Official issuer benchmark page: index identity, earnings-positive eligibility and methodology context | Index page reviewed 2026-08-17; index facts through 2026-07-29 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR current | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=f33eb5c2-5231-4c16-bc59-38407c3d2f2f&sourceIdentifier=home-page | Official current cross-check for S&P 500 (TR) | YTD `9.00%` as of 2026-07-28; not synchronized with EES 2026-07-31 YTD |
+
+## EES raw observations and calculations
+
+| Year | EES NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 29.96% | 11.96% |
+| 2017 | 12.56% | 21.83% |
+| 2018 | -9.96% | -4.38% |
+| 2019 | 21.92% | 31.49% |
+| 2020 | 2.79% | 18.40% |
+| 2021 | 34.34% | 28.71% |
+| 2022 | -16.16% | -18.11% |
+| 2023 | 18.42% | 26.29% |
+| 2024 | 9.89% | 25.02% |
+| 2025 | 6.93% | 17.88% |
+| 2026 YTD | 19.57% (official NAV TR, 2026-07-31) | 9.00% (official S&P 500 TR, 2026-07-28) |
+
+- Metric basis: official WisdomTree NAV Total Return, calculated from the daily 4:00 p.m. NAV under the issuer performance convention; USD; fund expenses are reflected in NAV returns. Market-price return remains separate.
+- Issuer benchmark: `WisdomTree U.S. SmallCap Index (WTSEI)`, formerly WisdomTree U.S. SmallCap Earnings Index; the fund seeks to track the index before fees and expenses.
+- EES 2016-2025 compound: `158.70%` cumulative; rounded-input CAGR `9.97%`.
+- EES 2021-2025 compound: `56.73%` cumulative; rounded-input CAGR `9.40%`.
+- Issuer rolling 10-year NAV TR average annual: `10.85%` as of 2026-07-31; raw rolling endpoints are not disclosed and this is kept separate from the 2016-2025 calendar-window CAGR.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`; S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; normalized 2016-2025 start TR value `100.00` and rounded-input end TR value `258.70`.
+- Annual-return volatility: population standard deviation `15.31%` across the ten official rounded annual NAV observations.
+- Up years / down years: `8 / 2`; best `2021 +34.34%`; least positive `2020 +2.79%`; worst `2022 -16.16%`; least bad down year `2018 -9.96%`.
+- Current issuer fields: NAV `$69.712`, closing market price `$69.666`, expense ratio `0.38%`, and distribution yield `1.46%`, all as of 2026-08-14; current NAV TR YTD is as of 2026-07-31.
+
+## EES gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:EES`; no ticker/exchange alias conflict was found. The input card ticker and title both resolve to `EES`.
+- EES is within ETF v1 scope: WisdomTree describes it as tracking the earnings-generating U.S. small-cap index; no active, leveraged, inverse, bond, commodity, multi-asset or derivative-heavy structure was found.
+- Annual rows are official issuer observations from the Q1-2026 presentation and are rounded; cumulative/CAGR calculations are therefore rounded-input approximations. No secondary annual proxy or partial year is used.
+- The issuer rolling 10-year field `10.85%` is a separate average annual observation through 2026-07-31; raw endpoints are not disclosed, so the page does not relabel it as the calendar-window CAGR.
+- The current S&P 500 TR cross-check is `9.00%` as of 2026-07-28, three calendar days before EES's 2026-07-31 current YTD field; no same-date current benchmark pair is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_EES Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; preserve `geography/United-States`; link the new page from USA navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV official 2023-2025 with 2022 inception partial excluded; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; GWX calendar rows not disclosed; ISCV official 2016-2025; EES official 2016-2025; JHSC calendar rows not disclosed; SFLO official 2024 only; EWX secondary 2016-2025; AVSC secondary 2023-2025; FESM official 2016-2025 with predecessor history caveat; DFSV official 2023-2025; PSC official 2017-2025 with strategy-change caveat; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
+annual_rows_addendum: "JPSE official 2017-2025; 2016 inception-year partial excluded; XSVM official 2016-2025; JHSC calendar rows not disclosed; SFLO official 2024 only, 2023 inception-year partial excluded and 2025 row not disclosed; FESM official 2016-2025 with predecessor history; DFSV official 2023-2025, current 2026 fields secondary; PSC official 2017-2025, strategy change effective 2022-07-08"
 tags:
   - source/etf
 ---
@@ -37,7 +505,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX, and ISCV. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX, ISCV, EES, JPSE, XSVM, JHSC, SFLO, OSCV, SMDV, SMIN, EWX, AVSC, FESM, DFSV, and PSC. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -45,28 +513,54 @@ inline under `scheduled-inline`. No research worker, reviewer,
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 
-## DISV unsupported ETF record
+## DISV retry refresh — active long-only support
 
-- Input ticker: `DISV`; canonical identity: `Cboe BZX:DISV`; fund: Dimensional International Small Cap Value ETF; inception `2022-03-23`.
-- Type gate: `unsupported ETF type`. Dimensional describes its ETF lineup as active ETFs, and the SEC summary prospectus identifies DISV as the Dimensional International Small Cap Value ETF with a long-term capital-appreciation objective rather than a passive index-tracking mandate. The reviewed ETF reference also identifies `No Underlying Index` / active management; this fails ETF v1’s passive, index-tracking equity scope.
-- No NAV performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was created after the type gate. Current return observations were not used as performance evidence.
+- The earlier unsupported-type record is superseded by this retry because `check-etf-performance` now supports active long-only equity ETFs. The final type gate is `PASS` for `active-equity-long-only`.
+- Input ticker: `DISV`; canonical identity: `Cboe BZX:DISV`; fund: Dimensional International Small Cap Value ETF; inception `2022-03-23`; listing date `2022-03-24`.
+- Official SEC materials identify DISV as an actively managed ETF that does not seek to replicate a specific index. Long public equity is the principal return source; futures, options on futures, swaps and FX forwards are described for exposure, cash-flow and currency management and do not make the fund derivative-heavy for this scope.
+- `active_process: systematic-active`; Dimensional describes an integrated research, portfolio-design, portfolio-management and trading process with flexible daily implementation.
+- `management_benchmark: MSCI World ex USA Small Value Index (net dividends)`, selected because the official SEC performance table calls it an additional index with a similar investment universe. The broader MSCI World ex USA Index and the common S&P 500 reference were rejected as management comparators.
+- Official annual chart rows: `2023 19.60%`, `2024 6.02%`, `2025 47.24%`; 2022 inception-year partial is not shown and is excluded. These rows compound to `86.70%` cumulative / rounded-input CAGR `23.14%`; population annual-return volatility is `17.15%`; up/down count is `3 / 0`.
+- Official since-inception annualized return as of `2025-12-31`: DISV `14.78%` versus management benchmark `10.38%`, Excess CAGR `+4.40 pp`; compatible annual benchmark rows and hit rate are not disclosed, so management evidence is `positive return-only` and not alpha.
+- Secondary Schwab current fields as of `2026-07-31`: NAV TR YTD `12.90%`, 1-year `31.90%`, 3-year annualized `22.40%`, since-inception annualized `15.90%`; market price `US$44.25` as of `2026-08-14`. These are kept separate from official issuer calendar rows.
 
-### DISV Official Source Map
+### DISV official and secondary source map
 
 | Entity | Source | Used for | As-of / note |
 |---|---|---|---|
-| `Cboe BZX:DISV` | https://www.sec.gov/Archives/edgar/data/0001816125/000181612526000069/c497k.htm | Official SEC summary prospectus: fund identity, exchange, objective and formal fund context | Prospectus dated 2026-02-28 |
-| `Cboe BZX:DISV` | https://www.cboe.com/us/equities/listings/listed_products/symbols/DISV | Official exchange listing and fund identity cross-check | Listing page reviewed 2026-08-17 |
-| `Cboe BZX:DISV` | https://www.dimensional.com/us-en/etfs | Official issuer ETF lineup; Dimensional describes the lineup as active ETFs | Issuer page reviewed 2026-08-17 |
-| `Cboe BZX:DISV` | https://www.ifa.com/pdfs/fund-documents/disv-fact-sheet.pdf | Secondary/authorized-distributor factsheet: active international small-cap value description, fee and benchmark context | Factsheet as of 2025-12-31; used only to corroborate classification |
+| `Cboe BZX:DISV` | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000069/c497k.htm | Official SEC summary prospectus: identity, exchange, active status, strategy, expense ratio, turnover, annual chart, management benchmark and since-inception returns | Prospectus dated 2026-02-28; performance periods ended 2025-12-31; 2023-2025 annual chart; 2022-03-23 inception |
+| `Cboe BZX:DISV` | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000046/c485bpos.htm | Official SEC prospectus: integrated active process, portfolio construction, flexible trading, portfolio manager continuity and derivative-use context | Prospectus dated 2026-02-28; latest fiscal-year turnover 8% |
+| `Cboe BZX:DISV` | https://www.dimensional.com/us-en/funds/disv/international-small-cap-value | Official issuer fund identity and strategy page | Page reviewed 2026-08-17; numeric performance fields not exposed in the captured HTML |
+| `Cboe BZX:DISV` | https://www.dimensional.com/us-en/etfs | Official issuer ETF lineup and active-ETF classification | Page reviewed 2026-08-17; Dimensional describes 44 active ETFs as of 2026-06-30 |
+| `Cboe BZX:DISV` | https://my.dimensional.com/chmedia/282748/source/dimensional-etf-quick-guide.pdf | Official Dimensional Quick Guide: annualized NAV/market-price returns, benchmark and expense cross-check | Guide as of 2025-12-31; NAV 1-year `47.24%`, since inception `14.78%`; MSCI World ex USA Small Value Index `38.55%` / `10.38%`; net expense `0.42%` |
+| `Cboe BZX:DISV` | https://www.cboe.com/us/equities/listings/listed_products/symbols/DISV | Official exchange listing and identity cross-check | Listing page reviewed 2026-08-17 |
+| `Cboe BZX:DISV` | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=disv | Secondary current NAV/market-price performance and price cross-check | Performance as of 2026-07-31; price as of 2026-08-14 |
+| `S&P 500 TR` | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+### DISV raw observations and calculations
+
+| Year / window | DISV NAV TR | S&P 500 TR | Management benchmark |
+|---|---:|---:|---:|
+| 2023 | 19.60% | 26.29% | not disclosed as annual row |
+| 2024 | 6.02% | 25.02% | not disclosed as annual row |
+| 2025 | 47.24% | 17.88% | not disclosed as annual row |
+| 2023-2025 cumulative | 86.70% | 86.12% | not comparable from annual rows |
+| Since inception annualized, 2022-03-23 to 2025-12-31 | 14.78% | not paired | 10.38% |
+| 2026 YTD | 12.90% (secondary NAV, 2026-07-31) | not synchronized | not synchronized |
+
+- Metric basis: official DISV NAV Total Return includes reinvested distributions and fund expenses; market-price return remains separate. Currency is USD.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; 2023-2025 normalized start TR value `100.00` and rounded-input end TR value `186.70`.
+- 2023-2025 annual active returns versus S&P 500 common reference were `-6.69`, `-19.00`, and `+29.36 pp`; these are not management-benchmark evidence.
+- Official SEC highest quarter was `+15.12%` in 2025 Q2; lowest quarter was `-7.54%` in 2024 Q4. Official daily NAV history sufficient for maximum drawdown and recovery was not verified.
 
 ### DISV scheduled-local review
 
-- Complete pre-save checklist reviewed locally: canonical identity/exchange, issuer classification, active/passive type gate, index status, scope exclusion, source URLs/as-of dates, no-performance-artifact decision, card result metadata, and next-card sequencing.
-- Result: local `PASS` for the unsupported-type classification; no performance artifact was written.
+- Complete pre-save checklist reviewed locally: canonical identity/exchange, official active long-only eligibility, active-process subtype, management-benchmark selection, complete-year markers, common S&P 500 comparison, secondary labels, current as-of dates, calculations, management-evidence label, risk-evidence status, output paths, graph links and card result metadata.
+- Result: local `PASS`; performance page and source batch refresh were written. No research worker, reviewer, `source_verifier`, or other sub-agent was dispatched.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## ISHOF / IDP6 official source map
 
@@ -144,6 +638,12 @@ review_gate: PASS
 | ISCF | supported | NYSE Arca:ISCF | International | 12.52% (2026-08-13) | https://www.ishares.com/us/products/272823/ishares-international-small-cap-equity-factor-etf | passive/index-tracking international small-cap factor equity; benchmark changed from MSCI World ex USA Small Cap Diversified Multiple-Factor Index to STOXX International Small-Cap Equity Factor Index on 2023-03-01; daily NAV drawdown/recovery not disclosed |
 | GWX | supported | NYSE Arca:GWX | International | 8.18% (2026-06-30) | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx | passive/index-tracking international small-cap equity; official calendar rows and daily NAV drawdown/recovery not disclosed; reviewed secondary annual table conflicts with official 2025 NAV result and is not saved |
 | ISCV | supported | NYSE Arca:ISCV | USA | 20.34% (2026-08-13) | https://www.ishares.com/us/products/239588/ishares-morningstar-smallcap-value-etf | passive/index-tracking U.S. small-cap value equity; official 2016-2025 NAV rows displayed to one decimal; daily NAV drawdown/recovery not disclosed |
+| EES | supported | NYSE Arca:EES | USA | 19.57% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/ees | passive/index-tracking U.S. small-cap earnings-weighted equity; official 2016-2025 annual rows; annual-return volatility and daily NAV drawdown/recovery gaps disclosed |
+| FESM | supported | NYSE Arca:FESM | USA | 28.42% (2026-06-30) | https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9911747.PDF | active systematic U.S. small-cap equity; official 2016-2025 rows include predecessor history; daily NAV drawdown/recovery not disclosed |
+| DFSV | supported | NYSE Arca:DFSV | USA | 18.7% (2026-06-30, secondary) | https://www.sec.gov/Archives/edgar/data/1816125/000174177325001189/c497k.htm | active systematic U.S. small-cap value equity; official 2023-2025 rows and secondary current fields; history under 10 years and daily NAV drawdown/recovery not disclosed |
+| PSC | supported | NASDAQ:PSC | USA | 18.52% (2026-07-31) | https://www.principalam.com/us/fund/psc | active rules-based U.S. small-cap quality/momentum/value equity; official 2017-2025 rows; strategy changed from passive to active 2022-07-08; daily NAV drawdown/recovery not disclosed |
+| JPSE | supported | NYSE Arca:JPSE | USA | 20.41% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JPSE.PDF | passive/index-tracking U.S. small-cap multi-factor equity; official 2017-2025 annual rows; history under 10 years, annual-return volatility and daily NAV drawdown/recovery gaps disclosed |
+| XSVM | supported | NYSE Arca:XSVM | USA | 23.00% (2026-06-30, secondary NAV) | https://www.invesco.com/us/en/financial-products/etfs/invesco-sp-smallcap-value-with-momentum-etf.html | passive/index-tracking U.S. small-cap value/momentum equity; official 2016-2025 annual rows; latest YTD is secondary Schwab NAV and official issuer snapshot is older; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -639,6 +1139,145 @@ reviewer_dispatch: not-attempted-by-design
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
+
+## BSVO active-equity refresh source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Nasdaq:BSVO | https://bridgewayetfs.com/bsvo/ | Official Bridgeway product page: active classification, ticker, exchange, predecessor-inclusive inception, current expense, NAV/market price, current rolling performance, holdings and strategy | Page reviewed 2026-08-17; current month-end performance through 2026-07-31; current page snapshot as of 2026-08-17 |
+| Nasdaq:BSVO | https://www.sec.gov/Archives/edgar/data/1592900/000159290024002170/eabridgewayomnismall-capva.htm | Official SEC summary prospectus: active objective, value/small-cap strategy, statistical/evidence-based process, fees, predecessor history and listing | Prospectus dated 2024-10-31; total annual fund operating expenses 0.47%; ETF listing Nasdaq; predecessor history carried from 2010-12-31 |
+| Nasdaq:BSVO | https://www.sec.gov/Archives/edgar/data/1592900/000159290025002595/ck0001592900-20250630.htm | Official annual shareholder report: NAV returns, Russell 2000 Value benchmark comparisons, holdings, turnover and predecessor caveat | Fiscal period ended 2025-06-30; 1-year NAV 1.39% vs benchmark 5.54%; 5-year annualized NAV 17.45% vs 12.47%; 10-year annualized NAV 7.14% vs 6.72%; 613 holdings; turnover 17% |
+| Nasdaq:BSVO | https://www.sec.gov/Archives/edgar/data/1592900/000159290025001783/bridgewaysaibbluandbsvo.htm | Official SEC SAI: exchange, adviser/sub-adviser and governance cross-check | SAI dated 2024-10-31, supplemented 2025-07-10 |
+
+## BSVO active-equity refresh raw observations and calculations
+
+| Window / source date | BSVO NAV TR | Russell 2000 Value TR | Excess return |
+|---|---:|---:|---:|
+| 2026 YTD, 2026-07-31 current page | 25.66% | not synchronized | not calculated |
+| Rolling 1-year, 2026-07-31 current page | 44.04% | not synchronized | not calculated |
+| Rolling 3-year annualized, 2026-07-31 current page | 16.32% | not synchronized | not calculated |
+| Rolling 5-year annualized, 2026-07-31 current page | 11.89% | not synchronized | not calculated |
+| Rolling 10-year annualized, 2026-07-31 current page | 11.04% | not synchronized | not calculated |
+| Since predecessor inception annualized, 2026-07-31 current page | 10.45% | not synchronized | not calculated |
+| 1-year fiscal, 2025-06-30 annual report | 1.39% | 5.54% | -4.15 pp |
+| 5-year annualized, 2025-06-30 annual report | 17.45% | 12.47% | +4.98 pp |
+| 10-year annualized, 2025-06-30 annual report | 7.14% | 6.72% | +0.42 pp |
+
+- Metric basis: Bridgeway NAV total return; the current page states that returns are annualized except periods under one year, and that pre-2023-03-13 performance is predecessor-mutual-fund history. Currency is USD.
+- Current product fields: NAV US$30.15, market price US$30.15 and premium/discount 0% on the page snapshot reviewed 2026-08-17; AUM US$2,499.55 million and bid/ask spread 0.07%.
+- Active differences are direct calculations: `1.39% - 5.54% = -4.15 pp`; `17.45% - 12.47% = +4.98 pp`; `7.14% - 6.72% = +0.42 pp`.
+- Current product page expense ratio 0.45% and 2024 SEC summary-prospectus expense ratio 0.47% are retained as a source-dated conflict; no value is smoothed or backfilled.
+- No complete calendar-year row set or synchronized 2026 benchmark series was captured; no calendar CAGR or annual hit rate is calculated.
+
+## BSVO active-equity refresh gaps and scheduled-inline local review
+
+- Canonical identity is `Nasdaq:BSVO`; Bridgeway product, SEC prospectus and annual report confirm EA Bridgeway Omni Small-Cap Value ETF.
+- The earlier type-gate record classified BSVO as unsupported when ETF v1 was passive-only. Under the current scheduled workflow’s active long-only support, the official active equity structure is supported; no leverage, inverse, covered-call, option-income or derivative-heavy payoff structure was found.
+- The management benchmark is Russell 2000 Value Total Return Index, identified by the official annual report as the measure of the Fund’s investment strategy and universe. S&P 500 TR remains common reference context only.
+- Track record is established-with-predecessor-history; live ETF listing began 2023-03-10/13 while official performance includes the predecessor mutual fund from 2010-12-31. The prospectus states that lower ETF expenses can make predecessor-era returns differ from the ETF.
+- Current 2026 fields are official fund observations through 2026-07-31; benchmark-relative evidence is a separate official fiscal snapshot through 2025-06-30.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric drawdown or recovery claim is saved.
+- Planned durable paths: created `wiki/analysis/performance/ETF_NASDAQ_BSVO Performance.md`; updated `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region USA; breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; canonical tag `geography/United-States`; all affected wikilinks resolve after the performance page is created.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## AVUV active-equity refresh source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:AVUV | https://www.avantisinvestors.com/avantis-investments/avantis-us-small-cap-value-etf/?aud=indiv | Official Avantis product page: identity, active classification, current NAV/market price, current YTD and strategy/risk language | Page reviewed 2026-08-17; NAV TR YTD 23.61% and market-price TR YTD 23.62% as of 2026-07-31; NAV US$128.69 and market price US$128.73 as of 2026-08-14; expense ratio 0.25% as of 2026-01-01 |
+| NYSE Arca:AVUV | https://res.avantisinvestors.com/docs/avantis-us-small-cap-value-avuv-etf-fact-sheet.pdf | Official Avantis factsheet: benchmark, synchronized NAV/market/benchmark performance, inception, expense, holdings, portfolio characteristics, team and risks | Quarterly factsheet as of 2026-06-30; NAV YTD 23.09%, 1-year 39.00%, 3-year annualized 19.06%, 5-year annualized 12.29%, since-inception annualized 16.32%; Russell 2000 Value benchmark 22.99%, 43.01%, 18.73%, 8.23%, 11.85% |
+| NYSE Arca:AVUV | https://www.sec.gov/Archives/edgar/data/1710607/000171060726000063/0001710607-26-000063-index.htm | Official SEC filing index cross-check: current Avantis ETF listing and NYSE Arca venue | Filing reviewed 2026-08-17; AVUV listed as NYSE Arca, Inc. |
+| NYSE Arca:AVUV | https://www.sec.gov/Archives/edgar/data/1710607/000171060720000387/acetftavuv497k.htm | SEC prospectus/filing cross-check for the original listing and exchange | AVUV NYSE Arca listing; historical filing retained for exchange identity |
+
+## AVUV active-equity refresh raw observations and calculations
+
+| Window / source date | AVUV NAV TR | Russell 2000 Value TR | Excess return |
+|---|---:|---:|---:|
+| 2026 YTD, current product page 2026-07-31 | 23.61% | not synchronized | not calculated |
+| 2026 YTD, factsheet 2026-06-30 | 23.09% | 22.99% | +0.10 pp |
+| Rolling 1-year, 2026-06-30 | 39.00% | 43.01% | -4.01 pp |
+| Rolling 3-year annualized, 2026-06-30 | 19.06% | 18.73% | +0.33 pp |
+| Rolling 5-year annualized, 2026-06-30 | 12.29% | 8.23% | +4.06 pp |
+| Since inception annualized, 2026-06-30 | 16.32% | 11.85% | +4.47 pp |
+
+- Metric basis: official Avantis NAV Total Return and market-price return; the factsheet states that returns less than one year are not annualized and keeps benchmark performance separate. Currency is USD.
+- Active differences are direct calculations: `23.09% - 22.99% = +0.10 pp`; `39.00% - 43.01% = -4.01 pp`; `19.06% - 18.73% = +0.33 pp`; `12.29% - 8.23% = +4.06 pp`; `16.32% - 11.85% = +4.47 pp`.
+- Latest product-page current fields are retained separately: NAV TR YTD 23.61% and market-price TR YTD 23.62% as of 2026-07-31; NAV US$128.69 and market price US$128.73 as of 2026-08-14.
+- The factsheet provides no complete calendar-year return table and no compatible annual hit-rate series; no calendar CAGR or hit rate is calculated.
+- Risk descriptors from the factsheet as of 2026-06-30: 792 holdings, weighted average market cap $4.1B versus benchmark $3.5B, weighted average book/market 0.63x versus 0.56x, weighted average profits/book 0.31x versus 0.14x, top ten holdings 8.54%.
+
+## AVUV active-equity refresh gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:AVUV`; official Avantis materials and SEC filings confirm Avantis U.S. Small Cap Value ETF and the NYSE Arca venue.
+- AVUV is within supported ETF scope as an active, long-only equity ETF. The official factsheet states that it does not seek to replicate a specified index; no leverage, inverse, covered-call, option-income or derivative-heavy payoff structure was found, although derivatives are disclosed as a risk.
+- Management benchmark is Russell 2000 Value Total Return Index, the official strategy-aligned comparator. S&P 500 TR remains common reference context only.
+- Track record is developing-short-live-history because inception is 2019-09-24 and the reviewed materials do not yet provide a 10-year return field.
+- Current YTD is the newer official product-page observation through 2026-07-31. Benchmark-relative evidence uses the latest synchronized official factsheet through 2026-06-30; the as-of mismatch is disclosed and not compounded.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric drawdown or recovery claim is saved.
+- Planned durable paths: created `wiki/analysis/performance/ETF_NYSE_ARCA_AVUV Performance.md`; updated `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region USA; breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; canonical tag `geography/United-States`; all affected wikilinks resolve after the performance page is created.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## DFAS active-equity refresh source map
+
+workflow: check-etf-performance
+mode: lean
+caller: trello-etf-processing
+handoff: trello_handoff
+execution_profile: scheduled-inline
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:DFAS | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000081/c497k.htm | Official SEC summary prospectus: identity, exchange, objective, fee, active classification, process, predecessor-history treatment, risks, annual NAV returns and rolling Russell 2000/Russell 3000 comparisons | Summary prospectus dated 2026-02-28; annual rows 2016-2025 and rolling fields ended 2025-12-31 |
+| NYSE Arca:DFAS | https://www.dimensional.com/us-en/funds/dfas/us-small-cap-etf | Official issuer fund-page identity and current fund entry point | Page reviewed 2026-08-17; numeric page fields were not available in the text capture |
+| NYSE Arca:DFAS | https://www.dimensional.com/us-en/newsroom/dimensional-lists-four-new-etfs-following-the-industrys-largest-mutual-fund-to-etf-conversion | Official issuer listing announcement: active transparent ETF, NYSE Arca listing, conversion context and listing date | Published 2021-06-14; reviewed 2026-08-17 |
+| NYSE Arca:DFAS | https://my.dimensional.com/chmedia/282748/source/dimensional-etf-quick-guide.pdf | Official Dimensional Quick Guide search capture: inception/listing and rolling performance cross-check | Search capture reviewed 2026-08-17; reported inception 1998-12-15, listing 2021-06-14, 1Y 8.18%, 5Y 9.42%, 10Y 9.78%; access redirected to issuer login during direct open |
+| NYSE Arca:DFAS | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=dfas | Secondary current performance cross-check: NAV/market-price YTD and rolling fields | Performance page reviewed 2026-08-17; as of 2026-07-31: YTD 16.9%, 1Y 26.9%, 3Y 13.2%, 5Y 8.7%, inception 9.7% |
+| NYSE Arca:DFAS | https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=dfas | Secondary quote, NAV, premium/discount, holdings and expense cross-check | Page reviewed 2026-08-17; price 84.48 at 2026-08-14 close; NAV 83.78 and premium/discount +0.04% as of 2026-08-12; 2,059 holdings; total assets US$15.3B; 0.26% expense |
+
+## DFAS active-equity refresh raw observations and calculations
+
+| Window / source date | DFAS NAV TR | Management comparator | Difference |
+|---|---:|---:|---:|
+| 2026 YTD, Schwab secondary 2026-07-31 | 16.9% | not synchronized | not calculated |
+| 1-year annualized, official 2025-12-31 | 8.18% | Russell 2000 Index 12.81% | -4.63 pp |
+| 5-year annualized, official 2025-12-31 | 9.42% | Russell 2000 Index 6.09% | +3.33 pp |
+| 10-year annualized, official 2025-12-31 | 9.78% | Russell 2000 Index 9.62% | +0.16 pp |
+| 2016-2025 cumulative | 154.28% | not calculated | not calculated |
+| 2016-2025 CAGR | 9.78% | not calculated | not calculated |
+| 2021-2025 CAGR | 9.42% | not calculated | not calculated |
+
+- Official annual NAV Total Return rows: 2016 23.99%, 2017 11.87%, 2018 -13.12%, 2019 21.89%, 2020 10.36%, 2021 29.70%, 2022 -13.80%, 2023 17.53%, 2024 10.35%, 2025 8.18%.
+- S&P 500 rows use the cached USD Total Return convention for complete calendar years 2016-2025: 11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, and 17.88%; cumulative 298.33% and CAGR 14.82%.
+- DFAS 2016-2025 cumulative and CAGR use `product(1 + annual_return) - 1` and the tenth root from rounded official annual inputs. 2021-2025 cumulative is 56.86% and CAGR 9.42%.
+- Annual population standard deviation is 13.73% across the ten rounded DFAS observations; up/down years are 8/2.
+- Annual Russell 2000 rows for each calendar year were not disclosed in the reviewed official source; no annual benchmark hit rate is calculated.
+- Current YTD is explicitly secondary and uses Schwab's same one-decimal NAV/market-price observation, not an issuer current NAV table.
+
+## DFAS active-equity refresh gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:DFAS`; SEC and Dimensional materials confirm Dimensional U.S. Small Cap ETF and NYSE Arca venue.
+- DFAS is within supported scope as an active, long-only equity ETF. The SEC prospectus says it is actively managed and does not seek to replicate a specific index; no leverage, inverse, covered-call, option-income or derivative-heavy payoff structure was found, although futures/options and related risks are disclosed.
+- Active process is `systematic-active`; official materials describe integrated research, portfolio design, portfolio management and trading, with market-cap weighting and possible emphasis on small size, lower relative price and higher profitability.
+- Management comparator is Russell 2000 Index, the official additional index with a similar investment universe in the SEC performance table. S&P 500 TR remains common reference context only.
+- Track record is `established-with-predecessor-history`; the SEC performance section adopts predecessor-fund results before the June 2021 reorganization, while the ETF listing date is 2021-06-14.
+- The SEC summary prospectus reports total annual fund operating expenses of 0.26% as of 2026-02-28; the official Quick Guide search capture showed 0.27%, so the source-dated fee difference is preserved rather than smoothed.
+- Current YTD is the secondary Schwab observation through 2026-07-31; price/NAV snapshot dates are separate and are not used to replace NAV total-return history.
+- Official daily NAV history sufficient for reproducible maximum drawdown and recovery was not verified; no numeric drawdown or recovery claim is saved.
+- Historical `DFAS unsupported ETF type` material from the earlier passive-only gate is retained for provenance; this refresh supersedes that classification under the current active-long-only support rule.
+- Planned durable paths: created `wiki/analysis/performance/ETF_CBOE_BZX_DFAS Performance.md`; updated `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region USA; breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; canonical tag `geography/United-States`; all affected wikilinks resolve after the performance page is created.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## FNDC official source map
 
@@ -1342,7 +1981,6 @@ review_gate: PASS
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-
 ## ISCF official source map
 
 | Scope | Source | Role | Data / as-of date |
@@ -1489,6 +2127,259 @@ review_gate: PASS
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_GWX Performance.md`; update `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
 - Planned graph changes: primary region `International`; add breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; add `geography/International` and `geography/international-ex-US`; link the new page from International navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## JPSE official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:JPSE` | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JPSE.PDF | Official JPMorgan factsheet: identity, passive/index objective, inception, expense ratio, NAV/market-price performance, annual rows and risk statistics | Factsheet dated 2026-06-30; NAV YTD `20.41%`, market-price YTD `20.71%`, annual rows 2017-2025, 3-year standard deviation `17.63%` |
+| `NYSE Arca:JPSE` | https://www.sec.gov/Archives/edgar/data/1485894/000119312526071849/d58277d497k.htm | Official SEC summary prospectus: passive indexing approach, index construction, expenses, listing and risks | Prospectus dated 2026-03-01; management/total annual expenses `0.29%`; listing exchange NYSE Arca; fund uses at least 80% of assets in underlying index securities |
+| `NYSE Arca:JPSE` | https://www.sec.gov/Archives/edgar/data/1485894/000119312525336832/d43117dncsr.htm | Official SEC annual shareholder report cross-check | Report period ended 2025-10-31; expense ratio `0.29%`; confirms ticker/exchange and annual report identity |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## JPSE raw observations and calculations
+
+| Year | JPSE NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2017 | 14.38% | 21.83% |
+| 2018 | -8.14% | -4.38% |
+| 2019 | 22.67% | 31.49% |
+| 2020 | 12.62% | 18.40% |
+| 2021 | 29.14% | 28.71% |
+| 2022 | -14.42% | -18.11% |
+| 2023 | 15.77% | 26.29% |
+| 2024 | 8.13% | 25.02% |
+| 2025 | 8.95% | 17.88% |
+| 2026 YTD | 20.41% (official NAV TR, 2026-06-30) | not synchronized; common cached annual series only |
+
+- Metric basis: official JPMorgan NAV Total Return with dividends and capital gains reinvested; NAV total return assumes fund management fees and operating expenses.
+- Issuer benchmark: `JP Morgan Diversified Factor US Small Cap Equity Index`; the fund uses a rules-based value, momentum and quality selection process with risk allocation across sectors and securities. Russell 3000 is the regulatory index and Russell 2000 is an additional comparison index.
+- JPSE 2017-2025 compound: `118.79%` cumulative; rounded-input CAGR `9.09%`.
+- JPSE 2021-2025 compound: `50.73%` cumulative; rounded-input CAGR `8.55%`.
+- Issuer launch-to-date average annual NAV TR: `11.09%` as of 2026-06-30; this is not a 10-year rolling field because the fund history is under ten years at the factsheet date.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; normalized available-window start TR value `100.00` and rounded-input end TR value `218.79` over nine complete calendar years.
+- Annual-return volatility: population standard deviation `12.98%` across the nine official rounded annual NAV observations.
+- Up years / down years: `7 / 2`; best `2021 +29.14%`; least positive `2024 +8.13%`; worst `2022 -14.42%`; least bad down year `2018 -8.14%`.
+- Current official fields: NAV TR YTD `20.41%`, market-price return YTD `20.71%`, 3-month NAV TR `15.08%`, 1-year NAV TR `34.08%`, launch annualized NAV TR `11.09%`, and 3-year standard deviation `17.63%`, all as of 2026-06-30; gross/net expenses `0.29%` and value of investments `$593.73M` are also as of 2026-06-30.
+
+## JPSE gaps and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:JPSE`; the input card title and ticker resolve to the JPMorgan Diversified Return U.S. Small Cap Equity ETF.
+- JPSE is within ETF v1 scope: the SEC prospectus describes a passive/indexing approach targeting the JP Morgan Diversified Factor US Small Cap Equity Index; no active, leveraged, inverse, bond, commodity, multi-asset or derivative-heavy structure was found. Futures use is capped at 10% of assets and does not change the passive classification.
+- Official calendar rows begin in 2017 because the fund launched on 2016-11-15; no partial 2016 row is mixed into a complete-year CAGR. The available 2017-2025 result is explicitly marked history under ten years.
+- The issuer launch annualized field `11.09%` is retained separately from the 2017-2025 calendar CAGR; no 10-year issuer average is asserted.
+- The common S&P 500 comparison uses the cached annual convention for 2017-2025 and 2021-2025; no same-date 2026 current benchmark pair is asserted against the JPSE 2026-06-30 YTD value.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_JPSE Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; add `geography/United-States`; link the new page from USA navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## XSVM official and secondary source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:XSVM` | https://www.invesco.com/us/en/financial-products/etfs/invesco-sp-smallcap-value-with-momentum-etf.html | Official Invesco product page: fund identity, passive/index objective, exchange, inception, fee, 90% index-investment policy, portfolio size and historical underlying-index transitions | Product page reviewed 2026-08-17; inception 2005-03-03; total/net expense ratio `0.37%`; management fee `0.29%` |
+| `NYSE Arca:XSVM` | https://www.invesco.com/us-rest/contentdetail?contentId=118407c649400410VgnVCM10000046f1bf0aRCRD&dnsName=us | Official Invesco Q1-2026 performance material: complete 2016-2025 calendar NAV rows and issuer current snapshot | As of 2026-03-31; official NAV YTD `4.49%`; official NAV annual rows cover 2016-2025 |
+| `S&P SmallCap 600 High Momentum Value Index` | https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-smallcap-600-high-momentum-value-index/ | Official S&P index identity and linked-product confirmation | Index page reviewed 2026-08-17; index measures 120 S&P SmallCap 600 stocks with attractive valuations and momentum overlay |
+| `NYSE Arca:XSVM` | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=xsvm | Secondary performance cross-check for the latest month-end NAV/market-price YTD and current quote | As of 2026-06-30: NAV YTD `23.00%`, market-price YTD `22.90%`; quote `US$71.88` as of 2026-08-05; used with secondary marker only |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## XSVM raw observations and calculations
+
+| Year | XSVM NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 35.52% | 11.96% |
+| 2017 | 3.17% | 21.83% |
+| 2018 | -11.82% | -4.38% |
+| 2019 | 29.95% | 31.49% |
+| 2020 | 5.03% | 18.40% |
+| 2021 | 56.38% | 28.71% |
+| 2022 | -13.55% | -18.11% |
+| 2023 | 20.23% | 26.29% |
+| 2024 | 2.12% | 25.02% |
+| 2025 | 7.59% | 17.88% |
+| 2026 YTD | 23.00% (secondary NAV, 2026-06-30) | not synchronized; common cached annual series only |
+
+- Metric basis: official Invesco NAV Total Return with distributions reinvested and fund expenses reflected; secondary current YTD is explicitly kept separate from the official 2026-03-31 issuer snapshot.
+- Issuer benchmark: `S&P SmallCap 600 High Momentum Value Index`; the product page says the fund generally invests at least 90% of assets in index constituents and rebalances/reconstitutes semi-annually.
+- XSVM 2016-2025 compound: `200.51%` cumulative; rounded-input CAGR `11.63%`.
+- XSVM 2021-2025 compound: `78.58%` cumulative; rounded-input CAGR `12.30%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`; cached 2021-2025 compound `96.17%` / CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`; normalized start TR value `100.00` and rounded-input end TR value `300.51` over ten complete calendar years.
+- Annual-return volatility: population standard deviation `20.87%` across the ten official rounded annual NAV observations.
+- Up years / down years: `8 / 2`; best `2021 +56.38%`; least positive `2024 +2.12%`; worst `2022 -13.55%`; least bad down year `2018 -11.82%`.
+- Current fields: secondary NAV TR YTD `23.00%`, secondary market-price YTD `22.90%`, 1-year NAV `36.70%`, 3-year NAV `16.70%`, 5-year NAV `8.50%`, and since-inception NAV `9.30%`, all from the 2026-06-30 secondary page; official issuer NAV YTD was `4.49%` as of 2026-03-31.
+
+## XSVM gaps, benchmark history, and scheduled-inline local review
+
+- Canonical identity is `NYSE Arca:XSVM`; the input card title and ticker resolve to the Invesco S&P SmallCap Value with Momentum ETF.
+- XSVM is within ETF v1 scope: Invesco describes it as an index-based fund tracking the S&P SmallCap 600 High Momentum Value Index and investing at least 90% in index constituents; no active, leveraged, inverse, bond, commodity, multi-asset or derivative-heavy structure was found.
+- The issuer reports historical underlying-index changes: Dynamic Small Cap Value Intellidex before 2011-06-16, RAFI Fundamental Small Value through 2015-05-22, Russell 2000 Pure Value through 2019-06-21, and S&P SmallCap 600 High Momentum Value thereafter. Fund NAV annual rows remain the numeric source of truth; index-relative comparisons are not treated as a single uninterrupted benchmark history.
+- Latest 2026-06-30 YTD is a secondary Schwab NAV observation because the latest official Invesco performance material located is as of 2026-03-31. The page preserves both as-of dates and does not present the secondary number as an issuer disclosure.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_XSVM Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; add `geography/United-States`; link the new page from USA navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## OSCV official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Cboe BZX:OSCV | https://aptusetfs.com/oscv/ | Official Aptus product page: fund identity, active objective, exchange, current NAV/market price, expense ratio, distributions and rolling performance | Page reviewed 2026-08-17; fund details and price/NAV as of 2026-08-14; monthly performance and YTD through 2026-07-31 |
+| Cboe BZX:OSCV | https://f.hubspotusercontent20.net/hubfs/4896827/Content%20Hub/Fact%20Sheets%20and%20Performance/ETF%20Fact%20Sheets/OSCV%20Fact%20Sheet.pdf | Official Aptus factsheet: calendar NAV returns, S&P 600 Value comparison, expense, inception, capture and risk fields | Factsheet as of 2026-06-30; NAV calendar rows 2018-2025; 3-year standard deviation OSCV 18.67% vs S&P 600 Value 24.00% |
+| Cboe BZX:OSCV | https://www.sec.gov/Archives/edgar/data/1540305/000089418925006694/opussmallcapvalueetfsummary.htm | Official SEC summary prospectus: listing, active long-only eligibility, strategy, adviser/team, management benchmark, turnover and risks | Prospectus dated 2025-08-31; inception 2018-07-17; portfolio turnover 25% for fiscal year ended 2025-04-30; managers since 2019/2020 |
+| Cboe BZX:OSCV | https://aptusetfs.com/wp-content/uploads/2025/06/OSCV-4.30.25-TSR-Final-Web-Ready-Public.pdf | Official annual shareholder report: turnover and standardized performance cross-check | Fiscal year ended 2025-04-30; portfolio turnover 25%; 30-day SEC yield 1.47% as of 2025-04-30 |
+| S&P SmallCap 600 Value TR | https://www.spglobal.com/spdji/en/indices/equity/sp-smallcap-600-value/ | Official index identity and value methodology; management-benchmark context | Page reviewed 2026-08-17; index classifies S&P SmallCap 600 constituents using book value, earnings and sales to price |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## OSCV raw observations and calculations
+
+| Year / window | OSCV NAV TR | S&P 500 TR | S&P SmallCap 600 Value TR | Active return vs management benchmark |
+|---|---:|---:|---:|---:|
+| 2018 inception partial† | -12.66% | -4.38% | -20.60% | not comparable; excluded |
+| 2019 | 27.45% | 31.49% | 24.50% | +2.95 pp |
+| 2020 | 4.88% | 18.40% | 2.48% | +2.40 pp |
+| 2021 | 27.89% | 28.71% | 30.85% | -2.96 pp |
+| 2022 | -11.36% | -18.11% | -11.09% | -0.27 pp |
+| 2023 | 10.13% | 26.29% | 14.88% | -4.75 pp |
+| 2024 | 11.44% | 25.02% | 7.55% | +3.89 pp |
+| 2025 | 1.42% | 17.88% | 6.71% | -5.29 pp |
+| 2021-2025 cumulative | 41.10% | 96.17% | 53.39% | — |
+| 2026 YTD | 15.53% (official NAV, 2026-07-31) | not synchronized | not synchronized | — |
+
+- Metric basis: official Aptus NAV Total Return includes reinvested distributions and fund expenses; market-price return remains separate. Currency is USD.
+- Complete 2019-2025 compound: OSCV cumulative 88.61%, rounded-input CAGR 9.49%; S&P SmallCap 600 Value TR cumulative 95.70%, CAGR 10.07%; Excess CAGR -0.58 pp.
+- Complete 2019-2025 cumulative relative wealth: (1 + 88.61%) / (1 + 95.70%) - 1 = -3.62%.
+- Complete-year hit rate: 3 / 7 = 42.86%; zero active return would not count as outperformance.
+- Common 2021-2025 compound: OSCV 41.10% / CAGR 7.13%; S&P 500 TR 96.17% / CAGR 14.43%.
+- Annual-return volatility: population standard deviation 13.00% across complete 2019-2025 OSCV rows.
+- Current issuer fields: NAV YTD 15.53%, 1-year NAV 17.99%, 3-year annualized NAV 10.20%, 5-year annualized NAV 6.81%, since-inception cumulative 90.35%, since-inception annualized 8.34%, all as of 2026-07-31; NAV US$43.25 and market price US$43.24 as of 2026-08-14.
+- Latest four cash distributions shown by Aptus: $0.1171 (2026-06-29), $0.0582 (2026-03-30), $0.1547 (2025-12-30), $0.1161 (2025-09-29); average $0.1115 per round and approximate per-round yield 0.26% using the 2026-08-14 market price. The issuer 30-day SEC yield was 1.24% as of 2026-06-30.
+- Management-benchmark selection: the SEC prospectus explicitly calls S&P SmallCap 600 Value TR a more applicable comparison; S&P 500 is retained as the common reference benchmark. No alternative was selected after observing performance.
+
+## OSCV gaps and scheduled-inline local review
+
+- Canonical identity is Cboe BZX:OSCV; SEC materials confirm Cboe BZX listing and the Aptus page confirms Cboe as primary exchange. The factsheet one-day inception date 2018-07-18 conflicts with the product page/SEC 2018-07-17 and is retained rather than silently normalized.
+- OSCV is within supported ETF scope as an actively managed, long-only equity ETF: the official prospectus requires at least 80% in U.S. small-cap equity securities and describes common stocks, REITs and ADRs; no payoff-defining options, leverage, inverse, bond, commodity or derivative-heavy structure was found.
+- active_process: fundamental-active reflects the disclosed combination of factor-based analysis and rigorous fundamental research; the official sell discipline and named adviser/team are retained.
+- The official annual table exposes 2018-2025, but 2018 is an inception-year partial and excluded from rankings, CAGR and active evidence. Complete comparable years are 2019-2025.
+- Daily NAV history sufficient for maximum drawdown and recovery was not verified. Current S&P 500 YTD was not paired with OSCV 2026-07-31 YTD because a same-date official benchmark observation was not captured.
+- Planned durable paths: created wiki/analysis/performance/ETF_CBOE_BZX_OSCV Performance.md; updated wiki/analysis/comparisons/USA ETF.md, wiki/analysis/comparisons/ETF Region Index.md, wiki/analysis/performance/ETF Performance Index.md, this source batch, and log.md.
+- Planned graph changes: primary region USA; breadcrumb [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]; canonical tag geography/United-States; all affected wikilinks resolve to existing/planned targets.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## SMIN official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Cboe BZX:SMIN | https://www.ishares.com/us/products/239660/ishares-msci-india-smallcap-etf?fundSearch=true&qt=SMIN | Official iShares product and performance page: fund identity, exchange, tracked index, current NAV/market price, holdings, yield, risk fields and rolling performance | Page reviewed 2026-08-17; NAV TR YTD through 2026-08-13; NAV US$71.42 and closing price US$71.43 as of 2026-08-14; 461 holdings as of 2026-08-13; 3-year standard deviation 18.82% as of 2026-07-31 |
+| Cboe BZX:SMIN | https://www.ishares.com/us/literature/fact-sheet/smin-ishares-msci-india-small-cap-etf-fund-fact-sheet-en-us.pdf | Official iShares factsheet: NAV calendar returns, benchmark comparison, rolling returns, expense ratio and risk fields | Factsheet as of 2026-06-30; NAV calendar rows 2021-2025; benchmark calendar rows 2021-2025; rolling 10-year NAV TR CAGR 9.71%; current YTD field -0.02% as of 2026-06-30 |
+| Cboe BZX:SMIN | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-india-small-cap-etf-8-31.pdf | Official iShares summary prospectus: strategy, index, listing, inception, expenses and annual performance chart | Prospectus dated 2025-08-31; inception 2012-02-08; annual NAV rows 2015-2024; expense ratio 0.74%; fund is non-diversified and index-tracking |
+| MSCI India Small Cap Index (Net) | https://www.msci.com/documents/10199/255599/msci-india-small-cap-index.pdf | Official index factsheet and benchmark identity | Index factsheet reviewed 2026-08-17; issuer benchmark retained as MSCI India Small Cap Index (Net) |
+| Cboe BZX:SMIN | https://www.cboe.com/us/equities/listings/listed_products/symbols/SMIN/ | Exchange listing cross-check | Listing page reviewed 2026-08-17; Cboe BZX:SMIN |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return with dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## SMIN raw observations and calculations
+
+| Year / window | SMIN NAV TR | S&P 500 TR | MSCI India Small Cap Index (Net) | SMIN active return vs issuer benchmark |
+|---|---:|---:|---:|---:|
+| 2015 | 2.02% | not captured in cached window | not disclosed in captured source | not disclosed |
+| 2016 | -0.42% | 11.96% | not disclosed in captured source | not disclosed |
+| 2017 | 61.78% | 21.83% | not disclosed in captured source | not disclosed |
+| 2018 | -25.43% | -4.38% | not disclosed in captured source | not disclosed |
+| 2019 | -5.17% | 31.49% | not disclosed in captured source | not disclosed |
+| 2020 | 19.07% | 18.40% | not disclosed in captured source | not disclosed |
+| 2021 | 44.69% | 28.71% | 51.13% | -6.44 pp |
+| 2022 | -13.98% | -18.11% | -13.43% | -0.55 pp |
+| 2023 | 34.80% | 26.29% | 42.63% | -7.83 pp |
+| 2024 | 17.34% | 25.02% | 22.63% | -5.29 pp |
+| 2025 | -6.82% | 17.88% | -7.92% | +1.10 pp |
+| 2021-2025 cumulative | 83.44% | 96.17% | 110.71% | — |
+| 2026 YTD | 2.50% (official NAV, 2026-08-13) | not synchronized | not synchronized | — |
+
+- Metric basis: official iShares NAV Total Return includes reinvested distributions and fund expenses; market-price return remains separate. Currency is USD.
+- Complete 2015-2025 compound from the displayed official annual rows: SMIN cumulative 153.86%, rounded-input CAGR 8.84%; population standard deviation 25.45%; up years / down years 6 / 5.
+- Common 2021-2025 compound: SMIN 83.44% / CAGR 12.90%; S&P 500 TR 96.17% / CAGR 14.43%; MSCI India Small Cap Index (Net) 110.71% / CAGR 16.07%.
+- Five-year benchmark-relative evidence: annual excess returns -6.44, -0.55, -7.83, -5.29 and +1.10 percentage points; excess CAGR -3.17 pp; hit rate 1 / 5 = 20%. This is tracking evidence, not alpha.
+- Current issuer fields: NAV TR YTD 2.50% as of 2026-08-13; NAV US$71.42 and closing price US$71.43 as of 2026-08-14; 30-day SEC yield -0.07% as of 2026-07-31; 12-month yield 0.00%; 461 holdings as of 2026-08-13; 3-year standard deviation 18.82% as of 2026-07-31; beta 0.46 as of 2026-07-31.
+- Standardized June 2026 page fields remain separate: 2026 YTD NAV -0.02% and MSCI India Small Cap Index (Net) +1.08% as of 2026-06-30; no same-date benchmark pairing was captured for the later 2026-08-13 YTD observation.
+
+## SMIN gaps and scheduled-inline local review
+
+- Canonical identity is Cboe BZX:SMIN; the iShares page and Cboe listing confirm the exchange, while the iShares prospectus confirms the 2012-02-08 inception and MSCI India Small Cap Index (Net) strategy.
+- SMIN is within supported ETF scope as a passive, index-tracking, long-only equity ETF. No leverage, inverse, bond, commodity, covered-call, option-income or derivative-heavy structure was found in the official materials.
+- The official annual table exposes 2015-2024 in the summary prospectus and 2025 in the June 2026 factsheet; no secondary annual return was substituted. The strict common issuer comparison remains 2021-2025.
+- Current 2026-08-13 NAV YTD has no same-date official benchmark pair in the captured sources; the standardized 2026-06-30 page is retained separately.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; no numeric drawdown proxy is saved.
+- Planned durable paths: refreshed wiki/analysis/performance/ETF_CBOE_BZX_SMIN Performance.md; updated wiki/analysis/comparisons/India ETF.md, wiki/analysis/performance/ETF Performance Index.md, this source batch, and log.md.
+- Planned graph changes: primary region India; breadcrumb [[ETF Region Index]] → [[India ETF]] → [[ETF Performance Index]]; canonical tag geography/India; all affected wikilinks resolve to existing targets.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## SMDV official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| Cboe BZX:SMDV | https://www.proshares.com/our-etfs/strategic/smdv | Official ProShares product page: identity, current index, exchange, rolling performance, NAV/market price, expense, yield and future index/name notice | Page reviewed 2026-08-17; rolling returns as of 2026-07-31; NAV/market price as of 2026-08-14; scheduled transition notice dated 2026-07-13 |
+| Cboe BZX:SMDV | https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetsmdv.pdf | Official factsheet: fund identity, index, current rolling NAV/market-price/index returns and fund risk language | Factsheet as of 2026-06-30; NAV YTD 17.74%, 1-year 21.31%, 3-year annualized 12.21%, 5-year annualized 6.68%, 10-year annualized 7.54%, since-inception 8.33% |
+| Cboe BZX:SMDV | https://www.proshares.com/globalassets/proshares/prospectuses/smdv_summary_prospectus.pdf | Official summary prospectus: passive objective, index construction, fees, inception, risks and annual NAV chart | Supplement dated 2026-07-13; summary prospectus dated 2025-09-26; official annual NAV rows 2016-2024; expense ratio 0.40%; inception 2015-02-03 |
+| Cboe BZX:SMDV | https://www.proshares.com/globalassets/proshares/attribution-reports/smdv_review.pdf | Official ProShares attribution report: 2025 calendar NAV/index return and rolling tracking comparison | As of 2025-12-31; 2025 NAV 0.34% vs index 0.72%; 3-year 5.36% vs 5.75%; 5-year 5.59% vs 5.99%; 10-year 7.51% vs 7.97%; since inception 7.11% vs 7.56% |
+| Cboe BZX:SMDV | https://www.proshares.com/globalassets/proshares/documents/annual-reports/annual_smdv.pdf | Official annual shareholder report: fiscal-year return, index comparison, volatility and fund statistics | Period ended 2026-05-31; fund total return 15.71% vs index 16.17%; index volatility 15.76%; turnover 36% |
+| S&P SmallCap 600 Dividend Aristocrats Index | https://www.proshares.com/globalassets/proshares/prospectuses/smdv_summary_prospectus.pdf | Official future-transition notice: scheduled replacement index and new fund name | Expected effective date around 2026-09-28; current Russell 2000 Dividend Growth Index remains the active benchmark as of 2026-08-17 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## SMDV raw observations and calculations
+
+| Year / window | SMDV NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 7.03% | 11.96% |
+| 2017 | 8.89% | 21.83% |
+| 2018 | -5.79% | -4.38% |
+| 2019 | 19.11% | 31.49% |
+| 2020 | -4.93% | 18.40% |
+| 2021 | 17.37% | 28.71% |
+| 2022 | -0.71% | -18.11% |
+| 2023 | 4.70% | 26.29% |
+| 2024 | 35.57% | 25.02% |
+| 2025 | 0.34% | 17.88% |
+| 2021-2025 cumulative | 65.98% | 96.17% |
+| 2026 YTD | 18.13% (official NAV, 2026-07-31) | not synchronized |
+
+- Metric basis: official ProShares NAV Total Return includes reinvested distributions and fund expenses; market-price return remains separate. Currency is USD.
+- Complete 2016-2025 compound: SMDV cumulative 106.36%, rounded-input CAGR 7.51%; normalized start TR value 100.00 and end TR value 206.36.
+- Common 2021-2025 compound: SMDV cumulative 65.98%, rounded-input CAGR 10.66%; S&P 500 TR cumulative 96.17%, CAGR 14.43%.
+- Annual-return volatility: population standard deviation 12.15% across the ten official annual NAV observations.
+- Up years / down years: 7 / 3; best 2024 +35.57%; least positive 2025 +0.34%; worst 2018 -5.79%; least bad down year 2022 -0.71%.
+- Current issuer fields as of 2026-07-31: NAV TR YTD 18.13%, 1-year 22.23%, 3-year annualized 10.42%, 5-year annualized 7.01%, rolling 10-year annualized 7.41%, and since-inception annualized 8.29%; NAV 78.71 and market price 78.76 as of 2026-08-14.
+- Yield fields: 30-day SEC yield 2.56% as of 2026-06-30 and 12-month yield 2.28% as of 2026-07-31; quarterly distributions.
+- Tracking cross-check: the fiscal-year 2026 report gives fund 15.71% versus index 16.17%, five-year 4.31% versus 4.71%, and ten-year 7.39% versus 7.84%; the 2025 attribution report gives the calendar comparison above.
+
+## SMDV gaps and scheduled-inline local review
+
+- Canonical identity is Cboe BZX:SMDV; ProShares product and summary-prospectus materials confirm the Cboe BZX listing and current Russell 2000 Dividend Growth Index objective.
+- SMDV is within supported ETF scope as a passive, index-tracking, long-only equity ETF. The prospectus describes an index of U.S. small-cap companies with at least ten consecutive years of dividend growth, equal weighting, a 30% sector cap and quarterly resets; no leverage, inverse, bond, commodity or derivative-heavy structure was found.
+- The 2025 annual NAV row comes from the official ProShares attribution report as of 2025-12-31; 2016-2024 rows come from the official summary-prospectus annual chart. No secondary annual return was substituted.
+- The Board-approved name/index transition is future-dated around 2026-09-28. Current performance and current benchmark metadata are not backfilled to the future S&P SmallCap 600 Dividend Aristocrats Index.
+- Current S&P 500 YTD was not paired with SMDV 2026-07-31 YTD because a same-date official benchmark observation was not captured.
+- Official daily NAV history sufficient for maximum drawdown and recovery was not verified; the issuer NAV History link returned an unsupported CSV content type during source access, so no numeric secondary drawdown proxy is saved.
+- Planned durable paths: created wiki/analysis/performance/ETF_CBOE_BZX_SMDV Performance.md; updated wiki/analysis/comparisons/USA ETF.md, wiki/analysis/comparisons/ETF Region Index.md, wiki/analysis/performance/ETF Performance Index.md, this source batch, and log.md.
+- Planned graph changes: primary region USA; breadcrumb [[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]; canonical tag geography/United-States; all affected wikilinks resolve to existing/planned targets.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design

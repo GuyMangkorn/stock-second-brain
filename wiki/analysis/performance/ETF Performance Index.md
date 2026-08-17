@@ -60,6 +60,9 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_SCHC Performance]] | official 2010 / official 2016-2025 | 8.23% | 7.10% | 6.15% | 2025 +37.73% / 2022 -21.92% | developed international ex-U.S. small-cap | small-cap/country/FX/liquidity-sensitive |
 | [[ETF_NASDAQ_SCZ Performance]] | official 2007 / official 2016-2025; rolling issuer 2026-06-30 | 8.60% | 5.55% | 13.83% | 2025 +32.10% / 2022 -21.22% | developed ex-U.S./Canada small-cap | small-cap/country/FX/liquidity-sensitive; 14.97% 3-year standard deviation |
 | [[ETF_NYSE_ARCA_ISCF Performance]] | official 2015 / official 2016-2025; rolling issuer 2026-06-30 | 9.69% | 8.45% | 12.52% | 2017 +36.24% / 2018 -18.18% | international small-cap multifactor equity | small-cap/country/factor/FX/liquidity-sensitive; benchmark splice in 2023; 14.21% 3-year standard deviation |
+| [[ETF_CBOE_BZX_DISV Performance]] | official inception 2022-03-23 / official 2023-2025; history under 10 years; current YTD secondary | not applicable (<10y history) | not applicable | 12.90%* | 2025 +47.24% / 2024 +6.02% | active systematic international small-cap value; management benchmark MSCI World ex USA Small Value | small-cap/country/value/FX/active-process-sensitive; management evidence positive return-only, risk evidence not verified |
+| [[ETF_CBOE_BZX_DFIS Performance]] | official inception 2022-03-23 / official 2023-2025; history under 10 years; current YTD secondary proxy | not applicable (<10y history) | not applicable | 14.18%* | 2025 +37.49% / 2024 +3.79% | active systematic international small-cap; management benchmark MSCI World ex USA Small Cap | small-cap/country/value/profitability/FX/active-process-sensitive; Excess CAGR +2.20 pp, 3/3 hit rate, risk evidence not verified |
+| [[ETF_LSE_AVGS Performance]] | official USD LSE:AVGS / input alias AGSCF; inception 2024-09-25; official YTD and rolling 1-year as of 2026-07-31 | not applicable (<10y history) | not applicable | 21.43% | not disclosed | active systematic international small-cap value; management benchmark MSCI World Small Cap Value | small-cap/value/country/FX/active-process-sensitive; +7.63 pp YTD and +9.20 pp rolling 1-year, no calendar rows or drawdown/recovery verified |
 | [[ETF_NYSE_ARCA_GWX Performance]] | official 2007 / calendar rows not disclosed; rolling issuer 2026-06-30 | 7.58% | not disclosed | 8.18% | not disclosed / not disclosed | international ex-U.S. small-cap equity | small-cap/country/FX/liquidity-sensitive; calendar rows and NAV drawdown/recovery remain gaps |
 | [[ETF_NYSE_ARCA_FNDC Performance]] | official 2013 / official 2016-2025; rolling issuer 2026-07-31 | 8.11% | 8.25% | 10.96% | 2025 +35.79% / 2018 -18.77% | developed ex-U.S. small-cap fundamental equity | small-cap/country/FX/value/tracking-sensitive |
 | [[ETF_LSE_WSML Performance]] | official inception 2018-03-27 / official 2019-2025; history under 10 years; input alias IMWSF | not applicable (<10y history) | 7.17% | 19.00% | 2019 +25.73% / 2022 -18.64% | global developed small-cap equity | small-cap/country/FX/liquidity-sensitive; 16.16% 3-year standard deviation |
@@ -69,7 +72,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_INDY Performance]] | official 2020-2025 / rolling official 2016-2026 | 6.67% | 6.92% | -12.32% | 2021 +19.28% / 2022 -7.86% | India single-country large-cap equity | India/financials/FX-sensitive; emerging-market cyclicality |
 | [[ETF_NYSE_ARCA_INCO Performance]] | official 2011 / issuer 10-year as of 2026-05-31; official 2021-2025 rows | 8.72% | 11.16% | -9.92% | 2023 +34.12% / 2022 -7.40% | India consumer thematic equity | consumer/India/sector concentration; country/FX-sensitive |
 | [[ETF_NYSE_ARCA_EPI Performance]] | official 2008 / official rolling 2016-2026; official 2016-2025 | 9.18% | 11.52% | -7.91% | 2017 +39.03% / 2018 -10.44% | India earnings-weighted equity | India/country/sector/valuation/FX-sensitive; index annual rows not disclosed |
-| [[ETF_CBOE_BZX_SMIN Performance]] | official 2012 / official 2021-2025; rolling 2016-2026 | 9.71% | 12.90% | -0.58% | 2021 +44.69% / 2022 -13.98% | India single-country small-cap equity | small-cap liquidity; India/country/sector/valuation/FX-sensitive |
+| [[ETF_CBOE_BZX_SMIN Performance]] | official 2012 / official 2015-2025; rolling 2016-2026 | 9.71% | 12.90% | 2.50% | 2021 +44.69% / 2022 -13.98% | India single-country small-cap equity | small-cap liquidity; India/country/sector/valuation/FX-sensitive |
 | [[ETF_CBOE_BZX_INDA Performance]] | official 2012 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 7.07% | 7.80% | -10.12% | 2021 +22.41% / 2022 -9.38% | India single-country equity | India/country/financials/valuation/FX-sensitive |
 | [[ETF_NASDAQ_IND Performance]] | official inception 2025-11-24; history under 10 years; official 3-month NAV TR through 2026-03-31; inception-to-date/current-YTD fields not disclosed | not applicable (<10y history) | not applicable | not disclosed | not disclosed / not disclosed | India broad large/mid/small-cap equity | India/country/INR-USD FX/emerging-market/sector/liquidity/new-fund-sensitive; official 3-month NAV TR -18.41% |
 | [[ETF_NASDAQ_INDH Performance]] | official inception 2024-05-09; history under 10 years; available 2024-05 to 2026-06 | not applicable (<10y history) | not disclosed | -9.04% | not disclosed / not disclosed | India broad equity, INR hedged | India/country/financials/energy/IT/FX/hedge-cost-sensitive; available-period NAV TR 1.84% / CAGR 0.85% |
@@ -97,6 +100,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
 | [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
 | [[ETF_NYSE_ARCA_DGS Performance]] | official 2007 / official 2016-2025; issuer-reported 10Y average annual NAV TR as of 2026-07-31 | 8.31%† | 8.23% | 8.86%‡ | 2017 +35.48% / 2018 -15.39% | emerging-markets small-cap dividend | small-cap/country/FX/emerging-market-sensitive; dividend-factor and equity risk |
+| [[ETF_NYSE_ARCA_EWX Performance]] | official 2008 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 7.95%† | 7.92%* | 3.91%‡ | 2017 +34.10%* / 2018 -18.74%* | emerging-markets small-cap equity | small-cap/country/FX/China-Taiwan/liquidity-sensitive; annual rows secondary proxy and daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 9.50% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
 | [[ETF_LSE_SAUS Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 8.26% | 6.24% | 10.27% | 2019 +22.50% / 2018 -12.30% | Australia single-country broad equity | financials/materials/commodity/country/FX-sensitive |
@@ -168,6 +172,20 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_SCHA Performance]] | official 2009 / secondary 2016-2025*; official rolling 10-year as of 2026-07-31 | 10.48% | 6.53%* | 18.27% | proxy 2019 +26.50%* / 2022 -19.81%* | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; annual rows secondary proxy; 3-year standard deviation 19.78% |
 | [[ETF_NYSE_ARCA_SPSM Performance]] | issuer 10-year annualized field as of 2026-07-31; calendar rows not disclosed | 10.75% | not disclosed | 21.54% | not disclosed / not disclosed | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; low-cost tracking; benchmark continuity disclosed |
 | [[ETF_NYSE_ARCA_GSSC Performance]] | official 2018-2025; inception 2017-06-28; history under 10 years | not applicable (<10y history) | 8.25% | 21.33% | 2021 +24.05% / 2022 -16.87% | U.S. small-cap multi-factor equity | small-cap/factor-regime/cyclicality/liquidity-sensitive; official daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_AVSC Performance]] | official inception 2022-01-11 / secondary 2023-2025*; active long-only; history under 10 years | not applicable (<10y) | not applicable | 23.92% | 2023 +19.40%* / not disclosed | U.S. small-cap active value/profitability equity | active-management/benchmark/size/value/profitability/liquidity-sensitive; 2023-2025 annual rows secondary; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_AVUV Performance]] | official current YTD as of 2026-07-31; synchronized factsheet comparison as of 2026-06-30; inception 2019-09-24; history under 10 years | not applicable (<10y history) | not applicable | 23.61% | not disclosed / not disclosed | U.S. small-cap active systematic value/profitability equity; management benchmark Russell 2000 Value | active-management/benchmark/size/value/profitability/liquidity-sensitive; +0.10 pp YTD, -4.01 pp 1Y, +4.06 pp 5Y, +4.47 pp ITD; daily NAV drawdown/recovery gap |
+| [[ETF_CBOE_BZX_DFAS Performance]] | official 2016-2025; ETF listing 2021-06-14; predecessor history; current YTD secondary as of 2026-07-31 | 9.78% | 9.42% | 16.9%* | 2021 +29.70% / 2022 -13.80% | U.S. small-cap active systematic equity; management benchmark Russell 2000 | active-management/benchmark/predecessor/size/value/profitability/tax-management/liquidity-sensitive; -4.63 pp 1Y, +3.33 pp 5Y, +0.16 pp 10Y; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_EES Performance]] | official 2007 / official 2016-2025; issuer rolling 10-year as of 2026-07-31 | 10.85% | 9.40% | 19.57% | 2021 +34.34% / 2022 -16.16% | U.S. small-cap earnings-weighted equity | small-cap/earnings-factor/cyclicality/liquidity-sensitive; 15.31% annual-return volatility; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_FESM Performance]] | official 2007 / official 2016-2025; active ETF listing 2023-11-20; rolling 10-year as of 2026-06-30; predecessor history caveat | 13.28% | 10.33% | 28.42% | 2019 +23.65% / 2018 -13.04% | U.S. small-cap active systematic equity | active-management/benchmark/quantitative-factor/size/liquidity-sensitive; positive return evidence includes predecessor history; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_DFSV Performance]] | official inception 2022-02-23 / official 2023-2025; current secondary as of 2026-06-30; history under 10 years | not applicable (<10y history) | not applicable | 18.7%* | 2023 +19.23% / no down year | U.S. small-cap active value/factor equity | active-management/benchmark/size/value/profitability/liquidity-sensitive; 2023-2025 history under 10 years; current field secondary; daily NAV drawdown/recovery gap |
+| [[ETF_NASDAQ_PSC Performance]] | official 2016 inception / official 2017-2025; strategy change 2022-07-08; rolling/current as of 2026-07-31 | not applicable (<10y) | 10.91% | 18.52% | 2021 +32.32% / 2022 -15.99% | U.S. small-cap active quality/momentum/value equity | active-management/benchmark/strategy-change/size/quality/value/momentum/liquidity-sensitive; 6/9 hit rate and combined-history caveat; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_JPSE Performance]] | inception 2016-11-15 / official 2017-2025; history under 10 years | not applicable (<10y history) | 8.55% | 20.41% | 2021 +29.14% / 2022 -14.42% | U.S. small-cap multi-factor equity | small-cap/value/momentum/quality/factor-regime/liquidity-sensitive; 12.98% annual-return volatility; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_XSVM Performance]] | official 2005 / official 2016-2025; latest YTD secondary as of 2026-06-30 | 11.63% | 12.30% | 23.00%* | 2021 +56.38% / 2022 -13.55% | U.S. small-cap value/momentum equity | value/momentum/turnover/factor-regime/cyclicality/liquidity-sensitive; 20.87% annual-return volatility; daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_JHSC Performance]] | official inception 2017-11-08; rolling fields as of 2026-06-30; history under 10 years; calendar rows not disclosed | not applicable (<10y history) | not disclosed | 16.34% | not disclosed / not disclosed | U.S. small-cap multifactor equity | small-cap/size/value/profitability/factor-regime/liquidity-sensitive; calendar rows and daily NAV drawdown/recovery gap |
+| [[ETF_NASDAQ_SFLO Performance]] | official inception 2023-12-20/21; official 2024 calendar NAV row; rolling fields as of 2026-06-30; history under 10 years | not applicable (<10y history) | not applicable | 16.54% | not disclosed / not disclosed | U.S. small-cap free-cash-flow/value-factor equity | small-cap/FCF/value/growth/sector/liquidity-sensitive; 2025 annual row and daily NAV drawdown/recovery gap |
+| [[ETF_CBOE_BZX_OSCV Performance]] | official 2018-2025 rows; 2018 inception-year partial excluded; active strategy; complete 2019-2025 window | not applicable (<10y history) | 9.49% | 15.53% | 2021 +27.89% / 2022 -11.36% | U.S. small-cap active value/dividend equity | active-management/benchmark/cost/small-cap/value-regime/liquidity-sensitive; daily NAV drawdown/recovery gap |
+| [[ETF_NASDAQ_BSVO Performance]] | official predecessor-inclusive rolling fields as of 2026-07-31; ETF listing 2023-03-10; 2025 fiscal benchmark snapshot separate | 11.04% | not disclosed | 25.66% | not disclosed / not disclosed | U.S. small-cap active systematic value equity; management benchmark Russell 2000 Value | active-management/benchmark/predecessor/value/size/liquidity-sensitive; 2025 fiscal excess mixed, daily NAV drawdown/recovery gap |
+| [[ETF_CBOE_BZX_SMDV Performance]] | official 2016-2024 annual rows plus official 2025 attribution row; rolling fields as of 2026-07-31; current index transition scheduled around 2026-09-28 | 7.51% | 10.66% | 18.13% | 2024 +35.57% / 2018 -5.79% | U.S. small-cap dividend-growth equity | small-cap/dividend-screen/equal-weight/sector/reconstitution/liquidity-sensitive; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_XSMO Performance]] | official 2005 / official 2016-2025; issuer 10-year average annual as of 2025-12-31 | 12.25%‖ | 9.59% | 30.50%¶ | 2019 +28.35% / 2022 -15.48% | U.S. small-cap momentum equity | small-cap/momentum/turnover/liquidity-sensitive; current YTD secondary and benchmark-history caveat |
 | [[ETF_LSE_R2US Performance]] | official 2014 / official 2016-2025; official rolling 10-year as of 2026-07-31 | 10.18% | 5.70% | 18.69% | 2019 +24.98% / 2022 -20.78% | U.S. small-cap broad equity | small-cap/country/liquidity/currency-sensitive; OTC alias resolved to USD LSE line; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FNDA Performance]] | official 2013 / secondary 2016-2025; official rolling 10-year as of 2026-06-30 | 11.53% | 9.49%* | 21.18% | 2021 +31.11%* / 2022 -14.82%* | U.S. small-cap fundamental equity | small-cap/fundamental/value/factor-sensitive; annual rows secondary and 2024 benchmark splice; daily NAV drawdown/recovery gap |
@@ -207,9 +225,70 @@ as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
 ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`; the newer product-page table as of `2026-06-30` does not expose a separate YTD field.
+EES `10.85%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
+`9.97%` เป็น rounded-input CAGR จาก official 2016-2025 annual rows และ
+`19.57%` เป็น official NAV TR YTD ณ 2026-07-31. S&P 500 current cross-check
+`9.00%` เป็น official report ณ 2026-07-28 และไม่ใช่ same-date pair.
+JPSE ไม่มี 10-year NAV CAGR เพราะ inception 2016-11-15; `9.09%` เป็น
+rounded-input CAGR จาก complete 2017-2025 annual rows, `8.55%` เป็น CAGR จาก
+2021-2025 และ `20.41%` เป็น official NAV TR YTD ณ 2026-06-30. Issuer
+launch-to-date average annual NAV TR `11.09%` เป็นคนละ metric และไม่ถูกใช้แทน
+10-year field.
+XSVM `11.63%` เป็น rounded-input CAGR จาก official 2016-2025 NAV rows;
+`12.30%` เป็น CAGR จาก 2021-2025; `23.00%*` เป็น secondary NAV TR YTD ณ
+2026-06-30 และ official Invesco snapshot ที่ใหม่สุดที่อ่านได้คือ `4.49%` ณ
+2026-03-31. Historical underlying-index changes ของ Invesco ยังคงเปิดเผยแยก
+จาก fund NAV series.
 XSMO `12.25%‖` เป็น issuer 10-year average annual NAV TR ณ 2025-12-31 ไม่ใช่
 raw cumulative endpoint; `30.50%¶` เป็น secondary NAV return ณ 2026-06-30 และ
 official current YTD ของ issuer ยังไม่พบ.
+JHSC ไม่มี 10-year NAV CAGR เพราะ inception 2017-11-08; issuer factsheet ณ
+2026-06-30 รายงาน rolling 5-year NAV TR `8.00%`, since-inception annualized
+NAV TR `9.14%` และ current NAV TR YTD `16.34%`. Complete calendar-year rows,
+2021-2025 CAGR และ daily NAV drawdown/recovery ยังไม่พบข้อมูลที่ยืนยันได้.
+SFLO ไม่มี 10-year หรือ 2021-2025 CAGR เพราะ inception ปลายปี 2023; official
+factsheet ณ 2026-06-30 รายงาน current NAV TR YTD `16.54%`, 1-year NAV TR
+`31.73%` และ since-inception annualized NAV TR `14.48%`. SEC prospectus
+เปิดเผย calendar-year NAV TR ปี 2024 `6.49%`; 2023 เป็น partial และ 2025 row
+ยังไม่พบข้อมูลที่ยืนยันได้.
+
+EWX `7.95%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
+`8.62%*` เป็น rounded-input CAGR จาก secondary dividend-reinvested 2016-2025
+annual rows, `7.92%*` เป็น secondary 2021-2025 CAGR และ `3.91%‡` เป็น current
+official NAV TR YTD ณ 2026-07-31. EWX annual proxy rows ไม่ถูกเพิ่มใน strict
+Common Window ranking เพราะไม่ใช่ issuer-published NAV rows.
+
+AVSC ไม่มี 10-year หรือ 2021-2025 CAGR เพราะ inception 2022-01-11; `12.08%*`
+เป็น rounded-input CAGR จาก secondary 2023-2025 NAV rows และ `23.92%` เป็น
+official NAV TR YTD ณ 2026-07-31. Official factsheet ณ 2026-06-30 รายงาน
+1-year/3-year/since-inception NAV TR `43.54%`/`18.50%`/`10.24%` เทียบ Russell
+2000 `40.78%`/`18.60%`/`8.97%`; active comparison นี้เป็น return evidence ไม่ใช่
+alpha และ annual proxy ไม่ถูกเพิ่มใน strict Common Window ranking.
+
+FESM เป็น active systematic small-cap ETF; official 10-year NAV TR `13.28%`,
+2021-2025 rounded-input CAGR `10.33%`, และ current NAV TR YTD `28.42%` ณ
+2026-06-30. Russell 2000 เป็น management benchmark และ `+1.00 pp` Excess CAGR
+กับ active hit rate `6/10` เป็น evidence ของผลตอบแทน ไม่ใช่ alpha. Official
+2016-2025 rows รวม predecessor history ก่อน ETF listing 2023-11-20 และชื่อ Core
+มีผลประมาณ 2026-05-11.
+
+DFSV ไม่มี 10-year หรือ 2021-2025 CAGR เพราะ inception 2022-02-23; official
+2023-2025 rows ให้ cumulative `38.78%` / rounded-input CAGR `11.54%` และ
+2026-06-30 current NAV TR YTD `18.7%*` เป็น secondary. Official 2024 return
+`7.27%` เทียบ Russell 2000 Value `8.05%`, ขณะที่ since-inception ณ 2024-12-31
+`9.50%` เทียบ `5.16%`; เป็น mixed short-track-record evidence ไม่ใช่ alpha.
+
+OSCV เป็น active long-only ETF จึงไม่รวมใน passive strict ranking. Complete
+2019-2025 NAV TR cumulative 88.61% / rounded-input CAGR 9.49%, common
+2021-2025 CAGR 7.13%, current NAV TR YTD 15.53% ณ 2026-07-31 และ
+management-benchmark Excess CAGR -0.58 pp; 2018 inception-year partial,
+one-day inception-date conflict และ daily NAV drawdown/recovery ยังเป็น gaps.
+
+SMDV เป็น passive/index-tracking ETF ที่ยังใช้ Russell 2000 Dividend Growth
+Index ณ review date. Official 2016-2025 NAV TR cumulative 106.36% /
+rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
+18.13% ณ 2026-07-31; ProShares ประกาศเปลี่ยนชื่อและ index ประมาณ
+2026-09-28 จึงต้องแยก future transition ออกจาก current performance.
 
 ## Common Window
 
@@ -281,6 +360,12 @@ official current YTD ของ issuer ยังไม่พบ.
 | [[ETF_NASDAQ_VTWO Performance]] | 14.81% | -20.40% | 17.00% | 11.57% | 12.88% | 34.66% | 4 / 1 |
 | [[ETF_NYSE_ARCA_SCHA Performance]] | 16.45%* | -19.81%* | 18.46%* | 11.16%* | 11.60%* | 37.23%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_GSSC Performance]] | 24.05% | -16.87% | 17.37% | 10.94% | 10.71% | 48.66% | 4 / 1 |
+| [[ETF_NYSE_ARCA_EES Performance]] | 34.34% | -16.16% | 18.42% | 9.89% | 6.93% | 56.73% | 4 / 1 |
+| [[ETF_NYSE_ARCA_FESM Performance]] | 20.54% | -18.28% | 21.04% | 16.48% | 17.70% | 63.46% | 4 / 1 |
+| [[ETF_NYSE_ARCA_JPSE Performance]] | 29.14% | -14.42% | 15.77% | 8.13% | 8.95% | 50.73% | 4 / 1 |
+| [[ETF_NYSE_ARCA_XSVM Performance]] | 56.38% | -13.55% | 20.23% | 2.12% | 7.59% | 78.58% | 4 / 1 |
+| [[ETF_CBOE_BZX_OSCV Performance]] | 27.89% | -11.36% | 10.13% | 11.44% | 1.42% | 41.10% | 4 / 1 |
+| [[ETF_CBOE_BZX_SMDV Performance]] | 17.37% | -0.71% | 4.70% | 35.57% | 0.34% | 65.98% | 4 / 1 |
 | [[ETF_NYSE_ARCA_XSMO Performance]] | 19.28% | -15.48% | 21.43% | 17.57% | 9.81% | 58.05% | 4 / 1 |
 | [[ETF_LSE_R2US Performance]] | 14.70% | -20.78% | 16.27% | 11.19% | 12.32% | 31.94% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FNDA Performance]] | 31.11%* | -14.82%* | 20.31%* | 8.99%* | 7.44%* | 57.34%* | 4 / 1 |
@@ -428,6 +513,18 @@ utilities และ financials tilt.
 
 การสรุป “บริหารกองทุนดี” ต้องตีความเป็น index methodology + tracking + cost control
 เพราะกองทั้งหมดใน ranking นี้เป็น passive ไม่ใช่ discretionary active management.
+
+### Active management evidence
+
+- [[ETF_CBOE_BZX_OSCV Performance]] — management_mode: active-equity-long-only, active_process: fundamental-active, management_benchmark: S&P SmallCap 600 Value Total Return Index, track_record: established, management_evidence: negative, risk_evidence: positive. OSCV is kept outside the passive strict ranking; its active evidence is shown separately on the performance page.
+- [[ETF_NASDAQ_BSVO Performance]] — management_mode: active-equity-long-only, active_process: systematic-quantitative, management_benchmark: Russell 2000 Value Total Return Index, track_record: established-with-predecessor-history, management_evidence: mixed-benchmark-relative, risk_evidence: not-verified. Official 2025 fiscal comparison was -4.15 pp for 1-year, +4.98 pp for 5-year annualized and +0.42 pp for 10-year annualized; no alpha claim is made.
+- [[ETF_NYSE_ARCA_AVUV Performance]] — management_mode: active-equity-long-only, active_process: systematic-active, management_benchmark: Russell 2000 Value Total Return Index, track_record: developing-short-live-history, management_evidence: mixed-benchmark-relative, risk_evidence: not-verified. Official synchronized factsheet comparison shows +0.10 pp YTD, -4.01 pp 1-year, +0.33 pp 3-year, +4.06 pp 5-year and +4.47 pp since inception; no alpha claim is made.
+- [[ETF_CBOE_BZX_DFAS Performance]] — management_mode: active-equity-long-only, active_process: systematic-active, management_benchmark: Russell 2000 Index, track_record: established-with-predecessor-history, management_evidence: mixed-benchmark-relative, risk_evidence: not-verified. Official rolling comparison shows -4.63 pp 1-year, +3.33 pp 5-year and +0.16 pp 10-year; no alpha claim is made.
+- [[ETF_NYSE_ARCA_FESM Performance]] — management_mode: active-equity-long-only, active_process: systematic-quantitative, management_benchmark: Russell 2000, track_record: established-strategy-with-predecessor-history, management_evidence: positive-return-evidence, risk_evidence: issuer-fields. Official 2016-2025 annual history includes predecessor rows before 2023-11-17; Excess CAGR `+1.00 pp` and active hit rate `6/10` are strategy-level evidence, not alpha.
+- [[ETF_NYSE_ARCA_DFSV Performance]] — management_mode: active-equity-long-only, active_process: systematic-factor, management_benchmark: Russell 2000 Value, track_record: developing-short-live-history, management_evidence: mixed-short-track-record, risk_evidence: issuer-fields. Official 2024 return trailed the benchmark while since-inception through 2024-12-31 led it; no alpha claim is made.
+- [[ETF_CBOE_BZX_DFIS Performance]] — management_mode: active-equity-long-only, active_process: systematic-active, management_benchmark: MSCI World ex USA Small Cap Index (net dividends), track_record: provisional, management_evidence: positive return-only, risk_evidence: not-verified. Official 2023-2025 Excess CAGR is +2.20 pp with a 3/3 hit rate; no alpha claim is made.
+- [[ETF_LSE_AVGS Performance]] — management_mode: active-equity-long-only, active_process: systematic-active, management_benchmark: MSCI World Small Cap Value Index, track_record: developing-short-live-history, management_evidence: positive return-only, risk_evidence: not-verified. Official 2026 YTD excess is +7.63 pp and rolling 1-year excess is +9.20 pp; no alpha claim is made.
+- [[ETF_NASDAQ_PSC Performance]] — management_mode: active-equity-long-only, active_process: rules-based-multi-factor, management_benchmark: Russell 2000, track_record: established-with-strategy-change, management_evidence: mixed-benchmark-relative, risk_evidence: issuer-fields. Official 2017-2025 combined history has 6/9 positive annual active differences; Excess CAGR +1.47 pp, but the pre-2022-07-08 strategy differed, so no alpha claim is made.
 
 ## Annual 2016-2025 Comparison
 
@@ -635,10 +732,31 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 
 ## 2026-08-17 Coverage Addition
 
+- [[ETF_NASDAQ_PSC Performance]] — PSC (USA; active rules-based U.S. small-cap quality/momentum/value ETF; official 2017-2025 NAV TR cumulative +133.00% / rounded-input CAGR +9.85%, 2021-2025 CAGR +10.91%, official since-inception annualized NAV TR +12.01%, and current official NAV TR YTD +18.52% as of 2026-07-31; Russell 2000 current YTD +18.85%; strategy-change caveat, combined-history evidence and daily NAV drawdown/recovery gap disclosed)
+
+- [[ETF_CBOE_BZX_OSCV Performance]] — OSCV (USA; active long-only small-cap value/dividend ETF; official 2019-2025 NAV TR cumulative +88.61% / rounded-input CAGR +9.49%, 2021-2025 CAGR +7.13%, current official NAV TR YTD +15.53% as of 2026-07-31; management-benchmark Excess CAGR -0.58 pp and 42.86% complete-year hit rate; 2018 inception-year partial, one-day inception-date conflict, and daily NAV drawdown/recovery remain disclosed gaps)
+- [[ETF_CBOE_BZX_SMDV Performance]] — SMDV (USA; official 2016-2025 NAV TR cumulative +106.36% / rounded-input CAGR +7.51%, 2021-2025 CAGR +10.66%, issuer rolling 10-year NAV TR +7.41% and current official NAV TR YTD +18.13% as of 2026-07-31; passive Russell 2000 Dividend Growth Index exposure, official 2025 calendar row from attribution report, and index/name transition scheduled around 2026-09-28)
+- [[ETF_CBOE_BZX_SMIN Performance]] — SMIN (India; official 2015-2025 NAV TR cumulative +153.86% / rounded-input CAGR +8.84%, 2021-2025 CAGR +12.90%, issuer rolling 10-year NAV TR CAGR +9.71% as of 2026-06-30, and current official NAV TR YTD +2.50% as of 2026-08-13; passive MSCI India Small Cap Index exposure, current YTD benchmark date mismatch and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_CBOE_BZX_DISV Performance]] — DISV (International; active systematic long-only small-cap value ETF; official 2023-2025 NAV TR cumulative +86.70% / rounded-input CAGR +23.14%, official since-inception annualized NAV TR +14.78% versus management benchmark +10.38% as of 2025-12-31, current secondary NAV TR YTD +12.90% as of 2026-07-31; track record provisional, management evidence positive return-only, and risk evidence not verified)
+- [[ETF_CBOE_BZX_DFIS Performance]] — DFIS (International; active systematic long-only small-cap ETF; official 2023-2025 NAV TR cumulative +64.16% / rounded-input CAGR +17.97%, management benchmark cumulative +55.16% / CAGR +15.77%, Excess CAGR +2.20 pp and 3/3 hit rate, current secondary market-price + cash-distribution proxy +14.18% as of 2026-08-12; track record provisional and risk evidence not verified)
+- [[ETF_LSE_AVGS Performance]] — AGSCF / AVGS (International; active systematic long-only small-cap value UCITS ETF; official NAV TR YTD +21.43% versus management benchmark +13.80% and rolling 1-year +36.36% versus +27.16% as of 2026-07-31; history under two years, calendar rows/CAGR and risk evidence not verified)
+
+- [[ETF_NYSE_ARCA_EES Performance]] — EES (USA; official 2016-2025 NAV TR cumulative `+158.70%` / rounded-input CAGR `9.97%`, 2021-2025 CAGR `9.40%`, issuer rolling 10-year average annual NAV TR `10.85%` as of 2026-07-31, current official NAV TR YTD `+19.57%` as of 2026-07-31; annual-return volatility `15.31%` and daily NAV drawdown/recovery gap)
+- [[ETF_NYSE_ARCA_JPSE Performance]] — JPSE (USA; official 2017-2025 NAV TR cumulative `+118.79%` / rounded-input CAGR `9.09%`, 2021-2025 CAGR `8.55%`, issuer launch-to-date average annual NAV TR `11.09%`, current official NAV TR YTD `+20.41%` as of 2026-06-30; history under 10 years, annual-return volatility `12.98%`, and daily NAV drawdown/recovery gap)
+- [[ETF_NYSE_ARCA_XSVM Performance]] — XSVM (USA; official 2016-2025 NAV TR cumulative `+200.51%` / rounded-input CAGR `11.63%`, 2021-2025 CAGR `12.30%`, latest secondary NAV TR YTD `+23.00%` as of 2026-06-30 versus official issuer snapshot `+4.49%` as of 2026-03-31; annual-return volatility `20.87%` and daily NAV drawdown/recovery gap)
+- [[ETF_NYSE_ARCA_JHSC Performance]] — JHSC (USA; official inception 2017-11-08, rolling 5-year NAV TR `+8.00%` and since-inception annualized NAV TR `+9.14%` as of 2026-06-30, current official NAV TR YTD `+16.34%`; calendar-year rows, 2021-2025 CAGR and daily NAV drawdown/recovery remain disclosed gaps)
+- [[ETF_NASDAQ_SFLO Performance]] — SFLO (USA; official 2024 NAV TR `+6.49%`, official rolling 1-year NAV TR `+31.73%`, since-inception annualized NAV TR `+14.48%`, and current official NAV TR YTD `+16.54%` as of 2026-06-30; history under 10 years, 2025 annual row, and daily NAV drawdown/recovery remain disclosed gaps; inception-date one-day source conflict recorded)
 - [[ETF_NYSE_ARCA_GSSC Performance]] — GSSC (USA; official 2018-2025 NAV TR cumulative `+93.95%` / rounded-input CAGR `8.63%`, 2021-2025 CAGR `8.25%`, current official NAV TR YTD `+21.33%` as of 2026-06-30; history under 10 years and daily NAV drawdown/recovery gap)
 - [[ETF_NYSE_ARCA_XSMO Performance]] — XSMO (USA; official 2016-2025 NAV TR cumulative `+217.50%` / rounded-input CAGR `12.25%`, 2021-2025 CAGR `9.59%`, issuer 10-year average annual NAV TR `12.25%` as of 2025-12-31, current secondary NAV return `+30.50%` as of 2026-06-30; official current YTD and daily NAV drawdown/recovery remain gaps)
 - [[ETF_LSE_R2US Performance]] — SSEUF / R2US (USA; OTC alias resolved to official USD `LSE:R2US`, official 2016-2025 NAV/Fund Net cumulative `+140.61%` / rounded-input CAGR `9.18%`, 2021-2025 CAGR `5.70%`, official rolling 10-year NAV TR `10.18%` and current YTD `+18.69%` as of 2026-07-31; daily NAV drawdown/recovery remains a gap)
 - [[ETF_NYSE_ARCA_FNDA Performance]] — FNDA (USA; official NAV 10-year annualized `11.53%` and current NAV TR YTD `+21.18%` as of 2026-06-30; secondary 2016-2025 total-return proxy cumulative `+159.56%` / rounded-input CAGR `10.01%`, 2021-2025 CAGR `9.49%*`; annual NAV rows and daily NAV drawdown/recovery remain gaps)
+- [[ETF_NYSE_ARCA_EWX Performance]] — EWX (Emerging Markets; official issuer rolling 10-year NAV TR `+7.95%` and current official NAV TR YTD `+3.91%` as of 2026-07-31; secondary 2016-2025 total-return proxy cumulative `+128.55%` / rounded-input CAGR `+8.62%`, 2021-2025 CAGR `+7.92%`; passive small-cap index exposure, official calendar NAV rows and daily NAV drawdown/recovery remain gaps)
+- [[ETF_NYSE_ARCA_AVSC Performance]] — AVSC (USA; active long-only small-cap value/profitability ETF; official current NAV TR YTD `+23.92%` as of 2026-07-31; official 1-year/3-year/since-inception NAV TR `43.54%`/`18.50%`/`10.24%` versus Russell 2000 `40.78%`/`18.60%`/`8.97%` as of 2026-06-30; secondary 2023-2025 proxy cumulative `+40.81%` / rounded-input CAGR `+12.08%`; developing track record and daily NAV drawdown/recovery gap)
+- [[ETF_NYSE_ARCA_FESM Performance]] — FESM (USA; active systematic small-cap; official 2016-2025 NAV TR cumulative `+174.39%` / rounded-input CAGR `+10.62%`, 2021-2025 CAGR `+10.33%`, official 10-year NAV TR `+13.28%`, and current NAV TR YTD `+28.42%` as of 2026-06-30; Russell 2000 Excess CAGR `+1.00 pp` with `6/10` hit rate; predecessor history, name transition and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NYSE_ARCA_DFSV Performance]] — DFSV (USA; active small-cap value/factor; official 2023-2025 NAV TR cumulative `+38.78%` / rounded-input CAGR `+11.54%`, official 1-year NAV TR `+8.51%` and since-inception annualized `+9.25%` as of 2025-12-31, secondary current NAV TR YTD `+18.7%` as of 2026-06-30; history under 10 years, mixed benchmark evidence and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NASDAQ_BSVO Performance]] — BSVO (USA; active systematic long-only small-cap value ETF; official NAV TR YTD +25.66%, rolling 1-year +44.04%, rolling 5-year +11.89% and rolling 10-year +11.04% as of 2026-07-31; official 2025 fiscal benchmark comparison -4.15 pp / +4.98 pp / +0.42 pp for 1Y/5Y/10Y; predecessor history and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NYSE_ARCA_AVUV Performance]] — AVUV (USA; active systematic long-only small-cap value ETF; official current NAV TR YTD +23.61% as of 2026-07-31; synchronized factsheet as of 2026-06-30 reports +0.10 pp YTD, -4.01 pp 1Y, +0.33 pp 3Y, +4.06 pp 5Y and +4.47 pp since inception versus Russell 2000 Value; developing track record and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_CBOE_BZX_DFAS Performance]] — DFAS (USA; active systematic long-only U.S. small-cap ETF; official 2016-2025 NAV TR cumulative +154.28% / rounded-input CAGR +9.78%, 2021-2025 CAGR +9.42%, current secondary YTD +16.9% as of 2026-07-31; Russell 2000 comparison -4.63 pp / +3.33 pp / +0.16 pp for 1Y/5Y/10Y; predecessor history, fee source difference and daily NAV drawdown/recovery gap disclosed)
 - [[ETF_LSE_USSC Performance]] — ZPRVF / USSC (USA; OTC input alias resolved to official USD `LSE:USSC`, official 2016-2025 Fund Net cumulative `+191.31%` / rounded-input CAGR `11.28%`, 2021-2025 CAGR `12.97%`, rolling 10-year NAV TR `12.10%`, and current NAV TR YTD `+20.29%` as of 2026-07-31; daily NAV drawdown/recovery remains a gap)
 - [[ETF_CBOE_BZX_NUSC Performance]] — NUSC (USA; official 2017-2025 NAV TR cumulative `+116.65%` / rounded-input CAGR `8.97%`, 2021-2025 CAGR `5.51%`, current official NAV TR YTD `+16.76%` as of 2026-06-30; history under 10 years and daily NAV drawdown/recovery remain gaps)
 - [[ETF_LSE_WSML Performance]] — IMWSF / WSML (International; OTC input alias resolved to official USD `LSE:WSML`, official 2019-2025 NAV TR cumulative `+105.92%` / rounded-input CAGR `10.87%`, 2021-2025 CAGR `7.17%`, current official NAV TR YTD `+19.00%` as of 2026-08-13; history under 10 years and daily NAV drawdown/recovery remain gaps)
