@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM
-input_count: 24
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN
+input_count: 25
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, and IWM. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, and IWN. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -134,6 +134,7 @@ review_gate: PASS
 | VB | supported | NYSE Arca:VB | USA | 19.48% (2026-08-07) | https://investor.vanguard.com/investment-products/etfs/profile/vb | passive/index-tracking U.S. small-cap equity; official 2016-2025 rows and rolling 10-year field; daily NAV drawdown/recovery not disclosed |
 | SCHA | supported | NYSE Arca:SCHA | USA | 18.27% (2026-07-31) | https://www.schwabassetmanagement.com/products/scha | passive/index-tracking U.S. small-cap equity; official current/rolling fields, secondary annual proxy; daily NAV drawdown/recovery not disclosed |
 | SPSM | supported | NYSE Arca:SPSM | USA | 21.54% (2026-07-31) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-600-small-cap-etf-spsm | passive/index-tracking U.S. small-cap equity; issuer calendar rows and raw 10-year endpoints not disclosed; benchmark continuity is disclosed |
+| IWN | supported | NYSE Arca:IWN | USA | 25.91% (2026-08-13) | https://www.ishares.com/us/products/239712/ishares-russell-2000-value-etf | passive/index-tracking U.S. small-cap value equity; official 2016-2025 rows at 0.1% precision; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -786,6 +787,58 @@ reviewer_dispatch: not-attempted-by-design
 - The input is an OTC alias (`SSEUF`) rather than the official USD London ticker; the canonical exchange-qualified key is `LSE:R2US` and the official primary listing is Deutsche Börse `ZPRR`. The alias, ISIN, share-class currency and index identity were reconciled before save.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## IWN official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:IWN | https://www.ishares.com/us/products/239712/ishares-russell-2000-value-etf | Official iShares product page: identity, exchange, inception, benchmark, fee, current NAV/price, NAV YTD, standard deviation, beta, holdings, and fund facts | Current NAV/price and key facts through 2026-08-14; NAV TR YTD through 2026-08-13; risk fields through 2026-07-31 |
+| NYSE Arca:IWN | https://www.ishares.com/us/literature/fact-sheet/iwn-ishares-russell-2000-value-etf-fund-fact-sheet-en-us.pdf | Official factsheet: NAV total-return definition, 2021-2025 calendar rows, annualized returns, fee and risk cross-check | Factsheet as of 2026-06-30 |
+| NYSE Arca:IWN | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-russell-2000-value-etf-3-31.pdf | Official summary prospectus: passive objective, benchmark, complete 2016-2025 calendar-year table, YTD, and best/worst quarter | Prospectus performance table through 2025-12-31; YTD field through 2026-06-30 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true | Cached annual reference rows | 2016-2019; reused without new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf | Cached annual reference rows | 2018-2022; reused without new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/ | Cached annual reference row | 2021; reused without new search |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/ | Cached annual reference rows | 2022-2025; reused without new search |
+
+## IWN raw observations and calculations
+
+| Year | IWN NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 31.64% | 11.96% |
+| 2017 | 7.73% | 21.83% |
+| 2018 | -12.94% | -4.38% |
+| 2019 | 22.17% | 31.49% |
+| 2020 | 4.50% | 18.40% |
+| 2021 | 27.96% | 28.71% |
+| 2022 | -14.67% | -18.11% |
+| 2023 | 14.42% | 26.29% |
+| 2024 | 7.74% | 25.02% |
+| 2025 | 12.41% | 17.88% |
+| 2026 YTD | 25.91% | not available from cached current-year benchmark |
+
+- Metric basis: official iShares IWN NAV Total Return in USD; dividends and capital-gains distributions are reinvested and fund expenses are reflected in NAV. The complete 2016-2025 annual rows are published at 0.1% precision.
+- Issuer benchmark: `Russell 2000 Value Index`; it is retained as metadata and is not substituted for the common S&P 500 reference.
+- 2016-2025 IWN compound: `138.50%` cumulative; rounded-input CAGR `9.08%`.
+- 2021-2025 IWN compound: `51.31%` cumulative; rounded-input CAGR `8.64%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Annual-row positive/negative years: `8 / 2`; best 2016 `+31.64%`, least positive 2024 `+7.74%`, worst 2022 `-14.67%`, least bad down year 2018 `-12.94%`.
+- Official issuer rolling 10-year NAV TR annualized: `10.69%` as of 2026-06-30; raw endpoints were not disclosed and this field is kept separate from the annual-row CAGR.
+- Official current NAV TR YTD: `25.91%` as of 2026-08-13; market price `US$227.43` and NAV `US$227.41` as of 2026-08-14; calculated premium `0.01%`.
+- Official three-year standard deviation `19.10%` and equity beta `1.08` as of 2026-07-31; holdings `1,389` as of 2026-08-11; best quarter `+33.29%` and worst quarter `-35.70%` from the official prospectus.
+- Formula: cumulative `= product(1 + annual TR) - 1`; rounded-input CAGR `= product(1 + annual TR)^(1 / number of years) - 1`.
+
+## IWN gaps and scheduled-inline local review
+
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- The issuer rolling 10-year field is a separate annualized observation as of 2026-06-30; raw endpoints and exact elapsed years were not disclosed.
+- The complete annual table is official but rounded to 0.1%, so cumulative and CAGR outputs are explicitly rounded-input calculations.
+- Complete pre-save checklist reviewed locally: canonical ticker/exchange, passive/index-tracking type, issuer benchmark, NAV return definition, distributions, annual rows, cached S&P 500 window, current YTD and price/NAV as-of dates, calculations, source URLs, unresolved gaps, exact planned page/source-batch/index/region/log contents, graph links, canonical geography tag, and single primary region.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## CPLCF / CUSS official source map
 
