@@ -42,7 +42,7 @@ tags:
 | XSMO | Invesco S&P SmallCap Momentum ETF | U.S. small-cap momentum equity | 12.25%‖ | 9.59% | 30.50%¶ | [[ETF_NYSE_ARCA_XSMO Performance]] |
 | SSEUF | State Street SPDR Russell 2000 U.S. Small Cap UCITS ETF (Acc) | U.S. small-cap broad equity | 10.18% | 5.70% | 18.69% | [[ETF_LSE_R2US Performance]] |
 | FNDA | Schwab Fundamental U.S. Small Company ETF | U.S. small-cap fundamental equity | 11.53% | 9.49%* | 21.18% | [[ETF_NYSE_ARCA_FNDA Performance]] |
-| VBR | Vanguard Small-Cap Value ETF | U.S. small-cap value equity | 10.99% | 10.56% | 15.83% | [[ETF_NYSE_ARCA_VBR Performance]] |
+| VBR | Vanguard Morningstar Small-Cap Value ETF | U.S. small-cap value equity | 10.99% | 10.56% | 15.83% | [[ETF_NYSE_ARCA_VBR Performance]] |
 | RWJ | Invesco S&P SmallCap 600 Revenue ETF | U.S. small-cap revenue-weighted equity | 10.33%† | 13.76%* | 28.61%* | [[ETF_NYSE_ARCA_RWJ Performance]] |
 | ISHOF | iShares S&P SmallCap 600 UCITS ETF USD (Dist) | U.S. small-cap broad equity | 9.21% | 6.72% | 21.36% | [[ETF_LSE_IDP6 Performance]] |
 | CPLCF | iShares MSCI USA Small Cap CTB Enhanced ESG UCITS ETF USD (Acc) | U.S. small-cap ESG equity | 9.91% | 6.73% | 14.97% | [[ETF_LSE_CUSS Performance]] |

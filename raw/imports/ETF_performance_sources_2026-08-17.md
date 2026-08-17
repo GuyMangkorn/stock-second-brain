@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM
-input_count: 19
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR
+input_count: 20
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -179,6 +179,54 @@ review_gate: PASS
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - The latest official NAV TR YTD field located is 21.33% as of 2026-06-30. A later secondary snapshot reports a different YTD figure with an unclear return basis, so it is not mixed into the NAV table.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## VBR official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:VBR` | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F0937.pdf | Official Vanguard factsheet: passive/full-replication structure, benchmark, expense ratio, exchange, inception, annualized NAV TR, current YTD, and standard deviation | Factsheet as of 2026-06-30; annual rows through 2025-12-31 |
+| `NYSE Arca:VBR` | https://investor.vanguard.com/investment-products/etfs/profile/vbr | Official Vanguard performance/quote page: annual NAV TR rows and price/NAV inputs | Annual rows as of 2025-12-31; quote as of 2026-06-18 |
+| `NYSE Arca:VBR` | https://advisors.vanguard.com/content/dam/fas/pdfs/MRSTR.pdf | Official Vanguard ticker/CUSIP name-change list | New name effective 2026-07-29; ticker VBR and CUSIP 922908611 |
+| `NYSE Arca:VBR` | https://corporate.vanguard.com/content/corporatesite/us/en/corp/who-we-are/pressroom/press-release-vanguard-to-update-names-of-us-equity-index-funds-tracking-morningstar-indexes-042926.html | Official Vanguard rebrand release: effective date and unchanged objective/management | Published 2026-04-29; changes effective 2026-07-29 |
+| `NYSE Arca:VBR` | https://www.sec.gov/Archives/edgar/data/36405/000003640526000204/f44857d1.htm | SEC summary prospectus: passive objective, full replication, benchmark context, and fee schedule | Filed 2026-04-28 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## VBR raw observations and calculations
+
+| Year | VBR NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 24.80% | 11.96% |
+| 2017 | 11.79% | 21.83% |
+| 2018 | -12.22% | -4.38% |
+| 2019 | 22.76% | 31.49% |
+| 2020 | 5.82% | 18.40% |
+| 2021 | 28.07% | 28.71% |
+| 2022 | -9.29% | -18.11% |
+| 2023 | 16.00% | 26.29% |
+| 2024 | 12.39% | 25.02% |
+| 2025 | 9.09% | 17.88% |
+| 2026 YTD | 15.83% NAV / 15.92% market price | not available from cached current-year benchmark |
+
+- Canonical identity: `NYSE Arca:VBR`; current fund name `Vanguard Morningstar Small-Cap Value ETF`; passive, full-replication U.S. small-cap value equity ETF; inception `2004-01-26`; USD.
+- Current issuer benchmark: `Morningstar US Small Cap Value Index`, formerly `CRSP US Small Cap Value Index`; Bloomberg ticker `CRSPSCVT`. The rebrand is effective 2026-07-29 and Vanguard states it does not change the investment objective or management.
+- Metric basis: official Vanguard NAV Total Return is pre-tax, net of expenses, with dividends and capital-gains distributions reinvested. The S&P 500 comparison is the cached USD Total Return convention with dividends reinvested.
+- Official period-ended-2026-06-30 fields: NAV YTD `15.83%`, market-price YTD `15.92%`, issuer benchmark YTD `15.86%`, 1-year `27.01%`, 3-year annualized `16.08%`, 5-year annualized `9.23%`, 10-year annualized `10.99%`, since-inception annualized `9.51%`, and three-year standard deviation `16.43%`.
+- Latest captured quote: market price `US$238.40`, NAV `US$238.46`, quote date 2026-06-18; price/NAV discount `= 238.40 / 238.46 - 1 = -0.025%`, displayed as `-0.03%`.
+- Using published rounded annual NAV returns, VBR 2016-2025 cumulative `162.85%`, CAGR `10.15%`, and 2021-2025 cumulative `65.22%`, CAGR `10.56%`; up/down count `8 / 2`, best `2021 +28.07%`, worst `2018 -12.22%`.
+- S&P 500 cached 2016-2025 cumulative `298.33%`, CAGR `14.82%`; 2021-2025 cumulative `96.17%`, CAGR `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; rounded-input CAGR `= product(1 + annual TR)^(1 / number of years) - 1`.
+
+## VBR gaps, reconciliation, and scheduled-local gate
+
+- The official English 2026-06-30 factsheet and historical Vanguard page retain the former CRSP wording for the reviewed performance rows; the official 2026 name-change list and release establish the current Morningstar name/index and effective date. The durable page preserves both labels and does not infer a strategy change.
+- The issuer 10-year annualized field `10.99%` is retained as an official average annual return for the period ended 2026-06-30. Raw TR endpoints and exact elapsed years were not disclosed, so no endpoint-derived cumulative value is asserted.
+- No newer official price/NAV quote than 2026-06-18 was verified; current YTD performance is available through 2026-06-30. Dates remain separate in the performance page.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric drawdown proxy is saved.
+- Complete pre-save checklist: canonical ticker/exchange, current and former fund/index names, passive-equity type, return basis, distributions, annual rows, cached S&P 500 window, 10-year field and gap, as-of dates, calculations, source URLs, candidate page/source-batch contents, USA navigation link, canonical tag, and single log bullet were reviewed locally. No critical/high finding remained.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## VB official source map
 
