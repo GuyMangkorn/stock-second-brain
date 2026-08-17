@@ -36,7 +36,8 @@ tags:
 | VYM | Vanguard High Dividend Yield ETF | U.S. broad high dividend | 11.61% | 12.68% | 11.49% | [[ETF_AMEX_VYM Performance]] |
 | VOO | Vanguard S&P 500 ETF | U.S. large-cap broad equity | 15.47% | 14.38% | 9.97% | [[ETF_NYSE_ARCA_VOO Performance]] |
 | VB | Vanguard Morningstar Small-Cap ETF | U.S. small-cap broad equity | 10.90% | 7.35% | 19.48% | [[ETF_NYSE_ARCA_VB Performance]] |
-| SPSM | State Street SPDR Portfolio S&P 600 Small Cap ETF | U.S. small-cap broad equity | 11.61% | ไม่พบข้อมูลที่ยืนยันได้ | 23.89% | [[ETF_NYSE_ARCA_SPSM Performance]] |
+| SCHA | Schwab U.S. Small-Cap ETF | U.S. small-cap broad equity | 10.48% | 6.53%* | 18.27% | [[ETF_NYSE_ARCA_SCHA Performance]] |
+| SPSM | State Street SPDR Portfolio S&P 600 Small Cap ETF | U.S. small-cap broad equity | 10.75% | ไม่พบข้อมูลที่ยืนยันได้ | 21.54% | [[ETF_NYSE_ARCA_SPSM Performance]] |
 | GSSC | Goldman Sachs ActiveBeta U.S. Small Cap Equity ETF | U.S. small-cap multi-factor equity | not applicable (<10y) | 8.25% | 21.33% | [[ETF_NYSE_ARCA_GSSC Performance]] |
 | XSMO | Invesco S&P SmallCap Momentum ETF | U.S. small-cap momentum equity | 12.25%‖ | 9.59% | 30.50%¶ | [[ETF_NYSE_ARCA_XSMO Performance]] |
 | SSEUF | State Street SPDR Russell 2000 U.S. Small Cap UCITS ETF (Acc) | U.S. small-cap broad equity | 10.18% | 5.70% | 18.69% | [[ETF_LSE_R2US Performance]] |
@@ -55,6 +56,7 @@ tags:
 | IJS | iShares S&P Small-Cap 600 Value ETF | U.S. small-cap value equity | 10.60% | 8.71% | 23.99% | [[ETF_NYSE_ARCA_IJS Performance]] |
 | CALF | Pacer US Small Cap Cash Cows ETF | U.S. small-cap free-cash-flow equity | not applicable (<10y) | 8.88%† | 10.60%‡ | [[ETF_CBOE_BZX_CALF Performance]] |
 | FYC | First Trust Small Cap Growth AlphaDEX® Fund | U.S. small-cap growth rules-based equity | 13.92%† | 9.74%‡ | 23.54%§ | [[ETF_NASDAQ_FYC Performance]] |
+| FYX | First Trust Small Cap Core AlphaDEX® Fund | U.S. small-cap core rules-based enhanced equity | 13.26% | 9.25% | 28.10% | [[ETF_NASDAQ_FYX Performance]] |
 | VTWG | Vanguard Russell 2000 Growth ETF | U.S. small-cap growth equity | 12.00% | 3.20% | 16.85% | [[ETF_NASDAQ_VTWG Performance]] |
 | VIOG | Vanguard S&P Small-Cap 600 Growth ETF | U.S. small-cap growth equity | 11.89% | 5.41% | 22.11% | [[ETF_NYSE_ARCA_VIOG Performance]] |
 | VTWV | Vanguard Russell 2000 Value ETF | U.S. small-cap value equity | 10.86% | 8.83% | 23.63% | [[ETF_NASDAQ_VTWV Performance]] |

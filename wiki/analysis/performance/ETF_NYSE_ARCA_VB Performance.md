@@ -7,7 +7,7 @@ exchange: NYSE Arca
 fund: Vanguard Morningstar Small-Cap ETF
 tracked_index: Morningstar US Small Cap Index
 benchmark: S&P 500 Total Return
-updated: 2026-08-10
+updated: 2026-08-17
 performance_as_of: 2026-08-07
 rolling_10y_as_of: 2026-07-31
 current_ytd_as_of: 2026-08-07
@@ -15,9 +15,9 @@ price_nav_as_of: 2026-08-07
 distribution_as_of: not disclosed
 benchmark_transition_effective: 2026-07-29
 methodology_as_of: not disclosed
-benchmark_source_accessed: 2026-08-10
+benchmark_source_accessed: 2026-08-17
 fund_facts_as_of: 2026-06-30
-source_batch: raw/imports/ETF_performance_sources_2026-08-10.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-17.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -108,6 +108,11 @@ legacy CRSP small-cap index. Behavioral = higher-beta small-cap cyclicality, wit
   official calendar rows; ไม่ตีความเป็น event attribution.
 - Methodology transition: issuer benchmark เปลี่ยนชื่อ CRSP → Morningstar effective
   29 ก.ค. 2026; page นี้ไม่ claim management continuity.
+- Scheduled-inline refresh on 17 ส.ค. 2026 rechecked Vanguard's official factsheet,
+  product page and name-change notice. The latest numeric current-period capture
+  retained is the official product-page observation through 7 ส.ค. 2026; no later
+  machine-readable current return field was verified, so the separate as-of dates
+  above remain explicit.
 
 ## Sources
 

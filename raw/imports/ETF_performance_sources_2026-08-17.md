@@ -2,15 +2,33 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO
-input_count: 14
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM
+input_count: 19
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
+
+## IWMI unsupported ETF type
+
+| Scope | Source | Role | Evidence |
+|---|---|---|---|
+| IWMI | https://www.sec.gov/Archives/edgar/data/1848758/000199937126009956/iwmi-497k_050126.htm | Official SEC summary prospectus for NEOS Russell 2000® High Income ETF | Dated 2026-05-01; principal strategy identifies the fund as actively managed, uses Russell 2000 exposure plus written/sold RUT call options, and states the fund is not an index fund |
+| IWMI | https://www.cboe.com/us/equities/notices/new_listings/details/?etf=true&firm_name=NEOS+Investment+Management+LLC&first_trade_dt=2024-06-25&ipo=true&symbols=IWMI | Official exchange listing confirmation | Cboe BZX listing for NEOS Russell 2000 High Income ETF, first trading date 2024-06-25 |
+
+## IWMI scheduled-inline local review
+
+- Status: `PASS` for the type gate; `BLOCKED` for ETF v1 performance processing.
+- Confirmed the canonical fund identity as NEOS Russell 2000® High Income ETF (IWMI), Cboe BZX listing, active management, and options overlay from the official SEC prospectus.
+- Classification: unsupported ETF type because the fund is actively managed and derivative-heavy rather than a passive index-tracking equity ETF.
+- No performance page, region row, performance-index row, or ETF performance calculations were written.
+- Local pre-save result: `PASS` for the blocking decision.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -19,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, and BSVO. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, and SPSM. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -111,6 +129,11 @@ review_gate: PASS
 | DISV | unsupported | Cboe BZX:DISV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/0001816125/000181612526000069/c497k.htm | actively managed/no passive index-tracking mandate; no performance artifact created |
 | CPLCF | supported | LSE:CUSS | USA | 14.97% (2026-07-29) | https://www.ishares.com/uk/individual/en/products/253480/cuss?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official USD LSE line by ISIN; passive U.S. small-cap ESG equity; benchmark changed 2022-06-01; daily NAV drawdown/recovery not disclosed |
 | BSVO | unsupported | Nasdaq:BSVO | not assigned | not applicable | https://bridgewayetfs.com/bsvo/ | actively managed small-cap value ETF; no passive index-tracking mandate; no performance artifact created |
+| FYX | supported | NASDAQ:FYX | USA | 28.10% (2026-06-30) | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FYX | passive/indexing U.S. small-cap rules-based equity; official 2016-2025 rows; index changed 2026-04-08; daily NAV drawdown/recovery not disclosed |
+| IWMI | unsupported | Cboe BZX:IWMI | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1848758/000199937126009956/iwmi-497k_050126.htm | actively managed and written-call options ETF; not a passive index-tracking equity ETF; no performance artifact created |
+| VB | supported | NYSE Arca:VB | USA | 19.48% (2026-08-07) | https://investor.vanguard.com/investment-products/etfs/profile/vb | passive/index-tracking U.S. small-cap equity; official 2016-2025 rows and rolling 10-year field; daily NAV drawdown/recovery not disclosed |
+| SCHA | supported | NYSE Arca:SCHA | USA | 18.27% (2026-07-31) | https://www.schwabassetmanagement.com/products/scha | passive/index-tracking U.S. small-cap equity; official current/rolling fields, secondary annual proxy; daily NAV drawdown/recovery not disclosed |
+| SPSM | supported | NYSE Arca:SPSM | USA | 21.54% (2026-07-31) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-600-small-cap-etf-spsm | passive/index-tracking U.S. small-cap equity; issuer calendar rows and raw 10-year endpoints not disclosed; benchmark continuity is disclosed |
 
 ## GSSC official source map
 
@@ -156,6 +179,203 @@ review_gate: PASS
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - The latest official NAV TR YTD field located is 21.33% as of 2026-06-30. A later secondary snapshot reports a different YTD figure with an unclear return basis, so it is not mixed into the NAV table.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## VB official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:VB | https://investor.vanguard.com/investment-products/etfs/profile/vb | Official Vanguard product page: identity, annual NAV/market-price returns, rolling return, current NAV/price, historical-price observations, and current-period fields | Latest numeric product-page capture retained through 2026-08-07; direct scheduled recheck on 2026-08-17 found no newer machine-readable current return field |
+| NYSE Arca:VB | https://fund-docs.vanguard.com/F0969.pdf | Official Vanguard factsheet: passive/full-replication approach, benchmark, expense ratio, NAV return definition, current YTD, rolling returns, standard deviation, holdings and fund facts | Factsheet as of 2026-06-30 |
+| NYSE Arca:VB | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/investment-profiles/0969.pdf | Official Vanguard investment profile: complete annual and quarterly NAV return rows, recent distributions, risk measures and fund facts | Profile as of 2026-06-30; annual rows through 2025-12-31 |
+| NYSE Arca:VB | https://www.sec.gov/Archives/edgar/data/36405/000003640526000206/f44854d1.htm | SEC summary prospectus: structure, passive index exposure and expense-ratio evidence | Prospectus dated 2026-04-28 |
+| NYSE Arca:VB | https://advisors.vanguard.com/content/dam/fas/pdfs/MRSTR.pdf | Official Vanguard name-change list | Morningstar fund/benchmark names effective 2026-07-29; VB CUSIP 922908751 |
+| NYSE Arca:VB | https://www.vanguardmexico.com/es/inicio/noticias/name-changes-for-vanguard-equity-index-funds-and-crsp-morningstar-benchmarks | Official Vanguard transition notice | Name-only CRSP → Morningstar transition; objectives, strategy, index construction, ticker, CUSIP and expense ratios unchanged |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR cached annual rows | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true; https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/; https://www.spglobal.com/spdji/en/commentary/article/market-attributes-us-equities/ | Cached project reference for complete calendar years | 2016-2025 USD total return, dividends reinvested, as of 2025-12-31 |
+
+## VB raw observations and calculations
+
+| Year | VB NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 18.31% | 11.96% |
+| 2017 | 16.24% | 21.83% |
+| 2018 | -9.30% | -4.38% |
+| 2019 | 27.37% | 31.49% |
+| 2020 | 19.08% | 18.40% |
+| 2021 | 17.72% | 28.71% |
+| 2022 | -17.60% | -18.11% |
+| 2023 | 18.21% | 26.29% |
+| 2024 | 14.23% | 25.02% |
+| 2025 | 8.83% | 17.88% |
+| 2026 YTD | 19.48% (official NAV) | 13.58% (official S&P 500 TR, as of 2026-08-05; not synchronized) |
+
+- Metric basis: official VB NAV Total Return in USD, with dividends and capital-gains distributions reinvested and fund expenses reflected in NAV.
+- Issuer benchmark: Morningstar US Small Cap Index, formerly CRSP US Small Cap Index; the 2026-07-29 change is a name transition and is not treated as a methodology change.
+- VB 2016-2025 compound: `169.68%` cumulative; rounded-input CAGR `10.43%`.
+- VB 2021-2025 compound: `42.55%` cumulative; rounded-input CAGR `7.35%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR: `10.90%` annualized as of 2026-07-31; raw rolling endpoints are not disclosed and this field is not relabelled as the 2016-2025 calendar CAGR.
+- Official 36-month monthly standard deviation: `17.26%` as of 2026-06-30.
+- Quarter-end NAV-TR drawdown calculation: high-water index `1.58849` at 2019-12-31 to trough `1.11067` at 2020-03-31 equals `-30.08%`; recovery index `1.89154` at 2020-12-31 confirms the prior peak was recovered. This is not a daily maximum-drawdown series.
+- Official recent distributions visible in the investment profile: ex-dividend 2026-06-26 `US$0.89` and 2026-03-27 `US$0.98`; payment dates are not disclosed in the reviewed capture.
+
+## VB gaps, conflicts, and scheduled-inline local review
+
+- The current product-page return snapshot is as of 2026-08-07 while factsheet/risk fields are as of 2026-06-30 and rolling 10-year return is as of 2026-07-31; these are kept separate.
+- The 2026-07-29 CRSP → Morningstar change is a name/benchmark-label transition; Vanguard states that objectives, strategies, index construction, rebalancing, securities, ticker, CUSIP and expense ratios are unchanged.
+- Official daily NAV history sufficient for a daily maximum drawdown and recovery calculation was not verified; the quarter-end calculation and monthly NAV-price-only proxy remain clearly labelled and are not substituted for daily NAV TR.
+- Local pre-save result: `PASS`. Confirmed canonical identity `NYSE Arca:VB`, passive/full-replication classification, current fund/benchmark naming, official 2016-2025 annual rows, current YTD, rolling 10-year field, S&P cache basis/window, calculations, distribution observations, USA region ownership, breadcrumb links, and disclosed gaps.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+## SCHA official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:SCHA | https://www.schwabassetmanagement.com/products/scha | Official Schwab Asset Management product page: objective, index, passive style, expense ratio, current NAV/AUM/holdings, current returns, risk fields and distributions | Current quote/NAV through 2026-08-14; performance and risk fields through 2026-07-31; holdings through 2026-08-13 |
+| NYSE Arca:SCHA | https://www.schwabassetmanagement.com/products/scha/documents | Official documents hub for the SCHA factsheet, ETF performance summary, monthly fund report and distribution schedule | Factsheet last updated 2026-06-30; ETF performance summary and monthly report last updated 2026-07-31 |
+| NYSE Arca:SCHA | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=scha | Official Schwab ETF research capture: current NAV YTD, rolling performance, current quote and best/worst three-month observations | Performance through 2026-07-31; close/price through 2026-08-14 |
+| NYSE Arca:SCHA | https://www.sec.gov/Archives/edgar/data/1454889/000110465925123320/tm2526338-13_497k.htm | SEC summary prospectus: objective, index construction, 90% policy, passive indexing strategy and risks | Prospectus dated 2025-12-22; current product page supersedes its older 0.04% expense ratio with 0.03% effective 2026-06-11 |
+| NYSE Arca:SCHA annual proxy rows | https://www.etfreplay.com/etf/scha | Secondary dividend-reinvested annual total-return history; used only as a labelled proxy because the issuer annual table did not render in the reviewed capture | 2016-2025 annual rows; secondary proxy, not official issuer NAV rows |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR cached annual rows | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true; https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/; https://www.spglobal.com/spdji/en/commentary/article/market-attributes-us-equities/ | Cached project reference for complete calendar years | 2016-2025 USD total return, dividends reinvested, as of 2025-12-31 |
+
+## SCHA raw observations and calculations
+
+| Year | SCHA total-return proxy* | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 19.97%* | 11.96% |
+| 2017 | 14.93%* | 21.83% |
+| 2018 | -11.77%* | -4.38% |
+| 2019 | 26.50%* | 31.49% |
+| 2020 | 19.34%* | 18.40% |
+| 2021 | 16.45%* | 28.71% |
+| 2022 | -19.81%* | -18.11% |
+| 2023 | 18.46%* | 26.29% |
+| 2024 | 11.16%* | 25.02% |
+| 2025 | 11.60%* | 17.88% |
+| 2026 YTD | 18.27% (official NAV) | not available from cached current-year benchmark |
+
+- Metric basis: official SCHA NAV Total Return for current-period fields; annual rows are secondary dividend-reinvested proxy observations and are not relabelled as official issuer NAV rows.
+- Issuer benchmark: Dow Jones U.S. Small-Cap Total Stock Market Index; retained as metadata and not substituted for the common S&P 500 reference.
+- SCHA 2016-2025 proxy compound: `152.02%` cumulative; rounded-input CAGR `9.68%`.
+- SCHA 2021-2025 proxy compound: `37.23%` cumulative; rounded-input CAGR `6.53%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR field: `10.48%` annualized as of 2026-07-31; raw rolling endpoints are not disclosed.
+- Official risk fields as of 2026-07-31: beta `1.00` and standard deviation `19.78%`; holdings `1,711` as of 2026-08-13; turnover `13.99%` as of 2026-07-31.
+- Official 2026 distributions visible: `US$0.1004` ex/pay 2026-06-24/2026-06-29 and `US$0.0384` ex/pay 2026-03-25/2026-03-30.
+
+## SCHA gaps and scheduled-inline local review
+
+- The issuer page supplied current NAV/rolling fields but the reviewed machine-readable issuer capture did not expose the complete 2016-2025 annual NAV table; secondary rows are therefore marked `*` and excluded from claims of official annual coverage.
+- Official current fields are split across 2026-07-31 performance/risk, 2026-08-13 holdings, and 2026-08-14 quote snapshots; these dates are kept separate.
+- Official daily NAV history sufficient for a numeric maximum drawdown and recovery calculation was not verified; no daily drawdown proxy is saved.
+- Local pre-save result: `PASS`. Confirmed canonical identity `NYSE Arca:SCHA`, passive/index-tracking classification, index objective, expense ratio, current NAV/YTD, rolling field, proxy markers, S&P cache basis/window, risk/distribution observations, USA region ownership, graph breadcrumb, and disclosed gaps.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+## SPSM official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:SPSM | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-600-small-cap-etf-spsm | Official State Street product page: passive objective, index, exchange/listing, inception, NAV/AUM, expense ratio, holdings, characteristics, current performance and benchmark continuity | Product page accessed 2026-08-17; fund facts through 2026-08-15; NAV/AUM/characteristics as of 2026-08-13; performance as of 2026-07-31 |
+| NYSE Arca:SPSM | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-spsm.pdf | Official State Street factsheet: fund facts, passive index objective, standardized NAV/market-value/index performance and risk context | Factsheet as of 2026-06-30; accessed 2026-08-17 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR cached annual rows | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true; https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/; https://www.spglobal.com/spdji/en/commentary/article/market-attributes-us-equities/ | Cached project reference for complete calendar years | 2016-2025 USD total return, dividends reinvested, as of 2025-12-31 |
+
+## SPSM raw observations and calculations
+
+| Period | SPSM NAV TR | Linked benchmark series |
+|---|---:|---:|
+| 1 month to 2026-07-31 | -1.90% | -1.90% |
+| QTD to 2026-07-31 | -1.90% | -1.90% |
+| 2026 YTD | 21.54% | 21.55% |
+| 1 year to 2026-07-31 | 33.62% | 33.64% |
+| 3 years annualized to 2026-07-31 | 13.24% | 13.26% |
+| 5 years annualized to 2026-07-31 | 7.45% | 7.48% |
+| 10 years annualized to 2026-07-31 | 10.75% | 10.79% |
+| Since inception annualized to 2026-07-31 | 10.08% | 10.09% |
+
+- Metric basis: official State Street fund NAV total return, net of fees, with dividends and capital gains reinvested. The linked benchmark series is gross of fund fees.
+- Current quote/fund facts: NAV `US$58.20`, bid/ask midpoint `US$58.22`, premium/discount `+0.02%`, AUM `US$17,415.46M`, 606 holdings, gross expense ratio `0.03%`, 30-day SEC yield `1.44%`, and quarterly distributions as of 2026-08-13 or the applicable official fund-facts snapshot.
+- Tracking differences, calculated as fund NAV minus linked benchmark from the same issuer table, are `-0.01 pp` YTD, `-0.02 pp` for 1 year, `-0.02 pp` for 3 years, `-0.03 pp` for 5 years, and `-0.04 pp` for 10 years.
+- The issuer's benchmark history is linked across Russell 2000 from inception through 2017-11-16, SSGA Small Cap Index from 2017-11-16 through 2020-01-24, and S&P SmallCap 600 Index from 2020-01-24 onward.
+- Official SPSM calendar-year NAV rows for 2016-2025 and raw rolling 10-year endpoints were not disclosed in the reviewed issuer capture; no annual-row CAGR or up/down-year count is calculated.
+- S&P 500 annual rows reuse the cached USD total-return convention and are not mixed with the current SPSM YTD date window.
+
+## SPSM gaps and scheduled-inline local review
+
+- The latest official current-period performance located is through 2026-07-31; the latest official quote, AUM, holdings and characteristics are separate 2026-08-13/15 snapshots and remain separately labelled.
+- Official calendar-year NAV rows for 2016-2025 and raw endpoints for the 10-year field remain `ไม่พบข้อมูลที่ยืนยันได้`; the issuer-labeled `10.75%` annualized field is retained as a source fact, not recomputed.
+- Official daily NAV history sufficient for a numeric maximum drawdown and recovery calculation was not verified; no drawdown proxy is saved.
+- Complete local pre-save checklist: confirmed canonical identity `NYSE Arca:SPSM`, passive/index-tracking classification, S&P SmallCap 600 objective, inception, fee, return basis, benchmark continuity, current/rolling fields, units/currencies, as-of dates, tracking calculations, cached S&P window/basis, graph breadcrumb, USA primary-region ownership, planned page/index/source-batch/log contents, and disclosed gaps.
+- Local pre-save result: `PASS`.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+## FYX official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NASDAQ:FYX | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FYX | Official First Trust product page: fund identity, Nasdaq listing, objective, index methodology, expense ratio, current NAV/market price, rolling NAV performance, risk fields, and distribution context | Product/current fields through 2026-08-03; performance fields through 2026-06-30 |
+| NASDAQ:FYX | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=b4ab133b-7d16-4b63-81f3-83640709b936 | Official First Trust factsheet: inception, Nasdaq listing, expense ratio, index identity, 2016-2025 calendar NAV total-return rows, 2026 YTD, and 3-year risk statistics | Factsheet as of 2026-06-30 |
+| NASDAQ:FYX | https://www.ftportfolios.com/Funds/ETF/Prospectus/FYT | Official prospectus: indexing approach, at-least-90% index exposure, 2016-04-08 index change, annual return chart, and best/worst quarter observations | Prospectus dated 2025-12-01; annual chart through 2024 |
+| NASDAQ:FYX | https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=FYX | Official historical pricing: NAV/market price and net assets | Latest visible quote `2026-08-03` |
+| NASDAQ:FYX | https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=FYX | Official cash distribution history | 2026 records visible through 2026-06-30 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached convention as of 2025-12-31 |
+| S&P 500 TR cached annual rows | https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true; https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf; https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/; https://www.spglobal.com/spdji/en/commentary/article/market-attributes-us-equities/ | Cached project reference for complete calendar years | 2016-2025 USD total return, dividends reinvested, as of 2025-12-31 |
+
+## FYX raw observations and calculations
+
+| Year | FYX NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 22.72% | 11.96% |
+| 2017 | 14.45% | 21.83% |
+| 2018 | -10.26% | -4.38% |
+| 2019 | 21.04% | 31.49% |
+| 2020 | 19.23% | 18.40% |
+| 2021 | 27.48% | 28.71% |
+| 2022 | -18.39% | -18.11% |
+| 2023 | 18.12% | 26.29% |
+| 2024 | 12.20% | 25.02% |
+| 2025 | 12.90% | 17.88% |
+| 2026 YTD | 28.10% (official NAV TR) | not available from cached current-year benchmark |
+
+- Metric basis: official FYX NAV Total Return in USD; distributions are reinvested and fund expenses are reflected in NAV.
+- Issuer benchmark: Nasdaq AlphaDEX Small Cap Core™ Index (`NQDXUSSCT`); retained as metadata and not substituted for the common S&P 500 reference.
+- FYX 2016-2025 compound: `183.16%` cumulative; rounded-input CAGR `10.97%`.
+- FYX 2021-2025 compound: `55.67%` cumulative; rounded-input CAGR `9.25%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Official rolling 10-year NAV TR field: `13.26%` annualized as of 2026-06-30; raw rolling endpoints are not disclosed and the field is not relabelled as the 2016-2025 calendar CAGR.
+- Official 3-year risk fields as of 2026-06-30: standard deviation `19.91%`, alpha `4.99`, beta `1.02`, Sharpe ratio `0.87`, correlation `0.99`.
+- Official 2026 distributions visible in the reviewed archive: `US$0.4369` ex/pay 2026-06-25/2026-06-30 and `US$0.2029` ex/pay 2026-03-26/2026-03-31.
+
+## FYX gaps and conflicts
+
+- The latest official performance fields located are as of 2026-06-30, while the latest visible official NAV/market-price quote is as of 2026-08-03; these are separate snapshots and are not presented as one same-date observation.
+- The underlying index changed from the Defined Small Cap Core Index to the Nasdaq AlphaDEX Small Cap Core™ Index on 2026-04-08. The 2016 full-year fund return remains an official NAV observation, but pre-change performance is not necessarily indicative of the current index methodology.
+- Official daily NAV history sufficient for a numeric maximum drawdown and recovery calculation was not verified; no secondary drawdown proxy is saved.
+- The reviewed official distribution archive exposed only the two 2026 records above; older distributions are not inferred because they are not needed to calculate NAV Total Return.
+
+## FYX scheduled-inline local review
+
+- Status: `PASS`
+- Confirmed canonical identity `NASDAQ:FYX`, Nasdaq listing, passive/indexing classification, inception, expense ratio, issuer benchmark, NAV Total Return definition, official 2016-2025 annual rows, official 2026 YTD, issuer rolling 10-year field, risk statistics, distributions, S&P cache window/basis, best/worst ranking, calculations, source links, USA primary-region ownership, graph breadcrumb, and no unsupported drawdown/recovery inference.
+- All material durable values map to official First Trust sources or the cached S&P 500 convention; annual rows and YTD are clearly separated from the current quote snapshot.
+- No proxy marker is used because the factsheet provides the complete official 2016-2025 annual row set.
+- Local pre-save result: `PASS`.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
 
 ## BSVO unsupported ETF record
 

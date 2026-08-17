@@ -161,7 +161,8 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_AMEX_FVD Performance]] | official 2003 / official 2016-2025 | 8.40% | 7.95% | 5.76% | 2021 +24.86% / 2022 -5.24% | U.S. value/dividend income | utilities/financials tilt, equity-risk sensitive |
 | [[ETF_NYSE_ARCA_VOO Performance]] | official 2010 / official 2016-2025 | 15.47% | 14.38% | 9.97% | 2019 +31.46% / 2022 -18.15% | U.S. large-cap broad equity | S&P 500 market beta, mega-cap sensitive |
 | [[ETF_NYSE_ARCA_VB Performance]] | official 2004 / official 2016-2025; official rolling 10-year as of 2026-07-31 | 10.90% | 7.35% | 19.48% | 2019 +27.37% / 2022 -17.60% | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 8 / 2 positive/negative years |
-| [[ETF_NYSE_ARCA_SPSM Performance]] | issuer 10-year annualized field as of 2026-06-30; calendar rows not disclosed | 11.61% | not disclosed | 23.89% | not disclosed / not disclosed | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; low-cost tracking |
+| [[ETF_NYSE_ARCA_SCHA Performance]] | official 2009 / secondary 2016-2025*; official rolling 10-year as of 2026-07-31 | 10.48% | 6.53%* | 18.27% | proxy 2019 +26.50%* / 2022 -19.81%* | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; annual rows secondary proxy; 3-year standard deviation 19.78% |
+| [[ETF_NYSE_ARCA_SPSM Performance]] | issuer 10-year annualized field as of 2026-07-31; calendar rows not disclosed | 10.75% | not disclosed | 21.54% | not disclosed / not disclosed | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; low-cost tracking; benchmark continuity disclosed |
 | [[ETF_NYSE_ARCA_GSSC Performance]] | official 2018-2025; inception 2017-06-28; history under 10 years | not applicable (<10y history) | 8.25% | 21.33% | 2021 +24.05% / 2022 -16.87% | U.S. small-cap multi-factor equity | small-cap/factor-regime/cyclicality/liquidity-sensitive; official daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_XSMO Performance]] | official 2005 / official 2016-2025; issuer 10-year average annual as of 2025-12-31 | 12.25%‖ | 9.59% | 30.50%¶ | 2019 +28.35% / 2022 -15.48% | U.S. small-cap momentum equity | small-cap/momentum/turnover/liquidity-sensitive; current YTD secondary and benchmark-history caveat |
 | [[ETF_LSE_R2US Performance]] | official 2014 / official 2016-2025; official rolling 10-year as of 2026-07-31 | 10.18% | 5.70% | 18.69% | 2019 +24.98% / 2022 -20.78% | U.S. small-cap broad equity | small-cap/country/liquidity/currency-sensitive; OTC alias resolved to USD LSE line; daily NAV drawdown/recovery gap |
@@ -180,6 +181,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_IJS Performance]] | official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.60% | 8.71% | 23.99% | 2016 +31.17% / 2018 -12.80% | U.S. small-cap value equity | small-cap/value/cyclicality/liquidity-sensitive; daily NAV drawdown/recovery gap |
 | [[ETF_CBOE_BZX_CALF Performance]] | official inception 2017-06-16 / official 2018-2024; 2025 issuer 1 Year/YTD ending 2025-12-31; history under 10 years | not applicable (<10y) | 8.88%† | 10.60%‡ | 2021 +40.50% / 2022 -15.18% | U.S. small-cap free-cash-flow equity | small-cap/sector/turnover/liquidity-sensitive; 2025 row caveat; NAV drawdown/recovery not disclosed |
 | [[ETF_NASDAQ_FYC Performance]] | official 2011 / official 2016-2025; issuer benchmark methodology change 2016-04-08 noted | 13.92%† | 9.74%‡ | 23.54%§ | 2020 +32.08% / 2022 -25.75% | U.S. small-cap growth rules-based equity | small-cap/growth/sector/liquidity/turnover-sensitive; 3-year standard deviation 21.59%; NAV drawdown/recovery not disclosed |
+| [[ETF_NASDAQ_FYX Performance]] | official 2007 / official 2016-2025; issuer rolling 10-year as of 2026-06-30 | 13.26% | 9.25% | 28.10% | 2021 +27.48% / 2022 -18.39% | U.S. small-cap core rules-based enhanced equity | small-cap/style-factor/cyclicality/turnover/liquidity-sensitive; 3-year standard deviation 19.91%; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_VTWG Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 12.00% | 3.20% | 16.85% | 2020 +34.70% / 2022 -26.35% | U.S. small-cap growth equity | small-cap/growth/cyclicality/liquidity-sensitive; 3-year monthly standard deviation 21.30%; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_VIOG Performance]] | official 2010 / official 2016-2024; secondary 2025*; official rolling 10-year as of 2026-06-30 | 11.89% | 5.41% | 22.11% | 2021 +22.46% / 2022 -21.22% | U.S. small-cap growth equity | small-cap/growth/cyclicality/sector/liquidity-sensitive; 19.41% standard deviation; 2025 row secondary; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_SLYG Performance]] | 22.42%* | -21.26%* | 17.27%* | 9.38%* | 5.19%* | 30.06%* | 4 / 1 |
@@ -265,6 +267,7 @@ official current YTD ของ issuer ยังไม่พบ.
 | [[ETF_AMEX_FVD Performance]] | 24.86% | -5.24% | 4.10% | 10.00% | 8.19% | 46.58% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VOO Performance]] | 28.66% | -18.15% | 26.25% | 24.98% | 17.84% | 95.81% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VB Performance]] | 17.72% | -17.60% | 18.21% | 14.23% | 8.83% | 42.55% | 4 / 1 |
+| [[ETF_NYSE_ARCA_SCHA Performance]] | 16.45%* | -19.81%* | 18.46%* | 11.16%* | 11.60%* | 37.23%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_GSSC Performance]] | 24.05% | -16.87% | 17.37% | 10.94% | 10.71% | 48.66% | 4 / 1 |
 | [[ETF_NYSE_ARCA_XSMO Performance]] | 19.28% | -15.48% | 21.43% | 17.57% | 9.81% | 58.05% | 4 / 1 |
 | [[ETF_LSE_R2US Performance]] | 14.70% | -20.78% | 16.27% | 11.19% | 12.32% | 31.94% | 4 / 1 |
@@ -281,6 +284,7 @@ official current YTD ของ issuer ยังไม่พบ.
 | [[ETF_NYSE_ARCA_ISCG Performance]] | -1.32% | -26.65% | 22.84% | 13.44% | 13.09% | 14.07% | 3 / 2 |
 | [[ETF_NYSE_ARCA_IJS Performance]] | 30.47% | -11.32% | 14.64% | 7.42% | 6.55% | 51.81% | 4 / 1 |
 | [[ETF_NASDAQ_FYC Performance]] | 21.75% | -25.75% | 14.15% | 24.05% | 24.34% | 59.17% | 4 / 1 |
+| [[ETF_NASDAQ_FYX Performance]] | 27.48% | -18.39% | 18.12% | 12.20% | 12.90% | 55.67% | 4 / 1 |
 | [[ETF_NASDAQ_VTWG Performance]] | 2.82% | -26.35% | 18.73% | 15.17% | 13.07% | 17.08% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VIOG Performance]] | 22.46% | -21.22% | 16.95% | 9.44% | 5.40%* | 30.14%* | 4 / 1 |
 | [[ETF_NASDAQ_VTWV Performance]] | 28.13% | -14.56% | 14.66% | 7.98% | 12.61% | 52.63% | 8 / 2 |
@@ -343,7 +347,8 @@ utilities และ financials tilt.
   [[ETF_NYSE_ARCA_EWH Performance]],
   [[ETF_NYSE_ARCA_ECNS Performance]],
   [[ETF_NYSE_ARCA_IDX Performance]], [[ETF_NYSE_ARCA_DVYA Performance]],
-  [[ETF_NASDAQ_INDY Performance]], [[ETF_CBOE_BZX_CALF Performance]], [[ETF_NASDAQ_FYC Performance]]
+  [[ETF_NASDAQ_INDY Performance]], [[ETF_CBOE_BZX_CALF Performance]], [[ETF_NASDAQ_FYC Performance]],
+  [[ETF_NASDAQ_FYX Performance]], [[ETF_NYSE_ARCA_SCHA Performance]]
 - Source batch: [[ETF_performance_sources_2026-07-18]] | [[ETF_performance_sources_2026-07-14]] | [[ETF_performance_sources_2026-07-13]] | [[ETF_performance_sources_2026-07-12]]
 - Source batch: [[ETF_performance_sources_2026-07-19]]
 - Source batch: [[ETF_performance_sources_2026-07-21]]
