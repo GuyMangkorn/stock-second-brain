@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX
-input_count: 33
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX, ISCV
+input_count: 34
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; GWX calendar rows not disclosed; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; GWX calendar rows not disclosed; ISCV official 2016-2025; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, and GWX. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX, and ISCV. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -143,6 +143,7 @@ review_gate: PASS
 | BBSC | supported | Cboe BZX:BBSC | USA | 23.96% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBSC.PDF | passive/index-tracking U.S. small-cap equity; history under 10 years; exchange transfer from NYSE Arca to Cboe BZX resolved; daily NAV drawdown/recovery not disclosed |
 | ISCF | supported | NYSE Arca:ISCF | International | 12.52% (2026-08-13) | https://www.ishares.com/us/products/272823/ishares-international-small-cap-equity-factor-etf | passive/index-tracking international small-cap factor equity; benchmark changed from MSCI World ex USA Small Cap Diversified Multiple-Factor Index to STOXX International Small-Cap Equity Factor Index on 2023-03-01; daily NAV drawdown/recovery not disclosed |
 | GWX | supported | NYSE Arca:GWX | International | 8.18% (2026-06-30) | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx | passive/index-tracking international small-cap equity; official calendar rows and daily NAV drawdown/recovery not disclosed; reviewed secondary annual table conflicts with official 2025 NAV result and is not saved |
+| ISCV | supported | NYSE Arca:ISCV | USA | 20.34% (2026-08-13) | https://www.ishares.com/us/products/239588/ishares-morningstar-smallcap-value-etf | passive/index-tracking U.S. small-cap value equity; official 2016-2025 NAV rows displayed to one decimal; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -1389,6 +1390,56 @@ review_gate: PASS
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
 - Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_ISCF Performance.md`; update `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
 - Planned graph changes: primary region `International`; add breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; add `geography/International` and `geography/international-ex-US`; link the new page from International navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## ISCV official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ISCV` | https://www.ishares.com/us/products/239588/ishares-morningstar-smallcap-value-etf | Official iShares product page: identity, passive objective, exchange, benchmark, current NAV/YTD, price/NAV, holdings, AUM and risk fields | NAV TR YTD 2026-08-13; NAV/price, holdings and AUM 2026-08-14; risk fields through 2026-07-31 |
+| `NYSE Arca:ISCV` | https://www.ishares.com/ch/professionals/en/products/239588/ishares-morningstar-smallcap-value-etf?switchLocale=Y | Official iShares calendar-performance page: 2016-2025 NAV and issuer-benchmark rows, return-basis context and listing metadata | Page reviewed 2026-08-17; annual rows displayed to one decimal; listing date 2004-06-28 |
+| `NYSE Arca:ISCV` | https://www.ishares.com/us/literature/fact-sheet/iscv-ishares-morningstar-small-cap-value-etf-fund-fact-sheet-en-us.pdf | Official factsheet: 2021-2025 NAV/market-price/benchmark rows, rolling annualized performance, fee, holdings and risk cross-check | Factsheet as of 2026-06-30; 10-year NAV TR average annual `9.22%`; 3-year standard deviation `18.27%` and beta `1.03` on that factsheet date |
+| `NYSE Arca:ISCV` | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-morningstar-small-cap-value-etf-4-30.pdf | Official summary prospectus: passive investment objective, exchange, fees and risk context | Dated 2025-08-29; reviewed 2026-08-17 |
+| Parent input identity | `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md` | Exact parent backlog row used to confirm the intended iShares fund and input quote | Line 19: iShares Morningstar Small-Cap Value ETF, input price `81.79` |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## ISCV raw observations and calculations
+
+| Year | ISCV NAV TR | ISCV issuer benchmark | S&P 500 TR |
+|---|---:|---:|---:|
+| 2016 | 27.80% | 28.00% | 11.96% |
+| 2017 | 8.10% | 8.40% | 21.83% |
+| 2018 | -16.80% | -16.60% | -4.38% |
+| 2019 | 19.50% | 20.00% | 31.49% |
+| 2020 | 0.70% | 1.00% | 18.40% |
+| 2021 | 29.20% | 29.20% | 28.71% |
+| 2022 | -10.50% | -10.40% | -18.11% |
+| 2023 | 16.40% | 16.30% | 26.29% |
+| 2024 | 9.20% | 9.30% | 25.02% |
+| 2025 | 10.50% | 10.50% | 17.88% |
+
+- Metric basis: official iShares NAV total return is shown with gross income reinvested where applicable and fund expenses deducted; currency USD. Market-price return and issuer-benchmark return remain separate.
+- Issuer benchmark: `Morningstar US Small Cap Broad Value Extended Index`; it is retained as metadata and not substituted for the common S&P 500 reference.
+- ISCV 2016-2025 compound from official one-decimal NAV rows: `124.65%` cumulative; rounded-input CAGR `8.43%`.
+- ISCV 2021-2025 compound from the same official NAV rows: `62.41%` cumulative; rounded-input CAGR `10.19%`.
+- Issuer rolling 10-year NAV TR average annual: `9.22%` as of 2026-06-30; raw endpoints are not disclosed and this is not substituted for the calendar-window CAGR.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Up years / down years: `8 / 2`; best `2021 +29.20%`; least positive `2020 +0.70%`; worst `2018 -16.80%`; least bad down year `2022 -10.50%`.
+- Current official fields: NAV TR YTD `20.34%` as of 2026-08-13; NAV `US$81.86`, closing price `US$81.78`, premium/discount `-0.10%`, holdings `1,049`, and AUM `US$712.17M` as of 2026-08-14; 3-year standard deviation `17.95%` and beta `1.01` as of 2026-07-31.
+
+## ISCV gaps and scheduled-inline local review
+
+- The exact parent input row at `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md:19` identifies the intended iShares Morningstar Small-Cap Value ETF; canonical listing is `NYSE Arca:ISCV`.
+- The official iShares page displays 2016-2025 calendar NAV rows to one decimal; the June 2026 factsheet overlaps 2021-2025 and reconciles to those rows. Cumulative returns and CAGRs are rounded-input calculations.
+- The issuer 10-year annualized field `9.22%` is a separate official average annual observation for the period ended 2026-06-30; raw endpoints are not disclosed, so it is not relabeled as the 2016-2025 calendar CAGR.
+- The current NAV TR field is as of 2026-08-13 while price/NAV and holdings are as of 2026-08-14; dates remain separate. The common S&P cache ends 2025-12-31, so no current-year S&P comparison is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_ISCV Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; add `geography/United-States`; link the new page from USA navigation and the performance index; keep annual numeric ownership in the performance page.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
