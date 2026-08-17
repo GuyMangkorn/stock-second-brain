@@ -1,7 +1,7 @@
 # Active Equity ETF Performance Design
 
 **Date:** 2026-08-17
-**Status:** Draft for user review
+**Status:** Approved
 **Decision:** Extend `check-etf-performance` with an `active-equity-long-only`
 branch while preserving the existing passive-index branch and Trello result
 envelope.
