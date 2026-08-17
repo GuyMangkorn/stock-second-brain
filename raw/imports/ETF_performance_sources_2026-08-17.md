@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR
-input_count: 20
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO
+input_count: 21
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, and SPSM. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, and VTWO. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -223,6 +223,51 @@ review_gate: PASS
 - No newer official price/NAV quote than 2026-06-18 was verified; current YTD performance is available through 2026-06-30. Dates remain separate in the performance page.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric drawdown proxy is saved.
 - Complete pre-save checklist: canonical ticker/exchange, current and former fund/index names, passive-equity type, return basis, distributions, annual rows, cached S&P 500 window, 10-year field and gap, as-of dates, calculations, source URLs, candidate page/source-batch contents, USA navigation link, canonical tag, and single log bullet were reviewed locally. No critical/high finding remained.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## VTWO official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:VTWO` | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3351.pdf | Official Vanguard factsheet: passive/full-replication structure, Russell 2000 benchmark, expense ratio, exchange, inception, annualized NAV TR, current YTD, assets, and standard deviation | Factsheet as of 2026-06-30; annualized fields through 2026-06-30 |
+| `NASDAQ:VTWO` | https://investor.vanguard.com/investment-products/etfs/profile/vtwo | Official Vanguard performance/quote page: complete annual NAV TR rows and price/NAV inputs | Annual rows as of 2025-12-31; quote as of 2026-06-22 |
+| `NASDAQ:VTWO` | https://fund-docs.vanguard.com/FA3351_SPM.pdf | Official Vanguard factsheet mirror used to reconcile fund identity, exchange, return basis, and risk fields | Same 2026-06-30 data as the English factsheet |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## VTWO raw observations and calculations
+
+| Year | VTWO NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 21.33% | 11.96% |
+| 2017 | 14.70% | 21.83% |
+| 2018 | -10.98% | -4.38% |
+| 2019 | 25.61% | 31.49% |
+| 2020 | 20.10% | 18.40% |
+| 2021 | 14.81% | 28.71% |
+| 2022 | -20.40% | -18.11% |
+| 2023 | 17.00% | 26.29% |
+| 2024 | 11.57% | 25.02% |
+| 2025 | 12.88% | 17.88% |
+| 2026 YTD | 22.60% NAV TR | not available from cached current-year benchmark |
+
+- Canonical identity: `NASDAQ:VTWO`; Vanguard Russell 2000 ETF; passive, full-replication U.S. small-cap broad equity ETF; inception `2010-09-20`; USD; issuer benchmark `Russell 2000 Index`.
+- Metric basis: official Vanguard NAV Total Return is pre-tax, net of expenses, with dividends and capital-gains distributions reinvested. The S&P 500 comparison is the cached USD Total Return convention with dividends reinvested.
+- Official period-ended-2026-06-30 fields: NAV YTD `22.60%`, market-price YTD `22.63%`, issuer benchmark YTD `22.57%`, 1-year `40.87%`, 3-year annualized `18.65%`, 5-year annualized `7.03%`, 10-year annualized `11.68%`, since-inception annualized `11.55%`, and three-year standard deviation `19.99%`.
+- Latest captured quote: market price `US$120.46`, NAV `US$120.52`, quote date 2026-06-22; price/NAV discount `= 120.46 / 120.52 - 1 = -0.050%`, displayed as `-0.05%`.
+- Using published rounded annual NAV returns, VTWO 2016-2025 cumulative `151.67%`, CAGR `9.67%`, and 2021-2025 cumulative `34.66%`, CAGR `6.13%`; up/down count `8 / 2`, best `2019 +25.61%`, worst `2022 -20.40%`.
+- S&P 500 cached 2016-2025 cumulative `298.33%`, CAGR `14.82%`; 2021-2025 cumulative `96.17%`, CAGR `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; rounded-input CAGR `= product(1 + annual TR)^(1 / number of years) - 1`.
+
+## VTWO gaps, reconciliation, and scheduled-local gate
+
+- The Vanguard profile's complete annual table as of 2025-12-31 is used for the 2016-2025 calendar window. A later quarterly capture can show revised-looking historical rows; those observations are not mixed into this complete-calendar table.
+- Separate Vanguard advisor/fund-list captures returned different YTD or inception metadata in the reviewed HTML context, including an inconsistent inception display and YTD values that did not match the direct 2026-06-30 factsheet. The direct factsheet and product-profile identity (`2010-09-20`) are retained; the conflicting captures are not used as performance inputs.
+- The issuer 10-year annualized field `11.68%` is retained as an official average annual return for the period ended 2026-06-30. Raw TR endpoints and exact elapsed years were not disclosed, so no endpoint-derived cumulative value is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric drawdown proxy is saved. Quarterly distributions are disclosed, but the reviewed sources do not provide a complete distribution schedule in the performance table.
+- Complete pre-save checklist: canonical ticker/exchange, fund/index identity, passive-equity type, return basis, distributions, annual rows, cached S&P 500 window, 10-year field and gap, current YTD, quote inputs, as-of dates, calculations, source URLs, candidate page/source-batch contents, USA navigation link, canonical tag, and single log bullet were reviewed locally. No critical/high finding remained.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design

@@ -36,6 +36,7 @@ tags:
 | VYM | Vanguard High Dividend Yield ETF | U.S. broad high dividend | 11.61% | 12.68% | 11.49% | [[ETF_AMEX_VYM Performance]] |
 | VOO | Vanguard S&P 500 ETF | U.S. large-cap broad equity | 15.47% | 14.38% | 9.97% | [[ETF_NYSE_ARCA_VOO Performance]] |
 | VB | Vanguard Morningstar Small-Cap ETF | U.S. small-cap broad equity | 10.90% | 7.35% | 19.48% | [[ETF_NYSE_ARCA_VB Performance]] |
+| VTWO | Vanguard Russell 2000 ETF | U.S. small-cap broad equity | 11.68% | 6.13% | 22.60% | [[ETF_NASDAQ_VTWO Performance]] |
 | SCHA | Schwab U.S. Small-Cap ETF | U.S. small-cap broad equity | 10.48% | 6.53%* | 18.27% | [[ETF_NYSE_ARCA_SCHA Performance]] |
 | SPSM | State Street SPDR Portfolio S&P 600 Small Cap ETF | U.S. small-cap broad equity | 10.75% | ไม่พบข้อมูลที่ยืนยันได้ | 21.54% | [[ETF_NYSE_ARCA_SPSM Performance]] |
 | GSSC | Goldman Sachs ActiveBeta U.S. Small Cap Equity ETF | U.S. small-cap multi-factor equity | not applicable (<10y) | 8.25% | 21.33% | [[ETF_NYSE_ARCA_GSSC Performance]] |
