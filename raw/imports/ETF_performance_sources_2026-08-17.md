@@ -2,14 +2,15 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC
-input_count: 9
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO
+input_count: 14
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
+
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; current NAV/YTD fields through 2026-08-14; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -18,13 +19,80 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, and FNDC. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, and BSVO. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
+
+## DISV unsupported ETF record
+
+- Input ticker: `DISV`; canonical identity: `Cboe BZX:DISV`; fund: Dimensional International Small Cap Value ETF; inception `2022-03-23`.
+- Type gate: `unsupported ETF type`. Dimensional describes its ETF lineup as active ETFs, and the SEC summary prospectus identifies DISV as the Dimensional International Small Cap Value ETF with a long-term capital-appreciation objective rather than a passive index-tracking mandate. The reviewed ETF reference also identifies `No Underlying Index` / active management; this fails ETF v1’s passive, index-tracking equity scope.
+- No NAV performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was created after the type gate. Current return observations were not used as performance evidence.
+
+### DISV Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `Cboe BZX:DISV` | https://www.sec.gov/Archives/edgar/data/0001816125/000181612526000069/c497k.htm | Official SEC summary prospectus: fund identity, exchange, objective and formal fund context | Prospectus dated 2026-02-28 |
+| `Cboe BZX:DISV` | https://www.cboe.com/us/equities/listings/listed_products/symbols/DISV | Official exchange listing and fund identity cross-check | Listing page reviewed 2026-08-17 |
+| `Cboe BZX:DISV` | https://www.dimensional.com/us-en/etfs | Official issuer ETF lineup; Dimensional describes the lineup as active ETFs | Issuer page reviewed 2026-08-17 |
+| `Cboe BZX:DISV` | https://www.ifa.com/pdfs/fund-documents/disv-fact-sheet.pdf | Secondary/authorized-distributor factsheet: active international small-cap value description, fee and benchmark context | Factsheet as of 2025-12-31; used only to corroborate classification |
+
+### DISV scheduled-local review
+
+- Complete pre-save checklist reviewed locally: canonical identity/exchange, issuer classification, active/passive type gate, index status, scope exclusion, source URLs/as-of dates, no-performance-artifact decision, card result metadata, and next-card sequencing.
+- Result: local `PASS` for the unsupported-type classification; no performance artifact was written.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+## ISHOF / IDP6 official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| LSE:IDP6 / input ISHOF | https://www.ishares.com/uk/individual/en/products/251920/ishares-s-p-smallcap-600-ucits-etf?siteEntryPassthrough=true | Official iShares product page: identity, listings, ISIN, index, structure, expense ratio, NAV, YTD, risk fields and calendar NAV TR rows | Product/current fields through 2026-07-31; NAV TR YTD through 2026-07-30; calendar rows 2016-2025 |
+| LSE:IDP6 / input ISHOF | https://www.blackrock.com/uk/professional/en/literature/fact-sheet/isp6-ishares-s-p-smallcap-600-ucits-etf-fund-fact-sheet-en-gb.pdf | Official factsheet: USD distributing share class and calendar NAV performance | Calendar rows 2016-2025; factsheet capture dated 2026-03-31 / 2026-04-14 fields |
+| LSE:IDP6 / input ISHOF | https://www.ishares.com/uk/professional/en/literature/kiid/ucits_kiid-ishares-sp-smallcap-600-ucits-etf-usd-dist-gb-ie00b2qwcy14-en.pdf | Official KIID: passive objective, benchmark, NAV return definition and small-cap/liquidity risk | KIID reviewed 2026-08-17 |
+| S&P 500 TR current | https://www.slickcharts.com/sp500/returns/ytd | Secondary current benchmark cross-check | `10.14%` total return YTD through 2026-07-31; one day later than IDP6 current YTD |
+
+## ISHOF / IDP6 raw observations and calculations
+
+| Year | IDP6 NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 25.93% | 11.96% |
+| 2017 | 12.62% | 21.83% |
+| 2018 | -8.95% | -4.38% |
+| 2019 | 22.04% | 31.49% |
+| 2020 | 10.64% | 18.40% |
+| 2021 | 26.25% | 28.71% |
+| 2022 | -16.72% | -18.11% |
+| 2023 | 15.43% | 26.29% |
+| 2024 | 8.04% | 25.02% |
+| 2025 | 5.55% | 17.88% |
+| 2026 YTD | 21.36% | 10.14%† |
+
+- Metric basis: official iShares NAV Total Return, with gross income reinvested where applicable and performance after ongoing charges; USD share-class values are used for the canonical USD line.
+- `†` secondary S&P 500 current cross-check with a different as-of date; complete-year benchmark rows use the cached project convention.
+- 2016-2025 IDP6 compound: `141.31%` cumulative; rounded-input CAGR `9.21%`.
+- 2021-2025 IDP6 compound: `38.40%` cumulative; rounded-input CAGR `6.72%`.
+- Annual-row positive/negative years: `8 / 2`; best 2016 `+25.93%`, worst 2022 `-16.72%`.
+- Official current NAV TR YTD: `21.36%` as of 2026-07-30; NAV quote `US$117.48` as of 2026-07-31.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+
+## ISHOF / IDP6 gaps, alias resolution, and scheduled-local gate
+
+- ISHOF is an OTC input alias; official iShares listings for ISIN `IE00B2QWCY14` identify the USD London line as `IDP6`, while `ISP6` is the GBP London line of the same fund. Durable ownership uses `LSE:IDP6` and preserves ISHOF as `input_alias`.
+- The latest official iShares current NAV TR field located is `21.36%` as of 2026-07-30. The latest displayed NAV quote is `US$117.48` as of 2026-07-31; these are separate as-of fields.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Complete pre-save checklist: identity/exchange/index, alias and ISIN, return basis, benchmark, candidate claims, periods, units/currencies, metric definitions, as-of dates, calculations, source URLs, unresolved gaps, exact planned page/batch/index/log contents, graph links, and ownership were reviewed locally before write.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## Complete evidence register
 
@@ -38,6 +106,11 @@ reviewer_dispatch: not-attempted-by-design
 | IMWSF | supported | LSE:WSML | International | 19.00% (2026-08-13) | https://www.ishares.com/uk/professionals/en/products/296576/ishares-msci-world-small-cap-ucits-etf-fund?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official USD LSE line by ISIN `IE00BF4RFH31`; passive/global developed small-cap equity; history under 10 years; daily NAV drawdown/recovery not disclosed |
 | DES | supported | NYSE Arca:DES | USA | 22.93% (2026-07-31) | https://www.wisdomtree.com/us/products/equity/des | passive/index-tracking U.S. small-cap dividend equity; official 2016-2025 annual NAV rows; current S&P cross-check is not same-date; daily NAV drawdown/recovery not disclosed |
 | FNDC | supported | NYSE Arca:FNDC | International | 10.96% (2026-07-31) | https://www.schwabassetmanagement.com/products/fndc | passive/index-tracking developed ex-U.S. small-cap fundamental equity; benchmark changed effective 2024-06-21; daily NAV drawdown/recovery not disclosed |
+| RWJ | supported | NYSE Arca:RWJ | USA | 28.61% (2026-08-14, secondary proxy) | https://www.sec.gov/Archives/edgar/data/1378872/000119312525325669/d54028d497k.htm | passive/index-tracking U.S. small-cap revenue-weighted equity; annual/current fields use secondary dividend-reinvested proxy; official SEC average annual return kept separate |
+| ISHOF | supported | LSE:IDP6 | USA | 21.36% (2026-07-30) | https://www.ishares.com/uk/individual/en/products/251920/ishares-s-p-smallcap-600-ucits-etf?siteEntryPassthrough=true | OTC alias resolved to official USD LSE line by ISIN; passive U.S. small-cap equity; daily NAV drawdown/recovery not disclosed |
+| DISV | unsupported | Cboe BZX:DISV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/0001816125/000181612526000069/c497k.htm | actively managed/no passive index-tracking mandate; no performance artifact created |
+| CPLCF | supported | LSE:CUSS | USA | 14.97% (2026-07-29) | https://www.ishares.com/uk/individual/en/products/253480/cuss?siteEntryPassthrough=true&switchLocale=y | OTC alias resolved to official USD LSE line by ISIN; passive U.S. small-cap ESG equity; benchmark changed 2022-06-01; daily NAV drawdown/recovery not disclosed |
+| BSVO | unsupported | Nasdaq:BSVO | not assigned | not applicable | https://bridgewayetfs.com/bsvo/ | actively managed small-cap value ETF; no passive index-tracking mandate; no performance artifact created |
 
 ## GSSC official source map
 
@@ -83,6 +156,28 @@ reviewer_dispatch: not-attempted-by-design
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - The latest official NAV TR YTD field located is 21.33% as of 2026-06-30. A later secondary snapshot reports a different YTD figure with an unclear return basis, so it is not mixed into the NAV table.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## BSVO unsupported ETF record
+
+- Input ticker: `BSVO`; canonical identity: `Nasdaq:BSVO`; fund: EA Bridgeway Omni Small-Cap Value ETF; inception `2010-12-31`.
+- Type gate: `unsupported ETF type`. Bridgeway’s official fund page labels BSVO `Fund Type: Active`, and the SEC summary prospectus describes a broad small-cap value portfolio managed by an adviser/sub-adviser rather than a passive index-tracking mandate. ETF v1 excludes active ETFs even when the holdings are equity securities.
+- No NAV performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was created after the type gate. Current return observations were not used as performance evidence.
+
+### BSVO Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `Nasdaq:BSVO` | https://bridgewayetfs.com/bsvo/ | Official issuer fund page: active classification, ticker, Nasdaq exchange, inception, expense, NAV and current month-end performance context | Page reviewed 2026-08-17; current facts shown as of 2026-07-29 / month-end performance through 2026-06-30 |
+| `Nasdaq:BSVO` | https://www.sec.gov/Archives/edgar/data/1592900/000159290024002170/eabridgewayomnismall-capva.htm | SEC summary prospectus: fund objective, active portfolio management and formal listing | Prospectus dated 2024-10-31 |
+| `Nasdaq:BSVO` | https://www.sec.gov/Archives/edgar/data/1592900/000159290025001783/bridgewaysaibbluandbsvo.htm | SEC SAI: exchange and adviser/sub-adviser context | SAI dated 2024-10-31, supplemented 2025-07-10 |
+
+### BSVO scheduled-local review
+
+- Complete pre-save checklist reviewed locally: canonical identity/exchange, issuer classification, active/passive type gate, index status, scope exclusion, source URLs/as-of dates, no-performance-artifact decision, card result metadata, and final-round sequencing.
+- Result: local `PASS` for the unsupported-type classification; no performance artifact was written.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
 
 ## FNDC official source map
 
@@ -241,6 +336,98 @@ reviewer_dispatch: not-attempted-by-design
 - The input is an OTC alias (`SSEUF`) rather than the official USD London ticker; the canonical exchange-qualified key is `LSE:R2US` and the official primary listing is Deutsche Börse `ZPRR`. The alias, ISIN, share-class currency and index identity were reconciled before save.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## CPLCF / CUSS official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| LSE:CUSS / input CPLCF | https://www.ishares.com/uk/individual/en/products/253480/cuss?siteEntryPassthrough=true&switchLocale=y | Official iShares product page: identity, USD listing, ISIN, current index, name/benchmark change, NAV, YTD and calendar NAV TR rows | Product/current fields through 2026-07-29; calendar rows 2016-2025 |
+| LSE:CUSS / input CPLCF | https://www.ishares.com/uk/professional/en/products/253480/csuss | Official professional page: USD share-class facts, expense, holdings and risk fields | Holdings/current fields through 2026-07-30; risk fields through 2026-06-30 |
+| LSE:CUSS / input CPLCF | https://www.ishares.com/ch/privatkunden/de/literature/fact-sheet/csuss-ishares-msci-usa-small-cap-ctb-enhanced-esg-ucits-etf-fund-fact-sheet-de-ch.pdf | Official factsheet: calendar NAV performance and return definition | Calendar rows 2016-2025; factsheet capture reviewed 2026-08-17 |
+| LSE:CUSS / input CPLCF | https://www.londonstockexchange.com/stock/CUSS/ishares/company-page | Official exchange listing cross-check | USD CUSS line reviewed 2026-08-17 |
+| S&P 500 TR current | https://www.slickcharts.com/sp500/returns/ytd | Secondary current benchmark cross-check | `10.14%` total return YTD through 2026-07-31; later than CUSS current YTD |
+
+## CPLCF / CUSS raw observations and calculations
+
+| Year | CUSS NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 19.13% | 11.96% |
+| 2017 | 16.49% | 21.83% |
+| 2018 | -10.49% | -4.38% |
+| 2019 | 26.56% | 31.49% |
+| 2020 | 18.15% | 18.40% |
+| 2021 | 18.86% | 28.71% |
+| 2022 | -16.94% | -18.11% |
+| 2023 | 15.63% | 26.29% |
+| 2024 | 10.71% | 25.02% |
+| 2025 | 9.60% | 17.88% |
+| 2026 YTD | 14.97% | 10.14%† |
+
+- Metric basis: official iShares NAV Total Return, with gross income reinvested where applicable and performance after ongoing charges; USD accumulating share class values are used for the canonical USD line.
+- `†` secondary S&P 500 current cross-check with a different as-of date; complete-year benchmark rows use the cached project convention.
+- 2016-2025 CUSS compound: `157.28%` cumulative; rounded-input CAGR `9.91%`.
+- 2021-2025 CUSS compound: `38.51%` cumulative; rounded-input CAGR `6.73%`.
+- Annual-row positive/negative years: `8 / 2`; best 2019 `+26.56%`, worst 2022 `-16.94%`.
+- Official current NAV TR YTD: `14.97%` as of 2026-07-29; NAV quote `US$675.97` as of 2026-07-29.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+
+## CPLCF / CUSS gaps, benchmark change, and scheduled-local gate
+
+- CPLCF is an OTC input alias; official iShares listings identify the USD London line as `CUSS` for ISIN `IE00B3VWM098`. The fund changed name/objective and benchmark on 2022-06-01; the pre-change benchmark was MSCI USA Small Cap Index and the current benchmark is MSCI USA Small Cap ESG Enhanced Focus CTB Index.
+- The latest official iShares current NAV TR field located is `14.97%` as of 2026-07-29. The latest displayed NAV quote in the same capture is `US$675.97`; these are separate as-of fields.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Complete pre-save checklist: identity/exchange/index, alias and ISIN, benchmark-history change, return basis, candidate claims, periods, units/currencies, metric definitions, as-of dates, calculations, source URLs, unresolved gaps, exact planned page/batch/index/log contents, graph links, and ownership were reviewed locally before write.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## RWJ official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| NYSE Arca:RWJ | https://www.sec.gov/Archives/edgar/data/1378872/000119312525325669/d54028d497k.htm | Official SEC summary prospectus: fund identity, exchange, passive objective, index, expense ratio, risks, inception, annualized performance and official benchmark context | Prospectus filed 2025-12-18; performance period ended 2024-12-31 |
+| NYSE Arca:RWJ | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/rwj-invesco-s-p-smallcap-600-revenue-etf-fact-sheet.pdf | Official Invesco factsheet entry point and product identity | Link reviewed 2026-08-17; current PDF capture did not expose a synchronized annual table |
+| NYSE Arca:RWJ | https://www.etfrc.com/RWJ | Secondary standardized performance and expense snapshot | Total returns through 2026-07-31; expense/AUM snapshot as displayed on page |
+| NYSE Arca:RWJ | https://totalrealreturns.com/n/AVUV%2CRWJ%2CXSVM | Secondary dividend-reinvested annual rows, YTD, rolling returns and drawdown proxy | Daily/annual observations through 2026-08-14 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| S&P 500 TR current | https://www.slickcharts.com/sp500/returns/ytd | Secondary current benchmark cross-check | `10.14%` total return YTD through 2026-07-31; not synchronized with RWJ 2026-08-14 |
+
+## RWJ raw observations and calculations
+
+| Year | RWJ total-return proxy | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 30.72%* | 11.96% |
+| 2017 | 5.09%* | 21.83% |
+| 2018 | -16.95%* | -4.38% |
+| 2019 | 20.29%* | 31.49% |
+| 2020 | 20.83%* | 18.40% |
+| 2021 | 52.83%* | 28.71% |
+| 2022 | -10.97%* | -18.11% |
+| 2023 | 16.22%* | 26.29% |
+| 2024 | 11.81%* | 25.02% |
+| 2025 | 7.75%* | 17.88% |
+| 2026 YTD | 28.61%* | 10.14%† |
+
+- Metric basis: RWJ rows are a secondary dividend-reinvested total-return proxy; official SEC average annual returns are net of expenses but do not provide the same 2016-2025 calendar series in the reviewed capture. S&P rows are USD total return with dividends reinvested.
+- `*` secondary TotalRealReturns observations; `†` secondary Slickcharts current cross-check with a different as-of date.
+- 2016-2025 RWJ compound: `215.92%` cumulative; rounded-input CAGR `12.19%`.
+- 2021-2025 RWJ compound: `90.51%` cumulative; rounded-input CAGR `13.76%`.
+- Annual-row sample standard deviation from rounded observations: `19.95%`; this is not daily NAV volatility.
+- Official SEC average annual total return: `10.33%` for the 10-year period ended 2024-12-31; kept separate from the calendar-row proxy.
+- Secondary drawdown proxy: maximum drawdown `-45.04%` on 2020-03-18 from 2019-12-26 peak; recovery date not disclosed. Current drawdown was `-0.83%` on 2026-08-14 from 2026-08-04 peak.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+
+## RWJ gaps, conflicts, and scheduled-local gate
+
+- Official annual NAV rows and a synchronized official current NAV YTD field were not verified in the reviewed capture. The page labels all annual/current proxy values explicitly and does not mix them with the official SEC rolling figure.
+- ETFRC standardized return was `25.7%` YTD as of 2026-07-31, versus TotalRealReturns `28.61%` through 2026-08-14; the later source was used for the current proxy, with the conflict/as-of difference preserved.
+- Official daily NAV history was not verified; the `-45.04%` drawdown is a secondary total-return proxy and recovery timing is not disclosed.
+- Complete pre-save checklist: identity/exchange/index, return basis, benchmark, candidate claims, periods, units/currencies, metric definitions, as-of dates, calculations, source URLs, unresolved gaps, exact planned page/batch/index/log contents, graph links, and ownership were reviewed locally before write.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## XSMO official source map
 
