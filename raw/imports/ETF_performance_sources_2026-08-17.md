@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF
-input_count: 32
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, GWX
+input_count: 33
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; GWX calendar rows not disclosed; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, and ISCF. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF, and GWX. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -142,6 +142,7 @@ review_gate: PASS
 | SCZ | supported | NASDAQ:SCZ | International | 13.83% (2026-08-13) | https://www.ishares.com/us/products/239627/ | passive/index-tracking developed ex-U.S./Canada small-cap equity; official 2016-2025 rows; daily NAV drawdown/recovery not disclosed |
 | BBSC | supported | Cboe BZX:BBSC | USA | 23.96% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBSC.PDF | passive/index-tracking U.S. small-cap equity; history under 10 years; exchange transfer from NYSE Arca to Cboe BZX resolved; daily NAV drawdown/recovery not disclosed |
 | ISCF | supported | NYSE Arca:ISCF | International | 12.52% (2026-08-13) | https://www.ishares.com/us/products/272823/ishares-international-small-cap-equity-factor-etf | passive/index-tracking international small-cap factor equity; benchmark changed from MSCI World ex USA Small Cap Diversified Multiple-Factor Index to STOXX International Small-Cap Equity Factor Index on 2023-03-01; daily NAV drawdown/recovery not disclosed |
+| GWX | supported | NYSE Arca:GWX | International | 8.18% (2026-06-30) | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx | passive/index-tracking international small-cap equity; official calendar rows and daily NAV drawdown/recovery not disclosed; reviewed secondary annual table conflicts with official 2025 NAV result and is not saved |
 
 ## GSSC official source map
 
@@ -235,6 +236,7 @@ review_gate: PASS
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
+
 
 ## VTWO official source map
 
@@ -1386,6 +1388,55 @@ review_gate: PASS
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
 - Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_ISCF Performance.md`; update `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `International`; add breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; add `geography/International` and `geography/international-ex-US`; link the new page from International navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## GWX official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:GWX` | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx | Official State Street product page: identity, passive objective, exchange, inception, tracked index and performance context | Page reviewed 2026-08-17; current product-page quote snapshot was not used as a current price claim |
+| `NYSE Arca:GWX` | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gwx.pdf | Official factsheet: NAV/market-value/index standardized performance, return basis, expense ratio and holdings | Factsheet as of 2026-06-30; YTD NAV TR `8.18%`, market-value return `8.52%`, issuer-index return `6.77%`, holdings `2,083` |
+| `NYSE Arca:GWX` | https://www.sec.gov/Archives/edgar/data/1168164/000119312526031217/d833468d497k.htm | SEC summary prospectus: passive sampling strategy, risks, 2025 year-end average annual returns and best/worst quarters | Filed 2026-01-30; 10-year NAV TR `7.00%` through 2025-12-31; best quarter `+20.78%` Q2 2020; worst quarter `-28.37%` Q1 2020 |
+| Parent input identity | `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md` | Exact parent backlog row used to confirm the intended State Street fund and input quote | Line 18: State Street SPDR S&P International Small Cap ETF, input price `46.53` |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+| Secondary annual history | https://assetsanalyzer.com/etf/GWX/performance | Secondary total-return proxy reviewed only to test issuer coverage; not saved because it conflicts with official source data | Annual table displayed 2016-2025; 2025 secondary `35.86%` versus official prospectus NAV `35.00%` through 2025-12-31 |
+
+## GWX raw observations and calculations
+
+| Year | GWX NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | not disclosed | 11.96% |
+| 2017 | not disclosed | 21.83% |
+| 2018 | not disclosed | -4.38% |
+| 2019 | not disclosed | 31.49% |
+| 2020 | not disclosed | 18.40% |
+| 2021 | not disclosed | 28.71% |
+| 2022 | not disclosed | -18.11% |
+| 2023 | not disclosed | 26.29% |
+| 2024 | not disclosed | 25.02% |
+| 2025 | not disclosed | 17.88% |
+
+- Metric basis: official State Street NAV total return includes reinvested distributions and is net of fund expenses; market-value and index fields remain separate; currency USD.
+- Issuer benchmark: `S&P Developed Ex-U.S. Under USD2 Billion Index`; it is retained as metadata and not substituted for the common S&P 500 reference.
+- Official factsheet period returns as of 2026-06-30: QTD NAV `7.26%`, YTD NAV `8.18%`, 1-year NAV `21.24%`, 3-year NAV `15.84%`, 5-year NAV `5.32%`, and 10-year NAV `7.58%`.
+- GWX 10-year NAV TR average annual: `7.58%` from the official factsheet as of 2026-06-30; raw endpoints and exact elapsed years are not disclosed, so no independent endpoint CAGR is calculated.
+- The SEC prospectus reports a separate 10-year NAV TR average annual `7.00%` through 2025-12-31; the two observations have different as-of dates and are not combined.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`; it is shown only as the common reference table because GWX annual NAV rows are not disclosed.
+- 2021-2025 CAGR, up/down counts, best/least-positive/worst/least-bad years, maximum drawdown and recovery: not disclosed; no secondary proxy is saved.
+- Formula retained for any eligible calendar window: `CAGR = product(1 + annual return)^(1 / number of years)`; no GWX calendar CAGR is produced from the conflicting secondary table.
+
+## GWX gaps, conflict, and scheduled-inline local review
+
+- The exact parent input row at `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md:18` identifies the intended State Street fund; canonical listing is `NYSE Arca:GWX`.
+- The official issuer materials reviewed provide rolling/period NAV returns but do not expose complete 2016-2025 calendar NAV rows or raw 10-year endpoints. The official 10-year factsheet field is retained as an issuer average annual fact, not relabeled as a recomputed CAGR.
+- The reviewed secondary annual table is explicitly excluded because its 2025 result `35.86%` conflicts with the official SEC prospectus NAV result `35.00%` through the same year-end. No mixed-basis cumulative return, 2021-2025 CAGR, or year ranking is asserted.
+- The latest synchronized official GWX performance fields reviewed are as of 2026-06-30; the common S&P cache ends 2025-12-31 and no current-year S&P comparison is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_GWX Performance.md`; update `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
 - Planned graph changes: primary region `International`; add breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; add `geography/International` and `geography/international-ex-US`; link the new page from International navigation and the performance index; keep annual numeric ownership in the performance page.
 
 verification_mode: scheduled-local
