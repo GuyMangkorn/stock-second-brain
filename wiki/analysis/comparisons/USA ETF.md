@@ -49,6 +49,7 @@ tags:
 | CPLCF | iShares MSCI USA Small Cap CTB Enhanced ESG UCITS ETF USD (Acc) | U.S. small-cap ESG equity | 9.91% | 6.73% | 14.97% | [[ETF_LSE_CUSS Performance]] |
 | ZPRVF | State Street SPDR MSCI USA Small Cap Value Weighted UCITS ETF (USD line USSC) | U.S. small-cap value equity | 12.10% | 12.97% | 20.29% | [[ETF_LSE_USSC Performance]] |
 | NUSC | Nuveen ESG Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 5.51% | 16.76% | [[ETF_CBOE_BZX_NUSC Performance]] |
+| BBSC | JPMorgan BetaBuilders U.S. Small Cap Equity ETF | U.S. small-cap broad equity | not applicable (<10y) | 6.71% | 23.96% | [[ETF_CBOE_BZX_BBSC Performance]] |
 | IJR | iShares Core S&P Small-Cap ETF | U.S. small-cap broad equity | 11.47% | 7.23% | 25.09% | [[ETF_NYSE_ARCA_IJR Performance]] |
 | IWM | iShares Russell 2000 ETF | U.S. small-cap broad equity | 11.53% | 5.96% | 23.73% | [[ETF_NYSE_ARCA_IWM Performance]] |
 | IWN | iShares Russell 2000 Value ETF | U.S. small-cap value equity | 10.69% | 8.64% | 25.91% | [[ETF_NYSE_ARCA_IWN Performance]] |

@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ
-input_count: 30
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC
+input_count: 31
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -139,6 +139,8 @@ review_gate: PASS
 | AVUV | unsupported | NYSE Arca:AVUV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm | actively managed and does not seek to replicate a specified index; outside passive index-tracking equity scope; no performance artifact created |
 | DFAS | unsupported | NYSE Arca:DFAS | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000081/c497k.htm | actively managed and does not seek to replicate a specific index; outside passive index-tracking equity scope; no performance artifact created |
 | AVDV | unsupported | NYSE Arca:AVDV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm | actively managed and does not seek to replicate a specified index; outside passive index-tracking equity scope; no performance artifact created |
+| SCZ | supported | NASDAQ:SCZ | International | 13.83% (2026-08-13) | https://www.ishares.com/us/products/239627/ | passive/index-tracking developed ex-U.S./Canada small-cap equity; official 2016-2025 rows; daily NAV drawdown/recovery not disclosed |
+| BBSC | supported | Cboe BZX:BBSC | USA | 23.96% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBSC.PDF | passive/index-tracking U.S. small-cap equity; history under 10 years; exchange transfer from NYSE Arca to Cboe BZX resolved; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -1289,3 +1291,50 @@ review_gate: PASS
 - The current official S&P 500 TR page reports `14.04%` as of 2026-08-16, one date after the ETF current YTD; no synchronized current benchmark comparison is asserted.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## BBSC official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `Cboe BZX:BBSC` | https://am.jpmorgan.com/us/en/asset-management/adv/products/jpmorgan-betabuilders-us-small-cap-equity-etf-etf-shares-46641q290 | Official JPMorgan product page: identity, objective, tracked index and product context | Page reviewed 2026-08-17; current exchange context cross-checked against SEC materials |
+| `Cboe BZX:BBSC` | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBSC.PDF | Official factsheet: passive approach, benchmark, inception, fee, annual NAV returns, current NAV/market-price/benchmark fields and return basis | Factsheet dated 2026-06-30; annual rows 2021-2025 and current fields as of 2026-06-30 |
+| `Cboe BZX:BBSC` | https://www.sec.gov/Archives/edgar/data/1485894/000119312526071799/d46741d497k.htm | SEC summary prospectus: objective, index strategy, fees and passive structure | Filed 2026-03-01; listing and strategy context reviewed 2026-08-17 |
+| `Cboe BZX:BBSC` | https://www.sec.gov/Archives/edgar/data/1485894/000119312526128970/d123344d497k.htm | SEC supplement: exchange-transfer notice | Dated 2026-03-27; transfer from NYSE Arca to Cboe BZX effective 2026-04-16 |
+| `Cboe BZX:BBSC` | https://www.sec.gov/Archives/edgar/data/1485894/000119312526152486/d134932d8a12b.htm | SEC Form 8-A: current Cboe BZX registration cross-check | Filed 2026-04-16; BBSC registered on Cboe BZX |
+| `Cboe BZX:BBSC` | https://am.jpmorgan.com/us/en/asset-management/per/about-us/media/press-releases/jp-morgan-transfer-14-etfs-from-current-exchanges/ | JPMorgan exchange-transfer announcement | Reviewed 2026-08-17 |
+| Parent input identity | `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md` | Exact parent backlog row used to disambiguate U.S. BBSC from the Ireland UCITS ticker | Line 16: JPMorgan BetaBuilders U.S. Small Cap Equity ETF, parent input snapshot |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## BBSC raw observations and calculations
+
+| Year | BBSC NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2021 | 15.55% | 28.71% |
+| 2022 | -19.71% | -18.11% |
+| 2023 | 20.03% | 26.29% |
+| 2024 | 12.37% | 25.02% |
+| 2025 | 10.56% | 17.88% |
+
+- Metric basis: official JPMorgan NAV total return assumes dividends and capital gains are reinvested; NAV return reflects fund fees and expenses; currency USD.
+- Issuer benchmark: `Morningstar US Small Cap Target Market Exposure Extended Index`; retained as metadata and not substituted for the common S&P 500 reference.
+- BBSC 2021-2025 compound: `38.35%` cumulative; rounded-input CAGR `6.71%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Up years / down years: `4 / 1`; best `2021 +15.55%`; least positive `2025 +10.56%`; worst and least bad down year `2022 -19.71%`.
+- Current official fields as of 2026-06-30: NAV TR YTD `23.96%`, market-price return `24.13%`, issuer benchmark `24.11%`.
+
+## BBSC gaps and scheduled-inline local review
+
+- The exact parent input row at `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md:16` identifies the intended U.S. fund. This resolves the ticker ambiguity with the Ireland UCITS BBSC listing before saving.
+- Current canonical exchange is `Cboe BZX`; the prior NYSE Arca listing and 2026-04-16 transfer are preserved in the SEC source map. No old exchange slug is used for the durable page.
+- Inception was 2020-11-16; 2020 is an inception-year partial period and no 10-year NAV CAGR is claimed. Complete annual calculations use official 2021-2025 rows only.
+- The latest official current performance fields reviewed are as of 2026-06-30; no synchronized 2026-08-17 official NAV/price snapshot is asserted.
+- The common S&P 500 annual cache ends 2025-12-31; no current-year S&P comparison is asserted against BBSC's 2026-06-30 fields.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+- Planned durable paths: create `wiki/analysis/performance/ETF_CBOE_BZX_BBSC Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; add `geography/United-States`; link the new page from USA navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
