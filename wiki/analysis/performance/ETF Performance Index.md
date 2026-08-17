@@ -39,6 +39,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Hong Kong ETF]]
 - [[India ETF]]
 - [[Indonesia ETF]]
+- [[Italy ETF]]
 - [[International ETF]]
 - [[Japan ETF]]
 - [[Malaysia ETF]]
@@ -47,6 +48,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Poland ETF]]
 - [[Singapore ETF]]
 - [[South Korea ETF]]
+- [[Spain ETF]]
 - [[Southeast Asia ETF]]
 - [[Taiwan ETF]]
 - [[Thailand ETF]]
@@ -112,7 +114,10 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025 | 8.22% | 8.38% | -0.85% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials concentrated, country/Europe/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWO Performance]] | official 1996 / official 2016-2025; rolling issuer 2026-06-30 | 15.59% | 17.28% | 25.85% | 2025 +72.85% / 2018 -23.20% | Austria single-country equity | financials/industrials/materials concentrated, country/EUR-USD FX-sensitive; 3-year standard deviation 15.22%; official rolling 5Y tracking gap +0.05 pp |
+| [[ETF_NYSE_ARCA_EWP Performance]] | official 1996 / official 2016-2025; rolling issuer 2016-2026 | 12.76% | 18.29% | 16.14% | 2025 +77.12% / 2018 -15.07% | Spain single-country equity | financials/utilities/industrials concentrated; country/EUR-USD FX-sensitive; 3-year standard deviation 16.33%; official daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EPOL Performance]] | official 2010 / official 2016-2025; rolling issuer 2026-06-30 | 11.71% | 16.89% | 26.40% | 2025 +76.25% / 2022 -24.53% | Poland single-country equity | financials/energy/consumer concentration, Poland/country/PLN-USD FX-sensitive; 3-year standard deviation 21.37%; official rolling 5Y tracking gap -0.37 pp |
+| [[ETF_LSE_IPOL Performance]] | official 2011 / official 2021-2025; current rolling table capture 2026-08-14; 2016-2020 annual source conflict | 10.24%† | 13.76% | 27.44% | 2025 +74.88% / 2022 -27.36% | Poland single-country accumulating UCITS equity | financials/energy/consumer concentration; Poland/PLN-USD/emerging-market/country/FX/liquidity-sensitive; 2020 annual conflict and daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_EWI Performance]] | official 1996 / official 2016-2025; rolling issuer 2026-06-30 | 14.40% | 16.92% | 18.73% | 2025 +55.51% / 2018 -17.51% | Italy single-country equity | financials/utilities/consumer concentration; Italy/country/EUR-USD FX/market/liquidity-sensitive; 3-year standard deviation 15.16%; official daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_GREK Performance]] | official inception 2011 / secondary 2016-2025; rolling issuer 2026-06-30 | 17.01% | 24.58%* | 22.00%* | 2025 +75.10%* / 2018 -29.90%* | Greece single-country equity | non-diversified; financials/country/FX/liquidity-sensitive; official rolling 5Y tracking gap -0.80 pp; annual rows secondary and daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
 | [[ETF_NYSE_ARCA_JPXN Performance]] | official 2001 / official rolling 2016-2026 | 9.28% | 6.19% | 15.60% | 2025 +26.05% / 2022 -16.04% | Japan large-cap equity, JPX-Nikkei 400 | profitability/governance screen; Japan/sector/FX-sensitive |
@@ -325,6 +330,9 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWO Performance]] | 30.74% | -21.67% | 19.88% | 4.58% | 72.85% | 121.92% | 4 / 1 |
+| [[ETF_NYSE_ARCA_EWP Performance]] | 0.10% | -5.34% | 29.80% | 6.30% | 77.12% | 131.57% | 4 / 1 |
+| [[ETF_LSE_IPOL Performance]] | 8.16% | -27.36% | 48.25% | -6.47% | 74.88% | 90.51% | 3 / 2 |
+| [[ETF_NYSE_ARCA_EWI Performance]] | 13.80% | -14.19% | 30.34% | 10.39% | 55.51% | 118.50% | 4 / 1 |
 | [[ETF_NYSE_ARCA_GREK Performance]] | 5.70% | 3.00% | 43.50% | 9.70% | 75.10% | 200.09% | 5 / 0 |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 1.56% | -17.36% | 19.78% | 6.80% | 25.92% | 35.20% | 4 / 1 |
 | [[ETF_NYSE_ARCA_SCJ Performance]] | -2.40% | -12.70% | 12.95% | 3.26% | 29.66% | 28.85% | 3 / 2 |
@@ -416,6 +424,12 @@ OPPJ `2025*` เป็น secondary standardized NAV return; common window ข�
 ยังคร่อมการเปลี่ยน objective/index เมื่อ 30 มิ.ย. 2025 จึงไม่ใช่ record ของ
 current strategy แบบต่อเนื่องห้าปี.
 
+† IPOL's `10.24%` is the issuer current rolling 10-year NAV TR annualised field
+from the 2026-08-14 page capture; the selected date is not exposed in the HTML.
+The official USD accumulating factsheet reports 2020 NAV TR `+1.91%`, while the
+live product page reports `-11.9%`; therefore no 2016-2025 annual-row CAGR is
+used for IPOL. The common 2021-2025 CAGR `13.76%` is unaffected by that conflict.
+
 † DGS 8.31% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DGS current NAV TR YTD is 8.86% as of 2026-07-31.
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31.
@@ -503,7 +517,7 @@ utilities และ financials tilt.
 | [[ETF_AMEX_SDOG Performance]] | 9.38% | 10.52% | -0.13% | 13.60% | 13.99% | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_KBWD Performance]] | 5.92% | 7.14% | -18.99% | 15.44% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_KBWY Performance]] | 0.99% | 1.85% | -18.90% | 21.94% | 1.51% | official annual NAV TR 2016-2025 |
-| [[ETF_AMEX_FDD Performance]] | 9.11% | 12.37% | -15.67% | 22.74% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_FDD Performance]] | 10.86% | 12.37% | -15.67% | 22.74% | 18.51% | official annual NAV TR 2016-2025; rolling/YTD as of 2026-07-31 |
 | [[ETF_NASDAQ_EUFN Performance]] | 14.36% | 21.63% | -23.20% | 29.22% | 18.15% | official annual NAV TR 2016-2025; passive developed-Europe financials exposure |
 | [[ETF_NASDAQ_TDIV Performance]] | 18.22% | 16.55% | -22.14% | 29.01% | 19.52% | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_DVY Performance]] | 10.11% | 11.96% | ไม่พบข้อมูลที่ยืนยันได้ | 12.49% | 12.48% | official annual NAV TR 2016-2025 |
@@ -745,9 +759,14 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 
 - [[ETF_NYSE_ARCA_AVDV Performance]] — AVDV (International; active fundamental long-only small-cap value ETF; official 5Y NAV TR `13.81%` versus MSCI World ex USA Small Cap `6.03%`, return-only Excess CAGR `+7.78 pp` as of 2026-06-30; current official NAV TR YTD `+13.11%` as of 2026-07-31; secondary complete 2020-2025 proxy cumulative `+104.35%` / rounded-input CAGR `+12.65%`, hit rate and official daily drawdown/recovery remain unverified)
 - [[ETF_NYSE_ARCA_EPOL Performance]] — EPOL (Poland; passive MSCI Poland IMI 25/50 exposure; official 2016-2025 NAV TR cumulative `+154.36%` / rounded-input CAGR `+9.79%`, 2021-2025 CAGR `+16.89%`, issuer rolling 10-year NAV TR `+11.71%` as of 2026-06-30, and current official NAV TR YTD `+26.40%` as of 2026-08-13; 2025 `+76.25%` / 2022 `-24.53%`, 3-year standard deviation `21.37%`, official daily NAV drawdown/recovery remains unverified)
+- [[ETF_LSE_IPOL Performance]] — IPLCF / IPOL (Poland; OTC input alias resolved to official USD `LSE:IPOL`, passive accumulating UCITS exposure; issuer current rolling 10-year NAV TR `+10.24%` and current official NAV TR YTD `+27.44%` as of 2026-08-14; 2021-2025 factsheet NAV TR CAGR `+13.76%`, 2025 `+74.88%` / 2022 `-27.36%`, 2020 annual source conflict and official daily NAV drawdown/recovery remain unverified)
+- [[ETF_NYSE_ARCA_EWI Performance]] — EWI (Italy; passive MSCI Italy 25/50 exposure; official 2016-2025 NAV TR cumulative `+173.66%` / rounded-input CAGR `+10.59%`, 2021-2025 CAGR `+16.92%`, issuer rolling 10-year NAV TR `+14.40%` as of 2026-06-30, and current official NAV TR YTD `+18.73%` as of 2026-08-14; 2025 `+55.51%` / 2018 `-17.51%`, 3-year standard deviation `15.16%`, official daily NAV drawdown/recovery remains unverified)
 - [[ETF_NASDAQ_EUFN Performance]] — EUFN (Europe; passive developed-Europe financials sector ETF; official 2016-2025 NAV TR cumulative `+177.80%` / rounded-input CAGR `+10.76%`, 2021-2025 CAGR `+21.63%`, issuer rolling 10-year NAV TR `+14.36%` as of 2026-06-30, and current official NAV TR YTD `+18.15%` as of 2026-08-14; 2025 `+65.23%` / 2018 `-23.20%`, 3-year standard deviation `15.75%`, official daily NAV drawdown/recovery remains unverified)
 - [[ETF_NYSE_ARCA_EWO Performance]] — EWO (Austria; passive MSCI Austria IMI 25/50 exposure; official 2016-2025 NAV TR cumulative `+217.16%` / rounded-input CAGR `+12.23%`, 2021-2025 CAGR `+17.28%`, issuer rolling 10-year NAV TR `+15.59%` as of 2026-06-30, and current official NAV TR YTD `+25.85%` as of 2026-08-11; 2025 `+72.85%` / 2018 `-23.20%`, 3-year standard deviation `15.22%`, index-transition and official daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_GREK Performance]] — GREK (Greece; passive MSCI All Greece Select 25/50 exposure; official rolling 10-year NAV TR `+17.01%` as of 2026-06-30, secondary 2016-2025 NAV proxy cumulative `+255.67%` / rounded-input CAGR `+13.53%`, 2021-2025 CAGR `+24.58%`, and secondary NAV TR YTD `+22.00%` as of 2026-07-31; 2025 `+75.10%*` / 2018 `-29.90%*`, official 5Y tracking gap `-0.80 pp`, annual rows and daily NAV drawdown/recovery gaps disclosed)
+- [[ETF_NYSE_ARCA_EWP Performance]] — EWP (Spain; passive MSCI Spain 25/50 exposure; official 2016-2025 NAV TR cumulative `+162.48%` / rounded-input CAGR `+10.13%`, 2021-2025 CAGR `+18.29%`, issuer rolling 10-year NAV TR `+12.76%` as of 2026-06-30, and current official NAV TR YTD `+16.14%` as of 2026-07-30; 2025 `+77.12%` / 2018 `-15.07%`, 3-year standard deviation `16.33%`, official daily NAV drawdown/recovery remains unverified)
+- [[ETF_AMEX_FDD Performance]] — FDD (Europe; passive STOXX Europe Select Dividend 30 exposure; official 2016-2025 NAV TR cumulative `+139.09%` / rounded-input CAGR `+9.11%`, 2021-2025 CAGR `+12.37%`, issuer rolling 10-year NAV TR `+10.86%` and current official NAV TR YTD `+18.51%` as of 2026-07-31; 2025 `+61.85%` / 2022 `-15.67%`, annual-return standard deviation `20.71%`, official daily NAV drawdown/recovery remains unverified)
+- [[ETF_CBOE_BZX_EUAD Performance]] — EUAD (Europe; passive STOXX Europe Total Market Aerospace & Defense exposure; inception 2024-10-22 so 10-year and 2021-2025 windows are not applicable; official current YTD not disclosed, secondary NAV YTD `+0.20%†` as of 2026-06-30, since-inception annualised NAV TR `+36.80%†`, holdings/NAV snapshots conflict across official and secondary sources, and daily drawdown/recovery remain unverified)
 
 ## 2026-08-17 Coverage Addition
 

@@ -284,3 +284,273 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official passive-index evidence and the scheduled-local pre-save checklist passed; GREK performance artifacts were written.
+
+## EWP — iShares MSCI Spain ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:EWP`; ticker `EWP`; canonical exchange `NYSE Arca`; inception `1996-03-12`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI Spain 25/50 Index (Net)`; return basis `NAV total return` in USD.
+- Primary region: `Spain`; region page `[[Spain ETF]]` was created because the exposure is single-country rather than multi-country Europe.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer current product page | https://www.ishares.com/us/products/239683/ishares-msci-spain-capped-etf?qt=EWP | current YTD, NAV/price, AUM, exchange, index, fee and fund facts |
+| Issuer fact sheet | https://www.ishares.com/us/literature/fact-sheet/ewp-ishares-msci-spain-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 calendar NAV rows, rolling returns, benchmark, holdings and risk snapshot |
+| Issuer summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-spain-capped-etf-8-31.pdf | official 2016-2020 calendar rows, return definition, index history and quarter-risk disclosures |
+| S&P 500 current cross-check | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=df8ec300-24ad-4c70-81d3-a3dcce0200e2&sourceIdentifier=index-family-specialization | S&P 500 (TR) current YTD `14.54%` as of 2026-08-17; non-matched with EWP YTD |
+| Cached benchmark convention | workflow cache and https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- Official iShares product page: NAV Total Return YTD `16.14%` as of `2026-07-30`; NAV `61.36` and closing price `61.48` as of `2026-07-31`; expense ratio `0.50%`; exchange `NYSE Arca`; benchmark `MSCI Spain 25/50 Index (Net)`; inception `1996-03-12`; distribution frequency semi-annual.
+- Official iShares rolling table as of `2026-06-30`: NAV Total Return cumulative `232.40%` over 10 years and annualized `12.76%`; benchmark cumulative `243.69%` and annualized `13.13%`; 1-year NAV `38.56%`, 3-year `31.53%`, 5-year `19.70%`, inception `8.78%`.
+- Official iShares fact sheet as of `2026-06-30`: 23 holdings; 3-year equity beta `0.49`; 3-year standard deviation `16.33%`; Financials `43.70%`, Utilities `24.16%`, Industrials `13.91%`; NAV calendar rows 2021 `0.10%`, 2022 `-5.34%`, 2023 `29.80%`, 2024 `6.30%`, 2025 `77.12%`.
+- Official summary prospectus calendar chart: 2016 `-2.18%`, 2017 `26.97%`, 2018 `-15.07%`, 2019 `10.94%`, 2020 `-3.14%`; returns assume reinvestment of dividends and distributions.
+- Official index history: EWP began tracking MSCI Spain 25/50 Index (Net) on `2013-02-12`; earlier historical index data is for MSCI Spain Index (Net).
+- Official iShares distributions: `2026-06-15 $0.924231`, `2025-12-16 $0.740374`, `2025-06-16 $0.483756`, `2024-12-17 $0.818596`; latest four average cash distribution `US$0.741739` per semi-annual round. Latest four sum `US$2.966957`; issuer 12m trailing yield `2.81%` as of `2026-06-30`.
+- S&P 500 current cross-check: official S&P 500 (TR) YTD `14.54%` as of `2026-08-17`; this is not combined with EWP's `2026-07-30` YTD in a same-date calculation.
+
+### Calculations and reconciliation
+
+- Complete official 2016-2025 EWP: `(0.9782 × 1.2697 × 0.8493 × 1.1094 × 0.9686 × 1.0010 × 0.9466 × 1.2980 × 1.0630 × 1.7712) - 1 = 162.48%`; rounded-input CAGR `10.13%`; population annual-return standard deviation `25.33%`; up/down `6/4`.
+- Complete official 2021-2025 EWP: cumulative `131.57%`, rounded-input CAGR `18.29%`, up/down `4/1`. Cached S&P 500 TR cumulative `96.17%`, CAGR `14.43%` over the same 2021-2025 window.
+- Official rolling 10-year endpoint normalization: start TR value `100.00`; end TR value `332.40` from official cumulative `232.40%`; elapsed years `10.00`; `(332.40 / 100.00)^(1/10.00) - 1 = 12.76%`.
+- Best complete calendar year `2025 +77.12%`; least positive `2021 +0.10%`; worst `2018 -15.07%`; least bad down year `2016 -2.18%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed capture; no secondary proxy was substituted automatically.
+- Cached S&P 500 TR annual rows for 2016-2025 are USD total-return rows as of 2025-12-31; cumulative `298.33%` and rounded-input CAGR `14.82%`.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, canonical exchange, passive equity classification, tracked index, return basis, periods, units, currencies, distributions, as-of dates, and source URLs are recorded.
+- PASS: rolling 10-year NAV TR is kept separate from the 2016-2025 calendar CAGR; annual rows are official and no proxy or partial-year marker is used; the index-history change is disclosed.
+- PASS: current EWP YTD and current S&P 500 cross-check are visibly dated and not treated as a same-date spread; official daily drawdown/recovery remains an explicit gap.
+- PASS: proposed EWP performance page, Spain region page, performance-index rows, region-index row, and source-batch contents are specified; canonical breadcrumb, `geography/Spain` tag, and graph links resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local pre-save checklist passed; EWP performance artifacts were written.
+
+## IPOL — iShares MSCI Poland UCITS ETF USD (Acc)
+
+### Identity and classification
+
+- `entity_key: LSE:IPOL`; input ticker `IPLCF`; canonical exchange `London Stock Exchange`; official USD listing `IPOL`; ISIN `IE00B4M7GH52`; launch `2011-01-21`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI Emerging - Poland in Net USD`; return basis `NAV total return` in USD; use of income `accumulating`.
+- Primary region: `Poland`; the region page `[[Poland ETF]]` now includes both EPOL and IPOL.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer current product page | https://www.blackrock.com/uk/individual/products/251875/ishares-msci-poland-ucits-etf_1 | current NAV/YTD, rolling table, fund facts, risk and listings |
+| Issuer USD accumulating factsheet | https://www.ishares.com/uk/professional/en/literature/fact-sheet/spol-ishares-msci-poland-ucits-etf-fund-fact-sheet-en-gb.pdf | official share-class annual rows and benchmark rows |
+| Issuer professional product page | https://www.ishares.com/uk/professionals/en/products/251875/ishares-msci-poland-ucits-etf?shortLocale=en_GB&siteEntryPassthrough=true&switchLocale=y | listing map, holdings, exposures and risk fields |
+| S&P 500 current cross-check | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=df8ec300-24ad-4c70-81d3-a3dcce0200e2&sourceIdentifier=index-family-specialization | current reference cross-check only; date does not match IPOL YTD |
+| Cached benchmark convention | workflow cache and https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- Current issuer page capture: NAV Total Return YTD `27.44%` as of `2026-08-14`; NAV `US$42.02` as of `2026-08-14`; net assets `US$1,126,150,918` and 16 holdings as of `2026-08-14`.
+- Current issuer key facts: TER `0.74%`; accumulating; Ireland domicile; UCITS; physical and replicated; quarterly rebalance; benchmark `MSCI Emerging - Poland in Net USD`.
+- Current risk snapshot: 3-year beta `0.993` and standard deviation `22.01%` as of `2026-07-31`; P/E `17.22` and P/B `2.11` as of `2026-08-14`.
+- Professional page exposure as of `2026-08-06`: Financials `45.80%`, Energy `16.68%`, Consumer Discretionary `12.86%`, Materials `9.24%`, Consumer Staples `5.32%`, Communication `3.04%`, Information Technology `2.16%`, Utilities `1.83%`, Industrials `1.78%`, and Cash/Derivatives `1.29%`.
+- Issuer current rolling table capture reports NAV Total Return annualised `10.24%` over 10 years and cumulative `164.99%`; benchmark `10.43%` annualised and `169.59%` cumulative. The selected date is not surfaced in the HTML, so it is retained as an issuer-current capture anchored to the page's `2026-08-14` snapshot rather than presented as an independently dated endpoint.
+- Official March 2026 USD accumulating factsheet calendar rows: fund `0.02, 54.33, -13.14, -6.03, 1.91, 8.16, -27.36, 48.25, -6.47, 74.88`; benchmark `0.13, 54.72, -12.87, -5.87, 1.39, 8.46, -27.24, 48.60, -6.65, 74.61` for 2016-2025.
+- The live product-page annual table reports fund `0.0, 54.3, -13.1, -6.0, -11.9, 8.2, -27.4, 48.2, -6.5, 74.9` and benchmark `0.1, 54.7, -12.9, -5.9, -11.4, 8.5, -27.2, 48.6, -6.7, 74.6`. The 2020 conflict (`+1.91%` vs `-11.9%`) is unresolved and preserved.
+- The share class is accumulating; no cash-distribution series was used.
+- S&P 500 current cross-check from the separate official report is `14.54%` YTD as of `2026-08-17`; it is not a same-date pair with IPOL's `2026-08-14` YTD.
+
+### Calculations and reconciliation
+
+- Factsheet complete common window 2021-2025: `(1.0816 × 0.7264 × 1.4825 × 0.9353 × 1.7488) - 1 = 90.51%`; rounded-input CAGR `13.76%`; up/down `3/2`.
+- Factsheet tracked benchmark common window 2021-2025: cumulative `91.15%`; rounded-input CAGR `13.83%`; IPOL trails by approximately `-0.08 pp` CAGR. This is a tracking observation, not alpha.
+- S&P 500 cached common-window cumulative `96.17%` / rounded-input CAGR `14.43%`; it is a common reference only.
+- Factsheet annual rows across 2016-2025 produce up/down `6/4`, best `2025 +74.88%`, worst `2022 -27.36%`. Because the official live page conflicts with the factsheet in 2020, no cumulative or CAGR is saved for the 2016-2025 annual window.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed sources; no secondary proxy was substituted.
+
+### Local pre-save checklist
+
+- PASS: OTC alias, canonical USD LSE listing, ETF identity, passive classification, tracked index, return basis, periods, units, currencies, and as-of dates are recorded.
+- PASS: official current/rolling fields are separated from factsheet annual rows; the 2020 source conflict is preserved; no unsupported 2016-2025 CAGR is calculated; S&P 500 is labeled common reference only.
+- PASS: proposed IPOL performance page, Poland region row, performance-index row, common-window row, region-index count, and dated source-batch contents are fully specified; canonical breadcrumb and both ticker tags are present.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence passed the scheduled-local checklist; the 2020 source conflict was disclosed and IPOL performance artifacts were written.
+
+## EWI — iShares MSCI Italy ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:EWI`; ticker `EWI`; canonical exchange `NYSE Arca`; inception `1996-03-12`; CUSIP `46434G830`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI Italy 25/50 Index (Net)`; return basis `NAV total return` in USD; semi-annual distributions.
+- Primary region: `Italy`; a new static region page `[[Italy ETF]]` was created and linked from both ETF indexes.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer current product page | https://www.ishares.com/us/products/239664/ishares-msci-italy-etf | current NAV/YTD, rolling returns, 2021-2025 annual rows, fund facts, exposures and distributions |
+| Issuer summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-italy-capped-etf-8-31.pdf | 2016-2020 annual NAV rows, return definition, index strategy, risks and best/worst quarter |
+| S&P 500 current cross-check | https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=df8ec300-24ad-4c70-81d3-a3dcce0200e2&sourceIdentifier=index-family-specialization | current reference cross-check only; date does not match EWI YTD |
+| Cached benchmark convention | workflow cache and https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- Official current page: NAV Total Return YTD `18.73%` and NAV `US$63.17` as of `2026-08-14`; closing price `US$63.27`, net assets `US$1,160,763,629`, 25 holdings, and 30-day median bid/ask spread `0.02%` as of `2026-08-14`.
+- Fund facts: expense ratio `0.50%`; management fee `0.49%`; inception `1996-03-12`; benchmark `MSCI Italy 25/50 Index (Net)`; distribution frequency semi-annual.
+- Official rolling table as of `2026-06-30`: NAV TR `1Y 27.21%`, `3Y 27.34%`, `5Y 17.16%`, `10Y 14.40%`, inception `6.44%`; benchmark `27.17%`, `27.34%`, `17.19%`, `14.48%`, with no inception benchmark value shown.
+- Official current risk snapshot: Financials `54.88%`, Utilities `15.98%`, Consumer Discretionary `8.75%`, Industrials `7.81%`, Energy `6.84%`, Communication `2.41%`, Health Care `1.28%`, Consumer Staples `0.98%`, Materials `0.87%`, and Cash/Derivatives `0.21%` as of `2026-08-14`; 3-year standard deviation `15.16%`, beta `0.63`, P/E `15.84`, and P/B `2.14` across the issuer's stated dates.
+- Official summary prospectus calendar NAV rows: 2016 `-9.40%`, 2017 `28.47%`, 2018 `-17.51%`, 2019 `27.19%`, 2020 `2.56%`, 2021 `13.80%`, 2022 `-14.19%`, 2023 `30.34%`, and 2024 `10.39%`. The current product page supplies 2025 `55.51%` and official benchmark rows for 2021-2025: `14.15%`, `-14.59%`, `30.66%`, `10.66%`, `56.28%`.
+- Official current distributions: `2026-06-15 $1.173545`, `2025-12-16 $0.702133`, `2025-06-16 $0.821604`, and `2024-12-17 $0.559282`; latest four sum `US$3.256564`, average `US$0.814141`; issuer 12m trailing yield `3.05%` as of `2026-07-31`.
+- Summary prospectus best/worst quarter: `+27.29%` in Q4 2022 / `-29.51%` in Q1 2020. Daily NAV maximum drawdown and recovery were not captured.
+- S&P 500 current cross-check from the separate official report is `14.54%` YTD as of `2026-08-17`; it is not a same-date pair with EWI's `2026-08-14` YTD.
+
+### Calculations and reconciliation
+
+- Complete official fund 2016-2025: `(0.9060 × 1.2847 × 0.8249 × 1.2719 × 1.0256 × 1.1380 × 0.8581 × 1.3034 × 1.1039 × 1.5551) - 1 = 173.66%`; rounded-input CAGR `10.59%`; population annual-return standard deviation `21.99%`; up/down `7/3`.
+- Complete official fund 2021-2025: cumulative `118.50%`, rounded-input CAGR `16.92%`, up/down `4/1`; cached S&P 500 TR cumulative `96.17%`, CAGR `14.43%` over the same window.
+- Complete official tracked-index 2021-2025: cumulative `120.30%`, rounded-input CAGR `17.11%`; EWI trails by approximately `-0.19 pp` CAGR. This is tracking evidence, not alpha.
+- Official rolling 10-year endpoint normalization: start TR value `100.00`; end TR value `383.84` from cumulative `283.84%`; annualised `(383.84 / 100.00)^(1/10) - 1 = 14.40%`, as reported by the issuer for the 2026-06-30 window.
+- Best complete calendar year `2025 +55.51%`; worst `2018 -17.51%`; average positive year `24.04%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed; no secondary proxy was substituted automatically.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, NYSE Arca exchange, passive classification, tracked index, return basis, periods, units, currencies, distributions, and as-of dates are recorded.
+- PASS: 2016-2020 prospectus rows and 2021-2025 product-page rows are separated by source; official rolling and current fields are not mixed with annual windows; S&P 500 is labeled common reference only.
+- PASS: proposed EWI performance page, new Italy region page, performance-index row, common-window row, region-index row, and dated source-batch contents are fully specified; canonical breadcrumb and `geography/Italy` tag are present.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local pre-save checklist passed; EWI performance artifacts were written.
+
+## FDD — First Trust STOXX European Select Dividend Index Fund
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:FDD`; ticker `FDD`; canonical exchange `NYSE Arca`; inception `2007-08-27`; CUSIP `33735T109`; ISIN `US33735T1097`.
+- `management_mode: passive-index-tracking`; tracked index `STOXX Europe Select Dividend 30 Index`; return basis `NAV total return` in USD.
+- Primary region: `Europe`; the existing static region page `[[Europe ETF]]` and existing FDD performance page were updated.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ftportfolios.com/retail/etf/etfsummary.aspx?Ticker=FDD | current NAV/price, fund facts, fee, holdings, exposures, distribution fields and methodology |
+| Issuer performance list | https://www.ftportfolios.com/retail/etf/etflist.aspx?DisplayType=PerformanceNav&Type=Dividend | current standardized NAV performance as of 2026-07-31 |
+| Issuer prospectus | https://www.ftportfolios.com/Funds/ETF/Prospectus/FAN | official annual NAV TR rows and return definitions |
+| Cached benchmark convention | workflow cache and https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- Official First Trust performance list as of `2026-07-31`: NAV TR `3M 8.27%`, `YTD 18.51%`, `1Y 38.57%`, `3Y 26.57%`, `5Y 13.10%`, `10Y 10.86%`, and since inception `2.84%`.
+- Official product page fund data as of `2026-07-23`: NAV `US$19.25`, market price `US$19.25`, total net assets `US$853,048,790`, and 30 holdings.
+- Current issuer fee disclosure: expense ratio `0.56%` as of `2026-02-02`; expenses capped at `0.60%` through at least `2027-01-31`. The prior durable page's `0.58%` is retained as a source conflict; the current issuer disclosure is used.
+- Product methodology: 30 European dividend-paying stocks selected from STOXX Europe 600 using positive five-year dividend-per-share growth, a dividend-to-EPS screen and yield/outperformance criteria; individual holdings are capped at 15%.
+- Current exposure snapshots: country Netherlands `22.79%`, France `21.76%`, UK `20.21%`, Germany `9.34%`, Norway `4.21%`, South Africa `4.05%`, Jersey `3.93%`, Italy `3.58%`, Belgium `2.85%`, Poland `2.74%`; sectors Financials `57.23%`, Consumer Discretionary `15.31%`, Industrials `9.58%`, Energy `6.95%`, Real Estate `3.26%`, Materials `2.95%`, Utilities `2.74%`, Communication Services `1.98%` as of the issuer's 2026-06 snapshots.
+- Distribution fields as of `2026-06-30`: 30-day SEC yield `4.33%`, 12-month distribution rate `5.45%`, and index yield `5.98%`.
+- Official annual NAV TR rows for 2016-2025: `2.58%`, `19.04%`, `-8.83%`, `23.09%`, `-2.64%`, `15.07%`, `-15.67%`, `13.42%`, `0.60%`, `61.85%`. Cached S&P 500 TR rows for the same years are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed sources; no secondary proxy was substituted.
+
+### Calculations and reconciliation
+
+- Complete FDD 2016-2025 using the displayed annual rows: cumulative `139.09%`; rounded-input CAGR `9.11%`; population annual-return standard deviation `20.71%`; up/down `7/3`; best `2025 +61.85%`; worst `2022 -15.67%`.
+- Complete FDD 2021-2025 using the displayed annual rows: cumulative `79.20%`; rounded-input CAGR `12.37%`; up/down `4/1`; average positive year `22.74%`.
+- Cached S&P 500 TR common-window cumulative `96.17%` / rounded-input CAGR `14.43%`; FDD trails by approximately `-2.05 pp` CAGR. This is a common-reference comparison, not alpha.
+- The issuer's current 10-year annualised figure `10.86%` and current YTD `18.51%` are kept separate from the rounded-input calendar-window calculations because their as-of date and return window differ.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, exchange, passive classification, tracked index, return basis, periods, units, currencies, metric definitions, as-of dates, calculations, and source URLs are recorded.
+- PASS: current issuer rolling/YTD fields are separated from annual rows; the older `0.58%` fee versus current `0.56%` fee is disclosed as a source conflict; common-reference comparison is not labeled alpha; daily drawdown/recovery gap is retained.
+- PASS: proposed FDD performance page, Europe region row, performance-index row, existing-page delta, and dated source-batch contents are fully specified; canonical breadcrumb and `geography/Europe` tag are present.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local pre-save checklist passed; FDD performance artifacts were refreshed.
+
+## EUAD — Select STOXX Europe Aerospace & Defense ETF
+
+### Identity and classification
+
+- `entity_key: Cboe BZX:EUAD`; ticker `EUAD`; canonical exchange `Cboe BZX`; inception `2024-10-22`; CUSIP `84858T772`.
+- `management_mode: passive-index-tracking`; tracked index `STOXX Europe Total Market Aerospace & Defense Index`; return basis `NAV total return` in USD.
+- Primary region: `Europe`; the existing static region page `[[Europe ETF]]` was updated and a new EUAD performance page was created.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer fund page | https://www.select-funds.com/fund-info | official identity, exchange, inception, fee, NAV/market-price snapshot, assets, holdings count, strategy and risk disclosures |
+| SEC summary prospectus | https://www.sec.gov/Archives/edgar/data/1484018/000148401824000217/r497e1024.htm | official Cboe BZX listing, passive strategy, fee breakdown, index construction, replication and risks |
+| STOXX index page | https://stoxx.com/index/sxparo/ | tracked-index identity, USD net-return availability and index context |
+| Secondary performance page | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=euad | issuer-display gap fill: NAV period returns through 2026-06-30 and worst 3-month observation |
+| Secondary summary page | https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=euad | latest NAV/market price, holdings conflict and distribution cross-check |
+| S&P 500 official page | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | common benchmark definition; complete cached rows are not used for the short EUAD history |
+
+### Raw observations
+
+- Official issuer page snapshot as of `2026-07-29`: NAV `US$43.91`, market price `US$43.98`, net assets `US$1,166,571,261`, gross expense ratio `0.50%`, primary exchange `Cboe`, 23 holdings, 26,570,000 shares outstanding and 30-day median bid-ask `0.22%`.
+- SEC prospectus: ticker `EUAD`; shares listed on Cboe BZX; management fee `0.05%`, other expenses `0.45%`, total annual fund operating expenses `0.50%`; the fund invests at least 80% of assets in index components and uses a passive approach with replication or representative sampling.
+- SEC prospectus index description: the index covered 25 European aerospace-and-defense companies as of 2024-07-31, uses the STOXX Europe Total Market universe and is rebalanced/reconstituted daily based on relative market capitalization.
+- Secondary Schwab snapshot as of `2026-06-30`: NAV TR YTD `+0.20%`, 1-month `-1.0%`, 3-month `+3.3%`, 6-month `+0.2%`, 1-year `-1.5%`, since-inception hypothetical US$10,000 growth to `US$17,230` (`+72.30%` cumulative) and since-inception annualised return `+36.80%`.
+- Secondary Schwab snapshot reports worst 3-month return `-9.9%` for `2025-09-30` to `2025-12-31`; official daily NAV maximum drawdown and recovery were not disclosed.
+- Latest secondary cross-check as of `2026-08-14`: closing NAV `US$47.99`, market price `US$47.89`, 33 holdings, and approximately 62.7% in a money-market position plus swap positions. This conflicts with the official 2026-07-29 snapshot of NAV `US$43.91`, 23 holdings and a portfolio displayed as securities; no combined holdings or return calculation is made.
+- Secondary distribution cross-check: previous dividend `US$0.1688`, ex-date `2025-12-30`, pay date `2025-12-31`; trailing distribution yield `0.38%` on the current summary page. The issuer's current distribution series was not exposed in the reviewed static capture.
+- No official issuer numeric current YTD, annual NAV rows, or complete 2021-2025 calendar window was exposed in the reviewed capture. Fund inception is under two years, so 10-year and 2021-2025 windows are not applicable.
+
+### Calculations and reconciliation
+
+- No 10-year NAV TR CAGR, 2016-2025 cumulative return, 2021-2025 CAGR, up/down count or calendar-year best/worst was calculated because the fund began on 2024-10-22 and the issuer did not disclose a complete annual NAV table.
+- Secondary NAV YTD `+0.20%` and 1-year `-1.50%` are retained as period observations as of 2026-06-30; they are not relabelled as current August performance and are marked `†` in the performance page.
+- Secondary since-inception cumulative growth is `US$17,230 / US$10,000 - 1 = 72.30%`; the source separately reports annualised since-inception return `36.80%`. No independently annualised CAGR is substituted because the exact endpoint convention is not exposed.
+- S&P 500 cached 2016-2025 rows are not a comparable window for EUAD's short history; no same-date current S&P 500 comparison is claimed.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, Cboe BZX exchange, passive classification, tracked index, return basis, limited-history window, units, currencies, metric definitions, as-of dates and source URLs are recorded.
+- PASS: official issuer and SEC evidence establish eligibility; secondary NAV observations are separated and marked `†`; official current-YTD gap, official/secondary NAV-date conflict and holdings conflict are disclosed; no 10-year label is applied to a shorter history.
+- PASS: proposed EUAD performance page, Europe region row, performance-index addition, region-index count, and dated source-batch contents are fully specified; canonical breadcrumb and `geography/Europe` tag are present.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence established EUAD eligibility; the scheduled-local checklist passed and the limited-history/source-conflict gaps were disclosed.

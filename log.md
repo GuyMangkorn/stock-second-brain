@@ -3,6 +3,7 @@
 ## 2026-08-18
 
 - `etf-performance`: Created [[ETF_NYSE_ARCA_AVDV Performance]], [[ETF_NYSE_ARCA_EPOL Performance]], [[ETF_NASDAQ_EUFN Performance]], [[ETF_NYSE_ARCA_EWO Performance]], and [[ETF_NYSE_ARCA_GREK Performance]]; updated [[International ETF]], [[Europe ETF]], [[Poland ETF]], [[Austria ETF]], [[Greece ETF]], [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-18]]. Scheduled-inline local pre-save returned PASS for all five; all five reached confirmed `Done`, with secondary annual/YTD and daily NAV drawdown/recovery gaps disclosed where applicable.
+- `etf-performance`: Updated [[ETF_NYSE_ARCA_EWP Performance]], [[ETF_LSE_IPOL Performance]], [[ETF_NYSE_ARCA_EWI Performance]], [[ETF_AMEX_FDD Performance]], and created [[ETF_CBOE_BZX_EUAD Performance]]; updated [[Europe ETF]], [[Poland ETF]], [[Italy ETF]], [[Spain ETF]], [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-18]]. Scheduled-inline local pre-save returned PASS; all five cards reached confirmed `Done`, with IPOL's 2020 conflict, EUAD's limited-history/YTD/holdings gaps, and daily NAV drawdown gaps disclosed.
 
 ## 2026-08-17
 

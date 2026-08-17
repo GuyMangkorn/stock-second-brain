@@ -18,11 +18,14 @@ tags:
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
 | EPOL | iShares MSCI Poland ETF | Poland single-country equity | 11.71% | 16.89% | 26.40% | [[ETF_NYSE_ARCA_EPOL Performance]] |
+| IPLCF / IPOL | iShares MSCI Poland UCITS ETF USD (Acc) | Poland single-country equity / accumulating | 10.24%† | 13.76% | 27.44% | [[ETF_LSE_IPOL Performance]] |
 
 `11.71%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-06-30; `16.89%`
 เป็น rounded-input CAGR จาก official calendar NAV TR rows 2021-2025 และ `26.40%`
-เป็น official NAV TR YTD ณ 2026-08-13. ค่า *, †, not applicable และ
-ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม.
+เป็น official NAV TR YTD ณ 2026-08-13. สำหรับ IPOL, `10.24%†` เป็น issuer
+current rolling field จาก page capture ณ 2026-08-14; factsheet/live-page annual
+table มี conflict ในปี 2020 จึงไม่คำนวณ 2016-2025 CAGR จาก annual rows. ค่า *, †,
+not applicable และไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม.
 
 ## Navigation
 
