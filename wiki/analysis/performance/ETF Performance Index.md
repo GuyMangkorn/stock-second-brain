@@ -59,6 +59,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025; rolling 10-year as of 2026-07-31 | 7.42% | 6.45% | 10.86% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive; 14.43% 3-year standard deviation |
 | [[ETF_NYSE_ARCA_SCHC Performance]] | official 2010 / official 2016-2025 | 8.23% | 7.10% | 6.15% | 2025 +37.73% / 2022 -21.92% | developed international ex-U.S. small-cap | small-cap/country/FX/liquidity-sensitive |
 | [[ETF_NASDAQ_SCZ Performance]] | official 2007 / official 2016-2025; rolling issuer 2026-06-30 | 8.60% | 5.55% | 13.83% | 2025 +32.10% / 2022 -21.22% | developed ex-U.S./Canada small-cap | small-cap/country/FX/liquidity-sensitive; 14.97% 3-year standard deviation |
+| [[ETF_NYSE_ARCA_ISCF Performance]] | official 2015 / official 2016-2025; rolling issuer 2026-06-30 | 9.69% | 8.45% | 12.52% | 2017 +36.24% / 2018 -18.18% | international small-cap multifactor equity | small-cap/country/factor/FX/liquidity-sensitive; benchmark splice in 2023; 14.21% 3-year standard deviation |
 | [[ETF_NYSE_ARCA_FNDC Performance]] | official 2013 / official 2016-2025; rolling issuer 2026-07-31 | 8.11% | 8.25% | 10.96% | 2025 +35.79% / 2018 -18.77% | developed ex-U.S. small-cap fundamental equity | small-cap/country/FX/value/tracking-sensitive |
 | [[ETF_LSE_WSML Performance]] | official inception 2018-03-27 / official 2019-2025; history under 10 years; input alias IMWSF | not applicable (<10y history) | 7.17% | 19.00% | 2019 +25.73% / 2022 -18.64% | global developed small-cap equity | small-cap/country/FX/liquidity-sensitive; 16.16% 3-year standard deviation |
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
@@ -218,6 +219,7 @@ official current YTD ของ issuer ยังไม่พบ.
 | [[ETF_NYSE_ARCA_VSS Performance]] | 12.81% | -21.22% | 15.25% | 2.67% | 29.99% | 36.70% | 4 / 1 |
 | [[ETF_NYSE_ARCA_SCHC Performance]] | 12.14% | -21.92% | 14.69% | 1.90% | 37.73% | 40.94% | 4 / 1 |
 | [[ETF_NASDAQ_SCZ Performance]] | 10.02% | -21.22% | 12.90% | 1.35% | 32.10% | 31.01% | 4 / 1 |
+| [[ETF_NYSE_ARCA_ISCF Performance]] | 13.22% | -15.06% | 11.52% | 4.33% | 34.07% | 50.01% | 4 / 1 |
 | [[ETF_LSE_WSML Performance]] | 15.81% | -18.64% | 16.02% | 7.93% | 19.84% | 41.39% | 4 / 1 |
 | [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
 | [[ETF_CBOE_EFAV Performance]] | 7.02% | -14.76% | 11.98% | 5.28% | 26.16% | 35.68% | 4 / 1 |
@@ -335,7 +337,7 @@ current strategy แบบต่อเนื่องห้าปี.
 | OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.67% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
 | FXI China large-cap | 2024-2025 rebound `+30.10%` / `+29.01%` แต่ 2026 YTD กลับมา `-9.28%`; single-country concentration and FX/policy risk remain the dominant behavioral labels |
 | ECNS China small-cap | 2025 rebound `+36.42%` ตามด้วย 2026 YTD `-10.26%`; higher 3-year standard deviation than MCHI และ exposure กระจายไป healthcare, industrials, consumer, real estate ไม่ใช่ pure China internet |
-| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS/SCHC/SCZ; international value/dividend = DIVI; single-country = Canada EWC/FLCA, Germany EWG และ Japan EWJ/BBJP/FLJP |
+| Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS/SCHC/SCZ/ISCF; international value/dividend = DIVI; single-country = Canada EWC/FLCA, Germany EWG และ Japan EWJ/BBJP/FLJP |
 | EFAV minimum volatility | 2016-2025 CAGR `5.96%` ต่ำกว่า S&P 500 TR `14.82%`; 3-year beta `0.28` สนับสนุน lower-beta behavior ล่าสุด แต่ไม่ใช่ guarantee ของ downside protection |
 
 **สรุปสั้น:** DIVI ชนะใน common window แต่ไม่ควรถูกตีความว่า defensive อัตโนมัติ.
@@ -647,3 +649,4 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_IWO Performance]] — IWO (USA; official 2016-2025 NAV TR cumulative `+148.84%` / rounded-input CAGR `9.54%` from the complete 0.1%-precision table, 2021-2025 CAGR `3.11%`, issuer 10-year NAV TR `11.92%` as of 2026-06-30, and current official NAV TR YTD `+21.61%` as of 2026-08-13; daily NAV drawdown/recovery remains a gap)
 - [[ETF_NASDAQ_SCZ Performance]] — SCZ (International; official 2016-2025 NAV TR cumulative `+104.25%` / rounded-input CAGR `7.40%`, 2021-2025 CAGR `5.55%`, issuer rolling 10-year NAV TR `8.60%` as of 2026-06-30, and current official NAV TR YTD `+13.83%` as of 2026-08-13; daily NAV drawdown/recovery remains a gap)
 - [[ETF_CBOE_BZX_BBSC Performance]] — BBSC (USA; official 2021-2025 NAV TR cumulative `+38.35%` / rounded-input CAGR `6.71%`, history under 10 years, and current official NAV TR YTD `+23.96%` as of 2026-06-30; market-price YTD `+24.13%`, exchange transfer to Cboe BZX and daily NAV drawdown/recovery remain disclosed gaps)
+- [[ETF_NYSE_ARCA_ISCF Performance]] — ISCF (International; official 2016-2025 NAV TR cumulative `+127.24%` / rounded-input CAGR `8.55%`, 2021-2025 CAGR `8.45%`, issuer rolling 10-year NAV TR `9.69%` as of 2026-06-30, and current official NAV TR YTD `+12.52%` as of 2026-08-13; benchmark splice in 2023 and daily NAV drawdown/recovery remain disclosed gaps)

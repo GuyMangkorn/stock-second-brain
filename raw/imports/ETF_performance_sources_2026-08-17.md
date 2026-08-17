@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC
-input_count: 31
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, ISCF
+input_count: 32
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; IJR official 2016-2025; IWM official 2016-2025 at 0.1% precision; IWN official 2016-2025 at 0.1% precision; IWO official 2016-2025 at 0.1% precision; AVUV unsupported active ETF; DFAS unsupported active ETF; AVDV unsupported active ETF; SCZ official 2016-2025; BBSC official 2021-2025; ISCF official 2016-2024 SEC and 2025 factsheet; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, and AVDV. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ, BBSC, and ISCF. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -141,6 +141,7 @@ review_gate: PASS
 | AVDV | unsupported | NYSE Arca:AVDV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm | actively managed and does not seek to replicate a specified index; outside passive index-tracking equity scope; no performance artifact created |
 | SCZ | supported | NASDAQ:SCZ | International | 13.83% (2026-08-13) | https://www.ishares.com/us/products/239627/ | passive/index-tracking developed ex-U.S./Canada small-cap equity; official 2016-2025 rows; daily NAV drawdown/recovery not disclosed |
 | BBSC | supported | Cboe BZX:BBSC | USA | 23.96% (2026-06-30) | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBSC.PDF | passive/index-tracking U.S. small-cap equity; history under 10 years; exchange transfer from NYSE Arca to Cboe BZX resolved; daily NAV drawdown/recovery not disclosed |
+| ISCF | supported | NYSE Arca:ISCF | International | 12.52% (2026-08-13) | https://www.ishares.com/us/products/272823/ishares-international-small-cap-equity-factor-etf | passive/index-tracking international small-cap factor equity; benchmark changed from MSCI World ex USA Small Cap Diversified Multiple-Factor Index to STOXX International Small-Cap Equity Factor Index on 2023-03-01; daily NAV drawdown/recovery not disclosed |
 
 ## GSSC official source map
 
@@ -1334,6 +1335,58 @@ review_gate: PASS
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
 - Planned durable paths: create `wiki/analysis/performance/ETF_CBOE_BZX_BBSC Performance.md`; update `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
 - Planned graph changes: primary region `USA`; add breadcrumb `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`; add `geography/United-States`; link the new page from USA navigation and the performance index; keep annual numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## ISCF official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:ISCF` | https://www.ishares.com/us/products/272823/ishares-international-small-cap-equity-factor-etf | Official iShares product page: identity, exchange, benchmark, inception, current NAV/price/YTD, holdings and risk fields | Current NAV/price 2026-08-14; NAV TR YTD 2026-08-13; holdings 2026-08-13; risk fields through 2026-07-31 |
+| `NYSE Arca:ISCF` | https://www.ishares.com/us/literature/fact-sheet/iscf-ishares-international-small-cap-equity-factor-etf-fund-fact-sheet-en-us.pdf | Official factsheet: NAV/market-price/benchmark rows 2021-2025, return basis, current benchmark metadata and fund characteristics | Factsheet as of 2026-06-30; 2025 row and annual benchmark rows through 2025 |
+| `NYSE Arca:ISCF` | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-edge-msci-multifactor-intl-small-cap-etf-7-31.pdf | Official summary prospectus: passive objective, fees, 2016-2024 calendar NAV rows, best/worst quarters and benchmark splice | Dated 2025-11-28; annual chart through 2024; calendar YTD field in prospectus is stale and not used for current YTD |
+| Parent input identity | `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md` | Exact parent backlog row used to confirm the intended iShares fund and current quote snapshot | Line 17: iShares International Small-Cap Equity Factor ETF, input price `46.04` |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | USD total return, dividends reinvested; cached annual convention as of 2025-12-31 |
+
+## ISCF raw observations and calculations
+
+| Year | ISCF NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 0.01% | 11.96% |
+| 2017 | 36.24% | 21.83% |
+| 2018 | -18.18% | -4.38% |
+| 2019 | 25.94% | 31.49% |
+| 2020 | 7.89% | 18.40% |
+| 2021 | 13.22% | 28.71% |
+| 2022 | -15.06% | -18.11% |
+| 2023 | 11.52% | 26.29% |
+| 2024 | 4.33% | 25.02% |
+| 2025 | 34.07% | 17.88% |
+
+- Metric basis: official iShares NAV total return assumes reinvestment of dividends/capital gains and deducts fund expenses; currency USD.
+- Issuer benchmark annual rows in the June 2026 factsheet for 2021-2025 are `13.43%`, `-15.01%`, `11.75%`, `4.67%`, and `33.75%`; they are retained as issuer metadata and not substituted for the common S&P 500 reference.
+- Benchmark splice: historical index data before 2023-03-01 is `MSCI World ex USA Small Cap Diversified Multiple-Factor Index (Net)`; data from 2023-03-01 is `STOXX International Small-Cap Equity Factor Index (Net)`.
+- ISCF 2016-2025 compound: `127.24%` cumulative; rounded-input CAGR `8.55%`.
+- ISCF 2021-2025 compound: `50.01%` cumulative; rounded-input CAGR `8.45%`.
+- Issuer rolling 10-year NAV TR average annual: `9.69%` as of 2026-06-30; raw rolling endpoints are not disclosed and this is not substituted for the calendar-window CAGR.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Up years / down years: `8 / 2`; best `2017 +36.24%`; least positive `2016 +0.01%`; worst `2018 -18.18%`; least bad down year `2022 -15.06%`.
+- Current official fields: NAV TR YTD `12.52%` as of 2026-08-13; NAV `US$45.93` and closing price `US$46.04` as of 2026-08-14; 3-year standard deviation `14.21%` and beta `0.73` as of 2026-07-31; holdings `1,161` as of 2026-08-13.
+
+## ISCF gaps, benchmark splice, and scheduled-inline local review
+
+- The exact parent input row at `/Users/mangkornkatawong/Documents/md_output/current-filtered-etfs-14.md:17` identifies the intended iShares International Small-Cap Equity Factor ETF; no ticker alias conflict was found.
+- The annual evidence is intentionally spliced by source date: SEC summary prospectus rows for 2016-2024 and the June 2026 official factsheet row for 2025. The overlapping 2021-2024 NAV rows reconcile exactly.
+- The issuer benchmark changed on 2023-03-01 from the MSCI World ex USA Small Cap Diversified Multiple-Factor Index (Net) to the STOXX International Small-Cap Equity Factor Index (Net); this is preserved and not treated as a homogeneous single-index history.
+- The latest official current NAV TR field reviewed is `12.52%` as of 2026-08-13; the common S&P cache has no synchronized 2026 current-year row, so no current S&P comparison is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
+- Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NYSE_ARCA_ISCF Performance.md`; update `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `International`; add breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; add `geography/International` and `geography/international-ex-US`; link the new page from International navigation and the performance index; keep annual numeric ownership in the performance page.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
