@@ -50,6 +50,7 @@ tags:
 | ZPRVF | State Street SPDR MSCI USA Small Cap Value Weighted UCITS ETF (USD line USSC) | U.S. small-cap value equity | 12.10% | 12.97% | 20.29% | [[ETF_LSE_USSC Performance]] |
 | NUSC | Nuveen ESG Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 5.51% | 16.76% | [[ETF_CBOE_BZX_NUSC Performance]] |
 | IJR | iShares Core S&P Small-Cap ETF | U.S. small-cap broad equity | 11.47% | 7.23% | 25.09% | [[ETF_NYSE_ARCA_IJR Performance]] |
+| IWM | iShares Russell 2000 ETF | U.S. small-cap broad equity | 11.53% | 5.96% | 23.73% | [[ETF_NYSE_ARCA_IWM Performance]] |
 | ESML | iShares ESG Aware MSCI USA Small-Cap ETF | U.S. ESG small-cap equity | not applicable (<10y) | 7.47% | 23.07% | [[ETF_CBOE_BZX_ESML Performance]] |
 | IJT | iShares S&P Small-Cap 600 Growth ETF | U.S. small-cap growth equity | 11.82% | 5.35% | 26.03% | [[ETF_NASDAQ_IJT Performance]] |
 | ISCG | iShares Morningstar Small-Cap Growth ETF | U.S. small-cap growth equity | 12.02% | 2.67% | 19.39% | [[ETF_NYSE_ARCA_ISCG Performance]] |
