@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV
-input_count: 29
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV, DFAS, AVDV, SCZ
+input_count: 30
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -791,6 +791,54 @@ reviewer_dispatch: not-attempted-by-design
 - The input is an OTC alias (`SSEUF`) rather than the official USD London ticker; the canonical exchange-qualified key is `LSE:R2US` and the official primary listing is Deutsche Börse `ZPRR`. The alias, ISIN, share-class currency and index identity were reconciled before save.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## SCZ official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NASDAQ:SCZ` | https://www.ishares.com/us/products/239627/ | Official iShares product page: identity, NASDAQ listing, inception, benchmark, current NAV/YTD, expense ratio, holdings and risk fields | Current NAV/price 2026-08-14; NAV TR YTD 2026-08-13; holdings 2026-08-13; risk fields through 2026-07-31 |
+| `NASDAQ:SCZ` | https://www.ishares.com/ch/professionals/en/products/239627/ishares-msci-eafe-smallcap-etf?switchLocale=Y | Official iShares performance table with complete 2016-2025 calendar rows | Table reviewed 2026-08-17; rows displayed at one decimal |
+| `NASDAQ:SCZ` | https://www.ishares.com/us/literature/fact-sheet/scz-ishares-msci-eafe-small-cap-etf-fund-fact-sheet-en-us.pdf | Official factsheet: NAV return basis, 2021-2025 rows, benchmark, inception and expense ratio | Factsheet as of 2026-06-30 |
+| `NASDAQ:SCZ` | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-eafe-small-cap-etf-7-31.pdf | Official summary prospectus: objective, index-tracking scope and fee/risk context | Dated 2025-11-28 |
+| S&P 500 TR | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Official common benchmark definition | Cached USD total-return convention; annual rows as of 2025-12-31 |
+
+## SCZ raw observations and calculations
+
+| Year | SCZ NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 2.40% | 11.96% |
+| 2017 | 32.50% | 21.83% |
+| 2018 | -17.80% | -4.38% |
+| 2019 | 24.70% | 31.49% |
+| 2020 | 12.10% | 18.40% |
+| 2021 | 10.02% | 28.71% |
+| 2022 | -21.22% | -18.11% |
+| 2023 | 12.90% | 26.29% |
+| 2024 | 1.35% | 25.02% |
+| 2025 | 32.10% | 17.88% |
+
+- Metric basis: official iShares NAV total return with dividends/capital gains reinvested and fund expenses deducted; USD.
+- Issuer benchmark: `MSCI EAFE Small Cap Index (Net)`; retained as metadata and not substituted for the common S&P 500 reference.
+- SCZ 2016-2025 compound from displayed annual rows: `104.25%` cumulative; rounded-input CAGR `7.40%`.
+- SCZ 2021-2025 compound from displayed annual rows: `31.01%` cumulative; rounded-input CAGR `5.55%`.
+- S&P 500 cached 2016-2025 compound: `298.33%` cumulative; rounded-input CAGR `14.82%`.
+- S&P 500 cached 2021-2025 compound: `96.17%` cumulative; rounded-input CAGR `14.43%`.
+- Formula: `CAGR = product(1 + annual return)^(1 / number of years) - 1`.
+- Current NAV TR YTD: `13.83%` as of 2026-08-13; current NAV `US$87.17` and closing price `US$87.14` as of 2026-08-14.
+- Issuer rolling 10-year NAV TR average annual: `8.60%` as of 2026-06-30; raw endpoints are not disclosed and this is not substituted for the calendar-window CAGR.
+- Official risk fields: 3-year standard deviation `14.97%` and beta `0.78` as of 2026-07-31; holdings `2,056` as of 2026-08-13.
+
+## SCZ gaps and local review
+
+- The annual rows are official but rounded at different displayed precision: 2016-2020 one decimal in the product performance table and 2021-2025 two decimals in the June 2026 factsheet. Calculations preserve the displayed inputs and are labelled rounded-input.
+- The current S&P 500 TR field reviewed is not synchronized to the SCZ current YTD observation, so no current-year cross-asset comparison is asserted.
+- Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no secondary proxy is used.
+- Planned durable paths: create `wiki/analysis/performance/ETF_NASDAQ_SCZ Performance.md`; update `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, this source batch, and `log.md`.
+- Planned graph changes: primary region `International`; add breadcrumb `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`; add `geography/International` and `geography/international-ex-US`; preserve numeric ownership in the performance page.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## AVUV unsupported ETF type
 
