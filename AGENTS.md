@@ -177,11 +177,20 @@ results, financial ingest, stock research, or DCF stages.
 
 ### etf-performance
 
-Use `check-etf-performance` for passive equity ETF performance analysis.
+Use `check-etf-performance` for passive index-tracking and active long-only
+equity ETFs. Classify active funds from official strategy documents and assess
+management evidence against an official strategy-aligned benchmark; keep raw
+Total Return separate from excess return and risk-adjusted evidence.
 Explicit `[Skills] TICKER` or `$check-etf-performance` invocation defaults to
 `lean` and saves the performance page plus dated source batch; an implicit
 natural-language performance question defaults to read-only `chat`. Explicit
 `mode: chat` overrides the save default.
+
+For active long-only equity ETFs, expose management mode, active-process
+subtype, management benchmark, track-record maturity, management evidence, and
+risk-evidence status. Keep `S&P 500 Total Return` as a common reference rather
+than evidence of manager skill unless it is also the official
+strategy-appropriate comparator. Do not call arithmetic excess return `alpha`.
 
 For S&P 500 Total Return comparisons covering complete calendar years
 `2016-2025`, reuse the skill's cached S&P 500 TR convention without a new web
@@ -283,9 +292,12 @@ holdings, state fund suitability only and do not claim portfolio fit.
 - valuation: valuation blockers only
 - decision: action-relevant gaps only
 
-ETF v1 supports passive, index-tracking equity ETFs only. Stop with
-`unsupported ETF type` for bond, commodity, multi-asset, active, leveraged,
-inverse, or derivative-heavy funds.
+ETF research v1 (`official-source-etf-research` and its decision/deep-dive
+routes) supports passive, index-tracking equity ETFs only. The
+`check-etf-performance` workflow additionally supports active long-only equity
+ETFs. Return `unsupported ETF type` for bond, commodity, currency, multi-asset,
+leveraged, inverse, defined-outcome, covered-call, option-income, single-stock
+option, or derivative-heavy funds.
 
 ## Log Standard
 
