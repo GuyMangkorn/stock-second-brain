@@ -29,7 +29,7 @@ tags:
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
 | PID | Invesco International Dividend Achievers ETF | international dividend achievers | 8.81% | 11.28% | 2.05% | [[ETF_NASDAQ_PID Performance]] |
 | VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.13% | 5.46% | 4.64% | [[ETF_NASDAQ_VIGI Performance]] |
-| VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 8.26% | 6.45% | 6.36% | [[ETF_NYSE_ARCA_VSS Performance]] |
+| VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 7.42% | 6.45% | 10.86% | [[ETF_NYSE_ARCA_VSS Performance]] |
 | SCHC | Schwab International Small-Cap Equity ETF | developed international ex-U.S. small-cap | 8.23% | 7.10% | 6.15% | [[ETF_NYSE_ARCA_SCHC Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |

@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO
-input_count: 21
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS
+input_count: 22
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -28,7 +28,7 @@ verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 review_gate: PASS
 
-annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
+annual_rows_as_of: "GSSC official 2018-2025; XSMO official 2016-2025; SSEUF canonical LSE:R2US official 2016-2025; FNDA secondary 2016-2025; ZPRVF canonical LSE:USSC official 2016-2025; NUSC official 2017-2025; IMWSF canonical LSE:WSML official 2019-2025; DES official 2016-2025; FNDC official 2016-2025; RWJ secondary 2016-2025; ISHOF canonical LSE:IDP6 official 2016-2025; DISV unsupported active ETF; CPLCF canonical LSE:CUSS official 2016-2025; BSVO unsupported active ETF; FYX official 2016-2025; IWMI unsupported active ETF; VB official 2016-2025; SCHA secondary 2016-2025; SPSM calendar rows not disclosed; VBR official 2016-2025; VTWO official 2016-2025; VSS official 2016-2025; current NAV/YTD fields through 2026-08-15; S&P current cross-check through 2026-08-10"
 tags:
   - source/etf
 ---
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, and VTWO. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, and VSS. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -268,6 +268,51 @@ review_gate: PASS
 - The issuer 10-year annualized field `11.68%` is retained as an official average annual return for the period ended 2026-06-30. Raw TR endpoints and exact elapsed years were not disclosed, so no endpoint-derived cumulative value is asserted.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric drawdown proxy is saved. Quarterly distributions are disclosed, but the reviewed sources do not provide a complete distribution schedule in the performance table.
 - Complete pre-save checklist: canonical ticker/exchange, fund/index identity, passive-equity type, return basis, distributions, annual rows, cached S&P 500 window, 10-year field and gap, current YTD, quote inputs, as-of dates, calculations, source URLs, candidate page/source-batch contents, USA navigation link, canonical tag, and single log bullet were reviewed locally. No critical/high finding remained.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+## VSS official source map
+
+| Scope | Source | Role | Data / as-of date |
+|---|---|---|---|
+| `NYSE Arca:VSS` | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3184.pdf | Official Vanguard factsheet: passive/index-sampling structure, FTSE benchmark, expense ratio, exchange, inception, annualized NAV TR, current factsheet YTD, distributions, holdings, and standard deviation | Factsheet as of 2026-06-30; current factsheet YTD `8.18%`, rolling 10-year `8.26%`, standard deviation `14.43%` vs benchmark `15.27%` |
+| `NYSE Arca:VSS` | https://advisors.vanguard.com/investments/products/vss/vanguard-ftse-all-world-ex-us-small-cap-etf | Official Vanguard product/quote page: complete annual NAV TR rows, rolling 10-year field, and later price/NAV/YTD capture | Annual rows as of 2025-12-31; rolling 10-year `7.42%` as of 2026-07-31; quote and current YTD as of 2026-08-11 |
+| `NYSE Arca:VSS` | https://investor.vanguard.com/investment-products/etfs/profile/vss | Official Vanguard product-page identity and performance-page cross-check | Accessed 2026-08-17; dynamic page did not expose stable line-level data in the web capture |
+| `NYSE Arca:VSS` | https://fund-docs.vanguard.com/p3184.pdf | Official Vanguard prospectus: legal fund identity, benchmark, and strategy context | Reviewed with the prior source batch; fee effective 2026-02-27 |
+| VSS drawdown context | https://totalrealreturns.com/n/VSS | Secondary price total-return history | Data ending 2026-08-10; drawdown proxy only, not NAV Total Return |
+
+## VSS raw observations and calculations
+
+| Year | VSS NAV TR | S&P 500 TR |
+|---|---:|---:|
+| 2016 | 4.37% | 11.96% |
+| 2017 | 30.26% | 21.83% |
+| 2018 | -18.43% | -4.38% |
+| 2019 | 21.73% | 31.49% |
+| 2020 | 11.95% | 18.40% |
+| 2021 | 12.81% | 28.71% |
+| 2022 | -21.22% | -18.11% |
+| 2023 | 15.25% | 26.29% |
+| 2024 | 2.67% | 25.02% |
+| 2025 | 29.99% | 17.88% |
+| 2026 current | 10.86% NAV / 11.40% market price | not available from cached current-year benchmark |
+
+- Canonical identity: `NYSE Arca:VSS`; Vanguard FTSE All-World ex-US Small-Cap ETF; passive/index-tracking equity ETF using index sampling; inception `2009-04-02`; USD; issuer benchmark `FTSE Global Small Cap ex US Index` (`TGPVA09U`).
+- Metric basis: official Vanguard NAV Total Return is pre-tax, net of expenses, with dividends and capital-gains distributions reinvested. The S&P 500 comparison is the cached USD Total Return convention with dividends reinvested.
+- Latest product-page capture: market price `US$158.81`, NAV `US$158.05`, price/NAV premium `0.48%`, NAV YTD `10.86%`, and market-price YTD `11.40%`, all as of 2026-08-11.
+- Official factsheet cross-check as of 2026-06-30: NAV YTD `8.18%`, market-price YTD `8.23%`, issuer benchmark YTD `7.53%`, 1-year `18.74%`, 3-year annualized `15.50%`, 5-year annualized `5.71%`, 10-year annualized `8.26%`, since-inception annualized `9.51%`, and standard deviation `14.43%` versus benchmark `15.27%`.
+- Using published rounded annual NAV returns, VSS 2016-2025 cumulative `106.58%`, CAGR `7.53%`, and 2021-2025 cumulative `36.70%`, CAGR `6.45%`; up/down count `8 / 2`, best `2017 +30.26%`, worst `2022 -21.22%`.
+- S&P 500 cached 2016-2025 cumulative `298.33%`, CAGR `14.82%`; 2021-2025 cumulative `96.17%`, CAGR `14.43%`.
+- Formula: cumulative `= product(1 + annual TR) - 1`; rounded-input CAGR `= product(1 + annual TR)^(1 / number of years) - 1`.
+
+## VSS gaps, reconciliation, and scheduled-local gate
+
+- The latest product-page capture through 2026-08-11 is used for current YTD and quote fields. The 2026-06-30 factsheet is retained for the standardized current facts and risk cross-check; the two as-of windows are not mixed.
+- The issuer rolling 10-year NAV TR field is `7.42%` as of 2026-07-31, while the factsheet's earlier 2026-06-30 field is `8.26%`; both are official issuer fields for different month-end windows and raw TR endpoints are not disclosed.
+- Official complete-calendar-year NAV rows are available for 2016-2025. Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; the secondary `-43.51%` price total-return drawdown ending 2020-03-23 and current `-2.11%` price drawdown ending 2026-08-10 remain clearly marked as non-NAV context.
+- Complete pre-save checklist: canonical ticker/exchange, international primary region, passive-equity type, return basis, distributions, annual rows, cached S&P 500 window, current/rolling fields, standard-deviation fields, quote inputs, separate as-of dates, calculations, source URLs, candidate page/source-batch contents, International navigation link, canonical tags, and single log bullet were reviewed locally. No critical/high finding remained.
 
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
