@@ -2,8 +2,8 @@
 type: source-batch
 topic: ETF performance
 accessed: 2026-08-17
-input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO
-input_count: 26
+input_source: Trello ETF child cards GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, AVUV
+input_count: 27
 workflow: check-etf-performance
 execution_profile: scheduled-inline
 verification_mode: scheduled-local
@@ -37,7 +37,7 @@ tags:
 
 ## Scope and gate
 
-Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, and IWO. Source discovery, reading, reconciliation,
+Research-bearing lean source batch for GSSC, XSMO, SSEUF, FNDA, ZPRVF, NUSC, IMWSF, DES, FNDC, RWJ, ISHOF, DISV, CPLCF, BSVO, FYX, IWMI, VB, SCHA, SPSM, VBR, VTWO, VSS, IJR, IWM, IWN, IWO, and AVUV. Source discovery, reading, reconciliation,
 calculation, synthesis, and the complete pre-save checklist were performed
 inline under `scheduled-inline`. No research worker, reviewer,
 `source_verifier`, or other sub-agent was dispatched.
@@ -136,6 +136,7 @@ review_gate: PASS
 | SPSM | supported | NYSE Arca:SPSM | USA | 21.54% (2026-07-31) | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-600-small-cap-etf-spsm | passive/index-tracking U.S. small-cap equity; issuer calendar rows and raw 10-year endpoints not disclosed; benchmark continuity is disclosed |
 | IWN | supported | NYSE Arca:IWN | USA | 25.91% (2026-08-13) | https://www.ishares.com/us/products/239712/ishares-russell-2000-value-etf | passive/index-tracking U.S. small-cap value equity; official 2016-2025 rows at 0.1% precision; daily NAV drawdown/recovery not disclosed |
 | IWO | supported | NYSE Arca:IWO | USA | 21.61% (2026-08-13) | https://www.ishares.com/us/products/239709/ishares-russell-2000-growth-etf | passive/index-tracking U.S. small-cap growth equity; official 2016-2025 rows at 0.1% precision; daily NAV drawdown/recovery not disclosed |
+| AVUV | unsupported | NYSE Arca:AVUV | not assigned | not applicable | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm | actively managed and does not seek to replicate a specified index; outside passive index-tracking equity scope; no performance artifact created |
 
 ## GSSC official source map
 
@@ -788,6 +789,27 @@ reviewer_dispatch: not-attempted-by-design
 - The input is an OTC alias (`SSEUF`) rather than the official USD London ticker; the canonical exchange-qualified key is `LSE:R2US` and the official primary listing is Deutsche Börse `ZPRR`. The alias, ISIN, share-class currency and index identity were reconciled before save.
 - Official daily NAV history sufficient to calculate maximum drawdown and recovery was not verified; no numeric secondary drawdown proxy is saved.
 - Annual observations are rounded issuer values; cumulative and CAGR outputs are rounded-input calculations.
+
+## AVUV unsupported ETF type
+
+- Input ticker: `AVUV`; canonical identity: `NYSE Arca:AVUV`; fund: Avantis U.S. Small Cap Value ETF.
+- Type gate: `unsupported ETF type`. The official Avantis product page says the fund is actively managed and does not seek to replicate the performance of a specified index. The current SEC summary prospectus states the same and describes portfolio-manager security selection using profitability/value characteristics plus possible derivatives. This fails ETF v1's passive, index-tracking equity scope.
+
+### AVUV Official Source Map
+
+| Entity | Source | Used for | As-of / note |
+|---|---|---|---|
+| `NYSE Arca:AVUV` | https://www.avantisinvestors.com/avantis-investments/avantis-us-small-cap-value-etf/?aud=indiv | Official issuer product page: identity, exchange, active-management classification, and index-replication exclusion | Page reviewed 2026-08-17; current issuer page |
+| `NYSE Arca:AVUV` | https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm | Official SEC summary prospectus: identity, exchange, expense ratio, active security-selection strategy, derivatives context, and no-specified-index statement | Summary Prospectus dated 2026-01-01; reviewed 2026-08-17 |
+
+### AVUV scheduled-local review
+
+- Complete pre-save checklist reviewed locally: canonical identity/exchange, official issuer and SEC classification, active/passive type gate, index status, ETF v1 scope exclusion, source URLs/as-of dates, no-performance-artifact decision, Trello result metadata, and next-card sequencing.
+- Result: local `PASS` for the unsupported-type classification; no performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was written.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
 
 ## IWN official source map
 
