@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-18
+
+- `etf-performance`: Created [[ETF_NYSE_ARCA_AVDV Performance]], [[ETF_NYSE_ARCA_EPOL Performance]], [[ETF_NASDAQ_EUFN Performance]], [[ETF_NYSE_ARCA_EWO Performance]], and [[ETF_NYSE_ARCA_GREK Performance]]; updated [[International ETF]], [[Europe ETF]], [[Poland ETF]], [[Austria ETF]], [[Greece ETF]], [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-18]]. Scheduled-inline local pre-save returned PASS for all five; all five reached confirmed `Done`, with secondary annual/YTD and daily NAV drawdown/recovery gaps disclosed where applicable.
+
 ## 2026-08-17
 
 - `etf-performance`: Created [[ETF_CBOE_BZX_DFIS Performance]], [[ETF_LSE_AVGS Performance]], [[ETF_NASDAQ_BSVO Performance]], [[ETF_NYSE_ARCA_AVUV Performance]], and [[ETF_CBOE_BZX_DFAS Performance]]; updated [[USA ETF]], [[International ETF]], [[ETF Region Index]], [[ETF Performance Index]], and the dated source batch. Scheduled-inline local pre-save returned PASS for all five; DFIS/AGSCF/BSVO/AVUV/DFAS reached confirmed `Done`. Active benchmark/as-of/fee/predecessor and daily NAV drawdown gaps remain disclosed.

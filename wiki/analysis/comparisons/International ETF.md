@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - analysis/etf-region
   - geography/International
@@ -36,6 +36,7 @@ tags:
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
 | DFIS | Dimensional International Small Cap ETF | international active systematic small-cap | not applicable (<10y history) | not applicable (2022 inception) | 14.18%* | [[ETF_CBOE_BZX_DFIS Performance]] |
 | AGSCF | Avantis Global Small Cap Value UCITS ETF (official USD LSE:AVGS) | international active systematic small-cap value | not applicable (<10y history) | not applicable (2024 inception) | 21.43% | [[ETF_LSE_AVGS Performance]] |
+| AVDV | Avantis International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | 14.24%* | 13.11% | [[ETF_NYSE_ARCA_AVDV Performance]] |
 | GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 7.58%† | not disclosed | 8.18% | [[ETF_NYSE_ARCA_GWX Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
@@ -47,6 +48,12 @@ AGSCF เป็น input alias ของ official USD listing `LSE:AVGS`; `21.43
 official NAV TR YTD ณ 2026-07-31 เทียบกับ management benchmark `13.80%`.
 ประวัติสั้นและ official factsheet ไม่แสดง complete annual rows จึงไม่คำนวณ
 calendar CAGR หรือ hit rate.
+
+AVDV เป็น active long-only international small-cap value ETF; `13.11%` เป็น
+official NAV TR YTD ณ 2026-07-31 และ `14.24%*` เป็น rounded-input CAGR ของ
+secondary dividend-reinvested proxy ช่วง 2021-2025. Official 5Y NAV TR
+`13.81%` เทียบ management benchmark `6.03%` ให้ return-only Excess CAGR
+`+7.78 pp`; hit rate และ official daily drawdown/recovery ยังไม่ verified.
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. FNDC `8.48%` เป็น issuer-reported

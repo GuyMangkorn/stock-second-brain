@@ -1,6 +1,6 @@
 ---
 type: etf-region-index
-updated: 2026-08-17
+updated: 2026-08-18
 scope: ETF performance navigation
 tags:
   - analysis/etf-region
@@ -19,6 +19,7 @@ driver notes ทั้งหมด
 |---|---:|---|
 | USA | 66 | [[USA ETF]] |
 | Australia | 3 | [[Australia ETF]] |
+| Austria | 1 | [[Austria ETF]] |
 | North America | 2 | [[North America ETF]] |
 | India | 15 | [[India ETF]] |
 | Japan | 22 | [[Japan ETF]] |
@@ -27,14 +28,16 @@ driver notes ทั้งหมด
 | Indonesia | 2 | [[Indonesia ETF]] |
 | Canada | 2 | [[Canada ETF]] |
 | Germany | 1 | [[Germany ETF]] |
-| Europe | 1 | [[Europe ETF]] |
+| Greece | 1 | [[Greece ETF]] |
+| Europe | 2 | [[Europe ETF]] |
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
 | Emerging Markets | 5 | [[Emerging Markets ETF]] |
-| International | 23 | [[International ETF]] |
+| International | 24 | [[International ETF]] |
 | Malaysia | 1 | [[Malaysia ETF]] |
 | New Zealand | 1 | [[New Zealand ETF]] |
 | Philippines | 1 | [[Philippines ETF]] |
+| Poland | 1 | [[Poland ETF]] |
 | Singapore | 1 | [[Singapore ETF]] |
 | South Korea | 5 | [[South Korea ETF]] |
 | Southeast Asia | 1 | [[Southeast Asia ETF]] |
