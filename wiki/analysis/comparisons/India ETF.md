@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: India
-updated: 2026-07-26
+updated: 2026-08-17
 tags:
   - analysis/etf-region
   - geography/India
@@ -21,7 +21,7 @@ tags:
 | EPI | WisdomTree India Earnings Fund | India earnings-weighted / index-tracking equity | 9.18% | 11.52% | -7.91% | [[ETF_NYSE_ARCA_EPI Performance]] |
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | IND | Xtrackers Nifty 500 India ETF | India broad equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-11-24) | not disclosed | [[ETF_NASDAQ_IND Performance]] |
-| SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
+| SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | 2.50% | [[ETF_CBOE_BZX_SMIN Performance]] |
 | INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
 | FLIN | Franklin FTSE India ETF | India single-country equity / index-tracking | not applicable (<10y history) | 9.33% | -8.34% | [[ETF_NYSE_ARCA_FLIN Performance]] |
 | FLIBF / FLXI | Franklin FTSE India UCITS ETF | India large-/mid-cap equity / index-tracking | not applicable (<10y history) | 9.83% | -8.42% | [[ETF_LSE_FLXI Performance]] |
@@ -33,8 +33,17 @@ tags:
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม.
 
-SMIN current date-to-date NAV TR YTD อยู่ที่ -0.58% ณ 2026-07-21; standardized
+SMIN current date-to-date NAV TR YTD อยู่ที่ 2.50% ณ 2026-08-13; standardized
 month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
+
+## 2026-08-17 Verified Refresh
+
+SMIN เป็น passive/index-tracking India small-cap equity ETF ที่ติดตาม MSCI
+India Small Cap Index (Net). Issuer rolling 10-year NAV TR CAGR อยู่ที่ 9.71%
+ณ 2026-06-30; common 2021-2025 NAV TR CAGR อยู่ที่ 12.90%; current date-to-date
+NAV TR YTD อยู่ที่ 2.50% ณ 2026-08-13. Official 2015-2025 rows compound ได้
+153.86% cumulative / rounded-input CAGR 8.84%; daily NAV drawdown และ recovery
+ยังไม่พบข้อมูลที่ยืนยันได้.
 
 ## Navigation
 
@@ -57,7 +66,7 @@ month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 | INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking | not applicable (<10y history) | not applicable (inception 2026-03-31) | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
 | INQQ | INQQ The India Internet ETF | India internet/e-commerce equity / index-tracking | not applicable (<10y history) | not applicable (calendar rows unavailable) | -26.17% | [[ETF_NYSE_ARCA_INQQ Performance]] |
 | NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.99% | 10.83% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
-| SMIN | iShares MSCI India Small-Cap ETF | India equity / index-tracking | 9.71% | 12.90% | -0.58% | [[ETF_CBOE_BZX_SMIN Performance]] |
+| SMIN | iShares MSCI India Small-Cap ETF | India equity / index-tracking | 9.71% | 12.90% | 2.50% | [[ETF_CBOE_BZX_SMIN Performance]] |
 
 ## 2026-07-26 Verified Coverage Addition
 

@@ -33,6 +33,7 @@ tags:
 | SCHC | Schwab International Small-Cap Equity ETF | developed international ex-U.S. small-cap | 8.23% | 7.10% | 6.15% | [[ETF_NYSE_ARCA_SCHC Performance]] |
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
+| DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
 | GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 7.58%† | not disclosed | 8.18% | [[ETF_NYSE_ARCA_GWX Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
@@ -48,7 +49,10 @@ annual rows 2016-2025 คือ `8.11%`. IMWSF เป็น OTC alias ของ 
 official factsheet annual rows และ YTD field ใช้ as-of 2026-07-31. ประวัติยังไม่
 ครบ 10 ปี และ 2018 partial return ไม่ถูกนำมาคำนวณ. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม. GWX `8.18%` เป็น official NAV TR
-YTD ณ 2026-06-30 และ annual calendar rows ไม่เปิดเผย
+YTD ณ 2026-06-30 และ annual calendar rows ไม่เปิดเผย. DISV `12.90%*` เป็น
+secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใช้งานได้
+คือ 2023-2025 เพราะ 2022 เป็น inception partial และ official 2021-2025 CAGR
+จึงไม่ applicable.
 
 ## Navigation
 
