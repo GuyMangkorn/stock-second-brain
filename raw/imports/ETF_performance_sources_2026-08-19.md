@@ -882,3 +882,78 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive Belgium classification, official 2021-2025 NAV/benchmark evidence, rolling 10-year/current fields, reconciled calculations and the scheduled-local pre-save checklist passed; benchmark-history, concentration, systematic fair-value and daily NAV gaps remain disclosed.
+
+## HEDJ — WisdomTree Europe Hedged Equity Fund
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `entity_key: NYSE Arca:HEDJ`; input ticker `HEDJ`; official fund `WisdomTree Europe Hedged Equity Fund`; CUSIP `97717X701`; inception `2009-12-31`; official exchange `NYSE Arca`.
+- `management_mode: passive-index`; SEC summary prospectus describes passive/indexing management with representative sampling. The fund seeks to track the `WisdomTree Europe Hedged Equity Index` before fees and expenses and does not attempt to outperform its index.
+- The tracked index is a dividend-weighted European equity index with an exporter tilt and EUR/USD hedge. The current WisdomTree index page uses Bloomberg symbol `WTEHIP`; the fund product page and factsheet display related/legacy symbol `WTIDFTRH`. The index name is the canonical benchmark identity and the symbol discrepancy is preserved.
+- `return_basis: NAV total return` with reinvested distributions and expenses reflected in NAV; return currency USD; market-price return and yields are kept separate. Primary region: `Europe`; canonical tag `geography/Europe`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| WisdomTree HEDJ product page | https://www.wisdomtree.com/us/products/equity/hedj | official current identity, NYSE Arca context, NAV/price, rolling NAV/index returns, hedge ratio, assets, holdings, country and sector snapshots; current page through `2026-08-17`, month-end performance through `2026-07-31` |
+| WisdomTree HEDJ factsheet | https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-hedj-1056.pdf | official exchange, inception, fee, NAV/index rolling fields, 2025 year-end NAV/income observations, holdings and risks; all data as of `2026-06-30` |
+| SEC HEDJ summary prospectus | https://www.sec.gov/Archives/edgar/data/1350487/000121465925011291/hedj73125497k.htm | official passive classification, objective, index rules, hedging risks, NYSE Arca listing and 2016-2024 annual-return chart; August 2025 |
+| WisdomTree Europe Hedged Equity Index | https://www.wisdomtree.com/us/indexes/wtehip | current index identity, country/sector/valuation fields and current symbol `WTEHIP`; as of `2026-07-29` |
+| WisdomTree rules-based methodology | https://www.wisdomtree.com/us/media/core-equity-index-methodology | official dividend-weighting, caps, index calculation and EUR hedge methodology; last updated July 2026 |
+| AAII HEDJ performance page | https://www.aaii.com/etf/ticker/HEDJ | secondary dated annual NAV row used to reconcile calculated 2025; as of `2026-06-30` |
+| Cached S&P 500 Total Return convention | check-etf-performance skill cache and original URLs | USD common reference for 2016-2025 and 2021-2025, dividends reinvested, reference as of `2025-12-31`; no new search |
+
+### Raw observations
+
+- WisdomTree official month-end performance as of `2026-07-31`: HEDJ NAV TR `1Y 18.71%`, `3Y 13.54%`, `5Y 10.97%`, `10Y 10.73%`, since inception `8.98%`; the underlying index is `19.27%`, `13.94%`, `11.30%`, `11.14%`, `9.41%` on the same rows. Current official NAV TR YTD is `9.15%` as of `2026-07-31`.
+- Current WisdomTree product snapshot as of `2026-08-17`: NAV `USD 57.771`, closing market price `USD 57.870`, premium/discount `+0.17%`, total assets `$1,848,683.23k`, expense ratio `0.58%`, distribution yield `6.82%`, SEC 30-day yield `1.97%`, and aggregate hedge ratio `99.42%`. Yield fields are not NAV TR.
+- The June 2026 factsheet identifies 130 holdings, ticker HEDJ, NYSE Arca, inception `12/31/2009`, net expense ratio `0.58%`, Bloomberg index symbol `WTIDFTRH`, and NAV/index rolling fields as of `2026-06-30`. It also reports year-end NAV observations and income: 2022 NAV `35.98`, 2023 `42.87`, 2024 `43.85`, 2025 `53.11`; annual income rows 2022 `0.99`, 2023 `1.42`, 2024 `1.43`, 2025 `0.87`.
+- Official SEC 2025 summary-prospectus chart supplies complete calendar NAV TR rows for 2016-2024: `2016 9.30%`, `2017 13.56%`, `2018 -9.27%`, `2019 26.99%`, `2020 -2.90%`, `2021 23.57%`, `2022 -10.18%`, `2023 26.39%`, `2024 5.65%`. SEC states the chart assumes reinvestment of dividends/distributions.
+- 2025 NAV TR is calculated from official year-end observations: `(53.11 + 0.87) / 43.85 - 1 = 23.3295%`, displayed as `23.33%‡`. AAII independently reports `23.3%` NAV total return for 2025 as of `2026-06-30`; it is a reconciliation check, not a substitute for the official product/factsheet source.
+- Official current country weights as of `2026-08-17`: Germany `23.09%`, France `21.33%`, Spain `18.96%`, Netherlands `18.12%`, Italy `6.13%`, Finland `4.73%`, Belgium `4.46%`; sector weights include Industrials `23.11%`, Financials `16.71%`, Consumer Staples `12.42%`, Consumer Discretionary `11.93%`, Information Technology `11.76%`.
+- Official daily NAV observations sufficient to reproduce maximum drawdown and recovery were not disclosed in the reviewed sources. Annual-return dispersion is used as descriptive evidence only; `risk-adjusted evidence: not-verified`.
+- Cached S&P 500 TR rows are USD: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`: HEDJ 2016-2025 `153.817904%`, displayed `153.82%`; rounded-input calendar CAGR `9.762054%`, displayed `9.76%`; population annual-return standard deviation `13.755145%`, displayed `13.76%`; up/down `7/3`; best `2019 +26.99%`; least positive `2024 +5.65%`; worst `2022 -10.18%`; least-bad down year `2020 -2.90%`.
+- HEDJ 2021-2025 compounds to `82.783523%`, displayed `82.78%`; rounded-input CAGR `12.820341%`, displayed `12.82%`; population annual-return standard deviation `14.044453%`, displayed `14.04%`; up/down `4/1`; best `2023 +26.39%`; worst `2022 -10.18%`.
+- Cached S&P 500 TR compounds to `298.329111%` / rounded-input CAGR `14.821761%` over 2016-2025 and `96.169618%` / `14.426430%` over 2021-2025. It is a common USD reference, not the HEDJ management/tracked index, and no arithmetic alpha claim is made.
+- The official rolling 10-year NAV TR `10.73%` as of `2026-07-31` is kept separate from the calendar-derived `9.76%`; endpoints, dates and source definitions differ.
+
+### Source conflict and quality choice
+
+- WisdomTree product page/factsheet and SEC prospectus are the sources of truth for HEDJ identity, exchange, passive method, objective, fees, index, current/rolling returns and risk. The SEC chart is used for 2016-2024 annual rows because the current product page exposes rolling fields but not a calendar table.
+- The 2025 calculation uses official year-end NAV/income observations and is reconciled to AAII's rounded annual NAV row. It is marked `‡` and is not described as an issuer-published calendar row.
+- `WTIDFTRH` versus `WTEHIP` is preserved as an issuer display-symbol discrepancy; the index name and hedge methodology remain consistent. No market-price return, distribution yield or S&P arithmetic difference is mixed into the NAV analysis.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_HEDJ Performance.md` with canonical `NYSE Arca:HEDJ`, official passive/index identity, USD NAV annual table for 2016-2025, calculated 2025 marker `‡`, rolling 10-year/YTD/current NAV fields, S&P common reference, hedge/country/sector risk, source links, `geography/Europe` tag and breadcrumb.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the HEDJ row, `10.73%` issuer rolling field, `12.82%‡` calendar common-window CAGR, `9.15%` YTD and calculated-2025/index-symbol caveat.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `27` to `28`; no new region page is needed.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with HEDJ coverage row, marked `‡` Common Window row and 2026-08-19 coverage bullet; do not add HEDJ to the strict official 2016-2025 ranking because 2025 is calculated rather than an issuer calendar row.
+- Append one `log.md` workflow bullet; no entity hub, normalized financial table or `raw/funds/` file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:HEDJ` identity, fund name, CUSIP, inception, passive eligibility, WisdomTree tracked index, NYSE Arca exchange, 0.58% fee, USD NAV TR definition, current NAV/YTD, rolling fields and all as-of dates are source-backed.
+- PASS: official SEC 2016-2024 annual rows are separated from the calculated 2025 official-observation row and from cached S&P USD rows; market price, distribution yield and SEC yield are not mixed into NAV TR; `‡` caveat is visible.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR/dispersion/up-down/best-worst calculations recompute from the displayed inputs; issuer rolling 10-year field remains separate from calendar CAGR; no alpha or manager-skill claim is made.
+- PASS: hedge ratio, country/sector/top-holding concentration, hedge-cost/forward/counterparty risks, index-symbol discrepancy and daily NAV drawdown/recovery gap are disclosed; risk-adjusted evidence remains `not-verified`.
+- PASS: complete proposed performance page, source batch section, Europe row/count, performance-index coverage/Common Window/bullet and log bullet are specified; canonical breadcrumb, `geography/Europe` tag and all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official WisdomTree/SEC identity, passive classification, 2016-2024 NAV rows, calculated-and-reconciled 2025 return, official rolling/YTD fields, source reconciliation and the scheduled-local pre-save checklist passed; hedge, concentration, index-symbol and daily NAV gaps remain disclosed.

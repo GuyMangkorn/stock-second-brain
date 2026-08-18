@@ -257,6 +257,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_IEV Performance]] | official 2000 / official 2021-2025; rolling 10-year as of 2026-06-30 | 9.87% | 10.44% | 11.94% | 2025 +35.02% / 2022 -14.16% | developed Europe broad-market passive equity | country/sector/FX-sensitive; 13.38% 3-year standard deviation; semi-annual distributions; NAV drawdown/recovery gap |
 | [[ETF_LSE_XMED Performance]] | official share-class launch 2007 / secondary USD 2021-2025; DWS July 2026 factsheet lacks annual/current performance rows | 9.86%* | 10.57%* | 7.85%* | 2025 +35.77%* / 2022 -14.85%* | developed Europe large-/mid-cap passive accumulating equity | country/sector/FX/large-/mid-cap-sensitive; 17.17% secondary annual-return dispersion; DWS official NAV/benchmark and secondary currency-source gaps disclosed; input alias DXMEF |
 | [[ETF_NYSE_ARCA_DBEU Performance]] | official 2013 / official rolling 10Y as of 2026-06-30; secondary 2016-2025 | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | 2019 +26.80%* / 2018 -8.50%* | developed Europe large-/mid-cap passive USD-hedged equity | country/sector/FX/hedge-cost-sensitive; 11.83% secondary annual-return dispersion; official calendar/YTD gaps and NAV drawdown/recovery gap disclosed |
+| [[ETF_NYSE_ARCA_HEDJ Performance]] | official 2009 / official 2016-2024 plus 2025 calculated from official year-end observations | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | 2019 +26.99% / 2022 -10.18% | Europe dividend-weighted passive USD-hedged equity | country/sector/FX/hedge-cost/index-symbol-sensitive; 13.76% annual-return dispersion; 99.42% hedge ratio; daily NAV drawdown/recovery gap disclosed |
 | [[ETF_NYSE_ARCA_EWU Performance]] | official 1996 / official 2016-2025; rolling 10-year as of 2026-06-30 | 8.21% | 12.67% | 11.50% | 2025 +34.45% / 2018 -14.60% | United Kingdom large/mid-cap passive equity | financials/industrials/consumer staples/health care/energy; country/sector/GBP-USD FX-sensitive; 11.89% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FKU Performance]] | official 2012 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-07-14 | 8.67% | 10.30% | 10.96% | 2025 +37.60% / 2022 -23.52% | United Kingdom rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.80% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLGB Performance]] | official 2017 / official 2018-2025; history under 10 years; rolling issuer 2026-06-30 | not applicable (<10y history) | 12.80% | 11.56% | 2025 +33.36% / 2018 -14.65% | United Kingdom large/mid-cap passive equity | financials/consumer staples/industrials/health care; UK/GBP-USD/country/sector/liquidity-sensitive; 12.41% 3-year standard deviation |
@@ -484,6 +485,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_IEV Performance]] | 35.02% | -14.16% | 19.82% | 1.71% | 35.02% | 64.33% | 4 / 1 |
 | [[ETF_LSE_XMED Performance]] | 16.58%* | -14.85%* | 20.18%* | 2.02%* | 35.77%* | 65.25%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_DBEU Performance]] | 23.30%* | -6.20%* | 17.00%* | 9.50%* | 22.50%* | 81.51%* | 4 / 1 |
+| [[ETF_NYSE_ARCA_HEDJ Performance]] | 23.57% | -10.18% | 26.39% | 5.65% | 23.33%‡ | 82.78%‡ | 4 / 1 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -528,6 +530,14 @@ evidence. DWS's July 2026 factsheet provides the official USD identity, NAV,
 benchmark and fund facts but not annual/current performance rows. Euro-labelled
 ETFdoc/Quantalys and conflicting Stuttgarter rows are excluded from the USD
 calculation.
+
+HEDJ's 2016-2024 annual NAV rows come from the official SEC summary-prospectus
+chart. The 2025 row `23.33%‡` is calculated from official 2024/2025 year-end NAV
+and 2025 income observations and reconciled to AAII's rounded `23.3%` row; the
+2021-2025 common-window row is therefore not treated as a strict issuer-table
+ranking row. The tracked WisdomTree index remains separate from the cached S&P
+500 USD reference, and the fund-page/factsheet `WTIDFTRH` display is kept as a
+legacy/related symbol alongside current index-page symbol `WTEHIP`.
 
 DAX's 2016-2025 and 2021-2025 rows are official fund total-return rows from the
 Global X summary prospectus. The issuer's tracked DAX Index rows are retained
@@ -964,6 +974,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_DBEU Performance]] — DBEU (Europe; official `NYSE Arca:DBEU`; official rolling 10-year NAV TR `+11.58%` as of 2026-06-30, secondary 2016-2025 NAV-return proxy cumulative `+159.58%*` / rounded-input CAGR `+10.01%*`, 2021-2025 CAGR `+12.66%*`, and secondary YTD `+11.50%*` as of 2026-06-30; 2019 `+26.80%*` / 2018 `-8.50%*`, 0.73 official beta, USD hedge and official calendar/YTD/daily NAV gaps disclosed)
 - [[ETF_LSE_ISFD Performance]] — ISFD / IRESF (United Kingdom; input OTC alias resolved by ISIN `IE00BYZ28W67` to official USD hedged `LSE:ISFD`; official 2018-2025 NAV TR cumulative `+83.09%` / rounded-input CAGR `+7.85%`, 2021-2025 CAGR `+13.37%`, and current official NAV TR YTD `+11.08%` as of 2026-08-12; 2025 `+25.79%` / 2020 `-11.28%`, 9.46% 3-year standard deviation, USD share-class versus GBP benchmark basis and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_EWK Performance]] — EWK (Belgium; passive MSCI Belgium IMI 25/50 Index equity exposure; official 2021-2025 NAV TR cumulative `+41.43%` / rounded-input CAGR `+7.18%`, issuer rolling 10-year NAV TR `+7.08%` as of 2026-06-30, and current official NAV TR YTD `+12.61%` as of 2026-08-10; 2025 `+34.96%` / 2022 `-14.08%`, 14.38% 3-year standard deviation, Belgium/sector/top-holdings concentration and daily NAV drawdown/recovery gaps disclosed)
+- [[ETF_NYSE_ARCA_HEDJ Performance]] — HEDJ (Europe; passive WisdomTree Europe Hedged Equity Fund; official 2016-2024 NAV TR rows plus 2025 calculated/reconciled from official year-end NAV and income; 2016-2025 cumulative `+153.82%` / rounded-input CAGR `+9.76%`, 2021-2025 CAGR `+12.82%‡`, issuer rolling 10-year NAV TR `+10.73%` and current official NAV TR YTD `+9.15%` as of 2026-07-31; 99.42% hedge ratio, country/sector/hedge-cost and related-index-symbol risks, plus daily NAV drawdown/recovery gap disclosed)
 
 ## 2026-08-17 Coverage Addition
 

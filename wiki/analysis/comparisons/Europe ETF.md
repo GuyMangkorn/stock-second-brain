@@ -44,6 +44,7 @@ tags:
 | IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 11.94% | [[ETF_NYSE_ARCA_IEV Performance]] |
 | XMED | Xtrackers MSCI Europe UCITS ETF 1C | developed Europe large-/mid-cap passive accumulating equity; input alias DXMEF; USD-traded LSE line | 9.86%* | 10.57%* | 7.85%* | [[ETF_LSE_XMED Performance]] |
 | DBEU | Xtrackers MSCI Europe Hedged Equity ETF | developed Europe large-/mid-cap passive USD-hedged equity | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | [[ETF_NYSE_ARCA_DBEU Performance]] |
+| HEDJ | WisdomTree Europe Hedged Equity Fund | Europe dividend-weighted passive USD-hedged equity; NYSE Arca | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | [[ETF_NYSE_ARCA_HEDJ Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -203,6 +204,15 @@ benchmark, passive method, rolling 10-year NAV TR `11.58%` และ current fun
 fields ณ `2026-06-30`. Annual 2016-2025 rows และ YTD `11.50%*` เป็น secondary
 rounded NAV-return proxy เพราะ annual/YTD table ไม่ได้ปรากฏใน issuer capture;
 daily NAV drawdown/recovery ยังไม่ verified.
+
+HEDJ ใช้ official WisdomTree product page/factsheet และ SEC prospectus สำหรับ
+identity, NYSE Arca listing, passive index method, `10.73%` issuer rolling
+10-year NAV TR และ current NAV TR YTD `9.15%` ณ `2026-07-31`. ค่า 2021-2025
+CAGR `12.82%‡` และ annual 2025 `23.33%‡` ใช้ official 2016-2024 prospectus
+chart ร่วมกับการคำนวณจาก official year-end NAV/income; `‡` จึงไม่ใช่ issuer
+calendar-row label โดยตรง. Hedge ratio `99.42%`, country/sector concentration,
+index-symbol display discrepancy และ daily NAV drawdown/recovery gap ยังต้อง
+ติดตาม.
 
 ## Navigation
 
