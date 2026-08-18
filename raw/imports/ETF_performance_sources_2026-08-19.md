@@ -386,3 +386,68 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Vanguard identity, passive classification, rolling EUR NAV evidence and the marked secondary 2021-2025 proxy passed the scheduled-local pre-save checklist; VGRDF was resolved to LSE:VERE and currency/source gaps were disclosed.
+
+## GSEU — Goldman Sachs ActiveBeta Europe Equity ETF
+
+### Identity and classification
+
+- entity_key: NYSE Arca:GSEU; input ticker: GSEU; CUSIP: 381430305; inception: 2 Mar 2016; listing exchange: NYSE Arca.
+- management_mode: passive-index; the official prospectus says the Fund is not actively managed and generally does not dispose of securities unless they are removed from the tracked index.
+- tracked index and management benchmark: Goldman Sachs ActiveBeta Europe Equity Index. The index uses value, momentum, quality and low-volatility attributes, combines four factor indices equally and rebalances quarterly.
+- return_basis: official NAV Total Return in USD, net of fund expenses, with distributions reinvested; primary region Europe.
+- supported type: passive index-tracking equity ETF; established track record over ten years from inception.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Goldman Sachs GSEU fact card | https://am.gs.com/public-assets/documents/570151a1-24d6-11ef-870d-25a687970406 | official identity, annual NAV rows, rolling NAV/index fields, expenses, holdings, distributions, benchmark and risk disclosures as of 31 Jul 2026 |
+| Goldman Sachs summary prospectus | https://am.gs.com/public-assets/documents/f69ce232-24e2-11ef-ad18-ad734f1320f3 | official objective, not-actively-managed classification, index methodology and fee framework |
+| PortfoliosLab GSEU | https://portfolioslab.com/symbol/GSEU | secondary dividend-adjusted drawdown/recovery and return cross-check |
+| Cached S&P 500 Total Return convention | workflow cache and original URLs in the check-etf-performance skill | USD calendar rows 2021-2025, dividends reinvested, as of 31 Dec 2025; reused within cached 2016-2025 window |
+
+### Raw observations
+
+- Official fact card as of 31 Jul 2026: NAV Total Return YTD 9.78%, 1Y 22.13%, 3Y annualized 15.88%, 5Y annualized 8.85%, 10Y annualized 9.70%, since inception annualized 9.97%.
+- The same official performance table reports Goldman Sachs ActiveBeta Europe Equity Index YTD 9.80%, 1Y 22.30%, 3Y annualized 15.98%, 5Y annualized 8.84%, 10Y annualized 9.75%, since inception annualized 10.01%.
+- Official calendar NAV rows in USD: 2021 16.78%, 2022 -18.12%, 2023 20.86%, 2024 1.63%, 2025 36.41%. The official calendar table also shows the MSCI Europe net total-return reference rows, but MSCI Europe is not the fund’s management benchmark.
+- Official OCF/total expense ratio is 0.25%; fund facts as of 31 Jul 2026 show 346 holdings and net assets of 120.87 million USD. Distribution frequency is quarterly.
+- The official text capture does not expose an exact latest NAV price; current price/NAV and official daily NAV drawdown/recovery are unresolved gaps.
+- PortfoliosLab secondary dividend-adjusted data reports maximum drawdown -35.71% on 18 Mar 2020 with recovery in 172 trading sessions and a 2022 drawdown of -33.98%.
+- Cached S&P 500 TR rows used for the common reference are USD: 2021 28.71%, 2022 -18.11%, 2023 26.29%, 2024 25.02%, 2025 17.88%; reference window is complete calendar years 2016-2025, as of 31 Dec 2025, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Cumulative = product of (1 + annual return) - 1. Official GSEU NAV 2021-2025 compounds to 60.21%; rounded-input CAGR is 9.89%; population standard deviation is 18.50%; up/down years are 4/1; best is 2025 +36.41%; least positive is 2024 +1.63%; worst and least-bad down year are 2022 -18.12%.
+- Cached S&P 500 TR compounds to 96.17% / 14.43% over 2021-2025. It is a USD common reference rather than the strategy benchmark; no direct cross-strategy excess-return or manager-skill claim is made.
+- Official management-benchmark tracking observations remain separate: NAV versus ActiveBeta Index is -0.02 percentage points YTD, -0.17 points over 1Y, -0.10 points annualized over 3Y, +0.01 points annualized over 5Y, -0.05 points annualized over 10Y and -0.04 points since inception, based on the official rounded fields.
+- The official issuer 10-year field is 9.70% annualized as of 31 Jul 2026; it is kept separate from the 2021-2025 calendar CAGR 9.89%.
+
+### Planned durable paths and contents
+
+- Create wiki/analysis/performance/ETF_NYSE_ARCA_GSEU Performance.md with canonical NYSE Arca:GSEU identity, official USD NAV annual table, strategy-benchmark fields, S&P common reference, risk evidence, source links, geography/Europe tag and breadcrumb.
+- Update wiki/analysis/comparisons/Europe ETF.md with the GSEU row and current-date/risk note.
+- Update wiki/analysis/comparisons/ETF Region Index.md Europe count from 23 to 24.
+- Update wiki/analysis/performance/ETF Performance Index.md with the GSEU coverage row, 2021-2025 Common Window row and 2026-08-19 coverage bullet.
+- Append one log.md workflow bullet; no entity hub, normalized financial table or raw/funds file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical ticker/exchange, fund identity, CUSIP, inception, passive eligibility, strategy benchmark, factor methodology, OCF, distribution treatment, NAV TR definition, USD currency and as-of date are source-backed.
+- PASS: official annual NAV rows are separated from official rolling fields, the strategy benchmark is used for management evidence, S&P 500 is labeled only as a common reference, and no manager-skill label is assigned.
+- PASS: 10-year issuer field is distinguished from 2021-2025 calendar CAGR; secondary drawdown/recovery is labeled; current price/NAV and official daily NAV gaps are disclosed.
+- PASS: complete proposed contents of the performance page, source batch section, Europe row/count, performance-index row/Common Window/bullet and log bullet are specified.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Goldman Sachs identity, passive strategic-beta classification, USD NAV annual rows, strategy-benchmark rolling fields and the scheduled-local pre-save checklist passed; GSEU artifacts disclose S&P common-reference and price/NAV source gaps.
