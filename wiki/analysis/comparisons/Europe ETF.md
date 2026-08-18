@@ -38,6 +38,7 @@ tags:
 | VEUR | Vanguard FTSE Developed Europe UCITS ETF (EUR) Distributing | developed Europe large-/mid-cap passive distributing equity; input alias VFDEF | 9.66% | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VEUR Performance]] |
 | IEUR | iShares Core MSCI Europe ETF | developed Europe large-/mid-/small-cap passive broad-market equity; NYSE Arca | 10.02% | 9.91% | 12.03% | [[ETF_NYSE_ARCA_IEUR Performance]] |
 | SPEU | State Street SPDR Portfolio Europe ETF | Western Europe broad-market passive equity across market caps; NYSE Arca | 9.76% | 10.13%* | 7.29% | [[ETF_NYSE_ARCA_SPEU Performance]] |
+| IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 11.94% | [[ETF_NYSE_ARCA_IEV Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -73,6 +74,13 @@ TR YTD `7.29%` ณ วันเดียวกัน; `10.13%*` เป็น sec
 Benchmark history เปลี่ยนจาก linked STOXX Europe 50 เป็น STOXX Europe Total
 Market วันที่ 2023-09-23. Fund จ่าย quarterly; official daily NAV
 drawdown/recovery ยังไม่ verified และ YTD หลัง 2026-06-30 ยังไม่พบข้อมูลที่ยืนยันได้.
+
+IEV มี complete official calendar rows 2021-2025; `9.87%` เป็น issuer rolling
+10-year NAV TR ณ 2026-06-30, `10.44%` เป็น rounded-input CAGR ของ official USD
+NAV rows และ `11.94%` เป็น official NAV TR YTD ณ 2026-08-17. Fund จ่าย income
+semi-annually; latest two verified payments รวม `US$2.031906` ต่อหน่วย.
+Official 3-year standard deviation คือ `13.38%` ณ 2026-07-31; daily NAV
+drawdown/recovery ยังไม่ verified.
 
 FDD `10.86%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `12.37%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ

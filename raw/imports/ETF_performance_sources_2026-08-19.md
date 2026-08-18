@@ -261,3 +261,64 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street identity, passive classification, rolling NAV/benchmark evidence, disclosed benchmark-history change, marked secondary annual proxy and the scheduled-local pre-save checklist passed; SPEU artifacts were written with the issuer-YTD limitation and source-quality boundary disclosed.
+
+## IEV — iShares Europe ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:IEV`; input ticker `IEV`; canonical exchange `NYSE Arca`; fund `iShares Europe ETF`; CUSIP `464287861`; inception `2000-07-25`.
+- `management_mode: passive-index`; tracked index `S&P Europe 350 Index (Net)`; U.S.-domiciled USD share class; broad developed-European equity exposure.
+- `return_basis: NAV total return` with income/capital gains reinvested for performance measurement, net of expenses, USD; market-price return kept separate.
+- Primary region: `Europe`; region page `[[Europe ETF]]` and canonical geography tag `geography/Europe`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares product page | https://www.ishares.com/us/products/239736/IEV | official identity, NYSE Arca listing, current NAV/YTD, price/NAV, holdings, geography, distributions and performance tables; current page capture as of 2026-08-17 |
+| iShares factsheet | https://www.ishares.com/us/literature/fact-sheet/iev-ishares-europe-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 calendar rows, rolling annualized fields, fee, distributions and dated fund facts as of 2026-06-30 |
+| iShares prospectus | https://www.ishares.com/us/literature/prospectus/p-ishares-europe-etf-3-31.pdf | official investment objective, fee and risk disclosures |
+| Cached S&P 500 Total Return convention | original URLs and cache table recorded in the VEUR section above; same workflow cache is reused for the 2021-2025 subset | USD calendar rows 2021-2025, dividends reinvested, as of 2025-12-31; no new search because the window is within cached 2016-2025 |
+
+### Raw observations
+
+- iShares identifies the fund as `IEV` on NYSE Arca with CUSIP `464287861`, inception `2000-07-25`, benchmark `S&P Europe 350 Index (Net)`, semi-annual distribution frequency, and equity asset class.
+- Official factsheet calendar NAV/index rows in USD: 2021 `16.34% / 16.62%`, 2022 `-14.16% / -14.75%`, 2023 `19.82% / 20.20%`, 2024 `1.71% / 2.10%`, 2025 `35.02% / 35.78%`. The factsheet states the hypothetical growth series assumes reinvestment of dividends/capital gains and deducts fund expenses.
+- Official factsheet as of 2026-06-30: NAV TR 1Y `18.26%`, 3Y `16.07%`, 5Y `9.64%`, 10Y `9.87%`, since inception `5.15%`; benchmark 1Y `19.03%`, 3Y `16.38%`, 5Y `9.75%`, 10Y `10.09%`; expense ratio `0.60%`, 3-year standard deviation `13.39%`.
+- Current official product page as of 2026-08-17: NAV `US$75.37`, closing price `US$75.42`, NAV TR YTD `11.94%`, net assets `US$1.692B`, and 360 holdings. Product-page 3-year standard deviation is `13.38%` as of 2026-07-31; geography includes UK `22.90%`, France `15.31%`, Switzerland `14.14%`, Germany `13.55%`, and Netherlands `8.76%` as of 2026-08-17.
+- Official product-page distribution history: income `US$1.280576` with payable date 2026-06-18 and `US$0.751330` with payable date 2025-12-19; latest two verified payments sum to `US$2.031906` per unit. Product page also shows 30-day SEC yield `1.94%` and 12-month trailing yield `2.72%` as of 2026-07-31; these are not NAV TR.
+- Cached S&P 500 TR rows used for the common reference are USD: 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; reference window is complete calendar years 2016-2025, implied endpoints 2015-12-31 to 2025-12-31, as of 2025-12-31, dividends reinvested, not price return or net total return.
+- Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`: IEV 2021-2025 `64.33%`, rounded-input CAGR `10.44%`, population annual-return standard deviation `16.73%`, up/down `4/1`, best `2025 +35.02%`, least positive `2024 +1.71%`, worst/least-bad down year `2022 -14.16%`.
+- IEV 2021-2025 compounds to `64.33%` / rounded-input CAGR `10.44%`; the S&P Europe 350 rows compound to `65.67%` / `10.62%`. The approximate `-0.18 pp` fund-minus-index difference is a passive tracking observation, not alpha.
+- Cached S&P 500 TR compounds to `96.17%` / `14.43%` over 2021-2025. It is the common USD reference, not the issuer benchmark.
+- The issuer's rolling 10-year NAV TR field is `9.87%` as of 2026-06-30; it is kept separate from the calendar-derived 2021-2025 CAGR `10.44%`.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_IEV Performance.md` with canonical `NYSE Arca:IEV` identity, USD NAV/index/S&P annual table, rolling-versus-calendar distinction, current YTD/NAV/price/distribution dates, risk evidence, source links, `geography/Europe` tag and breadcrumb.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the IEV row and current-date/distribution note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `21` to `22` and preserve the existing navigation graph.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the IEV coverage row, 2021-2025 Common Window row and 2026-08-19 coverage bullet.
+- Append one `log.md` workflow bullet; no entity hub or `raw/funds/` file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical ticker/exchange mapping, fund name, CUSIP, inception date, passive eligibility, S&P Europe 350 benchmark, expense ratio, semi-annual distribution treatment, NAV TR definition, USD currency, annual rows, rolling 10Y, current YTD/NAV/price/distributions and all as-of dates are source-backed.
+- PASS: official calendar rows are separated from rolling/current fields and from the cached S&P USD reference; market-price return, yields and NAV TR are not mixed; passive tracking differences are not called alpha.
+- PASS: complete 2021-2025 history supports the calendar calculation; the issuer rolling 10-year field remains separately labeled; daily NAV drawdown/recovery remains explicitly disclosed as a gap.
+- PASS: complete proposed performance page, source batch section, Europe row/count, performance-index row/Common Window/bullet and log bullet are specified; canonical breadcrumb, `geography/Europe` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive classification, USD 2021-2025 NAV/index rows, rolling 10-year field, current YTD/price/distribution evidence and the scheduled-local pre-save checklist passed; IEV artifacts were written with the USD benchmark basis disclosed.
