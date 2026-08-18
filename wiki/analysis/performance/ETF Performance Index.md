@@ -253,6 +253,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_IEUR Performance]] | official 2014 / official 2021-2025; rolling 10-year as of 2026-06-30 | 10.02% | 9.91% | 12.03% | 2025 +35.11% / 2022 -16.18% | developed Europe large-/mid-/small-cap passive broad-market equity | country/sector/small-cap/FX-sensitive; 13.67% 3-year standard deviation; semi-annual distributions; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_SPEU Performance]] | official 2002 / official rolling fields as of 2026-06-30; secondary annual proxy 2021-2025* | 9.76% | 10.13%* | 7.29% | 2025 +35.80%* / 2022 -15.97%* | Western Europe broad-market passive equity across market caps | country/sector/small-cap/FX-sensitive; linked benchmark change 2023-09-23; quarterly distributions; current-YTD and NAV drawdown/recovery gaps |
 | [[ETF_NYSE_ARCA_IEV Performance]] | official 2000 / official 2021-2025; rolling 10-year as of 2026-06-30 | 9.87% | 10.44% | 11.94% | 2025 +35.02% / 2022 -14.16% | developed Europe broad-market passive equity | country/sector/FX-sensitive; 13.38% 3-year standard deviation; semi-annual distributions; NAV drawdown/recovery gap |
+| [[ETF_LSE_XMED Performance]] | official share-class launch 2007 / secondary USD 2021-2025; DWS July 2026 factsheet lacks annual/current performance rows | 9.86%* | 10.57%* | 7.85%* | 2025 +35.77%* / 2022 -14.85%* | developed Europe large-/mid-cap passive accumulating equity | country/sector/FX/large-/mid-cap-sensitive; 17.17% secondary annual-return dispersion; DWS official NAV/benchmark and secondary currency-source gaps disclosed; input alias DXMEF |
 | [[ETF_NYSE_ARCA_EWU Performance]] | official 1996 / official 2016-2025; rolling 10-year as of 2026-06-30 | 8.21% | 12.67% | 11.50% | 2025 +34.45% / 2018 -14.60% | United Kingdom large/mid-cap passive equity | financials/industrials/consumer staples/health care/energy; country/sector/GBP-USD FX-sensitive; 11.89% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FKU Performance]] | official 2012 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-07-14 | 8.67% | 10.30% | 10.96% | 2025 +37.60% / 2022 -23.52% | United Kingdom rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.80% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLGB Performance]] | official 2017 / official 2018-2025; history under 10 years; rolling issuer 2026-06-30 | not applicable (<10y history) | 12.80% | 11.56% | 2025 +33.36% / 2018 -14.65% | United Kingdom large/mid-cap passive equity | financials/consumer staples/industrials/health care; UK/GBP-USD/country/sector/liquidity-sensitive; 12.41% 3-year standard deviation |
@@ -475,6 +476,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_IEUR Performance]] | 35.11% | -16.18% | 19.83% | 1.70% | 35.11% | 60.39% | 4 / 1 |
 | [[ETF_NYSE_ARCA_SPEU Performance]] | 35.80%* | -15.97%* | 19.84%* | 1.94%* | 35.80%* | 61.99%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_IEV Performance]] | 35.02% | -14.16% | 19.82% | 1.71% | 35.02% | 64.33% | 4 / 1 |
+| [[ETF_LSE_XMED Performance]] | 16.58%* | -14.85%* | 20.18%* | 2.02%* | 35.77%* | 65.25%* | 4 / 1 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -512,6 +514,13 @@ FEZ's 2016-2025 and 2021-2025 annual rows are secondary dividend-reinvested
 total-return proxies rather than issuer-published NAV rows, so FEZ is excluded
 from the strict Common Window ranking; the official rolling 10-year NAV field
 and current YTD remain separately displayed in the coverage table.
+
+XMED's 2021-2025 rows are a secondary USD Morningstar growth-series proxy and
+are marked `*`; the displayed common-window row is not strict official ranking
+evidence. DWS's July 2026 factsheet provides the official USD identity, NAV,
+benchmark and fund facts but not annual/current performance rows. Euro-labelled
+ETFdoc/Quantalys and conflicting Stuttgarter rows are excluded from the USD
+calculation.
 
 DAX's 2016-2025 and 2021-2025 rows are official fund total-return rows from the
 Global X summary prospectus. The issuer's tracked DAX Index rows are retained
@@ -944,6 +953,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_GSEU Performance]] — GSEU (Europe; official NYSE Arca:GSEU; official 2021-2025 NAV TR cumulative +60.21% / rounded-input CAGR +9.89%, issuer rolling 10-year NAV TR +9.70% and current official NAV TR YTD +9.78% as of 2026-07-31; ActiveBeta strategy benchmark -0.02 pp YTD and -0.17 pp 1Y, 18.50% annual-return dispersion, secondary max drawdown/recovery and current NAV-price gaps disclosed)
 - [[ETF_LSE_ISEU Performance]] — ISEU / IMSEF (Europe; input OTC alias resolved by ISIN IE00B1YZSC51 to official USD London line LSE:ISEU; official EUR 2016-2025 NAV TR cumulative +113.94% / rounded-input CAGR +7.90%†, 2021-2025 CAGR +11.49%, current official NAV TR YTD +13.81% as of 2026-08-14 and EUR NAV 41.11 as of 2026-08-17; July factsheet YTD +12.05% as of 2026-07-31, 10.59% 3-year standard deviation, quarterly distributions, EUR-return/USD-listing basis and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_LSE_ISAC Performance]] — ISAC / ISACF (International; input OTC alias resolved to official USD `LSE:ISAC` by ISIN `IE00B6R52259`; official 2016-2025 NAV TR cumulative +201.54% / rounded-input CAGR +11.67%†, 2021-2025 CAGR +11.29%, current official NAV TR YTD +15.06% and NAV USD 124.95 as of 2026-08-17; official July factsheet YTD +11.42% as of 2026-07-31, MSCI ACWI tracking observations, 15.49% annual-return dispersion, 12.61% 3-year standard deviation and global/FX/emerging-market risk disclosed)
+- [[ETF_LSE_XMED Performance]] — DXMEF / XMED (Europe; OTC alias resolved by DWS/DTCC to official USD London line `LSE:XMED`; secondary USD 2021-2025 total-return proxy cumulative +65.25%* / rounded-input CAGR +10.57%*, secondary rolling 10-year +9.86%* and YTD +7.85%* as of 2026-07-21; official DWS July factsheet supplies USD identity/NAV/benchmark/fee but not annual/current rows, so Euro-labelled and conflicting secondary series are excluded from the USD calculation)
 
 ## 2026-08-17 Coverage Addition
 

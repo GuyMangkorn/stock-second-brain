@@ -42,6 +42,7 @@ tags:
 | IEUR | iShares Core MSCI Europe ETF | developed Europe large-/mid-/small-cap passive broad-market equity; NYSE Arca | 10.02% | 9.91% | 12.03% | [[ETF_NYSE_ARCA_IEUR Performance]] |
 | SPEU | State Street SPDR Portfolio Europe ETF | Western Europe broad-market passive equity across market caps; NYSE Arca | 9.76% | 10.13%* | 7.29% | [[ETF_NYSE_ARCA_SPEU Performance]] |
 | IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 11.94% | [[ETF_NYSE_ARCA_IEV Performance]] |
+| XMED | Xtrackers MSCI Europe UCITS ETF 1C | developed Europe large-/mid-cap passive accumulating equity; input alias DXMEF; USD-traded LSE line | 9.86%* | 10.57%* | 7.85%* | [[ETF_LSE_XMED Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -187,6 +188,14 @@ July factsheet YTD 12.05% ณ 2026-07-31, TER 0.12%, holdings 396 และ
 3-year standard deviation 10.59% ณ 2026-07-31; † คือ calendar CAGR ไม่ใช่
 issuer rolling 10-year field. Official daily NAV drawdown/recovery ยังไม่
 พบข้อมูลที่ยืนยันได้.
+
+XMED (input alias `DXMEF`) ใช้ official DWS factsheet สำหรับ identity, USD
+share-class/fund currency, official USD London line `LSE:XMED`, benchmark, fee,
+NAV และ risk fields. Factsheet ณ 2026-07-31 ไม่แสดง annual performance rows หรือ
+current YTD จึงใช้ secondary Morningstar USD series: rolling 10-year `9.86%*`
+และ 2021-2025 CAGR `10.57%*`, current YTD `7.85%*` ณ 2026-07-21. ETFdoc/
+Quantalys Euro-labelled rows และ Stuttgarter annual rows ขัดแย้งกันและไม่ถูก
+รวมใน USD calculation; daily NAV drawdown/recovery ยังไม่ verified.
 
 ## Navigation
 

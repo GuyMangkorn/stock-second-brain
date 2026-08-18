@@ -594,3 +594,78 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity and IMSEF-to-LSE:ISEU mapping, passive classification, EUR 2016-2025 NAV/benchmark rows, rolling/current fields and the scheduled-local pre-save checklist passed; EUR-return/USD-listing basis, date gaps and daily NAV drawdown/recovery gap are disclosed.
+
+## DXMEF — Xtrackers MSCI Europe UCITS ETF 1C / XMED
+
+### Identity and classification
+
+- `entity_key: LSE:XMED`; input ticker `DXMEF`; official ticker `XMED`; exchange `London Stock Exchange USD line`; ISIN `LU0274209237`; fund/share-class launch `2007-01-10`; domicile Luxembourg.
+- DWS identifies the fund as Xtrackers MSCI Europe UCITS ETF 1C, with share-class and fund currency USD. The official listing table maps the USD London line to `XMED LN` / `XMED.L`; the GBX London line is `XMEU LN` and is not used for this input.
+- DTCC's OTC notice cross-checks `DXMEF` to the legacy DB X-trackers/DB X-Trackers Europe fund name. The DWS ISIN and official listing table are the canonical identity evidence.
+- `management_mode: passive-index-tracking`; direct physical replication; accumulating income treatment; all-in fee `0.12% p.a.`.
+- Issuer benchmark: `MSCI Total Return Net Europe Index`, provider MSCI, USD base currency, 397 constituents, large-/mid-cap developed Europe and approximately 85% free-float coverage. Primary region: `Europe`; region page `[[Europe ETF]]`; canonical tag `geography/Europe`.
+- Return basis: secondary USD total-return growth series with reinvestment where provider-defined, marked `*`; official DWS factsheet did not expose its annual numeric performance table in the reviewed capture.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| DWS Xtrackers factsheet | https://etf.dws.com/download/asset/b67380f1-ceae-4018-9edf-9ddf65624841 | official July 2026 identity, USD share class, LSE XMED mapping, fee, NAV, assets, replication, benchmark, constituents and risk disclosures |
+| DTCC OTC notice | https://www.dtcc.com/-/media/Files/pdf/2016/5/16/OTC-094.pdf | DXMEF OTC symbol/name cross-check |
+| Morningstar XMED report | https://lt.morningstar.com/1c6qh1t6k9/etfreport/default.aspx?1=1&ClientFund=0&CurrencyId=USD&Id=0P0000M2W8&SecurityToken=0P0000M2W8%5D22%5D0%5DETEXG%24XLON&tab=0 | secondary USD growth rows for 2021-2025, rolling 10-year field, current YTD and dated NAV snapshot |
+| ETFdoc analysis | https://www.etfdoc.it/en/d/Ana/DBX1ME/LU0274209237_xtrackers-msci-europe-ucits-etf-1c | secondary Euro-labelled annual/current rows for conflict review only |
+| Stuttgarter fund page | https://fonds.stuttgarter.de/product/LU0274209237/ | secondary conflicting annual/current and risk cross-check; not used in USD calculation |
+| Cached S&P 500 Total Return convention | check-etf-performance skill cache and original URLs | USD calendar rows 2021-2025, dividends reinvested, as of 2025-12-31; reused without a new search |
+
+### Raw observations
+
+- DWS factsheet as of 2026-07-31: ISIN `LU0274209237`; share-class currency USD; fund currency USD; launch 2007-01-10; domicile Luxembourg; direct physical replication; all-in fee `0.12%`; capitalizing income; NAV per share `US$140.30`; total fund assets `US$9.93B`; 64.38M shares outstanding; annual securities-lending return `0.0184%`.
+- DWS official listing table: Borsa Italiana `XMEU IM` EUR, London USD line `XMED LN` / `XMED.L`, London GBX line `XMEU LN` / `XMEU.L`, SIX `XMEU SW` CHF and XETRA `XMEU GY` EUR. The requested OTC alias is therefore displayed as canonical `LSE:XMED`.
+- DWS index key facts: `MSCI Total Return Net Europe Index`, Bloomberg `NDDUE15`, USD base currency, 397 constituents; large-/mid-cap developed European companies, approximately 85% free-float coverage and quarterly review.
+- Morningstar USD Growth of 10,000 observations as of 2026-06-30: fund `2021 16.58%`, `2022 -14.85%`, `2023 20.18%`, `2024 2.02%`, `2025 35.77%`; Morningstar benchmark cross-check `16.56%`, `-15.23%`, `19.95%`, `2.16%`, `35.86%` is not used as the issuer benchmark series.
+- Morningstar trailing fields as of 2026-07-21: YTD `7.85%`, 3-year annualized `15.41%`, 5-year annualized `9.82%`, 10-year annualized `9.86%`; NAV/closing price `US$135.61` on the same date. These are secondary observations.
+- S&P 500 cached USD TR rows for the same complete calendar years: 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; reference as-of 2025-12-31, dividends reinvested.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`: secondary XMED rows compound to `65.245652%`, displayed as `65.25%*`; rounded-input 2021-2025 CAGR is `10.567123%`, displayed as `10.57%*`.
+- Population standard deviation of the five secondary annual returns is `17.166284%`, displayed as `17.17%*`; positive/negative years are `4/1`; best year is 2025 `+35.77%*`; worst year is 2022 `-14.85%*`; least positive year is 2024 `+2.02%*`.
+- Cached S&P 500 TR compounds to `96.17%` / rounded-input CAGR `14.43%` over 2021-2025. It is a common USD reference only and not the XMED management benchmark.
+- Official DWS benchmark annual rows and official issuer rolling/YTD performance values were not disclosed in the reviewed factsheet. Morningstar's `9.86%*` rolling field and `7.85%*` YTD are retained separately from the official DWS NAV snapshot `US$140.30` as of 2026-07-31.
+
+### Source conflict and quality choice
+
+- ETFdoc and Quantalys expose a Euro-labelled performance series with annual fund rows `2021 26.31%`, `2022 -8.33%`, `2023 14.41%`, `2024 8.51%`, `2025 20.05%`; these are not used because the DWS share class, fund currency, index base currency and canonical XMED line are USD.
+- Stuttgarter reports a different annual sequence `2021 15.40%`, `2022 -14.70%`, `2023 20.18%`, `2024 1.72%`, `2025 36.44%`; the reviewed page does not provide a return-definition/as-of basis that reconciles it to DWS. It is kept as a conflict cross-check, not merged.
+- Morningstar is the selected secondary source for the annual/current proxy because it explicitly identifies XMED, uses a USD report, provides dated USD trailing fields and a USD growth series. No cross-source spread or active-skill conclusion is calculated.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_LSE_XMED Performance.md` with canonical `LSE:XMED`, input alias `DXMEF`, official DWS identity/benchmark/fee/NAV/risk fields, secondary USD 2021-2025 annual table marked `*`, cached S&P reference, 65.25% / 10.57% secondary calculations, current YTD/rolling dates, source conflicts, Europe breadcrumb and `geography/Europe` tag.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the XMED row, `9.86%*` secondary rolling field, `10.57%*` secondary 2021-2025 CAGR, `7.85%*` secondary YTD, and the DWS-versus-secondary source-gap note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `25` to `26`; no new region page is needed.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the XMED coverage row, a marked `*` 2021-2025 common-window row (not strict official ranking evidence), an explanatory source-gap note, and a `2026-08-19 Coverage Addition` bullet.
+- Append this exact workflow bullet to `log.md`: `- etf-performance: Created [[ETF_LSE_XMED Performance]] for input alias DXMEF, updated [[Europe ETF]], [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-19]]. Scheduled-inline local pre-save returned PASS; DXMEF resolved to official USD London line LSE:XMED, with secondary USD 2021-2025 proxy cumulative 65.25%* / rounded-input CAGR 10.57%*, secondary rolling 10-year 9.86%* and YTD 7.85%* as of 2026-07-21, while DWS official identity/NAV/benchmark fields and conflicting currency sources are disclosed.`
+- No entity hub, normalized financial table or `raw/funds/` file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical OTC-to-issuer mapping, official LSE USD line, ISIN, launch date, passive eligibility, physical replication, accumulation treatment, DWS benchmark, fee, USD currency, official NAV/assets, and all as-of dates are source-backed.
+- PASS: official DWS identity/NAV/fund facts are separated from secondary Morningstar annual/current fields; the DWS benchmark has no invented annual rows; the S&P 500 cache is labeled as a common USD reference; no arithmetic alpha or manager-skill claim is made.
+- PASS: secondary annual rows are marked `*`; the 65.25% cumulative result, 10.57% rounded-input CAGR, 17.17% population standard deviation, 4/1 up/down count and best/worst years reconcile to the displayed inputs.
+- PASS: ETFdoc/Quantalys Euro-labelled rows and Stuttgarter conflicting rows are recorded as source conflicts and are not mixed into the USD calculation; official DWS NAV and secondary Morningstar NAV have separate dates.
+- PASS: Europe primary-region assignment, canonical breadcrumb, `geography/Europe` tag, performance page, region row/count, performance-index row/common-window note, source batch section and exact log bullet are specified; every planned wikilink resolves.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. The issuer annual/current performance gap is explicitly owned by the performance page and source batch.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official DWS identity, DXMEF-to-LSE:XMED mapping, passive USD share-class classification, secondary USD annual/current evidence, source reconciliation and the scheduled-local pre-save checklist passed; issuer performance gaps and conflicting Euro-labelled sources are explicitly disclosed.
