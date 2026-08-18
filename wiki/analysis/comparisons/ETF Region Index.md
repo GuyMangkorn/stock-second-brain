@@ -30,13 +30,15 @@ driver notes ทั้งหมด
 | Canada | 2 | [[Canada ETF]] |
 | Germany | 1 | [[Germany ETF]] |
 | Greece | 1 | [[Greece ETF]] |
-| Europe | 7 | [[Europe ETF]] |
+| Europe | 9 | [[Europe ETF]] |
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
 | Emerging Markets | 5 | [[Emerging Markets ETF]] |
 | International | 24 | [[International ETF]] |
 | Malaysia | 1 | [[Malaysia ETF]] |
 | New Zealand | 1 | [[New Zealand ETF]] |
+| Netherlands | 1 | [[Netherlands ETF]] |
+| Norway | 2 | [[Norway ETF]] |
 | Philippines | 1 | [[Philippines ETF]] |
 | Poland | 2 | [[Poland ETF]] |
 | Singapore | 1 | [[Singapore ETF]] |

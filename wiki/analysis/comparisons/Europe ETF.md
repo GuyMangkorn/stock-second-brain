@@ -24,6 +24,8 @@ tags:
 | FEP | First Trust Europe AlphaDEX Fund | rules-based enhanced broad-Europe equity | 10.57% | 10.90% | 11.02% | [[ETF_NASDAQ_FEP Performance]] |
 | FTEU | First Trust Eurozone AlphaDEX UCITS ETF | Eurozone rules-based enhanced equity; input alias FTDPF | 10.75%* | 11.40%* | 12.31%* | [[ETF_LSE_FTEU Performance]] |
 | FEUZ | First Trust Eurozone AlphaDEX ETF | Eurozone rules-based enhanced equity; Nasdaq-listed U.S. ETF | 10.43% | 10.86% | 12.30% | [[ETF_NASDAQ_FEUZ Performance]] |
+| CEUU | iShares Core MSCI EMU UCITS ETF USD Hedged (Accumulating) | Eurozone passive, currency-hedged, accumulating equity; input alias ISVYF | not applicable (<10y) | 14.29% | 17.09% | [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] |
+| CEMU | iShares Core MSCI EMU UCITS ETF EUR (Accumulating) | Eurozone passive, accumulating equity; input alias XMTIF | 8.58%† | 11.97% | 15.77% | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -65,6 +67,18 @@ FEUZ `10.43%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026
 `10.86%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ
 `12.30%` เป็น official NAV TR YTD ณ 2026-07-31. FEUZ เป็น Nasdaq-listed U.S.
 ETF แยกจาก UCITS USD London line `FTEU`; official daily NAV drawdown/recovery
+ยังไม่ verified.
+
+CEUU เปิดตัว 2019-06-05 จึงไม่มี 10-year NAV TR; `14.29%` เป็น rounded-input
+CAGR ของ official USD share-class NAV rows 2021-2025 และ `17.09%` เป็น official
+NAV TR YTD ณ 2026-08-13. Official MSCI EMU benchmark rows เป็น EUR และไม่ถูก
+นำมาคำนวณ tracking gap กับ USD-hedged share class; daily NAV drawdown/recovery
+ยังไม่ verified.
+
+CEMU ใช้ official EUR accumulating share class ซึ่งเปิดตัว 2010-01-12; `8.58%†`
+เป็น rounded-input CAGR ของ complete official calendar rows 2016-2025 ไม่ใช่
+issuer rolling-10-year field, `11.97%` เป็น common 2021-2025 CAGR และ `15.77%`
+เป็น official NAV TR YTD ณ 2026-08-14. Official daily NAV drawdown/recovery
 ยังไม่ verified.
 
 ## Navigation

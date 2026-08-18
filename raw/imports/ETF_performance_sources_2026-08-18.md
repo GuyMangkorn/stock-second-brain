@@ -831,3 +831,336 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official passive-index evidence and the scheduled-local checklist passed; FEUZ artifacts were written with the U.S.-listed versus UCITS FTEU identity distinction disclosed.
+
+## EWN — iShares MSCI Netherlands ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:EWN`; ticker `EWN`; canonical exchange `NYSE Arca`; inception `1996-03-12`; CUSIP `464286814`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI Netherlands IMI 25/50 Index (Net)`; return basis `NAV total return` in USD.
+- Primary region: `Netherlands`; a new static `[[Netherlands ETF]]` navigation page was created because the underlying exposure is single-country rather than multi-country Europe.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer U.S. product page | https://www.ishares.com/us/products/239671/ishares-msci-netherlands-etf?fundSearch=true&qt=EWN | identity, NYSE Arca, current NAV/price, YTD, rolling/cumulative/calendar performance, holdings, exposures, fees and distributions |
+| Issuer fact sheet | https://www.ishares.com/us/literature/fact-sheet/ewn-ishares-msci-netherlands-etf-fund-fact-sheet-en-us.pdf | official NAV return definition, 2021-2025 calendar rows, annualized returns, exchange, fees and risk characteristics |
+| Issuer summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-netherlands-etf-8-31.pdf | 2016-2020 annual NAV rows, strategy, return definition, index splice and best/worst quarter |
+| Issuer international calendar page | https://www.ishares.com/ch/professionals/en/products/239671/ishares-msci-netherlands-etf?switchLocale=Y | rounded official 2016-2025 USD calendar rows and locale cross-check |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- U.S. issuer product capture as of `2026-07-31`: NAV `US$66.97`, closing price `US$66.82`, net assets `US$686.49M`, 55 holdings, exchange `NYSE Arca`, expense ratio `0.50%`, management fee `0.49%`, semi-annual distributions, and tracked index `MSCI Netherlands IMI 25/50 Index`.
+- U.S. issuer capture: NAV TR YTD `19.46%` as of `2026-07-30`; 12m trailing yield `3.90%` and 30-day SEC yield `1.20%` as of `2026-06-30`.
+- Official rolling NAV TR as of `2026-06-30`: `1Y 35.10%`, `3Y 21.05%`, `5Y 10.39%`, `10Y 14.28%`, inception `7.86%`; tracked-index returns `36.15%`, `21.63%`, `10.93%`, `14.81%`.
+- Official rolling 10-year cumulative NAV TR as of `2026-06-30`: `279.85%`; normalized endpoint calculation uses start TR index `100.00` and end TR index `379.85` over `10.00` years.
+- Official NAV calendar rows: 2016 `3.91%`, 2017 `33.40%`, 2018 `-14.99%`, 2019 `31.34%`, 2020 `24.19%`, 2021 `22.39%`, 2022 `-24.12%`, 2023 `21.34%`, 2024 `2.34%`, 2025 `34.32%`.
+- Official tracked-index rows: international iShares page gives rounded USD rows 2016 `4.6%`, 2017 `33.9%`, 2018 `-14.6%`, 2019 `32.0%`, 2020 `24.8%`; U.S. product/factsheet gives exact 2021 `23.28%`, 2022 `-24.49%`, 2023 `22.46%`, 2024 `3.14%`, 2025 `35.15%`.
+- Current portfolio/risk fields: Information Technology `36.57%`, Financials `22.07%`, Industrials `12.35%`, Consumer Staples `10.45%` as of `2026-07-24`; 3-year standard deviation `18.76%` and equity beta `0.99` as of `2026-06-30`.
+- Latest four official cash distributions: `US$0.676501` (2026-06-15), `US$2.160893` (2025-12-16), `US$0.708587` (2025-06-16), and `US$0.397063` (2024-12-17); sum `US$3.943044`, average `US$0.985761`.
+- Summary prospectus best/worst quarter: `+25.30%` in Q2 2020 / `-22.21%` in Q1 2020. Official daily NAV maximum drawdown and recovery were not disclosed.
+- Locale conflict: iShares international capture reports NAV TR YTD `18.46%` as of `2026-07-31`, versus the U.S. USD product-page capture's `19.46%` as of `2026-07-30`. The U.S. USD listing is selected as primary because it is the reviewed trading line for `NYSE Arca:EWN`; the conflict is retained rather than silently reconciled.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 EWN using official rounded/exact NAV rows: cumulative `197.74%`, rounded-input CAGR `11.53%`, population annual-return standard deviation `19.61%`, up/down `8/2`, best `2025 +34.32%`, worst `2022 -24.12%`.
+- Complete 2021-2025 EWN: cumulative `54.90%`, rounded-input CAGR `9.15%`; tracked-index cumulative `58.90%`, CAGR `9.71%`; arithmetic tracking gap approximately `-0.56 pp`.
+- Rolling 10-year NAV TR: `(379.85 / 100.00)^(1 / 10.00) - 1 = 14.28%`, consistent with the issuer's reported 10-year average annual total return; this rolling figure is kept separate from the 2016-2025 calendar CAGR.
+- Cached S&P 500 TR 2016-2025 cumulative `298.33%` / rounded-input CAGR `14.82%`; common 2021-2025 cumulative `96.17%` / CAGR `14.43%`. No current S&P YTD was mixed with EWN's 2026-07-30 YTD.
+- Latest-four-distribution average per round as a percentage of the 2026-07-31 closing price: `0.985761 / 66.82 = 1.48%`; this is an approximate historical per-round yield, not a forward payout estimate.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, canonical exchange, passive classification, tracked index, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official U.S. and international-locale evidence is separated; the YTD conflict is disclosed with a source-quality choice; annual, rolling, market-price, distribution and S&P 500 bases are not mixed.
+- PASS: proposed EWN performance page, Netherlands region page, region-index row, performance-index rows, dated source-batch contents and one log bullet are fully specified; breadcrumb, wikilinks and `geography/Netherlands` tag resolve.
+- PASS: the 10-year normalized endpoints reproduce the issuer's reported `14.28%`; best/worst and up/down counts use complete calendar rows; daily NAV drawdown/recovery remains explicitly unverified.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local checklist passed; EWN performance artifacts were written with the iShares locale YTD conflict disclosed.
+
+## ENOR — iShares MSCI Norway Capped ETF
+
+### Identity and classification
+
+- `entity_key: Cboe BZX:ENOR`; ticker `ENOR`; canonical exchange `Cboe BZX`; inception `2012-01-23`; CUSIP `46429B499`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI Norway IMI 25/50 Index (Net)`; return basis `NAV total return` in USD.
+- Primary region: `Norway`; a new static `[[Norway ETF]]` navigation page was created because the underlying exposure is single-country rather than multi-country Europe.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer U.S. product page | https://www.ishares.com/us/products/239673/ishares-msci-norway-capped-etf | identity, Cboe BZX, current NAV/price, YTD, rolling/cumulative/calendar performance, holdings, exposures, fees and distributions |
+| Issuer fact sheet | https://www.ishares.com/us/literature/fact-sheet/enor-ishares-msci-norway-etf-fund-fact-sheet-en-us.pdf | official NAV return definition, 2021-2025 calendar rows, annualized returns, exchange, fees and risk characteristics |
+| Issuer summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-norway-capped-etf-8-31.pdf | 2015-2020 annual NAV rows, strategy, return definition and best/worst quarter |
+| Issuer international calendar page | https://www.ishares.com/ch/professionals/en/products/239673/ishares-msci-norway-capped-etf?switchLocale=Y | rounded official 2016-2025 USD calendar rows and index cross-check |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- U.S. issuer product capture as of `2026-08-14/17`: NAV `US$36.24`, closing price `US$36.25`, net assets `US$88.78M`, 60 holdings, exchange `Cboe BZX`, expense ratio and management fee `0.53%`, semi-annual distributions, and tracked index `MSCI Norway IMI 25/50 Index (Net)`. The latest quote is as of `2026-08-17`; holdings and YTD are as of `2026-08-14`.
+- U.S. issuer capture: NAV TR YTD `30.82%` as of `2026-08-14`; 30-day SEC yield `3.46%` and trailing yield `5.28%` as of `2026-07-31`.
+- Official rolling NAV TR as of `2026-06-30`: `1Y 19.10%`, `3Y 18.50%`, `5Y 7.00%`, `10Y 8.63%`, inception `5.03%`; tracked-index returns `19.24%`, `18.73%`, `7.29%`, `8.98%`, `5.36%`.
+- Official rolling 10-year cumulative NAV TR as of `2026-06-30`: `128.90%`; normalized endpoint calculation uses start TR index `100.00` and end TR index `228.90` over `10.00` years.
+- Official NAV calendar rows: 2016 `17.76%`, 2017 `21.89%`, 2018 `-8.54%`, 2019 `12.75%`, 2020 `3.49%`, 2021 `17.95%`, 2022 `-12.58%`, 2023 `4.55%`, 2024 `-2.67%`, 2025 `32.58%`.
+- Official tracked-index rows: international iShares page gives rounded USD rows 2016 `17.9%`, 2017 `22.2%`, 2018 `-8.1%`, 2019 `13.3%`, 2020 `3.9%`; U.S. product/factsheet gives exact 2021 `18.77%`, 2022 `-12.89%`, 2023 `5.52%`, 2024 `-2.37%`, 2025 `33.60%`.
+- Current portfolio/risk fields: Energy `30.67%`, Financials `23.44%`, Industrials `14.76%`, Consumer Staples `10.84%`, Materials `8.85%` and Communication Services `5.59%` as of `2026-08-14`; 3-year standard deviation `18.04%` and equity beta `0.19` as of `2026-07-31`. The older fact-sheet snapshot as of `2026-06-30` reports standard deviation `17.73%` and beta `0.24`.
+- Summary prospectus best/worst quarter: `+24.23%` in Q4 2020 / `-37.24%` in Q1 2020. Official daily NAV maximum drawdown and recovery were not disclosed.
+- Latest four official cash distributions: `US$1.560525` (2026-06-15), `US$0.278392` (2025-12-16), `US$0.572276` (2025-06-16), and `US$0.543072` (2024-12-17); sum `US$2.954265`, average `US$0.738566`.
+- Current-YTD captures have different as-of dates: the current U.S. product capture reports `30.82%` as of `2026-08-14`; older U.S. and international captures report earlier July figures. The current U.S. USD listing is used as primary and earlier observations are not mixed into the current YTD metric.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 ENOR using official displayed annual rows: `(1.1776 × 1.2189 × 0.9146 × 1.1275 × 1.0349 × 1.1795 × 0.8742 × 1.0455 × 0.9733 × 1.3258) - 1 = 113.09%`; rounded-input CAGR `7.86%`; population annual-return standard deviation `13.61%`; up/down `7/3`; best `2025 +32.58%`; worst `2022 -12.58%`.
+- Complete 2021-2025 ENOR: cumulative `39.11%`, rounded-input CAGR `6.82%`; tracked-index cumulative `42.40%`, CAGR `7.32%`; arithmetic tracking gap approximately `-3.29 pp` cumulative and `-0.50 pp` CAGR.
+- Rolling 10-year NAV TR: `(228.90 / 100.00)^(1 / 10.00) - 1 = 8.63%`, consistent with the issuer's reported 10-year average annual total return; this rolling figure is kept separate from the 2016-2025 calendar CAGR.
+- Cached S&P 500 TR 2016-2025 cumulative `298.33%` / rounded-input CAGR `14.82%`; common 2021-2025 cumulative `96.17%` / CAGR `14.43%`. No current S&P YTD was mixed with ENOR's 2026-08-14 YTD.
+- Latest-four-distribution average per round as a percentage of the 2026-08-17 closing price: `0.738566 / 36.25 = 2.04%`; this is an approximate historical per-round yield, not a forward payout estimate.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, Cboe BZX exchange, passive classification, tracked index, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official U.S. and international-locale evidence is separated; annual, rolling, market-price, distribution and S&P 500 bases are not mixed; earlier current-YTD captures are kept separate from the latest as-of date.
+- PASS: energy/financials and Norway/NOK-USD concentration, separate risk snapshots, best/worst quarter and official daily NAV drawdown/recovery gap are disclosed; no market-price proxy is labeled NAV evidence.
+- PASS: proposed ENOR performance page, Norway region page, region-index row, performance-index rows, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/Norway` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local checklist passed; ENOR performance artifacts were written with current-YTD as-of dates and Norway concentration gaps disclosed.
+
+## NORW — Global X MSCI Norway ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:NORW`; ticker `NORW`; canonical exchange `NYSE Arca`; inception `2010-11-09`; CUSIP `37950E101`; ISIN `US37950E1010`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI Norway IMI 25/50 Index`; return basis `NAV total return` in USD.
+- Primary region: `Norway`; the existing static `[[Norway ETF]]` navigation page was updated because the underlying exposure is single-country.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.globalxetfs.com/funds/norw | identity, NYSE Arca, current NAV/price, net assets, holdings, exposures, risk, rolling performance, fee and SEC yield |
+| Issuer fact sheet | https://assets.globalxetfs.com/funds/documents/norw/Fact-Sheet_NORW.pdf | official NAV total-return definition, official YTD/rolling returns as of 2026-06-30, exchange, fee and sector snapshot |
+| Issuer summary prospectus | https://assets.globalxetfs.com/funds/documents/norw/prospectus-regulatory/Summary-Prospectus_NORW.pdf | official 2016-2025 annual NAV rows, strategy, predecessor continuity and best/worst quarter |
+| MSCI index factsheet | https://www.msci.com/documents/10199/0be0be65-d64d-49cb-b08f-67b6f3a8da49 | official USD net-index annual rows and 2026-06-30 index return/risk context |
+| Secondary current-YTD source | https://www.ytdreturn.com/norw/ | dividend-reinvested YTD fallback through 2026-07-31 |
+| Secondary distribution source | https://stockanalysis.com/etf/norw/dividend/ | latest-four cash distributions and trailing yield; data source identified as S&P Global Market Intelligence |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 |
+
+### Raw observations
+
+- Global X issuer page capture as of `2026-08-14`: NAV `US$36.53`, closing market price `US$36.68`, net assets `US$90.81M`, 60 holdings, exchange `NYSE Arca`, total expense ratio `0.50%`, semi-annual distributions, CUSIP `37950E101`, and index `MSCI Norway IMI 25/50 Index`.
+- Global X issuer page sector snapshot as of `2026-07-31`: Energy `30.2%`, Financials `25.0%`, Industrials `12.7%`, Consumer Staples `11.3%`, Materials `9.2%`, Communication Services `6.0%`, and Information Technology `3.7%`.
+- Global X issuer page risk snapshot as of `2026-07-31`: standard deviation `15.90%` and beta versus S&P 500 `0.44`; 30-day SEC yield `3.95%` is shown as of `2026-08-14`.
+- Official rolling performance as of `2026-06-30`: NAV `1Y 18.70%`, `3Y 18.10%`, `5Y 6.84%`, `10Y 8.61%`, inception `4.26%`; tracked-index returns `19.24%`, `18.74%`, `7.30%`, `8.99%`, `4.79%`.
+- Global X factsheet as of `2026-06-30`: official NAV TR YTD `13.49%`, market-price YTD `13.31%`, and hybrid-index YTD `13.74%`; it confirms semi-annual frequency, 60 holdings, 0.50% expense ratio and NYSE Arca listing.
+- Official NAV calendar rows from the March 1, 2026 summary prospectus: 2016 `17.64%`, 2017 `22.04%`, 2018 `-8.38%`, 2019 `12.85%`, 2020 `3.50%`, 2021 `18.24%`, 2022 `-12.92%`, 2023 `5.01%`, 2024 `-2.89%`, 2025 `32.82%`. Performance before the 2021 reorganization reflects the predecessor fund history.
+- Official MSCI Norway IMI 25/50 net-index rows: 2016 `17.88%`, 2017 `22.25%`, 2018 `-8.09%`, 2019 `13.26%`, 2020 `3.85%`, 2021 `18.77%`, 2022 `-12.89%`, 2023 `5.52%`, 2024 `-2.37%`, 2025 `33.60%`; index factsheet data as of `2026-06-30`.
+- Summary prospectus best/worst quarter: `+24.12%` ending `2020-12-31` / `-37.23%` ending `2020-03-31`. Official daily NAV maximum drawdown and recovery were not disclosed.
+- Secondary current-YTD source reports dividend-reinvested NORW YTD `25.16%†` from `2025-12-31` through `2026-07-31`; this fills the issuer's newer-YTD display gap and is marked secondary. The issuer's official YTD remains `13.49%` as of the older `2026-06-30` factsheet.
+- Latest four cash distributions from the secondary history: `US$2.1048` (ex-date 2026-06-29), `US$0.42969` (2025-12-30), `US$0.60419` (2025-06-27), and `US$0.60245` (2024-12-30); sum `US$3.74113`, average `US$0.935283`. The page identifies S&P Global Market Intelligence as the data source.
+- Secondary trailing dividend yield is `7.17%` as of `2026-08-07`; it is kept separate from issuer 30-day SEC yield `3.95%` and is not a forward payout estimate.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 NORW using official displayed annual rows: `(1.1764 × 1.2204 × 0.9162 × 1.1285 × 1.0350 × 1.1824 × 0.8708 × 1.0501 × 0.9711 × 1.3282) - 1 = 114.25%`; rounded-input CAGR `7.92%`; population annual-return standard deviation `13.72%`; up/down `7/3`; best `2025 +32.82%`; worst `2022 -12.92%`.
+- Complete 2021-2025 NORW: cumulative `39.46%`, rounded-input CAGR `6.88%`; official MSCI index cumulative `42.40%`, CAGR `7.32%`; arithmetic tracking gap approximately `-2.94 pp` cumulative and `-0.45 pp` CAGR.
+- Cached S&P 500 TR 2016-2025 cumulative `298.33%` / rounded-input CAGR `14.82%`; common 2021-2025 cumulative `96.17%` / CAGR `14.43%`. No current S&P YTD was mixed with NORW's secondary current-YTD figure.
+- Latest-four-distribution average per round as a percentage of the 2026-08-14 closing price: `0.935283 / 36.68 = 2.55%`; this is an approximate historical per-round yield, not a forward payout estimate.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, NYSE Arca exchange, passive classification, tracked index, predecessor continuity, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official Global X, MSCI and prospectus evidence is separated from secondary current-YTD and distribution evidence; current YTD is marked `†`; market-price, NAV, index, distribution, rolling and S&P 500 bases are not mixed.
+- PASS: Norway single-country, energy/financials, NOK-USD and non-diversified concentration, separate risk snapshots, best/worst quarter and official daily NAV drawdown/recovery gap are disclosed; no market-price proxy is labeled NAV evidence.
+- PASS: proposed NORW performance page, Norway region-page delta, region-index count, performance-index rows, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/Norway` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local checklist passed; NORW artifacts were written with the newer official-YTD gap and secondary current-YTD fallback disclosed.
+
+## CEUU — iShares Core MSCI EMU UCITS ETF
+
+### Identity and classification
+
+- `entity_key: Euronext Amsterdam:CEUU`; input ticker `ISVYF`; canonical exchange `Euronext Amsterdam`; official USD listing `CEUU`; ISIN `IE00BKBF6616`; share-class launch `2019-06-05`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI EMU Net Index (EUR)`; return basis `NAV total return` in the USD-hedged share class.
+- The share class is accumulating, physically replicated, Ireland-domiciled and has ongoing charges `0.15%`. It is under ten years old, so a 10-year NAV TR metric is not applicable.
+- Primary region: `Europe`; the existing static `[[Europe ETF]]` navigation page was updated because the underlying exposure is Eurozone/EMU multi-country equity.
+
+### Alias bridge and source map
+
+`ISVYF` is retained as the card/input alias. The official iShares listing reviewed
+for the matching ISIN maps the USD line to `Euronext Amsterdam:CEUU`; the distinct
+`EMUU` share class was excluded because it has a different ISIN, launch history
+and fee. The OTC quote page was used only to cross-check the alias identity.
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ishares.com/uk/professionals/en/products/309033/ishares-core-msci-emu-ucits-etf | official CEUU listing, ISIN, NAV/YTD, assets, holdings, fees, index, exposures and risk snapshot |
+| Issuer factsheet | https://www.ishares.com/uk/individual/en/literature/fact-sheet/ceuu-ishares-core-msci-emu-ucits-etf-fund-fact-sheet-en-gb.pdf | official share-class structure, annual rows, benchmark rows and rolling return fields |
+| Issuer KIID | https://www.ishares.com/uk/individual/en/literature/kiid/kiid-ishares-core-msci-emu-ucits-etf-usd-hedged-acc-ie00bkbf6616-en.pdf | passive/index objective and risk/structure context |
+| OTC alias cross-check | https://stockanalysis.com/quote/otc/ISVYF/ | input alias identity only; not primary NAV performance evidence |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2020-2025 and 2021-2025 |
+
+### Raw observations
+
+- Issuer current page capture: NAV `US$12.99` as of `2026-08-14`, NAV TR YTD
+  `17.09%` as of `2026-08-13`, share-class net assets `US$975,371,519` as of
+  `2026-08-14`, 220 holdings as of `2026-08-13`, TER `0.15%`, accumulating use
+  of income, physical replication and USD hedging.
+- Issuer risk snapshot as of `2026-07-31`: 3-year standard deviation `11.89%`
+  and beta `1.005`. Sector weights as of `2026-08-14`: Financials `26.78%`,
+  Industrials `20.26%`, Information Technology `15.93%`, Consumer Discretionary
+  `7.78%`, Utilities `6.37%`, Healthcare `5.54%`, Consumer Staples `5.21%`,
+  Materials `3.87%`, Energy `3.80%`, and Communication Services `3.43%`.
+- Official factsheet calendar rows for the USD share class: 2020 `0.24%`, 2021
+  `23.88%`, 2022 `-9.31%`, 2023 `22.15%`, 2024 `12.00%`, and 2025 `26.87%`.
+- Official factsheet benchmark rows for `MSCI EMU Net Index (EUR)`: 2020
+  `-1.02%`, 2021 `22.16%`, 2022 `-12.47%`, 2023 `18.78%`, 2024 `9.49%`, and 2025
+  `23.70%`. These EUR rows remain separate from the USD share-class rows.
+- Official factsheet rolling fields as of `2026-05-31`: share-class YTD `13.44%`,
+  1-year `24.44%`, 3-year annualised `18.05%`, 5-year annualised `13.47%`, and
+  since-inception annualised `13.75%`; benchmark fields were YTD `11.93%`,
+  1-year `21.50%`, 3-year annualised `15.29%`, 5-year annualised `10.52%`, and
+  since-inception annualised `11.12%`, all on the factsheet's EUR benchmark basis.
+- No cash-distribution series is used because the official share-class use of
+  income is `Accumulating`; no cash yield is inferred. Official daily NAV
+  maximum drawdown and recovery were not disclosed in the reviewed capture.
+
+### Calculations and reconciliation
+
+- Complete 2020-2025 CEUU NAV TR using official displayed rows:
+  `(1.0024 × 1.2388 × 0.9069 × 1.2215 × 1.1200 × 1.2687) - 1 = 95.47%`;
+  rounded-input CAGR `11.82%`; population annual-return standard deviation
+  `14.53%`; up/down `5/1`; best `2025 +26.87%`; worst `2022 -9.31%`.
+- Common 2021-2025 CEUU NAV TR: cumulative `95.00%`, rounded-input CAGR
+  `14.29%`, up/down `4/1`. Cached S&P 500 TR common-window cumulative is
+  `96.17%` / CAGR `14.43%`.
+- The MSCI EMU benchmark rows are shown as raw EUR context only. No arithmetic
+  excess return or tracking gap is calculated against the USD-hedged CEUU
+  series because the reported currency bases differ.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, OTC alias bridge, Euronext Amsterdam listing, ISIN, passive classification, tracked index, share-class launch, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: the distinct EMUU share class was excluded; official USD share-class NAV rows, EUR benchmark rows, official current YTD, rolling fields, risk fields and cached S&P 500 reference are kept on their own currency/as-of bases.
+- PASS: accumulating structure, Eurozone country/sector concentration, currency-hedge and hedge-cost risks, under-ten-year history, and official daily NAV drawdown/recovery gap are disclosed; no market-price proxy is labeled NAV evidence.
+- PASS: proposed CEUU performance page, Europe region-page delta, region-index count, performance-index rows, common-window row, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares evidence and the scheduled-local checklist passed; CEUU artifacts were written with the ISVYF alias bridge, under-ten-year limitation, USD/EUR basis separation and current official YTD disclosed.
+
+## CEMU — iShares Core MSCI EMU UCITS ETF EUR (Accumulating)
+
+### Identity and classification
+
+- `entity_key: Euronext Amsterdam:CEMU`; input ticker `XMTIF`; canonical exchange `Euronext Amsterdam`; official EUR listing `CEMU`; ISIN `IE00B53QG562`; share-class launch `2010-01-12`.
+- `management_mode: passive-index-tracking`; tracked index `MSCI EMU Net Index (EUR)`; return basis `NAV total return` in EUR with gross income reinvested where applicable.
+- The share class is accumulating, physically replicated, Ireland-domiciled, rebalanced quarterly and has ongoing charges `0.12%`. The complete 2016-2025 calendar window is available; the 10Y field in the artifacts is a rounded-input calendar CAGR, not an issuer-labeled rolling field.
+- Primary region: `Europe`; the existing static `[[Europe ETF]]` navigation page was updated because the underlying exposure is Eurozone/EMU multi-country equity.
+
+### Alias bridge and source map
+
+`XMTIF` is retained as the card/input alias. The official iShares listing table
+for the matching ISIN maps the EUR accumulating share class to `Euronext
+Amsterdam:CEMU`; the same share class is also listed as `CEU1` on LSE, `SXR7` on
+Xetra and `CSEMU` on other exchanges. The OTC quote page was used only to
+cross-check the alias identity.
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ishares.com/uk/individual/en/products/253729/ishares-core-msci-emu-ucits-etf | official current EUR share-class NAV/YTD, assets, holdings, fee, risk snapshot and listings including CEMU |
+| Issuer factsheet | https://www.ishares.com/uk/individual/en/literature/fact-sheet/csemu-ishares-core-msci-emu-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y | official 2016-2025 calendar rows, EUR benchmark rows, structure and trading lines |
+| Issuer KIID | https://www.ishares.com/uk/individual/en/literature/kiid/ucits_kiid-ishares-core-msci-emu-ucits-etf-eur-acc-gb-ie00b53qg562-en.pdf?siteEntryPassthrough=true&switchLocale=y | passive/index objective and share-class risk/structure context |
+| OTC alias cross-check | https://stockanalysis.com/quote/otc/XMTIF/ | input alias identity only; not primary NAV performance evidence |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return common-window rows 2021-2025 |
+
+### Raw observations
+
+- Issuer current product page capture: NAV `€252.50` as of `2026-08-17`, NAV TR
+  YTD `15.77%` as of `2026-08-14`, fund net assets `€8,057,431,954` and share-
+  class net assets `€6,395,929,795` as of `2026-08-17`, 220 holdings as of
+  `2026-08-14`, TER `0.12%`, accumulating use of income, physical replication
+  and quarterly rebalancing.
+- Issuer risk snapshot as of `2026-07-31`: standard deviation `11.89%` and beta
+  `1.004`; P/E `19.36` and P/B `2.41` as of `2026-08-14`. Sector weights as of
+  `2026-08-14`: Financials `26.78%`, Industrials `20.26%`, Information
+  Technology `15.93%`, Consumer Discretionary `7.78%`, Utilities `6.37%`,
+  Healthcare `5.54%`, Consumer Staples `5.21%`, Materials `3.87%`, Energy
+  `3.80%`, and Communication `3.43%`.
+- Official factsheet EUR share-class calendar rows: 2016 `4.66%`, 2017 `12.75%`,
+  2018 `-12.40%`, 2019 `26.22%`, 2020 `-0.76%`, 2021 `22.73%`, 2022 `-12.03%`,
+  2023 `19.29%`, 2024 `9.96%`, and 2025 `24.25%`.
+- Official factsheet `MSCI EMU Net Index (EUR)` rows: 2016 `4.37%`, 2017
+  `12.49%`, 2018 `-12.71%`, 2019 `25.47%`, 2020 `-1.02%`, 2021 `22.16%`, 2022
+  `-12.47%`, 2023 `18.78%`, 2024 `9.49%`, and 2025 `23.70%`.
+- No cash-distribution series is used because the official share-class use of
+  income is `Accumulating`; no cash yield is inferred. Official daily NAV
+  maximum drawdown and recovery were not disclosed in the reviewed capture.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 CEMU NAV TR using official displayed rows:
+  `(1.0466 × 1.1275 × 0.8760 × 1.2622 × 0.9924 × 1.2273 × 0.8797 × 1.1929 × 1.0996 × 1.2425) - 1 = 127.84%`;
+  rounded-input CAGR `8.58%`; population annual-return standard deviation
+  `13.60%`; up/down `7/3`; best `2025 +24.25%`; worst `2018 -12.40%`.
+- Complete 2016-2025 tracked-index rows: cumulative `118.93%` / rounded-input
+  CAGR `8.15%`; common 2021-2025 index cumulative `72.02%` / CAGR `11.46%`.
+- Common 2021-2025 CEMU NAV TR: cumulative `75.96%`, rounded-input CAGR
+  `11.97%`, up/down `4/1`. The rounded-input arithmetic comparison is
+  approximately `+3.94 pp` cumulative / `+0.51 pp` CAGR; it is not named alpha.
+- Cached S&P 500 TR common-window cumulative `96.17%` / CAGR `14.43%` is kept
+  as a USD reference only and is not mixed into the EUR tracking comparison.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, OTC alias bridge, Euronext Amsterdam listing, ISIN, passive classification, tracked index, share-class launch, return basis, periods, units, currency, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: CEMU is separated from the different CEUU USD-hedged share class; official EUR share-class rows, EUR benchmark rows, current YTD/NAV, rolling/risk fields and cached S&P 500 reference are kept on their own bases.
+- PASS: accumulating structure, Eurozone country/sector concentration, complete 10-year calendar versus issuer-rolling distinction, and official daily NAV drawdown/recovery gap are disclosed; no market-price proxy is labeled NAV evidence.
+- PASS: proposed CEMU performance page, Europe region-page delta, region-index count, performance-index rows, common-window row, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares evidence and the scheduled-local checklist passed; CEMU artifacts were written with the XMTIF alias bridge, EUR-basis tracking comparison, complete 2016-2025 calendar window and current official YTD disclosed.
