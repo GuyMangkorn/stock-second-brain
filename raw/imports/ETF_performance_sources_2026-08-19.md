@@ -811,3 +811,74 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official DWS identity, passive USD-hedged classification, rolling NAV evidence, secondary annual/YTD observations, reconciled calculations and the scheduled-local pre-save checklist passed; issuer calendar/YTD and daily NAV gaps remain disclosed.
+
+## EWK — iShares MSCI Belgium ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `entity_key: NYSE Arca:EWK`; input ticker `EWK`; official fund `iShares MSCI Belgium ETF`; CUSIP `464286301`; fund inception `1996-03-12`; exchange `NYSE Arca`.
+- `management_mode: passive-index`; the official objective is to track a broad-based index of Belgian equities. The current benchmark is `MSCI Belgium IMI 25/50 Index (Net)`, a free-float-adjusted, market-cap-weighted index of Belgian large-, mid- and small-cap equities subject to the 25/50 methodology.
+- Primary region: `Belgium`; new region page `[[Belgium ETF]]`; canonical tag `geography/Belgium`; breadcrumb `[[ETF Region Index]] → [[Belgium ETF]] → [[ETF Performance Index]]`.
+- `return_basis: NAV total return` with dividends and capital gains reinvested and expenses reflected in NAV; return currency USD. Market-price return is retained separately.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares EWK product page | https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239610&seoSlug=ishares-msci-belgium-capped-etf | official identity, NYSE Arca, benchmark, current NAV/YTD/price, assets, holdings, rolling returns, standard deviation, beta, valuation fields and sector exposures; current snapshot through `2026-08-11` / `2026-08-10` |
+| iShares EWK June 2026 factsheet | https://www.ishares.com/us/literature/fact-sheet/ewk-ishares-msci-belgium-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV/market-price/benchmark rows, return definition, fee, launch, holdings, top holdings, sectors and benchmark-history note; as of `2026-06-30` |
+| SEC EWK summary prospectus | https://www.sec.gov/Archives/edgar/data/930667/000119312525336632/d23588d497k.htm | official objective, NYSE Arca identity, index methodology and risk disclosures; December 2025 |
+| S&P 500 index page and cached convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ plus cached URLs in the skill | common USD S&P 500 Total Return rows for 2021-2025; dividends reinvested, reference as of `2025-12-31` |
+
+### Raw observations
+
+- The official product page identifies EWK as an equity ETF on NYSE Arca tracking `MSCI Belgium IMI 25/50 Index (Net)`, with NAV `USD 26.75` as of `2026-08-11`, NAV TR YTD `12.61%` as of `2026-08-10`, closing price `USD 26.82`, net assets `USD 162,633,413`, 6,080,000 shares outstanding, semi-annual distributions and expense ratio `0.49%`.
+- The same page reports fund inception `1996-03-12`, 38 holdings as of `2026-08-10`, 3-year standard deviation `14.38%` and beta `0.54` as of `2026-07-31`, P/B `1.79`, P/E `19.05`, and sector exposures as of `2026-08-10`: Health Care `25.98%`, Consumer Staples `25.25%`, Financials `16.78%`, Real Estate `9.53%`, Materials `7.57%`, Industrials `5.78%`, Utilities `2.58%`, Consumer Discretionary `1.87%`, Information Technology `1.48%`, Communication `1.40%`, Energy `1.25%`, and Cash/Derivatives `0.52%`.
+- The June 2026 factsheet reports official NAV TR rows for 2021 `12.92%`, 2022 `-14.08%`, 2023 `7.46%`, 2024 `0.51%`, 2025 `34.96%`; market-price rows `12.87%`, `-13.93%`, `7.47%`, `0.17%`, `35.41%`; and MSCI Belgium IMI 25/50 benchmark rows `8.02%`, `-15.89%`, `7.71%`, `0.51%`, `35.30%`.
+- The official product page's standardized performance table as of `2026-06-30` reports NAV 1-year `24.33%`, 3-year annualised `17.72%`, 5-year annualised `7.07%`, 10-year annualised `7.08%`, and since-inception `6.02%`; YTD `12.53%` is a June month-end field, while the later product-page date-to-date YTD `12.61%` is retained as the current snapshot.
+- EWK began tracking the MSCI Belgium IMI 25/50 Index (Net) on `2012-11-09`; historical data before that date uses MSCI Belgium Investable Market Index (Net). The 2021-2025 annual table is post-transition.
+- The factsheet's top-10 holdings total `69.05%` as of `2026-06-30`; Anheuser-Busch InBev `21.94%`, argenx `15.55%`, UCB `9.01%`, KBC Groep `4.65%`, Ageas `4.31%` and the remaining top holdings are retained as concentration context.
+- Official daily NAV observations sufficient to reproduce maximum drawdown and recovery date were not disclosed in the reviewed sources. Systematic fair-value methodology is disclosed by iShares as a reason ETF total return may diverge from the benchmark.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`. Official EWK 2021-2025 NAV rows compound to `41.425042%`, displayed as `41.43%`; rounded-input CAGR is `7.177905%`, displayed as `7.18%`; population annual-return standard deviation is `16.089372%`, displayed as `16.09%`; up/down is `4/1`; best is 2025 `+34.96%`; worst is 2022 `-14.08%`; least-positive year is 2024 `+0.51%`.
+- Official benchmark rows compound to `33.080646%` / rounded-input CAGR `5.882206%`; population annual-return standard deviation is `16.543411%`. Fund-minus-benchmark observations are `+4.90`, `+1.81`, `-0.25`, `0.00` and `-0.34` percentage points for 2021-2025; these are tracking/currency/fair-value context and are not called alpha.
+- Cached S&P 500 TR compounds to `96.169618%` / rounded-input CAGR `14.426430%` for 2021-2025; it is a common USD reference, not EWK's strategy benchmark.
+- The official rolling 10-year NAV TR `7.08%` as of `2026-06-30` is kept separate from the independently calculated 2021-2025 CAGR `7.18%`; the periods, endpoints and source fields differ.
+
+### Source conflict and quality choice
+
+- The iShares product page and June factsheet are the sources of truth for identity, classification, benchmark, annual NAV/market-price/benchmark rows, rolling fields, fee, holdings, sector and risk fields. Product-page YTD `12.61%` as of 2026-08-10 is kept separate from the June factsheet YTD `12.53%` and June standardized table; no conflict is manufactured.
+- Market-price rows are displayed for reconciliation but excluded from NAV calculations. No secondary annual or price proxy is needed.
+- The benchmark-history change on 2012-11-09 is recorded; 2021-2025 is treated as current-index history. The S&P 500 is labeled a common reference only.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_EWK Performance.md` with canonical `NYSE Arca:EWK`, official 2021-2025 NAV/market-price/benchmark/S&P rows, 41.43% / 7.18% calculations, official rolling 10-year 7.08%, current/June YTD separation, Belgium concentration and systematic fair-value notes, Belgium breadcrumb and `geography/Belgium` tag.
+- Create `wiki/analysis/comparisons/Belgium ETF.md` as the new static region navigation page with the EWK row and links back to `[[ETF Region Index]]` and forward to `[[ETF Performance Index]]`.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` with Belgium count `1` and `[[Belgium ETF]]`; update `wiki/analysis/performance/ETF Performance Index.md` Browse by region with `[[Belgium ETF]]`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the EWK coverage row, 2021-2025 Common Window row and a `2026-08-19 Coverage Addition` bullet; no strict 2016-2025 annual ranking row is added because the reviewed official annual table does not expose 2016-2020 rows.
+- Append one `etf-performance` workflow bullet to `log.md`; no entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, CUSIP, inception, passive-index classification, MSCI Belgium benchmark, fee, semi-annual distribution treatment, USD NAV return basis and all as-of dates are source-backed.
+- PASS: official 2021-2025 NAV/market-price/benchmark rows, rolling 10-year field, current NAV/YTD, assets, holdings, valuation fields, beta, standard deviation, sectors and top holdings are preserved with separate dates; no 2016-2020 values are invented.
+- PASS: 2021-2025 cumulative/CAGR, standard deviation, up/down count, best/worst year and S&P compounding recompute from the stated inputs; rolling 10-year is not relabeled as calendar CAGR.
+- PASS: Belgium single-country/sector/top-holdings/liquidity risks, benchmark-history transition and systematic fair-value note are disclosed; daily NAV drawdown/recovery remains an explicit gap; no alpha claim is introduced.
+- PASS: complete proposed performance page, new Belgium region page, region-index row, performance-index Browse/coverage/Common Window/bullet, source batch section and log bullet are specified; canonical breadcrumb, `geography/Belgium` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive Belgium classification, official 2021-2025 NAV/benchmark evidence, rolling 10-year/current fields, reconciled calculations and the scheduled-local pre-save checklist passed; benchmark-history, concentration, systematic fair-value and daily NAV gaps remain disclosed.

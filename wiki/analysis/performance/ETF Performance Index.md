@@ -30,6 +30,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Asia-Pacific ETF]]
 - [[Australia ETF]]
 - [[Austria ETF]]
+- [[Belgium ETF]]
 - [[Canada ETF]]
 - [[China ETF]]
 - [[Emerging Markets ETF]]
@@ -116,6 +117,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_LSE_SAUS Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 8.26% | 6.24% | 10.27% | 2019 +22.50% / 2018 -12.30% | Australia single-country broad equity | financials/materials/commodity/country/FX-sensitive |
 | [[ETF_NASDAQ_ENZL Performance]] | official 2010 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 3.33% | -5.67% | 3.45% | 2023 +3.53% / 2022 -16.63% | New Zealand single-country equity | health care/industrials/utilities/real estate/country/FX-sensitive; benchmark splice 2024-09-03 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
+| [[ETF_NYSE_ARCA_EWK Performance]] | official 1996 / official 2021-2025; issuer rolling 10-year as of 2026-06-30 | 7.08% | 7.18% | 12.61% | 2025 +34.96% / 2022 -14.08% | Belgium single-country equity | health care/consumer staples/financials concentrated; Belgium/EUR-USD/country/sector/liquidity-sensitive; 14.38% 3-year standard deviation; systematic fair-value note |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025; rolling issuer 2026-06-30 | 8.22% | 8.38% | 6.09% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials/technology concentrated, country/EUR-USD/FX-sensitive; 16.03% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_DAX Performance]] | official 2014 / official 2016-2025; rolling issuer 2026-06-30 | 9.57% | 10.65% | 1.40% | 2025 +38.72% / 2018 -22.38% | Germany single-country equity | industrials/financials concentrated; Germany/EUR-USD/export-cycle/country-sensitive; 16.10% 3-year standard deviation; official 10Y fund-index gap -0.70 pp |
 | [[ETF_NYSE_ARCA_FLGR Performance]] | official 2017 / official 2018-2025; history under 10 years; official YTD as of 2026-08-07 | not applicable (<10y history) | 9.02% | 5.23% | 2025 +36.70% / 2022 -22.10% | Germany single-country equity | industrials/financials/technology; Germany/EUR-USD/export-cycle/country-sensitive; 16.66% 3-year standard deviation; daily NAV drawdown/recovery gap |
@@ -367,6 +369,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_FLAU Performance]] | 9.93% | -5.42% | 13.38% | 0.92% | 16.47% | 38.56% | 4 / 1 |
 | [[ETF_LSE_SAUS Performance]] | 9.00% | -5.70% | 14.30% | 0.80% | 14.30% | 35.36% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | 93.49% | 4 / 1 |
+| [[ETF_NYSE_ARCA_EWK Performance]] | 12.92% | -14.08% | 7.46% | 0.51% | 34.96% | 41.43% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWG Performance]] | 4.85% | -22.17% | 22.90% | 10.32% | 35.15% | 49.53% | 4 / 1 |
 | [[ETF_NASDAQ_DAX Performance]] | 7.09% | -18.35% | 23.59% | 10.65% | 38.72% | 65.87% | 4 / 1 |
 | [[ETF_NYSE_ARCA_EWO Performance]] | 30.74% | -21.67% | 19.88% | 4.58% | 72.85% | 121.92% | 4 / 1 |
@@ -960,6 +963,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_XMED Performance]] — DXMEF / XMED (Europe; OTC alias resolved by DWS/DTCC to official USD London line `LSE:XMED`; secondary USD 2021-2025 total-return proxy cumulative +65.25%* / rounded-input CAGR +10.57%*, secondary rolling 10-year +9.86%* and YTD +7.85%* as of 2026-07-21; official DWS July factsheet supplies USD identity/NAV/benchmark/fee but not annual/current rows, so Euro-labelled and conflicting secondary series are excluded from the USD calculation)
 - [[ETF_NYSE_ARCA_DBEU Performance]] — DBEU (Europe; official `NYSE Arca:DBEU`; official rolling 10-year NAV TR `+11.58%` as of 2026-06-30, secondary 2016-2025 NAV-return proxy cumulative `+159.58%*` / rounded-input CAGR `+10.01%*`, 2021-2025 CAGR `+12.66%*`, and secondary YTD `+11.50%*` as of 2026-06-30; 2019 `+26.80%*` / 2018 `-8.50%*`, 0.73 official beta, USD hedge and official calendar/YTD/daily NAV gaps disclosed)
 - [[ETF_LSE_ISFD Performance]] — ISFD / IRESF (United Kingdom; input OTC alias resolved by ISIN `IE00BYZ28W67` to official USD hedged `LSE:ISFD`; official 2018-2025 NAV TR cumulative `+83.09%` / rounded-input CAGR `+7.85%`, 2021-2025 CAGR `+13.37%`, and current official NAV TR YTD `+11.08%` as of 2026-08-12; 2025 `+25.79%` / 2020 `-11.28%`, 9.46% 3-year standard deviation, USD share-class versus GBP benchmark basis and daily NAV drawdown/recovery gaps disclosed)
+- [[ETF_NYSE_ARCA_EWK Performance]] — EWK (Belgium; passive MSCI Belgium IMI 25/50 Index equity exposure; official 2021-2025 NAV TR cumulative `+41.43%` / rounded-input CAGR `+7.18%`, issuer rolling 10-year NAV TR `+7.08%` as of 2026-06-30, and current official NAV TR YTD `+12.61%` as of 2026-08-10; 2025 `+34.96%` / 2022 `-14.08%`, 14.38% 3-year standard deviation, Belgium/sector/top-holdings concentration and daily NAV drawdown/recovery gaps disclosed)
 
 ## 2026-08-17 Coverage Addition
 
