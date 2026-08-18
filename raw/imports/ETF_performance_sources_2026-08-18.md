@@ -1406,3 +1406,253 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Franklin and SEC evidence plus the scheduled-local pre-save checklist passed; FLEU artifacts were written with the linked benchmark, 2023 strategy/index transition and latest issuer YTD limitation disclosed.
+
+## FEZ — State Street SPDR EURO STOXX 50 ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:FEZ`; ticker `FEZ`; canonical exchange `NYSE Arca`; inception `2002-10-15`.
+- `management_mode: passive-index`; tracked index `EURO STOXX 50 Index`; return basis `NAV total return` in USD where issuer-reported.
+- Primary region: `Europe`; the ETF targets large-cap Eurozone equities. The State Street factsheet describes passive index-tracking exposure; limited index-tracking mechanics do not create a derivative-defined payoff.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-euro-stoxx-50-etf-fez | official identity, exchange, inception, benchmark, fee, current NAV/price, YTD, rolling NAV TR and portfolio snapshot |
+| Issuer factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-fez.pdf | official return definitions, fee, index objective, fund structure and June 2026 return snapshot |
+| Issuer distribution page | https://www.ssga.com/us/en/intermediary/resources/documents/etf-dividend-distributions | official distribution-source context; FEZ product page states quarterly frequency |
+| Secondary annual history | https://www.financecharts.com/etfs/FEZ/performance | 2016-2025 dividend-reinvested total-return proxy rows; not issuer NAV rows |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025, USD, dividends reinvested, as of 2025-12-31 |
+
+### Raw observations
+
+- Official product page as of `2026-08-18`: fund information shows `NYSE Arca`, inception `2002-10-15`, benchmark `EURO STOXX 50 Index`, base currency USD, gross expense ratio `0.29%`, and quarterly distribution frequency.
+- Official current snapshot: NAV `$71.95`, AUM `$4,554.45m`, and net cash amount `$9.40m` as of `2026-08-17`; closing price `$71.91`, bid/ask midpoint `$71.92`, and premium/discount `-0.05%` as of `2026-08-17`.
+- Official product page as of `2026-07-31`: NAV TR YTD `9.66%`, 1-year `22.94%`, 3-year annualised `16.94%`, 5-year annualised `11.50%`, and rolling 10-year annualised `10.92%`; market-value YTD was `10.27%` and issuer benchmark YTD was `9.46%`.
+- Official portfolio snapshot as of `2026-08-14`: 50 holdings; sector weights Financials `28.44%`, Industrials `22.29%`, Information Technology `15.07%`; fund distribution yield `2.47%`.
+- Official factsheet states that performance assumes reinvestment of dividends and capital gains and is shown net of fees; the reviewed product page does not disclose raw 10-year endpoint values.
+- Secondary dividend-reinvested annual proxy rows: 2016 `0.67%`, 2017 `24.80%`, 2018 `-15.86%`, 2019 `26.05%`, 2020 `4.84%`, 2021 `14.84%`, 2022 `-14.27%`, 2023 `27.16%`, 2024 `3.58%`, 2025 `37.81%`.
+- S&P 500 Total Return cached rows are USD rows as of `2025-12-31`: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed capture; no price-only drawdown proxy was substituted.
+
+### Calculations and reconciliation
+
+- Secondary 2016-2025 proxy compounds to `149.64%`; rounded-input CAGR is `9.58%`; population annual-return standard deviation is `17.24%`; up/down is `8/2`; best is 2025 `+37.81%*`; least positive is 2016 `+0.67%*`; worst is 2018 `-15.86%*`; least bad down year is 2022 `-14.27%*`.
+- Secondary 2021-2025 proxy compounds to `78.70%`; rounded-input CAGR is `12.31%*`.
+- The issuer rolling 10-year NAV TR field is `10.92%` as of `2026-07-31`; it is retained as a separate official annualised metric and is not reconstructed from the secondary annual proxy.
+- Cached S&P 500 TR 2016-2025 compounds to `298.33%` / rounded-input CAGR `14.82%`; this is a common USD reference, not the FEZ issuer benchmark. FEZ's secondary proxy is approximately `5.24 pp` below the cached S&P CAGR over the rounded 10-year proxy window; this is not alpha.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FEZ Performance.md` with Thai-first output, official identity/classification, rolling 10-year NAV field, current YTD/NAV/price dates, one annual secondary-proxy table against cached S&P 500 TR, proxy calculations, risk read-through, sources, `geography/Europe` tag and breadcrumb `[[ETF Region Index]] → [[Europe ETF]] → [[ETF Performance Index]]`.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with one static FEZ row and the proxy/official-field note; update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `13` to `14`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the FEZ coverage row and 2026-08-18 coverage-addition bullet; explicitly exclude FEZ proxy rows from strict Common Window ranking.
+- Append one `log.md` workflow bullet. No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing FEZ ticker hub was found.
+
+### Local pre-save checklist
+
+- PASS: FEZ identity, NYSE Arca exchange, inception, passive-index classification, EURO STOXX 50 issuer benchmark, expense ratio, quarterly distribution frequency, NAV Total Return basis, USD currency, periods, units, current NAV/price/YTD and rolling 10-year as-of dates are recorded with official sources.
+- PASS: official rolling/YTD fields are separated from secondary annual proxy rows; proxy markers, calculations, S&P 500 cached basis/window, best/worst subset and the lack of raw 10-year endpoints are explicit; no annual proxy is relabelled as issuer NAV TR.
+- PASS: official annual endpoint values were not available in the reviewed capture, so no unsupported NAV calendar rows, daily NAV drawdown or recovery values were invented; risk evidence remains not verified for those fields.
+- PASS: proposed performance page, Europe region row, region count, performance-index coverage/addition, source-batch contents and log bullet are fully specified; canonical breadcrumb, `geography/Europe` tag and all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present in this batch header: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street identity and rolling/YTD evidence plus the scheduled-local pre-save checklist passed; FEZ artifacts were written with secondary annual-proxy separation and drawdown/recovery gaps disclosed.
+
+## DAX — Global X DAX Germany ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`.
+- `entity_key: Nasdaq:DAX`; ticker `DAX`; canonical exchange `Nasdaq`; inception `2014-10-22`.
+- `management_mode: passive-index`; tracked index `DAX Index`; return basis is official fund total return / NAV total return where issuer-reported, in USD.
+- Primary region: `Germany`; the ETF targets the largest and most liquid German companies. The prospectus says the fund is not actively managed, invests at least 80% in DAX securities or related ADRs/GDRs, generally uses replication, and is non-diversified.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.globalxetfs.com/funds/dax | official identity, exchange, inception, benchmark, current NAV/price, holdings, YTD, rolling returns, risk and sector snapshot |
+| Issuer factsheet | https://assets.globalxetfs.com/funds/documents/dax/Fact-Sheet_DAX.pdf | official annualised/YTD performance, fee, holdings and fund facts |
+| Issuer summary prospectus | https://assets.globalxetfs.com/funds/documents/dax/prospectus-regulatory/Summary-Prospectus_DAX.pdf | official objective, passive/80%/non-diversified disclosures, predecessor note and 2016-2025 annual fund returns |
+| SEC HTML filing | https://www.sec.gov/Archives/edgar/data/1432353/000143235326000193/a497kdaxgermany.htm | filing copy of the March 1, 2026 summary prospectus and performance chart |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025, USD, dividends reinvested, as of 2025-12-31; original URLs are recorded on the DAX performance page |
+
+### Raw observations
+
+- Official product page identifies `Global X DAX Germany ETF`, Nasdaq ticker `DAX`, tracked `DAX Index`, inception `2014-10-22`, expense ratio `0.20%`, 41 holdings, and semi-annual distributions.
+- Official product-page snapshot as of `2026-07-27`: NAV `$44.72`, market price `$44.78`, primary exchange Nasdaq, 30-day median bid/ask spread `0.68%`, and 30-day SEC yield `2.36%`.
+- Official product-page performance table as of `2026-06-30`: Fund NAV TR 1-year `1.24%`, 3-year annualised `16.77%`, 5-year annualised `8.47%`, 10-year annualised `9.57%`; corresponding DAX Index values `1.82%`, `17.50%`, `9.18%`, and `10.27%`.
+- Official factsheet as of `2026-05-31`: Fund NAV YTD `1.40%`, market-price YTD `1.16%`, and DAX Index YTD `1.73%`; AUM `$253.43m`; fund inception `2014-10-22`; index ticker `DAXNRUS`.
+- Official current characteristics as of `2026-07-31`: 3-year standard deviation `16.10%`, beta versus S&P 500 `1.03`, sector weights Industrials `35.7%`, Financials `21.2%`, and Information Technology `13.8%`.
+- The March 1, 2026 summary prospectus annual chart reports official fund total returns: 2016 `2.55%`, 2017 `26.83%`, 2018 `-22.38%`, 2019 `22.47%`, 2020 `12.48%`, 2021 `7.09%`, 2022 `-18.35%`, 2023 `23.59%`, 2024 `10.65%`, 2025 `38.72%`.
+- The prospectus states the fund's predecessor, Horizons DAX Germany ETF, supplied history through the December 24, 2018 reorganization; 2016-2018 are therefore disclosed predecessor/current-fund continuity, not a claim of uninterrupted current-manager history.
+- S&P 500 Total Return cached rows are USD rows as of `2025-12-31`: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+- Official raw 10-year endpoints, daily NAV maximum drawdown and recovery date were not disclosed in the reviewed capture; no unsupported substitute was used.
+
+### Calculations and reconciliation
+
+- Official DAX Fund 2016-2025 rows compound to `130.68%`; rounded-input CAGR is `8.72%`; population annual-return standard deviation is `18.36%`; up/down is `8/2`; best is 2025 `+38.72%`; least positive is 2016 `+2.55%`; worst is 2018 `-22.38%`; least bad down year is 2022 `-18.35%`.
+- Official DAX Fund 2021-2025 rows compound to `65.87%`; rounded-input CAGR is `10.65%`; the window has `4/1` positive/negative years.
+- Cached S&P 500 TR 2016-2025 compounds to `298.33%` / rounded-input CAGR `14.82%`; 2021-2025 compounds to `96.17%` / `14.43%`. DAX is approximately `-6.10 pp` and `-3.78 pp` below those common-reference CAGRs; this is not alpha and not a comparison to the issuer's DAX Index benchmark.
+- Issuer displayed annualised fund-versus-DAX Index differences are `-0.58 pp` for 1Y, `-0.73 pp` for 3Y, `-0.71 pp` for 5Y and `-0.70 pp` for 10Y as of `2026-06-30`; these are passive tracking/cost observations.
+- The issuer rolling `10-year` NAV TR field is `9.57%` as of `2026-06-30`; it is retained separately and is not reconstructed from annual rows.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NASDAQ_DAX Performance.md` with Thai-first output, official identity/classification, official annual table against cached S&P 500 TR, rolling 10-year NAV field, current YTD/NAV/price dates, benchmark separation, risk read-through, source links, `geography/Germany` tag and breadcrumb `[[ETF Region Index]] → [[Germany ETF]] → [[ETF Performance Index]]`.
+- Update `wiki/analysis/comparisons/Germany ETF.md` with one static DAX row; update `wiki/analysis/comparisons/ETF Region Index.md` Germany count from `1` to `2`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with DAX coverage, strict common-window row, annual comparison row, benchmark-separation note and 2026-08-18 coverage-addition bullet.
+- Append one `log.md` workflow bullet. No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing DAX ticker hub was found.
+
+### Local pre-save checklist
+
+- PASS: DAX identity, Nasdaq exchange, inception, passive-index classification, DAX Index issuer benchmark, expense ratio, semi-annual distribution, official fund-return/NAV basis, USD currency, periods, units, current NAV/price/YTD and rolling 10-year as-of dates are recorded with official sources.
+- PASS: official annual fund rows are separated from rolling/YTD fields and from the issuer DAX Index rows; S&P 500 is labeled as a common USD reference; calculations, predecessor history, best/worst subset and no-alpha wording are explicit.
+- PASS: no unsupported raw 10-year endpoints, daily NAV drawdown or recovery values were invented; 3-year standard deviation/beta and concentration evidence are labeled with their as-of date, and the remaining risk evidence gap is disclosed.
+- PASS: proposed performance page, Germany region row, region count, performance-index coverage/common/annual/addition rows, source-batch contents and log bullet are fully specified; canonical breadcrumb, `geography/Germany` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Global X/SEC identity, classification, annual fund returns, rolling/YTD evidence and the scheduled-local pre-save checklist passed; DAX artifacts were written with predecessor history, benchmark separation and daily NAV drawdown/recovery gaps disclosed.
+
+## FLGB — Franklin FTSE United Kingdom ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`.
+- `entity_key: NYSE Arca:FLGB`; ticker `FLGB`; canonical exchange `NYSE Arca`; inception `2017-11-02`.
+- `management_mode: passive-index`; tracked index `FTSE UK Capped Index` / `FTSE UK RIC Capped Index`; return basis is official NAV total return in USD with distributions reinvested and fund expenses deducted.
+- Primary region: `United Kingdom`; the ETF targets UK large- and mid-capitalization stocks. The issuer classifies it as an indexed equity ETF and the objective is to track the FTSE UK Capped Index before fees and expenses.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26350/SINGLCLASS/franklin-ftse-united-kingdom-etf/FLGB | official identity, exchange, objective, current NAV/YTD, rolling returns, fee, holdings, sectors and risk snapshot |
+| Issuer factsheet | https://www.franklintempleton.com/forms-literature/download/FLGB-FF | official 2018-2025 NAV/index calendar rows, return definitions, risk statistics and fund facts as of 2026-03-31 |
+| Issuer summary prospectus | https://www.franklintempleton.com/forms-literature/download-preview/FLGB-PSUM | official objective, passive indexed structure, risks and benchmark definitions |
+| Annual shareholder report | https://www.franklintempleton.com/forms-literature/download-preview/FLGB-ATSR | official fiscal-year performance comparison through 2026-03-31 |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2018-2025 and 2021-2025, USD, dividends reinvested, as of 2025-12-31; original URLs are recorded on the FLGB performance page |
+
+### Raw observations
+
+- Official product page identifies `Franklin FTSE United Kingdom ETF`, ticker `FLGB`, listing exchange `NYSE Arca`, inception `2017-11-02`, benchmark `FTSE UK Capped Index`, expense ratio `0.09%`, and semi-annual distributions.
+- Official product-page snapshot as of `2026-07-30`: NAV `$37.16`, YTD NAV total return `11.56%`, total net assets `$895.52m`, and 96 holdings. The reviewed capture did not expose a separate current market-price quote.
+- Official product-page rolling performance as of `2026-06-30`: NAV 1-year `18.81%`, 3-year annualised `17.46%`, 5-year annualised `11.51%`, and since inception annualised `8.04%`; 10-year field is not applicable because inception was in 2017.
+- Official factsheet as of `2026-03-31`: NAV 3-month `1.51%`, 6-month/YTD `8.25%`, 1-year `24.74%`, 3-year annualised `16.86%`, 5-year annualised `11.81%`, since inception annualised `7.73%`; benchmark rows were `1.52%`, `8.31%`, `24.86%`, `17.00%`, `11.92%`, and `7.82%` where shown.
+- Official factsheet calendar NAV/index rows: 2018 `-14.65% / -14.58%`, 2019 `22.57% / 22.80%`, 2020 `-8.87% / -8.94%`, 2021 `17.15% / 17.25%`, 2022 `-6.92% / -6.91%`, 2023 `15.37% / 15.49%`, 2024 `8.85% / 8.99%`, and 2025 `33.36% / 33.54%`.
+- Official factsheet risk statistics as of `2026-03-31`: 3-year standard deviation FLGB `12.41%` and benchmark `12.43%`; current product-page sector snapshot as of `2026-07-29`: Financials `26.96%`, Consumer Staples `14.59%`, Industrials `14.25%`, Health Care `12.71%`, and Energy `10.82%`.
+- S&P 500 Total Return cached rows are USD rows as of `2025-12-31`: 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`.
+- Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed capture; no price-only substitute was used.
+
+### Calculations and reconciliation
+
+- Official FLGB NAV TR 2018-2025 compounds to `74.10%`; rounded-input CAGR is `7.18%`; population annual-return standard deviation is `15.86%`; up/down is `5/3`; best is 2025 `+33.36%`; least positive is 2024 `+8.85%`; worst is 2018 `-14.65%`; least bad down year is 2022 `-6.92%`.
+- Official FLGB NAV TR 2021-2025 compounds to `82.62%`; rounded-input CAGR is `12.80%`; the window has `4/1` positive/negative years.
+- Official FTSE UK Capped Index-NR rows compound to `75.24%` / rounded-input CAGR `7.26%` for 2018-2025 and `83.47%` / `12.90%` for 2021-2025. Rounded-input fund-minus-index differences are approximately `-0.09 pp` and `-0.10 pp`; these are passive tracking/cost observations, not alpha.
+- Cached S&P 500 TR 2018-2025 compounds to `192.03%` / rounded-input CAGR `14.33%`; 2021-2025 compounds to `96.17%` / `14.43%`. FLGB is approximately `-1.63 pp` below the S&P common-reference CAGR in 2021-2025; this is not the issuer benchmark.
+- No 10-year CAGR is calculated because the fund inception is `2017-11-02`; 2017 is an inception-year partial period and is not treated as a complete calendar row.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FLGB Performance.md` with Thai-first output, official identity/classification, official 2018-2025 annual table against issuer index and cached S&P 500 TR, rolling fields, current YTD/NAV dates, benchmark separation, risk read-through, source links, `geography/United-Kingdom` tag and breadcrumb `[[ETF Region Index]] → [[United Kingdom ETF]] → [[ETF Performance Index]]`.
+- Update `wiki/analysis/comparisons/United Kingdom ETF.md` with one static FLGB row; update `wiki/analysis/comparisons/ETF Region Index.md` United Kingdom count from `1` to `2`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with FLGB coverage, 2021-2025 common-window row and 2026-08-18 coverage-addition bullet; keep 10-year fields not applicable.
+- Append one `log.md` workflow bullet. No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing FLGB ticker hub was found.
+
+### Local pre-save checklist
+
+- PASS: FLGB identity, NYSE Arca exchange, inception, passive-index classification, FTSE UK Capped issuer benchmark, expense ratio, semi-annual distribution, NAV total-return basis, USD currency, periods, units, current NAV/YTD and rolling as-of dates are recorded with official sources.
+- PASS: official 2018-2025 NAV/index rows are separated from rolling/YTD fields; 2017 partial history and under-10-year status are explicit; issuer index and S&P 500 common-reference comparisons are separated and no arithmetic difference is called alpha.
+- PASS: no unsupported 10-year field, daily NAV drawdown or recovery value was invented; standard deviation and sector evidence are labeled with their as-of dates, and the remaining risk evidence gap is disclosed.
+- PASS: proposed performance page, United Kingdom region row, region count, performance-index coverage/common/addition rows, source-batch contents and log bullet are fully specified; canonical breadcrumb, `geography/United-Kingdom` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Franklin product/factsheet/prospectus identity, classification, annual NAV/index rows, rolling/YTD evidence and the scheduled-local pre-save checklist passed; FLGB artifacts were written with under-10-year history, benchmark tracking separation and daily NAV drawdown/recovery gaps disclosed.
+
+## ISF — iShares Core FTSE 100 UCITS ETF GBP (Distributing) / BCYIF alias
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`.
+- `input_ticker: BCYIF`; alias resolution: OTC `BCYIF` maps by ISIN `IE0005042456` to the official GBP distributing London line `LSE:ISF`; canonical `entity_key: LSE:ISF`; canonical exchange `London Stock Exchange`.
+- `management_mode: passive-index`; tracked index `FTSE 100 Index`; return basis is official GBP share-class NAV total return with gross income reinvested where applicable.
+- Primary region: `United Kingdom`; the fund is an Ireland-domiciled, physical, replicated UCITS equity ETF targeting the 100 largest UK companies.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ishares.com/uk/individual/en/products/251795/ishares-core-ftse-100-ucits-etf | official ISIN/listing map, NAV/YTD, fund facts, benchmark, risk and exposure snapshot |
+| Issuer factsheet | https://www.ishares.com/gls-download/literature/fact-sheet/isf-ishares-core-ftse-100-ucits-etf-fund-fact-sheet-en-gb.pdf | official 2016-2025 GBP NAV/index rows, rolling returns, structure and trading information as of July 2026 |
+| Issuer KIID | https://www.ishares.com/uk/individual/en/literature/kiid/ucits_kiid-ishares-core-ftse-100-ucits-etf-gbp-dist-gb-ie0005042456-en.pdf?siteEntryPassthrough=true&switchLocale=y | official passive/replication, benchmark, share-class and risk/charge disclosures |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 and 2021-2025, USD, dividends reinvested, as of 2025-12-31; original URLs are recorded on the ISF performance page |
+
+### Raw observations
+
+- Official iShares listing table maps ISIN `IE0005042456` to `ISF` on London Stock Exchange in GBP; the same share class is also listed on BATS Chi-X Europe, Euronext Amsterdam and other venues. The input OTC symbol `BCYIF` is retained as an alias only.
+- Official product page snapshot: share-class NAV `£10.50` as of `2026-08-14`; NAV TR YTD `11.05%` as of `2026-08-13`; share-class net assets `£16,485.15m` as of `2026-08-14`; 100 holdings as of `2026-08-13`; benchmark `FTSE 100 Index`; TER `0.07%`; quarterly distribution; physical replicated structure.
+- Official factsheet performance/portfolio as of `2026-07-31` with other data as of `2026-08-07`: share-class YTD `11.42%`, 1-year `22.68%`, 3-year annualised `16.11%`, 5-year annualised `13.02%`, since inception annualised `5.60%`; benchmark rows `11.47%`, `22.78%`, `16.23%`, `13.12%`, and `5.88%`.
+- Official factsheet calendar GBP share-class/index rows: 2016 `19.03% / 19.04%`, 2017 `11.94% / 11.91%`, 2018 `-8.83% / -8.77%`, 2019 `17.18% / 17.28%`, 2020 `-11.64% / -11.58%`, 2021 `18.31% / 18.40%`, 2022 `4.62% / 4.67%`, 2023 `7.80% / 7.90%`, 2024 `9.50% / 9.63%`, 2025 `25.66% / 25.78%`.
+- Official product-page characteristics as of `2026-07-31` / `2026-08-14`: 3-year standard deviation `9.57%`, 3-year beta `1.00`, P/E `18.10x`, P/B `2.41x`, and 12-month trailing yield `2.88%`; sector weights as of `2026-08-14`: Financials `28.65%`, Industrials `14.15%`, Consumer Staples `13.45%`, Health Care `11.21%`, and Energy `10.59%`.
+- The factsheet states that before `2019-07-17` the benchmark used a different total-return series; historic benchmark data was simulated to reflect the later net-of-tax total-return methodology.
+- S&P 500 Total Return cached rows are USD rows as of `2025-12-31`: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`.
+- Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed capture; no price-only substitute was used.
+
+### Calculations and reconciliation
+
+- Official ISF GBP share-class NAV TR 2016-2025 compounds to `130.92%`; rounded-input calendar CAGR is `8.73%`; population annual-return standard deviation is `11.42%`; up/down is `8/2`; best is 2025 `+25.66%`; least positive is 2022 `+4.62%`; worst is 2020 `-11.64%`; least bad down year is 2018 `-8.83%`.
+- Official ISF GBP share-class NAV TR 2021-2025 compounds to `83.60%`; rounded-input CAGR is `12.92%`; the window has `5/0` positive/negative years.
+- Official FTSE 100 Index GBP rows compound to `132.39%` / rounded-input CAGR `8.80%` for 2016-2025 and `84.39%` / `13.02%` for 2021-2025. Rounded-input fund-minus-index differences are approximately `-0.07 pp` and `-0.10 pp`; these are passive tracking observations, not alpha.
+- Cached S&P 500 TR 2016-2025 compounds to `298.33%` / rounded-input CAGR `14.82%`; 2021-2025 compounds to `96.17%` / `14.43%`. Because ISF is a GBP share class and the S&P reference is USD, no direct cross-currency CAGR gap is asserted.
+- No issuer-labeled rolling 10-year field was found in the reviewed official capture; `8.73%` is retained as a calendar-derived CAGR from the complete official 2016-2025 rows.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_LSE_ISF Performance.md` with Thai-first output, BCYIF-to-LSE:ISF alias resolution, official identity/classification, official 2016-2025 GBP annual table against FTSE 100 and cached S&P 500 reference, rolling fields, current YTD/NAV dates, benchmark-method note, GBP/USD separation, risk read-through, source links, `geography/United-Kingdom` tag and breadcrumb `[[ETF Region Index]] → [[United Kingdom ETF]] → [[ETF Performance Index]]`.
+- Update `wiki/analysis/comparisons/United Kingdom ETF.md` with one static ISF/BCYIF row; update `wiki/analysis/comparisons/ETF Region Index.md` United Kingdom count from `2` to `3`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with ISF coverage/common-window/coverage-addition rows and a note that the calendar CAGR is not an issuer rolling field and the S&P reference is USD.
+- Append one `log.md` workflow bullet. No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing ISF/BCYIF ticker hub was found.
+
+### Local pre-save checklist
+
+- PASS: BCYIF alias, ISIN, canonical LSE:ISF exchange/ticker, inception, passive-index classification, FTSE 100 issuer benchmark, fee, quarterly distribution, GBP NAV total-return basis, periods, units, current NAV/YTD and rolling as-of dates are recorded with official sources.
+- PASS: official GBP annual share-class/index rows are separated from rolling/YTD fields and from the USD S&P reference; calendar-derived 10-year CAGR is labeled as non-issuer rolling; benchmark-method change and no-alpha wording are explicit.
+- PASS: no unsupported raw 10-year endpoints, daily NAV drawdown or recovery values were invented; standard deviation, beta, holdings and sector evidence are labeled with as-of dates, and the remaining risk evidence gap is disclosed.
+- PASS: proposed performance page, United Kingdom region row, region count, performance-index coverage/common/addition rows, source-batch contents and log bullet are fully specified; canonical breadcrumb, `geography/United-Kingdom` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity/listing, passive classification, GBP annual share-class/index returns, rolling/YTD evidence and the scheduled-local pre-save checklist passed; ISF/BCYIF artifacts were written with alias resolution, GBP/USD separation, benchmark-method note and daily NAV drawdown/recovery gaps disclosed.

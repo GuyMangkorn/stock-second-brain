@@ -30,6 +30,7 @@ tags:
 | HEZU | iShares Currency Hedged MSCI Eurozone ETF | Eurozone passive, USD-hedged equity on NYSE Arca | 12.88% | 13.88% | 17.53% | [[ETF_NYSE_ARCA_HEZU Performance]] |
 | EZU | iShares MSCI Eurozone ETF | Eurozone passive, USD unhedged equity on Cboe BZX | 10.91% | 10.60% | 14.20% | [[ETF_CBOE_BZX_EZU Performance]] |
 | FLEU | Franklin FTSE Eurozone ETF | Eurozone passive; predecessor hedged-Europe index through 2023-07-31 | not applicable (<10y) | 14.06% | 6.75% | [[ETF_NYSE_ARCA_FLEU Performance]] |
+| FEZ | State Street SPDR EURO STOXX 50 ETF | Eurozone large-cap passive equity | 10.92% | 12.31%* | 9.66% | [[ETF_NYSE_ARCA_FEZ Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -104,6 +105,11 @@ NAV YTD ใน capture ณ 2026-07-23. History ตั้งแต่ 2018 ใช
 2023-08-01. Factsheet ณ 2026-06-30 แสดง YTD `9.16%`; ใช้ `6.75%` เพราะเป็น
 later product-page snapshot, not a same-date conflict. Official daily NAV
 drawdown/recovery ยังไม่ verified.
+
+FEZ `10.92%` เป็น issuer rolling 10-year NAV TR ณ 2026-07-31; `12.31%*` เป็น
+rounded-input CAGR จาก secondary dividend-reinvested annual proxy rows 2021-2025
+และ `9.66%` เป็น official NAV TR YTD ณ 2026-07-31. Proxy annual rows ไม่ถูกเพิ่ม
+ใน strict common-window ranking; official daily NAV drawdown/recovery ยังไม่ verified.
 
 ## Navigation
 
