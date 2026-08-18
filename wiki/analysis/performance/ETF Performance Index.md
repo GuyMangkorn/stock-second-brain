@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-18
+updated: 2026-08-19
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -244,6 +244,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_CBOE_BZX_BBEU Performance]] | official 2019-2025; launch 2018-06-15; history under 10 years | not applicable (<10y history) | 10.63% | 10.47% | 2025 +35.73% / 2022 -14.71% | developed Europe broad-market passive equity | country/sector/FX/large-/mid-cap-sensitive; 15.26% annual-return dispersion; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_VGK Performance]] | official 2005 / official 2016-2025; rolling 10-year as of 2026-06-30 | 10.06% | 10.14% | 7.06% | 2025 +35.44% / 2022 -16.04% | developed Europe broad-market passive full-replication equity | country/sector/FX/large-/mid-/small-cap-sensitive; 13.67% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLEE Performance]] | official 2017-11-02 / official 2018-2025; history under 10 years | not applicable (<10y history) | 10.55% | 9.91% | 2025 +35.87% / 2018 -14.81% | developed Europe large-/mid-cap passive capped-index equity | country/sector/FX/large-/mid-cap-sensitive; 13.63% 3-year standard deviation; NAV drawdown/recovery gap |
+| [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] | official 2019-07-23 / official 2020-2025; history under 10 years | not applicable (<10y history) | 11.48% | 12.06% | 2025 +19.90% / 2020 -2.60% | developed Europe large-/mid-cap passive accumulating equity | country/sector/FX/large-/mid-cap/foreign-market-sensitive; 0.14% 1/3/5Y tracking error; NAV drawdown/recovery gap; input alias VNGLF |
 | [[ETF_NYSE_ARCA_EWU Performance]] | official 1996 / official 2016-2025; rolling 10-year as of 2026-06-30 | 8.21% | 12.67% | 11.50% | 2025 +34.45% / 2018 -14.60% | United Kingdom large/mid-cap passive equity | financials/industrials/consumer staples/health care/energy; country/sector/GBP-USD FX-sensitive; 11.89% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FKU Performance]] | official 2012 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-07-14 | 8.67% | 10.30% | 10.96% | 2025 +37.60% / 2022 -23.52% | United Kingdom rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.80% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLGB Performance]] | official 2017 / official 2018-2025; history under 10 years; rolling issuer 2026-06-30 | not applicable (<10y history) | 12.80% | 11.56% | 2025 +33.36% / 2018 -14.65% | United Kingdom large/mid-cap passive equity | financials/consumer staples/industrials/health care; UK/GBP-USD/country/sector/liquidity-sensitive; 12.41% 3-year standard deviation |
@@ -457,6 +458,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_CBOE_BZX_BBEU Performance]] | 16.70% | -14.71% | 19.98% | 2.25% | 35.73% | 65.74% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VGK Performance]] | 16.35% | -16.04% | 20.03% | 2.04% | 35.44% | 62.05% | 4 / 1 |
 | [[ETF_NYSE_ARCA_FLEE Performance]] | 16.21% | -15.51% | 20.93% | 2.35% | 35.87% | 65.12% | 4 / 1 |
+| [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] | 25.20% | -10.00% | 16.50% | 9.40% | 19.90% | 72.19% | 4 / 1 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -913,6 +915,10 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_ISF Performance]] — ISF / BCYIF (United Kingdom; official LSE:ISF GBP distributing share class, passive FTSE 100 Index exposure; official 2016-2025 NAV TR cumulative `+130.92%` / rounded-input calendar CAGR `+8.73%`, 2021-2025 CAGR `+12.92%`, and current official NAV TR YTD `+11.05%` as of 2026-08-13; 2025 `+25.66%` / 2020 `-11.64%`, 9.57% 3-year standard deviation, GBP/USD basis and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_EWU Performance]] — EWU (United Kingdom; passive MSCI United Kingdom Index exposure; official 2016-2025 NAV TR cumulative `+101.02%` / rounded-input CAGR `+7.23%`, issuer rolling 10-year NAV TR `+8.21%` as of 2026-06-30, 2021-2025 CAGR `+12.67%`, and current official NAV TR YTD `+11.50%` as of 2026-08-14; 2025 `+34.45%` / 2018 `-14.60%`, 11.89% 3-year standard deviation and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_FLGR Performance]] — FLGR (Germany; passive FTSE Germany Capped Index exposure; official 2018-2025 NAV TR cumulative `+63.92%` / rounded-input CAGR `+6.37%`, 2021-2025 CAGR `+9.02%`, history under 10 years, and current official NAV TR YTD `+5.23%` as of 2026-08-07; 2025 `+36.70%` / 2022 `-22.10%`, 16.66% 3-year standard deviation and daily NAV drawdown/recovery gap disclosed)
+
+## 2026-08-19 Coverage Addition
+
+- [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] — VWCG (Europe; input alias VNGLF resolved to official EUR accumulating `Euronext Amsterdam:VWCG`; official 2020-2025 NAV TR cumulative `+67.71%` / rounded-input CAGR `+9.00%`, 2021-2025 CAGR `+11.48%`, and current official NAV TR YTD `+12.06%` as of 2026-07-31; 2025 `+19.90%` / 2020 `-2.60%`, 0.14% 1/3/5-year tracking error, history under 10 years, EUR-vs-USD reference and daily NAV drawdown/recovery gaps disclosed)
 
 ## 2026-08-17 Coverage Addition
 

@@ -1,6 +1,6 @@
 ---
 type: etf-region-index
-updated: 2026-08-18
+updated: 2026-08-19
 scope: ETF performance navigation
 tags:
   - analysis/etf-region
@@ -30,7 +30,7 @@ driver notes ทั้งหมด
 | Canada | 2 | [[Canada ETF]] |
 | Germany | 3 | [[Germany ETF]] |
 | Greece | 1 | [[Greece ETF]] |
-| Europe | 17 | [[Europe ETF]] |
+| Europe | 18 | [[Europe ETF]] |
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
 | Emerging Markets | 5 | [[Emerging Markets ETF]] |

@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-19
+
+- `etf-performance`: Created [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] for input alias `VNGLF`, updated [[Europe ETF]], [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-19]]. Scheduled-inline local pre-save returned PASS; official 2020-2025 EUR NAV TR cumulative is `67.71%` / rounded-input CAGR `9.00%`, 2021-2025 CAGR `11.48%`, and current official NAV TR YTD is `12.06%` as of 2026-07-31, with the EUR-vs-USD reference, under-10-year history, and daily NAV drawdown/recovery gap disclosed.
+
 ## 2026-08-18
 
 - `etf-performance`: Created [[ETF_NYSE_ARCA_FLEE Performance]], updated [[Europe ETF]], [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-18]]. Scheduled-inline local pre-save returned PASS; official 2018-2025 NAV TR cumulative is `85.42%` / rounded-input CAGR `8.02%`, 2021-2025 CAGR `10.55%`, and current official NAV TR YTD is `9.91%` as of 2026-07-30, with under-10-year history, current NAV/market-price and daily NAV drawdown/recovery gaps disclosed.

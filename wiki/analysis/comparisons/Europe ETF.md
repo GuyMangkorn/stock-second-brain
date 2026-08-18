@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Europe
-updated: 2026-08-18
+updated: 2026-08-19
 tags:
   - analysis/etf-region
   - geography/Europe
@@ -34,6 +34,7 @@ tags:
 | BBEU | JPMorgan BetaBuilders Europe ETF | developed Europe broad-market passive equity | not applicable (<10y) | 10.63% | 10.47% | [[ETF_CBOE_BZX_BBEU Performance]] |
 | VGK | Vanguard FTSE Europe ETF | developed Europe broad-market passive full-replication equity | 10.06% | 10.14% | 7.06% | [[ETF_NYSE_ARCA_VGK Performance]] |
 | FLEE | Franklin FTSE Europe ETF | developed Europe large-/mid-cap passive capped-index equity | not applicable (<10y) | 10.55% | 9.91% | [[ETF_NYSE_ARCA_FLEE Performance]] |
+| VWCG | Vanguard FTSE Developed Europe UCITS ETF (EUR) Accumulating | developed Europe large-/mid-cap passive accumulating equity; input alias VNGLF | not applicable (<10y) | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -43,6 +44,11 @@ FLEE เปิดตัว 2017-11-02 จึงไม่มี 10-year NAV TR; `
 CAGR ของ official 2018-2025 NAV rows, `10.55%` เป็น common 2021-2025 CAGR
 และ `9.91%` เป็น official NAV TR YTD ณ 2026-07-30. Official 3-year standard
 deviation คือ `13.63%` ณ 2026-06-30; daily NAV drawdown/recovery ยังไม่ verified.
+
+VWCG (input alias `VNGLF`) เปิดตัว 2019-07-23 จึงไม่มี 10-year NAV TR;
+`11.48%` เป็น rounded-input CAGR ของ official EUR NAV rows 2021-2025 และ
+`12.06%` เป็น official NAV TR YTD ณ 2026-07-31. Official 1/3/5-year tracking
+error คือ `0.14%` ณ 2026-07-31; daily NAV drawdown/recovery ยังไม่ verified.
 
 FDD `10.86%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `12.37%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ
