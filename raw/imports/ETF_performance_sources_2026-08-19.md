@@ -669,3 +669,74 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official DWS identity, DXMEF-to-LSE:XMED mapping, passive USD share-class classification, secondary USD annual/current evidence, source reconciliation and the scheduled-local pre-save checklist passed; issuer performance gaps and conflicting Euro-labelled sources are explicitly disclosed.
+
+## DBEU — Xtrackers MSCI Europe Hedged Equity ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:DBEU`; input ticker `DBEU`; official fund `Xtrackers MSCI Europe Hedged Equity ETF`; SEC filing identifies the listing as NYSE Arca; inception `2013-09-30`; CUSIP `233051853`.
+- `management_mode: passive-index`; SEC summary prospectus describes a passive/indexing approach using full replication, with representative sampling permitted when direct acquisition is not practicable.
+- Issuer benchmark: `MSCI Europe US Dollar Hedged Index`; the index hedges the developed-Europe equity exposure to USD with one-month currency forwards. Primary region: `Europe`; region page `[[Europe ETF]]`; canonical tag `geography/Europe`.
+- `return_basis: NAV total return` in USD; the DWS factsheet reports ETF-at-NAV performance net of fund expenses and keeps market-price returns separate. The annual and YTD rows used below are secondary rounded NAV-return observations marked `*`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| DWS DBEU Q2 2026 factsheet | https://etf.dws.com/download/asset/b2d0199b-0bfc-4ed0-866b-24f31967f463 | official fund identity, NYSE ticker, inception, hedged MSCI benchmark, rolling NAV/benchmark returns, fee, holdings, country/sector weights and beta; as of `2026-06-30` |
+| SEC DBEU summary prospectus | https://www.sec.gov/Archives/edgar/data/1503123/000008805325000878/k100125dbeu.htm | official exchange identity, passive/indexing/full-replication method, expense ratio and risk disclosures; October 2025 |
+| AAII DBEU performance page | https://www.aaii.com/etf/ticker/DBEU | secondary rounded annual NAV-total-return and YTD rows; as of `2026-06-30` |
+| DWS 2026 NYSE dividend schedule | https://etf.dws.com/en-us/AssetDownload/Index/6b4403da-1256-4e11-8e8a-14254534db91/Dividend-Schedule.pdf/ | issuer distribution-schedule context; DBEU is listed under semi-annual distributions, but no amount is used in this performance run |
+| S&P 500 index page and cached convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ and the cached URLs in `check-etf-performance/SKILL.md` | common USD S&P 500 Total Return reference for complete calendar years `2016-2025`; dividends reinvested, as of `2025-12-31` |
+
+### Raw observations
+
+- DWS official factsheet as of `2026-06-30`: NAV returns are `11.97%` for 3 months, `24.03%` for 1 year, `16.02%` annualized for 3 years, `12.03%` annualized for 5 years, `11.58%` annualized for 10 years and `9.90%` since inception. The same table reports the MSCI Europe US Dollar Hedged Index at `11.87%`, `24.16%`, `16.25%`, `12.18%`, `11.82%` and `10.15%`, respectively.
+- DWS identifies the ETF as NYSE ticker `DBEU`, inception `2013-09-30`, 410 holdings, net assets `$758,183,774.79`, gross/net expense ratio `0.45%`, and beta `0.73`, all as of `2026-06-30`.
+- DWS country weights as of `2026-06-30`: UK `20.08%`, Switzerland `14.86%`, France `14.29%`, Germany `13.10%`, Netherlands `10.57%`, Spain `5.97%`, Italy `4.88%`, Sweden `4.57%`, Denmark `2.54%`, plus cash `1.94%`. Sector weights include Financials `23.71%`, Industrials `17.59%`, Health Care `12.46%`, Information Technology `9.84%` and Consumer Staples `8.29%`.
+- The AAII page labels the secondary annual NAV rows as: 2016 `8.1%`, 2017 `14.6%`, 2018 `-8.5%`, 2019 `26.8%`, 2020 `-0.5%`, 2021 `23.3%`, 2022 `-6.2%`, 2023 `17.0%`, 2024 `9.5%`, 2025 `22.5%`; its YTD row is `11.5%`, all as of `2026-06-30`. These values are rounded to one decimal in the source and are marked `*` rather than relabeled as official DWS calendar rows.
+- The DWS factsheet provides no issuer-published 2016-2025 annual table or current YTD field in the reviewed capture. Daily NAV observations sufficient to reproduce maximum drawdown and recovery were also not disclosed.
+- Cached S&P 500 TR rows for `2016-2025` are USD: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; dividends reinvested, reference as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`: secondary DBEU 2016-2025 rows compound to `159.582688%`, displayed as `159.58%*`; rounded-input CAGR is `10.008837%`, displayed as `10.01%*`; population annual-return standard deviation is `11.832092%`, displayed as `11.83%*`; up/down is `7/3`; best is 2019 `+26.80%*`; worst is 2018 `-8.50%*`; least-bad down year is 2020 `-0.50%*`.
+- Secondary DBEU 2021-2025 rows compound to `81.510597%`, displayed as `81.51%*`; rounded-input CAGR is `12.662763%`, displayed as `12.66%*`; population annual-return standard deviation for this five-year subset is `10.890253%`.
+- Cached S&P 500 TR compounds to `298.329111%` / rounded-input CAGR `14.821761%` over `2016-2025`, displayed as `298.33%` / `14.82%`; over `2021-2025` it compounds to `96.17%` / `14.43%`. It is a common USD reference, not DBEU's issuer benchmark, and no currency-mismatched excess-return claim is made.
+- The official DWS rolling 10-year NAV TR field `11.58%` as of `2026-06-30` is kept separate from the secondary complete-calendar proxy CAGR `10.01%*`; the windows and evidence ownership differ.
+
+### Source conflict and quality choice
+
+- The DWS factsheet is the source of truth for identity, classification, issuer benchmark, rolling NAV performance, fee, holdings and risk fields. It does not expose the annual/YTD rows needed for the durable annual table.
+- AAII is selected as the secondary source because it explicitly labels the observations as annual NAV total returns and provides a dated YTD NAV row. The values remain rounded and marked `*`; price-return and dividend-adjusted proxy pages were not substituted into the NAV table.
+- No arithmetic annual difference versus S&P 500 is described as alpha. Currency-hedged DBEU NAV returns and the USD S&P reference are shown together only as a clearly labelled common reference comparison.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_DBEU Performance.md` with canonical `NYSE Arca:DBEU`, official rolling 10-year NAV TR `11.58%`, secondary rounded 2016-2025 NAV-return rows marked `*`, secondary YTD `11.50%*`, cached S&P USD rows, 159.58%* / 10.01%* and 81.51%* / 12.66%* calculations, risk/hedging caveats, Europe breadcrumb and `geography/Europe` tag.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the DBEU row and the official-versus-secondary annual/YTD gap note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `26` to `27`; no new region page is needed.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the DBEU coverage row, a marked `*` 2021-2025 Common Window row, and a `2026-08-19 Coverage Addition` bullet.
+- Append one `log.md` workflow bullet; no entity hub, normalized financial table or `raw/funds/` file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:DBEU` identity, fund name, inception, passive eligibility, full-replication method, MSCI USD-hedged benchmark, 0.45% fee, USD return basis and all as-of dates are source-backed.
+- PASS: official DWS rolling NAV/benchmark fields are kept separate from secondary annual/YTD NAV-return rows; market-price return and distributions are not mixed into the annual table; secondary rows are visibly marked `*`.
+- PASS: 2016-2025 and 2021-2025 calculations, up/down counts, best/worst subset, S&P cached values and displayed percentages recompute from the stated inputs; the issuer rolling 10-year field is not relabeled as the calendar CAGR.
+- PASS: official beta, holdings, country/sector exposure and USD hedge risks are disclosed; daily NAV drawdown/recovery and issuer calendar/YTD gaps are explicitly recorded as unresolved.
+- PASS: complete proposed performance page, source batch section, Europe row/count, performance-index row/Common Window/bullet and log bullet are specified; canonical breadcrumb, `geography/Europe` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official DWS identity, passive USD-hedged classification, rolling NAV evidence, secondary annual/YTD observations, reconciled calculations and the scheduled-local pre-save checklist passed; issuer calendar/YTD and daily NAV gaps remain disclosed.
