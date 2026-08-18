@@ -522,3 +522,75 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity and ISACF-to-LSE:ISAC mapping, passive classification, USD 2016-2025 NAV/benchmark rows, rolling/current fields and the scheduled-local pre-save checklist passed; July-versus-current as-of dates, tracking observations and global risk gaps are disclosed.
+
+## IMSEF — iShares Core MSCI Europe UCITS ETF (EUR Distributing)
+
+### Identity and classification
+
+- entity_key: LSE:ISEU; input ticker: IMSEF; official ticker: ISEU; exchange: London Stock Exchange USD line; ISIN: IE00B1YZSC51.
+- Fund/share-class: iShares Core MSCI Europe UCITS ETF (EUR Distributing); share-class launch 06 Jul 2007; EUR share class; Ireland; UCITS.
+- management_mode: passive-index-tracking; physical optimized replication; benchmark MSCI Europe Index.
+- return_basis: official NAV Total Return in EUR, net of expenses, with gross income reinvested where applicable; distributing share class pays quarterly income.
+- supported type: passive index-tracking equity ETF; primary region Europe.
+- input mapping: OTC IMSEF is retained as alias and resolves by ISIN to the same EUR share class whose official USD London Stock Exchange line is ISEU. The LSE GBP line IMEU and Euronext EUR line IMEU are separate trading lines for the same share-class identity.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares product page | https://www.ishares.com/uk/individual/en/products/251860/ishares-msci-%20europe-ucits-etf-inc-fund | official identity, share class, benchmark, current NAV/YTD, holdings, risk fields and listing table |
+| iShares July 2026 factsheet | https://www.ishares.com/uk/individual/en/literature/fact-sheet/imeu-ishares-core-msci-europe-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y | official EUR 2016-2025 annual NAV/benchmark rows, rolling performance, TER, holdings and dated fund facts |
+| DTCC OTC notice | https://www.dtcc.com/-/media/Files/pdf/2016/5/16/OTC-094.pdf | OTC symbol IMSEF and iShares II plc MSCI Europe EUR UCITS ETF identity cross-check |
+| Cached S&P 500 Total Return convention | workflow cache and original URLs in the check-etf-performance skill | separate USD common reference; not used for arithmetic comparison with EUR NAV returns |
+
+### Raw observations
+
+- Official iShares product page identifies the share class as iShares Core MSCI Europe UCITS ETF (EUR Distributing), ISIN IE00B1YZSC51, share-class launch 06 Jul 2007, share-class currency EUR, benchmark MSCI Europe Index, physical optimized methodology, TER 0.12%, quarterly distributions and 396 holdings as of 14 Aug 2026.
+- Official listing table identifies London Stock Exchange ticker ISEU, currency USD, listing date 28 Nov 2016, SEDOL BD8BRX7, Bloomberg ISEU LN and RIC ISEU.L. The same table shows IMEU GBP and IMEU EUR listings for the share class.
+- Official product page current snapshot: NAV EUR 41.11 as of 17 Aug 2026; NAV Total Return YTD 13.81% as of 14 Aug 2026; net assets of share class EUR 10.839B as of 17 Aug; shares outstanding 263.621M as of 17 Aug.
+- Official product-page analytics as of 31 Jul 2026: 3-year standard deviation 10.59% and 3-year beta 1.002. The July factsheet also reports 3-year beta 1.00 and 396 holdings.
+- Official July factsheet says performance, portfolio and net-asset information are as of 31 Jul 2026 and other data as of 07 Aug 2026. It reports TER 0.12%, physical optimized replication, EUR distributing share class and MSCI Europe Index benchmark.
+- Official Share Class EUR NAV Total Return annual rows: 2016 2.65%, 2017 10.29%, 2018 -10.42%, 2019 26.42%, 2020 -3.14%, 2021 25.44%, 2022 -9.23%, 2023 16.13%, 2024 8.87%, 2025 19.67%.
+- Official MSCI Europe EUR benchmark annual rows: 2016 2.58%, 2017 10.24%, 2018 -10.57%, 2019 26.05%, 2020 -3.32%, 2021 25.13%, 2022 -9.49%, 2023 15.83%, 2024 8.59%, 2025 19.39%.
+- Official July factsheet rolling fields: Share Class 1m 0.97%, 3m 7.43%, 6m 8.67%, YTD 12.05%, 1y 22.36%, 3y annualized 14.28%, 5y annualized 10.40%, since inception 5.41%; benchmark YTD 11.82%, 1y 22.09%, 3y 14.00%, 5y 10.11%, since inception 5.29%.
+- Official product-page risk text covers equity-market movements and counterparty risk; country, sector and currency exposure are inherent in the MSCI Europe equity portfolio. Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources.
+
+### Calculations and reconciliation
+
+- Cumulative = product of (1 + annual return) - 1. Official 2016-2025 Share Class rows compound to 113.935433%, displayed as 113.94%; rounded-input CAGR is 7.901696%, displayed as 7.90%†; population annual-return standard deviation is 12.791270%.
+- Official 2021-2025 Share Class rows compound to 72.272645%, displayed as 72.27%; rounded-input CAGR is 11.491887%, displayed as 11.49%; population annual-return standard deviation is 11.973924%, displayed as 11.97%; positive/negative years are 4/1; best year is 2025 +19.67%; worst year is 2022 -9.23%.
+- Official 2016-2025 benchmark rows compound to 109.604920%, displayed as 109.60%; rounded-input CAGR is 7.681265%, displayed as 7.68%.
+- Official 2021-2025 benchmark rows compound to 70.073579%, displayed as 70.07%; rounded-input CAGR is 11.205782%, displayed as 11.21%.
+- Fund-minus-benchmark annual differences for 2021-2025 are +0.31, +0.26, +0.30, +0.28 and +0.28 percentage points. These are passive tracking observations after fees/rounding and are not called alpha.
+- Complete 2016-2025 rows support the calendar-derived 10-year display; no issuer rolling 10-year field is substituted for this calculation. The page marks the fund value with †.
+- Cached S&P 500 Total Return rows remain a separate USD reference and are not compared with the EUR NAV rows because of currency and market-exposure mismatch.
+
+### Planned durable paths and contents
+
+- Create wiki/analysis/performance/ETF_LSE_ISEU Performance.md with the canonical LSE:ISEU identity, IMSEF alias, EUR NAV/benchmark annual table, USD listing-currency note, rolling/current date separation, risk evidence, source links, Europe breadcrumb and geography tag.
+- Update wiki/analysis/comparisons/Europe ETF.md with the ISEU row, EUR-return/USD-listing note and calendar-CAGR footnote.
+- Update wiki/analysis/comparisons/ETF Region Index.md Europe count from 24 to 25.
+- Update wiki/analysis/performance/ETF Performance Index.md with the ISEU coverage row, 2021-2025 Common Window row and 2026-08-19 coverage bullet.
+- Append one log.md workflow bullet; no entity hub, normalized financial table or raw/funds file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical ticker/exchange mapping, fund/share-class identity, ISIN, launch/listing dates, passive eligibility, benchmark, replication method, TER, distribution, EUR NAV TR definition, USD listing currency and all as-of dates are source-backed.
+- PASS: official EUR annual rows and benchmark rows are separated from current product-page YTD/NAV; the USD LSE line is not treated as a USD return series; cached S&P is kept separate; no arithmetic alpha or manager-skill claim is made.
+- PASS: complete official 2016-2025 rows support the calendar calculation; the rounded-input CAGR is marked †; 2021-2025 common-window calculations reconcile to displayed annual rows; tracking differences are labeled as observations.
+- PASS: equity-market, country/sector, FX and counterparty risks are disclosed; official daily NAV drawdown/recovery gap is disclosed; no secondary performance rows are required.
+- PASS: complete proposed contents of the performance page, source batch section, Europe row/count, performance-index row/Common Window/bullet and log bullet are specified; planned links and breadcrumb resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity and IMSEF-to-LSE:ISEU mapping, passive classification, EUR 2016-2025 NAV/benchmark rows, rolling/current fields and the scheduled-local pre-save checklist passed; EUR-return/USD-listing basis, date gaps and daily NAV drawdown/recovery gap are disclosed.

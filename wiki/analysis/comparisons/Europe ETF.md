@@ -38,6 +38,7 @@ tags:
 | VEUR | Vanguard FTSE Developed Europe UCITS ETF (EUR) Distributing | developed Europe large-/mid-cap passive distributing equity; input alias VFDEF | 9.66% | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VEUR Performance]] |
 | VERE | Vanguard FTSE Developed Europe ex UK UCITS ETF (EUR) Accumulating | developed Europe ex-UK large-/mid-cap passive accumulating equity; input alias VGRDF | not applicable (<10y) | 10.68%* | 11.54% | [[ETF_LSE_VERE Performance]] |
 | GSEU | Goldman Sachs ActiveBeta Europe Equity ETF | developed Europe strategic-beta passive index exposure; quarterly value/momentum/quality/low-volatility factors | 9.70% | 9.89% | 9.78% | [[ETF_NYSE_ARCA_GSEU Performance]] |
+| ISEU | iShares Core MSCI Europe UCITS ETF (EUR Distributing) | developed Europe broad-market passive distributing equity; input alias IMSEF; USD-traded LSE line | 7.90%† | 11.49% | 13.81% | [[ETF_LSE_ISEU Performance]] |
 | IEUR | iShares Core MSCI Europe ETF | developed Europe large-/mid-/small-cap passive broad-market equity; NYSE Arca | 10.02% | 9.91% | 12.03% | [[ETF_NYSE_ARCA_IEUR Performance]] |
 | SPEU | State Street SPDR Portfolio Europe ETF | Western Europe broad-market passive equity across market caps; NYSE Arca | 9.76% | 10.13%* | 7.29% | [[ETF_NYSE_ARCA_SPEU Performance]] |
 | IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 11.94% | [[ETF_NYSE_ARCA_IEV Performance]] |
@@ -174,6 +175,18 @@ ActiveBeta Index เป็น management benchmark; fund NAV เทียบ ben
 -0.02 pp YTD และ -0.17 pp ใน rolling 1-year. Secondary maximum drawdown/
 recovery คือ -35.71% / 172 trading sessions; official daily NAV drawdown,
 latest NAV price และ current price/NAV gap ยังไม่ verified.
+
+IMSEF เป็น input OTC alias ของ iShares Core MSCI Europe UCITS ETF (EUR
+Distributing), ISIN IE00B1YZSC51. Official iShares listing table ยืนยัน
+London Stock Exchange USD line คือ ISEU; ผลตอบแทนใน factsheet เป็น EUR share-class
+NAV TR จึงไม่ควรอ่านเป็น USD return แม้ listing currency เป็น USD. Complete
+official 2016-2025 rows compound เป็น 113.94% หรือ rounded-input calendar CAGR
+7.90%†, ช่วง 2021-2025 เป็น 72.27% หรือ 11.49% ต่อปี และ current official
+NAV TR YTD คือ 13.81% ณ 2026-08-14 ขณะที่ NAV คือ EUR 41.11 ณ 2026-08-17.
+July factsheet YTD 12.05% ณ 2026-07-31, TER 0.12%, holdings 396 และ
+3-year standard deviation 10.59% ณ 2026-07-31; † คือ calendar CAGR ไม่ใช่
+issuer rolling 10-year field. Official daily NAV drawdown/recovery ยังไม่
+พบข้อมูลที่ยืนยันได้.
 
 ## Navigation
 
