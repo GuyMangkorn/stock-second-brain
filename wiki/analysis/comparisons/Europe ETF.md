@@ -36,6 +36,7 @@ tags:
 | FLEE | Franklin FTSE Europe ETF | developed Europe large-/mid-cap passive capped-index equity | not applicable (<10y) | 10.55% | 9.91% | [[ETF_NYSE_ARCA_FLEE Performance]] |
 | VWCG | Vanguard FTSE Developed Europe UCITS ETF (EUR) Accumulating | developed Europe large-/mid-cap passive accumulating equity; input alias VNGLF | not applicable (<10y) | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] |
 | VEUR | Vanguard FTSE Developed Europe UCITS ETF (EUR) Distributing | developed Europe large-/mid-cap passive distributing equity; input alias VFDEF | 9.66% | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VEUR Performance]] |
+| IEUR | iShares Core MSCI Europe ETF | developed Europe large-/mid-/small-cap passive broad-market equity; NYSE Arca | 10.02% | 9.91% | 12.03% | [[ETF_NYSE_ARCA_IEUR Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -57,6 +58,13 @@ CAGR ของ official EUR NAV rows 2021-2025 และ `12.06%` เป็น o
 ณ 2026-07-31. Share class จ่าย income quarterly; latest four verified cash
 distributions รวม `€1.2914` ต่อหน่วย. Official 1/3/5-year tracking error คือ
 `0.14%`; daily NAV drawdown/recovery ยังไม่ verified.
+
+IEUR มี complete official calendar rows 2021-2025; `10.02%` เป็น issuer
+rolling 10-year NAV TR ณ 2026-06-30, `9.91%` เป็น rounded-input CAGR ของ
+official USD NAV rows 2021-2025 และ `12.03%` เป็น official NAV TR YTD ณ
+2026-08-17. Fund จ่าย income semi-annually; latest two verified payments
+รวม `US$2.391585` ต่อหน่วย. Official 3-year standard deviation คือ `13.67%`
+ณ 2026-07-31; daily NAV drawdown/recovery ยังไม่ verified.
 
 FDD `10.86%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `12.37%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ
