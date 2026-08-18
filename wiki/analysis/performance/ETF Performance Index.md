@@ -52,6 +52,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Southeast Asia ETF]]
 - [[Taiwan ETF]]
 - [[Thailand ETF]]
+- [[United Kingdom ETF]]
 - [[Vietnam ETF]]
 
 ## Coverage
@@ -230,6 +231,11 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_SLYV Performance]] | official 2000 / official 2016-2023; secondary 2024-2025*; official rolling 10-year as of 2026-07-31 | 10.06% | 8.77% | 20.17% | 2016 +31.14% / 2018 -12.69% | U.S. small-cap value equity | small-cap/value/cyclicality/sector/liquidity-sensitive; 462 holdings; 2024-2025 rows secondary; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_RSSL Performance]] | official inception 2024-06-04; official 2025 complete year; history under 10 years | not applicable (<10y) | not applicable | 22.52% | 2025 +12.76% / not applicable | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 19.00% standard deviation and NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
+| [[ETF_NYSE_ARCA_OPPE Performance]] | official 2015 / official 2016-2025; strategy/index change 2025-06-02; rolling 10-year as of 2026-07-31 | 12.91% | 14.84% | 17.72% | 2025 +38.73% / 2018 -13.41% | Europe opportunities, dynamic FX hedge | shareholder-yield/value/geopolitical/theme/country/sector/FX-sensitive; 2025 transition and daily NAV drawdown/recovery gap |
+| [[ETF_NASDAQ_FEP Performance]] | official 2011 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-10-13 | 10.57% | 10.90% | 11.02% | 2025 +55.13% / 2022 -22.87% | broad Europe rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 14.98% 3-year standard deviation; NAV drawdown/recovery gap |
+| [[ETF_LSE_FTEU Performance]] | official 2014 / secondary USD 2021-2025; rolling 10-year secondary as of 2026-07-27 | 10.75%* | 11.40%* | 12.31%* | 2025 +57.98%* / 2022 -19.74%* | Eurozone rules-based enhanced UCITS equity | country/sector/factor/FX-sensitive; 25.31%* five-year annual-row dispersion; official USD calendar/NAV drawdown gaps; input alias FTDPF |
+| [[ETF_NASDAQ_FKU Performance]] | official 2012 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-07-14 | 8.67% | 10.30% | 10.96% | 2025 +37.60% / 2022 -23.52% | United Kingdom rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.80% 3-year standard deviation; NAV drawdown/recovery gap |
+| [[ETF_NASDAQ_FEUZ Performance]] | official 2014 / official 2016-2025; rolling 10-year as of 2026-07-31 | 10.43% | 10.86% | 12.30% | 2025 +56.57% / 2018 -19.82% | Eurozone rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.31% 3-year standard deviation; NAV drawdown/recovery gap; distinct from UCITS FTEU |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
 as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-30 และ raw TR endpoints
@@ -411,6 +417,10 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_VIOV Performance]] | 30.74% | -11.19% | 14.75% | 7.45% | 6.66% | 52.70% | 4 / 1 |
 | [[ETF_NYSE_ARCA_SLYV Performance]] | 30.66% | -11.13% | 14.71% | 7.28%* | 6.52%* | 52.21%* | 4 / 1 |
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
+| [[ETF_NYSE_ARCA_OPPE Performance]] | 7.86% | -13.41% | 19.33% | 10.74% | 38.73% | 186.21% | 7 / 3 |
+| [[ETF_NASDAQ_FEP Performance]] | 1.24% | -18.67% | 16.01% | 3.71% | 55.13% | 144.62% | 8 / 2 |
+| [[ETF_NASDAQ_FKU Performance]] | 25.53% | -23.52% | 20.59% | 8.01% | 37.60% | 80.82% | 6 / 4 |
+| [[ETF_NASDAQ_FEUZ Performance]] | 36.19% | -19.82% | 15.71% | 1.88% | 56.57% | 144.62% | 8 / 2 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -423,6 +433,37 @@ approximations; see the IJS performance page and source batch for formulas and i
 OPPJ `2025*` เป็น secondary standardized NAV return; common window ของ OPPJ
 ยังคร่อมการเปลี่ยน objective/index เมื่อ 30 มิ.ย. 2025 จึงไม่ใช่ record ของ
 current strategy แบบต่อเนื่องห้าปี.
+
+OPPE `2025` เป็น official one-year NAV return ending 2025-12-31, while the
+fund's objective/index changed on 2025-06-02. Its 2016-2024 rows therefore
+reflect the former EUSC strategy; the rolling 10-year issuer figure `12.91%`
+ณ 2026-07-31 is not the same as the rounded-input 2016-2025 calendar CAGR
+`11.09%`.
+
+FEP `10.57%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
+`10.90%` เป็น rounded-input CAGR จาก official 2021-2025 rows และ `11.02%`
+เป็น official NAV TR YTD ณ 2026-07-31. The prospectus records the underlying
+index change from Defined Europe to Nasdaq AlphaDEX Europe on 2015-10-13;
+the annual history retains that continuity caveat.
+
+FTEU `10.75%*` เป็น secondary USD 10-year annualised field ณ 2026-07-27;
+`11.40%*` เป็น rounded-input CAGR จาก secondary USD 2021-2025 rows และ
+`12.31%*` เป็น secondary USD YTD ณ 2026-07-30. Official factsheet's Acc EUR
+series is not mixed into the USD comparison; `FTDPF` remains an input alias of
+the official USD London line `LSE:FTEU`.
+
+FKU `8.67%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
+`10.30%` เป็น rounded-input CAGR จาก official 2021-2025 rows และ `10.96%` เป็น
+official NAV TR YTD ณ 2026-07-31. The underlying index changed from Defined
+United Kingdom to Nasdaq AlphaDEX United Kingdom on 2015-07-14; the annual
+history retains that continuity caveat and official daily NAV drawdown/recovery
+ยังไม่ verified.
+
+FEUZ `10.43%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
+`10.86%` เป็น rounded-input CAGR จาก official 2021-2025 rows และ `12.30%` เป็น
+official NAV TR YTD ณ 2026-07-31. FEUZ เป็น Nasdaq-listed U.S. Eurozone ETF แยก
+จาก UCITS USD London line `FTEU`; official daily NAV drawdown/recovery ยังไม่
+verified.
 
 † IPOL's `10.24%` is the issuer current rolling 10-year NAV TR annualised field
 from the 2026-08-14 page capture; the selected date is not exposed in the HTML.
@@ -463,7 +504,7 @@ utilities และ financials tilt.
   [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]],
   [[ETF_NYSE_ARCA_EWC Performance]], [[ETF_AMEX_DTD Performance]],
   [[ETF_AMEX_FVD Performance]], [[ETF_NYSE_ARCA_VOO Performance]],
-  [[ETF_NASDAQ_OPPJ Performance]], [[ETF_NYSE_ARCA_VSS Performance]],
+  [[ETF_NASDAQ_OPPJ Performance]], [[ETF_NYSE_ARCA_OPPE Performance]], [[ETF_NASDAQ_FEP Performance]], [[ETF_LSE_FTEU Performance]], [[ETF_NASDAQ_FKU Performance]], [[ETF_NASDAQ_FEUZ Performance]], [[ETF_NYSE_ARCA_VSS Performance]],
   [[ETF_NASDAQ_VXUS Performance]], [[ETF_CBOE_EFAV Performance]],
   [[ETF_NYSE_ARCA_EWG Performance]],
   [[ETF_NYSE_ARCA_EWJ Performance]], [[ETF_LSE_DXJ Performance]], [[ETF_CBOE_BBJP Performance]],

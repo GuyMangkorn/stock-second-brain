@@ -554,3 +554,280 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official passive-index evidence established EUAD eligibility; the scheduled-local checklist passed and the limited-history/source-conflict gaps were disclosed.
+
+## OPPE — WisdomTree European Opportunities Fund
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:OPPE`; ticker `OPPE`; canonical exchange `NYSE Arca`; inception `2015-03-04`; CUSIP `97717X552`.
+- `management_mode: passive-index-tracking`; the prospectus describes passive management/indexing and representative sampling.
+- Current tracked index: `WisdomTree European Opportunities Index`; historical performance uses the `WisdomTree Europe Hedged SmallCap Equity / WisdomTree European Opportunities Equity Spliced Index`.
+- Primary region: `Europe`; the existing static region page `[[Europe ETF]]` was updated and a new OPPE performance page was created.
+- The fund changed name from WisdomTree Europe Hedged SmallCap Equity Fund (EUSC) and changed its investment policy/index effective `2025-06-02`; the 2016-2024 history and part of 2025 therefore do not represent a continuous current-strategy record.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| WisdomTree product page | https://www.wisdomtree.com/us/products/equity/oppe | identity, current index objective, fee, NAV/price, rolling returns, YTD, sector/holdings and hedge ratio |
+| WisdomTree OPPE quarterly factsheet | https://www.wisdomtree.com/us/media/international-equity/en-us-equity-oppe | exchange, inception, return basis, official performance table, historical index splice and risk disclosures |
+| WisdomTree Trust prospectus | https://regulated-documents.saytechnologies.com/prospectuses/e0ff850f-45f1-417b-8779-01e2206cb79d-97717X552.pdf | passive strategy, representative sampling, official 2016-2024 annual-return chart and strategy-change disclosure |
+| WisdomTree monthly performance report | https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-reports-schedules/performance/monthly-performance.pdf | official 2025 NAV return ending 2025-12-31 |
+| WisdomTree European Opportunities Index | https://www.wisdomtree.com/us/indexes/wteuop | index design, shareholder-yield/value and dynamic currency-hedge methodology |
+| Secondary drawdown proxy | https://portfolioslab.com/symbol/OPPE | dividend-adjusted daily market-price drawdown/recovery proxy only |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 in USD with dividends reinvested |
+
+### Raw observations
+
+- WisdomTree product page as of `2026-08-14`: net expense ratio `0.58%`, distribution yield `7.83%`, 30-day SEC yield `2.72%`, NAV `US$60.308`, closing market price `US$60.504`, premium/discount `+0.324%`, and aggregate hedge ratio `97.95%`.
+- WisdomTree product page month-end performance as of `2026-07-31`: NAV TR YTD `17.72%`, 1-year `29.84%`, 3-year `23.84%`, 5-year `14.66%`, 10-year average annual `12.91%`, and since-inception average annual `11.59%`.
+- Official product/factsheet identity: NYSE Arca listing, inception `2015-03-04`, current index symbol `NDDLE15`, and total-return calculation based on the daily 4:00pm NAV. The displayed NAV symbol remains `EUSC.NV` as a legacy source identifier after the ticker/name change; the canonical entity remains `NYSE Arca:OPPE`.
+- Official index page: the current WisdomTree European Opportunities Index was established with base value `200` on `2025-04-30`; its hedge ratio ranges from `0%` to `100%` monthly and its construction combines total shareholder yield with geopolitical, technology and macro opportunity exposures.
+- Official annual NAV TR rows used for 2016-2024 from the prospectus annual-return chart: 2016 `7.86%`, 2017 `22.32%`, 2018 `-13.41%`, 2019 `28.45%`, 2020 `-2.34%`, 2021 `22.65%`, 2022 `-11.18%`, 2023 `19.33%`, 2024 `10.74%`.
+- Official 2025 NAV TR: `38.73%` for the one-year period ending `2025-12-31` in the WisdomTree monthly performance report; this row includes the June 2025 strategy/index transition.
+- Secondary ETFreplay annual table differs from the official NAV chart in several years, including 2020 `-2.92%` and 2021 `23.51%`; it was excluded from the NAV annual table because its historical basis is not the selected official NAV source. PortfoliosLab rows are also treated as dividend-adjusted market-price history, not NAV TR.
+- Secondary PortfoliosLab daily dividend-adjusted market-price proxy reports maximum drawdown `39.28%` on `2020-03-18` and recovery in `229` trading sessions. Official daily NAV maximum drawdown and recovery were not disclosed.
+- Cached S&P 500 Total Return annual rows for 2016-2025 are USD total-return rows as of `2025-12-31`; cumulative `298.33%` and rounded-input CAGR `14.82%`.
+
+### Calculations and reconciliation
+
+- Complete OPPE 2016-2025 using the official rounded annual rows: cumulative `186.21%`; rounded-input CAGR `11.09%`; population annual-return standard deviation `16.33%`; up/down `7/3`; best `2025 +38.73%`; worst `2018 -13.41%`; least-bad down year `2020 -2.34%`.
+- Complete OPPE 2021-2025: cumulative `99.71%`, rounded-input CAGR `14.84%`; cached S&P 500 TR cumulative `96.17%`, CAGR `14.43%`. The comparison is a common-reference comparison, not alpha.
+- The issuer's rolling 10-year NAV TR average annual `12.91%` as of `2026-07-31` is kept separate from the rounded-input 2016-2025 calendar-row CAGR because the windows have different endpoints.
+- The current YTD `17.72%` is as of `2026-07-31`; no same-date current S&P 500 YTD value was mixed into the table because the workflow cache only covers complete 2016-2025 calendar years.
+- The secondary drawdown/recovery values are retained only as a marked market-price proxy; no NAV risk metric is inferred from them.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, NYSE Arca exchange, passive classification, tracked index, historical splice, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official annual NAV rows are separated from secondary ETFreplay/PortfoliosLab data; the source-quality choice and conflicting annual observations are disclosed; rolling 10-year and calendar-row CAGR are not mixed; current YTD and quotes have separate as-of dates.
+- PASS: 2025 strategy/index transition and legacy EUSC source symbol are disclosed; current-strategy continuity is not overstated; market-price drawdown proxy is not labeled NAV evidence.
+- PASS: proposed OPPE performance page, Europe region row, region-index count, performance-index rows, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local pre-save checklist passed; OPPE performance artifacts were written with the 2025 strategy-transition gap disclosed.
+
+## FEP — First Trust Europe AlphaDEX Fund
+
+### Identity and classification
+
+- `entity_key: NASDAQ:FEP`; ticker `FEP`; canonical exchange `Nasdaq`; inception `2011-04-18`; CUSIP `33737J117`; ISIN `US33737J1170`.
+- `management_mode: passive-index-tracking`; tracked index `Nasdaq AlphaDEX Europe Index`; return basis `NAV total return` in USD.
+- The fund uses an indexing approach and normally invests at least 90% of net assets in index securities. The index is rules-based and selects from Nasdaq Developed Markets Europe using growth and value factors; this is not active long-only management.
+- Primary region: `Europe`; the existing static region page `[[Europe ETF]]` was updated and a new FEP performance page was created.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| First Trust product page | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FEP | identity, index methodology, fee, current NAV/price, holdings, exposures, rolling returns, YTD and risk statistics |
+| First Trust prospectus | https://www.ftportfolios.com/LoadContent/gradkqbz8r4y | passive strategy, index-change disclosure, official 2016-2025 annual-return chart, average annual returns and risk disclosure |
+| SEC N-CSR / FEP annual report | https://www.sec.gov/Archives/edgar/data/1510337/000144554626001916/adex2_ncsr.htm | 2025 official annual return and fund/index comparison |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 in USD with dividends reinvested |
+
+### Raw observations
+
+- Official First Trust product page: FEP is a Nasdaq-listed international equity ETF with inception `2011-04-18`, total expense ratio `0.80%` as of `2026-05-01`, and `200` holdings excluding cash as of `2026-08-13`.
+- Current snapshot as of `2026-08-13`: NAV `US$59.71`, closing market price `US$59.97`, premium `+0.44%`, net assets `US$534,405,825`; 30-day median bid/ask spread `0.40%` as of `2026-08-12`.
+- Product page month-end performance as of `2026-07-31`: NAV TR `3M 2.58%`, `YTD 11.02%`, `1Y 27.32%`, `3Y 21.97%`, `5Y 10.06%`, `10Y 10.57%`, and since inception `7.61%`. Official Nasdaq AlphaDEX Europe Index rows were `2.79%`, `11.31%`, `27.45%`, `22.85%`, `10.84%`, and `11.31%` for the same periods.
+- Current exposures as of `2026-08-12`: United Kingdom `20.08%`, Germany `13.52%`, France `11.36%`, Italy `8.09%`, Sweden `7.28%`; sectors Industrials `21.63%`, Materials `13.85%`, Financials `12.05%`, Consumer Discretionary `11.13%`, and Energy `10.74%`.
+- Official 3-year statistics as of `2026-07-31`: standard deviation `14.98%`, beta `1.00`, Sharpe ratio `1.11`, and correlation `0.93`; daily NAV maximum drawdown and recovery are not disclosed in the reviewed issuer capture.
+- Prospectus calendar-year NAV TR rows as of `2025-12-31`: 2016 `1.24%`, 2017 `35.67%`, 2018 `-18.67%`, 2019 `24.38%`, 2020 `4.95%`, 2021 `16.53%`, 2022 `-22.87%`, 2023 `16.01%`, 2024 `3.71%`, 2025 `55.13%`.
+- Prospectus average annual return table for periods ended `2025-12-31`: FEP `1Y 55.13%`, `5Y 10.91%`, `10Y 9.36%`, since inception `7.16%`; Nasdaq AlphaDEX Europe Index `1Y 56.05%`, `5Y 11.68%`, `10Y 10.04%`.
+- The prospectus states that the underlying index changed on `2015-10-13` from the Defined Europe Index to the Nasdaq AlphaDEX Europe Index and describes the new index as substantially similar. The performance history is therefore retained with an index-continuity caveat.
+- The prospectus discloses best quarter `+22.10%` ended `2022-12-31` and worst quarter `-31.13%` ended `2020-03-31`; these are quarterly observations, not maximum drawdown/recovery.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 FEP using the official displayed annual rows: `(1.0124 × 1.3567 × 0.8133 × 1.2438 × 1.0495 × 1.1653 × 0.7713 × 1.1601 × 1.0371 × 1.5513) - 1 = 144.62%`; rounded-input CAGR `9.36%`; population annual-return standard deviation `22.36%`; up/down `8/2`.
+- Complete 2021-2025 FEP: cumulative `67.75%`, rounded-input CAGR `10.90%`; cached S&P 500 TR cumulative `96.17%`, CAGR `14.43%` over the same window.
+- Cached S&P 500 TR common-window 2016-2025 is `298.33%` cumulative / `14.82%` rounded-input CAGR. It is a common reference comparison, not the tracked index.
+- Official same-date 2026-07-31 YTD tracking comparison: FEP NAV TR `11.02%` versus Nasdaq AlphaDEX Europe Index `11.31%`; this is tracking evidence, not alpha or manager-skill evidence.
+- The issuer's rolling 10-year average annual `10.57%` as of `2026-07-31` is kept separate from the rounded-input 2016-2025 calendar CAGR `9.36%`.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, Nasdaq exchange, passive classification, tracked index, return basis, periods, units, currencies, metric definitions, as-of dates, calculations, and source URLs are recorded.
+- PASS: official rolling/YTD fields are separated from calendar rows; the strategy-aligned index is separated from the S&P 500 common reference; tracking differences are not labeled alpha; the 2015 index change and daily NAV drawdown/recovery gap are disclosed.
+- PASS: proposed FEP performance page, Europe region row, performance-index row, common-window row, and dated source-batch contents are fully specified; canonical breadcrumb and `geography/Europe` tag are present.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local pre-save checklist passed; FEP performance artifacts were written with the 2015 index-continuity caveat disclosed.
+
+## FTDPF / FTEU — First Trust Eurozone AlphaDEX UCITS ETF
+
+### Identity and classification
+
+- Input ticker `FTDPF` is an OTC alias for First Trust Global Funds Plc. The official First Trust factsheet maps ISIN `IE00B8X9NY41` to the USD London Stock Exchange line `FTEU LN`; durable ownership therefore uses `entity_key: LSE:FTEU` and preserves `FTDPF` as `input_ticker`.
+- `fund: First Trust Eurozone AlphaDEX UCITS ETF`; official fund/share-class inception `2014-10-21`; Ireland-domiciled UCITS; base currency EUR; accumulating share class.
+- `management_mode: passive-index-tracking`; tracked index `Nasdaq AlphaDEX Eurozone NTR Index`; physical full replication; semi-annual rebalance; ongoing charges `0.65%` as of `2026-05-29`.
+- Primary region: `Europe`; the existing static region page `[[Europe ETF]]` was updated and a new canonical FTEU performance page was created.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| First Trust official factsheet | https://www.fundslibrary.co.uk/FundsLibrary.DataRetrieval/Documents.aspx/?id=db97fa3f-452a-4e87-a092-5d78014ea6e7&r=1&type=packet_fund_class_doc_factsheet_private&user=lmaloTxGN4q8hRUMT0fWlPBQqCmCX%2FhnFIbf7%2F7XByN2nwFrjrtLgpitSJYn96ru | ISIN, official trading lines, inception, fee, UCITS/passive/physical structure, official Acc EUR performance and exposures as of 2026-05-29 |
+| Central Bank of Ireland fund register | https://registers.centralbank.ie/%28X%281%29S%28uzbkfrrwrh3qjlqvxporqnfl%29%29/FundRegisterDataPage.aspx?fundReferenceNumber=C118215&register=28 | UCITS fund identity and regulatory status |
+| Morningstar FTEU report | https://lt.morningstar.com/1c6qh1t6k9/etfreport/default.aspx?1=1&ClientFund=0&CurrencyId=USD&Id=0P00018JZQ&SecurityToken=0P00018JZQ%5D22%5D0%5DETEXG%24XLON&tab=1 | secondary USD annual and trailing-return fields |
+| OTC alias cross-check | https://www.eoddata.com/stockquote/OTCBB/FTDPF.htm | input alias legal-name cross-check only; not used as primary NAV evidence |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return rows for 2021-2025 in USD with dividends reinvested |
+
+### Raw observations
+
+- Official First Trust factsheet as of `2026-05-29`: ISIN `IE00B8X9NY41`, asset class equity, fund/share-class inception `2014-10-21`, ongoing charges `0.65%`, base currency EUR, income treatment accumulating, UCITS compliant, Ireland domicile, physical full replication, and tracking index `Nasdaq AlphaDEX Eurozone NTR Index`.
+- Official trading lines for the same ISIN: London Stock Exchange GBP `FEUZ LN`, London Stock Exchange USD `FTEU LN`, Borsa Italiana EUR `FEUZ IM`, Xetra EUR `FTGE GY`, and Euronext Amsterdam EUR `FEUZ NA`. The input OTC symbol `FTDPF` is retained as an alias, not as the canonical exchange key.
+- Official Acc EUR performance as of `2026-05-29`: YTD `13.39%`, 1-year `30.66%`, 3-year annualised `23.40%`, 5-year annualised `11.91%`, and since inception annualised `10.68%`; tracking-index fields were `13.44%`, `30.55%`, `23.25%`, `11.97%`, and `11.02%`.
+- Official portfolio snapshot as of `2026-05-29`: country Germany `22.47%`, France `20.14%`, Italy `14.54%`, The Netherlands `9.04%`, Spain `8.95%`; sectors Industrials `22.44%`, Materials `12.25%`, Financials `10.65%`, Energy `10.46%`, Consumer Discretionary `9.57%`, and Utilities `9.29%`.
+- Secondary Morningstar FTEU USD annual returns: 2021 `12.59%`, 2022 `-19.74%`, 2023 `16.65%`, 2024 `3.03%`, 2025 `57.98%`; USD trailing fields as of `2026-07-30`: YTD `12.31%`, 1-year `20.85%`, 3-year annualised `21.29%`, and 5-year annualised `10.98%`. A separate secondary 10-year annualised field is `10.75%` as of `2026-07-27`.
+- Secondary USD closing-price snapshot: `US$75.54` as of `2026-07-30`; it is not used in NAV return calculations. Official daily NAV maximum drawdown and recovery were not disclosed.
+
+### Calculations and reconciliation
+
+- Secondary USD 2021-2025: `(1.1259 × 0.8026 × 1.1665 × 1.0303 × 1.5798) - 1 = 71.57%`; rounded-input CAGR `11.40%`; population annual-return standard deviation `25.31%`; up/down `4/1`.
+- Cached S&P 500 TR 2021-2025 cumulative `96.17%` / rounded-input CAGR `14.43%`; this is a common reference comparison only and is not the issuer benchmark.
+- The official Acc EUR factsheet series is kept separate from the secondary USD FTEU series; no currency conversion or cross-currency excess-return calculation is made.
+- No official 2016-2025 calendar table for the FTEU USD line was exposed in the reviewed capture, so no official 10-year calendar CAGR, annual up/down ranking beyond the secondary 2021-2025 window, or official USD drawdown/recovery metric is claimed.
+
+### Local pre-save checklist
+
+- PASS: OTC alias, canonical USD LSE listing, ISIN/share-class identity, passive classification, tracked index, return basis, periods, units, currencies, and as-of dates are recorded.
+- PASS: official EUR-base factsheet returns are separated from secondary USD alias returns; no cross-currency calculation is made; the lack of official USD calendar rows and daily NAV drawdown/recovery is disclosed; the S&P 500 is labeled common reference only.
+- PASS: proposed FTEU performance page, Europe region row, performance-index row, common-window row, alias tags, canonical breadcrumb, and dated source-batch contents are fully specified.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official share-class/alias evidence established passive FTEU ownership; the scheduled-local checklist passed and official EUR versus secondary USD gaps were disclosed.
+
+## FKU — First Trust United Kingdom AlphaDEX Fund
+
+### Identity and classification
+
+- `entity_key: NASDAQ:FKU`; ticker `FKU`; canonical exchange `Nasdaq`; inception `2012-02-14`; total expense ratio `0.80%` as of `2026-05-01`.
+- `management_mode: passive-index-tracking`; tracked index `Nasdaq AlphaDEX United Kingdom Index`; return basis `NAV total return` in USD.
+- The official prospectus describes FKU as an index fund that normally invests at least 90% of net assets in index securities and is not actively managed. The strategy-aligned benchmark is the Nasdaq AlphaDEX United Kingdom Index; S&P 500 Total Return is retained only as a common reference.
+- Primary region: `United Kingdom`; new static region page `[[United Kingdom ETF]]` and canonical performance page `[[ETF_NASDAQ_FKU Performance]]` were created.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| First Trust FKU product page | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FKU | identity, index methodology, fee, current NAV/price, holdings, exposures, rolling returns, YTD and risk statistics |
+| First Trust Exchange-Traded AlphaDEX Fund II prospectus | https://www.ftportfolios.com/LoadContent/gradkqbz8r4y | passive strategy, index-change disclosure, official 2016-2025 annual-return chart, average annual returns and risk disclosure |
+| SEC FKU summary prospectus | https://www.sec.gov/Archives/edgar/data/1510337/000144554626003320/fku_497k.htm | official calendar-year returns and best/worst-quarter disclosure |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 in USD with dividends reinvested |
+
+### Raw observations
+
+- Official First Trust product page: FKU is a Nasdaq-listed United Kingdom equity ETF with inception `2012-02-14`, total expense ratio `0.80%` as of `2026-05-01`, and `76` holdings as of `2026-08-14`.
+- Current snapshot as of `2026-08-14`: NAV `US$56.53`, closing market price `US$56.69`, premium `+0.33%`, net assets `US$39,567,669`, and 30-day median bid/ask spread `0.57%`.
+- Product page month-end performance as of `2026-07-31`: NAV TR `3M 6.09%`, `YTD 10.96%`, `1Y 25.50%`, `3Y 20.53%`, `5Y 9.03%`, `10Y 8.67%`, and since inception `7.86%`. Official Nasdaq AlphaDEX United Kingdom Index rows were `6.73%`, `12.12%`, `26.55%`, `21.94%`, `10.41%`, and `9.88%` for the comparable periods.
+- Official 3-year statistics as of `2026-07-31`: standard deviation `15.80%`, beta `1.18`, Sharpe ratio `0.98`, and correlation `0.93`.
+- Current sector exposures as of `2026-08-14`: Financials `25.33%`, Industrials `15.49%`, Consumer Discretionary `15.26%`, Consumer Staples `11.55%`, Materials `7.93%`, Information Technology `6.09%`, Energy `5.98%`, and Real Estate `5.30%` among the largest weights.
+- Official calendar-year NAV TR rows as of `2025-12-31`: 2016 `-16.08%`, 2017 `25.53%`, 2018 `-16.16%`, 2019 `32.36%`, 2020 `-5.25%`, 2021 `19.10%`, 2022 `-23.52%`, 2023 `20.59%`, 2024 `8.01%`, 2025 `37.60%`.
+- Prospectus average annual returns ended `2025-12-31`: FKU `1Y 37.60%`, `5Y 10.30%`, `10Y 6.10%`, since inception `7.40%`; Nasdaq AlphaDEX UK Index `1Y 39.19%`, `5Y 11.66%`, `10Y 7.30%`; Nasdaq UK Index `1Y 35.13%`, `5Y 12.12%`, `10Y 7.47%`; MSCI UK `1Y 35.11%`, `5Y 13.33%`, `10Y 7.83%`.
+- The product page and prospectus state that the underlying index changed on `2015-07-14` from the Defined United Kingdom Index to the Nasdaq AlphaDEX United Kingdom Index. The annual history is retained with this continuity caveat.
+- Prospectus best quarter was `+23.45%` ending `2022-12-31`; worst quarter was `-40.79%` ending `2020-03-31`. Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed issuer capture.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 FKU using the official displayed annual rows: `(0.8392 × 1.2553 × 0.8384 × 1.3236 × 0.9475 × 1.1910 × 0.7648 × 1.2059 × 1.0801 × 1.3760) - 1 = 80.82%`; rounded-input CAGR `6.10%`; population annual-return standard deviation `20.95%`; up/down `6/4`; best `2025 +37.60%`; worst `2022 -23.52%`.
+- Complete 2021-2025 FKU: cumulative `63.25%`, rounded-input CAGR `10.30%`; cached S&P 500 TR cumulative `96.17%`, CAGR `14.43%`. This is a common-reference comparison, not alpha.
+- Cached S&P 500 TR common-window 2016-2025 is `298.33%` cumulative / `14.82%` rounded-input CAGR.
+- Official same-date 2026-07-31 YTD tracking comparison: FKU NAV TR `10.96%` versus Nasdaq AlphaDEX United Kingdom Index `12.12%`; this is tracking evidence, not manager-skill evidence.
+- The issuer's rolling 10-year average annual `8.67%` as of `2026-07-31` is kept separate from the rounded-input 2016-2025 calendar CAGR `6.10%`.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, Nasdaq exchange, passive classification, tracked index, historical splice, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official annual NAV rows are separated from the strategy-aligned index and S&P 500 common reference; tracking differences are not labeled alpha; rolling 10-year and calendar-row CAGR are not mixed; current YTD and quotes have separate as-of dates.
+- PASS: the 2015 index change, 76-holding exposure snapshot, best/worst quarter and daily NAV drawdown/recovery gap are disclosed; no market-price proxy is labeled NAV evidence.
+- PASS: proposed FKU performance page, new United Kingdom region page, region-index row, performance-index rows, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/United-Kingdom` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local checklist passed; FKU artifacts were written with the 2015 index continuity caveat disclosed.
+
+## FEUZ — First Trust Eurozone AlphaDEX ETF
+
+### Identity and classification
+
+- `entity_key: NASDAQ:FEUZ`; ticker `FEUZ`; canonical exchange `Nasdaq`; ISIN `US33737J5056`; inception `2014-10-21`; total expense ratio `0.80%` as of `2026-05-01`.
+- `management_mode: passive-index-tracking`; tracked index `Nasdaq AlphaDEX Eurozone Index`; return basis `NAV total return` in USD.
+- The official prospectus says FEUZ normally invests at least 90% of net assets in the index and uses an indexing approach. FEUZ is the U.S.-listed Nasdaq ETF; it is not the same security as the UCITS USD London line `LSE:FTEU` used for input alias `FTDPF`.
+- Primary region: `Europe`; the existing static region page `[[Europe ETF]]` was updated and a new canonical performance page `[[ETF_NASDAQ_FEUZ Performance]]` was created.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| First Trust FEUZ product page | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FEUZ | identity, index methodology, fee, current NAV/price, holdings, exposures, rolling returns, YTD and risk statistics |
+| First Trust Exchange-Traded AlphaDEX Fund II prospectus | https://www.ftportfolios.com/LoadContent/gradkqbz8r4y | passive strategy, official 2016-2025 annual-return chart, average annual returns and risk disclosure |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025 in USD with dividends reinvested |
+
+### Raw observations
+
+- Official First Trust product page: FEUZ is a Nasdaq-listed Eurozone equity ETF with ISIN `US33737J5056`, inception `2014-10-21`, total expense ratio `0.80%` as of `2026-05-01`, and `150` holdings as of `2026-08-13`.
+- Current snapshot as of `2026-08-13`: closing NAV `US$68.66`, closing market price `US$68.59`, bid/ask discount `0.07%`, net assets `US$133,878,209`, and 30-day median bid/ask spread `0.60%`.
+- Product page month-end performance as of `2026-07-31`: NAV TR `3M 2.50%`, `YTD 12.30%`, `1Y 26.53%`, `3Y 21.31%`, `5Y 10.61%`, `10Y 10.43%`, and since inception `9.39%`. Official Nasdaq AlphaDEX Eurozone Index rows were `2.48%`, `12.30%`, `26.29%`, `21.94%`, `11.24%`, `11.05%`, and `10.00%` for the comparable periods.
+- Official 3-year statistics as of `2026-07-31`: standard deviation `15.31%`, beta `0.93`, Sharpe ratio `1.05`, and correlation `0.92`.
+- Current country exposures as of `2026-08-13`: Germany `21.12%`, France `20.60%`, Italy `14.44%`, The Netherlands `9.49%`, Spain `9.00%`; sector exposures: Industrials `21.56%`, Financials `12.12%`, Materials `11.67%`, Energy `11.12%`, Utilities `9.15%`, and Consumer Discretionary `8.77%`.
+- Official calendar-year NAV TR rows as of `2025-12-31`: 2016 `5.49%`, 2017 `36.19%`, 2018 `-19.82%`, 2019 `21.15%`, 2020 `4.69%`, 2021 `12.90%`, 2022 `-19.65%`, 2023 `15.71%`, 2024 `1.88%`, 2025 `56.57%`.
+- Prospectus average annual returns ended `2025-12-31`: FEUZ `1Y 56.57%`, `5Y 10.86%`, `10Y 9.36%`, since inception `8.77%`; Nasdaq AlphaDEX Eurozone Index `1Y 57.52%`, `5Y 11.51%`, `10Y 9.94%`, since inception `9.41%`; Nasdaq Eurozone Index `1Y 41.74%`, `5Y 10.50%`, `10Y 8.93%`; MSCI EMU Index `1Y 40.30%`, `5Y 10.55%`, `10Y 9.00%`.
+- Prospectus best quarter was `+23.61%` ending `2022-12-31`; worst quarter was `-29.55%` ending `2020-03-31`. Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed issuer capture.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 FEUZ using the official displayed annual rows: `(1.0549 × 1.3619 × 0.8018 × 1.2115 × 1.0469 × 1.1290 × 0.8035 × 1.1571 × 1.0188 × 1.5657) - 1 = 144.62%`; rounded-input CAGR `9.36%`; population annual-return standard deviation `22.09%`; up/down `8/2`; best `2025 +56.57%`; worst `2018 -19.82%`.
+- Complete 2021-2025 FEUZ: cumulative `67.44%`, rounded-input CAGR `10.86%`; cached S&P 500 TR cumulative `96.17%`, CAGR `14.43%`. This is a common-reference comparison, not alpha.
+- Cached S&P 500 TR common-window 2016-2025 is `298.33%` cumulative / `14.82%` rounded-input CAGR.
+- Official same-date 2026-07-31 YTD tracking comparison: FEUZ NAV TR `12.30%` versus Nasdaq AlphaDEX Eurozone Index `12.30%`; this is tracking evidence, not manager-skill evidence.
+- The issuer's rolling 10-year average annual `10.43%` as of `2026-07-31` is kept separate from the rounded-input 2016-2025 calendar CAGR `9.36%`.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, Nasdaq exchange, ISIN, passive classification, tracked index, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official annual NAV rows are separated from the strategy-aligned index and S&P 500 common reference; tracking differences are not labeled alpha; rolling 10-year and calendar-row CAGR are not mixed; current YTD and quotes have separate as-of dates.
+- PASS: FEUZ is explicitly separated from UCITS FTEU/FTDPF; 150-holding country/sector exposures, best/worst quarter and daily NAV drawdown/recovery gap are disclosed; no market-price proxy is labeled NAV evidence.
+- PASS: proposed FEUZ performance page, Europe region row, region-index count, performance-index rows, dated source-batch contents and one log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-index evidence and the scheduled-local checklist passed; FEUZ artifacts were written with the U.S.-listed versus UCITS FTEU identity distinction disclosed.
