@@ -76,6 +76,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_FNDC Performance]] | official 2013 / official 2016-2025; rolling issuer 2026-07-31 | 8.11% | 8.25% | 10.96% | 2025 +35.79% / 2018 -18.77% | developed ex-U.S. small-cap fundamental equity | small-cap/country/FX/value/tracking-sensitive |
 | [[ETF_LSE_WSML Performance]] | official inception 2018-03-27 / official 2019-2025; history under 10 years; input alias IMWSF | not applicable (<10y history) | 7.17% | 19.00% | 2019 +25.73% / 2022 -18.64% | global developed small-cap equity | small-cap/country/FX/liquidity-sensitive; 16.16% 3-year standard deviation |
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
+| [[ETF_LSE_ISAC Performance]] | official 2011 / official 2016-2025; current product-page YTD as of 2026-08-17; input alias ISACF | 11.67%† | 11.29% | 15.06% | 2025 +22.41% / 2022 -18.19% | global developed/emerging large-/mid-cap passive accumulating equity | global country/sector/mega-cap/FX/emerging-market-sensitive; official MSCI ACWI tracking observations; 12.61% 3-year standard deviation; price/NAV date gap disclosed |
 | [[ETF_CBOE_EFAV Performance]] | official 2011 / official 2016-2025 | 6.02% | 6.29% | 6.50% | 2025 +26.16% / 2022 -14.76% | developed ex-U.S./Canada minimum volatility | low-vol factor; country/FX-sensitive, lower recent beta |
 | [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
 | [[ETF_NASDAQ_INDY Performance]] | official 2020-2025 / rolling official 2016-2026 | 6.67% | 6.92% | -12.32% | 2021 +19.28% / 2022 -7.86% | India single-country large-cap equity | India/financials/FX-sensitive; emerging-market cyclicality |
@@ -348,6 +349,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_ISCF Performance]] | 13.22% | -15.06% | 11.52% | 4.33% | 34.07% | 50.01% | 4 / 1 |
 | [[ETF_LSE_WSML Performance]] | 15.81% | -18.64% | 16.02% | 7.93% | 19.84% | 41.39% | 4 / 1 |
 | [[ETF_NASDAQ_VXUS Performance]] | 8.69% | -15.99% | 15.56% | 5.20% | 32.23% | 46.78% | 4 / 1 |
+| [[ETF_LSE_ISAC Performance]] | 18.71% | -18.19% | 22.35% | 17.35% | 22.41% | 70.69% | 4 / 1 |
 | [[ETF_CBOE_EFAV Performance]] | 7.02% | -14.76% | 11.98% | 5.28% | 26.16% | 35.68% | 4 / 1 |
 | [[ETF_AMEX_DIVI Performance]] | 17.22% | -1.74% | 19.23% | 2.36% | 34.51% | 89.08% | 4 / 1 |
 | [[ETF_NASDAQ_INDY Performance]] | 19.28% | -7.86% | 17.05% | 4.02% | 4.42% | 39.73% | 4 / 1 |
@@ -938,6 +940,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 
 - [[ETF_LSE_VERE Performance]] — VERE (Europe; input alias VGRDF resolved to official USD London line LSE:VERE; history under 10 years, secondary 2021-2025 proxy cumulative +66.11%* / rounded-input CAGR +10.68%*, official rolling 5-year NAV TR +9.52% and current official NAV TR YTD +11.54% as of 2026-07-31; secondary YTD +13.71%* as of 2026-08-15, 13.40% annual-proxy dispersion, secondary max drawdown/recovery and EUR-vs-USD reference gaps disclosed)
 - [[ETF_NYSE_ARCA_GSEU Performance]] — GSEU (Europe; official NYSE Arca:GSEU; official 2021-2025 NAV TR cumulative +60.21% / rounded-input CAGR +9.89%, issuer rolling 10-year NAV TR +9.70% and current official NAV TR YTD +9.78% as of 2026-07-31; ActiveBeta strategy benchmark -0.02 pp YTD and -0.17 pp 1Y, 18.50% annual-return dispersion, secondary max drawdown/recovery and current NAV-price gaps disclosed)
+- [[ETF_LSE_ISAC Performance]] — ISAC / ISACF (International; input OTC alias resolved to official USD `LSE:ISAC` by ISIN `IE00B6R52259`; official 2016-2025 NAV TR cumulative +201.54% / rounded-input CAGR +11.67%†, 2021-2025 CAGR +11.29%, current official NAV TR YTD +15.06% and NAV USD 124.95 as of 2026-08-17; official July factsheet YTD +11.42% as of 2026-07-31, MSCI ACWI tracking observations, 15.49% annual-return dispersion, 12.61% 3-year standard deviation and global/FX/emerging-market risk disclosed)
 
 ## 2026-08-17 Coverage Addition
 

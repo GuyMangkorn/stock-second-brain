@@ -451,3 +451,74 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Goldman Sachs identity, passive strategic-beta classification, USD NAV annual rows, strategy-benchmark rolling fields and the scheduled-local pre-save checklist passed; GSEU artifacts disclose S&P common-reference and price/NAV source gaps.
+
+## ISACF — iShares MSCI ACWI UCITS ETF (USD) Accumulating
+
+### Identity and classification
+
+- entity_key: LSE:ISAC; input ticker: ISACF; official ticker: ISAC; exchange: London Stock Exchange USD line; ISIN: IE00B6R52259.
+- Fund/share-class: iShares MSCI ACWI UCITS ETF (USD Accumulating); share-class launch 21 Oct 2011; accumulating USD share class; Ireland; UCITS.
+- management_mode: passive-index-tracking; physical optimized replication; benchmark MSCI All Country World Index (Net).
+- return_basis: official NAV Total Return in USD, net of expenses, with income/capital gains reinvested.
+- supported type: passive index-tracking equity ETF; primary region International.
+- input mapping: OTC ISACF is retained as alias and resolves to the official USD London line LSE:ISAC; LSE GBP line is SSAC and is not used.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares product page | https://www.ishares.com/uk/individual/en/products/251850/ishares-msci-acwi-ucits-etf | official identity, listing table, ISIN, launch, current NAV/YTD, holdings, benchmark, beta, standard deviation and risk fields |
+| iShares July 2026 factsheet | https://www.ishares.com/nl/particuliere-belegger/nl/literature/fact-sheet/ssac-ishares-msci-acwi-ucits-etf-fund-fact-sheet-en-nl.pdf?siteEntryPassthrough=true&switchLocale=y | official 2016-2025 annual NAV/benchmark rows, rolling NAV fields, TER, holdings and dated fund facts |
+| iShares UK factsheet cross-check | https://www.ishares.com/uk/individual/en/literature/fact-sheet/ssac-ishares-msci-acwi-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y | official factsheet locale cross-check; same USD accumulating share-class identity and annual performance basis |
+| Cached S&P 500 Total Return convention | workflow cache and original URLs in the check-etf-performance skill | USD calendar rows 2021-2025, dividends reinvested, as of 31 Dec 2025; reused inside cached 2016-2025 window |
+
+### Raw observations
+
+- Official listing table identifies the USD London Stock Exchange line as ISAC, listed 24 Oct 2011, with SEDOL B6R5225, Bloomberg ISAC LN and RIC ISACI.L. The OTC input ISACF is mapped by ISIN IE00B6R52259.
+- Official product page current snapshot as of 17 Aug 2026: NAV USD 124.95, NAV Total Return YTD 15.06%, holdings 1,693, and the fund/share-class identity above.
+- Official product-page risk/analytics fields as of 31 Jul 2026: 3-year beta 0.998 and 3-year standard deviation 12.61%.
+- Official July factsheet says performance, portfolio and net-asset data are as of 31 Jul 2026 and other fund data are as of 06 Aug 2026. It reports TER 0.20%, 1,695 holdings, physical optimized replication, accumulating USD share class and MSCI ACWI Net benchmark.
+- Official Share Class NAV Total Return annual rows in USD: 2016 7.82%, 2017 23.94%, 2018 -9.52%, 2019 26.37%, 2020 15.62%, 2021 18.71%, 2022 -18.19%, 2023 22.35%, 2024 17.35%, 2025 22.41%.
+- Official MSCI ACWI Net benchmark annual rows in USD: 2016 7.86%, 2017 23.97%, 2018 -9.41%, 2019 26.60%, 2020 16.25%, 2021 18.54%, 2022 -18.36%, 2023 22.20%, 2024 17.49%, 2025 22.34%.
+- Official July factsheet rolling fields: Share Class 1m 0.11%, 3m 4.46%, 6m 8.21%, YTD 11.42%, 1y 22.22%, 3y annualized 18.33%, 5y annualized 10.95%, since inception 11.17%; benchmark YTD 11.33%, 1y 22.11%, 3y 18.30%, 5y 10.85%, since inception 11.30%.
+- Official product-page current YTD 15.06% is later than the July factsheet YTD 11.42%; this is an as-of date difference, not a contradictory performance claim. Current NAV/YTD and July rolling fields remain separately labeled.
+- Official product-page risk disclosures cover global equity, country/sector concentration, emerging markets, currency, liquidity and counterparty risks. Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources.
+
+### Calculations and reconciliation
+
+- Cumulative = product of (1 + annual return) - 1. Official 2016-2025 Share Class rows compound to 201.535205%, displayed as 201.54%; rounded-input CAGR is 11.669302%, displayed as 11.67%†.
+- Official 2021-2025 Share Class rows compound to 70.685907%, displayed as 70.69%; rounded-input CAGR is 11.285744%, displayed as 11.29%; population annual-return standard deviation is 15.486703%, displayed as 15.49%; positive/negative years are 4/1; best year is 2025 +22.41%; worst year is 2022 -18.19%.
+- Official 2021-2025 benchmark rows compound to 69.984180%, displayed as 69.98%; rounded-input CAGR is 11.194089%, displayed as 11.19%.
+- Fund-minus-benchmark annual differences for 2021-2025 are +0.17, +0.17, +0.15, -0.14 and +0.07 percentage points. These are tracking observations after fees/rounding and are not called alpha.
+- Complete 2016-2025 rows support the calendar-derived 10-year display; no issuer rolling 10-year field is substituted for this calculation. The page marks the value with †.
+- Cached S&P 500 Total Return rows are USD 2021 28.71%, 2022 -18.11%, 2023 26.29%, 2024 25.02%, 2025 17.88%; they compound to 96.17% / CAGR 14.43% and remain a common USD reference, not the fund's strategy benchmark.
+
+### Planned durable paths and contents
+
+- Create wiki/analysis/performance/ETF_LSE_ISAC Performance.md with the canonical LSE:ISAC identity, ISACF alias, official USD annual table, MSCI ACWI Net benchmark rows, rolling/current date separation, risk evidence, source links, International breadcrumb and geography tag.
+- Update wiki/analysis/comparisons/International ETF.md with the ISAC row, current product-page versus July factsheet date note and calendar-CAGR footnote.
+- Update wiki/analysis/comparisons/ETF Region Index.md International count from 24 to 25.
+- Update wiki/analysis/performance/ETF Performance Index.md with the ISAC coverage row, 2021-2025 Common Window row and 2026-08-19 coverage bullet.
+- Append one log.md workflow bullet; no entity hub, normalized financial table or raw/funds file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical ticker/exchange mapping, fund identity, ISIN, launch/listing dates, passive eligibility, benchmark, replication method, TER, accumulation, NAV TR definition, USD currency, annual rows, rolling fields, current NAV/YTD and all as-of dates are source-backed.
+- PASS: official product-page current YTD/NAV is separated from July factsheet performance and holdings; official benchmark rows are separated from the cached S&P common reference; no arithmetic alpha or manager-skill claim is made.
+- PASS: complete official 2016-2025 rows support the calendar calculation; the rounded-input CAGR is marked †; 2021-2025 common-window calculations reconcile to the displayed annual rows; tracking differences are labeled as observations.
+- PASS: global, country/sector, emerging-market, FX, liquidity and counterparty risks are disclosed; official daily NAV drawdown/recovery gap is disclosed; no secondary performance rows are required.
+- PASS: complete proposed contents of the performance page, source batch section, International row/count, performance-index row/Common Window/bullet and log bullet are specified; planned links and breadcrumb resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity and ISACF-to-LSE:ISAC mapping, passive classification, USD 2016-2025 NAV/benchmark rows, rolling/current fields and the scheduled-local pre-save checklist passed; July-versus-current as-of dates, tracking observations and global risk gaps are disclosed.

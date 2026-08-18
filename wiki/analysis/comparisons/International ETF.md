@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-18
+updated: 2026-08-19
 tags:
   - analysis/etf-region
   - geography/International
@@ -40,6 +40,7 @@ tags:
 | GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 7.58%† | not disclosed | 8.18% | [[ETF_NYSE_ARCA_GWX Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
+| ISAC | iShares MSCI ACWI UCITS ETF (USD Accumulating) | global developed/emerging large-/mid-cap passive accumulating equity; input alias ISACF | 11.67%† | 11.29% | 15.06% | [[ETF_LSE_ISAC Performance]] |
 | VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.73% | 13.06% | 12.31% | [[ETF_NASDAQ_VYMI Performance]] |
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `7.58%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed.
@@ -69,6 +70,19 @@ secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใ�
 จึงไม่ applicable. DFIS `14.18%*` เป็น secondary market-price + cash-distribution
 proxy ณ 2026-08-12 ไม่ใช่ official NAV TR; official complete annual rows คือ
 2023-2025 และกองทุนเป็น active systematic long-only small-cap.
+
+ISACF เป็น input alias ของ official USD London Stock Exchange line `LSE:ISAC`
+(ISIN `IE00B6R52259`) สำหรับ iShares MSCI ACWI UCITS ETF (USD Accumulating).
+Official 2016-2025 NAV TR rows compound เป็น `201.54%` หรือ rounded-input
+calendar CAGR `11.67%†`; ช่วง 2021-2025 compound เป็น `70.69%` หรือ `11.29%`
+ต่อปี และ current official product-page NAV TR YTD คือ `15.06%` ณ 2026-08-17
+(NAV USD `124.95`). Official July factsheet รายงาน YTD `11.42%` ณ 2026-07-31
+จึงเก็บเป็นคนละ as-of snapshot. กองทุนเป็น passive physical optimized,
+accumulating, TER `0.20%`, benchmark คือ MSCI ACWI Net และ 3-year standard
+deviation `12.61%` ณ 2026-07-31; tracking observations เทียบ official
+benchmark และ global country/sector/FX/emerging-market risks อยู่ในหน้ารายกอง.
+เครื่องหมาย `†` หมายถึง calendar CAGR จาก rounded official annual rows ไม่ใช่
+issuer rolling 10-year field.
 
 ## Navigation
 
