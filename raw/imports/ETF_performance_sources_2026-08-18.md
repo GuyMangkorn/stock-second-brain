@@ -1721,3 +1721,326 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive classification, annual NAV/index rows, rolling/YTD evidence and the scheduled-local pre-save checklist passed; EWU artifacts were written with rounded-row precision, benchmark separation and daily NAV drawdown/recovery gaps disclosed.
+
+## FLGR — Franklin FTSE Germany ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`.
+- `entity_key: NYSE Arca:FLGR`; input ticker and canonical ticker `FLGR`; exchange `NYSE Arca`; inception `2017-11-02`.
+- `management_mode: passive-index`; tracked index `FTSE Germany RIC Capped Index` / issuer label `FTSE Germany Capped Index-NR`; return basis is official USD NAV total return with distributions reinvested and fund expenses reflected in NAV.
+- Primary region: `Germany`; the fund targets German large- and mid-capitalization equities.
+- Candidate claims: official 2018-2025 NAV TR cumulative `63.92%` / rounded-input CAGR `6.37%`; 2021-2025 cumulative `54.03%` / CAGR `9.02%`; current official NAV TR YTD `5.23%` as of `2026-08-07`; 2025 best year `36.70%`, 2022 worst year `-22.10%`, and 3-year standard deviation `16.66%` as of `2026-06-30`. History is under ten years, so 10-year NAV CAGR is not applicable.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Franklin Templeton product page | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26360/SINGLCLASS/franklin-ftse-germany-etf/FLGR | identity, exchange, objective, current NAV/YTD, rolling returns, fee, assets and risk snapshot |
+| Franklin Templeton factsheet | https://www.franklintempleton.com/forms-literature/download/FLGR-FF | official 2018-2025 NAV/index calendar rows, return definitions, risk statistics and fund facts as of 2026-06-30 |
+| Franklin Templeton passive ETF prospectus | https://www.franklintempleton.com/forms-literature/download/ETF5-P | objective, fee, indexed structure, equity exposure and permitted tracking/settlement derivatives |
+| Franklin Templeton FLGR annual report | https://www.franklintempleton.com/tools-and-resources/literature/info/FLGR-ATSR | fiscal-year performance context through 2026-03-31 |
+| Cached S&P 500 Total Return convention | workflow cache | USD annual rows 2016-2025 and 2021-2025 with dividends reinvested, as of 2025-12-31; original URLs are recorded on the FLGR performance page |
+
+### Raw observations
+
+- Franklin identifies FLGR as an equity ETF listed on NYSE Arca, launched 2 Nov 2017, tracking the FTSE Germany RIC Capped Index, with semi-annual distributions and `0.09%` gross/net expense ratio; the product page labels it passive index exposure.
+- Official product-page snapshot: NAV `$34.29` and NAV TR YTD `5.23%` as of 7 Aug 2026; total net assets `$39.43m` as of 9 Aug 2026. The product page's fee field is as of 1 Aug 2026.
+- Official rolling NAV fields as of 30 Jun 2026: 1-year `0.31%`, 3-year annualized `16.26%`, 5-year annualized `6.90%`, and since-inception annualized `5.69%`; 10-year field is not applicable.
+- Official factsheet as of 30 Jun 2026: annual NAV/index rows 2018-2025; NAV `-22.07%`, `21.67%`, `12.24%`, `5.29%`, `-22.10%`, `24.12%`, `10.68%`, `36.70%`; FTSE index `-22.42%`, `21.34%`, `11.95%`, `5.10%`, `-22.42%`, `23.68%`, `10.42%`, `36.38%`; 69 holdings; 3-year standard deviation `16.66%` versus benchmark `16.59%`.
+- Factsheet sector weights as of 30 Jun 2026: Industrials `31.02%`, Financials `22.81%`, Information Technology `14.74%`. Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources.
+- Cached S&P 500 TR rows are USD total-return rows as of 31 Dec 2025: 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- Using official annual FLGR NAV TR inputs, `Cumulative = ∏(1 + annual return) - 1`: 2018-2025 `63.92%`, rounded-input CAGR `6.37%`, up/down `7/1`, best `2025 +36.70%`, least positive `2021 +5.29%`, worst and least bad down year `2022 -22.10%`.
+- The 2021-2025 FLGR window compounds to `54.03%` / rounded-input CAGR `9.02%`. The FTSE benchmark rows compound to `60.04%` / `6.05%` for 2018-2025 and `51.86%` / `8.72%` for 2021-2025; rounded-input differences of `+0.32 pp` and `+0.30 pp` are passive tracking observations, not alpha.
+- Cached S&P 500 TR compounds to `192.03%` / `14.33%` for 2018-2025 and `96.17%` / `14.43%` for 2021-2025. FLGR is approximately `-7.96 pp` and `-5.41 pp` below that common USD reference; it is not the issuer benchmark.
+- A 10-year NAV CAGR is not calculated because inception is 2017-11-02 and the verified history does not span 10.00 elapsed years.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FLGR Performance.md` with Thai-first identity/classification, official rolling fields, 2018-2025 annual fund/index/S&P table, calculations, current NAV/YTD, risk evidence, source links, canonical breadcrumb and `geography/Germany` tag.
+- Update `wiki/analysis/comparisons/Germany ETF.md` with one FLGR row and an under-10-year note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Germany count from `2` to `3`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the FLGR coverage row and 2026-08-18 coverage bullet; do not add FLGR to the strict 2016-2025 Common Window ranking because its history is under ten years.
+- Append one `log.md` workflow bullet for the FLGR result.
+- No `wiki/entities/ETF_NYSE_ARCA_FLGR.md` or `raw/funds/` file is planned because this performance workflow owns the numeric page and no existing FLGR ticker hub was found.
+
+### Local pre-save checklist
+
+- PASS: FLGR identity, NYSE Arca exchange, inception, passive-index classification, FTSE Germany Capped Index-NR benchmark, expense ratio, distribution frequency, NAV total-return basis, USD currency, periods, units, and as-of dates are recorded with official sources.
+- PASS: official annual NAV/index rows are separated from rolling/YTD fields and from the cached S&P reference; the under-10-year rule is applied; passive tracking differences and common-reference comparisons are not called alpha.
+- PASS: no unsupported daily NAV drawdown or recovery value is invented; standard deviation, holdings and sector evidence are labeled with dates; country, EUR/USD, export-cycle and concentration risks remain disclosed.
+- PASS: the complete proposed performance page, Germany region row/count, performance-index row/bullet, source-batch section and log bullet are specified; canonical breadcrumb, `geography/Germany` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Franklin identity, passive classification, annual NAV/index rows, rolling/YTD evidence and the scheduled-local pre-save checklist passed; FLGR artifacts were written with under-10-year history, benchmark separation and daily NAV drawdown/recovery gaps disclosed.
+
+## EWG — iShares MSCI Germany ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`.
+- `entity_key: NYSE Arca:EWG`; ticker `EWG`; canonical exchange `NYSE Arca`; inception `1996-03-12`.
+- `management_mode: passive-index`; tracked index `MSCI Germany Index (Net)`; return basis is official USD NAV total return with distributions reinvested and fund expenses reflected in NAV.
+- Primary region: `Germany`; the fund provides targeted exposure to German equities.
+- Candidate claims: official rolling 10-year NAV TR `8.22%` as of `2026-06-30`; official 2016-2025 NAV TR cumulative `103.85%` / rounded-input CAGR `7.38%`; 2021-2025 cumulative `49.53%` / CAGR `8.38%`; latest official NAV TR YTD `6.09%` as of `2026-08-14`; 2025 best year `35.15%`, 2018 worst year `-22.30%`, and 3-year standard deviation `16.03%` as of `2026-07-31`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares U.S. product page | https://www.ishares.com/us/products/239650/ishares-msci-germany-etf | identity, exchange, NAV/price, current YTD, rolling returns, holdings, sectors, risk, fees and distributions |
+| iShares U.S. factsheet | https://www.ishares.com/us/literature/fact-sheet/ewg-ishares-msci-germany-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV/index calendar rows, benchmark, fee and fund facts as of 2026-06-30 |
+| BlackRock localized calendar page | https://www.blackrock.com/fi/professionals/products/239650/ishares-msci-germany-etf | official 2016-2020 NAV rows and historical calendar context |
+| iShares summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-germany-etf-8-31.pdf | indexing/representative sampling, 80% policy, permitted derivatives, turnover and Germany risks |
+| Cached S&P 500 Total Return convention | workflow cache | USD annual rows 2016-2025 and 2021-2025 with dividends reinvested, as of 2025-12-31; original URLs are recorded on the EWG performance page |
+
+### Raw observations
+
+- iShares identifies EWG as an equity ETF listed on NYSE Arca, launched 12 Mar 1996, tracking the MSCI Germany Index (Net), with semi-annual distributions and `0.49%` expense ratio.
+- Official U.S. product-page snapshot: NAV `$43.90`, closing price `$43.96`, net assets `$1,712,051,264` as of 17 Aug 2026; 52 holdings as of 14 Aug 2026; NAV TR YTD `6.09%` as of 14 Aug 2026.
+- Official rolling fields as of 30 Jun 2026: NAV 1-year `-0.32%`, 3-year annualized `15.50%`, 5-year annualized `6.39%`, 10-year annualized `8.22%`, since inception `6.31%`; benchmark rolling 10-year `8.36%`.
+- Official factsheet as of 30 Jun 2026: NAV calendar rows 2021 `4.85%`, 2022 `-22.17%`, 2023 `22.90%`, 2024 `10.32%`, 2025 `35.15%`; benchmark rows `5.34%`, `-22.34%`, `22.98%`, `10.22%`, `36.28%`; 3-year standard deviation `16.00%` at the factsheet date.
+- Current product-page risk snapshot: standard deviation `16.03%` and beta `0.76` as of 31 Jul 2026; sectors as of 14 Aug 2026 include Industrials `30.22%`, Financials `22.60%`, and Information Technology `15.61%`.
+- Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources; the prior quarter loss is not relabeled as a drawdown.
+- Cached S&P 500 TR rows are USD total-return rows as of 31 Dec 2025: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- Official complete-calendar EWG NAV TR rows 2016-2025 compound to `103.85%` / rounded-input CAGR `7.38%`; up/down `8/2`, best `2025 +35.15%`, least positive `2016 +2.60%`, worst `2018 -22.30%`, least bad down year `2022 -22.17%`.
+- The 2021-2025 EWG window compounds to `49.53%` / rounded-input CAGR `8.38%`; the window has `4/1` positive/negative years. The official benchmark rows compound to `51.12%` / `8.61%`, an approximate `-0.23 pp` fund-minus-index CAGR difference that is a passive tracking observation, not alpha.
+- The official rolling 10-year field independently reports cumulative `120.25%` and CAGR `8.22%` from normalized endpoints `100.00` to `220.25` over `2016-06-30` to `2026-06-30`; it is kept separate from the `7.38%` calendar-derived CAGR.
+- Cached S&P 500 TR compounds to `298.33%` / `14.82%` for 2016-2025 and `96.17%` / `14.43%` for 2021-2025. EWG is approximately `-7.44 pp` and `-6.05 pp` below those common USD reference CAGRs; it is not the issuer benchmark.
+
+### Planned durable paths and contents
+
+- Refresh `wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md` with current official NAV/YTD, rolling fields, annual table, passive classification, benchmark separation, risk snapshot, source links, canonical breadcrumb and `geography/Germany` tag.
+- Update `wiki/analysis/comparisons/Germany ETF.md` EWG YTD from the prior `-0.85%` snapshot to the latest verified `6.09%`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` EWG coverage row; the strict common-window annual row remains unchanged.
+- Append one `log.md` workflow bullet for the EWG refresh.
+- No `wiki/entities/ETF_NYSE_ARCA_EWG.md` or `raw/funds/` file is planned because this performance workflow owns the numeric page.
+
+### Local pre-save checklist
+
+- PASS: EWG identity, NYSE Arca exchange, inception, passive-index classification, MSCI Germany Index (Net) benchmark, expense ratio, distribution frequency, NAV total-return basis, USD currency, periods, units and as-of dates are recorded with official sources.
+- PASS: official 2016-2020 localized rows, 2021-2025 U.S. factsheet rows, rolling 10-year field and current YTD are kept separate; the calendar-derived CAGR is not relabeled as the issuer rolling field; passive tracking differences and S&P comparisons are not called alpha.
+- PASS: no unsupported daily NAV drawdown or recovery value is invented; current holdings, sectors, beta and standard deviation carry visible dates; country, EUR/USD and concentration risks remain disclosed.
+- PASS: the complete proposed refreshed performance page, Germany region row, performance-index row, source-batch section and log bullet are specified; canonical breadcrumb, `geography/Germany` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive classification, annual NAV/index rows, rolling/YTD evidence and the scheduled-local pre-save checklist passed; EWG was refreshed with current NAV/YTD, benchmark separation and daily NAV drawdown/recovery gap disclosed.
+
+## BBEU — JPMorgan BetaBuilders Europe ETF
+
+### Evidence packet
+
+- `workflow: check-etf-performance`; `mode: lean`; `caller: trello-etf-processing`; `handoff: trello_handoff`; `execution_profile: scheduled-inline`.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: Cboe BZX:BBEU`; input ticker and canonical ticker `BBEU`; exchange `Cboe BZX`; fund `JPMorgan BetaBuilders Europe ETF`; class launch `2018-06-15`; primary region `Europe`.
+- `management_mode: passive-index`; tracked index `Morningstar Developed Europe Target Market Exposure Index (net total return)`; return basis is official USD NAV total return with distributions and capital gains reinvested and fund operating expenses reflected in NAV performance.
+- Candidate claims: official 2019-2025 NAV TR cumulative `117.38%` / rounded-input CAGR `11.73%`; official 2021-2025 NAV TR cumulative `65.74%` / CAGR `10.63%`; official current NAV TR YTD `10.47%` as of `2026-07-31`; 2025 best year `35.73%`; 2022 worst year `-14.71%`; population standard deviation of complete 2019-2025 annual returns `15.26%`. A 10-year NAV CAGR is not applicable because the fund launched in 2018.
+- Periods and units: annual NAV/index rows 2019-2025 and 2021-2025 windows are USD percentages; official current YTD is NAV total return through the last business day of July 2026; S&P 500 comparison is a separate cached USD total-return convention as of `2025-12-31`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| JPMorgan BBEU July 2026 factsheet | https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-BBEU.PDF | official identity, passive approach, launch date, fees, 2019-2025 fund/index rows, current YTD, rolling returns, fund assets, holdings, sectors, countries and portfolio metrics |
+| SEC BBEU summary prospectus | https://www.sec.gov/Archives/edgar/data/1485894/000119312526071726/d55674d497k.htm | official objective, 80% index policy, Cboe BZX listing, fees, passive/indexing and risk disclosures, and performance comparison through 2025-12-31 |
+| Cached S&P 500 Total Return convention | workflow cache | USD annual rows 2019-2025 and 2021-2025 with dividends reinvested, as of 2025-12-31; original URLs are recorded on the BBEU performance page |
+
+### Raw observations
+
+- JPMorgan's factsheet identifies BBEU as a passive indexed ETF for developed European equity markets, launched 15 Jun 2018, with gross and net annual expenses of `0.09%` and fund assets of `$9.36B` as of 31 Jul 2026.
+- Official calendar NAV/index rows are `2019 23.84% / 23.88%`, `2020 5.91% / 5.82%`, `2021 16.70% / 16.57%`, `2022 -14.71% / -15.23%`, `2023 19.98% / 19.95%`, `2024 2.25% / 2.16%`, and `2025 35.73% / 35.86%`.
+- Official current NAV TR fields as of 31 Jul 2026 are `1M 2.13%`, `3M 5.16%`, `YTD 10.47%`, `1Y 24.41%`, and since-launch annualized `9.42%`; annualized fields as of 30 Jun 2026 are `1Y 18.51%`, `3Y 16.59%`, `5Y 9.80%`, and since-launch `9.23%`.
+- Factsheet portfolio snapshot as of 31 Jul 2026: 352 holdings; sectors Financials `26.3%`, Industrials `18.4%`, Health Care `12.9%`, Consumer Staples `8.7%`, Information Technology `8.3%`; countries United Kingdom `22.1%`, Switzerland `14.7%`, France `13.6%`, Germany `13.2%`, Netherlands `9.7%`; P/E `15.41x`, P/B `2.53x`, weighted average market cap `$148.34B`, ROE `19.25%`.
+- Current NAV and market price were not disclosed in the reviewed official issuer capture. Official daily NAV maximum drawdown and recovery date were also not disclosed; no secondary price substitute or price-only drawdown was mixed into the NAV performance analysis.
+- SEC's summary prospectus states that the fund seeks to closely correspond to the Morningstar index, invests at least 80% of assets in index securities, uses a passive/indexing approach, is listed on Cboe BZX, and does not seek to outperform or take defensive positions.
+
+### Calculations and reconciliation
+
+- Using official annual BBEU NAV TR inputs, `Cumulative = ∏(1 + annual return) - 1`: 2019-2025 `117.38%`, rounded-input CAGR `11.73%`, population annual-return standard deviation `15.26%`, up/down `6/1`, best `2025 +35.73%`, least positive `2024 +2.25%`, worst and least bad down year `2022 -14.71%`.
+- The 2021-2025 BBEU window compounds to `65.74%` / rounded-input CAGR `10.63%`; the window has `4/1` positive/negative years.
+- Morningstar benchmark rows compound to `115.66%` / `11.60%` for 2019-2025 and `64.51%` / `10.47%` for 2021-2025. Fund-minus-index differences are approximately `+0.13 pp` and `+0.16 pp`; these are passive tracking observations, not alpha.
+- Cached S&P 500 TR compounds to `96.17%` / `14.43%` for 2021-2025. BBEU is approximately `-3.79 pp` below that common USD reference CAGR; it is not the tracked index.
+- A 10-year NAV CAGR is not calculated because the fund launched on 2018-06-15 and verified complete annual history begins in 2019.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_CBOE_BZX_BBEU Performance.md` with Thai-first identity/classification, official rolling/YTD fields, 2019-2025 annual fund/index/S&P table, 2021-2025 calculations, current fund facts, risk evidence, source links, canonical breadcrumb and `geography/Europe` tag; current NAV/market-price and daily NAV drawdown/recovery gaps are explicitly disclosed.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the BBEU row and under-10-year note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `14` to `15`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the BBEU coverage row, Common Window row, and 2026-08-18 coverage bullet; add the performance owner to the existing Europe navigation graph.
+- Append one `log.md` workflow bullet for the BBEU result.
+- Append this BBEU evidence packet and handoff to `raw/imports/ETF_performance_sources_2026-08-18.md`; no entity hub or `raw/funds/` file is planned because this performance workflow owns the numeric page.
+
+### Local pre-save checklist
+
+- PASS: BBEU identity, Cboe BZX exchange, launch date, passive-index classification, Morningstar benchmark, 0.09% expense ratio, NAV total-return basis, USD currency, periods, units and all as-of dates are recorded with official sources.
+- PASS: official fund/index annual rows are separated from current YTD and rolling fields; the under-10-year rule is applied; passive tracking differences and the S&P 500 comparison are not called alpha.
+- PASS: current NAV/market-price non-disclosure and official daily NAV drawdown/recovery non-disclosure are preserved; no unsupported value is invented; annual-return dispersion is labeled as a calculation rather than an issuer daily-volatility field.
+- PASS: the complete proposed contents of the performance page, Europe row, Europe count, performance-index rows/bullet, source-batch section and log bullet are specified; canonical breadcrumb, `geography/Europe` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official JPMorgan and SEC identity, passive classification, annual NAV/index rows, current YTD evidence and the scheduled-local pre-save checklist passed; BBEU artifacts were written with benchmark separation and current NAV/market-price plus daily NAV drawdown/recovery gaps disclosed.
+
+## VGK — Vanguard FTSE Europe ETF
+
+### Evidence packet
+
+- `workflow: check-etf-performance`; `mode: lean`; `caller: trello-etf-processing`; `handoff: trello_handoff`; `execution_profile: scheduled-inline`.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: NYSE Arca:VGK`; input ticker and canonical ticker `VGK`; exchange `NYSE Arca`; fund `Vanguard FTSE Europe ETF`; inception `2005-03-04`; primary region `Europe`.
+- `management_mode: passive-index`; tracked index `FTSE Developed Europe All Cap Index`; return basis is official USD NAV total return with dividends and capital gains distributions reinvested and expenses reflected in NAV performance.
+- Candidate claims: official 2016-2025 NAV TR cumulative `130.81%` / rounded-input CAGR `8.72%`; official 2021-2025 NAV TR cumulative `62.05%` / CAGR `10.14%`; issuer rolling 10-year NAV TR `10.06%` as of `2026-06-30`; latest official NAV TR YTD `7.06%` as of `2026-07-20`; 2025 best year `35.44%`; 2022 worst year `-16.04%`; official 3-year monthly standard deviation `13.67%` as of `2026-06-30`; population standard deviation of 2016-2025 annual rows `16.62%`.
+- Periods and units: annual NAV/index rows 2016-2025 and 2021-2025 windows are USD percentages; rolling and risk fields are as of 30 Jun 2026; latest official YTD is through 20 Jul 2026; S&P 500 comparison is a separate cached USD total-return convention as of `2025-12-31`; price snapshot is official as of 12 Jun 2026 and later secondary adjusted close is as of 31 Jul 2026.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Vanguard VGK product page | https://investor.vanguard.com/investment-products/etfs/profile/vgk | official identity, exchange, inception, price/NAV snapshot, annual NAV/index rows and return definitions |
+| Vanguard Advisors VGK page | https://advisors.vanguard.com/investments/products/vgk/vanguard-ftse-europe-etf | latest official NAV TR YTD `7.06%` as of 2026-07-20, expense ratio, net assets and product fields |
+| Vanguard VGK factsheet | https://fund-docs.vanguard.com/F0963.pdf | official rolling returns, benchmark splice, fund facts, standard deviation, country and sector exposures as of 2026-06-30 |
+| FinanceCharts VGK price history | https://www.financecharts.com/etfs/VGK/summary/price | secondary adjusted-close cross-check `90.59` as of 2026-07-31; not used as NAV return evidence |
+| Cached S&P 500 Total Return convention | workflow cache | USD annual rows 2016-2025 and 2021-2025 with dividends reinvested, as of 2025-12-31; original URLs are recorded on the VGK performance page |
+
+### Raw observations
+
+- Vanguard identifies VGK as a passively managed, full-replication ETF tracking the FTSE Developed Europe All Cap Index, listed on NYSE Arca, launched 4 Mar 2005, with `0.06%` expense ratio and quarterly dividends.
+- Official annual NAV/index rows are `2016 -0.59% / -0.48%`, `2017 27.06% / 26.83%`, `2018 -14.79% / -15.14%`, `2019 24.26% / 24.58%`, `2020 6.50% / 6.54%`, `2021 16.35% / 16.35%`, `2022 -16.04% / -16.45%`, `2023 20.03% / 20.10%`, `2024 2.04% / 2.23%`, and `2025 35.44% / 35.79%`.
+- Vanguard factsheet as of 30 Jun 2026 reports NAV TR `YTD 8.98%`, `1Y 17.71%`, `3Y 16.45%`, `5Y 9.27%`, `10Y 10.06%`, and since inception `6.38%`; the later Vanguard Advisors capture reports current NAV TR YTD `7.06%` as of 20 Jul 2026. These are different as-of dates, not a same-date conflict.
+- Official factsheet portfolio snapshot as of 30 Jun 2026: ETF total net assets `$29.98B`, 1,230 stocks, median market cap `$81.2B`, P/E `18.0x`, P/B `2.4x`, ROE `13.8%`, and 3-year monthly standard deviation `13.67%`.
+- Country exposure includes United Kingdom `22.5%`, Switzerland `14.3%`, France `14.2%`, Germany `12.9%`, and Netherlands `8.7%`; sector exposure includes Financials `24.2%`, Industrials `19.1%`, Health Care `12.5%`, Technology `9.6%`, and Consumer Discretionary `8.0%`.
+- Official price snapshot as of 12 Jun 2026: NAV `$89.60` and market price `$89.62`. Secondary FinanceCharts adjusted close was `$90.59` on 31 Jul 2026; it is kept as a price-only cross-check and not mixed into NAV return calculations.
+- Vanguard's benchmark series is spliced: MSCI Europe through 26 Mar 2013, FTSE Developed Europe through 30 Sep 2015, and FTSE Developed Europe All Cap thereafter; benchmark returns are adjusted for withholding taxes. Official daily NAV maximum drawdown and recovery date were not disclosed.
+
+### Calculations and reconciliation
+
+- Using official annual VGK NAV TR inputs, `Cumulative = ∏(1 + annual return) - 1`: 2016-2025 `130.81%`, rounded-input CAGR `8.72%`, population annual-return standard deviation `16.62%`, up/down `7/3`, best `2025 +35.44%`, least positive `2024 +2.04%`, worst `2022 -16.04%`, and least bad down year `2016 -0.59%`.
+- The 2021-2025 VGK window compounds to `62.05%` / rounded-input CAGR `10.14%`; the window has `4/1` positive/negative years.
+- Spliced benchmark rows compound to `130.41%` / `8.71%` for 2016-2025 and `62.07%` / `10.14%` for 2021-2025. Fund-minus-index differences are approximately `+0.02 pp` and `-0.00 pp`; these are passive tracking observations, not alpha.
+- Cached S&P 500 TR compounds to `298.33%` / `14.82%` for 2016-2025 and `96.17%` / `14.43%` for 2021-2025. VGK is approximately `-6.10 pp` and `-4.29 pp` below that common USD reference CAGR; it is not the tracked index.
+- The issuer rolling 10-year NAV field of `10.06%` as of 30 Jun 2026 is kept separate from the calendar-derived `8.72%` because the windows and as-of dates differ.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_VGK Performance.md` with Thai-first identity/classification, official rolling/YTD fields, 2016-2025 annual fund/index/S&P table, 2021-2025 calculations, price/fund facts, risk evidence, source links, canonical breadcrumb and `geography/Europe` tag; official versus secondary price timing and daily NAV drawdown/recovery gap are disclosed.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the VGK row and rolling/calendar/YTD precision note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `15` to `16`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the VGK coverage row, Common Window row, and 2026-08-18 coverage bullet; keep VGK in the existing Europe navigation graph.
+- Append one `log.md` workflow bullet for the VGK result.
+- Append this VGK evidence packet and handoff to `raw/imports/ETF_performance_sources_2026-08-18.md`; no entity hub or `raw/funds/` file is planned because this performance workflow owns the numeric page.
+
+### Local pre-save checklist
+
+- PASS: VGK identity, NYSE Arca exchange, inception, passive full-replication classification, FTSE Developed Europe All Cap benchmark, 0.06% expense ratio, quarterly distribution schedule, NAV total-return basis, USD currency, periods, units and all as-of dates are recorded with official sources.
+- PASS: official annual NAV/index rows are separated from rolling/YTD fields and from the cached S&P reference; benchmark splice is disclosed; passive tracking differences and S&P comparisons are not called alpha.
+- PASS: official price/NAV snapshot and later secondary price-only cross-check are kept separate; official 3-year standard deviation and calculated annual-return dispersion are labeled; no unsupported daily NAV drawdown or recovery value is invented.
+- PASS: the complete proposed contents of the performance page, Europe row, Europe count, performance-index rows/bullet, source-batch section and log bullet are specified; canonical breadcrumb, `geography/Europe` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard identity, passive classification, annual NAV/index rows, rolling/YTD evidence and the scheduled-local pre-save checklist passed; VGK artifacts were written with benchmark-splice separation, price-source timing disclosure and daily NAV drawdown/recovery gap disclosed.
+
+## FLEE — Franklin FTSE Europe ETF
+
+### Evidence packet
+
+- `workflow: check-etf-performance`; `mode: lean`; `caller: trello-etf-processing`; `handoff: trello_handoff`; `execution_profile: scheduled-inline`.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: NYSE Arca:FLEE`; input ticker and canonical ticker `FLEE`; exchange `NYSE Arca`; fund `Franklin FTSE Europe ETF`; inception `2017-11-02`; primary region `Europe`.
+- `management_mode: passive-index`; tracked index `FTSE Developed Europe Capped Index-NR`; return basis is official USD NAV total return with dividends and capital gains distributions reinvested and fund expenses reflected in NAV performance.
+- Candidate claims: official 2018-2025 NAV TR cumulative `85.42%` / rounded-input CAGR `8.02%`; official 2021-2025 NAV TR cumulative `65.12%` / CAGR `10.55%`; official rolling 5-year NAV TR `9.73%` as of `2026-06-30`; current official NAV TR YTD `9.91%` as of `2026-07-30`; 2025 best year `35.87%`; 2018 worst year `-14.81%`; population standard deviation of complete 2018-2025 annual returns `17.18%`; issuer 3-year standard deviation `13.63%` as of `2026-06-30`.
+- Periods and units: annual NAV/index rows 2018-2025 and 2021-2025 windows are USD percentages; rolling fields are annualized NAV TR as of 30 Jun 2026; current YTD is NAV total return through 30 Jul 2026; price/portfolio fields have their separately stated dates; S&P 500 comparison is the cached USD total-return convention as of `2025-12-31`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Franklin FLEE product page | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26349/SINGLCLASS/franklin-ftse-europe-etf/FLEE | official identity, exchange, inception, current YTD, rolling returns, NAV/market price, assets, holdings, portfolio statistics, geography and dates |
+| Franklin FLEE factsheet | https://www.franklintempleton.com/forms-literature/download/FLEE-FF | official 2018-2025 calendar fund/index rows, benchmark, fee, country/sector exposure and 3-year risk statistics as of 2026-06-30 |
+| SEC FLEE summary prospectus | https://www.sec.gov/Archives/edgar/data/1655589/000137949117007135/filing134981077.htm | official ticker/exchange, investment goal, 80% index policy, passive/indexing approach, representative sampling and regional/foreign-security risks |
+| Cached S&P 500 Total Return convention | workflow cache | USD annual rows 2018-2025 and 2021-2025 with dividends reinvested, as of 2025-12-31; original URLs are recorded on the FLEE performance page |
+
+### Raw observations
+
+- Franklin identifies FLEE as an indexed equity ETF listed on NYSE Arca, launched 2 Nov 2017, tracking the FTSE Developed Europe Capped Index-NR, with `0.09%` total expense ratio and semi-annual distributions.
+- Official factsheet calendar NAV/index rows are `2018 -14.81% / -14.97%`, `2019 24.09% / 23.84%`, `2020 6.23% / 6.05%`, `2021 16.21% / 16.05%`, `2022 -15.51% / -15.77%`, `2023 20.93% / 20.23%`, `2024 2.35% / 2.24%`, and `2025 35.87% / 35.58%`.
+- Franklin product-page rolling NAV fields as of 30 Jun 2026 are `1Y 18.91%`, `3Y 16.66%`, `5Y 9.73%`, and since inception `8.54%`. The product page separately reports current NAV TR YTD `9.91%` as of 30 Jul 2026; the factsheet reports `7.82%` YTD as of 30 Jun 2026.
+- Official current product snapshot: NAV `$40.28` and market price `$40.26` as of 7 Aug 2026; total net assets `$120.83M` as of 9 Aug 2026; 498 holdings, P/E `18.35x` and P/B `2.65x` as of 6 Aug 2026.
+- Official factsheet snapshot as of 30 Jun 2026: 3-year NAV standard deviation `13.63%`; country weights United Kingdom `20.67%`, France `14.50%`, Germany `12.92%`, Switzerland `12.49%`, Netherlands `8.80%`; sector weights Financials `25.33%`, Industrials `18.96%`, Health Care `12.83%`, Information Technology `9.40%`.
+- Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources; no price-only or secondary drawdown substitute was used.
+- Cached S&P 500 TR rows are USD total-return rows as of 31 Dec 2025: 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- Using official annual FLEE NAV TR inputs, `Cumulative = ∏(1 + annual return) - 1`: 2018-2025 `85.42%`, rounded-input CAGR `8.02%`, population annual-return standard deviation `17.18%`, up/down `6/2`, best `2025 +35.87%`, least positive `2024 +2.35%`, worst `2018 -14.81%`, and least bad down year `2022 -15.51%`.
+- The 2021-2025 FLEE window compounds to `65.12%` / rounded-input CAGR `10.55%`; the window has `4/1` positive/negative years.
+- FTSE benchmark rows compound to `81.92%` / `7.77%` for 2018-2025 and `62.91%` / `10.25%` for 2021-2025. Fund-minus-index differences are approximately `+0.25 pp` and `+0.30 pp`; these are passive tracking observations, not alpha.
+- Cached S&P 500 TR compounds to `192.03%` / `14.33%` for 2018-2025 and `96.17%` / `14.43%` for 2021-2025. FLEE is approximately `-6.31 pp` and `-3.88 pp` below that common USD reference CAGR; it is not the tracked index.
+- The issuer rolling 5-year NAV field of `9.73%` as of 30 Jun 2026 is kept separate from the calendar-derived `8.02%` because the windows and as-of dates differ.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FLEE Performance.md` with Thai-first identity/classification, official rolling/YTD fields, 2018-2025 annual fund/index/S&P table, 2021-2025 calculations, current price/fund facts, risk evidence, source links, canonical breadcrumb and `geography/Europe` tag; daily NAV drawdown/recovery remains disclosed as a gap.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with the FLEE row and under-10-year note.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from `16` to `17`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the FLEE coverage row, Common Window row and 2026-08-18 coverage bullet; keep FLEE in the existing Europe navigation graph.
+- Prepend one `log.md` workflow bullet for the FLEE result.
+- Append this FLEE evidence packet and handoff to `raw/imports/ETF_performance_sources_2026-08-18.md`; no entity hub or `raw/funds/` file is planned because this performance workflow owns the numeric page.
+
+### Local pre-save checklist
+
+- PASS: FLEE identity, NYSE Arca exchange, inception, passive-index classification, FTSE Developed Europe Capped Index-NR benchmark, 0.09% expense ratio, semi-annual distribution schedule, NAV total-return basis, USD currency, periods, units and all as-of dates are recorded with official sources.
+- PASS: official 2018-2025 annual NAV/index rows, 2021-2025 window, rolling 5-year field and current YTD are kept separate; the under-10-year rule is applied; passive tracking differences and S&P comparisons are not called alpha.
+- PASS: different YTD dates are disclosed; current NAV/market-price, holdings, portfolio statistics, country/sector exposures and standard deviation carry visible dates; no unsupported daily NAV drawdown or recovery value is invented.
+- PASS: the complete proposed contents of the performance page, Europe row, Europe count, performance-index rows/bullet, source-batch section and log bullet are specified; canonical breadcrumb, `geography/Europe` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present: `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Franklin identity, passive classification, annual NAV/index rows, rolling/YTD evidence and the scheduled-local pre-save checklist passed; FLEE artifacts were written with separate as-of dates, benchmark separation and daily NAV drawdown/recovery gap disclosed.

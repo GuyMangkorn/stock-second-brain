@@ -28,9 +28,9 @@ driver notes ทั้งหมด
 | Indonesia | 2 | [[Indonesia ETF]] |
 | Italy | 1 | [[Italy ETF]] |
 | Canada | 2 | [[Canada ETF]] |
-| Germany | 2 | [[Germany ETF]] |
+| Germany | 3 | [[Germany ETF]] |
 | Greece | 1 | [[Greece ETF]] |
-| Europe | 14 | [[Europe ETF]] |
+| Europe | 17 | [[Europe ETF]] |
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
 | Emerging Markets | 5 | [[Emerging Markets ETF]] |

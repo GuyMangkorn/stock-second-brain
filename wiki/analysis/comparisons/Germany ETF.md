@@ -17,8 +17,9 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EWG | iShares MSCI Germany ETF | Germany single-country equity | 8.22% | 8.38% | -0.85% | [[ETF_NYSE_ARCA_EWG Performance]] |
+| EWG | iShares MSCI Germany ETF | Germany single-country equity | 8.22% | 8.38% | 6.09% | [[ETF_NYSE_ARCA_EWG Performance]] |
 | DAX | Global X DAX Germany ETF | Germany single-country equity | 9.57% | 10.65% | 1.40% | [[ETF_NASDAQ_DAX Performance]] |
+| FLGR | Franklin FTSE Germany ETF | Germany single-country equity | not applicable (<10y) | 9.02% | 5.23% | [[ETF_NYSE_ARCA_FLGR Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
