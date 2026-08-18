@@ -26,6 +26,10 @@ tags:
 | FEUZ | First Trust Eurozone AlphaDEX ETF | Eurozone rules-based enhanced equity; Nasdaq-listed U.S. ETF | 10.43% | 10.86% | 12.30% | [[ETF_NASDAQ_FEUZ Performance]] |
 | CEUU | iShares Core MSCI EMU UCITS ETF USD Hedged (Accumulating) | Eurozone passive, currency-hedged, accumulating equity; input alias ISVYF | not applicable (<10y) | 14.29% | 17.09% | [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] |
 | CEMU | iShares Core MSCI EMU UCITS ETF EUR (Accumulating) | Eurozone passive, accumulating equity; input alias XMTIF | 8.58%† | 11.97% | 15.77% | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] |
+| ISX5 | iShares Core EURO STOXX 50 UCITS ETF | Eurozone large-cap passive, accumulating equity; input alias IVVPF | 9.07% | 13.47% | 15.37% | [[ETF_LSE_ISX5 Performance]] |
+| HEZU | iShares Currency Hedged MSCI Eurozone ETF | Eurozone passive, USD-hedged equity on NYSE Arca | 12.88% | 13.88% | 17.53% | [[ETF_NYSE_ARCA_HEZU Performance]] |
+| EZU | iShares MSCI Eurozone ETF | Eurozone passive, USD unhedged equity on Cboe BZX | 10.91% | 10.60% | 14.20% | [[ETF_CBOE_BZX_EZU Performance]] |
+| FLEU | Franklin FTSE Eurozone ETF | Eurozone passive; predecessor hedged-Europe index through 2023-07-31 | not applicable (<10y) | 14.06% | 6.75% | [[ETF_NYSE_ARCA_FLEU Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -80,6 +84,26 @@ CEMU ใช้ official EUR accumulating share class ซึ่งเปิดต
 issuer rolling-10-year field, `11.97%` เป็น common 2021-2025 CAGR และ `15.77%`
 เป็น official NAV TR YTD ณ 2026-08-14. Official daily NAV drawdown/recovery
 ยังไม่ verified.
+
+HEZU ใช้ official USD share class ซึ่งเปิดตัว 2014-07-09; `12.88%` เป็น
+issuer rolling 10-year average annual NAV TR ณ 2026-06-30, `13.88%` เป็น
+rounded-input CAGR ของ official 2021-2025 rows และ `17.53%` เป็น official NAV
+TR YTD ณ 2026-08-14. กองทุนใช้ EZU และ currency forwards เพื่อ hedge EUR/USD;
+official daily NAV drawdown/recovery ยังไม่ verified.
+
+EZU ใช้ official USD unhedged share class ซึ่งเปิดตัว 2000-07-25; `10.91%` เป็น
+issuer rolling 10-year average annual NAV TR ณ 2026-06-30, `10.60%` เป็น
+rounded-input CAGR ของ official 2021-2025 rows และ `14.20%` เป็น official NAV
+TR YTD ณ 2026-08-14. EZU ต้องแยกจาก HEZU ซึ่งมี currency-hedge overlay;
+official daily NAV drawdown/recovery ยังไม่ verified.
+
+FLEU เปิดตัว 2017-11-02 จึงไม่มี 10-year NAV TR; `14.06%` เป็น rounded-input
+CAGR ของ official 2021-2025 NAV rows และ `6.75%` เป็น latest official issuer
+NAV YTD ใน capture ณ 2026-07-23. History ตั้งแต่ 2018 ใช้ linked benchmark
+ที่รวม predecessor hedged-Europe period ก่อน index/strategy change วันที่
+2023-08-01. Factsheet ณ 2026-06-30 แสดง YTD `9.16%`; ใช้ `6.75%` เพราะเป็น
+later product-page snapshot, not a same-date conflict. Official daily NAV
+drawdown/recovery ยังไม่ verified.
 
 ## Navigation
 

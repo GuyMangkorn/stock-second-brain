@@ -1164,3 +1164,245 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares evidence and the scheduled-local checklist passed; CEMU artifacts were written with the XMTIF alias bridge, EUR-basis tracking comparison, complete 2016-2025 calendar window and current official YTD disclosed.
+
+## ISX5 — iShares Core EURO STOXX 50 UCITS ETF
+
+### Identity and classification
+
+- `entity_key: LSE:ISX5`; input ticker `IVVPF`; canonical exchange `London Stock Exchange`; official USD listing `ISX5`; ISIN `IE00B53L3W79`; share-class launch `2010-01-26`.
+- `management_mode: passive-index`; physically replicated, accumulating Ireland-domiciled UCITS equity ETF; total expense ratio `0.10%`.
+- Tracked index: `STOXX Eurozone 50 (Net Return)`; primary region: `Europe`.
+
+### Alias bridge and source map
+
+`IVVPF` is retained as the card/input OTC alias. The official iShares listing
+table for the same ISIN maps the USD London line to `ISX5`; the source page also
+shows EUR listings on Euronext Amsterdam, Xetra, Borsa Italiana and SIX. The
+USD OTC quote was used only to cross-check the alias identity, not as NAV
+performance evidence.
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ishares.com/uk/individual/en/products/253712/CSSX5E?siteEntryPassthrough=true | official listing table, ISIN, current NAV/YTD, assets, holdings, fees, index and risk snapshot |
+| Issuer factsheet | https://www.ishares.com/gls-download/literature/fact-sheet/cssx5e-ishares-core-euro-stoxx-50-ucits-etf-fund-fact-sheet-en-gb.pdf | official 2016-2025 NAV/index calendar rows, rolling returns, structure and trading lines |
+| OTC alias cross-check | https://www.boursorama.com/bourse/trackers/cours/3kIVVPF/ | IVVPF/ISIN identity only; secondary, not primary NAV evidence |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2016-2025, USD, dividends reinvested |
+
+### Raw observations
+
+- Official iShares product page as of `2026-08-14`: NAV `€254.66`; NAV TR YTD `15.37%`; net assets `€7,980,253,884`; 50 holdings; P/E `19.37`; P/B `2.59`; tracked benchmark level `EUR 16,243.95`.
+- Official July 2026 factsheet: NAV and portfolio data as of `2026-07-31`, all other data as of `2026-08-07`; share-class currency EUR; official 5-year annualised NAV TR `12.45%`, 3-year `15.62%`, since-inception `8.43%`.
+- Official calendar-year NAV/index rows: 2016 `4.37% / 3.72%`, 2017 `9.70% / 9.15%`, 2018 `-11.56% / -12.03%`, 2019 `28.86% / 28.20%`, 2020 `-2.89% / -3.20%`, 2021 `23.98% / 23.34%`, 2022 `-9.04% / -9.49%`, 2023 `22.78% / 22.23%`, 2024 `11.54% / 11.01%`, 2025 `21.78% / 21.20%`.
+- Official risk snapshot as of `2026-07-31`: 3-year standard deviation `12.53%`, beta `1.003`; sector weights as of `2026-08-14`: Financials `28.29%`, Industrials `22.17%`, Information Technology `14.98%`.
+- Use of income is `Accumulating`; no cash distribution series or yield is inferred. Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed capture.
+- S&P 500 Total Return cached annual rows are USD rows as of `2025-12-31`; no current S&P YTD was mixed with ISX5's `2026-08-14` YTD because the dates and currencies are not a synchronized pair.
+
+### Calculations and reconciliation
+
+- Complete 2016-2025 ISX5 NAV TR: `(1.0437 × 1.0970 × 0.8844 × 1.2886 × 0.9711 × 1.2398 × 0.9096 × 1.2278 × 1.1154 × 1.2178) - 1 = 138.31%`; rounded-input calendar CAGR `9.07%`; population annual-return standard deviation `13.71%`; up/down `7/3`; best `2019 +28.86%`; worst `2018 -11.56%`.
+- Common 2021-2025 ISX5 NAV TR: cumulative `88.08%`, rounded-input CAGR `13.47%`, up/down `4/1`. Tracked-index rows compound to `83.59%` / `12.92%`; arithmetic CAGR difference is approximately `+0.55 pp` and is not alpha.
+- Cached S&P 500 TR 2016-2025: cumulative `298.33%` / CAGR `14.82%`; common 2021-2025: `96.17%` / `14.43%`. This is a USD common reference, not the issuer benchmark.
+- 10-year NAV TR history is available as ten complete calendar years, but the displayed `9.07%` is a rounded-input calendar CAGR rather than an issuer-labeled rolling-10-year field.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_LSE_ISX5 Performance.md` with the canonical alias bridge, official identity/structure, one annual table containing ISX5 NAV TR, STOXX Eurozone 50 Net Return and cached S&P 500 TR, 2021-2025 calculations, current YTD, risk read-through, source links and breadcrumb.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with one static ISX5 navigation row; update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from 9 to 10; update `wiki/analysis/performance/ETF Performance Index.md` coverage, common-window row, Europe note and dated coverage addition; append one `log.md` workflow bullet.
+- No ETF entity page or `raw/funds/` file is created because no existing ticker-level hub was found and the performance workflow owns these outputs.
+
+### Local pre-save checklist
+
+- PASS: ETF identity, OTC alias bridge, canonical exchange/listing, ISIN, passive classification, tracked index, return basis, periods, units, currencies, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: official calendar rows, issuer rolling fields, current NAV/YTD, risk fields and the USD S&P 500 reference are separated; the calendar CAGR is not mislabeled as an issuer rolling field and arithmetic tracking difference is not called alpha.
+- PASS: the proposed performance page, Europe row, region-index count, performance-index coverage/common-window/addition changes, source-batch contents and log bullet are fully specified; canonical breadcrumb, alias tag and `geography/Europe` tag resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in the batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares evidence and the scheduled-local pre-save checklist passed; ISX5 artifacts were written with the IVVPF alias bridge and EUR/USD basis separation.
+
+## HEZU — iShares Currency Hedged MSCI Eurozone ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:HEZU`; input ticker `HEZU`; canonical exchange `NYSE Arca`; inception `2014-07-09`.
+- `management_mode: passive-index`; U.S.-domiciled equity ETF using an indexing approach; expense ratio `1.12%`, contractual net expense ratio `0.53%` after a `0.59%` waiver.
+- Tracked index: `MSCI EMU 100% Hedged to USD Index (Net)`; primary region: `Europe`.
+- The fund invests substantially in the underlying `EZU` and uses foreign-currency forward contracts to hedge euro exposure. The derivatives are for currency risk management; the fund is not leveraged, inverse, option-income, or a derivative-payoff product.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ishares.com/us/products/268708/HEZU | official exchange, current NAV/YTD, assets, benchmark, fees, rolling performance, risk and exposure snapshot |
+| Issuer factsheet | https://www.ishares.com/us/literature/fact-sheet/hezu-ishares-currency-hedged-msci-eurozone-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV/benchmark calendar rows, rolling returns, fee, structure and risk fields; factsheet as of 2026-06-30 |
+| SEC summary prospectus | https://www.sec.gov/Archives/edgar/data/1100663/000119312525336755/d918823d497k.htm | official equity objective, passive indexing, EZU underlying-fund and currency-forward hedge disclosures |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2021-2025, USD, dividends reinvested |
+
+### Raw observations
+
+- Official product-page snapshot as of `2026-08-14`: NAV `$50.62`, closing price `$50.68`, NAV TR YTD `17.53%`, net assets `$589,676,605`, one underlying fund holding, NYSE Arca listing, semi-annual distributions, and benchmark `MSCI EMU 100% Hedged to USD Index (Net)`.
+- Official current page risk/fund facts: 3-year standard deviation `11.39%` and beta `0.59` as of `2026-07-31`; P/E `19.36x` and P/B `2.41x` as of `2026-08-14`; trailing yield `2.57%` as of `2026-07-31`.
+- Official factsheet as of `2026-06-30`: rolling annualised NAV/benchmark returns are 1-year `26.48% / 26.04%`, 3-year `18.64% / 18.57%`, 5-year `13.47% / 13.37%`, 10-year `12.88% / 12.94%`, and since inception `10.58% / 10.65%`.
+- Official calendar-year NAV/index rows: 2021 `23.25% / 23.24%`, 2022 `-9.34% / -9.88%`, 2023 `22.89% / 22.08%`, 2024 `10.82% / 11.38%`, and 2025 `25.86% / 26.11%`.
+- Official factsheet look-through structure as of `2026-06-30`: `EZU` `100.29%` plus EUR/USD forwards and cash; top sectors Financials `25.36%`, Industrials `20.02%`, Information Technology `16.75%`; top countries France `28.08%`, Germany `24.53%`, Netherlands `17.51%`.
+- The latest product page exposure snapshot as of `2026-08-14` is used for the page's current risk read-through: Financials `26.98%`, Industrials `20.43%`, Information Technology `16.06%`; France `28.01%`, Germany `25.34%`, Netherlands `16.97%`.
+- S&P 500 Total Return cached annual rows are USD rows as of `2025-12-31`: 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed capture; no secondary price-only proxy was substituted.
+
+### Calculations and reconciliation
+
+- Complete 2021-2025 HEZU NAV TR using official displayed rows: `(1.2325 × 0.9066 × 1.2289 × 1.1082 × 1.2586) - 1 = 91.52%`; rounded-input calendar CAGR `13.88%`; population annual-return standard deviation `13.10%`; up/down `4/1`; best `2025 +25.86%`; least positive `2024 +10.82%`; worst `2022 -9.34%`.
+- Complete 2021-2025 official benchmark rows compound to `90.45%` / rounded-input CAGR `13.75%`; arithmetic CAGR difference is approximately `+0.13 pp` and is not alpha.
+- Cached S&P 500 TR common-window cumulative/CAGR is `96.17%` / `14.43%`; HEZU is approximately `0.55 pp` lower on rounded-input CAGR. This is a common USD reference and not the issuer benchmark.
+- The issuer's rolling `10-year` NAV TR `12.88%` is retained as a separately labelled official annualised field; no 2016-2020 calendar rows were reconstructed from secondary data.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_HEZU Performance.md` with the official identity, passive/hedged structure, one 2021-2025 NAV/issuer-benchmark/S&P table, rounded-input calculations, current YTD, risk read-through, source links, and the Europe breadcrumb.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with one static HEZU navigation row and its rolling-versus-calendar note; update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from 10 to 11; update `wiki/analysis/performance/ETF Performance Index.md` coverage, common-window row, HEZU hedge note, and dated coverage addition; append one `log.md` workflow bullet.
+- No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing HEZU ticker-level hub was found.
+
+### Local pre-save checklist
+
+- PASS: HEZU identity, NYSE Arca exchange, inception, passive-index classification, official benchmark, EZU/forward hedge structure, expense/waiver, distribution frequency, NAV Total Return basis, periods, units, currency, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: the official 2021-2025 calendar window, issuer rolling 10-year field, issuer benchmark, current NAV/YTD, risk snapshot, look-through exposure and cached USD S&P 500 reference are kept separate; no 2016-2020 annual values are inferred and the 10-year field is not relabelled as a calendar CAGR.
+- PASS: HEZU's currency forwards are classified as hedge/risk-management instruments within an otherwise passive equity strategy; residual EUR/USD, forward, counterparty, country and sector risks are disclosed, and passive tracking comparison is not called alpha.
+- PASS: the proposed HEZU performance page, Europe row, region-index count, performance-index coverage/common-window/addition changes, source-batch contents and log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares and SEC evidence plus the scheduled-local pre-save checklist passed; HEZU artifacts were written with USD basis, issuer benchmark separation and the EZU/forward currency-hedge structure disclosed.
+
+## EZU — iShares MSCI Eurozone ETF
+
+### Identity and classification
+
+- `entity_key: Cboe BZX:EZU`; input ticker `EZU`; canonical exchange `Cboe BZX`; inception `2000-07-25`.
+- `management_mode: passive-index`; U.S.-domiciled unhedged equity ETF using representative-sampling indexing; expense ratio `0.50%`.
+- Tracked index: `MSCI EMU Index (Net)`; primary region: `Europe`.
+- The prospectus says the Fund seeks to track large- and mid-cap euro-using developed-market equities, uses an indexing approach and generally invests at least 80% in index components or economically similar instruments. Limited futures, options and swaps may support tracking, but the fund is not leveraged, inverse, option-income, or a derivative-payoff product.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.ishares.com/us/products/239644/EZU | official exchange, current NAV/YTD, assets, benchmark, fees, rolling performance, risk and exposure snapshot |
+| Issuer factsheet | https://www.ishares.com/us/literature/fact-sheet/ezu-ishares-msci-eurozone-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV/benchmark calendar rows, rolling returns, fee, structure and risk fields; factsheet as of 2026-06-30 |
+| SEC summary prospectus | https://www.sec.gov/Archives/edgar/data/930667/000119312525336639/d31674d497k.htm | official equity objective, passive indexing, representative-sampling and tracking-instrument disclosures |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2021-2025, USD, dividends reinvested |
+
+### Raw observations
+
+- Official product-page snapshot as of `2026-08-14`: NAV `$71.82`, closing price `$71.99`, NAV TR YTD `14.20%`, net assets `$10,004,581,095`, 220 holdings, Cboe BZX listing, semi-annual distributions, and benchmark `MSCI EMU Index (Net)`.
+- Official current page risk/fund facts: 3-year standard deviation `14.62%` and beta `0.70` as of `2026-07-31`; P/E `19.36x` and P/B `2.41x` as of `2026-08-14`; trailing yield `2.62%` as of `2026-07-31`.
+- Official factsheet as of `2026-06-30`: rolling annualised NAV/benchmark returns are 1-year `19.60% / 20.13%`, 3-year `18.03% / 18.04%`, 5-year `10.24% / 10.11%`, 10-year `10.91% / 10.82%`, and since inception `4.73% / not disclosed`.
+- Official calendar-year NAV/index rows: 2021 `13.59% / 13.54%`, 2022 `-17.28% / -17.86%`, 2023 `22.93% / 22.94%`, 2024 `2.58% / 2.64%`, and 2025 `39.66% / 40.30%`.
+- Official product-page exposure snapshot as of `2026-08-14`: sector weights Financials `26.80%`, Industrials `20.29%`, Information Technology `15.95%`; country weights France `27.83%`, Germany `25.17%`, Netherlands `16.85%`; number of holdings `220`.
+- S&P 500 Total Return cached annual rows are USD rows as of `2025-12-31`: 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed capture; no secondary price-only proxy was substituted.
+
+### Calculations and reconciliation
+
+- Complete 2021-2025 EZU NAV TR using official displayed rows: `(1.1359 × 0.8272 × 1.2293 × 1.0258 × 1.3966) - 1 = 65.48%`; rounded-input calendar CAGR `10.60%`; population annual-return standard deviation `19.15%`; up/down `4/1`; best `2025 +39.66%`; least positive `2024 +2.58%`; worst `2022 -17.28%`.
+- Complete 2021-2025 official benchmark rows compound to `65.11%` / rounded-input CAGR `10.55%`; arithmetic CAGR difference is approximately `+0.04 pp` and is not alpha.
+- Cached S&P 500 TR common-window cumulative/CAGR is `96.17%` / `14.43%`; EZU is approximately `3.35 pp` lower on rounded-input CAGR. This is a common USD reference and not the issuer benchmark.
+- The issuer's rolling `10-year` NAV TR `10.91%` is retained as a separately labelled official annualised field; no 2016-2020 calendar rows were reconstructed from secondary data.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_CBOE_BZX_EZU Performance.md` with the official identity, passive unhedged structure, one 2021-2025 NAV/issuer-benchmark/S&P table, rounded-input calculations, current YTD, risk read-through, source links, and the Europe breadcrumb.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with one static EZU navigation row and its rolling-versus-calendar/unhedged note; update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from 11 to 12; update `wiki/analysis/performance/ETF Performance Index.md` coverage, common-window row, EZU unhedged note, and dated coverage addition; append one `log.md` workflow bullet.
+- No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing EZU ticker-level hub was found.
+
+### Local pre-save checklist
+
+- PASS: EZU identity, Cboe BZX exchange, inception, passive-index classification, official benchmark, representative-sampling structure, expense ratio, distribution frequency, NAV Total Return basis, periods, units, currency, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: the official 2021-2025 calendar window, issuer rolling 10-year field, issuer benchmark, current NAV/YTD, risk snapshot, look-through exposure and cached USD S&P 500 reference are kept separate; no 2016-2020 annual values are inferred and the 10-year field is not relabelled as a calendar CAGR.
+- PASS: EZU's USD-unhedged status is explicit and separated from HEZU's currency-hedged structure; limited tracking derivatives are not treated as a payoff-defining strategy, and passive tracking comparison is not called alpha.
+- PASS: the proposed EZU performance page, Europe row, region-index count, performance-index coverage/common-window/addition changes, source-batch contents and log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares and SEC evidence plus the scheduled-local pre-save checklist passed; EZU artifacts were written with USD unhedged basis, issuer benchmark separation and distinction from HEZU.
+
+## FLEU — Franklin FTSE Eurozone ETF
+
+### Identity and classification
+
+- `entity_key: NYSE Arca:FLEU`; ticker `FLEU`; canonical exchange `NYSE Arca`; inception `2017-11-02`.
+- `management_mode: passive-index`; Franklin classifies the fund as `Equity Indexed`; gross and net expense ratios are `0.09%`.
+- Current tracked index: `FTSE Developed Eurozone Index`; issuer performance field: `Linked FTSE Developed Eurozone Index-NR`; primary region: `Europe`.
+- The fund normally invests at least 80% in index securities or depositary receipts and may use replication or representative sampling. Equity futures, total-return swaps and currency forwards may support tracking, equitise cash/income, settlement or transaction efficiency; they do not define a leveraged, inverse or option-income payoff.
+- Strategy/index transition: effective `2023-08-01`, the fund changed from the `FTSE Developed Europe Capped Hedged Index` to the `FTSE Developed Eurozone Index`. The linked benchmark joins the predecessor period through `2023-07-31` to the current benchmark thereafter; the fund was formerly Franklin FTSE Europe Hedged ETF.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Issuer product page | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26347/SINGLCLASS/franklin-ftse-eurozone-etf/FLEU | official current objective, exchange, fees, NAV/YTD, assets, holdings, liquidity, portfolio and rolling returns |
+| Issuer factsheet | https://www.franklintempleton.com/forms-literature/download/FLEH-FF | official 2018-2025 NAV/linked-benchmark rows, rolling returns, risk and index-transition note; factsheet as of 2026-06-30 |
+| SEC prospectus supplement / summary prospectus | https://www.sec.gov/Archives/edgar/data/1655589/000174177324001255/c497.htm | official passive strategy, 80% policy, derivative tracking role, former name and 2023 benchmark transition |
+| Cached benchmark convention | workflow cache | S&P 500 Total Return calendar rows 2018-2025 and 2021-2025, USD, dividends reinvested |
+
+### Raw observations
+
+- Official product-page snapshot as of `2026-07-23`: NAV `$34.93`, market price `$34.90`, NAV TR YTD `6.75%`, net assets `$69.85m`, 260 holdings, NYSE Arca listing, and 30-day median bid/ask spread `0.48%`.
+- The June 2026 factsheet reports NAV YTD `9.16%` as of `2026-06-30`, while the later product-page capture reports `6.75%` as of `2026-07-23`; these are different as-of dates, not a same-date conflict, and the later product-page value is selected for the latest-YTD field.
+- Official current fund facts: inception `2017-11-02`, semi-annual distributions, gross/net expense ratio `0.09%`, current portfolio P/E `17.92x` and P/B `2.39x` as of `2026-07-23`; current country weights France `27.40%`, Germany `24.27%`, Netherlands `15.86%`, Spain `11.19%`, and Italy `10.06%`.
+- Official June 2026 factsheet: rolling NAV/linked-benchmark returns are 1-year `19.68% / 19.45%`, 3-year `17.80% / 17.64%`, 5-year `12.92% / 12.73%`, 10-year `not applicable`, and since inception `10.90% / 10.75%`.
+- Official calendar-year NAV/index rows: 2018 `-8.23% / -8.27%`, 2019 `27.22% / 27.14%`, 2020 `0.46% / 0.31%`, 2021 `23.43% / 23.27%`, 2022 `-6.97% / -7.09%`, 2023 `15.90% / 15.68%`, 2024 `2.79% / 2.71%`, and 2025 `41.11% / 40.80%`; 2017 and 2016 are not disclosed in the factsheet table.
+- Official June 2026 factsheet risk snapshot: 3-year NAV-return standard deviation `15.00%` versus `14.96%` for the linked benchmark; sector weights Financials `26.00%`, Industrials `20.00%`, Information Technology `16.34%`.
+- S&P 500 Total Return cached annual rows are USD rows as of `2025-12-31`: 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+- Official daily NAV maximum drawdown and recovery were not disclosed in the reviewed capture; no secondary price-only proxy was substituted. A more recent official YTD capture after `2026-07-23` was not found.
+
+### Calculations and reconciliation
+
+- Complete 2018-2025 FLEU NAV TR using official displayed rows: `(0.9177 × 1.2722 × 1.0046 × 1.2343 × 0.9303 × 1.1590 × 1.0279 × 1.4111) - 1 = 126.40%`; rounded-input calendar CAGR `10.75%`; population annual-return standard deviation `16.63%`; up/down `6/2`; best `2025 +41.11%`; least positive `2020 +0.46%`; worst `2018 -8.23%`; least bad down year `2022 -6.97%`.
+- Common 2021-2025 FLEU NAV TR cumulative/CAGR is `93.03%` / `14.06%`; linked benchmark is `91.60%` / `13.89%`; rounded-input arithmetic CAGR difference is approximately `+0.17 pp` and is not alpha.
+- Cached S&P 500 TR common-window cumulative/CAGR is `96.17%` / `14.43%`; FLEU is approximately `0.37 pp` lower on rounded-input CAGR. This is a common USD reference and not the issuer benchmark.
+- No 10-year NAV TR is calculated because inception `2017-11-02` leaves fewer than ten complete calendar years; the official linked history is retained with its 2023 strategy/index transition caveat.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FLEU Performance.md` with the official identity, passive linked-index structure, one 2018-2025 NAV/linked-benchmark/S&P table, 2018-2025 and 2021-2025 calculations, current YTD date limitation, risk read-through, source links and the Europe breadcrumb.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with one static FLEU navigation row and its under-10-year/index-transition note; update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from 12 to 13; update `wiki/analysis/performance/ETF Performance Index.md` coverage, common-window row, FLEU transition note and dated coverage addition; append one `log.md` workflow bullet.
+- No ETF entity page or `raw/funds/` file is created because the performance workflow owns these outputs and no existing FLEU ticker-level hub was found.
+
+### Local pre-save checklist
+
+- PASS: FLEU identity, NYSE Arca exchange, inception, passive-index classification, current and linked benchmark, 80%/sampling strategy, expense ratio, distribution frequency, NAV Total Return basis, periods, units, currency, metric definitions, as-of dates, calculations and source URLs are recorded.
+- PASS: complete 2018-2025 official rows, common 2021-2025 rows, issuer rolling fields, current/latest issuer NAV/YTD, risk snapshot and cached USD S&P 500 reference are kept separate; 2017 partial is excluded and no 10-year CAGR is inferred.
+- PASS: the 2023 benchmark/strategy transition and predecessor hedged period are visible in the performance page, region note, index row and source batch; linked benchmark tracking comparison is not called alpha and the latest official YTD limitation is disclosed.
+- PASS: the proposed FLEU performance page, Europe row, region-index count, performance-index coverage/common-window/addition changes, source-batch contents and log bullet are fully specified; canonical breadcrumb and `geography/Europe` tag are present; all planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write; no WARNING requiring confirmation remains. `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design` are recorded in this batch header.
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Franklin and SEC evidence plus the scheduled-local pre-save checklist passed; FLEU artifacts were written with the linked benchmark, 2023 strategy/index transition and latest issuer YTD limitation disclosed.

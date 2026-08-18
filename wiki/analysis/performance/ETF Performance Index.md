@@ -243,6 +243,10 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_FEUZ Performance]] | official 2014 / official 2016-2025; rolling 10-year as of 2026-07-31 | 10.43% | 10.86% | 12.30% | 2025 +56.57% / 2018 -19.82% | Eurozone rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.31% 3-year standard deviation; NAV drawdown/recovery gap; distinct from UCITS FTEU |
 | [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] | official inception 2019-06-05 / official 2020-2025; history under 10 years | not applicable (<10y) | 14.29% | 17.09% | 2025 +26.87% / 2022 -9.31% | Eurozone passive, USD-hedged accumulating equity | country/sector/hedge-cost/FX-sensitive; 11.89% 3-year standard deviation; EUR benchmark versus USD share class; NAV drawdown/recovery gap; input alias ISVYF |
 | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] | official 2010 / official 2016-2025; calendar CAGR used for 10Y field | 8.58%† | 11.97% | 15.77% | 2025 +24.25% / 2018 -12.40% | Eurozone passive, accumulating broad-market equity | country/sector/valuation/FX-sensitive; 11.89% 3-year standard deviation; rounded-input tracking comparison; NAV drawdown/recovery gap; input alias XMTIF |
+| [[ETF_LSE_ISX5 Performance]] | official 2010 / official 2016-2025; calendar-derived CAGR, not issuer rolling field | 9.07% | 13.47% | 15.37% | 2019 +28.86% / 2018 -11.56% | Eurozone large-cap passive, accumulating equity | country/sector/EUR-USD FX-sensitive; 12.53% 3-year standard deviation; NAV drawdown/recovery gap; input alias IVVPF |
+| [[ETF_NYSE_ARCA_HEZU Performance]] | official 2014 / official 2021-2025; issuer rolling 10-year as of 2026-06-30 | 12.88% | 13.88% | 17.53% | 2025 +25.86% / 2022 -9.34% | Eurozone passive, USD-hedged equity | country/sector/hedge-cost/forward/counterparty/FX-sensitive; 11.39% 3-year standard deviation; NAV drawdown/recovery gap |
+| [[ETF_CBOE_BZX_EZU Performance]] | official 2000 / official 2021-2025; issuer rolling 10-year as of 2026-06-30 | 10.91% | 10.60% | 14.20% | 2025 +39.66% / 2022 -17.28% | Eurozone passive, USD-unhedged equity | country/sector/valuation/FX-sensitive; 14.62% 3-year standard deviation; NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_FLEU Performance]] | official 2017 / official 2018-2025; history under 10 years; index/strategy change 2023-08-01 | not applicable (<10y) | 14.06% | 6.75% | 2025 +41.11% / 2018 -8.23% | Eurozone passive, linked FTSE exposure | country/sector/FX/liquidity-sensitive; 15.00% 3-year standard deviation; predecessor hedged-index splice and NAV drawdown/recovery gap |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
 as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-30 และ raw TR endpoints
@@ -433,6 +437,10 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NASDAQ_FEUZ Performance]] | 36.19% | -19.82% | 15.71% | 1.88% | 56.57% | 144.62% | 8 / 2 |
 | [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] | 23.88% | -9.31% | 22.15% | 12.00% | 26.87% | 95.00% | 4 / 1 |
 | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] | 22.73% | -12.03% | 19.29% | 9.96% | 24.25% | 75.96% | 4 / 1 |
+| [[ETF_LSE_ISX5 Performance]] | 23.98% | -9.04% | 22.78% | 11.54% | 21.78% | 88.08% | 4 / 1 |
+| [[ETF_NYSE_ARCA_HEZU Performance]] | 23.25% | -9.34% | 22.89% | 10.82% | 25.86% | 91.52% | 4 / 1 |
+| [[ETF_CBOE_BZX_EZU Performance]] | 13.59% | -17.28% | 22.93% | 2.58% | 39.66% | 65.48% | 4 / 1 |
+| [[ETF_NYSE_ARCA_FLEU Performance]] | 23.43% | -6.97% | 15.90% | 2.79% | 41.11% | 93.03% | 4 / 1 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -446,6 +454,25 @@ arithmetic excess-return or tracking-gap calculation against the USD series.
 CEMU common-window rows and its tracked MSCI EMU Net Index rows are both EUR
 based. The displayed-row comparison on the CEMU page is a rounded-input passive
 tracking comparison; it is not evidence of active-manager alpha.
+
+ISX5 common-window rows and its tracked STOXX Eurozone 50 Net Return rows are
+both EUR based. The displayed-row comparison is a rounded-input passive
+tracking comparison; the S&P 500 row remains a separate USD common reference.
+
+HEZU common-window rows and its tracked MSCI EMU 100% Hedged to USD Net Index
+rows are both USD based. The displayed-row comparison is a rounded-input
+passive tracking comparison; HEZU's forwards reduce but do not eliminate
+EUR/USD exposure and the S&P 500 row remains a separate USD common reference.
+
+EZU common-window rows and its tracked MSCI EMU Net Index rows are both USD
+based. The displayed-row comparison is a rounded-input passive tracking
+comparison; EZU is the unhedged companion to HEZU and the S&P 500 row remains a
+separate USD common reference.
+
+FLEU common-window rows use the issuer's linked FTSE Developed Eurozone Index-NR
+in USD. The 2021-2025 table still contains two years from the predecessor
+hedged-Europe period and the 2023 transition; the displayed tracking comparison
+is not alpha, and the S&P 500 row remains a separate USD common reference.
 
 IJS cumulative and CAGR fields derived from rounded annual rows are rounded-input
 approximations; see the IJS performance page and source batch for formulas and inputs.
@@ -833,6 +860,10 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_CBOE_BZX_EUAD Performance]] — EUAD (Europe; passive STOXX Europe Total Market Aerospace & Defense exposure; inception 2024-10-22 so 10-year and 2021-2025 windows are not applicable; official current YTD not disclosed, secondary NAV YTD `+0.20%†` as of 2026-06-30, since-inception annualised NAV TR `+36.80%†`, holdings/NAV snapshots conflict across official and secondary sources, and daily drawdown/recovery remain unverified)
 - [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] — ISVYF / CEUU (Europe; passive MSCI EMU Net Index exposure through a USD-hedged accumulating share class; official 2020-2025 NAV TR cumulative `+95.47%` / rounded-input CAGR `+11.82%`, 2021-2025 CAGR `+14.29%`, 10-year history not applicable after 2019-06-05 launch, and current official NAV TR YTD `+17.09%` as of 2026-08-13; EUR benchmark versus USD share-class basis and daily NAV drawdown/recovery remain disclosed gaps)
 - [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] — XMTIF / CEMU (Europe; passive MSCI EMU Net Index exposure through the EUR accumulating share class; official 2016-2025 NAV TR cumulative `+127.84%` / rounded-input CAGR `+8.58%†`, 2021-2025 CAGR `+11.97%`, and current official NAV TR YTD `+15.77%` as of 2026-08-14; the 10Y field is a calendar CAGR rather than an issuer rolling field, and daily NAV drawdown/recovery remains disclosed)
+- [[ETF_LSE_ISX5 Performance]] — IVVPF / ISX5 (Europe; OTC alias resolved to the official USD London line `LSE:ISX5` for iShares Core EURO STOXX 50 UCITS ETF; official 2016-2025 NAV TR cumulative `+138.31%` / rounded-input calendar CAGR `+9.07%`, 2021-2025 CAGR `+13.47%`, and current official NAV TR YTD `+15.37%` as of 2026-08-14; 12.53% 3-year standard deviation, EUR tracked-index rows and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NYSE_ARCA_HEZU Performance]] — HEZU (Europe; passive iShares Currency Hedged MSCI Eurozone ETF; official 2021-2025 USD NAV TR cumulative `+91.52%` / rounded-input CAGR `+13.88%`, issuer rolling 10-year NAV TR `+12.88%` as of 2026-06-30, and current official NAV TR YTD `+17.53%` as of 2026-08-14; 11.39% 3-year standard deviation, EZU/forward hedge structure and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_CBOE_BZX_EZU Performance]] — EZU (Europe; passive iShares MSCI Eurozone ETF; official 2021-2025 USD NAV TR cumulative `+65.48%` / rounded-input CAGR `+10.60%`, issuer rolling 10-year NAV TR `+10.91%` as of 2026-06-30, and current official NAV TR YTD `+14.20%` as of 2026-08-14; 14.62% 3-year standard deviation, USD-unhedged EUR exposure and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NYSE_ARCA_FLEU Performance]] — FLEU (Europe; passive Franklin FTSE Eurozone ETF; official 2018-2025 USD NAV TR cumulative `+126.40%` / rounded-input CAGR `+10.75%`, 2021-2025 CAGR `+14.06%`, and latest official issuer NAV TR YTD `+6.75%` as of 2026-07-23; 15.00% 3-year standard deviation, under-10-year history, 2023 index/strategy transition and daily NAV drawdown/recovery gap disclosed)
 
 ## 2026-08-17 Coverage Addition
 
