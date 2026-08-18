@@ -240,6 +240,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_OPPE Performance]] | official 2015 / official 2016-2025; strategy/index change 2025-06-02; rolling 10-year as of 2026-07-31 | 12.91% | 14.84% | 17.72% | 2025 +38.73% / 2018 -13.41% | Europe opportunities, dynamic FX hedge | shareholder-yield/value/geopolitical/theme/country/sector/FX-sensitive; 2025 transition and daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FEP Performance]] | official 2011 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-10-13 | 10.57% | 10.90% | 11.02% | 2025 +55.13% / 2022 -22.87% | broad Europe rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 14.98% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_LSE_FTEU Performance]] | official 2014 / secondary USD 2021-2025; rolling 10-year secondary as of 2026-07-27 | 10.75%* | 11.40%* | 12.31%* | 2025 +57.98%* / 2022 -19.74%* | Eurozone rules-based enhanced UCITS equity | country/sector/factor/FX-sensitive; 25.31%* five-year annual-row dispersion; official USD calendar/NAV drawdown gaps; input alias FTDPF |
+| [[ETF_NYSE_ARCA_EWU Performance]] | official 1996 / official 2016-2025; rolling 10-year as of 2026-06-30 | 8.21% | 12.67% | 11.50% | 2025 +34.45% / 2018 -14.60% | United Kingdom large/mid-cap passive equity | financials/industrials/consumer staples/health care/energy; country/sector/GBP-USD FX-sensitive; 11.89% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FKU Performance]] | official 2012 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-07-14 | 8.67% | 10.30% | 10.96% | 2025 +37.60% / 2022 -23.52% | United Kingdom rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.80% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLGB Performance]] | official 2017 / official 2018-2025; history under 10 years; rolling issuer 2026-06-30 | not applicable (<10y history) | 12.80% | 11.56% | 2025 +33.36% / 2018 -14.65% | United Kingdom large/mid-cap passive equity | financials/consumer staples/industrials/health care; UK/GBP-USD/country/sector/liquidity-sensitive; 12.41% 3-year standard deviation |
 | [[ETF_LSE_ISF Performance]] | official 2000 / official 2016-2025; calendar-derived CAGR, not issuer rolling field; input alias BCYIF | 8.73% | 12.92% | 11.05% | 2025 +25.66% / 2020 -11.64% | United Kingdom large-cap passive equity | financials/industrials/consumer staples/health care/energy; GBP/country/sector-sensitive; 9.57% 3-year standard deviation; GBP share-class versus USD reference |
@@ -438,6 +439,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
 | [[ETF_NYSE_ARCA_OPPE Performance]] | 7.86% | -13.41% | 19.33% | 10.74% | 38.73% | 186.21% | 7 / 3 |
 | [[ETF_NASDAQ_FEP Performance]] | 1.24% | -18.67% | 16.01% | 3.71% | 55.13% | 144.62% | 8 / 2 |
+| [[ETF_NYSE_ARCA_EWU Performance]] | 17.89% | -5.13% | 13.03% | 6.84% | 34.45% | 81.59% | 4 / 1 |
 | [[ETF_NASDAQ_FKU Performance]] | 25.53% | -23.52% | 20.59% | 8.01% | 37.60% | 80.82% | 6 / 4 |
 | [[ETF_NYSE_ARCA_FLGB Performance]] | 17.15% | -6.92% | 15.37% | 8.85% | 33.36% | 82.62% | 4 / 1 |
 | [[ETF_LSE_ISF Performance]] | 18.31% | 4.62% | 7.80% | 9.50% | 25.66% | 83.60% | 5 / 0 |
@@ -495,6 +497,13 @@ ISF (input alias BCYIF) rows are GBP share-class returns and the `8.73%` 10Y
 field is a calendar-derived CAGR from official 2016-2025 rows, not an issuer
 rolling field. Its S&P 500 reference is USD, so cross-currency CAGR ranking is
 not treated as direct alpha evidence.
+
+EWU's official rolling 10-year NAV TR field is `8.21%` as of 2026-06-30, while
+the displayed `7.23%` 2016-2025 CAGR is calculated from annual rows whose
+2016-2020 values are rounded to 0.1 pp. Its 2021-2025 CAGR is `12.67%` and
+current NAV TR YTD is `11.50%` as of 2026-08-14; the `11.89%` standard deviation
+is a 3-year issuer field and official daily NAV drawdown/recovery remain
+unverified.
 
 IJS cumulative and CAGR fields derived from rounded annual rows are rounded-input
 approximations; see the IJS performance page and source batch for formulas and inputs.
@@ -688,6 +697,7 @@ official complete-year coverage เริ่มที่ 2018; ใช้ดู�
 | [[ETF_AMEX_VYM Performance]] | 11.32% | -3.50 pp | -5.87% | 15.54% | 8 / 2 | official 10 years |
 | [[ETF_NYSE_ARCA_EWJ Performance]] | 7.23% | -7.59 pp | -17.36% | 14.10% | 8 / 2 | official 10 years |
 | [[ETF_NASDAQ_DAX Performance]] | 8.72% | -6.10 pp | -22.38% | 18.05% | 8 / 2 | official 10 years; predecessor history through 2018 reorganization |
+| [[ETF_NYSE_ARCA_EWU Performance]] | 7.23% | -7.59 pp | -14.60% | 19.05% | 6 / 4 | official 10 years; 2016-2020 rows rounded to 0.1 pp; issuer rolling field 8.21%† |
 
 **อ่านผล:** `TDIV` มี CAGR สูงสุดและ average positive year สูงมาก แต่แลกกับ
 ปี 2022 ที่ `-22.14%`. `DJD` มี downside ต่ำสุดในกลุ่ม complete official rows
@@ -891,6 +901,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_DAX Performance]] — DAX (Germany; passive DAX Index equity exposure; official 2016-2025 fund total-return cumulative `+130.68%` / rounded-input CAGR `+8.72%`, 2021-2025 CAGR `+10.65%`, issuer rolling 10-year NAV TR `+9.57%` as of 2026-06-30, and current official NAV TR YTD `+1.40%` as of 2026-05-31; 2025 `+38.72%` / 2018 `-22.38%`, 3-year standard deviation `16.10%`, predecessor history and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_FLGB Performance]] — FLGB (United Kingdom; passive FTSE UK Capped Index equity exposure; official 2018-2025 NAV TR cumulative `+74.10%` / rounded-input CAGR `+7.18%`, 2021-2025 CAGR `+12.80%`, history under 10 years, and current official NAV TR YTD `+11.56%` as of 2026-07-30; 2025 `+33.36%` / 2018 `-14.65%`, 12.41% 3-year standard deviation and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_LSE_ISF Performance]] — ISF / BCYIF (United Kingdom; official LSE:ISF GBP distributing share class, passive FTSE 100 Index exposure; official 2016-2025 NAV TR cumulative `+130.92%` / rounded-input calendar CAGR `+8.73%`, 2021-2025 CAGR `+12.92%`, and current official NAV TR YTD `+11.05%` as of 2026-08-13; 2025 `+25.66%` / 2020 `-11.64%`, 9.57% 3-year standard deviation, GBP/USD basis and daily NAV drawdown/recovery gaps disclosed)
+- [[ETF_NYSE_ARCA_EWU Performance]] — EWU (United Kingdom; passive MSCI United Kingdom Index exposure; official 2016-2025 NAV TR cumulative `+101.02%` / rounded-input CAGR `+7.23%`, issuer rolling 10-year NAV TR `+8.21%` as of 2026-06-30, 2021-2025 CAGR `+12.67%`, and current official NAV TR YTD `+11.50%` as of 2026-08-14; 2025 `+34.45%` / 2018 `-14.60%`, 11.89% 3-year standard deviation and daily NAV drawdown/recovery gaps disclosed)
 
 ## 2026-08-17 Coverage Addition
 
