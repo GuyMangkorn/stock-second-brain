@@ -322,3 +322,67 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive classification, USD 2021-2025 NAV/index rows, rolling 10-year field, current YTD/price/distribution evidence and the scheduled-local pre-save checklist passed; IEV artifacts were written with the USD benchmark basis disclosed.
+
+## VGRDF — Vanguard FTSE Developed Europe ex UK UCITS ETF (EUR) Accumulating
+
+### Identity and classification
+
+- entity_key: LSE:VERE; input ticker: VGRDF; official Vanguard USD London Stock Exchange line: VERE; ISIN: IE00BK5BQY34; share-class inception: 23 Jul 2019; listing: 25 Jul 2019.
+- management_mode: passive-index; physical equity ETF tracking FTSE Developed Europe ex U.K. Index; accumulating share class; base currency EUR; primary region Europe; OTC input symbol retained as alias.
+- return_basis: official NAV Total Return in EUR, net of fund expenses, with income and capital gains reinvested; complete calendar rows are secondary dividend-adjusted proxies marked *.
+- supported type: passive index-tracking equity ETF.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Vanguard product page | https://www.vanguard.co.uk/professional/product/etf/equity/9682/ftse-developed-europe-ex-uk-ucits-etf | official identity, exchange/alias mapping, benchmark, passive/physical structure, holdings, tracking error and NAV |
+| Vanguard factsheet | https://fund-docs.vanguard.com/FTSE_Developed_Europe_ex_UK_UCITS_ETF_EUR_Accumulating_9682_EU_INT_UK_EN.pdf | official rolling NAV TR, OCF, inception/ISIN/currency and risk disclosures as of 31 Jul 2026 |
+| PortfoliosLab VERE.DE | https://portfolioslab.com/symbol/VERE.DE | secondary dividend-adjusted 2021-2025 annual proxy, later YTD and drawdown/recovery |
+| justETF VERE | https://www.justetf.com/nl-be/etf-profile.html?isin=IE00BK5BQY34 | secondary volatility and identity/exchange cross-check |
+| Cached S&P 500 Total Return convention | workflow cache and original URLs in the check-etf-performance skill | USD calendar rows 2021-2025, dividends reinvested, as of 31 Dec 2025; reused within cached 2016-2025 window |
+
+### Raw observations
+
+- Official Vanguard factsheet as of 31 Jul 2026: fund NAV TR YTD 11.54%, 1Y 22.04%, 3Y annualized 14.04%, 5Y annualized 9.52%, since inception annualized 10.59%; fund 10-year field is not available because the share class launched in 2019.
+- Official product page: OCF 0.10%; physical, accumulating; USD London Stock Exchange line VERE; EUR base currency; official NAV EUR 60.4211 at closure 27 Jul 2026; 417 holdings and 3Y/5Y tracking error 0.18% as of 30 Jun 2026.
+- Official factsheet exposes rolling performance rather than complete calendar NAV rows. PortfoliosLab secondary dividend-adjusted annual proxy rows are 2021 24.57%, 2022 -12.43%, 2023 17.62%, 2024 6.80%, 2025 21.22%; later secondary YTD is 13.71% as of 15 Aug 2026.
+- PortfoliosLab secondary max drawdown is -34.74% on 18 Mar 2020 with recovery in 225 trading sessions. JustETF reports 3-year volatility 12.83% and 5-year volatility 14.49% as of 30 Jun 2026. These are not official daily NAV fields.
+- JustETF annual rows differ slightly from PortfoliosLab (for example 2022 -12.73% versus -12.43%), so its annual table is used only as a cross-check and not as the primary annual proxy.
+- Cached S&P 500 TR rows used for the common reference are USD: 2021 28.71%, 2022 -18.11%, 2023 26.29%, 2024 25.02%, 2025 17.88%; reference window is complete calendar years 2016-2025, as of 31 Dec 2025, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Cumulative = product of (1 + annual return) - 1. PortfoliosLab proxy 2021-2025 compounds to 66.11%*; rounded-input CAGR is 10.68%*; population standard deviation is 13.40%*; up/down years are 4/1; best is 2025 +21.22%*; least positive is 2024 +6.80%*; worst and least-bad down year are 2022 -12.43%*.
+- Cached S&P 500 TR compounds to 96.17% / 14.43% over 2021-2025. It remains a USD common reference rather than the issuer benchmark; no cross-currency excess-return or alpha claim is calculated.
+- Official rolling fields remain separate: 5Y annualized NAV TR is 9.52% and since-inception annualized NAV TR is 10.59% as of 31 Jul 2026. Neither is relabeled as the 2021-2025 calendar CAGR.
+- History is under 10 years, so a 10-year NAV CAGR is not applicable. Official daily NAV drawdown/recovery is not disclosed; secondary drawdown/recovery is labeled accordingly.
+
+### Planned durable paths and contents
+
+- Create wiki/analysis/performance/ETF_LSE_VERE Performance.md with canonical LSE:VERE identity, VGRDF alias, EUR NAV/secondary annual table, rolling-versus-calendar distinction, current YTD/NAV dates, risk evidence, source links, geography/Europe tag and breadcrumb.
+- Update wiki/analysis/comparisons/Europe ETF.md with the VERE row and source-date note.
+- Update wiki/analysis/comparisons/ETF Region Index.md Europe count from 22 to 23.
+- Update wiki/analysis/performance/ETF Performance Index.md with the VERE coverage row, 2021-2025 Common Window row and 2026-08-19 coverage bullet.
+- Append one log.md workflow bullet; no entity hub, normalized financial table or raw/funds file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical mapping, fund identity, ISIN, inception/listing, passive equity eligibility, issuer benchmark, OCF, accumulating structure, NAV TR definition, EUR currency and separate as-of dates are source-backed.
+- PASS: secondary proxy rows are marked *; official rolling fields remain separate; annual source conflict is disclosed; no cross-currency comparison or alpha label is used.
+- PASS: no 10-year CAGR is asserted because inception is 2019; official daily NAV drawdown/recovery gap is disclosed; source links, Europe region and breadcrumb resolve.
+- PASS: complete proposed contents of the performance page, source batch section, Europe row/count, performance-index row/Common Window/bullet and log bullet are specified.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard identity, passive classification, rolling EUR NAV evidence and the marked secondary 2021-2025 proxy passed the scheduled-local pre-save checklist; VGRDF was resolved to LSE:VERE and currency/source gaps were disclosed.

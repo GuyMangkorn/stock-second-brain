@@ -36,6 +36,7 @@ tags:
 | FLEE | Franklin FTSE Europe ETF | developed Europe large-/mid-cap passive capped-index equity | not applicable (<10y) | 10.55% | 9.91% | [[ETF_NYSE_ARCA_FLEE Performance]] |
 | VWCG | Vanguard FTSE Developed Europe UCITS ETF (EUR) Accumulating | developed Europe large-/mid-cap passive accumulating equity; input alias VNGLF | not applicable (<10y) | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VWCG Performance]] |
 | VEUR | Vanguard FTSE Developed Europe UCITS ETF (EUR) Distributing | developed Europe large-/mid-cap passive distributing equity; input alias VFDEF | 9.66% | 11.48% | 12.06% | [[ETF_EURONEXT_AMSTERDAM_VEUR Performance]] |
+| VERE | Vanguard FTSE Developed Europe ex UK UCITS ETF (EUR) Accumulating | developed Europe ex-UK large-/mid-cap passive accumulating equity; input alias VGRDF | not applicable (<10y) | 10.68%* | 11.54% | [[ETF_LSE_VERE Performance]] |
 | IEUR | iShares Core MSCI Europe ETF | developed Europe large-/mid-/small-cap passive broad-market equity; NYSE Arca | 10.02% | 9.91% | 12.03% | [[ETF_NYSE_ARCA_IEUR Performance]] |
 | SPEU | State Street SPDR Portfolio Europe ETF | Western Europe broad-market passive equity across market caps; NYSE Arca | 9.76% | 10.13%* | 7.29% | [[ETF_NYSE_ARCA_SPEU Performance]] |
 | IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 11.94% | [[ETF_NYSE_ARCA_IEV Performance]] |
@@ -156,6 +157,14 @@ FEZ `10.92%` เป็น issuer rolling 10-year NAV TR ณ 2026-07-31; `12.31%*
 rounded-input CAGR จาก secondary dividend-reinvested annual proxy rows 2021-2025
 และ `9.66%` เป็น official NAV TR YTD ณ 2026-07-31. Proxy annual rows ไม่ถูกเพิ่ม
 ใน strict common-window ranking; official daily NAV drawdown/recovery ยังไม่ verified.
+
+VERE (input alias VGRDF) เปิดตัว 2019-07-23 จึงไม่มี 10-year NAV TR; 10.68%*
+เป็น rounded-input CAGR ของ PortfoliosLab dividend-adjusted proxy rows 2021-2025
+และ 11.54% เป็น official NAV TR YTD ณ 2026-07-31. Official rolling 5-year
+NAV TR คือ 9.52% ณ วันเดียวกัน; secondary YTD ที่ใหม่กว่า 13.71%* ณ
+2026-08-15 ถูกเก็บแยก. Official daily NAV drawdown/recovery ไม่ได้เปิดเผย
+และ secondary full-history max drawdown/recovery คือ -34.74% / 225 trading
+sessions.
 
 ## Navigation
 
