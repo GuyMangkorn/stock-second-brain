@@ -670,6 +670,77 @@ confirmation: none
 code: durable-write-complete
 reason: Official DWS identity, DXMEF-to-LSE:XMED mapping, passive USD share-class classification, secondary USD annual/current evidence, source reconciliation and the scheduled-local pre-save checklist passed; issuer performance gaps and conflicting Euro-labelled sources are explicitly disclosed.
 
+## IRESF — iShares Core FTSE 100 UCITS ETF USD Hedged (Accumulating) / ISFD canonical line
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `entity_key: LSE:ISFD`; input ticker `IRESF`; canonical exchange `London Stock Exchange`; official fund `iShares Core FTSE 100 UCITS ETF USD Hedged (Accumulating)`; ISIN `IE00BYZ28W67`.
+- The official iShares listing table maps the share class to `LSE:ISFD` in USD, listed 2017-10-23. MarketScreener independently identifies the OTC input `IRESF` with the same ISIN and USD-hedged accumulating name; IRESF is retained only as an input alias and is not the durable exchange key.
+- `management_mode: passive-index`; iShares describes a physical, replicated UCITS equity ETF seeking to track the FTSE 100 Index. The share class accumulates income and uses derivatives for its USD currency hedge.
+- Primary region: `United Kingdom`; region page `[[United Kingdom ETF]]`; canonical tag `geography/United-Kingdom`; breadcrumb `[[ETF Region Index]] → [[United Kingdom ETF]] → [[ETF Performance Index]]`.
+- `return_basis: NAV total return` with gross income reinvested where applicable and expenses reflected in NAV; share-class return currency USD. The issuer benchmark rows are displayed in GBP, so benchmark arithmetic is kept separate from same-currency NAV analysis.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares professional product page | https://www.ishares.com/uk/professionals/en/products/291401/?siteEntryPassthrough=true&switchLocale=y | official identity, canonical LSE listing, ISIN, objective, structure, fee, current USD NAV/YTD, assets, holdings, beta, standard deviation, valuation fields and sector exposures; current snapshot through `2026-08-13` / `2026-08-12` |
+| iShares July 2026 factsheet | https://www.ishares.com/gls-download/literature/fact-sheet/isfd-ishares-core-ftse-100-ucits-etf-fund-fact-sheet-en-gb.pdf | official calendar NAV/benchmark rows, NAV return definition, share-class launch, TER, rolling performance, holdings and fund facts as of `2026-07-31` |
+| MarketScreener IRESF page | https://www.marketscreener.com/quote/etf/ISHARES-CORE-FTSE-100-UCI-66468693/ | secondary OTC alias, USD currency and ISIN cross-check only; not primary NAV performance evidence |
+| S&P 500 index page and cached convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ plus cached URLs in the skill | common USD S&P 500 Total Return rows for 2018-2025 and 2021-2025; dividends reinvested, reference as of `2025-12-31` |
+
+### Raw observations
+
+- The official product page identifies `ISFD`, USD Hedged (Accumulating), ISIN `IE00BYZ28W67`, LSE USD listing, inception `2017-10-19`, TER `0.20%`, physical/replicated structure, quarterly rebalance, 100 holdings, share-class net assets `USD 225,393,623`, fund net assets `GBP 16,670,824,973`, NAV `USD 10.45`, and NAV TR YTD `11.08%` as of `2026-08-12`.
+- The same product-page capture reports 3-year beta `0.989` and standard deviation `9.46%` as of `2026-07-31`, P/B `2.40x` and P/E `18.04x` as of `2026-08-12`, and sector exposures as of `2026-08-12`: Financials `28.48%`, Industrials `14.14%`, Consumer Staples `13.27%`, Health Care `11.36%`, Energy `10.49%`, Materials `8.15%`, Consumer Discretionary `4.47%`, Utilities `4.41%`, Communication `1.95%`, Real Estate `1.19%`.
+- The July 2026 factsheet reports calendar NAV TR rows for the share class: 2016 `-`, 2017 `-`, 2018 `-7.49%`, 2019 `19.10%`, 2020 `-11.28%`, 2021 `18.42%`, 2022 `5.69%`, 2023 `8.49%`, 2024 `9.66%`, 2025 `25.79%`. The corresponding FTSE 100 benchmark rows are 2016 `-`, 2017 `-`, 2018 `-14.11%`, 2019 `17.28%`, 2020 `-11.58%`, 2021 `18.40%`, 2022 `4.67%`, 2023 `7.90%`, 2024 `9.63%`, 2025 `25.78%`; the factsheet labels the share class performance as USD and benchmark performance as GBP.
+- The same factsheet reports 1-month `3.63%`, 3-month `5.30%`, 6-month `8.00%`, YTD `11.18%`, 1-year `22.44%`, 3-year annualised `16.17%`, 5-year annualised `13.43%`, and since-inception annualised `8.80%`, all as of `2026-07-31`.
+- The S&P 500 cached USD Total Return convention supplies 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; the five-year subset is 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+- Official daily NAV observations sufficient to reproduce maximum drawdown and recovery date were not disclosed in the reviewed sources. The OTC quote is not used as a substitute for official NAV return.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`. Official ISFD rows compound to `83.090157%`, displayed as `83.09%`, and rounded-input CAGR is `7.853222%`, displayed as `7.85%`, for the eight complete calendar years 2018-2025. Population annual-return standard deviation is `12.071986%`, displayed as `12.07%`; up/down is `6/2`; best is 2025 `+25.79%`; worst is 2020 `-11.28%`; least-bad down year is 2018 `-7.49%`.
+- Official ISFD rows for 2021-2025 compound to `87.302262%`, displayed as `87.30%`; rounded-input CAGR is `13.372730%`, displayed as `13.37%`; population annual-return standard deviation is `7.430098%`, displayed as `7.43%`; up/down is `5/0`; best is 2025 `+25.79%`; lowest positive year is 2022 `+5.69%`.
+- FTSE 100 benchmark rows compound to `64.230360%` / rounded-input CAGR `6.397563%` for 2018-2025 and `84.389580%` / `13.017910%` for 2021-2025; benchmark standard deviation is `13.19%` for 2018-2025 and `7.73%` for 2021-2025. Because benchmark rows are GBP and share-class rows are USD hedged, the differences are not presented as alpha.
+- Cached S&P 500 TR compounds to `192.028282%` / rounded-input CAGR `14.334715%` for 2018-2025 and `96.169618%` / `14.426430%` for 2021-2025. It remains a common USD reference, not the issuer benchmark or manager-skill evidence.
+
+### Source conflict and quality choice
+
+- The iShares product page and factsheet are the sources of truth for official share-class identity, canonical listing, passive structure, benchmark, fee, return definition, annual rows, rolling fields, current NAV/YTD and risk/fund facts. The product page's current YTD and July factsheet YTD are retained as separate dates, not treated as a conflict.
+- MarketScreener is used only to cross-check the OTC alias-to-ISIN mapping; no OTC market-price or secondary performance series enters the NAV calculations.
+- The official benchmark is FTSE 100 Index in GBP while the share-class NAV is USD hedged. Arithmetic fund-minus-benchmark observations are retained as tracking context only and are not called alpha.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_LSE_ISFD Performance.md` with canonical `LSE:ISFD`, input alias `IRESF`, USD hedged accumulating identity, official 2018-2025 annual NAV/benchmark/S&P rows, 83.09% / 7.85% available-window calculations, 87.30% / 13.37% common-window calculations, current/July YTD separation, risk fields, United Kingdom breadcrumb and `geography/United-Kingdom` tag.
+- Update `wiki/analysis/comparisons/United Kingdom ETF.md` with the ISFD/IRESF row, `not applicable (<10y)` 10Y field, 13.37% common CAGR, 11.08% YTD, and USD-share-class/GBP-benchmark caveat.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` United Kingdom count from `4` to `5`; no new region file is needed.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the ISFD/IRESF coverage row, the 2021-2025 Common Window row, and a `2026-08-19 Coverage Addition` bullet; do not add the under-10-year record to the strict 2016-2025 ranking.
+- Append one `etf-performance` workflow bullet to `log.md`; no entity hub, normalized financial table, or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical OTC-to-issuer mapping, official LSE USD line, ISIN, launch date, passive eligibility, physical replication, accumulation treatment, FTSE 100 benchmark, 0.20% fee, USD share-class return basis and all current/as-of dates are source-backed.
+- PASS: official annual NAV/benchmark rows, rolling fields, current NAV/YTD, holdings, assets, beta, standard deviation and sector exposure are preserved with separate USD/GBP currency labels; S&P rows are labeled as a cached common USD reference.
+- PASS: 2018-2025 and 2021-2025 calculations, up/down counts, best/worst years, standard deviations and S&P compounding recompute from the stated inputs; the eight-year CAGR is not relabeled as a 10-year issuer field.
+- PASS: under-10-year history, USD hedge/GBP benchmark basis, OTC alias evidence and daily NAV drawdown/recovery gap are explicitly disclosed; no unsupported market-price return or alpha claim is introduced.
+- PASS: complete proposed performance page, source batch section, United Kingdom row, region-index count, performance-index coverage/Common Window/bullet and log bullet are specified; canonical breadcrumb, `geography/United-Kingdom` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, IRESF-to-LSE:ISFD mapping, passive USD-hedged classification, official annual/current evidence, reconciled calculations and the scheduled-local pre-save checklist passed; under-10-year history, USD-share-class/GBP-benchmark basis and daily NAV gaps remain disclosed.
+
 ## DBEU — Xtrackers MSCI Europe Hedged Equity ETF
 
 ### Identity and classification

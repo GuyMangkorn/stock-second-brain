@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: United Kingdom
-updated: 2026-08-18
+updated: 2026-08-19
 tags:
   - analysis/etf-region
   - geography/United-Kingdom
@@ -21,6 +21,7 @@ tags:
 | FKU | First Trust United Kingdom AlphaDEX Fund | United Kingdom rules-based enhanced equity | 8.67% | 10.30% | 10.96% | [[ETF_NASDAQ_FKU Performance]] |
 | FLGB | Franklin FTSE United Kingdom ETF | United Kingdom large/mid-cap passive equity | not applicable (<10y) | 12.80% | 11.56% | [[ETF_NYSE_ARCA_FLGB Performance]] |
 | ISF (BCYIF) | iShares Core FTSE 100 UCITS ETF GBP (Dist) | United Kingdom large-cap passive equity | 8.73% | 12.92% | 11.05% | [[ETF_LSE_ISF Performance]] |
+| ISFD (IRESF) | iShares Core FTSE 100 UCITS ETF USD Hedged (Acc) | United Kingdom large-cap passive USD-hedged equity | not applicable (<10y) | 13.37% | 11.08% | [[ETF_LSE_ISFD Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า rolling 10-year `8.67%`
@@ -41,6 +42,14 @@ ISF (input alias `BCYIF`) ใช้ GBP share-class returns ของ official L
 rows ไม่ใช่ issuer rolling 10-year field. ค่า `12.92%` เป็น 2021-2025 CAGR และ
 `11.05%` เป็น official NAV TR YTD ณ 2026-08-13. S&P 500 reference เป็น USD จึง
 ไม่ใช้เป็น direct same-currency ranking.
+
+ISFD (input alias `IRESF`) ใช้ USD hedged share-class returns ของ official London
+line `LSE:ISFD`; 10-year field เป็น `not applicable` เพราะ share class launch
+อยู่ในปี 2017. Official complete 2018-2025 rows ให้ rounded-input CAGR `7.85%`,
+2021-2025 CAGR `13.37%` และ current NAV TR YTD `11.08%` ณ 2026-08-12. FTSE 100
+benchmark rows ใน factsheet เป็น GBP และ S&P 500 เป็น USD common reference จึง
+ไม่ใช้ arithmetic gap เป็น direct alpha evidence. Daily NAV drawdown/recovery
+ยังไม่ verified.
 
 EWU ใช้ official issuer rolling 10-year NAV TR `8.21%` ณ 2026-06-30; ค่า
 `7.23%` เป็น calendar-derived CAGR จาก 2016-2025 rows ที่ professional page

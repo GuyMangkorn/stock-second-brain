@@ -47,7 +47,7 @@ driver notes ทั้งหมด
 | Southeast Asia | 1 | [[Southeast Asia ETF]] |
 | Taiwan | 2 | [[Taiwan ETF]] |
 | Thailand | 1 | [[Thailand ETF]] |
-| United Kingdom | 4 | [[United Kingdom ETF]] |
+| United Kingdom | 5 | [[United Kingdom ETF]] |
 | Vietnam | 3 | [[Vietnam ETF]] |
 
 ## Coverage policy
