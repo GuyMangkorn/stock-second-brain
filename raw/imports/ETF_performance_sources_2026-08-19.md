@@ -957,3 +957,75 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official WisdomTree/SEC identity, passive classification, 2016-2024 NAV rows, calculated-and-reconciled 2025 return, official rolling/YTD fields, source reconciliation and the scheduled-local pre-save checklist passed; hedge, concentration, index-symbol and daily NAV gaps remain disclosed.
+
+## EIRL — iShares MSCI Ireland ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `entity_key: NYSE Arca:EIRL`; input ticker `EIRL`; official fund `iShares MSCI Ireland ETF`; CUSIP `46429B507`; fund inception `2010-05-05`; exchange `NYSE Arca`.
+- `management_mode: passive-index`; iShares states that the fund seeks to track a broad-based index of Irish equities. The current underlying index is `MSCI All Ireland Capped Index (Net)`, free-float-adjusted and market-capitalization-weighted, subject to MSCI eligibility and capping rules.
+- Primary region: `Ireland`; new region page `[[Ireland ETF]]`; canonical tag `geography/Ireland`; breadcrumb `[[ETF Region Index]] → [[Ireland ETF]] → [[ETF Performance Index]]`.
+- `return_basis: NAV total return` with dividends and capital gains reinvested and expenses reflected in NAV; return currency USD. Market-price return is retained separately.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares EIRL product page | https://www.ishares.com/us/products/239662/ishares-msci-ireland-capped-etf | official identity, exchange, benchmark, current NAV/YTD/price/assets, holdings, rolling returns, standard deviation, beta, valuation fields and sector/geography exposures; current snapshot through `2026-08-17` / `2026-08-14` |
+| iShares EIRL June 2026 factsheet | https://www.ishares.com/us/literature/fact-sheet/eirl-ishares-msci-ireland-etf-fund-fact-sheet-en-us.pdf | official launch, fee, benchmark-history note, top holdings, sector/geography context and return definitions; as of `2026-06-30` |
+| iShares EIRL December 2025 summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-ireland-capped-etf-8-31.pdf | official objective, passive/index methodology, expense ratio, 2015-2024 calendar-year chart and risk disclosures |
+| S&P 500 index page and cached convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ and cached URLs in `check-etf-performance/SKILL.md` | common USD S&P 500 Total Return reference for complete calendar years `2016-2025`; dividends reinvested, as of `2025-12-31` |
+
+### Raw observations
+
+- The official iShares product page identifies EIRL as an equity ETF on NYSE Arca tracking `MSCI All Ireland Capped Index (Net)`, with NAV `USD 82.88`, closing price `USD 83.01`, non-fair-value NAV `USD 83.11`, net assets `$78,733,413`, premium `0.16%`, and 950,000 shares outstanding as of `2026-08-17`. It reports NAV Total Return YTD `15.05%` as of `2026-08-14`, 30-day SEC yield `2.59%` and trailing 12-month yield `2.37%` as of `2026-07-31`, expense ratio `0.50%`, and semi-annual distributions.
+- The same page reports 26 holdings as of `2026-08-14`, 3-year standard deviation `16.21%` and beta `0.77` as of `2026-07-31`, P/B `1.73` and P/E `17.50` as of `2026-08-14`, and rolling NAV returns as of `2026-06-30`: 1-year `19.47%`, 3-year annualised `13.50%`, 5-year `8.53%`, 10-year `9.94%` and since inception `9.86%`.
+- Official exposure as of `2026-08-14`: Ireland `74.52%`, United Kingdom `12.80%`, United States `10.28%`, Bermuda `1.65%`, cash/derivatives `0.52%`, other `0.23%`; sectors include Financials `38.79%`, Consumer Staples `19.13%`, Industrials `14.62%`, Health Care `10.36%`, Consumer Discretionary `6.45%` and Energy `5.81%`.
+- The June 2026 factsheet reports 25 holdings and top holdings including AIB Group `16.39%`, Bank of Ireland Group `14.65%`, Kerry Group `10.51%`, Icon `6.46%`, Ryanair `5.10%`, Glanbia `5.03%`, Kingspan `4.66%`, DCC `4.27%`, Grafton `3.56%` and Cairn Homes `3.52%`; top-ten concentration is `74.15%` as of `2026-06-30`.
+- The December 2025 summary prospectus calendar chart reports EIRL NAV returns: 2015 `19.94%`, 2016 `-6.96%`, 2017 `28.58%`, 2018 `-20.99%`, 2019 `26.61%`, 2020 `10.80%`, 2021 `13.62%`, 2022 `-18.63%`, 2023 `34.06%`, and 2024 `-1.74%`. The current iShares performance table reports 2021 `13.62%`, 2022 `-18.63%`, 2023 `34.06%`, 2024 `-1.74%`, 2025 `28.63%` for NAV Total Return; market-price rows are kept separate.
+- The current iShares performance table reports MSCI All Ireland Capped Index benchmark rows for 2021 `14.52%`, 2022 `-18.19%`, 2023 `35.59%`, 2024 `-0.76%`, and 2025 `30.42%`. It does not expose the 2016-2020 benchmark rows in the reviewed capture, so those fields remain `not disclosed`.
+- iShares states that EIRL began tracking the MSCI All Ireland Capped Index on `2013-11-27`; historical index data before that date uses the MSCI Ireland Investable Market 25/50 Index. Official daily NAV observations sufficient to reproduce maximum drawdown and recovery were not disclosed in the reviewed sources.
+- Cached S&P 500 TR rows for `2016-2025` are USD: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; dividends reinvested, reference as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- `Cumulative = ∏(1 + annual return) - 1`: official EIRL 2016-2025 NAV rows compound to `107.716167%`, displayed as `107.72%`; rounded-input calendar CAGR is `7.583837%`, displayed as `7.58%`; population annual-return standard deviation is `19.397720%`, displayed as `19.40%`; up/down is `6/4`; best is 2023 `+34.06%`; least positive is 2020 `+10.80%`; worst is 2018 `-20.99%`; least-bad down year is 2024 `-1.74%`.
+- Official EIRL 2021-2025 NAV rows compound to `56.652506%`, displayed as `56.65%`; rounded-input CAGR is `9.392480%`, displayed as `9.39%`; population annual-return standard deviation for this five-year subset is `19.439715%`; up/down is `3/2`.
+- Official benchmark rows for 2021-2025 compound to `64.416858%` / rounded-input CAGR `10.455989%`. Rounded fund-minus-benchmark observations are `-0.90`, `-0.44`, `-1.53`, `-0.98` and `-1.79` percentage points; these are tracking/fee/fair-value context and are not called alpha.
+- Cached S&P 500 TR compounds to `298.329111%` / rounded-input CAGR `14.821761%` over 2016-2025 and `96.169618%` / `14.426430%` over 2021-2025. It is a common USD reference, not EIRL's strategy benchmark.
+- The official rolling 10-year NAV TR `9.94%` as of `2026-06-30` is kept separate from the complete-calendar CAGR `7.58%`; dates, endpoints and source fields differ.
+
+### Source conflict and quality choice
+
+- iShares product page, factsheet and summary prospectus are the sources of truth for EIRL identity, passive method, benchmark, annual NAV rows, rolling fields, fee, holdings, exposure and risk fields. The product page exposes 2021-2025 benchmark rows but not 2016-2020 benchmark rows; the latter remain `not disclosed` rather than backfilled.
+- The current product page's 2025 NAV row is used with the prospectus chart's 2016-2024 rows. Market-price rows, yield fields and current NAV are kept separate from the NAV Total Return calculation.
+- The S&P 500 is labeled a common USD reference only. No arithmetic difference versus S&P or the tracked benchmark is described as alpha or manager skill.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_EIRL Performance.md` with canonical `NYSE Arca:EIRL`, official passive/index identity, USD NAV annual table for 2016-2025, 2021-2025 benchmark rows, S&P common reference, 107.72% / 7.58% and 56.65% / 9.39% calculations, rolling/YTD/current fields, Ireland concentration risks, sources and breadcrumb/tag.
+- Create `wiki/analysis/comparisons/Ireland ETF.md` as the new static region navigation page with the EIRL row and links back to `[[ETF Region Index]]` and forward to `[[ETF Performance Index]]`.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` with Ireland count `1` and `[[Ireland ETF]]`; update `wiki/analysis/performance/ETF Performance Index.md` Browse by region, coverage row, Common Window row and `2026-08-19 Coverage Addition` bullet.
+- Append one `log.md` workflow bullet; no entity hub, normalized financial table or `raw/funds/` file is planned because this workflow owns the numeric performance page.
+
+### Local pre-save checklist
+
+- PASS: canonical NYSE Arca identity, fund name, CUSIP, inception, passive-index classification, MSCI All Ireland Capped benchmark, fee, semi-annual distribution treatment, USD NAV return basis and all as-of dates are source-backed.
+- PASS: official 2016-2024 prospectus rows, 2025/current-page NAV row, 2021-2025 benchmark rows, rolling fields, current NAV/YTD, assets, holdings, valuation fields, beta, standard deviation, sectors and top holdings are preserved with separate dates; unavailable 2016-2020 benchmark rows are explicitly `not disclosed`.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR, standard deviation, up/down count, best/worst year, benchmark reconciliation and S&P compounding recompute from the stated inputs; rolling 10-year is not relabeled as calendar CAGR.
+- PASS: Ireland/country, financials, consumer-staples, top-holdings, FX, liquidity and systematic fair-value risks are disclosed; benchmark-history transition and daily NAV drawdown/recovery remain explicit gaps; no alpha claim is introduced.
+- PASS: complete proposed performance page, new Ireland region page, region-index row, performance-index Browse/coverage/Common Window/bullet, source batch section and log bullet are specified; canonical breadcrumb, `geography/Ireland` tag and planned wikilinks resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive Ireland classification, official 2016-2025 NAV evidence, official 2021-2025 benchmark rows, rolling/current fields, reconciled calculations and the scheduled-local pre-save checklist passed; benchmark-history, country/sector concentration, FX/liquidity and daily NAV gaps remain disclosed.

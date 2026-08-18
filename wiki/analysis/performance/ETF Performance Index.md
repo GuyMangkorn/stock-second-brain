@@ -40,6 +40,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Hong Kong ETF]]
 - [[India ETF]]
 - [[Indonesia ETF]]
+- [[Ireland ETF]]
 - [[Italy ETF]]
 - [[International ETF]]
 - [[Japan ETF]]
@@ -258,6 +259,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_LSE_XMED Performance]] | official share-class launch 2007 / secondary USD 2021-2025; DWS July 2026 factsheet lacks annual/current performance rows | 9.86%* | 10.57%* | 7.85%* | 2025 +35.77%* / 2022 -14.85%* | developed Europe large-/mid-cap passive accumulating equity | country/sector/FX/large-/mid-cap-sensitive; 17.17% secondary annual-return dispersion; DWS official NAV/benchmark and secondary currency-source gaps disclosed; input alias DXMEF |
 | [[ETF_NYSE_ARCA_DBEU Performance]] | official 2013 / official rolling 10Y as of 2026-06-30; secondary 2016-2025 | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | 2019 +26.80%* / 2018 -8.50%* | developed Europe large-/mid-cap passive USD-hedged equity | country/sector/FX/hedge-cost-sensitive; 11.83% secondary annual-return dispersion; official calendar/YTD gaps and NAV drawdown/recovery gap disclosed |
 | [[ETF_NYSE_ARCA_HEDJ Performance]] | official 2009 / official 2016-2024 plus 2025 calculated from official year-end observations | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | 2019 +26.99% / 2022 -10.18% | Europe dividend-weighted passive USD-hedged equity | country/sector/FX/hedge-cost/index-symbol-sensitive; 13.76% annual-return dispersion; 99.42% hedge ratio; daily NAV drawdown/recovery gap disclosed |
+| [[ETF_NYSE_ARCA_EIRL Performance]] | official 2010 / official 2016-2025 | 9.94% issuer rolling 10Y | 9.39% | 15.05% | 2023 +34.06% / 2018 -20.99% | Ireland single-country passive equity | country/financials/consumer-staples/FX/liquidity-sensitive; 16.21% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWU Performance]] | official 1996 / official 2016-2025; rolling 10-year as of 2026-06-30 | 8.21% | 12.67% | 11.50% | 2025 +34.45% / 2018 -14.60% | United Kingdom large/mid-cap passive equity | financials/industrials/consumer staples/health care/energy; country/sector/GBP-USD FX-sensitive; 11.89% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FKU Performance]] | official 2012 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-07-14 | 8.67% | 10.30% | 10.96% | 2025 +37.60% / 2022 -23.52% | United Kingdom rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 15.80% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLGB Performance]] | official 2017 / official 2018-2025; history under 10 years; rolling issuer 2026-06-30 | not applicable (<10y history) | 12.80% | 11.56% | 2025 +33.36% / 2018 -14.65% | United Kingdom large/mid-cap passive equity | financials/consumer staples/industrials/health care; UK/GBP-USD/country/sector/liquidity-sensitive; 12.41% 3-year standard deviation |
@@ -486,6 +488,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_LSE_XMED Performance]] | 16.58%* | -14.85%* | 20.18%* | 2.02%* | 35.77%* | 65.25%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_DBEU Performance]] | 23.30%* | -6.20%* | 17.00%* | 9.50%* | 22.50%* | 81.51%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_HEDJ Performance]] | 23.57% | -10.18% | 26.39% | 5.65% | 23.33%‡ | 82.78%‡ | 4 / 1 |
+| [[ETF_NYSE_ARCA_EIRL Performance]] | 13.62% | -18.63% | 34.06% | -1.74% | 28.63% | 56.65% | 3 / 2 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -975,6 +978,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_ISFD Performance]] — ISFD / IRESF (United Kingdom; input OTC alias resolved by ISIN `IE00BYZ28W67` to official USD hedged `LSE:ISFD`; official 2018-2025 NAV TR cumulative `+83.09%` / rounded-input CAGR `+7.85%`, 2021-2025 CAGR `+13.37%`, and current official NAV TR YTD `+11.08%` as of 2026-08-12; 2025 `+25.79%` / 2020 `-11.28%`, 9.46% 3-year standard deviation, USD share-class versus GBP benchmark basis and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_EWK Performance]] — EWK (Belgium; passive MSCI Belgium IMI 25/50 Index equity exposure; official 2021-2025 NAV TR cumulative `+41.43%` / rounded-input CAGR `+7.18%`, issuer rolling 10-year NAV TR `+7.08%` as of 2026-06-30, and current official NAV TR YTD `+12.61%` as of 2026-08-10; 2025 `+34.96%` / 2022 `-14.08%`, 14.38% 3-year standard deviation, Belgium/sector/top-holdings concentration and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_HEDJ Performance]] — HEDJ (Europe; passive WisdomTree Europe Hedged Equity Fund; official 2016-2024 NAV TR rows plus 2025 calculated/reconciled from official year-end NAV and income; 2016-2025 cumulative `+153.82%` / rounded-input CAGR `+9.76%`, 2021-2025 CAGR `+12.82%‡`, issuer rolling 10-year NAV TR `+10.73%` and current official NAV TR YTD `+9.15%` as of 2026-07-31; 99.42% hedge ratio, country/sector/hedge-cost and related-index-symbol risks, plus daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NYSE_ARCA_EIRL Performance]] — EIRL (Ireland; passive iShares MSCI Ireland ETF; official 2016-2025 USD NAV TR cumulative `+107.72%` / rounded-input CAGR `+7.58%`, 2021-2025 CAGR `+9.39%`, issuer rolling 10-year NAV TR `+9.94%` as of 2026-06-30, and current official NAV TR YTD `+15.05%` as of 2026-08-14; 2023 `+34.06%` / 2018 `-20.99%`, 16.21% 3-year standard deviation, Ireland/financials/consumer-staples/top-holdings/FX risk and daily NAV drawdown/recovery gap disclosed)
 
 ## 2026-08-17 Coverage Addition
 

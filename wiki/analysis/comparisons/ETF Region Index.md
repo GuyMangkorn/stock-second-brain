@@ -27,6 +27,7 @@ driver notes ทั้งหมด
 | China | 26 | [[China ETF]] |
 | Hong Kong | 2 | [[Hong Kong ETF]] |
 | Indonesia | 2 | [[Indonesia ETF]] |
+| Ireland | 1 | [[Ireland ETF]] |
 | Italy | 1 | [[Italy ETF]] |
 | Canada | 2 | [[Canada ETF]] |
 | Germany | 3 | [[Germany ETF]] |
