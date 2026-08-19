@@ -1104,3 +1104,73 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Franklin identity, passive classification, 2019-2025 NAV evidence, current/rolling fields, reconciled calculations and the scheduled-local pre-save checklist passed; Swiss concentration, CHF/USD and daily NAV drawdown/recovery gaps remain disclosed.
+
+## HEDK — WisdomTree Europe Equity UCITS ETF - USD Hedged Acc / WEEUF alias
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: LSE:HEDK`; `input_ticker: WEEUF`.
+- Official WisdomTree identity is `WisdomTree Europe Equity UCITS ETF - USD Hedged Acc`, ISIN `IE00BYQCZP72`, with official USD London Stock Exchange listing `HEDK`; `WEEUF` is retained as the OTC input alias for traceability.
+- `management_mode: passive-index`; physical full replication; accumulating; base/NAV currency USD; inception 2016-11-01; TER 0.58%.
+- Tracked index: `WisdomTree Europe Hedged Equity UCITS Index`. Primary region: Europe. Return basis: USD NAV Total Return, net of fees, with income reinvested; no market-price proxy is mixed into the result.
+
+### Source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| WisdomTree product page | https://www.wisdomtree.com/ie/products/equities/wisdomtree-europe-equity-ucits-etf---usd-hedged-acc | official identity, ISIN, LSE HEDK/HEDS listings, objective, index, structure, current NAV/AUM/TER; product snapshot 2026-08-11 |
+| WisdomTree factsheet | https://dataspanapi.wisdomtree.com/pdr/documents/FACTSHEET/UCITS/EU/EN-GB/IE00BYQCZP72/ | official NAV TR, index rows, calendar returns, exposure and risk fields; document date 2026-07-31 |
+| StockAnalysis WEEUF page | https://stockanalysis.com/quote/otc/WEEUF/ | secondary OTC alias/name cross-check only; not used for performance values |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | USD total-return common reference, dividends reinvested; cached annual rows as of 2025-12-31 |
+
+### Raw observations
+
+- Official listing table maps the USD London line to `LSE:HEDK` and the GBp line to `LSE:HEDS`, both ISIN `IE00BYQCZP72`; the OTC `WEEUF` label is not treated as a separate fund.
+- Official product snapshot: NAV `US$44.125`, fund AUM `US$116,181,561`, and TER `0.58%` as of 2026-08-11. Official factsheet performance fields as of 2026-07-31: NAV TR YTD `9.03%`, 1-year `18.57%`, 3-year annualised `13.19%`, and available-period annualised return since inception `10.85%`.
+- Official HEDK NAV TR calendar rows: 2017 `13.74%`, 2018 `-9.14%`, 2019 `27.22%`, 2020 `-2.50%`, 2021 `23.68%`, 2022 `-10.04%`, 2023 `25.73%`, 2024 `5.66%`, 2025 `22.87%`.
+- Official tracked-index rows for the same years: 2017 `13.99%`, 2018 `-9.06%`, 2019 `27.54%`, 2020 `-2.28%`, 2021 `24.23%`, 2022 `-9.98%`, 2023 `25.99%`, 2024 `5.75%`, 2025 `23.19%`.
+- Official exposure snapshot as of 2026-07-31: Germany `22.83%`, France `21.45%`, Spain `19.56%`, Netherlands `17.62%`, Italy `5.51%`; leading sectors Industrials `20.91%`, Financials `17.21%`, Consumer Staples `13.82%`, Consumer Discretionary `12.60%`, and Information Technology `10.86%`.
+- Cached S&P 500 TR rows for 2017-2025: `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`, respectively; USD, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use the displayed rounded annual inputs.
+- HEDK 2017-2025: cumulative `132.803908%` → `132.80%`; rounded-input CAGR `9.844090%` → `9.84%`; up/down `6/3`; best 2019 `+27.22%`; worst 2022 `-10.04%`; population annual-return volatility `14.329313%` → `14.33%`.
+- HEDK 2021-2025: cumulative `81.611901%` → `81.61%`; rounded-input CAGR `12.675336%` → `12.68%`.
+- Cached S&P 500 TR 2017-2025: cumulative `255.778056%` → `255.78%`; CAGR `15.144216%` → `15.14%`. For 2021-2025: cumulative `96.169618%` → `96.17%`; CAGR `14.426431%` → `14.43%`.
+- HEDK-minus-tracked-index annual gaps are approximately `-0.25`, `-0.08`, `-0.32`, `-0.22`, `-0.55`, `-0.06`, `-0.26`, `-0.09`, and `-0.32` percentage points for 2017-2025. These are passive tracking observations, not alpha.
+- A 10-year NAV TR CAGR is not calculated: inception 2016-11-01 to latest verified performance 2026-07-31 is under ten elapsed years. The issuer `10.85%` field is retained as available-period since-inception annualised return, not relabelled as 10-year CAGR. Daily NAV observations sufficient for maximum drawdown/recovery were not disclosed.
+
+### Source conflict and quality choice
+
+- WisdomTree product page and factsheet are the sources of truth for identity, listing, classification, fees, return rows, current fields and exposures. StockAnalysis is used only to bridge the input alias `WEEUF` and is not used for performance arithmetic.
+- The S&P 500 annual series reuses the permitted cached 2016-2025 convention because 2017-2025 is a subset of that window; no fresh S&P search was needed. No arithmetic HEDK-minus-S&P difference is labelled alpha.
+- USD-hedging via monthly-rolled forwards, Eurozone country/sector concentration, TER drag and unavailable daily NAV drawdown/recovery are retained as explicit risk gaps; market-price history is not substituted for NAV risk evidence.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_LSE_HEDK Performance.md` with canonical `LSE:HEDK`, input alias `WEEUF`, USD NAV TR annual rows 2017-2025, 2021-2025 common-window metrics, current/available-period fields, sources and Europe breadcrumb/tag.
+- Update `wiki/analysis/comparisons/Europe ETF.md` with one HEDK navigation row and a compact note; update `wiki/analysis/comparisons/ETF Region Index.md` Europe count from 28 to 29.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with HEDK coverage, 2021-2025 common-window row and 2026-08-19 coverage bullet; append one workflow bullet to `log.md`.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, alias bridge, ISIN, passive-index eligibility, tracked index, TER, accumulation, USD NAV TR basis and all as-of dates are source-backed.
+- PASS: official 2017-2025 fund/index rows, current NAV/AUM/TER, YTD/1Y/3Y/inception fields, exposure weights and cached S&P rows are separated by source and date; no 10-year CAGR or market-price proxy is claimed.
+- PASS: cumulative/CAGR, 2021-2025 window, up/down count, annual volatility, best/worst years and fund-minus-index tracking gaps recompute from displayed inputs; no arithmetic difference is called alpha.
+- PASS: Europe is the sole primary exposure region; the canonical breadcrumb/tag, Europe row, region count, performance-index links, source batch section and log bullet are planned and resolve.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official WisdomTree identity, passive classification, 2017-2025 NAV rows, current/available-period fields, reconciled calculations and scheduled-local pre-save checklist passed; under-10-year history, USD hedge/concentration and daily NAV drawdown/recovery gaps remain disclosed.

@@ -45,6 +45,7 @@ tags:
 | XMED | Xtrackers MSCI Europe UCITS ETF 1C | developed Europe large-/mid-cap passive accumulating equity; input alias DXMEF; USD-traded LSE line | 9.86%* | 10.57%* | 7.85%* | [[ETF_LSE_XMED Performance]] |
 | DBEU | Xtrackers MSCI Europe Hedged Equity ETF | developed Europe large-/mid-cap passive USD-hedged equity | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | [[ETF_NYSE_ARCA_DBEU Performance]] |
 | HEDJ | WisdomTree Europe Hedged Equity Fund | Europe dividend-weighted passive USD-hedged equity; NYSE Arca | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | [[ETF_NYSE_ARCA_HEDJ Performance]] |
+| HEDK | WisdomTree Europe Equity UCITS ETF - USD Hedged Acc | Eurozone dividend-weighted passive USD-hedged equity; input alias WEEUF; LSE | not applicable (<10y) | 12.68% | 9.03% | [[ETF_LSE_HEDK Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -212,6 +213,15 @@ CAGR `12.82%‡` และ annual 2025 `23.33%‡` ใช้ official 2016-2024 
 chart ร่วมกับการคำนวณจาก official year-end NAV/income; `‡` จึงไม่ใช่ issuer
 calendar-row label โดยตรง. Hedge ratio `99.42%`, country/sector concentration,
 index-symbol display discrepancy และ daily NAV drawdown/recovery gap ยังต้อง
+ติดตาม.
+
+HEDK ใช้ official WisdomTree product page/factsheet สำหรับ identity, `LSE:HEDK`
+listing และ USD NAV TR. `WEEUF` เป็น OTC input alias ของ ISIN `IE00BYQCZP72`;
+official 2017-2025 NAV rows ให้ cumulative `132.80%` / rounded-input CAGR
+`9.84%`, 2021-2025 CAGR `12.68%`, และ current official NAV TR YTD `9.03%` ณ
+`2026-07-31`. History ยังไม่ครบ 10 ปี; issuer available-period annualised
+return `10.85%` ไม่ถูก relabel เป็น 10-year CAGR. Country/sector concentration,
+USD hedge/forward risk, TER `0.58%` และ daily NAV drawdown/recovery gap ยังต้อง
 ติดตาม.
 
 ## Navigation
