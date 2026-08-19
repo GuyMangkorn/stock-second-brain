@@ -1355,3 +1355,78 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official First Trust identity, passive classification, 2016-2025 NAV rows, current/rolling fields, tracked-index reconciliation and scheduled-local pre-save checklist passed; AlphaDEX index transition, Swiss concentration and daily NAV drawdown/recovery gaps remain disclosed.
+
+## EWQ — iShares MSCI France ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NYSE_ARCA:EWQ`; `input_ticker: EWQ`.
+- Official fund: `iShares MSCI France ETF`, listed on NYSE Arca, CUSIP `464286707`, inception `1996-03-12`, expense ratio `0.50%`, semi-annual distributions.
+- `management_mode: passive-index`; tracked index `MSCI France Index (Net)`. The prospectus says the Fund uses an indexing approach and representative sampling to track large- and mid-cap French equities; it does not seek to beat the index.
+- Primary region: `France`; return basis: USD NAV Total Return, net of fund expenses, with distributions reinvested; market-price returns remain separate.
+- Type-gate result: supported passive equity ETF. The official product page and prospectus identify the fund as equity exposure rather than bond, commodity, currency, multi-asset, leveraged, inverse, covered-call, or derivative-heavy exposure.
+
+### Source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| iShares EWQ product page | https://www.ishares.com/us/products/239648/ishares-msci-france-etf | official identity, NYSE Arca listing, tracked index, inception, current NAV, net assets, YTD, rolling returns, holdings, sectors, standard deviation and fees; current fields reviewed 2026-08-19, NAV/AUM 2026-08-18, holdings/sector 2026-08-17, risk fields 2026-07-31 |
+| iShares EWQ factsheet | https://www.ishares.com/us/literature/fact-sheet/ewq-ishares-msci-france-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV and MSCI France Index rows, 2025 return, rolling fields, top holdings, sectors and fund characteristics; factsheet as of 2026-06-30 |
+| iShares EWQ summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-france-etf-8-31.pdf | official 2015-2024 calendar-year chart, passive/indexing method, tracked-index definition, fees and principal risks; prospectus dated 2025-12-30 |
+| iShares EWQ annual shareholder report | https://www.ishares.com/us/literature/annual-report/ar-ewq-en.pdf | official reporting-period fund/index return context and portfolio concentration; period ended 2025-08-31 |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ and the permitted `check-etf-performance` cache | USD Total Return common reference, dividends reinvested, annual rows 2016-2025 as of 2025-12-31; no new S&P search because the requested complete window is cached |
+
+### Raw observations
+
+- Official EWQ NAV TR calendar rows for 2016-2024 from the prospectus chart: 2016 `4.98%`, 2017 `28.84%`, 2018 `-12.69%`, 2019 `25.78%`, 2020 `3.89%`, 2021 `21.12%`, 2022 `-12.23%`, 2023 `21.69%`, and 2024 `-5.29%`.
+- Official EWQ NAV TR 2025 factsheet row: `28.36%`; the same factsheet reports MSCI France Index (Net) `29.50%` for 2025 and official 2021-2025 rows of `20.59%`, `-12.67%`, `22.28%`, `-4.60%`, and `29.50%`.
+- Official current snapshot: NAV `US$46.57`, net assets `US$335.28m`, and closing price `US$46.75` as of 2026-08-18; 55 holdings and sector exposures as of 2026-08-17; current NAV TR YTD `+7.03%` as of 2026-08-17; expense ratio `0.50%`.
+- Official rolling performance as of 2026-06-30: fund 1Y `9.25%`, 3Y annualised `8.81%`, 5Y annualised `7.36%`, 10Y annualised `10.09%`, since inception `7.07%`; benchmark 1Y `10.45%`, 3Y `9.48%`, 5Y `7.52%`, 10Y `10.62%`.
+- Official risk snapshot: 3-year standard deviation `14.45%` as of 2026-07-31; sector exposures as of 2026-08-17 include Industrials `32.88%`, Financials `14.00%`, Consumer Discretionary `10.87%`, Health Care `8.30%`, Consumer Staples `7.93%`, Energy `7.90%`, Materials `6.93%`, Utilities `3.41%`, Information Technology `3.20%`, Communication `2.77%`, Real Estate `1.33%`, and Cash/Derivatives `0.49%`.
+- Official factsheet top ten as of 2026-06-30: Schneider Electric `8.31%`, TotalEnergies `7.12%`, LVMH `6.40%`, Safran `6.33%`, Airbus `6.14%`, Air Liquide `5.87%`, BNP Paribas `5.38%`, L'Oréal `4.90%`, Sanofi `4.35%`, and AXA `3.65%`; total `58.45%`.
+- Cached S&P 500 TR rows for 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`, respectively; USD, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use displayed rounded annual inputs.
+- EWQ 2016-2025: cumulative `142.688393%` → `142.69%`; rounded-input CAGR `9.270996%` → `9.27%`; up/down `7/3`; best 2017 `+28.84%`; worst 2018 `-12.69%`; population annual-return volatility `15.826242%` → `15.83%`.
+- EWQ 2021-2025: cumulative `57.268736%` → `57.27%`; rounded-input CAGR `9.478409%` → `9.48%`.
+- Cached S&P 500 TR 2016-2025: cumulative `298.329111%` → `298.33%`; rounded-input CAGR `14.821761%` → `14.82%`. For 2021-2025: cumulative `96.169618%` → `96.17%`; CAGR `14.426430%` → `14.43%`.
+- EWQ-minus-MSCI-France Index annual differences for 2021-2025 are `+0.53`, `+0.44`, `-0.59`, `-0.69`, and `-1.14` percentage points. Rolling fund-minus-index observations are `-1.20 pp` for 1Y, `-0.67 pp` for 3Y annualised, `-0.16 pp` for 5Y annualised, and `-0.53 pp` for 10Y annualised as of 2026-06-30. These are passive tracking observations, not alpha.
+- The issuer rolling 10-year NAV TR `10.09%` is kept separate from the rounded-input 2016-2025 calendar CAGR `9.27%`; no arithmetic substitution is made. Current EWQ YTD `7.03%` as of 2026-08-17 is not mixed with the older 2026-06-30 benchmark window.
+
+### Source conflict and quality choice
+
+- iShares product page, factsheet and summary prospectus are the sources of truth. The annual table combines the official prospectus chart through 2024 with the official factsheet 2025 row; no values are inferred between them.
+- The annual shareholder report covers a fiscal reporting period ending 2025-08-31 and is used for context, not substituted for calendar-year 2025 NAV TR. The official factsheet row is used for the complete calendar-year table.
+- The S&P annual comparison reuses the permitted cached 2016-2025 convention. No fresh S&P search is required for this complete cached window, and no arithmetic fund-minus-S&P difference is labelled alpha.
+- Current NAV/AUM/holdings/sector fields, factsheet rolling performance, prospectus calendar chart and risk language have different as-of dates; they remain separated. France concentration, representative-sampling/systematic-fair-value timing, currency/foreign-market risk and the daily NAV drawdown/recovery gap are disclosed.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_EWQ Performance.md` with canonical `NYSE Arca:EWQ`, USD NAV TR annual rows 2016-2025, 2021-2025 common-window metrics, issuer rolling/current fields, official MSCI France Index comparison, risk notes, sources and France breadcrumb/tag.
+- Create `wiki/analysis/comparisons/France ETF.md` as the static primary-region navigation page with the EWQ row, links to `[[ETF Region Index]]` and `[[ETF Performance Index]]`, and no copied annual table.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` with France count `1` and `[[France ETF]]`; update the Browse by region links in `wiki/analysis/performance/ETF Performance Index.md` with `[[France ETF]]`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the EWQ coverage row, 2021-2025 common-window row and the 2026-08-19 coverage bullet; append one workflow bullet to `log.md`.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, CUSIP, passive-index eligibility, tracked index, inception, fee, USD NAV TR basis, semi-annual distribution cadence and current/rolling as-of dates are source-backed.
+- PASS: 2016-2024 prospectus rows, 2025 factsheet row, 2021-2025 tracked-index rows, current NAV/YTD/AUM/holdings/sector/risk fields and cached S&P rows are separated by provenance and date.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR, up/down count, annual volatility, best/worst years and official fund-minus-index gaps recompute from displayed inputs; rolling 10-year `10.09%` remains an issuer field and no arithmetic difference is called alpha.
+- PASS: France is the sole primary exposure region; the new region page/count, canonical breadcrumb/tag, performance-index links, source batch section and log bullet are planned and resolve.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive classification, 2016-2025 NAV evidence, current/rolling fields, MSCI France tracking reconciliation and scheduled-local pre-save checklist passed; France concentration, systematic fair-value timing and daily NAV drawdown/recovery gaps remain disclosed.

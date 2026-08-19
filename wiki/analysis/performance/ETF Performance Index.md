@@ -35,6 +35,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[China ETF]]
 - [[Emerging Markets ETF]]
 - [[Europe ETF]]
+- [[France ETF]]
 - [[Germany ETF]]
 - [[Greece ETF]]
 - [[Hong Kong ETF]]
@@ -123,6 +124,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_FLSW Performance]] | official 2018-02-06 / official 2019-2025; history under 10 years | not applicable (<10y history) | 8.54% | 8.87% | 2025 +33.10% / 2022 -18.30% | Switzerland single-country large-/mid-cap passive equity | health care/financials/country/CHF-USD/valuation-sensitive; 15.88% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWL Performance]] | official 1996-03-12 / official 2016-2025; issuer rolling 10Y as of 2026-06-30 | 10.04% issuer rolling 10Y | 8.02% | 7.02% | 2025 +32.54% / 2022 -18.57% | Switzerland large-/mid-cap passive equity | country/health-care/financials/issuer/valuation/fair-value-sensitive; 15.30% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FSZ Performance]] | official 2012-02-14 / official 2016-2025; issuer rolling 10Y as of 2026-06-30 | 10.05% issuer rolling 10Y | 8.18% | 3.46% | 2017 +31.26% / 2022 -20.88% | Switzerland rules-based passive AlphaDEX equity | country/sector/small-/mid-cap/rebalance/liquidity-sensitive; 14.51% 3-year standard deviation; 2015 index transition and daily NAV drawdown/recovery gaps disclosed |
+| [[ETF_NYSE_ARCA_EWQ Performance]] | official 1996-03-12 / official 2016-2025; issuer rolling 10Y as of 2026-06-30 | 10.09% issuer rolling 10Y | 9.48% | 7.03% | 2017 +28.84% / 2018 -12.69% | France single-country large-/mid-cap passive equity | country/sector/industrials/luxury/consumer/FX/fair-value-sensitive; 14.45% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025; rolling issuer 2026-06-30 | 8.22% | 8.38% | 6.09% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials/technology concentrated, country/EUR-USD/FX-sensitive; 16.03% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_DAX Performance]] | official 2014 / official 2016-2025; rolling issuer 2026-06-30 | 9.57% | 10.65% | 1.40% | 2025 +38.72% / 2018 -22.38% | Germany single-country equity | industrials/financials concentrated; Germany/EUR-USD/export-cycle/country-sensitive; 16.10% 3-year standard deviation; official 10Y fund-index gap -0.70 pp |
 | [[ETF_NYSE_ARCA_FLGR Performance]] | official 2017 / official 2018-2025; history under 10 years; official YTD as of 2026-08-07 | not applicable (<10y history) | 9.02% | 5.23% | 2025 +36.70% / 2022 -22.10% | Germany single-country equity | industrials/financials/technology; Germany/EUR-USD/export-cycle/country-sensitive; 16.66% 3-year standard deviation; daily NAV drawdown/recovery gap |
@@ -498,6 +500,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_FLSW Performance]] | 20.40% | -18.30% | 16.71% | -1.41% | 33.10% | 50.65% | 3 / 2 |
 | [[ETF_NYSE_ARCA_EWL Performance]] | 19.27% | -18.57% | 17.37% | -2.64% | 32.54% | 47.10% | 3 / 2 |
 | [[ETF_NASDAQ_FSZ Performance]] | 19.34% | -20.88% | 22.07% | -1.25% | 30.16% | 48.15% | 3 / 2 |
+| [[ETF_NYSE_ARCA_EWQ Performance]] | 21.12% | -12.23% | 21.69% | -5.29% | 28.36% | 57.27% | 3 / 2 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
