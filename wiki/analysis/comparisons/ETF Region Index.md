@@ -51,6 +51,7 @@ driver notes ทั้งหมด
 | Southeast Asia | 1 | [[Southeast Asia ETF]] |
 | Taiwan | 2 | [[Taiwan ETF]] |
 | Thailand | 1 | [[Thailand ETF]] |
+| Turkey | 1 | [[Turkey ETF]] |
 | United Kingdom | 5 | [[United Kingdom ETF]] |
 | Vietnam | 3 | [[Vietnam ETF]] |
 

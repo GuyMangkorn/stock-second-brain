@@ -1430,3 +1430,76 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive classification, 2016-2025 NAV evidence, current/rolling fields, MSCI France tracking reconciliation and scheduled-local pre-save checklist passed; France concentration, systematic fair-value timing and daily NAV drawdown/recovery gaps remain disclosed.
+
+## TUR — iShares MSCI Turkey ETF
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NASDAQ:TUR`; `input_ticker: TUR`.
+- Official fund: `iShares MSCI Turkey ETF`, NASDAQ, CUSIP `464286715`, inception `2008-03-26`, expense ratio `0.59%`, semi-annual distributions.
+- `management_mode: passive-index`; the fund seeks to track the `MSCI Turkey IMI 25/50 Index (USD) (Net)`, a broad-based index of Turkish equities. The current index began on 2019-05-29; prior rows use the official spliced historical benchmark.
+- Primary region: `Turkey`; return basis: USD `NAV Total Return`, with dividends/capital gains reinvested and fund expenses deducted; market-price return remains separate.
+
+### Official source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| iShares TUR U.S. product page | https://www.ishares.com/us/products/239689/ishares-msci-turkey-etf | official identity, NASDAQ listing, benchmark, current NAV/price, YTD, rolling performance, holdings, sectors, distributions and fees; current page reviewed 2026-08-19, NAV/net assets 2026-08-18, price/holdings 2026-08-17, risk fields 2026-07-31 |
+| iShares TUR fact sheet | https://www.ishares.com/us/literature/fact-sheet/tur-ishares-msci-turkey-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV/index rows, return definition, benchmark, fee and fund characteristics; factsheet as of 2026-06-30 |
+| iShares TUR summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-turkey-etf-8-31.pdf | official 2016-2020 calendar rows, passive objective, index splice, risks, and best/worst quarter; prospectus dated 2025-12-30 |
+| iShares TUR international calendar page | https://www.ishares.com/ch/professionals/en/products/239689/ishares-msci-turkey-etf?switchLocale=Y | official USD fund/benchmark calendar cross-check for 2016-2025; page capture through 2026-07-30 |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ and the permitted `check-etf-performance` cache | USD Total Return common reference, dividends reinvested, annual rows 2016-2025, reference as-of 2025-12-31 |
+| Current S&P 500 YTD secondary snapshot | https://www.slickcharts.com/sp500/returns/ytd | secondary S&P 500 Total Return YTD `13.17%` as of 2026-08-18 |
+
+### Raw observations
+
+- Official product page current fields: NAV `US$39.58` and net assets `US$221.661M` as of 2026-08-18; closing price `US$39.43`, holdings `73`, and sector data as of 2026-08-17; official NAV TR YTD `16.38%` as of 2026-08-17. Product-page risk fields as of 2026-07-31 include 3-year standard deviation `25.11%`, equity beta `0.35`, 12m trailing yield `2.21%`, and 30-day SEC yield `1.44%`.
+- Official fund NAV TR annual rows 2016-2020 from the summary-prospectus chart: 2016 `-8.28%`, 2017 `37.45%`, 2018 `-41.42%`, 2019 `13.94%`, 2020 `-0.74%`. Official fact-sheet rows for 2021-2025: `-27.51%`, `106.42%`, `-9.16%`, `13.70%`, `-2.91%`.
+- Official benchmark rows: 2016-2020 international page rounded values `-8.2%`, `37.8%`, `-41.3%`, `14.5%`, `-0.7%`; 2021-2025 factsheet values `-27.68%`, `107.26%`, `-8.80%`, `14.82%`, `-2.57%`.
+- Official rolling performance as of 2026-06-30: NAV TR 1Y `23.05%`, 3Y annualised `13.81%`, 5Y `16.21%`, 10Y `2.58%`, inception `1.08%`; benchmark 1Y `23.19%`, 3Y `14.47%`, 5Y `16.58%`, 10Y `2.86%`, inception `1.40%`. The same page reports 10-year cumulative NAV TR `28.97%` and YTD `14.54%` at that month-end.
+- Official sector snapshot as of 2026-08-17: Industrials `27.62%`, Financials `16.56%`, Consumer Staples `13.18%`, Materials `11.70%`, Energy `9.05%`, Real Estate `6.49%`; holdings and allocations are subject to change.
+- Official summary prospectus reports best quarter `+68.38%` in Q4 2022 and worst quarter `-29.37%` in Q1 2020. Daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources.
+- Latest four official cash distributions: `US$0.479168` (record/ex 2026-06-15, payable 2026-06-18), `US$0.359292` (2025-12-16/2025-12-19), `US$0.466192` (2025-06-16/2025-06-20), and `US$0.146027` (2024-12-17/2024-12-20). Sum `US$1.450679`; average `US$0.362670` per round; approximate per-round yield `0.92%` against the verified closing price `US$39.43`.
+- Cached S&P 500 TR rows for 2016-2025 are USD `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; current secondary YTD is `13.17%` as of 2026-08-18.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use the displayed official annual inputs.
+- TUR 2016-2025: cumulative `25.328721%` → `25.33%`; rounded-input CAGR `2.283378%` → `2.28%`; up/down `4/6`; best 2022 `+106.42%`; least positive 2024 `+13.70%`; worst 2018 `-41.42%`; least-bad down year 2020 `-0.74%`; population annual-return standard deviation `38.832418%` → `38.83%`.
+- TUR 2021-2025: cumulative `50.052061%` → `50.05%`; rounded-input CAGR `8.454704%` → `8.45%`. The tracked-index rows compound to `52.925178%` / `8.866886%`; the approximate passive tracking gap is `-0.41 pp` CAGR.
+- Cached S&P 500 TR 2016-2025: cumulative `298.329111%` → `298.33%`; rounded-input CAGR `14.821761%` → `14.82%`. The 2021-2025 subset is `96.169618%` / `14.426430%` → `96.17%` / `14.43%`. These are common-reference comparisons, not alpha.
+- Official rolling 10-year NAV TR is kept separate from the complete-calendar calculation: `28.97%` cumulative / `2.58%` issuer CAGR as of 2026-06-30 versus 2016-2025 rounded-input `25.33%` / `2.28%`.
+
+### Source conflict and quality choice
+
+- iShares U.S. product page, factsheet, summary prospectus and official international calendar page are the sources of truth. The current U.S. product page is used for the latest YTD/NAV/price; older locale snapshots are not substituted for current U.S. fields.
+- 2016-2020 fund rows use the exact official prospectus chart; the international page's one-decimal rows provide a cross-check and are used for the displayed historical benchmark rows where the U.S. factsheet does not expose those years. 2021-2025 exact fund/index rows use the factsheet.
+- The S&P annual series reuses the permitted cached 2016-2025 USD convention. Current S&P YTD is a separate secondary snapshot dated one day after TUR's latest NAV TR YTD; no cross-date arithmetic excess return is claimed.
+- Turkey single-country/emerging-market, currency, sector concentration, systematic fair-value timing and daily NAV drawdown/recovery gaps remain disclosed.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NASDAQ_TUR Performance.md` with canonical `NASDAQ:TUR`, USD NAV TR annual rows 2016-2025, official MSCI Turkey comparison, rolling 10-year field, current YTD/NAV/price/distribution dates, risk notes, sources, `geography/Turkey` tag and breadcrumb `[[ETF Region Index]] → [[Turkey ETF]] → [[ETF Performance Index]]`.
+- Create `wiki/analysis/comparisons/Turkey ETF.md` as the static primary-region navigation page with the TUR row and links to `[[ETF Region Index]]` and `[[ETF Performance Index]]`; no annual table is duplicated there.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` with Turkey count `1` and `[[Turkey ETF]]`, add the Turkey link to the `ETF Performance Index` Browse by region list, add the TUR row and common-window row to `ETF Performance Index.md`, and append one `log.md` workflow bullet.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, passive equity eligibility, tracked index, inception, fee, USD NAV TR basis, semi-annual distributions, current/rolling fields and all as-of dates are source-backed.
+- PASS: 2016-2020 exact prospectus rows, 2016-2020 benchmark cross-check, 2021-2025 factsheet rows, current NAV/YTD/price/holdings/sector/risk fields and cached/secondary S&P references are separated by provenance and date.
+- PASS: calendar cumulative/CAGR, 2021-2025 CAGR, up/down count, annual volatility, best/worst years, distribution average and passive tracking gap recompute from displayed inputs; issuer rolling 10-year field remains separate and no arithmetic difference is called alpha.
+- PASS: Turkey is the sole primary exposure region; region page/count, canonical breadcrumb/tag, performance-index links, source-batch section and log bullet are planned and resolve. Daily NAV drawdown/recovery is explicitly retained as a gap.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive classification, 2016-2025 NAV/index evidence, rolling 10-year and current YTD fields, Turkey navigation and the scheduled-local pre-save checklist passed; country, currency, sector and daily NAV drawdown/recovery gaps remain disclosed.

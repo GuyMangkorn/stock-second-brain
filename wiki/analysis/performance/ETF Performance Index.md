@@ -58,6 +58,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Southeast Asia ETF]]
 - [[Taiwan ETF]]
 - [[Thailand ETF]]
+- [[Turkey ETF]]
 - [[United Kingdom ETF]]
 - [[Vietnam ETF]]
 
@@ -115,6 +116,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
 | [[ETF_NYSE_ARCA_DGS Performance]] | official 2007 / official 2016-2025; issuer-reported 10Y average annual NAV TR as of 2026-07-31 | 8.31%† | 8.23% | 8.86%‡ | 2017 +35.48% / 2018 -15.39% | emerging-markets small-cap dividend | small-cap/country/FX/emerging-market-sensitive; dividend-factor and equity risk |
 | [[ETF_NYSE_ARCA_EWX Performance]] | official 2008 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 7.95%† | 7.92%* | 3.91%‡ | 2017 +34.10%* / 2018 -18.74%* | emerging-markets small-cap equity | small-cap/country/FX/China-Taiwan/liquidity-sensitive; annual rows secondary proxy and daily NAV drawdown/recovery gap |
+| [[ETF_NASDAQ_TUR Performance]] | official 2008 / official 2016-2025; issuer rolling 10Y as of 2026-06-30 | 2.58% issuer rolling 10Y | 8.45% | 16.38% | 2022 +106.42% / 2018 -41.42% | Turkey single-country broad-market passive equity | country/currency/sector/emerging-market-sensitive; 25.11% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 9.50% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
 | [[ETF_LSE_SAUS Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 8.26% | 6.24% | 10.27% | 2019 +22.50% / 2018 -12.30% | Australia single-country broad equity | financials/materials/commodity/country/FX-sensitive |
@@ -501,6 +503,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_EWL Performance]] | 19.27% | -18.57% | 17.37% | -2.64% | 32.54% | 47.10% | 3 / 2 |
 | [[ETF_NASDAQ_FSZ Performance]] | 19.34% | -20.88% | 22.07% | -1.25% | 30.16% | 48.15% | 3 / 2 |
 | [[ETF_NYSE_ARCA_EWQ Performance]] | 21.12% | -12.23% | 21.69% | -5.29% | 28.36% | 57.27% | 3 / 2 |
+| [[ETF_NASDAQ_TUR Performance]] | -27.51% | 106.42% | -9.16% | 13.70% | -2.91% | 50.05% | 2 / 3 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -995,6 +998,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_LSE_HEDK Performance]] — HEDK / WEEUF (Europe; official WisdomTree USD London line `LSE:HEDK`, passive Europe Hedged Equity exposure; official 2017-2025 NAV TR cumulative `+132.80%` / rounded-input CAGR `+9.84%`, 2021-2025 CAGR `+12.68%`, and current official NAV TR YTD `+9.03%` as of 2026-07-31; 2019 `+27.22%` / 2022 `-10.04%`, 14.33% annual-return dispersion, under-10-year history, USD hedge/concentration/TER and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_EWL Performance]] — EWL (Switzerland; official NYSE Arca iShares MSCI Switzerland ETF; official 2016-2025 NAV TR cumulative `+136.56%` / rounded-input CAGR `+8.99%`, 2021-2025 CAGR `+8.02%`, issuer rolling 10-year NAV TR `+10.04%` as of 2026-06-30, and current official NAV TR YTD `+7.02%` as of 2026-08-17; 2025 `+32.54%` / 2022 `-18.57%`, 15.30% 3-year standard deviation, Swiss health-care/financials/issuer concentration, systematic fair-value and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NASDAQ_FSZ Performance]] — FSZ (Switzerland; official Nasdaq First Trust Switzerland AlphaDEX Fund; official 2016-2025 NAV TR cumulative `+148.00%` / rounded-input CAGR `+9.51%`, 2021-2025 CAGR `+8.18%`, issuer rolling 10-year NAV TR `+10.05%` as of 2026-06-30, and latest verified official NAV TR YTD `+3.46%` as of 2026-06-30; 2017 `+31.26%` / 2022 `-20.88%`, 14.51% 3-year standard deviation, AlphaDEX index comparison, 2015 index transition, Swiss concentration and daily NAV drawdown/recovery gaps disclosed)
+- [[ETF_NASDAQ_TUR Performance]] — TUR (Turkey; official NASDAQ iShares MSCI Turkey ETF; official 2016-2025 NAV TR cumulative `+25.33%` / rounded-input CAGR `+2.28%`, 2021-2025 CAGR `+8.45%`, issuer rolling 10-year NAV TR `+2.58%` as of 2026-06-30, and current official NAV TR YTD `+16.38%` as of 2026-08-17; 2022 `+106.42%` / 2018 `-41.42%`, 38.83% annual-return volatility, 25.11% 3-year standard deviation, Turkey/currency/sector/emerging-market risk and daily NAV drawdown/recovery gap disclosed)
 
 ## 2026-08-17 Coverage Addition
 
