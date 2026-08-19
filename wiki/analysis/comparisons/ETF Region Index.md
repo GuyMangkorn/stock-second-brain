@@ -46,7 +46,7 @@ driver notes ทั้งหมด
 | Singapore | 1 | [[Singapore ETF]] |
 | South Korea | 5 | [[South Korea ETF]] |
 | Spain | 1 | [[Spain ETF]] |
-| Switzerland | 1 | [[Switzerland ETF]] |
+| Switzerland | 2 | [[Switzerland ETF]] |
 | Southeast Asia | 1 | [[Southeast Asia ETF]] |
 | Taiwan | 2 | [[Taiwan ETF]] |
 | Thailand | 1 | [[Thailand ETF]] |

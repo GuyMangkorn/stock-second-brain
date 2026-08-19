@@ -1174,3 +1174,75 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official WisdomTree identity, passive classification, 2017-2025 NAV rows, current/available-period fields, reconciled calculations and scheduled-local pre-save checklist passed; under-10-year history, USD hedge/concentration and daily NAV drawdown/recovery gaps remain disclosed.
+
+## EWL — iShares MSCI Switzerland ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NYSE_ARCA:EWL`; `input_ticker: EWL`.
+- Official fund: `iShares MSCI Switzerland ETF`, CUSIP `464286749`, NYSE Arca, launch date `1996-03-12`; asset class equity; semi-annual distributions.
+- `management_mode: passive-index`; the fund seeks to track `MSCI Switzerland 25/50 Index (Net)`, a free-float-adjusted, market-cap-weighted Swiss large-/mid-cap index with issuer capping methodology.
+- Return basis: official USD NAV Total Return, net of fund expenses, with dividends/distributions reinvested. Market-price return is kept separate.
+- Primary region: Switzerland. Expense ratio `0.50%`.
+
+### Source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| iShares product page | https://www.ishares.com/us/products/239685/ishares-msci-switzerland-etf | official identity, NYSE Arca, benchmark, inception, current NAV/AUM, current YTD, rolling performance, sectors, holdings count, standard deviation and fees; page snapshot current fields through 2026-08-18 |
+| iShares factsheet | https://www.ishares.com/us/literature/fact-sheet/ewl-ishares-msci-switzerland-etf-fund-fact-sheet-en-us.pdf | official 2021-2025 NAV/benchmark rows, 2025 return, rolling returns, top holdings, sector weights and risk fields; as of 2026-06-30 |
+| iShares summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-switzerland-capped-etf-8-31.pdf | official 2015-2024 calendar chart, index strategy, fees and principal risks; dated 2025-12-30 |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | USD Total Return common reference; cached annual rows for 2016-2025, dividends reinvested, reference as of 2025-12-31 |
+
+### Raw observations
+
+- Official key facts: NAV `US$62.86`, net assets `US$2,388,778,706` and closing price `US$62.91` as of 2026-08-18; 40 holdings as of 2026-08-17; NAV TR YTD `7.02%` as of 2026-08-17; expense ratio `0.50%`.
+- Official rolling performance as of 2026-06-30: NAV TR 1-year `16.53%`, 3-year `12.91%`, 5-year `7.39%`, 10-year `10.04%`, and since inception `7.68%`; benchmark rows are 1-year `17.41%`, 3-year `13.08%`, 5-year `7.51%`, and 10-year `10.19%`.
+- Official EWL NAV TR calendar rows selected for the complete 2016-2025 window: 2016 `-3.04%`, 2017 `23.37%`, 2018 `-9.78%`, 2019 `32.27%`, 2020 `12.66%`, 2021 `19.27%`, 2022 `-18.57%`, 2023 `17.37%`, 2024 `-2.64%`, 2025 `32.54%`.
+- Source provenance for annual rows: 2016-2024 are from the official summary-prospectus calendar-year chart; 2025 is from the official June 30, 2026 factsheet/product capture. The 2015 chart row `0.51%` is retained in source evidence but omitted from the 10-year calculation.
+- Official tracked-index rows available for 2021-2025: 2021 `19.86%`, 2022 `-18.79%`, 2023 `17.32%`, 2024 `-2.10%`, 2025 `32.89%`.
+- Official current risk/portfolio fields: 3-year standard deviation `15.30%` as of 2026-07-31; sector weights as of 2026-08-17 include Health Care `37.30%`, Financials `18.26%`, Industrials `13.15%`, Consumer Staples `13.13%`, Materials `7.26%`, Consumer Discretionary `6.19%`; factsheet top holdings as of 2026-06-30 include Roche `12.84%`, Novartis `12.67%`, Nestlé `11.64%`, ABB `6.34%`, and Richemont `5.04%`.
+- Cached S&P 500 TR rows for 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`, respectively; USD, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use displayed rounded annual inputs.
+- EWL 2016-2025: cumulative `136.557316%` → `136.56%`; rounded-input CAGR `8.991753%` → `8.99%`; up/down `6/4`; best 2025 `+32.54%`; worst 2022 `-18.57%`; population annual-return volatility `16.929858%` → `16.93%`.
+- EWL 2021-2025: cumulative `47.095806%` → `47.10%`; rounded-input CAGR `8.023951%` → `8.02%`.
+- Cached S&P 500 TR 2016-2025: cumulative `298.329111%` → `298.33%`; rounded-input CAGR `14.821761%` → `14.82%`. For 2021-2025: cumulative `96.169618%` → `96.17%`; CAGR `14.426430%` → `14.43%`.
+- EWL-minus-tracked-index annual differences for 2021-2025 are `-0.59`, `+0.22`, `+0.05`, `-0.54`, and `-0.35` percentage points. These are passive tracking observations, not alpha.
+- The issuer's rolling 10-year NAV TR `10.04%` is kept separate from the rounded-input 2016-2025 calendar CAGR `8.99%`; no arithmetic substitution is made. Current EWL YTD `7.02%` as of 2026-08-17 is not compared with the older benchmark YTD `6.15%` as of 2026-06-30.
+
+### Source conflict and quality choice
+
+- iShares product page, factsheet and summary prospectus are the sources of truth. The annual table combines official documents with clearly labelled period provenance: prospectus chart through 2024 and factsheet/product-page 2025 row; no values are inferred between them.
+- The S&P annual comparison reuses the permitted cached 2016-2025 convention. No fresh S&P search is required for this complete cached window, and no arithmetic fund-minus-S&P difference is labelled alpha.
+- The product page's current fields, factsheet risk snapshot and prospectus risk language have different as-of dates; they remain separated. Systematic fair-value, foreign-market timing, non-diversification, issuer/sector concentration and daily NAV drawdown/recovery gaps are disclosed.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_EWL Performance.md` with canonical `NYSE Arca:EWL`, USD NAV TR annual rows 2016-2025, 2021-2025 common-window metrics, issuer rolling fields, official benchmark rows, risk notes, sources and Switzerland breadcrumb/tag.
+- Update `wiki/analysis/comparisons/Switzerland ETF.md` with the EWL navigation row/note and forward link; update `wiki/analysis/comparisons/ETF Region Index.md` Switzerland count from 1 to 2.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the EWL coverage row, 2021-2025 common-window row and 2026-08-19 coverage bullet; append one workflow bullet to `log.md`.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, passive-index eligibility, tracked index, launch date, CUSIP, fees, USD NAV TR basis, semi-annual distribution cadence and current/rolling as-of dates are source-backed.
+- PASS: 2016-2024 prospectus rows, 2025 factsheet row, 2021-2025 tracked-index rows, current NAV/YTD/AUM/holdings/sector/risk fields and cached S&P rows are separated by provenance and date.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR, up/down count, annual volatility, best/worst years and official fund-minus-index gaps recompute from displayed inputs; rolling 10-year `10.04%` remains an issuer field and no arithmetic difference is called alpha.
+- PASS: Switzerland is the sole primary exposure region; the region page/count, canonical breadcrumb/tag, performance-index links, source batch section and log bullet are planned and resolve.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive classification, 2016-2025 NAV evidence, current/rolling fields, benchmark reconciliation and scheduled-local pre-save checklist passed; Switzerland concentration, systematic fair-value and daily NAV drawdown/recovery gaps remain disclosed.
