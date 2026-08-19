@@ -1029,3 +1029,78 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive Ireland classification, official 2016-2025 NAV evidence, official 2021-2025 benchmark rows, rolling/current fields, reconciled calculations and the scheduled-local pre-save checklist passed; benchmark-history, country/sector concentration, FX/liquidity and daily NAV gaps remain disclosed.
+
+## FLSW — Franklin FTSE Switzerland ETF
+
+### Workflow and identity
+
+- `workflow: check-etf-performance`; caller: `trello-etf-processing`; mode: `lean`; `execution_profile: scheduled-inline`; input ticker `FLSW`.
+- Canonical identity: `NYSE Arca:FLSW`; Franklin official fund name `Franklin FTSE Switzerland ETF`; inception `2018-02-06`; CUSIP `35473P694`; ISIN `US35473P6943`; exchange `NYSE Arca`.
+- Management mode: `passive-index`; the fund seeks to track the `FTSE Switzerland RIC Capped Index` before fees and expenses. The index is a market-cap-weighted Swiss large-/mid-cap index with security caps. No active-management fields apply.
+- Return basis: official USD `NAV Total Return`, distributions reinvested and fund expenses deducted. Market-price return, current NAV, portfolio multiples and yield fields are not mixed into NAV TR.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Franklin FLSW product page | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/26352/SINGLCLASS/franklin-ftse-switzerland-etf/FLSW | official identity, exchange, benchmark, inception, expense ratio, rolling NAV returns, current NAV/YTD, assets, holdings, sectors and portfolio statistics; current fields through 2026-08-09, with NAV/YTD as of 2026-08-07 |
+| Franklin FLSW factsheet | https://www.franklintempleton.com/forms-literature/download/FLSW-FF | official 2019-2025 calendar NAV/market-price/index rows, total-return definitions, 0.09% expense ratio and 3-year NAV standard deviation `15.88%` versus index `15.91%`; factsheet as of 2026-03-31 |
+| Franklin FLSW summary prospectus | https://www.franklintempleton.com/forms-literature/download-preview/FLSW-PSUM | official objective, annual-return disclosure and passive/index context |
+| S&P 500 Total Return cached convention | skill cache and original S&P DJI references | USD common reference for 2019-2025 and 2021-2025, dividends reinvested, reference as of 2025-12-31 |
+| Slickcharts S&P 500 YTD | https://www.slickcharts.com/sp500/returns/ytd | secondary current S&P 500 total-return YTD cross-check `13.38%` as of 2026-08-07; kept separate from official Franklin YTD |
+
+### Raw observations
+
+- Franklin official calendar NAV TR rows: 2019 `32.66%`, 2020 `14.15%`, 2021 `20.40%`, 2022 `-18.30%`, 2023 `16.71%`, 2024 `-1.41%`, 2025 `33.10%`.
+- Franklin official tracked-index rows: 2019 `32.19%`, 2020 `13.30%`, 2021 `19.98%`, 2022 `-18.50%`, 2023 `16.27%`, 2024 `-1.83%`, 2025 `32.80%`.
+- Cached S&P 500 TR rows for the same years: 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; USD, dividends reinvested.
+- Official rolling NAV TR as of 2026-06-30: 1Y `18.06%`, 3Y `13.53%`, 5Y `7.87%`, 10Y `not applicable`, since inception `10.12%`.
+- Official current snapshot: NAV `$44.38` and NAV TR YTD `8.87%` as of 2026-08-07; total net assets `$84.32M` as of 2026-08-09; 50 holdings, P/E `26.69x`, P/B `4.50x` and sector allocation as of 2026-08-06; expense ratio `0.09%` as of 2026-08-01.
+- Official sector allocation as of 2026-08-06: Health Care `38.85%`, Financials `18.10%`, Industrials `13.67%`, Consumer Staples `13.42%`, Materials `8.52%`; residual sectors and cash are retained on the issuer page.
+- Official 3-year NAV standard deviation is `15.88%` versus benchmark `15.91%`, factsheet as of 2026-03-31. Official daily observations sufficient to reproduce NAV maximum drawdown and recovery were not disclosed in the reviewed sources.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`.
+- FLSW 2019-2025: cumulative `128.130548%`, rounded-input CAGR `12.504285%`, population annual-return standard deviation `17.079739%`, up/down `5/2`, best 2025 `33.10%`, least positive 2020 `14.15%`, worst 2022 `-18.30%`, least-bad down year 2024 `-1.41%`.
+- FLSW 2021-2025: cumulative `50.649444%`, rounded-input CAGR `8.540922%`, up/down `3/2`.
+- Tracked index 2019-2025: cumulative `121.993121%`, rounded-input CAGR `12.066827%`; 2021-2025 cumulative `48.221432%`, rounded-input CAGR `8.188774%`.
+- Cached S&P 500 TR 2019-2025: cumulative `205.405022%`, rounded-input CAGR `17.291901%`; 2021-2025 cumulative `96.169618%`, rounded-input CAGR `14.426430%`.
+- FLSW-minus-tracked-index annual differences are approximately `+0.47`, `+0.85`, `+0.42`, `+0.20`, `+0.44`, `+0.42`, and `+0.30` percentage points for 2019-2025; these are passive tracking observations, not alpha.
+
+### Source conflict and quality choice
+
+- Franklin product page and factsheet are the sources of truth for identity, passive classification, benchmark, fee, current fields, annual NAV rows and risk fields. The current product page has a newer YTD snapshot than the factsheet; the official product-page `8.87%` as of 2026-08-07 is used and the older factsheet YTD is not mixed into the result.
+- The official Franklin annual table starts at the first complete post-inception year 2019; the partial 2018 inception year is omitted rather than inferred.
+- The S&P annual comparison reuses the permitted cached 2016-2025 convention. Current YTD is outside the cache and is shown only as a clearly labelled same-date secondary cross-check; it is not used for the annual table or CAGR.
+- Official daily NAV drawdown/recovery evidence was not available, so the performance page records `not found / not verified` rather than substituting price-only data.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FLSW Performance.md` with canonical `NYSE Arca:FLSW`, official passive identity, USD NAV TR annual rows 2019-2025, the 2021-2025 Common Window row, current/rolling fields, source links, Swiss sector/FX/concentration risks, `geography/Switzerland` tag and breadcrumb `[[ETF Region Index]] → [[Switzerland ETF]] → [[ETF Performance Index]]`.
+- Create `wiki/analysis/comparisons/Switzerland ETF.md` as the static region navigation page with one FLSW row, a link back to `[[ETF Region Index]]`, a link forward to `[[ETF Performance Index]]`, and no copied annual table.
+- Update `wiki/analysis/comparisons/ETF Region Index.md` with Switzerland count `1` and `[[Switzerland ETF]]`; update the Browse by region links in `wiki/analysis/performance/ETF Performance Index.md`.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the FLSW coverage row, official 2021-2025 Common Window row, and a 2026-08-19 coverage-addition bullet. FLSW is not added to the strict 2016-2025 ranking because its history begins in 2018 and the 2018 row is partial.
+- Append one `etf-performance` workflow bullet to `log.md`; no entity hub, normalized financial table, or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, fund name, ticker, inception, passive-index eligibility, tracked index, fee, distribution cadence, USD NAV TR basis and all as-of dates are source-backed.
+- PASS: official 2019-2025 NAV/index rows, rolling fields, current NAV/YTD, assets, holdings, valuation fields, sectors and standard deviation are separated by source/as-of date; partial 2018 and unavailable daily NAV drawdown/recovery are explicit gaps.
+- PASS: 2019-2025 and 2021-2025 cumulative/CAGR, annual dispersion, up/down count and best/worst subset recompute from the displayed inputs; no 10-year CAGR is claimed.
+- PASS: tracked-index comparison is labelled passive tracking evidence, S&P annual rows use the cached USD convention, current S&P YTD is a separate secondary cross-check, and no arithmetic difference is called alpha.
+- PASS: Switzerland is the sole primary exposure region; the new region page, canonical breadcrumb, `geography/Switzerland` tag, region-index row, performance-index links and source/log paths are planned and resolve.
+- PASS: complete proposed performance page, region page, source batch section and log bullet were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Franklin identity, passive classification, 2019-2025 NAV evidence, current/rolling fields, reconciled calculations and the scheduled-local pre-save checklist passed; Swiss concentration, CHF/USD and daily NAV drawdown/recovery gaps remain disclosed.

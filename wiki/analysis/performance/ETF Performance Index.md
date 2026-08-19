@@ -53,6 +53,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 - [[Singapore ETF]]
 - [[South Korea ETF]]
 - [[Spain ETF]]
+- [[Switzerland ETF]]
 - [[Southeast Asia ETF]]
 - [[Taiwan ETF]]
 - [[Thailand ETF]]
@@ -119,6 +120,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_ENZL Performance]] | official 2010 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 3.33% | -5.67% | 3.45% | 2023 +3.53% / 2022 -16.63% | New Zealand single-country equity | health care/industrials/utilities/real estate/country/FX-sensitive; benchmark splice 2024-09-03 |
 | [[ETF_NYSE_ARCA_EWC Performance]] | official 1996 / official 2016-2025 | 11.25% | 14.11% | 8.78% | 2025 +36.03% / 2018 -17.20% | Canada single-country equity | financials/energy/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWK Performance]] | official 1996 / official 2021-2025; issuer rolling 10-year as of 2026-06-30 | 7.08% | 7.18% | 12.61% | 2025 +34.96% / 2022 -14.08% | Belgium single-country equity | health care/consumer staples/financials concentrated; Belgium/EUR-USD/country/sector/liquidity-sensitive; 14.38% 3-year standard deviation; systematic fair-value note |
+| [[ETF_NYSE_ARCA_FLSW Performance]] | official 2018-02-06 / official 2019-2025; history under 10 years | not applicable (<10y history) | 8.54% | 8.87% | 2025 +33.10% / 2022 -18.30% | Switzerland single-country large-/mid-cap passive equity | health care/financials/country/CHF-USD/valuation-sensitive; 15.88% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWG Performance]] | official 1996 / official 2016-2025; rolling issuer 2026-06-30 | 8.22% | 8.38% | 6.09% | 2025 +35.15% / 2018 -22.30% | Germany single-country equity | industrials/financials/technology concentrated, country/EUR-USD/FX-sensitive; 16.03% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_DAX Performance]] | official 2014 / official 2016-2025; rolling issuer 2026-06-30 | 9.57% | 10.65% | 1.40% | 2025 +38.72% / 2018 -22.38% | Germany single-country equity | industrials/financials concentrated; Germany/EUR-USD/export-cycle/country-sensitive; 16.10% 3-year standard deviation; official 10Y fund-index gap -0.70 pp |
 | [[ETF_NYSE_ARCA_FLGR Performance]] | official 2017 / official 2018-2025; history under 10 years; official YTD as of 2026-08-07 | not applicable (<10y history) | 9.02% | 5.23% | 2025 +36.70% / 2022 -22.10% | Germany single-country equity | industrials/financials/technology; Germany/EUR-USD/export-cycle/country-sensitive; 16.66% 3-year standard deviation; daily NAV drawdown/recovery gap |
@@ -489,6 +491,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_DBEU Performance]] | 23.30%* | -6.20%* | 17.00%* | 9.50%* | 22.50%* | 81.51%* | 4 / 1 |
 | [[ETF_NYSE_ARCA_HEDJ Performance]] | 23.57% | -10.18% | 26.39% | 5.65% | 23.33%‡ | 82.78%‡ | 4 / 1 |
 | [[ETF_NYSE_ARCA_EIRL Performance]] | 13.62% | -18.63% | 34.06% | -1.74% | 28.63% | 56.65% | 3 / 2 |
+| [[ETF_NYSE_ARCA_FLSW Performance]] | 20.40% | -18.30% | 16.71% | -1.41% | 33.10% | 50.65% | 3 / 2 |
 | S&P 500 Total Return | 28.71% | -18.11% | 26.29% | 25.02% | 17.88% | 96.17% | 4 / 1 |
 
 S&P 500 row uses the cached USD Total Return convention with dividends
@@ -979,6 +982,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_EWK Performance]] — EWK (Belgium; passive MSCI Belgium IMI 25/50 Index equity exposure; official 2021-2025 NAV TR cumulative `+41.43%` / rounded-input CAGR `+7.18%`, issuer rolling 10-year NAV TR `+7.08%` as of 2026-06-30, and current official NAV TR YTD `+12.61%` as of 2026-08-10; 2025 `+34.96%` / 2022 `-14.08%`, 14.38% 3-year standard deviation, Belgium/sector/top-holdings concentration and daily NAV drawdown/recovery gaps disclosed)
 - [[ETF_NYSE_ARCA_HEDJ Performance]] — HEDJ (Europe; passive WisdomTree Europe Hedged Equity Fund; official 2016-2024 NAV TR rows plus 2025 calculated/reconciled from official year-end NAV and income; 2016-2025 cumulative `+153.82%` / rounded-input CAGR `+9.76%`, 2021-2025 CAGR `+12.82%‡`, issuer rolling 10-year NAV TR `+10.73%` and current official NAV TR YTD `+9.15%` as of 2026-07-31; 99.42% hedge ratio, country/sector/hedge-cost and related-index-symbol risks, plus daily NAV drawdown/recovery gap disclosed)
 - [[ETF_NYSE_ARCA_EIRL Performance]] — EIRL (Ireland; passive iShares MSCI Ireland ETF; official 2016-2025 USD NAV TR cumulative `+107.72%` / rounded-input CAGR `+7.58%`, 2021-2025 CAGR `+9.39%`, issuer rolling 10-year NAV TR `+9.94%` as of 2026-06-30, and current official NAV TR YTD `+15.05%` as of 2026-08-14; 2023 `+34.06%` / 2018 `-20.99%`, 16.21% 3-year standard deviation, Ireland/financials/consumer-staples/top-holdings/FX risk and daily NAV drawdown/recovery gap disclosed)
+- [[ETF_NYSE_ARCA_FLSW Performance]] — FLSW (Switzerland; passive Franklin FTSE Switzerland ETF; official 2019-2025 USD NAV TR cumulative `+128.13%` / rounded-input CAGR `+12.50%`, 2021-2025 CAGR `+8.54%`, history under 10 years, and current official NAV TR YTD `+8.87%` as of 2026-08-07; 2025 `+33.10%` / 2022 `-18.30%`, 15.88% 3-year standard deviation, Swiss health-care/financials concentration, CHF/USD and daily NAV drawdown/recovery gaps disclosed)
 
 ## 2026-08-17 Coverage Addition
 
