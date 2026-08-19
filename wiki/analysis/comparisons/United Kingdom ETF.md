@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EWU | iShares MSCI United Kingdom ETF | United Kingdom large/mid-cap passive equity | 8.21%† | 12.67% | 11.50% | [[ETF_NYSE_ARCA_EWU Performance]] |
+| EWU | iShares MSCI United Kingdom ETF | United Kingdom large/mid-cap passive equity | 8.21%† | 12.67% | 11.22% | [[ETF_NYSE_ARCA_EWU Performance]] |
 | FKU | First Trust United Kingdom AlphaDEX Fund | United Kingdom rules-based enhanced equity | 8.67% | 10.30% | 10.96% | [[ETF_NASDAQ_FKU Performance]] |
 | FLGB | Franklin FTSE United Kingdom ETF | United Kingdom large/mid-cap passive equity | not applicable (<10y) | 12.80% | 11.56% | [[ETF_NYSE_ARCA_FLGB Performance]] |
 | ISF (BCYIF) | iShares Core FTSE 100 UCITS ETF GBP (Dist) | United Kingdom large-cap passive equity | 8.73% | 12.92% | 10.51% | [[ETF_LSE_ISF Performance]] |
@@ -55,7 +55,7 @@ benchmark rows ใน factsheet เป็น GBP และ S&P 500 เป็น 
 EWU ใช้ official issuer rolling 10-year NAV TR `8.21%` ณ 2026-06-30; ค่า
 `7.23%` เป็น calendar-derived CAGR จาก 2016-2025 rows ที่ professional page
 แสดง 2016-2020 เป็นค่าปัดเศษ 0.1 pp. ค่า `12.67%` เป็น 2021-2025 CAGR และ
-`11.50%` เป็น official NAV TR YTD ณ 2026-08-14. Official daily NAV
+`11.22%` เป็น official NAV TR YTD ณ 2026-08-17. Official daily NAV
 drawdown/recovery ยังไม่ verified.
 
 ## Navigation

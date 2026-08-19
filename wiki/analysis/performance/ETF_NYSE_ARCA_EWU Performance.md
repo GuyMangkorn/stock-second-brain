@@ -9,13 +9,13 @@ fund: iShares MSCI United Kingdom ETF
 tracked_index: MSCI United Kingdom Index (Net)
 benchmark: S&P 500 Total Return
 management_mode: passive-index
-updated: 2026-08-18
+updated: 2026-08-19
 performance_as_of: 2025-12-31
 rolling_10y_as_of: 2026-06-30
-current_ytd_as_of: 2026-08-14
-price_nav_as_of: 2026-08-17
-fund_facts_as_of: 2026-08-17
-source_batch: raw/imports/ETF_performance_sources_2026-08-18.md
+current_ytd_as_of: 2026-08-17
+price_nav_as_of: 2026-08-18
+fund_facts_as_of: 2026-08-18
+source_batch: raw/imports/ETF_performance_sources_2026-08-19.md
 return_basis: NAV total return; distributions reinvested; fund expenses reflected in NAV
 return_currency: USD
 tags:
@@ -35,7 +35,7 @@ tags:
 rolling 10-year NAV TR CAGR อยู่ที่ `8.21%` ณ 30 มิ.ย. 2026; ส่วน annual rows
 แบบครบปี 2016-2025 compound ได้ `101.02%` หรือ rounded-input CAGR `7.23%` และ
 ช่วง 2021-2025 ได้ `81.59%` หรือ `12.67%` ต่อปี. Latest official NAV TR YTD
-คือ `11.50%` ณ 14 ส.ค. 2026. Rolling field กับ calendar-derived CAGR เป็นคนละ
+คือ `11.22%` ณ 17 ส.ค. 2026. Rolling field กับ calendar-derived CAGR เป็นคนละ
 หน้าต่างเวลา จึงไม่ใช้แทนกัน.
 
 ## Performance check
@@ -46,7 +46,7 @@ rolling 10-year NAV TR CAGR อยู่ที่ `8.21%` ณ 30 มิ.ย. 202
 - Issuer benchmark: `MSCI United Kingdom Index (Net)`; `S&P 500 Total Return` is a common USD reference benchmark, not the tracked index.
 - Expense ratio: `0.50%`; distribution frequency: semi-annual; holdings: `67` as of 17 ส.ค. 2026.
 - Official rolling fields as of 30 มิ.ย. 2026: NAV TR 1-year `19.23%`, 3-year annualised `16.76%`, 5-year annualised `11.31%`, 10-year annualised `8.21%`, and since inception annualised `5.99%`.
-- Latest official issuer snapshot as of 17 ส.ค. 2026: NAV `$48.11`, closing price `$48.16`, total net assets `$3,776,373,933`, and 67 holdings. NAV TR YTD was `+11.50%` as of 14 ส.ค. 2026.
+- Latest official issuer snapshot: NAV `$48.17` and total net assets `$3,781,711,907` as of 18 ส.ค. 2026; closing price `$48.16` as of 17 ส.ค. 2026; shares outstanding `78,500,000` as of 18 ส.ค. 2026; and 67 holdings as of 17 ส.ค. 2026. NAV TR YTD was `+11.22%` as of 17 ส.ค. 2026.
 - Annual coverage: iShares' official 2016-2025 chart rows are used; 2016-2020 values are displayed by the professional product page rounded to 0.1 percentage point, while 2021-2025 values are available to two decimals from the U.S. product page/factsheet.
 
 | Year | EWU NAV TR (USD) | MSCI United Kingdom Index (Net) (USD) | S&P 500 TR (USD) |
@@ -82,14 +82,15 @@ annual rows ที่มีการปัดเศษ จึงไม่ใช�
 - Worst NAV TR year: 2018, `-14.60%`
 - Least bad down year: 2016, `-0.60%`
 - Average positive year: `+19.05%` from the six positive annual rows.
-- Current official NAV TR YTD: `+11.50%` as of 14 ส.ค. 2026.
+- Current official NAV TR YTD: `+11.22%` as of 17 ส.ค. 2026.
 
 ## Risk read-through
 
 Current iShares characteristics report 3-year standard deviation `11.89%` and
-equity beta `0.43` as of 31 ก.ค. 2026. Portfolio weights as of 14 ส.ค. 2026 were
-Financials `27.65%`, Industrials `14.10%`, Consumer Staples `13.96%`, Health Care
-`11.98%`, Energy `11.21%`, and Materials `8.10%`. UK/country, GBP/USD, sector,
+equity beta `0.43` as of 31 ก.ค. 2026; P/E `17.99x` and P/B `2.40x` as of 17 ส.ค.
+2026. Portfolio weights as of 17 ส.ค. 2026 were Financials `27.70%`, Industrials
+`14.12%`, Consumer Staples `13.71%`, Health Care `12.11%`, Energy `11.23%`, and
+Materials `8.22%`. UK/country, GBP/USD, sector,
 large-cap and geopolitical/trade risks remain relevant. The fund's 0.50% expense
 ratio and the approximately negative tracking differences are consistent with
 passive implementation; they are not evidence of manager skill. Official daily
@@ -103,4 +104,4 @@ risk-adjusted evidence is therefore `not-verified` for those fields.
 - [iShares EWU summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-united-kingdom-etf-8-31.pdf) — passive objective, sampling, benchmark and expense structure.
 - [iShares UK professional EWU page](https://www.ishares.com/uk/professional/en/products/239690/ishares-msci-united-kingdom-etf?shortLocale=en_GB) — 2016-2020 annual chart rows displayed to 0.1 percentage point.
 - Cached S&P 500 TR references: [S&P 500 low-volatility research PDF](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [U.S. equity market attributes July 2023](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [December 2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [current market attributes archive](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/).
-- Source batch: [[ETF_performance_sources_2026-08-18]] | [[ETF Performance Index]]
+- Source batch: [[ETF_performance_sources_2026-08-19]] | [[ETF Performance Index]]

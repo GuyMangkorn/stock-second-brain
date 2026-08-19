@@ -1652,3 +1652,71 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity and BCYIF-to-LSE:ISF mapping, passive classification, GBP 2016-2025 NAV/benchmark evidence, rolling fields, latest current YTD/NAV fields and the scheduled-local pre-save checklist passed; current-YTD date reconciliation, GBP/FX, UK concentration and daily NAV drawdown/recovery gaps remain disclosed.
+
+## EWU — iShares MSCI United Kingdom ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`.
+- `entity_key: NYSE Arca:EWU`; input ticker and canonical ticker `EWU`; exchange `NYSE Arca`; inception `1996-03-12`.
+- `management_mode: passive-index`; tracked index `MSCI United Kingdom Index (Net)`; return basis is official USD NAV total return with distributions reinvested and fund expenses reflected in NAV.
+- Primary region: `United Kingdom`; the fund targets UK large- and mid-capitalization equities.
+- Candidate claims: official rolling 10-year NAV TR `8.21%` as of `2026-06-30`; calendar-derived 2016-2025 cumulative `101.02%` / rounded-input CAGR `7.23%`; 2021-2025 cumulative `81.59%` / CAGR `12.67%`; current official NAV TR YTD `11.22%` as of `2026-08-17`; 2025 best year `34.45%`, 2018 worst year `-14.60%`, and 3-year standard deviation `11.89%` as of `2026-07-31`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| iShares U.S. EWU product page | https://www.ishares.com/us/products/239690/EWU | official identity, exchange, NAV/price, current YTD, rolling returns, holdings, sectors, risk, distributions and current key facts; current capture reviewed 2026-08-19 with NAV/net assets 2026-08-18, price/YTD/holdings/sectors 2026-08-17 and risk fields 2026-07-31 |
+| iShares U.S. EWU factsheet | https://www.ishares.com/us/literature/fact-sheet/ewu-ishares-msci-united-kingdom-etf-fund-fact-sheet-en-us.pdf | official fund facts, benchmark, expense ratio and 2021-2025 performance rows through 2025-12-31 |
+| iShares U.S. EWU summary prospectus | https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-united-kingdom-etf-8-31.pdf | passive objective, representative sampling, benchmark policy and expense structure |
+| iShares UK professional EWU product page | https://www.ishares.com/uk/professional/en/products/239690/ishares-msci-united-kingdom-etf?shortLocale=en_GB | 2016-2020 annual chart rows displayed to 0.1 percentage point |
+| Cached S&P 500 Total Return convention | workflow cache | USD annual rows 2016-2025 and 2021-2025 with dividends reinvested, as of 2025-12-31; original URLs are recorded on the EWU performance page |
+
+### Raw observations
+
+- iShares identifies EWU as an equity ETF listed on NYSE Arca, launched 12 Mar 1996, tracking the MSCI United Kingdom Index (Net), with a `0.50%` expense ratio, semi-annual distributions and 67 holdings as of 17 Aug 2026.
+- Latest official snapshot: NAV `$48.17` and total net assets `$3,781,711,907` as of 18 Aug 2026; closing price `$48.16` as of 17 Aug 2026; shares outstanding `78,500,000` as of 18 Aug 2026; and NAV TR YTD `11.22%` as of 17 Aug 2026.
+- Official rolling fields as of 30 Jun 2026: 1-year `19.23%`, 3-year annualised `16.76%`, 5-year annualised `11.31%`, 10-year annualised `8.21%`, and since inception annualised `5.99%`; cumulative 10-year NAV TR was `120.07%`.
+- Official calendar rows: 2016 `-0.60% / -0.10%`, 2017 `21.70% / 22.30%`, 2018 `-14.60% / -14.20%`, 2019 `20.40% / 21.00%`, 2020 `-11.00% / -10.50%`, 2021 `17.89% / 18.50%`, 2022 `-5.13% / -4.84%`, 2023 `13.03% / 14.09%`, 2024 `6.84% / 7.54%`, and 2025 `34.45% / 35.11%` for fund/benchmark. The 2016-2020 chart values are displayed to 0.1 pp; 2021-2025 values are retained to 0.01 pp where officially available.
+- Current characteristics as of 31 Jul / 17 Aug 2026: 3-year standard deviation `11.89%`, equity beta `0.43`, P/E `17.99x`, P/B `2.40x`; sector weights as of 17 Aug include Financials `27.70%`, Industrials `14.12%`, Consumer Staples `13.71%`, Health Care `12.11%`, Energy `11.23%`, and Materials `8.22%`.
+- Official daily NAV maximum drawdown and recovery date were not disclosed in the reviewed sources; no price-only substitute was used.
+- Cached S&P 500 TR rows are USD rows as of 2025-12-31: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- Using the displayed annual EWU NAV TR inputs, `Cumulative = ∏(1 + annual return) - 1`: 2016-2025 `101.02%`, rounded-input CAGR `7.23%`, population annual-return standard deviation `15.11%`, up/down `6/4`, best `2025 +34.45%`, least positive `2024 +6.84%`, worst `2018 -14.60%`, least bad down year `2016 -0.60%`, and average positive year `19.05%`.
+- The 2021-2025 EWU window compounds to `81.59%` / rounded-input CAGR `12.67%`; the window has `4/1` positive/negative years.
+- Issuer benchmark rows compound to `112.24%` / `7.82%` for 2016-2025 and `86.95%` / `13.33%` for 2021-2025. Fund-minus-index differences are approximately `-0.58 pp` and `-0.66 pp`; these are passive tracking/cost observations, not alpha.
+- Cached S&P 500 TR compounds to `298.33%` / `14.82%` for 2016-2025 and `96.17%` / `14.43%` for 2021-2025. EWU is approximately `-7.59 pp` and `-1.75 pp` below that common USD reference; it is not the issuer benchmark.
+- The official rolling 10-year field is kept separate from the `7.23%` calendar-derived CAGR because the windows and source precision differ.
+
+### Planned durable paths and contents
+
+- Refresh `wiki/analysis/performance/ETF_NYSE_ARCA_EWU Performance.md` with the latest official NAV/YTD snapshot, unchanged official rolling/calendar fields, current risk/sector fields, source links, canonical breadcrumb and `geography/United-Kingdom` tag.
+- Update `wiki/analysis/comparisons/United Kingdom ETF.md` with EWU current NAV TR YTD `11.22%` as of 2026-08-17 and the rolling/calendar precision note.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with EWU current-YTD row, explanatory note and coverage bullet; existing United Kingdom navigation and links already resolve, so no duplicate region page is planned.
+- Append one workflow bullet to `log.md`.
+- No entity hub, normalized financial table or `raw/funds/` file is planned because this performance workflow owns the numeric page.
+
+### Local pre-save checklist
+
+- PASS: EWU identity, NYSE Arca exchange, inception, passive-index classification, MSCI United Kingdom Index (Net) benchmark, expense ratio, distribution frequency, NAV total-return basis, USD currency, periods, units, and all as-of dates are recorded with official sources.
+- PASS: the latest product-page fields are separated from Jun 2026 rolling performance, calendar-derived CAGR and Jul 2026 risk fields; 2016-2020 rounded source precision is disclosed; fund/index tracking differences and the S&P 500 common reference are separated and no arithmetic difference is called alpha.
+- PASS: no unsupported daily NAV drawdown or recovery value is invented; standard deviation, beta, holdings, valuation multiples and sectors are labeled with dates; the remaining risk evidence gap is disclosed.
+- PASS: the complete proposed contents of the EWU performance page, United Kingdom region row/note, performance-index row/note/bullet, source batch section and log bullet were reviewed locally; all wikilinks, breadcrumb and canonical geography tag resolve.
+- PASS: no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains. Required scheduled audit lines are present.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity, passive classification, 2016-2025 NAV/benchmark evidence, rolling fields, latest current NAV/YTD fields and the scheduled-local pre-save checklist passed; 2016-2020 rounded precision, UK/GBP-USD/sector concentration and daily NAV drawdown/recovery gaps remain disclosed.
