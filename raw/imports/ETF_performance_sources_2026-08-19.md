@@ -1503,3 +1503,79 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive classification, 2016-2025 NAV/index evidence, rolling 10-year and current YTD fields, Turkey navigation and the scheduled-local pre-save checklist passed; country, currency, sector and daily NAV drawdown/recovery gaps remain disclosed.
+
+## FESM — Fidelity Enhanced Small Cap Core ETF
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NYSE Arca:FESM`; `input_ticker: FESM`.
+- Official fund identity: `Fidelity Enhanced Small Cap Core ETF` (formerly Fidelity Enhanced Small Cap ETF), listed on `NYSE Arca`; CUSIP `31609A206`; strategy/predecessor inception `2007-12-20`; ETF first listed `2023-11-20`; name change effective about `2026-05-11`.
+- `management_mode: active-equity-long-only`; `active_process: systematic-quantitative`; `management_benchmark: Russell 2000`; `track_record: established-strategy-with-predecessor-history`.
+- Return basis: USD `NAV Total Return`, including changes in share value and reinvested dividends/capital gains, after fund expenses; market-price return is retained separately. Rows through 2023-11-17 are predecessor mutual-fund history and are not relabelled as pure live ETF history.
+
+### Official source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| Fidelity FESM factsheet | https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9911747.PDF | official strategy, active classification, Russell 2000 policy, 2016-2025 NAV/market/benchmark rows, rolling returns, fee, assets, holdings, turnover, beta, standard deviation and yield; factsheet as of 2026-06-30 |
+| Fidelity FESM quote page | https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=FESM | current identity, previous close, NAV, shares outstanding and exchange; page capture 2026-08-19, page does not expose an explicit quote timestamp |
+| Fidelity portfolio holdings | https://research2.fidelity.com/fidelity/screeners/etf/etfholdings.asp?sortBy=Symbol&sortDir=desc&symbol=FESM&view=Holdings | official basket holdings and count; snapshot as of 2026-06-30 |
+| Fidelity portfolio manager Q&A | https://institutional.fidelity.com/app/proxy/content?literatureURL=%2FRD_QAA_7545.PDF | active process, predecessor-history caveat, benchmark comparison and manager commentary; periods ending 2025-12-31 / quarter ending 2026-03-31 |
+| SEC rename supplement | https://www.sec.gov/Archives/edgar/data/945908/000094590826000151/filing12065.htm | official name change to Fidelity Enhanced Small Cap Core ETF effective about 2026-05-11; filing dated 2026-04-29 |
+| SEC prospectus | https://www.sec.gov/Archives/edgar/data/945908/000094590825000511/filing9117.htm | official objective, Russell 2000 policy and predecessor-inclusive performance context; filing dated 2025 |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ and permitted `check-etf-performance` cache | USD Total Return common reference, dividends reinvested, annual rows 2016-2025, reference as-of 2025-12-31 |
+
+### Candidate claims and raw observations
+
+- Official factsheet fields as of 2026-06-30: expense ratio gross/net `0.28%/0.28%`; portfolio assets `$5,784.9M`; holdings `786`; turnover `41%`; 3-year beta `1.02`; 3-year standard deviation `20.52%`; 30-day SEC yield `0.52%`.
+- Official NAV TR calendar rows 2016-2025: `22.84%`, `7.22%`, `-13.04%`, `23.65%`, `18.53%`, `20.54%`, `-18.28%`, `21.04%`, `16.48%`, `17.70%`.
+- Official market-price calendar rows 2016-2025: `22.84%`, `7.22%`, `-13.04%`, `23.65%`, `18.53%`, `20.54%`, `-18.28%`, `21.40%`, `16.22%`, `17.88%`.
+- Official Russell 2000 benchmark rows 2016-2025: `21.31%`, `14.65%`, `-11.01%`, `25.52%`, `19.96%`, `14.82%`, `-20.44%`, `16.93%`, `11.54%`, `12.81%`.
+- Official rolling NAV TR as of 2026-06-30: 3-month `27.18%`, YTD `28.42%`, 1-year `52.23%`, 3-year annualized `24.57%`, 5-year annualized `11.69%`, 10-year annualized `13.28%`; market-price YTD `28.45%`; Russell 2000 YTD `22.57%`, 1-year `40.78%`, 3-year `18.60%`, 5-year `6.98%`, 10-year `11.62%`.
+- Fidelity quote snapshot captured 2026-08-19: previous close `US$48.11`, NAV `US$48.095514`, shares outstanding `133,121,356`, primary exchange `NYSE Arca`. The page does not expose a dated current total-return YTD; latest official YTD remains 2026-06-30.
+- Fidelity holdings page reports `789` basket holdings as of 2026-06-30; the factsheet reports `786` total holdings on the same date. The difference is retained as a source-definition conflict rather than reconciled by inference.
+- Cached S&P 500 TR annual rows 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; USD, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use displayed rounded annual inputs.
+- FESM 2016-2025: cumulative `174.393508%` → `174.39%`; rounded-input CAGR `10.620950%` → `10.62%`; up/down `8/2`; best 2019 `+23.65%`; least positive 2017 `+7.22%`; worst 2022 `-18.28%`; least-bad down year 2018 `-13.04%`; population annual-return standard deviation `14.383007%` → `14.38%`.
+- FESM 2021-2025: cumulative `63.461803%` → `63.46%`; rounded-input CAGR `10.327368%` → `10.33%`. Russell 2000 compounds to `34.405334%` / `6.092162%` → `34.41%` / `6.09%`.
+- Management-benchmark evidence: annual FESM-minus-Russell differences are positive in `6/10` years (2016, 2021, 2022, 2023, 2024 and 2025). Relative wealth is `15.889395%` → `15.89%`; rounded-input CAGR difference is approximately `+1.00 pp`. These are benchmark-relative observations, not alpha.
+- Cached S&P 500 TR 2016-2025: cumulative `298.329111%` → `298.33%`; rounded-input CAGR `14.821761%` → `14.82%`; 2021-2025 cumulative `96.169618%` → `96.17%`; CAGR `14.426430%` → `14.43%`. This is a common reference, not FESM's management benchmark.
+
+### Source conflict and quality choice
+
+- Fidelity's June 2026 factsheet is the primary source for annual and rolling total-return fields, fees and risk fields. The quote page is used only for the current market snapshot because it does not provide a dated current YTD total return.
+- FESM's 2016-2023 rows include the predecessor mutual fund. The current ETF structure has different expenses and market-price mechanics after conversion, so the long window is labelled strategy-plus-predecessor history.
+- The same-date factsheet and holdings pages report `786` versus `789` holdings because they use different holdings definitions; both values are preserved with their source labels.
+- Russell 2000 is the strategy-aligned management benchmark. S&P 500 TR is kept as a common reference only. No arithmetic return gap is labelled alpha.
+- Official daily NAV history sufficient to calculate max drawdown and recovery date was not found; this gap remains disclosed.
+
+### Planned durable paths and contents
+
+- Update `wiki/analysis/performance/ETF_NYSE_ARCA_FESM Performance.md` with the current source batch, 2026-08-19 quote snapshot, official 2016-2025/rolling/YTD fields, active-management evidence, corrected `+15.89%` cumulative relative wealth, risk fields, sources and disclosed gaps.
+- Update `wiki/analysis/comparisons/USA ETF.md` timestamp to 2026-08-19; the existing FESM row and performance link already resolve, so no duplicate region page or row is planned.
+- Append one workflow bullet to `log.md`.
+- `ETF Performance Index.md` and `ETF Region Index.md` already contain the FESM coverage/link and were not planned for content changes in this item.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, CUSIP, active equity eligibility, Russell 2000 management benchmark, predecessor/ETF dates, fee, USD NAV TR basis and current quote fields are source-backed.
+- PASS: official annual NAV/market/benchmark rows, rolling fields, current quote, holdings, risk fields and cached S&P rows are separated by provenance and as-of date; current official YTD is explicitly limited to 2026-06-30.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR, up/down count, annual volatility, best/worst years, active hit rate and relative-wealth calculation recompute from displayed inputs; no arithmetic difference is called alpha.
+- PASS: USA is the sole primary exposure region; the existing region navigation, canonical breadcrumb/tag, performance-index links, source-batch section and log bullet resolve. Predecessor-history, holdings-definition, current-YTD and daily NAV drawdown/recovery gaps remain disclosed.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Fidelity identity, active systematic classification, Russell 2000 benchmark, 2016-2025 NAV/benchmark evidence, rolling fields, current quote snapshot and the scheduled-local pre-save checklist passed; predecessor-history, holdings-definition, current-YTD and daily NAV drawdown/recovery gaps remain disclosed.

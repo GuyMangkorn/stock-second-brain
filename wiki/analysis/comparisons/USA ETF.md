@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-08-17
+updated: 2026-08-19
 tags:
   - analysis/etf-region
   - geography/United-States
