@@ -1246,3 +1246,41 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares identity, passive classification, 2016-2025 NAV evidence, current/rolling fields, benchmark reconciliation and scheduled-local pre-save checklist passed; Switzerland concentration, systematic fair-value and daily NAV drawdown/recovery gaps remain disclosed.
+
+## PTEU — Pacer Trendpilot European Index ETF — unsupported ETF type
+
+### Identity and type gate
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: CBOE_BZX:PTEU`; `input_ticker: PTEU`.
+- Official fund: `Pacer Trendpilot European Index ETF`, Cboe BZX-listed, CUSIP `69374H808`, ISIN `US69374H8088`, inception `2015-12-14`, total expenses `0.65%`.
+- The fund is rules-based/passive in its mandate and seeks to track the Pacer Trendpilot European Index, but the tracked index is not equity-only: the official Pacer methodology can allocate 100% to the FTSE Eurozone Index, 50% to the FTSE Eurozone Index and 50% to 3-month U.S. Treasury bills, or 100% to 3-month U.S. Treasury bills.
+- Type-gate result: `unsupported ETF type` because PTEU is a dynamic multi-asset/equity-and-T-bill allocation product, outside the supported passive index-tracking equity ETF scope. The official page's current `100% Equities` tracking field does not remove the documented T-bill states in the index methodology.
+
+### Official source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| Pacer PTEU product page | https://www.paceretfs.com/products/pteu | official ticker, exchange, identity, inception, fee, current fund fields, strategy states, performance and holdings; page reviewed 2026-08-19, current performance capture through 2026-03-31 |
+| Pacer PTEU factsheet | https://www.paceretfs.com/media/pteu.pdf | official objective, Pacer Trendpilot Index, FTSE Eurozone benchmark and T-bill strategy context; data as of 2026-03-31 |
+| Pacer PTEU summary prospectus | https://docs.paceretfs.com/assets/pdfs/Pacer_PTEU_Summary.pdf | official passive/indexing language, index methodology and risks; prospectus dated 2025-08-31 |
+
+### Scheduled-local review and write decision
+
+- PASS: canonical identity, Cboe BZX listing, ticker, inception, official strategy documents and source URLs were directly reviewed inline.
+- PASS: the unsupported-type classification is based on the index's explicit T-bill allocation states, not on a secondary performance label.
+- PASS: no NAV performance page, annual equity-return table, S&P 500 comparison, region row, or ETF Performance Index row was written; no performance calculation was performed.
+- PASS: the complete proposed source-batch section and blocked-card result metadata were reviewed locally; no High/Medium finding or confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### trello_handoff
+
+status: BLOCKED
+scope: item
+durable_write: not_completed
+exhausted: true
+confirmation: none
+code: unsupported-etf-type
+reason: Official Pacer methodology permits 100% equity, 50/50 equity-and-3-month-U.S.-T-bill, or 100% 3-month-U.S.-T-bill exposure, so PTEU is outside the supported equity-only ETF performance scope.
