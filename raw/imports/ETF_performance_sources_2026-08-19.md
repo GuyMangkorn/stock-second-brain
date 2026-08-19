@@ -1284,3 +1284,74 @@ exhausted: true
 confirmation: none
 code: unsupported-etf-type
 reason: Official Pacer methodology permits 100% equity, 50/50 equity-and-3-month-U.S.-T-bill, or 100% 3-month-U.S.-T-bill exposure, so PTEU is outside the supported equity-only ETF performance scope.
+
+## FSZ — First Trust Switzerland AlphaDEX Fund
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NASDAQ:FSZ`; `input_ticker: FSZ`.
+- Official fund: `First Trust Switzerland AlphaDEX Fund`, Nasdaq, CUSIP `33737J232`, ISIN `US33737J2327`, inception `2012-02-14`, total expense ratio `0.80%`.
+- `management_mode: passive-index`; the Fund seeks to correspond generally to the price and yield of the equity `Nasdaq AlphaDEX Switzerland Index` before fees and expenses. The index is rules-based and rebalanced semi-annually.
+- Primary region: Switzerland. Return basis: USD NAV Total Return, net of fund expenses, with distributions reinvested; market-price returns remain separate.
+
+### Source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| First Trust FSZ fund page | https://www.ftportfolios.com/retail/etf/etfsummary.aspx?Ticker=FSZ | official identity, index objective, exchange, inception, current NAV/AUM/holdings/sectors, fees and month-end performance; current fields through 2026-08-03 and performance through 2026-06-30 |
+| First Trust FSZ prospectus | https://www.ftportfolios.com/LoadContent/gradkqbz8r4y | official 2016-2025 calendar-year NAV rows, index transition, risks and annualized index comparison; periods ended 2025-12-31 |
+| First Trust FSZ holdings | https://www.ftportfolios.com/Retail/etf/ETFholdings.aspx?Ticker=FSZ | official holdings and weights; as of 2026-07-31 |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | USD Total Return common reference; cached annual rows for 2016-2025, dividends reinvested, reference as of 2025-12-31 |
+
+### Raw observations
+
+- Official FSZ NAV TR calendar rows for 2016-2025: 2016 `4.21%`, 2017 `31.26%`, 2018 `-15.11%`, 2019 `25.91%`, 2020 `14.50%`, 2021 `19.34%`, 2022 `-20.88%`, 2023 `22.07%`, 2024 `-1.25%`, 2025 `30.16%`.
+- Official month-end performance as of 2026-06-30: FSZ NAV TR 3-month `4.35%`, YTD `3.46%`, 1-year `9.55%`, 3-year annualised `12.76%`, 5-year `6.78%`, 10-year `10.05%`, and since inception `9.46%`.
+- Official Nasdaq AlphaDEX Switzerland Index comparison for the same date: 3-month `6.52%`, YTD `3.85%`, 1-year `11.05%`, 3-year annualised `13.50%`, 5-year `7.21%`, and 10-year `10.57%`.
+- Official current snapshot as of 2026-08-03: NAV `US$82.02`, market price `US$82.01`, net assets `US$36.91m`, 40 holdings excluding cash, and 30-day median bid/ask spread `0.58%`; latest distribution `US$0.8084` as of 2026-08-05.
+- Official exposure as of 2026-08-03: Industrials `30.02%`, Financials `19.72%`, Health Care `19.01%`, Consumer Discretionary `7.91%`, Consumer Staples `5.02%`; top holdings include Sulzer `4.75%`, Swiss Re `4.43%`, BKW `4.14%`, Flughafen Zurich `4.02%`, and Vontobel `3.93%`.
+- Official 3-year standard deviation as of 2026-06-30: FSZ `14.51%`; Nasdaq Switzerland Index `15.94%`; MSCI Switzerland Index `16.00%`.
+- Cached S&P 500 TR rows for 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`, respectively; USD, dividends reinvested.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use displayed rounded annual inputs.
+- FSZ 2016-2025: cumulative `148.004717%` → `148.00%`; rounded-input CAGR `9.508037%` → `9.51%`; up/down `7/3`; best 2017 `+31.26%`; worst 2022 `-20.88%`; population annual-return volatility `17.602444%` → `17.60%`.
+- FSZ 2021-2025: cumulative `48.148037%` → `48.15%`; rounded-input CAGR `8.178058%` → `8.18%`.
+- Cached S&P 500 TR 2016-2025: cumulative `298.329111%` → `298.33%`; rounded-input CAGR `14.821761%` → `14.82%`. For 2021-2025: cumulative `96.169618%` → `96.17%`; CAGR `14.426430%` → `14.43%`.
+- FSZ-minus-AlphaDEX index differences are approximately `-2.17 pp` for 3 months, `-0.39 pp` YTD, `-1.50 pp` 1-year, `-0.74 pp` 3-year annualised, `-0.43 pp` 5-year annualised and `-0.52 pp` 10-year annualised as of 2026-06-30. These are passive tracking observations, not alpha.
+- The official index changed from Defined Switzerland Index to Nasdaq AlphaDEX Switzerland Index on 2015-07-14; the complete 2016-2025 table is post-change. No later official YTD than 2026-06-30 was present in the reviewed issuer capture.
+
+### Source conflict and quality choice
+
+- First Trust fund page and prospectus are the sources of truth for identity, passive classification, calendar rows, current/rolling fields, index comparison and fee. Secondary annual/YTD sources were not used.
+- The S&P annual series reuses the permitted cached 2016-2025 convention; no fresh S&P search is needed. No arithmetic fund-minus-S&P difference is labelled alpha.
+- Current NAV/holdings fields, issuer month-end performance, prospectus annual chart and risk snapshot have separate as-of dates; these are kept separate. Index-selection, rebalance, single-country, small/mid-cap, liquidity and daily NAV drawdown/recovery gaps remain disclosed.
+
+### Planned durable paths and contents
+
+- Create `wiki/analysis/performance/ETF_NASDAQ_FSZ Performance.md` with canonical `NASDAQ:FSZ`, USD NAV TR annual rows 2016-2025, 2021-2025 common-window metrics, issuer rolling/current fields, tracked-index comparison, risk notes, sources and Switzerland breadcrumb/tag.
+- Update `wiki/analysis/comparisons/Switzerland ETF.md` with the FSZ navigation row/note; update `wiki/analysis/comparisons/ETF Region Index.md` Switzerland count from 2 to 3.
+- Update `wiki/analysis/performance/ETF Performance Index.md` with the FSZ coverage row, 2021-2025 common-window row and 2026-08-19 coverage bullet; append one workflow bullet to `log.md`.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical exchange-qualified identity, ISIN/CUSIP, passive-index eligibility, tracked index, inception, fee, USD NAV TR basis, current/rolling fields and all as-of dates are source-backed.
+- PASS: official 2016-2025 annual rows, 2021-2025 tracked-index fields, current NAV/AUM/holdings/sector/risk fields and cached S&P rows are separated by source and date; 2015 index transition is explicit.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR, up/down count, annual volatility, best/worst years and passive tracking gaps recompute from displayed inputs; no arithmetic difference is called alpha.
+- PASS: Switzerland is the sole primary exposure region; region row/count, canonical breadcrumb/tag, performance-index links, source batch section and log bullet are planned and resolve.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official First Trust identity, passive classification, 2016-2025 NAV rows, current/rolling fields, tracked-index reconciliation and scheduled-local pre-save checklist passed; AlphaDEX index transition, Swiss concentration and daily NAV drawdown/recovery gaps remain disclosed.
