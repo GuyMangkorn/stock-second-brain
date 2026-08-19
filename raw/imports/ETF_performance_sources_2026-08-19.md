@@ -1579,3 +1579,76 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Fidelity identity, active systematic classification, Russell 2000 benchmark, 2016-2025 NAV/benchmark evidence, rolling fields, current quote snapshot and the scheduled-local pre-save checklist passed; predecessor-history, holdings-definition, current-YTD and daily NAV drawdown/recovery gaps remain disclosed.
+
+## BCYIF — iShares Core FTSE 100 UCITS ETF GBP (Distributing) / LSE:ISF
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: LSE:ISF`; `input_ticker: BCYIF`.
+- Input mapping: `BCYIF` is an OTC alias for the official GBP distributing share class identified by ISIN `IE0005042456`; the official London Stock Exchange line is `ISF` (`LSE:ISF`). The durable page keeps the alias in frontmatter and uses `LSE:ISF` as the exchange-qualified identity.
+- Official fund: `iShares Core FTSE 100 UCITS ETF`, passive physical replicated equity UCITS ETF, Ireland domicile, share-class launch `2000-04-27`, benchmark `FTSE 100 Index`, quarterly distributions, TER `0.07%`.
+- `management_mode: passive-index`; `return_basis: GBP share-class NAV Total Return`, with gross income reinvested where applicable and fund expenses reflected in NAV; S&P 500 Total Return is a separate USD common reference only.
+- Primary region: `United Kingdom`; supported type: passive index-tracking equity ETF.
+
+### Official source map
+
+| Evidence | URL / path | Use and as-of |
+|---|---|---|
+| iShares ISF product page | https://www.ishares.com/uk/individual/en/products/251795/ishares-core-ftse-100-ucits-etf | official identity/ISIN/listing, current NAV/YTD, assets, holdings, sector, benchmark and risk fields; NAV/net assets 2026-08-18, NAV TR YTD/holdings/sectors 2026-08-17 |
+| iShares ISF July factsheet | https://www.blackrock.com/uk/literature/fact-sheet/isf-ishares-core-ftse-100-ucits-etf-fund-fact-sheet-en-gb.pdf | official 2016-2025 NAV/benchmark rows, rolling performance, fee, structure, holdings and risk fields; performance and portfolio as of 2026-07-31, other data as of 2026-08-07 |
+| iShares GBP distributing KIID | https://www.ishares.com/gls-download/literature/kiid/ucits_kiid-ishares-core-ftse-100-ucits-etf-gbp-dist-gb-ie0005042456-en.pdf | official passive objective, charge, GBP annual performance cross-check, benchmark and share-class disclosures; historical performance through 2025-12-31 |
+| BCYIF OTC alias cross-check | https://stockanalysis.com/quote/otc/BCYIF/ | secondary OTC symbol/name cross-check; the official ISIN and LSE listing remain the source of truth |
+| S&P 500 definition and cached workflow convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ and permitted `check-etf-performance` cache | USD Total Return common reference, dividends reinvested, annual rows 2016-2025, reference as-of 2025-12-31 |
+
+### Candidate claims and raw observations
+
+- Official GBP NAV TR calendar rows 2016-2025: `19.03%`, `11.94%`, `-8.83%`, `17.18%`, `-11.64%`, `18.31%`, `4.62%`, `7.80%`, `9.50%`, `25.66%`.
+- Official FTSE 100 benchmark rows 2016-2025: `19.04%`, `11.91%`, `-8.77%`, `17.28%`, `-11.58%`, `18.40%`, `4.67%`, `7.90%`, `9.63%`, `25.78%`.
+- The benchmark changed from a total-return series to a net-of-tax total-return series on 2019-07-17; historic benchmark performance was simulated to reflect that change.
+- Official July factsheet rolling fields as of 2026-07-31: share-class 1-month `3.61%`, 3-month `5.38%`, 6-month/YTD `11.42%`, 1-year `22.68%`, 3-year annualized `16.11%`, 5-year annualized `13.02%`, since inception annualized `5.60%`; benchmark `3.62%`, `5.38%`, `11.47%`, `22.78%`, `16.23%`, `13.12%`, `5.88%`.
+- Latest official product-page fields: NAV `GBP 10.48` and share-class net assets `GBP 16,350,956,822` as of 2026-08-18; NAV TR YTD `10.51%` as of 2026-08-17; 100 holdings and sector fields as of 2026-08-17; 3-year standard deviation `9.57%` and beta `1.000` as of 2026-07-31; trailing distribution yield `2.91%` as of 2026-08-17.
+- Latest product-page sector snapshot: Financials `28.72%`, Industrials `14.15%`, Consumer Staples `13.21%`, Health Care `11.33%`, Energy `10.62%`, Materials `7.91%`, Utilities `4.40%`, Consumer Discretionary `4.39%`, Communication `1.97%`, Real Estate `1.19%`.
+- Cached S&P 500 TR annual rows 2016-2025: USD `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; no GBP/USD cross-currency performance gap is claimed.
+
+### Calculations and reconciliation
+
+- Formula: `cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / years) - 1`; calculations use displayed official annual inputs.
+- ISF 2016-2025: cumulative `130.923960%` → `130.92%`; rounded-input CAGR `8.729377%` → `8.73%`; up/down `8/2`; best 2025 `+25.66%`; least positive 2022 `+4.62%`; worst 2020 `-11.64%`; least-bad down year 2018 `-8.83%`; population annual-return standard deviation `11.418875%` → `11.42%`.
+- ISF 2021-2025: cumulative `83.597222%` → `83.60%`; rounded-input CAGR `12.920611%` → `12.92%`. FTSE 100 compounds to `84.389580%` / `13.017911%` → `84.39%` / `13.02%`.
+- Passive tracking evidence: 2016-2025 fund-versus-index relative wealth is `-0.629228%` → `-0.63%`; rounded-input CAGR gap is approximately `-0.07 pp`. For 2021-2025 the rounded-input CAGR gap is approximately `-0.10 pp`; rolling gaps from the July factsheet are approximately `-0.10 pp` (1Y), `-0.12 pp` (3Y annualized), `-0.10 pp` (5Y annualized) and `-0.28 pp` (since inception). These are tracking observations, not alpha.
+- Cached S&P 500 TR 2016-2025: cumulative `298.329111%` → `298.33%`; rounded-input CAGR `14.821761%` → `14.82%`. It remains a USD common reference and is not used for direct same-currency ranking against GBP returns.
+
+### Source conflict and quality choice
+
+- The official iShares product page is the source of truth for the latest current fields: its current capture reports YTD `10.51%` as of 2026-08-17, while the July factsheet reports the earlier `11.42%` as of 2026-07-31. Both are preserved with their as-of dates; the newer product-page field is used in the durable current-YTD slot.
+- Annual rows and rolling returns use the official July factsheet, cross-checked against the official KIID. No USD listing or OTC price is substituted for the GBP share-class NAV return.
+- BCYIF-to-ISF mapping is retained as a secondary OTC alias cross-check; official ISIN/listing data determine the canonical `LSE:ISF` identity.
+- UK/country, GBP share-class/FX, financials and energy concentration, quarterly distribution and daily NAV drawdown/recovery gaps remain disclosed.
+
+### Planned durable paths and contents
+
+- Refresh `wiki/analysis/performance/ETF_LSE_ISF Performance.md` with `LSE:ISF`, the `BCYIF` alias, latest product-page current fields, July rolling/annual fields, GBP basis, tracking reconciliation, sources and disclosed gaps.
+- Update `wiki/analysis/comparisons/United Kingdom ETF.md` ISF row and explanatory note to current product-page YTD `10.51%` as of 2026-08-17, while retaining the July factsheet `11.42%` observation.
+- Update `wiki/analysis/performance/ETF Performance Index.md` ISF current-YTD row/note/bullet; the existing UK region page, breadcrumbs and links already resolve, so no duplicate region page is planned.
+- Append one workflow bullet to `log.md`.
+- No entity hub, normalized financial table or `raw/funds/` file is planned.
+
+### Local pre-save checklist
+
+- PASS: canonical ISIN/listing identity, BCYIF alias mapping, passive equity eligibility, FTSE 100 benchmark, GBP share class, launch date, fee, distribution method and NAV TR basis are source-backed.
+- PASS: official current product-page fields, July factsheet annual/rolling fields, KIID cross-check, benchmark-change caveat and cached USD S&P reference are separated by provenance and as-of date.
+- PASS: 2016-2025 and 2021-2025 cumulative/CAGR, up/down count, annual volatility, best/worst years and passive tracking gaps recompute from displayed inputs; no arithmetic difference is called alpha.
+- PASS: United Kingdom is the sole primary exposure region; existing region navigation, canonical breadcrumb/tag, performance-index links, source-batch section and log bullet resolve. Current-YTD source conflict and daily NAV drawdown/recovery gap remain disclosed.
+- PASS: complete proposed contents of every durable file were reviewed locally; no High/Medium finding remains and no confirmation-required WARNING remains.
+
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+review_gate: PASS
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares identity and BCYIF-to-LSE:ISF mapping, passive classification, GBP 2016-2025 NAV/benchmark evidence, rolling fields, latest current YTD/NAV fields and the scheduled-local pre-save checklist passed; current-YTD date reconciliation, GBP/FX, UK concentration and daily NAV drawdown/recovery gaps remain disclosed.
