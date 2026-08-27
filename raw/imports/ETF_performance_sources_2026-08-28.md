@@ -1,0 +1,242 @@
+---
+type: source-batch
+workflow: check-etf-performance
+scope: etf-cagr-top-50
+updated: 2026-08-28
+window: 2016-2025
+return_basis: NAV total return
+verification_mode: interactive-local-fallback
+reviewer_dispatch: attempted
+reviewer_status: source_verifier unavailable after repeated timeout; local checklist completed
+---
+
+# ETF Performance Sources — CAGR Top 50 2026-08-28
+
+## Verification record
+
+- `verification_mode: interactive-local-fallback`
+- `reviewer_dispatch: attempted`
+- `reviewer_status: source_verifier unavailable after repeated timeout; main-agent completed the same pre-save checklist locally before writing`
+
+## Scope and ownership
+
+- This batch is the evidence record for `workflow: check-etf-performance` and the aggregate page [[ETF Performance CAGR Top 50 2016-2025 2026-08-28]].
+- Folder inventory: `260` files under `wiki/analysis/performance/`; `255` are ETF owner pages after excluding README/index/regime/redirect artifacts.
+- The screen reads only the annual NAV Total Return column from each owner page. It does not substitute market-price return, price return, issuer benchmark return, current YTD, rolling CAGR, or a different currency.
+- Counts: `121` eligible; `21` proxy/secondary; `52` partial; `5` continuity-break; `56` no complete comparable window. Reconciliation: `255 = 121 + 21 + 52 + 5 + 56`.
+
+## Metric, window, and calculation
+
+- Common window: complete calendar years `2016` through `2025`, treated as `10.00` years.
+- Return basis: `NAV Total Return`, including reinvested distributions and fund expenses where the owner page's definition states them.
+- Formula shown to the user: `Cumulative = Π(1 + annual NAV TR) - 1`; `CAGR = (1 + cumulative)^(1 / 10) - 1`.
+- All annual inputs are the displayed owner-page observations; rounded inputs make the derived cumulative return and CAGR approximate. Raw NAV endpoints are generally `not disclosed`.
+- The issuer-reported currency is preserved per row. No FX conversion or cross-currency normalization was performed.
+- Common `S&P 500 Total Return` cache is not an input to this ranking. No benchmark comparison is used to determine rank.
+
+## Eligibility and exclusion rule
+
+- Eligible means: a current ETF owner page has ten numeric annual observations for 2016–2025 in a NAV/TR-like fund-return column, without a row marked `*` proxy/secondary or `†` inception-year partial, and without an owner-documented in-window fund objective/strategy/implementation break that makes the NAV history non-continuous like-for-like.
+- `HEDJ` is retained because its 2025 `‡` row is an official year-end NAV+income calculation reconciled to a secondary observation; it is labelled `official-derived` in this batch and is not treated as a proxy.
+- Retained methodology/benchmark caveats include `FYC` (benchmark methodology change 2016-04-08), `IAPD`, `CSKR`, `ISF`, `ISCF`, `EEMA`, and `FNDC`; these are not silently presented as one unchanged benchmark series, but the fund NAV rows remain the ranking input.
+- Continuity-break exclusions are `NFTY`, `OPPE`, `CUSS`, `CHIQ`, and `CQQQ`. `CUSS` is excluded because its owner page documents the 2022-06-01 objective/name/benchmark change; `NFTY` documents a Taiwan-to-India index change on 2018-04-17; `OPPE` documents the 2025 transition.
+- Complete-table exclusion examples are preserved as: proxy/secondary `DBEU, GREK, IDX, KWEB, OPPJ, RWJ, SCHA, SLYG, SLYV, VIOG`; partial `DGRO, VIGI, VYMI`; continuity-break `NFTY, OPPE, CUSS, CHIQ, CQQQ`; unresolved source-conflict/no-comparable-window `IPOL`. The remaining pages in the bucket counts lack a complete comparable 2016–2025 NAV TR window.
+
+## Full eligible CAGR ledger
+
+The following is the full 121-page ledger used to compute the rank. Each row points to the local owner page and the page's source batch; `not disclosed` is retained when metadata was not verified on the owner page.
+
+| Rank | Ticker | Entity key | Cumulative NAV TR | CAGR | Years | Source as-of | Performance as-of | Currency | Management mode | Primary geography | Owner page | Source batch | Continuity caveat |
+|---:|---|---|---:|---:|---:|---|---|---|---|---|---|---|---|
+| 1 | `TDIV` | `Nasdaq:TDIV` | 375.56% | 16.87% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_TDIV Performance.md` | `not disclosed` | none |
+| 2 | `VOO` | `NYSE Arca:VOO` | 296.90% | 14.78% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_VOO Performance.md` | `raw/imports/ETF_performance_sources_2026-07-13.md` | none |
+| 3 | `DXJ` | `LSE:DXJ` | 268.73% | 13.94% | 10.00 | 2026-06-30 | 2026-06-30 | USD | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_LSE_DXJ Performance.md` | `raw/imports/ETF_performance_sources_2026-07-23.md` | none |
+| 4 | `VIG` | `NYSE Arca:VIG` | 242.14% | 13.09% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_VIG Performance.md` | `raw/imports/ETF_performance_sources_2026-07-13.md` | none |
+| 5 | `FYC` | `Nasdaq:FYC` | 225.29% | 12.52% | 10.00 | 2026-06-30 | 2026-07-31 | not disclosed | passive-index | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_FYC Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | benchmark methodology changed 2016-04-08; full-year 2016 fund NAV row retained (owner page). |
+| 6 | `DLN` | `NYSE Arca:DLN` | 218.23% | 12.27% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_DLN Performance.md` | `not disclosed` | none |
+| 7 | `XSMO` | `NYSE Arca:XSMO` | 217.50% | 12.25% | 10.00 | not disclosed | 2025-12-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 8 | `EWO` | `NYSE Arca:EWO` | 217.16% | 12.23% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Austria | `wiki/analysis/performance/ETF_NYSE_ARCA_EWO Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | tracked-index change 2013-02-12, before the 2016-2025 window; rows retained. |
+| 9 | `IJPD` | `LSE:IJPD` | 216.04% | 12.20% | 10.00 | not disclosed | 2026-06-30 | not disclosed | passive-index | geography/Japan | `wiki/analysis/performance/ETF_LSE_IJPD Performance.md` | `raw/imports/ETF_performance_sources_2026-07-23.md` | none |
+| 10 | `EWC` | `NYSE Arca:EWC` | 210.78% | 12.01% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Canada | `wiki/analysis/performance/ETF_NYSE_ARCA_EWC Performance.md` | `raw/imports/ETF_performance_sources_2026-07-13.md` | none |
+| 11 | `DJD` | `NYSE Arca:DJD` | 207.63% | 11.89% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_DJD Performance.md` | `not disclosed` | none |
+| 12 | `DTD` | `NYSE Arca:DTD` | 206.16% | 11.84% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_DTD Performance.md` | `raw/imports/ETF_performance_sources_2026-07-13.md` | none |
+| 13 | `PFM` | `Nasdaq:PFM` | 205.96% | 11.83% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_PFM Performance.md` | `not disclosed` | none |
+| 14 | `ENFR` | `NYSE Arca:ENFR` | 204.03% | 11.76% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/North-America | `wiki/analysis/performance/ETF_AMEX_ENFR Performance.md` | `not disclosed` | none |
+| 15 | `ISAC` | `LSE:ISAC` | 201.54% | 11.67% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/International | `wiki/analysis/performance/ETF_LSE_ISAC Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 16 | `XSVM` | `NYSE Arca:XSVM` | 200.51% | 11.63% | 10.00 | not disclosed | 2025-12-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_XSVM Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 17 | `EWN` | `NYSE Arca:EWN` | 197.74% | 11.53% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Netherlands | `wiki/analysis/performance/ETF_NYSE_ARCA_EWN Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 18 | `VYM` | `NYSE Arca:VYM` | 192.23% | 11.32% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_VYM Performance.md` | `not disclosed` | none |
+| 19 | `USSC` | `LSE:USSC` | 191.31% | 11.28% | 10.00 | 2025-12-31 | 2026-07-31 | USD | passive-index | geography/United-States | `wiki/analysis/performance/ETF_LSE_USSC Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 20 | `FYX` | `Nasdaq:FYX` | 183.16% | 10.97% | 10.00 | 2026-06-30 | 2026-06-30 | not disclosed | passive-index | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_FYX Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 21 | `EUFN` | `Nasdaq:EUFN` | 177.80% | 10.76% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Europe | `wiki/analysis/performance/ETF_NASDAQ_EUFN Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 22 | `FESM` | `NYSE Arca:FESM` | 174.39% | 10.62% | 10.00 | 2026-06-30 | 2026-06-30 | USD | active-equity-long-only | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_FESM Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 23 | `EWI` | `NYSE Arca:EWI` | 173.66% | 10.59% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Italy | `wiki/analysis/performance/ETF_NYSE_ARCA_EWI Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 24 | `VB` | `NYSE Arca:VB` | 169.68% | 10.43% | 10.00 | not disclosed | 2026-08-07 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_VB Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 25 | `DVY` | `Nasdaq:DVY` | 168.75% | 10.39% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_DVY Performance.md` | `not disclosed` | none |
+| 26 | `ISCG` | `NYSE Arca:ISCG` | 165.20% | 10.24% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_ISCG Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 27 | `EPI` | `NYSE Arca:EPI` | 163.67% | 10.18% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/India | `wiki/analysis/performance/ETF_NYSE_ARCA_EPI Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 28 | `VBR` | `NYSE Arca:VBR` | 162.85% | 10.15% | 10.00 | 2025-12-31 | 2026-06-30 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_VBR Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 29 | `EWP` | `NYSE Arca:EWP` | 162.48% | 10.13% | 10.00 | not disclosed | 2025-12-31 | USD | not disclosed | geography/Spain | `wiki/analysis/performance/ETF_NYSE_ARCA_EWP Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 30 | `DDWM` | `Cboe BZX:DDWM` | 161.81% | 10.10% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_CBOE_DDWM Performance.md` | `not disclosed` | none |
+| 31 | `EES` | `NYSE Arca:EES` | 158.70% | 9.97% | 10.00 | not disclosed | 2025-12-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_EES Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 32 | `EPOL` | `NYSE Arca:EPOL` | 154.36% | 9.79% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Poland | `wiki/analysis/performance/ETF_NYSE_ARCA_EPOL Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 33 | `DFAS` | `NYSE Arca:DFAS` | 154.28% | 9.78% | 10.00 | not disclosed | 2025-12-31 | USD | active-equity-long-only | geography/United-States | `wiki/analysis/performance/ETF_CBOE_BZX_DFAS Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 34 | `VIOO` | `NYSE Arca:VIOO` | 153.93% | 9.77% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_VIOO Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 35 | `IJR` | `NYSE Arca:IJR` | 153.87% | 9.76% | 10.00 | not disclosed | 2026-08-13 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_IJR Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 36 | `HEDJ` | `NYSE Arca:HEDJ` | 153.82% | 9.76% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Europe | `wiki/analysis/performance/ETF_NYSE_ARCA_HEDJ Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | 2025 row is official year-end NAV+income calculation reconciled to secondary and marked official-derived (‡). |
+| 37 | `IDOG` | `NYSE Arca:IDOG` | 151.71% | 9.67% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_AMEX_IDOG Performance.md` | `not disclosed` | none |
+| 38 | `VTWO` | `Nasdaq:VTWO` | 151.67% | 9.67% | 10.00 | 2025-12-31 | 2026-06-30 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_VTWO Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 39 | `VTWG` | `Nasdaq:VTWG` | 150.23% | 9.61% | 10.00 | not disclosed | 2025-12-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_VTWG Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 40 | `IJT` | `Nasdaq:IJT` | 150.04% | 9.60% | 10.00 | not disclosed | 2026-06-30 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_IJT Performance.md` | `raw/imports/ETF_performance_sources_2026-08-15.md` | none |
+| 41 | `SDOG` | `NYSE Arca:SDOG` | 149.33% | 9.57% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_SDOG Performance.md` | `not disclosed` | none |
+| 42 | `DHS` | `NYSE Arca:DHS` | 149.25% | 9.56% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_DHS Performance.md` | `not disclosed` | none |
+| 43 | `IWM` | `NYSE Arca:IWM` | 148.94% | 9.55% | 10.00 | 2025-12-31 | 2026-08-13 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_IWM Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 44 | `IWO` | `NYSE Arca:IWO` | 148.84% | 9.54% | 10.00 | 2025-12-31 | 2026-08-13 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_IWO Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 45 | `VIOV` | `NYSE Arca:VIOV` | 148.69% | 9.54% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_VIOV Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 46 | `DON` | `NYSE Arca:DON` | 148.01% | 9.51% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_DON Performance.md` | `not disclosed` | none |
+| 47 | `FSZ` | `Nasdaq:FSZ` | 148.00% | 9.51% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Switzerland | `wiki/analysis/performance/ETF_NASDAQ_FSZ Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | issuer index change predates the 2016-2025 window; rows retained. |
+| 48 | `IJS` | `NYSE Arca:IJS` | 146.41% | 9.44% | 10.00 | not disclosed | 2026-06-30 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_IJS Performance.md` | `raw/imports/ETF_performance_sources_2026-08-15.md` | none |
+| 49 | `DEM` | `NYSE Arca:DEM` | 145.43% | 9.39% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/Emerging-Markets | `wiki/analysis/performance/ETF_AMEX_DEM Performance.md` | `not disclosed` | none |
+| 50 | `IDV` | `Cboe BZX:IDV` | 144.84% | 9.37% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_CBOE_IDV Performance.md` | `not disclosed` | none |
+| 51 | `FEP` | `Nasdaq:FEP` | 144.62% | 9.36% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Europe | `wiki/analysis/performance/ETF_NASDAQ_FEP Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 52 | `FEUZ` | `Nasdaq:FEUZ` | 144.62% | 9.36% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Europe | `wiki/analysis/performance/ETF_NASDAQ_FEUZ Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 53 | `EWQ` | `NYSE Arca:EWQ` | 142.69% | 9.27% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/France | `wiki/analysis/performance/ETF_NYSE_ARCA_EWQ Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 54 | `CSKR` | `LSE:CSKR` | 141.88% | 9.23% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/South-Korea | `wiki/analysis/performance/ETF_LSE_CSKR Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | benchmark changed MSCI Korea Index → MSCI Korea 20/35 Index on 2020-02-11; fund NAV rows retained. |
+| 55 | `FVD` | `NYSE Arca:FVD` | 141.64% | 9.22% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_FVD Performance.md` | `raw/imports/ETF_performance_sources_2026-07-12.md` | none |
+| 56 | `VTWV` | `Nasdaq:VTWV` | 141.46% | 9.22% | 10.00 | not disclosed | 2025-12-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_VTWV Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 57 | `IDP6` | `LSE:IDP6` | 141.31% | 9.21% | 10.00 | 2025-12-31 | 2026-07-30 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_LSE_IDP6 Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 58 | `IMVP` | `NYSE Arca:IMVP` | 140.92% | 9.19% | 10.00 | not disclosed | 2025-12-31 | not disclosed | not disclosed | geography/India | `wiki/analysis/performance/ETF_NYSE_ARCA_IMVP Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 59 | `R2US` | `LSE:R2US` | 140.61% | 9.18% | 10.00 | not disclosed | 2026-07-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_LSE_R2US Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 60 | `FDD` | `NYSE Arca:FDD` | 139.09% | 9.11% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Europe | `wiki/analysis/performance/ETF_AMEX_FDD Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 61 | `DGS` | `NYSE Arca:DGS` | 138.91% | 9.10% | 10.00 | 2026-03-31 | 2026-07-31 | USD | not disclosed | geography/Emerging-Markets | `wiki/analysis/performance/ETF_NYSE_ARCA_DGS Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 62 | `IWN` | `NYSE Arca:IWN` | 138.50% | 9.08% | 10.00 | 2025-12-31 | 2026-08-13 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_IWN Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 63 | `ISX5` | `LSE:ISX5` | 138.31% | 9.07% | 10.00 | not disclosed | 2025-12-31 | EUR | passive-index | geography/Europe | `wiki/analysis/performance/ETF_LSE_ISX5 Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 64 | `EWL` | `NYSE Arca:EWL` | 136.56% | 8.99% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Switzerland | `wiki/analysis/performance/ETF_NYSE_ARCA_EWL Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 65 | `EWY` | `NYSE Arca:EWY` | 135.42% | 8.94% | 10.00 | not disclosed | 2026-06-30 | not disclosed | passive-index | geography/South-Korea | `wiki/analysis/performance/ETF_NYSE_ARCA_EWY Performance.md` | `raw/imports/ETF_performance_sources_2026-07-23.md` | none |
+| 66 | `PEY` | `Nasdaq:PEY` | 132.93% | 8.82% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_PEY Performance.md` | `not disclosed` | none |
+| 67 | `PID` | `Nasdaq:PID` | 132.73% | 8.81% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_NASDAQ_PID Performance.md` | `not disclosed` | none |
+| 68 | `ISF` | `LSE:ISF` | 130.92% | 8.73% | 10.00 | 2025-12-31 | 2026-08-18 | GBP | passive-index | geography/United-Kingdom | `wiki/analysis/performance/ETF_LSE_ISF Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | benchmark changed total-return → net-of-tax total-return on 2019-07-17; fund rows retained. |
+| 69 | `VGK` | `NYSE Arca:VGK` | 130.81% | 8.72% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Europe | `wiki/analysis/performance/ETF_NYSE_ARCA_VGK Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 70 | `DAX` | `Nasdaq:DAX` | 130.68% | 8.72% | 10.00 | not disclosed | 2025-12-31 | USD | active-equity-long-only | geography/Germany | `wiki/analysis/performance/ETF_NASDAQ_DAX Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 71 | `CEMU` | `Euronext Amsterdam:CEMU` | 127.84% | 8.58% | 10.00 | not disclosed | 2025-12-31 | EUR | passive-index | geography/Europe | `wiki/analysis/performance/ETF_EURONEXT_AMSTERDAM_CEMU Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 72 | `ISCF` | `NYSE Arca:ISCF` | 127.24% | 8.55% | 10.00 | 2025-12-31 | 2025-12-31 | USD | passive-index | geography/International | `wiki/analysis/performance/ETF_NYSE_ARCA_ISCF Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | tracking began 2023-03-01; pre-change index and current index are disclosed on owner page; fund rows retained. |
+| 73 | `VXUS` | `Nasdaq:VXUS` | 127.03% | 8.54% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_NASDAQ_VXUS Performance.md` | `raw/imports/ETF_performance_sources_2026-07-18.md` | none |
+| 74 | `CEMA` | `LSE:CEMA` | 126.95% | 8.54% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Emerging-Markets | `wiki/analysis/performance/ETF_LSE_CEMA Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 75 | `ISCV` | `NYSE Arca:ISCV` | 124.65% | 8.43% | 10.00 | not disclosed | 2026-08-13 | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NYSE_ARCA_ISCV Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 76 | `VDPX` | `LSE:VDPX` | 122.03% | 8.30% | 10.00 | not disclosed | 2026-03-31 | not disclosed | not disclosed | geography/Asia-Pacific | `wiki/analysis/performance/ETF_LSE_VDPX Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 77 | `EEMA` | `Nasdaq:EEMA` | 121.24% | 8.26% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Emerging-Markets | `wiki/analysis/performance/ETF_NASDAQ_EEMA Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | index changed 2018-06-01; fund NAV rows retained with methodology caveat. |
+| 78 | `FNDC` | `NYSE Arca:FNDC` | 118.08% | 8.11% | 10.00 | not disclosed | 2026-07-31 | USD | not disclosed | geography/International | `wiki/analysis/performance/ETF_NYSE_ARCA_FNDC Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | benchmark changed 2024-06-21; fund NAV rows retained with methodology caveat. |
+| 79 | `VEUR` | `Euronext Amsterdam:VEUR` | 115.91% | 8.00% | 10.00 | not disclosed | 2025-12-31 | EUR | passive-index | geography/Europe | `wiki/analysis/performance/ETF_EURONEXT_AMSTERDAM_VEUR Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 80 | `DTH` | `NYSE Arca:DTH` | 115.33% | 7.97% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_AMEX_DTH Performance.md` | `not disclosed` | none |
+| 81 | `VPL` | `NYSE Arca:VPL` | 114.60% | 7.94% | 10.00 | not disclosed | 2026-05-31 | not disclosed | not disclosed | geography/Asia-Pacific | `wiki/analysis/performance/ETF_NYSE_ARCA_VPL Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 82 | `NORW` | `NYSE Arca:NORW` | 114.25% | 7.92% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Norway | `wiki/analysis/performance/ETF_NYSE_ARCA_NORW Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 83 | `ISEU` | `LSE:ISEU` | 113.94% | 7.90% | 10.00 | not disclosed | 2025-12-31 | EUR | passive-index | geography/Europe | `wiki/analysis/performance/ETF_LSE_ISEU Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 84 | `ENOR` | `Cboe BZX:ENOR` | 113.09% | 7.86% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Norway | `wiki/analysis/performance/ETF_CBOE_BZX_ENOR Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 85 | `DFJ` | `NYSE Arca:DFJ` | 112.38% | 7.82% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_AMEX_DFJ Performance.md` | `not disclosed` | none |
+| 86 | `DWM` | `NYSE Arca:DWM` | 110.83% | 7.74% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_AMEX_DWM Performance.md` | `not disclosed` | none |
+| 87 | `SAUS` | `LSE:SAUS` | 109.27% | 7.66% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Australia | `wiki/analysis/performance/ETF_LSE_SAUS Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 88 | `EWA` | `NYSE Arca:EWA` | 108.31% | 7.61% | 10.00 | not disclosed | 2026-07-16 | not disclosed | not disclosed | geography/Australia | `wiki/analysis/performance/ETF_NYSE_ARCA_EWA Performance.md` | `raw/imports/ETF_performance_sources_2026-07-19.md` | none |
+| 89 | `SCHC` | `NYSE Arca:SCHC` | 108.21% | 7.61% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/International | `wiki/analysis/performance/ETF_NYSE_ARCA_SCHC Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 90 | `EIRL` | `NYSE Arca:EIRL` | 107.72% | 7.58% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Ireland | `wiki/analysis/performance/ETF_NYSE_ARCA_EIRL Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 91 | `DES` | `NYSE Arca:DES` | 106.62% | 7.53% | 10.00 | not disclosed | 2026-07-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_AMEX_DES Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 92 | `VSS` | `NYSE Arca:VSS` | 106.58% | 7.53% | 10.00 | not disclosed | 2026-08-11 | not disclosed | not disclosed | geography/International | `wiki/analysis/performance/ETF_NYSE_ARCA_VSS Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 93 | `SMDV` | `Cboe BZX:SMDV` | 106.36% | 7.51% | 10.00 | 2025-12-31 | 2025-12-31 | USD | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_CBOE_BZX_SMDV Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 94 | `SCZ` | `Nasdaq:SCZ` | 104.25% | 7.40% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/International | `wiki/analysis/performance/ETF_NASDAQ_SCZ Performance.md` | `raw/imports/ETF_performance_sources_2026-08-17.md` | none |
+| 95 | `EWG` | `NYSE Arca:EWG` | 103.85% | 7.38% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Germany | `wiki/analysis/performance/ETF_NYSE_ARCA_EWG Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 96 | `ASEA` | `NYSE Arca:ASEA` | 102.43% | 7.31% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Southeast-Asia | `wiki/analysis/performance/ETF_NYSE_ARCA_ASEA Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 97 | `FCA` | `Nasdaq:FCA` | 101.92% | 7.28% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/China | `wiki/analysis/performance/ETF_NASDAQ_FCA Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 98 | `DLS` | `NYSE Arca:DLS` | 101.65% | 7.27% | 10.00 | 2026-03-31 | 2026-07-31 | not disclosed | passive-index | geography/International | `wiki/analysis/performance/ETF_NYSE_ARCA_DLS Performance.md` | `raw/imports/ETF_performance_sources_2026-08-16.md` | none |
+| 99 | `EWU` | `NYSE Arca:EWU` | 101.02% | 7.23% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/United-Kingdom | `wiki/analysis/performance/ETF_NYSE_ARCA_EWU Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 100 | `EWJ` | `NYSE Arca:EWJ` | 101.00% | 7.23% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_NYSE_ARCA_EWJ Performance.md` | `raw/imports/ETF_performance_sources_2026-07-18.md` | none |
+| 101 | `CPXJ` | `LSE:CPXJ` | 100.75% | 7.22% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Asia-Pacific | `wiki/analysis/performance/ETF_LSE_CPXJ Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 102 | `CJPU` | `LSE:CJPU` | 100.65% | 7.21% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_LSE_CJPU Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 103 | `IJPU` | `LSE:IJPU` | 98.94% | 7.12% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_LSE_IJPU Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 104 | `IAPD` | `LSE:IAPD` | 94.63% | 6.89% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Asia-Pacific | `wiki/analysis/performance/ETF_LSE_IAPD Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | benchmark change is disclosed before 2020-06-22; fund NAV rows retained because the rank uses fund NAV TR only. |
+| 105 | `EPP` | `NYSE Arca:EPP` | 94.42% | 6.87% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Asia-Pacific | `wiki/analysis/performance/ETF_NYSE_ARCA_EPP Performance.md` | `raw/imports/ETF_performance_sources_2026-07-23.md` | none |
+| 106 | `SCJ` | `NYSE Arca:SCJ` | 91.92% | 6.74% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_NYSE_ARCA_SCJ Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 107 | `FPA` | `Nasdaq:FPA` | 89.03% | 6.57% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Asia-Pacific | `wiki/analysis/performance/ETF_NASDAQ_FPA Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 108 | `CXSE` | `Nasdaq:CXSE` | 82.98% | 6.23% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/China | `wiki/analysis/performance/ETF_NASDAQ_CXSE Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 109 | `AMLP` | `NYSE Arca:AMLP` | 82.29% | 6.19% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/North-America | `wiki/analysis/performance/ETF_AMEX_AMLP Performance.md` | `not disclosed` | none |
+| 110 | `FKU` | `Nasdaq:FKU` | 80.82% | 6.10% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/United-Kingdom | `wiki/analysis/performance/ETF_NASDAQ_FKU Performance.md` | `raw/imports/ETF_performance_sources_2026-08-18.md` | none |
+| 111 | `EFAV` | `Cboe BZX:EFAV` | 78.42% | 5.96% | 10.00 | not disclosed | 2026-07-16 | USD | not disclosed | geography/International | `wiki/analysis/performance/ETF_CBOE_EFAV Performance.md` | `raw/imports/ETF_performance_sources_2026-07-18.md` | none |
+| 112 | `KBWD` | `Nasdaq:KBWD` | 77.77% | 5.92% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_KBWD Performance.md` | `not disclosed` | none |
+| 113 | `FJP` | `Nasdaq:FJP` | 76.82% | 5.87% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Japan | `wiki/analysis/performance/ETF_NASDAQ_FJP Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 114 | `EWH` | `NYSE Arca:EWH` | 51.86% | 4.27% | 10.00 | not disclosed | 2026-07-17 | not disclosed | not disclosed | geography/Hong-Kong | `wiki/analysis/performance/ETF_NYSE_ARCA_EWH Performance.md` | `raw/imports/ETF_performance_sources_2026-07-21.md` | none |
+| 115 | `VNM` | `Cboe BZX:VNM` | 44.54% | 3.75% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Vietnam | `wiki/analysis/performance/ETF_CBOE_BZX_VNM Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 116 | `FXC` | `LSE:FXC` | 38.28% | 3.29% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/China | `wiki/analysis/performance/ETF_LSE_FXC Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 117 | `TUR` | `Nasdaq:TUR` | 25.33% | 2.28% | 10.00 | not disclosed | 2025-12-31 | USD | passive-index | geography/Turkey | `wiki/analysis/performance/ETF_NASDAQ_TUR Performance.md` | `raw/imports/ETF_performance_sources_2026-08-19.md` | none |
+| 118 | `GLIN` | `NYSE Arca:GLIN` | 17.36% | 1.61% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/India | `wiki/analysis/performance/ETF_NYSE_ARCA_GLIN Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 119 | `EIDO` | `NYSE Arca:EIDO` | 11.70% | 1.11% | 10.00 | not disclosed | 2026-06-30 | not disclosed | not disclosed | geography/Indonesia | `wiki/analysis/performance/ETF_NYSE_ARCA_EIDO Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+| 120 | `KBWY` | `Nasdaq:KBWY` | 10.39% | 0.99% | 10.00 | not disclosed | not disclosed | not disclosed | not disclosed | geography/United-States | `wiki/analysis/performance/ETF_NASDAQ_KBWY Performance.md` | `not disclosed` | none |
+| 121 | `PGJ` | `Nasdaq:PGJ` | 3.50% | 0.34% | 10.00 | not disclosed | 2025-12-31 | not disclosed | not disclosed | geography/China | `wiki/analysis/performance/ETF_NASDAQ_PGJ Performance.md` | `raw/imports/ETF_performance_sources_2026-07-24.md` | none |
+
+## Revised Top 50 raw annual observations
+
+The following raw values are the 10 annual NAV TR inputs used for the 50 displayed bars. They are copied from the fund-return column selected on each owner page; benchmark columns are not used.
+
+| Rank | Ticker | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Owner page |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 1 | `TDIV` | 19.63% | 21.90% | -3.01% | 33.31% | 17.27% | 29.56% | -22.14% | 36.78% | 24.51% | 25.19% | `wiki/analysis/performance/ETF_NASDAQ_TDIV Performance.md` |
+| 2 | `VOO` | 11.93% | 21.78% | -4.42% | 31.46% | 18.35% | 28.66% | -18.15% | 26.25% | 24.98% | 17.84% | `wiki/analysis/performance/ETF_NYSE_ARCA_VOO Performance.md` |
+| 3 | `DXJ` | 0.73% | 22.17% | -18.71% | 18.53% | 2.82% | 18.07% | 6.48% | 40.46% | 30.55% | 31.19% | `wiki/analysis/performance/ETF_LSE_DXJ Performance.md` |
+| 4 | `VIG` | 11.84% | 22.22% | -2.02% | 29.71% | 15.46% | 23.64% | -9.79% | 14.46% | 17.02% | 14.18% | `wiki/analysis/performance/ETF_AMEX_VIG Performance.md` |
+| 5 | `FYC` | 13.92% | 23.19% | -5.60% | 16.80% | 32.08% | 21.75% | -25.75% | 14.15% | 24.05% | 24.34% | `wiki/analysis/performance/ETF_NASDAQ_FYC Performance.md` |
+| 6 | `DLN` | 15.37% | 18.21% | -5.77% | 29.03% | 4.55% | 25.60% | -3.79% | 9.93% | 19.55% | 15.59% | `wiki/analysis/performance/ETF_AMEX_DLN Performance.md` |
+| 7 | `XSMO` | 7.17% | 23.42% | -2.88% | 28.35% | 21.84% | 19.28% | -15.48% | 21.43% | 17.57% | 9.81% | `wiki/analysis/performance/ETF_NYSE_ARCA_XSMO Performance.md` |
+| 8 | `EWO` | 7.10% | 52.50% | -23.20% | 17.70% | -3.20% | 30.74% | -21.67% | 19.88% | 4.58% | 72.85% | `wiki/analysis/performance/ETF_NYSE_ARCA_EWO Performance.md` |
+| 9 | `IJPD` | -1.90% | 20.70% | -14.10% | 20.40% | 9.00% | 12.80% | -2.70% | 34.50% | 25.60% | 27.70% | `wiki/analysis/performance/ETF_LSE_IJPD Performance.md` |
+| 10 | `EWC` | 24.30% | 16.00% | -17.20% | 27.40% | 5.60% | 26.74% | -12.77% | 14.62% | 12.25% | 36.03% | `wiki/analysis/performance/ETF_NYSE_ARCA_EWC Performance.md` |
+| 11 | `DJD` | 16.93% | 21.63% | 0.11% | 22.37% | 0.94% | 22.33% | -0.61% | 9.26% | 13.79% | 15.72% | `wiki/analysis/performance/ETF_AMEX_DJD Performance.md` |
+| 12 | `DTD` | +16.59% | +17.25% | -6.35% | +28.28% | +2.57% | +26.14% | -3.81% | +10.44% | +18.75% | +14.22% | `wiki/analysis/performance/ETF_AMEX_DTD Performance.md` |
+| 13 | `PFM` | 14.64% | 17.35% | -4.40% | 26.79% | 9.54% | 23.19% | -6.23% | 11.31% | 16.98% | 13.88% | `wiki/analysis/performance/ETF_NASDAQ_PFM Performance.md` |
+| 14 | `ENFR` | 41.95% | -0.09% | -18.29% | 21.20% | -24.31% | 39.60% | 18.33% | 15.05% | 42.06% | 5.93% | `wiki/analysis/performance/ETF_AMEX_ENFR Performance.md` |
+| 15 | `ISAC` | 7.82% | 23.94% | -9.52% | 26.37% | 15.62% | 18.71% | -18.19% | 22.35% | 17.35% | 22.41% | `wiki/analysis/performance/ETF_LSE_ISAC Performance.md` |
+| 16 | `XSVM` | 35.52% | 3.17% | -11.82% | 29.95% | 5.03% | 56.38% | -13.55% | 20.23% | 2.12% | 7.59% | `wiki/analysis/performance/ETF_NYSE_ARCA_XSVM Performance.md` |
+| 17 | `EWN` | 3.91% | 33.40% | -14.99% | 31.34% | 24.19% | 22.39% | -24.12% | 21.34% | 2.34% | 34.32% | `wiki/analysis/performance/ETF_NYSE_ARCA_EWN Performance.md` |
+| 18 | `VYM` | 16.87% | 16.42% | -5.87% | 24.20% | 1.14% | 26.14% | -0.42% | 6.53% | 17.60% | 15.43% | `wiki/analysis/performance/ETF_AMEX_VYM Performance.md` |
+| 19 | `USSC` | 25.83% | 9.37% | -14.31% | 23.80% | 8.46% | 35.40% | -10.23% | 21.18% | 9.67% | 13.89% | `wiki/analysis/performance/ETF_LSE_USSC Performance.md` |
+| 20 | `FYX` | 22.72% | 14.45% | -10.26% | 21.04% | 19.23% | 27.48% | -18.39% | 18.12% | 12.20% | 12.90% | `wiki/analysis/performance/ETF_NASDAQ_FYX Performance.md` |
+| 21 | `EUFN` | -3.10% | 27.20% | -23.20% | 20.10% | -8.20% | 19.22% | -8.79% | 26.18% | 17.41% | 65.23% | `wiki/analysis/performance/ETF_NASDAQ_EUFN Performance.md` |
+| 22 | `FESM` | 22.84% | 7.22% | -13.04% | 23.65% | 18.53% | 20.54% | -18.28% | 21.04% | 16.48% | 17.70% | `wiki/analysis/performance/ETF_NYSE_ARCA_FESM Performance.md` |
+| 23 | `EWI` | -9.40% | 28.47% | -17.51% | 27.19% | 2.56% | 13.80% | -14.19% | 30.34% | 10.39% | 55.51% | `wiki/analysis/performance/ETF_NYSE_ARCA_EWI Performance.md` |
+| 24 | `VB` | 18.31% | 16.24% | -9.30% | 27.37% | 19.08% | 17.72% | -17.60% | 18.21% | 14.23% | 8.83% | `wiki/analysis/performance/ETF_NYSE_ARCA_VB Performance.md` |
+| 25 | `DVY` | 21.50% | 15.00% | -6.30% | 22.70% | -4.90% | 31.63% | 1.92% | 1.09% | 16.19% | 11.64% | `wiki/analysis/performance/ETF_NASDAQ_DVY Performance.md` |
+| 26 | `ISCG` | 9.48% | 23.48% | -5.79% | 27.41% | 43.28% | -1.32% | -26.65% | 22.84% | 13.44% | 13.09% | `wiki/analysis/performance/ETF_NYSE_ARCA_ISCG Performance.md` |
+| 27 | `EPI` | 2.24% | 39.03% | -10.44% | 1.70% | 18.07% | 28.02% | -5.72% | 26.31% | 11.11% | 1.83% | `wiki/analysis/performance/ETF_NYSE_ARCA_EPI Performance.md` |
+| 28 | `VBR` | 24.80% | 11.79% | -12.22% | 22.76% | 5.82% | 28.07% | -9.29% | 16.00% | 12.39% | 9.09% | `wiki/analysis/performance/ETF_NYSE_ARCA_VBR Performance.md` |
+| 29 | `EWP` | -2.18% | 26.97% | -15.07% | 10.94% | -3.14% | 0.10% | -5.34% | 29.80% | 6.30% | 77.12% | `wiki/analysis/performance/ETF_NYSE_ARCA_EWP Performance.md` |
+| 30 | `DDWM` | 14.18% | 18.52% | -11.05% | 21.03% | -4.20% | 14.33% | -1.27% | 15.44% | 10.65% | 30.10% | `wiki/analysis/performance/ETF_CBOE_DDWM Performance.md` |
+| 31 | `EES` | 29.96% | 12.56% | -9.96% | 21.92% | 2.79% | 34.34% | -16.16% | 18.42% | 9.89% | 6.93% | `wiki/analysis/performance/ETF_NYSE_ARCA_EES Performance.md` |
+| 32 | `EPOL` | 2.80% | 52.70% | -14.30% | -5.60% | -8.20% | 12.15% | -24.53% | 50.13% | -2.58% | 76.25% | `wiki/analysis/performance/ETF_NYSE_ARCA_EPOL Performance.md` |
+| 33 | `DFAS` | 23.99% | 11.87% | -13.12% | 21.89% | 10.36% | 29.70% | -13.80% | 17.53% | 10.35% | 8.18% | `wiki/analysis/performance/ETF_CBOE_BZX_DFAS Performance.md` |
+| 34 | `VIOO` | 26.44% | 13.31% | -8.57% | 22.72% | 11.43% | 26.67% | -16.20% | 16.00% | 8.62% | 5.99% | `wiki/analysis/performance/ETF_NYSE_ARCA_VIOO Performance.md` |
+| 35 | `IJR` | 26.49% | 13.20% | -8.43% | 22.79% | 11.24% | 26.69% | -16.20% | 16.03% | 8.61% | 5.95% | `wiki/analysis/performance/ETF_NYSE_ARCA_IJR Performance.md` |
+| 36 | `HEDJ` | 9.30% | 13.56% | -9.27% | 26.99% | -2.90% | 23.57% | -10.18% | 26.39% | 5.65% | 23.33%‡ | `wiki/analysis/performance/ETF_NYSE_ARCA_HEDJ Performance.md` |
+| 37 | `IDOG` | 3.97% | 25.81% | -13.09% | 20.86% | -1.34% | 11.36% | -4.23% | 22.64% | 1.53% | 39.83% | `wiki/analysis/performance/ETF_AMEX_IDOG Performance.md` |
+| 38 | `VTWO` | 21.33% | 14.70% | -10.98% | 25.61% | 20.10% | 14.81% | -20.40% | 17.00% | 11.57% | 12.88% | `wiki/analysis/performance/ETF_NASDAQ_VTWO Performance.md` |
+| 39 | `VTWG` | 11.40% | 22.13% | -9.31% | 28.59% | 34.70% | 2.82% | -26.35% | 18.73% | 15.17% | 13.07% | `wiki/analysis/performance/ETF_NASDAQ_VTWG Performance.md` |
+| 40 | `IJT` | 22.00% | 14.57% | -4.28% | 20.82% | 19.17% | 22.40% | -21.24% | 16.97% | 9.42% | 5.20% | `wiki/analysis/performance/ETF_NASDAQ_IJT Performance.md` |
+| 41 | `SDOG` | 22.36% | 12.67% | -11.30% | 24.09% | -0.37% | 24.40% | -0.13% | 4.06% | 14.84% | 11.08% | `wiki/analysis/performance/ETF_AMEX_SDOG Performance.md` |
+| 42 | `DHS` | 17.85% | 11.68% | -7.25% | 22.58% | -5.68% | 23.11% | 7.88% | -0.19% | 17.98% | 12.92% | `wiki/analysis/performance/ETF_AMEX_DHS Performance.md` |
+| 43 | `IWM` | 21.4% | 14.7% | -11.0% | 25.4% | 19.9% | 14.6% | -20.5% | 16.8% | 11.4% | 12.7% | `wiki/analysis/performance/ETF_NYSE_ARCA_IWM Performance.md` |
+| 44 | `IWO` | 11.47% | 22.24% | -9.33% | 28.46% | 34.52% | 2.71% | -26.33% | 18.58% | 15.04% | 12.92% | `wiki/analysis/performance/ETF_NYSE_ARCA_IWO Performance.md` |
+| 45 | `VIOV` | 31.07% | 11.50% | -12.77% | 24.40% | 2.70% | 30.74% | -11.19% | 14.75% | 7.45% | 6.66% | `wiki/analysis/performance/ETF_NYSE_ARCA_VIOV Performance.md` |
+| 46 | `DON` | 20.30% | 14.86% | -8.27% | 23.42% | -5.40% | 30.19% | -4.76% | 13.98% | 14.12% | 3.91% | `wiki/analysis/performance/ETF_AMEX_DON Performance.md` |
+| 47 | `FSZ` | 4.21% | 31.26% | -15.11% | 25.91% | 14.50% | 19.34% | -20.88% | 22.07% | -1.25% | 30.16% | `wiki/analysis/performance/ETF_NASDAQ_FSZ Performance.md` |
+| 48 | `IJS` | 31.17% | 11.36% | -12.80% | 24.25% | 2.56% | 30.47% | -11.32% | 14.64% | 7.42% | 6.55% | `wiki/analysis/performance/ETF_NYSE_ARCA_IJS Performance.md` |
+| 49 | `DEM` | 22.54% | 24.87% | -7.31% | 19.37% | -5.64% | 11.69% | -10.32% | 20.93% | 5.22% | 20.54% | `wiki/analysis/performance/ETF_AMEX_DEM Performance.md` |
+| 50 | `IDV` | 7.70% | 19.60% | -10.50% | 23.10% | -5.40% | 11.97% | -6.75% | 10.75% | 3.97% | 51.69% | `wiki/analysis/performance/ETF_CBOE_IDV Performance.md` |
+
+## Active-management classification
+
+- `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
+- `DFAS`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
+- For both active rows: `active_process` is `systematic-active`; `management_benchmark` is the official `Russell 2000`; `track_record` is `provisional` because predecessor history is included; `management_evidence` is `insufficient` for this aggregate and `risk_evidence` is `not-verified`.
+- The aggregate records the official strategy-aligned benchmark as classification context but intentionally does not calculate excess CAGR, hit rate, or risk-adjusted evidence. It therefore makes no claim of manager skill and does not call arithmetic return differences `alpha`.
+
+## Unresolved gaps and source ownership
+
+- Some older owner pages do not expose an explicit annual-row as-of date or return currency; those cells remain `not disclosed` in the ledger.
+- Annual inputs are rounded to the precision shown by the issuer/page. Calculations are reproducible from the displayed rows but may differ slightly from an issuer's raw-endpoint calculation.
+- Current YTD, rolling endpoints, market price, distributions, drawdown, and recovery were deliberately excluded from the common-window rank.
+- Numeric source of truth remains each linked owner page under `wiki/analysis/performance/`; this dated batch records the selected column, raw Top 50 inputs, calculations, caveats, and gaps.

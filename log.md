@@ -1366,3 +1366,7 @@
 ## 2026-05-30
 
 - `screener`: Created `raw/imports/MARKET_screener_sources_2026-05-30.md` and `wiki/analysis/comparisons/Screener Triage 2026-05-30.md` with a 40-stock medium-to-high-upside watchlist, source caveats, and next-step research queue.
+
+## 2026-08-28
+
+- `etf-performance`: Added [[ETF Performance CAGR Top 50 2016-2025 2026-08-28]] and chart; screened 255 ETF owner pages, retained 121 complete 2016-2025 NAV Total Return histories, and ranked the Top 50. Source batch: [[ETF_performance_sources_2026-08-28]].

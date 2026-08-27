@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-19
+updated: 2026-08-28
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -16,9 +16,10 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 ## Ranking output
 
-อ่าน [[ETF Performance Ranking 2026-08-07]] สำหรับ reproducible `2016-2025`
-`NAV Total Return` screen; source-confidence, exclusions และ source paths อยู่ที่
-[[ETF_performance_ranking_sources_2026-08-07]].
+อ่าน [[ETF Performance CAGR Top 50 2016-2025 2026-08-28]] สำหรับ reproducible `2016-2025`
+`NAV Total Return` CAGR Top 50; full eligibility ledger, exclusions และ source paths
+อยู่ที่ [[ETF_performance_sources_2026-08-28]]. Previous weighted screen:
+[[ETF Performance Ranking 2026-08-07]].
 
 ## Browse by region
 
