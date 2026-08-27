@@ -1,5 +1,9 @@
 # Log
 
+## 2026-08-27
+
+- `source-integrity-audit`: ตรวจ `wiki/analysis/performance/` และ [[ETF Index]]; ลบ empty graph nodes `AVDV.md`, `AVUV.md`, `DFAS.md`, เปลี่ยนลิงก์ประวัติศาสตร์ใน `log.md` ไปยัง canonical performance pages และบันทึกผลที่ [[Source Integrity Audit 2026-08-27]]. ไม่พบไฟล์ zero-byte หรือ Markdown ว่างอื่นใน vault.
+
 ## 2026-08-19
 - `etf-performance`: Created [[ETF_NYSE_ARCA_FLSW Performance]] and [[Switzerland ETF]], updated [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-19]]. Scheduled-inline local pre-save returned PASS; official 2019-2025 NAV TR cumulative is `128.13%` / rounded-input CAGR `12.50%`, 2021-2025 CAGR `8.54%`, and current official NAV TR YTD is `8.87%` as of 2026-08-07, with Swiss concentration, CHF/USD, and daily NAV drawdown/recovery gaps disclosed.
 - `etf-performance`: Created [[ETF_NASDAQ_TUR Performance]] and [[Turkey ETF]], updated [[ETF Region Index]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-19]]. Scheduled-inline local pre-save returned PASS; official 2016-2025 NAV TR cumulative is `25.33%` / rounded-input CAGR `2.28%`, 2021-2025 CAGR `8.45%`, issuer rolling 10-year NAV TR is `2.58%` as of 2026-06-30, and current official NAV TR YTD is `16.38%` as of 2026-08-17; Turkey/currency/sector risk and daily NAV drawdown/recovery gaps remain disclosed.
