@@ -36,6 +36,14 @@ tags:
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
 
+## 2026-08-29 Verified Refresh
+
+KBA latest official KraneShares NAV TR YTD อยู่ที่ `7.45%` ณ 2026-07-31 และ
+rolling 10-year NAV TR CAGR อยู่ที่ `6.22%` ณ วันเดียวกัน. Current NAV
+`US$33.32`, closing price `US$33.19`, และ net assets `US$144.92M` ณ 2026-08-27;
+June quarter-end cross-check (`11.37%` YTD และ `6.90%` 10-year CAGR) ยังคงแยก
+ตาม as-of date. Exchange และ fee-waiver conflicts ถูกเก็บในหน้ารายกองและ source batch.
+
 ## Navigation
 
 - [[ETF Region Index]]
@@ -72,7 +80,7 @@ tags:
 | GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | IHRPF / FXC | iShares China Large Cap UCITS ETF | China large-cap equity / index-tracking | 1.72% | -1.64% | -17.31% | [[ETF_LSE_FXC Performance]] |
 | ISVBF / ICHN | iShares MSCI China UCITS ETF USD (Acc) | China large-/mid-cap equity / index-tracking; OTC alias resolved to official Euronext Amsterdam USD line | not applicable (<10y history) | -3.44% | -8.79% | [[ETF_EURONEXT_AMSTERDAM_ICHN Performance]] |
-| KBA | KraneShares Bosera MSCI China A 50 Connect Index ETF | China equity / index-tracking | 6.90% | not disclosed | 11.37% | [[ETF_NYSE_ARCA_KBA Performance]] |
+| KBA | KraneShares Bosera MSCI China A 50 Connect Index ETF | China equity / index-tracking | 6.22% | not disclosed | 7.45% | [[ETF_NYSE_ARCA_KBA Performance]] |
 | KCAI | KraneShares China Alpha Index ETF | China equity / index-tracking | not applicable (<10y history) | not disclosed | 4.27% | [[ETF_NYSE_ARCA_KCAI Performance]] |
 | KGRN | KraneShares MSCI China Clean Technology Index ETF | China clean-technology thematic equity / index-tracking | not applicable (<10y history) | not disclosed | -13.22% | [[ETF_NYSE_ARCA_KGRN Performance]] |
 | KSTR | KraneShares China Technology & Semiconductor STAR 50 Index ETF | China equity / index-tracking | not applicable (<10y history) | not disclosed | 71.70% | [[ETF_NYSE_ARCA_KSTR Performance]] |
