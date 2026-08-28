@@ -10,10 +10,13 @@ tracked_index: MSCI Taiwan 25/50 Index
 benchmark: S&P 500 Total Return
 inception: 2000-06-20
 expense_ratio: 0.59%
-updated: 2026-07-24
+updated: 2026-08-29
 performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-20
-source_batch: raw/imports/ETF_performance_sources_2026-07-23.md
+current_ytd_as_of: 2026-08-27
+current_nav_as_of: 2026-08-27
+fund_facts_as_of: 2026-08-27
+risk_as_of: 2026-07-31
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -27,14 +30,14 @@ tags:
 
 ## Bottom line
 
-EWT เป็น passive/index-tracking equity ETF ที่ให้ exposure ต่อ Taiwan แบบ single-country และติดตาม `MSCI Taiwan 25/50 Index`. Official NAV Total Return (รวม reinvested distributions และหัก fund expenses ตาม growth-of-$10,000 convention) ให้ cumulative `552.21%` และ CAGR `20.63%` ในช่วง 2016-06-30 ถึง 2026-06-30 หรือ `10.00 calendar years`. ช่วง 2021-2025 ให้ CAGR `12.01%` ต่ำกว่า S&P 500 Total Return ที่ `14.43%`; current NAV YTD ล่าสุดที่ยืนยันได้คือ `50.68%` ณ 2026-07-20.
+EWT เป็น passive/index-tracking equity ETF ที่ให้ exposure ต่อ Taiwan แบบ single-country และติดตาม `MSCI Taiwan 25/50 Index`. Official NAV Total Return (รวม reinvested distributions และหัก fund expenses ตาม growth-of-$10,000 convention) ให้ cumulative `552.21%` และ CAGR `20.63%` ในช่วง 2016-06-30 ถึง 2026-06-30 หรือ `10.00 calendar years`. ช่วง 2021-2025 ให้ CAGR `12.01%` ต่ำกว่า S&P 500 Total Return ที่ `14.43%`; current NAV YTD ล่าสุดที่ยืนยันได้คือ `70.74%` ณ 2026-08-27 และ NAV อยู่ที่ `USD 108.51` ณ วันเดียวกัน.
 
 ## Performance check
 
 - `entity_key`: `NYSE Arca:EWT`; issuer page ยืนยัน exchange เป็น NYSE Arca, asset class เป็น Equity, inception `2000-06-20` และ benchmark เป็น `MSCI Taiwan 25/50 Index`.
 - `Metric`: official NAV Total Return; ไม่ผสมกับ market-price return. iShares ระบุว่า hypothetical growth สมมติ reinvestment ของ dividends/capital gains และหัก fund expenses.
 - `Expense ratio`: `0.59%` ตาม current prospectus.
-- `Current NAV`: `US$95.76` และ NAV TR YTD `50.68%` ณ 2026-07-20.
+- `Current NAV`: `US$108.51` และ NAV TR YTD `70.74%` ณ 2026-08-27.
 - `10-year NAV TR`: official cumulative `552.21%` และ average annual/CAGR `20.63%` ณ 2026-06-30.
 
 ### 10-year NAV TR window
@@ -72,10 +75,10 @@ Raw per-share NAV/TR endpoint levels are `not disclosed` in the compact issuer p
 
 ## Risk read-through
 
-Taiwan และ sector concentration เป็นตัวขับหลัก: Information Technology `71.92%` ของ market value ณ 2026-07-20; fund มี 79 holdings. Official 3-year standard deviation คือ `23.22%` และ equity beta `1.28` ณ 2026-06-30. จึงเป็น equity-risk สูงและไวต่อ semiconductor/technology cycle, Taiwan country risk และ FX; 10-year CAGR ไม่ใช่ downside protection.
+Taiwan และ sector concentration เป็นตัวขับหลัก: Information Technology `73.19%` และ Financials `14.02%` ของ market value ณ 2026-08-27; fund มี 79 holdings. Official 3-year standard deviation คือ `24.80%` และ equity beta `1.33` ณ 2026-07-31. จึงเป็น equity-risk สูงและไวต่อ semiconductor/technology cycle, Taiwan country risk และ FX; 10-year CAGR ไม่ใช่ downside protection.
 
 ## Sources
 
-- [iShares MSCI Taiwan ETF product page](https://www.ishares.com/us/products/239686/EWT) — identity, NYSE Arca listing, benchmark, inception, expense ratio, NAV TR, annual rows, current NAV/YTD and risk snapshot; accessed 2026-07-24.
+- [iShares MSCI Taiwan ETF product page](https://www.blackrock.com/us/individual/products/239686/ishares-msci-taiwan-etf) — identity, NYSE Arca listing, benchmark, inception, expense ratio, NAV TR, annual rows, current NAV/YTD and risk snapshot; accessed 2026-08-29.
 - [S&P 500 Total Return reference](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common USD total-return benchmark convention used in the comparison.
-- [[ETF_performance_sources_2026-07-23]] | [[ETF Performance Index]]
+- [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]
