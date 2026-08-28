@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-08-19
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/United-States
@@ -103,6 +103,14 @@ FESM เป็น active systematic small-cap ETF ที่ใช้ Russell 200
 DFSV ไม่มี 10-year หรือ 2021-2025 CAGR เพราะ inception 2022-02-23; official 2023-2025 NAV rows ให้ rounded-input CAGR `11.54%` และ current `18.7%*` เป็น secondary NAV TR YTD ณ 2026-06-30. Russell 2000 Value เป็น management benchmark; 2024 official comparison ต่ำกว่า benchmark แต่ since-inception comparison ณ 2024-12-31 สูงกว่า. `*` current field เป็น secondary และไม่ใช่ official Dimensional current table. BSVO `11.04%†` เป็น official Bridgeway rolling 10-year annualized NAV TR ณ 2026-07-31 จาก predecessor-inclusive history; `25.66%` เป็น official NAV TR YTD ณ 2026-07-31. Official 2025 fiscal-year report ให้ 1-year/5-year/10-year NAV TR `1.39%`/`17.45%`/`7.14%` เทียบ Russell 2000 Value `5.54%`/`12.47%`/`6.72%`; current 0.45% expense ratio กับ 2024 prospectus 0.47% เป็น source-dated conflict. AVUV `23.61%` เป็น official NAV TR YTD ณ 2026-07-31; latest synchronized factsheet ณ 2026-06-30 ให้ `23.09%` เทียบ Russell 2000 Value `22.99%`, 1-year `39.00%` เทียบ `43.01%`, 3-year `19.06%` เทียบ `18.73%`, 5-year `12.29%` เทียบ `8.23%` และ since-inception `16.32%` เทียบ `11.85%`. DFAS `9.78%` เป็น rounded-input CAGR จาก official 2016-2025 NAV rows, `9.42%` เป็น 2021-2025 CAGR, และ `16.9%*` เป็น secondary NAV/market-price YTD ณ 2026-07-31; official rolling Russell 2000 comparison is -4.63 pp / +3.33 pp / +0.16 pp for 1Y/5Y/10Y. `*` current field is secondary and the fee difference between the SEC prospectus and Quick Guide remains disclosed.
 
 PSC ไม่มี 10-year NAV CAGR เพราะ inception 2016-09-21; 10.91% เป็น rounded-input CAGR จาก official 2021-2025 rows, 18.52% เป็น official NAV TR YTD ณ 2026-07-31 และ official since-inception annualized NAV TR คือ 12.01%. Strategy ก่อน 2022-07-08 แตกต่างจาก current active process; 2017-2025 hit rate 6/9 และ +1.47 pp Excess CAGR เป็น benchmark-relative evidence ไม่ใช่ alpha.
+
+## 2026-08-29 Verified Refresh
+
+SPSM latest official State Street snapshot reports NAV `US$57.06`, bid/ask
+midpoint `US$57.07`, closing price `US$57.06`, AUM `US$17.081B`, 606 holdings,
+และ premium/discount `+0.02%` ณ 2026-08-27. Standardized NAV TR YTD remains
+`21.54%` and rolling 10-year NAV CAGR `10.75%` ณ 2026-07-31; annual calendar
+rows and daily NAV drawdown/recovery series ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Navigation
 
