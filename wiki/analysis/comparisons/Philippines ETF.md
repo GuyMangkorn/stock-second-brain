@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| EPHE | iShares MSCI Philippines ETF | Philippines equity / index-tracking | -3.24% | -3.42% | 2.76% | [[ETF_NYSE_ARCA_EPHE Performance]] |
+| EPHE | iShares MSCI Philippines ETF | Philippines equity / index-tracking | -3.24% | -3.42% | 1.80% | [[ETF_NYSE_ARCA_EPHE Performance]] |
 
 ## Navigation
 

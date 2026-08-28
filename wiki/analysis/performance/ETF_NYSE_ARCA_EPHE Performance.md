@@ -7,11 +7,20 @@ exchange: NYSE Arca
 fund: iShares MSCI Philippines ETF
 tracked_index: MSCI Philippines IMI 25/50 Index (USD) (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-07-26
+inception: 2010-09-28
+management_mode: passive-index
+updated: 2026-08-28
 performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-23
-source_batch: raw/imports/ETF_performance_sources_2026-07-26.md
+rolling_10y_as_of: 2026-06-30
+current_ytd_as_of: 2026-08-26
+nav_as_of: 2026-08-26
+market_price_as_of: 2026-08-26
+holdings_as_of: 2026-08-26
+risk_as_of: 2026-07-31
+fund_facts_as_of: 2026-06-30
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return
+return_currency: USD
 tags:
   - analysis/etf-performance
   - ticker/EPHE
@@ -24,84 +33,80 @@ tags:
 
 ## Bottom line
 
-EPHE เป็น passive/index-tracking Philippines equity ETF ของ iShares ที่ติดตาม
-`MSCI Philippines IMI 25/50 Index (USD) (Net)`. Official rolling 10-year NAV Total
-Return (รวมการนำ distributions กลับไปลงทุนและ fund expenses) จาก 2026-06-30
-ย้อนถึง 2016-06-30 มี cumulative return `-28.05%` และ CAGR `-3.24%` จากช่วงเวลา
-จริง `10.00 elapsed years`. Current official NAV TR YTD ล่าสุดคือ `2.76%` ณ
-2026-07-23. ตัวเลข 2021-2025 ที่เปิดเผยรวมกันเป็น cumulative `-15.95%` / CAGR
-`-3.42%`; 2016-2020 annual NAV rows ไม่ได้เปิดเผยใน capture ที่ยืนยันได้.
+EPHE เป็น passive/index-tracking Philippines equity ETF ที่ติดตาม `MSCI
+Philippines IMI 25/50 Index (USD) (Net)`. Official rolling 10-year NAV Total
+Return จาก `2016-06-30` ถึง `2026-06-30` มี cumulative return `-28.05%` และ CAGR
+`-3.24%`; available complete calendar rows 2021-2025 สะสม `-15.95%` หรือ CAGR
+`-3.42%`. Latest official current-page NAV TR YTD คือ `1.80%` ณ
+`2026-08-26`; เลือกค่าที่ใหม่กว่าการ capture ก่อนหน้าที่ `2.66%` ณ 25 ส.ค.
 
 ## Performance check
 
-- `entity_key`: `NYSE Arca:EPHE`
-- Inception: `2010-09-28`
-- Expense ratio: `0.59%`
-- Metric: official NAV Total Return, including reinvested distributions and fund expenses
-- Tracked index: `MSCI Philippines IMI 25/50 Index (USD) (Net)`
-- Benchmark: S&P 500 Total Return, USD, dividends reinvested
-- 10-year window: `2016-06-30` to `2026-06-30`; `10.00 elapsed years`
-- Index-history caveat: iShares states that EPHE began tracking the current MSCI Philippines IMI 25/50 Index (Net) on `2020-12-01`; earlier history is not treated as perfectly like-for-like.
-- Market-price return is not mixed with NAV Total Return.
+- `entity_key: NYSE Arca:EPHE`
+- Fund: iShares MSCI Philippines ETF; inception `2010-09-28`; expense ratio
+  `0.59%`; distribution frequency semi-annual
+- Metric: official `NAV Total Return` ใน USD รวม distributions reinvested และหัก
+  fund expenses
+- Issuer benchmark: `MSCI Philippines IMI 25/50 Index (USD) (Net)`
+- Benchmark: `S&P 500 Total Return` (USD, dividends reinvested; common reference
+  benchmark ไม่ใช่ tracked index ของ EPHE)
+- Management mode: `passive-index`; official objective คือ track a broad-based
+  index composed of Philippine equities
+- Index-history caveat: EPHE began tracking the current IMI 25/50 index on
+  `2020-12-01`; earlier index history is for the MSCI Philippines Investable
+  Market Index and is not treated as perfectly like-for-like
+- Official rolling 10-year window: `2016-06-30` to `2026-06-30`, `10.00 elapsed
+  years`; NAV TR cumulative `-28.05%`, CAGR `-3.24%`. Raw NAV endpoints are not
+  disclosed; normalized representation is Start `100.00`, End `71.95` from the
+  issuer cumulative return, not a market-price proxy
+- Current official snapshot: NAV `$24.88`, closing market price `$24.62`, and
+  1-day NAV change `-$0.21 (-0.84%)` as of `2026-08-26`; NAV TR YTD `1.80%` as of
+  `2026-08-26`
+- Annual coverage: 2021-2025 complete official rows; 2016-2020 annual NAV rows
+  remain `not disclosed` in the reviewed U.S. factsheet capture
 
-### Rolling 10-year NAV TR
+| ปี | EPHE NAV TR | MSCI Philippines IMI 25/50 Index (Net) | S&P 500 TR |
+|---|---:|---:|---:|
+| 2021 | -2.10% | -1.44% | 28.71% |
+| 2022 | -14.37% | -14.05% | -18.11% |
+| 2023 | -0.27% | 0.81% | 26.29% |
+| 2024 | 1.08% | 2.11% | 25.02% |
+| 2025 | -0.54% | -0.06% | 17.88% |
 
-Raw NAV endpoints are `not disclosed` in the reviewed official capture. The
-normalized endpoints below are a transparent representation of the issuer's
-published cumulative return, not a proxy or a market-price series.
-
-| Start date | End date | Actual years | Start TR value | End TR value | Cumulative NAV TR | CAGR |
-|---|---|---:|---:|---:|---:|---:|
-| 2016-06-30 | 2026-06-30 | 10.00 | 100.00 normalized | 71.95 derived | -28.05% official | -3.24% official |
-
-- `71.95 = 100.00 × (1 - 28.05%)`.
-- `CAGR = (71.95 / 100.00)^(1 / 10.00) - 1`; the displayed CAGR uses the issuer's rounded `-3.24%`.
-- Official 5-year NAV TR: cumulative `-12.55%`, average annual `-2.65%`, through `2026-06-30`.
-- Month-end NAV TR YTD: `0.06%` as of `2026-06-30`; latest current-page YTD: `2.76%` as of `2026-07-23`. These are separate as-of observations.
-
-### Annual NAV TR vs S&P 500 TR
-
-S&P 500 rows for complete calendar years 2016-2025 reuse the cached USD Total
-Return convention recorded in the dated source batch. EPHE annual NAV rows for
-2016-2020 are `not disclosed`; they are not reconstructed from a proxy.
-
-| Year | EPHE NAV TR | S&P 500 TR |
-|---|---:|---:|
-| 2016 | not disclosed | 11.96% |
-| 2017 | not disclosed | 21.83% |
-| 2018 | not disclosed | -4.38% |
-| 2019 | not disclosed | 31.49% |
-| 2020 | not disclosed | 18.40% |
-| 2021 | -2.10% | 28.71% |
-| 2022 | -14.37% | -18.11% |
-| 2023 | -0.27% | 26.29% |
-| 2024 | 1.08% | 25.02% |
-| 2025 | -0.54% | 17.88% |
-| 2026 YTD | 2.76% as of 2026-07-23 | not comparable; current-year S&P row not cached |
+S&P 500 rows ใช้ cached USD Total Return convention, dividends reinvested,
+reference as-of `2025-12-31`. EPHE 2021-2025 cumulative/CAGR คือ `-15.95%` /
+`-3.42%`; tracked index คือ `-12.85%` / `-2.71%`; arithmetic fund-minus-index
+CAGR gap คือ `-0.70 pp` และไม่เรียกว่า alpha. S&P 500 TR คือ `96.17%` /
+`14.43%`; EPHE มี arithmetic gap `-17.85 pp` เทียบ common reference นี้.
 
 ## Up years / Down years
 
-- Disclosed 2021-2025 rows: up `1`, down `4`.
-- Best disclosed year: `2024`, `1.08%`.
-- Worst disclosed year: `2022`, `-14.37%`.
-- Full 10-year best/worst ranking is not claimed because EPHE annual NAV rows for 2016-2020 are not disclosed.
-- Available disclosed 2021-2025 period: cumulative `-15.95%`, CAGR `-3.42%`.
+- Disclosed 2021-2025 rows: up `1`, down `4`
+- Best disclosed year: 2024, `+1.08%`
+- Worst disclosed year: 2022, `-14.37%`
+- Full 10-year best/worst ranking is not claimed because 2016-2020 annual NAV
+  rows are not disclosed in the reviewed source table
+- Current YTD: EPHE `+1.80%` NAV TR ณ `2026-08-26`
 
 ## Risk read-through
 
-EPHE เป็นกอง single-country Philippines equity จึงมี country, FX, liquidity,
-policy และ emerging-market risk สูงกว่ากอง broad developed-market. Official
-exposure ณ 2026-07-17 กระจุกใน Industrials `41.02%`, Financials `20.03%`,
-Utilities `11.80%` และ Real Estate `10.81%`; sector concentration นี้เป็น
-ความเสี่ยงเพิ่มเติมจากตลาดประเทศเดียว. ผลตอบแทน rolling 10 ปีติดลบแม้กองมี
-ประวัติยาวกว่า 10 ปี และไม่ควรใช้ current YTD ที่เป็น partial period แทน
-ผลตอบแทน 10 ปี.
+EPHE เป็นกอง single-country Philippines equity; sector exposure ณ 25 ส.ค. 2026
+คือ Industrials `40.52%`, Financials `20.27%`, Utilities `11.68%`, Real Estate
+`10.69%`, Consumer Staples `6.67%` และ Communication `4.47%`. มี `34` holdings
+ณ 26 ส.ค.; P/E `9.19` และ P/B `1.17` ณ 25 ส.ค.; 3-year standard deviation
+`18.24%` และ beta `0.15` ณ 31 ก.ค. 2026; 30-day SEC yield `1.88%` และ 12-month
+trailing yield `2.69%` ณ 31 ก.ค. 2026.
+
+จึงมี country, FX, liquidity, policy และ emerging-market risk สูงกว่ากอง broad
+developed-market และมี sector concentration เพิ่มเติม. Fund-minus-index gap ต้อง
+อ่านเป็น tracking/fee/timing evidence ไม่ใช่ manager skill; current YTD เป็น
+partial period และไม่ใช้แทน rolling 10-year result. Official daily NAV TR series
+สำหรับคำนวณ maximum drawdown และ recovery โดยตรง: `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Sources
 
-- [Official iShares EPHE product/performance page](https://www.ishares.com/us/products/239675/ishares-msci-philippines-etf)
-- [Official iShares EPHE data page](https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239675&seoSlug=ishares-msci-philippines-etf)
-- [Official EPHE factsheet](https://www.ishares.com/us/literature/fact-sheet/ephe-ishares-msci-philippines-etf-fund-fact-sheet-en-us.pdf)
-- [Official EPHE prospectus material](https://www.ishares.com/uk/individual/en/literature/prospectus/p-ishares-trust-emerging-8-31-emea.pdf?siteEntryPassthrough=true&switchLocale=y)
-- [Official EPHE annual shareholder report](https://www.blackrock.com/us/individual/literature/annual-report/ar-ephe-en.pdf)
- - [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); complete-year rows use the cached convention documented in [[ETF_performance_sources_2026-07-24]].
+- [Official iShares EPHE product/performance page](https://www.ishares.com/us/products/239675/EPHE) — latest current-page NAV/price, YTD NAV TR, exchange, benchmark, holdings, exposure, fees and performance table; current search capture through 2026-08-26
+- [Official EPHE factsheet](https://www.ishares.com/us/literature/fact-sheet/ephe-ishares-msci-philippines-etf-fund-fact-sheet-en-us.pdf) — official 2021-2025 annual NAV/index rows, rolling 10-year NAV TR and risk facts as of 2026-06-30
+- [Official EPHE summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-philippines-etf-8-31.pdf) — passive objective, NYSE Arca listing, benchmark and index-history caveat
+- [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common-reference identity; annual rows reuse the cached skill convention
+- [[ETF_performance_sources_2026-08-28]] | [[ETF Performance Index]]
