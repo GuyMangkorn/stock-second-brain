@@ -21,7 +21,7 @@ tags:
 | FXI | iShares China Large-Cap ETF | China single-country large-cap equity | 1.75% | -1.67% | -9.28% | [[ETF_NYSE_ARCA_FXI Performance]] |
 | KWEB | KraneShares CSI China Internet ETF | China internet single-country equity | -0.85% | -11.89%* | -28.96% | [[ETF_NYSE_ARCA_KWEB Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
-| CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
+| CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 4.80% | not disclosed | 8.45% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | ASHS | Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF | China A-share small-cap equity / index-tracking | 1.96% | not disclosed | 3.36% | [[ETF_NYSE_ARCA_ASHS Performance]] |
 | PGJ | Invesco Golden Dragon China ETF | China equity / index-tracking | 0.35% | -12.65% | not disclosed | [[ETF_NASDAQ_PGJ Performance]] |
 | CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | 6.85% | -8.00% | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
