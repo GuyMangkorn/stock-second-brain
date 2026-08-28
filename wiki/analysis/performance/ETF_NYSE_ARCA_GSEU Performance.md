@@ -9,11 +9,11 @@ fund: Goldman Sachs ActiveBeta Europe Equity ETF
 tracked_index: Goldman Sachs ActiveBeta Europe Equity Index
 benchmark: Goldman Sachs ActiveBeta Europe Equity Index
 management_mode: passive-index-tracking
-updated: 2026-08-19
+updated: 2026-08-29
 performance_as_of: 2026-07-31
 rolling_10y_as_of: 2026-07-31
 current_ytd_as_of: 2026-07-31
-source_batch: raw/imports/ETF_performance_sources_2026-08-19.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: official NAV total return; distributions reinvested; net of fund expenses
 return_currency: USD
 tags:
@@ -84,8 +84,8 @@ in industries represented heavily in the index.
 
 ## Sources
 
-- [Goldman Sachs GSEU fact card](https://am.gs.com/public-assets/documents/570151a1-24d6-11ef-870d-25a687970406) — official identity, NAV/market-price and strategy-benchmark returns, expenses, holdings, index methodology and risk disclosures; facts as of 31 Jul 2026.
+- [Goldman Sachs GSEU fact card](https://am.gs.com/public-assets/documents/570151a1-24d6-11ef-870d-25a687970406) — official identity, NAV/market-price and strategy-benchmark returns, expenses, holdings, index methodology and risk disclosures; facts as of 31 Jul 2026; reviewed 2026-08-29.
 - [Goldman Sachs GSEU summary prospectus](https://am.gs.com/public-assets/documents/f69ce232-24e2-11ef-ad18-ad734f1320f3) — official objective, passive/not-actively-managed classification, benchmark and fee framework.
 - [PortfoliosLab GSEU](https://portfolioslab.com/symbol/GSEU) — secondary dividend-adjusted performance and drawdown/recovery evidence.
 - [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached workflow references — USD TR reference rows 2021-2025, dividends reinvested, as of 31 Dec 2025.
-- [[ETF_performance_sources_2026-08-19]] | [[ETF Performance Index]]
+- [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]

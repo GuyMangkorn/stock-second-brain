@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Europe
-updated: 2026-08-28
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/Europe
