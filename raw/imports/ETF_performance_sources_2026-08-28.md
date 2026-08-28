@@ -367,6 +367,24 @@ screen's verification record.
 - source_urls: issuer product/performance page https://www.ishares.com/us/products/239730/ishares-asia-50-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/aia-ishares-asia-50-etf-fund-fact-sheet-en-us.pdf; prospectus https://www.ishares.com/us/literature/prospectus/p-ishares-asia-50-etf-3-31.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
 - gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and exact June-to-June S&P 500 TR were not disclosed in the reviewed evidence. Exposure snapshot is Taiwan 37.10%, Korea South 27.44%, China 24.65%, Singapore 5.82%, Hong Kong 4.77%, and Information Technology 57.06% as of 2026-08-27.
 
+### ENZL
+
+- workflow: check-etf-performance
+- execution_profile: scheduled-inline
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+- entity_key: NASDAQ:ENZL; official issuer page identifies iShares MSCI New Zealand ETF on NASDAQ.
+- management_mode: passive-index; the official issuer objective and summary prospectus describe an index-tracking equity fund.
+- inception: 2010-09-01; expense_ratio: 0.50%; distribution_frequency: semi-annual; asset_class: Equity.
+- metric: official NAV Total Return, including reinvested distributions and fund expenses; return_currency: USD.
+- issuer_benchmark: MSCI New Zealand All Cap Top 25 Capped Index (Net); the issuer states that the benchmark changed from MSCI New Zealand IMI 25/50 Index (Net) on 2024-09-03. Common benchmark is cached S&P 500 Total Return in USD with dividends reinvested.
+- current_snapshot: NAV USD 48.36 and closing price USD 48.56 as of 2026-08-27; current NAV TR YTD 8.69% as of 2026-08-26; holdings 26 as of 2026-08-27; 3-year standard deviation 15.88% and beta 0.83 as of 2026-07-31; P/E 23.80 and P/B 1.55 as of 2026-08-26.
+- official_rolling: 2016-06-30 to 2026-06-30 cumulative 38.78% and annualized 3.33%, based on the issuer standardized performance table; raw endpoint NAV values were not disclosed, so review normalization is 100.00 to 138.78 over 10.00 years.
+- official_annual_rows: 2021 -10.86% / benchmark -10.39%; 2022 -16.63% / -16.49%; 2023 3.53% / 4.47%; 2024 -4.55% / -4.01%; 2025 1.68% / 1.85%, performance as of 2026-06-30. 2016-2020 annual rows were not disclosed in the reviewed current issuer table.
+- common_window_calculation: 2021-2025 cumulative -25.33%, CAGR -5.67%, up/down 2/3; best 2023 +3.53%; least positive 2025 +1.68%; worst 2022 -16.63%; least bad down year 2024 -4.55%. Cached S&P 500 2021-2025 CAGR is 14.43%, so the arithmetic CAGR difference is -20.10 percentage points and is not called alpha.
+- source_urls: issuer product/performance page https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/enzl-ishares-msci-new-zealand-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-new-zealand-capped-etf-8-31.pdf; annual report https://www.blackrock.com/us/individual/literature/annual-report/ar-enzl-en.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
+- gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and exact June-to-June S&P 500 TR were not disclosed in the reviewed evidence; benchmark splice remains a comparability caveat. Current sector snapshot is Health Care 31.75%, Industrials 22.84%, Financials 12.99%, Real Estate 12.17%, and Utilities 11.89% as of 2026-08-26.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
