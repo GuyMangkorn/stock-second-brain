@@ -1,5 +1,10 @@
 # Log
 
+## 2026-08-28
+
+- `dr-ingest`: Added [[DR_all_2026-08-28]] and [[SET DR ETF Classification 2026-08-28]]; saved the 512-row SET DR snapshot and identified 66 ETF-labeled DR rows across 60 distinct underlyings, while preserving the future-dated trade-date anomaly and leaving issuer-level ETF verification as a follow-up.
+- `etf-performance`: Refreshed [[ETF_CBOE_BZX_CNYA Performance]] and [[China ETF]], updated [[ETF Performance Index]], and extended [[ETF_performance_sources_2026-08-28]]. Scheduled-inline local pre-save returned PASS; official rolling 10-year NAV TR is `6.71%` as of 2026-06-30, 2021-2025 CAGR is `-1.75%`, and current official NAV TR YTD is `3.57%` as of 2026-08-26; CNYA remains a passive China A-share ETF with the 2018 benchmark change and daily NAV drawdown/recovery gap disclosed.
+
 ## 2026-08-27
 
 - `source-integrity-audit`: ตรวจ `wiki/analysis/performance/` และ [[ETF Index]]; ลบ empty graph nodes `AVDV.md`, `AVUV.md`, `DFAS.md`, เปลี่ยนลิงก์ประวัติศาสตร์ใน `log.md` ไปยัง canonical performance pages และบันทึกผลที่ [[Source Integrity Audit 2026-08-27]]. ไม่พบไฟล์ zero-byte หรือ Markdown ว่างอื่นใน vault.

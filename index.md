@@ -1,6 +1,6 @@
 ---
 type: dashboard
-updated: 2026-07-12
+updated: 2026-08-28
 ---
 
 # Stock Second Brain Dashboard
@@ -17,6 +17,7 @@ updated: 2026-07-12
 - Earnings: `wiki/analysis/earnings/`
 - Catalysts / Market Moves: `wiki/analysis/catalysts/`
 - Comparisons: `wiki/analysis/comparisons/`
+- SET DR / ETF screen: [[SET DR ETF Classification 2026-08-28]]
 - ETF Performance: [[ETF Performance Index]]
 - ETF Performance by Region: [[ETF Region Index]]
 - Sentiment: `wiki/analysis/sentiment/`
@@ -26,6 +27,11 @@ The entity roster and ticker-level source gaps live in [[Entity Index]] and
 individual entity notes. Historical activity lives in [[log]].
 
 ## Recent Work
+
+- **2026-08-28 — SET DR universe:** Added [[SET DR ETF Classification 2026-08-28]]
+  and [[DR_all_2026-08-28]]; archived the 512-row snapshot and identified 66
+  ETF-labeled DR rows across 60 distinct underlyings, retaining the source-date
+  anomaly for follow-up.
 
 - **2026-07-12 — ETF performance:** Consolidated the pilot into one compact
   performance page per ETF plus [[ETF Performance Index]] for cross-ETF reads;
