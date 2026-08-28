@@ -7,11 +7,15 @@ exchange: Cboe BZX
 fund: iShares MSCI India ETF
 tracked_index: MSCI India Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
+updated: 2026-08-28
 performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-20
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
-return_basis: NAV total return
+rolling_10y_as_of: 2026-06-30
+current_ytd_as_of: 2026-08-26
+price_nav_as_of: 2026-08-26
+fund_facts_as_of: 2026-08-26
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
+return_basis: NAV total return; gross income reinvested; fund expenses reflected in NAV
+return_currency: USD
 tags:
   - analysis/etf-performance
   - ticker/INDA
@@ -24,26 +28,28 @@ tags:
 
 ## Bottom line
 
-INDA เป็น iShares MSCI India ETF, canonical `Cboe BZX:INDA`, กองทุน passive,
-index-tracking equity ETF ที่ติดตาม MSCI India Index (Net). Mandatory 10-year
-audit ของ official iShares page ยืนยัน NAV Total Return cumulative `98.09%` และ
-CAGR `7.07%` สำหรับ 2016-06-30 ถึง 2026-06-30 หรือ `10.00` elapsed years;
-normalized TR คือ 100.00 เป็น 198.09. Current official NAV TR YTD คือ `-10.12%`
-ณ 2026-07-20. Official calendar rows ที่เปิดเผยใน current capture มี 2021-2025;
-annual rows 2016-2020 เป็น `not disclosed` และไม่มีการสร้าง proxy.
+INDA เป็น iShares MSCI India ETF, canonical `Cboe BZX:INDA`, กองทุน
+passive/index-tracking equity ETF ที่ติดตาม `MSCI India Index (Net)`. Official
+rolling 10-year NAV Total Return ครอบคลุม 2016-06-30 ถึง 2026-06-30 ครบ
+`10.00` ปี; cumulative return คือ `98.09%` และ CAGR `7.07%` ต่อปี. Current
+official NAV TR YTD คือ `-8.44%` ณ 2026-08-26; NAV ล่าสุดที่ตรวจสอบได้คือ
+`USD 49.56` ณ 2026-08-26.
 
 ## Performance check
 
-- entity_key: Cboe BZX:INDA
-- Inception: 2012-02-02
-- Metric: NAV Total Return including reinvested distributions and fund expenses; iShares' hypothetical-growth method reinvests dividends/capital gains and deducts fund expenses
-- Tracked index (issuer benchmark): MSCI India Index (Net)
-- Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark)
-- 10-year NAV TR coverage: 2016-06-30 to 2026-06-30; actual years `10.00`
+- `entity_key`: `Cboe BZX:INDA`
+- Fund: iShares MSCI India ETF; asset class `Equity`; expense ratio `0.61%`
+- Inception: `2012-02-02`
+- Metric: official NAV Total Return, รวม reinvested distributions และหัก fund expenses แล้ว
+- Tracked index (issuer benchmark): `MSCI India Index (Net)`
+- Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark, not issuer benchmark)
+- Management mode: `passive-index`
+- 10-year NAV TR coverage: `2016-06-30` to `2026-06-30`; actual years `10.00`
 - 10-year NAV TR cumulative / CAGR: `98.09%` / `7.07%` (official iShares)
 - Normalized NAV TR: start `100.00`; end `198.09` (official cumulative return; raw NAV endpoints are not disclosed)
-- Available official calendar rows 2021-2025 compound to `45.55%` / CAGR `7.80%`; S&P 500 rows in the same window compound to `96.17%` / CAGR `14.43%`
-- Coverage/source note: rolling 10-year summary is as of 2026-06-30; current YTD is as of 2026-07-20; 2016-2020 annual NAV rows are not disclosed in the reviewed official capture.
+- Official rolling annualised NAV TR fields as of `2026-06-30`: 1-year `-11.39%`, 3-year `4.41%`, 5-year `3.64%`, 10-year `7.07%`, and since inception `5.72%`
+- Available official calendar rows 2021-2025 compound to `45.55%` / CAGR `7.80%`; issuer benchmark rows compound to `60.22%` / CAGR `9.89%`; S&P 500 rows in the same window compound to `96.17%` / CAGR `14.43%`
+- Current snapshot: NAV `USD 49.56`, closing price `USD 49.75`, net assets `USD 6,613,614,143`, and `167` holdings, all as of `2026-08-26`; current NAV TR YTD is `-8.44%` as of `2026-08-26`.
 
 | Year | INDA NAV TR | MSCI India Index (Net) TR | S&P 500 TR |
 |---|---:|---:|---:|
@@ -57,32 +63,40 @@ annual rows 2016-2020 เป็น `not disclosed` และไม่มีก�
 | 2023 | 17.49% | 20.81% | 26.29% |
 | 2024 | 8.99% | 11.22% | 25.02% |
 | 2025 | 2.47% | 2.62% | 17.88% |
+| 2026 YTD (month-end) | -9.09% | not disclosed | not comparable; current year not cached |
 
-S&P 500 เป็น common reference benchmark ไม่ใช่ issuer benchmark ของ INDA;
-ตารางใช้ cached USD Total Return convention สำหรับ 2016-2025.
+Official iShares calendar rows in the reviewed capture cover 2021-2025;
+2016-2020 annual rows were not disclosed, so no proxy was created. The
+month-end 2026 YTD row is as of `2026-06-30`; current product-page YTD is kept
+separately because it is as of `2026-08-26`. S&P 500 เป็น common reference
+benchmark ไม่ใช่ issuer benchmark ของ INDA; ตารางใช้ cached USD Total Return
+convention สำหรับ 2016-2025.
 
 ## Common-window comparison
 
-- INDA 2021-2025 NAV TR CAGR: `7.80%`
-- S&P 500 2021-2025 TR CAGR: `14.43%`
-- INDA trails by approximately `6.63 pp` CAGR in the common calendar window.
+- INDA 2021-2025 NAV TR cumulative / CAGR: `45.55%` / `7.80%`
+- MSCI India Index (Net) 2021-2025 cumulative / CAGR: `60.22%` / `9.89%`; INDA trails its issuer benchmark by approximately `2.09 pp` CAGR.
+- S&P 500 2021-2025 TR cumulative / CAGR: `96.17%` / `14.43%`
+- INDA trails the S&P 500 common reference by approximately `6.63 pp` CAGR in the common calendar window.
 - Up years / Down years in 2021-2025: `4 / 1`
-- Best year: 2021, `22.41%`; worst year: 2022, `-9.38%`
-- Current official NAV TR YTD: `-10.12%` as of 2026-07-20; latest NAV `US$48.65` as of 2026-07-20
+- Best year: 2021, `22.41%`; least positive year: 2025, `2.47%`
+- Worst year: 2022, `-9.38%`
+- Current official NAV TR YTD: `-8.44%` as of `2026-08-26`; latest NAV `US$49.56` as of `2026-08-26`
 
 ## Risk read-through
 
-INDA เป็น single-country India equity ETF; official data ณ 2026-07-20 มี 165
-holdings, expense ratio `0.61%`, 3-year standard deviation `14.13%` และ 3-year
-beta `0.43`. Sector exposureหลักคือ Financials `30.77%`, Consumer Discretionary
-`12.04%`, Industrials `10.88%`, Materials `8.64%` และ Energy `8.37%`.
-ความเสี่ยงหลักคือ India/country, valuation, currency, policy และ sector
-concentration. Daily NAV history ที่ยืนยันได้เพียงพอสำหรับ max drawdown และ
-recovery: `ไม่พบข้อมูลที่ยืนยันได้`.
+INDA เป็น single-country India equity ETF; official data ณ 2026-08-26 มี 167
+holdings, net assets `USD 6,613,614,143`, expense ratio `0.61%`, 3-year
+standard deviation `14.09%`, P/E `22.80` และ P/B `3.30`. Sector breakdown ที่
+สอดคล้องกับ current canonical product-page snapshot เป็น `not disclosed` ใน
+capture นี้. ความเสี่ยงหลักคือ India/country, valuation, currency, policy และ
+sector concentration. Daily NAV history ที่ยืนยันได้เพียงพอสำหรับ max drawdown
+และ recovery: `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Sources
 
-- Official iShares product and performance page: https://www.ishares.com/us/products/239659/ishares-msci-india-etf
+- Official iShares product and performance page: https://www.ishares.com/us/products/239659/INDA
 - Official iShares factsheet: https://www.ishares.com/us/literature/fact-sheet/inda-ishares-msci-india-etf-fund-fact-sheet-en-us.pdf
+- Official iShares summary prospectus: https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-india-etf-8-31.pdf
 - Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-24]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]] | [[ETF Performance Index]]

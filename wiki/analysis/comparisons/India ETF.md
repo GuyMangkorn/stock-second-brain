@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: India
-updated: 2026-08-17
+updated: 2026-08-28
 tags:
   - analysis/etf-region
   - geography/India
@@ -22,7 +22,7 @@ tags:
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | IND | Xtrackers Nifty 500 India ETF | India broad equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-11-24) | not disclosed | [[ETF_NASDAQ_IND Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | 2.50% | [[ETF_CBOE_BZX_SMIN Performance]] |
-| INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -10.12% | [[ETF_CBOE_BZX_INDA Performance]] |
+| INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -8.44% | [[ETF_CBOE_BZX_INDA Performance]] |
 | FLIN | Franklin FTSE India ETF | India single-country equity / index-tracking | not applicable (<10y history) | 9.33% | -8.34% | [[ETF_NYSE_ARCA_FLIN Performance]] |
 | FLIBF / FLXI | Franklin FTSE India UCITS ETF | India large-/mid-cap equity / index-tracking | not applicable (<10y history) | 9.83% | -8.42% | [[ETF_LSE_FLXI Performance]] |
 | NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.99% | 10.83% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |

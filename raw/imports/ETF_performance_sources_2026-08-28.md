@@ -270,6 +270,26 @@ screen's verification record.
 - Source URLs: issuer product/performance page `https://www.ishares.com/us/products/239644/EZU`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/ezu-ishares-msci-eurozone-etf-fund-fact-sheet-en-us.pdf`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/930667/000119312525336639/d31674d497k.htm`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
 - Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; 2016–2020 annual rows are not disclosed; the annual five-row population standard deviation `19.15%` is a calculation from rounded NAV rows and is not substituted for the issuer's 3-year measure; USD share-class returns retain EUR/USD exposure.
 
+### INDA
+
+- `workflow: check-etf-performance`
+- `execution_profile: scheduled-inline`
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: Cboe BZX:INDA`; the canonical iShares product page identifies the fund as `iShares MSCI India ETF` on `Cboe BZX`.
+- `management_mode: passive-index`; the official issuer description says the fund seeks to track an index of Indian equities, and the prospectus supports an indexing objective.
+- `inception: 2012-02-02`; `expense_ratio: 0.61%`; `distribution_frequency: semi-annual`.
+- Metric: official `NAV Total Return`, with reinvested distributions and fund expenses reflected in NAV; return currency `USD`.
+- Issuer benchmark: `MSCI India Index (Net)`; common benchmark remains cached `S&P 500 Total Return` in USD with dividends reinvested.
+- Current canonical product-page snapshot: NAV `USD 49.56`, closing price `USD 49.75`, net assets `USD 6,613,614,143`, and holdings `167`, all as of `2026-08-26`; current NAV TR YTD is `-8.44%` as of `2026-08-26`; 3-year standard deviation is `14.09%` as of `2026-07-31`; P/E `22.80` and P/B `3.30` as of `2026-08-26`.
+- Official rolling NAV TR fields as of `2026-06-30`: 1-year `-11.39%`, 3-year `4.41%`, 5-year `3.64%`, 10-year `7.07%`, and since inception `5.72%`; official 10-year cumulative return is `98.09%` for `2016-06-30` to `2026-06-30`, or `10.00` elapsed years. Raw rolling endpoints were not disclosed; normalized review endpoints are `100.00` and `198.09`.
+- Official calendar NAV TR / issuer benchmark rows, performance as of `2026-06-30`: `2021 22.41% / 26.23%`; `2022 -9.38% / -7.95%`; `2023 17.49% / 20.81%`; `2024 8.99% / 11.22%`; `2025 2.47% / 2.62%`. 2016–2020 annual rows were not disclosed in the reviewed issuer table. The issuer table's month-end 2026 YTD NAV TR is `-9.09%` as of `2026-06-30`; current product-page YTD is kept separately.
+- Common benchmark: cached `S&P 500 Total Return` in USD, dividends reinvested, complete calendar years `2016–2025`, as of `2025-12-31`; rows are not used as issuer benchmark or for a new current-YTD claim.
+- Calculations from displayed complete rows: INDA 2021–2025 cumulative `45.55%`, CAGR `7.80%`; MSCI India Index (Net) cumulative `60.22%`, CAGR `9.89%`; INDA minus issuer benchmark CAGR `-2.09 pp`; S&P 500 cumulative `96.17%`, CAGR `14.43%`; INDA minus S&P CAGR `-6.63 pp`; up/down years `4 / 1`; best `2021 +22.41%`; least positive `2025 +2.47%`; worst `2022 -9.38%`.
+- Source conflict: a separate iShares overview endpoint returned `-7.61%` YTD and `165` holdings as of `2026-08-25`; it was not mixed into the snapshot. The canonical `/INDA` product page was selected because it is the direct product endpoint and provides the later `2026-08-26` as-of date with internally consistent current fields.
+- Source URLs: issuer product/performance page `https://www.ishares.com/us/products/239659/INDA`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/inda-ishares-msci-india-etf-fund-fact-sheet-en-us.pdf`; summary prospectus `https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-india-etf-8-31.pdf`; S&P 500 definition `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
+- Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; raw 10-year endpoints and 2016–2020 annual rows are not disclosed; sector breakdown was not disclosed in the reviewed current canonical product-page capture; the separate overview endpoint conflict is preserved above rather than averaged or silently discarded.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
