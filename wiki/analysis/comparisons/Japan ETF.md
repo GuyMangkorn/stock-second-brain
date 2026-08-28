@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Japan
-updated: 2026-07-24
+updated: 2026-08-28
 tags:
   - analysis/etf-region
   - geography/Japan
@@ -23,7 +23,7 @@ tags:
 | EWJ | iShares MSCI Japan ETF | Japan single-country large/mid-cap equity | 9.54% | 6.22% | 14.28% | [[ETF_NYSE_ARCA_EWJ Performance]] |
 | JPXN | iShares JPX-Nikkei 400 ETF | Japan large-cap equity / index-tracking | 9.28% | 6.19% | 15.60% | [[ETF_NYSE_ARCA_JPXN Performance]] |
 | HEWJ | iShares Currency Hedged MSCI Japan ETF | Japan large/mid-cap equity / USD hedged | 17.27% | 19.11% | 18.81% | [[ETF_NYSE_ARCA_HEWJ Performance]] |
-| SJPA / IHREF | iShares Core MSCI Japan IMI UCITS ETF | Japan broad large/mid/small-cap equity, USD accumulating | 9.50% | 6.33% | 12.55% | [[ETF_LSE_SJPA Performance]] |
+| SJPA / IHREF | iShares Core MSCI Japan IMI UCITS ETF | Japan broad large/mid/small-cap equity, USD accumulating | 7.42% | 6.33% | 19.87% | [[ETF_LSE_SJPA Performance]] |
 | SCJ | iShares MSCI Japan Small-Cap ETF | Japan small-cap equity / index-tracking | 8.18% | 5.20% | 16.10% | [[ETF_NYSE_ARCA_SCJ Performance]] |
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
 | VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan single-country large/mid-cap equity, USD distributing | 9.45% | not disclosed (rolling periods) | 16.30% | [[ETF_LSE_VDJP Performance]] |
@@ -44,8 +44,10 @@ tags:
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม. HEWJ current date-to-date NAV TR
 YTD อยู่ที่ 18.81% ณ 2026-07-17; SJPA/IHREF current date-to-date YTD อยู่ที่
-12.55% ณ 2026-07-17. Standardized month-end YTD ของ HEWJ และ SJPA อยู่ที่
-22.41% และ 15.88% ตามลำดับ ณ 2026-06-30.
+19.87% ณ 2026-08-26. Standardized month-end YTD ของ HEWJ และ SJPA อยู่ที่
+22.41% ณ 2026-06-30 และ 16.99% ณ 2026-07-31 ตามลำดับ. SJPA 7.42% ในตาราง
+เป็น calendar-row CAGR 2016-2025; rolling 10-year field ใน current capture
+ไม่พบข้อมูลที่ reconcile ได้.
 
 ## Navigation
 

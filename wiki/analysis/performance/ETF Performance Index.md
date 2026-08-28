@@ -143,7 +143,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_EWJ Performance]] | official 1996 / official 2016-2025 | 9.54% | 6.22% | 14.28% | 2025 +25.92% / 2022 -17.36% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/trade-cycle/FX-sensitive |
 | [[ETF_NYSE_ARCA_JPXN Performance]] | official 2001 / official rolling 2016-2026 | 9.28% | 6.19% | 15.60% | 2025 +26.05% / 2022 -16.04% | Japan large-cap equity, JPX-Nikkei 400 | profitability/governance screen; Japan/sector/FX-sensitive |
 | [[ETF_NYSE_ARCA_HEWJ Performance]] | official 2014 / official 2021-2025; rolling 2016-2026 | 17.27% | 19.11% | 18.81% | 2023 +36.20% / 2022 -3.91% | Japan large/mid-cap equity, USD hedged | country/sector/FX/hedging-cost-sensitive |
-| [[ETF_LSE_SJPA Performance]] | official 2009 / official 2016-2025; rolling 2016-2026 | 9.50% | 6.33% | 12.55% | 2025 +25.36% / 2022 -15.88% | Japan broad large/mid/small-cap equity, accumulating | country/sector/FX-sensitive; OTC alias/liquidity gap |
+| [[ETF_LSE_SJPA Performance]] | official 2009 / official 2016-2025; current rolling 10-year field not disclosed in reviewed capture; prior source conflict preserved | 7.42% | 6.33% | 19.87% | 2025 +25.36% / 2022 -15.88% | Japan broad large/mid/small-cap equity, accumulating | country/sector/FX/listing-currency-sensitive; rolling-field conflict and OTC alias/liquidity gap |
 | [[ETF_NYSE_ARCA_SCJ Performance]] | official 2007 / official rolling 2016-2026; official 2016-2025 | 8.18% | 5.20% | 16.10% | 2017 +30.90% / 2018 -16.40% | Japan small-cap equity | small-cap/liquidity/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_EWY Performance]] | official 2000 / official 2016-2025 and rolling 2016-2026 | 16.72% | 4.77% | 75.82% | 2025 +97.57% / 2022 -26.70% | South Korea single-country equity | high volatility; IT/semiconductor/country/FX-sensitive |
 | [[ETF_NYSE_ARCA_THD Performance]] | official 2008 / official rolling 2016-2026; official 2021-2025 | 3.35% | -2.14% | 25.53% | 2022 +1.55% / 2023 -12.18% | Thailand single-country equity | country/sector/FX/emerging-market-sensitive; benchmark change 2013-02-12 |
@@ -818,7 +818,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_GSJY Performance]] — GSJY (Japan)
 - [[ETF_NYSE_ARCA_GXC Performance]] — GXC (China)
 - [[ETF_NYSE_ARCA_HEWJ Performance]] — HEWJ (Japan)
-- [[ETF_LSE_SJPA Performance]] — IHREF / SJPA (Japan)
+- [[ETF_LSE_SJPA Performance]] — IHREF / SJPA (Japan; official 2016-2025 NAV TR cumulative `+104.57%` / rounded-input calendar CAGR `+7.42%`, 2021-2025 CAGR `+6.33%`, current official NAV TR YTD `+19.87%` as of 2026-08-26; rolling 10-year field is not disclosed in the current reconciled capture and the prior `147.80% / 9.50%` record remains a source conflict)
 - [[ETF_LSE_FXC Performance]] — IHRPF / FXC (China)
 - [[ETF_LSE_IAPD Performance]] — IHSEF (Asia-Pacific)
 - [[ETF_LSE_CJPU Performance]] — IMSCF (Japan)
