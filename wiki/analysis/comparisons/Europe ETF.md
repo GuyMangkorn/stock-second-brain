@@ -27,7 +27,7 @@ tags:
 | CEUU | iShares Core MSCI EMU UCITS ETF USD Hedged (Accumulating) | Eurozone passive, currency-hedged, accumulating equity; input alias ISVYF | not applicable (<10y) | 14.29% | 17.09% | [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] |
 | CEMU | iShares Core MSCI EMU UCITS ETF EUR (Accumulating) | Eurozone passive, accumulating equity; input alias XMTIF | 8.58%† | 11.97% | 15.77% | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] |
 | ISX5 | iShares Core EURO STOXX 50 UCITS ETF | Eurozone large-cap passive, accumulating equity; input alias IVVPF | 9.07% | 13.47% | 15.37% | [[ETF_LSE_ISX5 Performance]] |
-| HEZU | iShares Currency Hedged MSCI Eurozone ETF | Eurozone passive, USD-hedged equity on NYSE Arca | 12.88% | 13.88% | 17.53% | [[ETF_NYSE_ARCA_HEZU Performance]] |
+| HEZU | iShares Currency Hedged MSCI Eurozone ETF | Eurozone passive, USD-hedged equity on NYSE Arca | 12.88% | 13.88% | 15.23% | [[ETF_NYSE_ARCA_HEZU Performance]] |
 | EZU | iShares MSCI Eurozone ETF | Eurozone passive, USD unhedged equity on Cboe BZX | 10.91% | 10.60% | 13.57% | [[ETF_CBOE_BZX_EZU Performance]] |
 | FLEU | Franklin FTSE Eurozone ETF | Eurozone passive; predecessor hedged-Europe index through 2023-07-31 | not applicable (<10y) | 14.06% | 6.75% | [[ETF_NYSE_ARCA_FLEU Performance]] |
 | FEZ | State Street SPDR EURO STOXX 50 ETF | Eurozone large-cap passive equity | 10.92% | 12.31%* | 9.66% | [[ETF_NYSE_ARCA_FEZ Performance]] |
@@ -141,8 +141,8 @@ issuer rolling-10-year field, `11.97%` เป็น common 2021-2025 CAGR แล
 
 HEZU ใช้ official USD share class ซึ่งเปิดตัว 2014-07-09; `12.88%` เป็น
 issuer rolling 10-year average annual NAV TR ณ 2026-06-30, `13.88%` เป็น
-rounded-input CAGR ของ official 2021-2025 rows และ `17.53%` เป็น official NAV
-TR YTD ณ 2026-08-14. กองทุนใช้ EZU และ currency forwards เพื่อ hedge EUR/USD;
+rounded-input CAGR ของ official 2021-2025 rows และ `15.23%` เป็น official NAV
+TR YTD ณ 2026-08-27. กองทุนใช้ EZU และ currency forwards เพื่อ hedge EUR/USD;
 official daily NAV drawdown/recovery ยังไม่ verified.
 
 EZU ใช้ official USD unhedged share class ซึ่งเปิดตัว 2000-07-25; `10.91%` เป็น

@@ -8,13 +8,13 @@ exchange: NYSE Arca
 fund: iShares Currency Hedged MSCI Eurozone ETF
 tracked_index: MSCI EMU 100% Hedged to USD Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-08-18
+updated: 2026-08-29
 performance_as_of: 2025-12-31
 rolling_10y_as_of: 2026-06-30
-current_ytd_as_of: 2026-08-14
-price_nav_as_of: 2026-08-14
-fund_facts_as_of: 2026-08-14
-source_batch: raw/imports/ETF_performance_sources_2026-08-18.md
+current_ytd_as_of: 2026-08-27
+price_nav_as_of: 2026-08-27
+fund_facts_as_of: 2026-08-27
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return; gross income reinvested; fund expenses reflected in NAV
 return_currency: USD
 tags:
@@ -36,7 +36,7 @@ exposure; derivatives เป็นส่วนของ currency hedge ไม่
 payoff. Official 2021-2025 NAV TR ให้ cumulative `91.52%` และ rounded-input
 calendar CAGR `13.88%`; issuer rolling 10-year NAV TR อยู่ที่ `12.88%` ณ
 30 มิ.ย. 2026. Common USD reference อย่าง S&P 500 TR ให้ `96.17%` / `14.43%`
-ในช่วงเดียวกัน. Latest official NAV TR YTD คือ `17.53%` ณ 14 ส.ค. 2026.
+ในช่วงเดียวกัน. Latest official NAV TR YTD คือ `15.23%` ณ 27 ส.ค. 2026.
 
 ## Performance check
 
@@ -51,10 +51,11 @@ calendar CAGR `13.88%`; issuer rolling 10-year NAV TR อยู่ที่ `12.
 - Official rolling annualised fields as of 30 มิ.ย. 2026: 1-year `26.48%`,
   3-year `18.64%`, 5-year `13.47%`, 10-year `12.88%`, and since inception
   `10.58%`.
-- Current official snapshot as of 14 ส.ค. 2026: NAV `$50.62`, closing price
-  `$50.68`, net assets `$589.68m`, and one underlying fund holding. Expense
-  ratio is `1.12%`; contractual net expense ratio is `0.53%` after a `0.59%`
-  fee waiver. Distribution frequency is semi-annual.
+- Current official snapshot as of 27 ส.ค. 2026: NAV `$49.63`, closing price
+  `$49.65`, net assets `$595.52m`, shares outstanding `12.00m`, and one
+  underlying fund holding. Current NAV TR YTD is `15.23%`. Expense ratio is
+  `1.12%`; contractual net expense ratio is `0.53%` after a `0.59%` fee waiver.
+  Distribution frequency is semi-annual.
 
 | Year | HEZU NAV TR (USD) | MSCI EMU 100% Hedged to USD NR (USD) | S&P 500 TR (USD) |
 |---|---:|---:|---:|
@@ -88,11 +89,11 @@ the cached USD Total Return convention as of 2025-12-31.
 ## Risk read-through
 
 The latest issuer risk snapshot reports 3-year standard deviation `11.39%` and
-beta `0.59` as of 31 ก.ค. 2026; P/E `19.36x` and P/B `2.41x` are as of 14 ส.ค.
-2026, while trailing yield is `2.57%` as of 31 ก.ค. 2026. Look-through sector
-exposure as of 14 ส.ค. 2026 was led by Financials `26.98%`, Industrials
-`20.43%`, and Information Technology `16.06%`; country exposure was led by
-France `28.01%`, Germany `25.34%`, and the Netherlands `16.97%`.
+beta `0.59` as of 31 ก.ค. 2026; trailing yield is `2.57%` as of 31 ก.ค. 2026.
+P/E `19.11x` and P/B `2.38x` are as of 27 ส.ค. 2026. Look-through sector exposure as of 27 ส.ค.
+2026 was led by Financials `27.38%`, Industrials `20.39%`, and Information
+Technology `15.44%`; country exposure was led by France `28.01%`, Germany
+`25.77%`, and the Netherlands `16.51%`.
 
 The hedge is designed to reduce, not eliminate, EUR/USD fluctuations. Forward
 roll, basis mismatch, counterparty, derivative and residual currency risks can
@@ -108,4 +109,4 @@ standard deviation.
 - [HEZU SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1100663/000119312525336755/d918823d497k.htm) — official passive objective, underlying fund, indexing approach and currency-forward hedge disclosures
 - [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
 - Cached S&P 500 TR references: [2016-2019](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-08-18]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]
