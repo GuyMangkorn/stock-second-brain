@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Asia-Pacific
-updated: 2026-08-28
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/Asia-Pacific
@@ -19,7 +19,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | DVYA | iShares Asia/Pacific Dividend ETF | developed Asia-Pacific dividend equity | 6.90% | 9.91% | 21.45% | [[ETF_NYSE_ARCA_DVYA Performance]] |
 | EPP | iShares MSCI Pacific ex Japan ETF | Asia-Pacific equity / index-tracking | 7.37% | 5.28% | 11.23% | [[ETF_NYSE_ARCA_EPP Performance]] |
-| GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.94% | 4.20% | 12.56% | [[ETF_NYSE_ARCA_GMF Performance]] |
+| GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.17% | 4.20% | 9.44% | [[ETF_NYSE_ARCA_GMF Performance]] |
 | FPA | First Trust Asia Pacific ex-Japan AlphaDEX Fund | Asia-Pacific equity / passive index fund | 10.31% | 7.23% | 42.71% | [[ETF_NASDAQ_FPA Performance]] |
 | WDAF | WisdomTree Asia Defense Fund | Asia-Pacific defense thematic equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-09-12) | 6.77% | [[ETF_NASDAQ_WDAF Performance]] |
 | IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 13.75% | [[ETF_NYSE_ARCA_IPAC Performance]] |
