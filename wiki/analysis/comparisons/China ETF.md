@@ -78,7 +78,7 @@ tags:
 | KSTR | KraneShares China Technology & Semiconductor STAR 50 Index ETF | China equity / index-tracking | not applicable (<10y history) | not disclosed | 71.70% | [[ETF_NYSE_ARCA_KSTR Performance]] |
 | KURE | KraneShares MSCI All China Health Care Index ETF | China healthcare sector equity / index-tracking | not applicable (<10y history) | not disclosed | -8.80% | [[ETF_NYSE_ARCA_KURE Performance]] |
 | KRANF / KWEB | KraneShares CSI China Internet UCITS ETF USD | China internet equity / index-tracking UCITS; official LSE USD listing and corrected annual rows | not applicable (<10y history) | -11.72% | -28.96% | [[ETF_LSE_KWEB Performance]] |
-| MCHI | iShares MSCI China ETF | China equity / index-tracking | 3.82% | -3.72% | -9.33% | [[ETF_NASDAQ_MCHI Performance]] |
+| MCHI | iShares MSCI China ETF | China equity / index-tracking | 3.82% | -3.72% | -7.93% | [[ETF_NASDAQ_MCHI Performance]] |
 | PGJ | Invesco Golden Dragon China ETF | China equity / index-tracking | 0.35% | -12.65% | not disclosed | [[ETF_NASDAQ_PGJ Performance]] |
 | SMHC | VanEck China Semiconductor ETF | China semiconductor thematic equity / index-tracking | not applicable (<10y history) | not applicable (inception 2026-06-23) | not disclosed | [[ETF_NASDAQ_SMHC Performance]] |
 | TCHI | iShares MSCI China Multisector Tech ETF | China technology/multisector equity / index-tracking | not applicable (<10y history) | not disclosed (2021-2022 unavailable) | -0.45% | [[ETF_NASDAQ_TCHI Performance]] |

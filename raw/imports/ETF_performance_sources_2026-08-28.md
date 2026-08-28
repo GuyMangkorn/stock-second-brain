@@ -405,6 +405,25 @@ screen's verification record.
 - source_urls: issuer product/performance page https://www.ishares.com/us/products/239758/ishares-india-50-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/indy-ishares-india-50-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-india-50-etf-3-31.pdf; 2020 factsheet https://www.blackrock.com/americas-offshore/en/literature/fact-sheet/indy-ishares-india-50-etf-fund-fact-sheet-en-lm.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
 - gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and 2016-2019 annual rows are not disclosed; the separate overview endpoint conflict is retained above. Current sector snapshot is Financials 36.04%, Consumer Discretionary 11.95%, Energy 9.48%, Industrials 8.60%, and Information Technology 8.13% as of 2026-08-27.
 
+### MCHI
+
+- workflow: check-etf-performance
+- execution_profile: scheduled-inline
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+- entity_key: NASDAQ:MCHI; official issuer page identifies iShares MSCI China ETF on NASDAQ.
+- management_mode: passive-index; the official issuer objective and summary prospectus describe an index-tracking equity fund tracking the MSCI China Index.
+- inception: 2011-03-29; expense_ratio: 0.59%; distribution_frequency: semi-annual; asset_class: Equity.
+- metric: official NAV Total Return, including reinvested distributions and fund expenses; return_currency: USD.
+- issuer_benchmark: MSCI China Index (Net); common benchmark is cached S&P 500 Total Return in USD with dividends reinvested.
+- current_snapshot: NAV USD 55.02 and closing price USD 54.90 as of 2026-08-27; current NAV TR YTD -7.93% as of 2026-08-26; holdings 575 as of 2026-08-27; 3-year standard deviation 21.63% and beta 0.36 as of 2026-07-31; P/E 13.68 and P/B 1.66 as of 2026-08-26.
+- official_rolling: 2016-06-30 to 2026-06-30 cumulative 45.52% and annualized 3.82%, based on the issuer standardized performance table; raw endpoint NAV values were not disclosed, so review normalization is 100.00 to 145.52 over 10.00 years.
+- official_annual_rows: 2021 -22.38% / benchmark -21.72%; 2022 -22.53% / -21.93%; 2023 -11.07% / -11.20%; 2024 18.06% / 19.42%; 2025 31.07% / 31.17%, performance as of 2026-06-30. 2016-2020 annual rows were not disclosed in the reviewed current issuer table.
+- common_window_calculation: 2021-2025 cumulative -17.25%, CAGR -3.72%, up/down 2/3; best 2025 +31.07%; least positive 2024 +18.06%; worst 2022 -22.53%; least bad down year 2023 -11.07%. Cached S&P 500 2021-2025 CAGR is 14.43%, so the arithmetic CAGR difference is -18.14 percentage points and is not called alpha.
+- current_month_end: issuer standardized YTD -14.65% as of 2026-06-30; kept separate from current product-page YTD -7.93% as of 2026-08-26.
+- source_urls: issuer product/performance page https://www.ishares.com/us/products/239619/ishares-msci-china-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/mchi-ishares-msci-china-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-etf-8-31.pdf; annual financial statements https://www.ishares.com/us/literature/annual-financial-statements/afs-ishares-trust-msci-country-etfs-book1-08-31-en.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
+- gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and 2016-2020 annual rows are not disclosed. Current sector snapshot is Consumer Discretionary 24.12%, Financials 19.78%, Communication 17.80%, Information Technology 10.91%, and Health Care 5.86% as of 2026-08-26. Index futures use may offset cash/receivables but is not strategy-defining.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
