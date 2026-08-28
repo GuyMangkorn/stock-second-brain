@@ -7,11 +7,13 @@ exchange: NYSE Arca
 fund: Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF
 tracked_index: CSI 500 Index
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
+management_mode: passive-index
+updated: 2026-08-28
 performance_as_of: 2026-03-31
 current_ytd_as_of: 2026-03-31
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return
+return_currency: USD
 tags:
   - analysis/etf-performance
   - ticker/ASHS
@@ -24,7 +26,15 @@ tags:
 
 ## Bottom line
 
-ASHS เป็น passive/index-tracking China A-share small-cap equity ETF ที่ติดตาม CSI 500 Index. Official rolling 10-year NAV Total Return CAGR คือ `1.96%` สำหรับ `2016-03-31` ถึง `2026-03-31` (`10.00` elapsed years); raw start/end TR values และ raw cumulative return ไม่ได้เปิดเผย. Annual NAV TR rows `2016-2025` ไม่ได้เปิดเผยใน official capture จึงไม่คำนวณ CAGR จาก annual rows และไม่จัดอันดับ best/worst. Latest official NAV TR YTD คือ `3.36%` ณ `2026-03-31`; ค่า 2026-06-30 ไม่พบใน official source ที่ตรวจ.
+ASHS เป็น passive/index-tracking China A-share small-cap equity ETF ที่ติดตาม
+CSI 500 Index. Latest official source located คือ Q1 factsheet ณ 2026-03-31:
+NAV Total Return YTD `3.36%`, rolling 1-year `38.14%`, 3-year annualized
+`7.16%`, 5-year annualized `3.79%` และ 10-year annualized `1.96%`.
+ช่วง 10-year คือ `2016-03-31` ถึง `2026-03-31` (`10.00` elapsed years); raw
+start/end TR values และ raw cumulative return ไม่ได้เปิดเผย. Annual NAV TR rows
+`2016-2025` ไม่ได้เปิดเผยใน official capture จึงไม่คำนวณ CAGR จาก annual rows
+และไม่จัดอันดับ best/worst. ยังไม่พบ official Q2 2026 factsheet หรือ current
+2026-06-30 YTD field ใน reviewed source set.
 
 ## Performance check
 
@@ -36,6 +46,20 @@ ASHS เป็น passive/index-tracking China A-share small-cap equity ETF ท�
 - Implied cumulative return from the official CAGR is approximately `21.42%`; this is a shown calculation, not a substitute for undisclosed raw endpoints
 - Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark, not the issuer benchmark)
 - Current NAV TR YTD: `3.36%` as of `2026-03-31`; current `2026-06-30` NAV TR YTD: `not disclosed` in the reviewed official source capture
+- Latest official Q1 2026 factsheet rolling fields as of `2026-03-31`: 3-month `3.36%`, 1-year `38.14%`, 3-year annualized `7.16%`, 5-year annualized `3.79%`, 10-year annualized `1.96%`, and since ETF inception `5.23%`. No newer official current YTD field was captured by 2026-08-28.
+
+| Window ended 2026-03-31 | ASHS NAV TR | CSI 500 Index TR | Difference |
+|---|---:|---:|---:|
+| 3-month | 3.36% | 3.29% | +0.07 pp |
+| 1-year | 38.14% | 38.41% | -0.27 pp |
+| 3-year annualized | 7.16% | 7.80% | -0.64 pp |
+| 5-year annualized | 3.79% | 4.54% | -0.75 pp |
+| 10-year annualized | 1.96% | 2.74% | -0.78 pp |
+| Since ETF inception | 5.23% | 6.53% | -1.30 pp |
+
+The CSI 500 Index returns are gross of fees; the differences are tracking and
+fee-related comparisons, not alpha. A newer Q2 2026 factsheet/current YTD
+observation was not found in the reviewed official source set.
 
 | Year | ASHS NAV TR | CSI 500 Index TR | S&P 500 TR |
 |---|---:|---:|---:|
@@ -72,4 +96,4 @@ ASHS ลงทุนโดยตรงใน China A-shares ผ่าน Stock C
 - Official Xtrackers ASHS annual shareholder report: https://etf.dws.com/download/asset/cd4f449d-b77e-49df-8486-46f48efe43cc
 - SEC ASHS summary prospectus cross-check (October 1, 2024): https://www.sec.gov/Archives/edgar/data/1503123/000008805324000976/k100124ashs.htm
 - Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-24]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]] | [[ETF Performance Index]]
