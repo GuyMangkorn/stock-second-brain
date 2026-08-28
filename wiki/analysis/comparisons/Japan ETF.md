@@ -21,7 +21,7 @@ tags:
 | DBJP | Xtrackers MSCI Japan Hedged Equity ETF | Japan single-country equity / USD hedged | 17.28% | not disclosed | not disclosed | [[ETF_NYSE_ARCA_DBJP Performance]] |
 | DFJ | WisdomTree Japan SmallCap Dividend Fund | Japan small-cap dividend | 9.13% | 8.57% | 10.98% | [[ETF_AMEX_DFJ Performance]] |
 | EWJ | iShares MSCI Japan ETF | Japan single-country large/mid-cap equity | 9.54% | 6.22% | 14.28% | [[ETF_NYSE_ARCA_EWJ Performance]] |
-| JPXN | iShares JPX-Nikkei 400 ETF | Japan large-cap equity / index-tracking | 9.28% | 6.19% | 15.60% | [[ETF_NYSE_ARCA_JPXN Performance]] |
+| JPXN | iShares JPX-Nikkei 400 ETF | Japan large-cap equity / index-tracking | 9.28% | 6.19% | 19.53% | [[ETF_NYSE_ARCA_JPXN Performance]] |
 | HEWJ | iShares Currency Hedged MSCI Japan ETF | Japan large/mid-cap equity / USD hedged | 17.27% | 19.11% | 23.35% | [[ETF_NYSE_ARCA_HEWJ Performance]] |
 | SJPA / IHREF | iShares Core MSCI Japan IMI UCITS ETF | Japan broad large/mid/small-cap equity, USD accumulating | 7.42% | 6.33% | 19.87% | [[ETF_LSE_SJPA Performance]] |
 | SCJ | iShares MSCI Japan Small-Cap ETF | Japan small-cap equity / index-tracking | 8.18% | 5.20% | 16.10% | [[ETF_NYSE_ARCA_SCJ Performance]] |
@@ -48,6 +48,14 @@ YTD อยู่ที่ 23.35% ณ 2026-08-25; SJPA/IHREF current date-to-date
 22.41% ณ 2026-06-30 และ 16.99% ณ 2026-07-31 ตามลำดับ. SJPA 7.42% ในตาราง
 เป็น calendar-row CAGR 2016-2025; rolling 10-year field ใน current capture
 ไม่พบข้อมูลที่ reconcile ได้.
+
+## 2026-08-29 Verified Refresh
+
+JPXN latest official iShares NAV TR YTD อยู่ที่ `19.53%` ณ 2026-08-27; NAV
+`US$102.65`, closing price `US$102.59`, และ net assets `US$138.57M` ณ วันเดียวกัน.
+Rolling 10-year NAV TR `9.28%` และ 2021-2025 NAV TR CAGR `6.19%` ยังคงอิง
+standardized June 2026 table. Daily NAV drawdown/recovery ยัง
+`ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Navigation
 
