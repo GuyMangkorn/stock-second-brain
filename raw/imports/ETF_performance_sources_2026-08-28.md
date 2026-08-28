@@ -290,6 +290,27 @@ screen's verification record.
 - Source URLs: issuer product/performance page `https://www.ishares.com/us/products/239659/INDA`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/inda-ishares-msci-india-etf-fund-fact-sheet-en-us.pdf`; summary prospectus `https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-india-etf-8-31.pdf`; S&P 500 definition `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
 - Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; raw 10-year endpoints and 2016–2020 annual rows are not disclosed; sector breakdown was not disclosed in the reviewed current canonical product-page capture; the separate overview endpoint conflict is preserved above rather than averaged or silently discarded.
 
+### SMIN
+
+- `workflow: check-etf-performance`
+- `execution_profile: scheduled-inline`
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: Cboe BZX:SMIN`; the canonical iShares product page identifies the fund as `iShares MSCI India Small-Cap ETF` on `Cboe BZX`.
+- `management_mode: passive-index`; the issuer description and summary prospectus state that the fund seeks to track an index composed of small-capitalization Indian equities and uses an indexing approach.
+- `inception: 2012-02-08`; `expense_ratio: 0.74%`; `distribution_frequency: semi-annual`.
+- Metric: official `NAV Total Return`, with reinvested dividends/distributions and fund expenses reflected in NAV; return currency `USD`.
+- Issuer benchmark: `MSCI India Small Cap Index (Net)`; common benchmark remains cached `S&P 500 Total Return` in USD with dividends reinvested.
+- Current canonical product-page snapshot: NAV `USD 71.90`, closing price `USD 72.13`, net assets `USD 772,891,256`, shares outstanding `10,750,000`, and holdings `461`, all as of `2026-08-25`; current NAV TR YTD is `2.57%` as of `2026-08-25`; expense ratio `0.74%`; 3-year standard deviation `18.82%` and equity beta `0.46` as of `2026-07-31`; P/E `32.69` and P/B `3.59` as of `2026-08-25`.
+- Current sector snapshot as of `2026-08-25`: Industrials `19.70%`, Financials `17.14%`, Health Care `15.14%`, Consumer Discretionary `14.73%`, Materials `11.84%`, Information Technology `8.04%`, Consumer Staples `4.12%`, Real Estate `3.48%`, Utilities `2.37%`, Communication `1.98%`, Energy `1.14%`, and Cash/Derivatives `0.32%`.
+- Official rolling NAV TR as of `2026-06-30`: 10-year annualized `9.71%` and 10-year cumulative `152.70%` for `2016-06-30` to `2026-06-30`, or `10.00` elapsed years. Raw rolling endpoints were not disclosed; normalized review endpoints are `100.00` and `252.70`. Other annualized NAV TR fields are 1-year `-7.02%`, 3-year `9.79%`, 5-year `7.42%`, and since inception `9.00%`.
+- Official calendar NAV TR / issuer benchmark rows, performance as of `2026-06-30`: `2021 44.69% / 51.13%`; `2022 -13.98% / -13.43%`; `2023 34.80% / 42.63%`; `2024 17.34% / 22.63%`; `2025 -6.82% / -7.92%`. The issuer table's month-end 2026 YTD is `-0.02%` NAV versus `1.08%` benchmark as of `2026-06-30`; current product-page YTD is kept separately.
+- Additional complete calendar rows: the official summary prospectus supplies NAV rows for `2015-2024` and the June 2026 factsheet supplies `2025`; the assembled 2015-2025 NAV rows compound to `153.86%` / rounded-input CAGR `8.84%`. The strict common comparison uses the issuer-published 2021-2025 rows.
+- Common benchmark: cached `S&P 500 Total Return` in USD, dividends reinvested, complete calendar years `2016–2025`, as of `2025-12-31`; rows are not used as issuer benchmark or for a new current-YTD claim.
+- Calculations from displayed complete rows: SMIN 2021-2025 cumulative `83.44%`, CAGR `12.90%`; issuer benchmark cumulative `110.71%`, CAGR `16.07%`; SMIN minus issuer benchmark CAGR `-3.17 pp`; S&P 500 cumulative `96.17%`, CAGR `14.43%`; SMIN minus S&P CAGR `-1.53 pp`; up/down years in 2015-2025 `6 / 5`; best `2017 +61.78%`; least positive `2015 +2.02%`; worst `2018 -25.43%`; least bad down year `2016 -0.42%`.
+- Source URLs: issuer product/performance page `https://www.ishares.com/us/products/239660/SMIN`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/smin-ishares-msci-india-small-cap-etf-fund-fact-sheet-en-us.pdf`; summary prospectus `https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-india-small-cap-etf-8-31.pdf`; MSCI India Small Cap Index factsheet `https://www.msci.com/documents/10199/255599/msci-india-small-cap-index.pdf`; S&P 500 definition `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
+- Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; raw 10-year endpoints are not disclosed; 2015-2024 rows are sourced from the dated prospectus/chart plus the later 2025 factsheet and are kept separate from the current 2026 YTD observation; benchmark-relative differences are tracking comparisons, not alpha.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
