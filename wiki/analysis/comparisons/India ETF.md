@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -12.32% | [[ETF_NASDAQ_INDY Performance]] |
+| INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -11.36% | [[ETF_NASDAQ_INDY Performance]] |
 | EPI | WisdomTree India Earnings Fund | India earnings-weighted / index-tracking equity | 9.18% | 11.52% | -7.91% | [[ETF_NYSE_ARCA_EPI Performance]] |
 | INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | IND | Xtrackers Nifty 500 India ETF | India broad equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-11-24) | not disclosed | [[ETF_NASDAQ_IND Performance]] |

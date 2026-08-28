@@ -385,6 +385,26 @@ screen's verification record.
 - source_urls: issuer product/performance page https://www.ishares.com/us/products/overview-v3-ishares-fund-data?portfolioId=239672&seoSlug=ishares-msci-new-zealand-capped-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/enzl-ishares-msci-new-zealand-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-new-zealand-capped-etf-8-31.pdf; annual report https://www.blackrock.com/us/individual/literature/annual-report/ar-enzl-en.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
 - gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and exact June-to-June S&P 500 TR were not disclosed in the reviewed evidence; benchmark splice remains a comparability caveat. Current sector snapshot is Health Care 31.75%, Industrials 22.84%, Financials 12.99%, Real Estate 12.17%, and Utilities 11.89% as of 2026-08-26.
 
+### INDY
+
+- workflow: check-etf-performance
+- execution_profile: scheduled-inline
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+- entity_key: NASDAQ:INDY; official issuer page identifies iShares India 50 ETF on NASDAQ.
+- management_mode: passive-index; the official issuer objective and summary prospectus describe an index-tracking equity fund tracking the Nifty 50 Index.
+- inception: 2009-11-18; expense_ratio: 0.65%; distribution_frequency: semi-annual; asset_class: Equity.
+- metric: official NAV Total Return, including reinvested distributions and fund expenses; return_currency: USD.
+- issuer_benchmark: Nifty 50 Index; common benchmark is cached S&P 500 Total Return in USD with dividends reinvested.
+- current_snapshot: NAV USD 43.57 and closing price USD 43.58 as of 2026-08-27; current NAV TR YTD -11.36% as of 2026-08-26; holdings 50 as of 2026-08-27; 3-year standard deviation 13.32% and beta 0.37 as of 2026-07-31; P/E 21.64 and P/B 3.03 as of 2026-08-27.
+- official_rolling: 2016-06-30 to 2026-06-30 cumulative 90.75% and annualized 6.67%, based on the issuer standardized performance table; raw endpoint NAV values were not disclosed, so review normalization is 100.00 to 190.75 over 10.00 years.
+- official_annual_rows: 2021 19.28%; 2022 -7.86%; 2023 17.05%; 2024 4.02%; 2025 4.42%, performance as of 2026-06-30. The additional 2020 row is 10.67% from the dated BlackRock factsheet; 2016-2019 annual rows are not disclosed in the reviewed current capture.
+- common_window_calculation: 2021-2025 cumulative 39.73%, CAGR 6.92%, up/down 4/1; best 2021 +19.28%; least positive 2024 +4.02%; worst and only down year 2022 -7.86%. Cached S&P 500 2021-2025 CAGR is 14.43%, so the arithmetic CAGR difference is -7.51 percentage points and is not called alpha. The 2020-2025 six-row series compounds to 54.64% / 7.54% CAGR with 5/1 up/down years.
+- current_month_end: issuer standardized YTD -11.49% as of 2026-06-30; kept separate from current product-page YTD -11.36% as of 2026-08-26.
+- source_quality_choice: canonical INDY direct product page was selected over a separate overview endpoint that showed YTD -7.61% and holdings 165 as of 2026-08-25. The conflict is preserved and not averaged.
+- source_urls: issuer product/performance page https://www.ishares.com/us/products/239758/ishares-india-50-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/indy-ishares-india-50-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-india-50-etf-3-31.pdf; 2020 factsheet https://www.blackrock.com/americas-offshore/en/literature/fact-sheet/indy-ishares-india-50-etf-fund-fact-sheet-en-lm.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
+- gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and 2016-2019 annual rows are not disclosed; the separate overview endpoint conflict is retained above. Current sector snapshot is Financials 36.04%, Consumer Discretionary 11.95%, Energy 9.48%, Industrials 8.60%, and Information Technology 8.13% as of 2026-08-27.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
