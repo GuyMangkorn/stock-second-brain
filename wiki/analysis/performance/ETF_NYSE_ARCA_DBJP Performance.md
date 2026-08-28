@@ -7,11 +7,13 @@ exchange: NYSE Arca
 fund: Xtrackers MSCI Japan Hedged Equity ETF
 tracked_index: MSCI Japan US Dollar Hedged Index
 benchmark: S&P 500 Total Return
-updated: 2026-07-23
+management_mode: passive-index
+updated: 2026-08-28
 performance_as_of: 2026-06-30
 current_ytd_as_of: not disclosed
-source_batch: raw/imports/ETF_performance_sources_2026-07-23.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return
+return_currency: USD
 primary_region: Japan
 tags:
   - analysis/etf-performance
@@ -27,10 +29,11 @@ tags:
 
 DBJP เป็น passive/index-tracking Japan equity ETF ที่ใช้ MSCI Japan US Dollar
 Hedged Index เป็น issuer benchmark. Official Q2 2026 factsheet รายงาน rolling
-10-year NAV Total Return CAGR `17.28%` ณ `2026-06-30` โดย NAV return รวมการ
-reinvest distributions และหัก fund expenses แล้ว. Annual NAV TR ที่ยืนยันได้จาก
-official summary prospectus ครอบคลุม `2016-2024`; ปี `2025` และ current YTD
-ยังเป็น `ไม่พบข้อมูลที่ยืนยันได้` จาก issuer source ที่ตรวจสอบรอบนี้.
+10-year NAV Total Return CAGR `17.28%`, rolling 1-year NAV TR `49.40%` และ
+3-month NAV TR `17.29%` ณ `2026-06-30` โดย NAV return รวมการ reinvest
+distributions และหัก fund expenses แล้ว. Annual NAV TR ที่ยืนยันได้จาก official
+summary prospectus ครอบคลุม `2016-2024`; ปี `2025` และ current YTD ยังเป็น
+`ไม่พบข้อมูลที่ยืนยันได้` จาก issuer source ที่ตรวจสอบรอบนี้.
 
 ## Performance check
 
@@ -49,6 +52,22 @@ official summary prospectus ครอบคลุม `2016-2024`; ปี `2025` 
   rounded `17.28%` annualized return; raw NAV endpoint levels are not disclosed)
 - Formula: `(492.31 / 100.00)^(1 / 10.00) - 1 ≈ 17.28%`
 - Exact June-to-June S&P 500 TR comparison for this rolling window: `not disclosed`
+
+### Official rolling comparison
+
+| Window ended 2026-06-30 | DBJP NAV TR | MSCI Japan USD Hedged Index | Difference |
+|---|---:|---:|---:|
+| 3-month | 17.29% | 17.56% | -0.27 pp |
+| 1-year | 49.40% | 50.24% | -0.84 pp |
+| 3-year annualized | 28.05% | 28.70% | -0.65 pp |
+| 5-year annualized | 21.88% | 22.49% | -0.61 pp |
+| 10-year annualized | 17.28% | 17.89% | -0.61 pp |
+| Since ETF inception | 14.22% | 14.87% | -0.65 pp |
+
+The issuer's MSCI Japan Index reference, without the USD/JPY hedge, returned
+`14.21%`, `29.11%`, `18.49%`, `9.49%`, `9.84%` and `8.10%` for the same six
+windows. Fund-minus-index differences above are tracking/fee/hedging outcomes,
+not manager alpha.
 
 | Year | DBJP NAV TR | S&P 500 TR |
 |---|---:|---:|
@@ -88,9 +107,10 @@ rolling 10-year CAGR because the windows and endpoint conventions differ.
 10-year NAV TR CAGR `17.28%` แสดงผลตอบแทนระยะยาวที่แข็งแรง แต่ DBJP ยังเป็น
 single-country equity exposure จึงไวต่อ Japan macro cycle, sector concentration,
 valuation และ FX. กองทุน hedge USD/JPY ด้วย forward contracts; hedge ลด currency
-exposure แต่มี hedge cost และ basis risk. Issuer factsheet รายงาน beta `0.89`
-และ expense ratio `0.45%` ณ `2026-06-30`. Daily NAV history ที่พอจะคำนวณ
-max drawdown และ recovery อย่าง reproducible ยังไม่เปิดเผยใน source ที่ใช้รอบนี้.
+exposure แต่มี hedge cost และ basis risk. Issuer factsheet รายงาน `169` holdings,
+net assets `US$670.07 million`, beta `0.89` และ expense ratio `0.45%` ณ
+`2026-06-30`. Daily NAV history ที่พอจะคำนวณ max drawdown และ recovery อย่าง
+reproducible ยังไม่เปิดเผยใน source ที่ใช้รอบนี้.
 
 ## Sources
 
@@ -99,4 +119,4 @@ max drawdown และ recovery อย่าง reproducible ยังไม่�
 - [DWS 2025 dividend schedule](https://etf.dws.com/en-us/AssetDownload/Index/6b4403da-1256-4e11-8e8a-14254534db91/Dividend-Schedule.pdf) — annual distribution schedule
 - [DWS currency-hedged ETF explanation](https://etf.dws.com/en-us/etf-knowledge/focus-topics-etf-investment-strategies/currency-hedged-etfs-mitigating-currency-risks-from-international-equities/) — USD/JPY forward-hedging mechanism
 - [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached source-batch convention — common USD total-return reference
-- ETF source batch: [[ETF_performance_sources_2026-07-23]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]] | [[ETF Performance Index]]
