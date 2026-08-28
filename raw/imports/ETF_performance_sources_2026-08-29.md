@@ -89,6 +89,21 @@ pre_save_review: PASS
 - verification_mode: scheduled-local
 - reviewer_dispatch: not-attempted-by-design
 
+## IEUR — iShares Core MSCI Europe ETF
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NYSE Arca:IEUR`.
+- Official product/performance source: https://www.ishares.com/us/products/264617/IEUR — Equity ETF listed on NYSE Arca, launched 2014-06-10, tracking `MSCI Europe IMI Index (Net)`; current NAV `USD 77.98`, closing price `USD 78.11`, net assets `USD 9,419,762,708`, shares outstanding `120,800,000`, and NAV Total Return YTD `12.23%`, all as of 2026-08-27. Expense ratio is `0.10%`, distribution frequency is semi-annual, and holdings are `1,009`.
+- Official standardized performance source: same iShares page and factsheet https://www.ishares.com/us/literature/fact-sheet/ieur-ishares-core-msci-europe-etf-fund-fact-sheet-en-us.pdf — factsheet as of 2026-06-30; official 2021-2025 NAV rows `16.21%, -16.18%, 19.83%, 1.70%, 35.11%`, benchmark rows `16.13%, -16.71%, 19.52%, 1.49%, 35.08%`; rolling NAV TR fields are 1-year `17.19%`, 3-year `16.18%`, 5-year `9.07%`, 10-year `10.02%`, and since inception `6.54%`.
+- Official classification source: same iShares product page and summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-core-msci-europe-etf-7-31.pdf — the fund tracks large-, mid- and small-cap developed-European equities with an indexing approach; eligible passive broad-Europe equity ETF. Current P/B is `2.48x` and P/E `19.14x` as of 2026-08-27; 3-year standard deviation `13.67%` and beta `0.66` are as of 2026-07-31. Country exposure as of 2026-08-27 is led by United Kingdom `22.89%`, France `14.14%`, Switzerland `13.88%`, Germany `13.42%`, and Netherlands `8.32%`.
+- Return basis and common benchmark: official NAV Total Return includes reinvested dividends/capital gains and reflects fund expenses; market-price and issuer-index returns remain separate. Cached `S&P 500 Total Return` convention is used for complete 2021-2025 rows, USD, dividends reinvested, as of 2025-12-31; current 2026 S&P comparison is not claimed.
+- Distribution observations from the official product page: `US$1.542483` payable 2026-06-18 and `US$0.849102` payable 2025-12-19; latest two verified cash payments total `US$2.391585` per share. These are distributions, not NAV TR.
+- Calculations: 2021-2025 NAV compound `60.39%`, CAGR `9.91%`; issuer benchmark compound `58.49%`, CAGR `9.65%`; S&P 500 TR compound `96.17%`, CAGR `14.43%`. Up/down years are `4 / 1`; best is 2025 `+35.11%`, least positive is 2024 `+1.70%`, worst and least bad down year are 2022 `-16.18%`. The issuer rolling 10-year field remains `10.02%` as of 2026-06-30; no separate ten-year calendar CAGR is inferred.
+- As-of reconciliation: the prior page snapshot reported NAV `USD 77.83`, closing price `USD 78.05`, and YTD `12.03%` as of 2026-08-17. The later official iShares observation is NAV `USD 77.98`, closing price `USD 78.11`, and YTD `12.23%` as of 2026-08-27 and is used for refreshed current fields. The date-to-date YTD is kept separate from the June month-end standardized table.
+- Evidence gaps: raw daily NAV TR endpoints sufficient for a reproducible NAV max-drawdown/recovery series are `ไม่พบข้อมูลที่ยืนยันได้`; no price-only proxy is substituted. No ETF entity hub exists in `wiki/entities/` for IEUR, so the existing performance owner remains the context page.
+- Pre-save local review: identity/exchange, passive equity eligibility, NAV/price/benchmark basis, as-of dates, annual markers, cached S&P window, calculations, source links, `Europe ETF` navigation, breadcrumb, and planned performance/source-batch/index/log changes were checked; no high-severity issue remained. Result: `PASS`.
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+
 ## HEZU — iShares Currency Hedged MSCI Eurozone ETF
 
 - `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: NYSE Arca:HEZU`.

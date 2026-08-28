@@ -9,12 +9,12 @@ fund: iShares Core MSCI Europe ETF
 tracked_index: MSCI Europe IMI Index (Net)
 benchmark: S&P 500 Total Return
 management_mode: passive-index-tracking
-updated: 2026-08-19
+updated: 2026-08-29
 performance_as_of: 2025-12-31
-current_ytd_as_of: 2026-08-17
-price_nav_as_of: 2026-08-17
-fund_facts_as_of: 2026-08-17
-source_batch: raw/imports/ETF_performance_sources_2026-08-19.md
+current_ytd_as_of: 2026-08-27
+price_nav_as_of: 2026-08-27
+fund_facts_as_of: 2026-08-27
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return; dividends reinvested; net of expenses
 return_currency: USD
 tags:
@@ -32,7 +32,7 @@ tags:
 `IEUR` คือ iShares Core MSCI Europe ETF ของ iShares/BlackRock, canonical
 listing `NYSE Arca:IEUR`. Official complete-calendar NAV rows ปี 2021-2025
 compound ได้ `60.39%` หรือ rounded-input CAGR `9.91%`; ผลตอบแทนเป็นบวก/ลบ
-`4 / 1` ปี และ current official NAV TR YTD คือ `+12.03%` ณ 17 ส.ค. 2026.
+`4 / 1` ปี และ current official NAV TR YTD คือ `+12.23%` ณ 27 ส.ค. 2026.
 Issuer rolling 10-year NAV TR คือ `10.02%` ณ 30 มิ.ย. 2026 ซึ่งแยกจาก
 calendar-derived 2021-2025 CAGR.
 
@@ -42,8 +42,8 @@ calendar-derived 2021-2025 CAGR.
 - Classification: `passive-index-tracking`; กองทุนมุ่งติดตามดัชนีหุ้น large-, mid- และ small-cap ใน developed Europe.
 - Metric: `NAV Total Return` รวม dividends/capital gains ที่ reinvested และ fund expenses; คำนวณเป็น USD. Market-price return ถูกเก็บแยกจาก NAV TR.
 - Common reference: `S&P 500 Total Return` (USD, dividends reinvested); issuer benchmark ยังคงเป็น `MSCI Europe IMI Index (Net)` และไม่ควรเรียก S&P 500 ว่า strategy benchmark.
-- Expense ratio: `0.10%`; official NAV `US$77.83` และ closing price `US$78.05` ณ 17 ส.ค. 2026; net assets `US$9.402B` ณ วันเดียวกัน.
-- Current official NAV TR YTD: `+12.03%` ณ 17 ส.ค. 2026. Official 1Y/3Y/5Y/10Y annualised NAV TR คือ `17.19% / 16.18% / 9.07% / 10.02%` ณ 30 มิ.ย. 2026.
+- Expense ratio: `0.10%`; official NAV `US$77.98` และ closing price `US$78.11` ณ 27 ส.ค. 2026; net assets `US$9.420B` ณ วันเดียวกัน.
+- Current official NAV TR YTD: `+12.23%` ณ 27 ส.ค. 2026. Official 1Y/3Y/5Y/10Y annualised NAV TR คือ `17.19% / 16.18% / 9.07% / 10.02%` ณ 30 มิ.ย. 2026.
 - Distribution check: frequency `Semi-Annual`; latest displayed income distributions คือ `US$1.542483` จ่าย 18 มิ.ย. 2026 และ `US$0.849102` จ่าย 19 ธ.ค. 2025, รวม `US$2.391585` ต่อหน่วยในสองงวดล่าสุด. 30-day SEC yield `2.39%` และ 12m trailing yield `3.11%` ณ 31 ก.ค. 2026 เป็นคนละ metric กับ NAV TR.
 - Coverage/source note: iShares factsheet ให้ complete official calendar rows ปี 2021-2025; 10-year value เป็น issuer rolling NAV TR field ไม่ใช่ CAGR ที่คำนวณจาก annual rows. S&P 500 rows เป็น cached USD total-return convention ปี 2021-2025 ณ 31 ธ.ค. 2025.
 
@@ -70,15 +70,15 @@ the same period; it is a common reference rather than the issuer benchmark.
 - Least bad down year: 2022, `-16.18%`
 - Population standard deviation of the five complete annual NAV returns: `17.38%`
 - Official 3-year standard deviation: `13.67%` as of 31 ก.ค. 2026
-- Current YTD: `+12.03%` as of 17 ส.ค. 2026
+- Current YTD: `+12.23%` as of 27 ส.ค. 2026
 
 ## Risk read-through
 
 The issuer's rolling 10-year NAV TR is `10.02%` as of 30 มิ.ย. 2026, while the
 available complete 2021-2025 annual rows produce `9.91%` CAGR. The fund held
-1,009 positions ณ 17 ส.ค. 2026, with country exposure to the United Kingdom
-`22.71%`, France `14.47%`, Switzerland `13.72%`, Germany `13.25%`, and the
-Netherlands `8.76%`. Main risks are European country/sector/small-cap exposure,
+1,009 positions ณ 27 ส.ค. 2026, with country exposure to the United Kingdom
+`22.89%`, France `14.14%`, Switzerland `13.88%`, Germany `13.42%`, and the
+Netherlands `8.32%`. Main risks are European country/sector/small-cap exposure,
 non-USD underlying currency movements, equity volatility, NAV/market-price
 timing and index-tracking risk. Official daily NAV maximum drawdown and
 recovery date ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
@@ -89,4 +89,4 @@ recovery date ยัง `ไม่พบข้อมูลที่ยืนย�
 - [iShares IEUR factsheet](https://www.ishares.com/us/literature/fact-sheet/ieur-ishares-core-msci-europe-etf-fund-fact-sheet-en-us.pdf) — official 2021-2025 calendar rows, rolling annualized fields, expense ratio, holdings, distributions and dated fund facts.
 - [iShares IEUR summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-core-msci-europe-etf-7-31.pdf) — official investment objective, risks and fee disclosures.
 - [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached workflow references — common USD Total Return rows, dividends reinvested, as of 31 ธ.ค. 2025.
-- [[ETF_performance_sources_2026-08-19]] | [[ETF Performance Index]]
+- [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]
