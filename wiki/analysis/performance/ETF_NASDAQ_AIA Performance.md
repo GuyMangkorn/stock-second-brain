@@ -7,11 +7,11 @@ exchange: NASDAQ
 fund: iShares Asia 50 ETF
 tracked_index: S&P Asia 50 Capped Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
+updated: 2026-08-28
 performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-21
-price_nav_as_of: 2026-07-21
-source_batch: raw/imports/ETF_performance_sources_2026-07-23.md
+current_ytd_as_of: 2026-08-26
+price_nav_as_of: 2026-08-27
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -28,7 +28,8 @@ tags:
 AIA เป็น passive/index-tracking equity ETF ของ iShares ที่ติดตาม S&P Asia 50
 Capped Index (Net) และจดทะเบียนบน NASDAQ. Official rolling 10-year NAV Total
 Return ณ 2026-06-30 อยู่ที่ cumulative 298.99% และ CAGR 14.84%; latest current
-date-to-date NAV Total Return YTD อยู่ที่ 40.47% ณ 2026-07-21. ตัวเลขหลักเป็น
+date-to-date NAV Total Return YTD อยู่ที่ 43.01% ณ 2026-08-26. Current official
+NAV คือ US$139.82 ณ 2026-08-27 และ closing price คือ US$139.38. ตัวเลขหลักเป็น
 NAV Total Return ที่รวมการ reinvest distributions และหัก fund expenses ตาม
 วิธีคำนวณของ issuer.
 
@@ -40,6 +41,10 @@ NAV Total Return ที่รวมการ reinvest distributions และห
 - Metric: NAV Total Return รวม reinvested distributions และ fund expenses
 - Tracked index (issuer benchmark): S&P Asia 50 Capped Index (Net)
 - Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark)
+- Asset class: Equity; distribution frequency: semi-annual
+- Holdings: 53 ณ 2026-08-27
+- 3-year standard deviation: 21.43%; equity beta: 1.05 ณ 2026-07-31
+- P/E: 21.44; P/B: 2.75 ณ 2026-08-27
 - 10-year coverage: official rolling performance from 2016-06-30 to 2026-06-30; actual years 10.00
 - Start TR value: 100.00 normalized; End TR value: 398.99 normalized, derived from official cumulative return 298.99%; raw NAV endpoints are not disclosed
 - 10-year NAV TR CAGR: 14.84% issuer-reported average annual NAV Total Return
@@ -66,19 +71,22 @@ comparison ที่เปิดเผยตรงกันคือ 2021-2025.
 - Worst: 2022, -24.07%
 - Least bad down year: 2021, -10.75%
 - 2021-2025 cumulative / CAGR: 25.77% / 4.69%; S&P 500 TR: 96.17% / 14.43%
-- Current date-to-date YTD: 40.47% NAV as of 2026-07-21
+- Current date-to-date YTD: 43.01% NAV as of 2026-08-26
 - Standardized month-end YTD: 46.79% NAV as of 2026-06-30; kept separate from the later date-to-date observation
 
 ## Risk read-through
 
 AIA กระจุกตัวใน Asia ex Japan large-cap equity โดย official exposure ณ
-2026-07-21 อยู่ที่ Taiwan 37.23%, South Korea 26.21% และ China 25.48%;
-Information Technology เป็น sector ใหญ่สุดที่ 56.39%. ความเสี่ยงหลักจึงเป็น
-country, semiconductor/technology concentration และ FX. Daily NAV history
+2026-08-27 อยู่ที่ Taiwan 37.10%, South Korea 27.44%, China 24.65%,
+Singapore 5.82% และ Hong Kong 4.77%; Information Technology เป็น sector
+ใหญ่สุดที่ 57.06% ตามด้วย Financials 20.31%. ความเสี่ยงหลักจึงเป็น country,
+semiconductor/technology concentration และ FX. Daily NAV history
 สำหรับคำนวณ max drawdown และ recovery: ไม่พบข้อมูลที่ยืนยันได้.
 
 ## Sources
 
 - Official iShares product and performance page: https://www.ishares.com/us/products/239730/ishares-asia-50-etf
+- Official factsheet: https://www.ishares.com/us/literature/fact-sheet/aia-ishares-asia-50-etf-fund-fact-sheet-en-us.pdf
+- Official prospectus: https://www.ishares.com/us/literature/prospectus/p-ishares-asia-50-etf-3-31.pdf
 - Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-23]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]] | [[ETF Performance Index]]

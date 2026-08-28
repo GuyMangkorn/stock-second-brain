@@ -349,6 +349,24 @@ screen's verification record.
 - source_urls: issuer product/performance page https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/aaxj-ishares-msci-all-country-asia-ex-japan-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-all-country-asia-ex-japan-etf-7-31.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
 - gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and exact June-to-June S&P 500 TR were not disclosed in the reviewed evidence. Exposure snapshot is Taiwan 30.17%, China 23.12%, Korea South 23.08%, India 12.72%, and Information Technology 45.88% as of 2026-08-24.
 
+### AIA
+
+- workflow: check-etf-performance
+- execution_profile: scheduled-inline
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+- entity_key: NASDAQ:AIA; official issuer page identifies iShares Asia 50 ETF on NASDAQ.
+- management_mode: passive-index; the official issuer objective and prospectus describe an indexing approach tracking the S&P Asia 50 Capped Index.
+- inception: 2007-11-13; expense_ratio: 0.50%; distribution_frequency: semi-annual; asset_class: Equity.
+- metric: official NAV Total Return, including reinvested distributions and fund expenses; return_currency: USD.
+- issuer_benchmark: S&P Asia 50 Capped Index (Net); common benchmark is cached S&P 500 Total Return in USD with dividends reinvested.
+- current_snapshot: NAV USD 139.82 and closing price USD 139.38 as of 2026-08-27; current NAV TR YTD 43.01% as of 2026-08-26; holdings 53 as of 2026-08-27; 3-year standard deviation 21.43% and beta 1.05 as of 2026-07-31; P/E 21.44 and P/B 2.75 as of 2026-08-27.
+- official_rolling: 2016-06-30 to 2026-06-30 cumulative 298.99% and annualized 14.84%, based on the issuer standardized performance table; raw endpoint NAV values were not disclosed, so review normalization is 100.00 to 398.99 over 10.00 years.
+- official_annual_rows: 2021 -10.75%; 2022 -24.07%; 2023 4.84%; 2024 20.42%; 2025 47.01%, performance as of 2026-06-30.
+- common_window_calculation: 2021-2025 cumulative 25.77%, CAGR 4.69%, up/down 3/2; best 2025 +47.01%; least positive 2023 +4.84%; worst 2022 -24.07%; least bad down year 2021 -10.75%. Cached S&P 500 2021-2025 CAGR is 14.43%, so the arithmetic CAGR difference is -9.73 percentage points and is not called alpha.
+- source_urls: issuer product/performance page https://www.ishares.com/us/products/239730/ishares-asia-50-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/aia-ishares-asia-50-etf-fund-fact-sheet-en-us.pdf; prospectus https://www.ishares.com/us/literature/prospectus/p-ishares-asia-50-etf-3-31.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
+- gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and exact June-to-June S&P 500 TR were not disclosed in the reviewed evidence. Exposure snapshot is Taiwan 37.10%, Korea South 27.44%, China 24.65%, Singapore 5.82%, Hong Kong 4.77%, and Information Technology 57.06% as of 2026-08-27.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
