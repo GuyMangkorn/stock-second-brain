@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: India
-updated: 2026-08-28
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/India
@@ -19,7 +19,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | INDY | iShares India 50 ETF | India single-country large-cap equity | 6.67% | 6.92% | -11.36% | [[ETF_NASDAQ_INDY Performance]] |
 | EPI | WisdomTree India Earnings Fund | India earnings-weighted / index-tracking equity | 9.18% | 11.52% | -7.91% | [[ETF_NYSE_ARCA_EPI Performance]] |
-| INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.72% | 11.16% | -9.92% | [[ETF_NYSE_ARCA_INCO Performance]] |
+| INCO | Columbia India Consumer ETF | India consumer thematic equity / indexed | 8.38% | 11.16% | -4.67% | [[ETF_NYSE_ARCA_INCO Performance]] |
 | IND | Xtrackers Nifty 500 India ETF | India broad equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-11-24) | not disclosed | [[ETF_NASDAQ_IND Performance]] |
 | SMIN | iShares MSCI India Small-Cap ETF | India single-country small-cap equity | 9.71% | 12.90% | 2.57% | [[ETF_CBOE_BZX_SMIN Performance]] |
 | INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -8.44% | [[ETF_CBOE_BZX_INDA Performance]] |
@@ -35,6 +35,15 @@ tags:
 
 SMIN current date-to-date NAV TR YTD อยู่ที่ 2.57% ณ 2026-08-25; standardized
 month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
+
+## 2026-08-29 Verified Refresh
+
+INCO latest official Columbia ETF finder snapshot reports 10-year average
+annual NAV TR `8.38%` and current YTD `-4.67%` ณ 2026-07-31. The detailed
+product table reports the complete 2021-2025 calendar rows and YTD `-8.68%`
+ณ 2026-06-30; the two as-of dates are kept separate. Latest verified NAV and
+market price are `US$60.84` and `US$61.37` ณ 2026-07-28. Daily NAV
+drawdown/recovery ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## 2026-08-17 Verified Refresh
 
