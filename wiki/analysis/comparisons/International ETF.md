@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-19
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/International
@@ -37,13 +37,13 @@ tags:
 | DFIS | Dimensional International Small Cap ETF | international active systematic small-cap | not applicable (<10y history) | not applicable (2022 inception) | 14.18%* | [[ETF_CBOE_BZX_DFIS Performance]] |
 | AGSCF | Avantis Global Small Cap Value UCITS ETF (official USD LSE:AVGS) | international active systematic small-cap value | not applicable (<10y history) | not applicable (2024 inception) | 21.43% | [[ETF_LSE_AVGS Performance]] |
 | AVDV | Avantis International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | 14.24%* | 13.11% | [[ETF_NYSE_ARCA_AVDV Performance]] |
-| GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 7.58%† | not disclosed | 8.18% | [[ETF_NYSE_ARCA_GWX Performance]] |
+| GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 6.86%† | not disclosed | 7.28% | [[ETF_NYSE_ARCA_GWX Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
 | ISAC | iShares MSCI ACWI UCITS ETF (USD Accumulating) | global developed/emerging large-/mid-cap passive accumulating equity; input alias ISACF | 11.67%† | 11.29% | 15.06% | [[ETF_LSE_ISAC Performance]] |
 | VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.73% | 13.06% | 12.31% | [[ETF_NASDAQ_VYMI Performance]] |
 
-† DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `7.58%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed.
+† DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `6.86%†` is issuer-reported 10-year average annual NAV TR as of 2026-07-31; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed.
 
 AGSCF เป็น input alias ของ official USD listing `LSE:AVGS`; `21.43%` เป็น
 official NAV TR YTD ณ 2026-07-31 เทียบกับ management benchmark `13.80%`.
@@ -63,8 +63,8 @@ annual rows 2016-2025 คือ `8.11%`. IMWSF เป็น OTC alias ของ 
 `LSE:WSML`; `19.00%` เป็น official current NAV TR YTD ณ 2026-08-13 ขณะที่
 official factsheet annual rows และ YTD field ใช้ as-of 2026-07-31. ประวัติยังไม่
 ครบ 10 ปี และ 2018 partial return ไม่ถูกนำมาคำนวณ. ค่า *, †, not applicable
-และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม. GWX `8.18%` เป็น official NAV TR
-YTD ณ 2026-06-30 และ annual calendar rows ไม่เปิดเผย. DISV `12.90%*` เป็น
+และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม. GWX `7.28%` เป็น official NAV TR
+YTD ณ 2026-07-31 และ annual calendar rows ไม่เปิดเผย. DISV `12.90%*` เป็น
 secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใช้งานได้
 คือ 2023-2025 เพราะ 2022 เป็น inception partial และ official 2021-2025 CAGR
 จึงไม่ applicable. DFIS `14.18%*` เป็น secondary market-price + cash-distribution
