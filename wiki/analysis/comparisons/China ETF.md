@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: China
-updated: 2026-07-26
+updated: 2026-08-28
 tags:
   - analysis/etf-region
   - geography/China
@@ -64,7 +64,7 @@ tags:
 | CHIQ | Global X MSCI China Consumer Discretionary ETF | China equity / index-tracking | 7.13% | -8.55% | -25.23% | [[ETF_NYSE_ARCA_CHIQ Performance]] |
 | CNQQ | Rayliant-ChinaAMC Transformative China Tech ETF | China technology equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-09-24) | 14.95% | [[ETF_NASDAQ_CNQQ Performance]] |
 | CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 7.37% | not disclosed | 16.05% | [[ETF_NYSE_ARCA_CNXT Performance]] |
-| CNYA | iShares MSCI China A ETF | China equity / index-tracking | 6.71% | -1.75% | 5.39% | [[ETF_CBOE_BZX_CNYA Performance]] |
+| CNYA | iShares MSCI China A ETF | China equity / index-tracking | 6.71% | -1.75% | 3.57% | [[ETF_CBOE_BZX_CNYA Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 | CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | 6.85% | -8.00% | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
 | GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |

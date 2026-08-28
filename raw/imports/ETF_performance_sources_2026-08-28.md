@@ -227,6 +227,31 @@ The following raw values are the 10 annual NAV TR inputs used for the 50 display
 | 49 | `DEM` | 22.54% | 24.87% | -7.31% | 19.37% | -5.64% | 11.69% | -10.32% | 20.93% | 5.22% | 20.54% | `wiki/analysis/performance/ETF_AMEX_DEM Performance.md` |
 | 50 | `IDV` | 7.70% | 19.60% | -10.50% | 23.10% | -5.40% | 11.97% | -6.75% | 10.75% | 3.97% | 51.69% | `wiki/analysis/performance/ETF_CBOE_IDV Performance.md` |
 
+## Scheduled-inline item records — 2026-08-28
+
+The following item record belongs to the Trello `etf-performance` run. It is
+appended to this date's source batch without changing the earlier aggregate
+screen's verification record.
+
+### CNYA
+
+- `workflow: check-etf-performance`
+- `execution_profile: scheduled-inline`
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: Cboe BZX:CNYA`; issuer page and factsheet identify the exchange as `Cboe BZX` and the fund as `iShares MSCI China A ETF`.
+- `management_mode: passive-index`; official issuer description states that the fund seeks to track an index of Chinese equities trading on the Shanghai or Shenzhen Stock Exchange; official factsheet labels the fund `PASSIVE`.
+- `inception: 2016-06-13`; `expense_ratio: 0.60%`; `distribution_frequency: semi-annual`.
+- Metric: official `NAV Total Return`, including reinvested dividends/capital gains and fund expenses; currency `USD`.
+- Issuer benchmark: `MSCI China A Inclusion Index (Net)` from 2018-04-26 onward; prior index history is `MSCI China A International Index`. The issuer product page shortens the key-facts label to `MSCI China A Inclusion Index`.
+- Current snapshot: NAV `USD 36.08` as of `2026-08-27`; closing price `USD 35.83` as of `2026-08-27`; current NAV TR YTD `3.57%` as of `2026-08-26`; holdings `411` as of `2026-08-27`; 3-year standard deviation `19.90%` as of `2026-07-31`; P/E `17.75` and P/B `1.94` as of `2026-08-26`.
+- Official calendar NAV TR / issuer benchmark rows, performance as of `2026-06-30`: `2021 2.96% / 3.20%`; `2022 -26.31% / -25.90%`; `2023 -13.51% / -13.47%`; `2024 11.08% / 11.70%`; `2025 25.59% / 26.48%`. 2016–2020 annual rows were not disclosed in the reviewed issuer table; 2016 is marked as a partial inception year and excluded from ranking.
+- Official rolling 10-year NAV TR as of `2026-06-30`: `91.51%` cumulative and `6.71%` annualized from `2016-06-30` to `2026-06-30`. Raw endpoint values were not disclosed; normalized review endpoints are `100.00` and `191.51`, with `Years: 10.00`.
+- Common benchmark: cached `S&P 500 Total Return` in USD, dividends reinvested, complete calendar years `2016–2025`, as of `2025-12-31`; rows are not used as issuer benchmark or for a new current-YTD claim.
+- Calculations from displayed complete rows: CNYA 2021–2025 cumulative `-8.46%`, CAGR `-1.75%`; S&P 500 cumulative `96.17%`, CAGR `14.43%`; CNYA minus S&P CAGR `-16.18 pp`; up/down years `3 / 2`; best `2025 +25.59%`; least positive `2021 +2.96%`; worst `2022 -26.31%`; least bad down year `2023 -13.51%`.
+- Source URLs: issuer product/performance page `https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/cnya-ishares-msci-china-a-etf-fund-fact-sheet-en-us.pdf`; summary prospectus `https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-a-etf-7-31.pdf`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
+- Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; raw 10-year NAV endpoints and 2016–2020 annual rows are not disclosed; the 2018 issuer benchmark change is retained.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
