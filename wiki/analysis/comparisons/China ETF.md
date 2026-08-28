@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| ECNS | iShares MSCI China Small-Cap ETF | China small-cap single-country equity | 1.05% | -2.79% | -10.26% | [[ETF_NYSE_ARCA_ECNS Performance]] |
+| ECNS | iShares MSCI China Small-Cap ETF | China small-cap single-country equity | 1.05% | -2.79% | -9.18% | [[ETF_NYSE_ARCA_ECNS Performance]] |
 | FXI | iShares China Large-Cap ETF | China single-country large-cap equity | 1.75% | -1.67% | -9.28% | [[ETF_NYSE_ARCA_FXI Performance]] |
 | KWEB | KraneShares CSI China Internet ETF | China internet single-country equity | -0.85% | -11.89%* | -28.96% | [[ETF_NYSE_ARCA_KWEB Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
