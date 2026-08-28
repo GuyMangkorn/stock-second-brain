@@ -22,7 +22,7 @@ tags:
 | GMF | State Street SPDR S&P Emerging Asia Pacific ETF | Asia-Pacific emerging-market equity / index-tracking | 9.17% | 4.20% | 9.44% | [[ETF_NYSE_ARCA_GMF Performance]] |
 | FPA | First Trust Asia Pacific ex-Japan AlphaDEX Fund | Asia-Pacific equity / passive index fund | 10.31% | 7.23% | 42.71% | [[ETF_NASDAQ_FPA Performance]] |
 | WDAF | WisdomTree Asia Defense Fund | Asia-Pacific defense thematic equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-09-12) | 6.77% | [[ETF_NASDAQ_WDAF Performance]] |
-| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 13.75% | [[ETF_NYSE_ARCA_IPAC Performance]] |
+| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 18.43% | [[ETF_NYSE_ARCA_IPAC Performance]] |
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VPL | Vanguard FTSE Pacific ETF | Asia-Pacific equity / index-tracking | 10.74% | 6.05% | 19.62% | [[ETF_NYSE_ARCA_VPL Performance]] |
 | VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
@@ -31,6 +31,13 @@ tags:
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
+
+## 2026-08-29 Verified Refresh
+
+IPAC latest official iShares NAV TR YTD อยู่ที่ `18.43%` ณ 2026-08-27; NAV
+`US$85.64`, market price `US$85.50`, และ net assets `US$2.775B` ณ วันเดียวกัน.
+Rolling 10-year NAV TR `9.23%` และ 2021-2025 CAGR `6.25%` ยังคงอิง standardized
+June 2026 table. Daily NAV drawdown/recovery ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Navigation
 
@@ -43,7 +50,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | IHSEF | iShares Asia Pacific Dividend UCITS ETF | Asia-Pacific dividend equity / passive physical-replicated | 6.75% | 9.69% | 14.55% | [[ETF_LSE_IAPD Performance]] |
 | VGUDF / VDPX | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Distributing | Asia-Pacific equity / passive physical index-tracking | 8.80% | 5.42% | not disclosed | [[ETF_LSE_VDPX Performance]] |
-| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 13.75% | [[ETF_NYSE_ARCA_IPAC Performance]] |
+| IPAC | iShares Core MSCI Pacific ETF | Asia-Pacific equity / index-tracking | 9.23% | 6.25% | 18.43% | [[ETF_NYSE_ARCA_IPAC Performance]] |
 | VFPAF / VAPU | Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF (USD) Accumulating | Asia-Pacific equity / passive physical index-tracking | 10-year NAV TR unavailable | not disclosed | 47.09% | [[ETF_LSE_VAPU Performance]] |
 | FPA | First Trust Asia Pacific ex-Japan AlphaDEX Fund | Asia-Pacific equity / passive index fund | 10.31% | 7.23% | 42.71% | [[ETF_NASDAQ_FPA Performance]] |
 | WDAF | WisdomTree Asia Defense Fund | Asia-Pacific defense thematic equity / index-tracking | not applicable (<10y history) | not applicable (inception 2025-09-12) | 6.77% | [[ETF_NASDAQ_WDAF Performance]] |

@@ -1045,3 +1045,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NYSE_ARCA_ISCF Performance]] — ISCF (International; official 2016-2025 NAV TR cumulative `+127.24%` / rounded-input CAGR `8.55%`, 2021-2025 CAGR `8.45%`, issuer rolling 10-year NAV TR `9.69%` as of 2026-06-30, and current official NAV TR YTD `+12.52%` as of 2026-08-13; benchmark splice in 2023 and daily NAV drawdown/recovery remain disclosed gaps)
 - [[ETF_NYSE_ARCA_GWX Performance]] — GWX (International; issuer 10-year NAV TR average annual `6.86%` and current official NAV TR YTD `+7.28%` as of 2026-07-31; official calendar rows, raw endpoints, and daily NAV drawdown/recovery remain disclosed gaps, with a conflicting secondary annual table excluded)
 - [[ETF_NYSE_ARCA_ISCV Performance]] — ISCV (USA; official 2016-2025 NAV TR cumulative `+124.65%` / rounded-input CAGR `8.43%`, 2021-2025 CAGR `10.19%`, issuer rolling 10-year NAV TR `9.22%` as of 2026-06-30, and current official NAV TR YTD `+20.34%` as of 2026-08-13; daily NAV drawdown/recovery remains a gap)
+
+## 2026-08-29 Performance Refresh
+
+- [[ETF_NYSE_ARCA_IPAC Performance]] — IPAC (Asia-Pacific; official rolling 10-year NAV TR cumulative `+141.81%` / CAGR `+9.23%` as of 2026-06-30, official 2021-2025 NAV TR CAGR `+6.25%`, and latest official NAV TR YTD `+18.43%` as of 2026-08-27; 1,369 holdings, Japan concentration, and daily NAV drawdown/recovery gap disclosed)
