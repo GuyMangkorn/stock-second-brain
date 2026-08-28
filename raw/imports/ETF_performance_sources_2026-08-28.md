@@ -252,6 +252,24 @@ screen's verification record.
 - Source URLs: issuer product/performance page `https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/cnya-ishares-msci-china-a-etf-fund-fact-sheet-en-us.pdf`; summary prospectus `https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-china-a-etf-7-31.pdf`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
 - Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; raw 10-year NAV endpoints and 2016–2020 annual rows are not disclosed; the 2018 issuer benchmark change is retained.
 
+### EZU
+
+- `workflow: check-etf-performance`
+- `execution_profile: scheduled-inline`
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+- `entity_key: Cboe BZX:EZU`; issuer product page identifies the fund as `iShares MSCI Eurozone ETF` on `Cboe BZX`.
+- `management_mode: passive-index`; the official issuer description says the fund seeks to track an index of large- and mid-cap developed-country equities using the euro; the prospectus describes an indexing approach and representative sampling.
+- `inception: 2000-07-25`; `expense_ratio: 0.50%`; `distribution_frequency: semi-annual`.
+- Metric: official `NAV Total Return`, with reinvested distributions and fund expenses reflected in NAV; return currency `USD`.
+- Issuer benchmark: `MSCI EMU Index (Net)`; common benchmark remains cached `S&P 500 Total Return` in USD with dividends reinvested.
+- Current snapshot: NAV `USD 71.33` as of `2026-08-26`; closing price `USD 71.40` as of `2026-08-26`; current NAV TR YTD `13.57%` as of `2026-08-25`; net assets `USD 10,028,823,430` and holdings `220` as of `2026-08-26`; 3-year standard deviation `14.62%` as of `2026-07-31`; P/E `19.11` and P/B `2.38` as of `2026-08-26`.
+- Official calendar NAV TR / issuer benchmark rows, performance as of `2026-06-30`: `2021 13.59% / 13.54%`; `2022 -17.28% / -17.86%`; `2023 22.93% / 22.94%`; `2024 2.58% / 2.64%`; `2025 39.66% / 40.30%`. 2016–2020 annual rows were not disclosed in the reviewed issuer table.
+- Official rolling NAV TR as of `2026-06-30`: 10-year annualized `10.91%`; 10-year cumulative `181.78%` from the issuer table. The issuer did not disclose raw rolling endpoint values in the reviewed capture, so no raw-endpoint CAGR was reconstructed.
+- Calculations from displayed complete rows: EZU 2021–2025 cumulative `65.48%`, CAGR `10.60%`; issuer benchmark cumulative `65.11%`, CAGR `10.55%`; fund minus issuer benchmark `+0.05 pp` CAGR; S&P 500 cumulative `96.17%`, CAGR `14.43%`; EZU minus S&P `-3.83 pp` CAGR; up/down years `4 / 1`; best `2025 +39.66%`; least positive `2024 +2.58%`; worst `2022 -17.28%`.
+- Source URLs: issuer product/performance page `https://www.ishares.com/us/products/239644/EZU`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/ezu-ishares-msci-eurozone-etf-fund-fact-sheet-en-us.pdf`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/930667/000119312525336639/d31674d497k.htm`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
+- Gaps/caveats: daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; 2016–2020 annual rows are not disclosed; the annual five-row population standard deviation `19.15%` is a calculation from rounded NAV rows and is not substituted for the issuer's 3-year measure; USD share-class returns retain EUR/USD exposure.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.

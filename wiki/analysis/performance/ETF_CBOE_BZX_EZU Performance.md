@@ -8,13 +8,13 @@ exchange: Cboe BZX
 fund: iShares MSCI Eurozone ETF
 tracked_index: MSCI EMU Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-08-18
-performance_as_of: 2025-12-31
+updated: 2026-08-28
+performance_as_of: 2026-06-30
 rolling_10y_as_of: 2026-06-30
-current_ytd_as_of: 2026-08-14
-price_nav_as_of: 2026-08-14
-fund_facts_as_of: 2026-08-14
-source_batch: raw/imports/ETF_performance_sources_2026-08-18.md
+current_ytd_as_of: 2026-08-25
+price_nav_as_of: 2026-08-26
+fund_facts_as_of: 2026-08-26
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return; gross income reinvested; fund expenses reflected in NAV
 return_currency: USD
 tags:
@@ -36,7 +36,8 @@ unhedged share class. กองทุนเป็น `passive-index` equity ETF 
 cumulative `65.48%` และ rounded-input calendar CAGR `10.60%`; issuer rolling
 10-year NAV TR อยู่ที่ `10.91%` ณ 30 มิ.ย. 2026. Common USD reference อย่าง
 S&P 500 TR ให้ `96.17%` / `14.43%` ในช่วงเดียวกัน. Latest official NAV TR
-YTD คือ `14.20%` ณ 14 ส.ค. 2026.
+YTD คือ `13.57%` ณ 25 ส.ค. 2026; NAV ล่าสุดที่ตรวจสอบได้คือ `USD 71.33`
+ณ 26 ส.ค. 2026.
 
 ## Performance check
 
@@ -53,9 +54,10 @@ YTD คือ `14.20%` ณ 14 ส.ค. 2026.
 - Official rolling annualised fields as of 30 มิ.ย. 2026: 1-year `19.60%`,
   3-year `18.03%`, 5-year `10.24%`, 10-year `10.91%`, and since inception
   `4.73%`.
-- Current official snapshot as of 14 ส.ค. 2026: NAV `$71.82`, closing price
-  `$71.99`, net assets `$10.00bn`, and 220 holdings. Expense ratio is `0.50%`
-  and distribution frequency is semi-annual.
+- Current official snapshot as of 26 ส.ค. 2026: NAV `$71.33`, closing price
+  `$71.40`, net assets `$10.03bn`, and 220 holdings. Expense ratio is `0.50%`
+  and distribution frequency is semi-annual. Current NAV TR YTD is `13.57%`
+  as of 25 ส.ค. 2026.
 
 | Year | EZU NAV TR (USD) | MSCI EMU Net (USD) | S&P 500 TR (USD) |
 |---|---:|---:|---:|
@@ -79,21 +81,23 @@ the cached USD Total Return convention as of 2025-12-31.
 - Worst NAV TR year: 2022, `-17.28%`
 - 2021-2025 EZU NAV TR cumulative/CAGR: `65.48%` / `10.60%`.
 - 2021-2025 issuer benchmark cumulative/CAGR: `65.11%` / `10.55%`; the
-  rounded-input difference is approximately `+0.04 pp` CAGR and is a passive
+  rounded-input difference is approximately `+0.05 pp` CAGR and is a passive
   tracking comparison, not alpha.
 - 2021-2025 S&P 500 TR cumulative/CAGR: `96.17%` / `14.43%` as a common USD
-  reference. EZU's rounded-input CAGR was approximately `3.35 pp` below it.
+  reference. EZU's rounded-input CAGR was approximately `3.83 pp` below it.
+- Current NAV TR YTD: `13.57%` as of `2026-08-25`; this is a partial-year
+  observation, not a calendar-year ranking.
 - Daily NAV maximum drawdown and recovery date were not disclosed in the
   reviewed official capture; no price-only proxy is substituted.
 
 ## Risk read-through
 
 The latest issuer risk snapshot reports 3-year standard deviation `14.62%` and
-beta `0.70` as of 31 ก.ค. 2026; P/E `19.36x` and P/B `2.41x` are as of 14 ส.ค.
+beta `0.70` as of 31 ก.ค. 2026; P/E `19.11x` and P/B `2.38x` are as of 26 ส.ค.
 2026, while trailing yield is `2.62%` as of 31 ก.ค. 2026. Look-through sector
-exposure as of 14 ส.ค. 2026 was led by Financials `26.80%`, Industrials
-`20.29%`, and Information Technology `15.95%`; country exposure was led by
-France `27.83%`, Germany `25.17%`, and the Netherlands `16.85%`.
+exposure as of 26 ส.ค. 2026 was led by Financials `27.06%`, Industrials
+`20.15%`, and Information Technology `15.25%`; country exposure was led by
+France `27.68%`, Germany `25.46%`, and the Netherlands `16.32%`.
 
 EZU leaves the USD investor exposed to EUR/USD movements, unlike HEZU's
 currency-hedged structure. Eurozone equity, country, sector, valuation and
@@ -104,9 +108,9 @@ deviation.
 
 ## Sources
 
-- [iShares MSCI Eurozone ETF product page](https://www.ishares.com/us/products/239644/EZU) — official exchange, current NAV/YTD, net assets, fees, benchmark, rolling returns, risk and exposure snapshot
+- [iShares MSCI Eurozone ETF product page](https://www.ishares.com/us/products/239644/EZU) — official exchange, current NAV/YTD, net assets, fees, benchmark, rolling returns, risk and exposure snapshot as of 2026-08-26/2026-08-25
 - [iShares EZU factsheet, June 2026](https://www.ishares.com/us/literature/fact-sheet/ezu-ishares-msci-eurozone-etf-fund-fact-sheet-en-us.pdf) — official 2021-2025 NAV/benchmark rows, rolling returns, fees, structure and risk fields
 - [EZU SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/930667/000119312525336639/d31674d497k.htm) — official passive objective, index, representative sampling and tracking instruments
 - [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
 - Cached S&P 500 TR references: [2016-2019](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-08-18]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]] | [[ETF Performance Index]]

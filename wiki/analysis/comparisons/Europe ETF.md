@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Europe
-updated: 2026-08-19
+updated: 2026-08-28
 tags:
   - analysis/etf-region
   - geography/Europe
@@ -28,7 +28,7 @@ tags:
 | CEMU | iShares Core MSCI EMU UCITS ETF EUR (Accumulating) | Eurozone passive, accumulating equity; input alias XMTIF | 8.58%† | 11.97% | 15.77% | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] |
 | ISX5 | iShares Core EURO STOXX 50 UCITS ETF | Eurozone large-cap passive, accumulating equity; input alias IVVPF | 9.07% | 13.47% | 15.37% | [[ETF_LSE_ISX5 Performance]] |
 | HEZU | iShares Currency Hedged MSCI Eurozone ETF | Eurozone passive, USD-hedged equity on NYSE Arca | 12.88% | 13.88% | 17.53% | [[ETF_NYSE_ARCA_HEZU Performance]] |
-| EZU | iShares MSCI Eurozone ETF | Eurozone passive, USD unhedged equity on Cboe BZX | 10.91% | 10.60% | 14.20% | [[ETF_CBOE_BZX_EZU Performance]] |
+| EZU | iShares MSCI Eurozone ETF | Eurozone passive, USD unhedged equity on Cboe BZX | 10.91% | 10.60% | 13.57% | [[ETF_CBOE_BZX_EZU Performance]] |
 | FLEU | Franklin FTSE Eurozone ETF | Eurozone passive; predecessor hedged-Europe index through 2023-07-31 | not applicable (<10y) | 14.06% | 6.75% | [[ETF_NYSE_ARCA_FLEU Performance]] |
 | FEZ | State Street SPDR EURO STOXX 50 ETF | Eurozone large-cap passive equity | 10.92% | 12.31%* | 9.66% | [[ETF_NYSE_ARCA_FEZ Performance]] |
 | BBEU | JPMorgan BetaBuilders Europe ETF | developed Europe broad-market passive equity | not applicable (<10y) | 10.63% | 10.47% | [[ETF_CBOE_BZX_BBEU Performance]] |
