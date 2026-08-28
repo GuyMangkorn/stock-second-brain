@@ -67,7 +67,7 @@ tags:
 | CNYA | iShares MSCI China A ETF | China equity / index-tracking | 6.71% | -1.75% | 3.57% | [[ETF_CBOE_BZX_CNYA Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 | CXSE | WisdomTree China ex-State-Owned Enterprises Fund | China equity / index-tracking | 6.85% | -8.00% | -3.69% | [[ETF_NASDAQ_CXSE Performance]] |
-| GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
+| GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.61% | not disclosed | -6.10% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | FLCH | Franklin FTSE China ETF | China large-/mid-cap equity / index-tracking | not applicable (<10y history) | -3.25% | -10.65% | [[ETF_NYSE_ARCA_FLCH Performance]] |
 | GXC | State Street SPDR S&P China ETF | China broad equity / index-tracking | 4.37% | not disclosed | -10.99% | [[ETF_NYSE_ARCA_GXC Performance]] |
 | IHRPF / FXC | iShares China Large Cap UCITS ETF | China large-cap equity / index-tracking | 1.72% | -1.64% | -17.31% | [[ETF_LSE_FXC Performance]] |

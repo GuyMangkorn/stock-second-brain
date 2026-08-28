@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-28
+updated: 2026-08-29
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -181,7 +181,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_CNQQ Performance]] | official inception 2025-09-24; history under 10 years; available 2025-09 to 2026-06 | not applicable (<10y history) | not applicable | 14.95% | not disclosed / not disclosed | China technology/innovation equity | China tech/policy/geopolitical/A-share/H-share/FX/counterparty-sensitive; total-return-swap implementation and short history |
 | [[ETF_NASDAQ_MCHI Performance]] | official 2011 / official rolling 2016-06 to 2026-06; official annual rows 2021-2025; 2016-2020 annual rows not disclosed | 3.82% | -3.72% | -7.93% | disclosed best 2025 +31.07% / disclosed worst 2022 -22.53% | China broad equity | single-country/China policy/geopolitical/A-share/H-share/ADR/country/sector/FX-sensitive; systematic fair-value and futures implementation notes |
 | [[ETF_NASDAQ_TCHI Performance]] | official inception 2022-01-25; official 2023-2025 NAV rows; history under 10 years; current YTD through 2026-07-17 | not applicable (<10y history) | not disclosed (2021-2022 unavailable) | -0.45% | 2025 +33.36% / 2023 -5.69% | China technology/multisector equity | IT/communication/consumer-discretionary concentration; China policy/geopolitical/technology/valuation/FX-sensitive; systematic fair-value note |
-| [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / official rolling 2016-2026; annual rows not disclosed | 4.37% | not disclosed | -10.99% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,309 holdings |
+| [[ETF_NYSE_ARCA_GXC Performance]] | official 2007 / issuer rolling 10-year as of 2026-07-31; annual rows not disclosed | 4.61% | not disclosed | -6.10% | not disclosed / not disclosed | China broad equity | China policy/geopolitical/country/sector/FX-sensitive; 1,365 holdings |
 | [[ETF_NASDAQ_FCA Performance]] | official 2011 / official rolling 2016-2026; official calendar NAV rows 2016-2025; index changed 2015-07-14 | 8.19% | 4.16% | -1.23% | 2017 +58.35% / 2022 -17.10% | China rules-based AlphaDEX equity | China policy/VIE/ADR/geopolitical/country/sector/FX/emerging-market-sensitive; 10Y annual-row and rolling-window endpoints use separate official windows |
 | [[ETF_NYSE_ARCA_FLCH Performance]] | official inception 2017-11-02 / official 2018-2025 calendar NAV rows; available through 2026-06-30; history under 10 years | not applicable (<10y history) | -3.25% | -10.65% | 2025 +31.61% / 2022 -22.25% | China large-/mid-cap equity | China policy/geopolitical/country/sector/FX-sensitive; available-period issuer average annual NAV TR -0.24%; current YTD as of 2026-07-10 |
 | [[ETF_LSE_FXC Performance]] | official share-class launch 2004-10-21 / official rolling 2016-06 to 2026-06; official 2016-2025 calendar NAV rows; benchmark changed 2014-09-19 | 1.72% | -1.64% | -17.31% | 2017 +34.51% / 2021 -20.70% | China large-cap equity | China policy/geopolitical/country/sector/FX-sensitive; input alias IHRPF resolved to USD LSE:FXC; official 10Y cumulative 18.61% |
