@@ -3,6 +3,7 @@
 ## 2026-08-28
 
 - etf-performance: Refreshed [[ETF_NASDAQ_BSVO Performance]] and extended [[ETF_performance_sources_2026-08-28]]. Scheduled-inline local pre-save returned PASS; official rolling 10-year NAV TR is 11.04% as of 2026-07-31, current official NAV TR YTD is 25.66% as of 2026-07-31, and 2025-06-30 Russell 2000 Value evidence is mixed (-4.15 pp / +4.98 pp / +0.42 pp across 1Y/5Y/10Y); BSVO remains an active systematic long-only U.S. small-cap value ETF with predecessor history and daily NAV drawdown/recovery gaps disclosed.
+- etf-performance: Refreshed [[ETF_NYSE_ARCA_ASHR Performance]] and extended [[ETF_performance_sources_2026-08-28]]. Scheduled-inline local pre-save returned PASS; official rolling 10-year NAV TR is 5.84% and 1-year NAV TR is 35.88% as of 2026-06-30, while current YTD remains not disclosed; ASHR remains a passive CSI 300 China A-share ETF with tracking/fee differences, China access risks, and daily NAV drawdown/recovery gaps disclosed.
 
 - `dr-ingest`: Added [[DR_all_2026-08-28]] and [[SET DR ETF Classification 2026-08-28]]; saved the 512-row SET DR snapshot and identified 66 ETF-labeled DR rows across 60 distinct underlyings, while preserving the future-dated trade-date anomaly and leaving issuer-level ETF verification as a follow-up.
 - `dr-market-screen`: Created [[DR_HK_CN_TW_SG_2026-08-28]] from [[DR_all_2026-08-28]]; separated 118 stock DR rows by underlying listing exchange: HKEX 100, Mainland China (SSE/SZSE) 9, SGX 9, and Taiwan 0; excluded ETFs/trust-like instruments and recorded listing-versus-domicile caveats.

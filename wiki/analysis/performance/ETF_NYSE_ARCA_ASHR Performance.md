@@ -7,11 +7,13 @@ exchange: NYSE Arca
 fund: Xtrackers Harvest CSI 300 China A-Shares ETF
 tracked_index: CSI 300 Index
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
+management_mode: passive-index
+updated: 2026-08-28
 performance_as_of: 2026-06-30
 current_ytd_as_of: not disclosed
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return
+return_currency: USD
 tags:
   - analysis/etf-performance
   - ticker/ASHR
@@ -24,7 +26,14 @@ tags:
 
 ## Bottom line
 
-ASHR เป็น passive/index-tracking China A-share equity ETF ของ Xtrackers/Harvest ติดตาม `CSI 300 Index` และเริ่มกองทุนเมื่อ 2013-11-05. Official rolling 10-year NAV Total Return ณ 2026-06-30 รายงาน CAGR `5.84%` สำหรับช่วง 2016-06-30 ถึง 2026-06-30 ครบ `10.00` ปี; raw endpoints และ cumulative rolling return ไม่ได้เปิดเผย จึง normalize ได้เพียงประมาณ 176.40 จาก 100.00. Current NAV TR YTD ใน official capture นี้คือ `ไม่พบข้อมูลที่ยืนยันได้`.
+ASHR เป็น passive/index-tracking China A-share equity ETF ของ Xtrackers/Harvest
+ติดตาม `CSI 300 Index` และเริ่มกองทุนเมื่อ 2013-11-05. Official Q2 factsheet
+ณ 2026-06-30 รายงาน NAV Total Return 3-month `13.88%`, rolling 1-year
+`35.88%`, 3-year annualized `13.23%`, 5-year annualized `-0.51%` และ
+10-year annualized `5.84%`. ช่วง 10-year คือ 2016-06-30 ถึง 2026-06-30
+ครบ `10.00` ปี; raw endpoints และ cumulative rolling return ไม่ได้เปิดเผย
+จึง normalize ได้เพียงประมาณ 176.40 จาก 100.00. Current NAV TR YTD คือ
+`ไม่พบข้อมูลที่ยืนยันได้` เพราะ reviewed current factsheet ไม่ได้เปิดเผย YTD.
 
 ## Performance check
 
@@ -35,6 +44,7 @@ ASHR เป็น passive/index-tracking China A-share equity ETF ของ Xtra
 - Issuer benchmark: CSI 300 Index; 300 large- and mid-cap China A-share stocks listed on Shenzhen or Shanghai, free-float/capitalization-weighted index
 - Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark, not issuer benchmark)
 - Type note: DWS prospectus explicitly describes a passive/indexing approach and an at-least-80% exposure policy to A-shares or qualifying exposure instruments; derivatives and other instruments are permitted for implementation/risk management but the fund is not derivative-heavy by the reviewed strategy description.
+- Current official Q2 factsheet fields as of 2026-06-30: NAV TR 3-month 13.88%, 1-year 35.88%, 3-year annualized 13.23%, 5-year annualized -0.51%, 10-year annualized 5.84%, and since ETF inception 6.30%; no current NAV/market-price snapshot or current YTD field was disclosed in the reviewed factsheet.
 
 ### Official 10-year NAV TR window
 
@@ -60,6 +70,20 @@ ASHR เป็น passive/index-tracking China A-share equity ETF ของ Xtra
 | 2025 | not disclosed | not disclosed | 17.88% |
 | 2026 YTD | not disclosed | not disclosed | not comparable; current year not cached |
 
+### Official rolling comparison
+
+| Window ended 2026-06-30 | ASHR NAV TR | CSI 300 Index TR | Difference |
+|---|---:|---:|---:|
+| 3-month | 13.88% | 14.68% | -0.80 pp |
+| 1-year | 35.88% | 36.47% | -0.59 pp |
+| 3-year annualized | 13.23% | 14.21% | -0.98 pp |
+| 5-year annualized | -0.51% | 0.30% | -0.81 pp |
+| 10-year annualized | 5.84% | 6.65% | -0.81 pp |
+| Since ETF inception | 6.30% | 7.24% | -0.94 pp |
+
+The CSI 300 Index returns are gross of fees; the differences are tracking and
+fee-related comparisons, not alpha.
+
 ASHR NAV rows `2016-2024` come from the official DWS prospectus calendar-year table for the period ended `2024-12-31`; the current Q2 2026 factsheet provides the rolling 10-year result but does not disclose 2025 calendar NAV rows in the reviewed capture. S&P 500 rows reuse the cached USD Total Return convention as of `2025-12-31`; no value is invented for ASHR 2025 or current YTD.
 
 ### Window calculations and ranking
@@ -80,5 +104,5 @@ ASHR เป็น single-country China A-share exposure. Q2 2026 official factsh
 - Official DWS Q2 2026 factsheet: https://etf.dws.com/download/asset/e73aaa93-92c6-4a51-9233-38ccb329e09b
 - Official DWS prospectus (October 1, 2025): https://etf.dws.com/en-us/AssetDownload/Index/ce51b065-fc18-496f-9b88-8996a37d16b3/CHINA-1-Prospectus.pdf
 - Official S&P 500 index page and cached USD Total Return convention: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-24]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]]
 - Navigation: [[China ETF]] | [[ETF Region Index]] | [[ETF Performance Index]]
