@@ -10,10 +10,10 @@ tracked_index: MSCI AC Asia ex Japan Index (Net)
 benchmark: S&P 500 Total Return
 inception: 2008-08-13
 expense_ratio: 0.72%
-updated: 2026-07-24
+updated: 2026-08-28
 performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-22
-source_batch: raw/imports/ETF_performance_sources_2026-07-23.md
+current_ytd_as_of: 2026-08-24
+source_batch: raw/imports/ETF_performance_sources_2026-08-28.md
 return_basis: NAV total return
 return_currency: USD
 tags:
@@ -28,7 +28,7 @@ tags:
 
 ## Bottom line
 
-AAXJ เป็น passive/index-tracking equity ETF ของ iShares ที่ลงทุนในหุ้น large- และ mid-cap ของประเทศพัฒนาแล้วและ emerging Asia โดยไม่รวมญี่ปุ่น. Official rolling NAV Total Return ช่วง 2016-06-30 ถึง 2026-06-30 ให้ cumulative `164.36%` และ CAGR `10.21%`. ใน common calendar window 2021-2025 กองทุนให้ cumulative `15.04%` และ CAGR `2.84%`, ต่ำกว่า S&P 500 Total Return ที่ CAGR `14.43%`. Current official NAV คือ `US$113.07` และ NAV TR YTD คือ `21.30%` ณ 2026-07-22.
+AAXJ เป็น passive/index-tracking equity ETF ของ iShares ที่ลงทุนในหุ้น large- และ mid-cap ของประเทศพัฒนาแล้วและ emerging Asia โดยไม่รวมญี่ปุ่น. Official rolling NAV Total Return ช่วง 2016-06-30 ถึง 2026-06-30 ให้ cumulative `164.36%` และ CAGR `10.21%`. ใน common calendar window 2021-2025 กองทุนให้ cumulative `15.04%` และ CAGR `2.84%`, ต่ำกว่า S&P 500 Total Return ที่ CAGR `14.43%`. Current official NAV คือ `US$116.34` ณ 2026-08-25 และ NAV TR YTD คือ `22.87%` ณ 2026-08-24.
 
 ## Performance check
 
@@ -38,8 +38,9 @@ AAXJ เป็น passive/index-tracking equity ETF ของ iShares ที่�
 - Issuer benchmark: `MSCI AC Asia ex Japan Index (Net)`
 - Metric: NAV Total Return รวมการ reinvest distributions และหัก fund expenses ตาม issuer methodology
 - Expense ratio: `0.72%`
-- Holdings: `941` ณ 2026-07-22
-- 3-year standard deviation: `16.71%`; equity beta: `0.87` ณ 2026-06-30
+- Holdings: `941` ณ 2026-08-24
+- 3-year standard deviation: `17.20%`; equity beta: `0.88` ณ 2026-07-31
+- P/E: `21.73`; P/B: `2.74` ณ 2026-08-24
 - Benchmark comparison: S&P 500 Total Return เป็น common USD reference benchmark ไม่ใช่ tracked index ของ AAXJ
 
 ## Rolling 10-year NAV Total Return
@@ -69,14 +70,16 @@ AAXJ trailing S&P 500 by approximately `11.59 percentage points` in 2021-2025 CA
 
 ## Current snapshot and risk read-through
 
-- NAV: `US$113.07` ณ 2026-07-22; NAV TR YTD: `+21.30%` ณ 2026-07-22. Market-price return ไม่ถูกรวมกับ NAV TR.
-- Exposure ณ 2026-07-22 กระจุกใน Taiwan `30.55%`, China `23.25%`, Korea (South) `22.59%`, India `12.73%`; Information Technology `46.29%` เป็น sector ใหญ่สุด.
+- NAV: `US$116.34` ณ 2026-08-25; closing price `US$114.34` ณ 2026-08-24; NAV TR YTD: `+22.87%` ณ 2026-08-24. Market-price return ไม่ถูกรวมกับ NAV TR.
+- Exposure ณ 2026-08-24 กระจุกใน Taiwan `30.17%`, China `23.12%`, Korea (South) `23.08%`, India `12.72%`; Information Technology `45.88%` เป็น sector ใหญ่สุด.
 - พฤติกรรมจึงไวต่อ Taiwan/Korea/China country risk, semiconductor/technology cycle, FX และ valuation; 2022 แสดง downside สูงกว่าปี 2021 ขณะที่ 2025 เป็น rebound ที่แรง.
 - Daily NAV history สำหรับคำนวณ max drawdown และ recovery: `ไม่พบข้อมูลที่ยืนยันได้` ใน lean capture นี้.
 
 ## Sources
 
 - Official issuer source: [iShares AAXJ product and performance page](https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf)
+- Official factsheet: [AAXJ fund fact sheet](https://www.ishares.com/us/literature/fact-sheet/aaxj-ishares-msci-all-country-asia-ex-japan-etf-fund-fact-sheet-en-us.pdf)
+- Official summary prospectus: [AAXJ summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-all-country-asia-ex-japan-etf-7-31.pdf)
 - Official S&P source: [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
-- ETF source batch: [[ETF_performance_sources_2026-07-23]]
+- ETF source batch: [[ETF_performance_sources_2026-08-28]]
 - Cross-ETF index: [[ETF Performance Index]]

@@ -331,6 +331,24 @@ screen's verification record.
 - Source URLs: official product/performance page `https://www.ishares.com/uk/professionals/en/products/251867/ishares-core-msci-japan-imi-ucits-etf?siteEntryPassthrough=true&switchLocale=y`; official July factsheet `https://www.ishares.com/uk/individual/en/literature/fact-sheet/sjpa-ishares-core-msci-japan-imi-ucits-etf-fund-fact-sheet-en-gb.pdf`; secondary OTC alias identity `https://stockanalysis.com/quote/otc/IHREF/`; S&P 500 definition `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`; cached benchmark source links remain in the skill convention and the pre-existing batch record.
 - Gaps/caveats: raw rolling 10-year endpoints and a current reconciled rolling 10-year issuer field are not disclosed in the current capture; the prior `147.80% / 9.50%` record remains a preserved source conflict; daily NAV observations sufficient for fund-level max drawdown/recovery were not captured; GBP listing currency versus USD return basis remains a material comparison caveat.
 
+### AAXJ
+
+- workflow: check-etf-performance
+- execution_profile: scheduled-inline
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+- entity_key: NASDAQ:AAXJ; official issuer page identifies iShares MSCI All Country Asia ex Japan ETF on NASDAQ.
+- management_mode: passive-index; the official issuer objective and summary prospectus describe an index-tracking equity fund investing across developed and emerging Asia ex Japan.
+- inception: 2008-08-13; expense_ratio: 0.72%; distribution_frequency: semi-annual.
+- metric: official NAV Total Return, including reinvested distributions and fund expenses; return_currency: USD.
+- issuer_benchmark: MSCI AC Asia ex Japan Index (Net); common benchmark is cached S&P 500 Total Return in USD with dividends reinvested.
+- current_snapshot: NAV USD 116.34 as of 2026-08-25; closing price USD 114.34 as of 2026-08-24; current NAV TR YTD 22.87% as of 2026-08-24; holdings 941 as of 2026-08-24; 3-year standard deviation 17.20% and beta 0.88 as of 2026-07-31; P/E 21.73 and P/B 2.74 as of 2026-08-24.
+- official_rolling: 2016-06-30 to 2026-06-30 cumulative 164.36% and annualized 10.21%, based on the issuer standardized performance table; raw endpoint NAV values were not disclosed, so review normalization is 100.00 to 264.36 over 10.00 years.
+- official_annual_rows: 2021 -5.89%; 2022 -20.18%; 2023 4.94%; 2024 10.48%; 2025 32.09%, performance as of 2026-06-30. 2016-2020 annual rows were not disclosed in the reviewed current issuer table.
+- common_window_calculation: 2021-2025 cumulative 15.04%, CAGR 2.84%, up/down 3/2; best 2025 +32.09%; least positive 2023 +4.94%; worst 2022 -20.18%; least bad down year 2021 -5.89%. Cached S&P 500 2021-2025 CAGR is 14.43%, so the arithmetic CAGR difference is -11.59 percentage points and is not called alpha.
+- source_urls: issuer product/performance page https://www.ishares.com/us/products/239601/ishares-msci-all-country-asia-ex-japan-etf; factsheet https://www.ishares.com/us/literature/fact-sheet/aaxj-ishares-msci-all-country-asia-ex-japan-etf-fund-fact-sheet-en-us.pdf; summary prospectus https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-msci-all-country-asia-ex-japan-etf-7-31.pdf; S&P definition https://www.spglobal.com/spdji/en/indices/equity/sp-500/.
+- gaps: daily NAV observations sufficient for fund-level max drawdown and recovery were not captured; raw rolling endpoints and exact June-to-June S&P 500 TR were not disclosed in the reviewed evidence. Exposure snapshot is Taiwan 30.17%, China 23.12%, Korea South 23.08%, India 12.72%, and Information Technology 45.88% as of 2026-08-24.
+
 ## Active-management classification
 
 - `FESM`: owner page classification `active-equity-long-only`; it is ranked on raw NAV TR CAGR only.
