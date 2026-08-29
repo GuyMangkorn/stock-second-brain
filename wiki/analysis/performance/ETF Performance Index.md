@@ -84,7 +84,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_VXUS Performance]] | official 2011 / official 2016-2025 | 9.95% | 7.98% | 11.55% | 2025 +32.23% / 2022 -15.99% | broad international ex-U.S. equity | diversified country exposure; FX/financials-sensitive |
 | [[ETF_LSE_ISAC Performance]] | official 2011 / official 2016-2025; current product-page YTD as of 2026-08-17; input alias ISACF | 11.67%† | 11.29% | 15.06% | 2025 +22.41% / 2022 -18.19% | global developed/emerging large-/mid-cap passive accumulating equity | global country/sector/mega-cap/FX/emerging-market-sensitive; official MSCI ACWI tracking observations; 12.61% 3-year standard deviation; price/NAV date gap disclosed |
 | [[ETF_CBOE_EFAV Performance]] | official 2011 / official 2016-2025 | 6.02% | 6.29% | 6.50% | 2025 +26.16% / 2022 -14.76% | developed ex-U.S./Canada minimum volatility | low-vol factor; country/FX-sensitive, lower recent beta |
-| [[ETF_AMEX_DIVI Performance]] | official rolling as of 2026-06-30; calendar 2017-2025 | 11.24% | 13.59% | 11.38% | 2025 +34.51% / 2022 -1.74% | international value/dividend tilt | lower beta, value/financials/FX-sensitive |
+| [[ETF_AMEX_DIVI Performance]] | official calendar 2017-2025; issuer rolling 10-year as of 2026-07-31 | 11.13% | 13.59% | 16.62% | 2025 +34.51% / 2018 -6.18% | international value/dividend tilt | value/financials/FX/country-sensitive; secondary max drawdown -27.76%; official daily NAV gap |
 | [[ETF_NASDAQ_INDY Performance]] | official 2020-2025 / rolling official 2016-2026 | 6.67% | 6.92% | -11.36% | 2021 +19.28% / 2022 -7.86% | India single-country large-cap equity | India/financials/FX-sensitive; emerging-market cyclicality |
 | [[ETF_NYSE_ARCA_INCO Performance]] | official 2011 / issuer 10-year and YTD as of 2026-07-31; official 2021-2025 rows | 8.38% | 11.16% | -4.67% | 2023 +34.12% / 2022 -7.40% | India consumer thematic equity | consumer/India/sector concentration; country/FX-sensitive; detailed product table is as of 2026-06-30 |
 | [[ETF_NYSE_ARCA_EPI Performance]] | official 2008 / official rolling 2016-2026; official 2016-2025 | 9.18% | 11.52% | -7.91% | 2017 +39.03% / 2018 -10.44% | India earnings-weighted equity | India/country/sector/valuation/FX-sensitive; index annual rows not disclosed |
@@ -285,8 +285,9 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_FEZ Performance]] | official 2002 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 10.92% | 12.31%* | 9.66% | 2025 +37.81%* / 2018 -15.86%* | Eurozone large-cap passive equity | country/sector/FX-sensitive; 17.24% secondary annual dispersion; calendar NAV and daily NAV drawdown/recovery gaps |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
-as-of date ต่างกัน; DIVI ใช้ Franklin factsheet ณ 2026-06-30 และ raw TR endpoints
-ไม่เปิดเผย. FLCA ไม่มี 10-year CAGR เพราะประวัติกองยังไม่ครบ 10 ปี.
+as-of date ต่างกัน; DIVI ใช้ Franklin product page ณ 2026-07-31 และ raw TR
+endpoints ไม่เปิดเผย. DIVI current NAV TR YTD `16.62%` เป็น official snapshot ณ
+2026-08-21. FLCA ไม่มี 10-year CAGR เพราะประวัติกองยังไม่ครบ 10 ปี.
 2026 YTD เป็น partial period และแต่ละกองมี performance as-of date ต่างกัน. `*`
 คือ secondary proxy; `†` คือ official inception-year partial.
 ASEA's `2026 YTD` is the latest official factsheet disclosure as of `2026-05-31`; the newer product-page table as of `2026-06-30` does not expose a separate YTD field.

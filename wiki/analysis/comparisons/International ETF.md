@@ -19,7 +19,7 @@ tags:
 |---|---|---|---:|---:|---:|---|
 | DDLS | WisdomTree Dynamic International SmallCap Equity Fund | dynamic international small-cap dividend / currency-hedged | 9.61% | 11.33%* | 6.54% | [[ETF_CBOE_DDLS Performance]] |
 | DDWM | WisdomTree Dynamic International Equity Fund | dynamic international dividend | 10.72% | 13.41% | 7.65% | [[ETF_CBOE_DDWM Performance]] |
-| DIVI | Franklin International Core Dividend Tilt Index ETF | international value/dividend tilt | 11.24% | 13.59% | 11.38% | [[ETF_AMEX_DIVI Performance]] |
+| DIVI | Franklin International Core Dividend Tilt Index ETF | international value/dividend tilt | 11.13% | 13.59% | 16.62% | [[ETF_AMEX_DIVI Performance]] |
 | DLS | WisdomTree International SmallCap Dividend Fund | international small-cap dividend | 7.69%† | 7.97% | 8.54%‡ | [[ETF_NYSE_ARCA_DLS Performance]] |
 | DTH | WisdomTree International High Dividend Fund | international high dividend | 9.06% | 12.22% | 8.21% | [[ETF_AMEX_DTH Performance]] |
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
@@ -49,6 +49,13 @@ AGSCF เป็น input alias ของ official USD listing `LSE:AVGS`; `21.43
 official NAV TR YTD ณ 2026-07-31 เทียบกับ management benchmark `13.80%`.
 ประวัติสั้นและ official factsheet ไม่แสดง complete annual rows จึงไม่คำนวณ
 calendar CAGR หรือ hit rate.
+
+DIVI verified refresh ณ 2026-08-29 ใช้ Franklin official rolling 10-year NAV TR
+`11.13%` ณ 2026-07-31 และ current NAV TR YTD `16.62%` ณ 2026-08-21. ค่า
+2021-2025 CAGR `13.59%` คำนวณจาก official calendar NAV rows; raw rolling
+endpoints และ official daily NAV drawdown/recovery ยังไม่เปิดเผย. Secondary
+adjusted-price proxy คง max drawdown `-27.76%` และ recovery `207` trading sessions
+ไว้เป็นบริบทเท่านั้น.
 
 AVDV เป็น active long-only international small-cap value ETF; `13.11%` เป็น
 official NAV TR YTD ณ 2026-07-31 และ `14.24%*` เป็น rounded-input CAGR ของ

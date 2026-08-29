@@ -623,3 +623,69 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Vanguard July standardized fields and current August YTD support the VYMI refresh; scheduled-local verification passed and current NAV-pair, benchmark-current, and daily drawdown gaps remain disclosed.
+
+## DIVI — Franklin International Core Dividend Tilt Index ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177392785e124d26c3869`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `DIVI`; canonical `entity_key: NYSE Arca:DIVI`.
+- Franklin identifies DIVI as the Franklin International Core Dividend Tilt Index ETF, listed on NYSE Arca, with inception `2016-06-01`. The fund is an `Indexed` passive equity ETF tracking the `Morningstar Developed Markets ex-North America Dividend Enhanced Select Index-NR`; quarterly reconstitution and permitted implementation instruments do not change the passive equity classification.
+- Primary region is `International`; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`, with the performance page retaining `geography/International` and the entity link `[[ETF_AMEX_DIVI]]`.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Franklin official product/performance page | https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/21412/SINGLCLASS/franklin-international-core-dividend-tilt-index-etf/DIVI?role=fp | Identity, exchange, indexed classification, official NAV TR and rolling fields as of 2026-07-31, current NAV/YTD and fund facts as of 2026-08-21/23, exposure and yield fields |
+| Franklin official DIVI factsheet | https://www.franklintempleton.com/forms-literature/download/DIVI-FF | Calendar NAV and issuer-index rows for 2017-2025; factsheet/holdings context as of 2026-06-30; return definition |
+| PortfoliosLab DIVI | https://portfolioslab.com/symbol/DIVI | Secondary adjusted-price-plus-distributions max-drawdown/recovery proxy, accessed 2026-08-29; not official NAV evidence |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `raw/funds/ETF_AMEX_DIVI_fund_facts.md`; `raw/imports/ETF_AMEX_DIVI_fund_source_2026-07-12.md`; `wiki/entities/ETF_AMEX_DIVI.md` | Prior identity/strategy context only; fresh performance claims use the official web sources above |
+
+### Candidate performance claims and raw observations
+
+- Franklin official product page reports NAV Total Return average annual performance as of `2026-07-31`: 1-year `28.73%`, 3-year `17.52%`, 5-year `13.86%`, 10-year `11.13%`, and since inception `11.18%`. Corresponding issuer-index fields are `28.63%`, `17.38%`, `13.85%`, `11.35%`, and `11.42%`; market-price fields are `28.85%`, `17.39%`, `13.74%`, `11.06%`, and `11.16%`. The saved primary 10-year field is the official NAV value `11.13%`; raw rolling endpoints are not disclosed.
+- The same official page reports current NAV `USD 44.55` and NAV Total Return YTD `16.62%` as of `2026-08-21`; total net assets are `USD 2.77B` as of `2026-08-23`; gross and net expense ratio are `0.09%` as of `2026-08-01`; 30-Day SEC Yield is `3.01%` as of `2026-07-31`; distribution rate at NAV is `2.98%` as of `2026-08-21`; distributions are quarterly.
+- Official Franklin exposure fields as of `2026-08-20` are Europe `59.34%`, Asia `28.58%`, Australia/New Zealand `9.13%`, North America `1.79%`, and Middle East/Africa `1.24%`. Latest complete official holdings snapshot in the reviewed materials is `417` holdings as of `2026-06-30`.
+- Official factsheet calendar NAV Total Return rows are: 2017 `12.82%`, 2018 `-6.18%`, 2019 `22.66%`, 2020 `1.55%`, 2021 `17.22%`, 2022 `-1.74%`, 2023 `19.23%`, 2024 `2.36%`, and 2025 `34.51%`. The corresponding Morningstar index rows are `13.21%`, `-5.75%`, `23.21%`, `1.86%`, `17.63%`, `-1.43%`, `18.96%`, `2.28%`, and `34.32%`. Inception-year 2016 is unavailable in the reviewed calendar table and is not ranked.
+- Franklin's performance definition is NAV or market-price return with all distributions reinvested and fund expenses deducted. NAV Total Return, market-price return, issuer-index return, distribution rate, and SEC yield remain separate metrics with separate as-of dates.
+- Cached S&P 500 Total Return common-reference rows for 2017-2025 are 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`. This is a common reference only, not DIVI's strategy benchmark.
+- PortfoliosLab secondary adjusted-price total-return evidence reports maximum drawdown `-27.76%` on `2020-03-12` and recovery in `207` trading sessions. This is a price-plus-distributions proxy; official daily NAV history sufficient to independently reproduce fund-level max drawdown, recovery, or volatility is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- `2021-2025` DIVI NAV compound is `(1.1722 × 0.9826 × 1.1923 × 1.0236 × 1.3451) - 1 = 89.08%`; rounded-input CAGR is `(1 + 0.8908)^(1/5) - 1 = 13.59%`.
+- `2021-2025` cached S&P 500 TR compound is `96.17%` and CAGR `14.43%`. The arithmetic difference is approximately `-0.84 percentage points` of CAGR; it is not labelled alpha.
+- `2017-2025` DIVI NAV compound is `149.29%`; rounded-input CAGR is `10.68%`; positive/negative calendar years are `7 / 2`; best year is 2025 `+34.51%`; least positive year is 2024 `+2.36%`; worst year is 2018 `-6.18%`; least-bad down year is 2022 `-1.74%`.
+- `2017-2025` cached S&P 500 TR compound is `255.78%` and CAGR `15.14%`; this remains a cross-asset/common-reference comparison and does not replace the Morningstar issuer benchmark.
+- The issuer-reported rolling 10-year NAV TR CAGR `11.13%` as of `2026-07-31` is recorded as reported. No cumulative endpoint is inferred because Franklin did not expose raw start/end total-return values. If a normalized illustration is needed, it is explicitly `100 × ((1 + 0.1113)^10 - 1) = 188.77%` implied growth, not a sourced NAV endpoint; the durable page does not present it as an observed cumulative return.
+- Reconciliation: July official NAV rolling 10-year is `11.13%` while current YTD NAV TR is a separate `16.62%` observation as of `2026-08-21`; no period mixing is performed. Official index and market-price rolling fields are retained only as the issuer's same-window tracking context.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet contains ETF identity and exchange, return basis (`NAV Total Return`), issuer benchmark, common benchmark, all candidate claims and periods, units/currency (`%`, USD), metric definitions, individual as-of dates, source URLs/paths, calculations, secondary-risk qualification, unresolved gaps, and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_AMEX_DIVI Performance.md`: current frontmatter with `entity_key: NYSE Arca:DIVI`, official 2026-07-31 performance date, current YTD/NAV/facts dates, NAV TR basis and International tag; canonical breadcrumb; Thai bottom line; official 10-year NAV TR `11.13%`; official annual NAV/index/S&P rows for 2017-2025; 2021-2025 and 2017-2025 calculations; current NAV/YTD, expense, yield, assets, geography and holdings context; secondary drawdown proxy; explicit official daily-NAV/raw-endpoint gaps; source links and follow-up navigation.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: update only the DIVI row to official rolling 10-year `11.13%`, 2021-2025 CAGR `13.59%`, and current NAV TR YTD `16.62%`; append a dated refresh note preserving the raw rolling-endpoint and official daily NAV drawdown gaps and identifying `-27.76%`/`207` sessions as secondary proxy evidence.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the DIVI coverage row to official rolling `11.13%`, 2021-2025 CAGR `13.59%`, current YTD `16.62%`, best/worst `2025 +34.51% / 2018 -6.18%`, and explicit secondary max-drawdown/official daily-NAV gap; preserve the common-window table and International navigation links.
+- Proposed content for this source batch: this DIVI identity/source map, raw observations, calculations, reconciliation, evidence packet, local checklist, and exact structured `trello_handoff` below.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: one workflow bullet linking `[[ETF_AMEX_DIVI Performance]]`, `[[International ETF]]`, `[[ETF Performance Index]]`, and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `11.13%`, current YTD `16.62%`, 2021-2025 CAGR `13.59%`, and preserved data gaps. The file remains outside the scoped commit because it already contained unrelated user changes.
+- No new ETF entity or region page is required; existing `wiki/entities/ETF_AMEX_DIVI.md` and `wiki/analysis/comparisons/International ETF.md` remain the canonical owners.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units, and International region ownership are source-mapped.
+- PASS: official July rolling fields, official calendar rows, current August NAV/YTD/fund facts, secondary drawdown proxy and cached S&P rows retain individual sources and as-of dates; NAV, market price, benchmark, distribution and yield metrics are not conflated.
+- PASS: official annual rows, 2021-2025 and 2017-2025 calculations, issuer-reported 10-year field, index tracking context, and secondary drawdown proxy reproduce the proposed page/index values; no raw endpoint, current benchmark, or official daily NAV value is inferred.
+- PASS: complete proposed contents for performance, International region, index, source batch and log artifacts are specified; breadcrumb/tag/source links and secondary conflict language are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Franklin July performance fields and August current YTD support the DIVI refresh; scheduled-local verification passed and raw NAV endpoints/daily drawdown gaps remain disclosed.
