@@ -2665,3 +2665,61 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares and SEC sources confirm IDEV as a passive NYSE Arca developed-markets ETF with official 2021-2025 NAV rows and current-YTD evidence; under-10-year and secondary-context gaps are explicit, scheduled-local verification passed, and daily-drawdown gaps remain disclosed.
+
+## IEFA — iShares Core MSCI EAFE ETF
+
+### Workflow and identity
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9243915bc1d6915f38699f`; input ticker `IEFA`; canonical `entity_key: Cboe BZX:IEFA`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is International; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`.
+- This run creates the IEFA performance owner and adds the corresponding International navigation, ETF Performance Index coverage/refresh entry, this source batch and one log bullet. No entity page was found or created.
+
+### Evidence packet
+
+| Source | URL / path | Use and as-of handling |
+|---|---|---|
+| Official iShares IEFA product page | https://www.ishares.com/us/products/244049/ishares-core-msci-eafe-etf?fundSearch=true&qt=IEFA | Identity, current Cboe BZX listing, inception `2012-10-18`, MSCI EAFE IMI Index (Net), official 2021-2025 calendar NAV rows, official rolling `9.78%` as of `2026-06-30`, current NAV TR YTD `14.71%` as of `2026-08-26`, and current NAV/price/assets/holdings/valuation/risk fields through `2026-08-27` |
+| Official iShares IEFA fact sheet | https://www.ishares.com/us/literature/fact-sheet/iefa-ishares-core-msci-eafe-etf-fund-fact-sheet-en-us.pdf | Fund objective and performance-document context; current product page is used for fresher official fields |
+| Official iShares IEFA documents | https://www.ishares.com/us/products/244049/ishares-core-msci-eafe-etf?fundSearch=true&qt=IEFA | Prospectus and regulatory-document access through the product page |
+| FinanceCharts IEFA performance | https://www.financecharts.com/etfs/IEFA/performance | Secondary dividend-reinvested annual total-return proxy captured 2026-08-29 for full 2016-2025 historical context |
+| S&P 500 Total Return cache | Official S&P source references retained by `check-etf-performance` | USD dividends-reinvested common reference, complete calendar years `2016-2025` and `2021-2025`; no new search needed under cached convention |
+| Existing vault context | `index.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Routing/navigation context; no existing IEFA performance owner or entity page was present |
+
+### Observations, calculations, and reconciliation
+
+- iShares classifies IEFA as a passive, index-tracking equity ETF seeking to track the `MSCI EAFE IMI Index (Net)` across large-, mid- and small-cap developed markets outside the United States and Canada. Current iShares key facts list `Cboe BZX`; canonical exchange is therefore `Cboe BZX`.
+- Official current page fields are kept separate by date: NAV `USD 100.61`, net assets `USD 195,414,338,928`, shares outstanding `1,942,200,000`, and non-fair-value NAV `USD 100.55` as of `2026-08-27`; closing price `USD 100.96`, premium/discount `0.16`, and 30-day median bid/ask spread `0.01%` as of `2026-08-26`; holdings `2,616` as of `2026-08-26`; P/E `19.09x` and P/B `2.25x` as of `2026-08-26`; standard deviation `12.99%`, SEC yield `2.30%`, and trailing yield `3.31%` as of `2026-07-31`; expense `0.07%`; distribution frequency semi-annual.
+- Official iShares calendar NAV rows are `2021 11.29%`, `2022 -15.13%`, `2023 17.63%`, `2024 3.41%`, `2025 31.83%`. Their compound return is `51.46%` and rounded-input CAGR is `8.66%`; there are `4` positive and `1` negative years, best 2025, worst 2022.
+- Official rolling 10-year NAV TR is `9.78%` annualized as of `2026-06-30`; official 5-year NAV TR is `8.81%` annualized in the same capture. Current official NAV TR YTD is `14.71%` as of `2026-08-26`.
+- The secondary full-window proxy rows are `2016 1.58%`, `2017 26.57%`, `2018 -14.14%`, `2019 22.64%`, `2020 8.18%`, `2021 11.64%`, `2022 -15.24%`, `2023 17.95%`, `2024 3.27%`, `2025 32.08%`; proxy compound is `122.96%*` and rounded-input CAGR `8.35%*`. These are kept separate from official 2021-2025 NAV rows.
+- For the official common 2021-2025 window, the cached S&P 500 TR compound is `96.17%` and CAGR is `14.43%`; IEFA compound is `51.46%` and CAGR `8.66%`. The cumulative gap is `44.71 percentage points` and CAGR gap is `5.77 pp`. IEFA beat the S&P 500 in 2025 only (`1 / 5` official complete years); this is not manager-skill evidence.
+- Official daily NAV Total Return history sufficient for maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no market-price or secondary drawdown proxy is substituted. Historical exchange naming differences are preserved as a source-quality note, but current iShares listing controls the canonical key.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The iShares product page is the source of truth for current identity, current listing, official 2021-2025 calendar rows, rolling/YTD fields and current fund snapshot; the fact sheet supplies supporting fund context. FinanceCharts supplies only the marked full-window context proxy.
+- The cached S&P 500 table is used only for its exact USD total-return convention. It is not substituted for IEFA's `MSCI EAFE IMI Index (Net)`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_CBOE_BZX_IEFA Performance.md`: complete IEFA owner page with official rolling/YTD fields, official 2021-2025 rows, secondary full-window proxy, current listing, risk gaps, sources, International breadcrumb and canonical geography tag.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: add the IEFA row and dated explanatory note; keep the region page as navigation-only.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: add IEFA to the coverage table and `2026-08-29 Performance Refresh`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking IEFA performance, International navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `Cboe BZX:IEFA` identity, fund name, inception, passive/index-tracking equity eligibility, MSCI EAFE IMI benchmark, expense ratio, International region and official source dates are mapped.
+- PASS: official NAV Total Return, market-price return, price, benchmark, holdings, assets, valuation, yield, standard deviation, rolling/YTD fields and secondary full-window proxy remain separate; current listing is not overwritten by stale NYSE Arca naming.
+- PASS: official rolling `9.78%`, official YTD `14.71%`, official 2021-2025 compound/CAGR, secondary 2016-2025 context calculations, S&P cache basis, `4/1` up/down count and daily-NAV drawdown gap reconcile to the proposed owner page and index/region notes.
+- PASS: all planned links and breadcrumbs resolve; the performance page owns the numbers; the region page remains static; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares sources confirm IEFA as a passive Cboe BZX developed-markets ETF with official rolling, YTD and 2021-2025 NAV evidence; secondary full-window context, current listing, scheduled-local verification and daily-drawdown gaps are explicitly disclosed.
