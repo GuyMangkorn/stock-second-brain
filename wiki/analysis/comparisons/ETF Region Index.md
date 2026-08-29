@@ -1,6 +1,6 @@
 ---
 type: etf-region-index
-updated: 2026-08-19
+updated: 2026-08-30
 scope: ETF performance navigation
 tags:
   - analysis/etf-region
@@ -37,7 +37,7 @@ driver notes ทั้งหมด
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
 | Emerging Markets | 5 | [[Emerging Markets ETF]] |
-| International | 25 | [[International ETF]] |
+| International | 26 | [[International ETF]] |
 | Malaysia | 1 | [[Malaysia ETF]] |
 | New Zealand | 1 | [[New Zealand ETF]] |
 | Netherlands | 1 | [[Netherlands ETF]] |

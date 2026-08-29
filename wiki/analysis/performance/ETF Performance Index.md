@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-29
+updated: 2026-08-30
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -75,6 +75,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_SCHF Performance]] | official 2009 / official rolling 2026-07-31; secondary 2016-2025 rows | 10.11% | 9.31%* | 15.26% | 2025 +34.54%* / 2022 -14.79%* | developed markets ex-U.S. large-/mid-cap | diversified country/sector exposure; currency and foreign-market-sensitive; 14.53% 3-year standard deviation; daily-NAV drawdown gap |
 | [[ETF_NYSE_ARCA_IDEV Performance]] | official inception 2017-03-21 / official 2021-2025 rows; history under 10 years | not applicable (<10y) | 9.27% | 14.77% | 2025 +32.59% / 2022 -14.94% | developed markets ex-U.S. broad equity | country/sector/currency-sensitive; 12.92% 3-year standard deviation; daily-NAV drawdown gap |
 | [[ETF_CBOE_BZX_IEFA Performance]] | official 2012 / official rolling 2026-06-30 and 2021-2025 rows; secondary 2016-2025 context | 9.78% | 8.66% | 14.71% | 2025 +31.83% / 2022 -15.13% | developed markets ex-U.S./Canada broad equity | country/sector/currency-sensitive; 12.99% 3-year standard deviation; daily-NAV drawdown gap |
+| [[ETF_NASDAQ_ESGD Performance]] | official 2021-2025 rows; official rolling 2026-06-30 | 9.77% | 8.62% | 14.42% | 2025 +29.98% / 2022 -14.96% | developed markets ex-U.S./Canada ESG-screened broad equity | country/sector/FX/ESG-methodology-sensitive; 12.86% 3-year standard deviation; daily-NAV drawdown gap |
 | [[ETF_NYSE_ARCA_DFAI Performance]] | official inception/listing 2020-11-17/18; official 1Y/5Y management comparison; secondary 2021-2025 rows | not applicable (<10y) | 10.34%* | 15.19%* | 2025 +34.04%* / 2022 -12.94%* | active systematic international core equity; benchmark MSCI World ex USA IMI | active-process/country/factor/currency-sensitive; return-only excess +1.31 pp over 5Y, risk evidence not verified |
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025; rolling 10-year as of 2026-07-31 | 7.42% | 6.45% | 10.86% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive; 14.43% 3-year standard deviation |
 | [[ETF_NYSE_ARCA_SCHC Performance]] | official 2010 / official 2016-2025 | 8.23% | 7.10% | 6.15% | 2025 +37.73% / 2022 -21.92% | developed international ex-U.S. small-cap | small-cap/country/FX/liquidity-sensitive |

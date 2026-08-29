@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-29
+updated: 2026-08-30
 tags:
   - analysis/etf-region
   - geography/International
@@ -24,6 +24,7 @@ tags:
 | DTH | WisdomTree International High Dividend Fund | international high dividend | 9.06% | 12.22% | 8.21% | [[ETF_AMEX_DTH Performance]] |
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
 | EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 6.50% | [[ETF_CBOE_EFAV Performance]] |
+| ESGD | iShares ESG Aware MSCI EAFE ETF | developed ex-U.S./Canada ESG-screened broad equity | 9.77% | 8.62% | 14.42% | [[ETF_NASDAQ_ESGD Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
