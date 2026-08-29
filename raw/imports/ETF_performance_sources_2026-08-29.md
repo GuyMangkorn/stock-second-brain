@@ -1232,3 +1232,75 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Schwab July standardized performance and August current fund data support the FNDA refresh; scheduled-local verification passed, benchmark-change and secondary annual gaps remain disclosed, and official daily-NAV drawdown data is unavailable.
+
+## GREK — Global X MSCI Greece ETF
+
+### Workflow identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917762c8882cc31947fdb5`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `GREK`; canonical `entity_key: NYSE Arca:GREK`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `Greece`; the durable graph is `[[ETF Region Index]] → [[Greece ETF]] → [[ETF Performance Index]]`.
+- Global X identifies GREK as `Global X MSCI Greece ETF`, listed on NYSE Arca, launched 2011-12-07, and tracking the `MSCI All Greece Select 25/50 Index`. The fund is passive/index-tracking, non-diversified, and its prospectus requires at least 80% of assets to be economically tied to Greece or index instruments.
+
+### Source map and raw observations
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Global X official product page | https://www.globalxetfs.com/funds/grek | Identity, objective, tracked index, current NAV/market/net assets, holdings, spread, yield, sector/risk fields and rolling performance; current fields through 2026-08-28 and standardized rolling fields as of 2026-06-30 |
+| Global X official factsheet | https://assets.globalxetfs.com/funds/documents/grek/Fact-Sheet_GREK.pdf | July 2026 standardized NAV/market/index returns, holdings, AUM and fund facts as of 2026-07-31 |
+| SEC summary prospectus | https://www.sec.gov/Archives/edgar/data/1432353/000143235326000191/a497kmscigreece.htm | Exchange, strategy, 80% policy, non-diversified status, fee and standardized performance/best-worst-quarter disclosures |
+| AAII GREK performance page | https://www.aaii.com/etf/ticker/GREK?via=emailsignup-readmore | Secondary annual NAV total-return proxy rows from the prior reviewed capture; current capture returned 403 |
+| ChartRow GREK returns | https://chartrow.com/quote/grek/returns | Conflicting secondary adjusted-close capture through 2026-08-12, used only for source reconciliation |
+| S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Cached common USD total-return reference for complete calendar years 2016-2025, dividends reinvested, as of 2025-12-31 |
+
+- Official Global X current snapshot: NAV `US$85.33`, market price `US$85.26`, net assets `US$343.51M` as of 2026-08-28; holdings `32` and 30-day median bid/ask spread `0.45%` as of 2026-08-27; 30-day SEC yield `2.22%` as of 2026-08-28 and semi-annual distributions.
+- Official fee is total expense ratio `0.56%` (`0.55%` management fee plus `0.01%` other expenses). Return basis is USD NAV Total Return with distributions/capital gains reinvested and expenses deducted according to issuer convention.
+- Official Global X product-page rolling table as of 2026-06-30: fund/index NAV TR `1Y 33.59% / 34.54%`, `3Y 31.38% / 32.28%`, `5Y 26.03% / 26.83%`, `10Y 17.01% / 17.76%`, and since inception `5.71% / 6.55%`.
+- Official July factsheet as of 2026-07-31: NAV TR `1M 6.39%`, `YTD 21.99%`, `1Y 34.63%`, `3Y 31.55%`, `5Y 27.58%`, `10Y 16.88%`, and since inception `6.13%`; market-price counterparts are `6.24%`, `22.58%`, `36.34%`, `31.77%`, `27.82%`, `16.78%`, and `6.15%`; factsheet holdings `33` and AUM `US$313.64M` are separately dated.
+- SEC standardized table as of 2025-12-31 reports fund/index `1Y 75.12% / 76.40%`, `5Y 24.58% / 25.34%`, and `10Y 13.54% / 14.20%`; index history splices FTSE/ATHEX Custom Capped before 2026-03-01 and MSCI All Greece Select 25/50 after that date.
+- Official sector weights as of 2026-07-31 are Financials `49.0%`, Industrials `18.7%`, Utilities `9.1%`, Consumer Discretionary `8.2%`, Energy `6.5%`, Communication Services `4.0%`, Materials `2.8%`, Consumer Staples `0.9%`, and Real Estate `0.9%`. Official risk fields are standard deviation `19.60%`, beta versus S&P 500 `1.10`, Nasdaq-100 `0.69`, MSCI EAFE `1.11`, and MSCI EM `0.65`.
+- SEC best quarter is `+31.50%` and worst quarter `-44.00%`; these are quarter observations, not maximum-drawdown measures. Official daily NAV history sufficient to calculate maximum drawdown and recovery remains `ไม่พบข้อมูลที่ยืนยันได้`.
+- Secondary AAII annual proxy rows are 2016 `-1.20%`, 2017 `32.20%`, 2018 `-29.90%`, 2019 `49.30%`, 2020 `-13.30%`, 2021 `5.70%`, 2022 `3.00%`, 2023 `43.50%`, 2024 `9.70%`, and 2025 `75.10%`. These are not issuer-published calendar-year NAV rows.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- AAII secondary 2016-2025 rows compound to `255.6659%`, displayed as `255.67%*`; rounded-input CAGR is `(1 + 2.5567)^(1/10) - 1 = 13.53%*`; up/down years are `7 / 3`, best is 2025 `+75.10%*`, and worst is 2018 `-29.90%*`.
+- AAII secondary 2021-2025 rows compound to `200.0937%`, displayed as `200.09%*`; rounded-input CAGR is `(1 + 2.0009)^(1/5) - 1 = 24.58%*`; all five years are positive.
+- Cached S&P 500 TR compounds to `96.1696%` / CAGR `14.43%` over 2021-2025 and `298.3291%` / CAGR `14.82%` over 2016-2025. The 2021-2025 arithmetic difference versus GREK secondary CAGR is `+10.15 pp`, not manager alpha.
+- AAII rows were retained because their 2021-2025 compound/CAGR reconciles to the SEC standardized 5Y fund return `24.58%` and their 2016-2025 CAGR is close to the SEC standardized 10Y `13.54%` after rounding. ChartRow's adjusted-close rows differ and compound to approximately `158.89%` over 2021-2025, so they are not used in the canonical table.
+- Official product-page rolling 10Y fund-index gap is `17.01% - 17.76% = -0.75 pp`; rolling 5Y gap is `26.03% - 26.83% = -0.80 pp`. These are tracking/implementation observations, not alpha.
+
+### Source-quality choice and unresolved gaps
+
+- Global X and SEC are the sources of truth for identity, passive classification, strategy, fee, official NAV/market/index performance, portfolio, risk and standardized returns. AAII supplies only the marked secondary annual proxy; ChartRow is retained solely as a conflicting cross-check.
+- Current AAII access returned HTTP 403 during this run, so the previously reviewed AAII rows were not presented as newly retrieved data. Official numeric calendar-year NAV rows, raw daily NAV endpoints and daily NAV drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+- Point-in-time NAV, market price, net assets, holdings, sectors, yield and risk fields retain their own as-of dates and are not mixed into total-return calculations. July factsheet holdings/AUM are not treated as current August holdings/net assets.
+
+### Pre-save evidence packet / proposed durable contents
+
+- The evidence packet contains the ETF identity and exchange, return basis (`NAV Total Return`), tracked and common benchmarks, candidate claims and periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_GREK Performance.md`: replace the stale August-18 page with the official Global X/SEC identity and rolling tables, official July YTD, current August NAV/market/net-assets/holdings/spread/yield, sector/risk observations, marked AAII annual proxy rows, S&P cache comparison, source conflict note, and disclosed daily-NAV gaps; preserve the Greece breadcrumb, canonical tag and source-batch link.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Greece ETF.md`: update the single GREK navigation row to official rolling `17.01%`, secondary 2021-2025 CAGR `24.58%*`, and official YTD `21.99%`; preserve static navigation and `*` marking for annual proxy data.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the GREK coverage row and dated coverage note from secondary YTD `22.00%*` to official YTD `21.99%`, retaining official rolling `17.01%`, secondary calendar metrics, best/worst rows, Greece ownership and daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this GREK source batch with identity, sources, raw observations, calculations, reconciliation, conflicts, gaps, full planned write set, local checklist, scheduled verification lines and the structured handoff.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_GREK Performance]]`, `[[Greece ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `17.01%`, official YTD `21.99%`, secondary 2021-2025 CAGR `24.58%*`, and preserved annual/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing Greece navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and Greece region ownership are source-mapped.
+- PASS: official June rolling table, July factsheet/YTD, August current NAV/market/net-assets/holdings/spread/yield, portfolio/risk fields, SEC standardized table, secondary annual proxy, cached S&P rows and each metric definition retain separate sources and as-of dates; secondary fields remain visibly marked `*`.
+- PASS: annual/CAGR/up-down calculations, official fund-index gaps, splice interpretation, source-quality choice, AAII-versus-ChartRow conflict, prior-snapshot reconciliation and annual/daily-NAV gaps reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for GREK performance, Greece region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Global X July/August and SEC evidence support the GREK refresh; scheduled-local verification passed, secondary annual-source conflict and daily-NAV gaps remain disclosed.
