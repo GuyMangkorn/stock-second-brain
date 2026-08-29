@@ -2003,3 +2003,72 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official BlackRock/iShares current and July USD-share-class evidence support the CUSS refresh; scheduled-local verification passed, the 2022 benchmark/name change and separate current/standardized as-of dates are disclosed, calendar returns reconcile, official daily-NAV drawdown data remains unavailable, and the durable write set is complete.
+
+## NFTY — First Trust India NIFTY 50 Equal Weight ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91777d094c1678af65d776`; input ticker `NFTY`; canonical `entity_key: NASDAQ:NFTY`.
+- The card was claimed and directly reread as `In Progress` before this check. Primary region is India; the durable graph is `[[ETF Region Index]] → [[India ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing NFTY performance owner, India navigation snapshot, ETF Performance Index coverage row, this source batch, and one log bullet. No ETF entity or new region page is required.
+
+### Source map and classification
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| First Trust official summary | https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=NFTY | Canonical identity, Nasdaq listing, inception `2012-02-14`, passive objective, index, expense ratio `0.80%` as of `2026-05-01`, current fund facts and standardized performance; page data includes performance through `2026-07-31` and current fields through `2026-08-28` |
+| First Trust monthly performance report | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=b363655b-cc73-4f42-a7b1-4c1e00306c7c | Official NAV/market-price/index performance through `2026-07-31`; NAV TR YTD `-5.59%` and 3-year standard deviation `14.31%`; the PDF capture displays `7.99%` in its 10-year column, which conflicts with the current summary page's `7.62%` |
+| First Trust factsheet | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=4ce8e98a-434e-452d-89fb-89f33f070e32 | Official historical calendar NAV rows `2016-2025` and passive/index facts in the reviewed capture; capture is dated `2026-03-31` |
+| First Trust summary prospectus | https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=9c00e478-c2d3-49d2-b8db-229055716c36 | Official indexing approach, 90% policy, risk and index-history caveat; dated `2026-05-01` |
+| First Trust historical pricing | https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=NFTY | Current point-in-time NAV `US$54.40`, market price `US$54.10`, and net assets `US$116,956,871`, all as of `2026-08-27` |
+| First Trust holdings | https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=NFTY | Current exposure and 50-holding confirmation as of `2026-08-28`; sector snapshot is separate from return dates |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; no current-year S&P comparison claimed |
+| Existing vault context | `wiki/analysis/performance/ETF_NASDAQ_NFTY Performance.md`, `wiki/analysis/comparisons/India ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior NFTY owner, India navigation, annual series and index-change caveat; current July/August evidence supersedes the prior June snapshot |
+
+- First Trust describes NFTY as seeking results corresponding generally to the price and yield of the `NIFTY 50 Equal Weight Index`, normally investing at least 90% of net assets in index common stocks. This supports `passive-index` classification. The index contains 50 Indian securities, equal-weights constituents, rebalances quarterly and reconstitutes semi-annually.
+- The underlying index changed from the NASDAQ AlphaDEX Taiwan Index to the NIFTY 50 Equal Weight Index on `2018-04-17`; the fund's pre-change history is retained as fund NAV history but is not a pure current-index backtest. The index inception is `2017-04-13`.
+
+### Candidate performance claims and raw observations
+
+- Latest official standardized month-end performance (`2026-07-31`) from the current First Trust summary page: NAV Total Return 3-month `2.27%`, YTD `-5.59%`, 1-year `-1.64%`, 3-year annualized `5.68%`, 5-year annualized `6.09%`, 10-year annualized `7.62%`, and since-inception annualized `6.35%`. Market-price return is kept separate (`-5.97%` YTD). The issuer states returns are total returns and the NAV series reflects fund expenses; distributions are included in NAV total return. The linked monthly-report PDF for the same as-of month displays `7.99%` in its 10-year column; this source conflict is retained, and `7.62%` is used because it is the later/current summary-page field.
+- Current official point-in-time data (`2026-08-27`): NAV `US$54.40`, market price `US$54.10`, net assets `US$116,956,871`; current holdings page reports 50 holdings as of `2026-08-28`. These are not substituted for NAV TR observations.
+- Current sector snapshot (`2026-08-27`) is Financials `21.98%`, Consumer Discretionary `17.04%`, Materials `12.19%`, Information Technology `10.60%`, Industrials `9.74%`, and Health Care `9.59%`, supporting the country/sector concentration risk read-through.
+- The reviewed official historical calendar rows are: 2016 `10.31%`, 2017 `22.54%`, 2018 `-2.67%`, 2019 `0.88%`, 2020 `10.83%`, 2021 `26.22%`, 2022 `-4.45%`, 2023 `24.39%`, 2024 `5.30%`, and 2025 `5.84%`. Annual NIFTY 50 Equal Weight rows were not disclosed in the current capture.
+- The May 2026 summary prospectus displays small version/rounding differences for 2023-2025 (`24.44%`, `5.27%`, `5.73%`) versus the reviewed factsheet series. The factsheet series is retained consistently in the owner page and calculations; the conflict is not silently reconciled.
+- Cached S&P 500 Total Return rows for `2016-2025` are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- Official rolling 10-year NAV TR is `7.62%` as of `2026-07-31`; raw per-share TR endpoints are not disclosed. A normalized display calculation is `100 × (1 + 0.0762)^10 - 100 = 108.42%`; this is derived from the displayed rounded CAGR and is not an issuer-reported cumulative endpoint. The 10-year window is shown as `2016-07-31` to `2026-07-31`, `10.00` years.
+- The retained official calendar rows compound to `145.94%` cumulative / rounded-input CAGR `9.42%` for `2016-2025`; the five rows `2021-2025` compound to `67.19%` / CAGR `10.83%`. Cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over `2016-2025` and `96.17%` / CAGR `14.43%` over `2021-2025`.
+- Complete-year profile is `8` up / `2` down. Best year is `2021` at `26.22%`; least positive is `2019` at `0.88%`; worst is `2022` at `-4.45%`; least-bad down year is `2018` at `-2.67%`. The latest official month-end NAV TR YTD is `-5.59%` as of `2026-07-31`.
+- First Trust reports 3-year standard deviation `14.31%` as of `2026-07-31`; official daily NAV observations sufficient to reproduce maximum drawdown and recovery are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The current First Trust summary page is the source of truth for the latest July standardized return fields and current fund identity. Its rolling 10-year field is `7.62%`; the monthly-report PDF's `7.99%` 10-year display is preserved as an explicit source conflict rather than mixed into the owner metric. The historical factsheet series is retained because it supplies the complete annual table; the prospectus version difference is disclosed rather than mixed into the calculations.
+- Current NAV/market price and holdings dates (`2026-08-27`/`2026-08-28`) are kept separate from standardized NAV TR and risk dates (`2026-07-31`). No date-to-date YTD is backfilled from point-in-time NAV prices.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NASDAQ_NFTY Performance.md`: refresh frontmatter/source batch, July rolling 10-year `7.62%`, July NAV TR YTD `-5.59%`, current NAV/market-price observations, official risk/sector facts, retained annual table, source conflict, index-change caveat, and India breadcrumb.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/India ETF.md`: update the NFTY row to `7.62%`, `10.83%`, `-5.59%` and add the dated July/August as-of note.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the NFTY coverage row and `2026-08-29 Performance Refresh` bullet to the same verified metrics and gaps.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this complete source map, observations, calculations, reconciliation, local checklist, and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking NFTY performance, India navigation, ETF Performance Index, and this source batch; keep the existing unrelated working-tree change unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NASDAQ:NFTY` identity, Nasdaq exchange, fund name, inception, passive/index-tracking equity eligibility, tracked index, expense ratio, India region, and 2018 index-change caveat are source-mapped.
+- PASS: NAV Total Return, market-price return, issuer-index rows, current NAV/price, holdings, sector facts, historical annual rows, currencies, units, and every as-of date are separated; distributions are included in the NAV TR convention; the summary-page `7.62%` versus monthly-PDF `7.99%` conflict is explicitly retained.
+- PASS: 10-year eligibility, normalized rounded-CAGR calculation, 2016-2025 and 2021-2025 compounding, up/down/best/worst ranking, cached S&P 500 basis/window, and the summary/monthly-report plus factsheet/prospectus conflicts reconcile to the proposed page. No unsupported current YTD or daily drawdown value is inferred.
+- PASS: complete proposed contents for performance, India region, ETF Performance Index, source batch, and log are specified; breadcrumb and links resolve; no critical/high finding remains and no WARNING requires confirmation.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official First Trust July performance and current fund evidence support the NFTY refresh; scheduled-local verification passed, the summary-versus-monthly-report 10-year conflict and separate as-of dates are disclosed, and the daily NAV drawdown/recovery gap remains explicit.

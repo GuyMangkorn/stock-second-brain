@@ -25,7 +25,7 @@ tags:
 | INDA | iShares MSCI India ETF | India single-country equity / index-tracking | 7.07% | 7.80% | -8.44% | [[ETF_CBOE_BZX_INDA Performance]] |
 | FLIN | Franklin FTSE India ETF | India single-country equity / index-tracking | not applicable (<10y history) | 9.33% | -8.34% | [[ETF_NYSE_ARCA_FLIN Performance]] |
 | FLIBF / FLXI | Franklin FTSE India UCITS ETF | India large-/mid-cap equity / index-tracking | not applicable (<10y history) | 9.83% | -8.42% | [[ETF_LSE_FLXI Performance]] |
-| NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.99% | 10.83% | -7.45% | [[ETF_NASDAQ_NFTY Performance]] |
+| NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.62% | 10.83% | -5.59% | [[ETF_NASDAQ_NFTY Performance]] |
 | INQQ | INQQ The India Internet ETF | India internet/e-commerce equity / index-tracking | not applicable (<10y history) | not applicable (calendar rows unavailable) | -26.17% | [[ETF_NYSE_ARCA_INQQ Performance]] |
 | GLIN | VanEck India Growth Leaders ETF | India equity / index-tracking factor | 1.92% rolling / 1.61% calendar | 8.55% | -4.15% | [[ETF_NYSE_ARCA_GLIN Performance]] |
 
@@ -37,6 +37,11 @@ SMIN current date-to-date NAV TR YTD อยู่ที่ 2.57% ณ 2026-08-25;
 month-end YTD อยู่ที่ -0.02% ณ 2026-06-30.
 
 ## 2026-08-29 Verified Refresh
+
+NFTY latest official First Trust month-end performance reports rolling 10-year
+NAV TR `7.62%` and NAV TR YTD `-5.59%` ณ 2026-07-31. Current NAV `US$54.40`
+and market price `US$54.10` ณ 2026-08-27 are separate point-in-time quotes;
+daily NAV drawdown/recovery ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 INCO latest official Columbia ETF finder snapshot reports 10-year average
 annual NAV TR `8.38%` and current YTD `-4.67%` ณ 2026-07-31. The detailed
