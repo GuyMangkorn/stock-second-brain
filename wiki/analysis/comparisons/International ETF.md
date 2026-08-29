@@ -26,6 +26,7 @@ tags:
 | EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 6.50% | [[ETF_CBOE_EFAV Performance]] |
 | ESGD | iShares ESG Aware MSCI EAFE ETF | developed ex-U.S./Canada ESG-screened broad equity | 9.77% | 8.62% | 14.42% | [[ETF_NASDAQ_ESGD Performance]] |
 | IRRRF | iShares Core MSCI World UCITS ETF (official USD listing LSE:IWDA) | global developed large-/mid-cap passive accumulating equity | 12.26%† | 5.94% | 13.67% | [[ETF_LSE_IWDA Performance]] |
+| IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
@@ -79,6 +80,12 @@ NAV TR YTD ณ 2026-07-31. Official factsheet ณ 2026-06-30 รายงาน 
 Official complete calendar rows ไม่ readable ใน reviewed capture จึงไม่คำนวณ
 2021-2025 CAGR, best/worst year หรือ hit rate และ daily NAV drawdown/recovery
 ยังไม่ verified.
+
+IXSAF เป็น OTC alias ของ official CAD share class `TSX:XEF`, ISIN `CA46434T1057`.
+Official issuer rolling 10-year NAV TR average annual อยู่ที่ `9.95%` ณ 2026-07-31,
+official 2021-2025 NAV rows คำนวณเป็น CAGR `10.01%`, และ current official NAV TR
+YTD คือ `16.10%` ณ 2026-08-26. Return currency คือ CAD; S&P USD common reference
+จึงไม่ FX-matched และ daily NAV drawdown/recovery ยังไม่ verified.
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. FNDC `8.48%` เป็น issuer-reported
