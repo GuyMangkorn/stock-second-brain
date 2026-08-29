@@ -167,7 +167,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_LSE_IJPD Performance]] | official 2013 / official 2016-2025; rolling 2016-2026 | 17.02% | 18.81% | 17.84% | 2023 +34.50% / 2018 -14.10% | Japan single-country USD-hedged equity, accumulating | country/sector/FX/hedge-cost-sensitive |
 | [[ETF_CBOE_BBJP Performance]] | official 2019-2025 | not applicable (<10y history) | 6.56% | 14.75% | 2025 +26.56% / 2022 -16.78% | Japan single-country large/mid-cap equity | sector/country/FX-sensitive; broad indexed exposure |
 | [[ETF_NYSE_ARCA_FLJP Performance]] | official 2018-2025 | not applicable (<10y history) | 6.60% | 14.82% | 2025 +25.30% / 2022 -15.78% | Japan single-country large/mid-cap equity | industrials/financials/technology; country/FX-sensitive |
-| [[ETF_NYSE_ARCA_KWEB Performance]] | 2013 / secondary 2016-2025* | -0.85% | -11.89%* | -28.96% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive |
+| [[ETF_NYSE_ARCA_KWEB Performance]] | official 2013 / official rolling as of 2026-07-31; secondary 2016-2025* | 0.22% | -11.89%* | -17.66% | 2017 +69.73%* / 2021 -49.01%* | China internet single-country equity | high volatility; China consumer/policy/valuation/FX-sensitive; current drawdown proxy -69.56%; US/LSE KWEB share classes separated |
 | [[ETF_NYSE_ARCA_CQQQ Performance]] | official 2009 / official complete 2016-2025* | 4.44%* | -8.27% | not disclosed | 2017 +72.54% / 2018 -34.21% | China technology equity | non-diversified; China tech/policy/VIE/FX-sensitive; predecessor/index breaks |
 | [[ETF_CBOE_BZX_CNYA Performance]] | official 2016 / official rolling 2016-2026; official 2021-2025; 2016-2020 annual rows not disclosed | 6.71% | -1.75% | 3.57% | 2025 +25.59% / 2022 -26.31% | China A-share single-country equity | A-share/Stock Connect/policy/geopolitical/country/sector/FX-sensitive; benchmark change 2018-04-26 |
 | [[ETF_NYSE_ARCA_CNXT Performance]] | official 2014 / official rolling 2016-2026; calendar rows not disclosed | 4.80% | not disclosed | 8.45% | not disclosed / not disclosed | China A-share ChiNext equity | China A-share/technology/industrial concentration; methodology/index break 2021-12-10 |
@@ -355,6 +355,13 @@ Index ณ review date. Official 2016-2025 NAV TR cumulative 106.36% /
 rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 18.13% ณ 2026-07-31; ProShares ประกาศเปลี่ยนชื่อและ index ประมาณ
 2026-09-28 จึงต้องแยก future transition ออกจาก current performance.
+
+KWEB ใช้ official KraneShares July month-end NAV TR rolling 10-year `0.22%`
+และ YTD `-17.66%` ณ 2026-07-31; current NAV `US$26.30`, market price
+`US$26.32` และ net assets `US$5.19B` ณ 2026-08-28. Calendar rows ยังคงเป็น
+secondary market-price proxy `*`; current drawdown proxy `-69.56%` และ worst
+drawdown `-80.92%` เป็น secondary เช่นกัน. `NYSE Arca:KWEB` ไม่รวมกับ
+`LSE:KWEB` / `KRANF` UCITS share class.
 
 ## Common Window
 

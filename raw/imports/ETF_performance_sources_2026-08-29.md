@@ -824,3 +824,83 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street July performance and current product data support the SPEU refresh; scheduled-local verification passed, secondary annual rows remain marked, and source/as-of and official daily NAV gaps are disclosed.
+
+## KWEB — KraneShares CSI China Internet ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917749032483b31141e900`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `KWEB`; canonical `entity_key: NYSE Arca:KWEB`.
+- Card was claimed and reread as `In Progress` before research. The card ticker resolves to the US-listed KraneShares CSI China Internet ETF. It is not the separate UCITS USD share class shown as `LSE:KWEB` / OTC alias `KRANF`.
+- Primary region is `China`; the durable graph is `[[ETF Region Index]] → [[China ETF]] → [[ETF Performance Index]]`. Only `wiki/analysis/performance/ETF_NYSE_ARCA_KWEB Performance.md` is refreshed; `wiki/analysis/performance/ETF_LSE_KWEB Performance.md` is not changed.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| KraneShares official US product page | https://kraneshares.com/etf/kweb/ | US identity, NYSE ticker, CUSIP/ISIN, inception, fee, index, NAV/market price, premium/discount, standardized performance, holdings and listed-location breakdown; performance as of 2026-07-31, fund facts/current pair as of 2026-08-28, spread as of 2026-08-27 |
+| KraneShares official US factsheet | https://kraneshares.com/resources/factsheet/kweb_factsheet.pdf | Official fund-document and return-basis cross-reference; used with the current product page rather than to overwrite newer product-page fields |
+| Total Real Returns KWEB | https://totalrealreturns.com/n/KWEB | Secondary dividend-reinvested market-price/adjusted-return proxy, annual rows, current YTD and drawdown; data ending 2026-08-28 |
+| Stock Analysis KWEB history | https://stockanalysis.com/etf/kweb/history/ | Secondary market-price history cross-check; not used to replace official NAV TR |
+| KraneShares official UCITS page | https://kraneshares.eu/etf/kwebln/ | Distinct UCITS identity: USD class `LSE:KWEB`, ISIN `IE00BFXR7892`, inception 2018-11-21, accumulating, expense 0.75%; used only for ticker/share-class disambiguation |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_KWEB Performance.md`, `wiki/analysis/comparisons/China ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior stale official June fields, page structure, region ownership, annual proxy rows and link graph |
+
+### Identity and classification evidence
+
+- KraneShares identifies the US fund as `KraneShares CSI China Internet ETF`, ticker `KWEB`, primary exchange `NYSE`, CUSIP `500767306`, ISIN `US5007673065`, inception `2013-07-31`, total annual fund operating expense `0.69%`, annual distributions, and underlying index `CSI Overseas China Internet Index`; these fund details are as of 2026-08-28.
+- The fund is passive/index-tracking equity exposure. The official product page describes exposure to Chinese internet companies, e-commerce and technology themes; no active-management evidence is used.
+- The vault canonical exchange-qualified key remains `NYSE Arca:KWEB` because the existing US performance owner and region/index links use the NYSE Arca convention. The issuer's wording that KWEB trades on the NYSE is retained in the performance page.
+
+### Candidate performance claims and raw observations
+
+- Official KraneShares cumulative NAV / closing-price / linked-index returns as of 2026-07-31 are: 1M `15.90% / 16.43% / 15.91%`; 3M `-0.14% / -0.97% / -0.27%`; 6M `-21.20% / -19.47% / -21.67%`; YTD `-17.66% / -16.33% / -18.18%`; since inception `44.81% / 46.20% / 45.05%`.
+- Official annualized NAV / closing-price / linked-index returns as of month-end 2026-07-31 are: 1Y `-15.45% / -14.76% / -15.89%`; 3Y `-0.04% / -0.20% / -0.65%`; 5Y `-7.75% / -7.50% / -7.97%`; 10Y `0.22% / 0.29% / 0.20%`; since inception `2.89% / 2.96% / 2.90%`.
+- Official daily/current fields as of 2026-08-28: NAV `US$26.30`, NAV daily change `+0.11%`, market price `US$26.32`, market-price daily change `+0.84%`, premium/discount `US$0.02`, net assets `US$5,193,762,658`, shares outstanding `197,500,000`, fee `0.69%`; 30-day median bid/ask spread `0.04%` as of 2026-08-27.
+- Official holdings as of 2026-08-28: Tencent `10.23%`, Alibaba `8.58%`, PDD `8.38%`, Meituan `7.11%`, NetEase `6.20%`, Lenovo `4.99%`, KE Holdings `4.42%`, JD.com `3.85%`, Trip.com `3.68%`, and Baidu `3.34%`; top five sum calculation is `10.23 + 8.58 + 8.38 + 7.11 + 6.20 = 40.50%`.
+- Official listed-location breakdown as of 2026-08-28 is Hong Kong `76.9%`, US ADRs with no secondary HK listing `12.2%`, and US ADRs with a secondary HK listing `10.8%`.
+- Secondary Total Real Returns data ending 2026-08-28 reports total-return proxy YTD `-22.70%`, trailing one-year `-25.60%`, since 2013-08-01 cumulative `+28.82%` / annualized `+1.96%`, current drawdown `-69.56%` from the 2021-02-17 peak, and worst drawdown `-80.92%` to 2022-10-24. It cautions that its calculations are educational and may be incomplete; these are not official NAV drawdown fields.
+- Secondary annual dividend-reinvested proxy rows retained from the existing verified source context are: 2016 `-8.54%`, 2017 `+69.73%`, 2018 `-33.80%`, 2019 `+29.92%`, 2020 `+58.23%`, 2021 `-49.01%`, 2022 `-17.24%`, 2023 `-9.06%`, 2024 `+12.01%`, 2025 `+23.55%`. They remain marked `*` and are not issuer-published NAV TR.
+- Cached S&P 500 Total Return common-reference rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of 2025-12-31. The S&P series is not KWEB's strategy benchmark.
+
+### Calculations and reconciliation
+
+- Official tracking observations calculated as NAV minus linked index are YTD `-17.66 - (-18.18) = +0.52 pp`, 1Y `+0.44 pp`, 3Y `+0.61 pp`, 5Y `+0.22 pp`, 10Y `+0.02 pp`, and since inception `-0.01 pp`. These are implementation/expense observations and are not called alpha.
+- Secondary 2016-2025 proxy compounds to `12.19%*` and rounded-input CAGR `1.16%*`; positive/negative years `5 / 5`; best `2017 +69.73%*`; worst `2021 -49.01%*`.
+- Secondary 2021-2025 proxy compounds to `-46.89%*` and rounded-input CAGR `-11.89%*`; positive/negative years `2 / 3`. Cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over the same window.
+- Official rolling 10-year NAV TR `0.22%` annualized is a separate issuer field from the secondary 2021-2025 proxy CAGR `-11.89%*`; the fields have different windows, bases and source quality. Raw official NAV endpoints for the rolling field are not disclosed.
+- Reconciliation: the prior page used official June quarter-end YTD `-28.96%` and rolling 10Y `-0.85%`; the current official July month-end fields are YTD `-17.66%` and rolling 10Y `0.22%`. Current NAV/price is a separate 2026-08-28 observation and is not mixed with July standardized returns.
+
+### Source-quality choice and unresolved gaps
+
+- Official KraneShares product-page performance is the canonical source for rolling NAV TR, current official YTD, NAV/price, fee and index tracking fields. Secondary annual rows are retained because a complete official 2016-2025 calendar NAV series was not exposed in the reviewed current page; every such row and derived CAGR is marked `*`.
+- Secondary drawdown/current-YTD values are preserved as context only. Official daily NAV history sufficient to reproduce drawdown, recovery date and volatility is `ไม่พบข้อมูลที่ยืนยันได้`.
+- No current material price/NAV dislocation is evidenced: the issuer reports a `US$0.02` premium/discount on 2026-08-28. This is not an inference about future performance.
+- The distinct LSE/UCITS KWEB page reports a different ISIN, inception, fee, NAV and accumulating share class. It is deliberately excluded from the US page and from this card's result.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange convention, US ISIN/CUSIP, passive equity classification, return basis (`NAV Total Return`, USD, distributions reinvested, net of expenses), issuer tracked index, S&P common reference, official and secondary candidate claims, periods, units/currency, metric definitions, as-of dates, calculations, source URLs/paths, source-quality choice, unresolved gaps and the full planned file set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_KWEB Performance.md`: replace the stale June/July-17 snapshot with official July standardized NAV/price/index tables; set rolling 10Y `0.22%`, YTD `-17.66%`, current NAV `US$26.30`, price `US$26.32`, premium/discount `US$0.02`, AUM `US$5.19B`, fee `0.69%`; retain marked secondary 2016-2025 rows and calculations; add current holdings/listed-location and secondary drawdown caveats; preserve the China breadcrumb/tag, source links and distinct LSE/UCITS disambiguation.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/China ETF.md`: update only the US KWEB snapshot row to `0.22% | -11.89%* | -17.66%`; append a 2026-08-29 refresh note with July official performance, Aug-28 current pair/AUM, secondary annual-row caveat and US-versus-LSE share-class separation. Leave the separate `KRANF / KWEB` UCITS row unchanged.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the US KWEB coverage row to official rolling `0.22%`, secondary 2021-2025 CAGR `-11.89%*`, YTD `-17.66%`, best/worst proxy years and drawdown/share-class caveats; append a dated KWEB reconciliation note; leave the Common Window annual proxy row unchanged because no calendar proxy values changed.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one `etf-performance` workflow bullet linking `[[ETF_NYSE_ARCA_KWEB Performance]]`, `[[China ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `0.22%`, YTD `-17.66%`, retained secondary CAGR `-11.89%*`, and the LSE share-class separation; preserve unrelated pre-existing log changes outside the scoped commit.
+- This source batch section itself is part of the proposed durable write and records the complete evidence packet, checklist and structured handoff.
+
+### Local pre-save checklist
+
+- PASS: official US KWEB identity, NYSE/NYSE Arca canonical key, CUSIP/ISIN, inception, passive/index-tracking equity eligibility, tracked index, USD return basis, China region ownership and distinct LSE UCITS identity are source-mapped.
+- PASS: official July NAV/price/index tables, official Aug-28 current NAV/price/AUM/holdings/location fields, secondary annual proxy, secondary drawdown, cached S&P reference and every as-of date remain separate; no current field is conflated with the July standardized window.
+- PASS: annual rows and both CAGR calculations reproduce the proposed page/index values; official rolling NAV is not replaced by secondary proxy; tracking differences are labeled implementation observations rather than alpha; official daily NAV drawdown/recovery remains an explicit gap.
+- PASS: complete proposed contents for US performance page, China region snapshot, master index, source batch and log are specified; canonical breadcrumb/tag/source links are preserved; LSE/UCITS KWEB is not overwritten; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official KraneShares July standardized performance and Aug-28 US fund data support the KWEB refresh; scheduled-local verification passed, secondary calendar/drawdown data remain marked, and US/LSE share-class and official daily-NAV gaps are disclosed.
