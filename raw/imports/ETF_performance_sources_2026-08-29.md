@@ -2072,3 +2072,72 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official First Trust July performance and current fund evidence support the NFTY refresh; scheduled-local verification passed, the summary-versus-monthly-report 10-year conflict and separate as-of dates are disclosed, and the daily NAV drawdown/recovery gap remains explicit.
+
+## CHIQ — Global X MSCI China Consumer Discretionary ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91777fac2e895ec1ef507e`; input ticker `CHIQ`; canonical `entity_key: NYSE Arca:CHIQ`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is China; the durable graph is `[[ETF Region Index]] → [[China ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing CHIQ performance owner, China navigation snapshot, ETF Performance Index coverage row, this source batch, and one log bullet. No ETF entity or new region page is required.
+
+### Source map and classification
+
+| Source | URL | Use and as-of date |
+|---|---|---|
+| Global X official CHIQ product page | https://www.globalxetfs.com/funds/CHIQ | Canonical identity, NYSE Arca listing, objective, index, current NAV/market price/net assets/holdings, current characteristics and risk stats; current fields through `2026-08-27`, performance table through `2026-06-30` |
+| Global X CHIQ factsheet | https://assets.globalxetfs.com/funds/documents/chiq/Fact-Sheet_CHIQ.pdf | Official NAV TR, market-price return, hybrid-index return, July YTD and rolling 10-year performance, 57 holdings, expense ratio, industry weights and return definitions; as of `2026-07-31` |
+| Global X CHIQ summary prospectus | https://assets.globalxetfs.com/funds/documents/chiq/prospectus-regulatory/Summary-Prospectus_CHIQ.pdf | Official annual NAV TR rows `2016-2025`, formal objective/fee, replication/indexing approach, risk disclosures and index-history break; dated `2026-03-01`, annual rows through `2025-12-31` |
+| Global X CHIQ annual shareholder report | https://assets.globalxetfs.com/funds/documents/chiq/prospectus-regulatory/Annual-Shareholder-Report.pdf | Passive/full-replication cross-check and fiscal-year performance; report period ended `2025-10-31`, not mixed into the calendar-year window |
+| Global X index methodology summary | https://assets.globalxetfs.com/funds/documents/chiq/Index-Methodology-Summary.pdf | 10/50 construction, eligible China A/B/H, red-chip, P-chip and foreign listings, free-float weighting and quarterly rebalance; methodology document is historical and not used for current weights |
+| Cached S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; no current-year S&P comparison claimed |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_CHIQ Performance.md`, `wiki/analysis/comparisons/China ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior CHIQ owner and China navigation; July 2026 factsheet evidence supersedes the prior June/July-21 snapshot |
+
+- Global X describes CHIQ as seeking to track the price and yield performance, before fees and expenses, of the `MSCI China Consumer Discretionary 10/50 Index`; the 2026 summary prospectus says the fund generally uses a replication strategy and is not actively managed. This supports `passive-index` classification.
+- The fund's name, investment objective, investment strategy and underlying index changed effective `2018-12-06`; performance through `2018-12-05` reflects the predecessor Solactive China Consumer Total Return Index and later performance reflects the MSCI China Consumer Discretionary 10/50 Index. The break is disclosed rather than treated as one unchanged index history.
+
+### Candidate performance claims and raw observations
+
+- Latest official factsheet performance as of `2026-07-31`: NAV Total Return 1-month `17.80%`, YTD `-12.37%`, 1-year `-10.93%`, 3-year annualized `-2.25%`, 5-year annualized `-7.74%`, 10-year annualized `6.53%`, and since inception annualized `2.50%`. Market-price returns are kept separate: 1-month `18.41%`, YTD `-11.46%`, 1-year `-10.22%`, 3-year `-2.50%`, 5-year `-7.60%`, 10-year `6.57%`, since inception `2.53%`. Hybrid-index returns are separate: YTD `-12.11%` and 10-year `7.15%`.
+- The current Global X product page as of `2026-08-27` reports NAV `US$17.57`, market price `US$17.40`, net assets `US$115.63m`, 57 holdings, expense ratio `0.65%`, median bid-ask spread `0.60%`, and 30-day SEC yield `0.98%`. These are point-in-time fund facts, not substitutions for the July NAV TR series.
+- Current industry weights from the July factsheet are Consumer Discretionary Distribution & Retail `36.97%`, Automobiles & Components `28.66%`, Consumer Durables & Apparel `17.02%`, Consumer Services `16.69%`, Equity REITs `0.38%`, and Technology Hardware & Equipment `0.28%`. The product page reports standard deviation `32.00%` and beta `0.89` versus the S&P 500 as of `2026-07-31`.
+- The official annual NAV TR rows from the March 2026 summary prospectus are: 2016 `-5.88%`, 2017 `65.28%`, 2018 `-27.72%`, 2019 `43.06%`, 2020 `93.43%`, 2021 `-27.23%`, 2022 `-22.07%`, 2023 `-10.92%`, 2024 `12.16%`, and 2025 `12.91%`.
+- The annual shareholder report provides a separate fiscal-year cross-check: 1-year NAV return `14.55%` and index `15.26%` for the period ended `2025-10-31`; its 10-year NAV return `7.10%` is not mixed into the July 2026 rolling field.
+- Cached S&P 500 Total Return rows for `2016-2025` are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- The official rolling 10-year NAV TR CAGR is `6.53%` for `2016-07-31` to `2026-07-31`; raw NAV endpoints are not disclosed. A normalized display calculation is `100 × (1 + 0.0653)^10 - 100 = 88.24%`; this is derived from the rounded issuer CAGR and is not an issuer-reported cumulative endpoint.
+- Official annual rows compound to normalized TR `100.00` → `199.05`, cumulative `99.05%`, and rounded-input CAGR `7.13%` for `2016-2025`. The `2021-2025` rows compound to approximately `-36.03%` cumulative / `-8.55%` CAGR; the prospectus reports `-8.54%` from unrounded underlying data, so the rounded-input calculation is retained and labeled.
+- Cached S&P 500 TR compounds to `298.33%` cumulative / CAGR `14.82%` over `2016-2025` and `96.17%` / CAGR `14.43%` over `2021-2025`. CHIQ trails the S&P common reference by approximately `7.69 pp` CAGR over `2016-2025` and `22.98 pp` over `2021-2025`; this is reference context, not manager alpha.
+- Complete-year profile is `5` up / `5` down. Best year is `2020` at `93.43%`; worst is `2021` at `-27.23%`; the latest official NAV TR YTD is `-12.37%` as of `2026-07-31`.
+- The reviewed official sources do not expose a reproducible daily NAV series for maximum drawdown and recovery: `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The July 2026 Global X factsheet is the source of truth for the latest standardized NAV TR, market-price and hybrid-index fields because it is the freshest official return table. The current product page supplies later point-in-time NAV, price, net assets and holdings, while its June performance table is not mixed into the July factsheet metrics.
+- The summary prospectus is the source of truth for the complete 2016-2025 annual NAV series and formal index-history disclosure. The annual shareholder report is retained as a fiscal-year cross-check only; its dates and 10-year field differ from the July factsheet.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_CHIQ Performance.md`: refresh frontmatter/source batch, July rolling 10-year `6.53%`, July NAV TR YTD `-12.37%`, current NAV/market-price/net-assets observations, industry/risk facts, annual rows, index-change caveat, and China breadcrumb.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/China ETF.md`: add/update the current CHIQ row to `6.53%`, `-8.55%`, `-12.37%` and add the dated July/August as-of note; preserve the historical July-23 row.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the CHIQ coverage row and append the `2026-08-29 Performance Refresh` bullet with the same verified metrics and gaps.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this complete source map, observations, calculations, reconciliation, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking CHIQ performance, China navigation, ETF Performance Index and this source batch; keep the existing unrelated working-tree change unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:CHIQ` identity, fund name, inception, passive/index-tracking equity eligibility, tracked index, expense ratio, China region and `2018-12-06` index/strategy break are source-mapped.
+- PASS: NAV Total Return, market-price return, hybrid-index return, current NAV/price/net assets/holdings, industry/risk facts, annual rows, currencies, units and each as-of date are separated; distributions are included in the NAV TR convention.
+- PASS: rolling 10-year eligibility, normalized rounded-CAGR calculation, 2016-2025 and 2021-2025 compounding, up/down/best/worst ranking, cached S&P 500 basis/window, July factsheet versus June product-page date distinction, and fiscal-year cross-check reconcile to the proposed page. No unsupported current-year benchmark or daily drawdown value is inferred.
+- PASS: complete proposed contents for performance, China region, ETF Performance Index, source batch and log are specified; breadcrumbs/source links resolve; no critical/high finding remains and no WARNING requires confirmation.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Global X July factsheet and current product-page evidence support the CHIQ refresh; scheduled-local verification passed, separate return and point-in-time dates are disclosed, the index-history break is preserved, and the daily NAV drawdown/recovery gap remains explicit.

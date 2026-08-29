@@ -20,6 +20,7 @@ tags:
 | ECNS | iShares MSCI China Small-Cap ETF | China small-cap single-country equity | 1.05% | -2.79% | -9.18% | [[ETF_NYSE_ARCA_ECNS Performance]] |
 | FXI | iShares China Large-Cap ETF | China single-country large-cap equity | 1.75% | -1.67% | -6.68% | [[ETF_NYSE_ARCA_FXI Performance]] |
 | KWEB | KraneShares CSI China Internet ETF | China internet single-country equity | 0.22% | -11.89%* | -17.66% | [[ETF_NYSE_ARCA_KWEB Performance]] |
+| CHIQ | Global X MSCI China Consumer Discretionary ETF | China consumer discretionary equity / index-tracking | 6.53% | -8.55% | -12.37% | [[ETF_NYSE_ARCA_CHIQ Performance]] |
 | CQQQ | Invesco China Technology ETF | China technology equity / index-tracking | 4.44%* | -8.27% | not disclosed | [[ETF_NYSE_ARCA_CQQQ Performance]] |
 | CNXT | VanEck ChiNext Innovators ETF | China A-share / ChiNext equity / index-tracking | 4.80% | not disclosed | 8.45% | [[ETF_NYSE_ARCA_CNXT Performance]] |
 | ASHS | Xtrackers Harvest CSI 500 China A-Shares Small Cap ETF | China A-share small-cap equity / index-tracking | 1.96% | not disclosed | 3.36% | [[ETF_NYSE_ARCA_ASHS Performance]] |
@@ -37,6 +38,13 @@ tags:
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
 
 ## 2026-08-29 Verified Refresh
+
+CHIQ latest official Global X factsheet reports rolling 10-year NAV TR CAGR
+`6.53%` and NAV TR YTD `-12.37%` ณ 2026-07-31. Current NAV `US$17.57`,
+market price `US$17.40`, net assets `US$115.63m`, and 57 holdings are as of
+2026-08-27. The factsheet's July industry snapshot remains separate from the
+current price/holdings date; the index/strategy change effective 2018-12-06
+and daily-NAV drawdown/recovery gap remain disclosed on the owner page.
 
 KWEB latest official KraneShares NAV TR YTD อยู่ที่ `-17.66%` ณ 2026-07-31 และ
 rolling 10-year NAV TR CAGR อยู่ที่ `0.22%` ณ วันเดียวกัน. Current NAV `US$26.30`,

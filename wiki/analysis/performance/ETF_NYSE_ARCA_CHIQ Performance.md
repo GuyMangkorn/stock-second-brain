@@ -7,10 +7,10 @@ exchange: NYSE Arca
 fund: Global X MSCI China Consumer Discretionary ETF
 tracked_index: MSCI China Consumer Discretionary 10/50 Index
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
-performance_as_of: not disclosed
-current_ytd_as_of: 2026-07-21
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
+updated: 2026-08-29
+performance_as_of: 2026-07-31
+current_ytd_as_of: 2026-07-31
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -24,7 +24,7 @@ tags:
 
 ## Bottom line
 
-CHIQ เป็น passive/index-tracking China consumer discretionary equity ETF ของ Global X ติดตาม MSCI China Consumer Discretionary 10/50 Index. Official prospectus มี NAV total-return annual rows ครบ 10 calendar years 2016-2025: normalized TR `100.00` เป็น `199.05`, cumulative `99.05%`, CAGR `7.13%` สำหรับ 2015-12-31 ถึง 2025-12-31. Current official rolling 10Y NAV TR CAGR คือ `5.31%` สำหรับ 2016-06-30 ถึง 2026-06-30; current YTD คือ `-25.23%` ณ 2026-07-21.
+CHIQ เป็น passive/index-tracking China consumer discretionary equity ETF ของ Global X ติดตาม MSCI China Consumer Discretionary 10/50 Index. Official prospectus มี NAV total-return annual rows ครบ 10 calendar years 2016-2025: normalized TR `100.00` เป็น `199.05`, cumulative `99.05%`, CAGR `7.13%` สำหรับ 2015-12-31 ถึง 2025-12-31. Current official rolling 10Y NAV TR CAGR คือ `6.53%` สำหรับ 2016-07-31 ถึง 2026-07-31; latest official YTD คือ `-12.37%` ณ 2026-07-31.
 
 ## Performance check
 
@@ -34,14 +34,15 @@ CHIQ เป็น passive/index-tracking China consumer discretionary equity ETF
 - Tracked index (issuer benchmark): MSCI China Consumer Discretionary 10/50 Index; predecessor Solactive China Consumer Total Return Index through 2018-12-04
 - Expense ratio: 0.65%
 - Benchmark: S&P 500 Total Return (USD, dividends reinvested; common reference benchmark)
-- 10-year calendar NAV TR CAGR: 7.13% for 2015-12-31 to 2025-12-31; rolling official 10Y NAV TR CAGR: 5.31% for 2016-06-30 to 2026-06-30
-- Coverage/source note: the calendar window uses official annual NAV TR rows; raw NAV endpoints for the rolling June window are not disclosed; S&P 500 rows reuse cached USD Total Return convention as of 2025-12-31; market-price return is not mixed
+- 10-year calendar NAV TR CAGR: 7.13% for 2015-12-31 to 2025-12-31; rolling official 10Y NAV TR CAGR: 6.53% for 2016-07-31 to 2026-07-31
+- Coverage/source note: the calendar window uses official annual NAV TR rows; raw NAV endpoints for the rolling July window are not disclosed; S&P 500 rows reuse cached USD Total Return convention as of 2025-12-31; market-price return is not mixed
 
 ### 10-year NAV TR window
 
 | Start date | End date | Actual years | Start TR value | End TR value | Cumulative return | CAGR | Disclosure |
 |---|---|---:|---:|---:|---:|---:|---|
 | 2015-12-31 | 2025-12-31 | 10.00 | 100.00 (normalized) | 199.05 (calculated from official annual rows) | 99.05% | 7.13% | Complete calendar years 2016-2025 |
+| 2016-07-31 | 2026-07-31 | 10.00 | not disclosed | not disclosed | approximately 88.24% (derived) | 6.53% | Official rolling NAV TR CAGR; endpoints not disclosed |
 
 Formula: `199.05 = 100.00 × Π(1 + annual NAV TR)` and `CAGR = (199.05 / 100.00)^(1/10) - 1 = 7.13%`. The normalized endpoint is calculated from official annual returns, not a proxy.
 
@@ -57,19 +58,19 @@ Formula: `199.05 = 100.00 × Π(1 + annual NAV TR)` and `CAGR = (199.05 / 100.00
 | 2023 | -10.92% | 26.29% |
 | 2024 | 12.16% | 25.02% |
 | 2025 | 12.91% | 17.88% |
-| 2026 YTD | -25.23% as of 2026-07-21 | not comparable; current year not cached |
+| 2026 YTD | -12.37% as of 2026-07-31 | not comparable; current year not cached |
 
 ## Window read-through
 
 - 10 complete calendar-year NAV TR CAGR: `7.13%` for 2016-2025; cumulative return `99.05%`.
 - 2021-2025 NAV TR CAGR: `-8.55%`; the five-year window is a comparison slice, not the primary 10-year coverage.
-- Current official rolling 10Y NAV TR CAGR: `5.31%` for 2016-06-30 to 2026-06-30. It is shown separately because its end date differs from the complete-calendar window.
+- Current official rolling 10Y NAV TR CAGR: `6.53%` for 2016-07-31 to 2026-07-31. It is shown separately because its end date differs from the complete-calendar window. The approximate cumulative equivalent is `100 × ((1 + 0.0653)^10 - 1) = 88.24%`, calculated from the displayed rounded CAGR because raw NAV endpoints are not disclosed.
 - Best calendar year: `2020 +93.43%`; worst: `2022 -22.07%`.
-- Current YTD NAV TR: `-25.23%` as of 2026-07-21; S&P 500 current-year comparison is not used because the cached benchmark window ends 2025-12-31.
+- Current YTD NAV TR: `-12.37%` as of 2026-07-31; S&P 500 current-year comparison is not used because the cached benchmark window ends 2025-12-31.
 
 ## Risk read-through
 
-CHIQ เป็น non-diversified China consumer discretionary ETF มี 57 holdings ณ 2026-07-21 และ exposure กระจุกใน retail/distribution, autos, consumer durables และ consumer services. ความเสี่ยงหลักคือ China/A-share and foreign-listing access, policy/geopolitical, sector concentration, currency, liquidity และ benchmark/index change effective 2018-12-06. Daily NAV TR drawdown/recovery series: `ไม่พบข้อมูลที่ยืนยันได้` ใน reviewed official capture.
+CHIQ เป็น non-diversified China consumer discretionary ETF มี 57 holdings ณ 2026-08-27 และ exposure กระจุกใน distribution & retail `36.97%`, autos & components `28.66%`, consumer durables & apparel `17.02%` และ consumer services `16.69%` ณ 2026-07-31. Global X รายงาน standard deviation `32.00%` ณ 2026-07-31; current NAV `US$17.57`, market price `US$17.40` และ net assets `US$115.63m` ณ 2026-08-27. ความเสี่ยงหลักคือ China/A-share and foreign-listing access, policy/geopolitical, sector concentration, currency, liquidity และ benchmark/index change effective 2018-12-06. Daily NAV TR drawdown/recovery series: `ไม่พบข้อมูลที่ยืนยันได้` ใน reviewed official capture.
 
 ## Sources
 
@@ -78,4 +79,4 @@ CHIQ เป็น non-diversified China consumer discretionary ETF มี 57 hol
 - Official summary prospectus: https://assets.globalxetfs.com/funds/documents/chiq/prospectus-regulatory/Summary-Prospectus_CHIQ.pdf
 - Official annual shareholder report: https://assets.globalxetfs.com/funds/documents/chiq/prospectus-regulatory/Annual-Shareholder-Report.pdf
 - Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
-- ETF source batch: [[ETF_performance_sources_2026-07-24]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]
