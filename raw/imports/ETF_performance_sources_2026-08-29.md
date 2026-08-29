@@ -1460,3 +1460,83 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Invesco Q1 2026 factsheet and SEC evidence support the RWJ refresh; scheduled-local verification passed, current secondary fields and source-date differences are disclosed, and official current/daily-NAV gaps remain explicit.
+
+## SCHA — Schwab U.S. Small-Cap ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91776b47b6a2ddcf914270`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `SCHA`; canonical `entity_key: NYSE Arca:SCHA`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `USA`; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing SCHA performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity page or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Schwab Asset Management official SCHA product page | https://www.schwabassetmanagement.com/products/scha | Official identity, passive classification, index, fee, current NAV/AUM/holdings/quote, yields, characteristics and July standardized NAV/market/index returns; current quote through 2026-08-26 and standardized table through 2026-07-31 |
+| Schwab official ETF research performance page | https://www.schwab.wallst.com/Prospect/Research/mutualfunds/performance.asp?symbol=scha | Official daily fund-performance capture for current YTD and rolling returns through 2026-08-27; the captured table also shows Russell 2000 TR as a broad-based comparison, not SCHA’s issuer index |
+| Schwab official ETF research portfolio page | https://www.schwab.wallst.com/Prospect/Research/etfs/portfolio.asp?symbol=scha | Official holdings/portfolio context and current quote; portfolio snapshot through 2026-07-31 and quote captures were separately dated |
+| SEC SCHA summary prospectus | https://www.sec.gov/Archives/edgar/data/1454889/000110465925123320/tm2526338-13_497k.htm | Official objective, 90% policy, indexing strategy, small-cap risks and fund structure; prospectus dated 2025-12-22 |
+| TotalRealReturns SCHA | https://totalrealreturns.com/n/SCHA | Secondary dividend-reinvested current/rolling returns, annual rows and drawdown proxy; data ending 2026-08-27 |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_SCHA Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, prior dated source batch | Prior SCHA page, USA ownership, secondary annual proxy and disclosed daily-NAV gap; current issuer fields are refreshed and annual proxy is retained |
+
+### Identity and classification evidence
+
+- Schwab identifies SCHA as `Schwab U.S. Small-Cap ETF`, ticker `SCHA`, listed on NYSE Arca, with inception `2009-11-03` and total expense ratio `0.030%` effective 2026-06-11.
+- Classification is `passive-index-tracking`; the fund seeks to track the Dow Jones U.S. Small-Cap Total Stock Market Index before fees and expenses, normally investing at least 90% of assets in index securities and generally using replication with possible sampling.
+- The issuer index covers companies ranked approximately 751-2,500 by full market capitalization and is float-adjusted market-cap weighted. Primary region is USA and canonical tag is `geography/United-States`.
+
+### Candidate performance claims and raw observations
+
+- Official Schwab ETF research daily fund-performance capture as of `2026-08-27` reports SCHA fund return YTD `22.36%`, 1-day `0.26%`, 1-month `2.27%`, 3-month `2.41%`, 1-year `29.05%`, 3-year annualized `18.86%`, 5-year annualized `7.95%`, and 10-year annualized `10.78%`. The capture's comparison row is Russell 2000 TR USD; it is not substituted for SCHA's Dow Jones issuer index.
+- Official Schwab product-page standardized snapshot as of `2026-07-31` reports SCHA NAV YTD `18.27%`, 1-year `31.71%`, 3-year annualized `14.88%`, 5-year `7.25%`, 10-year `10.48%`, inception `12.31%`; market-price returns are `18.33%`, `31.88%`, `14.92%`, `7.26%`, `10.50%`, `12.32%`; Dow Jones index returns are `18.23%`, `31.65%`, `14.83%`, `7.19%`, `10.43%` for the comparable fields.
+- Official current Schwab product-page fields as of `2026-08-26` are NAV `US$34.69`, previous close `US$34.71`, bid/ask midpoint `US$34.69`, total net assets `US$23,000,233,279.50`, and `1,710` holdings. The 30-day median bid/ask spread is `0.03%`; SEC yield is `1.02%` as of 2026-08-25 and TTM distribution yield is `1.07%` as of 2026-07-31.
+- Official characteristics as of `2026-07-31` are weighted average market capitalization `US$13.61B`, P/E `19.05`, P/CF `11.21`, ROE `4.30%`, P/B `2.48`, 3-year beta `1.00`, 3-year standard deviation `19.78%`, and portfolio turnover `13.99%`.
+- Official product-page risk fields report best three-month return `+33.21%` and worst three-month return `-31.61%`; these are not maximum-drawdown measures. Recent verified distributions are `US$0.1004` ex/pay 2026-06-24/2026-06-29 and `US$0.0384` ex/pay 2026-03-25/2026-03-30.
+- Latest accessible secondary TotalRealReturns data ending `2026-08-27` reports total return YTD `22.60%`, 1Y `28.50%`, 2Y `40.79%` (`18.66%` annualized), 3Y `68.20%` (`18.93%` annualized), 5Y `43.22%` (`7.45%` annualized), and 10Y `178.94%` (`10.80%` annualized). Its current drawdown proxy is `-3.76%` on 2026-08-27 from the 2026-06-30 peak; worst drawdown is `-42.41%` on 2020-03-23 from the 2020-01-16 peak.
+- Secondary annual total-return rows from the same source are 2016 `19.98%`, 2017 `14.94%`, 2018 `-11.76%`, 2019 `26.50%`, 2020 `19.34%`, 2021 `16.45%`, 2022 `-19.81%`, 2023 `18.46%`, 2024 `11.16%`, and 2025 `11.60%`; these are dividend-reinvested proxy observations, not issuer-published calendar NAV rows.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- Secondary 2016-2025 rows compound to `152.0962%`, displayed as `152.10%*`; rounded-input CAGR is `(1 + 1.520962)^(1/10) - 1 = 9.69%*`. Secondary 2021-2025 rows compound to `37.2285%`, displayed as `37.23%*`; rounded-input CAGR is `6.53%*`.
+- Cached S&P 500 TR compounds to `298.3291%` / CAGR `14.82%` over 2016-2025 and `96.1696%` / CAGR `14.43%` over 2021-2025. The secondary SCHA CAGR differences are `9.69% - 14.82% = -5.13 pp` and `6.53% - 14.43% = -7.90 pp`; these are common-reference comparisons, not alpha.
+- Up/down years are `8 / 2`; best is 2019 `+26.50%*`, least positive is 2025 `+11.60%*`, worst is 2022 `-19.81%*`, and least-bad down year is 2018 `-11.76%*`.
+- Official July product-page NAV-minus-Dow-Jones-index differences are `+0.04 pp` YTD, `+0.06 pp` 1Y, `+0.05 pp` 3Y, `+0.06 pp` 5Y and `+0.05 pp` 10Y. These small differences reflect fee, sampling, implementation, timing and index-construction effects; they are not alpha.
+- Official daily Schwab YTD `22.36%` as of 2026-08-27, official July monthly NAV YTD `18.27%`, and secondary TotalRealReturns YTD `22.60%` as of 2026-08-27 are retained as separate observations because the source captures and return conventions differ. No synchronized S&P 500 current-year spread is inferred.
+
+### Source-quality choice and unresolved gaps
+
+- Schwab Asset Management and the SEC are the sources of truth for identity, passive classification, issuer index, official current NAV/quote, official rolling performance, fee, holdings, characteristics, yields, distributions and risk language. TotalRealReturns supplies only the marked annual/current/rolling/drawdown proxy.
+- Official issuer text exposes current and rolling fields but not a complete 2016-2025 calendar NAV table in the reviewed capture; the annual table therefore remains secondary and visibly marked `*`.
+- Official daily NAV history sufficient to independently reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; the TotalRealReturns drawdown values are not promoted to official NAV claims.
+- Point-in-time NAV, price, AUM, holdings, yield, characteristics, standardized performance, daily performance and annual proxy retain separate as-of dates. SCHA is passive; no management-skill or alpha claim is made.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), issuer and common benchmarks, candidate claims and periods, units/currency (`%`, USD), metric definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_SCHA Performance.md`: refresh frontmatter to 2026-08-29, add official current Schwab daily YTD/rolling fields and 2026-08-26 NAV/asset/holdings snapshot, preserve the separate July standardized issuer-index table, update secondary annual/current/drawdown proxy rows, retain distributions and risk fields, and disclose official daily-NAV gaps; preserve USA breadcrumb and tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update the SCHA row to official rolling `10.78%`, secondary 2021-2025 CAGR `6.53%*`, and official daily current YTD `22.36%`; preserve static navigation and add a concise source/as-of note.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the SCHA coverage row and dated refresh section to official rolling `10.78%`, secondary 2016-2025/2021-2025 values, official YTD `22.36%`, and the annual/daily-NAV gap status.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_SCHA Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `10.78%`, official YTD `22.36%`, secondary 2021-2025 CAGR `6.53%*`, and preserved annual/daily-NAV gaps; keep the file outside the scoped commit because it already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, issuer index, return basis, USD units and USA region ownership are source-mapped.
+- PASS: official 2026-08-27 daily return fields, July issuer-index standardized table, August-26 quote/NAV/AUM/holdings snapshot, characteristics/yields/distributions/risk fields, secondary annual/current/drawdown observations, cached S&P rows and all metric definitions retain separate sources and as-of dates; secondary fields remain marked `*`.
+- PASS: annual/CAGR/up-down calculations, official fund-index differences, current-YTD source reconciliation, common-benchmark context and daily-NAV gap reproduce the proposed values; no secondary result is relabelled official and no alpha claim is made.
+- PASS: complete proposed contents for SCHA performance, USA region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Schwab current/July evidence and SEC methodology support the SCHA refresh; scheduled-local verification passed, secondary annual/current drawdown fields and separate as-of conflicts are disclosed, and official daily-NAV gaps remain explicit.
