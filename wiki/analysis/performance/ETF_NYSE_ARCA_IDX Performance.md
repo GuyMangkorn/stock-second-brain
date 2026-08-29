@@ -7,12 +7,14 @@ exchange: NYSE Arca
 fund: VanEck Indonesia Index ETF
 tracked_index: MVIS Indonesia Index (MVIDXTR)
 benchmark: S&P 500 Total Return
-updated: 2026-07-19
-performance_as_of: 2026-06-30
-current_ytd_as_of: 2026-07-16
-price_nav_as_of: 2026-07-17
-source_batch: raw/imports/ETF_performance_sources_2026-07-19.md
+updated: 2026-08-29
+performance_as_of: 2026-07-31
+current_ytd_as_of: 2026-08-14
+price_nav_as_of: 2026-08-14
+fund_facts_as_of: 2026-07-31
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return
+return_currency: USD
 tags:
   - analysis/etf-performance
   - ticker/IDX
@@ -27,29 +29,32 @@ tags:
 ## Bottom line
 
 `IDX` ในที่นี้คือ `VanEck Indonesia Index ETF` ที่จดทะเบียนบน `NYSE Arca` ไม่ใช่
-ดัชนี IDX Composite ของตลาดหุ้นอินโดนีเซีย. Official NAV YTD อยู่ที่ `-36.18%`
-ณ 16 ก.ค. 2026; rolling 1Y/3Y/5Y/10Y NAV annualized อยู่ที่ `-30.93%` /
-`-15.82%` / `-8.96%` / `-5.49%` ณ 30 มิ.ย. 2026. จึงมีโอกาสเกิด tactical
-rebound จากภาวะ oversold แต่ยังไม่มีหลักฐานยืนยันการกลับตัวเป็นขาขึ้นแบบยั่งยืน.
+ดัชนี IDX Composite ของตลาดหุ้นอินโดนีเซีย. Latest official daily snapshot อยู่ที่
+NAV `$11.22`, NAV YTD `-32.77%` และ total net assets `$36.45M` ณ 14 ส.ค. 2026.
+Latest standardized month-end table ณ 31 ก.ค. 2026 รายงาน rolling 1Y/3Y/5Y/10Y
+NAV annualized ที่ `-26.74%` / `-13.43%` / `-6.74%` / `-5.02%`. ผลตอบแทนยัง
+ติดลบหลายช่วงเวลา จึงยังไม่มีหลักฐานยืนยันการกลับตัวเป็นขาขึ้นแบบยั่งยืน.
 
 ## Performance check
 
 - `entity_key: NYSE Arca:IDX`
 - Fund: VanEck Indonesia Index ETF; inception `15 ม.ค. 2009`; passive,
   index-tracking equity ETF; gross/net expense ratio `0.86%` / `0.57%`
-  (net cap ถึงอย่างน้อย 1 พ.ค. 2027)
+  (contractual net cap ถึงอย่างน้อย 1 พ.ค. 2027)
 - Metric: `NAV Total Return` รวม distributions ที่ reinvested และหัก fund expenses
 - Tracked index (issuer benchmark): `MVIS Indonesia Index (MVIDXTR)`
 - Benchmark: `S&P 500 Total Return` (USD, dividends reinvested; common reference
   benchmark ไม่ใช่ tracked index ของ IDX)
-- 10-year window: `2016-06-30` ถึง `2026-06-30` (rolling; issuer ไม่เปิด raw
-  start/end TR values)
-- 10-year NAV TR CAGR: `-5.49%` ณ 30 มิ.ย. 2026; `Start/End TR value:
-  not disclosed`; ไม่อนุมาน endpoint ซ้ำ
-- Current NAV: `$10.65` ณ 16 ก.ค. 2026; current YTD NAV TR `-36.18%`
-- Market price: `$10.90`, closing NAV `$10.86`, premium `0.37%` ณ 17 ก.ค. 2026;
-  price drawdown จาก 52-week high `$17.55` เท่ากับ `-37.89%` (secondary proxy,
-  ไม่ใช่ official maximum drawdown)
+- Latest official month-end performance ณ 2026-07-31: NAV `1M 10.72%`, `3M -15.62%`,
+  `YTD -34.87%`, `1Y -26.74%`, `3Y -13.43%`, `5Y -6.74%`, `10Y -5.02%`, life `3.63%`;
+  MVIS index `11.53%`, `-17.48%`, `-36.54%`, `-28.59%`, `-13.86%`, `-7.04%`,
+  `-4.91%`, `4.00%` ตามลำดับ.
+- Quarter-end cross-check ณ 2026-06-30: NAV 1Y/3Y/5Y/10Y `-30.93%` / `-15.82%` /
+  `-8.96%` / `-5.49%`; issuer does not expose raw start/end TR endpoints.
+- Latest official daily snapshot ณ 2026-08-14: NAV `$11.22`, current YTD NAV TR
+  `-32.77%`, total net assets `$36.45M`; daily holdings `72` ณ 2026-08-13.
+- Latest secondary market close located ณ 2026-08-27: market price `$11.59`; no
+  same-date official closing NAV was exposed, so price and NAV are not reconciled.
 - Annual coverage: `secondary total-return proxy*` ปี 2016-2025; official SEC
   prospectus แสดง annual chart เป็นภาพ แต่ไม่เปิดค่าตัวเลขในข้อความ
 
@@ -79,22 +84,23 @@ common benchmark ใช้ cached USD TR convention ณ 31 ธ.ค. 2025.
 - Least positive: 2023, `+1.97%*`
 - Worst: 2018, `-10.46%*`
 - Least bad down year: 2022, `-9.39%*`
-- Current YTD: `-36.18%` official NAV ณ 16 ก.ค. 2026; market price วันที่
-  17 ก.ค. เพิ่ม `1.77%` เป็นเพียงสัญญาณรีบาวด์ระยะสั้น
+- Current YTD: `-32.77%` official NAV ณ 14 ส.ค. 2026; FinanceCharts secondary
+  partial-year total-return capture อยู่ที่ `-29.25%` และ market close ณ 27 ส.ค.
+  อยู่ที่ `$11.59`; ทั้งสองเป็นคนละ basis/as-of date และไม่ใช้ยืนยัน trend reversal.
 
 ## Risk read-through
 
 Rolling 10-year NAV CAGR ติดลบและ 3Y/5Y ก็ยังติดลบ สะท้อนว่า cheap valuation
-ยังไม่เพียงพอให้เกิด rerating. ณ 30 มิ.ย. 2026 กองมี P/E `9.45x`, P/B `1.21x`,
-top 10 holdings `49.91%`, โดย sector หลักคือ Financials `26.48%`, Materials
-`21.91%`, Industrials `12.47%` และ Energy `12.33%`; country exposure คือ
-Indonesia `77.58%` และ China `14.36%`. โครงสร้างนี้ทำให้ IDX ไวต่อดอกเบี้ย,
-Rupiah, commodity cycle, bank earnings และ China risk มากกว่าตลาดโลกแบบกระจาย.
-Official daily NAV TR series สำหรับคำนวณ maximum drawdown/recovery date:
-`ไม่พบข้อมูลที่ยืนยันได้`. กองยังมี AUM เพียง `$31.41M` ณ 16 ก.ค. 2026 จึงควร
-เผื่อ liquidity/bid-ask risk.
+ยังไม่เพียงพอให้เกิด rerating. Official factsheet ณ 31 ก.ค. 2026 รายงาน P/E
+`10.73x`, P/B `1.40x`, top 10 holdings `50.53%`, sector หลักคือ Financials
+`26.4%`, Materials `23.2%`, Industrials `12.7%` และ Energy `12.4%`; country
+exposure คือ Indonesia `77.63%` และ China `14.07%`. โครงสร้างนี้ทำให้ IDX ไวต่อ
+ดอกเบี้ย, Rupiah, commodity cycle, bank earnings และ China risk มากกว่าตลาดโลก
+แบบกระจาย. Official daily NAV TR series สำหรับคำนวณ maximum drawdown/recovery
+date: `ไม่พบข้อมูลที่ยืนยันได้`. Total net assets ล่าสุดจาก official daily
+snapshot คือ `$36.45M` ณ 14 ส.ค. 2026 จึงยังควรเผื่อ liquidity/bid-ask risk.
 
-## Indonesia macro overlay and reversal scenarios
+## Indonesia macro overlay and reversal scenarios (source snapshot 2026-07-19)
 
 กรอบเวลา: 6-12 เดือน. Causal chain คือ growth และ employment ช่วยพยุง earnings
 แต่ policy/FX/governance risk ยังขวาง multiple expansion. GDP Q1 2026 โต `5.61%`
@@ -123,11 +129,11 @@ bet ไม่ใช่ pure Indonesia macro proxy.
 
 ## Sources
 
-- [VanEck IDX product page](https://www.vaneck.com/us/en/investments/indonesia-index-etf-idx?audience=retail&country=us) — current NAV/YTD, fees, holdings, sector/country weights, distributions
-- [VanEck IDX fact sheet](https://www.vaneck.com/us/en/investments/indonesia-index-etf-idx-fact-sheet.pdf) — official rolling returns, valuation, top-10 concentration, risk and benchmark
-- [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000469/vaneckindonesiaindexetfidx.htm) — fund objective, calendar-year chart, and risk disclosures
-- [FinanceCharts IDX performance](https://www.financecharts.com/etfs/IDX/performance) — secondary annual total-return proxy, clearly separated from official NAV TR
-- [Charles Schwab IDX summary](https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=IDX) — secondary 17 Jul 2026 market price/NAV and 52-week range
+- [VanEck IDX product page](https://www.vaneck.com/us/en/investments/indonesia-index-etf-idx?audience=retail&country=us) — current official NAV/YTD, fees, holdings and product-page performance through the reviewed 2026-08-14 capture
+- [VanEck IDX fact sheet](https://www.vaneck.com/us/en/investments/indonesia-index-etf-idx-fact-sheet.pdf) — official July standardized returns, valuation, top-10 concentration, country/sector weights, yield and fee cap
+- [SEC summary prospectus](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000469/vaneckindonesiaindexetfidx.htm) — fund objective, calendar-year chart, passive/non-diversified classification and risk disclosures
+- [FinanceCharts IDX performance](https://www.financecharts.com/etfs/IDX/performance) — secondary annual total-return proxy and current partial-year/period cross-check, clearly separated from official NAV TR
+- [Investing.com IDX historical data](https://www.investing.com/etfs/marketvectors-indonesia-index-historical-data) — secondary 27 Aug 2026 market price cross-check
 - [BPS Q1 2026 GDP, labor and demographics](https://www.bps.go.id/en/news/2026/05/06/910/ekonomi-indonesia-resilien-dan-tumbuh-solid--pada-triwulan-1-2026.html)
 - [Bank Indonesia BI-Rate indicator](https://www.bi.go.id/en/statistik/indikator/bi-rate.aspx)
 - [BPS June 2026 inflation](https://www.bps.go.id/en/pressrelease/2026/07/01/2590/inflasi-year-on-year--y-on-y--pada-juni-2026-sebesar-3-34-persen-.html)

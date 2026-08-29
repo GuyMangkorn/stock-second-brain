@@ -1304,3 +1304,76 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Global X July/August and SEC evidence support the GREK refresh; scheduled-local verification passed, secondary annual-source conflict and daily-NAV gaps remain disclosed.
+
+## IDX — VanEck Indonesia Index ETF
+
+### Workflow identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917765261453c326d814a6`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `IDX`; canonical `entity_key: NYSE Arca:IDX`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `Indonesia`; durable graph is `[[ETF Region Index]] → [[Indonesia ETF]] → [[ETF Performance Index]]`.
+- VanEck identifies IDX as `VanEck Indonesia Index ETF`, listed on NYSE Arca, launched 2009-01-15, and tracking `MVIS Indonesia Index (MVIDXTR)`. It is a passive/index-tracking equity ETF and is classified as non-diversified; it is not the Indonesian IDX Composite index.
+
+### Source map and raw observations
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| VanEck official product page | https://www.vaneck.com/us/en/investments/indonesia-index-etf-idx?audience=retail&country=us | Identity, objective, current official NAV/YTD/net assets, fee cap, holdings and rolling/month-end performance; current snapshot through 2026-08-14 and standardized table through 2026-07-31 |
+| VanEck official factsheet | https://www.vaneck.com/us/en/investments/indonesia-index-etf-idx-fact-sheet.pdf | Official July 2026 standardized NAV/market/index returns, valuation, top-10 concentration, country/sector weights, yield and fee details |
+| SEC summary prospectus | https://www.sec.gov/Archives/edgar/data/1137360/000113736026000469/vaneckindonesiaindexetfidx.htm | Objective, 80% policy, passive/non-diversified classification, risk disclosures and calendar-year chart limitation |
+| FinanceCharts IDX performance | https://www.financecharts.com/etfs/IDX/performance | Secondary total-return annual rows and partial-year/period cross-check; not used to replace official NAV fields |
+| Investing.com IDX historical data | https://www.investing.com/etfs/marketvectors-indonesia-index-historical-data | Secondary market price through 2026-08-27 |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_IDX Performance.md`, `wiki/analysis/comparisons/Indonesia ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-07-19.md` | Prior page structure, annual proxy rows, macro overlay and previously disclosed gaps; current performance fields are refreshed while the dated macro overlay is retained |
+| S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Cached common USD total-return reference for complete calendar years 2016-2025, dividends reinvested, as of 2025-12-31 |
+
+- Official VanEck daily snapshot as of 2026-08-14: NAV `$11.22`, YTD NAV return `-32.77%`, total net assets `$36.45M`; daily holdings `72` as of 2026-08-13.
+- Official VanEck factsheet as of 2026-07-31: total net assets `$35.31M`, `71` holdings, P/E `10.73x`, P/B `1.40x`, 30-day SEC yield `3.58%`, exchange `NYSE Arca`, gross expense ratio `0.86%`, fee waiver `-0.29%`, and net expense ratio `0.57%`; contractual cap runs through 2027-05-01.
+- Official month-end performance as of 2026-07-31: NAV TR `1M 10.72%`, `3M -15.62%`, `YTD -34.87%`, `1Y -26.74%`, `3Y -13.43%`, `5Y -6.74%`, `10Y -5.02%`, life `3.63%`; MVIS Indonesia Index `11.53%`, `-17.48%`, `-36.54%`, `-28.59%`, `-13.86%`, `-7.04%`, `-4.91%`, `4.00%` respectively.
+- Official quarter-end cross-check as of 2026-06-30: NAV 1Y/3Y/5Y/10Y `-30.93%` / `-15.82%` / `-8.96%` / `-5.49%`; MVIS index `-32.88%` / `-16.34%` / `-9.36%` / `-5.42%`. Raw start/end NAV TR endpoints are not disclosed.
+- Official July portfolio weights: Indonesia `77.63%`, China `14.07%`, Singapore `4.70%`, Thailand `1.99%`, Malaysia `0.92%`, United Kingdom `0.52%`, Germany `0.34%`, other/cash `-0.16%`; sector weights Financials `26.4%`, Materials `23.2%`, Industrials `12.7%`, Energy `12.4%`, Consumer Staples `9.6%`, Communication Services `8.4%`, Utilities `4.0%`, Health Care `1.6%`, Real Estate `1.4%`, Consumer Discretionary `0.7%`, other/cash `-0.2%`.
+- Latest secondary market close located as of 2026-08-27 is `$11.59`; same-date official closing NAV was not exposed. FinanceCharts reports a partial 2026 total-return proxy of `-29.25%`; this is not substituted for the later official 2026-08-14 NAV YTD `-32.77%`.
+- Secondary FinanceCharts annual total-return proxy rows are 2016 `16.67%`, 2017 `19.25%`, 2018 `-10.46%`, 2019 `6.13%`, 2020 `-7.45%`, 2021 `-2.60%`, 2022 `-9.39%`, 2023 `1.97%`, 2024 `-9.75%`, and 2025 `13.83%`. The SEC prospectus annual chart is image-based and does not expose numeric annual rows in text.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`.
+
+### Calculations and reconciliation
+
+- FinanceCharts secondary 2016-2025 rows compound to `13.1256%`, displayed as `13.13%*`; rounded-input CAGR is `(1 + 0.1313)^(1/10) - 1 = 1.24%*`; up/down years are `5 / 5`, best is 2017 `+19.25%*`, least positive is 2023 `+1.97%*`, worst is 2018 `-10.46%*`, and least-bad down year is 2022 `-9.39%*`.
+- FinanceCharts secondary 2021-2025 rows compound to `-7.5490%`, displayed as `-7.55%*`; rounded-input CAGR is `(1 - 0.0755)^(1/5) - 1 = -1.56%*`; up/down years are `2 / 3`.
+- Cached S&P 500 TR compounds to `96.1696%` / CAGR `14.43%` over 2021-2025 and `298.3291%` / CAGR `14.82%` over 2016-2025. The 2021-2025 arithmetic difference versus IDX secondary CAGR is `-16.0 pp`, not alpha.
+- Official July 2026 NAV minus MVIS index differences are `-0.81 pp` for YTD, `+1.85 pp` for 1Y, `+0.43 pp` for 3Y, `+0.30 pp` for 5Y and `-0.11 pp` for 10Y. These are implementation, fee, tax, timing and index-construction observations, not alpha.
+- The official current YTD `-32.77%` as of 2026-08-14, official month-end YTD `-34.87%` as of 2026-07-31, and secondary partial-year `-29.25%` are retained as separate observations because their dates and source/basis differ; no arithmetic reconciliation is inferred.
+
+### Source-quality choice and unresolved gaps
+
+- VanEck and SEC are the sources of truth for identity, passive classification, benchmark, fee, official NAV/market/index performance, holdings, valuation, country/sector exposure, yield and risk disclosures. FinanceCharts supplies only the marked annual proxy; Investing.com supplies only the later market-price cross-check.
+- Official daily holdings and current snapshot are newer than the July factsheet and are not mixed with the July standardized performance/portfolio fields. Price, NAV and total-return data retain their own as-of dates.
+- Official numeric calendar-year NAV rows, raw 10-year NAV endpoints, daily NAV TR index levels, maximum drawdown and recovery date are `ไม่พบข้อมูลที่ยืนยันได้`; the annual table remains marked `*`.
+- The existing Indonesia macro overlay in the performance page is retained with its original 2026-07-19 source snapshot; it is not presented as newly refreshed macro research in this item.
+
+### Pre-save evidence packet / proposed durable contents
+
+- The evidence packet contains ETF identity and exchange, return basis (`NAV Total Return`), tracked and common benchmarks, candidate claims and periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_IDX Performance.md`: refresh frontmatter, bottom line, official July performance table, official August-14 daily snapshot, August-27 secondary price cross-check, July valuation/portfolio fields, annual proxy calculations and source-quality/gap notes; preserve the existing macro overlay but label its 2026-07-19 source snapshot.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Indonesia ETF.md`: update the IDX row to official rolling `-5.02%`, secondary 2021-2025 CAGR `-1.56%*`, and official current YTD `-32.77%`; preserve the static region navigation and EIDO row.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the IDX coverage row to official July rolling `-5.02%`, current official YTD `-32.77%` as of 2026-08-14, and explicitly retain the secondary annual-window marker and gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this IDX source batch with identity, sources, raw claims, calculations, reconciliation, conflicts, gaps, planned write set, local checklist, scheduled verification lines and structured handoff.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_IDX Performance]]`, `[[Indonesia ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `-5.02%`, current official YTD `-32.77%`, secondary 2021-2025 CAGR `-1.56%*`, and preserved annual/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing Indonesia navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, non-diversified classification, canonical key, tracked index, return basis, USD units and Indonesia region ownership are source-mapped.
+- PASS: official July standardized NAV/market/index table, official August-14 NAV/YTD/net-assets snapshot, August-13 holdings, July valuation/country/sector/yield fields, secondary August-27 price, annual proxy rows, cached S&P rows and metric definitions retain separate sources and as-of dates; secondary fields remain marked `*`.
+- PASS: annual/CAGR/up-down calculations, official fund-index differences, YTD date/basis reconciliation, source-quality choice, prior macro overlay provenance and annual/daily-NAV gaps reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for IDX performance, Indonesia region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official VanEck July and August evidence support the IDX refresh; scheduled-local verification passed, annual proxy and YTD date conflicts are disclosed, and daily-NAV drawdown data remains unavailable.
