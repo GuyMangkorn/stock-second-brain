@@ -29,7 +29,7 @@ tags:
 | VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan single-country large/mid-cap equity, USD distributing | 9.45% | not disclosed (rolling periods) | 16.30% | [[ETF_LSE_VDJP Performance]] |
 | VFJUF / VJPU | Vanguard FTSE Japan UCITS ETF - USD Hedged Accumulating | Japan single-country large/mid-cap equity, USD hedged accumulating | not applicable (<10y history) | not disclosed (rolling periods) | 19.41% | [[ETF_LSE_VJPU Performance]] |
 | VGDTF / VJPA | Vanguard FTSE Japan UCITS ETF - USD Accumulating | Japan single-country large/mid-cap equity, physical/index-tracking; history under 10 years | not applicable (<10y history) | 6.50% | 15.27% | [[ETF_XETRA_VJPA Performance]] |
-| GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan rules-based smart-beta equity / index-tracking | 9.29% | 6.62% | 12.86% | [[ETF_NYSE_ARCA_GSJY Performance]] |
+| GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan rules-based smart-beta equity / index-tracking | 9.01% | 6.62% | 15.60% | [[ETF_NYSE_ARCA_GSJY Performance]] |
 | IMSCF / CJPU | iShares MSCI Japan UCITS ETF | Japan single-country large/mid-cap equity, USD accumulating | 9.46% | 6.27% | 12.11% | [[ETF_LSE_CJPU Performance]] |
 | IHRMF / IJPU | iShares MSCI Japan UCITS ETF USD (Dist) | Japan single-country large/mid-cap equity, USD distributing | 9.36% | 6.21% | 15.45% | [[ETF_LSE_IJPU Performance]] |
 | EWJV | iShares MSCI Japan Value ETF | Japan value-factor equity / index-tracking | not applicable (<10y history) | 12.96% | 18.04% | [[ETF_NASDAQ_EWJV Performance]] |
@@ -65,6 +65,12 @@ ratio `97.24%` ณ 2026-08-28. กองเป็น passive Japan opportunities
 2021-2025 CAGR จึงยังเป็น spliced-history context ไม่ใช่ current-strategy
 track record ต่อเนื่อง. Official daily NAV drawdown/recovery ยัง
 `ไม่พบข้อมูลที่ยืนยันได้`.
+
+GSJY latest official Goldman Sachs July factsheet reports NAV TR rolling 10-year
+`9.01%`, NAV TR YTD `15.60%`, and 2021-2025 calendar-row CAGR `6.62%`, all with
+the relevant month-end field dated 2026-07-31. The ActiveBeta Japan index remains
+the issuer benchmark; official daily NAV drawdown/recovery and raw rolling
+endpoints are `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Navigation
 

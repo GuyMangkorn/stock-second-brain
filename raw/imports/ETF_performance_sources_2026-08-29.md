@@ -689,3 +689,72 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Franklin July performance fields and August current YTD support the DIVI refresh; scheduled-local verification passed and raw NAV endpoints/daily drawdown gaps remain disclosed.
+
+## GSJY — Goldman Sachs ActiveBeta Japan Equity ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91773ff338b4c1e6bad08f`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `GSJY`; canonical `entity_key: NYSE Arca:GSJY`.
+- Goldman Sachs identifies GSJY as the Goldman Sachs ActiveBeta Japan Equity ETF, listed on NYSE Arca, with inception `2016-03-02` and CUSIP `381430404`. The fund is an index-tracking, rules-based smart-beta equity ETF tracking the `Goldman Sachs ActiveBeta Japan Equity Index`.
+- The official summary prospectus states that the fund `is not actively managed`; the ActiveBeta methodology uses value, momentum, quality and low-volatility factors and is reconstituted/rebalanced quarterly. This remains eligible passive equity ETF performance work; the word ActiveBeta does not make it an active long-only fund.
+- Primary region is `Japan`; the durable graph is `[[ETF Region Index]] → [[Japan ETF]] → [[ETF Performance Index]]`, with the performance page retaining `geography/Japan`.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Goldman Sachs official factsheet/performance PDF | https://am.gs.com/public-assets/documents/5747f795-24d6-11ef-870d-ed3a247c783e | July 2026 standardized NAV, market-price, ActiveBeta-index and MSCI Japan reference returns; fund facts, holdings, sector weights, yield and expense data as of 2026-07-31 |
+| Goldman Sachs official fund page | https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf | Fund identity, CUSIP, listing and issuer strategy/document discovery |
+| Goldman Sachs official summary prospectus | https://am.gs.com/public-assets/documents/179d857b-24e3-11ef-ad18-377468fbef87?view=true | Objective, passive/not-actively-managed classification, index methodology and risks; December 2025 document |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_GSJY Performance.md`; `wiki/analysis/comparisons/Japan ETF.md` | Prior rows and page structure; fresh July official fields replace stale June values |
+
+### Candidate performance claims and raw observations
+
+- Official Goldman Sachs factsheet reports NAV Total Return as of `2026-07-31`: 1-month `2.42%`, YTD `15.60%`, 1-year `31.15%`, 3-year annualized `17.33%`, 5-year annualized `9.83%`, 10-year annualized `9.01%`, and since inception annualized `9.50%`. The 10-year field covers `10.00` elapsed years from 2016-07-31 to 2026-07-31.
+- Same-window market-price fields are `1.03%`, `14.27%`, `30.33%`, `16.95%`, `9.50%`, `9.20%`, and `9.41%`; they remain separate from NAV Total Return and are not used as the canonical return basis.
+- Same-window issuer ActiveBeta Japan Index fields are `2.46%`, `15.65%`, `31.23%`, `17.37%`, `9.81%`, `8.90%`, and `9.38%`; MSCI Japan - USD (Net) reference fields are `1.03%`, `16.96%`, `32.28%`, `17.70%`, `9.99%`, `9.26%`, and `9.79%`. The ActiveBeta series is the issuer benchmark; MSCI Japan is a separate reference universe.
+- Official calendar NAV rows are: 2017 `24.52%`, 2018 `-10.52%`, 2019 `18.28%`, 2020 `12.52%`, 2021 `0.60%`, 2022 `-15.60%`, 2023 `18.92%`, 2024 `9.09%`, and 2025 `25.07%`. Corresponding ActiveBeta Japan Index rows are `23.99%`, `-12.88%`, `19.61%`, `14.44%`, `1.71%`, `-16.65%`, `20.32%`, `8.28%`, and `24.60%`. 2016 is an inception-year partial and is not treated as a complete calendar row.
+- Official fund facts as of `2026-07-31` include `155` holdings, net assets `USD 85.21M`, weighted average market cap `USD 83.95B`, P/E `17.70x`, P/B `1.86x`, ROE `12.00%`, dividend yield `2.00%`, 30-Day SEC Yield `1.42%`, total expense ratio `0.25%`, and quarterly distribution frequency.
+- Official sector weights as of `2026-07-31` are Industrials `24.6%`, Financials `20.5%`, Information Technology `17.1%`, Consumer Discretionary `15.2%`, Health Care `4.7%`, Communication Services `4.5%`, Materials `4.1%`, Energy `3.2%`, Consumer Staples `3.2%`, Utilities `1.5%`, Real Estate `1.2%`, and Cash `0.2%`. Top holdings include Mitsubishi UFJ Financial Group `4.5%`, Advantest `3.6%`, Tokyo Electron `3.0%`, Toyota `3.0%`, Hitachi `2.8%`, and Sumitomo Mitsui Financial Group `2.6%`.
+- Goldman Sachs' performance convention reflects reinvested distributions; NAV calculations assume management fees and operating expenses. Official daily NAV history sufficient to independently reproduce max drawdown, recovery, or volatility is `ไม่พบข้อมูลที่ยืนยันได้`.
+- Cached S&P 500 Total Return common-reference rows for 2017-2025 are 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`. These rows are not GSJY's strategy benchmark.
+
+### Calculations and reconciliation
+
+- `2021-2025` GSJY NAV compound is `(1.0060 × 0.8440 × 1.1892 × 1.0909 × 1.2507) - 1 = 37.76%`; rounded-input CAGR is `(1 + 0.3776)^(1/5) - 1 = 6.62%`; positive / negative years are `3 / 2`.
+- `2017-2025` GSJY NAV compound is `(1.2452 × 0.8948 × 1.1828 × 1.1252 × 1.0060 × 0.8440 × 1.1892 × 1.0909 × 1.2507) - 1 = 104.29%`; rounded-input CAGR is `8.26%`; positive / negative years are `6 / 3`.
+- Best complete year is 2017 `+24.52%`; least positive is 2021 `+0.60%`; worst is 2022 `-15.60%`; least-bad down year is 2018 `-10.52%`.
+- Cached S&P 500 TR common reference is cumulative `96.17%` / CAGR `14.43%` for 2021-2025 and `255.78%` / CAGR `15.14%` for 2017-2025. No arithmetic difference is called alpha.
+- The issuer-reported rolling 10-year NAV TR CAGR `9.01%` implies normalized growth `100.00 → 236.95`, or `136.95%` cumulative implied growth, via `100 × ((1 + 0.0901)^10 - 1)`. Raw NAV endpoints are not disclosed, so this is not an observed cumulative return.
+- Same-window tracking context: GSJY NAV is `-0.05 pp` below the ActiveBeta index YTD, `-0.08 pp` below over 1 year, and `+0.11 pp` above over 10 years. These differences are implementation/expense observations, not manager alpha.
+- Reconciliation: the prior June snapshot was NAV YTD `12.86%` and rolling 10-year `9.29%`; the newer official July month-end snapshot is NAV YTD `15.60%` and rolling 10-year `9.01%`. The page uses the newer July fields and does not mix as-of dates.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet contains ETF identity and exchange, return basis (`NAV Total Return`), issuer/common benchmarks, classification, all candidate rolling/current/annual claims, periods, units/currency (`%`, USD), metric definitions, individual as-of dates, source URLs/paths, calculations, risk fields, unresolved gaps and complete planned file changes.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_GSJY Performance.md`: replace the stale June page with updated July frontmatter; retain the canonical Japan breadcrumb and tag; add official July standardized NAV/market-price/index/MSCI table; retain official 2017-2025 annual NAV/index/S&P rows; update rolling 10-year `9.01%`, YTD `15.60%`, normalized implied calculation, 2021-2025 CAGR `6.62%`, best/worst years, current July fund facts, sector/top-holding context, passive/not-actively-managed risk language, source links and official daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Japan ETF.md`: update the primary GSJY row to `9.01% | 6.62% | 15.60%`; append a 2026-08-29 verified refresh note distinguishing the July month-end fields from the stale June snapshot and preserving raw-endpoint/daily-NAV gaps. The older 2026-07-23 coverage-addition row remains historical context.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the GSJY coverage row to official rolling `9.01%`, 2021-2025 CAGR `6.62%`, YTD `15.60%`, best/worst `2017 +24.52% / 2022 -15.60%`, and explicit official daily NAV gap; append the dated GSJY refresh entry while leaving the unchanged Common Window annual row intact.
+- Proposed content for this source batch: this GSJY identity/source map, raw observations, calculations, reconciliation, evidence packet, local checklist and exact structured `trello_handoff` below.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: one workflow bullet linking `[[ETF_NYSE_ARCA_GSJY Performance]]`, `[[Japan ETF]]`, `[[ETF Performance Index]]`, and `[[ETF_performance_sources_2026-08-29]]`, stating official July rolling `9.01%`, YTD `15.60%`, and 2021-2025 CAGR `6.62%`; preserve the existing unrelated log modification outside the scoped commit.
+- No new ETF entity or region page is required; the existing `Japan ETF` region page is the sole regional navigation owner.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception/CUSIP, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and Japan region ownership are source-mapped.
+- PASS: official July standardized NAV, market price, issuer index, MSCI reference, annual rows, fund facts and sector/holding snapshot retain individual metric definitions and as-of dates; no price/NAV or benchmark/current field is conflated.
+- PASS: official annual rows, 2021-2025 and 2017-2025 calculations, rolling-10-year issuer field, normalized implied calculation, tracking differences, cached S&P reference and explicit daily-NAV gap reproduce the proposed page/index values; no raw endpoint or official drawdown is inferred.
+- PASS: complete proposed contents for performance, Japan region, index, source batch and log artifacts are specified; canonical breadcrumb/tag/source links and passive smart-beta classification are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Goldman Sachs July standardized performance and fund facts support the GSJY refresh; scheduled-local verification passed and raw NAV endpoints/official daily drawdown gaps remain disclosed.
