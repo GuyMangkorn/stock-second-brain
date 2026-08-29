@@ -46,6 +46,14 @@ market price `US$17.40`, net assets `US$115.63m`, and 57 holdings are as of
 current price/holdings date; the index/strategy change effective 2018-12-06
 and daily-NAV drawdown/recovery gap remain disclosed on the owner page.
 
+CQQQ was rechecked against the current Invesco product page, the Q4 2025
+performance report, factsheet and SEC prospectus. The latest fully readable
+official NAV performance table remains as of 2025-12-31: 10-year CAGR `4.44%`
+from the annual-row calculation and 2021-2025 CAGR `-8.27%`; current NAV/YTD
+was `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed Invesco capture. The predecessor
+fund and 2019 FTSE methodology breaks, plus the daily-NAV gap, remain disclosed
+on the owner page.
+
 KWEB latest official KraneShares NAV TR YTD อยู่ที่ `-17.66%` ณ 2026-07-31 และ
 rolling 10-year NAV TR CAGR อยู่ที่ `0.22%` ณ วันเดียวกัน. Current NAV `US$26.30`,
 market price `US$26.32`, premium/discount `US$0.02`, และ net assets `US$5.19B`

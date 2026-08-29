@@ -2141,3 +2141,69 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Global X July factsheet and current product-page evidence support the CHIQ refresh; scheduled-local verification passed, separate return and point-in-time dates are disclosed, the index-history break is preserved, and the daily NAV drawdown/recovery gap remains explicit.
+
+## CQQQ — Invesco China Technology ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91778146e64ad3aa4c9cbf`; input ticker `CQQQ`; canonical `entity_key: NYSE Arca:CQQQ`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is China; the durable graph is `[[ETF Region Index]] → [[China ETF]] → [[ETF Performance Index]]`.
+- This recheck updates the existing CQQQ performance owner, China navigation note, ETF Performance Index refresh section, this source batch and one log bullet. No ETF entity or new region page is required.
+
+### Source map and classification
+
+| Source | URL | Use and as-of date |
+|---|---|---|
+| Invesco official CQQQ product page | https://www.invesco.com/us/en/financial-products/etfs/invesco-china-technology-etf.html | Canonical identity, NYSE Arca listing, current product discovery and strategy; current text capture did not expose numeric current NAV/YTD fields |
+| Invesco Q4 2025 performance report | https://www.invesco.com/us-rest/contentdetail?contentId=84c2f428e1682610VgnVCM1000006e36b50aRCRD&dnsName=us | Official NAV/market-price/index standardized performance, annual rows, fund facts and holdings; as of `2025-12-31` |
+| Invesco CQQQ factsheet | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/cqqq-invesco-china-technology-etf-fact-sheet.pdf | Official fund/index identity and risk/strategy context; reviewed PDF capture dated `2025-09-30`, retained as supporting rather than current-return evidence |
+| SEC CQQQ summary prospectus | https://www.sec.gov/Archives/edgar/data/1378872/000119312525040714/d834062d497k.htm | Official predecessor/reorganization and index-history disclosures, at-least-90% policy, non-diversified and risk context |
+| Cached S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; no current-year comparison claimed |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_CQQQ Performance.md`, `wiki/analysis/comparisons/China ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior CQQQ annual series and strategy-history caveat; current recheck confirms no verified current NAV/YTD field to replace `not disclosed` |
+
+- Invesco describes CQQQ as based on the `FTSE China Incl A 25% Technology Capped Index`; the fund invests at least 90% of total assets in index securities and related ADRs/GDRs. The official materials describe the shares as not actively managed, supporting `passive-index` classification.
+- The SEC prospectus identifies CQQQ as successor to the Guggenheim China Technology ETF after the reorganization completed on `2018-05-18`. The current FTSE index methodology began on `2019-06-22`; earlier blended-index history reflects AlphaShares China Technology Index. These continuity breaks are disclosed.
+
+### Candidate performance claims and raw observations
+
+- Latest fully readable official standardized report as of `2025-12-31`: NAV TR YTD/1Y `33.65%`, 3-year annualized `7.27%`, 5-year annualized `-8.27%`, 10-year annualized `4.45%`, and since inception `5.69%`. Market-price values are `34.84%`, `34.84%`, `7.27%`, `-8.23%`, `4.47%`, and `5.67%`; underlying-index YTD `35.14%`, 1-year `35.14%`, 3-year `8.04%`, 5-year `-7.62%`. These are not current 2026 YTD values.
+- The same official report provides fund facts as of `2025-12-31`: 157 holdings, management fee and total expense ratio `0.65%`, P/B `5.46`, P/E `21.99`, return on equity `12.77%`, and NYSE Arca listing. Current product-page text did not expose a newer numeric snapshot during this review.
+- Official annual NAV TR rows are: 2016 `-0.07%`, 2017 `72.54%`, 2018 `-34.21%`, 2019 `32.46%`, 2020 `58.33%`, 2021 `-25.13%`, 2022 `-29.74%`, 2023 `-16.97%`, 2024 `11.24%`, and 2025 `33.65%`.
+- Cached S&P 500 Total Return rows for `2016-2025` are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- The official annual rows compound to normalized TR `100.00` → `154.48`, cumulative `54.48%`, and rounded-input CAGR `4.44%` for `2016-2025`; the official Q4 report displays `4.45%` from unrounded data. The row-derived `4.44%` is retained consistently in the owner page.
+- The `2021-2025` rows compound to `-35.06%` cumulative / rounded-input CAGR `-8.27%`; the official Q4 report's 5-year annualized field also displays `-8.27%`.
+- Cached S&P 500 TR compounds to `298.33%` cumulative / CAGR `14.82%` over `2016-2025` and `96.17%` / CAGR `14.43%` over `2021-2025`. CQQQ trails the common reference by approximately `10.38 pp` CAGR and `22.70 pp` CAGR, respectively; this is reference context, not manager alpha.
+- Complete-year profile is `5` up / `5` down. Best year is `2017` at `72.54%`; least positive is `2024` at `11.24%`; worst is `2018` at `-34.21%`; least-bad down year is `2016` at `-0.07%`.
+- Current NAV/YTD and reproducible official daily NAV history for drawdown/recovery are `ไม่พบข้อมูลที่ยืนยันได้` in the reviewed Invesco capture. The 2025-12-31 standardized field must not be presented as 2026 current YTD.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The Q4 2025 Invesco report is the latest fully readable official standardized return table located in this review, so it supports the annual and historical metrics only. The current product-page text was freshly checked but did not expose a newer current NAV/YTD value; `not disclosed` is retained rather than backfilled from secondary price or return data.
+- The annual NAV row-derived 10-year CAGR `4.44%` is used even though the Q4 report's rounded summary field is `4.45%`; this small difference is disclosed and the consistent row calculation is retained. The Q4 report's 5-year field agrees with the row-derived `-8.27%`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_CQQQ Performance.md`: refresh timestamp/source batch, preserve official 2016-2025 annual/2021-2025 calculations, record current NAV/YTD as not disclosed, add Q4 source and strategy-history caveat, and preserve China breadcrumb.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/China ETF.md`: add a dated CQQQ recheck note while leaving the numeric snapshot unchanged and preserving the historical July-23 row.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: append the CQQQ status to the `2026-08-29 Performance Refresh` section while leaving current numeric row values unchanged.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this complete source map, observations, calculations, reconciliation, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking CQQQ performance, China navigation, ETF Performance Index and this source batch; keep the existing unrelated working-tree change unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:CQQQ` identity, fund name, inception, passive/index-tracking equity eligibility, tracked index, expense ratio, China region, successor reorganization and `2019-06-22` methodology break are source-mapped.
+- PASS: NAV Total Return, market-price return, underlying-index return, annual rows, Q4 fund facts, currencies, units and as-of dates are separated; the 2025-12-31 field is not relabeled as current 2026 YTD.
+- PASS: 10-year calendar eligibility, normalized row calculation, 2021-2025 compounding, up/down/best/worst ranking, cached S&P 500 basis/window, 4.44-versus-4.45 rounding difference and current-data gap reconcile to the proposed page. No unsupported current NAV/YTD or daily drawdown value is inferred.
+- PASS: complete proposed contents for performance, China navigation, ETF Performance Index, source batch and log are specified; breadcrumbs/source links resolve; no critical/high finding remains and no WARNING requires confirmation.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Invesco historical performance and SEC strategy evidence support the CQQQ recheck; scheduled-local verification passed, current NAV/YTD remains explicitly undisclosed, rounding and continuity breaks are documented, and the daily NAV drawdown/recovery gap remains explicit.
