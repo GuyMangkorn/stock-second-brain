@@ -2489,3 +2489,62 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Vanguard and SEC sources confirm VEA as a passive NYSE Arca developed-markets ETF with complete 2016-2025 NAV rows, rolling 10-year and current-YTD evidence; scheduled-local verification passed and raw-endpoint and daily-drawdown gaps remain explicitly disclosed.
+
+## SPDW — State Street SPDR Portfolio Developed World ex-US ETF
+
+### Workflow and identity
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9243839e0b9eba5ecdf7fc`; input ticker `SPDW`; canonical `entity_key: NYSE Arca:SPDW`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is International; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`.
+- This run creates the SPDW performance owner and adds the corresponding International navigation, ETF Performance Index coverage/refresh entry, this source batch and one log bullet. No entity page was found or created.
+
+### Evidence packet
+
+| Source | URL / path | Use and as-of handling |
+|---|---|---|
+| Official State Street SPDW product page | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-developed-world-ex-us-etf | Identity, NYSE Arca listing, inception `2007-04-20`, passive/systematic sampling, benchmark, expense `0.03%`, official rolling `9.88%` and NAV YTD `14.69%` as of `2026-07-31`, current NAV/price/AUM/holdings/valuation snapshot through `2026-08-27` |
+| Official State Street SPDW factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-spdw.pdf | Official `2026-06-30` NAV total-return fields, expense ratio, holdings and fund characteristics; latest page values are kept separate from this factsheet date |
+| SEC SPDW summary prospectus | https://www.sec.gov/Archives/edgar/data/1168164/000119312526031210/d86341d497k.htm | Passive sampling, at least 80% index securities/DRs, index objective, turnover `3%`, diversification and foreign-market/currency/country/sector/liquidity risks |
+| FinanceCharts SPDW performance | https://www.financecharts.com/etfs/SPDW/performance | Secondary dividend-reinvested annual total-return proxy captured 2026-08-29; used only because reviewed official annual chart rows were not readable as text and are marked `*` |
+| S&P 500 Total Return cache | Official S&P source references retained by `check-etf-performance` | USD dividends-reinvested common reference, complete calendar years `2016-2025`; no new search needed under cached convention |
+| Existing vault context | `index.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Routing/navigation context; no existing SPDW performance owner or entity page was present |
+
+### Observations, calculations, and reconciliation
+
+- State Street and the SEC classify SPDW as a passive, index-tracking developed-markets ex-U.S. equity ETF seeking to track the `S&P Developed Ex-U.S. BMI Index`; it uses representative sampling and therefore qualifies for this workflow. Canonical exchange is `NYSE Arca`.
+- Official current page fields are kept separate by date: NAV `USD 51.97`, closing price `USD 52.04`, AUM `USD 42,244.64M`, holdings `2,433`, P/B `2.16x`, FY1 P/E `14.28x`, fund distribution yield `2.92%`, and 30-day SEC yield `2.09%` as of `2026-08-27`; expense `0.03%` and semi-annual distribution schedule are issuer facts.
+- Official State Street NAV performance is `14.69%` YTD, `29.55%` 1-year, `17.89%` 3-year, `9.81%` 5-year and `9.88%` 10-year as of `2026-07-31`; official factsheet values as of `2026-06-30` are retained separately (`14.48%` YTD, `28.32%` 1-year, `19.21%` 3-year, `9.81%` 5-year, `10.39%` 10-year).
+- The reviewed official current page and SEC chart capture did not expose complete annual rows in a machine-readable, independently checkable form. The secondary proxy rows are `2016 3.00%`, `2017 25.81%`, `2018 -14.22%`, `2019 22.41%`, `2020 9.90%`, `2021 11.45%`, `2022 -15.98%`, `2023 17.82%`, `2024 3.55%`, `2025 34.75%`; they represent dividend-reinvested total return and are not labeled official NAV TR.
+- From the proxy rows, 2016-2025 compound return is `130.20%*` and rounded-input CAGR is `8.70%*` using `(Π(1 + annual return))^(1/10) - 1`. There are `8` positive and `2` negative years; best is 2025 `+34.75%*`, least positive is 2016 `+3.00%*`, worst is 2022 `-15.98%*`, and least bad down year is 2018 `-14.22%*`.
+- For the common 2021-2025 window, SPDW proxy compound return is `53.94%*` and CAGR is `9.01%*`; the cached S&P 500 TR compound is `96.17%` and CAGR is `14.43%`. The cumulative gap is `42.23 percentage points` and CAGR gap is `5.41 pp`; this is a basis-mismatched context comparison, not official tracking or manager-skill evidence.
+- SPDW proxy beats the S&P 500 common reference in 2017, 2022 and 2025 (`3 / 10` complete years). Do not call this alpha or manager skill.
+- Official daily NAV Total Return history sufficient for maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no market-price or secondary drawdown proxy is substituted. Annual proxy and official NAV fields remain explicitly separated.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The State Street product page is the source of truth for current official performance, identity and fund snapshot; the June factsheet is retained for its separate official performance table; the SEC prospectus is the source for strategy and risk. The annual proxy is used only for window calculations and is marked `*`.
+- The cached S&P 500 table is used only for its exact 2016-2025 USD total-return convention. It is not substituted for SPDW's `S&P Developed Ex-U.S. BMI Index`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_SPDW Performance.md`: complete SPDW owner page with official rolling/YTD fields, secondary proxy annual table, calculations, risk gaps, sources, International breadcrumb and canonical geography tag.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: add the SPDW row and dated explanatory note; keep the region page as navigation-only.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: add SPDW to the coverage table and `2026-08-29 Performance Refresh`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking SPDW performance, International navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:SPDW` identity, fund name, inception, passive/index-tracking equity eligibility, S&P Developed Ex-U.S. BMI benchmark, expense ratio, International region and official source dates are mapped.
+- PASS: official NAV Total Return, market price, price, benchmark, holdings, AUM, valuation, expense, yield, official rolling/YTD fields and secondary annual proxy remain separate; all proxy values are marked `*` and no official NAV annual row is invented.
+- PASS: official rolling `9.88%`, official YTD `14.69%`, proxy annual calculations, 2021-2025 comparison, best/worst ranking, S&P cache basis, `8/2` up/down count and daily-NAV drawdown gap reconcile to the proposed owner page and index/region notes.
+- PASS: all planned links and breadcrumbs resolve; the performance page owns the numbers; the region page remains static; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street and SEC sources confirm SPDW as a passive NYSE Arca developed-markets ETF with official rolling/YTD evidence; annual rows are explicitly marked as a secondary proxy, scheduled-local verification passed, and raw-endpoint and daily-drawdown gaps remain disclosed.
