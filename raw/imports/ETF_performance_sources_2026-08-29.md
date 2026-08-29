@@ -1148,3 +1148,87 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street July standardized performance and August current fund data support the FEZ refresh; scheduled-local verification passed, fresh secondary annual rows remain marked, and country/daily-NAV gaps are disclosed.
+
+## FNDA — Schwab Fundamental U.S. Small Company ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91775dba7092ffa28aee67`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `FNDA`; canonical `entity_key: NYSE Arca:FNDA`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `USA`; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing FNDA performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity page or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Schwab Asset Management official FNDA product page | https://www.schwabassetmanagement.com/products/fnda | Official identity, exchange, passive classification, current index, fee, NAV/AUM/holdings, characteristics, yields, quote fields and July standardized performance/risk; fund/current fields as of 2026-08-27 to 2026-08-28 and performance table as of 2026-07-31 |
+| Schwab official FNDA fact-sheet page | https://www.schwabassetmanagement.com/resource/fnda-fact-sheet | Issuer document entry, fund facts and methodology context; source document date is kept separate where shown |
+| SEC FNDA summary prospectus | https://www.sec.gov/Archives/edgar/data/1454889/000110465925063127/tm2513735-8_497k.htm | Passive objective, fees, benchmark-change context and risk disclosures |
+| ETFreplay FNDA | https://www.etfreplay.com/etf/fnda | Secondary dividend-adjusted calendar rows 2016-2025 and annualized daily-volatility cross-check; annual rows captured in the current run |
+| FinanceCharts FNDA | https://www.financecharts.com/etfs/FNDA/performance | Secondary cross-check only; close but non-identical annual/current observations are not mixed into canonical official fields |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, prior dated source batch | Prior page structure, USA ownership, older official snapshot and secondary rows; stale values are replaced only where refreshed evidence supports it |
+
+### Identity and classification evidence
+
+- Schwab identifies FNDA as `Schwab Fundamental U.S. Small Company ETF`, ticker `FNDA`, listed on NYSE Arca, CUSIP `808524763`, inception `2013-08-15`, and total expense ratio `0.250%`.
+- Classification is `passive-index-tracking`; the fund seeks to track, before fees and expenses, the total return of an index measuring small U.S. companies using fundamental size and weighting measures. Schwab labels management style `Passive`.
+- Current issuer benchmark is `RAFI Fundamental High Liquidity US Small Index`. Schwab notes the benchmark changed from `Russell RAFI US Small Company Index` effective `2024-06-21`; `Fundamental U.S. Small Company Spliced Index` is the official long-history comparison.
+- Primary region is USA and canonical tag is `geography/United-States`.
+
+### Candidate performance claims and raw observations
+
+- Official Schwab standardized returns as of `2026-07-31` are: FNDA market price 1M `-2.34%`, 3M `4.65%`, YTD `18.49%`, 1Y `28.86%`, 3Y annualized `13.07%`, 5Y annualized `8.53%`, 10Y annualized `10.72%`, since-inception annualized `10.27%`; FNDA NAV 1M `-2.29%`, 3M `4.59%`, YTD `18.41%`, 1Y `28.73%`, 3Y `13.09%`, 5Y `8.52%`, 10Y `10.72%`, since inception `10.27%`.
+- Official current-index rows as of `2026-07-31` are RAFI Fundamental High Liquidity US Small Index 1M `-2.27%`, 3M `4.65%`, YTD `18.59%`, 1Y `29.03%`; longer periods are not disclosed. The official long-history spliced index is 1M `-2.27%`, 3M `4.65%`, YTD `18.59%`, 1Y `29.03%`, 3Y `13.31%`, 5Y `8.72%`, 10Y `10.92%`; inception is not disclosed.
+- Official comparative rows as of `2026-07-31` are Russell RAFI US Small Company Index 1M `-2.44%`, 3M `5.26%`, YTD `19.86%`, 1Y `31.59%`, 3Y `13.86%`, 5Y `9.03%`, 10Y `11.08%`; Russell 2000 Index 1M `-3.03%`, 3M `4.99%`, YTD `18.85%`, 1Y `34.18%`, 3Y `15.09%`, 5Y `7.11%`, 10Y `10.64%`.
+- Official current Schwab fields as of `2026-08-27` to `2026-08-28` are NAV `$37.61`, previous close `$37.62`, indicative bid/ask midpoint `$37.61`, premium/discount `0.03%`, 30-day median bid/ask spread `0.03%`, total net assets `$9,238,333,945.91`, shares outstanding `245,650,000`, and holdings `918`. Portfolio turnover is `24.50%` as of `2026-07-31`.
+- Official characteristics as of `2026-07-31` are weighted average market cap `$8.98B`, P/E `18.78`, P/CF `9.63`, ROE `10.07%`, P/B `2.04`, 3-year beta versus benchmark `1.00`, 3-year standard deviation `18.27%`, SEC 30-day yield `1.14%` as of 2026-08-27, and TTM distribution yield `1.12%` as of 2026-07-31.
+- Current official top holdings as of `2026-08-27` are Lumentum Holdings `0.56%`, Victoria's Secret `0.47%`, Compass Class A `0.44%`, Delek US `0.37%`, Abercrombie & Fitch Class A `0.36%`, Twilio Class A `0.34%`, MKS `0.34%`, Par Pacific Holdings `0.33%`, Coherent `0.33%`, and ATI `0.32%`; the displayed top ten sum is `3.86%`.
+- Official sector weights as of `2026-06-30` are Industrials `20.73%`, Financials `16.31%`, Information Technology `14.26%`, Consumer Discretionary `12.57%`, Real Estate `9.22%`, Health Care `7.39%`, Energy `4.93%`, Materials `4.85%`, Communication Services `3.85%`, Consumer Staples `3.25%`, and Utilities `2.63%`. Asset allocation as of 2026-08-27 is stocks `99.91%`, cash investments `0.09%`, other `0.00%`.
+- Official risk table reports best three months `+32.40%` for 2020-10-31 to 2021-01-31 and worst three months `-35.49%` for 2019-12-31 to 2020-03-31. Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+- ETFreplay secondary annual total-return rows are 2016 `23.54%`, 2017 `12.66%`, 2018 `-12.10%`, 2019 `24.33%`, 2020 `8.46%`, 2021 `31.11%`, 2022 `-14.82%`, 2023 `20.31%`, 2024 `8.99%`, and 2025 `7.44%`; these are dividend-adjusted proxy rows, not issuer-published NAV rows. Its partial 2026 observation is not mixed with the official July YTD.
+- FinanceCharts is retained only as a cross-check: its close annual observations include 2016 `23.49%`, 2017 `12.71%`, 2018 `-12.11%`, 2019 `24.32%`, 2020 `8.45%`, 2021 `31.13%`, 2022 `-14.82%`, 2023 `20.29%`, 2024 `8.99%`, and 2025 `7.44%`; no FinanceCharts current field overwrites the official Schwab table.
+- Cached S&P 500 Total Return common-reference rows for 2016-2025 are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`. This is not FNDA's strategy benchmark.
+
+### Calculations and reconciliation
+
+- Secondary 2016-2025 rows compound to `159.56%*`; rounded-input CAGR is `(1 + 1.5956)^(1/10) - 1 = 10.01%*`; population standard deviation is `14.33%*`; up/down years are `8 / 2`, best is 2021 `+31.11%*`, least positive is 2025 `+7.44%*`, worst is 2022 `-14.82%*`, and least-bad down year is 2018 `-12.10%*`.
+- Secondary 2021-2025 rows compound to `57.34%*`; rounded-input CAGR is `(1 + 0.5734)^(1/5) - 1 = 9.49%*`. Cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over the same window.
+- Official FNDA NAV minus the current RAFI index as of 2026-07-31 is 1M `-0.02 pp`, 3M `-0.06 pp`, YTD `-0.18 pp`, and 1Y `-0.30 pp`; longer current-index fields are not disclosed.
+- Against the official long-history spliced index, NAV minus index is 1M `-0.02 pp`, 3M `-0.06 pp`, YTD `-0.18 pp`, 1Y `-0.30 pp`, 3Y `-0.22 pp`, 5Y `-0.20 pp`, and 10Y `-0.20 pp`. These are implementation/expense and index-construction observations, not alpha.
+- Reconciliation choice: ETFreplay is the canonical secondary annual series because it supplied the complete current 2016-2025 row set. FinanceCharts differences are preserved as a cross-check. The official July NAV/YTD fields and secondary calendar rows are not merged into one source series.
+
+### Source-quality choice and unresolved gaps
+
+- Schwab is the source of truth for identity, passive classification, current benchmark, official NAV/market/index performance, fee, AUM, holdings, sectors, characteristics, yields, risk and quote fields. ETFreplay supplies only the marked secondary annual proxy; FinanceCharts is cross-check context.
+- The current RAFI benchmark has limited long-horizon disclosure on the product page; the official spliced index and historical Russell RAFI row are retained with their distinct definitions and benchmark-change date.
+- Complete issuer-published calendar-year NAV rows for 2016-2025 are `ไม่พบข้อมูลที่ยืนยันได้`; annual rows remain marked `*`. Official daily NAV history for independent max drawdown/recovery is also `ไม่พบข้อมูลที่ยืนยันได้`.
+- Point-in-time NAV, market price, premium/discount, AUM, holdings, sectors, yield and risk fields retain their own as-of dates and are not treated as total-return data.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), current and historical issuer benchmarks, common benchmark, candidate claims and periods, units/currency (`%`, USD), metric definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_FNDA Performance.md`: replace the stale June/July snapshot with official July standardized NAV/market/index returns, official rolling `10.72%`, official YTD `18.41%`, current Aug-27/28 NAV/quote/AUM/holdings/characteristics/yields, secondary annual proxy calculations, benchmark-change context, risk evidence and disclosed annual/daily-NAV gaps; preserve the USA breadcrumb and tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update the FNDA navigation row to official rolling `10.72%`, secondary 2021-2025 CAGR `9.49%*`, official YTD `18.41%`, and add a current benchmark/as-of note without copying the full performance table.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the FNDA coverage row and current coverage note to official rolling `10.72%` and YTD `18.41%` as of 2026-07-31; retain secondary 2016-2025 `159.56%* / 10.01%*`, 2021-2025 `9.49%*`, best/worst proxy years and strict source ownership.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one `etf-performance` bullet linking `[[ETF_NYSE_ARCA_FNDA Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `10.72%`, official YTD `18.41%`, retained secondary 2021-2025 CAGR `9.49%*`, and benchmark/calendar/daily-NAV gaps; keep the file outside the scoped commit because it already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, current issuer benchmark, historical benchmark splice, return basis, USD units and USA region ownership are source-mapped.
+- PASS: official July standardized table, official August NAV/quote/AUM/fund facts, current holdings/sectors/characteristics/yields/risk fields, fresh secondary annual rows, cached S&P rows and each metric definition retain separate sources and as-of dates; secondary fields remain visibly marked `*`.
+- PASS: annual/CAGR/up-down/dispersion calculations, official tracking differences, benchmark-change interpretation, source-quality choice, prior-snapshot reconciliation and annual/daily-NAV gaps reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for FNDA performance, USA region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Schwab July standardized performance and August current fund data support the FNDA refresh; scheduled-local verification passed, benchmark-change and secondary annual gaps remain disclosed, and official daily-NAV drawdown data is unavailable.

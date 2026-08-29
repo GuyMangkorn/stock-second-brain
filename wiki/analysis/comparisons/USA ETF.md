@@ -56,7 +56,7 @@ tags:
 | SMDV | ProShares Russell 2000 Dividend Growers ETF | U.S. small-cap dividend-growth equity | 7.51% | 10.66% | 18.13% | [[ETF_CBOE_BZX_SMDV Performance]] |
 | XSMO | Invesco S&P SmallCap Momentum ETF | U.S. small-cap momentum equity | 12.25%‖ | 9.59% | 30.50%¶ | [[ETF_NYSE_ARCA_XSMO Performance]] |
 | SSEUF | State Street SPDR Russell 2000 U.S. Small Cap UCITS ETF (Acc) | U.S. small-cap broad equity | 10.18% | 5.70% | 18.69% | [[ETF_LSE_R2US Performance]] |
-| FNDA | Schwab Fundamental U.S. Small Company ETF | U.S. small-cap fundamental equity | 11.53% | 9.49%* | 21.18% | [[ETF_NYSE_ARCA_FNDA Performance]] |
+| FNDA | Schwab Fundamental U.S. Small Company ETF | U.S. small-cap fundamental equity | 10.72% | 9.49%* | 18.41% | [[ETF_NYSE_ARCA_FNDA Performance]] |
 | VBR | Vanguard Morningstar Small-Cap Value ETF | U.S. small-cap value equity | 10.99% | 10.56% | 15.83% | [[ETF_NYSE_ARCA_VBR Performance]] |
 | ISCV | iShares Morningstar Small-Cap Value ETF | U.S. small-cap value equity | 9.22% | 10.19% | 20.34% | [[ETF_NYSE_ARCA_ISCV Performance]] |
 | RWJ | Invesco S&P SmallCap 600 Revenue ETF | U.S. small-cap revenue-weighted equity | 10.33%† | 13.76%* | 28.61%* | [[ETF_NYSE_ARCA_RWJ Performance]] |
@@ -111,6 +111,8 @@ midpoint `US$57.07`, closing price `US$57.06`, AUM `US$17.081B`, 606 holdings,
 และ premium/discount `+0.02%` ณ 2026-08-27. Standardized NAV TR YTD remains
 `21.54%` and rolling 10-year NAV CAGR `10.75%` ณ 2026-07-31; annual calendar
 rows and daily NAV drawdown/recovery series ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
+
+FNDA current refresh note: `10.72%` เป็น official rolling 10-year NAV TR และ `18.41%` เป็น official NAV TR YTD ณ 2026-07-31; `9.49%*` เป็น rounded-input CAGR จาก secondary dividend-adjusted annual rows 2021-2025. Current issuer benchmark คือ RAFI Fundamental High Liquidity US Small Index หลัง benchmark change จาก Russell RAFI US Small Company Index เมื่อ 2024-06-21; official calendar NAV rows และ daily NAV drawdown/recovery ยังไม่พบข้อมูลที่ยืนยันได้.
 
 ## Navigation
 
