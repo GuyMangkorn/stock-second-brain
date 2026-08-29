@@ -46,6 +46,7 @@ tags:
 | DFIS | Dimensional International Small Cap ETF | international active systematic small-cap | not applicable (<10y history) | not applicable (2022 inception) | 14.18%* | [[ETF_CBOE_BZX_DFIS Performance]] |
 | AGSCF | Avantis Global Small Cap Value UCITS ETF (official USD LSE:AVGS) | international active systematic small-cap value | not applicable (<10y history) | not applicable (2024 inception) | 21.43% | [[ETF_LSE_AVGS Performance]] |
 | AVDV | Avantis International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | 14.24%* | 13.11% | [[ETF_NYSE_ARCA_AVDV Performance]] |
+| AVDE | Avantis International Equity ETF | international active systematic all-cap value/profitability | not applicable (<10y history) | not disclosed | 12.39% | [[ETF_NYSE_ARCA_AVDE Performance]] |
 | GWX | State Street SPDR S&P International Small Cap ETF | international ex-U.S. small-cap | 6.86%† | not disclosed | 7.28% | [[ETF_NYSE_ARCA_GWX Performance]] |
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
@@ -71,6 +72,13 @@ official NAV TR YTD ณ 2026-07-31 และ `14.24%*` เป็น rounded-inpu
 secondary dividend-reinvested proxy ช่วง 2021-2025. Official 5Y NAV TR
 `13.81%` เทียบ management benchmark `6.03%` ให้ return-only Excess CAGR
 `+7.78 pp`; hit rate และ official daily drawdown/recovery ยังไม่ verified.
+
+AVDE เป็น active long-only developed ex-U.S. all-cap ETF; `12.39%` เป็น official
+NAV TR YTD ณ 2026-07-31. Official factsheet ณ 2026-06-30 รายงาน 5Y NAV TR
+`10.49%` เทียบ management benchmark `8.84%` หรือ return-only excess `+1.65 pp`.
+Official complete calendar rows ไม่ readable ใน reviewed capture จึงไม่คำนวณ
+2021-2025 CAGR, best/worst year หรือ hit rate และ daily NAV drawdown/recovery
+ยังไม่ verified.
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. FNDC `8.48%` เป็น issuer-reported
