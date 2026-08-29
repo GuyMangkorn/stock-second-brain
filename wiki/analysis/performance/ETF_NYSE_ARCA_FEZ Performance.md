@@ -8,15 +8,20 @@ exchange: NYSE Arca
 fund: State Street SPDR EURO STOXX 50 ETF
 tracked_index: EURO STOXX 50 Index
 benchmark: S&P 500 Total Return
-updated: 2026-08-18
-performance_as_of: 2025-12-31
+management_mode: passive-index-tracking
+updated: 2026-08-29
+annual_performance_as_of: 2025-12-31
+performance_as_of: 2026-07-31
 rolling_10y_as_of: 2026-07-31
 current_ytd_as_of: 2026-07-31
-price_nav_as_of: 2026-08-17
-fund_facts_as_of: 2026-08-18
-source_batch: raw/imports/ETF_performance_sources_2026-08-18.md
-return_basis: NAV total return where issuer-reported; secondary annual proxy is dividend-reinvested total return
+nav_as_of: 2026-08-27
+market_price_as_of: 2026-08-27
+fund_facts_as_of: 2026-08-28
+risk_as_of: 2026-08-27
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
+return_basis: NAV total return; dividends and capital gains reinvested; net of expenses
 return_currency: USD
+primary_region: Europe
 tags:
   - analysis/etf-performance
   - ticker/FEZ
@@ -29,71 +34,96 @@ tags:
 
 ## Bottom line
 
-`FEZ` คือ State Street SPDR EURO STOXX 50 ETF ที่จดทะเบียนบน NYSE Arca และเป็น
-`passive-index` equity ETF. Official rolling `10-year NAV Total Return CAGR`
-อยู่ที่ `10.92%` ณ 31 ก.ค. 2026 และ official NAV TR YTD อยู่ที่ `9.66%` ณ วันเดียวกัน.
-Annual calendar rows 2016-2025 ที่ตรวจสอบได้เป็น secondary
-dividend-reinvested total-return proxy จึงแยกจาก official NAV evidence และไม่ใช้
-ใน strict common-window ranking.
+`FEZ` คือ State Street SPDR EURO STOXX 50 ETF, passive Eurozone large-cap
+equity ETF ที่ติดตาม `EURO STOXX 50 Index` และมี gross expense ratio `0.29%`.
+Official State Street รายงาน NAV Total Return `10.92%` แบบ rolling 10-year
+average annual และ `9.66%` current YTD ณ 2026-07-31. Latest official daily
+snapshot รายงาน NAV `$71.14`, market midpoint/close `$71.34`,
+premium/discount `0.27%` และ AUM `$4,503.11M` ณ 2026-08-27.
+
+Complete calendar-year rows 2016-2025 เป็น secondary dividend-reinvested
+total-return proxy*; proxy cumulative `149.39%` / rounded-input CAGR `9.57%*`
+และ 2021-2025 CAGR `12.30%*` จึงไม่ถูก relabel เป็น official NAV rows และไม่ถูก
+ใช้ใน strict Common Window ranking.
 
 ## Performance check
 
-- `entity_key: NYSE Arca:FEZ`; fund name, exchange and ticker are confirmed by State Street. Inception: 15 ต.ค. 2002.
-- Classification: `passive-index`; the fund seeks to track the total-return performance of the `EURO STOXX 50 Index` before fees and expenses.
-- Metric: issuer `NAV Total Return` รวมเงินปันผลและ capital gains ที่ reinvested และแสดง net of fund fees; annual table below is a secondary dividend-reinvested total-return proxy (`*`), not issuer NAV rows.
-- Benchmark: `S&P 500 Total Return` (USD, dividends reinvested; common reference benchmark). Issuer benchmark remains `EURO STOXX 50 Index`.
-- Expense ratio: `0.29%` gross; distribution frequency: quarterly; fund facts as of 18 ส.ค. 2026.
-- 10-year window: issuer rolling field as of 31 ก.ค. 2026; raw endpoint values are `not disclosed` on the reviewed official page.
-- 10-year NAV TR CAGR: `10.92%` (issuer-reported annualised field; no endpoint reconstruction).
-- Coverage/source note: official issuer rolling/YTD fields are kept separate from the secondary annual proxy. S&P 500 rows reuse the cached USD convention as of 31 ธ.ค. 2025.
+- `entity_key: NYSE Arca:FEZ`; State Street ระบุ fund เป็น `State Street SPDR EURO STOXX 50 ETF`, listed on NYSE Arca, inception `2002-10-15`, CUSIP `78463X202`, ISIN `US78463X2027`.
+- Classification: `passive-index-tracking`; fund มุ่งให้ผลตอบแทนโดยทั่วไปสอดคล้องกับ `EURO STOXX 50 Index` และใช้ sampling/index-tracking mechanics; ไม่มี derivative-defined payoff.
+- Metric: official `NAV Total Return` รวม dividends/capital gains ที่ reinvested และแสดง net of fund fees; market-price return และ index return ถูกเก็บแยก. Annual rows ด้านล่างเป็น secondary dividend-reinvested proxy `*` เพราะ official current page ไม่เปิดเผย complete calendar-year NAV rows.
+- Tracked index: `EURO STOXX 50 Index`; index เป็น market-capitalization-weighted large-cap Eurozone reference. Common comparison benchmark คือ `S&P 500 Total Return` (USD, dividends reinvested) ไม่ใช่ issuer tracking benchmark.
+- Official rolling 10-year NAV TR average annual `10.92%` as of `2026-07-31`; raw rolling endpoints และ exact elapsed years ไม่ได้เปิดเผย.
+- Official current facts as of `2026-08-27` to `2026-08-28`: 50 holdings, AUM `$4,503.11M`, P/B `2.48`, P/E FY1 `16.08`, weighted average market cap `$197,779.33M`, estimated 3-5 year EPS growth `15.63%`, 30-day SEC yield `1.94%`, fund distribution yield `2.50%`, and index dividend yield `2.66%`.
 
-| Year | FEZ total-return proxy* (USD) | S&P 500 TR (USD) |
+### Official July 2026 standardized returns
+
+| Return basis | 1M | QTD | YTD | 1Y | 3Y annualized | 5Y annualized | 10Y annualized | Since inception annualized |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| NAV | 1.20% | 1.20% | 9.66% | 22.94% | 16.94% | 11.50% | 10.92% | 7.83% |
+| Market value | 1.56% | 1.56% | 10.27% | 23.82% | 17.17% | 11.53% | 10.96% | 7.84% |
+| EURO STOXX 50 Index | 1.20% | 1.20% | 9.46% | 22.78% | 16.76% | 11.23% | 10.76% | 7.60% |
+
+All official rows above are as of `2026-07-31`. State Street defines fund
+returns as net of fees with reinvested distributions; index returns are
+unmanaged and are not called alpha.
+
+### Secondary annual total-return context
+
+| Year | FEZ secondary total-return proxy* | S&P 500 TR (USD; common ref.) |
 |---|---:|---:|
-| 2016 | 0.67% | 11.96% |
-| 2017 | 24.80% | 21.83% |
-| 2018 | -15.86% | -4.38% |
-| 2019 | 26.05% | 31.49% |
-| 2020 | 4.84% | 18.40% |
-| 2021 | 14.84% | 28.71% |
-| 2022 | -14.27% | -18.11% |
-| 2023 | 27.16% | 26.29% |
-| 2024 | 3.58% | 25.02% |
-| 2025 | 37.81% | 17.88% |
+| 2016 | 0.64% | 11.96% |
+| 2017 | 24.78% | 21.83% |
+| 2018 | -15.85% | -4.38% |
+| 2019 | 26.04% | 31.49% |
+| 2020 | 4.85% | 18.40% |
+| 2021 | 14.83% | 28.71% |
+| 2022 | -14.30% | -18.11% |
+| 2023 | 27.19% | 26.29% |
+| 2024 | 3.55% | 25.02% |
+| 2025 | 37.78% | 17.88% |
 
-`*` Secondary rows include price appreciation plus reinvested dividends; they
-are not relabelled as official NAV TR. The complete proxy window compounds to
-`149.64%` / rounded-input CAGR `9.58%`; 2021-2025 compounds to `78.70%` /
-`12.31%`. The cached S&P 500 2016-2025 cumulative return is `298.33%` /
-`14.82%` CAGR from rounded annual inputs.
+The FEZ annual series is ETFreplay's secondary dividend-adjusted total-return
+proxy, not issuer-published NAV rows. The S&P 500 column reuses the cached USD
+Total Return convention as of `2025-12-31`.
 
-**Up years / Down years**
+## Window calculations and tracking context
 
-- Proxy up/down years: `8 / 2`
-- Best: 2025, `+37.81%*`
-- Least positive: 2016, `+0.67%*`
-- Worst: 2018, `-15.86%*`
-- Least bad down year: 2022, `-14.27%*`
-- Current official NAV YTD: `+9.66%` as of 31 ก.ค. 2026; latest official NAV `71.95` and closing price `71.91` as of 17 ส.ค. 2026.
+- Secondary 2016-2025 proxy compounds to `149.39%*` / rounded-input CAGR `9.57%*`; up/down years are `8 / 2`; best is 2025 `+37.78%*`; least positive is 2016 `+0.64%*`; worst is 2018 `-15.85%*`; least-bad down year is 2022 `-14.30%*`.
+- Secondary 2021-2025 proxy compounds to `78.58%*` / rounded-input CAGR `12.30%*`; cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over the same window. This is a common reference, not manager-skill evidence.
+- Official NAV minus linked-index observations as of 2026-07-31 are 1M/QTD `0.00 pp`, YTD `+0.20 pp`, 1Y `+0.16 pp`, 3Y `+0.18 pp`, 5Y `+0.27 pp`, 10Y `+0.16 pp`, and since inception `+0.23 pp`; these are passive implementation/expense observations, not alpha.
+- Official rolling 10Y NAV TR `10.92%` remains separate from secondary 2016-2025 CAGR `9.57%*` and 2021-2025 CAGR `12.30%*`; the windows and source ownership differ.
+- Reconciliation: the refreshed ETFreplay annual rows differ slightly from the prior FinanceCharts proxy (for example 2016 `0.64%` versus `0.67%` and 2025 `37.78%` versus `37.81%`). The fresh ETFreplay series is used consistently for the current annual proxy; FinanceCharts remains a secondary cross-check and its current YTD/rolling observations are not mixed with official State Street fields.
 
 ## Risk read-through
 
-The official rolling 10-year NAV TR CAGR is `10.92%`; the annual proxy's
-population standard deviation is `17.24%`, calculated from the ten rounded
-secondary rows and not presented as official NAV risk evidence. The portfolio
-had 50 holdings as of 14 ส.ค. 2026, with Financials `28.44%`, Industrials
-`22.29%`, and Information Technology `15.07%`; country/sector concentration
-and EUR/USD exposure remain relevant for a USD investor. Official daily NAV
-maximum drawdown and recovery date were not disclosed in the reviewed capture,
-so `risk-adjusted evidence: not-verified` for those fields. The fund's 0.29%
-expense ratio and quarterly distributions also create tracking drag versus the
-issuer index.
+Latest official State Street holdings as of 2026-08-27 show a concentrated
+large-cap portfolio. Top holdings are ASML Holding `8.84%`, Siemens `4.69%`,
+SAP `4.28%`, Banco Santander `4.11%`, Schneider Electric `3.83%`, Allianz
+`3.77%`, TotalEnergies `3.76%`, BBVA `3.10%`, Safran `2.82%`, and Iberdrola
+`2.81%`; the displayed top ten sum is `42.01%`.
+
+Current official sector weights as of 2026-08-27 are Financials `28.42%`,
+Industrials `22.00%`, Information Technology `14.86%`, Consumer Discretionary
+`9.32%`, Health Care `5.38%`, Consumer Staples `5.15%`, Energy `4.81%`,
+Utilities `4.46%`, Materials `3.41%`, and Communication Services `2.19%`.
+The official factsheet country snapshot as of 2026-06-30 was France `32.27%`,
+Germany `28.88%`, Netherlands `14.98%`, Spain `11.36%`, Italy `8.38%`, Belgium
+`2.85%`, and Finland `1.28%`; the latest product-page geographic section did
+not expose a newer country breakdown.
+
+FEZ มี Eurozone country, EUR/USD FX, large-cap concentration, sector,
+valuation, equity-market, geopolitical และ liquidity risk. Secondary ETFreplay
+reports annualized daily volatility `18.4%` as of 2026-08-21, while the
+rounded annual proxy population standard deviation is `17.24%*`; ทั้งสองเป็น
+secondary context ไม่ใช่ official daily NAV risk measure. Official daily NAV
+history sufficient to reproduce maximum drawdown and recovery date ยังไม่พบ
+ข้อมูลที่ยืนยันได้.
 
 ## Sources
 
-- [State Street FEZ product page](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-euro-stoxx-50-etf-fez) — official identity, exchange, current NAV/price, YTD, rolling returns, fee, holdings and fund facts
-- [State Street FEZ factsheet, June 2026](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-fez.pdf) — official return definitions, fee, index objective and fund structure
-- [State Street SPDR dividend distributions](https://www.ssga.com/us/en/intermediary/resources/documents/etf-dividend-distributions) — official distribution-source context
-- [FEZ performance history](https://www.financecharts.com/etfs/FEZ/performance) — secondary dividend-reinvested annual proxy rows
-- [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
-- Cached S&P 500 TR references: [2016-2019](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-08-18]] | [[ETF Performance Index]]
+- [State Street FEZ product/performance page](https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-euro-stoxx-50-etf-fez) — official identity, exchange, index, fee, current NAV/market price/AUM, holdings, sectors, characteristics, yields and July standardized performance.
+- [Official FEZ factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-fez.pdf) — official return definition, June 2026 fund facts, holdings, sectors and country snapshot.
+- [ETFreplay FEZ annual total-return table](https://www.etfreplay.com/etf/fez) — secondary dividend-adjusted annual rows and volatility cross-check.
+- [FinanceCharts FEZ performance table](https://www.financecharts.com/etfs/FEZ/performance) — secondary cross-check; not mixed into the canonical official fields.
+- [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) and cached workflow references — common USD Total Return rows, dividends reinvested, as of 2025-12-31.
+- [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]

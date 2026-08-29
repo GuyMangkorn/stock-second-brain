@@ -30,7 +30,7 @@ tags:
 | HEZU | iShares Currency Hedged MSCI Eurozone ETF | Eurozone passive, USD-hedged equity on NYSE Arca | 12.88% | 13.88% | 15.23% | [[ETF_NYSE_ARCA_HEZU Performance]] |
 | EZU | iShares MSCI Eurozone ETF | Eurozone passive, USD unhedged equity on Cboe BZX | 10.91% | 10.60% | 13.57% | [[ETF_CBOE_BZX_EZU Performance]] |
 | FLEU | Franklin FTSE Eurozone ETF | Eurozone passive; predecessor hedged-Europe index through 2023-07-31 | not applicable (<10y) | 14.06% | 6.75% | [[ETF_NYSE_ARCA_FLEU Performance]] |
-| FEZ | State Street SPDR EURO STOXX 50 ETF | Eurozone large-cap passive equity | 10.92% | 12.31%* | 9.66% | [[ETF_NYSE_ARCA_FEZ Performance]] |
+| FEZ | State Street SPDR EURO STOXX 50 ETF | Eurozone large-cap passive equity | 10.92% | 12.30%* | 9.66% | [[ETF_NYSE_ARCA_FEZ Performance]] |
 | BBEU | JPMorgan BetaBuilders Europe ETF | developed Europe broad-market passive equity | not applicable (<10y) | 10.63% | 10.47% | [[ETF_CBOE_BZX_BBEU Performance]] |
 | VGK | Vanguard FTSE Europe ETF | developed Europe broad-market passive full-replication equity | 10.06% | 10.14% | 7.06% | [[ETF_NYSE_ARCA_VGK Performance]] |
 | FLEE | Franklin FTSE Europe ETF | developed Europe large-/mid-cap passive capped-index equity | not applicable (<10y) | 10.55% | 9.91% | [[ETF_NYSE_ARCA_FLEE Performance]] |
@@ -160,10 +160,12 @@ NAV YTD ใน capture ณ 2026-07-23. History ตั้งแต่ 2018 ใช
 later product-page snapshot, not a same-date conflict. Official daily NAV
 drawdown/recovery ยังไม่ verified.
 
-FEZ `10.92%` เป็น issuer rolling 10-year NAV TR ณ 2026-07-31; `12.31%*` เป็น
-rounded-input CAGR จาก secondary dividend-reinvested annual proxy rows 2021-2025
-และ `9.66%` เป็น official NAV TR YTD ณ 2026-07-31. Proxy annual rows ไม่ถูกเพิ่ม
-ใน strict common-window ranking; official daily NAV drawdown/recovery ยังไม่ verified.
+FEZ `10.92%` เป็น issuer rolling 10-year NAV TR ณ 2026-07-31; `12.30%*` เป็น
+rounded-input CAGR จาก fresh ETFreplay secondary dividend-reinvested annual proxy
+rows 2021-2025, `9.66%` เป็น official NAV TR YTD ณ 2026-07-31 และ latest official
+snapshot ณ 2026-08-27 คือ NAV `$71.14`, market midpoint `$71.34`,
+premium/discount `0.27%` และ AUM `$4,503.11M`. Proxy annual rows ไม่ถูกเพิ่มใน
+strict common-window ranking; official daily NAV drawdown/recovery ยังไม่ verified.
 
 VERE (input alias VGRDF) เปิดตัว 2019-07-23 จึงไม่มี 10-year NAV TR; 10.68%*
 เป็น rounded-input CAGR ของ PortfoliosLab dividend-adjusted proxy rows 2021-2025

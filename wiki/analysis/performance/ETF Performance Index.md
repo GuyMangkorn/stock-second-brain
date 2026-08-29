@@ -282,7 +282,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_HEZU Performance]] | official 2014 / official 2021-2025; issuer rolling 10-year as of 2026-06-30 | 12.88% | 13.88% | 15.23% | 2025 +25.86% / 2022 -9.34% | Eurozone passive, USD-hedged equity | country/sector/hedge-cost/forward/counterparty/FX-sensitive; 11.39% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_CBOE_BZX_EZU Performance]] | official 2000 / official 2021-2025; issuer rolling 10-year as of 2026-06-30 | 10.91% | 10.60% | 13.57% | 2025 +39.66% / 2022 -17.28% | Eurozone passive, USD-unhedged equity | country/sector/valuation/FX-sensitive; 14.62% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLEU Performance]] | official 2017 / official 2018-2025; history under 10 years; index/strategy change 2023-08-01 | not applicable (<10y) | 14.06% | 6.75% | 2025 +41.11% / 2018 -8.23% | Eurozone passive, linked FTSE exposure | country/sector/FX/liquidity-sensitive; 15.00% 3-year standard deviation; predecessor hedged-index splice and NAV drawdown/recovery gap |
-| [[ETF_NYSE_ARCA_FEZ Performance]] | official 2002 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 10.92% | 12.31%* | 9.66% | 2025 +37.81%* / 2018 -15.86%* | Eurozone large-cap passive equity | country/sector/FX-sensitive; 17.24% secondary annual dispersion; calendar NAV and daily NAV drawdown/recovery gaps |
+| [[ETF_NYSE_ARCA_FEZ Performance]] | official 2002 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 10.92% | 12.30%* | 9.66% | 2025 +37.78%* / 2018 -15.85%* | Eurozone large-cap passive equity | country/sector/FX-sensitive; current NAV 71.14 / market 71.34 as of 2026-08-27; 17.24% secondary annual dispersion; calendar NAV and daily NAV drawdown/recovery gaps |
 
 10Y NAV CAGR เป็น rolling average annual return จาก official issuer และแต่ละกองมี
 as-of date ต่างกัน; DIVI ใช้ Franklin product page ณ 2026-07-31 และ raw TR
@@ -555,10 +555,13 @@ in USD. The 2021-2025 table still contains two years from the predecessor
 hedged-Europe period and the 2023 transition; the displayed tracking comparison
 is not alpha, and the S&P 500 row remains a separate USD common reference.
 
-FEZ's 2016-2025 and 2021-2025 annual rows are secondary dividend-reinvested
-total-return proxies rather than issuer-published NAV rows, so FEZ is excluded
-from the strict Common Window ranking; the official rolling 10-year NAV field
-and current YTD remain separately displayed in the coverage table.
+FEZ's fresh ETFreplay 2016-2025 and 2021-2025 annual rows are secondary
+dividend-reinvested total-return proxies rather than issuer-published NAV rows;
+they compound to `149.39%*` / `9.57%*` and `78.58%*` / `12.30%*`, respectively.
+FEZ is excluded from the strict Common Window ranking; the official rolling
+10-year NAV field and current YTD remain separately displayed in the coverage
+table. Latest official snapshot ณ 2026-08-27 คือ NAV `$71.14`, market price
+`$71.34`, premium/discount `0.27%`, AUM `$4,503.11M`, and 50 holdings.
 
 XMED's 2021-2025 rows are a secondary USD Morningstar growth-series proxy and
 are marked `*`; the displayed common-window row is not strict official ranking

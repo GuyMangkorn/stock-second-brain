@@ -1066,3 +1066,85 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street July standardized performance and August current fund data support the EWX refresh; scheduled-local verification passed, secondary annual/current conflicts remain marked, and current-country plus official daily-NAV gaps are disclosed.
+
+## FEZ — State Street SPDR EURO STOXX 50 ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917758a24a445865b49aa6`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `FEZ`; canonical `entity_key: NYSE Arca:FEZ`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `Europe`; the durable graph is `[[ETF Region Index]] → [[Europe ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing FEZ performance owner, Europe navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity page or normalized fund table is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| State Street official FEZ product/performance page | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-euro-stoxx-50-etf-fez | Official identity, exchange, passive/indexing classification, benchmark, current NAV/market price/AUM, holdings/sectors/characteristics/yields and standardized performance; current fields as of 2026-08-27 to 2026-08-28 and performance table as of 2026-07-31 |
+| State Street official FEZ factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-fez.pdf | Official return definition, index objective, June 2026 fund facts, country/sector/holding snapshot and risk context; as of 2026-06-30 |
+| State Street distribution page | https://www.ssga.com/us/en/intermediary/resources/documents/etf-dividend-distributions | Official distribution-source context; product page states quarterly distribution frequency |
+| ETFreplay FEZ | https://www.etfreplay.com/etf/fez | Secondary dividend-adjusted calendar rows 2016-2025 and annual-return volatility cross-check; page capture as of 2026-08-21 |
+| FinanceCharts FEZ | https://www.financecharts.com/etfs/FEZ/performance | Secondary current/annual cross-check; values are not mixed into canonical official fields |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_FEZ Performance.md`, `wiki/analysis/comparisons/Europe ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-08-18.md` | Prior page structure, region ownership, older secondary rows and prior official snapshot; refreshed claims use the newer official/secondary captures above |
+
+### Identity and classification evidence
+
+- State Street identifies FEZ as `State Street SPDR EURO STOXX 50 ETF`, listed on NYSE Arca, ticker `FEZ`, CUSIP `78463X202`, ISIN `US78463X2027`, inception `2002-10-15`, benchmark `EURO STOXX 50 Index`, base currency USD and quarterly distributions.
+- Classification is `passive-index-tracking`; the fund seeks to correspond generally to the total-return performance of the EURO STOXX 50 Index before fees and expenses. State Street describes sampling mechanics and related tracking-error risk; the payoff is not derivative-defined.
+- Primary region is Europe and canonical tag is `geography/Europe`.
+
+### Candidate performance claims and raw observations
+
+- Official State Street standardized returns as of 2026-07-31 are NAV / market value / linked index: 1M `1.20% / 1.56% / 1.20%`; QTD `1.20% / 1.56% / 1.20%`; YTD `9.66% / 10.27% / 9.46%`; 1Y `22.94% / 23.82% / 22.78%`; 3Y annualized `16.94% / 17.17% / 16.76%`; 5Y annualized `11.50% / 11.53% / 11.23%`; 10Y annualized `10.92% / 10.96% / 10.76%`; since inception annualized `7.83% / 7.84% / 7.60%`.
+- Official current State Street capture reports NAV `$71.14`, shares outstanding `63.30M`, AUM `$4,503.11M`, net cash amount `$8,865,134.99`, market midpoint/close `$71.34`, premium/discount `0.27%`, median bid/ask spread `0.01%`, and exchange volume `356,124` as of 2026-08-27. Gross expense ratio is `0.29%`.
+- Official characteristics as of 2026-08-27 include 50 holdings, P/B `2.48`, P/E FY1 `16.08`, weighted average market cap `$197,779.33M`, estimated 3-5 year EPS growth `15.63%`, 30-day SEC yield `1.94%`, fund distribution yield `2.50%`, and index dividend yield `2.66%`.
+- Official current fund top-ten holdings as of 2026-08-27 are ASML Holding `8.84%`, Siemens `4.69%`, SAP `4.28%`, Banco Santander `4.11%`, Schneider Electric `3.83%`, Allianz `3.77%`, TotalEnergies `3.76%`, BBVA `3.10%`, Safran `2.82%`, and Iberdrola `2.81%`; shown weights sum to `42.01%`.
+- Official current fund sector weights as of 2026-08-27 are Financials `28.42%`, Industrials `22.00%`, Information Technology `14.86%`, Consumer Discretionary `9.32%`, Health Care `5.38%`, Consumer Staples `5.15%`, Energy `4.81%`, Utilities `4.46%`, Materials `3.41%`, and Communication Services `2.19%`.
+- Official factsheet country weights as of 2026-06-30 are France `32.27%`, Germany `28.88%`, Netherlands `14.98%`, Spain `11.36%`, Italy `8.38%`, Belgium `2.85%`, and Finland `1.28%`; the latest product-page geographic section did not expose a newer country breakdown. The same factsheet's June sector snapshot is Financials `26.79%`, Industrials `22.09%`, IT `15.96%`, Consumer Discretionary `9.58%`, Consumer Staples `5.55%`, Health Care `5.32%`, Utilities `4.90%`, Energy `4.47%`, Materials `3.46%`, and Communication Services `1.88%`.
+- ETFreplay secondary annual total-return rows are 2016 `0.64%`, 2017 `24.78%`, 2018 `-15.85%`, 2019 `26.04%`, 2020 `4.85%`, 2021 `14.83%`, 2022 `-14.30%`, 2023 `27.19%`, 2024 `3.55%`, and 2025 `37.78%`; these are dividend-adjusted proxy rows, not official NAV rows. ETFreplay also reports annualized daily volatility `18.4%` as of 2026-08-21.
+- FinanceCharts is retained as a cross-check: its annual rows are close but not identical (for example 2016 `0.67%`, 2025 `37.81%`) and its current YTD/rolling values are source/date observations distinct from the official State Street July table; no FinanceCharts field overwrites the canonical data.
+- Cached S&P 500 Total Return common-reference rows for 2016-2025 are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of 2025-12-31. This is not FEZ's strategy benchmark.
+- Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no price-only drawdown proxy is substituted.
+
+### Calculations and reconciliation
+
+- Secondary 2016-2025 rows compound to `149.39%*`; rounded-input CAGR is `(1 + 1.4939)^(1/10) - 1 = 9.57%*`; population standard deviation is `17.24%*`; up/down years are `8 / 2`, best is 2025 `+37.78%*`, least positive is 2016 `+0.64%*`, worst is 2018 `-15.85%*`, and least-bad down year is 2022 `-14.30%*`.
+- Secondary 2021-2025 rows compound to `78.58%*`; rounded-input CAGR is `(1 + 0.7858)^(1/5) - 1 = 12.30%*`. Cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over the same window.
+- Official NAV minus linked-index observations as of 2026-07-31 are 1M/QTD `0.00 pp`, YTD `+0.20 pp`, 1Y `+0.16 pp`, 3Y `+0.18 pp`, 5Y `+0.27 pp`, 10Y `+0.16 pp`, and since inception `+0.23 pp`; these are implementation/expense observations, not alpha.
+- Official rolling 10-year NAV TR `10.92%` is kept separate from secondary 2016-2025 CAGR `9.57%*` and 2021-2025 CAGR `12.30%*`; official rolling and secondary calendar windows have different source ownership.
+- Reconciliation: fresh ETFreplay annual rows replace the prior rounded FinanceCharts proxy for consistency. The small differences are disclosed rather than smoothed; official State Street rolling/YTD fields remain unchanged and current NAV/market fields are refreshed to 2026-08-27.
+
+### Source-quality choice and unresolved gaps
+
+- State Street is the source of truth for identity, passive classification, tracked index, official NAV/market/index performance, fee, AUM, holdings, sectors, characteristics, yields and current premium/discount. ETFreplay is used for the complete secondary annual proxy and FinanceCharts only as a cross-check.
+- Official current country breakdown was not exposed in the latest product-page capture; June factsheet country weights are retained with their date and are not asserted as current.
+- Official daily NAV history sufficient to independently reproduce maximum drawdown and recovery date is `ไม่พบข้อมูลที่ยืนยันได้`; ETFreplay's daily volatility is secondary context only.
+- The current NAV/market pair is point-in-time data and is not treated as total return.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), issuer benchmark, common benchmark, candidate claims and periods, units/currency (`%`, USD), metric definitions, separate as-of dates, source URLs/paths, calculations, source-quality selection, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_FEZ Performance.md`: replace the stale August-17 snapshot and old secondary proxy with the official July standardized NAV/market/index table, official rolling `10.92%`, official YTD `9.66%`, current Aug-27 NAV/market/AUM/holdings/sectors, fresh secondary annual proxy calculations, dated factsheet country weights, risk context and official daily-NAV/drawdown gap; preserve the Europe breadcrumb and tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Europe ETF.md`: update only the FEZ row to secondary 2021-2025 CAGR `12.30%*`, retain official `10.92%` and `9.66%`, and append current official NAV/market/premium/AUM context plus the country/daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the FEZ coverage row and reconciliation note to `149.39%* / 9.57%*` for 2016-2025, `78.58%* / 12.30%*` for 2021-2025, best/worst proxy years, current NAV/market snapshot and strict-ranking exclusion; preserve historical dated coverage bullets.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one `etf-performance` bullet linking `[[ETF_NYSE_ARCA_FEZ Performance]]`, `[[Europe ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `10.92%`, official YTD `9.66%`, fresh secondary 2021-2025 CAGR `12.30%*`, and preserved country/daily-NAV gaps; keep the file outside the scoped commit because it already contains unrelated changes.
+- No new ETF entity or region page is required; existing Europe navigation remains the canonical owner.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units, and Europe region ownership are source-mapped.
+- PASS: official July standardized table, official August NAV/market/AUM/fund facts, June factsheet country/sector context, fresh secondary annual rows/volatility, cached S&P rows and each metric definition retain separate sources and as-of dates; secondary fields remain visibly marked `*`.
+- PASS: annual/CAGR/up-down/dispersion calculations, official tracking differences, source-quality choice, prior-proxy reconciliation and current-country/daily-NAV gaps reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for FEZ performance, Europe region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street July standardized performance and August current fund data support the FEZ refresh; scheduled-local verification passed, fresh secondary annual rows remain marked, and country/daily-NAV gaps are disclosed.
