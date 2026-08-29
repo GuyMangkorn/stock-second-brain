@@ -480,3 +480,74 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official WisdomTree July performance and August fund snapshots support the OPPJ refresh; scheduled-local verification passed, the DXJS strategy transition and secondary 2025/drawdown limitations remain disclosed, and the Common Window cumulative arithmetic was corrected to 68.80%.
+
+## VIGI — Vanguard International Dividend Appreciation ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177308f6ae33ff619e408`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `VIGI`; canonical `entity_key: NASDAQ:VIGI`.
+- Vanguard identifies VIGI as the Nasdaq-listed Vanguard International Dividend Appreciation ETF, inception `2016-02-25`, CUSIP `921946810`, and a passive/index-tracking equity ETF. The strategy is fully invested/full replication and targets large-cap developed and emerging markets outside the United States.
+- Issuer benchmark is `S&P Global Ex-U.S. Dividend Growers Index (USD) NTR`. Primary region is `International`; ownership remains with `[[International ETF]]` and `[[ETF Performance Index]]`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Vanguard advisor product page | https://advisors.vanguard.com/investments/products/vigi/vanguard-international-dividend-appreciation-etf | Current NAV TR YTD, market-price YTD, expense ratio, distribution yield, spread, holdings, net assets and current portfolio metrics |
+| Vanguard investor VIGI product page | https://investor.vanguard.com/investment-products/etfs/profile/vigi | Product identity and annual performance source |
+| Vanguard fund list | https://workplace.vanguard.com/fund-list/?filters=eqIndex%2C&viewType=monthEndReturnNAV | Official standardized average annual returns as of 2026-07-31 and separately dated YTD field |
+| Vanguard VIGI factsheet | https://fund-docs.vanguard.com/F4415.pdf | June 2026 performance cross-check, benchmark, strategy, holdings, country/sector mix and risk fields |
+| Schwab VIGI report | https://www.schwab.wallst.com/schwab/Prospect/research/etfs/reports/reportRetrieve.asp?reportType=etfrc&symbol=VIGI | Secondary current market price and rounded standardized cross-check |
+| S&P Global Ex-U.S. Dividend Growers Index | https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-global-ex-us-dividend-growers-index/ | Issuer benchmark identity |
+| S&P Dividend Growers Index Series Methodology | https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-dividend-growers-index-series.pdf | Index methodology context |
+| S&P 500 index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference rows for the stated complete calendar windows; dividends reinvested |
+| PortfoliosLab VIGI | https://portfolioslab.com/symbol/VIGI | Secondary adjusted-price drawdown/recovery proxy |
+
+### Candidate performance claims and raw observations
+
+- Official Vanguard fund-list capture reports as of `2026-07-31`: NAV Total Return 1-year `15.69%`, 3-year annualised `10.58%`, 5-year annualised `5.32%`, 10-year annualised `8.01%`, and since-inception annualised `9.12%`. The same table separately labels YTD `9.80%` as of `2026-08-11`; it is retained as a dated separate observation.
+- Later official Vanguard advisor-page capture reports current YTD NAV Total Return `9.18%` and market-price return `9.01%`, both as of `2026-08-26`; this later YTD field is the current durable value.
+- Official current/near-current fund facts include net expense ratio `0.07%` as of `2026-02-27`, distribution yield `2.13%` as of `2026-07-31`, median bid/ask spread `0.06%` as of `2026-08-25`, holdings `341` as of `2026-07-31`, ETF net assets `US$9.1B`, fund total net assets `US$9.4B`, and 3-year standard deviation `12.05%` as of `2026-07-31`. Current portfolio metrics include P/E `20.7x`, P/B `2.9x`, turnover `13.90%`, developed-market exposure `94.96%`, emerging-market exposure `5.04%`, and foreign holdings `99.23%`.
+- Official June factsheet as of `2026-06-30` reports NAV TR YTD `3.70%`, 1-year `6.06%`, 3-year `9.85%`, 5-year `4.65%`, 10-year `7.89%`, and since inception `8.80%`; it reports benchmark/index rows separately and is retained only as an older cross-check. June standard deviation is `11.93%`, holdings/benchmark constituents `342`, ETF net assets `US$8,725M`, and fund net assets `US$9,080M`.
+- The June factsheet country weights are Japan `30.6%`, Canada `23.7%`, Switzerland `14.6%`, United Kingdom `5.3%`, Germany `5.0%`, India `3.2%`, France `3.2%`, Spain `2.9%`, Denmark `2.8%`, and Hong Kong `1.7%`. Top-ten holdings are RBC `4.9%`, Mitsubishi UFJ `4.3%`, Nestle `3.9%`, TD `3.7%`, Novartis `3.6%`, Roche `3.5%`, Schneider `3.2%`, SAP `2.8%`, Iberdrola `2.8%`, and Novo Nordisk `2.8%`, approximately `35.4%` combined. Sector weights are Financials `29.1%`, Industrials `16.3%`, Health Care `14.6%`, Technology `11.4%`, Consumer Staples `8.6%`, Consumer Discretionary `5.9%`, Utilities `5.9%`, Basic Materials `3.5%`, Energy `2.5%`, Real Estate `1.1%`, and Telecommunications `1.0%`.
+- Secondary Schwab capture generated `2026-08-28` reports market price `US$98.55` as of `2026-08-28` and rounded July fields; it reports a different holdings profile of `370` as of `2026-08-18`. The secondary price is retained as market-price context only; no current official NAV or premium/discount is inferred.
+- Official annual NAV rows are `2016 6.64%` (inception-year partial), `2017 27.80%`, `2018 -11.32%`, `2019 27.04%`, `2020 15.11%`, `2021 12.42%`, `2022 -16.71%`, `2023 16.16%`, `2024 2.62%`, and `2025 16.89%`. Cached S&P 500 TR rows used as a common USD reference are 2017-2025 `21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%` and 2021-2025 `28.71%, -18.11%, 26.29%, 25.02%, 17.88%`; the cache is as of `2025-12-31`, dividends reinvested, and is not VIGI's strategy benchmark.
+- Secondary adjusted-price evidence from PortfoliosLab reports maximum drawdown about `-31.01%` during the COVID period and `114` trading sessions to recover. Official daily NAV history sufficient for a reproducible fund-level drawdown/recovery remains `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- 2017-2025 rounded annual-row calculation: `(1.2780 × 0.8868 × 1.2704 × 1.1511 × 1.1242 × 0.8329 × 1.1616 × 1.0262 × 1.1689) - 1 = 116.23%`; rounded-input CAGR `(1 + 1.1623)^(1/9) - 1 = 8.95%`; population standard deviation `14.71%`; positive/negative years `7 / 2`.
+- 2021-2025 rounded annual-row calculation: `(1.1242 × 0.8329 × 1.1616 × 1.0262 × 1.1689) - 1 = 30.47%`; rounded-input CAGR `(1 + 0.3047)^(1/5) - 1 = 5.46%`; population standard deviation `12.57%`; positive/negative years `4 / 1`.
+- Cached S&P 500 TR common reference is cumulative `255.78%` / CAGR `15.14%` for 2017-2025 and cumulative `96.17%` / CAGR `14.43%` for 2021-2025. It is a USD reference only and no arithmetic excess return is called alpha.
+- The issuer's rolling 10-year average annual NAV TR `8.01%` as of `2026-07-31` implies normalized growth `100.00 → 216.09`, or cumulative `116.09%`, via `100 × ((1 + 0.0801)^10 - 1)`. Raw endpoints are not disclosed, so the implied endpoint is not presented as a sourced NAV level.
+- As-of reconciliation: June factsheet YTD/10-year were `3.70%`/`7.89%`; July standardized 1-year/10-year were `15.69%`/`8.01%`; current advisor-page YTD is `9.18%` as of 2026-08-26. The separate fund-list YTD `9.80%` is dated 2026-08-11. These fields are not mixed into one period.
+- Current official benchmark YTD in the same as-of capture was not exposed. The current official NAV/market-price pair and official daily NAV drawdown series were also not exposed; these remain explicit gaps.
+
+### Pre-save evidence packet and proposed durable contents
+
+- Evidence packet records child/parent ARIs, Nasdaq identity, inception/CUSIP, passive classification, return basis, issuer/common benchmarks, candidate annual/rolling/current claims, periods, units/currency, metric definitions, as-of dates, source URLs, calculations, current exposure, secondary conflicts, unresolved gaps and the complete planned file changes.
+- Proposed `wiki/analysis/performance/ETF_NASDAQ_VIGI Performance.md`: replace the stale July page with current frontmatter; preserve the official 2016† and 2017-2025 annual NAV table; add the official July 1/3/5/10-year and since-inception fields; use current official YTD NAV/market-price fields; add the rolling-10-year implied calculation, annual-window calculations, current fund snapshot, official June country/sector/top-ten context, international FX/country/sector/dividend-factor risks, secondary drawdown proxy, as-of reconciliation, source links and follow-up gaps; retain the canonical International breadcrumb and `geography/International` tag.
+- Proposed `wiki/analysis/comparisons/International ETF.md`: update only the VIGI row to official rolling 10-year `8.01%`, 2021-2025 CAGR `5.46%`, and current official YTD `9.18%`; append a `2026-08-29 Verified Refresh` note distinguishing the issuer rolling field from the calendar-row CAGR and disclosing the current NAV-pair/drawdown gaps.
+- Proposed `wiki/analysis/performance/ETF Performance Index.md`: update the VIGI coverage row to rolling 10-year `8.01%`, 2021-2025 `5.46%`, current YTD `9.18%`, best/worst `2025 +16.89% / 2022 -16.71%`, and the `12.05%` 3-year standard-deviation/daily-NAV-gap behavior label; append the dated VIGI note below the existing issuer-field footnotes. The Common Window row remains `30.47%` because its annual inputs did not change.
+- Proposed `raw/imports/ETF_performance_sources_2026-08-29.md`: append this VIGI identity/source map, raw claims, calculations, reconciliation, complete proposed contents, local checklist, exact scheduled-inline verification lines, and structured `trello_handoff`.
+- Proposed `log.md` exact bullet: ``- `etf-performance`: Refreshed [[ETF_NASDAQ_VIGI Performance]] with official July rolling 10-year NAV TR `8.01%`, current NAV TR YTD `9.18%` as of 2026-08-26, and 2017-2025 CAGR `8.95%`; updated [[International ETF]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-29]], while preserving the current NAV-pair and official daily drawdown gaps.`` `log.md` remains outside the scoped commit because it already contains unrelated user changes.
+- No ETF entity hub or new region page is required; `NASDAQ:VIGI` remains the canonical performance owner and the existing International region page remains the sole regional navigation owner.
+
+### Local pre-save checklist
+
+- PASS: official Nasdaq identity, fund name, inception, passive/full-replication equity eligibility, canonical key, tracked index, return basis, USD units, and International region ownership are source-mapped.
+- PASS: official July standardized fields, the separate August 11 YTD table, later August 26 current YTD, secondary August 28 price, and June factsheet cross-check retain individual as-of dates; NAV, market price, benchmark, distribution and holdings metrics are not conflated.
+- PASS: official annual rows, 2017-2025 and 2021-2025 calculations, rolling-10-year implied calculation, cached S&P common reference, secondary drawdown proxy and all unresolved current NAV/daily-series gaps reproduce the proposed page/index values; no unsupported benchmark-current or NAV endpoint is inferred.
+- PASS: complete proposed contents for performance, International region, index, source batch and log artifacts are specified; canonical breadcrumb/tag, source links, secondary conflicts and follow-up gaps are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard July standardized fields and current August YTD support the VIGI refresh; scheduled-local verification passed and current NAV-pair, calendar/benchmark-current, and daily drawdown gaps remain disclosed.
