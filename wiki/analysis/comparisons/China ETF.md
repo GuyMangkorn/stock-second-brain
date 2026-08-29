@@ -67,6 +67,11 @@ rolling 10-year NAV TR CAGR อยู่ที่ `6.22%` ณ วันเดี
 June quarter-end cross-check (`11.37%` YTD และ `6.90%` 10-year CAGR) ยังคงแยก
 ตาม as-of date. Exchange และ fee-waiver conflicts ถูกเก็บในหน้ารายกองและ source batch.
 
+SMHC official VanEck summary ณ 2026-08-27 reports NAV `US$47.82`, total net
+assets `US$26.30M`, 27 holdings และ performance since inception `-18.83%`
+cumulative. Current YTD ยังไม่ถูกเปิดเผย; detailed performance blocks มีค่าขัดแย้ง
+และไม่ระบุ as-of ชัดเจน จึงเก็บไว้เป็น source conflict และไม่ใช้แทน summary field.
+
 ## Navigation
 
 - [[ETF Region Index]]

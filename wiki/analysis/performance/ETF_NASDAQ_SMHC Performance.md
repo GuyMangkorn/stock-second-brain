@@ -7,10 +7,10 @@ exchange: Nasdaq
 fund: VanEck China Semiconductor ETF
 tracked_index: MarketVector China Semiconductor 25 Index (MVSMHCTR)
 benchmark: S&P 500 Total Return
-updated: 2026-07-24
-performance_as_of: 2026-07-20
+updated: 2026-08-29
+performance_as_of: 2026-08-27
 current_ytd_as_of: not disclosed
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -24,7 +24,13 @@ tags:
 
 ## Bottom line
 
-SMHC เป็น passive/index-tracking equity ETF ที่เพิ่งเริ่มกองทุนเมื่อ `2026-06-23` จึงไม่มี 10-year NAV Total Return. หน้า official ของ VanEck ที่ตรวจสอบยังแสดง fund NAV/market-price performance เป็น `--` และยังไม่เปิดเผย current NAV YTD; จึงไม่สร้าง proxy จากผลตอบแทนของ underlying index (`+20.18%` 1-month) และไม่คำนวณ CAGR เองจากข้อมูลที่ไม่มีจุดปลายทาง.
+SMHC เป็น passive/index-tracking equity ETF ที่เพิ่งเริ่มกองทุนเมื่อ `2026-06-23`
+จึงไม่มี 10-year NAV Total Return. Official VanEck summary ณ `2026-08-27`
+แสดง NAV `US$47.82` และ performance since inception `-18.83%` แบบ cumulative
+สำหรับช่วงที่ยังไม่ครบหนึ่งปี; current YTD ยังเป็น `--`. Detailed performance
+table มี duplicate blocks ที่ให้ค่าขัดแย้งและไม่ระบุ as-of ชัดเจน จึงเลือกใช้
+summary field ที่มีวันที่กำกับและเก็บ conflict ไว้; ไม่ annualize และไม่ใช้
+underlying-index return หรือ secondary proxy แทน NAV TR.
 
 ## Performance check
 
@@ -34,13 +40,16 @@ SMHC เป็น passive/index-tracking equity ETF ที่เพิ่งเ�
 - Tracked index: MarketVector China Semiconductor 25 Index (`MVSMHCTR`)
 - Metric: NAV Total Return including reinvested distributions and fund expenses
 - 10-year NAV TR: unavailable; fund history is under 10 years
-- Available-period window reviewed: `2026-06-23` to `2026-07-20`, `27 days / 0.073973 years`
+- Available-period window reviewed: `2026-06-23` to `2026-08-27`, `65 days / 0.17796 years`
 - Start NAV TR value: not disclosed
 - End NAV TR value: not disclosed
-- Available-period cumulative return: not disclosed
-- Available-period CAGR: not disclosed
+- Available-period cumulative return: `-18.83%` (official VanEck summary field; not annualized)
+- Available-period CAGR: not applicable; period is under one year
+- Current NAV: `US$47.82` as of `2026-08-27`
+- Total net assets: `US$26.30M` as of `2026-08-27`
+- Holdings: `27` as of `2026-08-27`
 - Current NAV TR YTD: not disclosed
-- Official performance table: SMHC fund NAV and market-price rows are `--`; the underlying-index 1-month result is not an ETF NAV TR result
+- Official performance table: YTD and most detailed NAV/market-price rows are `--`; a duplicate table block contains conflicting/unlabeled values and is not used for the current metric
 
 | Period | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
@@ -48,6 +57,12 @@ SMHC เป็น passive/index-tracking equity ETF ที่เพิ่งเ�
 | 2026 YTD | not disclosed | not comparable; 2026 is outside the cached 2016-2025 benchmark window |
 
 S&P 500 rows are the cached USD Total Return convention for complete calendar years `2016-2025`; they are shown only as a common reference and do not fill the missing SMHC NAV TR fields.
+
+The official available-period summary field is `-18.83%` from `2026-06-23` to
+`2026-08-27`; it is not a calendar-year or current-YTD figure and is not
+annualized. The detailed page capture also shows a conflicting duplicate block
+with values such as `-23.14%` and `15.61%` for life performance without a clear
+matching as-of label; those values are excluded from the owner metric.
 
 ## Up years / Down years
 
@@ -59,13 +74,22 @@ S&P 500 rows are the cached USD Total Return convention for complete calendar ye
 
 ## Risk read-through
 
-SMHC ให้ exposure แบบ concentrated ไปยังบริษัท semiconductor จีน 25 บริษัท. ความเสี่ยงหลักคือ China/semiconductor sector concentration, policy and export-control changes, geopolitics, FX, liquidity และความเสี่ยงของกองทุนใหม่ที่ยังไม่มีประวัติ NAV TR เพียงพอ. Expense ratio ตาม official fund profile คือ `0.65%`.
+SMHC ให้ exposure แบบ concentrated ไปยังบริษัท semiconductor จีน 25 บริษัท;
+official current holdings page แสดง `27` holdings ณ 2026-08-27 และ currency
+exposure เป็น Chinese Renminbi `64.58%` / Other-Cash `35.42%` ณ 2026-07-31.
+ความเสี่ยงหลักคือ China/semiconductor sector concentration, policy and
+export-control changes, geopolitics, FX, Stock Connect, liquidity และความเสี่ยง
+ของกองทุนใหม่. SEC ระบุว่า fund ใช้ passive approach, normally ลงทุนอย่างน้อย
+80% ใน benchmark securities และเป็น non-diversified fund. Expense ratio ตาม
+current official profile คือ `0.65%`.
 
 ## Sources
 
-- [VanEck SMHC official product/performance page](https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/)
+- [VanEck SMHC official product/performance page](https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/overview/)
 - [VanEck SMHC launch release](https://www.vaneck.com/us/en/press-releases/vaneck-launches-smhc-offering-pure-play-access-to-chinas-semiconductor-build-out/)
 - [VanEck SMHC Q&A](https://www.vaneck.com/us/en/blogs/thematic-investing/smhc-etf-question-answer/)
 - [VanEck SMHC fund profile](https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/smhc-chinas-race-to-the-future-fund-profile.pdf)
+- [SEC SMHC summary prospectus](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000629/vaneckchinasemiconductoret.htm)
+- [SEC SMHC statement of additional information](https://www.sec.gov/Archives/edgar/data/1137360/000113736026000630/veconsolsai485b062026.htm)
 - [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
-- ETF source batch: [[ETF_performance_sources_2026-07-24]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]

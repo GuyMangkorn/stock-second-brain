@@ -2352,3 +2352,71 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Pacer, SEC and Nasdaq evidence confirm INDQ identity and passive India factor exposure while official fund/index performance remains N/A or unavailable; scheduled-local verification passed, no return or proxy was inferred, and the under-10-year/current-data gaps are explicitly preserved.
+
+## SMHC — VanEck China Semiconductor ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177887f32ceaaadb7feb8`; input ticker `SMHC`; canonical `entity_key: Nasdaq:SMHC`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is China; the durable graph is `[[ETF Region Index]] → [[China ETF]] → [[ETF Performance Index]]`.
+- This recheck updates the existing SMHC performance owner, China navigation note, ETF Performance Index coverage row/refresh section, this source batch and one log bullet. No new ETF entity or region page is required.
+
+### Source map and classification
+
+| Source | URL | Use and as-of date |
+|---|---|---|
+| VanEck official SMHC product/performance page | https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/overview/ | Canonical identity, Nasdaq listing, current NAV, performance-since-inception summary, net assets, expense ratio, inception, holdings, currency exposure and detailed performance blocks; summary fields as of `2026-08-27`, holdings as of `2026-08-27`, currency exposure as of `2026-07-31` |
+| VanEck SMHC fund profile | https://www.vaneck.com/us/en/investments/china-semiconductor-etf-smhc/smhc-chinas-race-to-the-future-fund-profile.pdf | Official fund/index identity, risk disclosure and return-convention notes; profile dated `2026-06` |
+| VanEck SMHC launch release | https://www.vaneck.com/us/en/press-releases/vaneck-launches-smhc-offering-pure-play-access-to-chinas-semiconductor-build-out/ | Official strategy/launch context for China semiconductor exposure |
+| VanEck SMHC Q&A | https://www.vaneck.com/us/en/blogs/thematic-investing/smhc-etf-question-answer/ | Official product and strategy context |
+| SEC SMHC summary prospectus | https://www.sec.gov/Archives/edgar/data/1137360/000113736026000629/vaneckchinasemiconductoret.htm | Official identity, Nasdaq listing, objective, 0.65% fee, 80% policy, index construction, passive approach, Stock Connect and risk disclosures; dated `2026-06-22` |
+| SEC SMHC statement of additional information | https://www.sec.gov/Archives/edgar/data/1137360/000113736026000630/veconsolsai485b062026.htm | Official current fund/ticker/exchange and administration details; dated `2026-06-22` |
+| Cached S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; no current-year comparison claimed |
+| Existing vault context | `wiki/analysis/performance/ETF_NASDAQ_SMHC Performance.md`, `wiki/analysis/comparisons/China ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior SMHC owner and China navigation; July gap snapshot is superseded by the current VanEck summary field and current holdings/asset facts |
+
+- VanEck and SEC materials classify SMHC as a passive, index-tracking equity ETF seeking to track, before fees and expenses, the price and yield performance of the `MarketVector China Semiconductor 25 Index (MVSMHCTR)`. The index is rules-based, modified capitalization-weighted and float-adjusted; it selects 25 of the largest and most liquid eligible Chinese semiconductor companies. The fund normally invests at least 80% of total assets in benchmark securities and is non-diversified.
+- Official inception is `2026-06-23`, so the fund is ineligible for a 10-year NAV TR series and for 2021-2025 calendar CAGR comparison. The current summary provides a less-than-one-year cumulative performance-since-inception field; no annualization is appropriate.
+
+### Candidate performance claims and raw observations
+
+- Current VanEck summary fields as of `2026-08-27`: NAV `US$47.82`, performance since inception `-18.83%`, and total net assets `US$26.30M`; total expense ratio is `0.65%` and inception is `2026-06-23`.
+- Official current holdings page as of `2026-08-27` reports `27` holdings. Currency exposure as of `2026-07-31` is Chinese Renminbi `64.58%` and Other/Cash `35.42%`.
+- The same page's detailed performance capture contains conflicting/unlabeled duplicate blocks: one block reports SMHC NAV 1-month `-33.52%` and life `-23.14%`, while another block reports life `15.61%`; the detailed YTD field is `--`. Because those blocks lack a single clear matching as-of label and conflict with the dated summary field, they are excluded from the owner metric and recorded as a source conflict.
+- The underlying index is not substituted for the fund. The page shows an index 1-month field and separate index-life values, but these do not establish an ETF NAV Total Return series.
+- Official SEC materials state that returns are subject to high volatility and tracking risk, the fund primarily invests directly in A-shares through Stock Connect, and the index may rebalance quarterly/reconstitute semi-annually. No reproducible official daily NAV series for maximum drawdown and recovery was identified.
+
+### Calculations and reconciliation
+
+- Available-period window is `2026-06-23` to `2026-08-27`: `65 days / 0.17796 years`, calculated from the source dates. The official summary's `-18.83%` is retained as a cumulative less-than-one-year fund figure; no CAGR or annualization is calculated.
+- Start/end NAV TR endpoints are not disclosed, so normalized TR endpoints, tracking difference, up/down years, best/worst year, maximum drawdown and recovery are `not disclosed` or `not calculable`.
+- `10-year NAV TR` and `2021-2025 CAGR` are not applicable because inception is `2026-06-23`; `2026 YTD` remains `not disclosed` because the official detailed YTD field is `--` and the dated summary field is since inception rather than calendar-year YTD.
+- The cached S&P 500 reference remains separate and no excess-return comparison is calculated because SMHC has no comparable complete calendar-year return series. Currency is USD for the ETF quote/share class, returns are percentages, and the CNY/cash exposure is a separate portfolio snapshot.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The dated VanEck summary field is used for the current available-period fund return and NAV/asset snapshot. The detailed duplicate performance blocks are retained as a conflict because their as-of labeling is unclear and their life-return values disagree; no attempt is made to reconcile them by inference.
+- The SEC summary prospectus and SAI are the sources of truth for passive classification, fee, listing, index construction, 80% policy, non-diversified status and Stock Connect/risk context. The underlying index figures are not used as ETF returns.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NASDAQ_SMHC Performance.md`: update frontmatter/source batch, current NAV/assets/performance-since-inception/holdings/currency facts, 65-day available-period window, no-YTD/no-10-year gaps, detailed-table conflict and current SEC risk disclosures.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/China ETF.md`: add the current SMHC NAV/assets/holdings/performance-since-inception note while leaving the 2026 YTD column not disclosed and preserving the historical coverage row.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the SMHC coverage row and append the current SMHC status to the `2026-08-29 Performance Refresh` section.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this complete source map, observations, calculations, reconciliation, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking SMHC performance, China navigation, ETF Performance Index and this source batch; preserve unrelated working-tree changes and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `Nasdaq:SMHC` identity, fund name, Nasdaq listing, inception, passive/index-tracking equity eligibility, tracked index, fee, China region and current source dates are source-mapped.
+- PASS: performance-since-inception summary, NAV, market-price/detail-table blocks, index return, holdings, currency exposure, fee, units/currency and all as-of dates are kept separate; duplicate performance conflict is disclosed and no underlying-index or secondary proxy is substituted.
+- PASS: under-10-year eligibility, 65-day date calculation, no-annualization rule, no-current-YTD conclusion, no-calendar-CAGR conclusion, cached S&P separation and daily-NAV gap reconcile to the proposed page. No unsupported return is inferred.
+- PASS: complete proposed contents for performance, China navigation, ETF Performance Index, source batch and log are specified; breadcrumbs/source links resolve; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official VanEck and SEC sources support the SMHC refresh with a dated available-period performance-since-inception field, current NAV/assets/holdings evidence and passive index classification; scheduled-local verification passed, detailed-table conflicts and no-YTD/no-10-year gaps are disclosed, and no underlying-index or secondary proxy was used.
