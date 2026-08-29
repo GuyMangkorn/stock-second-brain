@@ -1540,3 +1540,79 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Schwab current/July evidence and SEC methodology support the SCHA refresh; scheduled-local verification passed, secondary annual/current drawdown fields and separate as-of conflicts are disclosed, and official daily-NAV gaps remain explicit.
+
+## SLYG — State Street SPDR S&P 600 Small Cap Growth ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91776e8cfa535e289bd503`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `SLYG`; canonical `entity_key: NYSE Arca:SLYG`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is USA; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing SLYG performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| State Street official SLYG product page | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-600-small-cap-growth-etf-slyg | Official identity, NYSE Arca listing, inception, benchmark, fee, current NAV/price/AUM/holdings/characteristics/yields and standardized performance; current snapshot through 2026-08-26/27 and standardized performance through 2026-07-31 |
+| State Street official SLYG factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-slyg.pdf | Official passive/index approach, return-basis and risk context; reviewed factsheet is dated 2026-03-31 |
+| Schwab official ETF performance page | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=slyg | Independent official-distributor display of SLYG NAV/market total returns and S&P 500 comparison; latest captured standardized table is 2026-07-31 |
+| AAII SLYG profile | https://www.aaii.com/etf/ticker/SLYG | Secondary NAV annual and trailing-return cross-check; data as of 2026-07-31 |
+| YTDReturn SLYG | https://www.ytdreturn.com/slyg/ | Secondary dividend-reinvested current YTD cross-check; data ending 2026-08-26 |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31 |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_SLYG Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, prior dated source batch | Prior SLYG page, USA ownership, secondary annual proxy, calculations and disclosed gaps; current official July fields and August snapshot are refreshed |
+
+### Identity and classification evidence
+
+- State Street identifies SLYG as `State Street SPDR S&P 600 Small Cap Growth ETF`, ticker `SLYG`, listed on NYSE Arca, with inception `2000-09-25`, USD base currency, quarterly distributions and gross expense ratio `0.15%`.
+- SLYG is a passive/index-tracking U.S. small-cap growth equity ETF. The tracked issuer benchmark is the `S&P SmallCap 600 Growth Index`, which selects growth characteristics using sales growth, earnings change to price and momentum and is float-adjusted market-cap weighted. The issuer page notes the linked benchmark history uses the Dow Jones U.S. Small-Cap Growth Total Stock Market Index through 2010-12-16 and S&P SmallCap 600 Growth Index from 2010-12-17.
+- Primary region is USA and the canonical tag is `geography/United-States`. S&P 500 TR remains a common large-cap reference only, not SLYG's tracked index.
+
+### Candidate performance claims and raw observations
+
+- Official State Street standardized performance as of `2026-07-31`: NAV `-3.27%` 1M, `-3.27%` QTD, `22.77%` YTD, `30.23%` 1Y, `13.78%` 3Y annualized, `6.55%` 5Y, `10.97%` 10Y and `7.40%` since inception. Market-value returns are `-3.28%`, `-3.28%`, `22.78%`, `30.28%`, `13.77%`, `6.56%`, `10.98%` and `7.40%`; linked index returns are `-3.27%`, `-3.27%`, `22.89%`, `30.43%`, `13.94%`, `6.69%`, `11.13%` and `8.36%`.
+- Official State Street current snapshot as of `2026-08-26` reports NAV `US$115.64`, market close `US$115.70`, bid/ask midpoint `US$115.66`, assets under management `US$5,088.35M`, and `351` fund holdings. Fund characteristics are P/B `3.11`, FY1 P/E `19.16`, weighted average market cap `US$5,090.10M` and estimated 3-5 year EPS growth `14.06%`; yields are SEC `0.75%` as of 2026-08-25 and fund distribution yield `0.66%`.
+- The official State Street page does not expose complete 2016-2025 calendar NAV rows in the reviewed text capture. The existing secondary dividend-reinvested proxy remains: 2016 `22.16%`, 2017 `14.53%`, 2018 `-4.19%`, 2019 `20.98%`, 2020 `19.48%`, 2021 `22.42%`, 2022 `-21.26%`, 2023 `17.27%`, 2024 `9.38%`, 2025 `5.19%`.
+- The latest secondary YTD cross-check reports SLYG total return `23.31%` with dividends reinvested through `2026-08-26`; it is not substituted for the latest official month-end NAV field because the windows and source basis differ. AAII independently rounds the July official/secondary calendar and trailing fields to 22.8% YTD and 11.0% 10-year annualized.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%` and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- The existing secondary SLYG rows compound to `152.01%` over 2016-2025; rounded-input CAGR is `(1 + 1.5201)^(1/10) - 1 = 9.68%*`. The 2021-2025 rows compound to `30.06%`, with rounded-input CAGR `5.40%*`.
+- The cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over 2016-2025 and `96.17%` / CAGR `14.43%` over 2021-2025. The arithmetic common-reference differences are `-5.14 pp` and `-9.03 pp`; these are not alpha and S&P 500 TR is not SLYG's strategy benchmark.
+- Official State Street fund-minus-linked-index differences from the July table are `-0.12 pp` YTD, `-0.20 pp` 1Y, `-0.16 pp` 3Y, `-0.11 pp` 5Y, `-0.16 pp` 10Y and `-0.96 pp` since inception. These reflect fees, implementation, timing and index-linkage effects, not manager skill.
+- Proxy up/down years are `8 / 2`; best proxy year is 2021 `+22.42%*`, worst is 2022 `-21.26%*`, and the ten-row sample standard deviation is retained from the prior source context as annual-row dispersion rather than official daily NAV volatility.
+
+### Source-quality choice and unresolved gaps
+
+- State Street and its official factsheet are the sources of truth for identity, passive classification, tracked index, fee, official standardized performance, current fund facts and risk framing. Schwab, AAII and YTDReturn are secondary cross-checks only; secondary calendar/current fields remain visibly marked `*`.
+- The latest official standardized return window is July month-end, while the current quote/fund facts are August 26-27. The secondary `23.31%` YTD through August 26 is retained as a later total-return context field, not blended with the official July `22.77%` NAV YTD.
+- Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no unsupported drawdown number is saved. Point-in-time NAV, price, AUM, holdings, yields, characteristics and performance retain separate as-of dates.
+- SLYG is passive; no management-skill or alpha claim is made.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), issuer and common benchmarks, candidate performance claims and periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_SLYG Performance.md`: refresh frontmatter to 2026-08-29, use official July rolling/YTD table and August-26 current fund snapshot, retain secondary annual/current proxy fields, update tracking-gap and source/as-of notes, preserve USA breadcrumb and canonical tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update SLYG to official rolling `10.97%`, secondary 2021-2025 CAGR `5.40%*`, official July YTD `22.77%`, and a concise July/August source-as-of note.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the SLYG coverage row and dated refresh section to official rolling `10.97%`, secondary 2016-2025/2021-2025 values, official July YTD `22.77%`, and annual/daily-NAV gap status.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_SLYG Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `10.97%`, official YTD `22.77%`, secondary 2021-2025 CAGR `5.40%*`, and preserved annual/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and USA region ownership are source-mapped.
+- PASS: official July standardized NAV/market/index fields, August-26/27 NAV/price/AUM/holdings/characteristics/yields, secondary annual/current fields, cached S&P rows and metric definitions retain separate sources and as-of dates; secondary values remain marked `*`.
+- PASS: annual/CAGR/up-down calculations, official fund-index differences, July-versus-August current-YTD reconciliation, common-benchmark context and daily-NAV gap reproduce the proposed values; no secondary result is relabelled official and no alpha claim is made.
+- PASS: complete proposed contents for SLYG performance, USA region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street July performance and August fund-fact evidence support the SLYG refresh; scheduled-local verification passed, secondary annual/current fields and separate as-of windows are disclosed, and official daily-NAV drawdown data remains unavailable.
