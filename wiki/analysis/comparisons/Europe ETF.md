@@ -42,7 +42,7 @@ tags:
 | IEUR | iShares Core MSCI Europe ETF | developed Europe large-/mid-/small-cap passive broad-market equity; NYSE Arca | 10.02% | 9.91% | 12.23% | [[ETF_NYSE_ARCA_IEUR Performance]] |
 | SPEU | State Street SPDR Portfolio Europe ETF | Western Europe broad-market passive equity across market caps; NYSE Arca | 9.76% | 10.13%* | 7.29% | [[ETF_NYSE_ARCA_SPEU Performance]] |
 | IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 12.71% | [[ETF_NYSE_ARCA_IEV Performance]] |
-| XMED | Xtrackers MSCI Europe UCITS ETF 1C | developed Europe large-/mid-cap passive accumulating equity; input alias DXMEF; USD-traded LSE line | 9.86%* | 10.57%* | 7.85%* | [[ETF_LSE_XMED Performance]] |
+| XMED | Xtrackers MSCI Europe UCITS ETF 1C | developed Europe large-/mid-cap passive accumulating equity; input alias DXMEF; USD-traded LSE line | 9.94%* | 10.57%* | 12.58%* | [[ETF_LSE_XMED Performance]] |
 | DBEU | Xtrackers MSCI Europe Hedged Equity ETF | developed Europe large-/mid-cap passive USD-hedged equity | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | [[ETF_NYSE_ARCA_DBEU Performance]] |
 | HEDJ | WisdomTree Europe Hedged Equity Fund | Europe dividend-weighted passive USD-hedged equity; NYSE Arca | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | [[ETF_NYSE_ARCA_HEDJ Performance]] |
 | HEDK | WisdomTree Europe Equity UCITS ETF - USD Hedged Acc | Eurozone dividend-weighted passive USD-hedged equity; input alias WEEUF; LSE | not applicable (<10y) | 12.68% | 9.03% | [[ETF_LSE_HEDK Performance]] |
@@ -195,10 +195,11 @@ issuer rolling 10-year field. Official daily NAV drawdown/recovery ยังไ�
 XMED (input alias `DXMEF`) ใช้ official DWS factsheet สำหรับ identity, USD
 share-class/fund currency, official USD London line `LSE:XMED`, benchmark, fee,
 NAV และ risk fields. Factsheet ณ 2026-07-31 ไม่แสดง annual performance rows หรือ
-current YTD จึงใช้ secondary Morningstar USD series: rolling 10-year `9.86%*`
-และ 2021-2025 CAGR `10.57%*`, current YTD `7.85%*` ณ 2026-07-21. ETFdoc/
-Quantalys Euro-labelled rows และ Stuttgarter annual rows ขัดแย้งกันและไม่ถูก
-รวมใน USD calculation; daily NAV drawdown/recovery ยังไม่ verified.
+current YTD จึงใช้ secondary Morningstar USD series: rolling 10-year `9.94%*`
+และ 2021-2025 CAGR `10.57%*`, current YTD `12.58%*` ณ 2026-08-26; secondary
+USD NAV/closing price คือ `US$141.55` ณ วันเดียวกัน. ETFdoc/Quantalys
+Euro-labelled rows และ Stuttgarter annual rows ขัดแย้งกันและไม่ถูก รวมใน USD
+calculation; daily NAV drawdown/recovery ยังไม่ verified.
 
 DBEU ใช้ official DWS factsheet สำหรับ identity, USD-hedged MSCI Europe
 benchmark, passive method, rolling 10-year NAV TR `11.58%` และ current fund/risk
