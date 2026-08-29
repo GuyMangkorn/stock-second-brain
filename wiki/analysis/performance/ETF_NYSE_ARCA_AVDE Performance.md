@@ -49,7 +49,7 @@ management benchmark `20.76%`, `16.85%`, `8.84%` และ `10.43%` ตามล
 annual rows ที่ยืนยันได้ไม่ปรากฏใน reviewed capture จึงไม่คำนวณ 2021-2025 CAGR,
 best/worst year หรือ hit rate และไม่ใช้ secondary proxy มาเติมช่องว่าง.
 
-## Fund and measurement
+## Performance check
 
 - กองทุน: Avantis International Equity ETF; `entity_key: NYSE Arca:AVDE`; inception `2019-09-24`; exchange `NYSE Arca`.
 - Expense ratio `0.23%` และ dividend frequency รายไตรมาส. Total assets `US$19,185,290,809` ณ 2026-08-26; holdings `3,300` และ weighted average market cap `US$66.07B` ณ 2026-07-31.

@@ -49,7 +49,7 @@ Total Return common reference ให้ `96.17%` / `14.43%` ในช่วง�
 ขณะที่ XEF เป็น CAD จึงเป็น directional reference ที่ไม่ควรตีความเป็น
 FX-adjusted relative performance.
 
-## Fund and measurement
+## Performance check
 
 - Input card ticker: `IXSAF` OTC alias; official security: `TSX:XEF`, ISIN `CA46434T1057`; exchange `Toronto Stock Exchange`; class inception `2013-04-10`.
 - Asset class: equity; official objective is long-term capital growth by replicating the MSCI EAFE Investable Market Index net of expenses.
