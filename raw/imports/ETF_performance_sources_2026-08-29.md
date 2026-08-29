@@ -1775,3 +1775,80 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Vanguard current and July performance plus June factsheet evidence support the VIOG refresh; scheduled-local verification passed, the workplace July-field conflict and separate as-of dates are disclosed, and official daily-NAV drawdown data remains unavailable.
+
+## IPOL — iShares MSCI Poland UCITS ETF USD (Acc)
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177759eb403580c64f8db`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `IPOL`; canonical `entity_key: LSE:IPOL`; input/OTC alias `IPLCF` remains recorded on the owner page.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is Poland; the durable graph is `[[ETF Region Index]] → [[Poland ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing IPOL performance owner, Poland navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| BlackRock/iShares current UK product page | https://www.blackrock.com/uk/individual/products/251875/ishares-msci-poland-ucits-etf_1 | Official current USD-share-class NAV, YTD NAV TR, rolling/cumulative table, fund facts, risks and listings; NAV as of 2026-08-27, YTD return as of 2026-08-26 and rolling table capture current to 2026-08-27 with selected return date not exposed |
+| iShares July USD accumulating factsheet | https://www.ishares.com/uk/individual/en/literature/fact-sheet/spol-ishares-msci-poland-ucits-etf-fund-fact-sheet-en-gb.pdf | Official July 2026 calendar rows, fund/benchmark cumulative and annualized performance, holdings, fee, methodology and risk facts; performance/portfolio data as of 2026-07-31 and other data as of 2026-08-07 |
+| iShares professional product page | https://www.ishares.com/uk/professionals/en/products/251875/ishares-msci-poland-ucits-etf?siteEntryPassthrough=true&switchLocale=y | Official listing map, benchmark, holdings and product-methodology cross-check |
+| BlackRock Denmark current product page | https://www.blackrock.com/dk/individual/products/251875/ishares-msci-poland-ucits-etf | Official adjacent-locale cross-check for 26 Aug NAV/YTD and 25 Aug sector facts |
+| Prior March factsheet snapshot | `raw/imports/ETF_performance_sources_2026-08-18.md` | Existing source batch records an earlier official March factsheet value for 2020 of `+1.91%`; the latest July factsheet/live page now show `-11.91%`, so the version conflict is retained and the latest July/current pair is used |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31 |
+| Existing vault context | `wiki/analysis/performance/ETF_LSE_IPOL Performance.md`, `wiki/analysis/comparisons/Poland ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-08-18.md` | Prior IPOL page, Poland ownership, annual conflict, 2021-2025 benchmark reconciliation and disclosed daily-NAV gap; current official fields are refreshed |
+
+### Identity and classification evidence
+
+- BlackRock/iShares identifies the fund as `iShares MSCI Poland UCITS ETF USD (Acc)`, ISIN `IE00B4M7GH52`, USD accumulating share class, launched `2011-01-21`, listed on London Stock Exchange as `IPOL` in USD (Bloomberg `IPOL LN`, RIC `IPLD.L`), with GBP `SPOL` as a separate LSE line.
+- IPOL is a passive, physical, replicated Poland single-country equity UCITS ETF tracking `MSCI Emerging - Poland in Net USD`; TER is `0.74%`, domicile Ireland and rebalance frequency quarterly. S&P 500 TR is a common reference only, not the tracked benchmark.
+- Primary region is Poland and the canonical tag is `geography/Poland`. The `IPLCF` OTC input alias is mapped to the official USD LSE line and is not treated as a separate fund.
+
+### Candidate performance claims and raw observations
+
+- Latest official current page snapshot reports NAV `US$41.43` as of `2026-08-27`, one-day NAV change `-US$1.07` / `-2.52%`, and NAV Total Return YTD `28.91%` as of `2026-08-26`. Net assets are `US$1,114,481,096` as of 2026-08-27; holdings are `16` as of 2026-08-26.
+- Current official characteristics are P/B `2.13` and P/E `17.26` as of 2026-08-26, 3-year beta `0.993` and standard deviation `22.01%` as of 2026-07-31. The adjacent official Denmark page reports 25 Aug sector weights: Financials `46.28%`, Energy `16.71%`, Consumer Discretionary `12.42%`, Materials `9.67%`, Consumer Staples `5.72%`, Communication `2.98%`, Information Technology `2.42%`, Utilities `1.79%`, Industrials `1.71%` and Cash/Derivatives `0.31%`.
+- The current official product-page rolling table reports fund NAV TR cumulative `164.99%` / annualized `10.24%` over 10 years versus tracked benchmark cumulative `169.59%` / annualized `10.43%`; the selected return date is not exposed in the HTML, so this is retained as an issuer-current capture rather than a reconstructed endpoint calculation.
+- The latest official July factsheet reports cumulative NAV/benchmark performance as of 2026-07-31: 1M `10.12%`/`10.19%`, 3M `11.83%`/`11.53%`, 6M `12.94%`/`12.82%`, YTD `21.20%`/`21.13%`, 1Y `38.59%`/`38.12%`, 3Y annualized `30.08%`/`29.89%`, 5Y `15.80%`/`15.81%` and since inception `3.06%`/`3.14%`.
+- The latest July factsheet and current live product page align on the complete annual fund rows: 2016 `0.02%`, 2017 `54.33%`, 2018 `-13.14%`, 2019 `-6.03%`, 2020 `-11.91%`, 2021 `8.16%`, 2022 `-27.36%`, 2023 `48.25%`, 2024 `-6.47%` and 2025 `74.88%`; benchmark rows are `0.13%`, `54.72%`, `-12.87%`, `-5.87%`, `-11.39%`, `8.46%`, `-27.24%`, `48.60%`, `-6.65%` and `74.61%`.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%` and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- Using the latest July/live annual rows, IPOL compounds to `111.4468%`, displayed as `111.45%`, over 2016-2025; rounded-input CAGR is `(1 + 1.114468)^(1/10) - 1 = 7.78%`. The 2021-2025 rows compound to `90.51%` with rounded-input CAGR `13.76%`; both are official latest July rows and no longer use the superseded March `+1.91%` 2020 observation.
+- Cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over 2016-2025 and `96.17%` / CAGR `14.43%` over 2021-2025. IPOL's common-reference CAGR differences are `-7.04 pp` and `-0.67 pp`; these are not alpha and S&P 500 TR is not IPOL's strategy benchmark.
+- Latest issuer rolling fund-minus-index differences are `-4.60 pp` cumulative and `-0.19 pp` annualized over the 10-year table. The official 2021-2025 row comparison is `-0.64 pp` cumulative / approximately `-0.08 pp` CAGR; July factsheet YTD fund-minus-index is `+0.07 pp`, 1Y `+0.47 pp`, 3Y `+0.19 pp`, 5Y `-0.01 pp` and since inception `-0.08 pp`. These are tracking observations, not alpha.
+- Latest annual rows give up/down years `6 / 4`; best is 2025 `+74.88%`, worst is 2022 `-27.36%`. Official daily NAV history sufficient to reproduce maximum drawdown and recovery is not disclosed.
+
+### Source-quality choice and unresolved gaps
+
+- BlackRock/iShares current page and the latest July 2026 factsheet are the sources of truth for the USD accumulating share class. The earlier March factsheet snapshot in the prior batch reported 2020 `+1.91%`, while the latest July factsheet and current live page report `-11.91%`; the latest aligned pair is used for the refreshed 2016-2025 calculation and the version conflict remains disclosed.
+- Current NAV/YTD (`2026-08-27`/`2026-08-26`), July standardized performance (`2026-07-31`) and issuer rolling-table capture (selected date not exposed) are separate windows; no date is backfilled or harmonized.
+- Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no secondary drawdown proxy is saved. Point-in-time NAV, AUM, holdings, characteristics, sector weights and performance retain separate as-of dates.
+- The fund is passive; no management-skill or alpha claim is made. `IPLCF` is an input alias for the USD `LSE:IPOL` line, not a second performance series.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, alias mapping, return basis (`NAV Total Return`), issuer and common benchmarks, candidate claims and periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_LSE_IPOL Performance.md`: refresh frontmatter to 2026-08-29, update current NAV/YTD/AUM/holdings/characteristics, use latest July official annual and benchmark rows with 2016-2025 calculation, preserve alias/Poland breadcrumb/tags, and disclose the March-vs-July 2020 source-version conflict and daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Poland ETF.md`: update IPOL to official rolling `10.24%`, 2021-2025 CAGR `13.76%`, and current official NAV TR YTD `28.91%`, with separate current/July as-of notes.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the IPOL coverage row and 2026-08-29 refresh section to the latest current fields, annual calculation, benchmark tracking observations and disclosed gaps.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_LSE_IPOL Performance]]`, `[[Poland ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating rolling `10.24%`, current official YTD `28.91%`, 2016-2025 CAGR `7.78%`, 2021-2025 CAGR `13.76%`, and the preserved source-version/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing Poland navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official USD LSE identity, `IPLCF` alias mapping, fund name, inception, passive/physical/replicated eligibility, canonical key, tracked index, return basis, USD units and Poland region ownership are source-mapped.
+- PASS: official current NAV/YTD/AUM/holdings/characteristics/sector fields, July standardized fund/index returns, current rolling table, latest annual rows, cached S&P rows and metric definitions retain separate sources and as-of dates.
+- PASS: 2016-2025 and 2021-2025 calculations, fund/index reconciliation, common-benchmark context, March-vs-July 2020 source-version conflict and daily-NAV gap reproduce the proposed values; no unsupported return or alpha claim is made.
+- PASS: complete proposed contents for IPOL performance, Poland region, index, source batch and log artifacts are specified; alias/breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official BlackRock/iShares current and July USD accumulating-share evidence support the IPOL refresh; scheduled-local verification passed, the March-versus-July 2020 source-version conflict and separate as-of windows are disclosed, and official daily-NAV drawdown data remains unavailable.
