@@ -694,7 +694,7 @@ utilities และ financials tilt.
 | [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official annual NAV TR 2016-2025 |
 | [[ETF_CBOE_DDWM Performance]] | 10.72% | 13.41% | -1.27% | 17.63% | 7.65% | official annual NAV TR 2016-2025 |
-| [[ETF_CBOE_DDLS Performance]] | 10.18% | 11.33% | -9.79% | 17.55% | 4.48% | 2016 gap; 2017-2024 official; 2025 secondary* |
+| [[ETF_CBOE_DDLS Performance]] | 9.61% | 11.33%* | -9.79% | 17.55% | 6.54% | 2016 gap; 2017-2024 official; 2025 secondary* |
 | [[ETF_AMEX_DJD Performance]] | 11.89% | 11.83% | -0.61% | 15.28% | ไม่พบข้อมูลที่ยืนยันได้ | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_PEY Performance]] | 8.83% | 7.96% | ไม่พบข้อมูลที่ยืนยันได้ | 8.33% | 13.25% | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_PFM Performance]] | 11.83% | 11.36% | -6.23% | 16.34% | 7.99% | official annual NAV TR 2016-2025 |

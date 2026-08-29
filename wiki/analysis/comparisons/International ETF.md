@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| DDLS | WisdomTree Dynamic International SmallCap Equity Fund | dynamic international small-cap dividend | 10.18% | 11.33% | 4.48% | [[ETF_CBOE_DDLS Performance]] |
+| DDLS | WisdomTree Dynamic International SmallCap Equity Fund | dynamic international small-cap dividend / currency-hedged | 9.61% | 11.33%* | 6.54% | [[ETF_CBOE_DDLS Performance]] |
 | DDWM | WisdomTree Dynamic International Equity Fund | dynamic international dividend | 10.72% | 13.41% | 7.65% | [[ETF_CBOE_DDWM Performance]] |
 | DIVI | Franklin International Core Dividend Tilt Index ETF | international value/dividend tilt | 11.24% | 13.59% | 11.38% | [[ETF_AMEX_DIVI Performance]] |
 | DLS | WisdomTree International SmallCap Dividend Fund | international small-cap dividend | 7.69%† | 7.97% | 8.54%‡ | [[ETF_NYSE_ARCA_DLS Performance]] |
@@ -43,7 +43,7 @@ tags:
 | ISAC | iShares MSCI ACWI UCITS ETF (USD Accumulating) | global developed/emerging large-/mid-cap passive accumulating equity; input alias ISACF | 11.67%† | 11.29% | 15.06% | [[ETF_LSE_ISAC Performance]] |
 | VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.73% | 13.06% | 12.31% | [[ETF_NASDAQ_VYMI Performance]] |
 
-† DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `6.86%†` is issuer-reported 10-year average annual NAV TR as of 2026-07-31; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed.
+† DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `6.86%†` is issuer-reported 10-year average annual NAV TR as of 2026-07-31; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed. DDLS `9.61%` is the latest issuer rolling 10-year average annual NAV TR as of 2026-07-31; `11.33%*` blends official 2021-2024 rows with a secondary 2025 NAV proxy, and current NAV TR YTD is `6.54%` as of 2026-07-31.
 
 AGSCF เป็น input alias ของ official USD listing `LSE:AVGS`; `21.43%` เป็น
 official NAV TR YTD ณ 2026-07-31 เทียบกับ management benchmark `13.80%`.
