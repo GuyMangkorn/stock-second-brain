@@ -758,3 +758,69 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Goldman Sachs July standardized performance and fund facts support the GSJY refresh; scheduled-local verification passed and raw NAV endpoints/official daily drawdown gaps remain disclosed.
+
+## SPEU — State Street SPDR Portfolio Europe ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917744ecbb2ebeae8cc910`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `SPEU`; canonical `entity_key: NYSE Arca:SPEU`.
+- State Street identifies SPEU as the State Street SPDR Portfolio Europe ETF, listed on NYSE Arca, with inception `2002-10-15`, CUSIP `78463X103`, ISIN `US78463X1037`, base currency USD, and quarterly distributions. It is a passive/index-tracking equity ETF that uses sampling to seek the `STOXX Europe Total Market Index` across Western Europe and market-cap segments.
+- State Street's linked benchmark history uses STOXX Europe 50 from inception through `2019-09-22` and STOXX Europe Total Market Index from `2019-09-23` onward. This is preserved as a benchmark-history break, not silently treated as one unchanged series. Primary region is `Europe`; the durable graph is `[[ETF Region Index]] → [[Europe ETF]] → [[ETF Performance Index]]`.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| State Street official product page | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-portfolio-europe-etf-speu | Identity, listing, inception, benchmark-history change, official rolling performance, holdings/sector/country facts and current NAV/AUM captures |
+| State Street official factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-speu.pdf | Official June 2026 NAV/benchmark table, fee, holdings, country/sector facts and return definitions; as of 2026-06-30 |
+| FinanceCharts SPEU total-return history | https://www.financecharts.com/stocks/SPEU/performance/total-return | Secondary dividend-reinvested calendar proxy; direct page was captcha-gated during this run, so existing dated proxy rows are retained and marked `*` |
+| Existing prior source batch | `raw/imports/ETF_performance_sources_2026-08-19.md` | Source path and prior evidence for the marked 2021-2025 secondary rows; no issuer calendar rows were available in that review |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years; cached convention as of 2025-12-31, dividends reinvested |
+
+### Candidate performance claims and raw observations
+
+- State Street's latest official July standardized performance table reports NAV Total Return as of `2026-07-31`: 1-month `2.02%`, QTD `2.02%`, YTD `9.45%`, 1-year `22.02%`, 3-year annualized `15.87%`, 5-year annualized `9.09%`, 10-year annualized `9.65%`, and since inception `6.96%`.
+- Same-window market-value fields are `2.20%`, `2.20%`, `9.90%`, `22.89%`, `16.01%`, `9.07%`, `9.69%`, and `6.97%`; linked benchmark fields are `2.02%`, `2.02%`, `9.23%`, `21.79%`, `15.63%`, `8.83%`, `9.52%`, and `6.93%`. All fund results assume reinvestment of dividends/capital gains and are net of fees; index returns are unmanaged.
+- A later official product-page search capture reports NAV `US$57.41`, shares outstanding `13.00M`, and AUM `US$746.35M` as of `2026-08-26`. The full official page capture used for portfolio context separately reports NAV `US$54.97` and AUM `US$714.59M` as of `2026-07-17`; the later NAV/AUM is used for current context and the date discrepancy is disclosed rather than mixed.
+- Official product/fund facts as of `2026-07-17` to `2026-07-21` include gross expense ratio `0.07%`, 30-Day SEC Yield `2.43%`, fund distribution yield `3.44%`, index dividend yield `2.93%`, holdings `1,684`, P/B `2.27x`, P/E FY1 `15.19x`, weighted average market cap `US$126,168.53M`, and 30-day median bid/ask spread `0.04%`. The product page reports the listing details and quarterly distribution frequency as of 2026-07-21.
+- Official portfolio context as of `2026-07-17` reports top country weights United Kingdom `21.99%`, France `14.75%`, Switzerland `13.96%`, Germany `12.72%`, Netherlands `8.30%`, Sweden `6.06%`, Spain `5.76%`, and Italy `5.68%`; sector weights Financials `25.00%`, Industrials `19.24%`, Health Care `12.34%`, Information Technology `8.46%`, Consumer Staples `8.14%`, Consumer Discretionary `7.19%`, Materials `5.42%`, Energy `5.07%`, Utilities `4.73%`, Communication Services `2.93%`, and Real Estate `1.48%`.
+- State Street's reviewed official capture did not publish complete calendar-year NAV rows. Retained FinanceCharts secondary dividend-reinvested proxy rows are 2021 `16.20%*`, 2022 `-15.97%*`, 2023 `19.84%*`, 2024 `1.94%*`, and 2025 `35.80%*`; the proxy is not issuer NAV evidence and direct page access was captcha-gated in this run.
+- Cached S&P 500 Total Return common-reference rows for 2021-2025 are `28.71%`, `-18.11%`, `26.29%`, `25.02%`, and `17.88%`; USD, dividends reinvested, as of `2025-12-31`. This is a common reference only, not SPEU's strategy benchmark.
+- Official daily NAV history sufficient to independently reproduce max drawdown, recovery, or volatility is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- Secondary proxy 2021-2025 compounds to `61.99%*` and rounded-input CAGR `10.13%*`; positive/negative years are `4 / 1`; best proxy year is 2025 `+35.80%*`; least positive is 2024 `+1.94%*`; worst/least-bad down year is 2022 `-15.97%*`; population standard deviation is `17.48%*`.
+- Cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over 2021-2025. No direct fund-minus-index or manager-skill claim is made from the secondary proxy.
+- Official rolling NAV TR `9.65%` as of 2026-07-31 is kept separate from the secondary calendar proxy `10.13%*`. Normalized growth from the official annualized field would be `100.00 → 251.24`, or `151.24%` implied cumulative growth via `100 × ((1 + 0.0965)^10 - 1)`; raw endpoints are not disclosed, so this is not an observed cumulative return.
+- Official linked benchmark tracking differences for July are NAV minus index: YTD `+0.22 pp`, 1Y `+0.23 pp`, 3Y `+0.24 pp`, 5Y `+0.26 pp`, 10Y `+0.26 pp`, and since inception `+0.03 pp`; these are passive implementation observations, not alpha.
+- Reconciliation: the prior June official fields were NAV YTD `7.29%` and rolling 10-year `9.76%`; the newer July official fields are NAV YTD `9.45%` and rolling 10-year `9.65%`. The page uses the newer July performance window, while current NAV/AUM and portfolio characteristics retain their own as-of dates.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet contains ETF identity and exchange, return basis (`NAV Total Return`, USD, dividends/capital gains reinvested, net of fees), issuer benchmark and linked-history break, common benchmark, candidate official/secondary claims, periods, units/currency, metric definitions, individual as-of dates, source URLs/paths, calculations, source-quality choice, unresolved gaps and complete planned file changes.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_SPEU Performance.md`: replace the stale June page with July official rolling NAV/market-value/benchmark table; update official 10-year `9.65%`, YTD `9.45%`, current NAV/AUM, fee/yield/holdings/country/sector facts with their as-of dates; retain the 2021-2025 secondary proxy table marked `*`; correct the benchmark-history change to 2019-09-23; add tracking differences, source-quality/captcha note, current price/NAV gap and official daily-NAV drawdown gap; preserve Europe breadcrumb/tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Europe ETF.md`: update only the SPEU row to `9.65% | 10.13%* | 9.45%`; append a dated refresh note with the July official fields, later Aug-26 NAV/AUM, benchmark-history date, secondary annual proxy marker and daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the SPEU coverage row to official rolling `9.65%`, secondary 2021-2025 CAGR `10.13%*`, YTD `9.45%`, and explicit current NAV-pair/daily-NAV gaps; correct linked benchmark change to 2019-09-23; update the dated refresh bullet. The Common Window row remains unchanged because its annual rows are secondary.
+- Proposed content for this source batch: this SPEU identity/source map, raw observations, calculations, reconciliation, complete proposed contents, local checklist and exact structured `trello_handoff` below.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: one workflow bullet linking `[[ETF_NYSE_ARCA_SPEU Performance]]`, `[[Europe ETF]]`, `[[ETF Performance Index]]`, and `[[ETF_performance_sources_2026-08-29]]`, stating official July rolling `9.65%`, YTD `9.45%`, retained secondary CAGR `10.13%*`, and corrected 2019-09-23 benchmark change; preserve unrelated prior log changes outside the scoped commit.
+- No new ETF entity or region page is required; the existing Europe region page remains the sole regional navigation owner.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, identifiers, inception, passive/sampling equity eligibility, canonical key, STOXX benchmark, linked benchmark-history change, return basis, USD units and Europe region ownership are source-mapped.
+- PASS: official July NAV/market-value/benchmark fields, current NAV/AUM capture, July portfolio facts, secondary annual proxy, cached S&P reference and each as-of date remain separate; the old-versus-new official captures are reconciled and disclosed.
+- PASS: secondary annual rows are marked `*`, direct FinanceCharts captcha limitation is preserved, no secondary row overrides official rolling NAV fields, tracking differences are not called alpha, and no official daily NAV drawdown is inferred.
+- PASS: complete proposed contents for performance, Europe region, index, source batch and log artifacts are specified; canonical breadcrumb/tag/source links and benchmark-history correction are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street July performance and current product data support the SPEU refresh; scheduled-local verification passed, secondary annual rows remain marked, and source/as-of and official daily NAV gaps are disclosed.
