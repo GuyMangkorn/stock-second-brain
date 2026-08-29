@@ -253,7 +253,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
 | [[ETF_NYSE_ARCA_OPPE Performance]] | official 2015 / official 2016-2025; strategy/index change 2025-06-02; rolling 10-year as of 2026-07-31 | 12.91% | 14.84% | 17.72% | 2025 +38.73% / 2018 -13.41% | Europe opportunities, dynamic FX hedge | shareholder-yield/value/geopolitical/theme/country/sector/FX-sensitive; 2025 transition and daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FEP Performance]] | official 2011 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-10-13 | 10.57% | 10.90% | 11.02% | 2025 +55.13% / 2022 -22.87% | broad Europe rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 14.98% 3-year standard deviation; NAV drawdown/recovery gap |
-| [[ETF_LSE_FTEU Performance]] | official 2014 / secondary USD 2021-2025; rolling 10-year secondary as of 2026-07-27 | 10.75%* | 11.40%* | 12.31%* | 2025 +57.98%* / 2022 -19.74%* | Eurozone rules-based enhanced UCITS equity | country/sector/factor/FX-sensitive; 25.31%* five-year annual-row dispersion; official USD calendar/NAV drawdown gaps; input alias FTDPF |
+| [[ETF_LSE_FTEU Performance]] | official 2014 / secondary USD 2021-2025; rolling 10-year secondary as of 2026-08-27 | 10.63%* | 11.40%* | 14.06%* | 2025 +57.98%* / 2022 -19.74%* | Eurozone rules-based enhanced UCITS equity | country/sector/factor/FX-sensitive; 25.31%* five-year annual-row dispersion; official USD calendar/NAV drawdown gaps; input alias FTDPF |
 | [[ETF_CBOE_BZX_BBEU Performance]] | official 2019-2025; launch 2018-06-15; history under 10 years | not applicable (<10y history) | 10.63% | 10.47% | 2025 +35.73% / 2022 -14.71% | developed Europe broad-market passive equity | country/sector/FX/large-/mid-cap-sensitive; 15.26% annual-return dispersion; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_VGK Performance]] | official 2005 / official 2016-2025; rolling 10-year as of 2026-06-30 | 10.06% | 10.14% | 7.06% | 2025 +35.44% / 2022 -16.04% | developed Europe broad-market passive full-replication equity | country/sector/FX/large-/mid-/small-cap-sensitive; 13.67% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_FLEE Performance]] | official 2017-11-02 / official 2018-2025; history under 10 years | not applicable (<10y history) | 10.55% | 9.91% | 2025 +35.87% / 2018 -14.81% | developed Europe large-/mid-cap passive capped-index equity | country/sector/FX/large-/mid-cap-sensitive; 13.63% 3-year standard deviation; NAV drawdown/recovery gap |
@@ -595,11 +595,12 @@ FEP `10.57%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-
 index change from Defined Europe to Nasdaq AlphaDEX Europe on 2015-10-13;
 the annual history retains that continuity caveat.
 
-FTEU `10.75%*` เป็น secondary USD 10-year annualised field ณ 2026-07-27;
+FTEU `10.63%*` เป็น secondary USD 10-year annualised field ณ 2026-08-27;
 `11.40%*` เป็น rounded-input CAGR จาก secondary USD 2021-2025 rows และ
-`12.31%*` เป็น secondary USD YTD ณ 2026-07-30. Official factsheet's Acc EUR
+`14.06%*` เป็น secondary USD YTD ณ 2026-08-27. Official factsheet's Acc EUR
 series is not mixed into the USD comparison; `FTDPF` remains an input alias of
-the official USD London line `LSE:FTEU`.
+the official USD London line `LSE:FTEU`; current USD-LSE price/NAV ยังไม่พบ
+ข้อมูลที่ยืนยันได้.
 
 FKU `8.67%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `10.30%` เป็น rounded-input CAGR จาก official 2021-2025 rows และ `10.96%` เป็น

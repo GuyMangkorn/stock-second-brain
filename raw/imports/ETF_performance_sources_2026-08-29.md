@@ -89,6 +89,69 @@ pre_save_review: PASS
 - verification_mode: scheduled-local
 - reviewer_dispatch: not-attempted-by-design
 
+## FTDPF / FTEU — First Trust Eurozone AlphaDEX UCITS ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; input ticker `FTDPF` is an OTC alias for the First Trust Eurozone AlphaDEX UCITS ETF, while the official factsheet maps ISIN `IE00B8X9NY41` to the London Stock Exchange USD line `FTEU LN`. Durable ownership remains `entity_key: LSE:FTEU`, with `input_ticker: FTDPF` preserved.
+- Official fund/share-class inception is `2014-10-21`; Ireland-domiciled UCITS; equity; accumulating; base currency EUR; ongoing charges `0.65%`; physical full replication; semi-annual rebalance; official tracking-index label `Nasdaq AlphaDEX Eurozone Index`.
+- The official factsheet describes the fund as passively managed and index-tracking. The index ranks growth and value factors, selects the top 150 stocks, applies country/sector constraints, and reconstitutes semi-annually. This is an eligible passive, index-tracking equity ETF.
+- Primary region is `Europe`; the existing `[[Europe ETF]]` page and `[[ETF Performance Index]]` row are the navigation owners.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| First Trust official factsheet, data as of 2026-07-31 | https://www.fundslibrary.co.uk/FundsLibrary.DataRetrieval//Documents.aspx?id=db97fa3f-452a-4e87-a092-5d78014ea6e7&type=packet_fund_class_doc_factsheet_private&user=fidelitydocumentreport | ISIN, official trading lines, inception, fee, UCITS/passive/physical structure, official Acc EUR performance and exposures |
+| Fidelity document page | https://www.fidelity.co.uk/factsheet-data/factsheet/IE00B8X9NY41-first-trust-global-funds-icav/charges-and-key-documents | Discovery and confirmation that the provider factsheet posted 2026-08-18 is the 2026-07-31 factsheet |
+| Morningstar FTEU report | https://lt.morningstar.com/1c6qh1t6k9/etfreport/default.aspx?1=1&ClientFund=0&CurrencyId=USD&Id=0P00018JZQ&SecurityToken=0P00018JZQ%5D22%5D0%5DETEXG%24XLON&tab=1 | Secondary USD annual rows as of 2026-07-31 and trailing fields as of 2026-08-27 |
+| Central Bank of Ireland fund register | https://registers.centralbank.ie/%28X%281%29S%28uzbkfrrwrh3qjlqvxporqnfl%29%29/FundRegisterDataPage.aspx?fundReferenceNumber=C118215&register=28 | UCITS fund identity and regulatory status |
+| Cached benchmark convention | workflow cache; original S&P references are listed on the performance page | S&P 500 Total Return common-reference rows for 2021-2025, USD, dividends reinvested |
+
+### Candidate performance claims and raw observations
+
+- Official First Trust factsheet as of `2026-07-31`: Acc EUR NAV total return YTD `14.55%`, 1-year `25.43%`, 3-year annualised `20.33%`, 5-year annualised `11.86%`, and since-inception annualised `10.61%`; corresponding index fields are `14.64%`, `25.63%`, `20.22%`, `11.91%`, and `10.95%`.
+- The same official factsheet reports total fund AUM `€127.83 million`, outstanding shares `1,641,580`, and country exposure Germany `21.36%`, France `20.77%`, Italy `14.27%`, The Netherlands `9.26%`, Spain `9.15%`; sector exposure is Industrials `21.60%`, Financials `12.02%`, Materials `11.55%`, Energy `11.14%`, Utilities `9.40%`, and Consumer Discretionary `8.86%`, all as of `2026-07-31`.
+- Official factsheet performance is in the EUR base/Acc EUR series and is net of fees with reinvested income. It uses the label `Nasdaq AlphaDEX Eurozone Index`; the previous 2026-08-18 batch used an NTR label for the return series. This naming difference is preserved as a source-language distinction and does not change the ISIN or share-class identity.
+- Secondary Morningstar USD annual rows as of `2026-07-31` are 2021 `12.59%`, 2022 `-19.74%`, 2023 `16.65%`, 2024 `3.03%`, and 2025 `57.98%`; secondary trailing fields as of `2026-08-27` are YTD `14.06%`, 1-year `24.60%`, 3-year annualised `25.55%`, 5-year annualised `10.92%`, and 10-year annualised `10.63%`.
+- Morningstar identifies its comparator as `Morningstar Developed Eurozone Target Market Exposure NR EUR`, not the official AlphaDEX strategy benchmark; no Morningstar benchmark gap is treated as manager alpha or issuer tracking evidence.
+- A current FTEU USD-LSE price/NAV pair was not disclosed in the reviewed official or secondary capture. The U.S.-listed FEUZ price/NAV is a different security and is not substituted. Official daily NAV history sufficient for maximum drawdown/recovery is also `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- Secondary USD 2021-2025 cumulative return: `(1.1259 × 0.8026 × 1.1665 × 1.0303 × 1.5798) - 1 = 71.57%`; rounded-input CAGR `(1 + 0.7157)^(1/5) - 1 = 11.40%`; population standard deviation of the five annual returns `25.31%`; up/down years `4 / 1`.
+- Cached S&P 500 Total Return common reference for 2021-2025 is cumulative `96.17%` / rounded-input CAGR `14.43%`; this is USD, dividends reinvested, and is not FTEU's strategy benchmark.
+- The 10-year field `10.63%*` and YTD `14.06%*` are kept as secondary USD observations as of `2026-08-27`; official EUR observations are not currency-converted into the USD series. No cross-currency excess-return calculation is made.
+- No official USD calendar-year table, current USD-LSE NAV/price pair, or daily NAV drawdown/recovery series was exposed. The prior annual table and current trailing metrics are retained with `*` secondary markers rather than upgraded to official issuer NAV claims.
+
+### Pre-save evidence packet and proposed durable contents
+
+- Evidence packet records ETF identity and exchange, OTC alias, ISIN, return bases, official and common benchmarks, all candidate annual/trailing/rolling claims, periods, units and currencies, metric definitions, as-of dates, source URLs, calculations, source-label reconciliation, unresolved gaps, and the complete planned contents.
+- Proposed `wiki/analysis/performance/ETF_LSE_FTEU Performance.md`: refresh frontmatter/source batch, retain the 2021-2025 USD annual table and calculations, update official Acc EUR and secondary USD current fields, update exposure/risk notes, disclose no current USD-LSE price/NAV and no daily NAV drawdown series, and preserve the canonical breadcrumb and alias tags.
+- Proposed `wiki/analysis/comparisons/Europe ETF.md`: update only the FTEU row and its explanatory note to secondary USD 10-year `10.63%*` and YTD `14.06%*` as of 2026-08-27.
+- Proposed `wiki/analysis/performance/ETF Performance Index.md`: update only the FTEU row and explanatory note with the same dated secondary metrics and gap disclosure.
+- Proposed `raw/imports/ETF_performance_sources_2026-08-29.md`: append this evidence packet, local checklist, and structured `trello_handoff`.
+- Proposed `log.md`: append one `etf-performance` workflow bullet listing the FTEU performance page, Europe region/index updates, and the scheduled-local PASS; `log.md` remains outside the scoped commit because it already contains unrelated user changes.
+
+### Local pre-save checklist
+
+- PASS: official ISIN/share-class mapping, canonical `LSE:FTEU` exchange key, OTC alias, passive equity classification, tracked index, return bases, units/currencies, periods, metric definitions, and as-of dates are recorded.
+- PASS: official EUR Acc performance and secondary USD FTEU performance are separated; no FEUZ U.S.-listed price/NAV is substituted; Morningstar's non-official comparator is not treated as the strategy benchmark; the current USD-LSE price/NAV and daily drawdown gaps are disclosed.
+- PASS: calculations reproduce secondary USD 2021-2025 cumulative/CAGR and dispersion; the cached S&P 500 TR comparison is labeled common reference only; no cross-currency calculation or unsupported official USD calendar claim is made.
+- PASS: complete proposed contents for performance, region, index, source batch, and log artifacts are specified; canonical breadcrumb, alias tags, region ownership, and source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+- verification_mode: scheduled-local
+- reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official July factsheet and current secondary USD evidence support the FTEU refresh; the scheduled-local checklist passed and currency, source-label, price/NAV, and drawdown gaps remain disclosed.
+
 ## DDLS — WisdomTree Dynamic International SmallCap Equity Fund
 
 - `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `entity_key: Cboe BZX:DDLS`; issuer WisdomTree; current official product page lists stock exchange `Cboe`; Cboe/SEC listing evidence identifies principal listing exchange `Cboe BZX`; inception `2016-01-07`; asset class `Equity`; management mode `passive-index`; tracked index `WisdomTree Dynamic International SmallCap Equity Index` (`WTISDIHD`).

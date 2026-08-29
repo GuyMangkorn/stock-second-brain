@@ -22,7 +22,7 @@ tags:
 | EUAD | Select STOXX Europe Aerospace & Defense ETF | Europe aerospace & defense thematic equity | not applicable (<10y) | not applicable | not disclosed | [[ETF_CBOE_BZX_EUAD Performance]] |
 | OPPE | WisdomTree European Opportunities Fund | Europe shareholder-yield/value and geopolitical-opportunities equity | 12.91% | 14.84% | 17.72% | [[ETF_NYSE_ARCA_OPPE Performance]] |
 | FEP | First Trust Europe AlphaDEX Fund | rules-based enhanced broad-Europe equity | 10.57% | 10.90% | 11.02% | [[ETF_NASDAQ_FEP Performance]] |
-| FTEU | First Trust Eurozone AlphaDEX UCITS ETF | Eurozone rules-based enhanced equity; input alias FTDPF | 10.75%* | 11.40%* | 12.31%* | [[ETF_LSE_FTEU Performance]] |
+| FTEU | First Trust Eurozone AlphaDEX UCITS ETF | Eurozone rules-based enhanced equity; input alias FTDPF | 10.63%* | 11.40%* | 14.06%* | [[ETF_LSE_FTEU Performance]] |
 | FEUZ | First Trust Eurozone AlphaDEX ETF | Eurozone rules-based enhanced equity; Nasdaq-listed U.S. ETF | 10.43% | 10.86% | 12.30% | [[ETF_NASDAQ_FEUZ Performance]] |
 | CEUU | iShares Core MSCI EMU UCITS ETF USD Hedged (Accumulating) | Eurozone passive, currency-hedged, accumulating equity; input alias ISVYF | not applicable (<10y) | 14.29% | 17.09% | [[ETF_EURONEXT_AMSTERDAM_CEUU Performance]] |
 | CEMU | iShares Core MSCI EMU UCITS ETF EUR (Accumulating) | Eurozone passive, accumulating equity; input alias XMTIF | 8.58%† | 11.97% | 15.77% | [[ETF_EURONEXT_AMSTERDAM_CEMU Performance]] |
@@ -115,11 +115,11 @@ FEP `10.57%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-
 rules-based enhanced index; underlying index changed on 2015-10-13 and official
 daily NAV drawdown/recovery ยังไม่ verified.
 
-FTEU `10.75%*` เป็น secondary USD 10-year annualised field ณ 2026-07-27;
+FTEU `10.63%*` เป็น secondary USD 10-year annualised field ณ 2026-08-27;
 `11.40%*` เป็น rounded-input CAGR ของ secondary USD calendar rows 2021-2025
-และ `12.31%*` เป็น secondary USD YTD ณ 2026-07-30. Official factsheet's Acc EUR
+และ `14.06%*` เป็น secondary USD YTD ณ 2026-08-27. Official factsheet's Acc EUR
 series is kept separate; `FTDPF` is retained as the input alias for official
-USD London line `LSE:FTEU`.
+USD London line `LSE:FTEU`; current USD-LSE price/NAV ยังไม่พบข้อมูลที่ยืนยันได้.
 
 FEUZ `10.43%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `10.86%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ
