@@ -266,7 +266,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_SPEU Performance]] | official 2002 / official rolling fields as of 2026-07-31; secondary annual proxy 2021-2025* | 9.65% | 10.13%* | 9.45% | 2025 +35.80%* / 2022 -15.97%* | Western Europe broad-market passive equity across market caps | country/sector/small-cap/FX-sensitive; linked benchmark change 2019-09-23; quarterly distributions; current NAV-pair and daily NAV gaps |
 | [[ETF_NYSE_ARCA_IEV Performance]] | official 2000 / official 2021-2025; rolling 10-year as of 2026-06-30 | 9.87% | 10.44% | 12.71% | 2025 +35.02% / 2022 -14.16% | developed Europe broad-market passive equity | country/sector/FX-sensitive; 13.38% 3-year standard deviation; semi-annual distributions; NAV drawdown/recovery gap |
 | [[ETF_LSE_XMED Performance]] | official share-class launch 2007 / secondary USD 2021-2025; DWS July 2026 factsheet lacks annual/current performance rows | 9.94%* | 10.57%* | 12.58%* | 2025 +35.77%* / 2022 -14.85%* | developed Europe large-/mid-cap passive accumulating equity | country/sector/FX/large-/mid-cap-sensitive; 17.17% secondary annual-return dispersion; DWS official NAV/benchmark and secondary currency-source gaps disclosed; input alias DXMEF |
-| [[ETF_NYSE_ARCA_DBEU Performance]] | official 2013 / official rolling 10Y as of 2026-06-30; secondary 2016-2025 | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | 2019 +26.80%* / 2018 -8.50%* | developed Europe large-/mid-cap passive USD-hedged equity | country/sector/FX/hedge-cost-sensitive; 11.83% secondary annual-return dispersion; official calendar/YTD gaps and NAV drawdown/recovery gap disclosed |
+| [[ETF_NYSE_ARCA_DBEU Performance]] | official 2013 / official rolling 10Y as of 2026-06-30; secondary 2016-2025 and July current fields* | 11.58% issuer rolling 10Y | 12.66%* | 12.6%* | 2019 +26.80%* / 2018 -8.50%* | developed Europe large-/mid-cap passive USD-hedged equity | country/sector/FX/hedge-cost-sensitive; 11.83% secondary annual-return dispersion; official calendar/rolling-current source gaps and NAV drawdown/recovery gap disclosed |
 | [[ETF_NYSE_ARCA_HEDJ Performance]] | official 2009 / official 2016-2024 plus 2025 calculated from official year-end observations | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | 2019 +26.99% / 2022 -10.18% | Europe dividend-weighted passive USD-hedged equity | country/sector/FX/hedge-cost/index-symbol-sensitive; 13.76% annual-return dispersion; 99.42% hedge ratio; daily NAV drawdown/recovery gap disclosed |
 | [[ETF_LSE_HEDK Performance]] | official 2016-11-01 / official 2017-2025; history under 10 years; input alias WEEUF | not applicable (<10y history) | 12.68% | 9.03% | 2019 +27.22% / 2022 -10.04% | Eurozone dividend-weighted passive USD-hedged equity; LSE:HEDK | country/sector/hedge/TER-sensitive; 14.33% annual-return dispersion; daily NAV drawdown/recovery gap disclosed |
 | [[ETF_NYSE_ARCA_EIRL Performance]] | official 2010 / official 2016-2025 | 9.94% issuer rolling 10Y | 9.39% | 15.05% | 2023 +34.06% / 2018 -20.99% | Ireland single-country passive equity | country/financials/consumer-staples/FX/liquidity-sensitive; 16.21% 3-year standard deviation; NAV drawdown/recovery gap |
@@ -362,6 +362,12 @@ KWEB ใช้ official KraneShares July month-end NAV TR rolling 10-year `0.22%
 secondary market-price proxy `*`; current drawdown proxy `-69.56%` และ worst
 drawdown `-80.92%` เป็น secondary เช่นกัน. `NYSE Arca:KWEB` ไม่รวมกับ
 `LSE:KWEB` / `KRANF` UCITS share class.
+
+DBEU official DWS Q2 factsheet ยังคงให้ canonical rolling 10-year NAV TR
+`11.58%` และ fund facts ณ 2026-06-30. Latest secondary AAII capture ให้ YTD
+`12.6%*` ณ 2026-07-31 และ market price `$54.80` ณ 2026-08-27; annual rows
+และ 2021-2025 CAGR `12.66%*` ยังคงเป็น rounded secondary NAV-return proxy,
+และ current NAV/daily NAV drawdown gaps ยังเปิดเผยแยก.
 
 ## Common Window
 

@@ -904,3 +904,83 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official KraneShares July standardized performance and Aug-28 US fund data support the KWEB refresh; scheduled-local verification passed, secondary calendar/drawdown data remain marked, and US/LSE share-class and official daily-NAV gaps are disclosed.
+
+## DBEU — Xtrackers MSCI Europe Hedged Equity ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91774fa415f5e69597f27e`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `DBEU`; canonical `entity_key: NYSE Arca:DBEU`.
+- Card was claimed and reread as `In Progress` before research. Primary region is `Europe`; the durable graph is `[[ETF Region Index]] → [[Europe ETF]] → [[ETF Performance Index]]`.
+- This refresh does not create an entity page or normalized fund table. It updates the existing DBEU performance owner, Europe navigation snapshot, master performance index, source batch and one log bullet.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| DWS official DBEU factsheet | https://etf.dws.com/download/asset/b2d0199b-0bfc-4ed0-866b-24f31967f463 | Official identity, passive objective, MSCI Europe USD-hedged benchmark, standardized NAV/market/index returns, fund facts, holdings, countries, sectors, yield and beta; Q2 factsheet as of 2026-06-30 |
+| SEC DBEU summary prospectus | https://www.sec.gov/Archives/edgar/data/1503123/000008805325000878/k100125dbeu.htm | Official NYSE Arca identity, indexing method, 80% policy and principal risks; October 2025 |
+| AAII DBEU performance page | https://www.aaii.com/etf/ticker/DBEU | Secondary rounded NAV/price trailing and annual rows, July YTD, current price/assets, portfolio and risk cross-check; data as of 2026-07-31 to 2026-08-27 where stated |
+| DWS currency-hedged ETF overview | https://etf.dws.com/en-us/etf-knowledge/focus-topics-etf-investment-strategies/currency-hedged-etfs-mitigating-currency-risks-from-international-equities/ | Official currency-hedge structure and 0.45% expense cross-reference |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_DBEU Performance.md`, `wiki/analysis/comparisons/Europe ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-08-19.md` | Prior official June fields, secondary annual rows, page structure, region ownership and unresolved source gaps |
+
+### Identity and classification evidence
+
+- DWS identifies DBEU as `Xtrackers MSCI Europe Hedged Equity ETF`, NYSE ticker `DBEU`, CUSIP `233051853`, inception `2013-09-30`, 410 holdings and net assets `US$758,183,774.79` as of 2026-06-30; gross and net expense ratio are `0.45%`.
+- Classification is `passive-index-tracking`; the SEC prospectus describes a passive/indexing approach, with at least 80% of total assets in component securities of the underlying index and representative sampling permitted where direct acquisition is not practicable.
+- Tracked index is `MSCI Europe US Dollar Hedged Index`; DWS describes one-month forward contracts that hedge the developed-Europe exposure to USD. The common comparison benchmark is S&P 500 Total Return and is not the fund's strategy benchmark.
+- Primary region is Europe and canonical tag is `geography/Europe`.
+
+### Candidate performance claims and raw observations
+
+- Official DWS Q2 standardized returns as of 2026-06-30 (NAV / market price / hedged index / parent MSCI Europe) are: 3M `11.97% / 10.67% / 11.87% / 10.93%`; 1Y `24.03% / 24.31% / 24.16% / 18.64%`; 3Y annualized `16.02% / 16.08% / 16.25% / 16.18%`; 5Y annualized `12.03% / 12.02% / 12.18% / 9.50%`; 10Y annualized `11.58% / 11.52% / 11.82% / 9.92%`; since inception annualized `9.90% / 9.92% / 10.15% / 7.11%`.
+- Official DWS facts as of 2026-06-30 include SEC 30-day yield `2.11%`, beta `0.73`, 397 index constituents across 15 countries, and 410 fund holdings. Top countries: UK `20.08%`, Switzerland `14.86%`, France `14.29%`, Germany `13.10%`, Netherlands `10.57%`, Spain `5.97%`, Italy `4.88%`, Sweden `4.57%`, Denmark `2.54%`, cash `1.94%`.
+- Official DWS sector weights as of 2026-06-30: Financials `23.71%`, Industrials `17.59%`, Health Care `12.46%`, Information Technology `9.84%`, Consumer Staples `8.29%`, Consumer Discretionary `6.42%`, Energy `5.30%`, Materials `5.11%`, Utilities `4.86%`, Communication Services `3.48%`, Real Estate `0.62%`, cash `1.94%`, other `0.37%`.
+- Official DWS top holdings as of 2026-06-30 include ASML `5.25%`, HSBC `2.24%`, Roche `1.99%`, Novartis `1.97%`, AstraZeneca `1.94%`, Nestle `1.82%`, Siemens `1.64%`, Shell `1.50%`, Banco Santander `1.36%`, and Allianz `1.24%`.
+- Latest secondary AAII trailing table as of 2026-07-31 reports NAV proxy 1M `1.0%`, 3M `7.7%`, YTD `12.6%`, 1Y `23.9%`, 3Y annualized `15.8%`, 5Y annualized `11.9%`, and 10Y annualized `11.2%`; price proxy is `0.6%`, `7.1%`, `13.0%`, `24.1%`, `15.7%`, `11.9%`, and `11.2%`, respectively.
+- The same secondary source reports market price `$54.80` as of 2026-08-27, share-class assets about `$771M`, trailing yield `1.40%`, expense ratio `0.45%`, and a 2026-07-30 portfolio capture with 424 securities, top-ten weight `20.4%`, foreign issues `96.4%`, and cash `0.8%`.
+- Secondary rounded annual NAV-return rows as of the 2026-07-31 table are unchanged: 2016 `8.10%`, 2017 `14.60%`, 2018 `-8.50%`, 2019 `26.80%`, 2020 `-0.50%`, 2021 `23.30%`, 2022 `-6.20%`, 2023 `17.00%`, 2024 `9.50%`, 2025 `22.50%`. These remain marked `*` because the current official DWS factsheet does not expose the calendar rows.
+- Cached S&P 500 Total Return common-reference rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of 2025-12-31. These are not DBEU's hedged strategy benchmark.
+
+### Calculations and reconciliation
+
+- Official DWS NAV minus MSCI Europe USD Hedged Index observations as of 2026-06-30 are 3M `+0.10 pp`, 1Y `-0.13 pp`, 3Y `-0.23 pp`, 5Y `-0.15 pp`, 10Y `-0.24 pp`, and since inception `-0.25 pp`; these are passive implementation/expense/hedging observations, not alpha.
+- Secondary 2016-2025 rows compound to `159.58%*` and rounded-input CAGR `10.01%*`; up/down years `7 / 3`; best `2019 +26.80%*`; worst `2018 -8.50%*`; population standard deviation `11.83%*`.
+- Secondary 2021-2025 rows compound to `81.51%*` and rounded-input CAGR `12.66%*`; up/down years `4 / 1`. Cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over the same window.
+- Official rolling 10-year NAV TR `11.58%` is kept separate from secondary calendar CAGR `10.01%*` and secondary July trailing 10Y `11.2%*`; they have different source ownership and dates.
+- Reconciliation: the prior durable page already used DWS official June rolling `11.58%`; this refresh adds later secondary July current/YTD fields (`12.6%*` YTD) and Aug-27 price while preserving the official June metric and facts. Current price/NAV pair remains unresolved because no same-date NAV was verified.
+
+### Source-quality choice and unresolved gaps
+
+- Official DWS is the source of truth for identity, passive USD-hedged index structure, official rolling NAV/benchmark performance, fee, holdings, country/sector weights, yield and beta. AAII is used only for later rounded July current/YTD/trailing and annual context.
+- No official DWS July month-end factsheet or official calendar/YTD table was verified in this run; secondary rows are explicitly marked `*` and do not overwrite the official June rolling field.
+- Official daily NAV history sufficient to reproduce maximum drawdown, recovery date and volatility is `ไม่พบข้อมูลที่ยืนยันได้`; AAII's secondary beta/standard deviation is retained only as a dated cross-check.
+- Current market price `$54.80` has no verified same-date NAV, so premium/discount and a current NAV/price gap are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity/exchange, CUSIP/inception, passive eligibility, tracked hedged index, USD NAV-total-return basis, common S&P reference, official and secondary candidate claims, periods, units/currency, metric definitions, separate as-of dates, source URLs/paths, calculations, source-quality selection, unresolved gaps and the complete planned file set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_DBEU Performance.md`: replace the stale June-only narrative with official DWS Q2 table, secondary July cross-check, official rolling `11.58%`, secondary YTD `12.6%*`, retained 2016-2025 and 2021-2025 proxy calculations, current secondary price/assets, USD-hedge risk, dated country/sector facts and official calendar/YTD/NAV-pair/daily-NAV gaps; preserve Europe breadcrumb and tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Europe ETF.md`: update only the DBEU row to `11.58% issuer rolling 10Y | 12.66%* | 12.6%*`; append a refresh note distinguishing official June rolling/facts from secondary July current/YTD and Aug-27 price. No new region page is required.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the DBEU coverage row to official rolling `11.58%`, secondary 2021-2025 CAGR `12.66%*`, secondary YTD `12.6%*`, best/worst proxy years and source/NAV gaps; append a current reconciliation note; leave the Common Window annual row unchanged.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one `etf-performance` bullet linking `[[ETF_NYSE_ARCA_DBEU Performance]]`, `[[Europe ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `11.58%`, secondary YTD `12.6%*`, retained secondary 2021-2025 CAGR `12.66%*`, and the official/secondary gap; preserve unrelated pre-existing log changes outside the scoped commit.
+- This source batch section itself is part of the proposed durable write and records the full evidence packet, local checklist and structured handoff.
+
+### Local pre-save checklist
+
+- PASS: official DBEU identity, NYSE Arca key, CUSIP/inception, passive/indexing eligibility, 80% policy, MSCI Europe USD-hedged tracked index, USD NAV basis, Europe region ownership and all source dates are mapped.
+- PASS: official June standardized table/facts, secondary July trailing/YTD/annual table, Aug-27 price/assets, cached S&P reference and each metric definition remain separate; secondary fields are visibly marked `*`.
+- PASS: annual/CAGR/up-down calculations, official tracking differences, source-quality choice and prior-versus-current reconciliation reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for DBEU performance, Europe region, master index, source batch and log are specified; canonical links/tags are preserved; official calendar/YTD, current NAV pair and daily NAV gaps remain disclosed; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official DWS June rolling performance/fund facts plus the latest secondary July/August observations support the DBEU refresh; scheduled-local verification passed, secondary fields remain marked, and official July/current NAV and daily-NAV gaps are disclosed.

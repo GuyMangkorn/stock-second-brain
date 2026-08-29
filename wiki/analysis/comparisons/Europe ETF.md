@@ -43,7 +43,7 @@ tags:
 | SPEU | State Street SPDR Portfolio Europe ETF | Western Europe broad-market passive equity across market caps; NYSE Arca | 9.65% | 10.13%* | 9.45% | [[ETF_NYSE_ARCA_SPEU Performance]] |
 | IEV | iShares Europe ETF | developed Europe broad-market passive equity; NYSE Arca | 9.87% | 10.44% | 12.71% | [[ETF_NYSE_ARCA_IEV Performance]] |
 | XMED | Xtrackers MSCI Europe UCITS ETF 1C | developed Europe large-/mid-cap passive accumulating equity; input alias DXMEF; USD-traded LSE line | 9.94%* | 10.57%* | 12.58%* | [[ETF_LSE_XMED Performance]] |
-| DBEU | Xtrackers MSCI Europe Hedged Equity ETF | developed Europe large-/mid-cap passive USD-hedged equity | 11.58% issuer rolling 10Y | 12.66%* | 11.50%* | [[ETF_NYSE_ARCA_DBEU Performance]] |
+| DBEU | Xtrackers MSCI Europe Hedged Equity ETF | developed Europe large-/mid-cap passive USD-hedged equity | 11.58% issuer rolling 10Y | 12.66%* | 12.6%* | [[ETF_NYSE_ARCA_DBEU Performance]] |
 | HEDJ | WisdomTree Europe Hedged Equity Fund | Europe dividend-weighted passive USD-hedged equity; NYSE Arca | 10.73% issuer rolling 10Y | 12.82%‡ | 9.15% | [[ETF_NYSE_ARCA_HEDJ Performance]] |
 | HEDK | WisdomTree Europe Equity UCITS ETF - USD Hedged Acc | Eurozone dividend-weighted passive USD-hedged equity; input alias WEEUF; LSE | not applicable (<10y) | 12.68% | 9.03% | [[ETF_LSE_HEDK Performance]] |
 
@@ -207,6 +207,13 @@ benchmark, passive method, rolling 10-year NAV TR `11.58%` และ current fun
 fields ณ `2026-06-30`. Annual 2016-2025 rows และ YTD `11.50%*` เป็น secondary
 rounded NAV-return proxy เพราะ annual/YTD table ไม่ได้ปรากฏใน issuer capture;
 daily NAV drawdown/recovery ยังไม่ verified.
+
+DBEU latest secondary AAII capture เพิ่ม current NAV-return proxy YTD `12.6%*`,
+1Y `23.9%*`, 3Y `15.8%*`, 5Y `11.9%*` และ trailing 10Y `11.2%*` ณ
+2026-07-31; secondary market price คือ `$54.80` ณ 2026-08-27. Official DWS
+rolling 10-year `11.58%` และ fund facts `ณ 2026-06-30` ยังคงเป็น canonical
+fields. Current NAV/price pair และ official daily NAV drawdown/recovery ยังไม่
+พบข้อมูลที่ยืนยันได้.
 
 HEDJ ใช้ official WisdomTree product page/factsheet และ SEC prospectus สำหรับ
 identity, NYSE Arca listing, passive index method, `10.73%` issuer rolling
