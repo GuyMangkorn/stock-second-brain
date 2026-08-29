@@ -28,6 +28,7 @@ tags:
 | NFTY | First Trust India Nifty 50 Equal Weight ETF | India large-cap equal-weight equity / index-tracking | 7.62% | 10.83% | -5.59% | [[ETF_NASDAQ_NFTY Performance]] |
 | INQQ | INQQ The India Internet ETF | India internet/e-commerce equity / index-tracking | not applicable (<10y history) | not applicable (calendar rows unavailable) | -26.17% | [[ETF_NYSE_ARCA_INQQ Performance]] |
 | GLIN | VanEck India Growth Leaders ETF | India equity / index-tracking factor | 1.92% rolling / 1.61% calendar | 8.55% | -4.15% | [[ETF_NYSE_ARCA_GLIN Performance]] |
+| INDQ | Pacer ActiveAlpha India Quality ETF | India equity / index-tracking factor | not applicable (<10y history) | not applicable (inception 2026-03-31) | not disclosed | [[ETF_NASDAQ_INDQ Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -49,6 +50,12 @@ product table reports the complete 2021-2025 calendar rows and YTD `-8.68%`
 ณ 2026-06-30; the two as-of dates are kept separate. Latest verified NAV and
 market price are `US$60.84` and `US$61.37` ณ 2026-07-28. Daily NAV
 drawdown/recovery ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
+
+INDQ official Pacer product/factsheet recheck confirms passive India
+quality/value/momentum exposure and inception `2026-03-31`. Fund and index NAV
+performance fields remain `N/A`, while current NAV, available-period NAV TR and
+YTD are not disclosed; no secondary proxy is used. Daily NAV drawdown/recovery
+ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## 2026-08-17 Verified Refresh
 

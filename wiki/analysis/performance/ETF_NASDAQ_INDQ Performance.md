@@ -7,10 +7,10 @@ exchange: Nasdaq
 fund: Pacer ActiveAlpha India Quality ETF
 tracked_index: ActiveAlpha India Quality Index
 benchmark: MSCI India Index
-updated: 2026-07-24
+updated: 2026-08-29
 performance_as_of: 2026-03-31
 current_ytd_as_of: not disclosed
-source_batch: raw/imports/ETF_performance_sources_2026-07-24.md
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -27,9 +27,10 @@ tags:
 INDQ เป็น passive, rules-based, index-tracking India equity ETF ที่ติดตาม
 `ActiveAlpha India Quality Index` และใช้ quality, value และ momentum screens.
 กองเริ่มมีผลดำเนินงานเมื่อ `2026-03-31` จึงยังไม่มี 10-year history และ
-`10-year NAV TR unavailable`. Official Pacer performance table และ factsheet
-ที่ตรวจสอบได้ยังแสดง NAV TR เป็น `N/A`; จึงยังไม่สามารถเปิดเผย available-period
-NAV TR, CAGR หรือ current YTD ที่ยืนยันได้ และไม่สร้าง proxy.
+`10-year NAV TR unavailable`. การ recheck วันที่ `2026-08-29` ยังพบว่า official
+Pacer performance table และ factsheet แสดง NAV TR เป็น `N/A` ขณะที่ official
+quote/performance fields ที่เปิดดูได้ยังว่าง; จึงยังไม่สามารถเปิดเผย
+available-period NAV TR, CAGR หรือ current YTD ที่ยืนยันได้ และไม่สร้าง proxy.
 
 ## Performance check
 
@@ -41,8 +42,13 @@ NAV TR, CAGR หรือ current YTD ที่ยืนยันได้ แ�
 - Issuer benchmark: `MSCI India Index`
 - 10-year NAV TR: unavailable because inception is `2026-03-31`.
 - Available-period NAV TR: `not disclosed` in the official Pacer page/factsheet reviewed; the table is explicitly `N/A`.
-- Current YTD: `not disclosed`; the reviewed official performance snapshot is dated `2026-03-31` and does not provide a numeric YTD return.
+- Current YTD: `not disclosed`; the reviewed official performance snapshot is dated `2026-03-31` and does not provide a numeric YTD return. The indexed official product-page fields remain blank (`as of --`), and the official Nasdaq quote page reports that data is currently unavailable.
 - Market-price return is not substituted for NAV Total Return.
+
+The direct Pacer product and factsheet captures returned an access restriction in
+this review, so the official indexed product extract, official factsheet extract,
+SEC filings and Nasdaq quote page are retained as evidence. No secondary quote or
+return proxy is substituted for the missing official fund series.
 
 ### Available-period coverage
 
@@ -88,14 +94,18 @@ INDQ มีความเสี่ยงจาก India single-country exposure
 factor concentration และ small-/mid-cap liquidity. Strategy เป็น rules-based
 แต่ไม่ใช่ market-cap broad index: ActiveAlpha คัดเลือกประมาณ 20-30 บริษัทจาก
 universe ของ Nifty 500 และ Nifty Microcap 250 ด้วย composite quality, value และ
-momentum score และ rebalance/reconstitute รายไตรมาส. Because official NAV TR
-ยังเป็น `N/A`, ยังประเมิน tracking, drawdown, recovery หรือ realized factor
-behavior จากผลตอบแทนจริงไม่ได้.
+momentum score และ rebalance/reconstitute รายไตรมาส. Current holdings และ
+realized risk statistics ยังไม่ถูกเปิดเผยใน official captures ที่ตรวจสอบได้.
+Because official NAV TR ยังเป็น `N/A`, ยังประเมิน tracking, drawdown, recovery
+หรือ realized factor behavior จากผลตอบแทนจริงไม่ได้.
 
 ## Sources
 
 - [Official Pacer INDQ product/performance page](https://www.paceretfs.com/products/indq)
 - [Official Pacer INDQ factsheet](https://www.paceretfs.com/media/indq.pdf)
 - [Official Pacer INDQ documents](https://docs.paceretfs.com/indq)
+- [Official Pacer INDQ summary prospectus](https://regulated-documents.saytechnologies.com/prospectuses/7da4597a-2a8f-4dd7-836c-bce3400f9869-69374H196.pdf)
+- [Official Pacer INDQ launch release](https://www.paceretfs.com/media/Pacer_ETFs_INDQ_Launch_Press_Release.pdf)
 - [SEC INDQ statement of additional information](https://www.sec.gov/Archives/edgar/data/1616668/000089418926007588/paceractivealphaindiaquali.htm)
+- [Official Nasdaq INDQ quote page](https://www.nasdaq.com/market-activity/etf/indq)
 - [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); complete-year rows use the cached convention documented in [[ETF_performance_sources_2026-07-24]].

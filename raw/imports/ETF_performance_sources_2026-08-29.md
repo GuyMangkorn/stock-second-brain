@@ -2281,3 +2281,74 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official WisdomTree current product data and historical performance sources support the OPPE refresh; scheduled-local verification passed, separate as-of windows and the 2025 strategy transition are disclosed, and the daily NAV drawdown/recovery gap remains explicit.
+
+## INDQ — Pacer ActiveAlpha India Quality ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177857eb4d73991a4b62a`; input ticker `INDQ`; canonical `entity_key: Nasdaq:INDQ`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is India; the durable graph is `[[ETF Region Index]] → [[India ETF]] → [[ETF Performance Index]]`.
+- This recheck updates the existing INDQ performance owner, India navigation snapshot/note, ETF Performance Index refresh section, this source batch and one log bullet. No new ETF entity or region page is required.
+
+### Source map and classification
+
+| Source | URL | Use and as-of date |
+|---|---|---|
+| Official Pacer INDQ product/performance page | https://www.paceretfs.com/products/indq | Canonical identity, Nasdaq listing, fund/index, inception `2026-03-31`, passive rules-based strategy, expense ratio `0.88%`, and current/performance field availability; direct capture returned an access restriction, while the official indexed extract showed quote fields `as of --` and blank performance values |
+| Official Pacer INDQ factsheet | https://www.paceretfs.com/media/indq.pdf | Fund/index identity, NAV Total Return convention, expense, inception, benchmark and performance table; data as of `2026-03-31`, with INDQ NAV, market-price and ActiveAlpha Index performance fields shown as `N/A` |
+| Official Pacer INDQ documents | https://docs.paceretfs.com/indq | Official document hub and risk disclosure; reviewed during the current source pass |
+| Official Pacer INDQ summary prospectus | https://regulated-documents.saytechnologies.com/prospectuses/7da4597a-2a8f-4dd7-836c-bce3400f9869-69374H196.pdf | Formal objective, fees, listing, ticker, index and short-history disclosure; dated `2025-12-22` in the official document record |
+| Official Pacer INDQ launch release | https://www.paceretfs.com/media/Pacer_ETFs_INDQ_Launch_Press_Release.pdf | Strategy context: Indian quality/value/momentum selection from the Nifty 500 and Nifty Microcap 250 universe; launch announcement `2026-04-01` |
+| SEC INDQ summary prospectus | https://www.sec.gov/Archives/edgar/data/1616668/000089418925017392/ck0001616668-20251222.htm | Objective, index methodology and portfolio-selection details; current prospectus dated `2025-12-22` |
+| SEC INDQ statement of additional information | https://www.sec.gov/Archives/edgar/data/1616668/000089418926007588/paceractivealphaindiaquali.htm | Current identity/listing and confirmation that the fund seeks total-return performance before fees/expenses; amended `2026-03-05` |
+| Official Nasdaq INDQ quote page | https://www.nasdaq.com/market-activity/etf/indq | Current exchange-side corroboration; reviewed result says `Data is currently not available` |
+| Cached S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; no INDQ comparison is calculated because the fund has no disclosed return rows |
+| Existing vault context | `wiki/analysis/performance/ETF_NASDAQ_INDQ Performance.md`, `wiki/analysis/comparisons/India ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior INDQ owner and India navigation; current recheck preserves the missing-return gap and updates the source batch/timestamps |
+
+- Official Pacer and SEC materials classify INDQ as a passive, rules-based ETF seeking to track the total return performance before fees and expenses of the `ActiveAlpha India Quality Index`; NAV returns assume distributions are reinvested. This supports `passive-index` classification.
+- The strategy starts from the Nifty 500 and Nifty Microcap 250 universe, applies eligibility/governance, value and risk-adjusted momentum filters, and narrows the portfolio to approximately 20-30 Indian companies. This is a factor-concentrated India equity exposure, not a broad market-cap index.
+- The fund's official inception is `2026-03-31`, so 10-year NAV TR is not applicable. The official page/factsheet and Nasdaq capture do not expose a numeric current or available-period fund return.
+
+### Candidate performance claims and raw observations
+
+- Official factsheet data as of `2026-03-31` shows INDQ fund NAV return, market-price return and ActiveAlpha Index return fields as `N/A`; the factsheet states that returns for periods under one year are cumulative and that NAV/market returns assume dividends and capital gains are reinvested.
+- The official Pacer product-page extract labels current quote fields `as of --` and its performance section `as of 03/31/2026` without numeric INDQ returns. The direct product-page capture returned an access restriction during this review; this is recorded as a source-access limitation, not filled with a secondary quote.
+- Official Pacer search/document extracts identify ticker `INDQ`, Nasdaq listing, ISIN `US69374H1968`, CUSIP `69374H196`, inception `2026-03-31`, total expenses `0.88%`, tracked index `ActiveAlpha India Quality Index`, benchmark `MSCI India Index`, and intraday NAV symbol `INDQIV`.
+- The official Nasdaq quote page reviewed for current corroboration reports `Data is currently not available`. Current NAV, current YTD, available-period NAV TR, holdings snapshot and realized risk statistics are therefore `not disclosed` in the reviewed official evidence.
+- The factsheet includes a separate MSCI India benchmark section, but no benchmark value is substituted for INDQ's missing fund return. No market-price or secondary total-return proxy is used.
+
+### Calculations and reconciliation
+
+- `10-year NAV TR`: not applicable because inception is `2026-03-31`.
+- Available-period NAV TR cannot be calculated: the official start/end return endpoints are not disclosed and the official performance fields are `N/A`. Therefore cumulative return, CAGR, up/down years, best/worst year, tracking difference, drawdown and recovery are all `not disclosed` or `not calculable`.
+- Current YTD is `not disclosed`; no point-in-time NAV or market-price value is used to backfill it. No S&P 500 comparison is calculated for INDQ because there is no verified INDQ return row to compare against the cached USD reference.
+- The only usable numeric inputs in this review are instrument metadata such as the `0.88%` expense ratio; no return arithmetic is performed. Units are percentages where applicable, currency is USD for the quoted share-class identifiers, and all dates remain source-specific.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The official Pacer factsheet is the source of truth for the latest readable fund performance table, but its INDQ NAV/market/index fields are `N/A` as of `2026-03-31`. The official product-page extract and Nasdaq page independently leave current quote/performance data blank or unavailable.
+- The official SEC filings are used for objective, listing, index and strategy details. A direct Pacer access restriction is disclosed rather than worked around with lower-priority secondary data. The MSCI India benchmark rows in the factsheet remain separate from INDQ fund performance.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NASDAQ_INDQ Performance.md`: update frontmatter/source batch and recheck date, preserve inception/under-10-year status, record official N/A/blank current-return fields, add the source-access limitation, keep no-proxy policy, retain India breadcrumb and source links.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/India ETF.md`: add INDQ to the current performance snapshot and add a dated recheck note with the inception and not-disclosed return gap; preserve the historical coverage-addition row.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: append the INDQ status to the `2026-08-29 Performance Refresh` section while retaining the current coverage row's not-applicable/not-disclosed fields.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this complete source map, observations, calculations, reconciliation, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking INDQ performance, India navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `Nasdaq:INDQ` identity, fund name, inception, passive/index-tracking equity eligibility, tracked index, benchmark, expense ratio, India region and official listing are source-mapped.
+- PASS: NAV Total Return, market-price return, index return and benchmark fields are kept separate; the factsheet's `N/A` and the product/Nasdaq blank/unavailable fields are not converted into zeroes or proxy returns; USD identifiers, percentage units and source-specific as-of dates are retained.
+- PASS: 10-year ineligibility, missing available-period endpoints, no-CAGR/no-up-down conclusion, no-current-YTD conclusion, current-data access limitation and no-secondary-proxy choice reconcile to the proposed owner page and index/region notes.
+- PASS: complete proposed contents for performance, India navigation, ETF Performance Index, source batch and log are specified; breadcrumbs/source links resolve; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Pacer, SEC and Nasdaq evidence confirm INDQ identity and passive India factor exposure while official fund/index performance remains N/A or unavailable; scheduled-local verification passed, no return or proxy was inferred, and the under-10-year/current-data gaps are explicitly preserved.
