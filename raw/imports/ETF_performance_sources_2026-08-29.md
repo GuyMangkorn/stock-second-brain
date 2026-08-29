@@ -2607,3 +2607,61 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Schwab and SEC sources confirm SCHF as a passive NYSE Arca developed-markets ETF with official rolling/YTD evidence; annual rows are explicitly marked as a secondary proxy, scheduled-local verification passed, and NAV/market-price plus raw-endpoint and daily-drawdown gaps remain disclosed.
+
+## IDEV — iShares Core MSCI International Developed Markets ETF
+
+### Workflow and identity
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a92438d8363ee4793587654`; input ticker `IDEV`; canonical `entity_key: NYSE Arca:IDEV`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is International; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`.
+- This run creates the IDEV performance owner and adds the corresponding International navigation, ETF Performance Index coverage/refresh entry, this source batch and one log bullet. No entity page was found or created.
+
+### Evidence packet
+
+| Source | URL / path | Use and as-of handling |
+|---|---|---|
+| Official iShares IDEV product page | https://www.ishares.com/us/products/286762/ishares-core-msci-international-developed-markets-etf | Identity, NYSE Arca, inception `2017-03-21`, MSCI World ex USA IMI Index (Net), official 2021-2025 calendar NAV rows, official NAV TR YTD `14.77%` as of `2026-08-27`, current NAV/price/assets/holdings/valuation and risk fields through `2026-08-28` |
+| Official iShares IDEV fact sheet | https://www.ishares.com/us/literature/fact-sheet/idev-ishares-core-msci-international-developed-markets-etf-fund-fact-sheet-en-us.pdf | Fund objective and performance-document context; current product page is used for the fresher official fields |
+| SEC IDEV prospectus | https://www.sec.gov/Archives/edgar/data/1317146/000113322826007243/mmlsif-efp24450_497.htm | Developed-markets objective, MSCI World ex USA Investable Market Index strategy, country/sector scope and risks |
+| FinanceCharts IDEV performance | https://www.financecharts.com/etfs/IDEV/performance | Secondary dividend-reinvested rows for 2018-2020 only, captured 2026-08-29; marked `*` and not mixed into official 2021-2025 calculations |
+| S&P 500 Total Return cache | Official S&P source references retained by `check-etf-performance` | USD dividends-reinvested common reference for the official 2021-2025 comparison; no new search needed under cached convention |
+| Existing vault context | `index.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Routing/navigation context; no existing IDEV performance owner or entity page was present |
+
+### Observations, calculations, and reconciliation
+
+- iShares and SEC classify IDEV as a passive, index-tracking equity ETF seeking to track the `MSCI World ex USA IMI Index (Net)` across large-, mid- and small-cap developed markets outside the United States. Canonical exchange is `NYSE Arca`; inception `2017-03-21` means the fund is under 10 years old.
+- Official current page fields are kept separate by date: NAV `USD 92.70`, closing price `USD 92.89`, net assets `USD 32,745,724,415`, premium/discount `0.21` and shares outstanding `353,250,000` as of `2026-08-28`; holdings `2,312` as of `2026-08-27`; P/E `19.44x` and P/B `2.32x` as of `2026-08-27`; standard deviation `12.92%`, SEC yield `2.26%`, trailing yield `3.14%` as of `2026-07-31`; expense `0.04%`; distribution frequency semi-annual.
+- Official iShares calendar rows are available for 2021-2025: `2021 12.72%`, `2022 -14.94%`, `2023 17.28%`, `2024 4.49%`, `2025 32.59%`. Official 2021-2025 compound return is `55.79%` and rounded-input CAGR is `9.27%` using `(Π(1 + annual NAV TR))^(1/5) - 1`; there are `4` positive and `1` negative years, best 2025, worst 2022.
+- Official current NAV TR YTD is `14.77%` as of `2026-08-27`; official 5-year annualized NAV TR is `9.15%` as of `2026-06-30`. Official rolling 10-year NAV TR is not applicable because inception is under 10 years.
+- The secondary context rows are `2018 -14.10%*`, `2019 23.13%*`, and `2020 8.32%*`. They are dividend-reinvested total-return observations and are not presented as official iShares NAV rows. No 2016-2017 values are invented; 2017 is a partial inception year.
+- For the official common 2021-2025 window, the cached S&P 500 TR compound is `96.17%` and CAGR is `14.43%`. IDEV compound is `55.79%` and CAGR `9.27%`; the cumulative gap is `40.38 percentage points` and CAGR gap `5.15 pp`. IDEV beat the S&P 500 in 2025 only (`1 / 5` official complete years); this is not manager-skill evidence.
+- Official daily NAV Total Return history sufficient for maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no market-price or secondary drawdown proxy is substituted. The product page notes systematic fair value can create timing differences versus the benchmark.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The iShares product page is the source of truth for identity, current official NAV/YTD, official 2021-2025 calendar rows and current fund fields; the SEC prospectus is the source for strategy and risks. FinanceCharts is retained only for 2018-2020 context rows and is marked `*`.
+- The cached S&P 500 table is used only for its exact 2021-2025 USD total-return convention. It is not substituted for IDEV's `MSCI World ex USA IMI Index (Net)`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_IDEV Performance.md`: complete IDEV owner page with official 2021-2025 rows, secondary context rows, under-10-year treatment, current YTD, risk gaps, sources, International breadcrumb and canonical geography tag.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: add the IDEV row and dated explanatory note; keep the region page as navigation-only.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: add IDEV to the coverage table and `2026-08-29 Performance Refresh`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking IDEV performance, International navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:IDEV` identity, fund name, inception, passive/index-tracking equity eligibility, MSCI World ex USA IMI benchmark, expense ratio, International region and official source dates are mapped.
+- PASS: official 2021-2025 NAV rows, secondary 2018-2020 context rows, current NAV/YTD, market price, assets, holdings, valuation, standard deviation, fee and distribution fields remain separate; no 2016-2017 value or 10-year return is invented.
+- PASS: official 2021-2025 compound `55.79%`, CAGR `9.27%`, S&P cache comparison, `4/1` up/down count, inception/under-10-year status and daily-NAV drawdown gap reconcile to the proposed owner page and index/region notes.
+- PASS: all planned links and breadcrumbs resolve; the performance page owns the numbers; the region page remains static; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official iShares and SEC sources confirm IDEV as a passive NYSE Arca developed-markets ETF with official 2021-2025 NAV rows and current-YTD evidence; under-10-year and secondary-context gaps are explicit, scheduled-local verification passed, and daily-drawdown gaps remain disclosed.

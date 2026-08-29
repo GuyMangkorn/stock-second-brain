@@ -34,6 +34,7 @@ tags:
 | VEA | Vanguard FTSE Developed Markets ETF | developed markets ex-U.S. large-/mid-/small-cap | 10.52% | 9.14% | 18.46% | [[ETF_NYSE_ARCA_VEA Performance]] |
 | SPDW | State Street SPDR Portfolio Developed World ex-US ETF | developed markets ex-U.S. broad equity | 9.88% | 9.01%* | 14.69% | [[ETF_NYSE_ARCA_SPDW Performance]] |
 | SCHF | Schwab International Equity ETF | developed markets ex-U.S. large-/mid-cap | 10.11% | 9.31%* | 15.26% | [[ETF_NYSE_ARCA_SCHF Performance]] |
+| IDEV | iShares Core MSCI International Developed Markets ETF | developed markets ex-U.S. large-/mid-/small-cap | not applicable (<10y) | 9.27% | 14.77% | [[ETF_NYSE_ARCA_IDEV Performance]] |
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
@@ -97,6 +98,11 @@ SCHF ใช้ official Schwab rolling 10-year NAV TR `10.11%` และ current
 `9.31%*` เป็น secondary dividend-reinvested total-return proxy; official annual
 rows ใน reviewed capture ไม่ readable เป็นชุดที่ยืนยันได้ และ daily NAV
 drawdown/recovery ยังไม่ verified.
+
+IDEV มี official inception 2017-03-21 จึงยังไม่ครบ 10-year history; official
+2021-2025 NAV rows ให้ CAGR `9.27%` และ current NAV TR YTD `14.77%` ณ 2026-08-27.
+Rows 2018-2020 เป็น secondary context proxy* และไม่มีการเติม 2016-2017 หรือ
+คำนวณ mixed-source 2018-2025 CAGR; daily NAV drawdown/recovery ยังไม่ verified.
 
 ## 2026-08-29 Verified Refresh
 
