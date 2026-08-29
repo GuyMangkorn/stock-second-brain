@@ -1694,3 +1694,84 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street July performance and August-27 fund-fact evidence support the SLYV refresh; scheduled-local verification passed, official/secondary annual and current as-of differences are disclosed, and official daily-NAV drawdown data remains unavailable.
+
+## VIOG — Vanguard S&P Small-Cap 600 Growth ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917773d3aa1eb451e4e5dc`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `VIOG`; canonical `entity_key: NYSE Arca:VIOG`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is USA; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing VIOG performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Vanguard advisor VIOG page | https://advisors.vanguard.com/investments/products/viog/vanguard-sp-small-cap-600-growth-etf | Official fund identity, tracked index, current NAV TR YTD and standardized performance table; current YTD `23.25%` as of 2026-08-26 and table through 2026-07-31 |
+| Vanguard VIOG investor page | https://investor.vanguard.com/investment-products/etfs/profile/viog | Official product context and issuer identity; dynamic fields cross-checked during research |
+| Vanguard ETF fund list | https://workplace.vanguard.com/fund-list/?filters=etf | Official distributor cross-check; a separate July YTD snippet displayed `25.41%`, which conflicts with the VIOG-specific advisor table and is retained as an unresolved source conflict |
+| Vanguard VIOG fact sheet | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3347.pdf | Official passive/full-replication approach, return basis, inception, expense ratio, exchange, holdings, standard deviation, turnover, sector snapshot and NAV/index performance; factsheet dated 2026-06-30 |
+| Vanguard S&P ETF prospectus | https://fund-docs.vanguard.com/p3340.pdf | Official strategy/risk context and VIOG annual NAV total-return rows through 2024 |
+| Schwab VIOG performance page | https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=viog | Official distributor cross-check for price and July rolling/YTD fields; price `149.14` as of 2026-08-26 and rounded July performance fields |
+| Yahoo Finance VIOG performance history | https://uk.finance.yahoo.com/quote/VIOG/performance/ | Secondary cross-check for the complete-year 2025 total-return row |
+| ETFReplay VIOG return table | https://www.etfreplay.com/etf/viog | Secondary corroboration for the 2025 complete-year total-return row `5.40%` |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31 |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_VIOG Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, prior dated source batch | Prior VIOG page, USA ownership, official 2016-2024 rows, secondary 2025 row, calculations and disclosed gaps; current official Vanguard fields are refreshed |
+
+### Identity and classification evidence
+
+- Vanguard identifies VIOG as `Vanguard S&P Small-Cap 600 Growth ETF`, ticker `VIOG`, listed on NYSE Arca, with inception `2010-09-07`, USD base currency, quarterly distributions and expense ratio `0.10%`.
+- VIOG is a passive/index-tracking U.S. small-cap growth equity ETF using full replication. The tracked issuer benchmark is the `S&P SmallCap 600 Growth Index`; S&P 500 TR remains a common large-cap reference only, not VIOG's strategy benchmark.
+- The official advisor page displayed an erroneous future inception metadata value, while the factsheet and prospectus corroborate `2010-09-07`; the corroborated date is used.
+- Primary region is USA and the canonical tag is `geography/United-States`.
+
+### Candidate performance claims and raw observations
+
+- Official Vanguard advisor page current field as of `2026-08-26`: NAV total-return YTD `23.25%`. The same page's standardized table as of `2026-07-31` reports NAV `-3.28%` 1M, `22.82%` YTD, `30.32%` 1Y, `13.80%` 3Y annualized, `6.54%` 5Y, `10.98%` 10Y and `12.92%` since inception; its benchmark cells are blank in the reviewed capture.
+- Official Vanguard factsheet as of `2026-06-30` reports NAV `23.62%` YTD, `26.98%` 1Y, `35.51%` 3Y, `16.96%` 5Y, `11.89%` 10Y and `13.23%` since inception. The linked-index fields are `23.66%`, `27.05%`, `35.62%`, `17.10%`, `12.05%` and `13.41%`, respectively; market-value fields are `23.45%`, `26.92%`, `35.27%`, `16.94%`, `7.22%`, `11.89%` and `13.22%`.
+- Official fund facts include `348` holdings, median market cap `$5.0B`, P/E `22.6`, P/B `3.4`, earnings growth `14.0%`, turnover `47.6%` and standard deviation `19.41%` as of 2026-06-30; net assets were `$1,087M` at that date and approximately `$1.1B` on the July advisor snapshot. The advisor page also reports a `0.91%` dividend yield and `0.000%` 30-day bid/ask spread as of 2026-08-26.
+- Schwab's official distributor page independently rounds July VIOG NAV/market YTD to `22.8%`/`22.7%`, 1Y `30.3%`, 3Y `13.8%`, 5Y `6.5%` and since inception `12.9%`; it reports a market close of `$149.14` as of 2026-08-26. These are cross-checks, not replacements for Vanguard's issuer fields.
+- Official Vanguard annual NAV rows are available through 2024: 2016 `22.01%`, 2017 `14.58%`, 2018 `-4.18%`, 2019 `20.95%`, 2020 `19.48%`, 2021 `22.46%`, 2022 `-21.22%`, 2023 `16.95%` and 2024 `9.44%`. Secondary standardized total-return data supplies 2025 `5.40%*` to complete the comparison window.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%` and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- The displayed VIOG rows compound to `151.94%` over 2016-2025; rounded-input CAGR is `(1 + 1.5194)^(1/10) - 1 = 9.68%`. The 2021-2025 rows compound to `30.14%`, with rounded-input CAGR `5.41%`; both include the secondary 2025 row and retain that caveat.
+- Cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over 2016-2025 and `96.17%` / CAGR `14.43%` over 2021-2025. The common-reference CAGR differences are `-5.14 pp` and `-9.03 pp`; these are not alpha and S&P 500 TR is not VIOG's strategy benchmark.
+- Official June factsheet fund-minus-linked-index differences are `-0.04 pp` YTD, `-0.07 pp` 1Y, `-0.11 pp` 3Y, `-0.14 pp` 5Y, `-0.16 pp` 10Y and `-0.18 pp` since inception. These reflect fees and implementation/timing effects, not manager skill.
+- Up/down years are `8 / 2`; best row is 2021 `+22.46%`, worst is 2022 `-21.22%`. Official daily-NAV volatility, maximum drawdown and recovery dates are not disclosed in the reviewed source set.
+
+### Source-quality choice and unresolved gaps
+
+- Vanguard issuer materials and the prospectus are the sources of truth for identity, passive classification, tracked index, fee, official standardized performance and risk framing. Schwab, Yahoo Finance and ETFReplay are cross-checks only; the 2025 calendar row remains marked `*`.
+- Current official YTD fields are dated 2026-08-26 (`23.25%`), 2026-07-31 (`22.82%`) and 2026-06-30 (`23.62%`); they are separate windows, and the latest dated VIOG-specific advisor field is used. The separate Vanguard workplace fund-list snippet showing July `25.41%` conflicts with the advisor table; it is not used without a resolved field mapping.
+- The advisor page's future inception metadata is rejected in favor of the corroborated 2010-09-07 factsheet/prospectus date. Its July benchmark cells are blank, so June factsheet index fields are used for the available fund-index reconciliation.
+- Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no numeric secondary drawdown proxy is saved. Point-in-time price, AUM, holdings, yield, risk and performance retain separate as-of dates.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), issuer and common benchmarks, candidate claims and periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_VIOG Performance.md`: refresh frontmatter to 2026-08-29, use the official current YTD and July standardized NAV fields, preserve official 2016-2024 plus secondary 2025 annual rows, add June fund/index reconciliation and current quote cross-check, update risk/source conflict notes and preserve the USA breadcrumb/tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update VIOG to official rolling `10.98%`, rounded-input 2021-2025 CAGR `5.41%`, and current official YTD `23.25%`, with the separate July/current source-as-of note.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the VIOG coverage row, annual summary linkage and 2026-08-29 refresh section to the latest official fields and disclosed source conflicts/gaps.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_VIOG Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `10.98%`, current official YTD `23.25%`, rounded-input 2021-2025 CAGR `5.41%`, and preserved source/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and USA region ownership are source-mapped; the conflicting workplace inception/July fields are explicitly disclosed.
+- PASS: official August-26 current YTD, July standardized NAV fields, June NAV/index reconciliation, fund facts, quote cross-check, annual rows, secondary 2025 row, cached S&P rows and metric definitions retain separate sources and as-of dates.
+- PASS: annual/CAGR/up-down calculations, official fund-index differences, current-YTD reconciliation, common-benchmark context and daily-NAV gap reproduce the proposed values; no secondary result is relabelled official and no alpha claim is made.
+- PASS: complete proposed contents for VIOG performance, USA region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard current and July performance plus June factsheet evidence support the VIOG refresh; scheduled-local verification passed, the workplace July-field conflict and separate as-of dates are disclosed, and official daily-NAV drawdown data remains unavailable.
