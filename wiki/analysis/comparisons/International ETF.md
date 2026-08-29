@@ -28,7 +28,7 @@ tags:
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
 | PID | Invesco International Dividend Achievers ETF | international dividend achievers | 8.81% | 11.28% | 2.05% | [[ETF_NASDAQ_PID Performance]] |
-| VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.13% | 5.46% | 4.64% | [[ETF_NASDAQ_VIGI Performance]] |
+| VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.01% | 5.46% | 9.18% | [[ETF_NASDAQ_VIGI Performance]] |
 | VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 7.42% | 6.45% | 10.86% | [[ETF_NYSE_ARCA_VSS Performance]] |
 | SCHC | Schwab International Small-Cap Equity ETF | developed international ex-U.S. small-cap | 8.23% | 7.10% | 6.15% | [[ETF_NYSE_ARCA_SCHC Performance]] |
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
@@ -70,6 +70,18 @@ secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใ�
 จึงไม่ applicable. DFIS `14.18%*` เป็น secondary market-price + cash-distribution
 proxy ณ 2026-08-12 ไม่ใช่ official NAV TR; official complete annual rows คือ
 2023-2025 และกองทุนเป็น active systematic long-only small-cap.
+
+## 2026-08-29 Verified Refresh
+
+VIGI ใช้ official Vanguard standardized NAV Total Return ณ 2026-07-31 ที่
+`8.01%` annualized สำหรับ rolling 10-year, `15.69%` สำหรับ 1-year, `10.58%`
+สำหรับ 3-year และ `5.32%` สำหรับ 5-year; current official NAV TR YTD อยู่ที่
+`9.18%` ณ 2026-08-26. Expense ratio อยู่ที่ `0.07%`, holdings `341` และ ETF net
+assets `US$9.1B` ณ 2026-07-31. ตัวเลข `8.01%` เป็น issuer rolling field ไม่ใช่
+calendar-row CAGR `8.95%` ที่คำนวณจาก annual rows 2017-2025. Current official
+NAV/market-price pair ยัง `ไม่พบข้อมูลที่ยืนยันได้`; secondary price และ
+PortfoliosLab drawdown จึงไม่ถูกใช้สร้าง premium/discount หรือ official NAV
+drawdown claim.
 
 ISACF เป็น input alias ของ official USD London Stock Exchange line `LSE:ISAC`
 (ISIN `IE00B6R52259`) สำหรับ iShares MSCI ACWI UCITS ETF (USD Accumulating).

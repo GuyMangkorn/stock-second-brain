@@ -69,7 +69,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 |---|---|---:|---:|---:|---|---|---|
 | [[ETF_NYSE_ARCA_DGRO Performance]] | official 2016-2025 | 13.38% | 11.69% | 15.25% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
 | [[ETF_AMEX_VIG Performance]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
-| [[ETF_NASDAQ_VIGI Performance]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
+| [[ETF_NASDAQ_VIGI Performance]] | 2016† / official 2017-2025; rolling 10-year as of 2026-07-31 | 8.01% | 5.46% | 9.18% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive; 12.05% 3-year standard deviation; official daily NAV drawdown gap |
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025; rolling 10-year as of 2026-07-31 | 7.42% | 6.45% | 10.86% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive; 14.43% 3-year standard deviation |
 | [[ETF_NYSE_ARCA_SCHC Performance]] | official 2010 / official 2016-2025 | 8.23% | 7.10% | 6.15% | 2025 +37.73% / 2022 -21.92% | developed international ex-U.S. small-cap | small-cap/country/FX/liquidity-sensitive |
 | [[ETF_NASDAQ_SCZ Performance]] | official 2007 / official 2016-2025; rolling issuer 2026-06-30 | 8.60% | 5.55% | 13.83% | 2025 +32.10% / 2022 -21.22% | developed ex-U.S./Canada small-cap | small-cap/country/FX/liquidity-sensitive; 14.97% 3-year standard deviation |
@@ -631,6 +631,12 @@ used for IPOL. The common 2021-2025 CAGR `13.76%` is unaffected by that conflict
 † CALF 2021-2025 CAGR 8.88% is a rounded-input approximation; the 2025 row is an issuer 1 Year/YTD field ending 2025-12-31, not separately labelled as a calendar-year row. ‡ CALF NAV TR YTD is 10.60% as of 2026-06-22; a separate stale snapshot is 12.78% as of 2026-06-16 and no 2026-08-16 figure was located.
 
 † FYC 13.92% is an issuer-reported 10-year average annual NAV TR as of 2026-07-31; it is distinct from the rounded-input 2016-2025 calendar-row CAGR of 12.52%. ‡ FYC 2021-2025 CAGR 9.74% is calculated from rounded annual NAV TR inputs; § FYC NAV TR YTD is 23.54% as of 2026-07-31, while the older factsheet reports 32.59% as of 2026-06-30.
+
+VIGI `8.01%` is the official Vanguard rolling 10-year average annual NAV TR as of
+2026-07-31, distinct from the rounded-input 2017-2025 calendar-row CAGR `8.95%`.
+Current official NAV TR YTD is `9.18%` as of 2026-08-26; the separate Vanguard
+fund-list capture labels YTD `9.80%` as of 2026-08-11. No current official NAV pair
+or daily NAV drawdown series was exposed in the reviewed capture.
 
 ## Regime read
 
