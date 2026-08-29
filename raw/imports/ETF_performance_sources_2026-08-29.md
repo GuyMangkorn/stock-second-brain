@@ -551,3 +551,75 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Vanguard July standardized fields and current August YTD support the VIGI refresh; scheduled-local verification passed and current NAV-pair, calendar/benchmark-current, and daily drawdown gaps remain disclosed.
+
+## VYMI — Vanguard International High Dividend Yield ETF
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177346ed613956b8949e6`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `VYMI`; canonical `entity_key: NASDAQ:VYMI`.
+- Vanguard identifies VYMI as the Nasdaq-listed Vanguard International High Dividend Yield ETF, inception `2016-02-25`, CUSIP `921946794`, and a passive/index-tracking equity ETF. The fund uses a sampling strategy, remains fully invested, and targets large- and mid-cap developed and emerging markets outside the United States with above-average forecast dividend yields.
+- Issuer benchmark is `FTSE All-World ex US High Dividend Yield Index` (`GPVAN0TR`). Primary region is `International`; ownership remains with `[[International ETF]]` and `[[ETF Performance Index]]`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| Vanguard advisor product page | https://advisors.vanguard.com/investments/products/vymi/vanguard-international-high-dividend-yield-etf | Current official YTD, rolling return summary, expense, yield, spread, assets, strategy and portfolio facts |
+| Vanguard investor VYMI product page | https://investor.vanguard.com/investment-products/etfs/profile/vymi | Product identity and annual performance source |
+| Vanguard fund list | https://workplace.vanguard.com/fund-list/?filters=etf | Official standardized average annual returns as of 2026-07-31 and separately dated YTD field as of 2026-08-11 |
+| Vanguard VYMI factsheet | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F4430.pdf | June 2026 performance/index cross-check, strategy, holdings, country/sector mix and risk fields |
+| Schwab VYMI report | https://www.schwab.wallst.com/schwab/Prospect/research/etfs/reports/reportRetrieve.asp?reportType=etfrc&symbol=VYMI | Secondary current price and rounded standardized cross-check |
+| PortfoliosLab VYMI | https://portfolioslab.com/symbol/VYMI | Secondary adjusted-price total-return drawdown/recovery proxy |
+| S&P 500 index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference rows for the stated complete calendar windows; dividends reinvested |
+
+### Candidate performance claims and raw observations
+
+- Official Vanguard fund-list capture reports average annual NAV Total Return as of `2026-07-31`: 1-year `34.56%`, 3-year `21.47%`, 5-year `14.05%`, 10-year `10.98%`, and since inception `11.68%`. The same table separately labels YTD `18.37%` as of `2026-08-11`; it is retained as a dated separate observation.
+- Later official Vanguard advisor-page capture reports current YTD NAV Total Return `19.86%` as of `2026-08-26`; this later YTD field is the current durable value. The page's earlier capture reported `18.22%` as of `2026-08-05`, which is retained only as an older observation.
+- Official current/near-current fund facts include net expense ratio `0.07%` as of `2026-02-27`, dividend yield `3.69%` as of `2026-07-31`, median bid/ask spread `0.01%` as of `2026-08-26`, total net assets `US$21.9B`, and net assets for VYMI `US$21.0B`, all with the individual as-of dates exposed by Vanguard. Latest verified official holdings count is `1,565` as of `2026-06-30`.
+- Official June factsheet as of `2026-06-30` reports NAV TR YTD `11.49%`, 1-year `27.47%`, 3-year `21.11%`, 5-year `12.72%`, 10-year `10.82%`, and since inception `11.22%`; corresponding market-price rows are `11.36%`, `27.47%`, `21.05%`, `12.69%`, `10.77%`, and `11.23%`. The FTSE index rows are `11.06%`, `27.59%`, `21.29%`, `12.87%`, `11.10%`, and `11.53%`. These are an older cross-check, not the current YTD field.
+- Official June factsheet portfolio metrics include developed exposure `77.61%`, emerging exposure `22.39%`, foreign holdings `99.34%`, median market cap `US$65.0B`, P/E `14.1x`, P/B `1.7x`, ROE `13.0%`, earnings growth `9.9%`, turnover `8.8%`, and 3-year standard deviation `11.27%`. June ETF net assets were `US$19,502M` and fund total net assets `US$20,382M`.
+- Official June country weights are Japan `11.5%`, United Kingdom `11.0%`, Canada `9.2%`, Switzerland `7.6%`, Australia `7.3%`, Taiwan `5.8%`, China `5.5%`, France `5.5%`, Spain `4.4%`, and Germany `4.3%`. Top ten holdings are HSBC `1.8%`, Roche `1.7%`, Novartis `1.6%`, Royal Bank of Canada `1.6%`, Nestle `1.5%`, Shell `1.2%`, Mitsubishi UFJ `1.2%`, BHP `1.2%`, Toronto-Dominion Bank `1.1%`, and Banco Santander `1.1%`, or `13.8%` combined. Sector weights are Financials `43.7%`, Energy `8.3%`, Consumer Staples `6.9%`, Consumer Discretionary `6.7%`, Health Care `6.6%`, Industrials `6.2%`, Basic Materials `6.1%`, Utilities `5.6%`, Technology `5.1%`, Telecommunications `3.6%`, and Real Estate `1.0%`.
+- Official Vanguard distribution table shows the latest two 2026 income payments as `US$1.256900` payable `2026-06-23` and `US$0.708000` payable `2026-03-24`, totaling `US$1.964900` per share; these are distributions, not NAV Total Return.
+- Secondary Schwab report generated `2026-08-25` reports price `US$105.17` as of `2026-08-24`, total assets `US$21.9B`, expense ratio `0.07%`, and rounded July NAV/market-price performance. It is used for price context only because the reviewed current official VYMI page did not expose a verified current NAV/market-price pair.
+- Official annual NAV rows are `2016 15.75%` (inception-year partial), `2017 22.37%`, `2018 -12.39%`, `2019 18.31%`, `2020 -0.65%`, `2021 15.00%`, `2022 -6.90%`, `2023 16.88%`, `2024 6.97%`, and `2025 38.02%`. Cached S&P 500 TR rows used as a common USD reference are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; the cache is as of `2025-12-31`, dividends reinvested, and is not VYMI's strategy benchmark.
+- Secondary adjusted-price total-return evidence from PortfoliosLab reports maximum drawdown `-40.00%` on `2020-03-23` and recovery in `202` trading sessions, with the page updated `2026-08-28`. Official daily NAV history sufficient for a reproducible fund-level drawdown/recovery remains `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- 2017-2025 rounded annual-row calculation: `(1.2237 × 0.8761 × 1.1831 × 0.9935 × 1.1500 × 0.9310 × 1.1688 × 1.0697 × 1.3802) - 1 = 132.81%`; rounded-input CAGR `(1 + 1.3281)^(1/9) - 1 = 9.84%`; population standard deviation `14.84%`; positive/negative years `6 / 3`.
+- 2021-2025 rounded annual-row calculation: `(1.1500 × 0.9310 × 1.1688 × 1.0697 × 1.3802) - 1 = 84.75%`; rounded-input CAGR `(1 + 0.8475)^(1/5) - 1 = 13.06%`; population standard deviation `14.65%`; positive/negative years `4 / 1`.
+- Cached S&P 500 TR common reference is cumulative `255.78%` / CAGR `15.14%` for 2017-2025 and cumulative `96.17%` / CAGR `14.43%` for 2021-2025. It is a USD reference only and no arithmetic excess return is called alpha.
+- The issuer's rolling 10-year average annual NAV TR `10.98%` as of `2026-07-31` implies normalized growth `100.00 → 283.43`, or cumulative `183.43%`, via `100 × ((1 + 0.1098)^10 - 1)`. Raw endpoints are not disclosed, so the implied endpoint is not a sourced NAV level.
+- June factsheet NAV/index tracking observations were YTD `11.49%` vs `11.06%`, 1-year `27.47%` vs `27.59%`, 3-year `21.11%` vs `21.29%`, 5-year `12.72%` vs `12.87%`, 10-year `10.82%` vs `11.10%`, and since inception `11.22%` vs `11.53%`; these are passive implementation/fee observations, not alpha.
+- As-of reconciliation: June official NAV YTD/10-year were `11.49%`/`10.82%`; the separate fund-list YTD was `18.37%` as of `2026-08-11`; later official advisor-page YTD is `19.86%` as of `2026-08-26`; July standardized rolling fields are `34.56%`/`21.47%`/`14.05%`/`10.98%`/`11.68%`. These fields are kept separate and are not mixed into one period.
+- Current official benchmark YTD in the same current capture was not exposed. The current official NAV/market-price pair and official daily NAV drawdown series were also not exposed; these remain explicit gaps.
+
+### Pre-save evidence packet and proposed durable contents
+
+- Evidence packet records child/parent ARIs, Nasdaq identity, inception/CUSIP, passive/sampling classification, return basis, issuer/common benchmarks, candidate annual/rolling/current claims, periods, units/currency, metric definitions, as-of dates, source URLs, calculations, current portfolio facts, distribution timing, secondary price/drawdown fields, unresolved gaps and the complete planned file changes.
+- Proposed `wiki/analysis/performance/ETF_NASDAQ_VYMI Performance.md`: replace the stale July page with current frontmatter; retain the official 2016† and 2017-2025 annual NAV table; add July official rolling/annualized fields and current August YTD; add annual-window and rolling-10-year implied calculations, June index tracking cross-check, current fund snapshot, country/sector/top-ten context, distribution timing, international value/dividend/FX/emerging-market risks, secondary price and drawdown proxy, as-of reconciliation, source links and follow-up gaps; retain the canonical International breadcrumb and `geography/International` tag.
+- Proposed `wiki/analysis/comparisons/International ETF.md`: update only the VYMI row to official rolling 10-year `10.98%`, 2021-2025 CAGR `13.06%`, and current official YTD `19.86%`; append the dated VYMI refresh note distinguishing the 8/11 and 8/26 YTD snapshots and disclosing current NAV-pair/daily-NAV gaps.
+- Proposed `wiki/analysis/performance/ETF Performance Index.md`: update the VYMI row in the preliminary holdings-group table to `10.98%`, `13.06%`, worst `-6.90%`, average positive `19.22%`, and current YTD `19.86%`; append the dated VYMI note below the existing issuer-field footnotes. The Common Window values remain unchanged because annual rows did not change.
+- Proposed `raw/imports/ETF_performance_sources_2026-08-29.md`: append this VYMI identity/source map, raw claims, calculations, reconciliation, complete proposed contents, local checklist, exact scheduled-inline verification lines, and structured `trello_handoff`.
+- Proposed `log.md` exact bullet: ``- `etf-performance`: Refreshed [[ETF_NASDAQ_VYMI Performance]] with official July rolling 10-year NAV TR `10.98%`, current NAV TR YTD `19.86%` as of 2026-08-26, and 2021-2025 CAGR `13.06%`; updated [[International ETF]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-29]], while preserving the current NAV-pair and official daily drawdown gaps.`` `log.md` remains outside the scoped commit because it already contains unrelated user changes.
+- No ETF entity hub or new region page is required; `NASDAQ:VYMI` remains the canonical performance owner and the existing International region page remains the sole regional navigation owner.
+
+### Local pre-save checklist
+
+- PASS: official Nasdaq identity, fund name, inception, passive/sampling equity eligibility, canonical key, tracked index, return basis, USD units, and International region ownership are source-mapped.
+- PASS: official June factsheet, July standardized fields, separate August 11 YTD, later August 26 current YTD, secondary August 24 price and secondary drawdown data retain individual as-of dates; NAV, market price, benchmark, distribution, holdings and risk metrics are not conflated.
+- PASS: official annual rows, 2017-2025 and 2021-2025 calculations, rolling-10-year implied calculation, June index tracking observations, cached S&P common reference, secondary drawdown proxy and all unresolved current NAV/daily-series gaps reproduce the proposed page/index values; no unsupported benchmark-current or NAV endpoint is inferred.
+- PASS: complete proposed contents for performance, International region, index, source batch and log artifacts are specified; canonical breadcrumb/tag, source links, secondary conflicts and follow-up gaps are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard July standardized fields and current August YTD support the VYMI refresh; scheduled-local verification passed and current NAV-pair, benchmark-current, and daily drawdown gaps remain disclosed.

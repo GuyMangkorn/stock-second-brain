@@ -41,7 +41,7 @@ tags:
 | IMWSF | iShares MSCI World Small Cap UCITS ETF (USD line WSML) | global developed small-cap equity | not applicable (<10y) | 7.17% | 19.00% | [[ETF_LSE_WSML Performance]] |
 | VXUS | Vanguard Total International Stock ETF | broad international ex-U.S. equity | 9.95% | 7.98% | 11.55% | [[ETF_NASDAQ_VXUS Performance]] |
 | ISAC | iShares MSCI ACWI UCITS ETF (USD Accumulating) | global developed/emerging large-/mid-cap passive accumulating equity; input alias ISACF | 11.67%† | 11.29% | 15.06% | [[ETF_LSE_ISAC Performance]] |
-| VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.73% | 13.06% | 12.31% | [[ETF_NASDAQ_VYMI Performance]] |
+| VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.98% | 13.06% | 19.86% | [[ETF_NASDAQ_VYMI Performance]] |
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `6.86%†` is issuer-reported 10-year average annual NAV TR as of 2026-07-31; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed. DDLS `9.61%` is the latest issuer rolling 10-year average annual NAV TR as of 2026-07-31; `11.33%*` blends official 2021-2024 rows with a secondary 2025 NAV proxy, and current NAV TR YTD is `6.54%` as of 2026-07-31.
 
@@ -82,6 +82,14 @@ calendar-row CAGR `8.95%` ที่คำนวณจาก annual rows 2017-202
 NAV/market-price pair ยัง `ไม่พบข้อมูลที่ยืนยันได้`; secondary price และ
 PortfoliosLab drawdown จึงไม่ถูกใช้สร้าง premium/discount หรือ official NAV
 drawdown claim.
+
+VYMI ใช้ official Vanguard standardized NAV Total Return ณ 2026-07-31 ที่
+`10.98%` annualized สำหรับ rolling 10-year, `34.56%` สำหรับ 1-year, `21.47%`
+สำหรับ 3-year และ `14.05%` สำหรับ 5-year; current official NAV TR YTD อยู่ที่
+`19.86%` ณ 2026-08-26. Expense ratio `0.07%`, holdings `1,565` (latest
+verified official June snapshot) และ fund/net assets `US$21.0B`/`US$21.9B`
+ณ 2026-07-31. Current official NAV/market-price pair ยัง `ไม่พบข้อมูลที่ยืนยันได้`;
+secondary price/drawdown จึงไม่ถูกใช้เป็น official NAV or premium/discount.
 
 ISACF เป็น input alias ของ official USD London Stock Exchange line `LSE:ISAC`
 (ISIN `IE00B6R52259`) สำหรับ iShares MSCI ACWI UCITS ETF (USD Accumulating).

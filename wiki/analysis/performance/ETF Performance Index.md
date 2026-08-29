@@ -638,6 +638,12 @@ Current official NAV TR YTD is `9.18%` as of 2026-08-26; the separate Vanguard
 fund-list capture labels YTD `9.80%` as of 2026-08-11. No current official NAV pair
 or daily NAV drawdown series was exposed in the reviewed capture.
 
+VYMI `10.98%` is the official Vanguard rolling 10-year average annual NAV TR as of
+2026-07-31, distinct from the rounded-input 2017-2025 CAGR `9.84%`. Current official
+NAV TR YTD is `19.86%` as of 2026-08-26; separate fund-list YTD `18.37%` is dated
+2026-08-11. No current official NAV pair or daily NAV drawdown series was exposed
+in the reviewed capture.
+
 ## Regime read
 
 | Regime / question | Read-through |
@@ -710,7 +716,7 @@ utilities และ financials tilt.
 | [[ETF_NASDAQ_PFM Performance]] | 11.83% | 11.36% | -6.23% | 16.34% | 7.99% | official annual NAV TR 2016-2025 |
 | [[ETF_NASDAQ_PID Performance]] | 8.81% | 11.28% | -6.36% | 16.54% | 2.05% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_VYM Performance]] | 11.61% | 12.68% | -0.42% | 16.42% | 11.49% | official annual NAV TR 2016-2025 |
-| [[ETF_NASDAQ_VYMI Performance]] | 10.73% | 13.06% | -6.90% | 19.22% | 12.31% | official annual NAV TR 2016†-2025 |
+| [[ETF_NASDAQ_VYMI Performance]] | 10.98% | 13.06% | -6.90% | 19.22% | 19.86% | official annual NAV TR 2016†-2025; rolling 10-year as of 2026-07-31 |
 | [[ETF_AMEX_AMLP Performance]] | 8.22% | 22.43% | ไม่พบข้อมูลที่ยืนยันได้ | 22.90% | 14.86% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_ENFR Performance]] | 13.40% | 23.39% | ไม่พบข้อมูลที่ยืนยันได้ | 24.19% | 23.50% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_IDOG Performance]] | 10.38% | 13.18% | -4.23% | 18.84% | 10.58% | official annual NAV TR 2016-2025 |
