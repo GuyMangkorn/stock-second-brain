@@ -1616,3 +1616,81 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street July performance and August fund-fact evidence support the SLYG refresh; scheduled-local verification passed, secondary annual/current fields and separate as-of windows are disclosed, and official daily-NAV drawdown data remains unavailable.
+
+## SLYV — State Street SPDR S&P 600 Small Cap Value ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91777155fda1b1f85c9d82`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `SLYV`; canonical `entity_key: NYSE Arca:SLYV`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is USA; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing SLYV performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| State Street official SLYV product page | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-600-small-cap-value-etf-slyv | Official identity, NYSE Arca listing, inception, benchmark, fee, current NAV/AUM/price/holdings/characteristics/yields, risk and standardized performance; current fund facts through 2026-08-27/28 and standardized performance through 2026-07-31 |
+| State Street official SLYV factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-slyv.pdf | Official return basis, passive sampling approach, holdings/sector context and fund methodology; reviewed factsheet is dated 2026-03-31 |
+| SEC-hosted SLYV summary prospectus | https://www.sec.gov/Archives/edgar/data/1064642/000119312524242957/R25.htm | Official passive strategy, value/small-cap risks and annual NAV rows through 2023 |
+| ETFReplay SLYV history | https://www.etfreplay.com/etf/slyv | Secondary standardized total-return rows for 2024-2025 and prior source context |
+| TotalRealReturns SLYV | https://totalrealreturns.com/n/SLYV | Secondary dividend-reinvested current YTD/rolling/drawdown corroboration; latest data ending 2026-08-27 |
+| YTDReturn SLYV | https://www.ytdreturn.com/slyv/ | Secondary dividend-reinvested YTD cross-check through 2026-08-26 |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31 |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_SLYV Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, prior dated source batch | Prior SLYV page, USA ownership, official 2016-2023 rows, secondary 2024-2025 rows, calculations and disclosed gaps; current official July/August fields are refreshed |
+
+### Identity and classification evidence
+
+- State Street identifies SLYV as `State Street SPDR S&P 600 Small Cap Value ETF`, ticker `SLYV`, listed on NYSE Arca, with inception `2000-09-25`, USD base currency, quarterly distributions and gross expense ratio `0.15%`.
+- SLYV is a passive/index-tracking U.S. small-cap value equity ETF using representative sampling. The tracked issuer benchmark is the `S&P SmallCap 600 Value Index`, whose constituents exhibit value characteristics based on book value to price, earnings to price and sales to price. The issuer page links the predecessor Dow Jones U.S. Small-Cap Value Total Stock Market Index through 2010-12-16 and the S&P SmallCap 600 Value Index from 2010-12-17.
+- Primary region is USA and the canonical tag is `geography/United-States`. S&P 500 TR remains a common large-cap reference only, not SLYV's tracked index.
+
+### Candidate performance claims and raw observations
+
+- Official State Street standardized performance as of `2026-07-31`: NAV `-0.56%` 1M, `-0.56%` QTD, `20.17%` YTD, `36.94%` 1Y, `12.35%` 3Y annualized, `7.98%` 5Y, `10.06%` 10Y and `10.77%` since inception. Market-value returns are `-0.59%`, `-0.59%`, `20.17%`, `36.98%`, `12.34%`, `7.99%`, `10.05%` and `10.78%`; linked index returns are `-0.55%`, `-0.55%`, `20.27%`, `37.16%`, `12.50%`, `8.14%`, `10.19%` and `10.47%`.
+- Official State Street current snapshot as of `2026-08-27` reports NAV `US$110.06`, market close `US$110.07`, bid/ask midpoint `US$110.09`, AUM `US$5,046.52M` and `461` fund holdings. Fund characteristics are P/B `1.55`, FY1 P/E `12.67`, weighted average market cap `US$4,111.42M` and estimated 3-5 year EPS growth `16.28%`; yields are SEC `1.92%` and fund distribution yield `1.80%` as of 2026-08-26.
+- The official SEC annual table exposes 2016-2023 NAV rows: 2016 `31.14%`, 2017 `11.45%`, 2018 `-12.69%`, 2019 `24.31%`, 2020 `2.60%`, 2021 `30.66%`, 2022 `-11.13%` and 2023 `14.71%`. Secondary standardized observations supply 2024 `7.28%*` and 2025 `6.52%*`; they remain marked `*` and are corroborated by TotalRealReturns.
+- Latest secondary TotalRealReturns data ending `2026-08-27` reports total-return YTD `22.15%`, 1Y `27.42%`, since-inception cumulative `1,251.91%` / annualized `10.57%`, and current drawdown `-1.92%` from the 2026-08-14 total-return high. YTDReturn independently reports `22.10%` through 2026-08-26. These are secondary contexts and are not substituted for official July NAV YTD.
+- Official current sector snapshot as of `2026-08-27`: Financials `21.66%`, Consumer Discretionary `15.63%`, Industrials `14.54%`, Information Technology `10.77%`, Energy `7.17%`, Real Estate `6.95%`, Health Care `6.78%`, Materials `5.75%`, Consumer Staples `4.63%`, Communication Services `3.91%` and Utilities `2.21%`.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%` and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- The displayed SLYV rows compound to `147.7318%` over 2016-2025, displayed as `147.73%`; rounded-input CAGR is `(1 + 1.477318)^(1/10) - 1 = 9.50%`. The 2021-2025 compound is `52.2121%`, displayed as `52.21%`, with rounded-input CAGR `8.77%`; both calculations include secondary 2024-2025 rows and therefore retain the source-quality caveat.
+- Cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over 2016-2025 and `96.17%` / CAGR `14.43%` over 2021-2025. The common-reference CAGR differences are `-5.32 pp` and `-5.66 pp`; these are not alpha and S&P 500 TR is not SLYV's strategy benchmark.
+- Official State Street fund-minus-linked-index differences from the July table are `-0.10 pp` YTD, `-0.22 pp` 1Y, `-0.15 pp` 3Y, `-0.16 pp` 5Y, `-0.13 pp` 10Y and `+0.30 pp` since inception. These reflect fees, sampling, implementation, timing and benchmark-linkage effects, not manager skill.
+- Up/down years are `8 / 2`; best row is 2016 `+31.14%`, worst is 2018 `-12.69%`. Official daily-NAV volatility is not disclosed in the reviewed source set; the annual rows are not converted into a daily risk statistic.
+
+### Source-quality choice and unresolved gaps
+
+- State Street, the official factsheet and SEC prospectus are the sources of truth for identity, passive classification, tracked index, fee, methodology, official standardized performance and risk framing. ETFReplay, TotalRealReturns and YTDReturn are secondary cross-checks only; 2024-2025 calendar rows and current secondary fields remain visibly marked `*`.
+- The latest official standardized return window is July month-end, while current NAV/AUM/holdings/sector facts are August 27 and current secondary total return ends August 27. These windows are retained separately; no same-date official NAV YTD is inferred after July.
+- Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; the secondary current drawdown is retained only as labeled context and is not used in ranking calculations.
+- Point-in-time NAV, price, AUM, holdings, yields, characteristics, sectors and performance retain separate as-of dates. SLYV is passive; no management-skill or alpha claim is made.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), issuer and common benchmarks, candidate performance claims and periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_SLYV Performance.md`: refresh frontmatter to 2026-08-29, use official July rolling/YTD table and August-27 current fund snapshot, preserve official 2016-2023 and secondary 2024-2025 annual rows, add current secondary YTD/drawdown context, update sector/risk and source/as-of notes, and preserve USA breadcrumb/tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update SLYV to official rolling `10.06%`, official July YTD `20.17%`, secondary 2021-2025 CAGR `8.77%`, and a concise July/August source-as-of note.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the SLYV coverage row and dated refresh section to official rolling `10.06%`, official July YTD `20.17%`, existing annual-window values, and the current secondary/daily-NAV gap status.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_SLYV Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `10.06%`, official YTD `20.17%`, secondary 2021-2025 CAGR `8.77%`, current secondary YTD `22.15%*`, and preserved annual/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and USA region ownership are source-mapped.
+- PASS: official July standardized NAV/market/index fields, August-27 NAV/AUM/price/holdings/sector/characteristics/yields, SEC/secondary annual rows, current secondary YTD/drawdown, cached S&P rows and metric definitions retain separate sources and as-of dates; secondary values remain marked `*` where applicable.
+- PASS: annual/CAGR/up-down calculations, official fund-index differences, official-versus-secondary current-YTD reconciliation, common-benchmark context and daily-NAV gap reproduce the proposed values; no secondary result is relabelled official and no alpha claim is made.
+- PASS: complete proposed contents for SLYV performance, USA region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street July performance and August-27 fund-fact evidence support the SLYV refresh; scheduled-local verification passed, official/secondary annual and current as-of differences are disclosed, and official daily-NAV drawdown data remains unavailable.
