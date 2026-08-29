@@ -36,6 +36,7 @@ tags:
 | SCHF | Schwab International Equity ETF | developed markets ex-U.S. large-/mid-cap | 10.11% | 9.31%* | 15.26% | [[ETF_NYSE_ARCA_SCHF Performance]] |
 | IDEV | iShares Core MSCI International Developed Markets ETF | developed markets ex-U.S. large-/mid-/small-cap | not applicable (<10y) | 9.27% | 14.77% | [[ETF_NYSE_ARCA_IDEV Performance]] |
 | IEFA | iShares Core MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-/small-cap | 9.78% | 8.66% | 14.71% | [[ETF_CBOE_BZX_IEFA Performance]] |
+| DFAI | Dimensional International Core Equity Market ETF | active systematic developed markets ex-U.S. broad equity | not applicable (<10y) | 10.34%* | 15.19%* | [[ETF_NYSE_ARCA_DFAI Performance]] |
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
@@ -109,6 +110,12 @@ IEFA ใช้ official iShares rolling 10-year NAV TR `9.78%` ณ 2026-06-30 �
 current official NAV TR YTD `14.71%` ณ 2026-08-26. Official 2021-2025 NAV
 rows คำนวณเป็น CAGR `8.66%`; ตาราง 2016-2025 เป็น secondary total-return
 proxy* เพื่อคง historical context และ daily NAV drawdown/recovery ยังไม่ verified.
+
+DFAI เป็น active systematic long-only international equity ETF; official Dimensional
+Quick Guide ณ 2025-12-31 รายงาน 5-year NAV annualized `10.34%` เทียบ management
+benchmark `9.03%` และ 1-year `33.92%` เทียบ `32.18%`. Current YTD `15.19%*`
+และ calendar window `10.34%*` เป็น secondary proxy; กองทุนยังไม่ครบ 10-year
+history และ risk evidence/daily NAV drawdown ยังไม่ verified.
 
 ## 2026-08-29 Verified Refresh
 

@@ -2723,3 +2723,62 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official iShares sources confirm IEFA as a passive Cboe BZX developed-markets ETF with official rolling, YTD and 2021-2025 NAV evidence; secondary full-window context, current listing, scheduled-local verification and daily-drawdown gaps are explicitly disclosed.
+
+## DFAI — Dimensional International Core Equity Market ETF
+
+### Workflow and identity
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a924396cd48cc43a09b6326`; input ticker `DFAI`; canonical `entity_key: NYSE Arca:DFAI`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is International; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`.
+- This run creates the DFAI performance owner and adds the corresponding International navigation, ETF Performance Index coverage/refresh entry, this source batch and one log bullet. No entity page was found or created.
+
+### Evidence packet
+
+| Source | URL / path | Use and as-of handling |
+|---|---|---|
+| Official Dimensional DFAI ETF page | https://www.dimensional.com/us-en/funds/dfai/international-core-equity-market-etf | Official product access point; page capture is JS-limited, so no current official annual/YTD table is inferred from it |
+| Official Dimensional ETF lineup | https://www.dimensional.com/us-en/etfs | Active ETF structure, flexible daily process and systematic implementation context |
+| Official Dimensional newsroom listing | https://www.dimensional.com/us-en/newsroom/dimensional-lists-etfs | Active transparent classification, NYSE Arca listing `2020-11-18`, DFAI inception `2020-11-17`, net expense ratio `0.18%` |
+| Official Dimensional ETF Quick Guide | https://my.dimensional.com/chmedia/282748/source/dimensional-etf-quick-guide.pdf | NAV 1-year `33.92%`, 5-year `10.34%`, benchmark 1-year `32.18%`, benchmark 5-year `9.03%`, since-inception `11.34%` versus `10.08%`, all as of `2025-12-31` |
+| SEC DFAI summary prospectus | https://www.sec.gov/Archives/edgar/data/1816125/000181612526000086/c497k.htm | Objective, NYSE Arca exchange, active strategy and principal risks; February 28, 2026 prospectus |
+| FinanceCharts DFAI performance | https://www.financecharts.com/etfs/DFAI/performance | Secondary dividend-reinvested annual/YTD proxy captured 2026-08-29; rows and current YTD are marked `*` |
+| S&P 500 Total Return cache | Official S&P source references retained by `check-etf-performance` | USD dividends-reinvested common reference for 2021-2025; no new search needed under cached convention |
+| Existing vault context | `index.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Routing/navigation context; no existing DFAI performance owner or entity page was present |
+
+### Observations, calculations, and reconciliation
+
+- Dimensional and the SEC classify DFAI as an active transparent, systematic long-only equity ETF, not a passive index fund. It seeks long-term capital appreciation through a broad non-U.S. developed-market universe and a flexible daily process. Canonical exchange is `NYSE Arca`; inception is `2020-11-17`.
+- Official Quick Guide as of `2025-12-31` reports DFAI NAV 1-year `33.92%`, 5-year `10.34%`, since inception `11.34%`; the management benchmark rows are `32.18%`, `9.03%`, and `10.08%`. Return-only excess is therefore `+1.74 pp` for 1-year, `+1.31 pp` for 5-year, and `+1.26 pp` since inception. These are not alpha claims and do not establish risk-adjusted skill.
+- The current official Dimensional web capture did not expose a complete current NAV/YTD table in readable form. The secondary current YTD proxy is `15.19%*`; no official current YTD is invented.
+- Secondary annual proxy rows are `2021 13.86%`, `2022 -12.94%`, `2023 17.59%`, `2024 4.69%`, `2025 34.04%`. From these rounded rows, 2021-2025 compound return is `63.57%*` and CAGR is `10.34%*`; there are `4` positive and `1` negative years, best 2025 and worst 2022.
+- For the common 2021-2025 window, the cached S&P 500 TR compound is `96.17%` and CAGR is `14.43%`; DFAI proxy compound is `63.57%*` and CAGR `10.34%*`. The cumulative gap is `32.60 percentage points` and CAGR gap is `4.08 pp`. DFAI proxy beats the S&P 500 in 2022 and 2025 (`2 / 5` years); this is arithmetic context, not manager-skill evidence.
+- Official daily NAV Total Return history sufficient for maximum drawdown/recovery and risk-adjusted management evidence is `ไม่พบข้อมูลที่ยืนยันได้`; no market-price or secondary drawdown proxy is substituted.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The Dimensional Quick Guide and newsroom are the source of truth for management mode, benchmark comparison, maturity and fees; the SEC prospectus is the source for objective, exchange and risks. FinanceCharts supplies only the marked current/annual proxy because current official table capture is incomplete.
+- The S&P 500 cache is used only for its exact 2021-2025 USD total-return convention. It is not substituted for DFAI's `MSCI World ex USA IMI Index (net dividends)` management benchmark.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_DFAI Performance.md`: complete DFAI owner page with active-systematic fields, official 1Y/5Y benchmark comparison, secondary annual/YTD proxy, maturity, risk gaps, sources, International breadcrumb and canonical geography tag.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: add the DFAI row and dated explanatory note; keep the region page as navigation-only.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: add DFAI to the coverage table and `2026-08-29 Performance Refresh`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking DFAI performance, International navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:DFAI` identity, fund name, inception/listing, active-systematic equity eligibility, management benchmark, expense ratio, International region and official source dates are mapped.
+- PASS: official NAV/benchmark 1Y and 5Y evidence, secondary annual/YTD proxy, return-only excess, maturity, S&P cache context and no-current-official-YTD gap remain separate; no alpha claim or risk-adjusted skill claim is made.
+- PASS: proxy 2021-2025 compound/CAGR, `4/1` up/down count, best/worst ranking, current-YTD proxy and daily-NAV/risk-evidence gaps reconcile to the proposed owner page and index/region notes.
+- PASS: all planned links and breadcrumbs resolve; the performance page owns the numbers; the region page remains static; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Dimensional and SEC sources confirm DFAI as an active-systematic NYSE Arca international equity ETF with official benchmark comparisons; secondary annual/YTD proxies, sub-10-year maturity and unverified risk evidence are explicitly disclosed, and scheduled-local verification passed.
