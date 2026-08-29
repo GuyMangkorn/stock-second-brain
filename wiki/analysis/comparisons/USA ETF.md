@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| DGRO | iShares Core Dividend Growth ETF | U.S. dividend growth | 13.38% | 11.69% | 10.22% | [[ETF_AMEX_DGRO Performance]] |
+| DGRO | iShares Core Dividend Growth ETF | U.S. dividend growth | 13.38% | 11.69% | 15.25% | [[ETF_NYSE_ARCA_DGRO Performance]] |
 | VIG | Vanguard Dividend Appreciation ETF | U.S. dividend growth | 13.13% | 11.27% | 7.19% | [[ETF_AMEX_VIG Performance]] |
 | DES | WisdomTree U.S. SmallCap Dividend Fund | U.S. small-cap dividend | 8.04% | 7.65% | 22.93% | [[ETF_AMEX_DES Performance]] |
 | DHS | WisdomTree U.S. High Dividend Fund | U.S. high dividend | 9.44% | 12.05% | 13.44% | [[ETF_AMEX_DHS Performance]] |

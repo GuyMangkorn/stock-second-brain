@@ -1,21 +1,21 @@
 ---
 type: entity
 instrument_type: ETF
-entity_key: AMEX:DGRO
+entity_key: NYSE Arca:DGRO
 ticker: DGRO
-exchange: AMEX
+exchange: NYSE Arca
 fund: iShares Core Dividend Growth ETF
 market: U.S. listed ETF
 currency: USD
-latest_holdings_as_of: 2026-06-30
-source_gap_count: 2
+latest_holdings_as_of: 2026-08-27
+source_gap_count: 1
 source_gaps:
-  - Current price/NAV and trading-date market data are not normalized in the vault.
-  - Current distribution data are not normalized in the entity pass.
+  - Official daily NAV Total Return history is not normalized for a reproducible drawdown/recovery calculation.
 tags:
   - entity/etf
   - ticker/DGRO
   - exchange/AMEX
+  - exchange/NYSE-Arca
 ---
 
 # DGRO - iShares Core Dividend Growth ETF
@@ -24,12 +24,13 @@ tags:
 
 | Item | Value |
 |---|---|
-| Instrument key | `AMEX:DGRO` |
-| Strategy | Broad dividend equity / dividend growth |
+| Instrument key | `NYSE Arca:DGRO` |
+| Strategy | U.S. dividend growth / quality equity |
 | Role | Core candidate |
 | Triage score | 8.1 / 10 |
-| 12m trailing yield | 1.96% as of 2026-05-31; iShares official source |
-| Latest holdings snapshot | 2026-06-30; official holdings found |
+| 12m trailing yield | 1.89% as of 2026-07-31; iShares official source |
+| Current NAV / closing price | USD 79.27 / USD 79.28 as of 2026-08-27 |
+| Latest holdings snapshot | 2026-08-27; 390 holdings; official iShares source |
 | Top-10 theme | U.S. large-cap dividend payers across technology, health care, financials, staples, and industrials |
 
 ## Thesis / Key Debate
@@ -50,21 +51,20 @@ ETF valuation should be tracked through price/NAV, distribution yield, expense r
 
 ## Performance
 
-- [[ETF_AMEX_DGRO Performance]]
+- [[ETF_NYSE_ARCA_DGRO Performance]]
 - [[ETF Performance Index]]
 
 ## Reports / Sources
 
 - [[Dividend ETF Full Universe Triage 2026-06-28]]
 - [[Dividend ETF Top 10 Holdings Tracker 2026-07-01]]
-- iShares official product page: https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf
+- iShares official product page: https://www.ishares.com/us/products/264623/DGRO
 
 ## Follow-Up
 
-- Refresh official holdings, distribution, expense-ratio, and price/NAV data before treating DGRO as an actionable allocation.
+- Refresh official holdings, distribution, expense-ratio, and price/NAV data before treating DGRO as an actionable allocation; the latest snapshot is recorded above and on the performance page.
 - Compare current overlap with [[ETF_AMEX_VIG]] and the existing company entities referenced in the holdings tracker.
 
 ## Missing / Unverified Data
 
-- Current price/NAV and as-of date: `ไม่พบข้อมูลที่ยืนยันได้` in this entity pass.
-- Expense ratio and current distribution schedule: `ไม่พบข้อมูลที่ยืนยันได้` in the captured tracker sources.
+- Official daily NAV Total Return history for a reproducible max-drawdown/recovery calculation: `ไม่พบข้อมูลที่ยืนยันได้`.

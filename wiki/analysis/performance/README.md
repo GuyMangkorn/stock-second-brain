@@ -82,7 +82,7 @@ changes.
 
 ## Pilot Status
 
-Pilot coverage is [[ETF_AMEX_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
+Pilot coverage is [[ETF_NYSE_ARCA_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
 [[ETF_NASDAQ_VIGI Performance]], and [[ETF_AMEX_DIVI Performance]]. The common
 window is 2021-2025. 2026 data remain partial and are shown as freshness context,
 not as a full-year ranking.

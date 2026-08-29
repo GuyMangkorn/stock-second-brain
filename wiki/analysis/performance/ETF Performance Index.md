@@ -67,7 +67,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 
 | ETF | History used | 10Y NAV CAGR / issuer avg annual | 2021-2025 CAGR | 2026 YTD | Best / Worst in window | Structural | Behavioral |
 |---|---|---:|---:|---:|---|---|---|
-| [[ETF_AMEX_DGRO Performance]] | 2014* / official 2021-2025 | 13.38% | 11.69% | 10.22% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
+| [[ETF_NYSE_ARCA_DGRO Performance]] | official 2016-2025 | 13.38% | 11.69% | 15.25% | 2021 +26.56% / 2022 -7.85% | U.S. dividend growth | quality/large-cap, moderate downside |
 | [[ETF_AMEX_VIG Performance]] | 2006* / official 2011-2025 | 13.13% | 11.27% | 7.19% | 2021 +23.64% / 2022 -9.79% | U.S. dividend growth | quality/large-cap, relatively defensive |
 | [[ETF_NASDAQ_VIGI Performance]] | 2016† / official 2017-2025 | 8.13% | 5.46% | 4.64% | 2025 +16.89% / 2022 -16.71% | international dividend growth | FX/country-sensitive, higher downside |
 | [[ETF_NYSE_ARCA_VSS Performance]] | official 2009 / official 2016-2025; rolling 10-year as of 2026-07-31 | 7.42% | 6.45% | 10.86% | 2017 +30.26% / 2022 -21.22% | international ex-U.S. small-cap | small-cap/country/FX-sensitive; 14.43% 3-year standard deviation |
@@ -359,7 +359,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 
 | ETF | 2021 | 2022 | 2023 | 2024 | 2025 | Cumulative | Positive / Negative |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| [[ETF_AMEX_DGRO Performance]] | 26.56% | -7.85% | 10.43% | 16.61% | 15.74% | 73.82% | 4 / 1 |
+| [[ETF_NYSE_ARCA_DGRO Performance]] | 26.56% | -7.85% | 10.43% | 16.61% | 15.74% | 73.82% | 4 / 1 |
 | [[ETF_AMEX_VIG Performance]] | 23.64% | -9.79% | 14.46% | 17.02% | 14.18% | 70.58% | 4 / 1 |
 | [[ETF_NASDAQ_VIGI Performance]] | 12.42% | -16.71% | 16.16% | 2.62% | 16.89% | 30.47% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VSS Performance]] | 12.81% | -21.22% | 15.25% | 2.67% | 29.99% | 36.70% | 4 / 1 |
@@ -649,7 +649,7 @@ utilities และ financials tilt.
 
 ## Sources
 
-- รายละเอียดรายกอง: [[ETF_AMEX_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
+- รายละเอียดรายกอง: [[ETF_NYSE_ARCA_DGRO Performance]], [[ETF_AMEX_VIG Performance]],
   [[ETF_NASDAQ_VIGI Performance]], [[ETF_AMEX_DIVI Performance]],
   [[ETF_NYSE_ARCA_EWC Performance]], [[ETF_AMEX_DTD Performance]],
   [[ETF_AMEX_FVD Performance]], [[ETF_NYSE_ARCA_VOO Performance]],
@@ -757,8 +757,8 @@ official complete-year coverage เริ่มที่ 2018; ใช้ดู�
 | [[ETF_NASDAQ_TDIV Performance]] | 16.87% | +2.05 pp | -22.14% | 26.02% | 8 / 2 | official 10 years |
 | [[ETF_NYSE_ARCA_VOO Performance]] | 14.78% | -0.04 pp | -18.15% | 22.66% | 8 / 2 | official 10 years |
 | [[ETF_LSE_DXJ Performance]] | 13.94% | -0.88 pp | -18.71% | 19.00% | 9 / 1 | official 10 years; rounded annual inputs |
+| [[ETF_NYSE_ARCA_DGRO Performance]] | 13.11% | -1.71 pp | -7.85% | 18.36% | 8 / 2 | official 2016-2025 rows; rounded annual inputs |
 | [[ETF_AMEX_VIG Performance]] | 13.09% | -1.73 pp | -9.79% | 18.57% | 8 / 2 | official 10 years |
-| [[ETF_AMEX_DGRO Performance]] | 13.08%* | -1.74 pp | -7.85% | 18.36% | 8 / 2 | 2016-2020 proxy* |
 | [[ETF_NASDAQ_FYC Performance]] | 12.52% | -2.30 pp | -25.75% | 21.07% | 8 / 2 | official 10 years; issuer 10Y field 13.92% is a separate rolling measure† |
 | [[ETF_AMEX_DLN Performance]] | 12.27% | -2.55 pp | -5.77% | 17.23% | 8 / 2 | official 10 years |
 | [[ETF_AMEX_DJD Performance]] | 11.89% | -2.93 pp | -0.61% | 13.68% | 9 / 1 | official 10 years |
