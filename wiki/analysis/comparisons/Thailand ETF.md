@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Thailand
-updated: 2026-07-24
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/Thailand
@@ -17,7 +17,7 @@ tags:
 
 | Ticker | Fund | Exposure / Style | 10Y NAV CAGR | 2021-2025 CAGR | 2026 YTD | Performance |
 |---|---|---|---:|---:|---:|---|
-| THD | iShares MSCI Thailand ETF | Thailand equity / index-tracking | 3.35% | -2.14% | 25.53% | [[ETF_NYSE_ARCA_THD Performance]] |
+| THD | iShares MSCI Thailand ETF | Thailand equity / index-tracking | 3.35% | -2.14% | 26.46% | [[ETF_NYSE_ARCA_THD Performance]] |
 
 ## Navigation
 
