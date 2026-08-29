@@ -1377,3 +1377,86 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official VanEck July and August evidence support the IDX refresh; scheduled-local verification passed, annual proxy and YTD date conflicts are disclosed, and daily-NAV drawdown data remains unavailable.
+
+## RWJ — Invesco S&P SmallCap 600 Revenue ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a917767243f5784f7eba0db`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `RWJ`; canonical `entity_key: NYSE Arca:RWJ`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `USA`; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing RWJ performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity page or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Invesco official RWJ factsheet | https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/rwj-invesco-s-p-smallcap-600-revenue-etf-fact-sheet.pdf | Official identity, passive methodology, NAV/market/index standardized returns, calendar-year rows, holdings, characteristics and yield; factsheet as of 2026-03-31 |
+| Invesco official RWJ product page | https://www.invesco.com/us/en/financial-products/etfs/invesco-sp-smallcap-600-revenue-etf.html | Official product and strategy discovery; current dynamic quote/performance fields were not exposed in the text capture reviewed 2026-08-29 |
+| SEC RWJ summary prospectus | https://www.sec.gov/Archives/edgar/data/1378872/000119312525325669/d54028d497k.htm | Official identity, NYSE Arca listing, objective, 90% policy, revenue-weighting/full-replication method, fee, risks, inception and issuer performance table; prospectus dated 2025-12-19 |
+| TotalRealReturns RWJ comparison | https://totalrealreturns.com/n/RWJ%2CXMMO | Secondary dividend-reinvested total-return current/rolling fields, annual rows and drawdown proxy; data ending 2026-08-26 |
+| Barchart RWJ performance | https://www.barchart.com/etfs-funds/quotes/RWJ/performance | Secondary market-price and price-only YTD cross-check; closing price `US$61.64` and price YTD `25.43%` as of 2026-08-28 |
+| AAII RWJ profile | https://www.aaii.com/etf/ticker/RWJ?via=emailsignup-readmore | Secondary 2026-07-31 standardized NAV/price returns, share-class assets and yield cross-check |
+| ETF Research Center RWJ profile | https://www.etfrc.com/RWJ | Secondary 2026-07-31 standardized returns, holdings/assets and portfolio profile cross-check |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_RWJ Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, prior dated source batch | Prior RWJ page, USA ownership, proxy calculations and disclosed gaps; official factsheet now supports replacing the annual proxy table |
+
+### Identity and classification evidence
+
+- Invesco identifies RWJ as `Invesco S&P SmallCap 600 Revenue ETF`, ticker `RWJ`, listed on NYSE Arca, with inception `2008-02-19` and total expense ratio `0.39%`.
+- Classification is `passive-index-tracking`; the fund generally invests at least 90% of assets in the S&P SmallCap 600 Revenue-Weighted Index and uses full replication. The index weights positive-revenue S&P SmallCap 600 constituents by trailing-four-quarter revenue, subject to a 5% maximum constituent weight.
+- Primary region is USA and canonical tag is `geography/United-States`. The issuer benchmark is the S&P SmallCap 600 Revenue-Weighted Index; S&P 500 TR remains a common large-cap reference only.
+
+### Candidate performance claims and raw observations
+
+- Official Invesco factsheet standardized returns as of `2026-03-31` are: RWJ NAV `YTD 3.92%`, `1Y 25.49%`, `3Y 11.93%`, `5Y 7.10%`, `10Y 12.06%`, and since inception `11.50%`; market-price returns are `3.96%`, `25.54%`, `11.95%`, `7.04%`, `12.07%`, and `11.50%`; the underlying index is `3.98%`, `25.89%`, `12.32%`, `7.45%`, `12.35%`, and `12.04%`.
+- The same factsheet reports the S&P SmallCap 600 Index comparison at `3.51%` YTD, `20.50%` 1Y, `10.51%` 3Y annualized, `4.49%` 5Y annualized, `9.90%` 10Y annualized and `9.63%` since inception. This is a secondary official comparison, not the revenue-weighted tracking index.
+- Official calendar-year NAV rows from the Invesco factsheet are: 2016 `30.52%`, 2017 `5.17%`, 2018 `-16.87%`, 2019 `20.25%`, 2020 `20.49%`, 2021 `52.93%`, 2022 `-11.03%`, 2023 `16.42%`, 2024 `11.55%`, and 2025 `7.81%`. Underlying-index rows are `31.36%`, `5.48%`, `-16.79%`, `20.45%`, `20.39%`, `53.30%`, `-10.72%`, `16.75%`, `11.88%`, and `8.22%` respectively.
+- Official factsheet characteristics as of `2026-03-31` are `602` holdings, P/B `2.33`, P/E `13.31`, ROE `5.73%`, weighted market cap `US$3,451.26M`, 30-day SEC yield `1.29%`, and total expense ratio `0.39%`.
+- Latest accessible secondary TotalRealReturns comparison data ending `2026-08-26` reports RWJ total return YTD `26.53%`, 1Y `30.62%`, 2Y `39.32%` (`18.03%` annualized), 3Y `68.22%` (`18.93%` annualized), 5Y `68.09%` (`10.94%` annualized), and 10Y `251.61%` (`13.40%` annualized). Its current drawdown proxy is `-2.44%` on 2026-08-26 from the 2026-08-04 peak; worst drawdown is `-55.97%` on 2009-03-09 from the 2008-09-19 peak.
+- The same secondary source's annual rows are close but not identical to the official factsheet: 2016 `30.72%`, 2017 `5.09%`, 2018 `-16.95%`, 2019 `20.29%`, 2020 `20.83%`, 2021 `52.83%`, 2022 `-10.97%`, 2023 `16.22%`, 2024 `11.81%`, and 2025 `7.75%`; they are retained only as reconciliation evidence, not canonical rows.
+- Barchart provides a later secondary market-price close of `US$61.64` as of `2026-08-28` and price-only YTD `25.43%`; it is not a total-return or NAV observation. AAII's 2026-07-31 cross-check reports NAV YTD `25.8%`, 1Y `39.9%`, 3Y `16.1%`, 5Y `10.8%`, 10Y `13.3%`, and share-class assets `US$2,065M`; ETFRC reports `593` holdings and approximately `US$2B` of assets on the same date.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`.
+
+### Calculations and reconciliation
+
+- Official displayed NAV rows compound to `214.9599%`, displayed as `214.96%`; rounded-input CAGR is `(1 + 2.149599)^(1/10) - 1 = 12.16%` over 2016-2025. The 2021-2025 compound is `90.4989%`, displayed as `90.50%`, with rounded-input CAGR `13.76%`.
+- Official displayed index rows compound to `223.4590%` / CAGR `12.46%` over 2016-2025 and `93.4698%` / CAGR `14.11%` over 2021-2025. S&P 500 TR compounds to `298.3291%` / CAGR `14.82%` and `96.1696%` / CAGR `14.43%` over the same windows.
+- Official RWJ-minus-index tracking differences from the 2026-03-31 factsheet are `-0.06 pp` YTD, `-0.40 pp` 1Y, `-0.39 pp` 3Y, `-0.35 pp` 5Y, `-0.29 pp` 10Y and `-0.54 pp` since inception. These are fee, implementation, tax, timing and index-construction observations, not alpha.
+- Against the common S&P 500 reference, the official 2021-2025 CAGR difference is `13.76% - 14.43% = -0.67 pp`; the 2016-2025 difference is `12.16% - 14.82% = -2.66 pp`. S&P 500 TR is not RWJ's strategy benchmark.
+- The sample standard deviation of the ten displayed official annual NAV returns is `19.93%`; this is an annual-row dispersion descriptor, not daily NAV volatility. Up/down years are `8 / 2`; best is 2021 `+52.93%`, worst is 2018 `-16.87%`.
+- The prior direct TotalRealReturns snapshot was `28.61%` YTD through 2026-08-14; the later comparison capture is `26.53%` through 2026-08-26 and is used for the refreshed current secondary field. The Barchart `25.43%` figure is price-only through 2026-08-28, so no total-return/NAV reconciliation is inferred.
+
+### Source-quality choice and unresolved gaps
+
+- Invesco and SEC are the sources of truth for identity, passive classification, tracked index, official NAV/market/index performance, fee, methodology and risk disclosures. TotalRealReturns supplies only the marked current/rolling/drawdown proxy; Barchart, AAII and ETFRC supply later secondary cross-checks.
+- The official factsheet now provides complete 2016-2025 calendar NAV rows, so the canonical annual table is upgraded from the former secondary proxy. Secondary annual rows remain recorded only to show the small source differences.
+- Official current NAV and current official NAV YTD after the 2026-03-31 factsheet were not exposed in the reviewed Invesco text capture; current YTD and drawdown are therefore marked secondary. Official daily NAV history sufficient to independently reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+- Point-in-time price, NAV, assets, holdings, yield, characteristics, rolling performance and annual performance retain separate as-of dates and are not mixed into one return series. RWJ is passive; no management-skill or alpha claim is made.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), tracked and common benchmarks, candidate claims and periods, units/currency (`%`, USD), metric definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_RWJ Performance.md`: refresh frontmatter to 2026-08-29, use official Invesco 2026-03-31 rolling and 2016-2025 NAV rows, add official fund/index tracking differences, current secondary 2026-08-26 total-return/drawdown fields, 2026-08-28 price cross-check, risk/dispersion observations, and disclosed official-current/daily-NAV gaps; preserve the USA breadcrumb and canonical tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update the RWJ navigation row to official rolling `12.06%`, official 2021-2025 NAV CAGR `13.76%`, and secondary current YTD `26.53%*`; preserve static navigation and add a concise source/as-of note.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the RWJ coverage row and current refresh section to official rolling `12.06%`, official 2021-2025 CAGR `13.76%`, secondary current YTD `26.53%*`, and the annual/daily-NAV gap status; retain the separate official issuer `10.33%` field only as historical SEC context if useful.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_NYSE_ARCA_RWJ Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `12.06%`, official 2021-2025 CAGR `13.76%`, secondary YTD `26.53%*`, and preserved current-official/daily-NAV gaps; keep the file outside the scoped commit because it already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains the canonical owner and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and USA region ownership are source-mapped.
+- PASS: official 2026-03-31 rolling and calendar NAV/index rows, fee, holdings, characteristics, yield, secondary 2026-08-26 total-return/drawdown fields, 2026-08-28 price cross-check, cached S&P rows and each metric definition retain separate sources and as-of dates; secondary fields remain visibly marked `*`.
+- PASS: official fund/index gaps, annual CAGRs, up/down counts, dispersion, common-benchmark comparison, prior/current secondary reconciliation and daily-NAV gap reproduce the proposed values; no secondary result is relabelled official and no alpha claim is made.
+- PASS: complete proposed contents for RWJ performance, USA region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Invesco Q1 2026 factsheet and SEC evidence support the RWJ refresh; scheduled-local verification passed, current secondary fields and source-date differences are disclosed, and official current/daily-NAV gaps remain explicit.
