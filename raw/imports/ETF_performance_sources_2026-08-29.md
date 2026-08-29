@@ -2548,3 +2548,62 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official State Street and SEC sources confirm SPDW as a passive NYSE Arca developed-markets ETF with official rolling/YTD evidence; annual rows are explicitly marked as a secondary proxy, scheduled-local verification passed, and raw-endpoint and daily-drawdown gaps remain disclosed.
+
+## SCHF — Schwab International Equity ETF
+
+### Workflow and identity
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a924388412ee4d1c2007cf0`; input ticker `SCHF`; canonical `entity_key: NYSE Arca:SCHF`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is International; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`.
+- This run creates the SCHF performance owner and adds the corresponding International navigation, ETF Performance Index coverage/refresh entry, this source batch and one log bullet. No entity page was found or created.
+
+### Evidence packet
+
+| Source | URL / path | Use and as-of handling |
+|---|---|---|
+| Official Schwab SCHF product page | https://www.schwabassetmanagement.com/products/schf | Identity, NYSE Arca, inception `2009-11-03`, passive style, FTSE Developed ex US Index (Net), official NAV rolling `10.11%` and NAV YTD `15.26%` as of `2026-07-31`, official market-price YTD `14.79%`, and current fund facts through `2026-08-28` |
+| Official Schwab SCHF documents | https://www.schwabassetmanagement.com/products/schf/documents | Fund-document and NAV-history download access; annual NAV rows were not used because the reviewed capture did not expose a complete readable table |
+| SEC SCHF summary prospectus | https://www.sec.gov/Archives/edgar/data/1454889/000110465926020707/tm266454-7_497k.htm | Index objective, sampling, derivatives/cash handling, foreign-market and currency risks; February 27, 2026 summary prospectus |
+| FinanceCharts SCHF performance | https://www.financecharts.com/etfs/SCHF/performance | Secondary dividend-reinvested annual total-return proxy captured 2026-08-29; used only for window calculations and marked `*` |
+| S&P 500 Total Return cache | Official S&P source references retained by `check-etf-performance` | USD dividends-reinvested common reference, complete calendar years `2016-2025`; no new search needed under cached convention |
+| Existing vault context | `index.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Routing/navigation context; no existing SCHF performance owner or entity page was present |
+
+### Observations, calculations, and reconciliation
+
+- Schwab and the SEC classify SCHF as a passive, index-tracking developed-markets ex-U.S. equity ETF seeking to track the `FTSE Developed ex US Index (Net)`; it uses sampling and does not hedge foreign currencies. Canonical exchange is `NYSE Arca`.
+- Official current page fields are kept separate by date: NAV `USD 28.40`, total net assets `USD 69,683,892,971.15`, shares outstanding `2,454,000,000` and fund profile as of `2026-08-28`; holdings `1,494`, turnover `3.90%`, P/E `16.70x`, P/B `2.26x`, and standard deviation `14.53%` as of `2026-07-31`; SEC yield `2.08%` as of `2026-08-27`; distribution yield `3.05%` as of `2026-07-31`; expense ratio `0.030%`.
+- Official Schwab performance as of `2026-07-31` is NAV YTD `15.26%`, 1-year `30.59%`, 3-year `18.12%`, 5-year `10.29%`, 10-year `10.11%`; market-price YTD is `14.79%` and market-price 10-year is `10.05%`. The separate official quarterly capture as of `2026-06-30` reports NAV 10-year `10.63%`, so the date difference is preserved.
+- The reviewed official product page exposes a NAV history download link but not a complete readable annual return table in the capture. The secondary proxy rows are `2016 3.05%`, `2017 26.01%`, `2018 -14.26%`, `2019 22.23%`, `2020 9.48%`, `2021 11.40%`, `2022 -14.79%`, `2023 18.34%`, `2024 3.28%`, `2025 34.54%`; they represent price appreciation plus reinvested dividends and are not labeled official NAV TR.
+- From the proxy rows, 2016-2025 compound return is `132.55%*` and rounded-input CAGR is `8.81%*` using `(Π(1 + annual return))^(1/10) - 1`. There are `8` positive and `2` negative years; best is 2025 `+34.54%*`, least positive is 2016 `+3.05%*`, worst is 2022 `-14.79%*`, and least bad down year is 2018 `-14.26%*`.
+- For the common 2021-2025 window, SCHF proxy compound return is `56.09%*` and CAGR is `9.31%*`; the cached S&P 500 TR compound is `96.17%` and CAGR is `14.43%`. The cumulative gap is `40.08 percentage points` and CAGR gap is `5.11 pp`; this is a basis-mismatched context comparison, not official tracking or manager-skill evidence.
+- SCHF proxy beats the S&P 500 common reference in 2017, 2022 and 2025 (`3 / 10` complete years). Do not call this alpha or manager skill.
+- Official daily NAV Total Return history sufficient for maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no market-price or secondary drawdown proxy is substituted. Official NAV and market-price returns remain separate.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The Schwab product page is the source of truth for current official performance, identity and fund snapshot; the SEC prospectus is the source for strategy and risk; FinanceCharts supplies only the marked annual proxy because the official annual table was not readable in the reviewed capture.
+- The cached S&P 500 table is used only for its exact 2016-2025 USD total-return convention. It is not substituted for SCHF's `FTSE Developed ex US Index (Net)`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_SCHF Performance.md`: complete SCHF owner page with official rolling/YTD fields, secondary proxy annual table, calculations, risk gaps, sources, International breadcrumb and canonical geography tag.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: add the SCHF row and dated explanatory note; keep the region page as navigation-only.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: add SCHF to the coverage table and `2026-08-29 Performance Refresh`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking SCHF performance, International navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:SCHF` identity, fund name, inception, passive/index-tracking equity eligibility, FTSE Developed ex US benchmark, expense ratio, International region and official source dates are mapped.
+- PASS: official NAV Total Return, market-price return, price, benchmark, holdings, assets, valuation, expense, yield, rolling/YTD fields and secondary annual proxy remain separate; all proxy values are marked `*` and no official annual NAV row is invented.
+- PASS: official rolling `10.11%`, official YTD `15.26%`, market-price YTD `14.79%`, proxy annual calculations, 2021-2025 comparison, best/worst ranking, S&P cache basis, `8/2` up/down count and daily-NAV drawdown gap reconcile to the proposed owner page and index/region notes.
+- PASS: all planned links and breadcrumbs resolve; the performance page owns the numbers; the region page remains static; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Schwab and SEC sources confirm SCHF as a passive NYSE Arca developed-markets ETF with official rolling/YTD evidence; annual rows are explicitly marked as a secondary proxy, scheduled-local verification passed, and NAV/market-price plus raw-endpoint and daily-drawdown gaps remain disclosed.
