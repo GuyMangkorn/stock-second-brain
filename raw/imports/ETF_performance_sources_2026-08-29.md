@@ -2420,3 +2420,72 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official VanEck and SEC sources support the SMHC refresh with a dated available-period performance-since-inception field, current NAV/assets/holdings evidence and passive index classification; scheduled-local verification passed, detailed-table conflicts and no-YTD/no-10-year gaps are disclosed, and no underlying-index or secondary proxy was used.
+
+## VEA — Vanguard FTSE Developed Markets ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a924381bc27a88452a07e4b`; input ticker `VEA`; canonical `entity_key: NYSE Arca:VEA`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is International; the durable graph is `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`.
+- This run creates the VEA performance owner and adds the corresponding International navigation, ETF Performance Index coverage/refresh entry, this source batch and one log bullet. No entity page was found or created.
+
+### Source map and classification
+
+| Source | URL | Use and as-of date |
+|---|---|---|
+| Official Vanguard VEA product page | https://investor.vanguard.com/investment-products/etfs/profile/vea | Identity, inception `2007-07-20`, index management, asset class, and product performance summary; page capture current to 2026-08-29 |
+| Official Vanguard Advisors VEA page | https://advisors.vanguard.com/investments/products/vea/vanguard-ftse-developed-markets-etf | Current NAV TR YTD `18.46%` as of `2026-08-26`, expense ratio `0.03%` as of `2026-04-28`, holdings `3,886`, net assets `USD 230.3bn` as of `2026-07-31`, turnover `4.10%`, exchange and benchmark |
+| Official Vanguard VEA investment profile | https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/investment-profiles/0936.pdf | Official 2016-2025 annual NAV total returns, rolling 10-year `10.52%` annualized, 3-year standard deviation `13.88%`, benchmark splice, distributions and portfolio facts as of `2026-06-30` |
+| Official Vanguard VEA summary prospectus | https://www.vanguard.com/pub/Pdf/sp936.pdf | NYSE Arca listing, objective, FTSE Developed All Cap ex US Index methodology, fees, passive replication and foreign-market risks; dated `2026-04-28` |
+| Cached S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; cache reused without a new benchmark search |
+| Existing vault context | `index.md`, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Routing and navigation context; no existing VEA performance or entity page was present |
+
+- Vanguard and the SEC prospectus classify VEA as a passive, full-replication, index-tracking international equity ETF seeking to track the `FTSE Developed All Cap ex US Index`. The fund invests across large-, mid-, and small-cap companies in Canada, Europe and the Pacific region, so `management_mode: passive-index` and primary region `International` are supported.
+- The official prospectus identifies the ETF shares as listed on `NYSE Arca`; the canonical displayed key is therefore `NYSE Arca:VEA`.
+- Fund performance figures are NAV total returns, include reinvested dividends and capital-gains distributions, and are net of expenses. The issuer benchmark is kept separate from the common S&P 500 reference.
+
+### Candidate performance claims and raw observations
+
+- Official Vanguard annual NAV TR rows: 2016 `2.51%`, 2017 `26.44%`, 2018 `-14.47%`, 2019 `22.08%`, 2020 `10.29%`, 2021 `11.49%`, 2022 `-15.35%`, 2023 `17.77%`, 2024 `3.07%`, and 2025 `35.15%`.
+- Official rolling 10-year NAV TR is `10.52%` annualized for the period ended `2026-06-30`. The source does not disclose raw start/end TR values or a cumulative value for this rolling field, so no normalized endpoint is inferred.
+- Current official NAV TR YTD is `18.46%` as of `2026-08-26`. The same current source reports expense ratio `0.03%` as of `2026-04-28`; holdings `3,886` and ETF net assets `USD 230.3bn` as of `2026-07-31`.
+- Official portfolio facts as of `2026-06-30` include P/E `18.7x`, P/B `2.2x`, turnover `4.1%`, and 3-year standard deviation `13.88%`. Distribution schedule is quarterly.
+- The VEA benchmark is a historical splice: MSCI EAFE through `2013-05-28`, FTSE Developed ex North America through `2015-12-20`, FTSE Developed All Cap ex US Transition Index through `2016-05-31`, and FTSE Developed All Cap ex US thereafter. Benchmark returns are adjusted for withholding taxes.
+- No official daily NAV total-return history sufficient to reproduce maximum drawdown and recovery was identified. No secondary market-price or dividend proxy is used.
+
+### Calculations and reconciliation
+
+- From the official annual rows, 2016-2025 compound return is `131.10%` and rounded-input CAGR is `8.74%` using `(Π(1 + annual TR))^(1/10) - 1`.
+- For the common 2021-2025 window, VEA compound return is `54.83%` and CAGR is `9.14%`; the cached S&P 500 TR compound is `96.17%` and CAGR is `14.43%`. The cumulative gap is `41.34 percentage points` and CAGR gap is `5.29 pp`.
+- VEA has `8` positive and `2` negative complete calendar years. Best is 2025 `+35.15%`; least positive is 2016 `+2.51%`; worst is 2022 `-15.35%`; least bad down year is 2018 `-14.47%`.
+- VEA beat the S&P 500 common reference in 2017, 2022 and 2025 (`3 / 10` complete years). This arithmetic comparison is not a manager-skill claim.
+- The 10-year issuer field is eligible as a complete rolling window but raw endpoints are not disclosed; the page therefore reports the issuer's `10.52%` annualized field without inventing a cumulative endpoint. Maximum drawdown and recovery remain `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The Vanguard investment profile is the source of truth for the complete annual NAV rows, rolling 10-year field, standard deviation and distribution schedule. The Advisors page is used for the fresher current YTD and July fund snapshot. These are retained with separate as-of dates.
+- The cached S&P 500 table is used only for its exact 2016-2025 USD total-return convention. It is not substituted for VEA's FTSE benchmark.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_VEA Performance.md`: complete VEA owner page with the required four sections, official annual table, rolling 10-year field, current YTD, calculations, risk gaps, sources, International breadcrumb and canonical geography tag.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/International ETF.md`: add the VEA row and dated refresh note; keep the region page as navigation-only.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: add VEA to the coverage table and `2026-08-29 Performance Refresh`.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking VEA performance, International navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change and keep `log.md` unstaged.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:VEA` identity, fund name, inception, passive/index-tracking equity eligibility, FTSE benchmark, expense ratio, International region and official source dates are mapped.
+- PASS: NAV Total Return, market-price return, price, benchmark splice, holdings, expense, standard deviation and distribution facts remain separate; current YTD uses the freshest official capture and no proxy is introduced.
+- PASS: 10-year issuer field, annual-row CAGR, 2021-2025 comparison, best/worst ranking, S&P cache basis, 8/2 up/down count and daily-NAV drawdown gap reconcile to the proposed owner page and index/region notes.
+- PASS: all planned links and breadcrumbs resolve; the performance page owns the numbers; the region page remains static; no critical/high finding remains and no WARNING requires confirmation.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard and SEC sources confirm VEA as a passive NYSE Arca developed-markets ETF with complete 2016-2025 NAV rows, rolling 10-year and current-YTD evidence; scheduled-local verification passed and raw-endpoint and daily-drawdown gaps remain explicitly disclosed.

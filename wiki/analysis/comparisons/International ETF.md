@@ -31,6 +31,7 @@ tags:
 | VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.01% | 5.46% | 9.18% | [[ETF_NASDAQ_VIGI Performance]] |
 | VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 7.42% | 6.45% | 10.86% | [[ETF_NYSE_ARCA_VSS Performance]] |
 | SCHC | Schwab International Small-Cap Equity ETF | developed international ex-U.S. small-cap | 8.23% | 7.10% | 6.15% | [[ETF_NYSE_ARCA_SCHC Performance]] |
+| VEA | Vanguard FTSE Developed Markets ETF | developed markets ex-U.S. large-/mid-/small-cap | 10.52% | 9.14% | 18.46% | [[ETF_NYSE_ARCA_VEA Performance]] |
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
@@ -77,6 +78,11 @@ secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใ�
 จึงไม่ applicable. DFIS `14.18%*` เป็น secondary market-price + cash-distribution
 proxy ณ 2026-08-12 ไม่ใช่ official NAV TR; official complete annual rows คือ
 2023-2025 และกองทุนเป็น active systematic long-only small-cap.
+
+VEA ใช้ official Vanguard rolling 10-year NAV TR `10.52%` ณ 2026-06-30,
+official 2016-2025 annual NAV rows ที่คำนวณเป็น CAGR `8.74%`, 2021-2025
+CAGR `9.14%`, และ current official NAV TR YTD `18.46%` ณ 2026-08-26.
+Rolling raw endpoints และ official daily NAV drawdown/recovery ยังไม่เปิดเผย.
 
 ## 2026-08-29 Verified Refresh
 
