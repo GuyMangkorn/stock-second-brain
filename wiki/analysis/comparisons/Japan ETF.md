@@ -26,7 +26,7 @@ tags:
 | SJPA / IHREF | iShares Core MSCI Japan IMI UCITS ETF | Japan broad large/mid/small-cap equity, USD accumulating | 7.42% | 6.33% | 19.87% | [[ETF_LSE_SJPA Performance]] |
 | SCJ | iShares MSCI Japan Small-Cap ETF | Japan small-cap equity / index-tracking | 8.18% | 5.20% | 16.10% | [[ETF_NYSE_ARCA_SCJ Performance]] |
 | DXJ / DXJJF | WisdomTree Japan Equity UCITS ETF - USD Hedged | Japan single-country dividend/export tilt, USD/JPY hedged | 13.94% | 24.77% | 21.90% | [[ETF_LSE_DXJ Performance]] |
-| VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan single-country large/mid-cap equity, USD distributing | 9.45% | not disclosed (rolling periods) | 16.30% | [[ETF_LSE_VDJP Performance]] |
+| VNFGF / VDJP | Vanguard FTSE Japan UCITS ETF - USD Distributing | Japan single-country large/mid-cap equity, USD distributing | 9.03% | not disclosed (rolling periods) | 16.27% | [[ETF_LSE_VDJP Performance]] |
 | VFJUF / VJPU | Vanguard FTSE Japan UCITS ETF - USD Hedged Accumulating | Japan single-country large/mid-cap equity, USD hedged accumulating | not applicable (<10y history) | not disclosed (rolling periods) | 19.41% | [[ETF_LSE_VJPU Performance]] |
 | VGDTF / VJPA | Vanguard FTSE Japan UCITS ETF - USD Accumulating | Japan single-country large/mid-cap equity, physical/index-tracking; history under 10 years | not applicable (<10y history) | 6.50% | 15.27% | [[ETF_XETRA_VJPA Performance]] |
 | GSJY | Goldman Sachs ActiveBeta Japan Equity ETF | Japan rules-based smart-beta equity / index-tracking | 9.01% | 6.62% | 15.60% | [[ETF_NYSE_ARCA_GSJY Performance]] |
@@ -71,6 +71,13 @@ GSJY latest official Goldman Sachs July factsheet reports NAV TR rolling 10-year
 the relevant month-end field dated 2026-07-31. The ActiveBeta Japan index remains
 the issuer benchmark; official daily NAV drawdown/recovery and raw rolling
 endpoints are `ไม่พบข้อมูลที่ยืนยันได้`.
+
+VDJP latest official Vanguard July factsheet reports rolling 10-year NAV TR
+`9.03%` for 2016-08-01 to 2026-07-31 and standardized NAV TR YTD `16.27%` as of
+2026-07-31. Current official NAV is `US$52.30` and market price is `£38.65` as
+of 2026-08-28. Calendar 2021-2025 CAGR remains not disclosed because the
+official history is reported as rolling August-July periods; official daily NAV
+drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Navigation
 

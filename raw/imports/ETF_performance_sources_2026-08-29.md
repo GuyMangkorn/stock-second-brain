@@ -1852,3 +1852,78 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official BlackRock/iShares current and July USD accumulating-share evidence support the IPOL refresh; scheduled-local verification passed, the March-versus-July 2020 source-version conflict and separate as-of windows are disclosed, and official daily-NAV drawdown data remains unavailable.
+
+## VDJP — Vanguard FTSE Japan UCITS ETF (USD) Distributing
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177774c4f9f6db18336ae`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `VDJP`; canonical `entity_key: LSE:VDJP`; OTC/input alias `VNFGF` remains recorded on the owner page.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is Japan; the durable graph is `[[ETF Region Index]] → [[Japan ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing VDJP performance owner, Japan navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| Vanguard official professional product page | https://www.vanguard.co.uk/professional/product/etf/equity/9504/ftse-japan-ucits-etf-usd-distributing | Official identity, USD LSE listing, current NAV/market price, current fund facts, classification, benchmark and tracking statistics; prices captured at 2026-08-28 close, 52-week fields may show 2026-08-29 page metadata |
+| Vanguard FTSE Japan UCITS ETF USD Distributing factsheet | https://fund-docs.vanguard.com/FTSE_Japan_UCITS_ETF_USD_Distributing_9504_EU_INT_UK_EN.pdf | Official rolling 12-month NAV/benchmark returns, standardized rolling 10-year performance, portfolio characteristics, sectors, fee and share-class facts; performance and portfolio data as of 2026-07-31 |
+| Vanguard ETF prospectus | https://fund-docs.vanguard.com/etf-prospectus-en.pdf | Official fund-structure and risk cross-check; current prospectus source retained from the existing page |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31 |
+| Existing vault context | `wiki/analysis/performance/ETF_LSE_VDJP Performance.md`, `wiki/analysis/comparisons/Japan ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-07-24.md` | Prior rolling June-May page, Japan ownership, alias mapping, benchmark context and disclosed daily-NAV gap; July 2026 official evidence supersedes the prior May 2026 snapshot |
+
+### Identity and classification evidence
+
+- Vanguard identifies the fund as `FTSE Japan UCITS ETF – (USD) Distributing` (fund/product code `9504`), with `VDJP` as the USD London Stock Exchange ticker; `VNFGF` is an OTC/input alias for this same fund, not a separate performance series. ISIN is `IE00B95PGT31`; Bloomberg `VDJP LN`; Reuters `VDJP.L`.
+- The fund launched on `2013-05-21` and was listed on `2013-05-22`. It is an Irish UCITS, passive, physical equity ETF tracking the `FTSE Japan Index`, investing in large- and mid-cap Japanese equities with full replication where practicable and sampling where necessary. OCF is `0.10%`; distributions are quarterly.
+- Primary region is Japan and the canonical tag is `geography/Japan`. The product page reports Japan allocation `100%`, share-class assets `US$3.18B`, total fund assets `US$4.99B`, and risk indicator `6` in the reviewed capture.
+
+### Candidate performance claims and raw observations
+
+- Latest official product-page price capture reports NAV `US$52.30` and market price `£38.65`, both at the 2026-08-28 close. Historical NAV fields show `US$52.3035` on 2026-08-28, `US$52.1557` on 2026-08-27 and `US$52.0387` on 2026-08-26. These are point-in-time prices, separate from standardized month-end total-return fields.
+- The official July factsheet reports closing-NAV total return, net of fees with distributions reinvested, as of 2026-07-31: fund `0.87%` 1M, `5.05%` quarter, `16.27%` YTD, `31.22%` 1Y, `17.40%` 3Y annualized, `9.69%` 5Y annualized, `9.03%` 10Y annualized and `7.36%` since inception. The corresponding FTSE Japan Index fields are `0.87%`, `5.09%`, `16.32%`, `31.31%`, `17.50%`, `9.79%`, `9.17%` and `7.51%`.
+- The same official factsheet supplies rolling 12-month fund/index NAV TR rows: 01 Aug 2016-31 Jul 2017 `14.62%`/`14.90%`; Aug 2017-Jul 2018 `8.90%`/`9.08%`; Aug 2018-Jul 2019 `-5.51%`/`-5.35%`; Aug 2019-Jul 2020 `0.99%`/`1.11%`; Aug 2020-Jul 2021 `25.47%`/`25.63%`; Aug 2021-Jul 2022 `-14.43%`/`-14.34%`; Aug 2022-Jul 2023 `14.71%`/`14.81%`; Aug 2023-Jul 2024 `15.44%`/`15.56%`; Aug 2024-Jul 2025 `6.81%`/`6.92%`; and Aug 2025-Jul 2026 `31.22%`/`31.31%`.
+- Latest official July portfolio facts are `475` stocks, median market cap `US$43.4B`, P/E `16.6`, P/B `1.8`, ROE `10.2%`, earnings growth `16.8%`, turnover `-20.4%` from 2026-06-30, equity yield `1.9%`, and Japan allocation `100%`. Sector weights are Industrials `26.8%`, Financials `17.8%`, Consumer Discretionary `17.7%`, Technology `15.0%`, Health Care `5.1%`, Basic Materials `4.5%`, Consumer Staples `4.4%`, Telecommunications `4.0%`, Real Estate `2.7%`, Utilities `1.3%` and Energy `0.9%`.
+- Official tracking statistics as of 2026-07-31 are beta `0.99`, R-squared `1.00`, and annualized tracking error `0.03%` 1Y, `0.47%` 3Y and `0.36%` 5Y. The factsheet's `1.73%` historic-performance field is not substituted for NAV total return.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%` and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`. Calendar-year VDJP rows are not disclosed by the reviewed official July factsheet.
+
+### Calculations and reconciliation
+
+- The official rounded 10-year annualized NAV TR is `9.03%` for the rolling period 2016-08-01 through 2026-07-31, equivalent to `10.00` elapsed years. Because raw NAV endpoints are not disclosed, normalized cumulative return is derived from the displayed rounded CAGR: `100 × (1 + 0.0903)^10 - 100 = 137.35%`. The corresponding benchmark calculation from `9.17%` is `140.43%`; fund-minus-index is approximately `-3.09 pp` cumulative and `-0.14 pp` annualized. These normalized cumulative values are derived, not issuer-reported endpoints.
+- Official rolling rows give up/down periods `8 / 2`; best is Aug 2025-Jul 2026 `+31.22%`, and worst is Aug 2021-Jul 2022 `-14.43%`. Calendar 2021-2025 CAGR is `not disclosed`; it is not calculated from these non-calendar rolling periods.
+- The cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over calendar 2016-2025. This is a common directional reference only and is not date-aligned with VDJP's rolling August-July periods; no alpha claim is made.
+- Official rolling fund-minus-index differences are `-0.28 pp`, `-0.18 pp`, `-0.16 pp`, `-0.12 pp`, `-0.16 pp`, `-0.09 pp`, `-0.10 pp`, `-0.12 pp`, `-0.11 pp` and `-0.09 pp` across the ten rows. The July standardized fund-minus-index differences are `-0.04 pp` YTD, `-0.09 pp` 1Y, `-0.10 pp` 3Y, `-0.10 pp` 5Y, `-0.14 pp` 10Y and `-0.15 pp` since inception; these are tracking observations, not manager skill.
+
+### Source-quality choice and unresolved gaps
+
+- Vanguard's July 2026 factsheet and official product page are the sources of truth for the USD distributing share class, identity, rolling performance, current price and risk facts. The July factsheet supersedes the prior May 2026 snapshot; the new rolling periods are preserved as August-July periods and are not relabeled as calendar years.
+- Current NAV/market prices are dated 2026-08-28, while standardized performance and fund facts are dated 2026-07-31. No current date-to-date YTD value after July is backfilled from the point-in-time price series; the latest verified standardized NAV TR YTD remains `16.27%` as of 2026-07-31.
+- The product page's historic-performance/distribution field is not used as NAV total return. Official daily NAV history sufficient to reproduce maximum drawdown, recovery dates and a daily volatility series is `ไม่พบข้อมูลที่ยืนยันได้`; no secondary drawdown proxy is saved.
+- Official holdings, sector, valuation, tracking-error, price and performance fields retain separate as-of dates. `VNFGF` is retained as an alias for `LSE:VDJP`; no duplicate OTC performance line is created.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, alias mapping, return basis (`NAV Total Return`), issuer benchmark (`FTSE Japan Index`), common S&P reference, candidate claims and rolling periods, units/currency (`%`, USD/GBP price), definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_LSE_VDJP Performance.md`: refresh frontmatter to 2026-08-29, use official July rolling rows and 10-year NAV TR `9.03%`, derive normalized cumulative `137.35%` from the rounded CAGR with the formula disclosed, update current NAV/market prices, fund facts, tracking statistics and source-quality notes, preserve alias/breadcrumb/tags, and keep calendar 2021-2025 CAGR as not disclosed.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Japan ETF.md`: update VDJP to official rolling `9.03%`, calendar CAGR `not disclosed (rolling periods)`, and official standardized NAV TR YTD `16.27%`, with the current price and July performance as-of separation noted.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the VDJP coverage row and 2026-08-29 refresh section to July rolling values, current NAV, benchmark tracking context and disclosed daily-NAV/calendar-window gaps.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_LSE_VDJP Performance]]`, `[[Japan ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `9.03%`, derived normalized cumulative `137.35%`, official July YTD `16.27%`, and preserved rolling/calendar/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing Japan navigation remains canonical and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official LSE USD distributing identity, `VNFGF` alias mapping, fund name, inception/listing dates, passive/physical/index-tracking equity eligibility, canonical key, tracked index, return basis, currency and Japan region ownership are source-mapped.
+- PASS: official current NAV/market price, July standardized NAV/index returns, rolling annual rows, fund facts, sector exposures, tracking statistics, fee, cached S&P rows and metric definitions retain separate sources and as-of dates.
+- PASS: normalized cumulative calculations, fund-index reconciliation, up/down counts, best/worst rows, current-vs-standardized date separation, common-benchmark context and daily-NAV gap reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for VDJP performance, Japan region, index, source batch and log artifacts are specified; breadcrumb/alias/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official Vanguard current and July factsheet evidence support the VDJP refresh; scheduled-local verification passed, rolling August-July periods and separate current-price/standardized-return dates are disclosed, calendar-year CAGR and official daily-NAV drawdown data remain unavailable, and the durable write set is complete.
