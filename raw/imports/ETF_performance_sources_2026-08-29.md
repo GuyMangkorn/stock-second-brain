@@ -1927,3 +1927,79 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Vanguard current and July factsheet evidence support the VDJP refresh; scheduled-local verification passed, rolling August-July periods and separate current-price/standardized-return dates are disclosed, calendar-year CAGR and official daily-NAV drawdown data remain unavailable, and the durable write set is complete.
+
+## CUSS — iShares MSCI USA Small Cap CTB Enhanced ESG UCITS ETF USD (Acc)
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91777a1901f9ca3adfe7b1`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `CUSS`; canonical `entity_key: LSE:CUSS`; OTC/input alias `CPLCF` remains recorded on the owner page.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is United States; the durable graph is `[[ETF Region Index]] → [[USA ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing CUSS performance owner, USA navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity or new region page is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| BlackRock/iShares current product page | https://www.blackrock.com/uk/individual/products/253480/ishares-msci-usa-small-cap-ctb-enhanced-esg-ucits-etf | Official current NAV/YTD, objective, benchmark-change disclosure, fund facts, characteristics and listing map; latest search capture shows NAV `US$708.60` as of 2026-08-27 and NAV TR YTD `20.54%` as of 2026-08-26; full page capture separately shows fund facts through 2026-08-24/31-Jul |
+| iShares official professional product page | https://www.ishares.com/uk/professionals/en/products/253480/csuss | Official objective, benchmark change, risk language, fund facts, portfolio characteristics, USD LSE listing and literature links; page capture through 2026-07-31/07-Aug and current page fields through 2026-07-31 |
+| iShares July USD factsheet | https://www.ishares.com/gls-download/literature/fact-sheet/csuss-ishares-msci-usa-small-cap-ctb-enhanced-esg-ucits-etf-fund-fact-sheet-en-gb.pdf | Official annual NAV/benchmark rows, July cumulative/annualized returns, holdings, fee, structure and risk facts; performance/portfolio data as of 2026-07-31 and all other data as of 2026-08-07 |
+| London Stock Exchange CUSS page | https://www.londonstockexchange.com/stock/CUSS/ishares/company-page | USD LSE listing cross-check; page response did not expose a readable quote table in the reviewed capture |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31 |
+| Existing vault context | `wiki/analysis/performance/ETF_LSE_CUSS Performance.md`, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-08-17.md` | Prior CUSS page, USA ownership, alias mapping, annual series and benchmark-change caveat; current official August/July evidence supersedes the prior July-29 snapshot |
+
+### Identity and classification evidence
+
+- BlackRock/iShares identifies the fund as `iShares MSCI USA Small Cap CTB Enhanced ESG UCITS ETF`, USD accumulating share class, ISIN `IE00B3VWM098`, launched `2009-07-01`, with `CUSS` as the USD London Stock Exchange ticker (Bloomberg `CUSS LN`, RIC `CUSS.L`, SEDOL `B53N420`). `CPLCF` is an OTC/input alias for this same fund and is not a separate performance series. The same fund family also has GBP `CUS1`; the listing map is preserved to avoid mixing exchange lines.
+- CUSS is a passive, physical, optimised U.S. small-cap equity UCITS ETF tracking the `MSCI USA Small Cap ESG Enhanced Focus CTB Index`; TER is `0.43%`, income is accumulating, domicile Ireland, SFDR Article 8 and rebalance frequency quarterly.
+- The fund changed name/objective and benchmark on `2022-06-01`: prior benchmark `MSCI USA Small Cap Index`, current benchmark `MSCI USA Small Cap ESG Enhanced Focus CTB Index`. The fund's calendar NAV history is continuous, but issuer benchmark comparisons across the full 2016-2025 window are not one continuous benchmark series.
+- Primary region is United States and the canonical tag is `geography/United-States`.
+
+### Candidate performance claims and raw observations
+
+- Latest official current product-page search capture reports NAV `US$708.60` as of `2026-08-27`, one-day NAV change `-US$0.12` / `-0.02%`, and NAV Total Return YTD `20.54%` as of `2026-08-26`. The current page's full capture reports net assets `US$3,256,508,232`, `1,509` holdings and P/B `2.62` as of `2026-08-24`; P/E is `21.42` as of 2026-08-24, beta `1.000` and standard deviation `18.55%` as of 2026-07-31. These are separate current/fund-facts dates.
+- The official July factsheet reports NAV total return, with gross income reinvested where applicable and on an NAV basis, as of `2026-07-31`: 1M `-4.34%`, 3M `4.31%`, 6M `10.72%`, YTD `16.40%`, 1Y `28.32%`, 3Y annualized `12.92%`, 5Y annualized `6.84%` and since inception annualized `12.61%`. The corresponding benchmark fields are `-4.34%`, `4.31%`, `10.75%`, `16.45%`, `28.51%`, `13.11%`, `6.99%` and `12.79%`.
+- The latest official July factsheet supplies complete calendar-year NAV rows: 2016 `19.13%`, 2017 `16.49%`, 2018 `-10.49%`, 2019 `26.56%`, 2020 `18.15%`, 2021 `18.86%`, 2022 `-16.94%`, 2023 `15.63%`, 2024 `10.71%` and 2025 `9.60%`. Benchmark rows are `19.15%`, `16.75%`, `-10.40%`, `26.74%`, `18.32%`, `19.11%`, `-16.79%`, `15.53%`, `11.02%` and `9.77%`; the pre-2022 benchmark rows reflect the former MSCI USA Small Cap Index.
+- The July factsheet reports `1,510` holdings, P/B `2.54x`, P/E `21.23x` and 3-year beta `1.00`; portfolio data and all other factsheet data are dated 2026-08-07 unless marked as performance/portfolio data at 2026-07-31. The full official page's current holdings snapshot is later but slightly different at `1,509`.
+- Cached S&P 500 TR rows are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%` and 2025 `17.88%`; USD, dividends reinvested, as of `2025-12-31`. S&P 500 TR is a common reference only, not CUSS's strategy benchmark.
+
+### Calculations and reconciliation
+
+- Using the official rounded fund rows, CUSS compounds to `157.2806%`, displayed as `157.28%`, over 2016-2025; rounded-input CAGR is `(1 + 1.572806)^(1/10) - 1 = 9.91%`. The 2021-2025 rows compound to `38.5146%`, displayed as `38.51%`, with rounded-input CAGR `6.73%`.
+- The official rounded benchmark rows compound to `160.8160%` / CAGR `10.06%` over 2016-2025 and `39.5415%` / CAGR `6.89%` over 2021-2025. Fund-minus-index is approximately `-3.54 pp` cumulative / `-0.15 pp` annualized for 2016-2025 and `-1.03 pp` cumulative / `-0.16 pp` annualized for 2021-2025. Because of the 2022 benchmark change, these full-window benchmark comparisons are directional tracking context, not a single continuous strategy benchmark.
+- Cached S&P 500 TR compounds to `298.33%` / CAGR `14.82%` over 2016-2025 and `96.17%` / CAGR `14.43%` over 2021-2025. These common-reference differences are not alpha and do not replace the issuer benchmark.
+- Annual fund rows give up/down years `8 / 2`; best is 2019 `+26.56%`, worst is 2022 `-16.94%`, least positive is 2025 `+9.60%`, and least bad down year is 2018 `-10.49%`. Official daily NAV history sufficient to reproduce maximum drawdown and recovery is not disclosed in the reviewed source set.
+
+### Source-quality choice and unresolved gaps
+
+- BlackRock/iShares current and July USD factsheet materials are the sources of truth for identity, classification, current fields, annual NAV returns, benchmark rows and the 2022 methodology break. The latest current capture replaces the prior current YTD `14.97%` as of 2026-07-29 with `20.54%` as of 2026-08-26; the July standardized YTD `16.40%` remains separately labeled and is not harmonized with the later current field.
+- The current page defaults visually to the GBP `CUS1` listing in some captures while its listing map identifies the USD `CUSS` line. The USD NAV/YTD fields, ISIN, USD share-class facts and LSE CUSS listing map are retained together; no GBP market-price series is mixed into NAV total return.
+- Current NAV/YTD, current AUM/holdings/valuation, July standardized performance and July/August portfolio fields have separate as-of dates. Official daily NAV history sufficient to reproduce maximum drawdown and recovery is `ไม่พบข้อมูลที่ยืนยันได้`; no secondary drawdown proxy is saved.
+- The 2022-06-01 benchmark/name change is disclosed wherever full-history benchmark context is used. No management-skill or alpha claim is made; return-only fund-minus-index arithmetic is labeled as tracking observation.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, alias mapping, return basis (`NAV Total Return`), issuer benchmark and benchmark-change date, common S&P reference, candidate claims and calendar periods, units/currency (`%`, USD), definitions, separate as-of dates, source URLs/paths, calculations, reconciliation, source-quality choice, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_LSE_CUSS Performance.md`: refresh frontmatter to 2026-08-29, update current NAV/YTD/AUM/holdings/characteristics, preserve official 2016-2025 annual NAV and benchmark rows, update 2016-2025/2021-2025 calculations, retain the 2022 benchmark/name-change caveat, preserve alias/USA breadcrumb/tags and disclose the daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/USA ETF.md`: update CUSS/CPLCF to official 2016-2025 CAGR `9.91%`, 2021-2025 CAGR `6.73%`, and latest current official NAV TR YTD `20.54%`, with July standardized YTD and current/fund-fact as-of dates separated.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: update the CUSS coverage row, annual summary and 2026-08-29 refresh section to current official fields, annual calculations, benchmark-change caveat and disclosed daily-NAV gap.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking `[[ETF_LSE_CUSS Performance]]`, `[[USA ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official 2016-2025 CAGR `9.91%`, 2021-2025 CAGR `6.73%`, current official YTD `20.54%`, and preserved benchmark-change/daily-NAV gaps; keep outside the scoped commit because `log.md` already contains unrelated changes.
+- No new ETF entity or region page is required; existing USA navigation remains canonical and no chart is created for this item.
+
+### Local pre-save checklist
+
+- PASS: official USD LSE identity, `CPLCF` alias mapping, fund name, inception date, passive/physical/optimised/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units and United States region ownership are source-mapped.
+- PASS: official current NAV/YTD, current AUM/holdings/valuation, July standardized NAV/index returns, complete annual rows, benchmark-change date, fee, structure, risk facts, cached S&P rows and metric definitions retain separate sources and as-of dates.
+- PASS: 2016-2025 and 2021-2025 calculations, fund/index reconciliation, common-benchmark context, up/down/best/worst rows, current-vs-standardized date separation and daily-NAV gap reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for CUSS performance, USA region, index, source batch and log artifacts are specified; alias/breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official BlackRock/iShares current and July USD-share-class evidence support the CUSS refresh; scheduled-local verification passed, the 2022 benchmark/name change and separate current/standardized as-of dates are disclosed, calendar returns reconcile, official daily-NAV drawdown data remains unavailable, and the durable write set is complete.
