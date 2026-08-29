@@ -108,7 +108,10 @@ OPPE `12.91%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026
 `14.84%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ
 `17.72%` เป็น official NAV TR YTD ณ 2026-07-31. ผลตอบแทนก่อนวันที่ 2 มิ.ย.
 2025 สะท้อน EUSC small-cap objective เดิม และปี 2025 เป็น mixed transition year;
-official daily NAV drawdown/recovery ยังไม่ verified.
+official daily NAV drawdown/recovery ยังไม่ verified. การ recheck วันที่
+2026-08-29 ยืนยัน current NAV `US$59.920`, closing market price `US$60.045`,
+distribution yield `7.88%` และ aggregate hedge ratio `98.12%` จาก WisdomTree
+ณ 2026-08-27; ตัวเลข return ในแถวเป็นคนละ as-of window ตามที่ระบุข้างต้น.
 
 FEP `10.57%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `10.90%` เป็น rounded-input CAGR ของ official calendar rows 2021-2025 และ

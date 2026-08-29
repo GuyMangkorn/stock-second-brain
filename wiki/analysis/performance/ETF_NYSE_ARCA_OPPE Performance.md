@@ -7,13 +7,13 @@ exchange: NYSE Arca
 fund: WisdomTree European Opportunities Fund
 tracked_index: WisdomTree European Opportunities Index
 benchmark: S&P 500 Total Return
-updated: 2026-08-18
+updated: 2026-08-29
 performance_as_of: 2025-12-31
 rolling_10y_as_of: 2026-07-31
 current_ytd_as_of: 2026-07-31
-price_nav_as_of: 2026-08-14
-fund_facts_as_of: 2026-08-14
-source_batch: raw/imports/ETF_performance_sources_2026-08-18.md
+price_nav_as_of: 2026-08-27
+fund_facts_as_of: 2026-08-27
+source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
 return_basis: NAV total return
 return_currency: USD
 tags:
@@ -42,8 +42,8 @@ objective/index วันที่ 2 มิ.ย. 2025 จึงไม่ใช�
 - `entity_key: NYSE Arca:OPPE`
 - Classification: supported passive/index-tracking equity ETF using passive
   indexing and representative sampling; exchange `NYSE Arca`
-- Inception: 4 มี.ค. 2015; expense ratio `0.58%`; distribution yield `7.83%`
-  ณ 14 ส.ค. 2026
+- Inception: 4 มี.ค. 2015; expense ratio `0.58%`; distribution yield `7.88%`
+  และ 30-day SEC yield `2.66%` ณ 27 ส.ค. 2026
 - Metric: `NAV Total Return` บนฐาน USD รวม reinvested distributions และ fund
   expenses ตาม issuer methodology; total returns ใช้ daily 4:00pm NAV
 - Tracked index (issuer benchmark): `WisdomTree European Opportunities Index`;
@@ -60,9 +60,9 @@ objective/index วันที่ 2 มิ.ย. 2025 จึงไม่ใช�
   - Formula: `(End TR / Start TR)^(1 / Years) - 1`
 - Current official NAV TR YTD: `17.72%` ณ 31 ก.ค. 2026; official 1-year NAV TR
   `29.84%` and 5-year NAV TR `14.66%` ณ วันเดียวกัน
-- Latest quote snapshot: NAV `US$60.308`, closing market price `US$60.504`,
-  premium/discount `+0.324%` ณ 14 ส.ค. 2026; quotes are not used in return
-  calculations
+- Latest quote snapshot: NAV `US$59.920`, closing market price `US$60.045`,
+  premium/discount `+0.208%` และ 30-day median bid/ask spread `0.18%` ณ
+  27 ส.ค. 2026; quotes are not used in return calculations
 - Coverage/source note: 2016-2024 annual rows are the official prospectus
   annual-return chart; 2025 is the official 1-year NAV return ending
   31 ธ.ค. 2025. The 2016-2024 history reflects the former EUSC
@@ -98,10 +98,13 @@ objective/index วันที่ 2 มิ.ย. 2025 จึงไม่ใช�
 
 Official rolling 10-year NAV TR เฉลี่ยต่อปีอยู่ที่ `12.91%` ณ 31 ก.ค. 2026;
 เมื่อใช้ annual rows แบบ rounded-input ช่วง 2016-2025 ได้ CAGR `11.09%` และ
-annual-return volatility `16.33%`. OPPE มี exposure กระจุกใน Industrials
-`25.94%`, Financials `25.62%` และ Materials `12.50%` ณ 14 ส.ค. 2026 และ
-aggregate hedge ratio `97.95%`; จึงยังมี Europe country/sector, cyclical,
-large-/mid-cap และ hedge-effect risks แม้จะลด EUR/USD exposure บางส่วน.
+annual-return volatility `16.33%`. Current portfolio characteristics ณ 27 ส.ค.
+2026 รายงาน P/E `14.34`, estimated P/E `13.86`, P/B `1.94`, dividend yield
+`3.35%`, net buyback yield `2.25%`; sector exposure หลัก ณ 26 ส.ค. 2026 คือ
+Industrials `25.73%`, Financials `25.30%` และ Materials `13.01%`, ขณะที่
+aggregate hedge ratio อยู่ที่ `98.12%` ณ 27 ส.ค. 2026. จึงยังมี Europe
+country/sector, cyclical, large-/mid-cap และ hedge-effect risks แม้จะลด
+EUR/USD exposure บางส่วน.
 
 Official daily NAV history ที่เพียงพอสำหรับ maximum drawdown และ recovery ยัง
 ไม่ถูกเปิดเผย. Secondary dividend-adjusted daily market-price proxy รายงาน
@@ -117,8 +120,9 @@ June 2025.
 - [WisdomTree OPPE quarterly factsheet](https://www.wisdomtree.com/us/media/international-equity/en-us-equity-oppe) — exchange, inception, return basis, official performance table, historical index splice and risks
 - [WisdomTree Trust prospectus](https://regulated-documents.saytechnologies.com/prospectuses/e0ff850f-45f1-417b-8779-01e2206cb79d-97717X552.pdf) — passive strategy and official 2016-2024 annual-return chart
 - [WisdomTree monthly performance report](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-reports-schedules/performance/monthly-performance.pdf) — official 2025 NAV return ending 31 ธ.ค. 2025
+- [WisdomTree dividend yield report as of 2025-12-31](https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-reports-schedules/dividend-yield/us-dividend-report-2025-12-31.pdf) — official 2025 NAV return and rolling-return cross-check
 - [WisdomTree European Opportunities Index](https://www.wisdomtree.com/us/indexes/wteuop) — index design, value/shareholder-yield and dynamic currency-hedge methodology
 - [PortfoliosLab OPPE](https://portfolioslab.com/symbol/OPPE) — secondary dividend-adjusted market-price drawdown/recovery proxy only
 - [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
 - Cached S&P 500 TR references: [2016-2019](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-08-18]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]

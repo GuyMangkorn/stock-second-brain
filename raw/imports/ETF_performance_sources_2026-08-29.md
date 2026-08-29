@@ -2207,3 +2207,77 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official Invesco historical performance and SEC strategy evidence support the CQQQ recheck; scheduled-local verification passed, current NAV/YTD remains explicitly undisclosed, rounding and continuity breaks are documented, and the daily NAV drawdown/recovery gap remains explicit.
+
+## OPPE — WisdomTree European Opportunities Fund
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; child card ARI: `ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a9177830070452b908e1c0a`; input ticker `OPPE`; canonical `entity_key: NYSE Arca:OPPE`.
+- The card was claimed and directly reread as `In Progress` before research. Primary region is Europe; the durable graph is `[[ETF Region Index]] → [[Europe ETF]] → [[ETF Performance Index]]`.
+- This recheck updates the existing OPPE performance owner, Europe navigation note, ETF Performance Index refresh section, this source batch and one log bullet. No ETF entity or new region page is required.
+
+### Source map and classification
+
+| Source | URL | Use and as-of date |
+|---|---|---|
+| WisdomTree official OPPE product page | https://www.wisdomtree.com/us/products/equity/oppe | Canonical identity, NYSE Arca, current objective, fee, current NAV/price, July month-end NAV returns, portfolio characteristics, holdings, sectors and hedge ratio; point-in-time fields as of `2026-08-26/27` and return fields as of `2026-07-31` |
+| WisdomTree OPPE quarterly factsheet | https://www.wisdomtree.com/us/media/international-equity/en-us-equity-oppe | Official exchange, inception, 90 holdings, 2026-06-30 rolling return table, return basis and historical index splice |
+| WisdomTree Trust prospectus | https://regulated-documents.saytechnologies.com/prospectuses/e0ff850f-45f1-417b-8779-01e2206cb79d-97717X552.pdf | Passive management, representative sampling, official 2016-2024 annual-return chart and strategy-change disclosure |
+| WisdomTree monthly performance report | https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-reports-schedules/performance/monthly-performance.pdf | Official 2026-06-30 rolling table and current report context |
+| WisdomTree dividend yield report as of 2025-12-31 | https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/fund-reports-schedules/dividend-yield/us-dividend-report-2025-12-31.pdf | Official 2025 NAV one-year return and 2021-2025/10-year cross-check |
+| WisdomTree European Opportunities Index | https://www.wisdomtree.com/us/indexes/wteuop | Index design, shareholder-yield/value and geopolitical, technology and macro opportunity exposures; dynamic 0-100% currency hedge; base date `2025-04-30` |
+| Secondary drawdown proxy | https://portfolioslab.com/symbol/OPPE | Dividend-adjusted daily market-price drawdown/recovery proxy only; not NAV evidence |
+| Cached S&P 500 Total Return convention | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years `2016-2025`, dividends reinvested, as of `2025-12-31`; no current-year comparison claimed |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_OPPE Performance.md`, `wiki/analysis/comparisons/Europe ETF.md`, `wiki/analysis/performance/ETF Performance Index.md` | Prior annual series, strategy-transition caveat and navigation graph; refreshed fields are reconciled against current official sources |
+
+- `OPPE` is a supported passive/index-tracking equity ETF. The prospectus describes passive management and representative sampling; the product page says the fund seeks to track the price and yield performance, before fees and expenses, of the WisdomTree European Opportunities Index.
+- The fund was formerly EUSC. WisdomTree states that the investment policy/index changed on `2025-06-02`; the current EUOP index was established with base value `200` on `2025-04-30` and uses a monthly dynamic hedge ratio between `0%` and `100%`.
+- The historical source symbol remains `EUSC.NV` on the product page, but the canonical entity for this card is `NYSE Arca:OPPE`; this legacy symbol is not treated as a separate instrument.
+
+### Candidate performance claims and raw observations
+
+- Current WisdomTree product page fields labelled `2026-08-27`: net expense ratio `0.58%`, total assets `$296.60480M`, shares outstanding `4,950,000`, distribution yield `7.88%`, 30-day SEC yield `2.66%`, NAV `$59.920`, closing market price `$60.045`, premium/discount `0.208%`, and 30-day median bid/ask spread `0.18%`.
+- The same page's portfolio characteristics as of `2026-08-27` are dividend yield `3.35%`, P/E `14.34`, estimated P/E `13.86`, P/B `1.94`, price/sales `0.98`, price/cash flow `8.38`, gross buyback yield `2.47%`, and net buyback yield `2.25%`. Holdings and sector data are labelled `2026-08-26`; the page shows 10 named holdings plus remaining portfolio, and sector weights Industrials `25.73%`, Financials `25.30%`, Materials `13.01%`, Consumer Discretionary `7.09%`, Information Technology `6.74%`, Energy `6.45%`, Utilities `5.46%`, Health Care `3.96%`, Consumer Staples `3.13%`, Real Estate `1.66%`, and Communication Services `1.47%`.
+- Current page month-end return fields as of `2026-07-31`: NAV Total Return cumulative `1M 6.19%`, `3M 6.56%`, YTD `17.72%`, since inception `249.26%`; average annual NAV returns `1Y 29.84%`, `3Y 23.84%`, `5Y 14.66%`, `10Y 12.91%`, since inception `11.59%`. The corresponding index fields are `6.25%`, `6.64%`, `18.05%`, `255.60%`, and `30.79%`, `24.27%`, `14.91%`, `13.12%`, `11.75%`.
+- The product page reports aggregate hedge ratio `98.12%` as of `2026-08-27`. WisdomTree explains that the fund uses derivatives for dynamic currency hedging; the hedge ratio is implemented after month-end close.
+- Official factsheet as of `2026-06-30` reports 90 holdings and NAV returns `YTD 10.86%`, `1Y 23.70%`, `3Y 22.58%`, `5Y 14.02%`, `10Y 12.97%`, and since inception `11.09%`. These June fields are retained as a date-separated cross-check, not mixed with the newer July product-page return fields.
+- Official annual NAV TR rows for `2016-2024` from the prospectus are `7.86%`, `22.32%`, `-13.41%`, `28.45%`, `-2.34%`, `22.65%`, `-11.18%`, `19.33%`, and `10.74%`. The official 2025 NAV one-year return ending `2025-12-31` is `38.73%` in the WisdomTree dividend-yield/monthly performance materials; it is a mixed transition year rather than a clean current-strategy year.
+- The current official quarterly/product pages do not expose a reproducible daily NAV series sufficient to independently calculate maximum drawdown and recovery: `ไม่พบข้อมูลที่ยืนยันได้`. The freshly checked PortfoliosLab page is clearly labelled a dividend-adjusted daily market-price series; it reports maximum drawdown `39.28%` on `2020-03-18` and recovery `229` trading sessions, so it remains a marked secondary proxy only.
+
+### Calculations and reconciliation
+
+- The official rounded annual rows compound to normalized TR `100.00` → `286.21`, cumulative `186.21%`, and rounded-input CAGR `11.09%` over `2016-2025`; population annual-return standard deviation is `16.33%`; complete-year profile is `7` up / `3` down.
+- The `2021-2025` rows compound to `99.71%` cumulative / rounded-input CAGR `14.84%`; the cached S&P 500 Total Return reference compounds to `96.17%` / CAGR `14.43%`. OPPE is ahead by approximately `0.41 pp` CAGR in this common reference window, but this is not manager alpha and the window includes the 2025 strategy transition.
+- The cached S&P 500 Total Return reference compounds to `298.33%` / CAGR `14.82%` over `2016-2025`; OPPE trails that common reference by approximately `3.73 pp` CAGR. This is reference context, not tracked-index excess return or alpha.
+- Best calendar year is `2025 +38.73%`; worst is `2018 -13.41%`; least-bad down year is `2020 -2.34%`; the 2025 result and the 2016-2024 rows must be read with the EUSC-to-OPPE continuity caveat.
+- The issuer's rolling 10-year NAV TR `12.91%` as of `2026-07-31` is kept separate from the rounded-input 2016-2025 calendar CAGR `11.09%`; the June factsheet's `12.97%` is a prior month-end value and is not mixed into the current row.
+
+### Source-quality choice, gaps, and proposed durable contents
+
+- The current WisdomTree product page is the source of truth for current NAV, market price, premium/discount, yields, portfolio characteristics, current hedge ratio and July month-end performance. The June factsheet and monthly report are retained as date-separated official cross-checks.
+- The prospectus annual chart is the source of truth for 2016-2024 annual NAV rows. The official 2025 one-year return ending 2025-12-31 is sourced separately from the WisdomTree report; the strategy/index transition is disclosed rather than treated as a seamless current-strategy history.
+- The secondary PortfoliosLab drawdown/recovery data is retained only as a marked market-price proxy. No official daily NAV drawdown or recovery value is inferred, and no secondary YTD value replaces the official July NAV YTD.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_OPPE Performance.md`: refresh frontmatter/source batch, current NAV/price/fund facts through 2026-08-27, official July rolling/YTD fields, date-separated June cross-check, current sector/valuation/hedge facts, annual rows, calculation updates and transition/daily-NAV caveats.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Europe ETF.md`: retain the OPPE row and add the current quote/yield/hedge recheck note while preserving the static Europe navigation summary.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: append OPPE to the `2026-08-29 Performance Refresh` section with the verified current metrics and disclosed gaps.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/raw/imports/ETF_performance_sources_2026-08-29.md`: append this source map, observations, calculations, reconciliation, local checklist and handoff.
+- Proposed `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one dated `etf-performance` bullet linking OPPE performance, Europe navigation, ETF Performance Index and this source batch; preserve the existing unrelated working-tree change.
+
+### Local pre-save checklist
+
+- PASS: canonical `NYSE Arca:OPPE` identity, fund name, inception, passive/index-tracking equity eligibility, tracked index, exchange, fee, Europe region and EUSC-to-OPPE strategy/index transition are source-mapped.
+- PASS: NAV Total Return, market-price return, underlying-index return, current NAV/price/yield/portfolio facts, hedge ratio, annual rows, currencies, units and every as-of date are separated; current July return fields are not mixed with June factsheet fields or secondary market-price proxy data.
+- PASS: 10-year eligibility, normalized 2016-2025 and 2021-2025 calculations, up/down/best/worst ranking, cached S&P 500 basis/window, rolling-versus-calendar distinction, and 2025 transition caveat reconcile to the proposed page. No unsupported current benchmark YTD, NAV drawdown or recovery value is inferred.
+- PASS: complete proposed contents for performance, Europe navigation, ETF Performance Index, source batch and log are specified; breadcrumbs/source links resolve; no critical/high finding remains and no WARNING requires confirmation.
+- `verification_mode: scheduled-local`
+- `reviewer_dispatch: not-attempted-by-design`
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official WisdomTree current product data and historical performance sources support the OPPE refresh; scheduled-local verification passed, separate as-of windows and the 2025 strategy transition are disclosed, and the daily NAV drawdown/recovery gap remains explicit.
