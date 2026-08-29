@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: Emerging Markets
-updated: 2026-08-17
+updated: 2026-08-29
 tags:
   - analysis/etf-region
   - geography/Emerging-Markets
@@ -26,7 +26,7 @@ tags:
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
 และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม
 
-† DGS 8.31% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DGS current NAV TR YTD is 8.86% as of 2026-07-31. EWX 7.95% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; `7.92%*` is a secondary dividend-reinvested 2021-2025 proxy, not official NAV, and `3.91%‡` is current official NAV TR YTD as of 2026-07-31.
+† DGS 8.31% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DGS current NAV TR YTD is 8.86% as of 2026-07-31. EWX 7.95% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; `7.92%*` is a secondary dividend-reinvested 2021-2025 proxy, not official NAV, and `3.91%‡` is current official NAV TR YTD as of 2026-07-31. The latest official EWX snapshot as of 2026-08-27 reports NAV `$73.96`, market price `$74.02`, premium/discount `0.08%`, AUM `$702.61M`, and 3,383 holdings; current country weights were not exposed in the accessible page capture.
 
 ## Navigation
 

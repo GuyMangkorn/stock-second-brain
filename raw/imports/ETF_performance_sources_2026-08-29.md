@@ -984,3 +984,85 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official DWS June rolling performance/fund facts plus the latest secondary July/August observations support the DBEU refresh; scheduled-local verification passed, secondary fields remain marked, and official July/current NAV and daily-NAV gaps are disclosed.
+
+## EWX — State Street SPDR S&P Emerging Markets Small Cap ETF
+
+### Workflow identity and scope
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91775396863dcefd1fe3ac`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `EWX`; canonical `entity_key: NYSE Arca:EWX`.
+- Card was claimed and directly reread as `In Progress` before research. Primary region is `Emerging Markets`; the durable graph is `[[ETF Region Index]] → [[Emerging Markets ETF]] → [[ETF Performance Index]]`.
+- This refresh updates the existing EWX performance owner, Emerging Markets navigation snapshot, master performance index, this dated source batch and one log bullet. No ETF entity page or normalized fund table is created.
+
+### Source map and as-of dates
+
+| Source | URL/path | Use and as-of date |
+|---|---|---|
+| State Street official EWX product/performance page | https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-emerging-markets-small-cap-etf-ewx | Official identity, exchange, passive/indexing classification, benchmark, current NAV/market price/AUM/holdings/sectors/characteristics/yields and standardized performance; current fields as of 2026-08-27 to 2026-08-28 and performance table as of 2026-07-31 |
+| State Street official EWX factsheet | https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-ewx.pdf | Official fund-document and standardized-return cross-reference; reviewed result dated 2026-07-31 |
+| SEC EWX summary prospectus | https://www.sec.gov/Archives/edgar/data/1168164/000119312526031211/d87745d497k.htm | Official passive strategy, index construction, fees, risks and best/worst-quarter context |
+| ETFreplay EWX | https://www.etfreplay.com/etf/ewx | Secondary dividend-adjusted calendar rows 2016-2025 and partial-2026 observation; page capture as of 2026-08-21 |
+| FinanceCharts EWX | https://www.financecharts.com/etfs/EWX/performance | Secondary YTD/rolling and annual cross-check; current crawl observation retained only for conflict disclosure |
+| S&P 500 official index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference for complete calendar years 2016-2025; cached convention as of 2025-12-31, dividends reinvested |
+| Existing vault context | `wiki/analysis/performance/ETF_NYSE_ARCA_EWX Performance.md`, `wiki/analysis/comparisons/Emerging Markets ETF.md`, `wiki/analysis/performance/ETF Performance Index.md`, `raw/imports/ETF_performance_sources_2026-08-17.md` | Prior page structure, region ownership, annual proxy rows and earlier official fields; refreshed claims use the newer official capture above |
+
+### Identity and classification evidence
+
+- State Street identifies EWX as `State Street SPDR S&P Emerging Markets Small Cap ETF`, listed on NYSE Arca, ticker `EWX`, CUSIP `78463X756`, ISIN `US78463X7562`, inception `2008-05-12`, benchmark `S&P Emerging Under USD2 Billion Index`, base currency USD and semi-annual distributions.
+- Classification is `passive-index-tracking`; the issuer describes sampling and at least 80% exposure to index securities/ADRs/GDRs. Incidental futures/cash-flow instruments do not change the passive equity classification.
+- Primary region is Emerging Markets and canonical tag is `geography/Emerging-Markets`.
+
+### Candidate performance claims and raw observations
+
+- Official State Street standardized returns as of 2026-07-31 are NAV / market value / linked index: 1M `-8.69% / -9.58% / -8.87%`; QTD `-8.69% / -9.58% / -8.87%`; YTD `3.91% / 3.07% / 3.33%`; 1Y `9.84% / 10.33% / 9.11%`; 3Y annualized `9.82% / 9.58% / 10.12%`; 5Y annualized `5.32% / 5.14% / 5.58%`; 10Y annualized `7.95% / 7.87% / 8.19%`; since inception annualized `4.18% / 4.14% / 5.11%`.
+- Official current State Street capture reports NAV `$73.96`, market price/close `$74.02`, premium/discount `0.08%`, median bid/ask spread `0.15%`, and volume `4,554` as of 2026-08-27. AUM is `$702.61M` as of 2026-08-27; gross expense ratio is `0.65%`.
+- Official characteristics as of 2026-08-27 include 3,383 holdings, P/B `1.70`, P/E FY1 `14.77`, weighted average market cap `$1,816.91M`, 30-day SEC yield `1.99%`, fund distribution `2.49%`, and index dividend `2.35%`.
+- Official sector weights as of 2026-08-27 are IT `26.67%`, Industrials `17.38%`, Materials `12.50%`, Consumer Discretionary `10.58%`, Financials `7.46%`, Health Care `7.10%`, Real Estate `5.77%`, Consumer Staples `5.45%`, Utilities `2.65%`, Communication Services `2.31%`, Energy `1.83%`, and Unassigned `0.29%`.
+- Official top-ten holdings as of 2026-08-27 are LandMark Optoelectronics `0.76%`, Kinsus `0.72%`, Macronix `0.61%`, Katilim… `0.47%`, WinWay `0.44%`, Win Semiconductors `0.43%`, ITEQ `0.35%`, Syntec `0.31%`, A Data `0.31%`, and Innodisk `0.30%`; shown weights sum to `4.70%`.
+- A prior official geographic snapshot as of 2026-08-14 listed Taiwan `31.79%`, India `18.50%`, and China `17.82%`. The latest accessible 2026-08-27 page did not expose a current geographic breakdown, so these older values are not presented as current.
+- ETFreplay secondary annual total-return rows are 2016 `7.94%`, 2017 `34.10%`, 2018 `-18.74%`, 2019 `15.59%`, 2020 `14.86%`, 2021 `18.16%`, 2022 `-15.00%`, 2023 `18.15%`, 2024 `6.84%`, and 2025 `15.44%`; its partial-2026 observation is `+10.72%` as of 2026-08-21. These rows are dividend-adjusted secondary proxy evidence, not official NAV rows.
+- FinanceCharts cross-check shows annual values within roughly `0.01–0.03 pp` of the ETFreplay rows, but current YTD `4.76%` and 10-year CAGR `8.18%` differ from ETFreplay and official State Street; these fields are retained only as a source conflict, not mixed into canonical performance.
+- Cached S&P 500 Total Return common-reference rows for 2016-2025 are 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, and 2025 `17.88%`; USD, dividends reinvested, as of 2025-12-31. This is not EWX's strategy benchmark.
+- Prospectus context reports best quarter `+25.82%` in Q2 2020 and worst quarter `-28.68%` in Q1 2020. Official daily NAV history sufficient to reproduce maximum drawdown, recovery and volatility is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- Secondary 2016-2025 rows compound to `128.55%*`; rounded-input CAGR is `(1 + 1.2855)^(1/10) - 1 = 8.62%*`; up/down years are `8 / 2`, best is 2017 `+34.10%*`, and worst is 2018 `-18.74%*`.
+- Secondary 2021-2025 rows compound to `46.36%*`; rounded-input CAGR is `(1 + 0.4636)^(1/5) - 1 = 7.92%*`. Cached S&P 500 TR compounds to `96.17%` / CAGR `14.43%` over the same window.
+- Official NAV minus linked-index observations as of 2026-07-31 are 1M/QTD `+0.18 pp`, YTD `+0.58 pp`, 1Y `+0.73 pp`, 3Y `-0.30 pp`, 5Y `-0.26 pp`, 10Y `-0.24 pp`, and since inception `-0.93 pp`; these are implementation/expense observations, not alpha.
+- Official rolling 10-year NAV TR `7.95%` is kept separate from the secondary 2016-2025 CAGR `8.62%*` and 2021-2025 CAGR `7.92%*`; official rolling, month-end YTD and secondary calendar rows have different windows and source ownership.
+- Reconciliation: ETFreplay partial-2026 return `+10.72%` is through 2026-08-21, while official State Street YTD `+3.91%` is through 2026-07-31. FinanceCharts' `4.76%` YTD and `8.18%` 10-year secondary values are not used to overwrite either field.
+
+### Source-quality choice and unresolved gaps
+
+- State Street is the source of truth for identity, passive classification, tracked index, official NAV/market/index performance, fee, AUM, holdings, sector weights, characteristics and yields. ETFreplay is used only for the complete annual proxy and FinanceCharts only as a secondary conflict check.
+- Official current geographic breakdown was not exposed in the latest accessible page capture; prior 2026-08-14 country values are retained with their date and are not asserted as current.
+- Official daily NAV history sufficient to independently reproduce maximum drawdown, recovery date and volatility is `ไม่พบข้อมูลที่ยืนยันได้`; no secondary drawdown number is promoted to a NAV claim.
+- The official current NAV/market pair and premium/discount are available as of 2026-08-27; they are point-in-time values and are not treated as total return.
+
+### Pre-save evidence packet / proposed durable contents
+
+- Evidence packet includes ETF identity and exchange, return basis (`NAV Total Return`), issuer benchmark, common benchmark, candidate claims and periods, units/currency (`%`, USD), metric definitions, separate as-of dates, source URLs/paths, calculations, source-quality selection, unresolved gaps and the complete planned write set.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF_NYSE_ARCA_EWX Performance.md`: replace stale Aug-14 fields with official July standardized NAV/market/index table, official rolling `7.95%`, official YTD `3.91%`, current Aug-27 NAV/market/AUM/holdings/sectors, retained secondary 2016-2025 and 2021-2025 proxy calculations, current country-data gap and official daily-NAV/drawdown gap; preserve the Emerging Markets breadcrumb and tag.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/comparisons/Emerging Markets ETF.md`: preserve the official 10Y/2021-2025/YTD snapshot row, update the page date and append current official EWX NAV/market/AUM/holdings context plus the current-country disclosure.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/wiki/analysis/performance/ETF Performance Index.md`: retain EWX's official/secondary headline metrics, add the current NAV/market snapshot to the coverage row and expand the EWX reconciliation note with the official country/daily-NAV gaps; do not change strict Common Window ranking membership.
+- Proposed content for `/Users/mangkornkatawong/Documents/STOCK_PROJECT/stock-second-brain/log.md`: append one `etf-performance` bullet linking `[[ETF_NYSE_ARCA_EWX Performance]]`, `[[Emerging Markets ETF]]`, `[[ETF Performance Index]]` and `[[ETF_performance_sources_2026-08-29]]`, stating official rolling `7.95%`, official YTD `3.91%`, retained secondary 2021-2025 CAGR `7.92%*`, and preserved source/daily-NAV gaps; keep the file outside the scoped commit because it already contains unrelated changes.
+- No new ETF entity or region page is required; existing navigation remains the canonical owner.
+
+### Local pre-save checklist
+
+- PASS: official NYSE Arca identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units, and Emerging Markets region ownership are source-mapped.
+- PASS: official July standardized table, official August NAV/market/AUM/fund facts, secondary annual/partial-YTD observations, cached S&P rows and each metric definition retain separate sources and as-of dates; secondary fields remain visibly marked `*`.
+- PASS: annual/CAGR/up-down calculations, official tracking differences, source-quality choice, current-country gap and prior-versus-current reconciliation reproduce the proposed values; no secondary result is relabeled official and no alpha claim is made.
+- PASS: complete proposed contents for EWX performance, Emerging Markets region, index, source batch and log artifacts are specified; breadcrumbs/tags/source links are preserved; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official State Street July standardized performance and August current fund data support the EWX refresh; scheduled-local verification passed, secondary annual/current conflicts remain marked, and current-country plus official daily-NAV gaps are disclosed.

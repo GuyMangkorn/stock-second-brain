@@ -116,7 +116,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NASDAQ_EEMA Performance]] | official 2012 / official rolling 2016-2026; official 2016-2025 | 10.54% | 3.36% | 20.51% | 2017 +41.94% / 2022 -21.45% | Emerging Markets Asia broad equity | China/Taiwan/Korea/India and technology concentrated; country/FX/emerging-market-sensitive |
 | [[ETF_LSE_CEMA Performance]] | official 2010 / official rolling 2016-2026; official 2016-2025 | 11.04% | 3.62% | 28.17% | 2025 +32.40% / 2022 -21.00% | Emerging Markets Asia broad equity | Taiwan/Korea/China/India and technology/country/FX/emerging-market-sensitive |
 | [[ETF_NYSE_ARCA_DGS Performance]] | official 2007 / official 2016-2025; issuer-reported 10Y average annual NAV TR as of 2026-07-31 | 8.31%† | 8.23% | 8.86%‡ | 2017 +35.48% / 2018 -15.39% | emerging-markets small-cap dividend | small-cap/country/FX/emerging-market-sensitive; dividend-factor and equity risk |
-| [[ETF_NYSE_ARCA_EWX Performance]] | official 2008 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 7.95%† | 7.92%* | 3.91%‡ | 2017 +34.10%* / 2018 -18.74%* | emerging-markets small-cap equity | small-cap/country/FX/China-Taiwan/liquidity-sensitive; annual rows secondary proxy and daily NAV drawdown/recovery gap |
+| [[ETF_NYSE_ARCA_EWX Performance]] | official 2008 / secondary 2016-2025*; issuer rolling 10-year as of 2026-07-31 | 7.95%† | 7.92%* | 3.91%‡ | 2017 +34.10%* / 2018 -18.74%* | emerging-markets small-cap equity | small-cap/country/FX/China-Taiwan/liquidity-sensitive; current NAV 73.96 / market 74.02 as of 2026-08-27; annual rows secondary proxy and daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_TUR Performance]] | official 2008 / official 2016-2025; issuer rolling 10Y as of 2026-06-30 | 2.58% issuer rolling 10Y | 8.45% | 16.38% | 2022 +106.42% / 2018 -41.42% | Turkey single-country broad-market passive equity | country/currency/sector/emerging-market-sensitive; 25.11% 3-year standard deviation; daily NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_EWA Performance]] | official 1996 / official 2016-2025 | 8.27% | 6.16% | 10.44% | 2017 +19.60% / 2018 -12.30% | Australia single-country equity | financials/materials concentrated, country/commodity/FX-sensitive |
 | [[ETF_NYSE_ARCA_FLAU Performance]] | official 2017 / official 2018-2025 | not applicable (<10y history) | 6.74% | 9.50% | 2019 +23.20% / 2018 -12.25% | Australia single-country broad equity | financials/materials, country/commodity/FX-sensitive |
@@ -321,8 +321,11 @@ factsheet ณ 2026-06-30 รายงาน current NAV TR YTD `16.54%`, 1-year 
 EWX `7.95%` เป็น issuer rolling 10-year average annual NAV TR ณ 2026-07-31;
 `8.62%*` เป็น rounded-input CAGR จาก secondary dividend-reinvested 2016-2025
 annual rows, `7.92%*` เป็น secondary 2021-2025 CAGR และ `3.91%‡` เป็น current
-official NAV TR YTD ณ 2026-07-31. EWX annual proxy rows ไม่ถูกเพิ่มใน strict
-Common Window ranking เพราะไม่ใช่ issuer-published NAV rows.
+official NAV TR YTD ณ 2026-07-31. Latest official snapshot ณ 2026-08-27 คือ
+NAV `$73.96`, market price `$74.02`, premium/discount `0.08%`, AUM `$702.61M`
+และ 3,383 holdings. EWX annual proxy rows ไม่ถูกเพิ่มใน strict Common Window
+ranking เพราะไม่ใช่ issuer-published NAV rows; current country breakdown และ
+official daily NAV drawdown/recovery series ยังไม่พบข้อมูลที่ยืนยันได้.
 
 AVSC ไม่มี 10-year หรือ 2021-2025 CAGR เพราะ inception 2022-01-11; `12.08%*`
 เป็น rounded-input CAGR จาก secondary 2023-2025 NAV rows และ `23.92%` เป็น
