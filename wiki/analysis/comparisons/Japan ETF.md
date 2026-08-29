@@ -38,7 +38,7 @@ tags:
 | WDTRF | WisdomTree Japan Equity UCITS ETF - USD Hedged Acc | Japan single-country dividend/export tilt, USD hedged, accumulating | not applicable (<10y history) | 24.84% | 21.90% | [[ETF_LSE_DXJA Performance]] |
 | ISRVF | iShares MSCI Japan USD Hedged UCITS ETF (Acc) | Japan single-country USD-hedged equity, accumulating | 17.02% | 18.81% | 17.84% | [[ETF_LSE_IJPD Performance]] |
 | FLJP | Franklin FTSE Japan ETF | Japan single-country large/mid-cap equity | not applicable (<10y history) | 6.60% | 14.82% | [[ETF_NYSE_ARCA_FLJP Performance]] |
-| OPPJ | ไม่พบข้อมูลที่ยืนยันได้ | Japan opportunities, dynamic FX hedge | 17.89% | 21.87%* | 24.67% | [[ETF_NASDAQ_OPPJ Performance]] |
+| OPPJ | WisdomTree Japan Opportunities Fund | Japan opportunities, dynamic FX hedge | 17.00% | 21.87%* | 24.40% | [[ETF_NASDAQ_OPPJ Performance]] |
 
 ตัวเลขในตารางเป็น snapshot จาก [[ETF Performance Index]] และหน้ารายกอง
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, not applicable
@@ -55,6 +55,15 @@ JPXN latest official iShares NAV TR YTD อยู่ที่ `19.53%` ณ 2026-
 `US$102.65`, closing price `US$102.59`, และ net assets `US$138.57M` ณ วันเดียวกัน.
 Rolling 10-year NAV TR `9.28%` และ 2021-2025 NAV TR CAGR `6.19%` ยังคงอิง
 standardized June 2026 table. Daily NAV drawdown/recovery ยัง
+`ไม่พบข้อมูลที่ยืนยันได้`.
+
+OPPJ latest official WisdomTree product snapshot: NAV `US$57.915` ณ 2026-08-28,
+closing market price `US$57.750` ณ 2026-08-27, July standardized NAV TR YTD
+`24.40%`, rolling 10-year `17.00%`, expense ratio `0.58%`, and aggregate hedge
+ratio `97.24%` ณ 2026-08-28. กองเป็น passive Japan opportunities ETF และ
+เปลี่ยน objective/index จาก DXJS เป็น OPPJ เมื่อ 2025-07-01; 2025* และ
+2021-2025 CAGR จึงยังเป็น spliced-history context ไม่ใช่ current-strategy
+track record ต่อเนื่อง. Official daily NAV drawdown/recovery ยัง
 `ไม่พบข้อมูลที่ยืนยันได้`.
 
 ## Navigation

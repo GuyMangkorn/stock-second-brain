@@ -250,7 +250,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_VIOV Performance]] | official 2010 / official 2016-2025; official rolling 10-year as of 2026-06-30 | 10.72% | 8.83% | 20.27% | 2021 +30.74% / 2018 -12.77% | U.S. small-cap value equity | small-cap/value/cyclicality/sector/liquidity-sensitive; 19.92% standard deviation; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_SLYV Performance]] | official 2000 / official 2016-2023; secondary 2024-2025*; official rolling 10-year as of 2026-07-31 | 10.06% | 8.77% | 20.17% | 2016 +31.14% / 2018 -12.69% | U.S. small-cap value equity | small-cap/value/cyclicality/sector/liquidity-sensitive; 462 holdings; 2024-2025 rows secondary; NAV drawdown/recovery gap |
 | [[ETF_NYSE_ARCA_RSSL Performance]] | official inception 2024-06-04; official 2025 complete year; history under 10 years | not applicable (<10y) | not applicable | 22.52% | 2025 +12.76% / not applicable | U.S. small-cap broad equity | small-cap/cyclicality/high equity risk; 19.00% standard deviation and NAV drawdown/recovery gap |
-| [[ETF_NASDAQ_OPPJ Performance]] | 2013 / official 2016-2024, secondary 2025* | 17.89% | 21.87%* | 24.67% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic FX hedge | single-country/concentration; strategy break mid-2025 |
+| [[ETF_NASDAQ_OPPJ Performance]] | official 2013 / official 2016-2024, secondary 2025*; rolling 10-year as of 2026-07-31 | 17.00% | 21.87%* | 24.40% | 2023 +36.69% / 2018 -17.82% | Japan opportunities, dynamic 0-100% JPY/USD hedge | single-country/non-diversified; 48.27% Industrials; strategy break mid-2025; NAV drawdown gap |
 | [[ETF_NYSE_ARCA_OPPE Performance]] | official 2015 / official 2016-2025; strategy/index change 2025-06-02; rolling 10-year as of 2026-07-31 | 12.91% | 14.84% | 17.72% | 2025 +38.73% / 2018 -13.41% | Europe opportunities, dynamic FX hedge | shareholder-yield/value/geopolitical/theme/country/sector/FX-sensitive; 2025 transition and daily NAV drawdown/recovery gap |
 | [[ETF_NASDAQ_FEP Performance]] | official 2011 / official 2016-2025; rolling 10-year as of 2026-07-31; index change 2015-10-13 | 10.57% | 10.90% | 11.02% | 2025 +55.13% / 2022 -22.87% | broad Europe rules-based enhanced index | country/sector/factor-selection/FX-sensitive; 14.98% 3-year standard deviation; NAV drawdown/recovery gap |
 | [[ETF_LSE_FTEU Performance]] | official 2014 / secondary USD 2021-2025; rolling 10-year secondary as of 2026-08-27 | 10.63%* | 11.40%* | 14.06%* | 2025 +57.98%* / 2022 -19.74%* | Eurozone rules-based enhanced UCITS equity | country/sector/factor/FX-sensitive; 25.31%* five-year annual-row dispersion; official USD calendar/NAV drawdown gaps; input alias FTDPF |
@@ -469,7 +469,7 @@ rounded-input CAGR 7.51%, common 2021-2025 CAGR 10.66%, current NAV TR YTD
 | [[ETF_NYSE_ARCA_VIOO Performance]] | 26.67% | -16.20% | 16.00% | 8.62% | 5.99% | 41.76% | 4 / 1 |
 | [[ETF_NYSE_ARCA_VIOV Performance]] | 30.74% | -11.19% | 14.75% | 7.45% | 6.66% | 52.70% | 4 / 1 |
 | [[ETF_NYSE_ARCA_SLYV Performance]] | 30.66% | -11.13% | 14.71% | 7.28%* | 6.52%* | 52.21%* | 4 / 1 |
-| [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 168.80%* | 5 / 0 |
+| [[ETF_NASDAQ_OPPJ Performance]] | 11.98% | 6.84% | 36.69% | 20.68% | 36.20%* | 68.80%* | 5 / 0 |
 | [[ETF_NYSE_ARCA_OPPE Performance]] | 7.86% | -13.41% | 19.33% | 10.74% | 38.73% | 186.21% | 7 / 3 |
 | [[ETF_NASDAQ_FEP Performance]] | 1.24% | -18.67% | 16.01% | 3.71% | 55.13% | 144.62% | 8 / 2 |
 | [[ETF_NYSE_ARCA_EWU Performance]] | 17.89% | -5.13% | 13.03% | 6.84% | 34.45% | 81.59% | 4 / 1 |
@@ -581,8 +581,10 @@ IJS cumulative and CAGR fields derived from rounded annual rows are rounded-inpu
 approximations; see the IJS performance page and source batch for formulas and inputs.
 
 OPPJ `2025*` เป็น secondary standardized NAV return; common window ของ OPPJ
-ยังคร่อมการเปลี่ยน objective/index เมื่อ 30 มิ.ย. 2025 จึงไม่ใช่ record ของ
-current strategy แบบต่อเนื่องห้าปี.
+มี cumulative `68.80%*` และยังคร่อมการเปลี่ยน objective/index เมื่อ 30 มิ.ย.
+2025 จึงไม่ใช่ record ของ current strategy แบบต่อเนื่องห้าปี. Latest official
+July standardized NAV TR คือ rolling 10-year `17.00%` และ YTD `24.40%`; current
+hedge ratio `97.24%` ณ 2026-08-28.
 
 OPPE `2025` เป็น official one-year NAV return ending 2025-12-31, while the
 fund's objective/index changed on 2025-06-02. Its 2016-2024 rows therefore
@@ -637,7 +639,7 @@ used for IPOL. The common 2021-2025 CAGR `13.76%` is unaffected by that conflict
 | 2022 rate-hike shock | VIGI แย่สุด; DGRO/VIG มี quality cushion; DIVI ใกล้ flat จาก value/financials/ex-North-America mix |
 | 2020 COVID drawdown | Secondary drawdown: DGRO -35.10%, VIG -31.72%, VIGI -31.01%, DIVI -27.76%; ทุกกองยังมี equity risk |
 | 2025 rebound | EWG +35.15%, DIVI +34.51% และ broad ex-U.S. VXUS +32.23% นำ VIGI +16.89%, DGRO +15.74% และ VIG +14.18%; สอดคล้องกับ international/value leadership แต่ยังเป็น hypothesis |
-| OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.67% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
+| OPPJ continuity | 2025 +36.20%* และ 2026 YTD +24.40% แข็งแรง แต่ปี 2025 ผสม predecessor/current strategy; current hedge ratio 97.24% ณ 2026-08-28; ห้าม extrapolate rolling 10Y เป็น current-strategy history |
 | FXI China large-cap | 2024-2025 rebound `+30.10%` / `+29.01%` แต่ 2026 YTD อยู่ที่ `-6.68%`; single-country concentration and FX/policy risk remain the dominant behavioral labels |
 | ECNS China small-cap | 2025 rebound `+36.42%` ตามด้วย 2026 YTD `-10.26%`; higher 3-year standard deviation than MCHI และ exposure กระจายไป healthcare, industrials, consumer, real estate ไม่ใช่ pure China internet |
 | Portfolio grouping | U.S. quality = DGRO/VIG; broad international ex-U.S. = VXUS; international growth = VIGI; international ex-U.S. small-cap = VSS/SCHC/SCZ/ISCF; international value/dividend = DIVI; single-country = Canada EWC/FLCA, Germany EWG และ Japan EWJ/BBJP/FLJP |

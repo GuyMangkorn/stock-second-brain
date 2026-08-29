@@ -409,3 +409,74 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official DWS identity and current secondary USD evidence support the XMED refresh; the scheduled-local checklist passed and currency, source-gap, and drawdown limitations remain disclosed.
+
+## OPPJ — WisdomTree Japan Opportunities Fund
+
+### Identity and classification
+
+- `workflow: check-etf-performance`; `execution_profile: scheduled-inline`; `child_card_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91772b924e9bf819ec2584`; `parent_ari: ari:cloud:trello::card/workspace/6a78536437ed0b3b544c19e1/6a91760cdaae83b3d4afdc13`; input ticker `OPPJ`; canonical `entity_key: NASDAQ:OPPJ`.
+- WisdomTree's product page and prospectus identify OPPJ as the Nasdaq-listed WisdomTree Japan Opportunities Fund, inception `2013-06-28`, CUSIP `97717W521`, and a passive/index-tracking equity ETF. The prospectus describes representative sampling and an 80% policy for index constituents or substantially similar investments; it also identifies the fund as non-diversified.
+- The fund seeks to track the `WisdomTree Japan Opportunities Index`. Before `2025-07-01`, it was the WisdomTree Japan Hedged SmallCap Equity Fund under ticker DXJS; the durable record therefore labels pre-change history and 2025 as a spliced strategy record. Primary region is `Japan`; ownership remains with `[[Japan ETF]]` and `[[ETF Performance Index]]`.
+
+### Source map
+
+| Source | URL/path | Use |
+|---|---|---|
+| WisdomTree OPPJ product page | https://www.wisdomtree.com/us/products/equity/oppj | Official identity, passive objective, current NAV/price, July standardized returns, assets, fee, portfolio characteristics, holdings, sectors, hedge ratio and distributions |
+| WisdomTree OPPJ factsheet | https://www.wisdomtree.com/us/media/wisdomtree-factsheet-oppj | Official 2026-06-30 performance/benchmark cross-check, NASDAQ listing, 88 holdings, fee, fund size and strategy-change disclosure |
+| SEC OPPJ summary prospectus | https://www.sec.gov/Archives/edgar/data/1350487/000121465925011309/oppj73125497k.htm | Passive management, 80% policy, index construction, dynamic JPY/USD hedge, non-diversified status and principal risks; official annual rows through 2024 |
+| WisdomTree Japan Opportunities Index | https://www.wisdomtree.com/us/indexes/WTJOP | Current index design, 0-100% dynamic hedge description, 88 components, country/industry profile and definitions |
+| Schwab OPPJ exchange-traded-funds report | https://www.schwab.wallst.com/Prospect/research/etfs/reports/reportRetrieve.asp?reportType=etfrc&symbol=OPPJ | Secondary 2025 annual row, current July standardized cross-check, current price and portfolio profile |
+| PortfoliosLab OPPJ | https://portfolioslab.com/symbol/OPPJ | Secondary adjusted-market-price drawdown/recovery proxy retained with explicit non-NAV label |
+| S&P 500 index page and cached workflow references | https://www.spglobal.com/spdji/en/indices/equity/sp-500/ | Common USD Total Return reference rows for complete 2016-2025 and 2021-2025 windows; dividends reinvested |
+
+### Candidate performance claims and raw observations
+
+- Official WisdomTree month-end table as of `2026-07-31`: underlying-index YTD `24.86%`, NAV YTD `24.40%`, market-price YTD `22.02%`; NAV 1-year `56.11%`, 3-year annualised `31.08%`, 5-year annualised `24.91%`, 10-year annualised `17.00%`, and since-inception annualised `15.24%`. The issuer's underlying-index fields are before fund expenses; NAV total return is the durable return basis.
+- Official current fund overview as of `2026-08-28`: NAV `US$57.915`, change `+0.20%`, premium/discount `-0.09%`, total assets `US$283.78305M`, shares outstanding `4,900,000`, distribution yield `2.35%`, SEC 30-day yield `1.77%`, and net expense ratio `0.58%`.
+- Official trading/portfolio snapshot as of `2026-08-27`: closing market price `US$57.750`, 30-day average volume `37,662`, median bid/ask spread `0.49%`, P/E `14.17x`, estimated P/E `13.03x`, P/B `1.63x`, dividend yield `2.17%`, gross buyback yield `1.75%`, and net buyback yield `1.63%`.
+- Official current hedge ratio is `97.24%` as of `2026-08-28`; WisdomTree states hedge ratios are implemented after the last business day of each month. Current country exposure is Japan `100.00%`; current holdings and sectors are as of `2026-08-27`.
+- Current top holdings are Sumitomo `8.32%`, Mitsubishi `7.47%`, Marubeni `7.19%`, Mitsui `6.83%`, Itochu `5.90%`, Kioxia `4.12%`, Tokio Marine `3.92%`, Panasonic `2.52%`, Tokyo Electron `2.32%`, and Hanwa `2.09%`; the displayed top-ten weights sum to `50.68%`. Current sector weights are Industrials `48.27%`, Information Technology `13.99%`, Materials `11.31%`, Financials `11.12%`, Consumer Discretionary `7.55%`, Health Care `3.12%`, Consumer Staples `2.28%`, Communication Services `1.58%`, and Real Estate `0.78%`.
+- Official June factsheet cross-check as of `2026-06-30` reports OPPJ NAV YTD `24.67%`, 10-year average annual NAV TR `17.89%`, 5-year `24.84%`, since-inception `15.37%`, and fund net assets `US$280.24M`. It reports the same strategy-change caveat and the spliced `WisdomTree Japan Hedged SmallCap Equity/WisdomTree Japan Opportunities` index.
+- Official annual NAV rows through 2024 are `2016 6.88%`, `2017 29.46%`, `2018 -17.82%`, `2019 18.33%`, `2020 -4.64%`, `2021 11.98%`, `2022 6.84%`, `2023 36.69%`, and `2024 20.68%`; these are rounded rows from the SEC summary prospectus and largely reflect the predecessor DXJS objective. The 2025 row `36.20%*` remains a secondary standardized NAV total-return observation from Schwab, not an issuer calendar row.
+- Official product/factsheet related index symbol is `WTJOPN`, while the current WisdomTree index page uses `WTJOP`; both labels are preserved as source-display identifiers for the same named Japan Opportunities Index and do not alter `NASDAQ:OPPJ` identity.
+- Secondary adjusted-market-price evidence retains maximum drawdown `-39.30%` from 2018-01-09 to 2020-03-16 and recovery 2021-03-15; official daily NAV history sufficient to reproduce a fund-level drawdown/recovery is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Calculations and reconciliation
+
+- 2016-2025 rounded annual-row calculation: `(1.0688 × 1.2946 × 0.8218 × 1.1833 × 0.9536 × 1.1198 × 1.0684 × 1.3669 × 1.2068 × 1.3620) - 1 = 244.89%`; rounded-input CAGR `(1 + 2.4489)^(1/10) - 1 = 13.18%`; population standard deviation `16.66%`; positive/negative years `8 / 2`.
+- 2021-2025 rounded annual-row calculation: `(1.1198 × 1.0684 × 1.3669 × 1.2068 × 1.3620) - 1 = 68.80%`; rounded-input CAGR `(1 + 0.6880)^(1/5) - 1 = 21.87%`; population standard deviation `12.23%`; positive/negative years `5 / 0`.
+- Cached S&P 500 Total Return common reference is cumulative `298.33%` / CAGR `14.82%` for 2016-2025 and cumulative `96.17%` / CAGR `14.43%` for 2021-2025; it is USD, dividends reinvested, and is not OPPJ's issuer benchmark or manager-skill evidence.
+- July standardized tracking observations are NAV versus underlying index: YTD `24.40%` vs `24.86%` (`-0.46 pp`), 1-year `56.11%` vs `57.24%` (`-1.13 pp`), 3-year `31.08%` vs `31.76%` (`-0.68 pp`), 5-year `24.91%` vs `25.54%` (`-0.63 pp`), 10-year `17.00%` vs `17.66%` (`-0.66 pp`), and since inception `15.24%` vs `16.00%` (`-0.76 pp`). These are tracking/fee observations, not alpha.
+- The July issuer rolling 10-year average annual NAV TR `17.00%` covers `2016-07-31` to `2026-07-31`. Because raw endpoints are not exposed, shown calculation `100 × (1 + 0.17)^10 = 480.68` is an implied growth endpoint and implied cumulative `380.68%`, not a sourced NAV/TR level.
+- As-of reconciliation: prior June quarter-end values were NAV YTD `24.67%` and rolling 10-year `17.89%`; the later July month-end product table reports `24.40%` and `17.00%`. These standardized windows are kept separate from the August 27-28 quote, fund-facts and hedge snapshots. No cross-date arithmetic is performed.
+- The prior index common-window row showed `168.80%*`; recomputation from the saved annual rows gives `68.80%*` cumulative return (growth factor `1.6880`), so the index row is corrected and the correction is disclosed here.
+
+### Pre-save evidence packet and proposed durable contents
+
+- Evidence packet records child card/parent ARIs, ETF identity and Nasdaq exchange, inception, passive classification, return basis, issuer/common benchmarks, strategy and index transition, all candidate annual/trailing/rolling/current claims, periods, units/currency, metric definitions, as-of dates, source URLs, calculations, source-label conflicts, current exposure, unresolved gaps and the complete planned file changes.
+- Proposed `wiki/analysis/performance/ETF_NASDAQ_OPPJ Performance.md`: update frontmatter/source batch; refresh bottom line, current official July return fields, August NAV/price/fund-facts/hedge snapshot, annual table labels, rounded-input calculations, tracking observations, current exposure, risk read-through, strategy-transition reconciliation, source links and follow-up gaps; preserve the canonical Japan breadcrumb and secondary 2025/drawdown markers.
+- Proposed `wiki/analysis/comparisons/Japan ETF.md`: replace the OPPJ snapshot row with fund name, official rolling 10-year `17.00%`, 2021-2025 `21.87%*`, and July YTD `24.40%`; append the dated OPPJ verified-refresh note and retain the Japan navigation contract.
+- Proposed `wiki/analysis/performance/ETF Performance Index.md`: replace the OPPJ coverage row with July rolling/YTD fields and current risk labels; correct the Common Window cumulative field to `68.80%*`; update the OPPJ continuity note with July YTD and current hedge ratio; preserve the existing performance-owner wikilink.
+- Proposed `raw/imports/ETF_performance_sources_2026-08-29.md`: append this OPPJ evidence packet, local pre-save checklist and structured `trello_handoff`.
+- Proposed `log.md` exact bullet: ``- `etf-performance`: Refreshed [[ETF_NASDAQ_OPPJ Performance]] with official July rolling 10-year NAV TR `17.00%`, current NAV TR YTD `24.40%`, and current NAV `US$57.915` as of 2026-08-28; corrected the 2021-2025 cumulative calculation to `68.80%`, updated [[Japan ETF]], [[ETF Performance Index]], and [[ETF_performance_sources_2026-08-29]], and preserved the DXJS-to-OPPJ strategy-break caveat.`` `log.md` remains outside the scoped commit because it already contains unrelated user changes.
+- No ETF entity hub or new region page is required; `NASDAQ:OPPJ` remains the canonical performance owner and the existing Japan region page remains the sole regional navigation owner.
+
+### Local pre-save checklist
+
+- PASS: Nasdaq identity, fund name, inception, passive/index-tracking equity eligibility, canonical key, tracked index, return basis, USD units, dynamic hedge policy, and current/predecessor strategy split are source-mapped.
+- PASS: official July standardized NAV/index/market-price bases are separated; June quarter-end figures are retained only as a dated cross-check; August NAV, closing price, assets, yields, valuation fields, holdings, sectors and hedge ratio retain their individual as-of dates; no current value is backfilled.
+- PASS: official 2016-2024 annual rows, secondary 2025 row, 2016-2025 and 2021-2025 calculations, cached S&P reference, passive tracking differences, and corrected `68.80%` Common Window cumulative return reproduce the planned page/index values; no arithmetic excess return is called alpha.
+- PASS: strategy-change caveat, non-diversified/single-country/sector/hedge/derivatives risks, secondary drawdown proxy, official daily NAV gap, source-display symbol difference, source links, canonical breadcrumb, region ownership, and complete proposed file contents are disclosed; no unresolved High/Medium finding blocks the write and no WARNING requiring confirmation remains.
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+
+### trello_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official WisdomTree July performance and August fund snapshots support the OPPJ refresh; scheduled-local verification passed, the DXJS strategy transition and secondary 2025/drawdown limitations remain disclosed, and the Common Window cumulative arithmetic was corrected to 68.80%.
