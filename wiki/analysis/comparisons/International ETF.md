@@ -28,6 +28,7 @@ tags:
 | IQLT | iShares MSCI Intl Quality Factor ETF | developed international quality factor | 9.99% | 7.64% | 16.01% | [[ETF_NYSE_ARCA_IQLT Performance]] |
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
 | EFA | iShares MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-cap | 9.68% | 8.88% | 14.29% | [[ETF_NYSE_ARCA_EFA Performance]] |
+| EFV | iShares MSCI EAFE Value ETF | developed markets ex-U.S./Canada large-/mid-cap value | 10.39% | 13.34% | 18.09% | [[ETF_CBOE_BZX_EFV Performance]] |
 | IRRRF | iShares Core MSCI World UCITS ETF (official USD listing LSE:IWDA) | global developed large-/mid-cap passive accumulating equity | 12.26%† | 5.94% | 13.67% | [[ETF_LSE_IWDA Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
@@ -153,6 +154,12 @@ EFA ใช้ official iShares rolling 10-year NAV TR `9.68%` เทียบ be
 `9.65%` ณ 2026-06-30, official 2016-2025 NAV rows คำนวณเป็น CAGR `8.15%`,
 2021-2025 CAGR `8.88%`, และ current official NAV TR YTD `14.29%` ณ 2026-08-27.
 Official EFA table ที่ reviewed ไม่แสดง benchmark rows สำหรับ 2016-2020 จึงคง gap
+ไว้ และ daily NAV drawdown/recovery ยังไม่ verified.
+
+EFV ใช้ official iShares rolling 10-year NAV TR `10.39%` เทียบ benchmark
+`10.44%` ณ 2026-06-30, official 2016-2025 NAV rows คำนวณเป็น CAGR `8.60%`,
+2021-2025 CAGR `13.34%`, และ current official NAV TR YTD `18.09%` ณ 2026-08-26.
+Official EFV table ที่ reviewed ไม่แสดง benchmark rows สำหรับ 2016-2020 จึงคง gap
 ไว้ และ daily NAV drawdown/recovery ยังไม่ verified.
 
 DFAI เป็น active systematic long-only international equity ETF; official Dimensional
