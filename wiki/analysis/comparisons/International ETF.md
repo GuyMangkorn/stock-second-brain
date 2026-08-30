@@ -84,9 +84,11 @@ adjusted-price proxy คง max drawdown `-27.76%` และ recovery `207` trad
 
 AVDV เป็น active long-only international small-cap value ETF; `13.11%` เป็น
 official NAV TR YTD ณ 2026-07-31 และ `14.24%*` เป็น rounded-input CAGR ของ
-secondary dividend-reinvested proxy ช่วง 2021-2025. Official 5Y NAV TR
-`13.81%` เทียบ management benchmark `6.03%` ให้ return-only Excess CAGR
-`+7.78 pp`; hit rate และ official daily drawdown/recovery ยังไม่ verified.
+secondary dividend-reinvested proxy ช่วง 2021-2025. Secondary proxy YTD อยู่ที่
+`+21.36%*` ถึง 2026-08-28 และไม่ merge กับ official NAV YTD เพราะคนละ as-of date
+และวิธีวัด. Official 5Y NAV TR `13.81%` เทียบ management benchmark `6.03%`
+ให้ return-only Excess CAGR `+7.78 pp`; hit rate และ official daily
+drawdown/recovery ยังไม่ verified.
 
 AVDE เป็น active long-only developed ex-U.S. all-cap ETF; `12.39%` เป็น official
 NAV TR YTD ณ 2026-07-31. Official factsheet ณ 2026-06-30 รายงาน 5Y NAV TR
