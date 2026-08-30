@@ -29,6 +29,7 @@ tags:
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
 | EFA | iShares MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-cap | 9.68% | 8.88% | 14.29% | [[ETF_NYSE_ARCA_EFA Performance]] |
 | EFV | iShares MSCI EAFE Value ETF | developed markets ex-U.S./Canada large-/mid-cap value | 10.39% | 13.34% | 18.09% | [[ETF_CBOE_BZX_EFV Performance]] |
+| EFG | iShares MSCI EAFE Growth ETF | developed markets ex-U.S./Canada large-/mid-cap growth | 8.43% | 4.19% | 11.08% | [[ETF_CBOE_BZX_EFG Performance]] |
 | IRRRF | iShares Core MSCI World UCITS ETF (official USD listing LSE:IWDA) | global developed large-/mid-cap passive accumulating equity | 12.26%† | 5.94% | 13.67% | [[ETF_LSE_IWDA Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
@@ -96,6 +97,13 @@ NAV TR YTD ณ 2026-07-31. Official factsheet ณ 2026-06-30 รายงาน 
 Official complete calendar rows ไม่ readable ใน reviewed capture จึงไม่คำนวณ
 2021-2025 CAGR, best/worst year หรือ hit rate และ daily NAV drawdown/recovery
 ยังไม่ verified.
+
+EFG เป็น passive developed ex-U.S./Canada large-/mid-cap growth ETF; official
+rolling 10-year NAV TR อยู่ที่ `8.43%` ณ 2026-06-30, 2021-2025 CAGR ที่คำนวณจาก
+official rows คือ `4.19%`, และ current official NAV TR YTD คือ `11.08%` ณ
+2026-08-27. Official 2021-2025 benchmark CAGR อยู่ที่ `4.43%`; benchmark rows
+สำหรับ 2016-2020 ไม่ readable จาก reviewed official table และ official daily
+drawdown/recovery ยังไม่ verified.
 
 IXSAF เป็น OTC alias ของ official CAD share class `TSX:XEF`, ISIN `CA46434T1057`.
 Official issuer rolling 10-year NAV TR average annual อยู่ที่ `9.95%` ณ 2026-07-31,
