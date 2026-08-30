@@ -35,6 +35,7 @@ tags:
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
+| TKCPF | VanEck Morningstar Developed Markets Dividend Leaders UCITS ETF (official USD listing LSE:TDIV) | global developed large-cap dividend; OTC alias | 12.38%† | 18.73% | 18.12% | [[ETF_LSE_TDIV Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
 | PID | Invesco International Dividend Achievers ETF | international dividend achievers | 8.81% | 11.28% | 2.05% | [[ETF_NASDAQ_PID Performance]] |
 | VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.01% | 5.46% | 9.18% | [[ETF_NASDAQ_VIGI Performance]] |
@@ -90,6 +91,15 @@ secondary dividend-reinvested proxy ช่วง 2021-2025. Secondary proxy YTD 
 และวิธีวัด. Official 5Y NAV TR `13.81%` เทียบ management benchmark `6.03%`
 ให้ return-only Excess CAGR `+7.78 pp`; hit rate และ official daily
 drawdown/recovery ยังไม่ verified.
+
+TKCPF เป็น OTC alias ของ official USD listing `LSE:TDIV`, ISIN `NL0011683594`,
+สำหรับ VanEck Morningstar Developed Markets Dividend Leaders UCITS ETF. Official
+EUR NAV TR rolling 10-year average annual อยู่ที่ `12.38%` ณ 2026-07-31 และ
+complete 2017-2025 calendar rows ให้ rounded-input CAGR `18.73%` สำหรับ 2021-2025;
+current official EUR NAV TR YTD อยู่ที่ `18.12%` ณ 2026-08-28. แถว 2016 เป็น
+partial launch year ที่ issuer เว้นว่างและถูก exclude; ไม่แปลง EUR performance
+เป็น USD แม้ canonical listing จะเป็น LSE USD. Official daily-NAV drawdown และ
+recovery ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 AVDE เป็น active long-only developed ex-U.S. all-cap ETF; `12.39%` เป็น official
 NAV TR YTD ณ 2026-07-31. Official factsheet ณ 2026-06-30 รายงาน 5Y NAV TR
