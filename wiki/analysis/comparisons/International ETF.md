@@ -37,6 +37,7 @@ tags:
 | IXUAF | iShares MSCI World ex-USA UCITS ETF (official USD listing Euronext Amsterdam:XUSE) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | 14.27% | [[ETF_EURONEXT_AMSTERDAM_XUSE Performance]] |
 | XTMWF | Xtrackers MSCI World ex USA UCITS ETF 1C (official USD listing LSE:EXUS) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | not disclosed | [[ETF_LSE_EXUS Performance]] |
 | GSWO | Goldman Sachs ActiveBeta World Equity ETF | global developed large-/mid-cap passive strategic-beta equity | not applicable (2026 strategy change) | not applicable | 11.27% | [[ETF_CBOE_BZX_GSWO Performance]] |
+| INTF | iShares International Equity Factor ETF | developed ex-U.S. multifactor passive strategic-beta equity | 9.85% | 10.65%* | 16.19% | [[ETF_NYSE_ARCA_INTF Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
@@ -194,6 +195,14 @@ GSWO เป็น passive rules-based strategic-beta global developed large-/mid
 Vol Plus หลัง fund เปลี่ยนชื่อ ดัชนี และ objective เป็น GSWO. จึงไม่มี comparable
 2021-2025 CAGR หรือ 10-year history และเก็บ methodology-break/daily-NAV gaps
 ไว้ในหน้ารายกอง.
+
+INTF เป็น passive developed ex-U.S. multifactor ETF ที่ติดตาม `STOXX
+International Equity Factor Index`. Official current YTD คือ `16.19%` ณ
+2026-08-27; issuer rolling 10-year NAV TR คือ `9.85%` ณ 2026-06-30 และ
+2021-2025 rounded-input CAGR คือ `10.65%*`. Benchmark series เปลี่ยนจาก MSCI
+World ex USA Diversified Multiple-Factor เป็น STOXX เมื่อ 2022-06-01 จึงเก็บ
+benchmark splice, factor/country/sector/FX exposure และ daily-NAV gap ไว้ในหน้า
+รายกอง.
 
 SPDW ใช้ official State Street rolling 10-year NAV TR `9.88%` และ current NAV TR
 YTD `14.69%` ณ 2026-07-31. ค่า 2016-2025 CAGR `8.70%*` และ 2021-2025 CAGR
