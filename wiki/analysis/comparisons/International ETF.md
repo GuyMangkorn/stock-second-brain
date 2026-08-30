@@ -23,7 +23,7 @@ tags:
 | DLS | WisdomTree International SmallCap Dividend Fund | international small-cap dividend | 7.69%† | 7.97% | 8.54%‡ | [[ETF_NYSE_ARCA_DLS Performance]] |
 | DTH | WisdomTree International High Dividend Fund | international high dividend | 9.06% | 12.22% | 8.21% | [[ETF_AMEX_DTH Performance]] |
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
-| EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 6.50% | [[ETF_CBOE_EFAV Performance]] |
+| EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 11.06% | [[ETF_CBOE_EFAV Performance]] |
 | ESGD | iShares ESG Aware MSCI EAFE ETF | developed ex-U.S./Canada ESG-screened broad equity | 9.77% | 8.62% | 14.42% | [[ETF_NASDAQ_ESGD Performance]] |
 | IQLT | iShares MSCI Intl Quality Factor ETF | developed international quality factor | 9.99% | 7.64% | 16.01% | [[ETF_NYSE_ARCA_IQLT Performance]] |
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
