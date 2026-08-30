@@ -36,6 +36,7 @@ tags:
 | PBPH | Portfolio Building Block World Pharma and Biotech Index ETF | global developed pharma/biotech thematic passive equity | not applicable (2025 inception) | not applicable | 7.69% | [[ETF_NASDAQ_PBPH Performance]] |
 | IXUAF | iShares MSCI World ex-USA UCITS ETF (official USD listing Euronext Amsterdam:XUSE) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | 14.27% | [[ETF_EURONEXT_AMSTERDAM_XUSE Performance]] |
 | XTMWF | Xtrackers MSCI World ex USA UCITS ETF 1C (official USD listing LSE:EXUS) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | not disclosed | [[ETF_LSE_EXUS Performance]] |
+| GSWO | Goldman Sachs ActiveBeta World Equity ETF | global developed large-/mid-cap passive strategic-beta equity | not applicable (2026 strategy change) | not applicable | 11.27% | [[ETF_CBOE_BZX_GSWO Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
@@ -185,6 +186,14 @@ LSE `EXUS` เป็น USD และ `XMWX` เป็น GBP. Official past-per
 MSCI World ex USA `31.90%`; share class เริ่ม 2024-03-06 จึงไม่มี 2021-2025
 CAGR และ current official YTD ยัง `ไม่พบข้อมูลที่ยืนยันได้`. Daily-NAV
 drawdown/recovery และ official current risk statistics ยังไม่ verified.
+
+GSWO เป็น passive rules-based strategic-beta global developed large-/mid-cap ETF
+บน Cboe BZX. Official Goldman factsheet ณ 2026-07-31 รายงาน NAV TR 1 เดือน
+`0.42%`, YTD `11.27%`, 1 ปี `18.46%`, 3 ปี `17.00%` และ since inception
+`13.00%`; แต่ performance ก่อน 2026-02-04 เป็น predecessor ของ GLOV/World Low
+Vol Plus หลัง fund เปลี่ยนชื่อ ดัชนี และ objective เป็น GSWO. จึงไม่มี comparable
+2021-2025 CAGR หรือ 10-year history และเก็บ methodology-break/daily-NAV gaps
+ไว้ในหน้ารายกอง.
 
 SPDW ใช้ official State Street rolling 10-year NAV TR `9.88%` และ current NAV TR
 YTD `14.69%` ณ 2026-07-31. ค่า 2016-2025 CAGR `8.70%*` และ 2021-2025 CAGR
