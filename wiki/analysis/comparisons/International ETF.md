@@ -28,6 +28,7 @@ tags:
 | IQLT | iShares MSCI Intl Quality Factor ETF | developed international quality factor | 9.99% | 7.64% | 16.01% | [[ETF_NYSE_ARCA_IQLT Performance]] |
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
 | EFA | iShares MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-cap | 9.68% | 8.88% | 14.29% | [[ETF_NYSE_ARCA_EFA Performance]] |
+| BBIN | JPMorgan BetaBuilders International Equity ETF | developed markets ex-North America large-/mid-cap passive | not applicable (<10y) | 9.10% | 11.47% | [[ETF_NYSE_ARCA_BBIN Performance]] |
 | EFV | iShares MSCI EAFE Value ETF | developed markets ex-U.S./Canada large-/mid-cap value | 10.39% | 13.34% | 18.09% | [[ETF_CBOE_BZX_EFV Performance]] |
 | EFG | iShares MSCI EAFE Growth ETF | developed markets ex-U.S./Canada large-/mid-cap growth | 8.43% | 4.19% | 11.08% | [[ETF_CBOE_BZX_EFG Performance]] |
 | IRRRF | iShares Core MSCI World UCITS ETF (official USD listing LSE:IWDA) | global developed large-/mid-cap passive accumulating equity | 12.26%† | 5.94% | 13.67% | [[ETF_LSE_IWDA Performance]] |
@@ -189,6 +190,13 @@ EFA ใช้ official iShares rolling 10-year NAV TR `9.68%` เทียบ be
 2021-2025 CAGR `8.88%`, และ current official NAV TR YTD `14.29%` ณ 2026-08-27.
 Official EFA table ที่ reviewed ไม่แสดง benchmark rows สำหรับ 2016-2020 จึงคง gap
 ไว้ และ daily NAV drawdown/recovery ยังไม่ verified.
+
+BBIN ใช้ official JPMorgan factsheet ณ 2026-07-31 ซึ่งแสดง 2020-2025 NAV TR
+rows และ benchmark rows ครบถ้วน; 2021-2025 NAV CAGR คือ `9.10%` เทียบ
+Morningstar benchmark `9.00%`, current official NAV TR YTD คือ `11.47%`, และ
+inception `2019-12-03` ทำให้ไม่มี 10-year field. Country/sector exposure,
+current price/NAV และ official daily-NAV drawdown/recovery มี as-of/gap ตามหน้า
+รายกอง.
 
 EFV ใช้ official iShares rolling 10-year NAV TR `10.39%` เทียบ benchmark
 `10.44%` ณ 2026-06-30, official 2016-2025 NAV rows คำนวณเป็น CAGR `8.60%`,
