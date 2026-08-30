@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-30
+updated: 2026-08-31
 tags:
   - analysis/etf-region
   - geography/International
@@ -35,6 +35,7 @@ tags:
 | XDWHF | Xtrackers MSCI World Health Care UCITS ETF 1C (official USD listing LSE:XDWH) | global developed health-care sector passive accumulating | 8.96%* | 6.38%* (2021-2025) | 8.20%* | [[ETF_LSE_XDWH Performance]] |
 | ESGD | iShares ESG Aware MSCI EAFE ETF | developed ex-U.S./Canada ESG-screened broad equity | 9.77% | 8.62% | 14.42% | [[ETF_NASDAQ_ESGD Performance]] |
 | IQLT | iShares MSCI Intl Quality Factor ETF | developed international quality factor | 9.99% | 7.64% | 16.01% | [[ETF_NYSE_ARCA_IQLT Performance]] |
+| ISQWF / IWQU | iShares Edge MSCI World Quality Factor UCITS ETF | global developed quality-factor equity; OTC input alias / official USD LSE listing | 11.71%† | 10.99% | 13.26% | [[ETF_LSE_IWQU Performance]] |
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
 | EFA | iShares MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-cap | 9.68% | 8.88% | 14.29% | [[ETF_NYSE_ARCA_EFA Performance]] |
 | BBIN | JPMorgan BetaBuilders International Equity ETF | developed markets ex-North America large-/mid-cap passive | not applicable (<10y) | 9.10% | 11.47% | [[ETF_NYSE_ARCA_BBIN Performance]] |

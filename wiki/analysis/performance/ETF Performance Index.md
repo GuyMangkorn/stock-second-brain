@@ -1,7 +1,7 @@
 ---
 type: etf-performance-index
 scope: expanded
-updated: 2026-08-30
+updated: 2026-08-31
 canonical_window: 2016-2025
 return_basis: NAV total return
 tags:
@@ -100,6 +100,7 @@ table และ driver notes; อ่านหน้านี้เมื่อ�
 | [[ETF_NYSE_ARCA_JIRE Performance]] | official ETF 2022 / predecessor-linked 2016-2025; official annualized fields 2026-06-30 and current YTD 2026-07-31 | 9.74% | 9.67% | 11.45% | 2025 +32.11% / 2018 -14.66% | active research-enhanced developed international core equity; management benchmark MSCI EAFE | active-process/country/sector/FX/valuation-sensitive; mixed return-only evidence; official Sharpe 0.86/beta 0.92; daily-NAV drawdown gap |
 | [[ETF_NASDAQ_ESGD Performance]] | official 2021-2025 rows; official rolling 2026-06-30 | 9.77% | 8.62% | 14.42% | 2025 +29.98% / 2022 -14.96% | developed markets ex-U.S./Canada ESG-screened broad equity | country/sector/FX/ESG-methodology-sensitive; 12.86% 3-year standard deviation; daily-NAV drawdown gap |
 | [[ETF_NYSE_ARCA_IQLT Performance]] | official 2015 / official 2016-2025; official rolling 2026-06-30; current official YTD 2026-08-27 | 9.99% | 7.64% | 16.01% | 2017 +24.10% / 2022 -15.10% | developed international quality factor | quality-factor/country/sector/FX/mid-cap-sensitive; 0.68 beta / 13.07% 3-year standard deviation; daily-NAV drawdown gap |
+| [[ETF_LSE_IWQU Performance]] | OTC input ISQWF resolved to official USD LSE:IWQU / inception 2014-10-03; official 2016-2025 calendar rows and current official YTD 2026-08-21 | 11.71%† | 10.99% | 13.26% | 2019 +30.53% / 2022 -19.20% | global developed quality-factor passive accumulating equity; benchmark MSCI World Sector Neutral Quality Index (Net) | quality-factor/country/sector/FX/valuation-sensitive; 12.05% 3-year standard deviation; daily-NAV drawdown gap |
 | [[ETF_NYSE_ARCA_FENI Performance]] | official predecessor-linked 2016-2025; official rolling 2026-06-30; secondary current YTD 2026-07-31 | 10.53% | 10.82% | 13.07%* | 2017 +27.59% / 2018 -14.72% | active systematic-quantitative developed international equity; benchmark MSCI EAFE | active-process/country/FX/model-sensitive; Excess CAGR +0.55 pp, 6/10 hit rate, issuer beta 0.98 / 3-year standard deviation 13.27%; daily-NAV drawdown gap |
 | [[ETF_LSE_IWDA Performance]] | official 2009 / official 2016-2025; current product page through 2026-08-27 | 12.26%† | 5.94% | 13.67% | 2019 +27.76% / 2022 -18.03% | global developed large-/mid-cap passive accumulating equity | global mega-cap/country/sector/FX-sensitive; 12.42% 3-year standard deviation; daily-NAV drawdown/recovery gap |
 | [[ETF_LSE_TDIV Performance]] | input OTC TKCPF resolved to official USD LSE:TDIV / inception 2016-05-23; official 2017-2025 complete rows; current product page through 2026-08-28 | 12.38%† | 18.73% | 18.12% | 2021 +26.90% / 2020 -10.40% | global developed large-cap dividend passive; EUR NAV performance | dividend-factor/country/financials/FX/valuation-sensitive; 2016 partial row excluded; EUR performance vs USD listing; daily-NAV drawdown/recovery gap |
