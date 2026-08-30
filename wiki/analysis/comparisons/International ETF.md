@@ -34,6 +34,7 @@ tags:
 | IRRRF | iShares Core MSCI World UCITS ETF (official USD listing LSE:IWDA) | global developed large-/mid-cap passive accumulating equity | 12.26%† | 5.94% | 13.67% | [[ETF_LSE_IWDA Performance]] |
 | VGDDF | Vanguard FTSE Developed World UCITS ETF (official USD listing LSE:VHVE) | global developed large-/mid-cap passive accumulating equity | not applicable (<10y) | 12.11% | 11.45% | [[ETF_LSE_VHVE Performance]] |
 | PBPH | Portfolio Building Block World Pharma and Biotech Index ETF | global developed pharma/biotech thematic passive equity | not applicable (2025 inception) | not applicable | 7.69% | [[ETF_NASDAQ_PBPH Performance]] |
+| IXUAF | iShares MSCI World ex-USA UCITS ETF (official USD listing Euronext Amsterdam:XUSE) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | 14.27% | [[ETF_EURONEXT_AMSTERDAM_XUSE Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
@@ -167,6 +168,14 @@ PBPH เป็น passive global pharma/biotech thematic ETF ที่จดท�
 Official product page มี source-field conflict ที่แสดง ticker `PBEU` ใน Fund
 Details แต่ page title, performance rows และ SEC prospectus ยืนยัน `PBPH`; เก็บ
 conflict นี้ไว้ในหน้ารายกองและ source batch.
+
+IXUAF เป็น OTC input alias ของ official USD listing `Euronext Amsterdam:XUSE`
+สำหรับ iShares MSCI World ex-USA UCITS ETF (USD Accumulating), ISIN
+`IE000R4ZNTN3`; official page ยังแสดง LSE `XUSE` เป็น GBP และ Xetra `IXUA` เป็น
+EUR ของ share class เดียวกัน. กองทุนเริ่ม 2025-01-24 จึงยังไม่มี complete
+calendar year หรือ 2021-2025 CAGR; current official NAV TR YTD คือ `14.27%` ณ
+2026-08-27 และ factsheet ณ 2026-06-30 รายงาน 1-year `21.11%` กับ since-inception
+annualized `26.07%`. Official daily-NAV risk fields ยังไม่ยืนยันได้.
 
 SPDW ใช้ official State Street rolling 10-year NAV TR `9.88%` และ current NAV TR
 YTD `14.69%` ณ 2026-07-31. ค่า 2016-2025 CAGR `8.70%*` และ 2021-2025 CAGR
