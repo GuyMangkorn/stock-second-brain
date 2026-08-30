@@ -28,6 +28,7 @@ tags:
 | HFXI | NYLIM FTSE International Equity Currency Neutral ETF | developed markets ex-North America large-/mid-cap passive; 50% currency-hedged | 9.54% | 11.21% | 18.81% | [[ETF_NYSE_ARCA_HFXI Performance]] |
 | DFSI | Dimensional International Sustainability Core 1 ETF | active systematic developed ex-U.S. broad equity with sustainability screen | not applicable (<10y) | not applicable (2022 inception) | 8.74%* | [[ETF_NYSE_ARCA_DFSI Performance]] |
 | URTH | iShares MSCI World ETF | global developed large-/mid-cap passive | 13.36% | 12.30% | 13.50% | [[ETF_NYSE_ARCA_URTH Performance]] |
+| AVIV | Avantis International Large Cap Value ETF | active systematic developed international large-cap value | not applicable (<10y) | 12.58%* (2022-2025) | 14.87% | [[ETF_NYSE_ARCA_AVIV Performance]] |
 | ESGD | iShares ESG Aware MSCI EAFE ETF | developed ex-U.S./Canada ESG-screened broad equity | 9.77% | 8.62% | 14.42% | [[ETF_NASDAQ_ESGD Performance]] |
 | IQLT | iShares MSCI Intl Quality Factor ETF | developed international quality factor | 9.99% | 7.64% | 16.01% | [[ETF_NYSE_ARCA_IQLT Performance]] |
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
