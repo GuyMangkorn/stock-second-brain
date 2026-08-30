@@ -42,6 +42,7 @@ tags:
 | IEFA | iShares Core MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-/small-cap | 9.78% | 8.66% | 14.71% | [[ETF_CBOE_BZX_IEFA Performance]] |
 | DFAI | Dimensional International Core Equity Market ETF | active systematic developed markets ex-U.S. broad equity | not applicable (<10y) | 10.34%* | 15.19%* | [[ETF_NYSE_ARCA_DFAI Performance]] |
 | DFIC | Dimensional International Core Equity 2 ETF | active systematic developed ex-U.S. core equity | not applicable (<10y history) | not applicable (2022 inception) | 12.10%* | [[ETF_CBOE_BZX_DFIC Performance]] |
+| DFIV | Dimensional International Value ETF | active systematic developed ex-U.S. large-cap value | 10.29% | 15.69% | 16.70%* | [[ETF_NYSE_ARCA_DFIV Performance]] |
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 13.83% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
@@ -56,6 +57,14 @@ tags:
 | VYMI | Vanguard International High Dividend Yield ETF | international high dividend | 10.98% | 13.06% | 19.86% | [[ETF_NASDAQ_VYMI Performance]] |
 
 † DLS 7.69% is issuer-reported 10-year average annual NAV TR as of 2026-07-31; endpoints and elapsed years are not disclosed, so it is not an independently calculated CAGR. ‡ DLS current NAV TR YTD is 8.54% as of 2026-07-31. SCZ `8.60%†` is issuer-reported 10-year average annual NAV TR as of 2026-06-30; its `5.55%` 2021-2025 CAGR is calculated from rounded annual rows. ISCF `9.69%` is issuer-reported rolling 10-year average annual NAV TR as of 2026-06-30; its `8.55%` 2016-2025 CAGR is calculated from rounded official rows and its benchmark changed in 2023. GWX `6.86%†` is issuer-reported 10-year average annual NAV TR as of 2026-07-31; official calendar rows and raw endpoints are not disclosed, so 2021-2025 CAGR remains not disclosed. DDLS `9.61%` is the latest issuer rolling 10-year average annual NAV TR as of 2026-07-31; `11.33%*` blends official 2021-2024 rows with a secondary 2025 NAV proxy, and current NAV TR YTD is `6.54%` as of 2026-07-31. IRRRF `12.26%†` is the rounded-input 2016-2025 calendar NAV TR CAGR for the official USD listing `LSE:IWDA`; current NAV TR YTD is `13.67%` as of 2026-08-27. DFIC has no applicable 2021-2025 CAGR because of its 2022 inception; `12.10%*` is a secondary standardized total-return YTD field as of 2026-07-31, while official 2023-2025 complete calendar rows are retained on the performance page.
+
+DFIV เป็น active long-only international large-cap value ETF; official
+predecessor-linked NAV TR ให้ 2016-2025 rounded-input CAGR `10.29%` และ
+2021-2025 CAGR `15.69%`, ขณะที่ current NAV TR YTD `16.70%*` เป็น secondary
+standardized field ณ 2026-07-31. Management benchmark คือ MSCI World ex USA
+Value Index และ official annual comparison ให้ Excess CAGR `+1.13 pp` กับ
+hit rate `7/10`; official daily NAV สำหรับ drawdown/recovery และ risk-adjusted
+persistence ยังไม่ยืนยันได้.
 
 AGSCF เป็น input alias ของ official USD listing `LSE:AVGS`; `21.43%` เป็น
 official NAV TR YTD ณ 2026-07-31 เทียบกับ management benchmark `13.80%`.
