@@ -38,6 +38,7 @@ tags:
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
 | TKCPF | VanEck Morningstar Developed Markets Dividend Leaders UCITS ETF (official USD listing LSE:TDIV) | global developed large-cap dividend; OTC alias | 12.38%† | 18.73% | 18.12% | [[ETF_LSE_TDIV Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
+| HDEF | Xtrackers MSCI EAFE High Dividend Yield Equity ETF | developed ex-U.S./Canada high dividend | 8.74% | 11.09%* | 12.20%* | [[ETF_NYSE_ARCA_HDEF Performance]] |
 | PID | Invesco International Dividend Achievers ETF | international dividend achievers | 8.81% | 11.28% | 2.05% | [[ETF_NASDAQ_PID Performance]] |
 | VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.01% | 5.46% | 9.18% | [[ETF_NASDAQ_VIGI Performance]] |
 | VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 7.42% | 6.45% | 10.86% | [[ETF_NYSE_ARCA_VSS Performance]] |
@@ -197,6 +198,12 @@ Morningstar benchmark `9.00%`, current official NAV TR YTD คือ `11.47%`, �
 inception `2019-12-03` ทำให้ไม่มี 10-year field. Country/sector exposure,
 current price/NAV และ official daily-NAV drawdown/recovery มี as-of/gap ตามหน้า
 รายกอง.
+
+HDEF ใช้ official DWS rolling 10-year NAV TR `8.74%` ณ 2026-03-31 และ secondary
+annual NAV-return rows ที่คำนวณเป็น 2016-2025 CAGR `8.20%*` กับ 2021-2025 CAGR
+`11.09%*`; current secondary NAV-return YTD คือ `12.20%*` ณ 2026-07-31 ขณะที่
+official index YTD คือ `13.05%`. ชื่อเก่า “Hedged” และ index ก่อน 2018-02-13
+คงเป็น historical context; official daily-NAV drawdown/recovery ยังไม่ verified.
 
 EFV ใช้ official iShares rolling 10-year NAV TR `10.39%` เทียบ benchmark
 `10.44%` ณ 2026-06-30, official 2016-2025 NAV rows คำนวณเป็น CAGR `8.60%`,
