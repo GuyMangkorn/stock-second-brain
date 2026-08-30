@@ -44,6 +44,7 @@ tags:
 | VEA | Vanguard FTSE Developed Markets ETF | developed markets ex-U.S. large-/mid-/small-cap | 10.52% | 9.14% | 18.46% | [[ETF_NYSE_ARCA_VEA Performance]] |
 | SPDW | State Street SPDR Portfolio Developed World ex-US ETF | developed markets ex-U.S. broad equity | 9.88% | 9.01%* | 14.69% | [[ETF_NYSE_ARCA_SPDW Performance]] |
 | SCHF | Schwab International Equity ETF | developed markets ex-U.S. large-/mid-cap | 10.11% | 9.31%* | 15.26% | [[ETF_NYSE_ARCA_SCHF Performance]] |
+| BKIE | BNY Mellon International Equity ETF | developed markets ex-U.S. large-/mid-cap passive | not applicable (<10y) | 9.89%* | 14.70% | [[ETF_NYSE_ARCA_BKIE Performance]] |
 | IDEV | iShares Core MSCI International Developed Markets ETF | developed markets ex-U.S. large-/mid-/small-cap | not applicable (<10y) | 9.27% | 14.77% | [[ETF_NYSE_ARCA_IDEV Performance]] |
 | IEFA | iShares Core MSCI EAFE ETF | developed markets ex-U.S./Canada large-/mid-/small-cap | 9.78% | 8.66% | 14.71% | [[ETF_CBOE_BZX_IEFA Performance]] |
 | DFAI | Dimensional International Core Equity Market ETF | active systematic developed markets ex-U.S. broad equity | not applicable (<10y) | 10.34%* | 15.19%* | [[ETF_NYSE_ARCA_DFAI Performance]] |
@@ -159,6 +160,12 @@ SCHF ใช้ official Schwab rolling 10-year NAV TR `10.11%` และ current
 `9.31%*` เป็น secondary dividend-reinvested total-return proxy; official annual
 rows ใน reviewed capture ไม่ readable เป็นชุดที่ยืนยันได้ และ daily NAV
 drawdown/recovery ยังไม่ verified.
+
+BKIE ใช้ official BNY current NAV TR YTD `14.70%` ณ 2026-08-28 และ official
+since-inception NAV annualized `15.34%` ณ 2026-07-31. Inception `2020-04-22` ทำให้
+ยังไม่ครบ 10-year history; ค่า 2021-2025 CAGR `9.89%*` มาจาก secondary
+NAV/total-return rows และ current fields ใช้ post-split NAV หลัง 3-for-1 split
+วันที่ 2026-07-20. Official daily NAV drawdown/recovery ยังไม่ verified.
 
 IDEV มี official inception 2017-03-21 จึงยังไม่ครบ 10-year history; official
 2021-2025 NAV rows ให้ CAGR `9.27%` และ current NAV TR YTD `14.77%` ณ 2026-08-27.
