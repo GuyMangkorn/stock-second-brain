@@ -25,6 +25,7 @@ tags:
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
 | EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 11.06% | [[ETF_CBOE_EFAV Performance]] |
 | GSID | Goldman Sachs MarketBeta International Equity ETF | developed markets ex-North America large-/mid-cap passive | not applicable (<10y) | not disclosed | 11.93% | [[ETF_CBOE_BZX_GSID Performance]] |
+| GSIE | Goldman Sachs ActiveBeta International Equity ETF | developed ex-U.S. four-factor strategic-beta passive | 9.43% | 9.20%* (2021-2025) | 11.16% | [[ETF_NYSE_ARCA_GSIE Performance]] |
 | HFXI | NYLIM FTSE International Equity Currency Neutral ETF | developed markets ex-North America large-/mid-cap passive; 50% currency-hedged | 9.54% | 11.21% | 18.81% | [[ETF_NYSE_ARCA_HFXI Performance]] |
 | DFSI | Dimensional International Sustainability Core 1 ETF | active systematic developed ex-U.S. broad equity with sustainability screen | not applicable (<10y) | not applicable (2022 inception) | 8.74%* | [[ETF_NYSE_ARCA_DFSI Performance]] |
 | URTH | iShares MSCI World ETF | global developed large-/mid-cap passive | 13.36% | 12.30% | 13.50% | [[ETF_NYSE_ARCA_URTH Performance]] |
