@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-08-29
+updated: 2026-08-30
 tags:
   - analysis/etf-region
   - geography/United-States
@@ -33,6 +33,7 @@ tags:
 | PEY | Invesco High Yield Equity Dividend Achievers ETF | U.S. high-yield dividend achievers | 8.83% | 7.96% | 13.25% | [[ETF_NASDAQ_PEY Performance]] |
 | PFM | Invesco Dividend Achievers ETF | U.S. broad dividend achievers | 11.83% | 11.36% | 7.99% | [[ETF_NASDAQ_PFM Performance]] |
 | TDIV | First Trust NASDAQ Technology Dividend Index Fund | technology dividend and semiconductors | 18.22% | 16.55% | 19.52% | [[ETF_NASDAQ_TDIV Performance]] |
+| AIQ | Global X Artificial Intelligence & Technology ETF | U.S.-majority global AI/big-data thematic equity | not applicable (<10y) | 13.64% | 16.92% | [[ETF_NASDAQ_AIQ Performance]] |
 | VYM | Vanguard High Dividend Yield ETF | U.S. broad high dividend | 11.61% | 12.68% | 11.49% | [[ETF_AMEX_VYM Performance]] |
 | VOO | Vanguard S&P 500 ETF | U.S. large-cap broad equity | 15.47% | 14.38% | 9.97% | [[ETF_NYSE_ARCA_VOO Performance]] |
 | VB | Vanguard Morningstar Small-Cap ETF | U.S. small-cap broad equity | 10.90% | 7.35% | 19.48% | [[ETF_NYSE_ARCA_VB Performance]] |
@@ -87,7 +88,7 @@ tags:
 
 ตัวเลขในตารางเป็น navigation snapshot เท่านั้น; performance page และ [[ETF Performance Index]] เป็นเจ้าของตัวเลขและ calculation.
 โดย as-of date อาจต่างกันตาม source batch. ค่า *, †, ‡, not applicable
-และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม. SLYG `5.40%*` เป็น rounded-input
+และ ไม่พบข้อมูลที่ยืนยันได้ คงตาม source เดิม. AIQ เป็น global thematic fund แต่จัด primary region เป็น USA เพราะ U.S. issuers `67.51%` ของ snapshot ณ 2026-07-31; current NAV TR YTD `16.92%` เป็นคนละ as-of กับ current NAV `US$64.29` ณ 2026-08-28. AIQ ยังไม่มี 10-year field เพราะ inception 2018-05-11. SLYG `5.40%*` เป็น rounded-input
 secondary CAGR จาก annual total-return proxy; official issuer annual rows ไม่ได้
 เปิดเผยใน text extract ที่ตรวจสอบ. SLYG `10.97%` และ `22.77%` เป็น official
 State Street standardized NAV TR fields ณ 2026-07-31; current secondary YTD
