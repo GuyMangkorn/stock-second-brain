@@ -37,7 +37,7 @@ driver notes ทั้งหมด
 | Asia ex Japan | 4 | [[Asia ex Japan ETF]] |
 | Asia-Pacific | 12 | [[Asia-Pacific ETF]] |
 | Emerging Markets | 5 | [[Emerging Markets ETF]] |
-| International | 36 | [[International ETF]] |
+| International | 37 | [[International ETF]] |
 | Malaysia | 1 | [[Malaysia ETF]] |
 | New Zealand | 1 | [[New Zealand ETF]] |
 | Netherlands | 1 | [[Netherlands ETF]] |
