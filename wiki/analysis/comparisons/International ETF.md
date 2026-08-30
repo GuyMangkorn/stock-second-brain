@@ -32,6 +32,7 @@ tags:
 | EFV | iShares MSCI EAFE Value ETF | developed markets ex-U.S./Canada large-/mid-cap value | 10.39% | 13.34% | 18.09% | [[ETF_CBOE_BZX_EFV Performance]] |
 | EFG | iShares MSCI EAFE Growth ETF | developed markets ex-U.S./Canada large-/mid-cap growth | 8.43% | 4.19% | 11.08% | [[ETF_CBOE_BZX_EFG Performance]] |
 | IRRRF | iShares Core MSCI World UCITS ETF (official USD listing LSE:IWDA) | global developed large-/mid-cap passive accumulating equity | 12.26%† | 5.94% | 13.67% | [[ETF_LSE_IWDA Performance]] |
+| VGDDF | Vanguard FTSE Developed World UCITS ETF (official USD listing LSE:VHVE) | global developed large-/mid-cap passive accumulating equity | not applicable (<10y) | 12.11% | 11.45% | [[ETF_LSE_VHVE Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
@@ -150,6 +151,14 @@ VEA ใช้ official Vanguard rolling 10-year NAV TR `10.52%` ณ 2026-06-30,
 official 2016-2025 annual NAV rows ที่คำนวณเป็น CAGR `8.74%`, 2021-2025
 CAGR `9.14%`, และ current official NAV TR YTD `18.46%` ณ 2026-08-26.
 Rolling raw endpoints และ official daily NAV drawdown/recovery ยังไม่เปิดเผย.
+
+VGDDF เป็น OTC input alias ของ official USD listing `LSE:VHVE` สำหรับ Vanguard
+FTSE Developed World UCITS ETF (USD) Accumulating, ISIN `IE00BK5BQV03`.
+Official 2020-2025 NAV TR rows ให้ cumulative `105.82%` / rounded-input CAGR
+`12.78%`, 2021-2025 CAGR `12.11%`, และ current official NAV TR YTD `11.45%`
+ณ 2026-07-31. กองทุนเริ่ม 2019-09-24 จึงยังไม่มี 10-year field; tracking error
+official 1/3/5-year คือ `0.02%`/`0.05%`/`0.04%` และ daily NAV drawdown/recovery
+ยังไม่ verified.
 
 SPDW ใช้ official State Street rolling 10-year NAV TR `9.88%` และ current NAV TR
 YTD `14.69%` ณ 2026-07-31. ค่า 2016-2025 CAGR `8.70%*` และ 2021-2025 CAGR
