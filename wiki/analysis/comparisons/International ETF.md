@@ -30,6 +30,7 @@ tags:
 | URTH | iShares MSCI World ETF | global developed large-/mid-cap passive | 13.36% | 12.30% | 13.50% | [[ETF_NYSE_ARCA_URTH Performance]] |
 | AVIV | Avantis International Large Cap Value ETF | active systematic developed international large-cap value | not applicable (<10y) | 12.58%* (2022-2025) | 14.87% | [[ETF_NYSE_ARCA_AVIV Performance]] |
 | IDMO | Invesco S&P International Developed Momentum ETF | developed ex-U.S./South Korea momentum passive | 12.12% | 13.99% | 10.5%* | [[ETF_NYSE_ARCA_IDMO Performance]] |
+| XDEVF | Xtrackers MSCI World Value UCITS ETF 1C (official USD listing SIX:XDEV) | developed-market large-/mid-cap value smart-beta passive accumulating | 9.86%† | 13.70% | 36.97%* | [[ETF_SIX_XDEV Performance]] |
 | ESGD | iShares ESG Aware MSCI EAFE ETF | developed ex-U.S./Canada ESG-screened broad equity | 9.77% | 8.62% | 14.42% | [[ETF_NASDAQ_ESGD Performance]] |
 | IQLT | iShares MSCI Intl Quality Factor ETF | developed international quality factor | 9.99% | 7.64% | 16.01% | [[ETF_NYSE_ARCA_IQLT Performance]] |
 | FENI | Fidelity Enhanced International ETF | active systematic-quantitative developed international equity | 10.53% | 10.82% | 13.07%* | [[ETF_NYSE_ARCA_FENI Performance]] |
