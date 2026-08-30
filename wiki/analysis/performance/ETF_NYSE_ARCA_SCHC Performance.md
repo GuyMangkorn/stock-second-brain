@@ -7,13 +7,13 @@ exchange: NYSE Arca
 fund: Schwab International Small-Cap Equity ETF
 tracked_index: FTSE Developed Small Cap ex US Liquid Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-08-16
+updated: 2026-08-30
 performance_as_of: 2025-12-31
 rolling_10y_as_of: 2026-06-30
 current_ytd_as_of: 2026-07-31
-price_nav_as_of: 2026-08-14
-fund_facts_as_of: 2026-06-30
-source_batch: raw/imports/ETF_performance_sources_2026-08-16.md
+price_nav_as_of: 2026-08-28
+fund_facts_as_of: 2026-08-28
+source_batch: raw/imports/ETF_performance_sources_2026-08-30.md
 return_basis: NAV total return
 return_currency: USD
 tags:
@@ -34,7 +34,9 @@ Developed Small Cap ex US Liquid Index (Net). ใน complete calendar window
 2016-2025 มี 8 ปีบวก / 2 ปีลบ; cumulative NAV Total Return อยู่ที่ `108.21%`
 หรือ rounded-input CAGR `7.61%`, เทียบ S&P 500 TR `298.33%` / `14.82%`.
 ปีดีที่สุดคือ 2025 ที่ `+37.73%` และแย่ที่สุดคือ 2022 ที่ `-21.92%`. Current
-official NAV TR YTD คือ `+6.15%` ณ 31 ก.ค. 2026.
+official NAV TR YTD คือ `+6.15%` ณ 31 ก.ค. 2026; Schwab's latest
+quote/profile snapshot dated 28 ส.ค. 2026 shows NAV `US$51.63` and total net
+assets `US$5.793B`.
 
 ## Performance check
 
@@ -52,8 +54,9 @@ official NAV TR YTD คือ `+6.15%` ณ 31 ก.ค. 2026.
 - Official rolling 10-year NAV TR: average annual `8.23%` ณ 30 มิ.ย. 2026;
   raw rolling endpoints และ cumulative return ไม่ได้เปิดเผย จึงไม่สร้าง
   normalized endpoint
-- Current NAV: `US$51.24` ณ 14 ส.ค. 2026; product page แสดง bid/ask midpoint
-  `US$51.06` และ premium/discount `0.24%` ณ วันเดียวกัน
+- Current NAV: `US$51.63` ณ 28 ส.ค. 2026; product page แสดง bid/ask midpoint
+  `US$51.88`, premium/discount `0.14%` และ 30-day median bid/ask spread
+  `0.06%` ณ วันเดียวกัน
 - Annual coverage: official complete calendar years 2016-2025 จาก Schwab
   factsheet as of 30 มิ.ย. 2026; current YTD ใช้ Schwab monthly performance
   summary as of 31 ก.ค. 2026
@@ -88,10 +91,11 @@ official NAV TR YTD คือ `+6.15%` ณ 31 ก.ค. 2026.
 
 SCHC ให้ developed-market small-cap exposure นอกสหรัฐฯ จึงมี small-cap,
 country, currency และ liquidity sensitivity สูงกว่ากองทุน developed-market
-broad equity. Official product page แสดง holdings `2,202` ณ 13 ส.ค. 2026,
-portfolio turnover `25.85%` และ three-year standard deviation `16.57%` ณ
-31 ก.ค. 2026. Factsheet ที่ปิด ณ 30 มิ.ย. 2026 รายงาน standard deviation
-`16.73%`; ความต่างนี้เป็นคนละ dated snapshot ไม่ใช่ source conflict.
+broad equity. Official product page แสดง holdings `2,200` ณ 27 ส.ค. 2026,
+total net assets `US$5.793B` และ NAV `US$51.63` ณ 28 ส.ค. 2026; portfolio
+turnover `25.85%` และ three-year standard deviation `16.57%` ณ 31 ก.ค. 2026.
+Factsheet ที่ปิด ณ 30 มิ.ย. 2026 รายงาน standard deviation `16.73%`; ความต่างนี้
+เป็นคนละ dated snapshot ไม่ใช่ source conflict.
 
 Official rolling 10-year NAV TR average annual return `8.23%` ณ 30 มิ.ย. 2026
 ยังไม่มี raw endpoints ให้คำนวณ cumulative แบบ reproducible. Official daily NAV
@@ -104,6 +108,7 @@ history ที่เพียงพอสำหรับ maximum drawdown แล
 - [Schwab ETF Investment Performance Summary](https://www.schwabassetmanagement.com/resource/etf-investment-performance-summary) — monthly and quarterly official return snapshots through 31 Jul 2026
 - [Official SCHC fact sheet](https://www.schwabassetmanagement.com/resource/schc-fact-sheet) — official 2016-2025 calendar NAV rows, return basis and 3-year risk statistic as of 30 Jun 2026
 - [SCHC summary prospectus](https://www.sec.gov/Archives/edgar/data/1454889/000110465926020712/tm266454-8_497k.htm) — index objective, sampling method and risk disclosures
+- [SCHC fee supplement](https://www.sec.gov/Archives/edgar/data/1454889/000088454626000250/c497.htm) — management-fee reduction effective 11 Jun 2026 and current 0.06% total annual operating expenses
 - [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/)
 - Cached S&P 500 TR references: [2016-2019](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-08-16]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-08-30]] | [[ETF Performance Index]]

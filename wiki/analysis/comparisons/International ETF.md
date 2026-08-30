@@ -161,6 +161,13 @@ SCHF ใช้ official Schwab rolling 10-year NAV TR `10.11%` และ current
 rows ใน reviewed capture ไม่ readable เป็นชุดที่ยืนยันได้ และ daily NAV
 drawdown/recovery ยังไม่ verified.
 
+SCHC ใช้ official Schwab rolling 10-year NAV TR `8.23%` ณ 2026-06-30 และ
+official 2016-2025 NAV rows ที่คำนวณเป็น CAGR `7.61%`; 2021-2025 CAGR คือ
+`7.10%` และ current official NAV TR YTD คือ `6.15%` ณ 2026-07-31. Latest
+product snapshot แสดง NAV `US$51.63` และ total net assets `US$5.793B` ณ
+2026-08-28, holdings `2,200` ณ 2026-08-27; daily NAV drawdown/recovery ยังไม่
+verified.
+
 BKIE ใช้ official BNY current NAV TR YTD `14.70%` ณ 2026-08-28 และ official
 since-inception NAV annualized `15.34%` ณ 2026-07-31. Inception `2020-04-22` ทำให้
 ยังไม่ครบ 10-year history; ค่า 2021-2025 CAGR `9.89%*` มาจาก secondary
