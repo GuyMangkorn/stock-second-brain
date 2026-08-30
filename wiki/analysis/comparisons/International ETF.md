@@ -35,6 +35,7 @@ tags:
 | VGDDF | Vanguard FTSE Developed World UCITS ETF (official USD listing LSE:VHVE) | global developed large-/mid-cap passive accumulating equity | not applicable (<10y) | 12.11% | 11.45% | [[ETF_LSE_VHVE Performance]] |
 | PBPH | Portfolio Building Block World Pharma and Biotech Index ETF | global developed pharma/biotech thematic passive equity | not applicable (2025 inception) | not applicable | 7.69% | [[ETF_NASDAQ_PBPH Performance]] |
 | IXUAF | iShares MSCI World ex-USA UCITS ETF (official USD listing Euronext Amsterdam:XUSE) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | 14.27% | [[ETF_EURONEXT_AMSTERDAM_XUSE Performance]] |
+| XTMWF | Xtrackers MSCI World ex USA UCITS ETF 1C (official USD listing LSE:EXUS) | global developed ex-U.S. large-/mid-cap passive accumulating equity | not applicable (<10y) | not applicable | not disclosed | [[ETF_LSE_EXUS Performance]] |
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
@@ -176,6 +177,14 @@ EUR ของ share class เดียวกัน. กองทุนเริ�
 calendar year หรือ 2021-2025 CAGR; current official NAV TR YTD คือ `14.27%` ณ
 2026-08-27 และ factsheet ณ 2026-06-30 รายงาน 1-year `21.11%` กับ since-inception
 annualized `26.07%`. Official daily-NAV risk fields ยังไม่ยืนยันได้.
+
+XTMWF เป็น OTC input alias ของ official USD listing `LSE:EXUS` สำหรับ Xtrackers
+MSCI World ex USA UCITS ETF 1C, ISIN `IE0006WW1TQ4`; official factsheet ระบุ
+LSE `EXUS` เป็น USD และ `XMWX` เป็น GBP. Official past-performance document
+ยืนยันปี 2025 เพียงปีเดียวที่เป็น complete calendar row: fund `32.00%` เทียบ
+MSCI World ex USA `31.90%`; share class เริ่ม 2024-03-06 จึงไม่มี 2021-2025
+CAGR และ current official YTD ยัง `ไม่พบข้อมูลที่ยืนยันได้`. Daily-NAV
+drawdown/recovery และ official current risk statistics ยังไม่ verified.
 
 SPDW ใช้ official State Street rolling 10-year NAV TR `9.88%` และ current NAV TR
 YTD `14.69%` ณ 2026-07-31. ค่า 2016-2025 CAGR `8.70%*` และ 2021-2025 CAGR
