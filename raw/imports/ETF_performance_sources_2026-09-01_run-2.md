@@ -72,6 +72,55 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## IMFL — Invesco International Developed Dynamic Multifactor ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `IMFL`; `entity_key`: `Cboe BZX:IMFL`; exchange: Cboe BZX
+- Primary region: International; developed markets ex-US multifactor equity exposure
+- `management_mode`: `passive-index`; tracked index: `FTSE Developed ex US Invesco Dynamic Multifactor Index`; official comparison benchmark: `FTSE Developed ex US Index`
+- Proposed outputs: `wiki/analysis/performance/ETF_CBOE_BZX_IMFL Performance.md` and this source batch
+
+### Evidence and definitions
+
+- Invesco’s official product page identifies IMFL as an indexed equity ETF launched `2021-02-24`, using monthly rebalanced low-volatility, momentum, quality, size, and value factors. Management fee/expense ratio is `0.34%`; exchange is Cboe BZX.
+- The official Invesco factsheet as of `2026-03-31` reports NAV total return YTD `6.43%`, 1-year `31.64%`, 3-year annualized `14.31%`, 5-year `7.97%`, and since inception annualized `8.46%`. Its benchmark fields are `FTSE Developed ex US Index`: `0.18%, 26.88%, 15.05%, 8.32%, 8.22%` for the same periods.
+- The same official factsheet supplies complete NAV calendar rows for `2022-2025`: `-16.71%, 24.96%, -3.70%, 30.79%`. No complete 2021 row is claimed because inception was in February 2021.
+- Official factsheet portfolio fields as of `2026-03-31` include `1,146` holdings, P/E `17.01`, P/B `2.37`, and ROE `12.12%`.
+- The official product-page performance widget was not text-readable for the current date. ETF Central reports current YTD `20.09%*` as of `2026-08-25`; this is a secondary proxy and is not presented as official. Current official NAV/YTD is therefore `ไม่พบข้อมูลที่ยืนยันได้` in the captured official text.
+- Return currency is USD. S&P 500 Total Return is only a cached USD common reference, not the official FTSE comparison benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | IMFL NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2022 | -16.71% | -18.11% | Invesco factsheet |
+| 2023 | 24.96% | 26.29% | Invesco factsheet |
+| 2024 | -3.70% | 25.02% | Invesco factsheet |
+| 2025 | 30.79% | 17.88% | Invesco factsheet |
+
+Applying `Π(1 + annual_return) - 1` to the four official rounded rows gives
+`31.09%` cumulative and `7.00%` rounded-input CAGR. The official rolling
+since-inception annualized return is `8.46%` as of `2026-03-31`; the windows
+and endpoints differ. The annual window has 2 up years and 2 down years; best
+is 2025 `30.79%`, worst is 2022 `-16.71%`.
+
+- Official 2025 NAV return `30.79%` exceeded the FTSE Developed ex US Index benchmark `34.22%` by `-3.43 pp`; 2023 IMFL `24.96%` exceeded benchmark `18.06%` by `+6.90 pp`. These are benchmark differences, not alpha.
+- A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Sources
+
+1. [Invesco official IMFL product page](https://www.invesco.com/us/en/financial-products/etfs/invesco-international-developed-dynamic-multifactor-etf.html)
+2. [Invesco IMFL official factsheet](https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/imfl-invesco-international-developed-dynamic-multifactor-etf-fact-sheet.pdf)
+3. [ETF Central IMFL data](https://www.etfcentral.com/fund/IMFL)
+4. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Identity, exchange, indexed factor process, tracked index, comparison benchmark, return basis, source dates, annual rows, current-YTD limitation, benchmark arithmetic, calculations, and unresolved drawdown gap are recorded above.
+- Proposed page contents: bottom line; performance check; 2022-2025 annual table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## IMTM — iShares MSCI Intl Momentum Factor ETF
 
 ### Identity and proposed durable outputs
