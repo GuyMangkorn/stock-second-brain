@@ -72,6 +72,53 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## IMTM — iShares MSCI Intl Momentum Factor ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `IMTM`; `entity_key`: `NYSE Arca:IMTM`; exchange: NYSE Arca
+- Primary region: International; developed markets ex-US momentum-factor exposure
+- `management_mode`: `passive-index`; issuer benchmark: `MSCI World ex USA Momentum Index (Net)`
+- Proposed outputs: `wiki/analysis/performance/ETF_NYSE_ARCA_IMTM Performance.md` and this source batch
+
+### Evidence and definitions
+
+- The official iShares product page identifies IMTM as an equity ETF launched `2015-01-13`, tracking `MSCI World ex USA Momentum Index (Net)`, with expense ratio `0.30%`, NAV `$53.18`, net assets `$4,254,713,180`, and `302` holdings as of `2026-08-28`.
+- The official page reports NAV total-return YTD `12.21%` as of `2026-08-28`; closing price `$53.32` is kept separate.
+- The official June 2026 factsheet supplies calendar NAV rows for `2021-2025`: `6.53%, -16.65%, 13.68%, 12.25%, 34.43%`, and rolling NAV annualized returns as of `2026-06-30`: 1-year `22.25%`, 3-year `21.07%`, 5-year `10.65%`, 10-year `10.71%`, and since inception `9.51%`.
+- Official factsheet risk fields include beta `0.73`, standard deviation `13.13%`, P/E `21.19`, and P/B `2.56` as of `2026-06-30`; the current page reports beta `0.74` and standard deviation `13.31%` in the latest snapshot.
+- Return currency is USD. S&P 500 Total Return is only a cached USD common reference, not IMTM’s issuer benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | IMTM NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2021 | 6.53% | 28.71% | iShares factsheet |
+| 2022 | -16.65% | -18.11% | iShares factsheet |
+| 2023 | 13.68% | 26.29% | iShares factsheet |
+| 2024 | 12.25% | 25.02% | iShares factsheet |
+| 2025 | 34.43% | 17.88% | iShares factsheet |
+
+Applying `Π(1 + annual_return) - 1` to the five official rounded rows gives
+`52.32%` cumulative and `8.78%` rounded-input CAGR. The official rolling
+5-year NAV CAGR is `10.65%` as of `2026-06-30`; the endpoint/window differs
+from the calendar-row calculation. The annual window has 4 up years and 1 down
+year; best is 2025 `34.43%`, worst is 2022 `-16.65%`.
+
+- A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Sources
+
+1. [iShares official IMTM product page](https://www.ishares.com/us/products/271538/ishares-msci-intl-momentum-factor-etf)
+2. [iShares IMTM official factsheet](https://www.ishares.com/us/literature/fact-sheet/imtm-ishares-msci-intl-momentum-factor-etf-fund-fact-sheet-en-us.pdf)
+3. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Identity, exchange, momentum-factor index, return basis, currency, source dates, annual rows, current snapshot, rolling comparison, risk fields, calculation, and unresolved drawdown gap are recorded above.
+- Proposed page contents: bottom line; performance check; 2021-2025 annual table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## IVLU — iShares MSCI Intl Value Factor ETF
 
 ### Identity and proposed durable outputs
