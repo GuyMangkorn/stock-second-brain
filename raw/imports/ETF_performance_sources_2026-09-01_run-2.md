@@ -72,6 +72,60 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## QEFA — State Street SPDR MSCI EAFE StrategicFactors ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `QEFA`; `entity_key`: `NYSE Arca:QEFA`; exchange: NYSE Arca
+- Primary region: International; developed markets ex-US/Canada strategic-factor exposure
+- `management_mode`: `passive-index`; issuer benchmark: `MSCI EAFE Factor Mix A-Series Index`
+- Proposed outputs: `wiki/analysis/performance/ETF_NYSE_ARCA_QEFA Performance.md` and this source batch
+
+### Evidence and definitions
+
+- State Street’s official product page identifies QEFA, inception `2014-06-04`, base currency USD, expense ratio `0.30%`, NAV `$101.49`, and AUM `$1,075.78M`, with the latest price/assets snapshot as of `2026-08-27`. The strategy combines low-volatility, quality, and value factors.
+- Official NAV total return as of `2026-07-31`: YTD `11.24%`, 1-year `23.04%`, 3-year annualized `14.90%`, 5-year annualized `8.58%`, 10-year annualized `8.92%`, and since inception annualized `7.07%`. Official benchmark fields are `11.20%, 23.16%, 14.94%, 8.63%, 8.97%, 7.13%` for the same periods.
+- The official June 2026 factsheet confirms the index methodology, `0.30%` expense ratio, and `643` holdings as of `2026-06-30`. It does not provide the full calendar-year table in the captured extract.
+- AAII provides rounded calendar NAV rows used only as secondary proxies: `2016-2025` equals `0.3%, 23.9%, -10.2%, 21.9%, 7.0%, 12.4%, -14.0%, 17.3%, 2.7%, 28.8%` as of `2026-07-31`.
+- Return currency is USD. The S&P 500 Total Return rows are the project’s cached USD common reference, not QEFA’s issuer benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | QEFA NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2016 | 0.3%* | 11.96% | AAII secondary proxy |
+| 2017 | 23.9%* | 21.83% | AAII secondary proxy |
+| 2018 | -10.2%* | -4.38% | AAII secondary proxy |
+| 2019 | 21.9%* | 31.49% | AAII secondary proxy |
+| 2020 | 7.0%* | 18.40% | AAII secondary proxy |
+| 2021 | 12.4%* | 28.71% | AAII secondary proxy |
+| 2022 | -14.0%* | -18.11% | AAII secondary proxy |
+| 2023 | 17.3%* | 26.29% | AAII secondary proxy |
+| 2024 | 2.7%* | 25.02% | AAII secondary proxy |
+| 2025 | 28.8%* | 17.88% | AAII secondary proxy |
+
+Applying `Π(1 + annual_return) - 1` to the ten secondary rounded rows gives
+`118.32%` cumulative and `8.12%` rounded-input CAGR. The official rolling
+10-year NAV CAGR is `8.92%` as of `2026-07-31`; the table is not a substitute
+for that issuer field. The proxy window has 8 up years and 2 down years; best
+is 2025 `28.8%*`, worst is 2022 `-14.0%*`.
+
+- Benchmark-relative official rolling fields are close but mixed: QEFA trails the issuer benchmark by `-0.12 pp` over 1 year and `-0.04 pp` over 3 years, and leads by `+0.01 pp` over 10 years; rounding and different data dates matter.
+- A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Sources
+
+1. [State Street official QEFA product page](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-msci-eafe-strategicfactors-etf-qefa)
+2. [State Street QEFA factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-qefa.pdf)
+3. [AAII QEFA data](https://www.aaii.com/etfs/summary?ticker=QEFA)
+4. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Identity, exchange, return basis, issuer benchmark, factor methodology, currency, source dates, current official fields, secondary annual rows, calculations, and unresolved drawdown gap are recorded above.
+- Proposed page contents: bottom line; performance check; 2016-2025 secondary annual table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## VEXNF / VIDY — Vanguard FTSE Developed ex North America High Dividend Yield Index ETF
 
 ### Identity and proposed durable outputs
