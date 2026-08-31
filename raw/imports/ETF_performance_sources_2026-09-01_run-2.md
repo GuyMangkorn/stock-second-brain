@@ -72,3 +72,55 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## ISMVF / IWVL — iShares Edge MSCI World Value Factor UCITS ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `ISMVF` is an OTC alias; official USD share class/listing used for the performance record is `LSE:IWVL`
+- Primary region: International; developed-world value-factor exposure
+- Proposed outputs: `wiki/analysis/performance/ETF_LSE_IWVL Performance.md` and this source batch
+
+### Evidence and definitions
+
+- The official iShares product page identifies the fund as equity, physical/replicated, accumulating, domiciled in Ireland, with share-class launch `2014-10-03`, benchmark `MSCI World Enhanced Value Index (Net)`, TER `0.25%`, NAV `$81.52`, and net assets `$7,208,692,355`, with the latest price/assets snapshot as of `2026-08-28`.
+- The official product page reports NAV total return YTD `36.23%` as of `2026-08-28`. Its performance convention reinvests gross income where applicable; market-price performance is separate.
+- The official July 2026 factsheet supplies calendar-year NAV/share-class returns for `2016-2025`: `8.14%, 22.16%, -13.90%, 19.13%, -3.93%, 20.03%, -9.96%, 19.41%, 5.25%, 39.63%`.
+- Return currency is USD for the selected LSE listing. Official factsheet risk data include 3-year beta `0.998` and standard deviation `16.00%` as of `2026-07-31`, with `399` holdings in the current product snapshot.
+- The S&P 500 Total Return rows are the project’s cached USD common reference for `2016-2025`, not the fund’s issuer benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | IWVL NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2016 | 8.14% | 11.96% | iShares factsheet |
+| 2017 | 22.16% | 21.83% | iShares factsheet |
+| 2018 | -13.90% | -4.38% | iShares factsheet |
+| 2019 | 19.13% | 31.49% | iShares factsheet |
+| 2020 | -3.93% | 18.40% | iShares factsheet |
+| 2021 | 20.03% | 28.71% | iShares factsheet |
+| 2022 | -9.96% | -18.11% | iShares factsheet |
+| 2023 | 19.41% | 26.29% | iShares factsheet |
+| 2024 | 5.25% | 25.02% | iShares factsheet |
+| 2025 | 39.63% | 17.88% | iShares factsheet |
+
+Applying `Π(1 + annual_return) - 1` to the ten official rounded rows gives
+`146.88%` cumulative and `9.46%` rounded-input CAGR. The official factsheet’s
+rolling 10-year field is not needed for this complete annual-row calculation;
+the page will retain the current official YTD and latest risk fields. The
+window has 7 up years and 3 down years; best is 2025 `39.63%`, worst is 2018
+`-13.90%`.
+
+- A fresh maximum drawdown and recovery calculation from daily NAV data was not assembled; disclose `ไม่พบข้อมูลที่ยืนยันได้`.
+- The OTC alias-to-LSE mapping is an identity normalization, not a return adjustment; listing currency and share-class details remain explicit.
+
+### Sources
+
+1. [iShares official IWVL product page](https://www.ishares.com/uk/professionals/en/products/270048/ishares-msci-world-value-factor-ucits-etf?shortLocale=en_GB)
+2. [iShares IWVL July 2026 factsheet](https://www.ishares.com/uk/professional/en/literature/fact-sheet/iwvl-ishares-edge-msci-world-value-factor-ucits-etf-fund-fact-sheet-en-gb.pdf)
+3. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Identity alias, official exchange/listing, return basis, benchmark, currency, units, source dates, annual rows, current snapshot, calculations, and unresolved drawdown gap are recorded above.
+- Proposed page contents: alias mapping; bottom line; performance check; 2016-2025 annual table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
