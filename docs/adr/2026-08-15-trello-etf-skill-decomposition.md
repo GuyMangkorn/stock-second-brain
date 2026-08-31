@@ -1,7 +1,7 @@
 # ADR: Decompose the Trello ETF Workflow into Focused Skills
 
 **Date:** 2026-08-15  
-**Status:** Proposed  
+**Status:** Superseded by `0001-project-local-markdown-research-queue.md`
 **Deciders:** Stock Second Brain maintainers
 
 ## Context
