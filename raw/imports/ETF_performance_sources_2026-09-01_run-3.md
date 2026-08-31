@@ -88,6 +88,39 @@ performance_output: wiki/analysis/performance/ETF_LSE_MVOL Performance.md
 - Planned durable paths/change map: `wiki/analysis/performance/ETF_LSE_MVOL Performance.md` (create); `raw/imports/ETF_performance_sources_2026-09-01_run-3.md` (create). No other path is written by the downstream workflow for this card.
 - Local pre-save verdict: `PASS`; no critical, high, or unresolved material finding remains within the renewed clean output scope.
 
+## IEMMF / IWMO evidence packet
+
+- Identity: input `IEMMF` is a secondary OTC alias for the official USD London Stock Exchange listing `IWMO` of iShares Edge MSCI World Momentum Factor UCITS ETF U.S. Dollar (Accumulating), ISIN `IE00BP3QZ825`. Official listing date is 6 Oct 2014; share-class/fund launch is 3 Oct 2014.
+- Official classification: passive physical optimised equity UCITS ETF tracking `MSCI World Momentum Index (Net)`. The selected share class is accumulating, USD, TER `0.25%`, and does not define its payoff through leverage, inverse exposure, or options.
+- Current official product-page snapshot: NAV `US$114.55` as of 28 Aug 2026; NAV Total Return YTD `19.25%` as of 27 Aug 2026; net assets `US$6,022,456,334` as of 28 Aug 2026; holdings `353` as of 28 Aug 2026; 3-year beta `0.999` and standard deviation `17.79%` as of 31 Jul 2026.
+- Official June 2026 factsheet observations: 2016–2025 annual NAV/index rows; 6-month/YTD `28.24%`, 1-year `36.71%`, 3-year annualised `29.88%`, 5-year annualised `14.55%`, and since-inception annualised `14.61%`, all as of 30 Jun 2026. The reviewed current capture did not expose a separate issuer rolling 10-year field.
+- Official calendar NAV TR / issuer index TR rows, USD, complete years 2016–2025:
+
+| Year | IWMO NAV TR | MSCI World Momentum Index TR |
+|---|---:|---:|
+| 2016 | 4.05% | 4.19% |
+| 2017 | 31.91% | 32.09% |
+| 2018 | -2.97% | -2.76% |
+| 2019 | 27.44% | 27.68% |
+| 2020 | 27.90% | 28.26% |
+| 2021 | 14.31% | 14.64% |
+| 2022 | -17.87% | -17.79% |
+| 2023 | 11.56% | 11.75% |
+| 2024 | 29.80% | 30.15% |
+| 2025 | 21.23% | 21.33% |
+
+- Cached S&P 500 TR rows for the same 2016–2025 USD total-return basis: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; cached reference as of 31 Dec 2025.
+- Calculation inputs and outputs: IWMO product `3.5775152551`, cumulative `257.75%`, rounded-input 10-year calendar CAGR `13.59%†`; issuer index product `3.6448173138`, cumulative `264.48%`, CAGR `13.81%`; S&P product `3.9832911148`, cumulative `298.33%`, CAGR `14.82%`. IWMO 2021–2025 product `1.6480840290`, cumulative `64.81%`, CAGR `10.51%`; issuer index `1.6631090524`, cumulative `66.31%`, CAGR `10.71%`; S&P `1.9616961801`, cumulative `96.17%`, CAGR `14.43%`.
+- Annual NAV standard deviation, population: `15.49%` for 2016–2025 and `16.12%` for 2021–2025. Annual active differences versus issuer index: `-0.14`, `-0.18`, `-0.21`, `-0.24`, `-0.36`, `-0.33`, `-0.08`, `-0.19`, `-0.35`, `-0.10` percentage points; no alpha claim.
+- Annual-path risk: maximum year-end drawdown `-17.87%` in 2022; cumulative year-end level exceeded the previous high by 2024; daily drawdown/recovery date is not disclosed in the reviewed official capture.
+- Ranking review: `8 / 2` up/down years; best `2017 +31.91%`; least positive `2016 +4.05%`; worst `2022 -17.87%`; least bad down year `2018 -2.97%`.
+- Source integrity review: PASS — OTC alias mapping is clearly secondary, official identity/listing and passive equity classification are separated, all return numbers use USD NAV Total Return or clearly labelled issuer-index/S&P comparison bases, and current/annual/as-of dates are visible.
+- Calculation and format review: PASS — ten complete official calendar rows support a rounded-input calendar CAGR, issuer rolling 10-year is not invented, required sections/one annual table/Thai-first narrative/canonical `geography/International` tag/breadcrumb are present, and daily risk gaps are stated.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, and `log.md` were already dirty before this claim due to retained FNDF recovery state. They were not modified or included in this card’s scoped output; the IWMO row and workflow log bullet remain deferred to clean navigation reconciliation.
+- Planned durable contents: create `wiki/analysis/performance/ETF_LSE_IWMO Performance.md` with the full IEMMF/IWMO performance page and update this source batch with the evidence, calculations, local review, and deferred shared-navigation note.
+- Planned durable paths/change map: `wiki/analysis/performance/ETF_LSE_IWMO Performance.md` (create); `raw/imports/ETF_performance_sources_2026-09-01_run-3.md` (update). No other path is written by the downstream workflow for this card.
+- Local pre-save verdict: `PASS`; no critical, high, or unresolved material finding remains within the renewed clean output scope.
+
 ## Research handoff
 
 ```text
