@@ -72,6 +72,58 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## VEXNF / VIDY — Vanguard FTSE Developed ex North America High Dividend Yield Index ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `VEXNF` is an OTC alias; official Canadian listing used is `TSX:VIDY`
+- Primary region: International; the underlying index excludes Canada and the United States
+- `management_mode`: `passive-index`; issuer benchmark: `FTSE Developed ex North America High Dividend Yield Index`
+- Proposed outputs: `wiki/analysis/performance/ETF_TSX_VIDY Performance.md` and this source batch
+
+### Evidence and definitions
+
+- Vanguard Canada’s official product page identifies VIDY as an equity ETF using passive full replication, with inception `2018-08-21`, management fee `0.28%`, and page-displayed RFG/MER `0.31%`. The official ETF Facts dated `2026-07-16` reports MER `0.32%`; this total-expense figure is used in the page while the page’s alternate display is retained as a note.
+- The official page reports CAD NAV `$48.3366` and market price `$48.45` as of `2026-08-28`, with `629` stocks and standard deviation `9.23%` as of `2026-07-31`.
+- The official ETF Facts supplies NAV total-return calendar rows for `2019-2025`: `12.3%, -2.9%, 14.0%, 1.6%, 15.1%, 16.1%, 34.5%`, plus since-inception value growth of `$1,000` to `$2,395` and annual compound return `11.89%` through `2026-05-31`.
+- Official current YTD was not text-readable on the product page. Cboe Canada/ETF Market reports `19.37%*` as of `2026-08-21`; it is a secondary proxy. A separate secondary source showed `19.61%` as of July 31, so the page preserves the source limitation rather than presenting either as official.
+- Return currency is CAD. The S&P 500 Total Return rows are USD-only common reference data and are not a currency-aligned benchmark for VIDY.
+
+### Candidate claims, calculations, and gaps
+
+| Year | VIDY NAV TR (CAD) | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2019 | 12.3% | 31.49% | Vanguard ETF Facts |
+| 2020 | -2.9% | 18.40% | Vanguard ETF Facts |
+| 2021 | 14.0% | 28.71% | Vanguard ETF Facts |
+| 2022 | 1.6% | -18.11% | Vanguard ETF Facts |
+| 2023 | 15.1% | 26.29% | Vanguard ETF Facts |
+| 2024 | 16.1% | 25.02% | Vanguard ETF Facts |
+| 2025 | 34.5% | 17.88% | Vanguard ETF Facts |
+
+Applying `Π(1 + annual_return) - 1` to the seven official rounded CAD rows gives
+`127.00%` cumulative and `12.42%` rounded-input CAGR. The official since-
+inception ETF Facts figure is `11.89%` annual compound through `2026-05-31`;
+the two calculations use different windows and should not be conflated. The
+2019-2025 window has 6 up years and 1 down year; best is 2025 `34.5%`, worst is
+2020 `-2.9%`.
+
+- A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`.
+- Underlying exposure, CAD return currency, and USD reference currency must remain explicit in any comparison.
+
+### Sources
+
+1. [Vanguard Canada official VIDY product page](https://www.vanguard.ca/fr/product/etf/equity/9742/vanguard-ftse-developed-ex-north-america-high-dividend-yield-index-etf)
+2. [Vanguard VIDY official ETF Facts](https://fund-docs.vanguard.com/VIDY_FTSE_Developed_ex_North_America_High_Dividend_Yield_Index_ETF_ETF_9742_EN_FACTS.pdf)
+3. [Cboe Canada / ETF Market VIDY data](https://etfmarket.cboe.com/canada/en/fund/VIDY)
+4. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Alias mapping, official exchange, underlying geography, CAD return basis, fee-definition conflict, source dates, annual rows, current NAV, secondary YTD limitation, calculations, and unresolved drawdown gap are recorded above.
+- Proposed page contents: alias mapping; bottom line; performance check; 2019-2025 annual table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## WTTHF / WTCH — State Street SPDR MSCI World Technology UCITS ETF
 
 ### Identity and proposed durable outputs
