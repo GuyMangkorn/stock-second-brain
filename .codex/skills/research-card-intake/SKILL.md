@@ -5,6 +5,9 @@ description: Create project-local Markdown Research Cards from an authorized ETF
 
 # Research Card Intake
 
+ใช้ skill นี้เมื่อผู้ใช้ขอสร้าง เพิ่ม หรือ queue งานวิจัยอย่างชัดเจน โดยให้
+ใช้ queue ที่เก็บในโปรเจกต์เป็น source of truth เดียว
+
 Use this project-scoped skill when the user clearly asks to create, add, queue,
 or seed research work. Intake materializes a Research Batch and Ready Research
 Cards; it does not start research. The Markdown card frontmatter is the sole

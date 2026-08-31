@@ -1,12 +1,12 @@
 # Markdown Research Queue cutover runbook
 
-This runbook is intentionally executable without a migration schema. It keeps
+runbook นี้ทำตามได้โดยไม่ต้องมี migration schema ถาวร โดยคง
 Trello read-only and turns the existing scheduled job into a Research Queue
 dispatcher only after the pilot is verified.
 
 ## 1. Read and seed
 
-Immediately before cutover, read the live `Ready for AI` and `Blocked` lists on
+ก่อน cutover ให้อ่าน live `Ready for AI` และ `Blocked` บน
 the historical `stock-analysis-task` board. Extract only each card's ticker and
 discard descriptions, Trello status, comments, provenance, and ARIs. Pass the
 deduplicated values through normal Intake:
@@ -21,14 +21,16 @@ Trello. Verify the created/reused/rejected counts against the fresh source set.
 
 ## 2. Pilot
 
-Run one card with the existing ETF performance workflow in
+รันหนึ่งการ์ดด้วย ETF performance workflow เดิมใน
 `execution_profile: scheduled-inline` and the caller boundary
-`caller: research-queue-manager`, `handoff: research_handoff`. Confirm:
+`caller: research-queue-manager`, `handoff: research_handoff`, and `mode: lean`.
+แล้วตรวจยืนยันว่า:
 
 - the card claim has a renewable two-hour lease and fencing token;
 - the ETF pre-save gate records `verification_mode: scheduled-local` and
   `reviewer_dispatch: not-attempted-by-design`;
-- only the complete seven-field handoff can route the card to Done or Blocked;
+- only the complete seven-field handoff, at least one existing output path, and
+  a scoped Git commit can route the card to Done or Blocked;
 - the card, scoped outputs, and no unrelated user edits are in the terminal
   commit; and
 - the Intake and Monitor projections reconcile with files on disk.
@@ -47,13 +49,17 @@ count: 10
 execution_profile: scheduled-inline
 
 Select only Ready Research Cards with workflow: check-etf-performance.
-Acquire the project lease, select oldest-first, claim and reread each card,
+Acquire and retain the project lease from selection through the downstream
+write (`claim-next --keep-lease`), select oldest-first, claim and reread each card,
 invoke check-etf-performance with caller: research-queue-manager and
-handoff: research_handoff, renew at safe phase boundaries, and route only the
-complete structured result. Process sequentially and stop globally on lease,
+handoff: research_handoff, mode: lean, and execution_profile: scheduled-inline;
+renew at safe phase boundaries with the lease token and route only the
+complete structured result with explicit output paths and a scoped commit.
+Process sequentially and stop globally on lease,
 configuration, claim-state, or contradictory-result failures. Continue after
 item-scoped Blocked results. Never dispatch a sub-agent or select/mutate Trello.
-Commit one terminal card with its scoped outputs and preserve unrelated edits.
+Release the retained lease after the bounded run. Commit one terminal card with
+its scoped outputs and preserve unrelated edits.
 ```
 
 ## 4. Verify

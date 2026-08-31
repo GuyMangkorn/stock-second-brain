@@ -12,6 +12,7 @@
 - [ ] The manager rereads a card after claiming it and before invoking research so that it does not process a lost or changed claim.
 - [ ] Scheduled execution runs inline in the top-level context and processes one card at a time without dispatching sub-agents.
 - [ ] A valid successful handoff moves the card to Done and links its durable outputs instead of copying their contents into the card.
+- [ ] Done is refused unless at least one `raw/`, `wiki/`, `index.md`, or `log.md` output is declared at the pre-write boundary, exists as a file, changes after its baseline, and the same card/output scope receives a successful terminal Git commit.
 - [ ] An item-scoped failure moves only that card to Blocked and processing continues until the requested count is exhausted; a global failure stops the run.
 - [ ] Each terminal card transition and its scoped research outputs are committed together in exactly one Git commit.
 - [ ] Unrelated working-tree changes remain unstaged and unmodified.

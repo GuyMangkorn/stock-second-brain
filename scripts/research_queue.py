@@ -12,18 +12,20 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import fcntl
 import hashlib
 import json
 import os
 import re
 import secrets
+import shlex
 import subprocess
 import sys
 import tempfile
 import uuid
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Callable, Iterable, Iterator, Mapping, Sequence
+from typing import Any, Callable, Iterator, Mapping, Sequence
 
 
 STATUS_READY = "Ready"
@@ -57,6 +59,10 @@ HANDOFF_SCOPES = {"item", "global", "unknown"}
 HANDOFF_WRITES = {"completed", "not_completed", "unknown"}
 HANDOFF_CONFIRMATIONS = {"none", "required", "confirmed"}
 SUCCESS_CODES = {"success", "durable-write-complete"}
+SAFE_RECOVERY_PHASES = {"claimed", "pre-write", "research", "preflight"}
+DURABLE_OUTPUT_PREFIXES = ("raw/", "wiki/", "index.md", "log.md")
+GIT_STATUS_UNAVAILABLE = "<git-status-unavailable>"
+DEFAULT_HANDOFF_TIMEOUT_SECONDS = 6600.0
 ITEM_BLOCK_CODES = {
     "review-warning",
     "confirmation-required",
@@ -88,6 +94,7 @@ CARD_FIELD_ORDER = [
     "claimed_at",
     "lease_expires_at",
     "fencing_token",
+    "claim_baseline_paths",
     "execution_phase",
     "result_status",
     "result_scope",
@@ -96,6 +103,8 @@ CARD_FIELD_ORDER = [
     "durable_write",
     "confirmation",
     "output_paths",
+    "planned_output_paths",
+    "planned_output_baselines",
     "output_links",
     "completed_at",
     "commit_id",
@@ -114,6 +123,17 @@ BATCH_FIELD_ORDER = [
     "reused_card_ids",
     "rejected_items",
 ]
+REQUIRED_CARD_FIELDS = {
+    "kind",
+    "card_id",
+    "title",
+    "status",
+    "workflow",
+    "instrument_type",
+    "input_ticker",
+    "created_at",
+    "updated_at",
+}
 
 
 class QueueError(Exception):
@@ -126,13 +146,11 @@ class QueueError(Exception):
         self.global_failure = global_failure
 
 
-def utc_now() -> dt.datetime:
-    return dt.datetime.now(dt.timezone.utc)
-
-
 def parse_time(value: str | None) -> dt.datetime:
-    if not value:
+    if value is None or value == "":
         return dt.datetime.now(dt.timezone.utc)
+    if not isinstance(value, str):
+        raise QueueError("workflow-config-mismatch", f"invalid timestamp: {value!r}")
     text = value.strip()
     if text.endswith("Z"):
         text = text[:-1] + "+00:00"
@@ -200,6 +218,11 @@ def parse_scalar(value: str) -> Any:
             return json.loads(value)
         except json.JSONDecodeError:
             return [part.strip().strip("\"'") for part in value[1:-1].split(",") if part.strip()]
+    if value.startswith("{") and value.endswith("}"):
+        try:
+            return json.loads(value)
+        except json.JSONDecodeError:
+            return value
     if len(value) >= 2 and value[0] == value[-1] and value[0] in {"\"", "'"}:
         if value[0] == '"':
             try:
@@ -262,8 +285,69 @@ def atomic_write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as handle:
         handle.write(content)
+        handle.flush()
+        os.fsync(handle.fileno())
         temporary = Path(handle.name)
     os.replace(temporary, path)
+    # Best-effort directory sync makes the replacement survive a sudden
+    # process/machine stop on filesystems that support directory fsync. The
+    # rename itself remains the atomicity boundary when directory fsync is not
+    # available (for example, on some macOS volume configurations).
+    try:
+        descriptor = os.open(path.parent, os.O_RDONLY)
+    except OSError:
+        return
+    try:
+        os.fsync(descriptor)
+    except OSError:
+        pass
+    finally:
+        os.close(descriptor)
+
+
+def validate_card_props(props: Mapping[str, Any], expected_card_id: str | None = None) -> None:
+    """Validate the immutable and lifecycle-independent card schema."""
+    missing = sorted(field for field in REQUIRED_CARD_FIELDS if field not in props)
+    if missing:
+        raise QueueError("invalid-card", f"missing required card fields: {', '.join(missing)}")
+    if props.get("kind") != "research-card":
+        raise QueueError("invalid-card", "missing research-card identity")
+    card_id = props.get("card_id")
+    if not isinstance(card_id, str) or not CARD_ID_RE.fullmatch(card_id):
+        raise QueueError("invalid-card", "card_id is malformed")
+    if expected_card_id is not None and card_id != expected_card_id:
+        raise QueueError("invalid-card", f"card identity mismatch: {expected_card_id}")
+    status = props.get("status")
+    if not isinstance(status, str) or status not in CARD_STATUSES:
+        raise QueueError("invalid-card", f"unsupported card status: {status!r}")
+    for field in ("title", "workflow", "instrument_type", "input_ticker"):
+        value = props.get(field)
+        if not isinstance(value, str) or not value.strip():
+            raise QueueError("invalid-card", f"{field} is missing or malformed")
+    if props.get("instrument_type") not in {"ETF", "Stock"}:
+        raise QueueError("invalid-card", f"unsupported instrument_type: {props.get('instrument_type')!r}")
+    for field in ("created_at", "updated_at"):
+        value = props.get(field)
+        if not isinstance(value, str) or not value.strip():
+            raise QueueError("invalid-card", f"{field} is missing or malformed")
+        parse_time(value)
+    for field in ("claimed_at", "lease_expires_at", "completed_at"):
+        if field in props and props[field] is not None:
+            if not isinstance(props[field], str) or not props[field].strip():
+                raise QueueError("invalid-card", f"{field} is malformed")
+            parse_time(props[field])
+    for field in ("claim_baseline_paths", "output_paths", "planned_output_paths", "output_links"):
+        if field in props and props[field] is not None:
+            value = props[field]
+            if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
+                raise QueueError("invalid-card", f"{field} must be a string list")
+    if "planned_output_baselines" in props and props["planned_output_baselines"] is not None:
+        baselines = props["planned_output_baselines"]
+        if not isinstance(baselines, Mapping) or not all(
+            isinstance(key, str) and (value is None or isinstance(value, str))
+            for key, value in baselines.items()
+        ):
+            raise QueueError("invalid-card", "planned_output_baselines must be an object of fingerprints")
 
 
 @dataclass(frozen=True)
@@ -290,6 +374,7 @@ class ProjectLease:
         self.ttl = ttl
         self.token = secrets.token_hex(16)
         self.path = store.runtime_dir / "queue-lease.json"
+        self.lock_path = store.runtime_dir / "queue-lease.lock"
         self.acquired = False
 
     def _payload(self, now: dt.datetime) -> dict[str, Any]:
@@ -300,57 +385,115 @@ class ProjectLease:
             "lease_expires_at": iso_time(now + self.ttl),
         }
 
-    def acquire(self) -> "ProjectLease":
+    def _lock(self) -> int:
         self.store.runtime_dir.mkdir(parents=True, exist_ok=True)
+        descriptor: int | None = None
+        try:
+            descriptor = os.open(self.lock_path, os.O_RDWR | os.O_CREAT, 0o600)
+            fcntl.flock(descriptor, fcntl.LOCK_EX)
+            return descriptor
+        except OSError as exc:
+            if descriptor is not None:
+                os.close(descriptor)
+            raise QueueError("manager-overlap", "queue lease lock could not be acquired") from exc
+
+    @staticmethod
+    def _unlock(descriptor: int) -> None:
+        try:
+            fcntl.flock(descriptor, fcntl.LOCK_UN)
+        finally:
+            os.close(descriptor)
+
+    def _current_locked(self, now: dt.datetime) -> dict[str, Any]:
+        try:
+            current = json.loads(self.path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise QueueError("manager-overlap", "queue lease disappeared or is malformed") from exc
+        if not isinstance(current, Mapping):
+            raise QueueError("manager-overlap", "queue lease is malformed")
+        if current.get("fencing_token") != self.token or current.get("owner") != self.owner:
+            raise QueueError("manager-overlap", "queue lease fencing token changed")
+        try:
+            expiry_text = current.get("lease_expires_at")
+            if not isinstance(expiry_text, str) or not expiry_text.strip():
+                raise QueueError("manager-overlap", "queue lease has an invalid expiry")
+            expires = parse_time(expiry_text)
+        except QueueError as exc:
+            raise QueueError("manager-overlap", "queue lease has an invalid expiry") from exc
+        if expires <= now:
+            raise QueueError("manager-overlap", "queue lease expired")
+        return current
+
+    def acquire(self) -> "ProjectLease":
         payload = self._payload(self.now)
-        for _ in range(2):
+        descriptor = self._lock()
+        try:
             try:
-                descriptor = os.open(self.path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
-            except FileExistsError:
-                try:
-                    existing = json.loads(self.path.read_text(encoding="utf-8"))
-                    expires = parse_time(existing.get("lease_expires_at"))
-                except (OSError, json.JSONDecodeError, QueueError):
-                    raise QueueError("manager-overlap", "queue lease exists and cannot be inspected")
-                if expires > self.now:
-                    raise QueueError("manager-overlap", f"queue lease held by {existing.get('owner', 'unknown')}")
-                try:
-                    self.path.unlink()
-                except FileNotFoundError:
-                    continue
-                continue
-            with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
-                json.dump(payload, handle, ensure_ascii=False)
+                existing = json.loads(self.path.read_text(encoding="utf-8"))
+                if not isinstance(existing, Mapping):
+                    raise QueueError("manager-overlap", "queue lease exists and is malformed")
+                expiry_text = existing.get("lease_expires_at")
+                if not isinstance(expiry_text, str) or not expiry_text.strip():
+                    raise QueueError("manager-overlap", "queue lease has an invalid expiry")
+                expires = parse_time(expiry_text)
+            except FileNotFoundError:
+                # The lease disappeared between the existence check and read;
+                # the lock prevents another cooperating manager from doing so.
+                existing = None
+                expires = self.now - dt.timedelta(seconds=1)
+            except (OSError, json.JSONDecodeError, QueueError) as exc:
+                raise QueueError("manager-overlap", "queue lease exists and cannot be inspected") from exc
+            if existing is not None and expires > self.now:
+                raise QueueError("manager-overlap", f"queue lease held by {existing.get('owner', 'unknown')}")
+            try:
+                self.path.unlink()
+            except FileNotFoundError:
+                pass
+            try:
+                # Write a complete payload to a temporary file, then atomically
+                # replace the lease path. A crash can leave only an ignored
+                # temporary artifact, never a half-written JSON lease.
+                atomic_write(self.path, json.dumps(payload, ensure_ascii=False))
+            except OSError as exc:
+                raise QueueError("manager-overlap", "queue lease could not be written") from exc
             self.acquired = True
             return self
-        raise QueueError("manager-overlap", "queue lease could not be acquired")
+        finally:
+            self._unlock(descriptor)
 
     def renew(self, now: dt.datetime) -> None:
         if not self.acquired:
             raise QueueError("manager-overlap", "queue lease is not held")
+        descriptor = self._lock()
         try:
-            current = json.loads(self.path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as exc:
-            raise QueueError("manager-overlap", "queue lease disappeared") from exc
-        if current.get("fencing_token") != self.token or current.get("owner") != self.owner:
-            raise QueueError("manager-overlap", "queue lease fencing token changed")
-        atomic_write(self.path, json.dumps(self._payload(now), ensure_ascii=False))
+            self._current_locked(now)
+            atomic_write(self.path, json.dumps(self._payload(now), ensure_ascii=False))
+        finally:
+            self._unlock(descriptor)
+
+    def assert_current(self, now: dt.datetime) -> dict[str, Any]:
+        if not self.acquired:
+            raise QueueError("manager-overlap", "queue lease is not held")
+        descriptor = self._lock()
+        try:
+            return self._current_locked(now)
+        finally:
+            self._unlock(descriptor)
 
     def release(self) -> None:
         if not self.acquired:
             return
+        descriptor = self._lock()
         try:
-            current = json.loads(self.path.read_text(encoding="utf-8"))
-            if current.get("fencing_token") == self.token:
-                self.path.unlink(missing_ok=True)
-        except (OSError, json.JSONDecodeError):
-            pass
-        self.acquired = False
-        try:
-            self.path.parent.rmdir()
-            self.store.queue_dir.rmdir()
-        except OSError:
-            pass
+            try:
+                current = json.loads(self.path.read_text(encoding="utf-8"))
+                if isinstance(current, Mapping) and current.get("fencing_token") == self.token and current.get("owner") == self.owner:
+                    self.path.unlink(missing_ok=True)
+            except (OSError, json.JSONDecodeError):
+                pass
+        finally:
+            self.acquired = False
+            self._unlock(descriptor)
 
     def __enter__(self) -> "ProjectLease":
         return self.acquire()
@@ -378,6 +521,16 @@ class QueueStore:
             raise QueueError("workflow-config-mismatch", "owner is required")
         return ProjectLease(self, owner.strip(), now or dt.datetime.now(dt.timezone.utc), dt.timedelta(hours=2))
 
+    def existing_project_lease(self, owner: str, fencing_token: str, now: dt.datetime | None = None) -> ProjectLease:
+        """Resume a lease intentionally kept by a previous queue command."""
+        if not owner.strip() or not fencing_token.strip():
+            raise QueueError("workflow-config-mismatch", "owner and lease token are required")
+        lease = self.project_lease(owner, now)
+        lease.token = fencing_token.strip()
+        lease.acquired = True
+        lease.assert_current(lease.now)
+        return lease
+
     def card_path(self, card_id: str) -> Path:
         if not CARD_ID_RE.fullmatch(card_id):
             raise QueueError("invalid-card", f"invalid card id: {card_id}")
@@ -395,10 +548,7 @@ class QueueStore:
         except FileNotFoundError as exc:
             raise QueueError("card-not-found", f"card not found: {card_id}") from exc
         props, body = parse_markdown(text)
-        if props.get("kind") != "research-card" or props.get("card_id") != card_id:
-            raise QueueError("invalid-card", f"card identity mismatch: {card_id}")
-        if props.get("status") not in CARD_STATUSES:
-            raise QueueError("invalid-card", f"unsupported card status: {props.get('status')}")
+        validate_card_props(props, expected_card_id=card_id)
         return Card(props, body, path)
 
     def write_card(self, card: Card) -> None:
@@ -410,10 +560,10 @@ class QueueStore:
         for path in sorted(self.cards_dir.glob("rc-*.md")):
             try:
                 props, body = parse_markdown(path.read_text(encoding="utf-8"))
-                if props.get("kind") == "research-card" and props.get("card_id"):
-                    yield Card(props, body, path)
-            except QueueError:
-                continue
+                validate_card_props(props, expected_card_id=path.stem)
+                yield Card(props, body, path)
+            except (OSError, QueueError) as exc:
+                raise QueueError("invalid-card", f"cannot inspect card {path.name}: {exc}") from exc
 
     def _new_id(self, prefix: str, now: dt.datetime) -> str:
         return f"{prefix}-{now.strftime('%Y%m%dT%H%M%S%fZ')}-{secrets.token_hex(4)}"
@@ -526,7 +676,7 @@ class QueueStore:
                 "updated_at": iso_time(now),
                 "batch_id": batch_id,
             }
-            card = Card(props, "This Research Card tracks one instrument and one explicit Research Workflow.\n", self.card_path(card_id))
+            card = Card(props, "การ์ดนี้ติดตามเครื่องมือหนึ่งรายการและ Research Workflow ที่ระบุไว้ชัดเจน\n", self.card_path(card_id))
             self.write_card(card)
             created_ids.append(card_id)
 
@@ -548,7 +698,7 @@ class QueueStore:
             "reused_card_ids": [entry["card_id"] for entry in reused],
             "rejected_items": rejected_items,
         }
-        atomic_write(self.batch_path(batch_id), dump_markdown(batch_props, "This Research Batch records card materialization, not downstream research completion.\n"))
+        atomic_write(self.batch_path(batch_id), dump_markdown(batch_props, "Batch นี้บันทึกการสร้างการ์ดเท่านั้น ไม่ได้ยืนยันว่า downstream research เสร็จแล้ว\n"))
         return {
             "command": "intake",
             "dry_run": False,
@@ -568,12 +718,15 @@ class QueueStore:
 
     def claim(self, card_id: str, *, owner: str, now: dt.datetime | None = None, phase: str = "claimed") -> dict[str, Any]:
         now = now or dt.datetime.now(dt.timezone.utc)
+        if not owner.strip():
+            raise QueueError("workflow-config-mismatch", "owner is required")
         card = self.load_card(card_id)
         if card.props.get("status") != STATUS_READY:
             raise QueueError("claim-state-error", f"card is not Ready: {card_id}")
         if card.props.get("workflow") != SUPPORTED_ETF_WORKFLOW:
             raise QueueError("unsupported-workflow", f"card workflow is not supported in V1: {card.props.get('workflow')}")
         token = uuid.uuid4().hex
+        baseline_paths = self._durable_working_tree_paths(card)
         card.props.update({
             "status": STATUS_IN_PROGRESS,
             "updated_at": iso_time(now),
@@ -581,6 +734,7 @@ class QueueStore:
             "claimed_at": iso_time(now),
             "lease_expires_at": iso_time(now + dt.timedelta(hours=2)),
             "fencing_token": token,
+            "claim_baseline_paths": baseline_paths,
             "execution_phase": phase,
         })
         self.write_card(card)
@@ -597,13 +751,29 @@ class QueueStore:
             "path": str(reread.path.relative_to(self.root)),
         }
 
-    def renew(self, card_id: str, *, owner: str, fencing_token: str, now: dt.datetime | None = None, phase: str | None = None) -> dict[str, Any]:
+    def renew(self, card_id: str, *, owner: str, fencing_token: str, now: dt.datetime | None = None, phase: str | None = None, outputs: Sequence[str] = ()) -> dict[str, Any]:
         now = now or dt.datetime.now(dt.timezone.utc)
+        card = self.load_card(card_id)
+        assert_claim(card, owner, fencing_token, now)
+        planned_outputs = normalize_output_paths(self.root, outputs)
+        # Fingerprinting can be non-trivial for a large vault; re-read the
+        # card after that work so the lease token is checked immediately before
+        # the renewal mutation.
         card = self.load_card(card_id)
         assert_claim(card, owner, fencing_token, now)
         card.props["lease_expires_at"] = iso_time(now + dt.timedelta(hours=2))
         if phase:
             card.props["execution_phase"] = phase
+        if planned_outputs:
+            baselines = card.props.get("planned_output_baselines") or {}
+            if not isinstance(baselines, Mapping):
+                raise QueueError("invalid-card", "planned output baselines must be an object")
+            baselines = dict(baselines)
+            for path in planned_outputs:
+                if path not in baselines:
+                    baselines[path] = file_fingerprint(self.root / path)
+            card.props["planned_output_paths"] = planned_outputs
+            card.props["planned_output_baselines"] = baselines
         card.props["updated_at"] = iso_time(now)
         self.write_card(card)
         return {
@@ -626,13 +796,26 @@ class QueueStore:
         now: dt.datetime | None = None,
         commit: bool = False,
         entity_key: str | None = None,
+        project_lease: ProjectLease | None = None,
     ) -> dict[str, Any]:
         now = now or dt.datetime.now(dt.timezone.utc)
+        if project_lease is not None:
+            project_lease.assert_current(now)
         card = self.load_card(card_id)
         assert_claim(card, owner, fencing_token, now)
+
+        def block(card_for_route: Card, timestamp: dt.datetime, **kwargs: Any) -> dict[str, Any]:
+            """Route a non-success while retaining the project lease fence."""
+            return self._route_blocked(
+                card_for_route,
+                timestamp,
+                project_lease=project_lease,
+                **kwargs,
+            )
+
         normalized, validation_error = validate_handoff(handoff)
         if validation_error:
-            return self._route_blocked(
+            return block(
                 card,
                 now,
                 status="BLOCKED",
@@ -644,11 +827,127 @@ class QueueStore:
                 global_blocked=True,
             )
 
-        output_paths = normalize_output_paths(self.root, outputs)
+        try:
+            output_paths = normalize_output_paths(self.root, outputs)
+        except QueueError as exc:
+            return block(
+                card,
+                now,
+                status="ERROR",
+                scope="global",
+                code=exc.code,
+                reason=exc.message,
+                durable_write="unknown",
+                confirmation="none",
+                global_blocked=True,
+            )
         if normalized["status"] == "PASS" and normalized["scope"] == "item" and normalized["durable_write"] == "completed" and normalized["exhausted"] is False and normalized["confirmation"] == "none" and normalized["code"] in SUCCESS_CODES:
+            if not output_paths:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-required",
+                    reason="A successful handoff must name at least one durable project-relative output.",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            if not commit:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="git-commit-required",
+                    reason="A successful handoff must request the scoped terminal Git commit.",
+                    durable_write="completed",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            try:
+                planned_paths = normalize_output_paths(self.root, card.props.get("planned_output_paths") or [])
+            except QueueError as exc:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code=exc.code,
+                    reason=exc.message,
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            if not planned_paths:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-scope-required",
+                    reason="Successful routing requires output paths declared by renew before downstream writes.",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            if planned_paths != output_paths:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-scope-mismatch",
+                    reason="Route output paths must exactly match the pre-write output scope.",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            baseline_paths = {str(path) for path in (card.props.get("claim_baseline_paths") or [])}
+            working_tree_paths = self._durable_working_tree_paths(card)
+            if GIT_STATUS_UNAVAILABLE in baseline_paths or GIT_STATUS_UNAVAILABLE in working_tree_paths:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-evidence-unavailable",
+                    reason="Git status could not establish a safe durable output scope.",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            dirty_conflicts = [path for path in output_paths if path in baseline_paths]
+            if dirty_conflicts:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-conflict",
+                    reason=f"Durable output was already dirty before claim: {dirty_conflicts[0]}",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            unexpected = [path for path in working_tree_paths if path not in baseline_paths and path not in output_paths]
+            if unexpected:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-scope-mismatch",
+                    reason=f"Downstream changed an undeclared durable output: {unexpected[0]}",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
             missing = [path for path in output_paths if not (self.root / path).exists()]
+            directories = [path for path in output_paths if (self.root / path).is_dir()]
             if missing:
-                return self._route_blocked(
+                return block(
                     card,
                     now,
                     status="ERROR",
@@ -659,6 +958,66 @@ class QueueStore:
                     confirmation="none",
                     global_blocked=True,
                 )
+            if directories:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-invalid",
+                    reason=f"durable output must be a file: {directories[0]}",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            baselines = card.props.get("planned_output_baselines") or {}
+            if not isinstance(baselines, Mapping) or any(path not in baselines for path in output_paths):
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-baseline-required",
+                    reason="Each durable output must have a pre-write baseline.",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            if any(baselines[path] is not None and not isinstance(baselines[path], str) for path in output_paths):
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-baseline-invalid",
+                    reason="Durable output baselines are malformed.",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            unchanged = [
+                path for path in output_paths
+                if baselines[path] is not None and file_fingerprint(self.root / path) == baselines[path]
+            ]
+            if unchanged:
+                return block(
+                    card,
+                    now,
+                    status="ERROR",
+                    scope="global",
+                    code="durable-output-unchanged",
+                    reason=f"Durable output was not changed after the pre-write boundary: {unchanged[0]}",
+                    durable_write="unknown",
+                    confirmation="none",
+                    global_blocked=True,
+                )
+            # Re-read and fence immediately before the terminal card write;
+            # validation above may have taken long enough for an expired claim
+            # to be recovered and re-claimed by another worker.
+            if project_lease is not None:
+                project_lease.assert_current(now)
+            card = self.load_card(card_id)
+            assert_claim(card, owner, fencing_token, now)
             card.props.update({
                 "status": STATUS_DONE,
                 "updated_at": iso_time(now),
@@ -671,26 +1030,27 @@ class QueueStore:
                 "durable_write": normalized["durable_write"],
                 "confirmation": normalized["confirmation"],
                 "output_paths": output_paths,
+                "planned_output_paths": output_paths,
                 "output_links": [f"[[{path[:-3] if path.endswith('.md') else path}]]" for path in output_paths],
                 "commit_id": f"queue/{card_id}",
             })
             clear_claim(card.props)
             if entity_key:
                 card.props["entity_key"] = entity_key
-            self.write_card(card)
             commit_result = self._commit_terminal(card, output_paths, now) if commit else {"committed": False}
-            if commit and not commit_result.get("committed") and commit_result.get("error"):
+            if commit and not commit_result.get("committed"):
                 failed = self.load_card(card_id)
-                return self._route_blocked(
+                return block(
                     failed,
                     now,
                     status="ERROR",
                     scope="global",
                     code="git-commit-failed",
-                    reason=commit_result["error"],
+                    reason=commit_result.get("error") or commit_result.get("reason") or "Git commit did not complete.",
                     durable_write="completed",
                     confirmation="none",
                     global_blocked=True,
+                    fenced=False,
                 )
             return {
                 "card_id": card_id,
@@ -702,7 +1062,7 @@ class QueueStore:
             }
 
         if is_accepted_item_block(normalized):
-            return self._route_blocked(
+            return block(
                 card,
                 now,
                 status=normalized["status"],
@@ -713,7 +1073,7 @@ class QueueStore:
                 confirmation=normalized["confirmation"],
                 global_blocked=False,
             )
-        return self._route_blocked(
+        return block(
             card,
             now,
             status="BLOCKED",
@@ -737,7 +1097,25 @@ class QueueStore:
         durable_write: str,
         confirmation: str,
         global_blocked: bool,
+        fenced: bool = True,
+        project_lease: ProjectLease | None = None,
     ) -> dict[str, Any]:
+        if project_lease is not None:
+            project_lease.assert_current(now)
+        if fenced:
+            # All blocked transitions must use the same claim snapshot that
+            # was validated by the caller. This closes the check-then-write
+            # window across recovery/reclaim races.
+            current = self.load_card(card.props["card_id"])
+            assert_claim(
+                current,
+                str(card.props.get("claim_owner") or ""),
+                str(card.props.get("fencing_token") or ""),
+                now,
+            )
+            if current.props.get("fencing_token") != card.props.get("fencing_token"):
+                raise QueueError("claim-state-error", "stale fencing token before blocked transition")
+            card = current
         card.props.update({
             "status": STATUS_BLOCKED,
             "updated_at": iso_time(now),
@@ -749,7 +1127,11 @@ class QueueStore:
             "durable_write": durable_write,
             "confirmation": confirmation,
         })
+        for key in ("completed_at", "commit_id"):
+            card.props.pop(key, None)
         clear_claim(card.props)
+        if project_lease is not None:
+            project_lease.assert_current(now)
         self.write_card(card)
         reread = self.load_card(card.props["card_id"])
         if reread.props.get("status") != STATUS_BLOCKED or reread.props.get("result_code") != normalize_code(code):
@@ -766,27 +1148,127 @@ class QueueStore:
     def _commit_terminal(self, card: Card, output_paths: Sequence[str], now: dt.datetime) -> dict[str, Any]:
         paths = [str(card.path.relative_to(self.root)), *output_paths]
         if not (self.root / ".git").exists():
-            return {"committed": False, "reason": "not-a-git-checkout"}
+            return {"committed": False, "error": "not-a-git-checkout"}
         message = f"research: complete {card.props['input_ticker']} ({card.props['card_id']})"
-        add_result = subprocess.run(["git", "-C", str(self.root), "add", "--", *paths], check=False, capture_output=True, text=True)
-        if add_result.returncode != 0:
-            return {"committed": False, "error": (add_result.stderr or add_result.stdout).strip() or "git add failed"}
-        command = ["git", "-C", str(self.root), "commit", "--only", "-m", message, "--", *paths]
+        index_result = subprocess.run(["git", "-C", str(self.root), "rev-parse", "--git-path", "index"], check=False, capture_output=True, text=True)
+        if index_result.returncode != 0 or not index_result.stdout.strip():
+            return {"committed": False, "error": "git index could not be resolved"}
+        index_path = Path(index_result.stdout.strip())
+        if not index_path.is_absolute():
+            index_path = self.root / index_path
+        temporary_index = index_path.with_name(f"queue-index-{secrets.token_hex(8)}")
+        temporary_card = self.runtime_dir / f"terminal-card-{secrets.token_hex(8)}.md"
+        commit_succeeded = False
+        materialization_error: str | None = None
         try:
-            completed = subprocess.run(command, check=False, capture_output=True, text=True)
+            self.runtime_dir.mkdir(parents=True, exist_ok=True)
+            temporary_card.write_text(dump_markdown(card.props, card.body), encoding="utf-8")
+            env = os.environ.copy()
+            env["GIT_INDEX_FILE"] = str(temporary_index)
+            # Start from HEAD rather than copying the caller's index. This
+            # keeps unrelated staged edits out of the queue commit and avoids
+            # resetting those edits if the commit fails.
+            read_tree = subprocess.run(["git", "-C", str(self.root), "read-tree", "HEAD"], env=env, check=False, capture_output=True, text=True)
+            if read_tree.returncode != 0:
+                return {"committed": False, "error": (read_tree.stderr or read_tree.stdout).strip() or "git index could not be initialized"}
+            add_result = subprocess.run(["git", "-C", str(self.root), "add", "--", *output_paths], env=env, check=False, capture_output=True, text=True)
+            if add_result.returncode != 0:
+                return {"committed": False, "error": (add_result.stderr or add_result.stdout).strip() or "git add failed"}
+            card_blob = subprocess.run(["git", "-C", str(self.root), "hash-object", "-w", "--", str(temporary_card)], check=False, capture_output=True, text=True)
+            if card_blob.returncode != 0 or not card_blob.stdout.strip():
+                return {"committed": False, "error": (card_blob.stderr or card_blob.stdout).strip() or "card blob could not be prepared"}
+            card_rel = str(card.path.relative_to(self.root))
+            update_index = subprocess.run(["git", "-C", str(self.root), "update-index", "--add", "--cacheinfo", f"100644,{card_blob.stdout.strip()},{card_rel}"], env=env, check=False, capture_output=True, text=True)
+            if update_index.returncode != 0:
+                return {"committed": False, "error": (update_index.stderr or update_index.stdout).strip() or "card could not be staged"}
+            command = ["git", "-C", str(self.root), "commit", "-m", message]
+            try:
+                completed = subprocess.run(command, env=env, check=False, capture_output=True, text=True)
+            except OSError as exc:
+                return {"committed": False, "error": str(exc)}
+            if completed.returncode != 0:
+                return {"committed": False, "error": (completed.stderr or completed.stdout).strip() or "git commit failed"}
+            commit_succeeded = True
+            # Materialize exactly the committed card after the commit. A crash
+            # before this point leaves the old In Progress file on disk, which
+            # recovery can reconcile against the terminal card blob in HEAD.
+            try:
+                self.write_card(card)
+            except (OSError, QueueError, ValueError) as exc:
+                # The commit is already authoritative. Do not demote the card
+                # to Blocked because a filesystem sync failed; recovery can
+                # materialize the terminal card from HEAD on the next run.
+                materialization_error = str(exc)
+        finally:
+            temporary_index.unlink(missing_ok=True)
+            temporary_card.unlink(missing_ok=True)
+        try:
+            sync_result = subprocess.run(["git", "-C", str(self.root), "add", "--", *paths], check=False, capture_output=True, text=True)
         except OSError as exc:
-            return {"committed": False, "error": str(exc)}
-        if completed.returncode != 0:
-            subprocess.run(["git", "-C", str(self.root), "reset", "-q", "--", *paths], check=False, capture_output=True, text=True)
-            return {"committed": False, "error": (completed.stderr or completed.stdout).strip() or "git commit failed"}
-        sha = subprocess.run(["git", "-C", str(self.root), "rev-parse", "HEAD"], check=False, capture_output=True, text=True).stdout.strip()
-        return {"committed": True, "commit_sha": sha}
+            sync_result = None
+            sync_error = str(exc)
+        else:
+            sync_error = (sync_result.stderr or sync_result.stdout).strip() or "git index sync failed" if sync_result.returncode != 0 else ""
+        if sync_result is None or sync_result.returncode != 0:
+            if commit_succeeded:
+                try:
+                    sha_result = subprocess.run(["git", "-C", str(self.root), "rev-parse", "HEAD"], check=False, capture_output=True, text=True)
+                except OSError as exc:
+                    sha = ""
+                    sha_error = str(exc)
+                else:
+                    sha = sha_result.stdout.strip() if sha_result.returncode == 0 else ""
+                    sha_error = sha_result.stderr.strip() if sha_result.returncode != 0 else ""
+                return {
+                    "committed": True,
+                    "materialized": materialization_error is None,
+                    "commit_sha": sha or None,
+                    "commit_sha_verified": bool(sha),
+                    "error": materialization_error or sync_error or sha_error or "Git commit SHA could not be verified.",
+                }
+            return {"committed": False, "error": sync_error}
+        try:
+            sha_result = subprocess.run(["git", "-C", str(self.root), "rev-parse", "HEAD"], check=False, capture_output=True, text=True)
+        except OSError as exc:
+            sha = ""
+            sha_error = str(exc)
+        else:
+            sha = sha_result.stdout.strip() if sha_result.returncode == 0 else ""
+            sha_error = sha_result.stderr.strip() if sha_result.returncode != 0 else ""
+        result: dict[str, Any] = {
+            "committed": commit_succeeded,
+            "materialized": materialization_error is None,
+            "commit_sha": sha or None,
+            "commit_sha_verified": bool(sha),
+        }
+        if materialization_error:
+            result["error"] = materialization_error
+        if not sha:
+            result["error"] = sha_error or "Git commit SHA could not be verified."
+        return result
 
-    def recover(self, *, now: dt.datetime | None = None) -> dict[str, Any]:
+    def recover(self, *, now: dt.datetime | None = None, project_lease: ProjectLease | None = None) -> dict[str, Any]:
         now = now or dt.datetime.now(dt.timezone.utc)
         ready: list[dict[str, Any]] = []
         blocked: list[dict[str, Any]] = []
+        recovered_done: list[dict[str, Any]] = []
         for card in list(self.iter_cards()):
+            # The initial iterator is only a selection snapshot. Re-read each
+            # candidate before changing it so a concurrent renewal/reclaim
+            # cannot be overwritten by stale recovery state.
+            card = self.load_card(card.props["card_id"])
+            terminal = self._head_terminal_card(card)
+            if terminal is not None and card.props.get("status") == STATUS_IN_PROGRESS:
+                if project_lease is not None:
+                    project_lease.assert_current(now)
+                current = self.load_card(card.props["card_id"])
+                if current.props.get("status") != STATUS_IN_PROGRESS or current.props.get("fencing_token") != card.props.get("fencing_token"):
+                    raise QueueError("claim-state-error", "stale claim before terminal recovery")
+                if project_lease is not None:
+                    project_lease.assert_current(now)
+                self.write_card(terminal)
+                recovered_done.append({"card_id": card.props["card_id"], "status": STATUS_DONE, "result_code": terminal.props.get("result_code")})
+                continue
             if card.props.get("status") != STATUS_IN_PROGRESS:
                 continue
             expiry_text = card.props.get("lease_expires_at")
@@ -794,16 +1276,96 @@ class QueueStore:
                 continue
             phase = str(card.props.get("execution_phase") or "").lower()
             output_paths = card.props.get("output_paths") or []
-            partial = phase in {"writing", "finalizing"} or bool(output_paths)
+            planned_paths = card.props.get("planned_output_paths") or []
+            if isinstance(planned_paths, str):
+                planned_paths = [planned_paths]
+            planned_existing = [path for path in planned_paths if (self.root / str(path)).exists()]
+            baseline_paths = card.props.get("claim_baseline_paths") or []
+            if isinstance(baseline_paths, str):
+                baseline_paths = [baseline_paths]
+            working_tree_paths = self._durable_working_tree_paths(card)
+            baseline_set = set(str(item) for item in baseline_paths)
+            git_status_unknown = GIT_STATUS_UNAVAILABLE in baseline_set or GIT_STATUS_UNAVAILABLE in working_tree_paths
+            changed_outputs = [path for path in working_tree_paths if path not in baseline_set and path != GIT_STATUS_UNAVAILABLE]
+            # Only an explicit, known pre-write phase with no output evidence is
+            # safe to retry. Unknown phases and ambiguous working-tree changes
+            # are conservatively blocked for human inspection.
+            partial = (
+                phase not in SAFE_RECOVERY_PHASES
+                or bool(output_paths)
+                or bool(planned_existing)
+                or bool(changed_outputs)
+                or git_status_unknown
+            )
             if partial:
-                item = self._route_recovery(card, now, ready_state=False)
+                item = self._route_recovery(card, now, ready_state=False, project_lease=project_lease)
                 blocked.append(item)
             else:
-                item = self._route_recovery(card, now, ready_state=True)
+                item = self._route_recovery(card, now, ready_state=True, project_lease=project_lease)
                 ready.append(item)
-        return {"command": "recover", "recovered_ready": ready, "blocked_partial": blocked}
+        return {"command": "recover", "recovered_ready": ready, "blocked_partial": blocked, "recovered_done": recovered_done}
 
-    def _route_recovery(self, card: Card, now: dt.datetime, *, ready_state: bool) -> dict[str, Any]:
+    def _head_terminal_card(self, card: Card) -> Card | None:
+        """Read a committed terminal card for crash recovery after commit."""
+        if not (self.root / ".git").exists():
+            return None
+        relative = str(card.path.relative_to(self.root))
+        result = subprocess.run(["git", "-C", str(self.root), "show", f"HEAD:{relative}"], check=False, capture_output=True, text=True)
+        if result.returncode != 0:
+            return None
+        try:
+            props, body = parse_markdown(result.stdout)
+        except QueueError:
+            return None
+        try:
+            validate_card_props(props, expected_card_id=card.props.get("card_id"))
+        except QueueError:
+            return None
+        if props.get("status") != STATUS_DONE:
+            return None
+        if props.get("commit_id") != f"queue/{card.props.get('card_id')}":
+            return None
+        return Card(props, body, card.path)
+
+    def _durable_working_tree_paths(self, card: Card) -> list[str]:
+        """Return changed durable paths unrelated to this queue card.
+
+        This is intentionally conservative: if Git status cannot be read, the
+        caller receives a sentinel and recovery blocks instead of retrying a
+        potentially partial write. Queue/runtime files and the claimed card
+        itself are excluded because they are expected state mutations.
+        """
+        if not (self.root / ".git").exists():
+            return []
+        result = subprocess.run(
+            ["git", "-C", str(self.root), "status", "--porcelain", "--untracked-files=all"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            return [GIT_STATUS_UNAVAILABLE]
+        card_rel = str(card.path.relative_to(self.root))
+        changed: list[str] = []
+        for line in result.stdout.splitlines():
+            if len(line) < 4:
+                continue
+            path = line[3:].strip().strip('"')
+            if " -> " in path:
+                path = path.split(" -> ", 1)[1].strip().strip('"')
+            if path == card_rel or path.startswith("research-queue/"):
+                continue
+            if path.startswith(DURABLE_OUTPUT_PREFIXES):
+                changed.append(path)
+        return changed
+
+    def _route_recovery(self, card: Card, now: dt.datetime, *, ready_state: bool, project_lease: ProjectLease | None = None) -> dict[str, Any]:
+        if project_lease is not None:
+            project_lease.assert_current(now)
+        current = self.load_card(card.props["card_id"])
+        if current.props.get("status") != STATUS_IN_PROGRESS or current.props.get("fencing_token") != card.props.get("fencing_token"):
+            raise QueueError("claim-state-error", "stale claim before recovery transition")
+        card = current
         if ready_state:
             card.props.update({
                 "status": STATUS_READY,
@@ -812,6 +1374,8 @@ class QueueStore:
                 "result_code": "lease-expired",
                 "result_reason": "Expired claim had no durable output write.",
             })
+            for key in ("planned_output_paths", "planned_output_baselines"):
+                card.props.pop(key, None)
         else:
             card.props.update({
                 "status": STATUS_BLOCKED,
@@ -825,6 +1389,8 @@ class QueueStore:
                 "confirmation": "none",
             })
         clear_claim(card.props)
+        if project_lease is not None:
+            project_lease.assert_current(now)
         self.write_card(card)
         return {"card_id": card.props["card_id"], "status": card.props["status"], "result_code": card.props.get("result_code")}
 
@@ -855,11 +1421,13 @@ class QueueStore:
 
 
 def clear_claim(props: dict[str, Any]) -> None:
-    for key in ("claim_owner", "claimed_at", "lease_expires_at", "fencing_token"):
+    for key in ("claim_owner", "claimed_at", "lease_expires_at", "fencing_token", "claim_baseline_paths"):
         props.pop(key, None)
 
 
 def assert_claim(card: Card, owner: str, token: str, now: dt.datetime) -> None:
+    if not owner.strip() or not token.strip():
+        raise QueueError("workflow-config-mismatch", "owner and fencing token are required")
     if card.props.get("status") != STATUS_IN_PROGRESS:
         raise QueueError("claim-state-error", f"card is not In Progress: {card.props.get('card_id')}")
     if card.props.get("claim_owner") != owner or card.props.get("fencing_token") != token:
@@ -885,7 +1453,7 @@ def canonical_status(value: str) -> str:
 
 
 def card_summary(card: Card) -> dict[str, Any]:
-    fields = ("card_id", "title", "status", "workflow", "instrument_type", "input_ticker", "created_at", "updated_at", "lease_expires_at", "fencing_token", "execution_phase", "result_code", "output_paths")
+    fields = ("card_id", "title", "status", "workflow", "instrument_type", "input_ticker", "created_at", "updated_at", "lease_expires_at", "fencing_token", "execution_phase", "result_code", "planned_output_paths", "output_paths")
     result = {key: card.props[key] for key in fields if key in card.props}
     result["path"] = str(card.path)
     return result
@@ -903,7 +1471,20 @@ def validate_handoff(handoff: Mapping[str, Any]) -> tuple[dict[str, Any] | None,
     confirmation = handoff.get("confirmation")
     code = normalize_code(handoff.get("code"))
     reason = handoff.get("reason")
-    if status not in HANDOFF_STATUSES or scope not in HANDOFF_SCOPES or durable_write not in HANDOFF_WRITES or confirmation not in HANDOFF_CONFIRMATIONS or not isinstance(exhausted, bool) or not code or not isinstance(reason, str) or not reason.strip():
+    if (
+        not isinstance(status, str)
+        or status not in HANDOFF_STATUSES
+        or not isinstance(scope, str)
+        or scope not in HANDOFF_SCOPES
+        or not isinstance(durable_write, str)
+        or durable_write not in HANDOFF_WRITES
+        or not isinstance(confirmation, str)
+        or confirmation not in HANDOFF_CONFIRMATIONS
+        or not isinstance(exhausted, bool)
+        or not code
+        or not isinstance(reason, str)
+        or not reason.strip()
+    ):
         return None, "Downstream result was missing, malformed, or contradictory."
     return {
         "status": status,
@@ -932,9 +1513,29 @@ def is_accepted_item_block(handoff: Mapping[str, Any]) -> bool:
     return False
 
 
+def file_fingerprint(path: Path) -> str | None:
+    """Return a stable content digest for a pre-write output baseline."""
+    if not path.exists():
+        return None
+    if path.is_dir():
+        raise QueueError("workflow-config-mismatch", f"output must identify a file, not a directory: {path}")
+    try:
+        digest = hashlib.sha256()
+        with path.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        return digest.hexdigest()
+    except OSError as exc:
+        raise QueueError("workflow-config-mismatch", f"output could not be fingerprinted: {path}") from exc
+
+
 def normalize_output_paths(root: Path, outputs: Sequence[str]) -> list[str]:
     result: list[str] = []
     for raw in outputs:
+        if not isinstance(raw, str) or not raw.strip():
+            raise QueueError("workflow-config-mismatch", f"output must be a non-empty project-relative file: {raw!r}")
+        if raw.strip().endswith(("/", os.sep)):
+            raise QueueError("workflow-config-mismatch", f"output must identify a file, not a directory: {raw}")
         candidate = Path(raw)
         if candidate.is_absolute():
             raise QueueError("workflow-config-mismatch", f"output must be project-relative: {raw}")
@@ -943,7 +1544,13 @@ def normalize_output_paths(root: Path, outputs: Sequence[str]) -> list[str]:
             relative = resolved.relative_to(root)
         except ValueError as exc:
             raise QueueError("workflow-config-mismatch", f"output escapes project root: {raw}") from exc
+        if resolved == root or candidate == Path(".") or ".git" in candidate.parts or ".obsidian" in candidate.parts:
+            raise QueueError("workflow-config-mismatch", f"output must identify a scoped project file: {raw}")
+        if resolved.exists() and resolved.is_dir():
+            raise QueueError("workflow-config-mismatch", f"output must identify a file, not a directory: {raw}")
         text = str(relative)
+        if not (text.startswith("raw/") or text.startswith("wiki/") or text in {"index.md", "log.md"}):
+            raise QueueError("workflow-config-mismatch", f"output must be under raw/, wiki/, index.md, or log.md: {raw}")
         if text not in result:
             result.append(text)
     return result
@@ -998,7 +1605,15 @@ def parse_table(lines: Sequence[str], *, default_type: str | None, workflow: str
     for row in rows[2:]:
         if len(row) <= ticker_index or not row[ticker_index].strip():
             continue
-        row_type = normalize_type(row[type_index]) if type_index is not None and len(row) > type_index and row[type_index] else default_type
+        if type_index is not None:
+            # Once a Type column is present every non-empty row must declare a
+            # type explicitly; a command-level default cannot silently classify
+            # an ambiguous mixed table row.
+            if len(row) <= type_index or not row[type_index].strip():
+                raise QueueError("invalid-instrument-type", f"table row has no Type: {row[ticker_index]}")
+            row_type = normalize_type(row[type_index])
+        else:
+            row_type = default_type
         if row_type is None:
             raise QueueError("invalid-instrument-type", f"table row has no Type: {row[ticker_index]}")
         row_workflow = row[workflow_index] if workflow_index is not None and len(row) > workflow_index and row[workflow_index] else workflow
@@ -1059,6 +1674,7 @@ def build_parser() -> argparse.ArgumentParser:
     claim_next = subparsers.add_parser("claim-next", help="claim oldest supported Ready cards")
     claim_next.add_argument("--count", required=True)
     claim_next.add_argument("--owner", required=True)
+    claim_next.add_argument("--keep-lease", action="store_true", help="keep the project lease for later renew/route commands")
     claim_next.add_argument("--now")
 
     renew = subparsers.add_parser("renew", help="renew one card lease")
@@ -1066,6 +1682,8 @@ def build_parser() -> argparse.ArgumentParser:
     renew.add_argument("--owner", required=True)
     renew.add_argument("--fencing-token", required=True)
     renew.add_argument("--phase")
+    renew.add_argument("--output", action="append", default=[], help="planned durable output path; repeatable")
+    renew.add_argument("--lease-token", help="project lease token returned by claim-next --keep-lease")
     renew.add_argument("--now")
 
     route = subparsers.add_parser("route", help="route one structured research_handoff")
@@ -1076,15 +1694,24 @@ def build_parser() -> argparse.ArgumentParser:
     route.add_argument("--output", action="append", default=[])
     route.add_argument("--entity-key")
     route.add_argument("--commit", action="store_true")
+    route.add_argument("--lease-token", help="project lease token returned by claim-next --keep-lease")
     route.add_argument("--now")
 
-    process = subparsers.add_parser("process", help="process Ready cards with a supplied handoff fixture")
+    lease_release = subparsers.add_parser("lease-release", help="release a persistent project lease")
+    lease_release.add_argument("--owner", required=True)
+    lease_release.add_argument("--lease-token", required=True)
+    lease_release.add_argument("--now")
+
+    process = subparsers.add_parser("process", help="process Ready cards with a handoff fixture or executable adapter")
     process.add_argument("--count", required=True)
     process.add_argument("--owner", default="research-queue-manager")
     process.add_argument("--execution-profile", default="scheduled-inline")
     process.add_argument("--handoff-json")
     process.add_argument("--handoff-file")
+    process.add_argument("--handoff-command", help="command whose stdout is one complete seven-field handoff JSON object")
+    process.add_argument("--handoff-timeout-seconds", type=float, default=DEFAULT_HANDOFF_TIMEOUT_SECONDS, help="maximum adapter runtime; must stay below the two-hour lease")
     process.add_argument("--output", action="append", default=[])
+    process.add_argument("--output-map", help="project-relative JSON object keyed by card_id or ticker to output path lists")
     process.add_argument("--commit", action="store_true")
     process.add_argument("--now")
 
@@ -1105,30 +1732,84 @@ def positive_count(value: str) -> int:
     return int(value)
 
 
-def process_cards(store: QueueStore, *, count: int, owner: str, execution_profile: str, handoff_provider: Callable[[Card], Mapping[str, Any]], outputs: Sequence[str] = (), now: dt.datetime | None = None, commit: bool = False) -> dict[str, Any]:
+def process_cards(store: QueueStore, *, count: int, owner: str, execution_profile: str, handoff_provider: Callable[[Card], Mapping[str, Any]], outputs: Sequence[str] = (), output_provider: Callable[[Card], Sequence[str]] | None = None, context_updater: Callable[[str, str, Sequence[str]], None] | None = None, now: dt.datetime | None = None, commit: bool = False) -> dict[str, Any]:
     count = positive_count(str(count))
     if execution_profile not in SUPPORTED_EXECUTION_PROFILES:
         raise QueueError("workflow-config-mismatch", f"unsupported execution profile: {execution_profile}")
-    now = now or dt.datetime.now(dt.timezone.utc)
+    fixed_now = now
+    start_now = fixed_now or dt.datetime.now(dt.timezone.utc)
+    clock = (lambda: fixed_now) if fixed_now is not None else (lambda: dt.datetime.now(dt.timezone.utc))
     attempted: list[str] = []
     completed: list[str] = []
     blocked: list[str] = []
+    skipped: list[dict[str, Any]] = []
     global_failure: dict[str, str] | None = None
-    with store.project_lease(owner, now) as lease:
+    recovery: dict[str, Any] = {"recovered_ready": [], "blocked_partial": []}
+    with store.project_lease(owner, start_now) as lease:
+        recovery = store.recover(now=clock(), project_lease=lease)
+        lease.renew(clock())
         for summary in store.list_cards(STATUS_READY):
             if len(attempted) >= count:
                 break
             if summary.get("workflow") != SUPPORTED_ETF_WORKFLOW:
+                skipped.append({
+                    "card_id": summary.get("card_id"),
+                    "ticker": summary.get("input_ticker"),
+                    "workflow": summary.get("workflow"),
+                    "code": "unsupported-workflow",
+                    "reason": "Ready card is outside the V1 ETF processor boundary.",
+                })
                 continue
             card_id = summary["card_id"]
             attempted.append(card_id)
-            claim = store.claim(card_id, owner=owner, now=now)
+            card_now = clock()
+            claim = store.claim(card_id, owner=owner, now=card_now)
             card = store.load_card(card_id)
             try:
+                card_outputs = output_provider(card) if output_provider is not None else outputs
+                # Revalidate the card fencing token immediately before the
+                # downstream workflow may begin a durable write, and record
+                # the planned scope for stale-claim recovery.
+                lease.renew(clock())
+                store.renew(
+                    card_id,
+                    owner=owner,
+                    fencing_token=claim["fencing_token"],
+                    phase="pre-write",
+                    outputs=card_outputs,
+                    now=clock(),
+                )
+                card = store.load_card(card_id)
+                if context_updater is not None:
+                    context_updater(lease.token, execution_profile, card_outputs)
                 handoff = handoff_provider(card)
-                routed = store.route(card_id, handoff, owner=owner, fencing_token=claim["fencing_token"], outputs=outputs, now=now, commit=commit)
+                # Renew again after the bounded adapter/workflow returns so the
+                # terminal card/output commit still runs under a live project
+                # lease even when the research call takes a substantial time.
+                lease.renew(clock())
+                routed = store.route(card_id, handoff, owner=owner, fencing_token=claim["fencing_token"], outputs=card_outputs, now=clock(), commit=commit, project_lease=lease)
             except QueueError as exc:
-                global_failure = {"code": exc.code, "reason": exc.message}
+                # A malformed/configuration failure after claim must leave an
+                # inspectable known-card global block rather than strand it in
+                # In Progress. Fencing/lease failures remain untouched so
+                # recovery can make the safe decision.
+                if exc.global_failure and exc.code not in {"claim-state-error", "manager-overlap"}:
+                    blocked_result = store._route_blocked(
+                        card,
+                        clock(),
+                        status="ERROR",
+                        scope="global",
+                        code=exc.code,
+                        reason=exc.message,
+                        durable_write="unknown",
+                        confirmation="none",
+                        global_blocked=True,
+                        project_lease=lease,
+                    )
+                    blocked.append(card_id)
+                    global_failure = {"code": blocked_result["result_code"], "reason": blocked_result["result_reason"]}
+                else:
+                    global_failure = {"code": exc.code, "reason": exc.message}
                 break
             if routed.get("global_blocked"):
                 global_failure = {"code": routed.get("result_code", "unknown-result"), "reason": routed.get("result_reason", "global result failure")}
@@ -1138,7 +1819,7 @@ def process_cards(store: QueueStore, *, count: int, owner: str, execution_profil
                 completed.append(card_id)
             else:
                 blocked.append(card_id)
-            lease.renew(now)
+            lease.renew(clock())
     return {
         "command": "process",
         "execution_profile": execution_profile,
@@ -1146,6 +1827,10 @@ def process_cards(store: QueueStore, *, count: int, owner: str, execution_profil
         "attempted": attempted,
         "completed": completed,
         "blocked": blocked,
+        "skipped": skipped,
+        "recovered_ready": recovery["recovered_ready"],
+        "recovered_blocked": recovery["blocked_partial"],
+        "recovered_done": recovery.get("recovered_done", []),
         "global_failure": global_failure,
     }
 
@@ -1160,14 +1845,31 @@ def load_handoff(raw: str) -> Mapping[str, Any]:
     return value
 
 
+def load_output_map(raw: str, root: Path) -> dict[str, list[str]]:
+    try:
+        value = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise QueueError("workflow-config-mismatch", f"invalid output map JSON: {exc.msg}") from exc
+    if not isinstance(value, Mapping):
+        raise QueueError("workflow-config-mismatch", "output map must be an object")
+    result: dict[str, list[str]] = {}
+    for key, outputs in value.items():
+        if not isinstance(key, str) or not key.strip() or not isinstance(outputs, list) or not all(isinstance(path, str) for path in outputs):
+            raise QueueError("workflow-config-mismatch", "output map values must be string path lists")
+        result[key.strip()] = normalize_output_paths(root, outputs)
+    return result
+
+
 def dispatch(args: argparse.Namespace) -> dict[str, Any]:
     root = Path(args.root).expanduser().resolve()
     store = QueueStore(root)
     if args.command in {"intake", "seed"}:
         source_text, source_name = read_input(args, root)
         source = "one-time-seed" if args.command == "seed" else args.source
+        if getattr(args, "dry_run", False):
+            return store.intake(source_text, default_type=args.default_type, workflow=getattr(args, "workflow", None), dry_run=True, source=source, now=parse_time(args.now))
         with store.project_lease(args.owner, parse_time(args.now)):
-            return store.intake(source_text, default_type=args.default_type, workflow=getattr(args, "workflow", None), dry_run=getattr(args, "dry_run", False), source=source, now=parse_time(args.now))
+            return store.intake(source_text, default_type=args.default_type, workflow=getattr(args, "workflow", None), source=source, now=parse_time(args.now))
     if args.command == "list":
         return {"command": "list", "cards": store.list_cards(args.status)}
     if args.command == "claim":
@@ -1176,40 +1878,199 @@ def dispatch(args: argparse.Namespace) -> dict[str, Any]:
     if args.command == "claim-next":
         count = positive_count(args.count)
         claimed: list[dict[str, Any]] = []
-        with store.project_lease(args.owner, parse_time(args.now)):
+        skipped: list[dict[str, Any]] = []
+        lease_now = parse_time(args.now)
+
+        def select_cards() -> None:
             for summary in store.list_cards(STATUS_READY):
                 if len(claimed) >= count:
                     break
                 if summary.get("workflow") != SUPPORTED_ETF_WORKFLOW:
+                    skipped.append({
+                        "card_id": summary.get("card_id"),
+                        "ticker": summary.get("input_ticker"),
+                        "workflow": summary.get("workflow"),
+                        "code": "unsupported-workflow",
+                        "reason": "Ready card is outside the V1 ETF processor boundary.",
+                    })
                     continue
-                claimed.append(store.claim(summary["card_id"], owner=args.owner, now=parse_time(args.now)))
-        return {"command": "claim-next", "requested_count": count, "claimed": claimed}
+                claimed.append(store.claim(summary["card_id"], owner=args.owner, now=lease_now))
+
+        persistent_lease: ProjectLease | None = None
+        recovery: dict[str, Any]
+        if args.keep_lease:
+            persistent_lease = store.project_lease(args.owner, lease_now)
+            persistent_lease.acquire()
+            try:
+                recovery = store.recover(now=lease_now, project_lease=persistent_lease)
+                persistent_lease.renew(lease_now)
+                select_cards()
+            except Exception:
+                persistent_lease.release()
+                raise
+            if not claimed:
+                persistent_lease.release()
+        else:
+            with store.project_lease(args.owner, lease_now) as lease:
+                recovery = store.recover(now=lease_now, project_lease=lease)
+                select_cards()
+
+        result = {"command": "claim-next", "requested_count": count, "claimed": claimed, "skipped": skipped, "recovered_ready": recovery["recovered_ready"], "recovered_blocked": recovery["blocked_partial"], "recovered_done": recovery.get("recovered_done", [])}
+        if persistent_lease and claimed:
+            result["lease_token"] = persistent_lease.token
+        return result
     if args.command == "renew":
-        with store.project_lease(args.owner, parse_time(args.now)):
-            return store.renew(args.card_id, owner=args.owner, fencing_token=args.fencing_token, phase=args.phase, now=parse_time(args.now))
+        command_now = parse_time(args.now) if args.now else None
+        lease_now = command_now or dt.datetime.now(dt.timezone.utc)
+        if args.lease_token:
+            lease = store.existing_project_lease(args.owner, args.lease_token, lease_now)
+            try:
+                lease.renew(lease_now)
+                return store.renew(args.card_id, owner=args.owner, fencing_token=args.fencing_token, phase=args.phase, outputs=args.output, now=command_now)
+            except QueueError:
+                lease.release()
+                raise
+            except Exception:
+                lease.release()
+                raise
+        with store.project_lease(args.owner, lease_now):
+            return store.renew(args.card_id, owner=args.owner, fencing_token=args.fencing_token, phase=args.phase, outputs=args.output, now=command_now)
     if args.command == "route":
+        command_now = parse_time(args.now) if args.now else None
+        lease_now = command_now or dt.datetime.now(dt.timezone.utc)
+        if args.lease_token:
+            lease = store.existing_project_lease(args.owner, args.lease_token, lease_now)
+            try:
+                lease.renew(lease_now)
+                handoff = load_handoff(args.handoff_json)
+                result = store.route(args.card_id, handoff, owner=args.owner, fencing_token=args.fencing_token, outputs=args.output, entity_key=args.entity_key, now=command_now, commit=args.commit, project_lease=lease)
+            except QueueError:
+                lease.release()
+                raise
+            except Exception:
+                lease.release()
+                raise
+            if result.get("global_blocked"):
+                lease.release()
+            return result
         handoff = load_handoff(args.handoff_json)
-        with store.project_lease(args.owner, parse_time(args.now)):
-            return store.route(args.card_id, handoff, owner=args.owner, fencing_token=args.fencing_token, outputs=args.output, entity_key=args.entity_key, now=parse_time(args.now), commit=args.commit)
+        with store.project_lease(args.owner, lease_now) as lease:
+            return store.route(args.card_id, handoff, owner=args.owner, fencing_token=args.fencing_token, outputs=args.output, entity_key=args.entity_key, now=command_now, commit=args.commit, project_lease=lease)
+    if args.command == "lease-release":
+        command_now = parse_time(args.now)
+        lease = store.existing_project_lease(args.owner, args.lease_token, command_now)
+        lease.release()
+        return {"command": "lease-release", "owner": args.owner, "released": True}
     if args.command == "process":
-        if not args.handoff_json and not args.handoff_file:
-            raise QueueError("workflow-config-mismatch", "process requires a structured handoff fixture or a project-relative handoff file")
-        if args.handoff_json and args.handoff_file:
-            raise QueueError("workflow-config-mismatch", "provide only one handoff fixture")
-        if args.handoff_file:
+        sources = sum(bool(value) for value in (args.handoff_json, args.handoff_file, args.handoff_command))
+        if sources != 1:
+            raise QueueError("workflow-config-mismatch", "process requires exactly one handoff JSON, project-relative handoff file, or executable adapter")
+        requested_count = positive_count(args.count)
+        if args.output and args.output_map:
+            raise QueueError("workflow-config-mismatch", "provide either --output or --output-map, not both")
+        if requested_count > 1 and args.output and not args.output_map:
+            raise QueueError("workflow-config-mismatch", "batch processing requires per-card --output-map; one static output scope is unsafe")
+        output_map: dict[str, list[str]] = {}
+        if args.output_map:
+            map_path = (root / args.output_map).resolve()
+            try:
+                map_path.relative_to(root)
+            except ValueError as exc:
+                raise QueueError("workflow-config-mismatch", "output map escapes project root") from exc
+            output_map = load_output_map(map_path.read_text(encoding="utf-8"), root)
+        adapter_context: dict[str, Any] = {}
+        context_updater: Callable[[str, str, Sequence[str]], None] | None = None
+        if args.handoff_json:
+            handoff = load_handoff(args.handoff_json)
+            handoff_provider: Callable[[Card], Mapping[str, Any]] = lambda _card: handoff
+        elif args.handoff_file:
             path = (root / args.handoff_file).resolve()
             try:
                 path.relative_to(root)
             except ValueError as exc:
                 raise QueueError("workflow-config-mismatch", "handoff file escapes project root") from exc
-            raw_handoff = path.read_text(encoding="utf-8")
+            handoff = load_handoff(path.read_text(encoding="utf-8"))
+            handoff_provider = lambda _card: handoff
         else:
-            raw_handoff = args.handoff_json
-        handoff = load_handoff(raw_handoff)
-        return process_cards(store, count=positive_count(args.count), owner=args.owner, execution_profile=args.execution_profile, handoff_provider=lambda _card: handoff, outputs=args.output, now=parse_time(args.now), commit=args.commit)
+            try:
+                command = shlex.split(args.handoff_command)
+            except ValueError as exc:
+                raise QueueError("workflow-config-mismatch", f"invalid handoff command: {exc}") from exc
+            if not command:
+                raise QueueError("workflow-config-mismatch", "handoff command cannot be empty")
+            if args.handoff_timeout_seconds <= 0 or args.handoff_timeout_seconds >= 2 * 60 * 60:
+                raise QueueError("workflow-config-mismatch", "handoff timeout must be positive and less than the two-hour lease")
+
+            def command_provider(card: Card) -> Mapping[str, Any]:
+                env = os.environ.copy()
+                env.update({
+                    "RESEARCH_CARD_ID": str(card.props["card_id"]),
+                    "RESEARCH_CARD_PATH": str(card.path.relative_to(root)),
+                    "RESEARCH_TICKER": str(card.props["input_ticker"]),
+                    "RESEARCH_WORKFLOW": str(card.props["workflow"]),
+                    "RESEARCH_CARD_FENCING_TOKEN": str(card.props["fencing_token"]),
+                    "RESEARCH_PROJECT_LEASE_TOKEN": str(adapter_context.get("project_lease_token") or ""),
+                    "RESEARCH_EXECUTION_PROFILE": str(adapter_context.get("execution_profile") or args.execution_profile),
+                    "RESEARCH_OUTPUT_PATHS": json.dumps(adapter_context.get("output_paths") or [], ensure_ascii=False),
+                })
+                try:
+                    completed = subprocess.run(command, cwd=root, env=env, check=False, capture_output=True, text=True, timeout=args.handoff_timeout_seconds)
+                except OSError as exc:
+                    raise QueueError("workflow-config-mismatch", f"Handoff adapter could not start: {exc}") from exc
+                except subprocess.TimeoutExpired as exc:
+                    return {
+                        "status": "BLOCKED",
+                        "scope": "global",
+                        "durable_write": "unknown",
+                        "exhausted": True,
+                        "confirmation": "none",
+                        "code": "unknown-result",
+                        "reason": f"Handoff adapter exceeded timeout ({args.handoff_timeout_seconds:g}s): {exc}",
+                    }
+                if completed.returncode != 0:
+                    detail = (completed.stderr or completed.stdout).strip() or f"adapter exited with status {completed.returncode}"
+                    return {
+                        "status": "ERROR",
+                        "scope": "global",
+                        "durable_write": "unknown",
+                        "exhausted": True,
+                        "confirmation": "none",
+                        "code": "unknown-result",
+                        "reason": detail,
+                    }
+                try:
+                    return load_handoff(completed.stdout)
+                except QueueError as exc:
+                    return {
+                        "status": "BLOCKED",
+                        "scope": "global",
+                        "durable_write": "unknown",
+                        "exhausted": True,
+                        "confirmation": "none",
+                        "code": "unknown-result",
+                        "reason": exc.message,
+                    }
+
+            handoff_provider = command_provider
+            def update_adapter_context(project_lease_token: str, execution_profile: str, card_outputs: Sequence[str]) -> None:
+                adapter_context.update({
+                    "project_lease_token": project_lease_token,
+                    "execution_profile": execution_profile,
+                    "output_paths": list(card_outputs),
+                })
+            context_updater = update_adapter_context
+        process_now = parse_time(args.now) if args.now else None
+        output_provider = None
+        if output_map:
+            def map_outputs(card: Card) -> Sequence[str]:
+                return output_map.get(str(card.props["card_id"]), output_map.get(str(card.props["input_ticker"]), []))
+            output_provider = map_outputs
+        return process_cards(store, count=requested_count, owner=args.owner, execution_profile=args.execution_profile, handoff_provider=handoff_provider, outputs=args.output, output_provider=output_provider, context_updater=context_updater, now=process_now, commit=args.commit)
     if args.command == "recover":
-        with store.project_lease("research-queue-recovery", parse_time(args.now)):
-            return store.recover(now=parse_time(args.now))
+        recovery_now = parse_time(args.now) if args.now else None
+        lease_now = recovery_now or dt.datetime.now(dt.timezone.utc)
+        with store.project_lease("research-queue-recovery", lease_now) as lease:
+            return store.recover(now=recovery_now, project_lease=lease)
     if args.command in {"hold", "unblock", "cancel"}:
         target = {"hold": STATUS_BLOCKED, "unblock": STATUS_READY, "cancel": STATUS_CANCELLED}[args.command]
         with store.project_lease("research-queue-human", parse_time(args.now)):

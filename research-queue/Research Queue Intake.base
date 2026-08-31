@@ -1,23 +1,21 @@
+filters:
+  and:
+    - file.inFolder("research-queue/cards")
+    - note.kind == "research-card"
+    - or:
+        - note.status == "Ready"
+        - note.status == "Blocked"
 views:
-  - type: cards
+  - type: kanban
     name: Ready and Blocked Intake
-    filters:
-      and:
-        - file.inFolder("research-queue/cards")
-        - kind == "research-card"
-        - or:
-            - status == "Ready"
-            - status == "Blocked"
     groupBy:
-      property: status
+      property: note.status
       direction: ASC
     order:
-      - created_at
-      - card_id
       - file.name
-      - status
-      - input_ticker
-      - instrument_type
-      - workflow
-      - updated_at
-      - result_code
+      - note.status
+      - note.input_ticker
+      - note.instrument_type
+      - note.workflow
+      - note.updated_at
+      - note.result_code

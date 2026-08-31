@@ -154,9 +154,12 @@ state machine ใหม่ Trello tickers เดิมจะถูกนำเ�
   missing or contradictory envelope as a global-stop result and never infers
   success from prose, links, or file existence.
 - Done requires strict item-scoped success, completed durable writes, no
-  exhaustion, no pending confirmation, and an accepted success code. Other
-  valid item results become Blocked. Known-card invalid results are persisted
-  safely before the manager stops globally.
+  exhaustion, no pending confirmation, an accepted success code, at least one
+  existing `raw/`, `wiki/`, `index.md`, or `log.md` output path declared before
+  downstream writes and changed after that baseline, and a successful scoped
+  Git commit.
+  Other valid item results become Blocked. Known-card invalid results are
+  persisted safely before the manager stops globally.
 - Result metadata stays compact on the card. Analysis content remains in its
   owning vault artifacts; the card stores wikilinks, completion time, and the
   scoped commit identifier.
@@ -192,8 +195,9 @@ state machine ใหม่ Trello tickers เดิมจะถูกนำเ�
   two-hour expiry, atomic takeover, fencing rejection of the stale owner, and
   same-checkout assumptions.
 - Recovery tests cover pre-write stale claims with no output, writing-phase
-  expiry, ambiguous scoped working-tree changes, safe return to Ready, and
-  partial-write routing to Blocked.
+  expiry, unknown-phase claims, ambiguous scoped working-tree changes, safe
+  return to Ready, partial-write routing to Blocked, and reconciliation of a
+  terminal card whose scoped commit completed just before a process crash.
 - Result tests feed complete and malformed seven-field handoffs through the
   public seam. They cover strict success, accepted item blocks, confirmation
   warnings, unsupported instruments, data gaps, item errors, invalid-envelope

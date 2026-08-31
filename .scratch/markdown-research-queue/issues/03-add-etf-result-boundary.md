@@ -6,7 +6,7 @@
 
 **Status:** ready-for-agent
 
-- [ ] The ETF-performance workflow can return a `research_handoff` containing exactly the seven approved fields: outcome, card ID, entity key, workflow, output paths, error code, and error summary.
+- [ ] The ETF-performance workflow can return a `research_handoff` containing exactly the seven approved status fields: `status`, `scope`, `durable_write`, `exhausted`, `confirmation`, `code`, and `reason`. Card identity, entity key, workflow, and output paths travel as caller context and are persisted separately by the queue router.
 - [ ] The new caller contract is additive and the legacy Trello caller continues to behave as before during the transition.
 - [ ] A result router validates the handoff shape and refuses missing, extra, malformed, or mismatched fields.
 - [ ] Only a verified success with durable expected outputs is eligible for Done.

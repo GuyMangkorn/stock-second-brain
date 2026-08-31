@@ -20,6 +20,27 @@ save/update/ingest/refresh intent, then general-question routing to `chat`.
 
 After durable work, keep the final chat handoff under 200 words.
 
+## Markdown Research Queue
+
+ใช้ project-scoped skills เพื่อสร้างและประมวลผลงานใน Obsidian โดย Intake
+รับ ticker list ธรรมดาและสร้างการ์ด `Ready` ให้เอง
+
+Use the project-scoped skills to create and process work in Obsidian. Intake
+accepts a plain ticker list, Markdown bullets/table, or a project-relative file
+and writes one Research Batch plus Ready Research Cards. ETF defaults to the
+`check-etf-performance` route; Stock is reserved in the schema but remains
+disabled until its processor ships.
+
+```text
+ใช้ $research-card-intake เพื่อ queue VIG, DGRO เป็น ETF
+ใช้ $research-queue-manager ด้วย count: 1
+```
+
+Open `research-queue/Research Queue Intake.base` for the Ready/Blocked board
+and `research-queue/Research Queue Monitor.base` for all statuses. The card
+frontmatter is authoritative; Base Board and Bases are projections. CLI details
+and the one-time Trello seed are documented in `research-queue/README.md`.
+
 ## Canonical Commands
 
 ### Explain A Market Move
