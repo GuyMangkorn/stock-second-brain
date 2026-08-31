@@ -72,6 +72,51 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## DIHP — Dimensional International High Profitability ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `DIHP`; `entity_key`: `Cboe BZX:DIHP`; exchange: Cboe BZX
+- Primary region: International; long-only non-US large-company profitability strategy
+- `management_mode`: `active-equity-long-only`; `active_process`: systematic-factor; management benchmark: `MSCI World ex USA Index (net dividends)`
+- Proposed outputs: `wiki/analysis/performance/ETF_CBOE_BZX_DIHP Performance.md` and this source batch
+
+### Evidence and definitions
+
+- The official SEC summary prospectus identifies DIHP as an actively managed, long-only ETF seeking long-term capital appreciation through high-profitability non-US companies; fund inception is `2022-03-23`. The prospectus benchmark is `MSCI World ex USA Index (net dividends)`.
+- The SEC prospectus reports official NAV calendar returns of `18.93%` in 2023, `0.78%` in 2024, and `27.87%` in 2025. It reports 2025 1-year annualized NAV return `27.87%` versus benchmark `31.85%`, and since-inception annualized NAV return `8.90%` versus benchmark `10.92%` through `2025-12-31`.
+- The official Dimensional fund table captured as of `2026-08-18` reports NAV `$35.25`, YTD `22.33%`, 1-year `13.67%`, since-inception annualized `10.12%`, and expense ratio `0.27%`.
+- Return currency is USD. NAV total return is kept separate from market-price return. Because inception was in March 2022, no complete 2022 calendar-year row is claimed.
+- The S&P 500 Total Return rows are the project’s cached USD common reference, not the strategy-aligned management benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | DIHP NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2023 | 18.93% | 26.29% | SEC summary prospectus |
+| 2024 | 0.78% | 25.02% | SEC summary prospectus |
+| 2025 | 27.87% | 17.88% | SEC summary prospectus |
+
+Applying `Π(1 + annual_return) - 1` to the three complete official rows gives
+`53.26%` cumulative and `15.30%` rounded-input CAGR. All three complete rows are
+positive; the lowest positive year is 2024 `0.78%` and the highest is 2025
+`27.87%`. This short window must not be treated as a mature track record.
+
+- Active evidence is mixed: 2025 underperformed the official management benchmark by `-3.98 pp`, and since inception through `2025-12-31` underperformed by `-2.02 pp`. This is arithmetic excess return, not alpha, and is insufficient to infer persistent manager skill.
+- SEC risk fields to carry into the page: highest quarter `10.91%` (quarter ended `2023-12-31`) and lowest quarter `-8.16%` (quarter ended `2024-12-31`). A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Sources
+
+1. [SEC DIHP summary prospectus](https://www.sec.gov/Archives/edgar/data/1816125/000181612526000046/R7.htm)
+2. [Dimensional official DIHP product page](https://www.dimensional.com/us-en/funds/dihp/international-high-profitability-etf)
+3. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Active classification, management benchmark, track-record maturity, return basis, currency, source dates, annual rows, current snapshot, benchmark-relative calculations, and risk gaps are recorded above.
+- Proposed page contents: bottom line; performance check; 2023-2025 annual table; up/down years; risk read-through; active management read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## ISMVF / IWVL — iShares Edge MSCI World Value Factor UCITS ETF
 
 ### Identity and proposed durable outputs
