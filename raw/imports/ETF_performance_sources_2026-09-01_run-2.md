@@ -72,6 +72,53 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## IVLU — iShares MSCI Intl Value Factor ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `IVLU`; `entity_key`: `NYSE Arca:IVLU`; exchange: NYSE Arca
+- Primary region: International; developed markets ex-US value-factor exposure
+- `management_mode`: `passive-index`; issuer benchmark: `MSCI World ex USA Enhanced Value Index (Net)`
+- Proposed outputs: `wiki/analysis/performance/ETF_NYSE_ARCA_IVLU Performance.md` and this source batch
+
+### Evidence and definitions
+
+- The official iShares product page identifies IVLU as an equity ETF launched `2015-06-16`, tracking `MSCI World ex USA Enhanced Value Index (Net)`, with expense ratio `0.31%`, NAV `$44.08`, net assets `$4,584,495,178`, and `348` holdings as of `2026-08-28`.
+- The official page reports NAV total-return YTD `17.91%` as of `2026-08-28`; market closing price was `$44.23` and is kept separate.
+- The official June 2026 factsheet supplies calendar NAV rows for `2021-2025`: `15.32%, -5.80%, 19.99%, 6.75%, 46.24%`, and rolling NAV annualized returns as of `2026-06-30`: 1-year `32.00%`, 3-year `23.09%`, 5-year `14.77%`, 10-year `11.53%`, and since inception `8.47%`.
+- Official factsheet risk fields include standard deviation `12.51%`, beta `0.50`, P/E `14.23`, and P/B `1.36` as of `2026-06-30`; current page standard deviation is `12.50%` and beta `0.49` in the latest snapshot.
+- Return currency is USD. S&P 500 Total Return is only a cached USD common reference, not IVLU’s issuer benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | IVLU NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2021 | 15.32% | 28.71% | iShares factsheet |
+| 2022 | -5.80% | -18.11% | iShares factsheet |
+| 2023 | 19.99% | 26.29% | iShares factsheet |
+| 2024 | 6.75% | 25.02% | iShares factsheet |
+| 2025 | 46.24% | 17.88% | iShares factsheet |
+
+Applying `Π(1 + annual_return) - 1` to the five official rounded rows gives
+`103.49%` cumulative and `15.27%` rounded-input CAGR. The official rolling
+5-year CAGR is `14.77%` as of `2026-06-30`; the table and rolling endpoint are
+different windows. The annual window has 4 up years and 1 down year; best is
+2025 `46.24%`, worst is 2022 `-5.80%`.
+
+- A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`.
+
+### Sources
+
+1. [iShares official IVLU product page](https://www.ishares.com/us/products/275382/IVLU)
+2. [iShares IVLU official factsheet](https://www.ishares.com/us/literature/fact-sheet/ivlu-ishares-msci-intl-value-factor-etf-fund-fact-sheet-en-us.pdf)
+3. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- Identity, exchange, value-factor index, return basis, currency, source dates, annual rows, current snapshot, rolling comparison, risk fields, calculation, and unresolved drawdown gap are recorded above.
+- Proposed page contents: bottom line; performance check; 2021-2025 annual table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## QEFA — State Street SPDR MSCI EAFE StrategicFactors ETF
 
 ### Identity and proposed durable outputs
