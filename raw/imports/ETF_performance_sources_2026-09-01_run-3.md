@@ -164,3 +164,36 @@ confirmation: none
 code: durable-write-complete
 reason: Official identity, strategy, rolling NAV fields, secondary annual/YTD fields, calculations and source dates passed the scheduled-local pre-save review with all source-quality gaps disclosed.
 ```
+
+## HEFA evidence packet
+
+- Identity: `HEFA` is currently listed by iShares on `Cboe BZX`; canonical entity key is `Cboe BZX:HEFA`. Fund launch date is 31 Jan 2014 and the official benchmark is `MSCI EAFE 100% Hedged to USD Index (Net)`.
+- Official classification: passive/index-tracking international equity ETF. HEFA uses the iShares MSCI EAFE ETF as the underlying exposure and currency forwards to hedge FX; the structure is not leverage, inverse, option-income, bond, commodity, currency or derivative-defined payoff.
+- Current official product snapshot: NAV `US$47.39` and NAV Total Return YTD `16.33%` as of 28 Aug 2026; closing price `US$47.28` and net assets `US$7,525,863,862` as of 28 Aug 2026. The NAV metric is used; closing price is retained only as a separate fact.
+- Official fund facts as of 31 Jul 2026: gross expense ratio `0.70%`, fee waiver `0.35%`, net expense ratio `0.35%`, 30-day SEC yield `3.23%`, 12-month trailing yield `3.09%`, 3-year standard deviation `8.64%`, and 3-year beta `0.46`. The product page/factsheet reports one direct holding because the fund holds the underlying iShares MSCI EAFE ETF and currency-forward positions.
+- Official rolling performance as of 30 Jun 2026: NAV 1Y `28.14%`, 3Y annualized `18.56%`, 5Y annualized `13.92%`, 10Y annualized `12.71%`, since inception annualized `10.81%`; cumulative NAV YTD `13.52%`, 1M `3.12%`, 3M `10.33%`, 6M `13.52%`, 1Y `28.14%`, 3Y `66.65%`, 5Y `91.85%`, 10Y `230.88%`, inception `257.49%`. Corresponding issuer benchmark fields are `27.86%`, `18.72%`, `13.95%`, `12.89%`, `10.85%` annualized and `13.03%`, `2.46%`, `12.08%`, `13.03%`, `27.86%`, `67.41%`, `92.15%`, `236.39%`, `259.50%` cumulative.
+- Official calendar NAV rows for complete years 2016–2025: 2016 `6.57%`, 2017 `16.69%`, 2018 `-9.24%`, 2019 `24.73%`, 2020 `2.11%`, 2021 `19.38%`, 2022 `-4.73%`, 2023 `20.44%`, 2024 `13.71%`, 2025 `23.25%`. The 2016–2020 rows are from the official HEFA summary prospectus calendar bar chart; 2021–2025 rows are also exposed in the current official product page/factsheet.
+- Official issuer benchmark rows exposed for 2021–2025: `19.43%`, `-4.60%`, `19.95%`, `14.14%`, `23.10%`. Earlier annual benchmark rows were not exposed in the reviewed capture and remain `not disclosed` in the performance table.
+- Cached S&P 500 TR rows for the same 2016–2025 USD total-return basis: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; cached reference as of 31 Dec 2025.
+- Calculations from official HEFA annual rows: 2016–2025 product `2.7596014563`, cumulative `175.96%`, rounded-input CAGR `10.68%`, population standard deviation `11.37%`; 2021–2025 product `1.9197473382`, cumulative `91.97%`, rounded-input CAGR `13.93%`, population standard deviation `10.06%`. Issuer benchmark 2021–2025 product `1.9202509138`, cumulative `92.03%`, rounded-input CAGR `13.94%`.
+- Annual-path risk calculation: maximum year-end drawdown `-9.24%` in 2018; cumulative year-end level exceeded the previous high in 2019. Up/down count `8 / 2`; best `2019 +24.73%`; least positive `2020 +2.11%`; worst `2018 -9.24%`; least bad down year `2022 -4.73%`. Daily NAV drawdown and exact recovery timing were not verified.
+- Source map: official product page `https://www.ishares.com/us/products/259622/HEFA`; factsheet `https://www.ishares.com/us/literature/fact-sheet/hefa-ishares-currency-hedged-msci-eafe-etf-fund-fact-sheet-en-us.pdf`; summary prospectus `https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-currency-hedged-msci-eafe-etf-7-31.pdf`; S&P 500 source URLs are the cached references listed above.
+- Source integrity review: PASS — official exchange-qualified identity, benchmark, NAV return basis, annual rows, rolling fields, current YTD/NAV, fees and risk fields reconcile; market price is kept separate; the underlying-fund/forward structure and fee waiver are disclosed.
+- Calculation review: PASS — cumulative return, rounded-input CAGRs, standard deviations, year counts, best/worst rows, annual-path drawdown and recovery statement were recomputed from the stated inputs; official rolling 10Y is kept separate from the calendar CAGR because the windows differ.
+- Format and graph review: PASS for the planned card-specific files — Thai-first narrative, one annual table, required risk/source sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, and `log.md` were already dirty before this claim due to retained FNDF recovery state. They were not modified or included in this card's scoped output; the HEFA row and workflow log bullet remain deferred to clean navigation reconciliation.
+- Planned durable contents: create `wiki/analysis/performance/ETF_CBOE_BZX_HEFA Performance.md` with the complete HEFA performance page described above and update this source batch with the evidence, calculations, local review and deferred shared-navigation note.
+- Planned durable paths/change map: `wiki/analysis/performance/ETF_CBOE_BZX_HEFA Performance.md` (create); `raw/imports/ETF_performance_sources_2026-09-01_run-3.md` (update). No other path is written by the downstream workflow for this card.
+- Local pre-save verdict: `PASS`; no critical, high or unresolved material finding remains within the renewed clean output scope.
+
+## HEFA research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official exchange identity, NAV annual/rolling/current fields, hedge structure, calculations and source dates passed the scheduled-local pre-save review.
+```
