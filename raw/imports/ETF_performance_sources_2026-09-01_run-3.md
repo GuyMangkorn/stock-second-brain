@@ -132,3 +132,35 @@ confirmation: none
 code: durable-write-complete
 reason: Official identity, NAV total-return history, rolling field, current YTD, calculations and source dates passed the scheduled-local pre-save review.
 ```
+
+## DBEF / DBEF evidence packet
+
+- Identity: `DBEF` is the NYSE Arca ticker for Xtrackers MSCI EAFE Hedged Equity ETF; issuer factsheet identifies the underlying index as `MSCI EAFE US Dollar Hedged Index` and the fund inception date as 8 Jun 2011.
+- Official classification: passive/index-tracking developed ex-US equity ETF. The fund normally invests at least 80% in equity issuers in Europe, Australia and the Far East and uses non-deliverable/forward foreign-currency contracts to hedge non-US currencies. The hedge is implementation risk, not a leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff structure.
+- Official Q2 factsheet snapshot as of 30 Jun 2026: NAV returns 3M `12.08%`, 1Y `27.58%`, 3Y annualized `18.49%`, 5Y annualized `13.76%`, 10Y annualized `12.66%`, since inception annualized `10.42%`; issuer benchmark respectively `12.08%`, `27.86%`, `18.74%`, `13.95%`, `12.90%`, `10.73%`; broad MSCI EAFE reference respectively `10.82%`, `20.23%`, `16.44%`, `9.05%`, `9.66%`, `6.99%`.
+- Official Q2 fund facts as of 30 Jun 2026: `690` holdings, net assets `US$9,039,408,798.94`, gross/net expense ratio `0.35%`, SEC 30-day yield `2.05%`, beta `0.72`, ticker `DBEF`, NAV ticker `DBEF.NV`, CUSIP `233051200`.
+- Current YTD evidence: issuer current YTD field was not exposed in the reviewed Q2/current product captures. AAII secondary profile reports NAV YTD `+14.1%` as of 31 Jul 2026; it is marked secondary and is not merged with the official 30 Jun rolling fields. AAII also reports standard deviation `9.6%`; this remains a secondary cross-check.
+- Secondary annual NAV total-return observations as of 31 Jul 2026: 2016 `5.7%`, 2017 `16.6%`, 2018 `-9.3%`, 2019 `24.4%`, 2020 `2.3%`, 2021 `19.3%`, 2022 `-4.7%`, 2023 `19.7%`, 2024 `14.0%`, 2025 `22.9%`. The issuer Q2 factsheet exposes rolling annualized fields but not a numeric 2016–2025 calendar table; therefore all annual DBEF rows remain marked `*` as secondary and the issuer benchmark annual column is `not disclosed`.
+- Cached S&P 500 TR rows for the same 2016–2025 USD total-return basis: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; cached reference as of 31 Dec 2025.
+- Calculations from the stated secondary annual rows: 2016–2025 product `2.7124457932`, cumulative `171.24%`, rounded-input CAGR `10.49%`, population standard deviation `11.26%`; 2021–2025 product `1.9067081765`, cumulative `90.67%`, rounded-input CAGR `13.78%`, population standard deviation `9.89%`; S&P 500 2016–2025 cumulative `298.33%` / CAGR `14.82%` and 2021–2025 cumulative `96.17%` / CAGR `14.43%`.
+- Annual-path risk calculation: maximum year-end drawdown `-9.30%` in 2018; cumulative year-end level exceeded the previous high in 2019. Up/down count `8 / 2`; best `2019 +24.40%`; least positive `2020 +2.30%`; worst `2018 -9.30%`; least bad down year `2022 -4.70%`. Daily NAV drawdown and exact recovery timing were not verified.
+- Source map: official factsheet `https://etf.dws.com/download/asset/0eb88b89-c04c-4170-b412-80462e8598e1`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/1503123/000008805325000874/k100125dbef.htm`; DWS currency-hedged page `https://etf.dws.com/en-us/etf-knowledge/focus-topics-etf-investment-strategies/currency-hedged-etfs-mitigating-currency-risks-from-international-equities/`; secondary AAII profile `https://www.aaii.com/etf/ticker/DBEF`; S&P 500 source URLs are the cached references listed above.
+- Source integrity review: PASS — official identity, exchange, strategy, hedge role, USD NAV return basis, rolling fields and fund facts are separated from secondary calendar/YTD/risk fields; missing issuer annual rows and current official YTD are explicitly disclosed; no market-price return is mixed with NAV return.
+- Calculation review: PASS — cumulative return, rounded-input CAGRs, standard deviations, year counts, best/worst rows and annual-path drawdown were recomputed from the stated inputs; official rolling 10Y `12.66%` is kept separate from the secondary calendar proxy CAGR `10.49%` because windows and source methods differ.
+- Format and graph review: PASS for the planned card-specific files — Thai-first narrative, one annual table, required risk/source sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, and `log.md` were already dirty before this claim due to retained FNDF recovery state. They were not modified or included in this card's scoped output; the DBEF row and workflow log bullet remain deferred to clean navigation reconciliation.
+- Planned durable contents: create `wiki/analysis/performance/ETF_NYSE_ARCA_DBEF Performance.md` with the complete DBEF performance page described above and update this source batch with the evidence, calculations, local review and deferred shared-navigation note.
+- Planned durable paths/change map: `wiki/analysis/performance/ETF_NYSE_ARCA_DBEF Performance.md` (create); `raw/imports/ETF_performance_sources_2026-09-01_run-3.md` (update). No other path is written by the downstream workflow for this card.
+- Local pre-save verdict: `PASS`; no critical, high or unresolved material finding remains within the renewed clean output scope.
+
+## DBEF research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official identity, strategy, rolling NAV fields, secondary annual/YTD fields, calculations and source dates passed the scheduled-local pre-save review with all source-quality gaps disclosed.
+```
