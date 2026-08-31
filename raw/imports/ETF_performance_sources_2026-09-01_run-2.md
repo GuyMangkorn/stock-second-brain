@@ -72,6 +72,59 @@ window has 7 up years and 3 down years; best is 2025 `34.20%*`, worst is 2022
 - Proposed page contents: bottom line; performance check with identity/inception/expense/current NAV TR; 2016-2025 annual table; up/down years; risk read-through; source links; and the source-batch link.
 - Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
 
+## WTTHF / WTCH — State Street SPDR MSCI World Technology UCITS ETF
+
+### Identity and proposed durable outputs
+
+- `input_ticker`: `WTTHF` is an OTC alias; official primary listing used is `Euronext Amsterdam:WTCH` (ISIN `IE00BYTRRD19`)
+- Primary region: International; global developed-market information technology exposure
+- `management_mode`: `passive-index`; issuer benchmark: `MSCI World Information Technology 35/20 Capped Index`
+- Proposed outputs: `wiki/analysis/performance/ETF_EURONEXT_AMSTERDAM_WTCH Performance.md` and this source batch
+
+### Evidence and definitions
+
+- State Street’s official product page identifies the fund as accumulating, base currency USD, with fund inception `2016-04-29`, performance inception `2009-02-28` through a linked predecessor history, TER `0.30%`, NAV `$271.16` as of `2026-08-28`, AUM `$1,239.66M`, and `135` holdings as of `2026-08-27`.
+- Official net NAV performance as of `2026-07-31`: YTD `16.31%`, 1-year `27.07%`, 3-year annualized `26.94%`, 5-year annualized `17.45%`, 10-year annualized `22.73%`, and since performance inception annualized `20.55%`; corresponding issuer-index returns are `16.55%, 27.49%, 27.17%, 17.64%, 22.95%, 20.82%`.
+- Official calendar-year net NAV rows are `2016-2025`: `11.30%, 37.94%, -2.74%, 47.39%, 43.31%, 29.62%, -30.85%, 53.34%, 32.71%, 23.18%`. The 2016 row is marked `†` because State Street says the pre-May 2016 history is linked to a predecessor fund; it is not treated as a clean full live-ETF year.
+- Return currency is USD for performance even though the primary Euronext listing is EUR; market-price/listing-currency returns remain separate.
+- Official risk fields include 3-year standard deviation `21.61%` and tracking error `0.08%`, both as of `2026-07-31`.
+- The S&P 500 Total Return rows are the project’s cached USD common reference, not the sector strategy’s issuer benchmark.
+
+### Candidate claims, calculations, and gaps
+
+| Year | WTCH NAV TR | S&P 500 TR (USD reference) | Evidence |
+|---|---:|---:|---|
+| 2016 | 11.30%† | 11.96% | State Street linked/predecessor history |
+| 2017 | 37.94% | 21.83% | State Street official table |
+| 2018 | -2.74% | -4.38% | State Street official table |
+| 2019 | 47.39% | 31.49% | State Street official table |
+| 2020 | 43.31% | 18.40% | State Street official table |
+| 2021 | 29.62% | 28.71% | State Street official table |
+| 2022 | -30.85% | -18.11% | State Street official table |
+| 2023 | 53.34% | 26.29% | State Street official table |
+| 2024 | 32.71% | 25.02% | State Street official table |
+| 2025 | 23.18% | 17.88% | State Street official table |
+
+Applying the formula to complete live/official rows `2017-2025` gives
+`536.70%` cumulative and `22.84%` rounded-input CAGR. The current official
+rolling 10-year CAGR is `22.73%`; the 2016 linked row is shown only for context
+and is excluded from the complete-live calculation. The 2017-2025 window has 7
+up years and 2 down years; best is 2023 `53.34%`, worst is 2022 `-30.85%`.
+
+- A fresh daily-NAV maximum drawdown and recovery calculation is `ไม่พบข้อมูลที่ยืนยันได้`; the 2022 annual loss is not a substitute for max drawdown.
+
+### Sources
+
+1. [State Street official WTCH product page](https://www.ssga.com/uk/en_gb/institutional/etfs/state-street-spdr-msci-world-technology-ucits-etf-wtch-na)
+2. [State Street WTCH factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/emea/factsheet-emea-en_gb-wtch-na.pdf)
+3. [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/); cached project convention is USD total return through `2025-12-31`
+
+### Scheduled-local pre-save review
+
+- OTC alias mapping, official primary listing, predecessor-history caveat, return basis, currency, benchmark, source dates, annual rows, current snapshot, risk fields, calculations, and unresolved drawdown gap are recorded above.
+- Proposed page contents: alias/listing normalization; bottom line; performance check; 2016-2025 table; up/down years; risk read-through; and source links.
+- Local review result: `PASS`; no high or medium finding remains; no confirmation is required.
+
 ## DIHP — Dimensional International High Profitability ETF
 
 ### Identity and proposed durable outputs
