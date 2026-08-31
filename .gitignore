@@ -11,4 +11,7 @@
 # Accidental nested checkout/worktree inside this vault
 /stock-second-brain/
 .worktrees/
+
+# Research Queue runtime lease (durable cards and batches remain tracked)
+/research-queue/.runtime/
 .venv/

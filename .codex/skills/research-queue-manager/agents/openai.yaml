@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Queue Manager"
+  short_description: "Process Ready ETF research cards safely"
+  default_prompt: "Use $research-queue-manager to process a bounded count of Ready Research Cards."

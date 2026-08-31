@@ -1,0 +1,23 @@
+views:
+  - type: cards
+    name: Ready and Blocked Intake
+    filters:
+      and:
+        - file.inFolder("research-queue/cards")
+        - kind == "research-card"
+        - or:
+            - status == "Ready"
+            - status == "Blocked"
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - created_at
+      - card_id
+      - file.name
+      - status
+      - input_ticker
+      - instrument_type
+      - workflow
+      - updated_at
+      - result_code

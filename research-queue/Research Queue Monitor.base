@@ -1,0 +1,24 @@
+views:
+  - type: table
+    name: Research Queue Monitor
+    filters:
+      and:
+        - file.inFolder("research-queue/cards")
+        - kind == "research-card"
+    order:
+      - status
+      - created_at
+      - card_id
+      - file.name
+      - status
+      - input_ticker
+      - instrument_type
+      - workflow
+      - batch_id
+      - claim_owner
+      - lease_expires_at
+      - execution_phase
+      - result_code
+      - output_paths
+      - completed_at
+      - commit_id

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Card Intake"
+  short_description: "Create Markdown research cards from ticker lists"
+  default_prompt: "Use $research-card-intake to queue this ETF or Stock ticker list in the project Research Queue."
