@@ -1,7 +1,7 @@
 ---
 type: etf-performance
 entity_key: Cboe BZX:DDWM
-updated: 2026-07-14
+updated: 2026-09-01
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -14,18 +14,20 @@ tags:
 
 ## Bottom line
 
-ช่วงร่วม 2021-2025 ให้ CAGR 13.41% จาก cumulative 87.58% เทียบ S&P 500 TR CAGR 14.43%; มี 1 ปีติดลบ.
+DDWM ให้ผลตอบแทน NAV Total Return `9.70%` ตั้งแต่ต้นปีถึง 31 ก.ค. 2026 และให้ rolling 10-year annualized NAV TR `10.41%` ถึงวันเดียวกัน. ช่วง 2016-2025 มี 8 ปีบวกและ 2 ปีลบ; CAGR จาก annual rows อยู่ที่ `10.10%` เทียบ S&P 500 TR `14.82%`.
 
 ## Performance check
 
 - `entity_key: Cboe BZX:DDWM`
 - Fund: WisdomTree Dynamic International Equity Fund
-- Inception: `2016-01-07`; expense ratio: `0.40%`
+- Inception: `2016-01-07`; expense ratio: `0.40%` (official product page as of 2026-08-31)
 - Metric: `NAV Total Return` รวม distributions reinvested และ fund expenses
 - Issuer benchmark: WisdomTree Dynamic International Equity Index
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested)
-- 10-year NAV TR CAGR: `10.72%` as of `2026-06-30` (official rolling issuer figure)
-- Coverage/source note: see annual NAV TR coverage bullet below; source batch 2026-07-14
+- 10-year NAV TR CAGR: `10.41%` as of `2026-07-31` (official rolling issuer figure; raw endpoints not disclosed)
+- Latest official NAV: `$47.511` as of `2026-08-31`; closing market price: `$47.534` as of `2026-08-28` (market price kept separate)
+- Current YTD: `9.70%` as of `2026-07-31`; latest month-end official NAV TR field available in the reviewed issuer capture
+- Coverage/source note: official annual NAV TR rows 2016-2025; calculated CAGRs use displayed rounded rows. Source batch: [[ETF_performance_sources_2026-09-01_run-4]]
 
 - Annual NAV TR coverage: official 2016-2025 NAV TR
 
@@ -44,15 +46,17 @@ tags:
 
 **Up years / Down years**
 
-- Best: 30.10%; least positive: 10.65%
-- Worst: -1.27%; least bad down year: -1.27%
-- Current YTD: `7.65%` as of `2026-06-30`
+- Best: `2025 +30.10%`; least positive: `2024 +10.65%`
+- Worst: `2018 -11.05%`; least bad down year: `2022 -1.27%`
+- Current YTD: `9.70%` as of `2026-07-31`
 
 ## Risk read-through
 
-Average positive year 17.63%; worst year -1.27%. ตัวเลขสะท้อนผลของ index construction และ tracking หลังหัก fund expenses ไม่ใช่หลักฐานว่าผู้จัดการกองทุนเลือกหุ้นเชิง discretionary ได้เหนือกว่า. Classification: `dynamic international dividend`. อย่าใช้ CAGR อย่างเดียวตัดสินความเสี่ยง โดยเฉพาะ sector/country-concentrated funds.
+Annual-path population standard deviationอยู่ที่ `11.96%` จากแถว 2016-2025; official 10-year annualized volatility อยู่ที่ `12.41%` as of `2026-03-31`. DDWM เป็น `passive-index` แบบ rules-based international dividend equity ที่มี dynamic FX hedge; aggregate hedge ratio อยู่ที่ `83.67%` as of `2026-08-31`. การกระจายประเทศและ sector ยังคงทำให้ผลลัพธ์ไวต่อ FX, financials และ international equity risk; daily NAV max drawdown และ exact recovery date ไม่ได้เปิดเผยในข้อมูลที่ตรวจสอบ. ตัวเลขเป็น index construction และ tracking หลังหัก fund expenses ไม่ใช่หลักฐานของ discretionary stock-picking skill.
 
 ## Sources
 
-- [Official issuer product/performance source](https://www.wisdomtree.com/us/products/equity/ddwm)
-- Benchmark convention and cached 2016-2025 rows: [[ETF_performance_sources_2026-07-14]]
+- [Official WisdomTree product/performance source](https://www.wisdomtree.com/us/products/equity/ddwm)
+- [Official WisdomTree DDWM presentation](https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/presentations/equity/ddwm_presentation.pdf)
+- [Official WisdomTree Dynamic International Equity Index](https://www.wisdomtree.com/us/indexes/WTDFAHD)
+- S&P 500 TR cached 2016-2025 convention and full source map: [[ETF_performance_sources_2026-09-01_run-4]]
