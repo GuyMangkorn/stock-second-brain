@@ -144,3 +144,34 @@ confirmation: none
 code: durable-write-complete
 reason: Official USD share-class identity, NAV total-return history, current YTD/NAV fields, benchmark metadata, calculations and scheduled-local review passed with alias and risk gaps disclosed.
 ```
+
+## SEIE evidence packet
+
+- Input ticker and identity: `SEIE`; official SEI ETF page and SEC annual shareholder report identify `SEI Select International Equity ETF`, primary exchange `Nasdaq`, CUSIP `81589A700`. The July 31, 2026 summary prospectus states commencement of operations `2024-10-08`; the issuer ETF page displays `2024-10-10`, so the date discrepancy is preserved and the prospectus date is used for maturity assessment.
+- Official classification: `active-equity-long-only`, integrated quantitative plus multi-manager model-portfolio process. SEI combines its own quantitative active stock portfolio with Brown Advisory and Pzena model portfolios; latest factsheet allocation is SEI `70%`, Pzena `20%`, Brown Advisory `10%`.
+- Strategy/benchmark: at least 80% equity, at least 40% outside the U.S., primarily developed markets with possible emerging-market exposure; official management benchmark `MSCI EAFE Index (Net) (USD)`. S&P 500 is only a common USD reference.
+- Official fees and turnover: total annual fund operating expenses `0.50%`; most recent fiscal-year portfolio turnover `70%` in the July 31, 2026 summary prospectus.
+- Official current factsheet performance: NAV YTD `13.46%` versus benchmark `11.59%` and since-inception cumulative `25.69%` versus `20.12%`, cumulative column as of `2026-07-31`; NAV 1-year `23.57%` versus `20.23%` and since-inception annualized `24.66%` versus `19.21%`, annualized column as of `2026-06-30`.
+- Official complete calendar row: 2025 SEIE NAV Total Return `38.96%` versus MSCI EAFE net `31.89%`; 2024 is a partial inception year and excluded. Cached S&P 500 TR reference for 2025 is `17.88%`.
+- Active evidence: return-only spread `+7.07 pp` for 2025, `+1.87 pp` current YTD, and `+5.45 pp` since-inception annualized at their respective as-of dates. Evidence is `positive return-only` but `provisional` because only one complete calendar year is available; it is not called alpha.
+- Risk/portfolio snapshot: issuer page as of `2026-08-27` reports NAV `$37.03`, closing price `$37.18`, net assets `$1.31bn`, shares outstanding `35,375,000`, holdings `357`, and 30-day SEC yield `2.12%`; July factsheet reports 346 holdings, P/B `1.90x`, median forward P/E `14.02x`, beta `0.94`, and standard deviation `N/A`. Full daily drawdown/recovery and risk-adjusted evidence were not verified.
+- Annual-path risk: one complete-year observation, up/down `1 / 0`, best and least positive `2025 +38.96%`; no complete down year is ranked. The official prospectus reports best quarter `13.56%` (2025 Q2) and worst quarter `5.09%` (2025 Q3), both positive and not a drawdown series.
+- Source map: official SEI strategy page `https://www.seic.com/financial-advisors/flexible-investment-solutions/etfs/select-etfs/sei-select-international-equity-etf-seie`; official ETF page `https://seietfs.filepoint.live/seie`; official fact sheet `https://seietfs.filepoint.live/assets/pdfs/SEIE_FactSheet.pdf`; official summary prospectus `https://seidocs.filepoint.live/assets/pdfs/Summary_Prospectuses/SEIE_Summary-Prospectus.pdf`; SEC annual report `https://www.sec.gov/Archives/edgar/data/1888997/000139834426010415/fp0099233-1_ncsrixbrl.htm`; secondary price history `https://stockanalysis.com/etf/seie/history/`; S&P official index page `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — official Nasdaq identity, active equity eligibility, process subtype, official strategy benchmark, date-separated current fields, one complete calendar row, current risk snapshot and secondary price separation reconcile; inception-date discrepancy is disclosed.
+- Calculation review: PASS — 2025 benchmark spread and date-specific YTD/since-inception spreads were recomputed from the stated official fields; no partial 2024 year was ranked and no unsupported CAGR or volatility was inferred.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required active-management fields, canonical `geography/International` tag and breadcrumb resolve to existing pages; no shared navigation file was changed.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/recovery artifacts and pre-existing dirty outputs remain outside this card's scope; region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_SEIE Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## SEIE research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official active equity eligibility, strategy-aligned benchmark, date-separated current fields, one compatible calendar row, calculations and scheduled-local review passed with provisional evidence disclosed.
+```
