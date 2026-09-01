@@ -183,3 +183,72 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official FNDC evidence passed the scheduled-local checklist and the canonical performance page plus source batch were updated.
+
+## LVHI evidence packet
+
+- Identity and eligibility: Franklin identifies `LVHI` as the `Franklin
+  International Low Volatility High Dividend Index ETF`, listed on `Cboe BZX`,
+  with inception `2016-07-27`. The official factsheet classifies it as
+  `Indexed` and `Equity`, tracking the `Franklin International Low Volatility
+  High Dividend Hedged Index-NR`.
+  Sources: https://www.franklintempleton.com/investments/options/exchange-traded-funds/products/91481/SINGLCLASS/franklin-international-low-volatility-high-dividend-index-etf/LVHI
+  and https://www.franklintempleton.com/forms-literature/download/91481-FF.
+- Strategy classification: `passive-index`; the fund selects developed-market
+  ex-U.S. equities with relatively high yield and low price/earnings volatility.
+  Currency-related derivatives hedge currency exposure but do not define a
+  leveraged, inverse, option-income, bond, commodity, or multi-asset payoff.
+- Fund facts: expense ratio `0.40%`; NAV `$42.72`, NAV TR YTD `18.27%`, net
+  assets `$5.57B`, and distribution rate at NAV `5.86%` as of 2026-08-06;
+  holdings `194`, 30-day SEC yield `2.85%`, and net assets `$5.00B` in the
+  June 30, 2026 factsheet snapshot. The latter is an older fund-facts field and
+  is not mixed with the August snapshot.
+- Return definition: Franklin states that NAV returns assume reinvestment of all
+  distributions and deduction of fund expenses. Official complete annual NAV
+  rows are 2017 `11.66%`, 2018 `-5.44%`, 2019 `18.81%`, 2020 `-8.79%`, 2021
+  `18.42%`, 2022 `3.80%`, 2023 `17.22%`, 2024 `15.55%`, and 2025 `27.77%`.
+  The 2016 inception-year cell is blank and is excluded from annual ranking.
+- Cached common benchmark: `S&P 500 Total Return`, USD, dividends reinvested,
+  complete calendar years 2016-2025, as of 2025-12-31. The 2017-2025 subset is
+  `21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%`.
+- Calculations: LVHI 2017-2025 product `2.4340164586`, cumulative `143.40%`,
+  rounded-input CAGR `10.39%`; S&P product `3.5577805598`, cumulative `255.78%`,
+  CAGR `15.14%`; LVHI 2021-2025 product `2.1272717460`, cumulative `112.73%`,
+  CAGR `16.30%`; S&P 2021-2025 cumulative `96.17%`, CAGR `14.43%`. Population
+  standard deviation of the nine LVHI annual rows is `11.41%`. Complete-year
+  ranking is `7 / 2` up/down; best `2025 +27.77%`, least positive `2022 +3.80%`,
+  worst `2020 -8.79%`, least bad down year `2018 -5.44%`.
+- Risk limitation: annual-path maximum drawdown approximation is `-8.79%` in
+  2020, with year-end recovery by 2021. Daily NAV drawdown/recovery and
+  compatible risk-adjusted evidence are not verified.
+- Primary region: `International`, because the underlying exposure is developed
+  markets outside the United States. The performance page uses the existing
+  breadcrumb and canonical `geography/International` tag. Shared navigation
+  and `log.md` were dirty before claim and are not in this card’s output scope.
+
+## LVHI planned paths and local review
+
+- Create `wiki/analysis/performance/ETF_CBOE_BZX_LVHI Performance.md` with the
+  complete performance page, one annual table, current fields, and source links.
+- Update this source batch with the LVHI evidence and local review.
+- Do not update `International ETF.md`, `ETF Region Index.md`,
+  `ETF Performance Index.md`, or `log.md` because those paths were dirty before
+  this queue claim; navigation reconciliation is deferred.
+- Source/data integrity: `PASS` — exchange/ticker, passive equity eligibility,
+  hedge role, NAV TR definition, annual rows, current YTD, and separated as-of
+  dates reconcile.
+- Calculation/ranking review: `PASS` — annual compounding, CAGRs, volatility,
+  year counts, best/worst rows, and annual-path drawdown recompute from the
+  factsheet rows; 2016 blank inception year is not ranked.
+- Format/graph review: `PASS` — Thai-first required sections, one annual table,
+  visible as-of dates, source links, existing breadcrumb, and canonical region
+  tag resolve.
+
+## LVHI research_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official LVHI evidence passed the scheduled-local checklist and the performance page plus source batch were written.
