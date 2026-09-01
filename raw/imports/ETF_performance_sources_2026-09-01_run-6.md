@@ -101,7 +101,40 @@ durable_write: completed
 exhausted: false
 confirmation: none
 code: durable-write-complete
+@@
  reason: Official passive global small-cap identity, current NAV/YTD, annual NAV rows, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
+```
+
+## TLTD evidence packet
+
+- Input ticker and canonical identity: `TLTD`; `NYSE Arca:TLTD`; fund currently named Northern Trust Morningstar Developed Markets ex-US Factor Tilt ETF, formerly FlexShares Morningstar Developed Markets ex-US Factor Tilt Index Fund; CUSIP `33939L803`.
+- Official classification: `passive-index`; developed-markets ex-US factor equity ETF. Northern Trust states that the fund seeks to track the Morningstar Developed Markets ex-US Factor Tilt Index, uses a passive/indexing approach and representative sampling, and targets increased small-cap and value exposure relative to the parent index. No leveraged, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified, although the prospectus permits limited futures/options/forwards for tracking and portfolio management.
+- Official product page observations through `2026-08-28`: NAV `US$105.33`, market price `US$104.51`, net assets `US$695.16m`, net expense ratio `0.39%`, primary exchange `NYSE Arca`. Official factsheet dated `2026-06-30` reports inception `2012-09-25`, 2,307 holdings, gross expense ratio `0.41%`, net expense ratio `0.39%`, weighted average beta `1.03`, and quarterly distributions.
+- Official current NAV Total Return performance from Northern Trust as of `2026-07-31`: YTD `11.45%`, 1-year cumulative `27.05%`, 3-year annualized `18.72%`, 5-year annualized `10.65%`, 7-year annualized `11.33%`, 10-year annualized `9.71%`, and since inception annualized `8.38%`. All fund figures assume reinvestment of dividends and capital gains at NAV; market-price returns remain separate.
+- Secondary rounded annual NAV rows from AAII, used only for the calendar-year table: `2016 5.4%`, `2017 25.9%`, `2018 -17.2%`, `2019 21.5%`, `2020 4.4%`, `2021 12.3%`, `2022 -13.7%`, `2023 17.5%`, `2024 5.1%`, `2025 38.6%`. The retrieved issuer pages expose standardized/trailing returns and a prospectus 2025/5-year cross-check but no text calendar-year table, so these rows are explicitly marked secondary.
+- Return basis: USD NAV Total Return with dividends and capital gains reinvested at NAV. The official current YTD field `+11.45%` as of `2026-07-31` is kept separate from the secondary calendar table and the `2026-08-28` NAV level.
+- Common S&P 500 Total Return reference uses cached USD dividend-reinvested rows for complete calendar years `2016-2025`: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from secondary rounded annual rows: TLTD 2016-2025 product `2.3118934751`, cumulative `131.1893%`, rounded-input CAGR `8.7419%`; 2021-2025 product `1.6588012918`, cumulative `65.8801%`, CAGR `10.6519%`; population standard deviation `16.2561%`; `8 / 2` up/down years. Best `2025 +38.60%`; least positive `2020 +4.40%`; worst `2018 -17.20%`; least-bad down year `2022 -13.70%`.
+- S&P cached calculations for 2016-2025: cumulative `298.3291%`, rounded-input CAGR `14.8218%`; 2021-2025 cumulative `96.1696%`, CAGR `14.4264%`. TLTD’s arithmetic CAGR comparison is `-6.0799 pp` for 2016-2025 and `-3.7745 pp` for 2021-2025; this is a reference comparison, not alpha.
+- Daily NAV maximum drawdown and recovery were not verified. The exact calendar table remains secondary, while official standardized NAV/YTD fields are retained as the primary current evidence.
+- Source map: official product `https://etfs.ntam.northerntrust.com/us/en/individual/funds/tltd`; official factsheet `https://www.flexshares.com/content/dam/ntflexshares/fund-documents/tltd/tltd-factsheet.pdf.coredownload.pdf`; SEC prospectus `https://www.sec.gov/Archives/edgar/data/1491978/000119312526352175/d272956d497k.htm`; secondary annual rows `https://www.aaii.com/etf/ticker/TLTD`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — official exchange/identity, passive factor classification, index, current NAV/price, fees, inception, official standardized returns and secondary calendar rows are reconciled with explicit provenance.
+- Calculation review: PASS — secondary annual compound returns, available-period CAGRs, annual dispersion, S&P comparisons, year counts and best/worst subsets were recomputed from the stated rounded rows; no partial year was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` and `geography/global-developed` tags, and existing breadcrumb targets resolve.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-5 batches and retained recovery artifacts were dirty before the TLTD pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_TLTD Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## TLTD research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive factor ETF identity, current NAV/YTD and trailing returns, secondary complete calendar rows, calculations and scheduled-local review passed with secondary annual-row and daily drawdown gaps disclosed.
 ```
 
 ## WGQDF evidence packet
