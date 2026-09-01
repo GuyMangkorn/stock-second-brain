@@ -111,3 +111,36 @@ confirmation: none
 code: durable-write-complete
 reason: Official active classification, strategy benchmark, annual NAV rows, current secondary YTD, calculations and scheduled-local review passed with return-only evidence and risk gaps disclosed.
 ```
+
+## IIREF evidence packet
+
+- Card reread: operational frontmatter identifies input ticker `IIREF`, workflow `check-etf-performance`, and an In Progress claim with fencing token `f260551088974e45b236b30799080e63`; the body contains stale URTH template text and was not treated as evidence because queue operational state is frontmatter-controlled.
+- Input alias and canonical identity: `IIREF` is an OTC USD quote for the named iShares MSCI World UCITS ETF; official iShares identifies ISIN `IE00B0M62Q58` and maps the USD London Stock Exchange listing to `IDWR`. Canonical identity is `LSE:IDWR`; the issuer's `IWRD` page name and GBP line are preserved as the same share class's alternate listing metadata.
+- Official classification: `passive-index`, physical/optimised developed-market equity UCITS ETF. The official KIID says the USD distributing share class seeks to reflect the MSCI World Index and may use optimising techniques; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official product-page snapshot as of `2026-08-28`: NAV `USD 106.25`, NAV Total Return YTD `13.27%`, net assets `USD 9,563,943,154`, holdings `1,282`, total expense ratio `0.50%`, benchmark `MSCI World Index (Net)`, quarterly distribution and USD share-class currency.
+- Official risk/portfolio fields: standard deviation `12.44%` and beta `1.000` as of `2026-07-31`; P/E `26.46`, P/B `4.15`, trailing distribution yield `0.85%`, and sector weights Information Technology `29.55%`, Financials `16.52%`, Industrials `11.21%` as of `2026-08-28`. Securities lending return was `0.02%` for the period ending `2026-06-30`.
+- Official factsheet rolling snapshot as of `2026-05-31`: fund/benchmark YTD `10.06% / 10.26%`, 1-year `20.03% / 20.41%`, 3-year annualized `17.84% / 18.14%`, 5-year annualized `10.93% / 11.19%`, since-inception annualized `8.83% / 9.04%`. These are kept separate from the newer August YTD field.
+- Official complete calendar NAV rows: 2016 `7.51%`, 2017 `22.26%`, 2018 `-8.89%`, 2019 `27.35%`, 2020 `15.59%`, 2021 `21.49%`, 2022 `-18.31%`, 2023 `23.55%`, 2024 `18.39%`, 2025 `20.75%`; official MSCI World Net rows: `7.51%`, `22.40%`, `-8.71%`, `27.67%`, `15.90%`, `21.82%`, `-18.14%`, `23.79%`, `18.67%`, `21.09%`.
+- Latest secondary market-price cross-check for canonical USD line: `USD 106.16` at 10:32 BST on `2026-08-31`; historical 28 Aug close `USD 106.79`. The price is marked secondary and is not mixed into NAV performance.
+- Cached S&P 500 TR rows for 2016-2025: 2016 `11.96%`, 2017 `21.83%`, 2018 `-4.38%`, 2019 `31.49%`, 2020 `18.40%`, 2021 `28.71%`, 2022 `-18.11%`, 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; cached USD total-return convention as of `2025-12-31`.
+- Calculations from official rows: 2016-2025 fund product `3.0901022540`, cumulative `209.0102%`, rounded-input CAGR `11.9431%`, population standard deviation `14.3544%`; benchmark product `3.1531955215`, cumulative `215.3196%`, CAGR `12.1696%`; 2021-2025 fund product `1.7528886858`, cumulative `75.2889%`, CAGR `11.8796%`; benchmark product `1.7738836057`, cumulative `77.3884%`, CAGR `12.1463%`; cached S&P product `3.9832911148`, cumulative `298.3291%`, CAGR `14.8218%`.
+- Annual-path risk: fund up/down `8 / 2`; best `2019 +27.35%`; least positive `2016 +7.51%`; worst `2022 -18.31%`; least bad down year `2018 -8.89%`; 2021-2025 up/down `4 / 1`. Daily NAV drawdown and recovery series were not verified.
+- Source map: official iShares product page `https://www.ishares.com/uk/individual/en/products/251881/ishares-msci-world-ucits-etf`; official factsheet `https://www.ishares.com/uk/individual/en/literature/fact-sheet/iwrd-ishares-msci-world-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true`; official KIID `https://www.ishares.com/uk/individual/en/literature/kiid/ucits_kiid-ishares-msci-world-ucits-etf-usd-dist-gb-ie00b0m62q58-en.pdf?siteEntryPassthrough=true&switchLocale=y`; OTC alias cross-check `https://stockanalysis.com/quote/otc/IIREF/history/`; secondary IDWR quote `https://markets.investorschronicle.markitdigital.com/data/etfs/tearsheet/historical?s=IDWR%3ALSE%3AUSD`; S&P official index page `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — official ISIN, USD share-class/listing mapping, passive equity eligibility, benchmark, return definition, current YTD/NAV, complete calendar rows, risk fields and secondary price separation reconcile; stale URTH body text is excluded from evidence.
+- Calculation review: PASS — cumulative returns, CAGRs, population standard deviation, benchmark spread, year counts and best/worst subsets were recomputed from the stated rounded official rows; rolling factsheet fields remain date-separated from the current product-page YTD.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, canonical `geography/International` tag and breadcrumb resolve to existing pages; no shared navigation file was changed.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/recovery artifacts and pre-existing dirty outputs remain outside this card's scope; region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_LSE_IDWR Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## IIREF research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official USD share-class identity, NAV total-return history, current YTD/NAV fields, benchmark metadata, calculations and scheduled-local review passed with alias and risk gaps disclosed.
+```
