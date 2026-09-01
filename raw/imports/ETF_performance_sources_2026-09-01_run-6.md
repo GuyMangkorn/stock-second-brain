@@ -45,3 +45,34 @@ confirmation: none
 code: durable-write-complete
 reason: Official passive strategic-beta identity, current quote, annual NAV total-return rows, date-separated YTD cross-check, calculations and scheduled-local review passed with unavailable 2018 and daily drawdown gaps disclosed.
 ```
+
+## KOKU evidence packet
+
+- Input ticker: `KOKU`; canonical identity: `NYSE Arca:KOKU`; fund: Xtrackers MSCI Kokusai Equity ETF; inception `2020-04-07`.
+- Official classification: `passive-index` developed-markets ex-Japan equity ETF. DWS states that the fund uses a passive/indexing approach and full replication where practicable to track the MSCI Kokusai Index, also known as MSCI World ex Japan. The fund does not hedge foreign-currency exposure; no leverage, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified.
+- Official Q1 2026 factsheet fields as of `2026-03-31`: NAV 1-year `18.75%`, 3-year annualized `17.14%`, 5-year annualized `10.85%`, since-inception annualized `16.88%`; net expense ratio `0.09%`; beta `1.04`; 1,143 holdings and net assets `$805,182,756.00`. The factsheet defines the MSCI Kokusai Net Total Return Index as the tracked index and keeps market-price returns separate.
+- Official calendar NAV Total Return rows from the DWS prospectus: 2021 `23.81%`, 2022 `-17.96%`, 2023 `24.38%`, and 2024 `19.64%`. The prospectus bar chart identifies 2020 as an inception-year partial and exposes no 2025 calendar row in the retrieved official filing.
+- Secondary dividend-reinvested history from PortfoliosLab, last updated `2026-08-29`: current YTD `13.09%` and 2025 total return `21.45%`. The 2025 observation is marked `*` in the performance page and is not described as official issuer data. Official DWS calendar rows and secondary rows are not mixed without provenance.
+- Common S&P 500 Total Return reference uses cached USD dividend-reinvested rows for 2021-2025: `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from the four official rows plus marked secondary 2025 proxy: 2021-2025 product `1.8357175134`, cumulative `83.5718%`, rounded-input CAGR `12.9175%`; population standard deviation `16.2011%`; `4 / 1` up/down years. Best `2023 +24.38%`; least positive `2024 +19.64%`; worst and least-bad down year `2022 -17.96%`.
+- S&P cached calculations for 2021-2025: product `1.9616961801`, cumulative `96.1696%`, rounded-input CAGR `17.4115%`. KOKU’s arithmetic spread is `-4.4940` percentage points; this is not alpha.
+- Daily NAV maximum drawdown and recovery were not verified. The principal data limitation is that official calendar rows for 2025 and a current issuer YTD field were not established; 2025 and current YTD remain clearly marked secondary observations.
+- Source map: official factsheet `https://etf.dws.com/en-us/AssetDownload/Index/94ec1d01-afbe-4684-8d4a-497c224fb2e5/KOKU-Fact-Sheet.pdf`; official prospectus `https://etf.dws.com/en-us/AssetDownload/Index/cfabbe07-bfc5-49c6-9de2-15429c72ad99/KOKU-1.pdf`; SEC filing `https://www.sec.gov/Archives/edgar/data/1503123/000008805325001122/k121925koku.htm`; secondary history `https://portfolioslab.com/symbol/KOKU`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — official identity, exchange, passive eligibility, index, inception, fees, official 2021-2024 rows and secondary 2025/YTD observations reconcile with explicit provenance and no mixed return basis.
+- Calculation review: PASS — cumulative return, CAGR, standard deviation, S&P comparison, year counts and best/worst subsets were recomputed from the stated rows; 2020 inception partial was excluded from ranking.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing navigation targets.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch, and retained recovery artifacts were dirty before the KOKU pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_KOKU Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## KOKU research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive developed-equity identity, current secondary YTD, official 2021-2024 NAV rows, marked 2025 proxy, calculations and scheduled-local review passed with inception and daily drawdown gaps disclosed.
+```
