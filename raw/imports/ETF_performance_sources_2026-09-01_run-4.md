@@ -44,3 +44,36 @@ confirmation: none
 code: durable-write-complete
 reason: Official identity, NAV total-return history, current YTD/NAV fields, benchmark metadata, calculations and scheduled-local review passed with source gaps disclosed.
 ```
+
+## TOUS evidence packet
+
+- Input ticker: `TOUS`; canonical identity: `NYSE Arca:TOUS`; fund: T. Rowe Price International Equity ETF; inception `2023-06-14`.
+- Official classification: `active-equity-long-only`, `fundamental-active`. The January 2026 summary prospectus states the fund normally invests at least 80% in equities and at least 65% in non-U.S. stocks, primarily in developed markets; adviser decision-making focuses on bottom-up stock selection. No payoff-defining leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-heavy structure was identified.
+- Official factsheet as of `2026-06-30`: benchmark `MSCI EAFE Index Net`, expense ratio `0.50%`, total assets `USD 1,525,974,857`, portfolio turnover `29.2%` for the one-year period ending `2025-12-31`, and official NAV YTD `11.34%`, 1-year `20.64%`, 3-year annualized `17.53%`, since-inception annualized `17.03%`. The factsheet states total return reflects reinvested dividends and capital gains.
+- Official complete calendar NAV/benchmark rows: 2024 fund `3.72%`, benchmark `3.82%`; 2025 fund `33.69%`, benchmark `31.22%`. 2023 is a June 14 inception-year partial and is excluded from complete-year rankings. Market-price rows remain separate.
+- Latest current secondary cross-check: Schwab reports TOUS NAV YTD `+12.8%`, 1-month `+1.3%`, 3-month `+6.4%`, 6-month `+6.9%`, 1-year `+25.0%`, 3-year annualized `+17.0%`, and inception-period annualized `+17.0%`, all as of `2026-07-31`; the secondary closing price is `$39.75` as of `2026-08-28`.
+- Active benchmark selection: `MSCI EAFE Index Net` is the official issuer-designated comparator and matches the fund's primarily developed non-U.S./non-Canadian international equity universe; no alternative official benchmark was preferred.
+- Cached S&P 500 TR rows for 2024-2025: 2024 `25.02%`, 2025 `17.88%`; cached USD total-return convention as of `2025-12-31`.
+- Calculations from official 2024-2025 rows: fund product `1.3866326800`, cumulative `38.6633%`, rounded-input CAGR `17.7554%`, population standard deviation `14.9850%`; management benchmark product `1.3623260400`, cumulative `36.2326%`, CAGR `16.7187%`; S&P product `1.4737357600`, cumulative `47.3736%`, CAGR `21.3975%`.
+- Active evidence: Excess CAGR `+1.0366 pp`, complete-year hit rate `1/2 = 50.00%`, cumulative relative wealth `+1.7842%`. This is `provisional` / `positive` evidence only; it is not called alpha and does not establish persistent manager skill.
+- Risk and continuity: two-year annual-path up/down count `2 / 0`; best `2025 +33.69%`; least positive `2024 +3.72%`; no complete-year down observation; daily NAV volatility, drawdown and recovery were not verified. June factsheet lists Jodi Love and Colin McQueen managed since 2023, Jordan Pryor and Richard Clattenburg since 2025; attribution remains at the adviser-process level.
+- Source conflict: current January 2026 summary prospectus reports turnover `34.7%`, while June 2026 factsheet reports `29.2%` for a one-year period ending 2025-12-31. Both are preserved rather than silently reconciled.
+- Source map: official factsheet `https://www.troweprice.com/literature/public/country/us/language/en/literature-type/quarterly-factsheet/sub-type/etf-single-class?productCode=INX`; official summary prospectus `https://www.troweprice.com/literature/public/country/us/language/en/literature-type/summary-prospectus/sub-type/etf?currency=USD&productCode=INX`; SEC exchange cross-check `https://www.sec.gov/Archives/edgar/data/1795351/000109926326000010/xslFormN-CEN_X05/primary_doc.xml`; secondary Schwab `https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=tous`; secondary AAII `https://www.aaii.com/etf/ticker/TOUS`.
+- Source integrity review: PASS — official identity, exchange, active equity eligibility, management benchmark, return definition, complete-year rows, secondary current YTD, and turnover conflict are separated and dated.
+- Calculation review: PASS — cumulative returns, CAGRs, annual standard deviation, active spread, hit rate, relative wealth and best/worst subset were recomputed from the stated compatible rows; 2023 partial year was excluded.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, active-management fields, risk/source sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the TOUS scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_TOUS Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## TOUS research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official active eligibility, issuer benchmark, compatible NAV rows, current secondary YTD, calculations and scheduled-local review passed with provisional evidence and source conflict disclosed.
+```
