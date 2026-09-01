@@ -392,3 +392,98 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official PXF evidence passed the scheduled-local checklist and the canonical performance page plus source batch were written.
+
+## FDRR evidence packet
+
+- Identity and eligibility: Fidelity identifies `FDRR` as the `Fidelity Dividend
+  ETF for Rising Rates`, listed on `NYSE Arca`, with inception `2016-09-12`.
+  The June 30, 2026 factsheet classifies the fund as `Domestic Equity` with
+  management style `Strategic Beta`. It normally invests at least 80% in
+  securities included in the `Fidelity Dividend Index for Rising Rates` or
+  related depositary receipts. Official source:
+  https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9880841.PDF.
+- Fund facts: gross/net expense ratio `0.15%`; portfolio assets `$708.8M`,
+  holdings `114`, 30-day SEC yield `2.10%`, beta `1.00`, standard deviation
+  `12.19%`, and tracking error `0.04%`, all in the issuer factsheet as of
+  `2026-06-30`. Fidelity's current quote page displayed market price `69.4146`
+  and NAV `69.242463`, but the capture did not expose a quote date; these are
+  recorded as context only and are not used as dated performance evidence.
+- Tracked index and benchmarks: Fidelity's index targets large- and mid-cap
+  dividend-paying companies expected to continue paying/growing dividends and
+  to have positive correlation to increasing 10-year U.S. Treasury yields.
+  Issuer benchmark is `Fidelity Dividend Index for Rising Rates`; secondary
+  benchmark is `Russell 1000 Index`; S&P 500 TR is retained only as a common
+  reference. The fund is rules-based/passive-index for this workflow, not an
+  actively managed or option-income product.
+- Return definition and annual rows: Fidelity defines NAV return as the closing
+  value of underlying securities at which the fund can create/redeem shares and
+  states that total returns include share-price changes and reinvestment of
+  dividends/capital gains. Complete 2017-2025 NAV TR rows are `19.51%, -3.23%,
+  26.55%, 8.22%, 26.02%, -9.45%, 13.61%, 20.29%, 21.18%`; the 2016 inception
+  cell is blank. Fidelity benchmark rows are `19.93%, -2.96%, 27.01%, 8.51%,
+  26.42%, -9.14%, 13.87%, 20.47%, 21.36%`; Russell 1000 rows are `21.69%,
+  -4.78%, 31.43%, 20.96%, 26.45%, -19.13%, 26.53%, 24.51%, 17.37%`.
+- Current official standardized fields: NAV TR YTD `8.18%`, 1-year `22.91%`,
+  3-year annualized `18.95%`, 5-year annualized `12.00%`, and since-inception
+  annualized `13.28%`, as of `2026-06-30`. These issuer windows are kept
+  separate from the calendar-row calculations.
+- Cached common benchmark: `S&P 500 Total Return`, USD, dividends reinvested,
+  complete 2017-2025 calendar years, as of `2025-12-31`. The rows are the
+  static skill convention: `21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%,
+  26.29%, 25.02%, 17.88%`; original URLs are retained in prior source batch
+  sections and the performance page.
+- Calculations: FDRR 2017-2025 product `2.9930889897`, cumulative `199.31%`,
+  normalized endpoints `100.00 → 299.31`, rounded-input CAGR `12.95%` over
+  `9.00` years; 2021-2025 product `1.8897526491`, cumulative `88.98%`, CAGR
+  `13.57%`. Fidelity index 2017-2025 cumulative `206.72%` / CAGR `13.26%` and
+  2021-2025 cumulative `91.23%` / CAGR `13.84%`; Russell 1000 cumulative
+  `248.32%` / CAGR `14.87%` and 2021-2025 cumulative `89.09%` / CAGR `13.59%`.
+  S&P 500 2017-2025 cumulative `255.78%` / CAGR `15.14%`; 2021-2025 cumulative
+  `96.17%` / CAGR `14.43%`. Complete-year count is `7 / 2`; best `2019 +26.55%`,
+  least positive `2020 +8.22%`, worst `2022 -9.45%`, least bad down year `2018
+  -3.23%`. Population annual-row standard deviation is `12.03%`; year-end path
+  drawdown approximation is `-9.45%` in 2022, with recovery by 2023.
+- Risk-adjusted evidence: Fidelity reports alpha `-0.14`, beta `1.00`, R-squared
+  `1.00`, relative volatility `1.00`, Sharpe `1.16`, standard deviation
+  `12.19%`, and tracking error `0.04%` versus the Fidelity index as of
+  `2026-06-30`. These are issuer measures and are not called arithmetic alpha.
+- Primary region: `United States` because the factsheet reports `94.36%`
+  domestic equities and labels the fund Domestic Equity as of 2026-06-30. The
+  performance page uses the existing breadcrumb and canonical
+  `geography/United-States` tag. Shared navigation and log files were dirty
+  before claim and are not in this card's output scope.
+
+## FDRR planned paths and local review
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_FDRR Performance.md` with the
+  canonical identity, passive/strategic-beta classification, 2017-2025 annual
+  table, official and common benchmarks, current fields, risk evidence, and
+  explicit partial-inception handling.
+- Update this source batch with the complete FDRR evidence and audit record.
+- The prior recovered source path `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`
+  was already dirty before this claim and is not overwritten. This card uses
+  the clean current run-1 source batch after the pre-write renew boundary.
+- Do not update `USA ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`,
+  or `log.md` because shared navigation/index/log reconciliation is outside
+  this card's clean scoped outputs; the performance page retains the required
+  breadcrumb and canonical region tag.
+- Source/data integrity: `PASS` — identity, domestic equity eligibility,
+  management mode, NAV TR basis, official benchmark, annual rows, current
+  standardized fields, quote-date limitation, and separate as-of dates
+  reconcile.
+- Calculation/ranking review: `PASS` — compounding, CAGRs, partial-inception
+  treatment, volatility, year counts, rankings, and annual-path drawdown
+  recompute from stated inputs; market-price figures are not mixed with NAV TR.
+- Format/graph review: `PASS` — Thai-first required sections, one annual table,
+  visible as-of dates, source links, existing breadcrumb, and canonical region
+  tag resolve.
+
+## FDRR research_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official FDRR evidence passed the scheduled-local checklist and the canonical performance page plus source batch were written.
