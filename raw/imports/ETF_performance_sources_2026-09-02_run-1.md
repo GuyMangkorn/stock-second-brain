@@ -184,6 +184,71 @@ confirmation: none
 code: durable-write-complete
 reason: Official FNDC evidence passed the scheduled-local checklist and the canonical performance page plus source batch were updated.
 
+## IVGAF / DFND evidence packet
+
+- Identity resolution: the input `IVGAF` is a secondary OTC alias for the
+  iShares Global Aerospace & Defence UCITS ETF U.S. Dollar (Accumulating),
+  ISIN `IE000U9ODG19`. Official iShares listings show the USD line as `DFND` on
+  SIX Swiss Exchange, listed 2024-04-30; London Stock Exchange `DFND` is a GBP
+  line and is not used as the USD canonical key. Official source:
+  https://www.ishares.com/uk/individual/en/products/334464/ishares-global-aerospace-defence-ucits-etf?siteEntryPassthrough=true&switchLocale=y.
+- Eligibility: iShares classifies the fund as `Equity` and `PASSIVE`, with
+  physical replicated exposure to developed-market aerospace and defence
+  equities. The selected USD accumulating class is not leverage, inverse,
+  option-income, fixed income, commodity, or multi-asset; incidental cash/
+  derivatives are not the return-defining structure.
+- Fund facts: share-class/fund launch `2024-02-01`; TER `0.35%`; accumulating;
+  current NAV `$9.73`, NAV TR YTD `7.13%`, net assets `$1,878,123,633` as of
+  2026-08-31; holdings `77` as of 2026-08-28; industrials `99.83%` and
+  cash/derivatives `0.19%` as of 2026-08-31.
+- Return definition and annual observation: the official July 2026 factsheet
+  states performance is on NAV basis with gross income reinvested where
+  applicable. Complete calendar performance reports 2025 share-class NAV TR
+  `54.55%` and benchmark `54.93%`; the 2024 cell is blank. No partial 2024
+  return is inferred.
+- Cached common benchmark: `S&P 500 Total Return`, USD, dividends reinvested,
+  as of 2025-12-31; 2025 row `17.88%`. It is a common reference, not DFND’s
+  issuer benchmark.
+- Calculations: only one complete annual observation is verified, so cumulative
+  and CAGR are both `54.55%` for 2025 and the up/down count is `1 / 0`. The
+  common-reference comparison is `54.55% - 17.88% = 36.67 pp`; it is a single-
+  year return difference and not alpha. Ten-year CAGR, volatility, maximum
+  drawdown, and recovery are not calculated because the history is insufficient.
+- Primary region: `International`, because the underlying exposure is global
+  developed-market aerospace and defence equities. The performance page uses
+  the existing breadcrumb and canonical tags `geography/International` and
+  `geography/global-developed`. Shared navigation and log files were dirty
+  before claim and are not in this card’s output scope.
+
+## IVGAF / DFND planned paths and local review
+
+- Create `wiki/analysis/performance/ETF_SIX_DFND Performance.md` with the
+  canonical USD listing, input-alias note, one complete annual row, current
+  fields, and explicit history/risk gaps.
+- Update this source batch with the evidence and audit record.
+- Do not update `International ETF.md`, `ETF Region Index.md`,
+  `ETF Performance Index.md`, or `log.md` because they were dirty before this
+  claim; navigation reconciliation is deferred.
+- Source/data integrity: `PASS` — alias/listing/currency, passive equity
+  eligibility, benchmark, NAV TR basis, annual row, current YTD and separate
+  as-of dates reconcile.
+- Calculation/ranking review: `PASS` — one-year return, reference comparison,
+  and inapplicable multi-year metrics follow the available history; no partial
+  2024 return is ranked.
+- Format/graph review: `PASS` — Thai-first required sections, one annual table,
+  visible as-of dates, source links, breadcrumb, and canonical region tags
+  resolve.
+
+## IVGAF / DFND research_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official DFND evidence passed the scheduled-local checklist and the canonical performance page plus source batch were written.
+
 ## LVHI evidence packet
 
 - Identity and eligibility: Franklin identifies `LVHI` as the `Franklin
