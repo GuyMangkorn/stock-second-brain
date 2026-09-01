@@ -101,6 +101,38 @@ durable_write: completed
 exhausted: false
 confirmation: none
 code: durable-write-complete
-reason: Official passive global small-cap identity, current NAV/YTD, annual NAV rows, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
+ reason: Official passive global small-cap identity, current NAV/YTD, annual NAV rows, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
 ```
 
+## WGQDF evidence packet
+
+- Input ticker: `WGQDF`; canonical identity: `LSE:GGRA`; legacy OTC alias `WGQDF`; fund: WisdomTree Global Quality Dividend Growth UCITS ETF - USD Acc; ISIN `IE00BZ56SW52`. The issuer listing table maps the USD London Stock Exchange line to `GGRA`; GBx line `GGRG` is the same ISIN but a different trading currency.
+- Official classification: `passive-index`; global developed-market quality/dividend-growth equity UCITS ETF. WisdomTree describes the fund as tracking the WisdomTree Global Developed Quality Dividend Growth Index, with a rules-based fundamentally weighted universe, quality/momentum risk screen, ESG exclusions and dividend-based weighting. Physical fully replicated; accumulating; no leverage, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified.
+- Official product page observations through `2026-08-28`: NAV `US$50.525`, fund AUM `US$1,705,874,426`, TER `0.38%`, inception `2016-06-03`, base currency USD, accumulating income, physical fully replicated. A second WisdomTree locale page displayed NAV `US$50.542` for the same date; this locale discrepancy is disclosed and the IE issuer page is retained as the canonical current-NAV source.
+- Official WisdomTree factsheet, document date `2026-07-31`, reports NAV/index performance in USD net of fees: fund YTD `7.28%`, QTR `5.03%`, 1-year `16.52%`, 3-year annualized `11.98%`, inception annualized `11.70%`; index YTD `7.38%`, QTR `5.10%`, 1-year `16.84%`, 3-year annualized `12.22%`, inception annualized `11.95%`. Performance below one year is cumulative.
+- Official complete calendar NAV/index rows from the same factsheet: fund `2017 27.99%`, `2018 -8.81%`, `2019 33.18%`, `2020 16.26%`, `2021 19.29%`, `2022 -13.88%`, `2023 18.26%`, `2024 8.98%`, `2025 16.33%`; index `28.42%`, `-8.63%`, `33.51%`, `16.51%`, `19.72%`, `-13.88%`, `18.49%`, `9.21%`, `16.58%`. The 2016 launch year is partial and excluded from ranking.
+- Return basis: USD `NAV Total Return` net of fees; accumulating income remains in NAV. The official issuer product page did not expose a newer NAV YTD field through `2026-08-28` in this capture. Secondary Cbonds reports LSE USD exchange-price return with payments YTD `+9.45%` through `2026-08-28`; it is retained as a date-stamped price-based cross-check and never merged into the NAV series. Borsa Italiana’s EUR trading-line YTD is a separate exchange observation and is not used for USD NAV TR.
+- Common S&P 500 Total Return reference uses cached USD dividend-reinvested rows for complete calendar years `2017-2025`: `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from official rounded annual rows: GGRA 2017-2025 product `2.7834091464`, cumulative `178.3409%`, rounded-input CAGR `12.0463%`; 2021-2025 product `1.5402260560`, cumulative `54.0226%`, CAGR `9.0227%`; population standard deviation `14.6637%`; `7 / 2` up/down years. Best `2019 +33.18%`; least positive `2024 +8.98%`; worst `2018 -8.81%`; least-bad down year `2018 -8.81%`.
+- Issuer-index calculations for the same rows: 2017-2025 cumulative `183.8914%`, rounded-input CAGR `12.2924%`; 2021-2025 cumulative `55.5389%`, CAGR `9.2365%`. The fund/index arithmetic tracking spread is `-0.2461 pp` CAGR over 2017-2025 and `-0.2138 pp` over 2021-2025; it is not called alpha.
+- S&P cached calculations: 2017-2025 cumulative `255.7781%`, rounded-input CAGR `15.1442%`; 2021-2025 cumulative `96.1696%`, CAGR `14.4264%`. GGRA’s arithmetic CAGR comparison is `-3.0979 pp` for 2017-2025 and `-5.4037 pp` for 2021-2025; these are reference comparisons, not manager-skill evidence.
+- Daily NAV maximum drawdown and recovery were not verified. The current NAV locale discrepancy and lack of a same-date issuer NAV YTD field are disclosed; no unsupported proxy is substituted for those gaps.
+- Source map: official product `https://www.wisdomtree.com/ie/products/equities/wisdomtree-global-quality-dividend-growth-ucits-etf---usd-acc`; official factsheet `https://dataspanapi.wisdomtree.com/pdr/documents/FACTSHEET/UCITS/EU/EN-GB/IE00BZ56SW52/`; OTC cross-check `https://stockanalysis.com/quote/otc/WGQDF/`; secondary current YTD `https://cbonds.fr/etf/6397/`; exchange metadata `https://www.borsaitaliana.it/borsa/etf/scheda/IE00BZ56SW52-ETFP.html`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — issuer identity, LSE USD canonical mapping, passive eligibility, index, inception, fees, physical/accumulating structure, annual NAV/index rows, current NAV and date-separated secondary YTD reconcile; the official locale NAV discrepancy is preserved as a disclosed conflict.
+- Calculation review: PASS — cumulative returns, available-period CAGRs, annual dispersion, S&P comparisons, tracking spreads, year counts and best/worst subsets were recomputed from the stated rounded rows; partial 2016 was excluded.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` and `geography/global-developed` tags, and existing breadcrumb targets resolve.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3/run-5 batches, and retained recovery artifacts were dirty before the WGQDF pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_LSE_GGRA Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## WGQDF research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive global developed equity identity, canonical LSE USD mapping, annual NAV/index rows, official July YTD, date-separated current secondary cross-check, calculations and scheduled-local review passed with NAV locale and daily drawdown gaps disclosed.
+```
