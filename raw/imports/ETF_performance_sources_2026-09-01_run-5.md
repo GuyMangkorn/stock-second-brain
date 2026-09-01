@@ -1,221 +1,43 @@
 ---
-type: source-batch
+type: etf-performance-source-batch
 workflow: check-etf-performance
-scope: research-queue
-updated: 2026-09-01
+run_date: 2026-09-01
+run_label: run-5
 execution_profile: scheduled-inline
-window: 2016-2025 plus current 2026 YTD
-return_basis: NAV total return
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 ---
 
-# ETF Performance Sources — 2026-09-01 Run 5
+# ETF Performance Sources — 2026-09-01 — run-5
 
-This dated batch records the source-backed evidence and scheduled-local pre-save review for cards processed by the retained `research-queue-manager` lease. Shared navigation/index files were already dirty before this run and remain outside each card's clean output scope.
+## EFAX — State Street SPDR MSCI EAFE Fossil Fuel Reserves Free ETF
 
-## DLS evidence packet
+- `entity_key`: `NYSE Arca:EFAX`; the issuer confirms NYSE Arca ticker `EFAX`, USD trading currency, listing `2016-10-25`, and fund inception `2016-10-24`.
+- Management mode: `passive-index`; the fund seeks to track the `MSCI EAFE ex Fossil Fuels Index` using an index-sampling strategy. The underlying exposure is developed-market equity outside the U.S. and Canada, so primary region is `International`.
+- Official product source: https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-msci-eafe-fossil-fuel-reserves-free-etf-efax — current fund facts as of 2026-08-31; NAV, price, holdings, characteristics, yields, and performance as of 2026-08-28/2026-07-31. NAV `US$56.03`, closing price `US$55.76`, premium/discount `-0.48%`, AUM `US$515.49M`, holdings `641`, P/B `2.43x`, forward P/E `16.76x`, fund distribution yield `3.04%`, and gross expense ratio `0.20%`.
+- Official standardized NAV performance as of 2026-07-31: YTD `10.16%`; 1-year `22.15%`; 3-year annualized `15.69%`; 5-year annualized `8.53%`; since-inception annualized `9.29%`. All results assume reinvested dividends and capital gains and are net of fund fees. Market-value returns remain separate.
+- Official factsheet: https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-efax.pdf — product information and performance as of 2026-06-30; NAV YTD `8.78%`, 1-year `18.61%`, 3-year annualized `16.37%`, 5-year annualized `8.43%`, and since-inception annualized `9.23%`.
+- SEC source: https://www.sec.gov/Archives/edgar/data/1168164/000119312526031207/d72607d497k.htm — January 31, 2026 summary prospectus; fund objective, 0.20% fee, index-sampling strategy, international equity risks, and year-end standardized returns as of 2025-12-31. The annual bar-chart values were not exposed in the reviewed HTML capture, so no annual NAV rows are invented or replaced by a secondary proxy.
+- Return basis: USD NAV Total Return with distributions reinvested and fund expenses reflected. A complete 10-year NAV window is not applicable because the verified inception is `2016-10-24`, which is under ten elapsed years at the current 2026-09-01 run date; raw endpoints are also not disclosed.
+- S&P 500 common reference: cached `S&P 500 Total Return` USD, dividends reinvested, complete calendar years 2016-2025, reference as of 2025-12-31. Rows: `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%`. These are not used to infer EFAX annual rankings.
+- Performance calculations: no EFAX calendar cumulative return, CAGR, up/down count, best/worst year, volatility, drawdown, or recovery was calculated because official annual NAV rows and daily NAV endpoints were not disclosed in the reviewed evidence. Issuer-reported period returns are retained with their own as-of date.
+- Planned durable path: create `wiki/analysis/performance/ETF_NYSE_ARCA_EFAX Performance.md`; create this source batch. Shared navigation/index files and `log.md` were intentionally not changed because they were already dirty before this card’s claim and must be preserved outside the scoped commit; the performance page retains the required breadcrumb and canonical geography tag.
 
-- Input ticker: `DLS`; canonical identity: `NYSE Arca:DLS`; fund: WisdomTree International SmallCap Dividend Fund; inception `2006-06-16`.
-- Official classification: `passive-index` international small-cap dividend equity ETF. WisdomTree describes tracking the WisdomTree International SmallCap Dividend Index; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
-- Official product snapshot as of `2026-08-31`: NAV `$89.743`, total assets `$1,090,377.49k`, shares outstanding `12,150,000`, net expense ratio `0.58%`, distribution yield `6.39%`, and 30-day SEC yield `3.12%`. The latest market price was `$89.450` as of `2026-08-28`, with premium/discount `-0.433%`; NAV and market-price dates are kept separate.
-- Official month-end performance as of `2026-07-31`: index YTD `8.77%`; NAV Total Return YTD `8.54%`, 1-year `18.29%`, 3-year `16.16%`, 5-year `7.25%`, 10-year average annual `7.69%`, and since inception `6.47%`. NAV total return reflects distributions reinvested and fund expenses; USD.
-- Official complete calendar NAV Total Return rows from the WisdomTree presentation dated `2026-03-31`: 2016 `7.00%`, 2017 `30.95%`, 2018 `-18.69%`, 2019 `22.11%`, 2020 `-1.23%`, 2021 `11.66%`, 2022 `-17.36%`, 2023 `15.40%`, 2024 `3.24%`, 2025 `33.49%`. The SEC prospectus independently corroborates the 2022 row at `-17.36%`; no conflict is established.
-- Official issuer benchmark metadata: WisdomTree International SmallCap Dividend Index (`WTISDI`). The common reference remains S&P 500 Total Return in USD with dividends reinvested; cached rows for 2016-2025 are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
-- Calculations from official DLS rows: 2016-2025 product `2.0165049887`, cumulative `101.6505%`, rounded-input CAGR `7.2680%`; 2021-2025 product `1.4674966327`, cumulative `46.7497%`, rounded-input CAGR `7.9738%`; 2016-2025 population standard deviation `17.5065%`; S&P 500 2016-2025 product `3.9832911148`, cumulative `298.3291%`, CAGR `14.8218%`; 2021-2025 S&P CAGR `14.4264%`.
-- Annual-path risk: `7 / 3` up/down years; best `2025 +33.49%`; least positive `2024 +3.24%`; worst `2018 -18.69%`; least-bad down year `2020 -1.23%`. The official presentation reports since-inception standard deviation `17.67%`, Sharpe `0.24`, information ratio `0.08`, down capture `95.51%`, and beta `0.95` as of `2026-03-31`. Daily NAV maximum drawdown and recovery were not verified.
-- Source map: official product/performance page `https://www.wisdomtree.com/us/products/equity/dls`; official presentation `https://www.wisdomtree.com/us/media/dls-presentation`; official index page `https://www.wisdomtree.com/us/indexes/wtisdi`; official factsheet `https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-dls-1050.ashx?la=en`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/1350487/000121465923010467/dls497k.htm`; S&P cached source URLs are the standard references recorded in the skill.
-- Source integrity review: PASS — official identity, exchange, passive-equity eligibility, current NAV/price and yield fields, month-end NAV total return, annual rows, benchmark metadata and market-price separation reconcile; issuer-reported 10-year average annual return has no disclosed raw endpoints and is not relabeled as independently calculated CAGR.
-- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, benchmark comparisons, year counts and best/worst subsets were recomputed from the stated official rows; no partial year was ranked.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the DLS scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: update `wiki/analysis/performance/ETF_NYSE_ARCA_DLS Performance.md`; create/update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+## Scheduled-inline local review
 
-## DLS research handoff
+- Review packet checked canonical exchange/ticker, identity, passive equity eligibility, index and region, NAV TR basis, currency, current and historical as-of dates, official source links, 10-year eligibility, benchmark cache, not-disclosed handling, one annual table, required sections, breadcrumb, and canonical tag.
+- Pre-save verdict: `PASS`. No material number lacks a source; no market-price return, unsupported annual proxy, or shorter-period 10-year claim is used. Daily-NAV risk evidence remains explicitly unresolved.
 
-```text
+## Item-scoped blocked card
+
+- `DFSB` was separately researched and routed `BLOCKED` with code `unsupported-etf-type`; official Dimensional and SEC materials classify it as the `Dimensional Global Sustainability Fixed Income ETF`, a global sustainability fixed-income fund outside this equity performance workflow. No performance page was planned for DFSB.
+
+### research_handoff
+
 status: PASS
 scope: item
 durable_write: completed
 exhausted: false
 confirmation: none
 code: durable-write-complete
-reason: Official identity, current NAV and performance fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with drawdown endpoint gaps disclosed.
-```
-
-## IHDG evidence packet
-
-- Input ticker: `IHDG`; canonical identity: `NYSE Arca:IHDG`; fund: WisdomTree International Hedged Quality Dividend Growth Fund; inception `2014-05-07`.
-- Official classification: `passive-index` international equity ETF with a systematic currency hedge. WisdomTree describes the fund as tracking the WisdomTree International Hedged Quality Dividend Growth Index; the hedge is implementation risk, not a leveraged, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff.
-- Official product snapshot as of `2026-08-28`: NAV `$53.716`, market price `$53.540`, premium/discount `-0.329%`, distribution yield `5.14%`, 30-day SEC yield `1.89%`, assets `$2,191,614.64k`, and aggregate hedge ratio `98.65%`. Net expense ratio is `0.58%` as of `2026-08-31`.
-- Official month-end performance as of `2026-07-31`: index YTD `10.09%`; NAV Total Return YTD `9.84%`, 1-year `20.00%`, 3-year `11.71%`, 5-year `7.82%`, 10-year average annual `10.34%`, and since inception `9.69%`. NAV total return includes reinvested distributions and fund expenses; USD.
-- The official IHDG factsheet dated `2026-06-30` independently reports NAV average annual returns of `18.05%`, `11.63%`, `8.14%`, `10.66%`, and `9.65%` for 1/3/5/10-year and since-inception periods respectively; the date difference explains the non-conflict with the newer product-page values. Raw endpoints for the issuer-reported 10-year average annual values are not disclosed.
-- Official complete calendar NAV Total Return rows from the WisdomTree presentation dated `2026-03-31`: 2016 `1.66%`, 2017 `21.47%`, 2018 `-11.71%`, 2019 `32.74%`, 2020 `10.78%`, 2021 `19.72%`, 2022 `-11.36%`, 2023 `19.55%`, 2024 `6.42%`, 2025 `14.32%`.
-- Official issuer benchmark metadata: WisdomTree International Hedged Quality Dividend Growth Index. The common reference remains S&P 500 Total Return in USD with dividends reinvested; cached rows for 2016-2025 are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
-- Calculations from official IHDG rows: 2016-2025 product `2.4744878981`, cumulative `147.4488%`, rounded-input CAGR `9.4835%`, population standard deviation `13.6465%`; 2021-2025 product `1.5434462374`, cumulative `54.3446%`, rounded-input CAGR `9.0682%`; S&P 500 2016-2025 product `3.9832911148`, cumulative `298.3291%`, CAGR `14.8218%`; S&P 2021-2025 CAGR `14.4264%`; relative wealth versus S&P `-37.8783%` for 2016-2025 and `-21.3208%` for 2021-2025.
-- Annual-path risk: `8 / 2` up/down years; best `2019 +32.74%`; least positive `2024 +6.42%`; worst `2018 -11.71%`; least-bad down year `2022 -11.36%`. Daily NAV maximum drawdown and recovery were not verified; the currency hedge does not remove equity, country, liquidity, dividend or tracking risk.
-- Source map: official product/performance page `https://www.wisdomtree.com/us/products/equity/ihdg`; official factsheet `https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-ihdg-1748.pdf`; official presentation `https://www.wisdomtree.com/us/media/ihdg-presentation`; official index page `https://www.wisdomtree.com/us/indexes/wtidhg`; S&P cached source URLs are the standard references recorded in the skill.
-- Source integrity review: PASS — official identity, exchange, passive-equity eligibility, current NAV/price/yield and hedge fields, date-separated rolling returns, annual rows, benchmark metadata and market-price separation reconcile; the 10-year reported average annual figures are not relabeled as independently calculated CAGRs.
-- Calculation review: PASS — cumulative returns, CAGRs, annual-path standard deviation, benchmark comparisons, year counts and best/worst subsets were recomputed from the stated official rows; no partial year was ranked.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required passive/index sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the IHDG scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_IHDG Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
-
-## IHDG research handoff
-
-```text
-status: PASS
-scope: item
-durable_write: completed
-exhausted: false
-confirmation: none
-code: durable-write-complete
-reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
-```
-
-## FDT evidence packet
-
-- Input ticker: `FDT`; canonical identity: `NASDAQ:FDT`; fund: First Trust Developed Markets ex-US AlphaDEX Fund; inception `2011-04-18`.
-- Official classification: `passive-index`/strategic-beta international equity ETF tracking the Nasdaq AlphaDEX Developed Markets Ex-US Index. The official factsheet describes the index as the fund's objective and gives Nasdaq as the exchange; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
-- Official current snapshot as of `2026-08-28`: NAV `USD 96.55`, market price `USD 96.23`, assets `USD 1,340,784,612`, holdings `300`, 30-day SEC yield `1.68%`; total expense ratio `0.80%` effective `2026-05-01`. NAV and market price are kept separate.
-- Official current performance as of `2026-07-31`: NAV YTD `16.08%`, 1-year `35.50%`, 3-year annualised `23.02%`, 5-year annualised `11.63%`, 10-year annualised `9.73%`, and since inception annualised `6.77%`.
-- Official FDT factsheet dated `2026-03-31` reports complete calendar-year NAV Total Return rows: 2016 `3.55%`, 2017 `33.57%`, 2018 `-19.52%`, 2019 `16.56%`, 2020 `4.61%`, 2021 `10.70%`, 2022 `-18.57%`, 2023 `13.89%`, 2024 `7.02%`, and 2025 `51.78%`. The factsheet defines NAV returns as including dividends and capital gains and notes the pre-2015-10-13 index-methodology history caveat.
-- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
-- Calculations from official FDT rows: 2016-2025 product `2.2634290290`, cumulative `126.3429%`, rounded-input CAGR `8.5117%`, population standard deviation `20.3118%`, 8 up/2 down years; 2021-2025 product `1.6676201870`, cumulative `66.7620%`, rounded-input CAGR `10.7693%`; best `2025 +51.78%`; least positive `2024 +7.02%`; worst `2018 -19.52%`; least-bad down year `2022 -18.57%`. S&P 500 reference CAGRs are `14.8218%` for 2016-2025 and `14.4264%` for 2021-2025.
-- Official 3-year risk fields as of `2026-03-31`: standard deviation `16.00%`, beta `1.15`, Sharpe `1.06`, correlation `0.93` versus MSCI World ex USA; the factsheet also presents an alpha field, which is not used as manager-skill evidence.
-- Source integrity review: PASS — official identity, passive/strategic-beta eligibility, index, current NAV/price/performance dates, annual rows and risk fields reconcile; the issuer's rolling 10-year return is kept separate from the calendar-row CAGR.
-- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, S&P reference comparisons, year counts and best/worst subsets were recomputed from the official rows; no partial year was ranked.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; index-methodology caveat is visible.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the FDT scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_FDT Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
-
-## FDT research handoff
-
-```text
-status: PASS
-scope: item
-durable_write: completed
-exhausted: false
-confirmation: none
-code: durable-write-complete
-reason: Official passive strategic-beta identity, current NAV/price/performance, complete calendar NAV rows, calculations, risk fields and scheduled-local review passed with index-history and drawdown caveats disclosed.
-```
-
-## BOTZ evidence packet
-
-- Input ticker: `BOTZ`; canonical identity: `NASDAQ:BOTZ`; fund: Global X Robotics & Artificial Intelligence ETF; inception `2016-09-12`.
-- Official classification: `passive-index` global thematic equity ETF tracking the Indxx Global Robotics & Artificial Intelligence Thematic Index (`IBOTZNT`). The official product page describes exposure to industrial robotics, automation, non-industrial robots and autonomous vehicles; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
-- Official current snapshot as of `2026-08-31`: NAV `USD 36.07`, market price `USD 35.89`, net assets `USD 3.44 billion`, total expense ratio `0.68%`, primary exchange Nasdaq, `61` holdings, and 30-day SEC yield `-0.06%`. NAV and market-price fields are kept separate.
-- Official BOTZ factsheet as of `2026-07-31`: NAV Total Return YTD `-1.53%`, 1-year `6.64%`, 3-year annualised `7.22%`, 5-year annualised `1.26%`, since inception annualised `9.72%`; market-price values `-2.74%`, `5.73%`, `6.83%`, `0.96%`, `9.59%`; index values `-1.28%`, `7.09%`, `7.65%`, `1.69%`, `10.13%`.
-- Official current SEC summary prospectus reports the complete calendar-year 2025 fund NAV return `13.71%`, underlying index `13.98%`, and since-inception/5-year values `10.54%`/`2.11%` for the fund and `10.95%`/`2.60%` for the index. This packet uses only the 2025 annual row; current official 2016-2024 annual rows were not established in the retrieved text and remain `not disclosed`.
-- Common S&P 500 Total Return reference for 2025 is the cached USD dividend-reinvested value `17.88%`, cached as of `2025-12-31`. The 2025 BOTZ-to-index gap is `-0.27` percentage points and BOTZ-to-S&P reference spread is `-4.17` percentage points; neither is called alpha.
-- Official risk/exposure fields as of `2026-07-31`: standard deviation `22.40%`; beta `1.68` versus S&P 500, `1.12` versus Nasdaq-100, and `1.28` versus MSCI EAFE. Sector exposures include Industrials `45.2%`, Information Technology `37.1%`, Health Care `8.1%`; country exposures include United States `32.13%`, Japan `31.43%`, China `18.52%`, and Switzerland `10.05%`. The official factsheet identifies BOTZ as non-diversified.
-- Source integrity review: PASS — official identity, passive thematic-equity eligibility, index, current NAV/market price, current performance dates, one complete 2025 annual row and risk fields reconcile. Missing annual history is disclosed rather than backfilled from price-only or secondary data.
-- Calculation review: PASS — 2025 implementation gap and S&P reference spread were recomputed from the stated official row; partial 2026 YTD was excluded from annual ranking. No unsupported CAGR or drawdown was introduced.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; the incomplete historical annual coverage is visible.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the BOTZ scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_BOTZ Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
-
-## BOTZ research handoff
-
-```text
-status: PASS
-scope: item
-durable_write: completed
-exhausted: false
-confirmation: none
-code: durable-write-complete
-reason: Official passive thematic-equity identity, current NAV and market price, latest official rolling performance, complete 2025 NAV row, risk fields, calculations and scheduled-local review passed with incomplete historical annual coverage disclosed.
-```
-
-## ICOW evidence packet
-
-- Input ticker: `ICOW`; canonical identity: `Cboe BZX:ICOW`; fund: Pacer Developed Markets International Cash Cows 100 ETF; inception `2017-06-16`.
-- Official classification: `passive-index` developed-markets ex-US equity ETF. The SEC summary prospectus states that the fund passively tracks the Pacer Developed Markets International Cash Cows 100 Index, uses a rules-based FCF-yield methodology, invests at least 80% in index/economic-equivalent securities, and generally uses replication. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
-- Official structural fields: total expense ratio `0.65%`; exchange `Cboe BZX`; universe is large/mid-cap non-U.S. developed-market companies derived from the FTSE Developed ex-US Index; 100 constituents selected and weighted by trailing twelve-month free cash flow with a 2% cap at rebalance.
-- Official SEC summary prospectus dated `2025-08-31`: 2024 return before taxes `-2.24%`, 5-year annualised `5.06%`, since-inception annualised `5.46%`; index comparison `-1.56%`, `5.98%`, `6.40%`; MSCI World broad-market comparison `18.67%`, `11.17%`, `10.90%`. These are issuer period metrics ending `2024-12-31` and are kept separate from current cross-check dates.
-- Current secondary cross-check as of `2026-07-31`: AAII reports NAV YTD `13.9%`, 1-year `32.2%`, 3-year annualised `15.8%`, and 5-year annualised `10.5%`. The official Pacer factsheet available in the packet is dated `2025-09-30`, so these fields are marked secondary and are not used to manufacture missing official calendar rows.
-- Official SEC calendar-year NAV rows from the current summary/prospectus and prior official summary: 2018 `-13.34%`, 2019 `17.23%`, 2020 `7.75%`, 2021 `10.62%`, 2022 `-7.43%`, 2023 `18.64%`, and 2024 `-2.24%`. The current SEC filing explicitly identifies the bar chart as calendar years ended December 31; 2017 is excluded because inception was during the year.
-- A secondary total-return page retrieved during research reports different overlapping values, including 2018 `-16.09%`, 2019 `17.91%`, 2020 `7.20%`, 2021 `11.52%`, 2022 `-7.98%`, 2023 `18.94%`, and 2024 `-2.59%`. This conflict is recorded; the official SEC fund NAV series is prioritized and the secondary series is not mixed into the annual table. Official 2025 and 2026 complete-year rows were not established and remain `not disclosed`.
-- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for 2018-2024: `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, cached as of `2025-12-31`.
-- Calculations from the seven official ICOW rows: 2018-2024 product `1.3000826942`, cumulative `30.0083%`, rounded-input CAGR `3.8201%`, population standard deviation `11.4394%`, 4 up/3 down years; 2021-2024 product `1.1876712641`, cumulative `18.7671%`, rounded-input CAGR `4.3936%`; best `2023 +18.64%`; least positive `2020 +7.75%`; worst `2018 -13.34%`; least-bad down year `2024 -2.24%`. S&P 500 reference CAGRs are `13.8370%` for 2018-2024 and `13.5790%` for 2021-2024.
-- Source integrity review: PASS — official identity, passive-equity eligibility, methodology, expense/inception fields and SEC calendar rows reconcile. The explicit conflict with the secondary total-return series is recorded and resolved by source priority; missing official 2025/2026 complete-year rows are not backfilled.
-- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, S&P reference comparisons, year counts and best/worst subsets were recomputed from the official rows; no partial inception/YTD period was ranked.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; source conflict and missing rows are visible in the durable page.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the ICOW scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: create `wiki/analysis/performance/ETF_CBOE_BZX_ICOW Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
-
-## ICOW research handoff
-
-```text
-status: PASS
-scope: item
-durable_write: completed
-exhausted: false
-confirmation: none
-code: durable-write-complete
-reason: Official passive developed-equity identity and methodology, SEC calendar NAV rows, current secondary cross-check, explicit source conflict resolution, calculations and scheduled-local review passed with missing 2025/2026 annual rows disclosed.
-```
-
-## GCOW evidence packet
-
-- Input ticker: `GCOW`; canonical identity: `Cboe BZX:GCOW`; fund: Pacer Global Cash Cows Dividend ETF; inception `2016-02-22`.
-- Official classification: `passive-index` global equity ETF tracking the Pacer Global Cash Cows Dividend Index. The strategy screens global large-cap stocks using free-cash-flow yield and dividend characteristics; the SEC summary prospectus identifies GCOW as listed on Cboe BZX and passively tracking the index. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
-- Official product/factsheet fields as of `2026-03-31`: NAV `USD 45.98`, total expense ratio `0.60%`, strategy benchmark `MSCI World Value Index`, official NAV annualised returns YTD `12.46%`, 1-year `30.59%`, 5-year `13.72%`, 10-year `10.15%`, and since inception `10.75%`. The factsheet's corresponding MSCI World Value figures are `1.18%`, `16.60%`, `9.59%`, `9.35%`, and `9.87%`.
-- Current secondary cross-check as of `2026-07-31`: AAII reports NAV YTD `14.7%`, 1-year `28.3%`, 3-year annualised `15.6%`, 5-year annualised `13.4%`, and 10-year annualised `9.8%`. This is used for current context only; the official Pacer factsheet remains the source for issuer strategy and dated benchmark fields.
-- Official Pacer GCOW summary/prospectus rows through complete calendar year `2024`: 2017 `20.63%`, 2018 `-7.56%`, 2019 `17.53%`, 2020 `-4.07%`, 2021 `13.86%`, 2022 `6.09%`, 2023 `13.69%`, and 2024 `3.56%`. A 2016 row is excluded because inception was during the year.
-- Secondary AAII calendar-year NAV row for `2025` is `27.60%`; it is explicitly marked in the durable page and calculations because a current official Pacer calendar row was not found in the retrieved official packet.
-- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for 2017-2025: `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
-- Calculations from eight official rows plus the explicitly marked rounded secondary 2025 row: 2017-2025 product `2.2815450934`, cumulative `128.1545%`, rounded-input CAGR `9.5982%`, population standard deviation `10.9080%`, 7 up/2 down years; 2021-2025 product `1.8147241197`, cumulative `81.4724%`, rounded-input CAGR `12.6580%`. S&P 500 reference CAGRs are `15.1442%` for 2017-2025 and `14.4264%` for 2021-2025. Best `2025 +27.60%`; least positive `2024 +3.56%`; worst `2018 -7.56%`; least-bad down year `2020 -4.07%`.
-- Source integrity review: PASS — official identity, passive-equity classification, issuer benchmark, expense/inception fields and official annual rows reconcile. The missing official 2025 annual row is disclosed and the secondary replacement is marked; no source conflict is hidden or treated as issuer data.
-- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, S&P reference comparisons, year counts and best/worst subsets were recomputed from the stated inputs; partial 2016 inception and 2026 YTD were excluded from annual ranking.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; secondary 2025 provenance is visible in the table and footnote.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the GCOW scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: create `wiki/analysis/performance/ETF_CBOE_BZX_GCOW Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
-
-## GCOW research handoff
-
-```text
-status: PASS
-scope: item
-durable_write: completed
-exhausted: false
-confirmation: none
-code: durable-write-complete
-reason: Official passive global-equity identity and index fields, official annual rows through 2024, explicitly marked secondary 2025 cross-check, current context, calculations and scheduled-local review passed with provenance and drawdown gaps disclosed.
-```
-
-## ISPFF evidence packet
-
-- Input ticker: `ISPFF`; canonical identity: `LSE:IDWP`; fund: iShares Developed Markets Property Yield UCITS ETF USD (Dist), ISIN `IE00B1FZS350`, inception `2006-10-20`. The official iShares listing table identifies the USD listing as London Stock Exchange ticker `IDWP`; `ISPFF` is retained only as the incoming OTC alias.
-- Official classification: `passive-index` equity ETF focused on listed real estate companies and REITs in developed markets. The official product page identifies the asset class as Real Estate and the KIID describes passive management; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified for this USD share class.
-- Official product snapshot as of `2026-08-28`: NAV `USD 25.65`, share-class net assets `USD 1,180,449,055`, fund net assets `USD 1,652,942,689`, total expense ratio `0.59%`, quarterly distribution, physical/optimised structure, and `46,013,444` shares outstanding. Official NAV Total Return YTD is `10.11%` as of `2026-08-27`; NAV and performance dates are kept separate.
-- Official benchmark metadata: `FTSE EPRA Nareit Developed Dividend+ Net Index in USD`; the product page reports `312` holdings as of `2026-08-27`, standard deviation `16.05%` and beta `0.998` as of `2026-07-31`.
-- Official iShares factsheet calendar-year NAV Total Return rows dated `2026-03-31`: 2016 `5.50%`, 2017 `10.59%`, 2018 `-5.80%`, 2019 `21.95%`, 2020 `-9.47%`, 2021 `25.18%`, 2022 `-24.33%`, 2023 `8.92%`, 2024 `1.00%`, 2025 `8.24%`. The same table reports benchmark rows `5.52%`, `10.53%`, `-5.75%`, `21.97%`, `-9.56%`, `25.28%`, `-24.17%`, `8.87%`, `1.06%`, `8.28%` respectively.
-- Official rolling NAV TR as of `2026-06-30`: 1-year `16.30%`, 3-year annualised `8.75%`, 5-year annualised `1.03%`, 10-year annualised `2.81%`, and since inception annualised `3.62%`. These are issuer-reported rolling metrics; raw endpoints are not disclosed, so the 10-year figure is not relabeled as an independently calculated CAGR.
-- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for complete calendar years 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
-- Calculations from the rounded official IDWP rows: 2016-2025 product `1.3676894500`, cumulative `36.7689%`, rounded-input CAGR `3.1808%`; 2021-2025 product `1.1279126597`, cumulative `12.7913%`, rounded-input CAGR `2.4366%`; population standard deviation `13.9470%`; 7 up/3 down years; best `2021 +25.18%`; least positive `2024 +1.00%`; worst `2022 -24.33%`; least-bad down year `2018 -5.80%`. S&P 500 reference CAGRs are `14.8218%` for 2016-2025 and `14.4264%` for 2021-2025.
-- Source integrity review: PASS — the OTC alias was resolved to the official USD LSE listing by the official listing table and ISIN; passive real-estate equity eligibility, NAV/performance date separation, calendar-year rows, FTSE benchmark rows, current YTD, rolling metrics and risk fields reconcile. The issuer-reported rolling figures are not used as independently calculated endpoint CAGRs.
-- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, benchmark comparisons, year counts and best/worst subsets were recomputed from the stated rounded rows; no partial year was ranked.
-- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; `LSE:IDWP` is used throughout the durable page.
-- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the ISPFF scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
-- Planned durable paths/change map: create `wiki/analysis/performance/ETF_LSE_IDWP Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
-- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
-
-## ISPFF research handoff
-
-```text
-status: PASS
-scope: item
-durable_write: completed
-exhausted: false
-confirmation: none
-code: durable-write-complete
-reason: Official passive real-estate equity identity, canonical USD LSE listing, current NAV and YTD, calendar NAV total-return rows, benchmark data, calculations and scheduled-local review passed with rolling-endpoint and drawdown gaps disclosed.
-```
+reason: Official EFAX performance evidence passed scheduled-local review and the scoped performance page and source batch were written.
