@@ -41,3 +41,31 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official EFAX performance evidence passed scheduled-local review and the scoped performance page and source batch were written.
+
+## IIXFF → LSE:IDFF — iShares MSCI AC Far East ex-Japan UCITS ETF
+
+- `entity_key`: `LSE:IDFF`; card input `IIXFF` is retained as the raw alias, while the official issuer page and factsheet identify the USD London Stock Exchange line as `IDFF` for share class ISIN `IE00B0M63730`. Other listing lines include GBP `IFFF` on LSE and USD `IFFF` on SIX; the USD LSE line is the canonical display line for this card.
+- Management mode: `passive-index`; physical replicated equity ETF; fund/share-class launch `2005-10-28`; primary underlying exposure is East Asia excluding Japan and India, so primary region is `Asia ex Japan`.
+- Official product source: https://www.ishares.com/uk/individual/en/products/251848/ishares-msci-ac-far-east-exjapan-ucits-etf — current NAV `US$96.75` as of 2026-08-27; NAV Total Return YTD `32.28%` as of 2026-08-26; holdings `423`, P/E `21.68x`, P/B `2.68x`, and 12-month trailing distribution yield `1.05%` as of 2026-08-28; 3-year beta `0.998` as of 2026-07-31; expense ratio `0.74%`; benchmark `MSCI All Country World Far East Ex Japan USD Index (USD)`.
+- Official factsheet: https://www.ishares.com/uk/individual/en/literature/fact-sheet/ifff-ishares-msci-ac-far-east-ex-japan-ucits-etf-fund-fact-sheet-en-gb.pdf?siteEntryPassthrough=true&switchLocale=y — USD distributing share class; performance/as-of 2026-06-30; official calendar NAV rows are `2016 5.50%`, `2017 41.19%`, `2018 -15.68%`, `2019 18.66%`, `2020 25.08%`, `2021 -8.92%`, `2022 -21.94%`, `2023 2.30%`, `2024 11.66%`, and `2025 39.91%`; benchmark rows are `6.21%, 42.16%, -15.14%, 19.45%, 26.04%, -8.42%, -21.57%, 3.00%, 12.42%, 40.69%`.
+- Return basis: USD NAV Total Return with gross income reinvested where applicable; market price is not mixed. The issuer factsheet also reports 5-year annualized `4.94%` and since-inception annualized `8.20%` as of 2026-06-30; these are retained as separate official fields, not substituted for the calendar CAGR.
+- Cached S&P 500 common reference: complete 2016-2025 USD Total Return calendar rows as of 2025-12-31: `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%`.
+- Calculations: IDFF 2016-2025 product `2.1181309`, cumulative `111.81%`, normalized endpoints `100.00 → 211.81`, rounded-input 10-year calendar CAGR `7.79%†`; 2021-2025 product `1.1362492`, cumulative `13.62%`, CAGR `2.59%`; S&P 500 cumulative `298.33%` / CAGR `14.82%`; S&P 2021-2025 cumulative `96.17%` / CAGR `14.43%`; population annual-return standard deviation `20.71%` for 2016-2025 and `20.92%` for 2021-2025.
+- Calendar ranking: `7 / 3` positive/negative years; best `2017 +41.19%`; least positive `2023 +2.30%`; worst `2022 -21.94%`; least bad down year `2021 -8.92%`. No partial year is ranked.
+- Risk evidence: official 3-year standard deviation `21.47%` and beta `0.998` are as of 2026-07-31; daily NAV observations sufficient for maximum drawdown/recovery and compatible risk-adjusted metrics were not verified. No market-price proxy is substituted.
+- Planned durable paths: create `wiki/analysis/performance/ETF_LSE_IDFF Performance.md`; update this shared source batch. Shared region/index/log files are not changed because they were dirty before the retained lease and must remain outside the scoped commit; the performance page carries the Asia ex Japan breadcrumb and canonical geography tag.
+
+## IIXFF scheduled-inline local review
+
+- Review packet checked raw-alias-to-USD-line reconciliation, exchange/display key, fund identity, passive physical equity eligibility, return basis/currency, official annual rows, cached S&P basis/window, calculations, as-of dates, distribution treatment, risk gaps, one-region assignment, required sections, breadcrumb, and source links.
+- Pre-save verdict: `PASS`. The 10-year label is limited to ten complete official calendar years and is marked `†` for rounded-input approximation; no current S&P YTD or daily drawdown is inferred.
+
+### research_handoff — IIXFF
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official IIXFF-to-IDFF performance evidence passed scheduled-local review and the scoped page and source batch were written.
