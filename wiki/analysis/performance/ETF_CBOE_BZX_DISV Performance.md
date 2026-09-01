@@ -13,11 +13,11 @@ management_benchmark: MSCI World ex USA Small Value Index (net dividends)
 track_record: provisional
 management_evidence: positive return-only
 risk_evidence: not-verified
-updated: 2026-08-17
+updated: 2026-09-01
 performance_as_of: 2025-12-31
 current_ytd_as_of: 2026-07-31
-price_nav_as_of: 2026-08-14
-source_batch: raw/imports/ETF_performance_sources_2026-08-17.md
+price_nav_as_of: 2026-08-31
+source_batch: raw/imports/ETF_performance_sources_2026-09-01_run-4.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -73,7 +73,7 @@ annual comparison นี้ใช้ cached USD Total Return convention ณ 2025
 - Least bad down year: ไม่พบข้อมูลที่ยืนยันได้
 - 2023-2025 cumulative / CAGR: 86.70% / 23.14%; S&P 500 TR: 86.12% / 23.01%
 - Official issuer 1-year NAV TR: 47.24% as of 2025-12-31; official since-inception annualized NAV TR: 14.78% as of 2025-12-31
-- Current date-to-date YTD*: 12.90% NAV as of 2026-07-31 from secondary Schwab performance data
+- Current date-to-date YTD*: 12.90% NAV as of 2026-07-31 from secondary Schwab performance data; secondary closing price US$44.63 as of 2026-08-31
 
 ## Risk read-through
 
@@ -84,7 +84,7 @@ Population standard deviation ของ official 2023-2025 annual rows อยู
 แต่มีเพียงสามปี จึงเป็นเพียง short-window descriptor. Official highest quarter
 คือ +15.12% ใน Q2 2025 และ lowest quarter -7.54% ใน Q4 2024. Secondary Schwab
 reports 3-year annualized NAV TR 22.40% as of 2026-07-31 and market price
-US$44.25 as of 2026-08-14; official daily NAV history for a reproducible
+US$44.63 as of 2026-08-31; official daily NAV history for a reproducible
 maximum drawdown and recovery was not verified.
 
 ## Active management read-through
@@ -109,3 +109,4 @@ maximum drawdown and recovery was not verified.
 - Official Cboe listing: https://www.cboe.com/us/equities/listings/listed_products/symbols/DISV
 - Secondary current-performance cross-check: https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=disv
 - Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+- Current source batch: [[ETF_performance_sources_2026-09-01_run-4]]

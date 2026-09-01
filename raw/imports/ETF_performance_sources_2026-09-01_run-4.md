@@ -77,3 +77,37 @@ confirmation: none
 code: durable-write-complete
 reason: Official active eligibility, issuer benchmark, compatible NAV rows, current secondary YTD, calculations and scheduled-local review passed with provisional evidence and source conflict disclosed.
 ```
+
+## DISV evidence packet
+
+- Input ticker: `DISV`; canonical identity: `Cboe BZX:DISV`; fund: Dimensional International Small Cap Value ETF; inception `2022-03-23`; listing `2022-03-24`.
+- Official classification: `active-equity-long-only`, `systematic-active`. The February 28, 2026 SEC summary prospectus identifies an actively managed ETF investing primarily in small non-U.S. developed-market equities. Swaps, futures, options on futures and FX forwards are described for exposure, cash-flow or currency management; they do not define a leveraged, inverse, option-income, bond, commodity, currency, multi-asset or derivative-heavy payoff.
+- Official SEC expense/turnover fields: total annual fund operating expenses `0.42%` (`0.39%` management fee plus `0.03%` other expenses) and latest fiscal-year portfolio turnover `8%`; official Dimensional quick-guide cross-check reports gross `0.43%` / net `0.42%` as of `2025-12-31`.
+- Official annual NAV Total Return chart rows for complete years: 2023 `19.60%`, 2024 `6.02%`, 2025 `47.24%`; the 2022 launch year is partial and excluded. Official return definition includes reinvested distributions and fund expenses; market-price return remains separate.
+- Official management benchmark: `MSCI World ex USA Small Value Index (net dividends)`, selected because the SEC performance table explicitly identifies it as an additional index with a similar investment universe. The broader MSCI World ex USA Index and S&P 500 remain rejected as management comparators; S&P is only the common reference benchmark.
+- Official annualized performance as of `2025-12-31`: 1-year DISV NAV `47.24%` versus selected management benchmark `38.55%`; since-inception annualized DISV `14.78%` versus benchmark `10.38%`. Compatible annual benchmark rows and a complete-year hit rate are not disclosed.
+- Latest secondary current fields as of `2026-07-31`: NAV YTD `12.90%`, 1-year `31.90%`, 3-year annualized `22.40%`, since-inception annualized `15.90%`; secondary closing price `$44.63` as of `2026-08-31`.
+- Cached S&P 500 TR rows for the same years: 2023 `26.29%`, 2024 `25.02%`, 2025 `17.88%`; cached USD total-return convention as of `2025-12-31`.
+- Calculations from official DISV rows: product `1.8669664000`, cumulative `86.6966%`, rounded-input CAGR `23.1420%`, population standard deviation `17.1513%`; S&P product `1.8611808913`, cumulative `86.1181%`, CAGR `23.0066%`.
+- Active evidence: official since-inception Excess CAGR `+4.40 pp` over 2022-03-23 to 2025-12-31; `management_evidence: positive return-only` because compatible annual benchmark rows/hit rate are unavailable; `track_record: provisional` at the latest evidence date. This is not called alpha.
+- Annual-path risk: up/down count `3 / 0`; best `2025 +47.24%`; least positive `2024 +6.02%`; no complete down year; official highest quarter `+15.12%` in 2025 Q2 and lowest quarter `-7.54%` in 2024 Q4. Daily NAV max drawdown and exact recovery were not verified, so `risk_evidence: not-verified`.
+- Adviser/team continuity: Dimensional describes an integrated research, portfolio-design, portfolio-management and trading process; the SEC prospectus names Jed S. Fogdall, Joseph F. Hohn and Joel P. Schneider as portfolio managers since inception and Brendan J. McAndrews since 2025. Attribute evidence to the disclosed strategy/adviser process rather than individual skill.
+- Source map: official SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/1816125/000181612526000069/c497k.htm`; official Dimensional fund page `https://www.dimensional.com/us-en/funds/disv/international-small-cap-value`; official ETF quick guide `https://my.dimensional.com/chmedia/282748/source/dimensional-etf-quick-guide.pdf`; official Cboe listing `https://www.cboe.com/us/equities/listings/listed_products/symbols/DISV`; secondary Schwab `https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=disv`; official S&P index page `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — active equity eligibility, process subtype, strategy-aligned benchmark, official annual rows, secondary current fields, return bases, dates and derivative-use context reconcile; no predecessor mutual-fund history is merged.
+- Calculation review: PASS — annual cumulative return, CAGR, standard deviation, S&P comparison, year counts and best/worst subsets were recomputed from the stated official rows; the official since-inception benchmark spread is kept separate from annual hit-rate evidence.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, active-management fields, risk/source sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the DISV scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: update `wiki/analysis/performance/ETF_CBOE_BZX_DISV Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## DISV research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official active classification, strategy benchmark, annual NAV rows, current secondary YTD, calculations and scheduled-local review passed with return-only evidence and risk gaps disclosed.
+```
