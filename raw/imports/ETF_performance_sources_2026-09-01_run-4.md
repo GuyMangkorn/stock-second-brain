@@ -175,3 +175,36 @@ confirmation: none
 code: durable-write-complete
 reason: Official active equity eligibility, strategy-aligned benchmark, date-separated current fields, one compatible calendar row, calculations and scheduled-local review passed with provisional evidence disclosed.
 ```
+
+## CGIE evidence packet
+
+- Input ticker and identity: `CGIE`; official Capital Group product page identifies `Capital Group International Equity ETF`, `NYSE Arca, Inc.`, CUSIP `14021M107`, inception `2023-09-26`. The fund is nondiversified and the issuer describes it as actively managed rather than index-replicating.
+- Official classification: `active-equity-long-only`, fundamental growth-oriented developed ex-U.S. equity with a multi-manager process. The summary prospectus says the fund invests primarily in common stocks outside the U.S., normally at least `80%` in equity securities and `80%` outside the U.S., with emerging markets up to `10%`; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Management process: Capital Group uses multiple portfolio managers with portfolio segments and collaborative research/long-term decision-making; investment focus includes strong management, growing markets, strong balance sheets, dividends and long-term growth/resilience.
+- Official fees and current product fields: expense ratio `0.54%`, one-year turnover `43%`, assets `$2,491.5m` as of `2026-08-27`, issuers `72` as of `2026-07-31`, NAV `$38.00` and market price `$37.97` as of `2026-08-28`, premium/discount `-0.08%` and 30-day median bid/ask spread `0.03%` as of `2026-08-28`.
+- Official rolling fields from the issuer product page: daily YTD NAV/market price `10.17% / 10.14%` as of `2026-08-28`; month-end YTD NAV/market price/index `7.21% / 7.12% / 11.59%`, 1-year `17.06% / 17.00% / 24.33%`, and since-inception annualized `16.51% / 16.45% / 20.03%` as of `2026-07-31`. The newer daily-YTD fields are kept separate from the older synchronized benchmark rows.
+- Official calendar-year NAV/market-price/index rows from the Q2 2026 fact sheet: 2024 `1.09% / 0.72% / 3.82%`; 2025 `28.00% / 28.10% / 31.22%`. The fact sheet marks 2021-2023 as `n/a`; 2023 is also a partial inception year and is excluded from complete-year rankings.
+- Cached S&P 500 TR rows for the matching complete years: 2024 `25.02%`, 2025 `17.88%`; cached USD total-return convention as of `2025-12-31` and used only as a common reference, not as the management benchmark.
+- Calculations from official CGIE NAV rows: product `1.2939520000`, cumulative `29.3952%`, rounded-input 2024-2025 CAGR `13.7520%`, population standard deviation `13.4550%`; benchmark product `1.3623260400`, cumulative `36.2326%`, CAGR `16.7187%`; S&P product `1.4737357600`, cumulative `47.3736%`, CAGR `21.3975%`; two-year CAGR spread `-2.9667 pp`; cumulative relative wealth `-5.0189%`; annual benchmark spreads `-2.73 pp` and `-3.22 pp`; hit rate `0/2`.
+- Annual-path risk: fund up/down `2 / 0`; best `2025 +28.00%`; least positive `2024 +1.09%`; no complete down year. Capital Group's official risk article cites Morningstar data for `2023-09-26` to `2026-03-31`: CGIE standard deviation `12.4%` versus MSCI EAFE `13.4%` and beta `0.9` versus `1.0`; daily NAV maximum drawdown, recovery duration and risk-adjusted persistence were not verified.
+- Portfolio/risk snapshot: official product page reports asset mix as of `2026-07-31` of non-U.S. equities `96.8%`, U.S. equities `0.7%`, cash/equivalents/other `2.5%`; valuation as of `2026-06-30` is P/B `2.8x` versus index `2.2x` and P/E `17.6x` versus `15.8x`. Key risks include foreign-market/currency, emerging-market, growth-style/sector, nondiversification, active-process and ETF trading risks.
+- Active evidence: `management_evidence: negative return-only`; the fund lagged the official strategy-aligned benchmark in both compatible complete years and in the synchronized issuer YTD/1-year/since-inception rows. This is not called alpha; evidence remains `provisional` because only two complete calendar years are available.
+- Source map: official product/performance page `https://www.capitalgroup.com/individual/investments/exchange-traded-funds/details/cgie`; official Q2 2026 fact sheet `https://www.capitalgroup.com/individual/pdf/shareholder/ETGEFSX-311-1039178.pdf`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/1969445/000005193125000866/cgie497k.htm`; official risk article `https://www.capitalgroup.com/advisor/investments/equities/perspectives/5-things-to-know-about-CGIE.html`; S&P official index page `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — official identity, exchange, active-equity eligibility, strategy-aligned benchmark, return basis, date-separated current fields, official annual rows, market-price separation and risk context reconcile; 2023 partial year and daily drawdown/recovery gaps are explicitly disclosed.
+- Calculation review: PASS — cumulative returns, CAGRs, population standard deviation, benchmark spreads, relative wealth, hit rate and annual-path best/worst subsets were recomputed from the stated rounded official rows; no partial year was ranked and no arithmetic excess return was called alpha.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, active-management fields, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the CGIE scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_CGIE Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## CGIE research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official active classification, strategy-aligned benchmark, current date-separated fields, complete 2024-2025 NAV rows, calculations and scheduled-local review passed with provisional negative evidence and risk gaps disclosed.
+```
