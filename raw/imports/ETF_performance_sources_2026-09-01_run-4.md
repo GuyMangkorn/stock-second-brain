@@ -208,3 +208,36 @@ confirmation: none
 code: durable-write-complete
 reason: Official active classification, strategy-aligned benchmark, current date-separated fields, complete 2024-2025 NAV rows, calculations and scheduled-local review passed with provisional negative evidence and risk gaps disclosed.
 ```
+
+## IDV evidence packet
+
+- Input ticker and identity: `IDV`; official iShares/BlackRock materials identify `iShares International Select Dividend ETF`, `Cboe BZX`, CUSIP `464288448`, equity asset class and fund launch date `2007-06-11`.
+- Official classification: `passive-index`; the fund seeks to track the `Dow Jones EPAC Select Dividend Index (USD) NTR`, an international developed-market high-dividend equity index. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official current fields as of `2026-08-28`: NAV `$44.65`, closing price `$44.65`, net assets `$8,645,789,767`, shares outstanding `193,650,000`, premium/discount `0.01%`, number of holdings `100`, P/B `1.28x`, P/E `13.27x`, and 30-day median bid/ask spread `0.02%`. Official factsheet/product fields as of `2026-07-31` include 30-day SEC yield `4.61%`, trailing 12-month yield `5.08%`, standard deviation `13.19%` and beta `0.41`.
+- Official rolling performance from the iShares page as of `2026-06-30`: NAV/market-price/index YTD `8.33% / 8.21% / 8.04%`, 1-year `27.05% / 26.89% / 27.49%`, 3-year annualized `23.50% / 23.48% / 23.68%`, 5-year `11.96% / 11.93% / 11.89%`, 10-year `10.10% / 10.00% / 10.07%`, and since-inception annualized `4.79% / 4.78% / 4.84%`.
+- Later official current YTD field: NAV Total Return `16.78%` as of `2026-08-28`; no same-date index or market-price YTD was inferred, and the later daily field remains separate from the June 30 synchronized table.
+- Official calendar rows from the current June 30, 2026 iShares factsheet for 2021-2025: NAV/market-price/index `2021 11.97% / 12.02% / 11.61%`, `2022 -6.75% / -6.31% / -7.25%`, `2023 10.75% / 10.38% / 11.30%`, `2024 3.97% / 4.08% / 3.66%`, `2025 51.69% / 52.12% / 52.14%`.
+- Prior official source-batch rows for 2016-2020 NAV TR: `2016 7.70%`, `2017 19.60%`, `2018 -10.50%`, `2019 23.10%`, `2020 -5.40%`; these are preserved from `raw/imports/ETF_performance_sources_2026-07-14.md` and no unsupported market-price or index rows are added for that sub-window.
+- Cached S&P 500 TR rows for 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; cached USD total-return convention as of `2025-12-31`, used only as a common reference.
+- Calculations from official/prior official IDV NAV rows: 2016-2025 product `2.448377368679`, cumulative `144.8377%`, rounded-input CAGR `9.3674%`, population standard deviation `17.2689%`; S&P product `3.983291114783`, cumulative `298.3291%`, CAGR `14.8218%`; 2021-2025 IDV product `1.823724568931`, cumulative `82.3725%`, CAGR `12.7696%`, population standard deviation `19.8285%`; S&P 2021-2025 CAGR `14.4264%`; relative wealth versus S&P `-38.5338%` for 2016-2025 and `-7.0333%` for 2021-2025.
+- Annual-path risk: 2016-2025 fund up/down `7 / 3`; best `2025 +51.69%`; least positive `2024 +3.97%`; worst `2018 -10.50%`; least bad down year `2020 -5.40%`. Current official 2021-2025 benchmark hit rate is `3/5`; because the fund is passive, this is implementation/tracking evidence, not management skill.
+- Portfolio/risk read-through: the Aug. 28 official snapshot reports Financials `33.75%`, Energy `14.42%`, Utilities `11.86%`, Communication `8.91%`; United Kingdom `17.35%`, France `13.98%`, Spain `12.54%`, Italy `9.83%`. Key risks include dividend cuts, value/factor and rate sensitivity, sector/country concentration, foreign currency/market exposure, liquidity, and ETF trading frictions; daily NAV max drawdown and recovery duration were not verified.
+- Source map: official iShares product/performance page `https://www.ishares.com/us/products/239499/IDV`; official fact sheet `https://www.ishares.com/us/literature/fact-sheet/idv-ishares-international-select-dividend-etf-fund-fact-sheet-en-us.pdf`; official BlackRock overview `https://www.blackrock.com/us/individual/products/239499/overview`; prior official 2016-2020 table `raw/imports/ETF_performance_sources_2026-07-14.md`; S&P official index page `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — official Cboe identity, equity/index eligibility, benchmark, return basis, current NAV/YTD fields, date-separated rolling values, current 2021-2025 annual rows, prior official 2016-2020 rows, and market-price separation reconcile; unsupported older market-price/index rows and daily drawdown/recovery are disclosed as gaps.
+- Calculation review: PASS — cumulative returns, CAGRs, population standard deviation, S&P common-reference comparison, relative wealth, year counts, best/worst subsets and 2021-2025 benchmark hit rate were recomputed from the stated rows; no manager alpha claim is made.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, passive/index fields, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/recovery artifacts and pre-existing dirty outputs remain outside this card's scope; they were not modified or included in the IDV scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: update `wiki/analysis/performance/ETF_CBOE_IDV Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## IDV research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-equity classification, issuer benchmark, current date-separated fields, official 2021-2025 rows plus prior official 2016-2020 rows, calculations and scheduled-local review passed with older sub-window gaps disclosed.
+```
