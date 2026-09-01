@@ -43,3 +43,34 @@ confirmation: none
 code: durable-write-complete
 reason: Official identity, current NAV and performance fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with drawdown endpoint gaps disclosed.
 ```
+
+## IHDG evidence packet
+
+- Input ticker: `IHDG`; canonical identity: `NYSE Arca:IHDG`; fund: WisdomTree International Hedged Quality Dividend Growth Fund; inception `2014-05-07`.
+- Official classification: `passive-index` international equity ETF with a systematic currency hedge. WisdomTree describes the fund as tracking the WisdomTree International Hedged Quality Dividend Growth Index; the hedge is implementation risk, not a leveraged, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff.
+- Official product snapshot as of `2026-08-28`: NAV `$53.716`, market price `$53.540`, premium/discount `-0.329%`, distribution yield `5.14%`, 30-day SEC yield `1.89%`, assets `$2,191,614.64k`, and aggregate hedge ratio `98.65%`. Net expense ratio is `0.58%` as of `2026-08-31`.
+- Official month-end performance as of `2026-07-31`: index YTD `10.09%`; NAV Total Return YTD `9.84%`, 1-year `20.00%`, 3-year `11.71%`, 5-year `7.82%`, 10-year average annual `10.34%`, and since inception `9.69%`. NAV total return includes reinvested distributions and fund expenses; USD.
+- The official IHDG factsheet dated `2026-06-30` independently reports NAV average annual returns of `18.05%`, `11.63%`, `8.14%`, `10.66%`, and `9.65%` for 1/3/5/10-year and since-inception periods respectively; the date difference explains the non-conflict with the newer product-page values. Raw endpoints for the issuer-reported 10-year average annual values are not disclosed.
+- Official complete calendar NAV Total Return rows from the WisdomTree presentation dated `2026-03-31`: 2016 `1.66%`, 2017 `21.47%`, 2018 `-11.71%`, 2019 `32.74%`, 2020 `10.78%`, 2021 `19.72%`, 2022 `-11.36%`, 2023 `19.55%`, 2024 `6.42%`, 2025 `14.32%`.
+- Official issuer benchmark metadata: WisdomTree International Hedged Quality Dividend Growth Index. The common reference remains S&P 500 Total Return in USD with dividends reinvested; cached rows for 2016-2025 are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from official IHDG rows: 2016-2025 product `2.4744878981`, cumulative `147.4488%`, rounded-input CAGR `9.4835%`, population standard deviation `13.6465%`; 2021-2025 product `1.5434462374`, cumulative `54.3446%`, rounded-input CAGR `9.0682%`; S&P 500 2016-2025 product `3.9832911148`, cumulative `298.3291%`, CAGR `14.8218%`; S&P 2021-2025 CAGR `14.4264%`; relative wealth versus S&P `-37.8783%` for 2016-2025 and `-21.3208%` for 2021-2025.
+- Annual-path risk: `8 / 2` up/down years; best `2019 +32.74%`; least positive `2024 +6.42%`; worst `2018 -11.71%`; least-bad down year `2022 -11.36%`. Daily NAV maximum drawdown and recovery were not verified; the currency hedge does not remove equity, country, liquidity, dividend or tracking risk.
+- Source map: official product/performance page `https://www.wisdomtree.com/us/products/equity/ihdg`; official factsheet `https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-ihdg-1748.pdf`; official presentation `https://www.wisdomtree.com/us/media/ihdg-presentation`; official index page `https://www.wisdomtree.com/us/indexes/wtidhg`; S&P cached source URLs are the standard references recorded in the skill.
+- Source integrity review: PASS — official identity, exchange, passive-equity eligibility, current NAV/price/yield and hedge fields, date-separated rolling returns, annual rows, benchmark metadata and market-price separation reconcile; the 10-year reported average annual figures are not relabeled as independently calculated CAGRs.
+- Calculation review: PASS — cumulative returns, CAGRs, annual-path standard deviation, benchmark comparisons, year counts and best/worst subsets were recomputed from the stated official rows; no partial year was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required passive/index sections, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the IHDG scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_IHDG Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## IHDG research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
+```
