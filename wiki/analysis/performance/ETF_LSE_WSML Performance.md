@@ -3,19 +3,19 @@ type: etf-performance
 instrument_type: ETF
 entity_key: LSE:WSML
 ticker: WSML
-input_ticker: WSML
+input_ticker: IMWSF
 input_alias: IMWSF
 exchange: London Stock Exchange
 fund: iShares MSCI World Small Cap UCITS ETF
 tracked_index: MSCI World Small Cap Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-09-01
+updated: 2026-09-02
 performance_as_of: 2026-08-28
 calendar_years_as_of: 2025-12-31
 current_ytd_as_of: 2026-08-28
 price_nav_as_of: 2026-08-28
 fund_facts_as_of: 2026-08-28
-source_batch: raw/imports/ETF_performance_sources_2026-09-01_run-6.md
+source_batch: raw/imports/ETF_performance_sources_2026-09-02_run-1.md
 return_basis: NAV total return
 return_currency: USD
 tags:
@@ -26,7 +26,7 @@ tags:
   - geography/global-developed
 ---
 
-# WSML Performance
+# IMWSF / WSML Performance
 
 > Navigation: [[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]
 
@@ -93,4 +93,4 @@ verified in this lean capture, so the values remain `ไม่พบข้อม
 - [Fidelity IMWSF OTC profile](https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=IMWSF) — secondary OTC alias / ISIN cross-check; not used for NAV Total Return ranking
 - [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common benchmark definition
 - Cached S&P 500 TR references: [S&P DJI historical research](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2023 U.S. Equities Market Attributes](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021 S&P DJI market attributes](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [2025 S&P DJI market attributes](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/); cached reference as of 31 ธ.ค. 2025
-- ETF source batch: [[ETF_performance_sources_2026-09-01_run-6]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-09-02_run-1]] | [[ETF Performance Index]]
