@@ -75,6 +75,36 @@ code: durable-write-complete
 reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
 ```
 
+## ICOW evidence packet
+
+- Input ticker: `ICOW`; canonical identity: `Cboe BZX:ICOW`; fund: Pacer Developed Markets International Cash Cows 100 ETF; inception `2017-06-16`.
+- Official classification: `passive-index` developed-markets ex-US equity ETF. The SEC summary prospectus states that the fund passively tracks the Pacer Developed Markets International Cash Cows 100 Index, uses a rules-based FCF-yield methodology, invests at least 80% in index/economic-equivalent securities, and generally uses replication. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official structural fields: total expense ratio `0.65%`; exchange `Cboe BZX`; universe is large/mid-cap non-U.S. developed-market companies derived from the FTSE Developed ex-US Index; 100 constituents selected and weighted by trailing twelve-month free cash flow with a 2% cap at rebalance.
+- Official SEC summary prospectus dated `2025-08-31`: 2024 return before taxes `-2.24%`, 5-year annualised `5.06%`, since-inception annualised `5.46%`; index comparison `-1.56%`, `5.98%`, `6.40%`; MSCI World broad-market comparison `18.67%`, `11.17%`, `10.90%`. These are issuer period metrics ending `2024-12-31` and are kept separate from current cross-check dates.
+- Current secondary cross-check as of `2026-07-31`: AAII reports NAV YTD `13.9%`, 1-year `32.2%`, 3-year annualised `15.8%`, and 5-year annualised `10.5%`. The official Pacer factsheet available in the packet is dated `2025-09-30`, so these fields are marked secondary and are not used to manufacture missing official calendar rows.
+- Official SEC calendar-year NAV rows from the current summary/prospectus and prior official summary: 2018 `-13.34%`, 2019 `17.23%`, 2020 `7.75%`, 2021 `10.62%`, 2022 `-7.43%`, 2023 `18.64%`, and 2024 `-2.24%`. The current SEC filing explicitly identifies the bar chart as calendar years ended December 31; 2017 is excluded because inception was during the year.
+- A secondary total-return page retrieved during research reports different overlapping values, including 2018 `-16.09%`, 2019 `17.91%`, 2020 `7.20%`, 2021 `11.52%`, 2022 `-7.98%`, 2023 `18.94%`, and 2024 `-2.59%`. This conflict is recorded; the official SEC fund NAV series is prioritized and the secondary series is not mixed into the annual table. Official 2025 and 2026 complete-year rows were not established and remain `not disclosed`.
+- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for 2018-2024: `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, cached as of `2025-12-31`.
+- Calculations from the seven official ICOW rows: 2018-2024 product `1.3000826942`, cumulative `30.0083%`, rounded-input CAGR `3.8201%`, population standard deviation `11.4394%`, 4 up/3 down years; 2021-2024 product `1.1876712641`, cumulative `18.7671%`, rounded-input CAGR `4.3936%`; best `2023 +18.64%`; least positive `2020 +7.75%`; worst `2018 -13.34%`; least-bad down year `2024 -2.24%`. S&P 500 reference CAGRs are `13.8370%` for 2018-2024 and `13.5790%` for 2021-2024.
+- Source integrity review: PASS — official identity, passive-equity eligibility, methodology, expense/inception fields and SEC calendar rows reconcile. The explicit conflict with the secondary total-return series is recorded and resolved by source priority; missing official 2025/2026 complete-year rows are not backfilled.
+- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, S&P reference comparisons, year counts and best/worst subsets were recomputed from the official rows; no partial inception/YTD period was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; source conflict and missing rows are visible in the durable page.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the ICOW scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_CBOE_BZX_ICOW Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## ICOW research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive developed-equity identity and methodology, SEC calendar NAV rows, current secondary cross-check, explicit source conflict resolution, calculations and scheduled-local review passed with missing 2025/2026 annual rows disclosed.
+```
+
 ## GCOW evidence packet
 
 - Input ticker: `GCOW`; canonical identity: `Cboe BZX:GCOW`; fund: Pacer Global Cash Cows Dividend ETF; inception `2016-02-22`.
