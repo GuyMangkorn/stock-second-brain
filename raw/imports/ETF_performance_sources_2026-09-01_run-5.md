@@ -75,6 +75,35 @@ code: durable-write-complete
 reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
 ```
 
+## GCOW evidence packet
+
+- Input ticker: `GCOW`; canonical identity: `Cboe BZX:GCOW`; fund: Pacer Global Cash Cows Dividend ETF; inception `2016-02-22`.
+- Official classification: `passive-index` global equity ETF tracking the Pacer Global Cash Cows Dividend Index. The strategy screens global large-cap stocks using free-cash-flow yield and dividend characteristics; the SEC summary prospectus identifies GCOW as listed on Cboe BZX and passively tracking the index. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official product/factsheet fields as of `2026-03-31`: NAV `USD 45.98`, total expense ratio `0.60%`, strategy benchmark `MSCI World Value Index`, official NAV annualised returns YTD `12.46%`, 1-year `30.59%`, 5-year `13.72%`, 10-year `10.15%`, and since inception `10.75%`. The factsheet's corresponding MSCI World Value figures are `1.18%`, `16.60%`, `9.59%`, `9.35%`, and `9.87%`.
+- Current secondary cross-check as of `2026-07-31`: AAII reports NAV YTD `14.7%`, 1-year `28.3%`, 3-year annualised `15.6%`, 5-year annualised `13.4%`, and 10-year annualised `9.8%`. This is used for current context only; the official Pacer factsheet remains the source for issuer strategy and dated benchmark fields.
+- Official Pacer GCOW summary/prospectus rows through complete calendar year `2024`: 2017 `20.63%`, 2018 `-7.56%`, 2019 `17.53%`, 2020 `-4.07%`, 2021 `13.86%`, 2022 `6.09%`, 2023 `13.69%`, and 2024 `3.56%`. A 2016 row is excluded because inception was during the year.
+- Secondary AAII calendar-year NAV row for `2025` is `27.60%`; it is explicitly marked in the durable page and calculations because a current official Pacer calendar row was not found in the retrieved official packet.
+- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for 2017-2025: `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from eight official rows plus the explicitly marked rounded secondary 2025 row: 2017-2025 product `2.2815450934`, cumulative `128.1545%`, rounded-input CAGR `9.5982%`, population standard deviation `10.9080%`, 7 up/2 down years; 2021-2025 product `1.8147241197`, cumulative `81.4724%`, rounded-input CAGR `12.6580%`. S&P 500 reference CAGRs are `15.1442%` for 2017-2025 and `14.4264%` for 2021-2025. Best `2025 +27.60%`; least positive `2024 +3.56%`; worst `2018 -7.56%`; least-bad down year `2020 -4.07%`.
+- Source integrity review: PASS — official identity, passive-equity classification, issuer benchmark, expense/inception fields and official annual rows reconcile. The missing official 2025 annual row is disclosed and the secondary replacement is marked; no source conflict is hidden or treated as issuer data.
+- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, S&P reference comparisons, year counts and best/worst subsets were recomputed from the stated inputs; partial 2016 inception and 2026 YTD were excluded from annual ranking.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; secondary 2025 provenance is visible in the table and footnote.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the GCOW scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_CBOE_BZX_GCOW Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## GCOW research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive global-equity identity and index fields, official annual rows through 2024, explicitly marked secondary 2025 cross-check, current context, calculations and scheduled-local review passed with provenance and drawdown gaps disclosed.
+```
+
 ## ISPFF evidence packet
 
 - Input ticker: `ISPFF`; canonical identity: `LSE:IDWP`; fund: iShares Developed Markets Property Yield UCITS ETF USD (Dist), ISIN `IE00B1FZS350`, inception `2006-10-20`. The official iShares listing table identifies the USD listing as London Stock Exchange ticker `IDWP`; `ISPFF` is retained only as the incoming OTC alias.
