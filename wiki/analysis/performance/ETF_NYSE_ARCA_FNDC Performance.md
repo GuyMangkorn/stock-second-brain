@@ -7,12 +7,13 @@ exchange: NYSE Arca
 fund: Schwab Fundamental International Small Equity ETF
 tracked_index: RAFI Fundamental High Liquidity Developed ex US Small Index (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-08-17
+updated: 2026-09-02
 performance_as_of: 2026-07-31
 rolling_10y_as_of: 2026-07-31
 current_ytd_as_of: 2026-07-31
-price_nav_as_of: 2026-08-14
-source_batch: raw/imports/ETF_performance_sources_2026-08-17.md
+price_nav_as_of: 2026-08-28
+fund_facts_as_of: 2026-08-28 / 2026-07-31
+source_batch: raw/imports/ETF_performance_sources_2026-09-02_run-1.md
 return_basis: NAV total return
 tags:
   - analysis/etf-performance
@@ -31,7 +32,8 @@ FNDC ให้ cumulative NAV Total Return `118.08%` หรือ rounded-input 
 และ CAGR `8.25%`, เทียบ S&P 500 TR ที่ `96.17%` / `14.43%` ในช่วงเดียวกัน.
 ผลตอบแทนรายปีเป็นบวก 8 ปีและลบ 2 ปี; ปีที่ดีที่สุดคือ 2025 ที่ `35.79%` และ
 แย่ที่สุดคือ 2018 ที่ `-18.77%`. Current YTD NAV TR ล่าสุดจาก issuer คือ
-`10.96%` ณ 31 ก.ค. 2026; NAV ล่าสุดคือ `$51.40` ณ 14 ส.ค. 2026.
+`10.96%` ณ 31 ก.ค. 2026; NAV ล่าสุดคือ `$51.52` และ market price คือ `$51.34`
+ณ 28 ส.ค. 2026.
 
 ## Performance check
 
@@ -44,7 +46,8 @@ FNDC ให้ cumulative NAV Total Return `118.08%` หรือ rounded-input 
 - Common benchmark: `S&P 500 Total Return` (USD, dividends reinvested; ใช้เป็น reference benchmark ไม่ใช่ issuer benchmark)
 - Official rolling 10-year NAV TR: `8.48%` average annual return ณ 31 ก.ค. 2026; issuer ไม่เปิดเผย raw rolling endpoints ใน capture ที่ตรวจ
 - Calendar-window calculation: 2016-01-01 ถึง 2025-12-31; Start TR index `100.00`, End TR index `218.08`, Years `10.00`; สูตร `(218.08 / 100.00)^(1 / 10.00) - 1 = 8.11%`. เป็น rounded-input approximation จาก annual rows ทางการ 10 แถว โดยค่า source precision ของ 2024 และ 2025 ถูกเก็บใน source batch
-- Coverage: annual NAV TR rows ครบ 2016-2025 ไม่มี proxy หรือ partial-year marker; current YTD เป็น month-end 31 ก.ค. 2026 และ quote เป็น 14 ส.ค. 2026
+- Current official snapshot: NAV `$51.52`, market price `$51.34`, premium/discount `-0.35%`, net assets `$3.189B`, and `1,588` holdings as of 28 ส.ค. 2026; portfolio turnover `25.61%` as of 31 ก.ค. 2026. These dates are separate from the YTD field.
+- Coverage: annual NAV TR rows ครบ 2016-2025 ไม่มี proxy หรือ partial-year marker; current YTD เป็น month-end 31 ก.ค. 2026 และ quote/NAV snapshot เป็น 28 ส.ค. 2026
 
 | ปี | ETF NAV TR | S&P 500 TR |
 |---|---:|---:|
@@ -97,4 +100,4 @@ underperformance และ tracking/index-reconstitution risk. Distribution yiel
 - [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common benchmark definition
 - [S&P 500 current return page](https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?parentIdentifier=f33eb5c2-5231-4c16-bc59-38407c3d2f2f&sourceIdentifier=home-page) — official current S&P 500 TR field `14.04%` displayed for 10 ส.ค. 2026
 - [S&P 500 cached source 1](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [source 2](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [source 3](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-2021/), [source 4](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/) — cached 2016-2025 USD gross S&P 500 TR rows
-- Source batch: [[ETF_performance_sources_2026-08-17]]
+- Source batch: [[ETF_performance_sources_2026-09-02_run-1]]

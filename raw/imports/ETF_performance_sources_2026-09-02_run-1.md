@@ -111,3 +111,75 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official WSML evidence passed the scheduled-local checklist and the canonical performance page plus source batch were updated.
+
+## FNDC evidence packet
+
+- Identity and eligibility: Schwab identifies `FNDC` as the `Schwab Fundamental
+  International Small Equity ETF`, listed on NYSE Arca, with inception
+  `2013-08-15`, management style `Passive`, and objective to track small
+  non-U.S. developed-market companies weighted by fundamental size and weight.
+  Official source: https://www.schwabassetmanagement.com/products/fndc —
+  reviewed through 2026-08-28.
+- Fund facts: Total Expense Ratio `0.390%`; NAV `$51.52`, market price
+  `$51.34`, premium/discount `-0.35%`, net assets `$3,189,048,898.14`, and
+  holdings `1,588` as of 2026-08-28; portfolio turnover `25.61%` as of
+  2026-07-31. The current issuer YTD NAV field is `10.96%` as of 2026-07-31.
+  These are separate as-of dates.
+- Tracked index: current `RAFI Fundamental High Liquidity Developed ex US Small
+  Index (Net)`; the issuer discloses that the prior `Russell RAFI Developed ex
+  US Small Company Index (Net)` changed effective 2024-06-21. The benchmark
+  change is disclosed rather than backfilled as one unchanged series.
+- Return definition and annual rows: official SEC/Schwab material defines the
+  annual figures as NAV total return with distributions reinvested, net of
+  expenses, in USD. Complete 2016-2025 annual NAV TR rows are `8.87%, 29.04%,
+  -18.77%, 20.02%, 7.11%, 9.83%, -14.82%, 15.21%, 1.57%, 35.79%`.
+  Official sources: https://www.sec.gov/Archives/edgar/data/1454889/000088454626000301/c497k.htm
+  and https://www.schwabassetmanagement.com/resource/etf-investment-performance-summary.
+- Cached common benchmark: `S&P 500 Total Return`, USD, dividends reinvested,
+  complete 2016-2025 calendar years, as of 2025-12-31. The rows are the static
+  skill convention: `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%,
+  26.29%, 25.02%, 17.88%`; original URLs are retained in the WSML section
+  above and in the performance page.
+- Calculations: FNDC annual product `2.1808`, cumulative `118.08%`, normalized
+  endpoints `100.00 → 218.08`, and rounded-input calendar CAGR `8.11%` over
+  `10.00` years; 2021-2025 product `1.4865`, cumulative `48.65%`, CAGR `8.25%`.
+  S&P 500 2016-2025 cumulative `298.33%`, CAGR `14.82%`; 2021-2025 cumulative
+  `96.17%`, CAGR `14.43%`. The FNDC complete-year count is `8 / 2` up/down;
+  best `2025 +35.79%`, least positive `2024 +1.57%`, worst `2018 -18.77%`,
+  least bad down year `2022 -14.82%`.
+- Risk evidence: issuer 3-year standard deviation `15.14%` as of 2026-07-31;
+  annual-row sample standard deviation `17.24%` is kept separate. The annual
+  path shows a year-end drawdown approximation of `-18.77%` in 2018 and recovery
+  above the prior year-end high by 2020; daily maximum drawdown and recovery
+  duration are not verified.
+- Primary region: `International` because the fund owns developed ex-U.S.
+  small-cap equities. The existing breadcrumb and `geography/International`
+  tag are preserved. Shared navigation and log paths were dirty before claim
+  and are not in this card’s output scope.
+
+## FNDC planned paths and local review
+
+- Update `wiki/analysis/performance/ETF_NYSE_ARCA_FNDC Performance.md` with the
+  current issuer snapshot, separated as-of dates, and this source-batch link.
+- Update this source batch with the complete FNDC evidence and audit record.
+- Do not update `International ETF.md`, `ETF Region Index.md`,
+  `ETF Performance Index.md`, or `log.md` in this scoped card because they were
+  pre-existing dirty paths; current navigation targets already resolve.
+- Source/data integrity: `PASS` — identity, passive equity classification, NAV
+  TR basis, benchmark change, annual rows, current YTD and separate fund-fact
+  dates reconcile.
+- Calculation/ranking review: `PASS` — compounding, CAGRs, year counts,
+  rankings, and risk distinction recompute from stated inputs; no price return
+  is mixed with NAV TR.
+- Format/graph review: `PASS` — Thai-first required sections, one annual table,
+  source links, breadcrumb, and canonical region tag resolve.
+
+## FNDC research_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official FNDC evidence passed the scheduled-local checklist and the canonical performance page plus source batch were updated.
