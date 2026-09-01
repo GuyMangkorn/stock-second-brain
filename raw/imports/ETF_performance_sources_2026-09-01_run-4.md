@@ -241,3 +241,35 @@ confirmation: none
 code: durable-write-complete
 reason: Official passive-equity classification, issuer benchmark, current date-separated fields, official 2021-2025 rows plus prior official 2016-2020 rows, calculations and scheduled-local review passed with older sub-window gaps disclosed.
 ```
+
+## FGD evidence packet
+
+- Input ticker and identity: `FGD`; official First Trust materials identify `First Trust Dow Jones Global Select Dividend Index Fund`, primary listing `NYSE Arca`, CUSIP `33734X200`, ISIN `US33734X2009`, and inception `2007-11-21`.
+- Official classification: `passive-index`, global developed-market equity income fund. The fund seeks results corresponding generally to the `Dow Jones Global Select Dividend Index`; it normally invests at least `90%` of net assets in index securities, with annual reconstitution/rebalance. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Index methodology: the universe begins with developed-market country sub-indices of the S&P Global Broad Market Index, excludes REITs, applies dividend-quality/liquidity screens, selects the top 100 high-yielding securities, yield-weights them, caps indicated yield at `20%` and individual weights at `10%`.
+- Official fees and current fields: total/net expense ratio `0.55%`; contractual expense cap `0.60%` at least through `2027-01-31`; price-history snapshot as of `2026-08-28` reports market price `$35.63`, NAV `$35.61`, midpoint `$35.61`, volume `118,105`, and net assets `$1,646,832,667`; holdings `99` as of `2026-08-03`.
+- Official fund facts: 30-day SEC yield `4.76%`, 12-month distribution rate `5.04%`, and index yield `5.95%` as of `2026-07-31`; P/E `11.12x`, P/B `1.17x`, and maximum/median/minimum market caps `$176.793bn / $15.25bn / $0.916bn` as of `2026-06-30`.
+- Official synchronized rolling performance as of `2026-06-30`: NAV/market-price/tracked-index YTD `7.37% / 7.70% / 7.58%`; 1-year `22.81% / 22.88% / 23.35%`; 3-year annualized `20.78% / 20.86% / 20.97%`; 5-year `10.60% / 10.58% / 10.70%`; 10-year `9.55% / 9.59% / 9.80%`; since-inception `5.77% / 5.78% / 5.92%`. Fund-minus-tracked-index spreads are `-0.21`, `-0.54`, `-0.19`, `-0.10`, `-0.25`, and `-0.15` percentage points respectively; these are implementation/tracking observations, not alpha.
+- Official complete calendar NAV rows from the 30 June 2026 factsheet: 2016 `11.80%`, 2017 `17.62%`, 2018 `-12.40%`, 2019 `19.88%`, 2020 `-4.59%`, 2021 `20.41%`, 2022 `-6.98%`, 2023 `8.19%`, 2024 `5.63%`, 2025 `44.22%`. The same factsheet supplies broad references, not annual rows for the tracked Dow Jones Global Select Dividend Index: Dow Jones World Developed Markets `8.11%`, `23.32%`, `-9.20%`, `27.38%`, `16.42%`, `20.59%`, `-18.25%`, `23.50%`, `17.50%`, `22.17%`; MSCI World `7.51%`, `22.40%`, `-8.71%`, `27.67%`, `15.90%`, `21.82%`, `-18.14%`, `23.79%`, `18.67%`, `21.09%`. Annual tracked-index hit rate is not inferred.
+- Cached S&P 500 TR rows for the same 2016-2025 USD reference convention: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`; cached as of `2025-12-31`.
+- Calculations from official FGD NAV rows: 2016-2025 product `2.4322404021`, cumulative `143.2240%`, rounded-input CAGR `9.2951%`, population standard deviation `15.6914%`; 2021-2025 product `1.8460301227`, cumulative `84.6030%`, CAGR `13.0441%`, population standard deviation `17.3083%`. MSCI World 2016-2025 product `3.1531955215`, cumulative `215.3196%`, CAGR `12.1696%`; cached S&P product `3.9832911148`, cumulative `298.3291%`, CAGR `14.8218%`. Relative wealth versus MSCI World is `-22.8643%` and versus S&P is `-38.9389%`; 2021-2025 relative wealth versus S&P is `-5.8962%`.
+- Annual-path risk: `7 / 3` up/down years; best `2025 +44.22%`; least positive `2024 +5.63%`; worst down year `2018 -12.40%`; least bad down year `2022 -6.98%`. Official 3-year fields as of `2026-06-30` report standard deviation `12.39%`, issuer-reported alpha field `5.72`, beta `0.68`, Sharpe `1.23`, and correlation `0.69` versus MSCI World. The alpha field is not used as manager-skill evidence; daily NAV drawdown and recovery were not verified.
+- Source map: official fund summary `https://www.ftportfolios.com/Retail/etf/etfsummary.aspx?Ticker=FGD`; official factsheet `https://www.ftportfolios.com/Common/ContentFileLoader.aspx?ContentGUID=978c0ace-c2ed-4b33-a779-bb829f1e4631`; official price history `https://www.ftportfolios.com/Retail/EtfPriceHistory.aspx?Ticker=FGD`; official summary prospectus `https://www.ftportfolios.com/Funds/ETF/Prospectus/FAN`; official index components `https://www.ftportfolios.com/Retail/Index/IndexComponents.aspx?IndexID=84`; S&P official index page `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — official identity, passive-equity eligibility, tracked benchmark, return basis, current NAV/price/fund facts, date-separated rolling data, annual NAV rows, broad-reference separation and cached S&P convention reconcile; annual tracked-index rows and daily drawdown/recovery remain explicitly undisclosed.
+- Calculation review: PASS — cumulative returns, CAGRs, population standard deviations, broad-reference comparisons, relative wealth, year counts and best/worst subsets were recomputed from the stated rounded official rows; no annual tracked-index hit rate or manager alpha was inferred.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, passive/index fields, canonical `geography/International` tag and breadcrumb resolve to existing pages.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/recovery artifacts and pre-existing dirty outputs remain outside this card's scope; they were not modified or included in the FGD scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_FGD Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-4.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## FGD research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive-equity identity, tracked-index rolling evidence, complete NAV calendar rows, current price/fund facts, calculations and scheduled-local review passed with annual tracked-index and drawdown gaps disclosed.
+```
