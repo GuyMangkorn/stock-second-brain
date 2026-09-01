@@ -7,7 +7,7 @@ exchange: NYSE Arca
 fund: State Street SPDR S&P International Small Cap ETF
 tracked_index: S&P Developed Ex-U.S. Under USD2 Billion Index
 benchmark: S&P 500 Total Return
-updated: 2026-08-29
+updated: 2026-09-01
 performance_as_of: 2026-07-31
 rolling_10y_as_of: 2026-07-31
 current_ytd_as_of: 2026-07-31
@@ -15,13 +15,15 @@ nav_as_of: 2026-08-26
 market_price_as_of: 2026-08-26
 fund_facts_as_of: 2026-08-26
 risk_as_of: 2026-08-25
-source_batch: raw/imports/ETF_performance_sources_2026-08-29.md
-return_basis: NAV total return
+source_batch: raw/imports/ETF_performance_sources_2026-09-01_run-6.md
+return_basis: NAV total return; distributions reinvested; net of fund expenses
+primary_region: International
 tags:
   - analysis/etf-performance
   - ticker/GWX
   - geography/International
   - geography/international-ex-US
+  - geography/global-developed
 ---
 
 # GWX Performance
@@ -76,13 +78,14 @@ Max drawdown, recovery, volatility และ positive/negative-year counts ย�
 
 - Confirmed structure: passive objective to track the S&P Developed Ex-U.S. Under USD2 Billion Index before fees and expenses; the index targets developed-market companies outside the U.S. with market capitalization under US$2 billion.
 - Current refresh: the official State Street July 2026 table provides standardized rolling/period returns through 2026-07-31, but it does not provide GWX calendar-year NAV rows for 2016-2025 or raw 10-year endpoints.
+- Fresh source recheck on 2026-09-01 exposed an older July 09, 2026 page snapshot in the dynamic text capture, while the later official 2026-08-26 NAV/price snapshot retained above remains the higher-quality dated observation. The discrepancy is disclosed rather than silently replacing later data with the stale capture.
 - The reviewed secondary annual-return table conflicted with the official prospectus 2025 NAV result, so no secondary proxy is saved and the annual window remains disclosed rather than mixed.
 
 ## Sources
 
-- [Official GWX issuer product page](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx) — identity, passive objective, exchange, inception, index, current NAV/AUM, holdings, sector snapshot and standardized performance; accessed 2026-08-29
+- [Official GWX issuer product page](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx) — identity, passive objective, exchange, inception, index, current NAV/AUM, holdings, sector snapshot and standardized performance; later dated capture through 2026-08-26 retained, dynamic recheck 2026-09-01 disclosed above
 - [Official GWX factsheet](https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gwx.pdf) — NAV/market-value/index standardized returns and fund characteristics; prior as-of data retained where explicitly dated
 - [Official SEC GWX summary prospectus](https://www.sec.gov/Archives/edgar/data/1168164/000119312526031217/d833468d497k.htm) — passive strategy, risk, 2025 year-end average annual returns, and best/worst quarters; filed 2026-01-30; accessed 2026-08-17
 - [S&P 500 index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common benchmark definition
 - Cached S&P 500 TR references: [S&P DJI historical research](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2023 U.S. Equities Market Attributes](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), and [2025 S&P DJI market attributes](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/); reference as-of 2025-12-31
-- ETF source batch: [[ETF_performance_sources_2026-08-29]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-09-01_run-6]] | [[ETF Performance Index]]

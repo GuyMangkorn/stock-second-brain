@@ -271,4 +271,36 @@ confirmation: none
 code: durable-write-complete
 reason: Official active long-only identity and quantitative process, predecessor-history caveat, official current and rolling returns, secondary complete calendar rows, official MSCI EAFE benchmark rows, calculations and scheduled-local review passed with trading-halt and daily drawdown gaps disclosed.
 ```
+
+## GWX evidence packet
+
+- Input ticker and canonical identity: `GWX`; `NYSE Arca:GWX`; fund: State Street SPDR S&P International Small Cap ETF; inception `2007-04-20`; listing currency USD; semi-annual distributions.
+- Official classification: `passive-index`; State Street says GWX seeks to track the `S&P Developed Ex-U.S. Under USD2 Billion Index` before fees and expenses through index sampling. The fund targets developed-market companies outside the United States with market capitalization under USD 2 billion. No leveraged, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified.
+- Later dated official fund/market snapshot retained from the State Street product page: NAV `USD 46.56`, closing price `USD 46.71`, bid/ask midpoint `USD 46.58`, premium/discount `0.05%`, shares outstanding `20.20M` and AUM `USD 940.44M`, all as of `2026-08-26`.
+- Official current characteristics retained from the same later dated capture as of `2026-08-26`: `2,081` holdings, P/B `1.36`, forward P/E `14.21`, weighted average market cap `USD 1,639.23M`, 30-day SEC yield `1.87%`, fund distribution yield `2.57%`, and index dividend yield `2.41%`. Sector weights as of `2026-08-25` were Industrials `22.35%`, Materials `15.62%`, Information Technology `13.94%`, Consumer Discretionary `10.87%`, and Financials `8.78%`.
+- Official standardized NAV Total Return from the later State Street capture as of `2026-07-31`: YTD `7.28%`, 1-year `19.13%`, 3-year annualized `13.82%`, 5-year annualized `5.15%`, 10-year annualized `6.86%`, since-inception annualized `4.49%`; issuer-index YTD `5.91%` and 10-year `6.64%`. Returns assume reinvestment of dividends/capital gains and are net of fund fees. Market-value return remains separate.
+- Fresh source recheck on `2026-09-01` reopened the same official product URL and the official June 2026 factsheet. The dynamic text capture exposed an older page snapshot with NAV `USD 43.22`, AUM `USD 860.02M`, holdings `2,083` and performance only through `2026-06-30`; those values are earlier than the retained 2026-08-26 / 2026-07-31 observations. The later dated official capture is kept, and the stale dynamic snapshot is recorded as a source-timing conflict rather than used to overwrite newer evidence.
+- Official factsheet as of `2026-06-30` separately reports NAV YTD `8.18%`, market-value return `8.52%`, issuer-index return `6.77%`, 1-year NAV `21.24%`, 3-year `15.84%`, 5-year `5.32%`, 10-year `7.58%`, and holdings `2,083`; these are not mixed with the later July/August fields. The SEC prospectus separately reports 10-year NAV TR `7.00%` through `2025-12-31`; it is a different as-of observation.
+- Complete calendar-year NAV rows, raw 10-year endpoints, volatility/beta and daily NAV history sufficient for maximum drawdown/recovery were not disclosed in the reviewed official sources. A secondary annual-return table was reviewed previously but excluded because its 2025 `35.86%` conflicted with the official SEC prospectus NAV result `35.00%` through 2025-12-31. No secondary annual proxy, calendar CAGR, up/down count or best/worst ranking is saved.
+- Common S&P 500 Total Return reference remains the cached USD dividend-reinvested convention for 2016-2025, as of `2025-12-31`; it is shown only as a common reference and is not used to fill GWX annual gaps. Cached 2021-2025 S&P rows are `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`.
+- Source map: official product `https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-international-small-cap-etf-gwx`; official factsheet `https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gwx.pdf`; SEC prospectus `https://www.sec.gov/Archives/edgar/data/1168164/000119312526031217/d833468d497k.htm`; prior secondary conflict source `https://assetsanalyzer.com/etf/GWX/performance`; cached S&P definition `https://www.spglobal.com/spdji/en/indices/equity/sp-500/` and workflow cache.
+- Source integrity review: PASS with disclosed source-timing conflict — issuer identity, exchange, passive structure, benchmark, later dated NAV/price/fund facts, July standardized returns and earlier June factsheet are date-separated; the stale dynamic recheck is not substituted for later official observations.
+- Calculation review: PASS — only the official rolling fields and cached S&P reference claims are retained; no unsupported annual CAGR, risk statistic, drawdown, recovery or mixed-date calculation is produced.
+- Format and graph review: PASS for card-specific output — Thai-first narrative, one annual table with undisclosed GWX rows rather than a conflicted proxy, canonical `geography/International` and `geography/global-developed` tags, and existing breadcrumb targets resolve.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-5 batches and retained recovery artifacts were dirty before the GWX pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: refresh `wiki/analysis/performance/ETF_NYSE_ARCA_GWX Performance.md`; append this GWX evidence packet and handoff to `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Proposed durable page contents: retain the canonical `NYSE Arca:GWX` identity, passive/index-tracking classification, S&P Developed Ex-U.S. Under USD2 Billion Index, 10-year issuer average annual `6.86%`, official July YTD `7.28%`, later August NAV/price/fund facts, a single annual table with `not disclosed` GWX cells and cached S&P references, explicit no-proxy/no-drawdown gaps, the fresh stale-snapshot conflict note, risk/sector notes, canonical breadcrumb/tags and source links; update only `updated`, `source_batch`, `return_basis`, `primary_region`, tags and refresh/source-note text.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## GWX research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive international small-cap identity, later dated current fund facts and July standardized returns, explicit annual-data conflict/gaps, calculations limited to verified fields and scheduled-local review passed.
+```
 ```
