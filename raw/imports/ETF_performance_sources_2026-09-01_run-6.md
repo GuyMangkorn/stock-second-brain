@@ -1,38 +1,106 @@
 ---
-type: etf-performance-source-batch
+type: source-batch
 workflow: check-etf-performance
-run_date: 2026-09-01
-run_label: run-6
+scope: research-queue
+updated: 2026-09-01
 execution_profile: scheduled-inline
+window: available complete calendar years plus current 2026 YTD
+return_basis: NAV total return
 verification_mode: scheduled-local
 reviewer_dispatch: not-attempted-by-design
 ---
 
-# ETF Performance Sources — 2026-09-01 — run-6
+# ETF Performance Sources — 2026-09-01 Run 6
 
-## WSML — iShares MSCI World Small Cap UCITS ETF
+This dated batch records source-backed evidence and the scheduled-local pre-save review for cards processed under the retained `research-queue-manager` project lease. Shared navigation/index files and earlier recovery artifacts were already dirty before this run and remain outside each card's clean output scope.
 
-- `entity_key`: `LSE:WSML`; input ticker `WSML`; legacy OTC alias `IMWSF`; official USD listing is London Stock Exchange `WSML` for ISIN `IE00BF4RFH31`. The underlying exposure is global developed-market small-cap equity, so primary region is `International` and canonical tag is `geography/global-developed`.
-- Management mode: `passive-index`; the fund seeks to track the `MSCI World Small Cap Index (Net)`, uses a physical/optimised structure, has share-class launch `2018-03-27`, `0.35%` Total Expense Ratio, and accumulating income treatment.
-- Official product source: https://www.ishares.com/uk/professionals/en/products/296576/ishares-msci-world-small-cap-ucits-etf-usd-%28acc%29-fund — product page reviewed for current observations through `2026-08-28`; NAV `USD 10.62`, NAV Total Return YTD `17.53%`, holdings `3,548`, P/B `2.11`, P/E `19.19`, and benchmark level `USD 996.55` as of `2026-08-28`; 3-year standard deviation `16.17%` and beta `1.000` as of `2026-07-31`.
-- Official historical source: https://www.ishares.com/gls-download/literature/fact-sheet/wsml-ishares-msci-world-small-cap-ucits-etf-fund-fact-sheet-en-gb.pdf — official factsheet with complete annual NAV/index rows for `2019-2025`, July 2026 YTD `13.88%` as of `2026-07-31`, and the USD accumulating share-class identity. Annual rows are retained from the verified factsheet capture: fund `25.73%, 15.83%, 15.81%, -18.64%, 16.02%, 7.93%, 19.84%`; issuer index `26.19%, 15.96%, 15.75%, -18.75%, 15.76%, 8.15%, 19.88%`.
-- Return basis: USD `NAV Total Return` with gross income reinvested where applicable; accumulating income remains in NAV. Market-price return is not mixed. Complete 2018 inception-year annual data was not disclosed, so the 2019-2025 window is used for annual ranking and no 10-year NAV TR CAGR is claimed because the share class has less than ten elapsed years as of the run date.
-- Performance calculations from official annual rows: 2019-2025 product compound `105.92%` and rounded-input CAGR `10.87%`; 2021-2025 compound `41.39%` and CAGR `7.17%`; issuer-index 2019-2025 CAGR `10.92%`; issuer-index 2021-2025 CAGR `7.14%`. Complete-year count is `6 / 1` up/down; best `2019 +25.73%`; least positive `2024 +7.93%`; worst and least-bad down year `2022 -18.64%`.
-- Cached common benchmark: `S&P 500 Total Return` in USD with dividends reinvested, complete calendar years `2016-2025`, reference as of `2025-12-31`; annual rows `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%`; 2019-2025 cumulative `205.41%` / CAGR `17.29%`; 2021-2025 cumulative `96.17%` / CAGR `14.43%`. The cached benchmark is not used as a synchronized 2026 YTD comparison.
-- Risk limitation: official daily NAV observations sufficient to calculate maximum drawdown and recovery were not verified in this lean refresh; no numeric drawdown proxy is saved. The latest NAV and YTD are separate as-of fields and are not combined with the older July factsheet field as if they were contemporaneous.
-- Planned durable paths: update `wiki/analysis/performance/ETF_LSE_WSML Performance.md`; create this source batch. Existing `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, and `log.md` were already dirty before the claim and are intentionally outside this scoped commit; the existing navigation links resolve, and the performance page retains the breadcrumb plus adds the canonical `geography/global-developed` tag.
+## FIVA evidence packet
 
-## Scheduled-inline local review
+- Input ticker: `FIVA`; canonical identity: `NYSE Arca:FIVA`; fund: Fidelity International Value Factor ETF; inception `2018-01-16`.
+- Official classification: `passive-index` / strategic-beta international equity ETF. Fidelity states that the fund normally invests at least 80% in securities in the Fidelity International Value Factor Index, a rules-based index of large- and mid-capitalization developed international companies with attractive valuations. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official June 30, 2026 factsheet fields: NAV Total Return YTD `14.34%`, 1-year `35.42%`, 3-year annualized `22.28%`, 5-year annualized `13.72%`, life-of-fund annualized `8.91%`; net expense ratio `0.18%`; 3-year standard deviation `13.24%`, beta `1.00`, Sharpe `1.32`, and tracking error `0.10`; turnover rate `69%` as of 2026-04. Fidelity’s quote page crawled 2026-09-01 reports NAV `USD 39.837917`, market price `USD 39.74`, primary exchange `NYSE ARCA`.
+- Official complete calendar NAV Total Return rows from the Fidelity factsheet dated `2026-06-30`: 2019 `19.70%`, 2020 `-1.68%`, 2021 `16.05%`, 2022 `-10.42%`, 2023 `20.26%`, 2024 `3.34%`, 2025 `44.65%`. The factsheet reports no 2018 calendar row; it is excluded rather than backfilled.
+- Official issuer benchmark: Fidelity International Value Factor Index (Net). NAV returns include changes in share price and reinvestment of dividends and capital gains; market-price returns remain separate. Fidelity identifies Geode Capital Management as sub-adviser since 2018, but the fund is passive and the page does not turn benchmark spread into manager skill evidence.
+- Latest secondary current-YTD cross-check: Schwab reports FIVA NAV YTD `+16.7%` as of `2026-07-31`; it is labelled secondary and kept separate from Fidelity’s official `+14.34%` June 30 YTD field. No same-date official August YTD field was established in the retrieved issuer sources.
+- Common S&P 500 Total Return reference uses the cached USD dividend-reinvested rows for 2019-2025: `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from official FIVA rows: 2019-2025 product `2.1993802350`, cumulative `119.9380%`, rounded-input CAGR `11.9180%`; 2021-2025 product `1.8688063349`, cumulative `86.8806%`, rounded-input CAGR `13.3216%`; population standard deviation `16.7580%`; `5 / 2` up/down years. Best `2025 +44.65%`; least positive `2024 +3.34%`; worst `2022 -10.42%`; least-bad down year `2020 -1.68%`.
+- S&P 500 cached calculations for the same windows: 2019-2025 product `3.0540502198`, cumulative `205.4050%`, rounded-input CAGR `17.2919%`; 2021-2025 CAGR `14.4264%`. FIVA spreads are `-5.3739` percentage points for 2019-2025 and `-1.1048` percentage points for 2021-2025; these are arithmetic comparisons, not alpha.
+- Daily NAV maximum drawdown and recovery were not verified. The primary gap is the unavailable 2018 calendar row and the lack of an issuer current YTD field matching the secondary 2026-07-31 date.
+- Source map: official factsheet `https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9887716.PDF`; official quote `https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=FIVA`; SEC prospectus `https://www.sec.gov/Archives/edgar/data/945908/000094590826000084/filing10958.htm`; secondary YTD `https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=fiva`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — issuer identity, exchange, passive strategic-beta classification, index, NAV/market-price separation, annual rows, fees and risk fields reconcile; official and secondary YTD observations remain date-separated.
+- Calculation review: PASS — cumulative returns, available-period CAGRs, standard deviation, S&P comparisons, year counts and best/worst subsets were recomputed from the stated rows; no partial or unavailable year was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing navigation targets.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch and retained recovery artifacts were dirty before the FIVA pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_FIVA Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
 
-- Review packet checked canonical exchange/ticker, legacy alias handling, passive equity eligibility, fund identity, inception, benchmark, TER, accumulating NAV TR basis, current and historical as-of dates, official source links, complete-year markers, 10-year eligibility, cached S&P 500 convention, calculations, not-disclosed handling, one annual table, breadcrumb, and canonical tag.
-- Pre-save verdict: `PASS`. No market-price return, unsupported annual proxy, or shorter-period 10-year claim is used. Daily-NAV max-drawdown/recovery remains explicitly unresolved, and the current 2026 YTD is not presented as a same-date benchmark comparison.
+## FIVA research handoff
 
-### research_handoff
-
+```text
 status: PASS
 scope: item
 durable_write: completed
 exhausted: false
 confirmation: none
 code: durable-write-complete
-reason: Official WSML performance evidence passed scheduled-local review and the scoped performance page and source batch were written.
+reason: Official passive strategic-beta identity, current quote, annual NAV total-return rows, date-separated YTD cross-check, calculations and scheduled-local review passed with unavailable 2018 and daily drawdown gaps disclosed.
+```
+
+## KOKU evidence packet
+
+- Input ticker: `KOKU`; canonical identity: `NYSE Arca:KOKU`; fund: Xtrackers MSCI Kokusai Equity ETF; inception `2020-04-07`.
+- Official classification: `passive-index` developed-markets ex-Japan equity ETF. DWS states that the fund uses a passive/indexing approach and full replication where practicable to track the MSCI Kokusai Index, also known as MSCI World ex Japan. The fund does not hedge foreign-currency exposure; no leverage, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified.
+- Official Q1 2026 factsheet fields as of `2026-03-31`: NAV 1-year `18.75%`, 3-year annualized `17.14%`, 5-year annualized `10.85%`, since-inception annualized `16.88%`; net expense ratio `0.09%`; beta `1.04`; 1,143 holdings and net assets `$805,182,756.00`. The factsheet defines the MSCI Kokusai Net Total Return Index as the tracked index and keeps market-price returns separate.
+- Official calendar NAV Total Return rows from the DWS prospectus: 2021 `23.81%`, 2022 `-17.96%`, 2023 `24.38%`, and 2024 `19.64%`. The prospectus bar chart identifies 2020 as an inception-year partial and exposes no 2025 calendar row in the retrieved official filing.
+- Secondary dividend-reinvested history from PortfoliosLab, last updated `2026-08-29`: current YTD `13.09%` and 2025 total return `21.45%`. The 2025 observation is marked `*` in the performance page and is not described as official issuer data. Official DWS calendar rows and secondary rows are not mixed without provenance.
+- Common S&P 500 Total Return reference uses cached USD dividend-reinvested rows for 2021-2025: `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from the four official rows plus marked secondary 2025 proxy: 2021-2025 product `1.8357175134`, cumulative `83.5718%`, rounded-input CAGR `12.9175%`; population standard deviation `16.2011%`; `4 / 1` up/down years. Best `2023 +24.38%`; least positive `2024 +19.64%`; worst and least-bad down year `2022 -17.96%`.
+- S&P cached calculations for 2021-2025: product `1.9616961801`, cumulative `96.1696%`, rounded-input CAGR `17.4115%`. KOKU’s arithmetic spread is `-4.4940` percentage points; this is not alpha.
+- Daily NAV maximum drawdown and recovery were not verified. The principal data limitation is that official calendar rows for 2025 and a current issuer YTD field were not established; 2025 and current YTD remain clearly marked secondary observations.
+- Source map: official factsheet `https://etf.dws.com/en-us/AssetDownload/Index/94ec1d01-afbe-4684-8d4a-497c224fb2e5/KOKU-Fact-Sheet.pdf`; official prospectus `https://etf.dws.com/en-us/AssetDownload/Index/cfabbe07-bfc5-49c6-9de2-15429c72ad99/KOKU-1.pdf`; SEC filing `https://www.sec.gov/Archives/edgar/data/1503123/000008805325001122/k121925koku.htm`; secondary history `https://portfolioslab.com/symbol/KOKU`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — official identity, exchange, passive eligibility, index, inception, fees, official 2021-2024 rows and secondary 2025/YTD observations reconcile with explicit provenance and no mixed return basis.
+- Calculation review: PASS — cumulative return, CAGR, standard deviation, S&P comparison, year counts and best/worst subsets were recomputed from the stated rows; 2020 inception partial was excluded from ranking.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing navigation targets.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch, and retained recovery artifacts were dirty before the KOKU pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_KOKU Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## KOKU research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive developed-equity identity, current secondary YTD, official 2021-2024 NAV rows, marked 2025 proxy, calculations and scheduled-local review passed with inception and daily drawdown gaps disclosed.
+```
+## WSML evidence packet
+
+- Input ticker: `WSML`; canonical identity: `LSE:WSML`; legacy OTC alias `IMWSF`; fund: iShares MSCI World Small Cap UCITS ETF; official USD listing is London Stock Exchange `WSML` for ISIN `IE00BF4RFH31`. Underlying exposure is global developed-market small-cap equity, primary region `International`, canonical tag `geography/global-developed`.
+- Official classification: `passive-index`; the fund seeks to track the `MSCI World Small Cap Index (Net)`, uses a physical/optimised structure, has share-class launch `2018-03-27`, `0.35%` Total Expense Ratio, and accumulating income treatment.
+- Official product source: https://www.ishares.com/uk/professionals/en/products/296576/ishares-msci-world-small-cap-ucits-etf-usd-%28acc%29-fund — product page reviewed for current observations through `2026-08-28`; NAV `USD 10.62`, NAV Total Return YTD `17.53%`, holdings `3,548`, P/B `2.11`, P/E `19.19`, and benchmark level `USD 996.55` as of `2026-08-28`; 3-year standard deviation `16.17%` and beta `1.000` as of `2026-07-31`.
+- Official historical source: https://www.ishares.com/gls-download/literature/fact-sheet/wsml-ishares-msci-world-small-cap-ucits-etf-fund-fact-sheet-en-gb.pdf — official factsheet with complete annual NAV/index rows for `2019-2025`, July 2026 YTD `13.88%` as of `2026-07-31`, and the USD accumulating share-class identity. Annual rows: fund `25.73%, 15.83%, 15.81%, -18.64%, 16.02%, 7.93%, 19.84%`; issuer index `26.19%, 15.96%, 15.75%, -18.75%, 15.76%, 8.15%, 19.88%`.
+- Return basis: USD `NAV Total Return` with gross income reinvested where applicable; accumulating income remains in NAV. Market-price return is not mixed. Complete 2018 inception-year annual data was not disclosed, so the 2019-2025 window is used for annual ranking and no 10-year NAV TR CAGR is claimed because the share class has less than ten elapsed years as of the run date.
+- Performance calculations from official annual rows: 2019-2025 product compound `105.92%` and rounded-input CAGR `10.87%`; 2021-2025 compound `41.39%` and CAGR `7.17%`; issuer-index 2019-2025 CAGR `10.92%`; issuer-index 2021-2025 CAGR `7.14%`. Complete-year count is `6 / 1` up/down; best `2019 +25.73%`; least positive `2024 +7.93%`; worst and least-bad down year `2022 -18.64%`.
+- Cached common benchmark: `S&P 500 Total Return` in USD with dividends reinvested, complete calendar years `2016-2025`, reference as of `2025-12-31`; annual rows `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%`; 2019-2025 cumulative `205.41%` / CAGR `17.29%`; 2021-2025 cumulative `96.17%` / CAGR `14.43%`. The cached benchmark is not used as a synchronized 2026 YTD comparison.
+- Risk limitation: official daily NAV observations sufficient to calculate maximum drawdown and recovery were not verified in this lean refresh; no numeric drawdown proxy is saved. The latest NAV and YTD are separate as-of fields and are not combined with the older July factsheet field as if they were contemporaneous.
+- Source integrity review: PASS — issuer identity, exchange, passive equity eligibility, index, TER, NAV/market-price separation, annual rows, current fields, calculations, and date separation reconcile; no unsupported annual proxy or shorter-period 10-year claim is used.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, existing breadcrumb targets resolve, and the canonical `geography/global-developed` tag is present.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, and retained recovery artifacts were dirty before the WSML pre-write boundary; they were not modified or included in this scoped commit. Existing navigation links already resolve to the canonical WSML performance page.
+- Planned durable paths/change map: update `wiki/analysis/performance/ETF_LSE_WSML Performance.md`; update this source batch; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## WSML research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive global small-cap identity, current NAV/YTD, annual NAV rows, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
+```
+
