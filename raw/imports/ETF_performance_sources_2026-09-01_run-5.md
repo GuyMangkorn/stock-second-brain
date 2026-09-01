@@ -75,6 +75,35 @@ code: durable-write-complete
 reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
 ```
 
+## FDT evidence packet
+
+- Input ticker: `FDT`; canonical identity: `NASDAQ:FDT`; fund: First Trust Developed Markets ex-US AlphaDEX Fund; inception `2011-04-18`.
+- Official classification: `passive-index`/strategic-beta international equity ETF tracking the Nasdaq AlphaDEX Developed Markets Ex-US Index. The official factsheet describes the index as the fund's objective and gives Nasdaq as the exchange; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official current snapshot as of `2026-08-28`: NAV `USD 96.55`, market price `USD 96.23`, assets `USD 1,340,784,612`, holdings `300`, 30-day SEC yield `1.68%`; total expense ratio `0.80%` effective `2026-05-01`. NAV and market price are kept separate.
+- Official current performance as of `2026-07-31`: NAV YTD `16.08%`, 1-year `35.50%`, 3-year annualised `23.02%`, 5-year annualised `11.63%`, 10-year annualised `9.73%`, and since inception annualised `6.77%`.
+- Official FDT factsheet dated `2026-03-31` reports complete calendar-year NAV Total Return rows: 2016 `3.55%`, 2017 `33.57%`, 2018 `-19.52%`, 2019 `16.56%`, 2020 `4.61%`, 2021 `10.70%`, 2022 `-18.57%`, 2023 `13.89%`, 2024 `7.02%`, and 2025 `51.78%`. The factsheet defines NAV returns as including dividends and capital gains and notes the pre-2015-10-13 index-methodology history caveat.
+- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from official FDT rows: 2016-2025 product `2.2634290290`, cumulative `126.3429%`, rounded-input CAGR `8.5117%`, population standard deviation `20.3118%`, 8 up/2 down years; 2021-2025 product `1.6676201870`, cumulative `66.7620%`, rounded-input CAGR `10.7693%`; best `2025 +51.78%`; least positive `2024 +7.02%`; worst `2018 -19.52%`; least-bad down year `2022 -18.57%`. S&P 500 reference CAGRs are `14.8218%` for 2016-2025 and `14.4264%` for 2021-2025.
+- Official 3-year risk fields as of `2026-03-31`: standard deviation `16.00%`, beta `1.15`, Sharpe `1.06`, correlation `0.93` versus MSCI World ex USA; the factsheet also presents an alpha field, which is not used as manager-skill evidence.
+- Source integrity review: PASS — official identity, passive/strategic-beta eligibility, index, current NAV/price/performance dates, annual rows and risk fields reconcile; the issuer's rolling 10-year return is kept separate from the calendar-row CAGR.
+- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, S&P reference comparisons, year counts and best/worst subsets were recomputed from the official rows; no partial year was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; index-methodology caveat is visible.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the FDT scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_FDT Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## FDT research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive strategic-beta identity, current NAV/price/performance, complete calendar NAV rows, calculations, risk fields and scheduled-local review passed with index-history and drawdown caveats disclosed.
+```
+
 ## BOTZ evidence packet
 
 - Input ticker: `BOTZ`; canonical identity: `NASDAQ:BOTZ`; fund: Global X Robotics & Artificial Intelligence ETF; inception `2016-09-12`.
