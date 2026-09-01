@@ -102,7 +102,40 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 @@
+@@
  reason: Official passive global small-cap identity, current NAV/YTD, annual NAV rows, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
+```
+
+## IDHQ evidence packet
+
+- Input ticker/canonical identity: `IDHQ`; `NYSE Arca:IDHQ`; fund: Invesco S&P International Developed Quality ETF; CUSIP `46138E214`; inception `2007-06-13`.
+- Official classification: `passive-index`; international developed-market quality equity ETF. Invesco states that the fund is based on the S&P Quality Developed ex-U.S. LargeMidCap Index, normally invests at least 90% in index securities, and uses quality measures based on return on equity, accruals ratio and financial leverage. No leverage, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified.
+- Official Q1 2026 factsheet fields as of `2026-03-31`: NAV YTD `0.84%`, 1-year `20.52%`, 3-year annualized `12.85%`, 5-year annualized `6.68%`, 10-year annualized `8.57%`, fund-inception annualized `4.13%`; management fee and total expense ratio `0.29%`; 193 holdings; P/E `23.81`, P/B `9.02`, ROE `32.01%`, and 30-day SEC yield `1.02%`.
+- Official calendar NAV/index rows from the same factsheet: fund `2016 -1.96%`, `2017 26.73%`, `2018 -12.74%`, `2019 29.86%`, `2020 15.63%`, `2021 11.29%`, `2022 -20.20%`, `2023 18.99%`, `2024 1.90%`, `2025 26.80%`; issuer index `-1.24%`, `26.76%`, `-12.63%`, `30.21%`, `15.65%`, `11.60%`, `-20.07%`, `19.13%`, `2.07%`, `27.34%`.
+- Return basis: USD `NAV Total Return`; the issuer index is net return and market-price returns remain separate. Secondary AAII reports current NAV YTD `+26.0%` as of `2026-07-31`; the issuer’s retrieved factsheet current YTD is only through `2026-03-31`, so the two observations remain date-separated and the secondary field is clearly labelled.
+- Common S&P 500 Total Return reference uses cached USD dividend-reinvested rows for complete calendar years `2016-2025`: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from official rows: IDHQ 2016-2025 product `2.2228328488`, cumulative `122.2833%`, rounded-input CAGR `8.3155%`; 2021-2025 product `1.3654095492`, cumulative `36.5410%`, CAGR `6.4272%`; population standard deviation `16.4535%`; `7 / 3` up/down years. Best `2019 +29.86%`; least positive `2024 +1.90%`; worst `2022 -20.20%`; least-bad down year `2016 -1.96%`.
+- Issuer-index calculations: 2016-2025 cumulative `127.4960%`, rounded-input CAGR `8.5669%`; 2021-2025 cumulative `38.1205%`, CAGR `6.6723%`. Arithmetic fund/index spread is `-0.2514 pp` CAGR for 2016-2025 and `-0.2451 pp` for 2021-2025; this is tracking difference, not alpha.
+- S&P cached calculations: 2016-2025 cumulative `298.3291%`, rounded-input CAGR `14.8218%`; 2021-2025 cumulative `96.1696%`, CAGR `14.4264%`. IDHQ’s arithmetic CAGR comparison is `-6.5062 pp` for 2016-2025 and `-7.9992 pp` for 2021-2025; these are reference comparisons, not manager-skill evidence.
+- Daily NAV maximum drawdown and recovery were not verified. The current YTD field is secondary and date-separated from the official March factsheet; no unsupported issuer value was backfilled.
+- Source map: official factsheet `https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/idhq-invesco-s-p-international-developed-quality-etf-fact-sheet.pdf`; SEC prospectus `https://www.sec.gov/Archives/edgar/data/1168164/000119312526031207/d72607d497k.htm`; secondary current YTD/annual table `https://www.aaii.com/etf/ticker/IDHQ`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — official identity, exchange, passive quality methodology, index, fees, annual NAV/index rows and official standardized returns reconcile; secondary July YTD is explicitly separated from the official March observation.
+- Calculation review: PASS — cumulative returns, available-period CAGRs, annual dispersion, S&P comparisons, tracking spreads, year counts and best/worst subsets were recomputed from the official rows.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` and `geography/global-developed` tags, and existing breadcrumb targets resolve.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-5 batches and retained recovery artifacts were dirty before the IDHQ pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_IDHQ Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## IDHQ research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive quality ETF identity, standardized issuer returns, official annual NAV/index rows, date-separated secondary current YTD, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
 ```
 
 ## TLTD evidence packet
