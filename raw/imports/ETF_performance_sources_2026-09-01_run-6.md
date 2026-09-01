@@ -1,0 +1,47 @@
+---
+type: source-batch
+workflow: check-etf-performance
+scope: research-queue
+updated: 2026-09-01
+execution_profile: scheduled-inline
+window: available complete calendar years plus current 2026 YTD
+return_basis: NAV total return
+verification_mode: scheduled-local
+reviewer_dispatch: not-attempted-by-design
+---
+
+# ETF Performance Sources — 2026-09-01 Run 6
+
+This dated batch records source-backed evidence and the scheduled-local pre-save review for cards processed under the retained `research-queue-manager` project lease. Shared navigation/index files and earlier recovery artifacts were already dirty before this run and remain outside each card's clean output scope.
+
+## FIVA evidence packet
+
+- Input ticker: `FIVA`; canonical identity: `NYSE Arca:FIVA`; fund: Fidelity International Value Factor ETF; inception `2018-01-16`.
+- Official classification: `passive-index` / strategic-beta international equity ETF. Fidelity states that the fund normally invests at least 80% in securities in the Fidelity International Value Factor Index, a rules-based index of large- and mid-capitalization developed international companies with attractive valuations. No leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official June 30, 2026 factsheet fields: NAV Total Return YTD `14.34%`, 1-year `35.42%`, 3-year annualized `22.28%`, 5-year annualized `13.72%`, life-of-fund annualized `8.91%`; net expense ratio `0.18%`; 3-year standard deviation `13.24%`, beta `1.00`, Sharpe `1.32`, and tracking error `0.10`; turnover rate `69%` as of 2026-04. Fidelity’s quote page crawled 2026-09-01 reports NAV `USD 39.837917`, market price `USD 39.74`, primary exchange `NYSE ARCA`.
+- Official complete calendar NAV Total Return rows from the Fidelity factsheet dated `2026-06-30`: 2019 `19.70%`, 2020 `-1.68%`, 2021 `16.05%`, 2022 `-10.42%`, 2023 `20.26%`, 2024 `3.34%`, 2025 `44.65%`. The factsheet reports no 2018 calendar row; it is excluded rather than backfilled.
+- Official issuer benchmark: Fidelity International Value Factor Index (Net). NAV returns include changes in share price and reinvestment of dividends and capital gains; market-price returns remain separate. Fidelity identifies Geode Capital Management as sub-adviser since 2018, but the fund is passive and the page does not turn benchmark spread into manager skill evidence.
+- Latest secondary current-YTD cross-check: Schwab reports FIVA NAV YTD `+16.7%` as of `2026-07-31`; it is labelled secondary and kept separate from Fidelity’s official `+14.34%` June 30 YTD field. No same-date official August YTD field was established in the retrieved issuer sources.
+- Common S&P 500 Total Return reference uses the cached USD dividend-reinvested rows for 2019-2025: `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from official FIVA rows: 2019-2025 product `2.1993802350`, cumulative `119.9380%`, rounded-input CAGR `11.9180%`; 2021-2025 product `1.8688063349`, cumulative `86.8806%`, rounded-input CAGR `13.3216%`; population standard deviation `16.7580%`; `5 / 2` up/down years. Best `2025 +44.65%`; least positive `2024 +3.34%`; worst `2022 -10.42%`; least-bad down year `2020 -1.68%`.
+- S&P 500 cached calculations for the same windows: 2019-2025 product `3.0540502198`, cumulative `205.4050%`, rounded-input CAGR `17.2919%`; 2021-2025 CAGR `14.4264%`. FIVA spreads are `-5.3739` percentage points for 2019-2025 and `-1.1048` percentage points for 2021-2025; these are arithmetic comparisons, not alpha.
+- Daily NAV maximum drawdown and recovery were not verified. The primary gap is the unavailable 2018 calendar row and the lack of an issuer current YTD field matching the secondary 2026-07-31 date.
+- Source map: official factsheet `https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9887716.PDF`; official quote `https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=FIVA`; SEC prospectus `https://www.sec.gov/Archives/edgar/data/945908/000094590826000084/filing10958.htm`; secondary YTD `https://www.schwab.wallst.com/Prospect/Research/etfs/performance.asp?symbol=fiva`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — issuer identity, exchange, passive strategic-beta classification, index, NAV/market-price separation, annual rows, fees and risk fields reconcile; official and secondary YTD observations remain date-separated.
+- Calculation review: PASS — cumulative returns, available-period CAGRs, standard deviation, S&P comparisons, year counts and best/worst subsets were recomputed from the stated rows; no partial or unavailable year was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing navigation targets.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, the prior run-3 batch and retained recovery artifacts were dirty before the FIVA pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_FIVA Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## FIVA research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive strategic-beta identity, current quote, annual NAV total-return rows, date-separated YTD cross-check, calculations and scheduled-local review passed with unavailable 2018 and daily drawdown gaps disclosed.
+```
