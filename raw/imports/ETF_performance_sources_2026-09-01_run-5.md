@@ -74,3 +74,32 @@ confirmation: none
 code: durable-write-complete
 reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
 ```
+
+## ISPFF evidence packet
+
+- Input ticker: `ISPFF`; canonical identity: `LSE:IDWP`; fund: iShares Developed Markets Property Yield UCITS ETF USD (Dist), ISIN `IE00B1FZS350`, inception `2006-10-20`. The official iShares listing table identifies the USD listing as London Stock Exchange ticker `IDWP`; `ISPFF` is retained only as the incoming OTC alias.
+- Official classification: `passive-index` equity ETF focused on listed real estate companies and REITs in developed markets. The official product page identifies the asset class as Real Estate and the KIID describes passive management; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified for this USD share class.
+- Official product snapshot as of `2026-08-28`: NAV `USD 25.65`, share-class net assets `USD 1,180,449,055`, fund net assets `USD 1,652,942,689`, total expense ratio `0.59%`, quarterly distribution, physical/optimised structure, and `46,013,444` shares outstanding. Official NAV Total Return YTD is `10.11%` as of `2026-08-27`; NAV and performance dates are kept separate.
+- Official benchmark metadata: `FTSE EPRA Nareit Developed Dividend+ Net Index in USD`; the product page reports `312` holdings as of `2026-08-27`, standard deviation `16.05%` and beta `0.998` as of `2026-07-31`.
+- Official iShares factsheet calendar-year NAV Total Return rows dated `2026-03-31`: 2016 `5.50%`, 2017 `10.59%`, 2018 `-5.80%`, 2019 `21.95%`, 2020 `-9.47%`, 2021 `25.18%`, 2022 `-24.33%`, 2023 `8.92%`, 2024 `1.00%`, 2025 `8.24%`. The same table reports benchmark rows `5.52%`, `10.53%`, `-5.75%`, `21.97%`, `-9.56%`, `25.28%`, `-24.17%`, `8.87%`, `1.06%`, `8.28%` respectively.
+- Official rolling NAV TR as of `2026-06-30`: 1-year `16.30%`, 3-year annualised `8.75%`, 5-year annualised `1.03%`, 10-year annualised `2.81%`, and since inception annualised `3.62%`. These are issuer-reported rolling metrics; raw endpoints are not disclosed, so the 10-year figure is not relabeled as an independently calculated CAGR.
+- The common S&P 500 Total Return reference remains the cached USD dividend-reinvested series for complete calendar years 2016-2025: `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from the rounded official IDWP rows: 2016-2025 product `1.3676894500`, cumulative `36.7689%`, rounded-input CAGR `3.1808%`; 2021-2025 product `1.1279126597`, cumulative `12.7913%`, rounded-input CAGR `2.4366%`; population standard deviation `13.9470%`; 7 up/3 down years; best `2021 +25.18%`; least positive `2024 +1.00%`; worst `2022 -24.33%`; least-bad down year `2018 -5.80%`. S&P 500 reference CAGRs are `14.8218%` for 2016-2025 and `14.4264%` for 2021-2025.
+- Source integrity review: PASS — the OTC alias was resolved to the official USD LSE listing by the official listing table and ISIN; passive real-estate equity eligibility, NAV/performance date separation, calendar-year rows, FTSE benchmark rows, current YTD, rolling metrics and risk fields reconcile. The issuer-reported rolling figures are not used as independently calculated endpoint CAGRs.
+- Calculation review: PASS — cumulative returns, CAGRs, standard deviation, benchmark comparisons, year counts and best/worst subsets were recomputed from the stated rounded rows; no partial year was ranked.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; `LSE:IDWP` is used throughout the durable page.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the ISPFF scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_LSE_IDWP Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## ISPFF research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive real-estate equity identity, canonical USD LSE listing, current NAV and YTD, calendar NAV total-return rows, benchmark data, calculations and scheduled-local review passed with rolling-endpoint and drawdown gaps disclosed.
+```
