@@ -317,3 +317,78 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official LVHI evidence passed the scheduled-local checklist and the performance page plus source batch were written.
+
+## PXF evidence packet
+
+- Identity and eligibility: Invesco identifies `PXF` as the `Invesco RAFI
+  Developed Markets ex-U.S. ETF`, listed on `NYSE Arca`, with inception
+  `2007-06-25`. The fund is a passive, rules-based equity ETF based on the
+  `RAFI Fundamental Select Developed ex-US 1000 Index`; it normally invests at
+  least 90% in index securities and related depositary receipts. Official
+  source: https://www.invesco.com/us/en/financial-products/etfs/invesco-rafi-developed-markets-ex-u-s-etf.html.
+- Fund facts: net/total expense ratio `0.43%`; official issuer NAV TR YTD
+  `19.82%` as of `2026-05-31`; SEC 30-day yield `2.18%` as of `2026-07-02`.
+  The latest captured product page did not expose a same-date NAV or market
+  price quote. The Q1 2026 factsheet reports `1,022` holdings and fund facts as
+  of `2026-03-31`.
+- Tracked index and benchmark: the current RAFI Fundamental Select Developed
+  ex-US 1000 Index uses book value, cash flow, sales, and dividends and is
+  reconstituted annually. Invesco discloses that it replaced the FTSE RAFI
+  Developed ex U.S. 1000 Index after `2025-03-21`; the history change is not
+  backfilled as an unchanged index series. Official benchmark rows are from
+  `MSCI EAFE Index (USD)`; S&P 500 TR is retained as a common USD reference.
+- Return definition and annual rows: the official factsheet reports NAV returns
+  with fund expenses reflected and reinvestment treatment according to the
+  return convention. Complete 2016-2025 annual NAV TR rows are `6.51%, 24.78%,
+  -15.12%, 17.81%, 3.08%, 15.20%, -9.24%, 18.90%, 4.35%, 42.26%`. Official
+  MSCI EAFE benchmark rows are `1.00%, 25.03%, -13.79%, 22.01%, 7.82%, 11.26%,
+  -14.45%, 18.24%, 3.82%, 31.22%`.
+- Cached common benchmark: `S&P 500 Total Return`, USD, dividends reinvested,
+  complete 2016-2025 calendar years, as of `2025-12-31`. The rows are the
+  static skill convention: `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%,
+  -18.11%, 26.29%, 25.02%, 17.88%`; original URLs are retained in prior source
+  batch sections and the performance page.
+- Calculations: PXF annual product `2.5281415214`, cumulative `152.81%`,
+  rounded-input calendar CAGR `9.72%` over `10.00` years; 2021-2025 product
+  `1.8454576302`, cumulative `84.55%`, CAGR `13.04%`. MSCI EAFE 2016-2025
+  cumulative `119.58%`, CAGR `8.18%`; 2021-2025 cumulative `53.32%`, CAGR
+  `8.92%`. S&P 500 2016-2025 cumulative `298.33%`, CAGR `14.82%`; 2021-2025
+  cumulative `96.17%`, CAGR `14.43%`. The complete-year count is `8 / 2`;
+  best `2025 +42.26%`, least positive `2024 +4.35%`, worst `2018 -15.12%`,
+  least bad down year `2022 -9.24%`. Population standard deviation from the
+  annual rows is `15.85%`; the year-end path drawdown approximation is `-15.12%`
+  in 2018, with year-end recovery by 2020. The issuer's separate rolling 10-year
+  NAV annualized return is `10.71%` as of `2026-03-31`.
+- Primary region: `International` because the fund owns developed-market
+  equities excluding the United States. The performance page uses the existing
+  breadcrumb and canonical `geography/International` tag. Shared navigation and
+  log files were dirty before claim and are not in this card's output scope.
+
+## PXF planned paths and local review
+
+- Create `wiki/analysis/performance/ETF_NYSE_ARCA_PXF Performance.md` with the
+  canonical identity, passive classification, index-change caveat, current
+  fields, complete annual table, calculations, risk gaps, and source links.
+- Update this source batch with the complete PXF evidence and audit record.
+- Do not update `International ETF.md`, `ETF Region Index.md`,
+  `ETF Performance Index.md`, or `log.md` because those paths were dirty before
+  this queue claim; navigation reconciliation is deferred.
+- Source/data integrity: `PASS` — identity, passive equity eligibility, index
+  change, NAV TR basis, annual rows, official benchmark, current YTD, and
+  separate as-of dates reconcile.
+- Calculation/ranking review: `PASS` — annual compounding, CAGRs, rolling-return
+  distinction, volatility, year counts, rankings, and annual-path drawdown
+  recompute from stated inputs; no price return is mixed with NAV TR.
+- Format/graph review: `PASS` — Thai-first required sections, one annual table,
+  visible as-of dates, source links, existing breadcrumb, and canonical region
+  tag resolve.
+
+## PXF research_handoff
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official PXF evidence passed the scheduled-local checklist and the canonical performance page plus source batch were written.
