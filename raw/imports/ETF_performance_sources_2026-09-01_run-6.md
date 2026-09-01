@@ -103,7 +103,39 @@ confirmation: none
 code: durable-write-complete
 @@
 @@
+@@
  reason: Official passive global small-cap identity, current NAV/YTD, annual NAV rows, calculations and scheduled-local review passed with daily drawdown gaps disclosed.
+```
+
+## JHMD evidence packet
+
+- Input ticker/canonical identity: `JHMD`; `NYSE Arca:JHMD`; fund: John Hancock Multifactor Developed International ETF; inception `2016-12-15`.
+- Official classification: `passive-index`; developed international multifactor equity ETF. John Hancock states that the fund seeks to track the John Hancock Dimensional Developed International Index and emphasizes smaller capitalization, lower relative price and higher profitability characteristics. No leverage, inverse, option-income, bond, commodity, currency or derivative-defined payoff was identified.
+- Official Q1 2026 factsheet fields as of `2026-03-31`: NAV QTD/YTD `0.08%`, 1-year `23.26%`, 3-year annualized `14.40%`, 5-year annualized `8.36%`, since-inception annualized `8.53%`; 10-year is unavailable; gross expense ratio `0.43%`, net expense ratio `0.39%` through `2026-08-31`.
+- Secondary rounded annual NAV rows from AAII, used only for the calendar-year table: `2017 25.2%`, `2018 -13.9%`, `2019 20.3%`, `2020 6.6%`, `2021 11.7%`, `2022 -13.9%`, `2023 19.1%`, `2024 2.5%`, `2025 32.8%`. The issuer factsheet exposes standardized periods but no text calendar-year table in this capture, so annual rows are explicitly marked secondary.
+- Return basis: USD `NAV Total Return` with distributions reinvested. Secondary AAII current NAV YTD is `+11.6%` as of `2026-07-31`; the issuer’s retrieved YTD field is only `+0.08%` as of `2026-03-31`, so the two fields remain date-separated and no same-date issuer value is backfilled.
+- Common S&P 500 Total Return reference uses cached USD dividend-reinvested rows for complete calendar years `2017-2025`: `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, cached as of `2025-12-31`.
+- Calculations from secondary rounded annual rows: JHMD 2017-2025 product `2.1553625809`, cumulative `115.5363%`, rounded-input CAGR `8.9075%`; 2021-2025 product `1.5591576376`, cumulative `55.9158%`, CAGR `9.2894%`; population standard deviation `15.4664%`; `7 / 2` up/down years. Best `2025 +32.80%`; least positive `2024 +2.50%`; worst and least-bad down years tie in `2018` and `2022` at `-13.90%`.
+- S&P cached calculations for 2017-2025: cumulative `255.7781%`, rounded-input CAGR `15.1442%`; 2021-2025 cumulative `96.1696%`, CAGR `14.4264%`. JHMD’s arithmetic CAGR comparison is `-6.2367 pp` for 2017-2025 and `-5.1370 pp` for 2021-2025; this is a reference comparison, not alpha.
+- Daily NAV maximum drawdown and recovery were not verified. Secondary risk cross-check reports beta `0.90` and standard deviation `13.0%` as of `2026-07-31`; these are not treated as issuer-confirmed daily metrics.
+- Source map: official factsheet `https://www.jhinvestments.com/content/dam/jhi-investments/JHINV/public/ETFs/Documents/FactSheets/InvestorFactSheet/etf-multifactor-developed-international-investor-fact-sheet-jhi.pdf`; SEC prospectus `https://www.sec.gov/Archives/edgar/data/1478482/000119312525191988/d911861d497k.htm`; secondary current YTD/annual table `https://www.aaii.com/etfs/summary?ticker=JHMD`; cached S&P references are defined in the `check-etf-performance` skill.
+- Source integrity review: PASS — official passive index identity, exchange, factor strategy, fee fields and standardized returns reconcile; secondary July YTD and annual rows are clearly labelled and kept separate from official March observations.
+- Calculation review: PASS — cumulative returns, available-period CAGRs, annual dispersion, S&P comparisons, year counts and best/worst subsets were recomputed from the stated rounded rows.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` and `geography/global-developed` tags, and existing breadcrumb targets resolve.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-5 batches and retained recovery artifacts were dirty before the JHMD pre-write boundary; they were not modified or included in this scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NYSE_ARCA_JHMD Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-6.md`; no shared navigation file is in this card’s output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## JHMD research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive multifactor identity and standardized returns, secondary complete calendar rows and current YTD, calculations and scheduled-local review passed with secondary annual/risk and daily drawdown gaps disclosed.
 ```
 
 ## IDHQ evidence packet
