@@ -75,6 +75,34 @@ code: durable-write-complete
 reason: Official passive-equity identity, current NAV and hedge fields, annual NAV total-return rows, benchmark convention, calculations and scheduled-local review passed with date-separated rolling metrics and drawdown gaps disclosed.
 ```
 
+## BOTZ evidence packet
+
+- Input ticker: `BOTZ`; canonical identity: `NASDAQ:BOTZ`; fund: Global X Robotics & Artificial Intelligence ETF; inception `2016-09-12`.
+- Official classification: `passive-index` global thematic equity ETF tracking the Indxx Global Robotics & Artificial Intelligence Thematic Index (`IBOTZNT`). The official product page describes exposure to industrial robotics, automation, non-industrial robots and autonomous vehicles; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official current snapshot as of `2026-08-31`: NAV `USD 36.07`, market price `USD 35.89`, net assets `USD 3.44 billion`, total expense ratio `0.68%`, primary exchange Nasdaq, `61` holdings, and 30-day SEC yield `-0.06%`. NAV and market-price fields are kept separate.
+- Official BOTZ factsheet as of `2026-07-31`: NAV Total Return YTD `-1.53%`, 1-year `6.64%`, 3-year annualised `7.22%`, 5-year annualised `1.26%`, since inception annualised `9.72%`; market-price values `-2.74%`, `5.73%`, `6.83%`, `0.96%`, `9.59%`; index values `-1.28%`, `7.09%`, `7.65%`, `1.69%`, `10.13%`.
+- Official current SEC summary prospectus reports the complete calendar-year 2025 fund NAV return `13.71%`, underlying index `13.98%`, and since-inception/5-year values `10.54%`/`2.11%` for the fund and `10.95%`/`2.60%` for the index. This packet uses only the 2025 annual row; current official 2016-2024 annual rows were not established in the retrieved text and remain `not disclosed`.
+- Common S&P 500 Total Return reference for 2025 is the cached USD dividend-reinvested value `17.88%`, cached as of `2025-12-31`. The 2025 BOTZ-to-index gap is `-0.27` percentage points and BOTZ-to-S&P reference spread is `-4.17` percentage points; neither is called alpha.
+- Official risk/exposure fields as of `2026-07-31`: standard deviation `22.40%`; beta `1.68` versus S&P 500, `1.12` versus Nasdaq-100, and `1.28` versus MSCI EAFE. Sector exposures include Industrials `45.2%`, Information Technology `37.1%`, Health Care `8.1%`; country exposures include United States `32.13%`, Japan `31.43%`, China `18.52%`, and Switzerland `10.05%`. The official factsheet identifies BOTZ as non-diversified.
+- Source integrity review: PASS — official identity, passive thematic-equity eligibility, index, current NAV/market price, current performance dates, one complete 2025 annual row and risk fields reconcile. Missing annual history is disclosed rather than backfilled from price-only or secondary data.
+- Calculation review: PASS — 2025 implementation gap and S&P reference spread were recomputed from the stated official row; partial 2026 YTD was excluded from annual ranking. No unsupported CAGR or drawdown was introduced.
+- Format and graph review: PASS for card-specific outputs — Thai-first narrative, one annual table, required sections, canonical `geography/International` tag and breadcrumb resolve to existing pages; the incomplete historical annual coverage is visible.
+- Shared navigation note: `International ETF.md`, `ETF Region Index.md`, `ETF Performance Index.md`, `log.md`, prior run-3/run-4 batches, and retained recovery artifacts were dirty before this card's pre-write boundary; they were not modified or included in the BOTZ scoped commit. Region/index/log reconciliation is deferred to a clean navigation pass.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_BOTZ Performance.md`; update `raw/imports/ETF_performance_sources_2026-09-01_run-5.md`; no shared navigation file is in this card's output scope.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## BOTZ research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive thematic-equity identity, current NAV and market price, latest official rolling performance, complete 2025 NAV row, risk fields, calculations and scheduled-local review passed with incomplete historical annual coverage disclosed.
+```
+
 ## ICOW evidence packet
 
 - Input ticker: `ICOW`; canonical identity: `Cboe BZX:ICOW`; fund: Pacer Developed Markets International Cash Cows 100 ETF; inception `2017-06-16`.
