@@ -22,7 +22,7 @@ tags:
 | DIVI | Franklin International Core Dividend Tilt Index ETF | international value/dividend tilt | 11.13% | 13.59% | 16.62% | [[ETF_AMEX_DIVI Performance]] |
 | DLS | WisdomTree International SmallCap Dividend Fund | international small-cap dividend | 7.69%† | 7.97% | 8.54%‡ | [[ETF_NYSE_ARCA_DLS Performance]] |
 | DTH | WisdomTree International High Dividend Fund | international high dividend | 9.06% | 12.22% | 8.21% | [[ETF_AMEX_DTH Performance]] |
-| DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
+| DWM | WisdomTree International Equity Fund | international broad dividend | 8.74% | 10.46% | 11.05% | [[ETF_AMEX_DWM Performance]] |
 | WNRG | State Street SPDR MSCI World Energy UCITS ETF | global developed energy sector / accumulating | 9.57% | 19.81% | 33.61% | [[ETF_EURONEXT_AMSTERDAM_WNRG Performance]] |
 | WHEA | State Street SPDR MSCI World Health Care UCITS ETF | global developed health-care sector / accumulating | 8.10% | 6.30% | 3.29% | [[ETF_EURONEXT_AMSTERDAM_WHEA Performance]] |
 | IQDG | WisdomTree International Quality Dividend Growth Fund | developed international quality/dividend growth | 7.95% | 5.43% | 7.12% | [[ETF_CBOE_IQDG Performance]] |
