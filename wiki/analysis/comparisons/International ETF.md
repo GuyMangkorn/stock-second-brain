@@ -34,6 +34,7 @@ tags:
 | URTH | iShares MSCI World ETF | global developed large-/mid-cap passive | 13.36% | 12.30% | 13.50% | [[ETF_NYSE_ARCA_URTH Performance]] |
 | AVIV | Avantis International Large Cap Value ETF | active systematic developed international large-cap value | not applicable (<10y) | 12.58%* (2022-2025) | 14.87% | [[ETF_NYSE_ARCA_AVIV Performance]] |
 | TXUE | Thornburg International Equity ETF | active fundamental developed international equity | not applicable (<10y) | not applicable (2025 partial inception) | 16.36% | [[ETF_NASDAQ_TXUE Performance]] |
+| FYLD | Cambria Foreign Shareholder Yield ETF | active systematic foreign developed shareholder-yield/value/quality equity | 11.35% | 11.80%* | 22.30%* | [[ETF_CBOE_BZX_FYLD Performance]] |
 | IDMO | Invesco S&P International Developed Momentum ETF | developed ex-U.S./South Korea momentum passive | 12.12% | 13.99% | 10.5%* | [[ETF_NYSE_ARCA_IDMO Performance]] |
 | XDEVF | Xtrackers MSCI World Value UCITS ETF 1C (official USD listing SIX:XDEV) | developed-market large-/mid-cap value smart-beta passive accumulating | 9.86%† | 13.70% | 36.97%* | [[ETF_SIX_XDEV Performance]] |
 | XDWHF | Xtrackers MSCI World Health Care UCITS ETF 1C (official USD listing LSE:XDWH) | global developed health-care sector passive accumulating | 8.96%* | 6.38%* (2021-2025) | 8.20%* | [[ETF_LSE_XDWH Performance]] |
@@ -330,6 +331,14 @@ deviation `12.61%` ณ 2026-07-31; tracking observations เทียบ officia
 benchmark และ global country/sector/FX/emerging-market risks อยู่ในหน้ารายกอง.
 เครื่องหมาย `†` หมายถึง calendar CAGR จาก rounded official annual rows ไม่ใช่
 issuer rolling 10-year field.
+
+FYLD เป็น active systematic foreign-developed-equity ETF; official factsheet ณ
+2026-06-30 รายงาน rolling 10-year NAV TR `11.35%` และ current YTD `13.49%`.
+ค่า 2021-2025 CAGR `11.80%*`, 2025 `34.20%*` และ current YTD `22.30%*` เป็น
+rounded-input/secondary fields โดย 2025 และ current YTD มาจาก secondary capture
+ณ 2026-07-31. MSCI EAFE annual rows, official daily-NAV drawdown/recovery และ
+hit rate ยังไม่เปิดเผย; 2016-2019 เป็น historical context เพราะ strategy change
+เกิด 2020-06-01.
 
 ## Navigation
 

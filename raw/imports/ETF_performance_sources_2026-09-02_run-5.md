@@ -53,3 +53,39 @@ confirmation: none
 code: durable-write-complete
 reason: Official active international-equity identity, Nasdaq listing, current NAV/YTD, comparable issuer performance fields, calculations and scheduled-local review passed with no-complete-year, insufficient-track-record and daily-NAV risk gaps disclosed.
 ```
+
+## FYLD evidence packet
+
+- Input ticker: `FYLD`; canonical identity: `Cboe BZX:FYLD`; fund: `Cambria Foreign Shareholder Yield ETF`. Cambria's official product page and fact sheet identify the Cboe BZX listing, inception `2013-12-03`, actively managed ETF status, equity-income objective and expense ratio `0.59%`. The SEC summary prospectus identifies the active foreign-equity mandate and principal risks.
+- Official classification: `active-equity-long-only`, `systematic-active`. The SEC states that the fund invests at least 80% of total assets in equity securities of developed countries outside the United States and uses a shareholder-yield/value-oriented process. Cboe describes the quantitative selection of roughly 100 companies using dividend and net buyback ranks with value, quality and low-leverage filters. No bond, commodity, currency, leveraged, inverse, covered-call, defined-outcome or derivative-heavy payoff was identified.
+- Management benchmark: `MSCI EAFE Index`, selected before comparing results because the official Cambria fact sheet names it as the strategy comparison for the developed foreign-equity mandate. Annual benchmark rows were not disclosed in the reviewed sources; they remain `not disclosed` rather than being inferred.
+- Official 2026-06-30 fact sheet: NAV TR `13.49%` YTD, `29.81%` 1-year, `11.16%` 5-year annualized, `11.35%` 10-year annualized and `7.73%` since inception annualized. Matching MSCI EAFE fields are `9.84%`, `20.80%`, `9.60%`, `10.20%` and `7.44%`, giving return-only differences of `+3.65`, `+9.01`, `+1.56`, `+1.15` and `+0.29` percentage points. These are not alpha.
+- Official annual NAV rows from Cambria's historical summary: 2016 `6.53%`, 2017 `28.46%`, 2018 `-13.66%`, 2019 `17.83%`, 2020 `4.35%`, 2021 `17.68%`, 2022 `-5.15%`, 2023 `12.95%`, 2024 `3.22%`. Secondary AAII annual row for 2025 is `34.20%*`; the asterisk marks the non-official provider. S&P 500 TR cache rows for 2016-2025 are `11.96%`, `21.83%`, `-4.38%`, `31.49%`, `18.40%`, `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`.
+- Calculations from rounded annual inputs: FYLD 2016-2025 product `2.5371305857`, cumulative `153.7131%`, rounded-input CAGR `9.7575%` → display `153.71%*` / `9.76%*`; FYLD 2021-2025 product `1.7463954884`, cumulative `74.6395%`, rounded-input CAGR `11.7966%` → display `74.64%*` / `11.80%*`. S&P cache 2016-2025 cumulative `298.3291%` / CAGR `14.8218%` → display `298.33%` / `14.82%`; 2021-2025 cumulative `96.1696%` / CAGR `14.4264%` → display `96.17%` / `14.43%`.
+- Calendar read-through: blended 2016-2025 window has `8 / 2` up/down years; best `2025 +34.20%*`, least positive `2024 +3.22%`, worst `2018 -13.66%`, least-bad down year `2022 -5.15%`. The 2025 row and blended CAGRs remain marked secondary.
+- Strategy/history caveat: the SEC prospectus records a strategy/objective change on `2020-06-01`; before that date FYLD tracked the Cambria Foreign Shareholder Yield Index. The 2016-2019 rows are therefore historical context, not perfectly like-for-like evidence for the current systematic process.
+- Official fund/risk facts as of `2026-06-30`: 30-day SEC yield `3.79%`, holdings `101`, quarterly distributions, Energy `25.0%`, Financials `23.2%`, Industrials `13.8%`, Japan `25.0%`, Britain `14.0%`, France `11.1%`, Canada `11.0%`. Compatible official daily NAV history for maximum drawdown, recovery, downside capture, tracking error or risk-adjusted persistence was not verified. Cambria's dynamic product page shows an undated holdings field of `112`, while the dated fact sheet shows `101`; the dated fact sheet is used and the conflict is retained.
+- Current-period cross-check: AAII reports NAV total-return YTD `22.30%*` and 2025 `34.20%*` as of `2026-07-31`; these are kept separate from the official `2026-06-30` fields. Current S&P 500 TR is `12.34%` as of `2026-09-01`; no direct same-date comparison is made.
+- Source map: official product `https://www.cambriafunds.com/fyld`; official fact sheet `https://www.cambriafunds.com/assets/docs/FYLD-FactSheet.pdf`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/1529390/000121390025083085/ea0253992-03_497k.htm`; Cboe listing `https://www.cboe.com/us/equities/listings/listed_products/symbols/FYLD/`; official historical summary `https://cambriafunds.com/assets/docs/Cambria_FYLD_Summary.pdf`; secondary AAII `https://www.aaii.com/etf/ticker/FYLD`; current S&P TR table `https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?additionalFilterCondition=&parentIdentifier=df8ec300-24ad-4c70-81d3-a3cece0200e2&sourceIdentifier=index-family-specialization`.
+
+## FYLD scheduled-local review
+
+- Source integrity review: PASS — ticker/exchange, fund identity, supported active equity type, inception, strategy, management benchmark, return basis, USD currency, expenses, distribution treatment, official/secondary separation and all as-of dates reconcile across the reviewed sources; the 2020 strategy change and 101-versus-112 holdings conflict are disclosed.
+- Calculation review: PASS — annual products, cumulative returns, CAGRs, up/down count, best/worst ranking and rolling return-only differences were recomputed from the stated rounded inputs; S&P rows use the permitted 2016-2025 USD TR cache; no annual MSCI EAFE rows, hit rate, daily drawdown or risk-adjusted metric was inferred.
+- Active-management review: PASS — `active-equity-long-only` and `systematic-active` are supported; `track_record: established` follows the 2013 inception; `management_evidence: positive return-only` follows positive 10-year excess with unavailable hit rate; `risk_evidence: not-verified` follows the missing compatible daily NAV series; no return difference is called alpha.
+- Format and graph review: PASS — Thai-first performance page, required active fields/sections, canonical `geography/International` tag, breadcrumb, one primary region, resolving page/index links and source-batch linkage are present.
+- Complete proposed durable contents: create `wiki/analysis/performance/ETF_CBOE_BZX_FYLD Performance.md` with the frontmatter and sections above; append this FYLD evidence/review/handoff packet; add the exact International row `| FYLD | Cambria Foreign Shareholder Yield ETF | active systematic foreign developed shareholder-yield/value/quality equity | 11.35% | 11.80%* | 22.30%* | [[ETF_CBOE_BZX_FYLD Performance]] |`; change `International` region count `70 → 71`; add the exact FYLD coverage row to `ETF Performance Index`; append the dated queue-coverage bullet; append one `etf-performance` log bullet with the official/secondary as-of split and risk gap.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_CBOE_BZX_FYLD Performance.md`; update this batch, `wiki/analysis/comparisons/International ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, and `log.md`.
+- Local pre-save verdict: PASS; exact scheduled audit lines are `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`; no critical, high or blocking finding remains.
+
+## FYLD research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official active foreign-equity identity, Cboe BZX listing, dated official NAV/benchmark fields, separated secondary current data, calculations and scheduled-local review passed with strategy-break, unavailable-hit-rate and daily-NAV risk gaps disclosed.
+```
