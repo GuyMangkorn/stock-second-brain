@@ -465,6 +465,8 @@ def render_dashboard(state: dict[str, Any]) -> str:
         "- [Configuration](config.yaml)",
         "- [Canonical ledger](ledger/events.jsonl)",
         "- [Derived state](state/portfolio.json)",
+        "- [Latest verified prices](evidence/market-data/latest-prices.md)",
+        "- [Price log](evidence/market-data/price-log.md)",
         "- [[ETF Performance Index]]",
         "",
         "This is an educational simulation, not personalized investment advice.",

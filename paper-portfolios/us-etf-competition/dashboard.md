@@ -2,7 +2,7 @@
 kind: paper-portfolio-dashboard
 competition_id: us-etf-competition-2026
 phase: proposal
-as_of: 2026-09-02T15:25:43Z
+as_of: 2026-09-02T15:33:36Z
 portfolio_value: 100000.00
 cash: 100000.00
 cumulative_return_pct: 0.00
@@ -53,6 +53,8 @@ LIMIT 10
 - [Configuration](config.yaml)
 - [Canonical ledger](ledger/events.jsonl)
 - [Derived state](state/portfolio.json)
+- [Latest verified prices](evidence/market-data/latest-prices.md)
+- [Price log](evidence/market-data/price-log.md)
 - [[ETF Performance Index]]
 
 This is an educational simulation, not personalized investment advice.

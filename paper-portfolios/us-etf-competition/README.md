@@ -47,6 +47,12 @@ visible values/text, source as-of time, retrieval time, and SHA-256 content hash
 Search snippets alone are never sufficient. Do not enter credentials or upload
 portfolio files into a website.
 
+Before searching, read [`latest-prices.md`](evidence/market-data/latest-prices.md)
+and the tail of [`price-log.md`](evidence/market-data/price-log.md). Use those
+observations for initial screening, then refresh only holdings, SPY, and
+decision-relevant candidates. Every verified refresh gets one append-only log
+row and one updated latest-cache row; stale cache values are not final quotes.
+
 ## Price and market-data sources
 
 Use these browser sources in priority order:

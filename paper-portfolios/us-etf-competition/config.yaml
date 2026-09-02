@@ -32,6 +32,15 @@ market_data:
   calendar_source: official-exchange-or-regulator-page
   evidence_root: evidence/market-data
 
+price_cache:
+  latest_path: evidence/market-data/latest-prices.md
+  append_only_log_path: evidence/market-data/price-log.md
+  canonical_history: append_only_log_path
+  read_before_refresh: true
+  use_for_initial_screen_only: true
+  refresh_scope: holdings-benchmark-and-decision-relevant-candidates
+  every_verified_price_must_be_logged: true
+
 execution:
   phase: proposal
   proposal_trading_sessions: 10

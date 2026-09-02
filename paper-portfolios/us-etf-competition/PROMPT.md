@@ -40,6 +40,11 @@ portfolio at `paper-portfolios/us-etf-competition/`.
 - Read `config.yaml`, `ledger/events.jsonl`, `state/portfolio.json`, the latest
   run note, `index.md`, relevant ETF entity/fund facts, and relevant pages under
   `wiki/analysis/performance/`.
+- Read `evidence/market-data/latest-prices.md` and the tail of
+  `evidence/market-data/price-log.md` before searching for new prices. Use the
+  cache for preliminary screening, then refresh only current holdings, the SPY
+  benchmark, and candidates whose price could change the decision; do not
+  search the whole universe again without a decision reason.
 - Vault pages are research context, not the source of current prices. Use
   browser search only to discover pages, then open the direct page and read the
   visible quote, calendar, NAV, or filing evidence. Preserve the search query,
@@ -50,6 +55,11 @@ portfolio at `paper-portfolios/us-etf-competition/`.
   early-close session, use the freshest directly observed quote available at
   the invocation time; outside market hours, use the latest completed close and
   label it explicitly. Do not treat a search-result snippet as a quote.
+- For every verified price refresh, append one row to the append-only
+  `evidence/market-data/price-log.md` and update the derived
+  `evidence/market-data/latest-prices.md` row for that Ticker. Keep the source
+  URL, local evidence file, price basis, source as-of timestamp, retrieval time,
+  and `run_id` together so a later run can reuse the observation.
 - If a mandatory source is missing, stale, conflicting, unauthorized, or
   unavailable, write `BLOCKED/NO TRADE`, preserve the prior portfolio, and name
   the failed dependency. Do not use private scraped APIs or look-ahead data as
@@ -155,9 +165,10 @@ exceed 35%. ETFs tracking the same benchmark or with top-holdings overlap above
 7. In Proposal Phase, create proposed decision evidence only. Do not call an
    order-placement route. In a later authorized phase, use marketable limit
    orders, expire unfilled orders after 15 minutes, and record actual fills.
-8. Append only valid events, rebuild state/dashboard, and create one dated run
-   note under `runs/` with source links, timestamps, calculations, gaps, and
-   decision rationale.
+8. Append verified prices to the price log, update the latest-price cache,
+   append only valid ledger events, rebuild state/dashboard, and create one
+   dated run note under `runs/` with source links, timestamps, calculations,
+   gaps, and decision rationale.
 
 ## Required decision table
 
