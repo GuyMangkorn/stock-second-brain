@@ -1159,6 +1159,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 ## 2026-09-02 Queue Coverage Addition
 
 - [[ETF_EURONEXT_AMSTERDAM_WNRG Performance]] — SMWFF / WNRG (International; OTC input alias resolved to official primary `Euronext Amsterdam:WNRG`, passive accumulating global developed energy-sector exposure; official 2017-2025 complete NAV TR cumulative `+67.84%` / rounded-input CAGR `+5.92%`, 2021-2025 CAGR `+19.81%`, official rolling 10-year NAV TR `+9.57%` and current official NAV TR YTD `+33.61%` as of 2026-07-31; predecessor-linked 2016 context row, energy concentration, linked-index history and daily-NAV drawdown gaps disclosed)
+- [[ETF_EURONEXT_AMSTERDAM_WHEA Performance]] — SWOOF / WHEA (International; OTC input alias resolved to official primary `Euronext Amsterdam:WHEA`, passive accumulating global developed health-care-sector exposure; official 2017-2025 complete NAV TR cumulative `+132.53%` / rounded-input CAGR `+9.83%`, 2021-2025 CAGR `+6.30%`, official rolling 10-year NAV TR `+8.10%` and current official NAV TR YTD `+3.29%` as of 2026-07-31; predecessor-linked 2016 context row, health-care concentration, linked-index history and daily-NAV drawdown gaps disclosed)
 
 ## 2026-08-30 Performance Refresh
 
