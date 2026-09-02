@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "provider": "Alpaca",
+  "method": "GET",
+  "kind": "clock",
+  "documented_endpoint": "https://paper-api.alpaca.markets/v2/clock",
+  "request_parameters": {},
+  "automation_heartbeat_at": "2026-09-02T08:02:27.595Z",
+  "source_response_timestamp": "2026-09-02T04:03:32.218126-04:00",
+  "response_sha256": "f49f3b61de5dbc204ccb2ba6e74621521ea050662731a3caaf4ef35e71879531",
+  "response": {
+    "timestamp": "2026-09-02T04:03:32.218126-04:00",
+    "is_open": false,
+    "next_open": "2026-09-02T09:30:00-04:00",
+    "next_close": "2026-09-02T16:00:00-04:00"
+  }
+}

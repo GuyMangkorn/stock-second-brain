@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "provider": "Alpaca",
+  "method": "GET",
+  "kind": "calendar",
+  "documented_endpoint": "https://paper-api.alpaca.markets/v2/calendar",
+  "request_parameters": {
+    "start": "2026-09-02",
+    "end": "2026-09-02"
+  },
+  "automation_heartbeat_at": "2026-09-02T08:02:27.595Z",
+  "response_sha256": "f36b8f3946cdc4093153fe064c10f789e5d59a89190363ade7bd95b5147140fc",
+  "response": {
+    "request": {
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-02"
+    },
+    "calendar": [
+      {
+        "date": "2026-09-02",
+        "open": "2026-09-02T09:30:00",
+        "close": "2026-09-02T16:00:00"
+      }
+    ]
+  }
+}
