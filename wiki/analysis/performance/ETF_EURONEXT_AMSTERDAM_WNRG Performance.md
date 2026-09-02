@@ -44,7 +44,7 @@ Street SPDR MSCI World Energy UCITS ETF. กองทุนเป็น passive,
 global developed-market energy equity ETF โดยใช้ USD NAV Total Return เป็นฐาน
 หลัก แม้ primary listing ซื้อขายเป็น EUR. Official rolling 10-year NAV TR
 annualized อยู่ที่ `9.57%` และ current YTD อยู่ที่ `33.61%` ณ `2026-07-31`;
-ช่วง complete 2017-2025 ให้ CAGR `5.92%` เทียบ S&P 500 TR `17.29%`, แต่ช่วง
+ช่วง complete 2017-2025 ให้ CAGR `5.92%` เทียบ S&P 500 TR `15.14%`, แต่ช่วง
 2021-2025 ให้ CAGR `19.81%` เทียบ `14.43%` เนื่องจาก energy-cycle exposure สูง.
 
 ## Performance check
