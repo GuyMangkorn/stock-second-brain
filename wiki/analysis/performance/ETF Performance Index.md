@@ -1156,6 +1156,10 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_NASDAQ_INDQ Performance]] — INDQ (India; official inception `2026-03-31`, fund/index NAV performance fields remain `N/A`, current NAV/YTD and available-period NAV TR not disclosed, and no secondary proxy or realized drawdown/recovery is inferred)
 - [[ETF_NASDAQ_SMHC Performance]] — SMHC (China; official inception `2026-06-23`, available-period fund performance since inception `-18.83%` cumulative as of 2026-08-27, current NAV `US$47.82`, current YTD not disclosed, and detailed performance-table conflict/daily-NAV gaps disclosed)
 
+## 2026-09-02 Queue Coverage Addition
+
+- [[ETF_EURONEXT_AMSTERDAM_WNRG Performance]] — SMWFF / WNRG (International; OTC input alias resolved to official primary `Euronext Amsterdam:WNRG`, passive accumulating global developed energy-sector exposure; official 2017-2025 complete NAV TR cumulative `+67.84%` / rounded-input CAGR `+5.92%`, 2021-2025 CAGR `+19.81%`, official rolling 10-year NAV TR `+9.57%` and current official NAV TR YTD `+33.61%` as of 2026-07-31; predecessor-linked 2016 context row, energy concentration, linked-index history and daily-NAV drawdown gaps disclosed)
+
 ## 2026-08-30 Performance Refresh
 
 - [[ETF_NYSE_ARCA_GSIE Performance]] — GSIE (International; passive four-factor strategic-beta developed ex-U.S. ETF, official NAV TR YTD +11.16%, 1-year +23.27%, 3-year +16.55%, 5-year +9.12%, 10-year +9.43% and since-inception +8.93% versus ActiveBeta index +11.22%, +23.45%, +16.63%, +9.19%, +9.51% and +9.01% as of 2026-07-31; secondary 2016-2025 cumulative +128.19% / rounded-input CAGR +8.60%* and 2021-2025 CAGR +9.20%*, with factor, country/sector/FX and daily-NAV gaps disclosed)

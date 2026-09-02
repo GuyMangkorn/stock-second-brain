@@ -23,6 +23,7 @@ tags:
 | DLS | WisdomTree International SmallCap Dividend Fund | international small-cap dividend | 7.69%† | 7.97% | 8.54%‡ | [[ETF_NYSE_ARCA_DLS Performance]] |
 | DTH | WisdomTree International High Dividend Fund | international high dividend | 9.06% | 12.22% | 8.21% | [[ETF_AMEX_DTH Performance]] |
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
+| WNRG | State Street SPDR MSCI World Energy UCITS ETF | global developed energy sector / accumulating | 9.57% | 19.81% | 33.61% | [[ETF_EURONEXT_AMSTERDAM_WNRG Performance]] |
 | EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 11.06% | [[ETF_CBOE_EFAV Performance]] |
 | GSID | Goldman Sachs MarketBeta International Equity ETF | developed markets ex-North America large-/mid-cap passive | not applicable (<10y) | not disclosed | 11.93% | [[ETF_CBOE_BZX_GSID Performance]] |
 | GSIE | Goldman Sachs ActiveBeta International Equity ETF | developed ex-U.S. four-factor strategic-beta passive | 9.43% | 9.20%* (2021-2025) | 11.16% | [[ETF_NYSE_ARCA_GSIE Performance]] |

@@ -2,6 +2,7 @@
 
 ## 2026-09-02
 
+- `etf-performance`: Added [[ETF_EURONEXT_AMSTERDAM_WNRG Performance]] for SMWFF, an OTC alias resolved to official primary `Euronext Amsterdam:WNRG`; scheduled-inline local pre-save returned PASS, official 2017-2025 complete NAV TR cumulative is `67.84%` / rounded-input CAGR `5.92%`, 2021-2025 CAGR is `19.81%`, rolling 10-year NAV TR is `9.57%`, and current official NAV TR YTD is `33.61%` as of `2026-07-31`; predecessor-linked 2016, energy concentration and daily-NAV drawdown gaps remain disclosed.
 - `etf-performance`: Rechecked and corrected [[ETF_CBOE_BZX_NUDM Performance]], [[ETF_NYSE_ARCA_FNDF Performance]], and [[ETF_CBOE_BZX_DFIS Performance]] using [[ETF_performance_sources_2026-09-02_recheck]]; fixed NUDM SEC/key presentation, separated FNDF official `9.98%` from rounded-row `9.97%`, changed DFIS YTD to secondary NAV `10.30%*` as of `2026-07-31`, reconciled International coverage to `65`, and removed the duplicate `Cboe:DFIS` page. Reviewer fallback was local PASS after source-verifier usage-limit exhaustion; daily-NAV risk gaps remain disclosed.
 
 ## 2026-09-01
