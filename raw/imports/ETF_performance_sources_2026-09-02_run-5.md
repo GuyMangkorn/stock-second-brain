@@ -89,3 +89,39 @@ confirmation: none
 code: durable-write-complete
 reason: Official active foreign-equity identity, Cboe BZX listing, dated official NAV/benchmark fields, separated secondary current data, calculations and scheduled-local review passed with strategy-break, unavailable-hit-rate and daily-NAV risk gaps disclosed.
 ```
+
+## SEIS evidence packet
+
+- Input ticker: `SEIS`; canonical identity: `Nasdaq:SEIS`; fund: `SEI Select Small Cap ETF`. SEI's official page and fact sheet identify the Nasdaq listing; SEC states operations began `2024-10-08`, while the Nasdaq listing notice records first listing/trading on `2024-10-10`. The operations date is used for track-record classification and the listing date is kept separately.
+- Official classification: `active-equity-long-only`, `other-active`. The SEC states that the fund invests at least 80% in equity securities of small companies in the Russell 2000 market-cap universe and combines SEI's quantitative-based active portfolio with model portfolios from sub-advisers. The official fact sheet identifies allocations to SEI Investments Management Corporation, Easterly Investment Partners and Geneva Capital Management. No bond, commodity, currency, leveraged, inverse, covered-call, defined-outcome or derivative-heavy payoff was identified.
+- Management benchmark: `Russell 2000 Index (USD)`, selected from the official SEI fact sheet as the strategy-aligned U.S. small-cap comparator. S&P 500 TR remains a common reference only.
+- Official fact sheet fields: the current/YTD block is as of `2026-07-31` and reports NAV TR YTD `15.79%` versus Russell 2000 `18.85%`; the annualized block is as of `2026-06-30` and reports NAV TR 1-year `31.44%` versus `40.78%` and since-inception annualized `18.35%` versus `21.99%`. The official fact sheet also reports net assets `US$575.55M`, holdings `372`, weighted capitalization `US$6,065M`, P/B `2.40`, median forward P/E `14.37`, beta `0.95`, and expense ratio `0.55%`.
+- Return-only calculations from identical official periods: YTD `15.79% - 18.85% = -3.06 pp`; 1-year `31.44% - 40.78% = -9.34 pp`; since inception annualized `18.35% - 21.99% = -3.64 pp`. These are not alpha. No Excess CAGR or hit rate is calculated because the fund has less than three years of operating history and annual benchmark rows are not disclosed.
+- Calendar evidence: official SEI sources reviewed do not expose a complete calendar-year table. Secondary AAII reports 2025 annual NAV TR `9.80%*` and 2026 YTD `15.8%` as of `2026-07-31`; only the 2025 row is used as a secondary complete-year observation. The 2024 inception-year partial is not annualized or backfilled. S&P cache 2025 TR is `17.88%`.
+- Calendar read-through: one available complete-year observation is positive (`2025 +9.80%*`), but a meaningful up/down count, best/worst year and 2021-2025 CAGR are `not applicable`. The 2025 observation remains marked secondary.
+- Risk/portfolio evidence: official July factsheet reports beta `0.95`, no 3-year standard deviation and no 3-year tracking error, with 372 holdings. Prospectus risks include equity, small/medium capitalization, momentum, quality, value, low volatility, quantitative investing, market, liquidity, management, new-fund, authorized participant and premium/discount risks. Compatible official daily NAV history for maximum drawdown, recovery, downside capture or risk-adjusted persistence was not verified. The official reliable capture used for the page does not provide a dated NAV/market-price pair.
+- Active evidence: `track_record: insufficient` because operations began 2024-10-08 and elapsed history is under three years. `management_evidence: insufficient` because the available one-year/YTD fields are below the minimum track-record threshold and no complete annual benchmark rows or compatible hit rate are available. `risk_evidence: not-verified`; no return difference is called alpha.
+- Current S&P reference: S&P DJI's current all-returns table reports S&P 500 TR YTD `12.34%` as of `2026-09-01`; it is not directly compared with SEIS's `2026-07-31` YTD because the as-of dates differ. The permitted cached S&P 2016-2025 rows are retained only for the 2025 common-reference row.
+- Source map: official product `https://seietfs.filepoint.live/seis`; official fact sheet `https://seietfs.filepoint.live/assets/pdfs/SEIS_FactSheet.pdf`; SEC summary prospectus `https://www.sec.gov/Archives/edgar/data/1888997/000110465925073552/tm258862d15_497k.htm`; Nasdaq listing `https://nasdaqtrader.com/TraderNews.aspx?id=ETP2024-93`; secondary AAII `https://www.aaii.com/etf/ticker/SEIS`; current S&P TR table `https://www.spglobal.com/spdji/en/additional-reports/all-returns/index.dot?additionalFilterCondition=&parentIdentifier=df8ec300-24ad-4c70-81d3-a3cece0200e2&sourceIdentifier=index-family-specialization`.
+
+## SEIS scheduled-local review
+
+- Source integrity review: PASS — ticker/exchange, operations-versus-listing dates, fund identity, supported active equity classification, benchmark, return basis, currency, expenses, current/YTD and annualized as-of dates, and official/secondary separation reconcile across SEI, SEC, Nasdaq and AAII sources.
+- Calculation review: PASS — the three official return-only differences were recomputed from the stated periods; the 2025 secondary row was not used to manufacture a long-window CAGR; no annual benchmark, hit rate, drawdown, recovery or risk-adjusted metric was inferred.
+- Active-management review: PASS — `active-equity-long-only` and `other-active` are supported by the integrated quantitative/fundamental multi-manager strategy; `track_record: insufficient`, `management_evidence: insufficient` and `risk_evidence: not-verified` follow the deterministic rules; return-only differences are not called alpha.
+- Format and graph review: PASS — Thai-first performance page, required active fields/sections, canonical `geography/United-States` tag, breadcrumb, one primary region, resolving output/index links and source-batch linkage are present.
+- Complete proposed durable contents: create `wiki/analysis/performance/ETF_NASDAQ_SEIS Performance.md` with the frontmatter, official/secondary tables, risk and active-management sections above; append this SEIS evidence/review/handoff packet; add the exact USA row `| SEIS | SEI Select Small Cap ETF | active integrated U.S. small-cap quantitative/fundamental | not applicable (<10y) | not applicable (2024 inception) | 15.79% | [[ETF_NASDAQ_SEIS Performance]] |`; change `USA` region count `67 → 68`; add the exact SEIS coverage row to `ETF Performance Index`; append the dated queue-coverage bullet; append one `etf-performance` log bullet with the official/secondary split and risk gap.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_SEIS Performance.md`; update this batch, `wiki/analysis/comparisons/USA ETF.md`, `wiki/analysis/comparisons/ETF Region Index.md`, `wiki/analysis/performance/ETF Performance Index.md`, and `log.md`.
+- Local pre-save verdict: PASS; exact scheduled audit lines are `verification_mode: scheduled-local` and `reviewer_dispatch: not-attempted-by-design`; no critical, high or blocking finding remains.
+
+## SEIS research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official active U.S. small-cap identity, Nasdaq listing, dated official NAV/benchmark fields, separated secondary 2025 row, calculations and scheduled-local review passed with insufficient-track-record and daily-NAV risk gaps disclosed.
+```

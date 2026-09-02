@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: USA
-updated: 2026-08-30
+updated: 2026-09-02
 tags:
   - analysis/etf-region
   - geography/United-States
@@ -41,6 +41,7 @@ tags:
 | SCHA | Schwab U.S. Small-Cap ETF | U.S. small-cap broad equity | 10.78%† | 6.53%* | 22.36%† | [[ETF_NYSE_ARCA_SCHA Performance]] |
 | SPSM | State Street SPDR Portfolio S&P 600 Small Cap ETF | U.S. small-cap broad equity | 10.75% | ไม่พบข้อมูลที่ยืนยันได้ | 21.54% | [[ETF_NYSE_ARCA_SPSM Performance]] |
 | GSSC | Goldman Sachs ActiveBeta U.S. Small Cap Equity ETF | U.S. small-cap multi-factor equity | not applicable (<10y) | 8.25% | 21.33% | [[ETF_NYSE_ARCA_GSSC Performance]] |
+| SEIS | SEI Select Small Cap ETF | active integrated U.S. small-cap quantitative/fundamental | not applicable (<10y) | not applicable (2024 inception) | 15.79% | [[ETF_NASDAQ_SEIS Performance]] |
 | AVSC | Avantis U.S. Small Cap Equity ETF | U.S. small-cap active value/profitability equity | not applicable (<10y) | not applicable | 23.92% | [[ETF_NYSE_ARCA_AVSC Performance]] |
 | AVUV | Avantis U.S. Small Cap Value ETF | U.S. small-cap active value/profitability equity | not applicable (<10y) | not applicable | 23.61% | [[ETF_NYSE_ARCA_AVUV Performance]] |
 | DFAS | Dimensional U.S. Small Cap ETF | U.S. small-cap active systematic equity | 9.78% | 9.42% | 16.9%* | [[ETF_CBOE_BZX_DFAS Performance]] |
@@ -123,6 +124,13 @@ midpoint `US$57.07`, closing price `US$57.06`, AUM `US$17.081B`, 606 holdings,
 rows and daily NAV drawdown/recovery series ยัง `ไม่พบข้อมูลที่ยืนยันได้`.
 
 FNDA current refresh note: `10.72%` เป็น official rolling 10-year NAV TR และ `18.41%` เป็น official NAV TR YTD ณ 2026-07-31; `9.49%*` เป็น rounded-input CAGR จาก secondary dividend-adjusted annual rows 2021-2025. Current issuer benchmark คือ RAFI Fundamental High Liquidity US Small Index หลัง benchmark change จาก Russell RAFI US Small Company Index เมื่อ 2024-06-21; official calendar NAV rows และ daily NAV drawdown/recovery ยังไม่พบข้อมูลที่ยืนยันได้.
+
+SEIS เป็น active integrated U.S. small-cap ETF; official fact sheet ณ 2026-07-31
+รายงาน NAV TR YTD `15.79%` เทียบ Russell 2000 `18.85%` และ 1-year ณ 2026-06-30
+`31.44%` เทียบ `40.78%`. 2025 NAV TR `9.80%*` เป็น secondary complete-year
+row; กองเริ่มดำเนินงาน 2024-10-08 จึงไม่มี 10-year หรือ 2021-2025 CAGR และยังมี
+management evidence `insufficient` ตาม track-record ต่ำกว่า 3 ปี. Official daily
+NAV risk series และ annual benchmark rows ยังไม่เปิดเผย.
 
 ## Navigation
 
