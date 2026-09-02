@@ -13,12 +13,13 @@ management_benchmark: MSCI World ex USA Small Cap Index (net dividends)
 track_record: provisional
 management_evidence: positive
 risk_evidence: not-verified
-updated: 2026-08-17
+updated: 2026-09-02
 performance_as_of: 2025-12-31
-current_ytd_as_of: 2026-08-12
-price_nav_as_of: 2026-08-13
-source_batch: raw/imports/ETF_performance_sources_2026-08-17.md
-return_basis: NAV total return
+current_ytd_as_of: 2026-07-31 (secondary NAV total return)
+price_nav_as_of: 2026-08-31
+source_batch: raw/imports/ETF_performance_sources_2026-09-02_recheck.md
+return_basis: NAV total return; distributions reinvested; net of expenses
+return_currency: USD
 tags:
   - analysis/etf-performance
   - ticker/DFIS
@@ -37,9 +38,9 @@ complete calendar rows ที่ยืนยันได้คือ 2023-2025: 
 64.16% และ rounded-input CAGR 17.97%. กองทุนชนะ management benchmark ที่เลือก
 คือ MSCI World ex USA Small Cap Index (net dividends) ในทั้งสามปี โดยมี Excess
 CAGR +2.20 percentage points และ relative wealth +5.80%; หลักฐานนี้เป็น
-return-only management evidence ไม่ใช่ alpha claim. Current YTD `14.18%*` ณ
-2026-08-12 เป็น secondary market-price + cash-distribution proxy ไม่ใช่
-official NAV Total Return.
+return-only management evidence ไม่ใช่ alpha claim. Current YTD `10.30%*` ณ
+2026-07-31 เป็น secondary NAV total-return field จาก AAII ไม่ใช่ official
+Dimensional standardized YTD field.
 
 ## Performance check
 
@@ -55,7 +56,8 @@ official NAV Total Return.
 - management_evidence: positive; annual active differences were +2.42 pp in 2023, +1.03 pp in 2024, and +3.42 pp in 2025; Excess CAGR +2.20 pp and hit rate 3/3
 - risk_evidence: not-verified; official daily NAV history sufficient for reproducible maximum drawdown and recovery was not captured
 - 10-year window: not applicable (<10 years of history)
-- Coverage/source note: official annual chart covers 2023-2025. The 2022 inception-year partial is excluded. Current 2026 YTD is marked `*` because it is a secondary proxy.
+- Current official standardized snapshot: NAV `US$37.61`, market price `US$37.53`, premium/discount `-0.22%` as of 2026-08-31. Current official standardized NAV TR fields as of 2026-07-31 are 3M `1.96%`, 1Y `23.26%`, 3Y annualized `17.39%`, and since inception `11.04%`.
+- Coverage/source note: official annual chart covers 2023-2025. The 2022 inception-year partial is excluded. Current 2026 YTD `10.30%*` is marked `*` because it is a secondary NAV total-return field.
 
 | Year / window | DFIS NAV TR | Management benchmark | S&P 500 TR |
 |---|---:|---:|---:|
@@ -77,7 +79,7 @@ annual comparison ใช้ cached USD Total Return convention ณ 2025-12-31.
 - Least bad down year: ไม่พบข้อมูลที่ยืนยันได้
 - 2023-2025 cumulative / CAGR: 64.16% / 17.97%; management benchmark 55.16% / 15.77%; S&P 500 TR 86.12% / 23.01%
 - Annual active differences versus management benchmark: +2.42 pp, +1.03 pp, +3.42 pp
-- Current date-to-date YTD*: 14.18% as of 2026-08-12, calculated as `(37.27 + 0.4222) / 32.94 - 1`; this uses secondary closing price plus one cash distribution and is not NAV TR
+- Current date-to-date YTD*: 10.30% as of 2026-07-31; this is the secondary AAII NAV total-return field and is not replaced with a price-plus-distribution calculation.
 
 ## Risk read-through
 
@@ -86,11 +88,12 @@ small-company, foreign securities/currencies, geographic, value, profitability,
 market-trading และ international closed-market risks. Population standard
 deviation ของ official 2023-2025 annual rows อยู่ที่ 14.01% แต่มีเพียงสามปี
 จึงเป็นเพียง short-window descriptor. Official highest quarter คือ +17.37%
-ใน Q2 2025 และ lowest quarter -7.85% ใน Q4 2024. Schwab reports a secondary
-price snapshot of US$37.34 at 11:12am ET on 2026-08-13, previous close
-US$37.27, and closing NAV US$37.18 on 2026-08-12; premium/discount was +0.24%.
+ใน Q2 2025 และ lowest quarter -7.85% ใน Q4 2024. The official 2026 summary
+prospectus reports an actively managed structure, while the secondary AAII
+profile reports 3,461 holdings and 9.0% turnover as of 2026-07-31. Current
+official price/NAV snapshot is `US$37.53` / `US$37.61` as of 2026-08-31.
 Official daily NAV history for a reproducible maximum drawdown and recovery was
-not verified. The latest summary also reports 3,461 holdings and 9% turnover.
+not verified.
 
 ## Active management read-through
 
@@ -98,7 +101,7 @@ not verified. The latest summary also reports 3,461 holdings and 9% turnover.
 - active_process: systematic-active
 - management_benchmark: MSCI World ex USA Small Cap Index (net dividends)
 - track_record: provisional
-- management_evidence: positive return-only
+- management_evidence: positive return evidence (not alpha)
 - risk_evidence: not-verified
 - Annual active differences were +2.42 pp, +1.03 pp and +3.42 pp; the 2023-2025 Excess CAGR was +2.20 pp, hit rate 3/3 = 100%, and relative wealth was +5.80%.
 - The selected benchmark is strategy-aligned small-cap international exposure from the official performance table. S&P 500 TR is retained only as a common reference and is not used to infer manager skill.
@@ -114,3 +117,5 @@ not verified. The latest summary also reports 3,461 holdings and 9% turnover.
 - Secondary current price/NAV/distribution cross-check: https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=dfis
 - Secondary historical closing-price cross-check: https://chartexchange.com/symbol/bats-dfis/historical/
 - Official S&P 500 index page: https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+- Secondary current NAV total-return cross-check: https://www.aaii.com/etf/ticker/DFIS
+- Recheck source batch: [[ETF_performance_sources_2026-09-02_recheck]]

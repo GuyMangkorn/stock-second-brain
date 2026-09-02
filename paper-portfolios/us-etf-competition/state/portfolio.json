@@ -1,0 +1,25 @@
+{
+  "benchmark": {
+    "return_pct": null,
+    "start_price": null,
+    "symbol": "SPY"
+  },
+  "cash": 100000.0,
+  "cash_weight_pct": 100.0,
+  "competition_id": "us-etf-competition-2026",
+  "cumulative_return_pct": 0.0,
+  "current_drawdown_pct": 0.0,
+  "daily_equity_curve": [],
+  "events_processed": 1,
+  "generated_at": "2026-09-02T01:44:49Z",
+  "last_mark": null,
+  "maximum_drawdown_pct": 0.0,
+  "normal_turnover_pct": 0.0,
+  "normal_turnover_usd": 0.0,
+  "phase": "proposal",
+  "portfolio_value": 100000.0,
+  "positions": {},
+  "schema_version": 1,
+  "starting_cash": 100000.0,
+  "total_turnover_usd": 0.0
+}

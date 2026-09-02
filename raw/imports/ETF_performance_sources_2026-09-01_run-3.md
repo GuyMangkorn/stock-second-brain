@@ -197,3 +197,12 @@ confirmation: none
 code: durable-write-complete
 reason: Official exchange identity, NAV annual/rolling/current fields, hedge structure, calculations and source dates passed the scheduled-local pre-save review.
 ```
+
+## DFIS correction notice
+
+The appended DFIS draft in this mixed `IEMXF`/`LSE:MVOL` batch was not canonical:
+it used `Cboe:DFIS`, an outdated SEC source, and a stale YTD proxy. It is
+superseded by the scoped recheck [[ETF_performance_sources_2026-09-02_recheck]]
+and the canonical page [[ETF_CBOE_BZX_DFIS Performance]]. Use the recheck for
+all current DFIS evidence; no performance decision should be based on the
+superseded draft.

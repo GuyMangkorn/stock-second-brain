@@ -69,3 +69,45 @@ exhausted: false
 confirmation: none
 code: durable-write-complete
 reason: Official IIXFF-to-IDFF performance evidence passed scheduled-local review and the scoped page and source batch were written.
+
+## NUDM — Nuveen ESG International Developed Markets Equity ETF
+
+- `entity_key`: `Cboe BZX:NUDM`; the card input is `NUDM`. The issuer factsheet lists the primary exchange as `Cboe` and ticker `NUDM`; the project exchange-qualified key uses the Cboe BZX venue.
+- Management mode: `passive-index`; inception `2017-06-06`. The fund seeks to track the `Nuveen ESG International Developed Markets Equity Index` before fees and expenses, using a rules-based developed-market equity portfolio outside the U.S. and Canada with ESG, controversial-business and low-carbon screens, rebalanced quarterly.
+- Official product source: https://www.nuveen.com/en-us/exchange-traded-funds/nudm-nuveen-esg-international-developed-markets-equity-etf — fund identity, passive/indexing approach, index scope, portfolio-management notice and risk description; accessed 2026-09-01. The live product page did not expose a more recent complete standardized performance table in the reviewed capture.
+- Official factsheet: https://documents.nuveen.com/Documents/Nuveen/Viewer.aspx?download=1&uniqueId=02852fbf-974a-433c-9b45-56a6a1289a83 — Nuveen ESG International Developed Markets Equity ETF, as of 2026-06-30. NAV Total Return calendar rows: `2018 -14.63%`, `2019 24.28%`, `2020 10.74%`, `2021 10.21%`, `2022 -15.08%`, `2023 17.89%`, `2024 5.55%`, `2025 29.35%`; 2026 YTD `10.10%`. Nuveen ESG index rows: `-14.47%, 24.66%, 11.14%, 10.52%, -14.94%, 18.19%, 5.80%, 29.87%`; 2026 YTD `10.26%`. MSCI EAFE reference rows are also shown in the official factsheet but are not substituted for the issuer benchmark.
+- Official factsheet fund fields as of 2026-06-30: expense ratio `0.27%`, SEC 30-day yield `2.33%`, distribution frequency `annually`, total net assets `US$698.26M`, positions `76`, weighted average market cap `US$126.09B`, forward P/E `17.39x`. The same factsheet reports NAV annualized returns of `21.41%` for 1 year, `16.73%` for 3 years, `9.14%` for 5 years and `8.60%` since inception, but these are retained separately from the calendar-row calculations.
+- Return basis: official USD NAV Total Return with distributions reinvested; market-price returns remain separate. 2017 is a partial inception year and is excluded from complete-calendar-year ranking and calculations.
+- SEC source: https://www.sec.gov/Archives/edgar/data/1635073/000119312526080207/d40382d497k.htm — summary prospectus used to corroborate the Cboe BZX listing, fund objective, passive approach, fees and non-U.S./ESG risk disclosures.
+- Calculations from rounded official NAV rows: 2018-2025 product `1.7698794`, cumulative `76.99%`, normalized calculation `100.00 at 2017-12-31 → 176.99 at 2025-12-31`, rounded-input CAGR `7.40%`; 2021-2025 product `1.5063734`, cumulative `50.64%`, CAGR `8.54%`. Issuer index: 2018-2025 cumulative `80.91%` / CAGR `7.69%`; 2021-2025 cumulative `52.67%` / CAGR `8.83%`. Cached S&P 500 TR common reference: 2018-2025 cumulative `192.03%` / CAGR `14.33%`; 2021-2025 cumulative `96.17%` / CAGR `14.43%`.
+- Calendar ranking: `6 / 2` positive/negative years for 2018-2025; best `2025 +29.35%`; least positive `2024 +5.55%`; worst `2022 -15.08%`; least bad down year `2018 -14.63%`. Population standard deviation from rounded annual NAV rows: `15.33%` for 2018-2025 and `14.73%` for 2021-2025. These are calculations, not issuer daily-risk fields.
+- Source-quality choice: a later secondary standardized-performance quote was not used because the official issuer factsheet provides a dated, inspectable NAV return series through 2026-06-30. No daily NAV series sufficient for maximum drawdown, recovery, downside capture or compatible risk-adjusted metrics was verified; those fields remain `ไม่พบข้อมูลที่ยืนยันได้`.
+- Management update: the official factsheet states Teachers Advisors, LLC merged into Nuveen Asset Management, LLC effective 2026-08-01, with no investment-strategy or portfolio-management change; Nuveen Asset Management became sub-adviser.
+- Planned durable contents: create `wiki/analysis/performance/ETF_CBOE_BZX_NUDM Performance.md` with the NUDM identity, passive equity classification, official 2018-2025 NAV/index annual table, cached S&P 500 TR comparison, 2018-2025 and 2021-2025 calculations, 2026 YTD field, risk gaps, required breadcrumb and canonical `geography/International` tag; append this evidence and the handoff to this source batch. Shared navigation/index files and `log.md` remain outside scope because they were dirty before the retained lease.
+
+## NUDM scheduled-inline local review
+
+- Review packet checked canonical exchange/ticker, fund identity, passive equity eligibility, index and region, NAV TR basis, currency, partial-inception handling, official annual rows, official current YTD, cached S&P basis/window, calculations, as-of dates, management update, risk gaps, one annual table, required sections, breadcrumb, canonical tag, source links, and complete planned output paths.
+- Pre-save verdict: `PASS`. Official issuer evidence supports the identity, strategy, annual rows, YTD, fund facts and return basis. The 2017 partial year is excluded; no current market-price return, unsourced ten-year claim, or daily-risk metric is inferred. Secondary later performance data was not used where the dated official factsheet was available.
+
+### research_handoff — NUDM
+
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official NUDM performance evidence passed scheduled-local review and the scoped performance page and source batch were written.
+
+## NUDM queue route outcome
+
+- Queue route returned `BLOCKED` with `scope: global`, `code: durable-output-unchanged`, because `wiki/analysis/performance/ETF_CBOE_BZX_NUDM Performance.md` was created before the pre-write output baseline and therefore was not changed after that boundary. The queue stopped the batch and released the retained project lease; no further cards were processed. The NUDM page and this appended source evidence remain uncommitted for the next controlled retry.
+
+## NUDM correction notice
+
+The NUDM draft above is a historical capture and is superseded for current
+performance use by [[ETF_performance_sources_2026-09-02_recheck]]. The corrected
+record uses the SEC prospectus for `Cboe BZX:NUDM`, removes the rounded-input
+dagger, labels the issuer index as USD Net Return, and preserves the adviser /
+sub-adviser wording conflict. The canonical page now points to the recheck.

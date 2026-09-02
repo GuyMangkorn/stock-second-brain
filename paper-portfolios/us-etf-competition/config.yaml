@@ -1,0 +1,105 @@
+schema_version: 1
+competition_id: us-etf-competition-2026
+name: US ETF Paper Portfolio Competition
+timezone: America/New_York
+start_at: 2026-09-02T15:00:00-04:00
+end_at: 2026-12-31T16:00:00-05:00
+starting_cash_usd: 100000.00
+currency: USD
+instrument_type: ETF
+
+universe:
+  listing: US-listed
+  eligible: unleveraged long-only equity ETFs
+  research_root: wiki/analysis/performance
+  new_research_budget_per_rebalance: 3
+  same_run_new_candidate_buy: false
+
+schedule:
+  review_days: [MO, TU, WE, TH, FR]
+  review_time: "15:00"
+  normal_rebalance_every_trading_sessions: 2
+  holiday_action: NO_TRADE
+  early_close_action: DEFER_REBALANCE
+  execution_profile: scheduled-inline
+
+execution:
+  phase: proposal
+  proposal_trading_sessions: 10
+  automatic_activation: explicit-user-authorization-required
+  broker_role: execution-mirror
+  order_connector_status: unavailable-in-current-tool-context
+  automatic_execution_status: blocked-until-order-capable-paper-connector
+  system_of_record: ledger/events.jsonl
+  proposal_slippage_bps_per_side: 5
+  automatic_order_type: marketable-limit
+  order_expiry_minutes: 15
+  fractional_shares: true
+
+costs:
+  commission_usd: 0.00
+  taxes: ignored-pre-tax
+  cash_yield_pct: 0.00
+  distributions: credit-cash-on-pay-date
+  automatic_reinvestment: false
+
+portfolio_limits:
+  minimum_cash_weight_pct: 3.00
+  minimum_position_weight_pct: 5.00
+  maximum_position_weight_pct: 20.00
+  target_position_count_min: 6
+  target_position_count_max: 10
+  maximum_sector_theme_weight_pct: 35.00
+  maximum_high_overlap_group_weight_pct: 25.00
+  high_overlap_threshold_pct: 50.00
+  no_trade_band_percentage_points: 2.00
+  maximum_normal_turnover_pct: 25.00
+
+candidate_score:
+  market_regime_fit: 15
+  underlying_earnings_trend: 15
+  valuation: 20
+  strategy_quality: 15
+  momentum: 20
+  risk_liquidity_cost: 15
+  sell_below: 45
+  reduce_on_score_drop: 15
+
+liquidity_gate:
+  minimum_aum_usd: 100000000
+  minimum_median_daily_dollar_volume_usd: 5000000
+  maximum_bid_ask_spread_pct: 0.20
+  maximum_expense_ratio_pct: 1.00
+  minimum_history_years: 1.00
+  seasoned_history_years: 3.00
+  unseasoned_maximum_position_weight_pct: 5.00
+  unseasoned_combined_weight_pct: 10.00
+
+freshness_gate:
+  decision_quote_minutes: 5
+  completed_daily_price_trading_sessions: 1
+  aum_spread_liquidity_trading_sessions: 5
+  holdings_valuation_days: 45
+  performance_fund_facts_days: 31
+  methodology: latest-verified-version
+
+benchmarks:
+  operational: SPY adjusted total-return proxy
+  reference: S&P 500 Total Return Index
+  operational_symbol: SPY
+
+risk:
+  soft_portfolio_drawdown_pct: -10.00
+  soft_minimum_cash_weight_pct: 20.00
+  hard_portfolio_drawdown_pct: -15.00
+  hard_minimum_cash_weight_pct: 50.00
+  resume_buy_above_drawdown_pct: -10.00
+  position_reunderwrite_loss_pct: -10.00
+  position_reduce_loss_pct: -15.00
+  reduced_position_maximum_weight_pct: 5.00
+
+data_failure:
+  action: NO_TRADE
+  run_status: BLOCKED
+  allow_risk_reduce_or_sell_with_stale_research: true
+  allow_buy_with_stale_data: false

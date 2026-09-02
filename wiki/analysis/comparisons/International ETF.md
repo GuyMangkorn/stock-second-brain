@@ -1,7 +1,7 @@
 ---
 type: etf-region-index
 region: International
-updated: 2026-08-31
+updated: 2026-09-01
 tags:
   - analysis/etf-region
   - geography/International
@@ -51,6 +51,8 @@ tags:
 | IXSAF | iShares Core MSCI EAFE IMI Index ETF (official TSX:XEF CAD share class) | developed ex-U.S./Canada all-cap passive | 9.95% | 10.01% | 16.10% | [[ETF_TSX_XEF Performance]] |
 | JIRE | JPMorgan International Research Enhanced Equity ETF | active research-enhanced developed international core equity | 9.74% | 9.67% | 11.45% | [[ETF_NYSE_ARCA_JIRE Performance]] |
 | FNDC | Schwab Fundamental International Small Equity ETF | developed ex-U.S. small-cap fundamental/value tilt | 8.48% | 8.25% | 10.96% | [[ETF_NYSE_ARCA_FNDC Performance]] |
+| FNDF | Schwab Fundamental International Equity ETF | developed ex-U.S. large-cap fundamental/value tilt | 11.73% | 12.92% | 20.44% | [[ETF_NYSE_ARCA_FNDF Performance]] |
+| NUDM | Nuveen ESG International Developed Markets Equity ETF | developed ex-U.S./Canada ESG passive | not applicable (<10y history) | 8.54% | 10.10% | [[ETF_CBOE_BZX_NUDM Performance]] |
 | IDOG | ALPS International Sector Dividend Dogs ETF | international sector dividend dogs | 10.38% | 13.18% | 10.58% | [[ETF_AMEX_IDOG Performance]] |
 | TKCPF | VanEck Morningstar Developed Markets Dividend Leaders UCITS ETF (official USD listing LSE:TDIV) | global developed large-cap dividend; OTC alias | 12.38%† | 18.73% | 18.12% | [[ETF_LSE_TDIV Performance]] |
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
@@ -71,7 +73,7 @@ tags:
 | SCZ | iShares MSCI EAFE Small-Cap ETF | developed ex-U.S./Canada small-cap | 8.60%† | 5.55% | 14.44% | [[ETF_NASDAQ_SCZ Performance]] |
 | ISCF | iShares International Small-Cap Equity Factor ETF | international small-cap multifactor | 9.69% | 8.45% | 12.52% | [[ETF_NYSE_ARCA_ISCF Performance]] |
 | DISV | Dimensional International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | not applicable (2022 inception partial) | 12.90%* | [[ETF_CBOE_BZX_DISV Performance]] |
-| DFIS | Dimensional International Small Cap ETF | international active systematic small-cap | not applicable (<10y history) | not applicable (2022 inception) | 14.18%* | [[ETF_CBOE_BZX_DFIS Performance]] |
+| DFIS | Dimensional International Small Cap ETF | international active systematic small-cap | not applicable (<10y history) | not applicable (2022 inception) | 10.30%* | [[ETF_CBOE_BZX_DFIS Performance]] |
 | AGSCF | Avantis Global Small Cap Value UCITS ETF (official USD LSE:AVGS) | international active systematic small-cap value | not applicable (<10y history) | not applicable (2024 inception) | 21.43% | [[ETF_LSE_AVGS Performance]] |
 | AVDV | Avantis International Small Cap Value ETF | international active small-cap value | not applicable (<10y history) | 14.24%* | 13.11% | [[ETF_NYSE_ARCA_AVDV Performance]] |
 | AVDE | Avantis International Equity ETF | international active systematic all-cap value/profitability | not applicable (<10y history) | not disclosed | 12.39% | [[ETF_NYSE_ARCA_AVDE Performance]] |
@@ -158,9 +160,20 @@ official factsheet annual rows และ YTD field ใช้ as-of 2026-07-31. �
 YTD ณ 2026-07-31 และ annual calendar rows ไม่เปิดเผย. DISV `12.90%*` เป็น
 secondary NAV TR YTD ณ 2026-07-31; official complete annual rows ที่ใช้งานได้
 คือ 2023-2025 เพราะ 2022 เป็น inception partial และ official 2021-2025 CAGR
-จึงไม่ applicable. DFIS `14.18%*` เป็น secondary market-price + cash-distribution
-proxy ณ 2026-08-12 ไม่ใช่ official NAV TR; official complete annual rows คือ
-2023-2025 และกองทุนเป็น active systematic long-only small-cap.
+จึงไม่ applicable. DFIS `10.30%*` เป็น secondary NAV Total Return field ณ
+2026-07-31 ไม่ใช่ official Dimensional standardized YTD field; official complete
+annual rows คือ 2023-2025 และกองทุนเป็น active systematic long-only small-cap.
+
+NUDM เป็น passive ESG-screened developed ex-U.S./Canada ETF; official 2018-2025
+NAV TR ให้ rounded-input CAGR `7.40%`, 2021-2025 CAGR `8.54%` และ current official
+YTD `10.10%` ณ 2026-06-30. Adviser/sub-adviser wording หลัง merger 2026-08-01
+และ official daily-NAV drawdown/recovery gap ยังคงเป็น watch items.
+
+FNDF `11.73%` เป็น issuer-reported rolling 10-year NAV TR ณ 2026-07-31;
+`9.97%` เป็น rounded-input calendar CAGR จาก official 2016-2025 annual NAV rows,
+`12.92%` เป็น 2021-2025 CAGR และ current official NAV TR YTD คือ `20.44%` ณ
+2026-07-31. Schwab changed FNDF's benchmark on 2024-06-21; official daily NAV
+drawdown/recovery ยังไม่ยืนยันได้.
 
 VEA ใช้ official Vanguard rolling 10-year NAV TR `10.52%` ณ 2026-06-30,
 official 2016-2025 annual NAV rows ที่คำนวณเป็น CAGR `8.74%`, 2021-2025
