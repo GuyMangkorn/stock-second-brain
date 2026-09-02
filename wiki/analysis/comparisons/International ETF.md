@@ -33,6 +33,7 @@ tags:
 | DFSI | Dimensional International Sustainability Core 1 ETF | active systematic developed ex-U.S. broad equity with sustainability screen | not applicable (<10y) | not applicable (2022 inception) | 8.74%* | [[ETF_NYSE_ARCA_DFSI Performance]] |
 | URTH | iShares MSCI World ETF | global developed large-/mid-cap passive | 13.36% | 12.30% | 13.50% | [[ETF_NYSE_ARCA_URTH Performance]] |
 | AVIV | Avantis International Large Cap Value ETF | active systematic developed international large-cap value | not applicable (<10y) | 12.58%* (2022-2025) | 14.87% | [[ETF_NYSE_ARCA_AVIV Performance]] |
+| TXUE | Thornburg International Equity ETF | active fundamental developed international equity | not applicable (<10y) | not applicable (2025 partial inception) | 16.36% | [[ETF_NASDAQ_TXUE Performance]] |
 | IDMO | Invesco S&P International Developed Momentum ETF | developed ex-U.S./South Korea momentum passive | 12.12% | 13.99% | 10.5%* | [[ETF_NYSE_ARCA_IDMO Performance]] |
 | XDEVF | Xtrackers MSCI World Value UCITS ETF 1C (official USD listing SIX:XDEV) | developed-market large-/mid-cap value smart-beta passive accumulating | 9.86%† | 13.70% | 36.97%* | [[ETF_SIX_XDEV Performance]] |
 | XDWHF | Xtrackers MSCI World Health Care UCITS ETF 1C (official USD listing LSE:XDWH) | global developed health-care sector passive accumulating | 8.96%* | 6.38%* (2021-2025) | 8.20%* | [[ETF_LSE_XDWH Performance]] |
