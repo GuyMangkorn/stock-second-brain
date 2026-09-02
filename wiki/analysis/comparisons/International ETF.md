@@ -61,6 +61,7 @@ tags:
 | IDV | iShares International Select Dividend ETF | international select high dividend | 10.10% | 12.78% | 4.25% | [[ETF_CBOE_IDV Performance]] |
 | HDEF | Xtrackers MSCI EAFE High Dividend Yield Equity ETF | developed ex-U.S./Canada high dividend | 8.74% | 11.09%* | 12.20%* | [[ETF_NYSE_ARCA_HDEF Performance]] |
 | PID | Invesco International Dividend Achievers ETF | international dividend achievers | 8.81% | 11.28% | 2.05% | [[ETF_NASDAQ_PID Performance]] |
+| PIZ | Invesco Dorsey Wright Developed Markets Momentum ETF | developed ex-U.S. momentum | 9.04% | 9.44% | ไม่พบข้อมูลที่ยืนยันได้ | [[ETF_NASDAQ_PIZ Performance]] |
 | VIGI | Vanguard International Dividend Appreciation ETF | international dividend growth | 8.01% | 5.46% | 9.18% | [[ETF_NASDAQ_VIGI Performance]] |
 | VSS | Vanguard FTSE All-World ex-US Small-Cap ETF | international ex-U.S. small-cap | 7.42% | 6.45% | 10.86% | [[ETF_NYSE_ARCA_VSS Performance]] |
 | SCHC | Schwab International Small-Cap Equity ETF | developed international ex-U.S. small-cap | 8.23% | 7.10% | 6.15% | [[ETF_NYSE_ARCA_SCHC Performance]] |
