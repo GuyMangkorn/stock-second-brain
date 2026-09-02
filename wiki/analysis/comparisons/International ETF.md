@@ -25,6 +25,7 @@ tags:
 | DWM | WisdomTree International Equity Fund | international broad dividend | 8.94% | 10.46% | 8.10% | [[ETF_AMEX_DWM Performance]] |
 | WNRG | State Street SPDR MSCI World Energy UCITS ETF | global developed energy sector / accumulating | 9.57% | 19.81% | 33.61% | [[ETF_EURONEXT_AMSTERDAM_WNRG Performance]] |
 | WHEA | State Street SPDR MSCI World Health Care UCITS ETF | global developed health-care sector / accumulating | 8.10% | 6.30% | 3.29% | [[ETF_EURONEXT_AMSTERDAM_WHEA Performance]] |
+| IQDG | WisdomTree International Quality Dividend Growth Fund | developed international quality/dividend growth | 7.95% | 5.43% | 7.12% | [[ETF_CBOE_IQDG Performance]] |
 | EFAV | iShares MSCI EAFE Min Vol Factor ETF | developed ex-U.S./Canada minimum volatility | 6.02% | 6.29% | 11.06% | [[ETF_CBOE_EFAV Performance]] |
 | GSID | Goldman Sachs MarketBeta International Equity ETF | developed markets ex-North America large-/mid-cap passive | not applicable (<10y) | not disclosed | 11.93% | [[ETF_CBOE_BZX_GSID Performance]] |
 | GSIE | Goldman Sachs ActiveBeta International Equity ETF | developed ex-U.S. four-factor strategic-beta passive | 9.43% | 9.20%* (2021-2025) | 11.16% | [[ETF_NYSE_ARCA_GSIE Performance]] |
