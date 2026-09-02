@@ -18,16 +18,16 @@
       "session_date": "2026-09-01"
     }
   ],
-  "events_processed": 5,
-  "generated_at": "2026-09-02T16:05:32Z",
+  "events_processed": 8,
+  "generated_at": "2026-09-02T16:37:02Z",
   "last_mark": {
-    "benchmark_price": 761.78,
+    "benchmark_price": 765.35,
     "cash": 100000.0,
-    "effective_at": "2026-09-01T20:00:00Z",
+    "effective_at": "2026-09-02T16:17:00Z",
     "equity": 100000.0,
-    "event_id": "evt-20260902T155632Z-mark-spy-20260901",
-    "scope": "daily-close",
-    "session_date": "2026-09-01"
+    "event_id": "evt-20260902T161843Z-mark-spy-intraday",
+    "scope": "intraday",
+    "session_date": "2026-09-02"
   },
   "maximum_drawdown_pct": 0.0,
   "normal_turnover_pct": 0.0,

@@ -2,7 +2,7 @@
 kind: paper-portfolio-dashboard
 competition_id: us-etf-competition-2026
 phase: proposal
-as_of: 2026-09-02T16:05:32Z
+as_of: 2026-09-02T16:37:02Z
 portfolio_value: 100000.00
 cash: 100000.00
 cumulative_return_pct: 0.00
