@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "provider": "NYSE",
+  "method": "browser-direct-web",
+  "kind": "calendar",
+  "discovery_method": "browser_search",
+  "discovery_query": "site:nyse.com markets hours holidays 2026 NYSE September 2 2026 trading calendar official",
+  "direct_url": "https://www.nyse.com/trade/hours-calendars?os=vbkn42___",
+  "page_title": "Holidays & Trading Hours",
+  "retrieved_at": "2026-09-02T15:56:32Z",
+  "visible_response_text": "All NYSE markets observe U.S. holidays as listed for 2026; Labor Day is Monday, September 7, 2026; NYSE Arca Equities core trading session is 9:30 a.m. to 4:00 p.m. ET; September 2, 2026 is not listed as a holiday.",
+  "content_hash": "sha256:82287929a60e0eb7433d6cbced8a73ebd0d918337e4a052ab15636609946deb9",
+  "response_sha256": "82287929a60e0eb7433d6cbced8a73ebd0d918337e4a052ab15636609946deb9",
+  "session_date": "2026-09-02",
+  "session_status": "normal",
+  "core_open_et": "09:30",
+  "core_close_et": "16:00",
+  "holiday_check": "not_holiday",
+  "evidence_status": "verified_official_calendar"
+}

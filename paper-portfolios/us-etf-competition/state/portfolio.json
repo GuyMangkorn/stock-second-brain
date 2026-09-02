@@ -1,7 +1,7 @@
 {
   "benchmark": {
-    "return_pct": null,
-    "start_price": null,
+    "return_pct": 0.0,
+    "start_price": 761.78,
     "symbol": "SPY"
   },
   "cash": 100000.0,
@@ -9,10 +9,26 @@
   "competition_id": "us-etf-competition-2026",
   "cumulative_return_pct": 0.0,
   "current_drawdown_pct": 0.0,
-  "daily_equity_curve": [],
-  "events_processed": 2,
-  "generated_at": "2026-09-02T15:42:27Z",
-  "last_mark": null,
+  "daily_equity_curve": [
+    {
+      "benchmark_price": 761.78,
+      "drawdown_pct": 0.0,
+      "equity": 100000.0,
+      "event_id": "evt-20260902T155632Z-mark-spy-20260901",
+      "session_date": "2026-09-01"
+    }
+  ],
+  "events_processed": 5,
+  "generated_at": "2026-09-02T16:05:32Z",
+  "last_mark": {
+    "benchmark_price": 761.78,
+    "cash": 100000.0,
+    "effective_at": "2026-09-01T20:00:00Z",
+    "equity": 100000.0,
+    "event_id": "evt-20260902T155632Z-mark-spy-20260901",
+    "scope": "daily-close",
+    "session_date": "2026-09-01"
+  },
   "maximum_drawdown_pct": 0.0,
   "normal_turnover_pct": 0.0,
   "normal_turnover_usd": 0.0,

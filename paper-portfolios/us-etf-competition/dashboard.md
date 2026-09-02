@@ -2,7 +2,7 @@
 kind: paper-portfolio-dashboard
 competition_id: us-etf-competition-2026
 phase: proposal
-as_of: 2026-09-02T15:42:27Z
+as_of: 2026-09-02T16:05:32Z
 portfolio_value: 100000.00
 cash: 100000.00
 cumulative_return_pct: 0.00
@@ -23,7 +23,7 @@ maximum_drawdown_pct: 0.00
 | Cash | $100,000.00 |
 | Cash weight | 100.00% |
 | Cumulative return | 0.00% |
-| SPY operational benchmark | not started |
+| SPY operational benchmark | 0.00% |
 | Current drawdown | 0.00% |
 | Maximum drawdown | 0.00% |
 | Normal turnover | 0.00% |
@@ -36,7 +36,9 @@ maximum_drawdown_pct: 0.00
 
 ## Daily Equity Curve
 
-No daily-close mark has been recorded yet.
+| Session | Portfolio Equity | Benchmark Price | Drawdown |
+|---|---:|---:|---:|
+| 2026-09-01 | $100,000.00 | $761.78 | 0.00% |
 
 ## Latest Runs
 
