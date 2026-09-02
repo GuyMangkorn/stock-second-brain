@@ -56,8 +56,10 @@ portfolio at `paper-portfolios/us-etf-competition/`.
 - Verify the US market calendar through an official exchange or regulator page
   opened in the browser. On a holiday return `NO TRADE`. On a normal or
   early-close session, use the freshest directly observed quote available at
-  the invocation time; outside market hours, use the latest completed close and
-  label it explicitly. Do not treat a search-result snippet as a quote.
+  the invocation time. The decision quote freshness gate is no more than one
+  US trading day (`decision_quote_trading_sessions: 1`), not a five-minute or
+  rolling clock-hours gate; outside market hours, use the latest completed close
+  and label it explicitly. Do not treat a search-result snippet as a quote.
 - For every verified price refresh, append one row to the append-only
   `evidence/market-data/price-log.md` and update the derived
   `evidence/market-data/latest-prices.md` row for that Ticker. Keep the source
@@ -98,9 +100,10 @@ An ETF may be bought only when all are true:
 4. AUM is at least USD 100M, median daily dollar volume at least USD 5M,
    bid/ask spread no more than 0.20%, expense ratio no more than 1.00%, and
    realized history at least one year.
-5. Decision quote is no more than 5 minutes old; liquidity facts are no more
-   than five trading sessions old; holdings/valuation are no more than 45 days
-   old; performance/fund facts are no more than 31 days old; methodology is the
+5. Decision quote is no more than one US trading day old under
+   `decision_quote_trading_sessions: 1`; liquidity facts are no more than five
+   trading sessions old; holdings/valuation are no more than 45 days old;
+   performance/fund facts are no more than 31 days old; methodology is the
    latest verified version.
 
 Funds with one to three years of history are limited to 5% each and 10%

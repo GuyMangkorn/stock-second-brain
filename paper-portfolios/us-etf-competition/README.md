@@ -29,6 +29,9 @@
   default 15:00 ET automation time. The run may record `BUY`, `REDUCE`, `SELL`,
   or `HOLD`; it should make no change when the existing portfolio is still the
   best supported decision.
+- The decision quote freshness gate is one US trading day, using
+  `freshness_gate.decision_quote_trading_sessions: 1`; it is not a five-minute
+  or rolling clock-hours gate. Same-day quotes remain preferable when available.
 - Every run records an `IN`/`OUT`/`HOLD` change log in the run note and ledger.
 - No margin, short sales, options, leveraged/inverse ETFs, or live-money orders.
 - Any missing, stale, conflicting, or unavailable mandatory input ends in

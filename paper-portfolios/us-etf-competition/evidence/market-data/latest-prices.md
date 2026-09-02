@@ -20,14 +20,15 @@ snippet เป็นหลักฐานราคา.
 
 | Ticker | Exchange-qualified identity | Price | Currency | Price basis | Source as-of | Retrieved at | Source | Direct URL | Evidence | Run ID | Status |
 |---|---|---:|---|---|---|---|---|---|---|---|---|
-| SPY | NYSEARCA:SPY | 765.41 | USD | intraday displayed price | 2026-09-02T11:47:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/spy/history/ | [quote](2026-09-02/quote_SPY_20260902T155632Z_d06f3175.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
-| VOO | NYSEARCA:VOO | 704.11 | USD | intraday displayed price | 2026-09-02T11:35:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/voo/ | [quote](2026-09-02/quote_VOO_20260902T155632Z_754255ff.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
-| DGRO | NYSEARCA:DGRO | 79.25 | USD | intraday displayed price | 2026-09-02T11:35:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/dgro/ | [quote](2026-09-02/quote_DGRO_20260902T155632Z_ec779fa8.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
-| VEA | NYSEARCA:VEA | 72.44 | USD | intraday displayed price | 2026-09-02T11:43:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/vea/ | [quote](2026-09-02/quote_VEA_20260902T155632Z_767116c9.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
-| VIGI | NASDAQ:VIGI | 97.95 | USD | intraday displayed price | 2026-09-02T11:09:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/vigi/ | [quote](2026-09-02/quote_VIGI_20260902T155632Z_24d95a65.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
+| SPY | NYSEARCA:SPY | 765.41 | USD | intraday displayed price | 2026-09-02T11:47:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/spy/history/ | [quote](2026-09-02/quote_SPY_20260902T155632Z_d06f3175.json) | run-2026-09-02-115632-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| VOO | NYSEARCA:VOO | 704.11 | USD | intraday displayed price | 2026-09-02T11:35:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/voo/ | [quote](2026-09-02/quote_VOO_20260902T155632Z_754255ff.json) | run-2026-09-02-115632-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| DGRO | NYSEARCA:DGRO | 79.25 | USD | intraday displayed price | 2026-09-02T11:35:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/dgro/ | [quote](2026-09-02/quote_DGRO_20260902T155632Z_ec779fa8.json) | run-2026-09-02-115632-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| VEA | NYSEARCA:VEA | 72.44 | USD | intraday displayed price | 2026-09-02T11:43:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/vea/ | [quote](2026-09-02/quote_VEA_20260902T155632Z_767116c9.json) | run-2026-09-02-115632-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| VIGI | NASDAQ:VIGI | 97.95 | USD | intraday displayed price | 2026-09-02T11:09:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/vigi/ | [quote](2026-09-02/quote_VIGI_20260902T155632Z_24d95a65.json) | run-2026-09-02-115632-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
 | SCHC | NYSEARCA:SCHC | 51.32 | USD | prior-session close displayed price | 2026-08-31T16:00:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/schc/ | [quote](2026-09-02/quote_SCHC_20260902T155632Z_c6433118.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
-| DMXF | NASDAQ:DMXF | 85.65 | USD | prior-session close displayed price | 2026-09-01T16:00:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/dmxf/ | [quote](2026-09-02/quote_DMXF_20260902T155632Z_f9318538.json) | run-2026-09-02-115632-et | STALE_FOR_DECISION |
+| DMXF | NASDAQ:DMXF | 85.65 | USD | prior-session close displayed price | 2026-09-01T16:00:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/dmxf/ | [quote](2026-09-02/quote_DMXF_20260902T155632Z_f9318538.json) | run-2026-09-02-115632-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
 
-ราคาข้างต้นเป็น verified browser observations แต่ทุก quote เกิน freshness gate
-5 นาที ณ เวลา analysis จึงใช้ได้เฉพาะ preliminary screening ไม่ใช่ reference
-price สำหรับ BUY/SELL.
+ราคาข้างต้นเป็น verified browser observations จากรอบก่อนหน้า. ภายใต้ policy
+ใหม่ quote ของ SPY, VOO, DGRO, VEA, VIGI และ DMXF อยู่ภายใน gate หนึ่ง US
+trading day ในเชิง preliminary; SCHC ยังเก่าเกิน gate. Cache นี้ยังไม่ใช่
+การยืนยัน admission หรือ reference price สุดท้ายสำหรับ BUY/SELL.

@@ -25,5 +25,7 @@ screening; final decision ต้องผ่าน freshness gate ใน `config
 | obs-20260902T155632Z-SCHC | run-2026-09-02-115632-et | SCHC | NYSEARCA:SCHC | 51.32 | USD | prior-session close displayed price | 2026-08-31T16:00:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/schc/ | [quote](2026-09-02/quote_SCHC_20260902T155632Z_c6433118.json) | STALE_FOR_DECISION |
 | obs-20260902T155632Z-DMXF | run-2026-09-02-115632-et | DMXF | NASDAQ:DMXF | 85.65 | USD | prior-session close displayed price | 2026-09-01T16:00:00-04:00 | 2026-09-02T15:56:32Z | StockAnalysis.com | https://stockanalysis.com/etf/dmxf/ | [quote](2026-09-02/quote_DMXF_20260902T155632Z_f9318538.json) | STALE_FOR_DECISION |
 
-ทุก observation เก็บ direct-page timestamp แล้ว; stale observations ไม่ใช่
-decision reference price และไม่ใช่ fill.
+ทุก observation เก็บ direct-page timestamp แล้ว และไม่ใช่ fill. ค่า
+`STALE_FOR_DECISION` ใน rows ของ run เดิมสะท้อน gate 5 นาที ณ เวลานั้น; policy
+ปัจจุบันเปลี่ยนเป็นหนึ่ง US trading day และ latest cache ถูก reclassify แบบ
+derived โดยไม่แก้ประวัติ append-only.

@@ -98,7 +98,8 @@ liquidity_gate:
   unseasoned_combined_weight_pct: 10.00
 
 freshness_gate:
-  decision_quote_minutes: 5
+  decision_quote_trading_sessions: 1
+  decision_quote_basis: latest-verified-quote-within-one-us-trading-day
   completed_daily_price_trading_sessions: 1
   aum_spread_liquidity_trading_sessions: 5
   holdings_valuation_days: 45
