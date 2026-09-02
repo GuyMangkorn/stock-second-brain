@@ -149,3 +149,41 @@ confirmation: none
 code: durable-write-complete
 reason: Official passive international equity identity, current NAV/YTD, official annual NAV total returns, calculations and scheduled-local review passed with country/sector and daily drawdown gaps disclosed.
 ```
+
+## DTH evidence packet
+
+- Input ticker: `DTH`; canonical identity: `NYSE Arca:DTH`; fund: WisdomTree International High Dividend Fund; CUSIP `97717W802`. WisdomTree identifies DTH as the NYSE Arca-listed fund with inception `2006-06-16`.
+- Official classification: `passive-index` equity ETF. WisdomTree says DTH seeks to track the WisdomTree International High Dividend Index, covering dividend-paying companies outside the United States and Canada. The current product page states `Options Available: No`; no leverage, inverse, option-income, bond, commodity, currency, multi-asset or derivative-defined payoff was identified.
+- Official identity/facts as of `2026-09-01`: net expense ratio `0.58%`, official NAV `USD 58.397`, total assets `USD 662.804M`. The closing market price was `USD 58.510` as of `2026-08-31`. WisdomTree reports distribution yield `8.35%` and SEC 30-day yield `3.41%` as of `2026-08-31`; these yield fields are not substituted for total return. Portfolio characteristics as of `2026-08-31` were dividend yield `4.36%`, P/E `13.29` and P/B `1.61`.
+- Official performance table as of `2026-07-31`: NAV Returns YTD `14.82%`, 1-year annualized `28.98%`, 3-year `19.73%`, 5-year `13.44%`, 10-year `9.26%`, since inception `5.49%`; cumulative since inception NAV return `192.89%`.
+- Official calendar NAV-return rows from WisdomTree's presentation as of `2026-03-31`: 2016 `5.10%`, 2017 `20.33%`, 2018 `-12.57%`, 2019 `17.74%`, 2020 `-7.05%`, 2021 `8.62%`, 2022 `-2.12%`, 2023 `15.19%`, 2024 `2.03%`, 2025 `42.41%`.
+- Issuer benchmark: `WisdomTree International High Dividend Index`; the product objective and factsheet identify it as the tracked high-dividend international equity index. The common comparison below uses the cached S&P 500 TR convention, not a claim of manager skill.
+- Return basis: USD NAV Total Return from WisdomTree's issuer NAV Returns field; DTH is a distributing fund, and market-price return is kept separate.
+- Cached common benchmark: S&P 500 Total Return in USD with dividends reinvested, as of `2025-12-31`; rows for 2016-2025 are `11.96%, 21.83%, -4.38%, 31.49%, 18.40%, 28.71%, -18.11%, 26.29%, 25.02%, 17.88%`.
+- Calculations from complete 2016-2025 DTH rows: product `2.1532648311`, cumulative `115.3265%`, rounded-input CAGR `7.9717%`; complete 2021-2025 product `1.7794545933`, cumulative `77.9455%`, CAGR `12.2167%`; `7 / 3` up/down years; best `2025 +42.41%`; least positive `2024 +2.03%`; worst `2018 -12.57%`; least-bad down year `2022 -2.12%`.
+- Calculations from the cached S&P rows: 2016-2025 product `3.9832911148`, cumulative `298.3291%`, rounded-input CAGR `14.8218%`; 2021-2025 product `1.9616961801`, cumulative `96.1696%`, CAGR `14.4264%`. DTH's arithmetic CAGR comparison is `-6.8501 pp` for 2016-2025 and `-2.2098 pp` for 2021-2025; these are reference comparisons, not alpha.
+- Official portfolio context as of `2026-08-31`: country weights United Kingdom `17.14%`, Japan `12.40%`, France `10.43%`, Spain `8.68%`, Italy `8.53%`, Australia `7.41%`, Hong Kong `5.61%`, Germany `5.29%`, Norway `5.14%` and Switzerland `4.54%`; sector weights Financials `27.15%`, Industrials `14.31%`, Utilities `11.03%`, Energy `9.24%`, Materials `8.14%`, Consumer Staples `7.64%`, Communication Services `6.94%`, Consumer Discretionary `5.45%`, Real Estate `4.85%`, Health Care `3.59%`, Information Technology `1.58%`, Telecom Services `0.06%` and ETF `0.01%`. WisdomTree's June presentation risk snapshot as of `2026-06-30` reports standard deviation `17.60%` and beta `1.01`; official daily NAV history sufficient for maximum drawdown and recovery was not verified.
+- Source list: [WisdomTree DTH product page](https://www.wisdomtree.com/us/products/equity/dth) (official product/performance page; identity, current facts, portfolio fields and July 2026 returns); [WisdomTree DTH factsheet](https://www.wisdomtree.com/-/media/us-media-files/documents/resource-library/fund-fact-sheets/international-equity/wisdomtree-factsheet-dth-1058.pdf) (official factsheet; identity/listing/distribution disclosure); [WisdomTree DTH presentation](https://www.wisdomtree.com/us/media/dth-presentation) (official presentation; 2016-2025 calendar returns and risk fields); [S&P 500 official index page](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) (benchmark definition); cached S&P source URLs and convention are defined in the `check-etf-performance` skill.
+- Management benchmark selection reason: not applicable to `passive-index`; the issuer benchmark is retained as the strategy-aligned index, while S&P 500 TR is a common cross-fund reference in USD. Active calculations, management evidence and adviser/team attribution are not applicable.
+- Track record: fund inception `2006-06-16`; `long-running-fund`; annual history is complete for 2016-2025 in the reviewed official presentation.
+- Candidate chat output: `DTH` is a passive international high-dividend equity ETF. Official July 2026 NAV TR is `14.82%` YTD and `9.26%` annualized over 10 years; rounded-input 2016-2025 CAGR is `7.97%` versus cached S&P 500 TR `14.82%`, while 2021-2025 is `12.22%` versus `14.43%`. The fund is concentrated in financials and several non-U.S. markets; daily-NAV drawdown/recovery remains unverified.
+- Planned durable file contents:
+  - Performance page: the complete proposed Markdown is the full content of `wiki/analysis/performance/ETF_AMEX_DTH Performance.md` after this write: frontmatter for `NYSE Arca:DTH`, `USD NAV total return`, official as-of dates, bottom line with `9.26%` rolling 10-year NAV TR / `14.82%` YTD / `7.97%` 2016-2025 CAGR / `12.22%` 2021-2025 CAGR, the official 2016-2025 annual table, up/down-year statistics, current country/sector risk fields, the June 2026 standard-deviation/beta snapshot, the daily-NAV gap, and the five source links listed above.
+  - Dated source batch: append this complete `## DTH evidence packet` and `## DTH research handoff` section to the existing run-4 Markdown; all prior run-4 sections remain unchanged.
+  - Region/index pages: no region page or region-index count change; update the existing International navigation row and append the exact performance-index bullet specified below.
+  - `log.md`: append the exact DTH bullet specified below under `## 2026-09-02`.
+- Planned durable paths/change map: refresh `wiki/analysis/performance/ETF_AMEX_DTH Performance.md`; extend `raw/imports/ETF_performance_sources_2026-09-02_run-4.md`; update `wiki/analysis/comparisons/International ETF.md` and `wiki/analysis/performance/ETF Performance Index.md`; append one workflow bullet to `log.md`.
+- Planned graph/index changes: retain exactly one primary region, `International`, because the underlying exposure is multi-country developed-market equity rather than the listing exchange; preserve `[[ETF Region Index]] → [[International ETF]] → [[ETF Performance Index]]`, keep `geography/International` and `geography/developed-markets`, refresh the existing DTH row, and do not change the International count.
+- Local scheduled pre-save review: PASS. `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; identity/listing, passive eligibility, distribution treatment, NAV/price separation, July current fields, annual rows, calculation outputs, date/currency labels, concentration risk and unresolved daily-NAV drawdown/recovery gap reconcile. No critical or high finding remains.
+
+## DTH research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive international high-dividend identity, current NAV/YTD, official annual NAV total returns, calculations and scheduled-local review passed with country/sector and daily drawdown gaps disclosed.
+```

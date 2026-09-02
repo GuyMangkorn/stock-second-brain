@@ -770,7 +770,7 @@ utilities และ financials tilt.
 | [[ETF_CBOE_BZX_CALF Performance]] | not applicable (<10y) | 8.88%† | -15.18% | 26.13% | 10.60%‡ | official 2018-2024 annual NAV TR plus 2025 issuer 1 Year/YTD field; 2025 label caveat |
 | [[ETF_NASDAQ_FYC Performance]] | 13.92%† | 9.74%‡ | -25.75% | 21.07% | 23.54%§ | official annual NAV TR 2016-2025; issuer 10Y field and current YTD as-of dates are separate |
 | [[ETF_AMEX_DON Performance]] | 9.36% | 10.88% | -4.76% | 15.55% | 10.79% | official annual NAV TR 2016-2025 |
-| [[ETF_AMEX_DTH Performance]] | 9.06% | 12.22% | -2.12% | 17.06% | 8.21% | official annual NAV TR 2016-2025 |
+| [[ETF_AMEX_DTH Performance]] | 9.26% | 12.22% | -2.12% | 17.06% | 14.82% | official annual NAV TR 2016-2025 |
 | [[ETF_AMEX_DWM Performance]] | 8.94% | 10.46% | -9.11% | 16.49% | 8.10% | official annual NAV TR 2016-2025 |
 | [[ETF_CBOE_DDWM Performance]] | 10.72% | 13.41% | -1.27% | 17.63% | 7.65% | official annual NAV TR 2016-2025 |
 | [[ETF_CBOE_DDLS Performance]] | 9.61% | 11.33%* | -9.79% | 17.55% | 6.54% | 2016 gap; 2017-2024 official; 2025 secondary* |
@@ -1162,6 +1162,7 @@ tracking และ cost control ไม่ใช่หลักฐานของ
 - [[ETF_EURONEXT_AMSTERDAM_WHEA Performance]] — SWOOF / WHEA (International; OTC input alias resolved to official primary `Euronext Amsterdam:WHEA`, passive accumulating global developed health-care-sector exposure; official 2017-2025 complete NAV TR cumulative `+132.53%` / rounded-input CAGR `+9.83%`, 2021-2025 CAGR `+6.30%`, official rolling 10-year NAV TR `+8.10%` and current official NAV TR YTD `+3.29%` as of 2026-07-31; predecessor-linked 2016 context row, health-care concentration, linked-index history and daily-NAV drawdown gaps disclosed)
 - [[ETF_CBOE_IQDG Performance]] — IQDG (International; passive developed international quality/dividend-growth equity exposure; official 2017-2025 complete NAV TR cumulative `+115.16%` / rounded-input CAGR `+8.89%`, 2021-2025 CAGR `+5.43%`, official rolling 10-year NAV TR `+7.95%` and current official NAV TR YTD `+7.12%` as of 2026-07-31; 2016 annual row not disclosed, factor/country/sector and daily-NAV drawdown gaps disclosed)
 - [[ETF_AMEX_DWM Performance]] — DWM (International; refreshed passive developed international dividend equity exposure; official 2016-2025 complete NAV TR cumulative `+110.83%` / rounded-input CAGR `+7.74%`, 2021-2025 CAGR `+10.46%`, official rolling 10-year NAV TR `+8.74%` and current official NAV TR YTD `+11.05%` as of 2026-07-31; country/sector and daily-NAV drawdown gaps disclosed)
+- [[ETF_AMEX_DTH Performance]] — DTH (International; refreshed passive international high-dividend equity exposure; official 2016-2025 complete NAV TR cumulative `+115.33%` / rounded-input CAGR `+7.97%`, 2021-2025 CAGR `+12.22%`, official rolling 10-year NAV TR `+9.26%` and current official NAV TR YTD `+14.82%` as of 2026-07-31; country/sector concentration, June 2026 risk snapshot and daily-NAV drawdown gaps disclosed)
 
 ## 2026-08-30 Performance Refresh
 
