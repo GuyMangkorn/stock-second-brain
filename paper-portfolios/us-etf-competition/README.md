@@ -1,7 +1,7 @@
 # US ETF Paper Portfolio Competition
 
-ระบบจำลองพอร์ต ETF สหรัฐฯ แบบ forward-only ระหว่าง `2026-09-02` ถึง
-`2026-12-31` ด้วยเงินตั้งต้น `$100,000` โดยใช้
+ระบบจำลองพอร์ต ETF สหรัฐฯ แบบ forward-only และ open-ended ด้วยเงินตั้งต้น
+`$100,000` เพื่อดูผลลัพธ์ระยะ 1 ปีหรือนานกว่านั้น โดยใช้
 [[ETF Performance Index]] และหน้าใน
 `wiki/analysis/performance/` เป็น research context ไม่ใช่แหล่งราคาปัจจุบัน
 
@@ -15,7 +15,10 @@
 
 ## Operating boundary
 
-- `Proposal Phase` is mandatory for the first 10 US trading sessions.
+- `Proposal Phase` is mandatory for the first 10 completed US trading sessions
+  after the first valid daily mark is recorded.
+- The portfolio has no competition end date. It continues until the user
+  explicitly asks to stop or close it; no date-based liquidation is performed.
 - Browser/direct-web pages are read-only market evidence; the local Portfolio
   Ledger is canonical. Browser search is used for discovery, while quotes,
   calendars, NAVs, filings, and fund facts must be read from the opened direct

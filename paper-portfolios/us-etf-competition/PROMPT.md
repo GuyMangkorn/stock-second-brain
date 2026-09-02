@@ -7,8 +7,10 @@ portfolio at `paper-portfolios/us-etf-competition/`.
 ## Fixed mandate
 
 - Starting capital: USD 100,000.
-- Competition window: 2026-09-02 3:00 PM through 2026-12-31 market close,
-  `America/New_York`.
+- Lifecycle: open-ended. Continue tracking performance for one year or longer
+  until the user explicitly asks to close or stop the portfolio. There is no
+  automatic end date, forced liquidation date, or look-ahead cutoff caused by a
+  calendar deadline.
 - Eligible assets: US-listed, unleveraged, long-only equity ETFs that passed the
   `Tradable Admission Gate`.
 - Prohibited: margin, short sales, options, leveraged/inverse funds, defined-
@@ -20,9 +22,10 @@ portfolio at `paper-portfolios/us-etf-competition/`.
   the invocation time, with no fixed review-window gate and no two-session wait.
   The no-trade band, freshness, turnover, and risk gates still apply. A `Risk
   Override` may REDUCE or SELL sooner.
-- The first 10 US trading sessions are `Proposal Phase`. Do not submit paper
-  orders. Automatic execution requires a later, explicit user authorization;
-  never infer or self-grant it.
+- The first 10 completed US trading sessions recorded after the portfolio's
+  first valid daily mark are `Proposal Phase`. Do not submit paper orders.
+  Automatic execution requires a later, explicit user authorization; never
+  infer or self-grant it.
 - Browser/direct-web evidence is read-only in this workspace. If an order-capable
   paper connector is not explicitly available and authorized, keep the run in
   `Proposal` or `BLOCKED/NO TRADE`; never emulate a fill or call a live-money
@@ -152,6 +155,8 @@ exceed 35%. ETFs tracking the same benchmark or with top-holdings overlap above
 1. Establish `analysis_at` and `information_cutoff_at`; inspect the current
    `America/New_York` time, official browser calendar status, and execution
    phase. A manual run is evaluated at that time even when it is not 15:00 ET.
+   Do not reject a valid run because the portfolio is outside a fixed window;
+   this portfolio is open-ended.
 2. Validate/rebuild the ledger and reconcile derived state. Never silently fix
    a mismatch.
 3. Mark the latest completed daily session using directly observed adjusted
@@ -208,6 +213,8 @@ portfolio unchanged.
 - Data limitations, blocked actions, and exact conditions that would change the
   decision
 
-On 2026-12-31, do not force liquidation. Complete `Final Reconciliation` using
-official closing prices after the session; do not use post-period news or
-fundamental information to reinterpret prior decisions.
+There is no forced liquidation date. Continue the Daily Equity Curve and
+benchmark comparison for as long as the portfolio remains active. Complete
+`Final Reconciliation` only after the user explicitly asks to close the
+portfolio or supplies an end date, using official closing prices for that final
+session and no later information to reinterpret prior decisions.

@@ -1,9 +1,12 @@
 schema_version: 1
 competition_id: us-etf-competition-2026
-name: US ETF Paper Portfolio Competition
+name: US ETF Paper Portfolio (Open-Ended)
 timezone: America/New_York
-start_at: 2026-09-02T15:00:00-04:00
-end_at: 2026-12-31T16:00:00-05:00
+lifecycle:
+  mode: open-ended
+  termination: explicit-user-action-only
+  final_reconciliation: explicit-close-only
+  performance_horizon: all-available-history
 starting_cash_usd: 100000.00
 currency: USD
 instrument_type: ETF
@@ -44,6 +47,7 @@ price_cache:
 execution:
   phase: proposal
   proposal_trading_sessions: 10
+  proposal_phase_basis: first-10-completed-us-trading-sessions-recorded
   automatic_activation: explicit-user-authorization-required
   broker_role: none-browser-evidence-only
   order_connector_status: unavailable-and-not-used
