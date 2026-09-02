@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Fetch immutable Alpaca market evidence through documented GET endpoints.
+"""Legacy Alpaca evidence fetcher retained for historical reproducibility.
+
+The scheduled workflow uses browser/direct-web evidence instead; do not use this
+script for new portfolio reviews.
 
 The script deliberately does not place orders. It writes one new JSON envelope
 per successful fetch and refuses to overwrite existing evidence.

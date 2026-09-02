@@ -8,7 +8,7 @@
 ## Open first
 
 - [[dashboard]] — current derived portfolio state
-- [PROMPT.md](PROMPT.md) — English instructions for each scheduled run
+- [PROMPT.md](PROMPT.md) — English instructions for each portfolio run
 - [config.yaml](config.yaml) — competition policy and risk limits
 - [ledger/events.jsonl](ledger/events.jsonl) — append-only system of record
 - [state/portfolio.json](state/portfolio.json) — derived state; safe to rebuild
@@ -16,12 +16,17 @@
 ## Operating boundary
 
 - `Proposal Phase` is mandatory for the first 10 US trading sessions.
-- Alpaca is the planned `Execution Mirror`; the local Portfolio Ledger is
-  canonical. The connected Alpaca app currently exposes market-data GET tools
-  only in this workspace, so automatic order submission remains blocked until
-  an order-capable paper connector is explicitly available and authorized.
+- Browser/direct-web pages are read-only market evidence; the local Portfolio
+  Ledger is canonical. Browser search is used for discovery, while quotes,
+  calendars, NAVs, filings, and fund facts must be read from the opened direct
+  page with explicit as-of/retrieval timestamps.
 - Scheduled runs never enable automatic execution. A separate explicit user
   authorization is required after reconciliation.
+- Manual runs are evaluated at the time they are invoked, regardless of the
+  default 15:00 ET automation time. The run may record `BUY`, `REDUCE`, `SELL`,
+  or `HOLD`; it should make no change when the existing portfolio is still the
+  best supported decision.
+- Every run records an `IN`/`OUT`/`HOLD` change log in the run note and ledger.
 - No margin, short sales, options, leveraged/inverse ETFs, or live-money orders.
 - Any missing, stale, conflicting, or unavailable mandatory input ends in
   `BLOCKED/NO TRADE` without look-ahead backfilling.
@@ -35,50 +40,28 @@ python3 paper-portfolios/us-etf-competition/scripts/rebuild_portfolio.py --check
 python3 paper-portfolios/us-etf-competition/scripts/rebuild_portfolio.py
 ```
 
-Fetch documented Alpaca evidence after providing paper/data credentials outside
-the repository:
-
-```bash
-export APCA_API_KEY_ID='...'
-export APCA_API_SECRET_KEY='...'
-python3 paper-portfolios/us-etf-competition/scripts/fetch_alpaca_data.py clock
-```
-
-The fetcher refuses to overwrite evidence and stores request parameters,
-timestamps, the response, and a SHA-256 content hash. Never commit credentials.
+For a review, use the browser to search for the relevant official or reputable
+source, open the direct result, and save an immutable evidence envelope under
+`evidence/market-data/YYYY-MM-DD/`. Record the query, direct URL, page title,
+visible values/text, source as-of time, retrieval time, and SHA-256 content hash.
+Search snippets alone are never sufficient. Do not enter credentials or upload
+portfolio files into a website.
 
 ## Price and market-data sources
 
-The connected Alpaca plugin and the local fetcher use documented `GET` routes;
-there is no private-endpoint scraping:
+Use these browser sources in priority order:
 
-- `GET https://paper-api.alpaca.markets/v2/clock` and `/v2/calendar` for market
-  status and US trading sessions.
-- `GET https://data.alpaca.markets/v2/stocks/snapshots` for current bid/ask,
-  trade and daily-bar context.
-- `GET https://data.alpaca.markets/v2/stocks/bars/latest` for the latest minute
-  bar and `GET https://data.alpaca.markets/v2/stocks/bars` for historical bars.
-  The competition records `adjustment=all`, `currency=USD`, the feed, and the
-  exact cutoff; use `sip` when entitled and do not silently mix feeds.
-- `GET https://data.alpaca.markets/v1/corporate-actions` for splits and
-  distributions. The endpoint is evidence only; the local ledger remains the
-  accounting authority because Alpaca paper trading does not simulate every
-  corporate action.
+- Official NYSE/Nasdaq or regulator pages for US trading dates, holidays, and
+  early closes.
+- ETF issuer product pages, fact sheets, holdings, NAV/performance pages, and
+  SEC filings for fund identity, methodology, holdings, costs, and distributions.
+- Direct reputable market-data pages for current quotes, bid/ask, volume, and
+  historical prices when the page shows a timestamp or session date.
 
-For fund facts, holdings, methodology and NAV performance, prefer the ETF issuer
-product page/factsheet and SEC filings. Financial Datasets
-([prices](https://docs.financialdatasets.ai/api-reference/prices)) and Twelve
-Data ([time series](https://twelvedata.com/docs#time-series)) are documented
-research-only alternatives; they are not wired into execution or allowed to
-replace an unavailable mandatory Alpaca quote without a logged source decision.
-Alpha Vantage's [daily endpoint](https://www.alphavantage.co/documentation/)
-is another research-only alternative. Current price, NAV, holdings and
-performance dates must remain separate in the evidence record.
-
-Official Alpaca references: [historical stock bars](https://docs.alpaca.markets/us/reference/stockbars),
-[paper trading](https://docs.alpaca.markets/us/docs/paper-trading),
-[market calendar](https://docs.alpaca.markets/us/reference/getcalendar-1), and
-[corporate actions](https://docs.alpaca.markets/us/reference/corporateactions-1).
+Keep current price, NAV, holdings, methodology, fund facts, and performance
+dates separate in each evidence record. If a direct page cannot be verified or
+the sources conflict, log `BLOCKED/NO TRADE` rather than backfilling with an
+unrelated data feed.
 
 ## Disclaimer
 

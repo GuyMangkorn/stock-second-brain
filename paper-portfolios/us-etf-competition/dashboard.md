@@ -2,7 +2,7 @@
 kind: paper-portfolio-dashboard
 competition_id: us-etf-competition-2026
 phase: proposal
-as_of: 2026-09-02T08:05:45Z
+as_of: 2026-09-02T15:25:43Z
 portfolio_value: 100000.00
 cash: 100000.00
 cumulative_return_pct: 0.00
@@ -12,7 +12,7 @@ maximum_drawdown_pct: 0.00
 # US ETF Paper Portfolio Dashboard
 
 > [!info] Proposal Phase
-> The local Portfolio Ledger is canonical; Alpaca is a planned Execution Mirror.
+> The local Portfolio Ledger is canonical; browser pages provide read-only market evidence.
 > This dashboard is derived by `rebuild_portfolio.py`.
 
 ## Snapshot

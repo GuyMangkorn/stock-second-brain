@@ -423,7 +423,7 @@ def render_dashboard(state: dict[str, Any]) -> str:
         "# US ETF Paper Portfolio Dashboard",
         "",
         f"> [!info] {state['phase'].title()} Phase",
-        "> The local Portfolio Ledger is canonical; Alpaca is a planned Execution Mirror.",
+        "> The local Portfolio Ledger is canonical; browser pages provide read-only market evidence.",
         "> This dashboard is derived by `rebuild_portfolio.py`.",
         "",
         "## Snapshot",

@@ -17,19 +17,28 @@ universe:
 
 schedule:
   review_days: [MO, TU, WE, TH, FR]
-  review_time: "15:00"
-  normal_rebalance_every_trading_sessions: 2
+  review_time: "15:00" # default for the scheduled automation; manual runs override this
+  manual_run_policy: evaluate-at-invocation-time
+  normal_rebalance_every_trading_sessions: 1
   holiday_action: NO_TRADE
-  early_close_action: DEFER_REBALANCE
+  early_close_action: evaluate-at-invocation-time
   execution_profile: scheduled-inline
+
+market_data:
+  provider: browser-direct-web
+  discovery: browser-search
+  search_snippets_as_evidence: false
+  quote_source: direct-page-with-visible-as-of-or-retrieval-time
+  calendar_source: official-exchange-or-regulator-page
+  evidence_root: evidence/market-data
 
 execution:
   phase: proposal
   proposal_trading_sessions: 10
   automatic_activation: explicit-user-authorization-required
-  broker_role: execution-mirror
-  order_connector_status: unavailable-in-current-tool-context
-  automatic_execution_status: blocked-until-order-capable-paper-connector
+  broker_role: none-browser-evidence-only
+  order_connector_status: unavailable-and-not-used
+  automatic_execution_status: blocked-until-explicit-user-authorization-and-order-capable-paper-connector
   system_of_record: ledger/events.jsonl
   proposal_slippage_bps_per_side: 5
   automatic_order_type: marketable-limit
