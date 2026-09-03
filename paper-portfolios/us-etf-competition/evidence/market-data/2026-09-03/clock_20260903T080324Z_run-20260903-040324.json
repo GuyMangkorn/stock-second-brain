@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "provider": "system clock",
+  "method": "local-time-command",
+  "kind": "invocation-clock",
+  "competition_id": "us-etf-competition-2026",
+  "run_id": "run-2026-09-03-040324-et",
+  "retrieved_at": "2026-09-03T08:15:41Z",
+  "visible_response_text": "Invocation clock: 2026-09-03 04:03:24 EDT (America/New_York); UTC 2026-09-03T08:03:24Z; scheduled review is pre-market; latest completed U.S. session is September 2, 2026.",
+  "content_hash": "sha256:e876f26897b43a142f4148aaabbaf0110357cbd4c74c2e11476934f6a55fef9d",
+  "response_sha256": "e876f26897b43a142f4148aaabbaf0110357cbd4c74c2e11476934f6a55fef9d",
+  "invocation_time_et": "2026-09-03T04:03:24-04:00",
+  "information_cutoff_at": "2026-09-03T08:03:24Z",
+  "post_period_data_used": false
+}

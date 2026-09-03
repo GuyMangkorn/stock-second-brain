@@ -3,7 +3,7 @@ kind: etf-price-cache
 competition_id: us-etf-competition-2026
 source_policy: browser-direct-web
 cache_role: preliminary-screen-only
-updated_at: "2026-09-02T16:18:43Z"
+updated_at: "2026-09-03T08:15:41Z"
 ---
 
 # Latest Verified ETF Price Cache
@@ -20,16 +20,17 @@ snippet เป็นหลักฐานราคา.
 
 | Ticker | Exchange-qualified identity | Price | Currency | Price basis | Source as-of | Retrieved at | Source | Direct URL | Evidence | Run ID | Status |
 |---|---|---:|---|---|---|---|---|---|---|---|---|
-| SPY | NYSEARCA:SPY | 765.35 | USD | intraday displayed price | 2026-09-02T12:17:00-04:00 | 2026-09-02T16:29:35Z | StockAnalysis.com | https://stockanalysis.com/etf/spy/history/ | [quote](2026-09-02/quote_SPY_20260902T161843Z_run-20260902-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
-| VOO | NYSEARCA:VOO | 703.90 | USD | intraday displayed price | 2026-09-02T12:06:00-04:00 | 2026-09-02T16:29:35Z | StockAnalysis.com | https://stockanalysis.com/etf/voo/ | [quote](2026-09-02/quote_VOO_20260902T161843Z_run-20260902-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
-| DGRO | NYSEARCA:DGRO | 79.15 | USD | intraday displayed price | 2026-09-02T12:09:00-04:00 | 2026-09-02T16:29:35Z | StockAnalysis.com | https://stockanalysis.com/etf/dgro/ | [quote](2026-09-02/quote_DGRO_20260902T161843Z_run-20260902-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
-| VEA | NYSEARCA:VEA | 72.44 | USD | intraday displayed price | 2026-09-02T11:43:00-04:00 | 2026-09-02T16:29:35Z | StockAnalysis.com | https://stockanalysis.com/etf/vea/ | [quote](2026-09-02/quote_VEA_20260902T161843Z_run-2026-09-02-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
-| VIGI | NASDAQ:VIGI | 97.95 | USD | intraday displayed price | 2026-09-02T11:09:00-04:00 | 2026-09-02T16:29:35Z | StockAnalysis.com | https://stockanalysis.com/etf/vigi/ | [quote](2026-09-02/quote_VIGI_20260902T161843Z_run-2026-09-02-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
-| SCHC | NYSEARCA:SCHC | 50.66 | USD | today's opening value displayed by issuer | 2026-09-02 | 2026-09-02T16:29:35Z | Schwab Asset Management | https://www.schwabassetmanagement.com/products/schc | [quote](2026-09-02/quote_SCHC_20260902T161843Z_run-20260902-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY_TIME_NOT_DISCLOSED |
-| DMXF | NASDAQ:DMXF | 85.95 | USD | intraday displayed price | 2026-09-02T10:43:00-04:00 | 2026-09-02T16:29:35Z | StockAnalysis.com | https://stockanalysis.com/etf/dmxf/history/ | [quote](2026-09-02/quote_DMXF_20260902T161843Z_run-20260902-121843.json) | run-2026-09-02-121843-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| SPY | NYSEARCA:SPY | 765.16 | USD | completed-session adjusted close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/spy/history/ | [quote](2026-09-03/quote_SPY_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | VERIFIED_COMPLETED_SESSION_CLOSE |
+| VOO | NYSEARCA:VOO | 703.41 | USD | completed-session close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/voo/history/ | [quote](2026-09-03/quote_VOO_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| DGRO | NYSEARCA:DGRO | 79.17 | USD | completed-session close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/dgro/history/ | [quote](2026-09-03/quote_DGRO_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| VEA | NYSEARCA:VEA | 72.59 | USD | completed-session close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/vea/history/ | [quote](2026-09-03/quote_VEA_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| VIGI | NASDAQ:VIGI | 98.20 | USD | completed-session close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/vigi/history/ | [quote](2026-09-03/quote_VIGI_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| SCHC | NYSEARCA:SCHC | 50.75 | USD | completed-session close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/schc/history/ | [quote](2026-09-03/quote_SCHC_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
+| DMXF | NASDAQ:DMXF | 85.65 | USD | latest visible completed-session close; Sep 2 close missing | 2026-09-01T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/dmxf/history/ | [quote](2026-09-03/quote_DMXF_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY_LIQUIDITY_FAIL |
+| SCHA | NYSEARCA:SCHA | 34.04 | USD | completed-session close | 2026-09-02T16:00:00-04:00 | 2026-09-03T08:15:41Z | StockAnalysis.com | https://stockanalysis.com/etf/scha/history/ | [quote](2026-09-03/quote_SCHA_20260903T080324Z_run-20260903-040324.json) | run-2026-09-03-040324-et | WITHIN_1_TRADING_DAY_PRELIMINARY |
 
-ราคาข้างต้นเป็น verified browser observations จากรอบนี้. ภายใต้ policy ปัจจุบัน
-quote ของ SPY, VOO, DGRO, VEA, VIGI, SCHC และ DMXF อยู่ภายใน gate หนึ่ง US
-trading day ในเชิง preliminary; SCHC ใช้ today's opening value ที่หน้า issuer
-ไม่เปิดเผยเวลา. Cache นี้ยังไม่ใช่การยืนยัน admission หรือ reference price
-สุดท้ายสำหรับ BUY/SELL.
+ราคาข้างต้นเป็น verified browser observations จากรอบนี้ โดยใช้ completed-session
+close ของ 2 กันยายน 2026 เป็น decision reference สำหรับทุก ticker ที่มีแถวปิด
+ครบ; ไม่ใช้ pre-market หรือ after-hours. DMXF มีเพียงแถวปิดล่าสุด 1 กันยายนบนหน้า
+ประวัติ และจึงถูกเก็บเป็น preliminary พร้อม liquidity failure. Cache นี้ยังไม่ใช่
+การยืนยัน admission หรือ reference price สุดท้ายสำหรับ BUY/SELL.

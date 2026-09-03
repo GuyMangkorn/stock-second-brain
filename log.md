@@ -3,6 +3,7 @@
 ## 2026-09-03
 
 - `portfolio-policy`: Expanded `performance/fund-facts` freshness from 31 days to three calendar months (`freshness_gate.performance_fund_facts_days: 90` as the operational day-based equivalent); kept the decision-price quote gate at one US trading day and did not rerun or trade the portfolio.
+- `scheduled-portfolio-run`: Recorded [[paper-portfolios/us-etf-competition/runs/2026-09-03|US ETF Portfolio Run 2026-09-03]]; refreshed direct completed-session prices and liquidity evidence, added the Sep 2 SPY daily mark, kept all rows HOLD/NOT_SUBMITTED, and retained `BLOCKED / NO TRADE` at 100% cash because DMXF failed liquidity and the 6-10 ETF score/overlap construction remains incomplete.
 
 ## 2026-09-02
 
