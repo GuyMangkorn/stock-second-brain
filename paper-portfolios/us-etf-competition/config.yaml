@@ -103,7 +103,7 @@ freshness_gate:
   completed_daily_price_trading_sessions: 1
   aum_spread_liquidity_trading_sessions: 5
   holdings_valuation_days: 45
-  performance_fund_facts_days: 31
+  performance_fund_facts_days: 90 # 3 calendar months; operational day-based equivalent
   methodology: latest-verified-version
 
 benchmarks:

@@ -32,6 +32,9 @@
 - The decision quote freshness gate is one US trading day, using
   `freshness_gate.decision_quote_trading_sessions: 1`; it is not a five-minute
   or rolling clock-hours gate. Same-day quotes remain preferable when available.
+- Performance and fund-facts freshness is three calendar months, represented by
+  the operational `freshness_gate.performance_fund_facts_days: 90` setting. The
+  decision-price quote gate above remains unchanged.
 - Every run records an `IN`/`OUT`/`HOLD` change log in the run note and ledger.
 - No margin, short sales, options, leveraged/inverse ETFs, or live-money orders.
 - Any missing, stale, conflicting, or unavailable mandatory input ends in

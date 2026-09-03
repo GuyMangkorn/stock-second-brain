@@ -1,5 +1,9 @@
 # Log
 
+## 2026-09-03
+
+- `portfolio-policy`: Expanded `performance/fund-facts` freshness from 31 days to three calendar months (`freshness_gate.performance_fund_facts_days: 90` as the operational day-based equivalent); kept the decision-price quote gate at one US trading day and did not rerun or trade the portfolio.
+
 ## 2026-09-02
 
 - `scheduled-portfolio-run`: Recorded [[paper-portfolios/us-etf-competition/runs/2026-09-02|US ETF Portfolio Run 2026-09-02]]; direct quote freshness failed the 5-minute gate, so the proposal is `BLOCKED / NO TRADE`, the SPY 2026-09-01 daily mark was added, and the portfolio remains 100% cash.

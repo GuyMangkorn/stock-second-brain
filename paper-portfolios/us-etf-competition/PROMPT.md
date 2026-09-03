@@ -103,7 +103,8 @@ An ETF may be bought only when all are true:
 5. Decision quote is no more than one US trading day old under
    `decision_quote_trading_sessions: 1`; liquidity facts are no more than five
    trading sessions old; holdings/valuation are no more than 45 days old;
-   performance/fund facts are no more than 31 days old; methodology is the
+   performance/fund facts are no more than 3 calendar months old (operational
+   equivalent: `performance_fund_facts_days: 90`); methodology is the
    latest verified version.
 
 Funds with one to three years of history are limited to 5% each and 10%
