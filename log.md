@@ -2,6 +2,7 @@
 
 ## 2026-09-04
 
+- `portfolio-policy`: Switched `US ETF Paper Portfolio Competition` to batch-first market-data evidence: one immutable batch per run, compact screen cache, and append-only price log; preserved the weekday 15:00 ET cadence, portfolio/Proposal Phase/no-order rules, and legacy dated evidence paths.
 - `scheduled-portfolio-run`: Recorded [[paper-portfolios/us-etf-competition/runs/2026-09-04|US ETF Portfolio Run 2026-09-04]]; refreshed direct completed-session prices for SPY, VOO, DGRO, VEA, VIGI, SCHC, DMXF, and SCHA, kept all rows HOLD/NOT_SUBMITTED, and retained `BLOCKED / NO_TRADE` at 100% cash because DMXF failed liquidity and the 6-10 ETF score/overlap construction remains incomplete.
 
 ## 2026-09-03
