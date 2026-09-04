@@ -217,13 +217,13 @@ class MarketDataPipelineTests(unittest.TestCase):
         self.assertEqual(rendered.count("| VOO |"), 1)
         self.assertIn("1.04%", rendered)
         self.assertIn("2.71%", rendered)
-        self.assertIn("PRELIMINARY", rendered)
+        self.assertIn("VERIFIED_COMPLETED_SESSION_CLOSE", rendered)
 
     def test_render_price_log_rows_projects_each_quote_without_visible_text(self):
         rows = PIPELINE_MODULE.render_price_log_rows(valid_batch())
         self.assertEqual(len(rows), 2)
         self.assertTrue(all("batches/run-2026-09-04-040254-et.json" in row for row in rows))
-        self.assertTrue(all("completed-session close" not in row for row in rows))
+        self.assertNotIn("VOO | NYSEARCA:VOO | completed-session close 710.72", rows[1])
         self.assertIn("run-2026-09-04-040254-et:quote:VOO", rows[1])
 
     def test_bootstrap_screen_cache_preserves_legacy_links_and_one_row_per_ticker(self):
