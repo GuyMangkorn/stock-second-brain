@@ -219,6 +219,10 @@ class MarketDataPipelineTests(unittest.TestCase):
         self.assertIn("2.71%", rendered)
         self.assertIn("VERIFIED_COMPLETED_SESSION_CLOSE", rendered)
 
+    def test_invalid_screen_cache_requires_recovery_bootstrap(self):
+        with self.assertRaises(PIPELINE_MODULE.MarketDataError):
+            PIPELINE_MODULE.merge_screen_cache("# broken cache\n", valid_batch())
+
     def test_render_price_log_rows_projects_each_quote_without_visible_text(self):
         rows = PIPELINE_MODULE.render_price_log_rows(valid_batch())
         self.assertEqual(len(rows), 2)

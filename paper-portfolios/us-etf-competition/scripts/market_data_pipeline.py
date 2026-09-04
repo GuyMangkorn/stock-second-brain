@@ -404,9 +404,11 @@ def _cache_row_from_legacy(row: Mapping[str, str]) -> dict[str, Any]:
 
 
 def _parse_cache(text: str) -> dict[str, dict[str, Any]]:
+    if not text.strip():
+        return {}
     parsed = _table(text, "Ticker")
     if parsed is None:
-        return {}
+        raise MarketDataError("screen-cache.table: invalid cache table; run bootstrap-cache recovery")
     header, rows, _ = parsed
     result: dict[str, dict[str, Any]] = {}
     for cells in rows:
@@ -664,6 +666,8 @@ def bootstrap_screen_cache(log_text: str) -> str:
     """Build the screen cache once from the complete append-only price log."""
 
     _, log_rows, _ = _price_log_rows(log_text)
+    if log_text.strip() and not log_rows and _table(log_text, "Observation ID") is None:
+        raise MarketDataError("price-log.table: invalid price log; recovery cannot infer history")
     grouped: dict[str, list[dict[str, str]]] = {}
     for row in log_rows:
         ticker = _field(row, "ticker", default="").upper()
@@ -710,19 +714,21 @@ def render_price_log_rows(batch: Mapping[str, Any]) -> list[str]:
 
 
 def _ensure_log_text(text: str, competition_id: str) -> str:
+    if not text.strip():
+        return (
+            "---\n"
+            "kind: etf-price-log\n"
+            f"competition_id: {competition_id}\n"
+            "append_only: true\n"
+            "canonical_history: true\n"
+            "source_policy: browser-direct-web\n"
+            "---\n\n"
+            "# ETF Price Log\n\n"
+            "" + LOG_HEADER + "\n" + LOG_SEPARATOR + "\n"
+        )
     if _table(text, "Observation ID") is not None:
         return text
-    return (
-        "---\n"
-        "kind: etf-price-log\n"
-        f"competition_id: {competition_id}\n"
-        "append_only: true\n"
-        "canonical_history: true\n"
-        "source_policy: browser-direct-web\n"
-        "---\n\n"
-        "# ETF Price Log\n\n"
-        "" + LOG_HEADER + "\n" + LOG_SEPARATOR + "\n" + text
-    )
+    raise MarketDataError("price-log.table: invalid price log; refusing to rewrite it")
 
 
 def _append_rows_to_log(text: str, rows: list[str], competition_id: str) -> tuple[str, int]:
