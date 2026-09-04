@@ -312,8 +312,9 @@ when the source-as-of and period are before the cutoff and
   ```
 
   Store recent closes as a bounded semicolon-separated series such as
-  `2026-09-03:710.72;2026-09-02:703.41`; retain no more than 20 completed-session
-  points per ticker. Use the same `price_basis` for all return calculations.
+  `2026-09-03:710.72;2026-09-02:703.41`; retain up to 21 completed-session
+  points per ticker (the latest close plus the prior 20 sessions) so a true
+  20-session return is computable. Use the same `price_basis` for all return calculations.
   Use `not disclosed` when a window has insufficient points, and never mix
   intraday rows with completed-session returns.
 
