@@ -179,11 +179,13 @@ exceed 35%. ETFs tracking the same benchmark or with top-holdings overlap above
 7. In Proposal Phase, create proposed decision evidence only. Do not call an
    order-placement route. In a later authorized phase, use marketable limit
    orders, expire unfilled orders after 15 minutes, and record actual fills.
-8. Assemble one market-data batch for the clock, calendar, and direct quote
-   observations captured in this run. Validate and record it with
-   `scripts/record_market_data_batch.py`; this appends compact price-log rows
-   and atomically updates the screen cache. Do not create per-ticker JSON files
-   for a new run.
+8. Assemble one `schema_version: 2`, `kind: market-data-batch` JSON for the
+   clock, calendar, and direct quote observations captured in this run. Write
+   it first to a temporary staging path, then validate and record it with
+   `scripts/record_market_data_batch.py --root paper-portfolios/us-etf-competition --batch STAGING_BATCH_PATH`;
+   the recorder creates the immutable `batches/{run_id}.json`, appends compact
+   price-log rows, and atomically updates the screen cache. Do not create
+   per-ticker JSON files for a new run.
 9. Append only valid ledger events, rebuild state/dashboard, and create one
    dated run note under `runs/` that links to the batch and its evidence IDs,
    with timestamps, calculations, gaps, and decision rationale.
