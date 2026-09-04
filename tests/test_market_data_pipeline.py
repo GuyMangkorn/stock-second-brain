@@ -309,6 +309,20 @@ class MarketDataPipelineTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(json.loads(result.stdout)["status"], "PASS")
 
+    def test_project_documents_describe_batch_first_contract(self):
+        prompt = (PORTFOLIO_ROOT / "PROMPT.md").read_text(encoding="utf-8")
+        config = (PORTFOLIO_ROOT / "config.yaml").read_text(encoding="utf-8")
+        evidence_readme = (PORTFOLIO_ROOT / "evidence" / "market-data" / "README.md").read_text(encoding="utf-8")
+        self.assertIn("one immutable evidence batch", prompt)
+        self.assertIn("Do not create a new JSON file per ticker", prompt)
+        self.assertIn("record_market_data_batch.py", prompt)
+        self.assertIn("batch_root:", config)
+        self.assertIn("screen_cache_path:", config)
+        self.assertIn("one_batch_per_run: true", config)
+        self.assertIn("legacy", evidence_readme.lower())
+        self.assertIn("price-log.md", evidence_readme)
+        self.assertIn("append-only", evidence_readme)
+
 
 if __name__ == "__main__":
     unittest.main()
