@@ -1,6 +1,6 @@
 {
   "benchmark": {
-    "return_pct": 0.44,
+    "return_pct": 1.5,
     "start_price": 761.78,
     "symbol": "SPY"
   },
@@ -23,18 +23,25 @@
       "equity": 100000.0,
       "event_id": "evt-20260903T080324Z-mark-spy-daily-20260902",
       "session_date": "2026-09-02"
+    },
+    {
+      "benchmark_price": 773.17,
+      "drawdown_pct": 0.0,
+      "equity": 100000.0,
+      "event_id": "evt-20260904T080254Z-mark-spy-daily-20260903",
+      "session_date": "2026-09-03"
     }
   ],
-  "events_processed": 11,
-  "generated_at": "2026-09-03T08:31:45Z",
+  "events_processed": 14,
+  "generated_at": "2026-09-04T09:01:08Z",
   "last_mark": {
-    "benchmark_price": 765.16,
+    "benchmark_price": 773.17,
     "cash": 100000.0,
-    "effective_at": "2026-09-02T20:00:00Z",
+    "effective_at": "2026-09-03T20:00:00Z",
     "equity": 100000.0,
-    "event_id": "evt-20260903T080324Z-mark-spy-daily-20260902",
+    "event_id": "evt-20260904T080254Z-mark-spy-daily-20260903",
     "scope": "daily-close",
-    "session_date": "2026-09-02"
+    "session_date": "2026-09-03"
   },
   "maximum_drawdown_pct": 0.0,
   "normal_turnover_pct": 0.0,
