@@ -34,6 +34,13 @@ market_data:
   quote_source: direct-page-with-visible-as-of-or-retrieval-time
   calendar_source: official-exchange-or-regulator-page
   evidence_root: evidence/market-data
+  batch_root: evidence/market-data/batches
+  legacy_evidence_root: evidence/market-data/YYYY-MM-DD
+  screen_cache_path: evidence/market-data/latest-prices.md
+  append_only_log_path: evidence/market-data/price-log.md
+  normal_read_policy: screen-cache-plus-price-log-tail
+  full_log_read_policy: bootstrap-or-recovery-only
+  one_batch_per_run: true
 
 price_cache:
   latest_path: evidence/market-data/latest-prices.md

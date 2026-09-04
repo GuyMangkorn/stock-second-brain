@@ -49,18 +49,37 @@ python3 paper-portfolios/us-etf-competition/scripts/rebuild_portfolio.py --check
 python3 paper-portfolios/us-etf-competition/scripts/rebuild_portfolio.py
 ```
 
-For a review, use the browser to search for the relevant official or reputable
-source, open the direct result, and save an immutable evidence envelope under
-`evidence/market-data/YYYY-MM-DD/`. Record the query, direct URL, page title,
-visible values/text, source as-of time, retrieval time, and SHA-256 content hash.
-Search snippets alone are never sufficient. Do not enter credentials or upload
-portfolio files into a website.
+Record one captured market-data batch and update both compact projections:
 
-Before searching, read [`latest-prices.md`](evidence/market-data/latest-prices.md)
-and the tail of [`price-log.md`](evidence/market-data/price-log.md). Use those
-observations for initial screening, then refresh only holdings, SPY, and
-decision-relevant candidates. Every verified refresh gets one append-only log
-row and one updated latest-cache row; stale cache values are not final quotes.
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/record_market_data_batch.py \
+  --root paper-portfolios/us-etf-competition --batch /path/to/captured-batch.json
+```
+
+If the screen cache is missing or invalid, rebuild it once from the complete
+price log in recovery mode:
+
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/record_market_data_batch.py \
+  --root paper-portfolios/us-etf-competition --bootstrap-cache
+```
+
+For a review, use the browser to search for the relevant official or reputable
+source, open the direct result, and capture the clock, calendar, and relevant
+market-data pages in one immutable batch under `evidence/market-data/batches/`.
+Record the query, direct URL, page title, visible values/text, source as-of time,
+retrieval time, and SHA-256 content hash. Search snippets alone are never
+sufficient. Do not enter credentials or upload portfolio files into a website.
+The dated directories under `evidence/market-data/YYYY-MM-DD/` are legacy
+evidence and remain read-only; do not create new per-ticker JSON files there.
+
+Before searching, read the screen cache in
+[`latest-prices.md`](evidence/market-data/latest-prices.md) and the tail of
+[`price-log.md`](evidence/market-data/price-log.md). Use those observations for
+initial screening, then refresh only holdings, SPY, and decision-relevant
+candidates. The recorder writes one append-only log row per verified
+observation and one updated cache row per ticker; stale cache values are not
+final quotes.
 
 ## Price and market-data sources
 

@@ -1,15 +1,42 @@
 # Market Data Evidence
 
-Immutable browser evidence envelopes live under dated subdirectories here. Each
-envelope records the discovery query, direct page URL, page title, visible
-response text/values, source as-of timestamp, retrieval timestamp, and a
-SHA-256 content hash. Search-result snippets are discovery context only, never
-the sole evidence for a price or market-status decision.
+ตลาดข้อมูลใหม่มีสามชั้นและแต่ละชั้นมีหน้าที่ต่างกัน:
 
-[`latest-prices.md`](latest-prices.md) is the derived latest-price table used for
-fast preliminary screening. [`price-log.md`](price-log.md) is the append-only
-history of verified browser price observations. A cache observation can narrow
-the refresh scope but cannot replace a direct quote outside the one-US-trading-
-day decision gate.
+1. [`latest-prices.md`](latest-prices.md) — `etf-price-screen-cache` แบบ compact
+   มีราคาล่าสุดและ rolling context ต่อ ticker ใช้คัดกรองเบื้องต้นเท่านั้น
+2. [`price-log.md`](price-log.md) — ประวัติราคาแบบ append-only มีหนึ่งแถวต่อ
+   verified observation และเป็น index ที่อ่าน tail ได้เร็ว
+3. [`batches/`](batches/) — full market-data evidence แบบ immutable หนึ่งไฟล์ต่อ
+   Portfolio Run รวม clock, calendar และ direct quote observations ไว้ด้วยกัน
 
-Never edit or overwrite an evidence file. A corrected fetch creates a new file.
+Normal run ต้องอ่าน screen cache และเฉพาะ tail ของ price log ก่อนคัด shortlist;
+ห้ามเปิด historical evidence ทั้ง tree เพื่อคัด ETF. ราคาใน cache ไม่ใช่
+`decision_reference_price` โดยอัตโนมัติ: ก่อน BUY ต้อง refresh direct quote และ
+อ้าง batch path พร้อม evidence ID.
+
+โครงสร้างของ run ใหม่:
+
+```text
+captured batch JSON (staging)
+        │ validate + record_market_data_batch.py
+        ├── batches/{run_id}.json       full immutable evidence
+        ├── price-log.md                one compact row per observation
+        └── latest-prices.md             one rolling row per ticker
+```
+
+สร้าง batch ใหม่ด้วยคำสั่งนี้หลังจาก capture หลักฐานเสร็จแล้ว:
+
+```bash
+python3 ../../scripts/record_market_data_batch.py \
+  --root ../.. --batch /path/to/captured-batch.json
+```
+
+ไฟล์เดิมใต้ `YYYY-MM-DD/` เป็น legacy evidence ที่ต้องคง path และเนื้อหาเดิม
+ไว้เพื่อให้ run notes และ audit links เก่ายังเปิดได้. ห้าม migrate, rewrite,
+move หรือ delete ไฟล์เหล่านั้น; bootstrap จาก `price-log.md` ใช้เฉพาะ recovery
+เพื่อสร้าง derived screen cache และไม่สร้าง retroactive batch. Search-result
+snippets เป็นเพียง discovery context ไม่ใช่หลักฐานราคาเพียงอย่างเดียว.
+
+ทุก envelope ใหม่ต้องเก็บ discovery query, direct page URL, page title, visible
+response text/values, source-as-of, retrieval timestamp และ SHA-256 content hash.
+หาก source ขาดหาย stale หรือขัดแย้ง ให้บันทึก `BLOCKED/NO TRADE` แทนการเติมค่า.

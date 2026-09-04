@@ -43,16 +43,17 @@ portfolio at `paper-portfolios/us-etf-competition/`.
 - Read `config.yaml`, `ledger/events.jsonl`, `state/portfolio.json`, the latest
   run note, `index.md`, relevant ETF entity/fund facts, and relevant pages under
   `wiki/analysis/performance/`.
-- Read `evidence/market-data/latest-prices.md` and the tail of
-  `evidence/market-data/price-log.md` before searching for new prices. Use the
-  cache for preliminary screening, then refresh only current holdings, the SPY
-  benchmark, and candidates whose price could change the decision; do not
-  search the whole universe again without a decision reason.
+- Read `evidence/market-data/latest-prices.md` as the compact screen cache and
+  only the tail of `evidence/market-data/price-log.md` before searching for new
+  prices. Use the cache for preliminary screening, then refresh only current
+  holdings, the SPY benchmark, and candidates whose price could change the
+  decision; do not search the whole universe again without a decision reason.
 - Vault pages are research context, not the source of current prices. Use
   browser search only to discover pages, then open the direct page and read the
   visible quote, calendar, NAV, or filing evidence. Preserve the search query,
   direct URL, page title, visible response text/values, as-of timestamp,
-  retrieval timestamp, and content hash under `evidence/market-data/`.
+  retrieval timestamp, and content hash in the new market-data batch under
+  `evidence/market-data/batches/`.
 - Verify the US market calendar through an official exchange or regulator page
   opened in the browser. On a holiday return `NO TRADE`. On a normal or
   early-close session, use the freshest directly observed quote available at
@@ -60,11 +61,15 @@ portfolio at `paper-portfolios/us-etf-competition/`.
   US trading day (`decision_quote_trading_sessions: 1`), not a five-minute or
   rolling clock-hours gate; outside market hours, use the latest completed close
   and label it explicitly. Do not treat a search-result snippet as a quote.
-- For every verified price refresh, append one row to the append-only
-  `evidence/market-data/price-log.md` and update the derived
-  `evidence/market-data/latest-prices.md` row for that Ticker. Keep the source
-  URL, local evidence file, price basis, source as-of timestamp, retrieval time,
-  and `run_id` together so a later run can reuse the observation.
+- For every Portfolio Run, store all full market-data browser evidence in one immutable evidence batch under `evidence/market-data/batches/`. Do not create a new JSON file per ticker for new runs. After the batch is validated, run
+  `scripts/record_market_data_batch.py` to append one compact row per verified
+  observation to `price-log.md` and update one screen-cache row per ticker in
+  `latest-prices.md`. A cache row is never final BUY evidence: a BUY proposal
+  must cite the direct batch path and evidence ID.
+- Existing dated JSON under `evidence/market-data/YYYY-MM-DD/` is legacy,
+  immutable, and read-only. Do not migrate, rewrite, move, or delete it. Use
+  the bootstrap/recovery command only when the screen cache is missing or
+  invalid; bootstrap derives a cache and does not create retroactive batches.
 - If a mandatory source is missing, stale, conflicting, unauthorized, or
   unavailable, write `BLOCKED/NO TRADE`, preserve the prior portfolio, and name
   the failed dependency. Do not use private scraped APIs or look-ahead data as
@@ -174,10 +179,14 @@ exceed 35%. ETFs tracking the same benchmark or with top-holdings overlap above
 7. In Proposal Phase, create proposed decision evidence only. Do not call an
    order-placement route. In a later authorized phase, use marketable limit
    orders, expire unfilled orders after 15 minutes, and record actual fills.
-8. Append verified prices to the price log, update the latest-price cache,
-   append only valid ledger events, rebuild state/dashboard, and create one
-   dated run note under `runs/` with source links, timestamps, calculations,
-   gaps, and decision rationale.
+8. Assemble one market-data batch for the clock, calendar, and direct quote
+   observations captured in this run. Validate and record it with
+   `scripts/record_market_data_batch.py`; this appends compact price-log rows
+   and atomically updates the screen cache. Do not create per-ticker JSON files
+   for a new run.
+9. Append only valid ledger events, rebuild state/dashboard, and create one
+   dated run note under `runs/` that links to the batch and its evidence IDs,
+   with timestamps, calculations, gaps, and decision rationale.
 
 ## Required decision table
 
