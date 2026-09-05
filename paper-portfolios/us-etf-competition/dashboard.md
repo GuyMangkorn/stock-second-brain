@@ -2,7 +2,7 @@
 kind: paper-portfolio-dashboard
 competition_id: us-etf-competition-2026
 phase: simulation
-as_of: 2026-09-05T09:02:26Z
+as_of: 2026-09-05T10:45:37Z
 portfolio_value: 100000.00
 cash: 100000.00
 cumulative_return_pct: 0.00
@@ -23,7 +23,7 @@ maximum_drawdown_pct: 0.00
 | Cash | $100,000.00 |
 | Cash weight | 100.00% |
 | Cumulative return | 0.00% |
-| SPY operational benchmark | 1.50% |
+| SPY operational benchmark | 1.10% |
 | Current drawdown | 0.00% |
 | Maximum drawdown | 0.00% |
 | Lifetime normal turnover / starting cash | 0.00% |
@@ -40,7 +40,9 @@ Pending targets do not change current holdings or returns.
 
 | Ticker | Side | Quantity | Scheduled open |
 |---|---|---:|---|
-| — | — | — | — |
+| VOO | BUY | 14.117035 | 2026-09-08T13:30:00Z |
+| VEA | BUY | 135.507083 | 2026-09-08T13:30:00Z |
+| VIGI | BUY | 50.261503 | 2026-09-08T13:30:00Z |
 
 ## Daily Equity Curve
 
@@ -49,6 +51,7 @@ Pending targets do not change current holdings or returns.
 | 2026-09-01 | $100,000.00 | $761.78 | 0.00% |
 | 2026-09-02 | $100,000.00 | $765.16 | 0.00% |
 | 2026-09-03 | $100,000.00 | $773.17 | 0.00% |
+| 2026-09-04 | $100,000.00 | $770.19 | 0.00% |
 
 ## Latest Runs
 

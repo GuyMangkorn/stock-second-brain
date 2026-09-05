@@ -1541,3 +1541,4 @@
 ## 2026-09-05
 
 - `workflow-checklist`: บันทึก [ETF Simulation Workflow Fix Checklist](paper-portfolios/us-etf-competition/WORKFLOW-FIX-CHECKLIST.md) จากการสนทนา ครอบคลุม screening data, simulation, analysis, missing-data handling, portfolio initialization, performance และ verification; เป็นรายการงานที่เสนอ ยังไม่เปลี่ยนกติกาหรือ portfolio accounting.
+- `paper-portfolio-run`: บันทึก [[US ETF Paper Portfolio Run — 2026-09-05]]; local simulation ผ่าน reconciliation, staged pending BUY สำหรับ VOO/VEA/VIGI รวม 25% ที่ next-session-open, คง cash reserve 75%, และคง DMXF excluded จาก liquidity gates.
