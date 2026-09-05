@@ -15,7 +15,7 @@ calendar_years_as_of: 2025-12-31
 current_ytd_as_of: 2026-06-30
 price_nav_as_of: not disclosed in reviewed official sources
 fund_facts_as_of: 2026-06-30
-source_batch: raw/imports/ETF_performance_sources_2026-09-02_recheck.md
+source_batch: raw/imports/ETF_performance_sources_2026-09-02_run-2.md
 return_basis: NAV total return; distributions reinvested
 return_currency: USD
 primary_region: International
@@ -96,4 +96,4 @@ Expense ratio คือ `0.27%` และกองทุนจ่าย distribu
 - [MSCI index factsheet](https://www.msci.com/documents/1296102/5161905/tiaa_esg_international_developed_markets_equity_index_usd_net.pdf/c086131e-2b0a-52de-ffec-ad056865129f) — USD net-return index context
 - [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common benchmark definition
 - Cached S&P 500 TR references: [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-09-02_recheck]]
+- ETF source batch: [[ETF_performance_sources_2026-09-02_run-2]]

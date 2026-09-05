@@ -9,13 +9,13 @@ views:
   - type: kanban
     name: Ready and Blocked Intake
     groupBy:
-      property: note.status
+      property: status
       direction: ASC
     order:
       - file.name
-      - note.status
-      - note.input_ticker
-      - note.instrument_type
-      - note.workflow
-      - note.updated_at
-      - note.result_code
+      - status
+      - input_ticker
+      - instrument_type
+      - workflow
+      - updated_at
+      - result_code

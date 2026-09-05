@@ -7,14 +7,14 @@ exchange: NYSE Arca
 fund: iShares International Small-Cap Equity Factor ETF
 tracked_index: STOXX International Small-Cap Equity Factor Index (USD) (Net)
 benchmark: S&P 500 Total Return
-updated: 2026-08-17
+updated: 2026-09-02
 performance_as_of: 2025-12-31
 calendar_years_as_of: 2025-12-31
 rolling_10y_as_of: 2026-06-30
-current_ytd_as_of: 2026-08-13
-price_nav_as_of: 2026-08-14
-fund_facts_as_of: 2026-06-30
-source_batch: raw/imports/ETF_performance_sources_2026-08-17.md
+current_ytd_as_of: 2026-08-28
+price_nav_as_of: 2026-08-28
+fund_facts_as_of: 2026-08-28
+source_batch: raw/imports/ETF_performance_sources_2026-09-02_run-3.md
 return_basis: NAV total return
 return_currency: USD
 tags:
@@ -36,7 +36,7 @@ markets นอกสหรัฐฯ. Official complete calendar-year NAV Total R
 cumulative `127.24%` หรือ rounded-input CAGR `8.55%`; issuer rolling 10-year
 average annual NAV TR คือ `9.69%` ณ 30 มิ.ย. 2026 ซึ่งเป็นคนละ metric. ช่วง
 2021-2025 ให้ cumulative `50.01%` / CAGR `8.45%`, เทียบกับ S&P 500 TR
-`96.17%` / `14.43%`. Current official NAV TR YTD ล่าสุดคือ `+12.52%` ณ 13 ส.ค.
+`96.17%` / `14.43%`. Current official NAV TR YTD ล่าสุดคือ `+12.99%` ณ 28 ส.ค.
 2026.
 
 ## Performance check
@@ -51,7 +51,7 @@ average annual NAV TR คือ `9.69%` ณ 30 มิ.ย. 2026 ซึ่งเ�
 - Official rolling 10-year NAV TR: average annual `9.69%` ณ 30 มิ.ย. 2026; raw rolling endpoints ไม่ได้เปิดเผย จึงแยกจาก calendar-window CAGR `8.55%`
 - 2016-2025 calendar NAV TR: cumulative `127.24%`; rounded-input CAGR `8.55%`
 - 2021-2025 calendar NAV TR: cumulative `50.01%`; rounded-input CAGR `8.45%`; S&P 500 cached cumulative `96.17%` / CAGR `14.43%`
-- Current official fields: NAV `US$45.93` ณ 14 ส.ค. 2026, closing price `US$46.04` ณ 14 ส.ค. 2026, และ NAV TR YTD `+12.52%` ณ 13 ส.ค. 2026
+- Current official fields: NAV `US$45.92` ณ 28 ส.ค. 2026, closing price `US$46.01` ณ 28 ส.ค. 2026, net assets `US$684.26m` ณ 28 ส.ค. 2026, holdings `1,161` ณ 28 ส.ค. 2026, และ NAV TR YTD `+12.99%` ณ 28 ส.ค. 2026
 - Coverage/source note: official SEC summary prospectus supplies 2016-2024 annual NAV rows; official June 2026 factsheet supplies 2025 and current fund/benchmark fields; S&P annual rows use cached USD Total Return convention as of 31 ธ.ค. 2025
 
 | Year | ISCF NAV TR | S&P 500 TR |
@@ -80,13 +80,13 @@ return ของ ISCF.
 - Least bad down year: 2022, `-15.06%`
 - 2016-2025 cumulative/CAGR: ISCF `127.24%` / `8.55%`; S&P 500 TR `298.33%` / `14.82%`
 - 2021-2025 cumulative/CAGR: ISCF `50.01%` / `8.45%`; S&P 500 TR `96.17%` / `14.43%`
-- Current ISCF NAV TR YTD: `+12.52%` ณ 13 ส.ค. 2026; current S&P YTD ไม่ได้อ้างว่าเป็นวันเดียวกัน
+- Current ISCF NAV TR YTD: `+12.99%` ณ 28 ส.ค. 2026; current S&P YTD ไม่ได้อ้างว่าเป็นวันเดียวกัน
 
 ## Risk read-through
 
 ISCF มี international small-cap, factor-regime, country, currency และ liquidity
 sensitivity. Official iShares fields รายงาน 3-year standard deviation `14.21%` ณ
-31 ก.ค. 2026, beta `0.73` ณ 31 ก.ค. 2026 และ holdings `1,161` ณ 13 ส.ค. 2026.
+31 ก.ค. 2026, beta `0.73` ณ 31 ก.ค. 2026 และ holdings `1,161` ณ 28 ส.ค. 2026.
 Index splice ในปี 2023 ทำให้การอ่าน tracking behavior ต้องแยกช่วงก่อนและหลังการ
 เปลี่ยน benchmark. Official daily NAV history ที่เพียงพอสำหรับคำนวณ maximum
 drawdown และ recovery ยังไม่ถูกยืนยัน จึงไม่บันทึกตัวเลข proxy.
@@ -98,4 +98,4 @@ drawdown และ recovery ยังไม่ถูกยืนยัน จึ
 - [ISCF summary prospectus](https://www.ishares.com/us/literature/summary-prospectus/sp-ishares-edge-msci-multifactor-intl-small-cap-etf-7-31.pdf) — 2016-2024 annual rows, passive objective, fees, best/worst quarters and benchmark splice
 - [S&P 500 index definition](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) — common benchmark definition
 - Cached S&P 500 TR references: [2016-2019](https://www.spglobal.com/spdji/en/documents/research/research-sp-500-low-volatility-index-five-decades-of-history.pdf?force_download=true), [2018-2022](https://www.spglobal.com/spdji/en/documents/commentary/market-attributes-us-equities-202307.pdf), [2021](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-december-2021/), and [2022-2025](https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes/)
-- ETF source batch: [[ETF_performance_sources_2026-08-17]] | [[ETF Performance Index]]
+- ETF source batch: [[ETF_performance_sources_2026-09-02_run-3]] | [[ETF Performance Index]]

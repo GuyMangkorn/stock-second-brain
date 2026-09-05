@@ -6,18 +6,18 @@ views:
   - type: table
     name: Research Queue Monitor
     order:
-      - note.status
-      - note.created_at
-      - note.card_id
+      - status
+      - created_at
+      - card_id
       - file.name
-      - note.input_ticker
-      - note.instrument_type
-      - note.workflow
-      - note.batch_id
-      - note.claim_owner
-      - note.lease_expires_at
-      - note.execution_phase
-      - note.result_code
-      - note.output_paths
-      - note.completed_at
-      - note.commit_id
+      - input_ticker
+      - instrument_type
+      - workflow
+      - batch_id
+      - claim_owner
+      - lease_expires_at
+      - execution_phase
+      - result_code
+      - output_paths
+      - completed_at
+      - commit_id
