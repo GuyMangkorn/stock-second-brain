@@ -335,4 +335,41 @@ confirmation: none
 code: durable-write-complete
 reason: Official passive international dividend ETF identity, July rolling performance update, official annual NAV rows, corrected up/down ranking, dated secondary price/NAV cross-check and scheduled-local review passed with daily risk-data gaps disclosed.
 ```
+
+## DMXF evidence packet
+
+- Input ticker: `DMXF`; canonical identity: `NASDAQ:DMXF`; fund: iShares ESG Advanced MSCI EAFE ETF; official inception `2020-06-16`; exchange `NASDAQ`; return currency `USD`.
+- Official classification: `passive-index`. iShares describes DMXF as tracking the `MSCI EAFE Choice ESG Screened Index (USD) (Net)`, a free-float-adjusted, market-capitalization-weighted index of developed-market equities excluding the U.S. and Canada with ESG and controversy screens. The reviewed objective does not define a leveraged, inverse, option-income, bond, commodity, currency, multi-asset or derivative-heavy payoff.
+- Official current product-page fields as of `2026-08-31`: NAV `USD 86.46`, closing price `USD 86.59`, net assets `USD 959.73m`, premium/discount `0.15%`, holdings `395`, expense ratio `0.12%`, and current NAV Total Return YTD `+16.02%`. The page also reports 3-year standard deviation `14.23%` and equity beta `0.82` as of `2026-07-31`, 12-month trailing yield `4.19%` as of `2026-07-31`, and semi-annual distributions.
+- Official rolling performance fields from the product page as of `2026-06-30`: NAV Total Return 1-year `18.74%`, 3-year annualized `15.47%`, 5-year annualized `7.72%`, since inception `11.48%`; 10-year field is not applicable because the fund launched in 2020. These rolling fields are kept date-separated from the August current snapshot.
+- Official June 30, 2026 factsheet calendar NAV rows: 2021 `10.92%`, 2022 `-19.18%`, 2023 `20.75%`, 2024 `3.49%`, 2025 `23.04%`. Market-price rows (`10.90%`, `-19.23%`, `20.56%`, `4.02%`, `22.08%`) and issuer benchmark rows (`10.98%`, `-19.40%`, `20.79%`, `3.81%`, `22.63%`) remain separate and are not substituted into the NAV ranking. The factsheet states that growth-of-hypothetical-$10,000 performance assumes reinvestment of dividends and capital gains and deducts fund expenses.
+- Common S&P 500 Total Return reference uses the cached USD dividend-reinvested rows for 2021-2025: `28.71%`, `-18.11%`, `26.29%`, `25.02%`, `17.88%`, reference as of `2025-12-31`.
+- Calculations from official DMXF NAV rows: 2021-2025 product `1.3783533174`, cumulative `37.8353%`, rounded-input CAGR `6.6282%`; population standard deviation `15.2065%`; `4 / 1` up/down years. Best `2025 +23.04%`; least positive `2024 +3.49%`; worst and least-bad down year `2022 -19.18%`.
+- S&P cached calculation for 2021-2025: product `1.9616961801`, cumulative `96.1696%`, rounded-input CAGR `14.4264%`. Annual DMXF-minus-S&P differences are `-17.79`, `-1.07`, `-5.54`, `-21.53` and `+5.16` percentage points; cumulative relative wealth `(1+DMXF)/(1+S&P)-1` is `-29.7367%`. These are arithmetic comparisons, not alpha.
+- Official distributions shown on the current page: ex-date/payable date `2026-06-15/2026-06-18`, total distribution `USD 1.032946`; `2025-12-16/2025-12-19`, `USD 2.504331`; `2025-06-16/2025-06-20`, `USD 1.140518`; `2024-12-17/2024-12-20`, `USD 0.884233`. No distribution forecast is inferred.
+- Official daily NAV observations sufficient for maximum drawdown and recovery were not verified; `risk-adjusted evidence: not-verified` for those fields. The 2020 inception partial is excluded from annual ranking. No secondary annual proxy or shorter-period 10-year CAGR is used.
+- Source map: official product/performance `https://www.ishares.com/us/products/314362/ishares-esg-advanced-msci-eafe-etf`; official factsheet `https://www.ishares.com/us/literature/fact-sheet/dmxf-ishares-esg-advanced-msci-eafe-etf-fund-fact-sheet-en-us.pdf`; Nasdaq listing circular `https://www.nasdaqtrader.com/content/newsalerts/2020/infocircular/DMXF%20USXF%20ETF%20Circular.pdf`; cached S&P convention and official definition `https://www.spglobal.com/spdji/en/indices/equity/sp-500/`.
+- Source integrity review: PASS — official identity, NASDAQ exchange, passive equity classification, benchmark, inception, expense ratio, NAV/market-price separation, annual rows, current fields, distribution records and dated rolling fields reconcile without mixed return bases.
+- Calculation review: PASS — annual compounding, CAGR, standard deviation, S&P comparison, relative wealth, year counts and best/worst subsets were recomputed from the stated rounded rows; partial 2020 was excluded.
+- Format and graph review: PASS for card-specific output — Thai-first narrative, one annual table, required sections, canonical `geography/International` and `geography/global-developed` tags, and the existing International breadcrumb targets resolve. Shared navigation/index/log files were already dirty before this card's pre-write boundary and remain outside this scoped output.
+- Planned durable paths/change map: create `wiki/analysis/performance/ETF_NASDAQ_DMXF Performance.md`; update this source batch; no shared navigation/index/log file is in this card's output scope because those files were dirty before the retained lease.
+- Proposed durable page contents: complete DMXF performance page with official identity, passive classification, current August snapshot, 2021-2025 NAV/S&P table, calculations, distribution dates, risk gaps, breadcrumb, canonical tags and source links.
+- Local pre-save verdict: PASS; `verification_mode: scheduled-local`; `reviewer_dispatch: not-attempted-by-design`; no critical or high finding remains.
+
+## DMXF research handoff
+
+```text
+status: PASS
+scope: item
+durable_write: completed
+exhausted: false
+confirmation: none
+code: durable-write-complete
+reason: Official passive developed-equity identity, current August NAV/YTD, official 2021-2025 NAV rows, cached S&P comparison, calculations and scheduled-local review passed with daily drawdown and recovery data gaps disclosed.
+```
+
+## DMXF queue route outcome
+
+- The downstream `research_handoff` was complete and passed the scheduled-local research gate, but queue routing stopped globally before commit with `durable-output-scope-mismatch`: the card's intake-planned path was `wiki/analysis/performance/ETF_NYSE_ARCA_DMXF Performance.md`, while the official exchange verification required and the written page used `wiki/analysis/performance/ETF_NASDAQ_DMXF Performance.md`.
+- The retained project lease was released by the global-block route. No other card was researched or mutated; the nine unstarted cards were restored to their exact pre-run `Ready` snapshots. The DMXF page and this source-batch append remain uncommitted for controlled path reconciliation.
 ```

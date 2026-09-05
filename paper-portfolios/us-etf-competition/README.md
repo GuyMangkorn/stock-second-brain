@@ -15,30 +15,19 @@
 
 ## Operating boundary
 
-- `Proposal Phase` is mandatory for the first 10 completed US trading sessions
-  after the first valid daily mark is recorded.
-- The portfolio has no competition end date. It continues until the user
-  explicitly asks to stop or close it; no date-based liquidation is performed.
-- Browser/direct-web pages are read-only market evidence; the local Portfolio
-  Ledger is canonical. Browser search is used for discovery, while quotes,
-  calendars, NAVs, filings, and fund facts must be read from the opened direct
-  page with explicit as-of/retrieval timestamps.
-- Scheduled runs never enable automatic execution. A separate explicit user
-  authorization is required after reconciliation.
-- Manual runs are evaluated at the time they are invoked, regardless of the
-  default 15:00 ET automation time. The run may record `BUY`, `REDUCE`, `SELL`,
-  or `HOLD`; it should make no change when the existing portfolio is still the
-  best supported decision.
-- The decision quote freshness gate is one US trading day, using
-  `freshness_gate.decision_quote_trading_sessions: 1`; it is not a five-minute
-  or rolling clock-hours gate. Same-day quotes remain preferable when available.
-- Performance and fund-facts freshness is three calendar months, represented by
-  the operational `freshness_gate.performance_fund_facts_days: 90` setting. The
-  decision-price quote gate above remains unchanged.
-- Every run records an `IN`/`OUT`/`HOLD` change log in the run note and ledger.
-- No margin, short sales, options, leveraged/inverse ETFs, or live-money orders.
-- Any missing, stale, conflicting, or unavailable mandatory input ends in
-  `BLOCKED/NO TRADE` without look-ahead backfilling.
+ใช้ local `simulation` ตามคำอนุมัติวันที่ 2026-09-05: กำหนด DECISION ก่อน
+แล้วบันทึก `SIMULATED_FILL` ด้วยราคาเปิด session ถัดไปพร้อม slippage ตาม config.
+ไม่ต้องมี broker และไม่รอ Proposal Phase. คำตัดสินที่ยังรอราคาไม่เปลี่ยน holdings.
+ประวัติเก่ายังคงเดิม; ไม่ซื้อย้อนหลังจากคำตัดสินเก่า.
+
+ลำดับ review: พอร์ต/ความเสี่ยง/pending → performance และ thesis ใน vault →
+shortlist ตามบทบาท → เติมข้อมูลที่เปลี่ยนคำตัดสิน → ราคาของกองที่เกี่ยวข้อง →
+คะแนน/น้ำหนัก/DECISION → settle เมื่อมีราคาเปิดที่กำหนดไว้ยืนยันแล้ว.
+Forum/X เป็นบริบทเสริมเฉพาะคำถาม ไม่ใช่ขั้นบังคับหรือแหล่งยืนยันตัวเลข.
+
+เริ่มลงทุนทีละกองได้ตาม risk/turnover limits; จำนวนกองเป้าหมายไม่ขวาง entry.
+Hard gaps ตัดสิทธิ์เฉพาะกอง; noncritical research gaps เป็น warning พร้อมลดขนาด.
+รายละเอียด gate และ run status อยู่ใน [PROMPT.md](PROMPT.md).
 
 ## Commands
 
@@ -64,8 +53,9 @@ python3 paper-portfolios/us-etf-competition/scripts/record_market_data_batch.py 
   --root paper-portfolios/us-etf-competition --bootstrap-cache
 ```
 
-For a review, use the browser to search for the relevant official or reputable
-source, open the direct result, and capture the clock, calendar, and relevant
+For a review, collect quotes with the Python API collector first, then use
+ETF.com product pages and existing direct-web sources for fallback or missing fields.
+Capture the clock, calendar, and relevant
 market-data pages in one immutable batch under `evidence/market-data/batches/`.
 Record the query, direct URL, page title, visible values/text, source as-of time,
 retrieval time, and SHA-256 content hash. Search snippets alone are never
@@ -83,7 +73,27 @@ final quotes.
 
 ## Price and market-data sources
 
-Use these browser sources in priority order:
+Quote source priority:
+
+1. ETF.com delayedquotes API via `scripts/fetch_etf_quotes.py`.
+2. ETF.com product page, for example https://www.etf.com/VOO.
+3. Existing reputable direct market-data pages.
+
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/fetch_etf_quotes.py --symbols VOO,SPY --output /tmp/unique-run-quotes.json
+```
+
+Python ใช้ curl เป็น HTTP client ตามการทดสอบ endpoint; เว้น request 10 วินาที,
+ใช้ retrieval cache 15 นาที และ shared lock/cooldown ใต้ `.runtime/`.
+เจอ 403/429 หยุดเรียก API ชั่วคราวอย่างน้อย 15 นาที เคารพ Retry-After ที่นานกว่า
+และใช้ fallback. ค่าความถี่เป็นนโยบายของเรา ไม่ใช่ quota ที่ผู้ให้บริการรับรอง.
+Output เป็น staging packet ให้ตรวจแล้วรวมลง batch เดิม พร้อม clock/calendar
+และ unique evidence IDs; ไม่ได้บันทึก ledger หรือ settle อัตโนมัติ.
+ดูรายละเอียด verification ใน PROMPT: snapshot ไม่ยืนยัน adjusted/unadjusted basis,
+final close หรือ regular-session Open โดยตัวมันเอง; history และ SPY adjusted prices
+ยังต้องเติมจากแหล่งที่ยืนยันได้. cache อายุสั้นไม่รับประกันว่าราคาต้นทางสด.
+
+For calendar and fund facts retain these source rules:
 
 - Official NYSE/Nasdaq or regulator pages for US trading dates, holidays, and
   early closes.
@@ -93,11 +103,23 @@ Use these browser sources in priority order:
   historical prices when the page shows a timestamp or session date.
 
 Keep current price, NAV, holdings, methodology, fund facts, and performance
-dates separate in each evidence record. If a direct page cannot be verified or
-the sources conflict, log `BLOCKED/NO TRADE` rather than backfilling with an
-unrelated data feed.
+dates separate in each evidence record. If a direct page cannot be verified or sources conflict, skip the affected
+candidate and record the exact gap; portfolio-wide failures use BLOCKED.
 
 ## Disclaimer
 
 This is an educational paper-trading simulation, not personalized investment
 advice. It does not guarantee returns and must not invent unavailable evidence.
+
+## Simulated settlement
+
+หลัง record batch ที่มีราคาเปิดของ pending decision แล้ว:
+
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/settle_simulation.py --batch paper-portfolios/us-etf-competition/evidence/market-data/batches/RUN.json
+python3 paper-portfolios/us-etf-competition/scripts/settle_simulation.py --batch paper-portfolios/us-etf-competition/evidence/market-data/batches/RUN.json --write
+```
+
+คำสั่งแรกตรวจโดยไม่บันทึก; คำสั่งที่สอง append ledger และ rebuild projections.
+ดู DECISION schema ใน PROMPT. รันซ้ำไม่เกิด fill ซ้ำ; ข้อมูลราคาเปิดที่ยังขาด
+คง pending และคำสั่งที่เกิน notional cap จะถูกยกเลิกให้ทบทวนใหม่.

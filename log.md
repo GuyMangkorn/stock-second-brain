@@ -1,5 +1,11 @@
 # Log
 
+## 2026-09-05
+
+- `market-data-workflow`: เพิ่ม Python `fetch_etf_quotes.py` สำหรับ quote staging พร้อม cache, request spacing และ cooldown; ปรับ US ETF competition README/PROMPT/config/evidence guide ให้ใช้ ETF.com API → ETF.com page → แหล่งเดิม โดยตรวจ timestamp/price basis ก่อนรวม evidence batch และคง historical/adjusted-price fallback.
+
+- `portfolio-policy`: เปิด local simulation ตามคำอนุมัติผู้ใช้ใน `paper-portfolios/us-etf-competition/`; ปรับ PROMPT/config และ automation ให้ research-first, progressive entry และ candidate-local gaps. เพิ่ม `settle_simulation.py` กับ `SIMULATED_FILL` ที่ใช้ราคาเปิดซึ่งกำหนดไว้ล่วงหน้า; append phase authorization และ rebuild projections โดยไม่ซื้อย้อนหลัง. ตรวจ ledger/simulation 16 tests และ market-data 11 tests ผ่าน; cash/holdings เดิมคงอยู่.
+
 ## 2026-09-04
 
 - `portfolio-policy`: Switched `US ETF Paper Portfolio Competition` to batch-first market-data evidence: one immutable batch per run, compact screen cache, and append-only price log; preserved the weekday 15:00 ET cadence, portfolio/Proposal Phase/no-order rules, and legacy dated evidence paths.
@@ -1537,3 +1543,4 @@
 ## 2026-09-05
 
 - `workflow-checklist`: บันทึก [ETF Simulation Workflow Fix Checklist](paper-portfolios/us-etf-competition/WORKFLOW-FIX-CHECKLIST.md) จากการสนทนา ครอบคลุม screening data, simulation, analysis, missing-data handling, portfolio initialization, performance และ verification; เป็นรายการงานที่เสนอ ยังไม่เปลี่ยนกติกาหรือ portfolio accounting.
+- `paper-portfolio-run`: บันทึก [[US ETF Paper Portfolio Run — 2026-09-05]]; local simulation ผ่าน reconciliation, staged pending BUY สำหรับ VOO/VEA/VIGI รวม 25% ที่ next-session-open, คง cash reserve 75%, และคง DMXF excluded จาก liquidity gates.

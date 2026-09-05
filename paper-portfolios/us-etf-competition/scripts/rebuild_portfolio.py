@@ -18,6 +18,7 @@ from collections import OrderedDict
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from pathlib import Path
 from typing import Any, Iterable
+from zoneinfo import ZoneInfo
 
 
 MONEY_QUANT = Decimal("0.0001")
@@ -29,6 +30,8 @@ SUPPORTED_EVENT_TYPES = {
     "DECISION",
     "ORDER_SUBMITTED",
     "FILL",
+    "SIMULATED_FILL",
+    "DECISION_CANCELLED",
     "MIRROR_SYNC",
     "DIVIDEND",
     "FEE",
@@ -187,6 +190,8 @@ def apply_events(events: Iterable[dict[str, Any]]) -> dict[str, Any]:
     total_turnover = Decimal("0")
     normal_turnover = Decimal("0")
     applied_event_ids: list[str] = []
+    decisions: dict[str, dict[str, Any]] = {}
+    settled_decisions: set[str] = set()
 
     def require_configured(event_id: str) -> None:
         if not configured:
@@ -215,21 +220,50 @@ def apply_events(events: Iterable[dict[str, Any]]) -> dict[str, Any]:
             cash = starting_cash
             benchmark_symbol = str(event.get("benchmark_symbol", "SPY")).upper()
             phase = str(event.get("phase", "proposal"))
-            if phase not in {"proposal", "automatic"}:
+            if phase not in {"proposal", "automatic", "simulation"}:
                 raise LedgerError(f"invalid initial phase: {phase}")
             continue
 
         require_configured(event_id)
         if kind == "PHASE_CHANGED":
             new_phase = str(event.get("phase", ""))
-            if new_phase not in {"proposal", "automatic"}:
+            if new_phase not in {"proposal", "automatic", "simulation"}:
                 raise LedgerError(f"invalid phase in {event_id}: {new_phase!r}")
-            if new_phase == "automatic" and event.get("user_authorized") is not True:
+            if new_phase in {"automatic", "simulation"} and event.get("user_authorized") is not True:
                 raise LedgerError(f"automatic phase requires explicit user_authorized=true in {event_id}")
             phase = new_phase
+        elif kind == "DECISION":
+            if event.get("execution_model") == "next-session-open":
+                if phase != "simulation" or event.get("status") != "PENDING":
+                    raise LedgerError("pending simulation decision requires simulation phase")
+                decision_time = parse_time(event["recorded_at"], "recorded_at")
+                opening_time = parse_time(event.get("execution_at"), "execution_at")
+                local_open = opening_time.astimezone(ZoneInfo("America/New_York"))
+                if (local_open.date() <= decision_time.astimezone(ZoneInfo("America/New_York")).date()
+                        or (local_open.hour, local_open.minute, local_open.second) != (9, 30, 0)):
+                    raise LedgerError("execution must be a subsequent session open at 09:30 ET")
+                if event.get("side") not in {"BUY", "SELL"} or not event.get("ticker"):
+                    raise LedgerError("simulation decision requires ticker and BUY/SELL side")
+                for field in ("quantity", "maximum_notional_usd", "decision_reference_price"):
+                    if decimal(event.get(field), field) <= 0:
+                        raise LedgerError(f"decision {field} must be positive")
+                for field in ("source_evidence", "calendar_evidence", "exchange_qualified_identity", "run_id"):
+                    if not event.get(field):
+                        raise LedgerError(f"decision requires {field}")
+                if any(d.get("ticker") == event["ticker"] and key not in settled_decisions
+                       and d.get("status") == "PENDING" for key, d in decisions.items()):
+                    raise LedgerError("cancel or settle the existing pending decision for this ticker first")
+            decisions[event_id] = event
+        elif kind == "DECISION_CANCELLED":
+            target = event.get("decision_event_id")
+            if target not in decisions or target in settled_decisions:
+                raise LedgerError("cancellation requires an unsettled prior decision")
+            settled_decisions.add(target)
         elif kind in PASSIVE_EVENT_TYPES:
             continue
-        elif kind == "FILL":
+        elif kind in {"FILL", "SIMULATED_FILL"}:
+            if kind == "FILL" and phase == "simulation":
+                raise LedgerError("local simulation requires SIMULATED_FILL, not broker FILL")
             ticker = str(event.get("ticker", "")).upper()
             side = str(event.get("side", "")).upper()
             quantity = decimal(event.get("quantity"), f"{event_id}.quantity")
@@ -237,6 +271,40 @@ def apply_events(events: Iterable[dict[str, Any]]) -> dict[str, Any]:
             fee = decimal(event.get("fee", "0"), f"{event_id}.fee")
             if not ticker or side not in {"BUY", "SELL"} or quantity <= 0 or price <= 0 or fee < 0:
                 raise LedgerError(f"invalid FILL fields in {event_id}")
+            if kind == "SIMULATED_FILL":
+                decision_id = event.get("decision_event_id")
+                decision = decisions.get(decision_id)
+                if phase != "simulation" or not decision or decision_id in settled_decisions:
+                    raise LedgerError("simulation requires an unsettled prior DECISION and simulation phase")
+                if decision.get("execution_model") != "next-session-open" or decision.get("status") != "PENDING":
+                    raise LedgerError("simulation requires a pending next-session-open decision")
+                for field, value in (("ticker", ticker), ("side", side)):
+                    if decision.get(field) != value:
+                        raise LedgerError(f"simulation {field} does not match decision")
+                if quantity != decimal(decision.get("quantity"), "decision.quantity"):
+                    raise LedgerError("simulation quantity does not match decision")
+                decided = parse_time(decision["recorded_at"], "decision.recorded_at")
+                execution = parse_time(decision.get("execution_at"), "decision.execution_at")
+                observed = parse_time(event.get("execution_price_as_of"), "execution_price_as_of")
+                if not decided < execution == observed == parse_time(event["effective_at"], "effective_at"):
+                    raise LedgerError("simulation must use the predetermined future session open")
+                if parse_time(event["recorded_at"], "recorded_at") < execution:
+                    raise LedgerError("cannot record a future simulated fill")
+                if event.get("price_basis") != "unadjusted-session-open" or not event.get("source_evidence"):
+                    raise LedgerError("simulation needs unadjusted open evidence")
+                opening = decimal(event.get("execution_reference_price"), "execution_reference_price")
+                expected = rounded(opening * (Decimal("1.0005") if side == "BUY" else Decimal("0.9995")))
+                if opening <= 0 or price != expected or fee != 0:
+                    raise LedgerError("simulation price must equal open plus/minus 5 bps with zero fee")
+                if side == "BUY" and quantity * price > decimal(decision.get("maximum_notional_usd"), "maximum_notional_usd"):
+                    raise LedgerError("opening gap exceeds decision notional budget; cancel and re-review")
+                if side == "BUY" and cash - quantity * price < calculate_equity() * Decimal("0.03"):
+                    raise LedgerError("simulation BUY breaches minimum cash")
+                if side == "BUY":
+                    existing_quantity = positions.get(ticker, position_template())["quantity"]
+                    if (existing_quantity + quantity) * price > calculate_equity() * Decimal("0.20"):
+                        raise LedgerError("simulation BUY breaches maximum position weight")
+                settled_decisions.add(decision_id)
             notional = quantity * price
             total_turnover += notional
             if not event.get("risk_override", False):
@@ -249,7 +317,7 @@ def apply_events(events: Iterable[dict[str, Any]]) -> dict[str, Any]:
                 cash -= cost
                 position["quantity"] += quantity
                 position["total_cost"] += cost
-                last_prices[ticker] = price
+                last_prices[ticker] = decimal(event["execution_reference_price"], "execution_reference_price") if kind == "SIMULATED_FILL" else price
             else:
                 if quantity > position["quantity"]:
                     raise LedgerError(f"SELL exceeds position for {ticker} in {event_id}")
@@ -259,7 +327,7 @@ def apply_events(events: Iterable[dict[str, Any]]) -> dict[str, Any]:
                 position["quantity"] -= quantity
                 position["total_cost"] -= average_cost * quantity
                 position["realized_pnl"] += proceeds - average_cost * quantity
-                last_prices[ticker] = price
+                last_prices[ticker] = decimal(event["execution_reference_price"], "execution_reference_price") if kind == "SIMULATED_FILL" else price
                 if position["quantity"] == 0:
                     position["total_cost"] = Decimal("0")
         elif kind == "DIVIDEND":
@@ -376,6 +444,9 @@ def apply_events(events: Iterable[dict[str, Any]]) -> dict[str, Any]:
         "total_turnover_usd": json_number(total_turnover),
         "events_processed": len(applied_event_ids),
         "positions": state_positions,
+        "pending_decisions": [d for key, d in decisions.items()
+                              if key not in settled_decisions and d.get("status") == "PENDING"
+                              and d.get("execution_model") == "next-session-open"],
         "generated_at": iso_time(now_utc()),
     }
     return state
@@ -406,7 +477,7 @@ def render_dashboard(state: dict[str, Any]) -> str:
         (f"{state['benchmark']['symbol']} operational benchmark", fmt(state["benchmark"]["return_pct"], "%")),
         ("Current drawdown", f"{state['current_drawdown_pct']:.2f}%"),
         ("Maximum drawdown", f"{state['maximum_drawdown_pct']:.2f}%"),
-        ("Normal turnover", f"{state['normal_turnover_pct']:.2f}%"),
+        ("Lifetime normal turnover / starting cash", f"{state['normal_turnover_pct']:.2f}%"),
     ]
     lines = [
         "---",
@@ -440,6 +511,14 @@ def render_dashboard(state: dict[str, Any]) -> str:
             )
     else:
         lines.append("| — | — | — | — | — | — |")
+    lines.extend(["", "## Pending Decisions", "",
+                  "Pending targets do not change current holdings or returns.", "",
+                  "| Ticker | Side | Quantity | Scheduled open |",
+                  "|---|---|---:|---|"])
+    for decision in state.get("pending_decisions", []):
+        lines.append(f"| {decision['ticker']} | {decision['side']} | {decision['quantity']} | {decision['execution_at']} |")
+    if not state.get("pending_decisions"):
+        lines.append("| — | — | — | — |")
     lines.extend(["", "## Daily Equity Curve", ""])
     if state["daily_equity_curve"]:
         lines.extend(["| Session | Portfolio Equity | Benchmark Price | Drawdown |", "|---|---:|---:|---:|"])
