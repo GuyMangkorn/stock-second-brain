@@ -104,8 +104,37 @@ BUY to meet a count, cash-investment target or activity quota.
 
 ### 5. Refresh only decision-relevant prices and lock the decision
 
-Retrieve directly opened quotes for holdings, SPY and shortlisted funds whose
-price changes the decision. Reuse a verified batch observation within freshness
+Retrieve quotes for holdings, SPY and shortlisted funds whose price changes the
+decision in this order: ETF.com delayedquotes API, https://www.etf.com/TICKER,
+then existing reputable direct market-data pages. Run:
+
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/fetch_etf_quotes.py --symbols VOO,SPY --output /tmp/UNIQUE-RUN-quotes.json
+```
+
+Replace symbols with the actual relevant list and use a new output path each time.
+The Python collector uses curl with the tested HTTP/1.1/PostmanRuntime User-Agent,
+a shared lock, 10-second request spacing, and a 15-minute retrieval cache. It makes
+no immediate retries. HTTP 403/429 starts a shared cooldown of at least 15 minutes
+(longer Retry-After is respected); use the fallback sources during that cooldown.
+Exit 2 can contain usable quotes plus ticker-specific gaps; inspect both.
+The output is a staging packet, not a complete batch. Preserve exact response text,
+hash and original retrieval timestamp when copying observations into this run's
+schema-v2 batch; assign unique evidence_id values. Add clock/calendar separately.
+Check source timestamps against freshness and the final information cutoff even
+on cache hits. Review identity against issuer evidence. A retrieved quote is not
+automatically admitted: the collector marks it REQUIRES_REVIEW.
+Message describes market delay; do not interpret the numeric Delay field as quote
+latency. Keep bid/ask timestamps separate from last trade time. Do not infer a final
+close, an unadjusted price, or regular-session opening semantics from field names
+alone. Confirm those bases on ETF.com/direct historical pages before assigning
+decision/completed-session/execution price bases. Use dated history for prior opens,
+multi-session volume/momentum and SPY adjusted total-return prices absent from this
+snapshot. Preserve conflicts and fall back for missing, stale or ambiguous fields.
+This source priority applies to quotes; official calendar and issuer fund/research
+source priorities remain applicable.
+
+Reuse a verified batch observation within freshness
 limits when no new price is needed; cite batch path and evidence ID, never cache
 alone. Open known source URLs directly where possible; search is discovery only.
 Use the latest completed unadjusted close outside market hours for decision
@@ -158,7 +187,7 @@ order or record the mechanical rejection before making a new decision.
 
 Store one immutable evidence batch (schema_version 2 market-data) per run containing clock,
 calendar, quotes and any due execution observations. Use actual timestamps and
-SHA-256 of captured visible text. Each execution observation must have
+SHA-256 of captured API response text or visible page text. Each execution observation must have
 price_basis `unadjusted-session-open`, source_as_of equal to the predetermined
 execution_at, matching ticker/exchange identity and USD currency. Use the
 historical table's actual Open column; never adjusted close/NAV or an invented

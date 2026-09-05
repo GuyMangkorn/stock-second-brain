@@ -53,8 +53,9 @@ python3 paper-portfolios/us-etf-competition/scripts/record_market_data_batch.py 
   --root paper-portfolios/us-etf-competition --bootstrap-cache
 ```
 
-For a review, use the browser to search for the relevant official or reputable
-source, open the direct result, and capture the clock, calendar, and relevant
+For a review, collect quotes with the Python API collector first, then use
+ETF.com product pages and existing direct-web sources for fallback or missing fields.
+Capture the clock, calendar, and relevant
 market-data pages in one immutable batch under `evidence/market-data/batches/`.
 Record the query, direct URL, page title, visible values/text, source as-of time,
 retrieval time, and SHA-256 content hash. Search snippets alone are never
@@ -72,7 +73,27 @@ final quotes.
 
 ## Price and market-data sources
 
-Use these browser sources in priority order:
+Quote source priority:
+
+1. ETF.com delayedquotes API via `scripts/fetch_etf_quotes.py`.
+2. ETF.com product page, for example https://www.etf.com/VOO.
+3. Existing reputable direct market-data pages.
+
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/fetch_etf_quotes.py --symbols VOO,SPY --output /tmp/unique-run-quotes.json
+```
+
+Python ใช้ curl เป็น HTTP client ตามการทดสอบ endpoint; เว้น request 10 วินาที,
+ใช้ retrieval cache 15 นาที และ shared lock/cooldown ใต้ `.runtime/`.
+เจอ 403/429 หยุดเรียก API ชั่วคราวอย่างน้อย 15 นาที เคารพ Retry-After ที่นานกว่า
+และใช้ fallback. ค่าความถี่เป็นนโยบายของเรา ไม่ใช่ quota ที่ผู้ให้บริการรับรอง.
+Output เป็น staging packet ให้ตรวจแล้วรวมลง batch เดิม พร้อม clock/calendar
+และ unique evidence IDs; ไม่ได้บันทึก ledger หรือ settle อัตโนมัติ.
+ดูรายละเอียด verification ใน PROMPT: snapshot ไม่ยืนยัน adjusted/unadjusted basis,
+final close หรือ regular-session Open โดยตัวมันเอง; history และ SPY adjusted prices
+ยังต้องเติมจากแหล่งที่ยืนยันได้. cache อายุสั้นไม่รับประกันว่าราคาต้นทางสด.
+
+For calendar and fund facts retain these source rules:
 
 - Official NYSE/Nasdaq or regulator pages for US trading dates, holidays, and
   early closes.

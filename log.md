@@ -2,6 +2,8 @@
 
 ## 2026-09-05
 
+- `market-data-workflow`: เพิ่ม Python `fetch_etf_quotes.py` สำหรับ quote staging พร้อม cache, request spacing และ cooldown; ปรับ US ETF competition README/PROMPT/config/evidence guide ให้ใช้ ETF.com API → ETF.com page → แหล่งเดิม โดยตรวจ timestamp/price basis ก่อนรวม evidence batch และคง historical/adjusted-price fallback.
+
 - `portfolio-policy`: เปิด local simulation ตามคำอนุมัติผู้ใช้ใน `paper-portfolios/us-etf-competition/`; ปรับ PROMPT/config และ automation ให้ research-first, progressive entry และ candidate-local gaps. เพิ่ม `settle_simulation.py` กับ `SIMULATED_FILL` ที่ใช้ราคาเปิดซึ่งกำหนดไว้ล่วงหน้า; append phase authorization และ rebuild projections โดยไม่ซื้อย้อนหลัง. ตรวจ ledger/simulation 16 tests และ market-data 11 tests ผ่าน; cash/holdings เดิมคงอยู่.
 
 ## 2026-09-04

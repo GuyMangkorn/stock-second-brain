@@ -37,6 +37,11 @@ move หรือ delete ไฟล์เหล่านั้น; bootstrap จ�
 เพื่อสร้าง derived screen cache และไม่สร้าง retroactive batch. Search-result
 snippets เป็นเพียง discovery context ไม่ใช่หลักฐานราคาเพียงอย่างเดียว.
 
-ทุก envelope ใหม่ต้องเก็บ discovery query, direct page URL, page title, visible
-response text/values, source-as-of, retrieval timestamp และ SHA-256 content hash.
-หาก source ขาดหาย stale หรือขัดแย้ง ให้บันทึก `BLOCKED/NO TRADE` แทนการเติมค่า.
+Quote priority: ETF.com delayedquotes API → ETF.com product page → แหล่ง direct-web เดิม.
+ใช้ `scripts/fetch_etf_quotes.py` จาก portfolio root ตาม README/PROMPT เพื่อสร้าง staging
+packet; ตรวจ basis/freshness และเพิ่ม evidence IDs ก่อนรวมเข้า batch. เก็บ raw API
+response text ใน `visible_response_text` พร้อม hash โดยไม่แก้ข้อความหรือเวลาจาก cache.
+ทุก envelope ใหม่ต้องเก็บ discovery query, direct URL, page title, response text/values,
+source-as-of, retrieval timestamp และ SHA-256 content hash.
+หาก source ขาดหาย stale หรือขัดแย้ง ให้ลอง fallback และบันทึก gap เฉพาะ candidate;
+ใช้ BLOCKED เฉพาะ portfolio-wide failure ตาม PROMPT แทนการเติมค่า.

@@ -28,10 +28,15 @@ schedule:
   execution_profile: scheduled-inline
 
 market_data:
-  provider: browser-direct-web
-  discovery: browser-search
+  provider: etf-com-api-with-web-fallback
+  quote_source_priority: [etf-com-delayedquotes-api, etf-com-product-page, legacy-direct-web]
+  api_script: scripts/fetch_etf_quotes.py
+  api_minimum_request_interval_seconds: 10
+  api_cache_ttl_seconds: 900
+  api_failure_policy: no-immediate-retry-fallback-on-403-or-429
+  discovery: api-then-direct-page-then-browser-search
   search_snippets_as_evidence: false
-  quote_source: direct-page-with-visible-as-of-or-retrieval-time
+  quote_source: captured-api-response-or-direct-page-with-source-as-of
   calendar_source: official-exchange-or-regulator-page
   evidence_root: evidence/market-data
   batch_root: evidence/market-data/batches

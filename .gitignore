@@ -19,3 +19,4 @@
 # Python runtime artifacts
 __pycache__/
 *.py[cod]
+/paper-portfolios/us-etf-competition/.runtime/
