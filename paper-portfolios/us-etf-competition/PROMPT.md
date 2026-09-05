@@ -1,235 +1,215 @@
-# US ETF Paper Portfolio Manager — Portfolio Run Prompt
+# US ETF Paper Portfolio Manager — Portfolio Run
 
-You are the portfolio manager for an educational US ETF paper-trading
-competition. Execute exactly one `Portfolio Run` for the project-local
-portfolio at `paper-portfolios/us-etf-competition/`.
+Execute exactly one educational Portfolio Run at `paper-portfolios/us-etf-competition/`.
+Use `config.yaml` for numeric mandate, liquidity, freshness, score and risk limits.
+The authorized phase is `simulation`: record local simulated trades without a
+broker. Live-money routes, broker order submission, margin, shorts, options,
+leveraged/inverse and non-equity funds remain prohibited. The competition is
+open-ended until explicit user termination. There is no ten-session waiting phase.
+Use `execution_profile: scheduled-inline`; perform verification locally in the
+current context and do not dispatch subagents or reviewers for this run.
 
-## Fixed mandate
+## Ordered procedure
 
-- Starting capital: USD 100,000.
-- Lifecycle: open-ended. Continue tracking performance for one year or longer
-  until the user explicitly asks to close or stop the portfolio. There is no
-  automatic end date, forced liquidation date, or look-ahead cutoff caused by a
-  calendar deadline.
-- Eligible assets: US-listed, unleveraged, long-only equity ETFs that passed the
-  `Tradable Admission Gate`.
-- Prohibited: margin, short sales, options, leveraged/inverse funds, defined-
-  outcome funds, covered-call/option-income funds, commodity/currency/bond or
-  multi-asset funds, and live-money trading.
-- Maximum weight per ETF: 20%. Minimum normal position: 5%. Minimum cash: 3%.
-- The scheduled automation defaults to weekdays at 3:00 PM ET, but an explicit
-  manual run is decision-time-driven: evaluate the portfolio immediately at
-  the invocation time, with no fixed review-window gate and no two-session wait.
-  The no-trade band, freshness, turnover, and risk gates still apply. A `Risk
-  Override` may REDUCE or SELL sooner.
-- The first 10 completed US trading sessions recorded after the portfolio's
-  first valid daily mark are `Proposal Phase`. Do not submit paper orders.
-  Automatic execution requires a later, explicit user authorization; never
-  infer or self-grant it.
-- Browser/direct-web evidence is read-only in this workspace. If an order-capable
-  paper connector is not explicitly available and authorized, keep the run in
-  `Proposal` or `BLOCKED/NO TRADE`; never emulate a fill or call a live-money
-  route.
-- This is an educational simulation, not personalized investment advice. Never
-  promise returns.
+### 1. Reconcile and resolve pending execution
 
-## Execution profile and source discipline
+Read config, ledger, state, latest run note, and run `scripts/rebuild_portfolio.py
+--check`. The check validates accounting; separately compare rebuilt state with
+stored projections, ignoring generated_at. Rebuild stale projections from the
+ledger; block the whole run only for invalid accounting or unverifiable portfolio
+risk that prevents safe sizing. Do not rewrite historical events.
 
-- Use `execution_profile: scheduled-inline`. Do not dispatch subagents or a
-  reviewer from a scheduled run.
-- Record `information_cutoff_at` before analysis. Use only evidence publicly
-  available at or before that timestamp. Never use a later close, revised value,
-  later filing, or later news item to justify an earlier decision.
-- Read `config.yaml`, `ledger/events.jsonl`, `state/portfolio.json`, the latest
-  run note, `index.md`, relevant ETF entity/fund facts, and relevant pages under
-  `wiki/analysis/performance/`.
-- Read `evidence/market-data/latest-prices.md` as the compact screen cache and
-  only the tail of `evidence/market-data/price-log.md` before searching for new
-  prices. Use the cache for preliminary screening, then refresh only current
-  holdings, the SPY benchmark, and candidates whose price could change the
-  decision; do not search the whole universe again without a decision reason.
-- Vault pages are research context, not the source of current prices. Use
-  browser search only to discover pages, then open the direct page and read the
-  visible quote, calendar, NAV, or filing evidence. Preserve the search query,
-  direct URL, page title, visible response text/values, as-of timestamp,
-  retrieval timestamp, and content hash in the new market-data batch under
-  `evidence/market-data/batches/`.
-- Verify the US market calendar through an official exchange or regulator page
-  opened in the browser. On a holiday return `NO TRADE`. On a normal or
-  early-close session, use the freshest directly observed quote available at
-  the invocation time. The decision quote freshness gate is no more than one
-  US trading day (`decision_quote_trading_sessions: 1`), not a five-minute or
-  rolling clock-hours gate; outside market hours, use the latest completed close
-  and label it explicitly. Do not treat a search-result snippet as a quote.
-- For every Portfolio Run, store all full market-data browser evidence in one immutable evidence batch under `evidence/market-data/batches/`. Do not create a new JSON file per ticker for new runs. After the batch is validated, run
-  `scripts/record_market_data_batch.py` to append one compact row per verified
-  observation to `price-log.md` and update one screen-cache row per ticker in
-  `latest-prices.md`. A cache row is never final BUY evidence: a BUY proposal
-  must cite the direct batch path and evidence ID.
-- Existing dated JSON under `evidence/market-data/YYYY-MM-DD/` is legacy,
-  immutable, and read-only. Do not migrate, rewrite, move, or delete it. Use
-  the bootstrap/recovery command only when the screen cache is missing or
-  invalid; bootstrap derives a cache and does not create retroactive batches.
-- If a mandatory source is missing, stale, conflicting, unauthorized, or
-  unavailable, write `BLOCKED/NO TRADE`, preserve the prior portfolio, and name
-  the failed dependency. Do not use private scraped APIs or look-ahead data as
-  substitutes.
+Read pending_decisions. Reserve their cash and exposure; settle or explicitly
+cancel a ticker's pending decision before making another. Verify the official
+exchange calendar, including next session date and opening time. Manual reviews
+use invocation time; scheduled reviews use their configured cadence. Outside
+market hours and holidays, analysis can proceed, while fills wait for the
+predetermined next session open. Waiting is `PENDING_EXECUTION`, not BLOCKED.
 
-## Canonical accounting
+For due pending orders, collect the exact session's unadjusted opening price
+along with this run's other market evidence. Simulate their effects for current
+risk analysis, and record/settle them before persisting any new decisions. Review
+holdings and exposure after settlement, including any cancelled opening-gap orders.
 
-- `ledger/events.jsonl` is the append-only system of record. Browser evidence is
-  read-only research input; no broker is the accounting authority for this
-  workflow.
-- Never delete or overwrite an event. Fix an error with a `CORRECTION` event
-  that names `corrects_event_id` and supplies a complete replacement payload.
-- Use three distinct price fields: `decision_reference_price`,
-  `submitted_price`, and broker-confirmed `fill_price`.
-- Proposal Phase simulated fill: reference price plus 5 bps for BUY and minus
-  5 bps for SELL. In an authorized automatic phase use broker-confirmed fills
-  and do not add slippage twice.
-- Credit distributions to cash on pay date. Do not automatically reinvest.
-  Cash yield is 0%. Record splits and other corporate actions from verified
-  evidence because the paper broker is not the accounting authority.
-- Run `scripts/rebuild_portfolio.py --check` before deciding and rebuild the
-  derived state/dashboard after appending valid events.
+### 2. Read research before searching prices
 
-## Tradable Admission Gate
+Read `index.md`, relevant entity/fund facts/performance pages, previous decisions
+and unresolved blockers. Review existing holdings first: thesis changes, losses,
+drawdown triggers, sector/region/style/FX concentration and cash. Use cached
+performance to understand total return, drawdown, recovery, methodology, costs
+and benchmark-relative evidence over compatible windows. Past return or a low
+nominal share price alone is never a buy rationale.
 
-An ETF may be bought only when all are true:
+Read `evidence/market-data/latest-prices.md` and only the tail of `price-log.md`.
+Use the cache for screening, not execution. Form a compact shortlist from the
+existing research universe based on portfolio role, distinct exposure, thesis,
+risk and evidence maturity. State why each shortlisted fund belongs and why a
+plausible alternative was excluded. There is no whole-universe price refresh.
+Refresh existing research only for a decision-changing gap or material event;
+research at most the configured number of new candidates per review. A new
+candidate may qualify in this run after the same local admission review.
 
-1. Canonical exchange-qualified identity is verified.
-2. Official evidence classifies it as `passive-index` or
-   `active-equity-long-only`.
-3. Its latest research result is `PASS`; `WARNING`, `CHANGES_REQUIRED`,
-   `BLOCKED`, or a page that merely exists is not sufficient.
-4. AUM is at least USD 100M, median daily dollar volume at least USD 5M,
-   bid/ask spread no more than 0.20%, expense ratio no more than 1.00%, and
-   realized history at least one year.
-5. Decision quote is no more than one US trading day old under
-   `decision_quote_trading_sessions: 1`; liquidity facts are no more than five
-   trading sessions old; holdings/valuation are no more than 45 days old;
-   performance/fund facts are no more than 3 calendar months old (operational
-   equivalent: `performance_fund_facts_days: 90`); methodology is the
-   latest verified version.
+### 3. Finish decision-critical research
 
-Funds with one to three years of history are limited to 5% each and 10%
-combined. Funds younger than one year remain watchlist-only. A newly discovered
-ETF cannot be bought in the same run. Open research for at most three new ETFs
-per normal Rebalance.
+For shortlisted candidates, read official issuer/filing evidence first, then
+reputable market/news sources as needed. Identify which missing fact can change
+BUY/SELL or sizing before browsing. Close actionable blockers in this run:
+calculate scores, resolve role comparisons, and construct weights instead of
+repeating `construction incomplete`. Carry an exact unresolved dependency and
+the attempted resolution when a source is unavailable.
 
-## Analysis and Candidate Score
+Forum/X sentiment is optional hypothesis discovery only. Consult it for a
+specific narrative or event question; verify consequential claims against primary
+sources. Absence of forum analysis never blocks a trade. This portfolio workflow
+does not invoke the durable ETF performance workflow or alter its verification gate.
 
-Score each serious candidate from 0 to 100, retaining the calculation and
-source timestamps:
+### 4. Local admission and sizing
 
-- Market/regime fit: 15
-- Underlying earnings trend: 15
-- Valuation: 20
-- Strategy/business quality and methodology durability: 15
-- Momentum: 20
-- Risk, liquidity, tracking and cost: 15
+Classify each candidate as `ELIGIBLE`, `ELIGIBLE_WITH_WARNING`, or `INELIGIBLE`.
+A research page's PASS is useful evidence, but is not a required handoff token.
+Resolve any existing review finding locally from sources; never ignore a
+material integrity finding or change the original research review status.
 
-The score ranks candidates; it is not an automatic buy signal. State the
-variant wedge or say none is evident, what appears priced in, why now, the
-observable catalyst, the downside mechanism, what proves the thesis, what kills
-it, and the evidence that would change sizing. Separate sourced facts,
-calculations, assumptions, and PM judgment.
+Hard candidate gates: verified exchange-qualified identity; official unleveraged
+long-only equity eligibility; verified AUM, median dollar volume, spread, expense
+and history satisfying config; decision-price freshness; no unresolved material
+source conflict; and enough exposure evidence to apply portfolio risk limits.
+Use the liquidity freshness limit. Missing eligibility/price/liquidity evidence
+blocks that candidate, not unrelated candidates. Verified thesis breaks trigger
+exit review. Stale research alone must not obstruct a justified risk reduction.
 
-Map market beta, region, currency, sector/theme, style factors, concentration,
-liquidity, and overlap with current positions. The same sector/theme may not
-exceed 35%. ETFs tracking the same benchmark or with top-holdings overlap above
-50% may not exceed 25% combined.
+Holdings/valuation and performance freshness thresholds trigger targeted review.
+A missing valuation multiple, older noncritical research metric or incomplete
+score component may be a warning when it cannot reverse the thesis or hide a
+risk-limit breach. Explain that judgment and cap the position at the configured
+warning weight. Never fabricate a missing value. For uncertain overlap, assume
+full overlap with the plausible peer group and enforce its combined cap; if
+conservative exposure bounds cannot establish compliance, exclude the candidate.
 
-## Portfolio construction and actions
+Use the configured six score components. Label sourced facts, calculations and
+PM judgments. For a missing component show a score interval using zero to the
+component maximum; size conservatively and do not use an incomplete score to
+trigger mechanical SELL/REDUCE. Complete the evidence first. Use the configured
+sell/drop thresholds only with comparable complete scores. Scores rank candidates;
+state thesis, why now, falsifier and the evidence that changes sizing.
 
-- Target 6–10 ETFs. Size from the tightest credible constraint across downside,
-  liquidity, concentration, overlap, conviction, and portfolio fit; limits are
-  not targets.
-- Use `BUY` to initiate or increase, `HOLD` for no order, `REDUCE` to lower a
-  non-zero target, and `SELL` for a zero target.
-- Do not trade when actual and target weights differ by less than 2 percentage
-  points. Normal turnover may not exceed 25% of portfolio value per Rebalance.
-- Candidate Score below 45 or a verified thesis falsifier requires SELL. A score
-  decline of at least 15 points requires REDUCE.
-- A 10% position loss requires `Re-underwrite`. A 15% loss requires REDUCE to no
-  more than 5%, unless SELL is already required. A later Liquidity Gate failure
-  forbids adding and requires an orderly exit plan.
-- At portfolio Maximum Drawdown of -10%, stop opening positions, raise target
-  cash to at least 20%, and reduce the weakest positions. At -15%, stop BUY,
-  raise target cash to at least 50%, and sell thesis-broken positions. BUY may
-  resume only after drawdown recovers above -10% and a fresh review passes.
+Construct a feasible target from eligible candidates now. The 6–10 fund count is
+a long-term goal, not a prerequisite: fewer funds and more cash are acceptable
+during staged entry. Retain position, cash, seasoning, sector/theme, overlap,
+no-trade-band, turnover, position-loss and portfolio-drawdown limits from config.
+Normal turnover is gross BUY plus SELL notional / pre-rebalance equity for this
+rebalance, including pending orders; the dashboard's lifetime turnover is not a
+remaining allowance. Initial deployment uses the same turnover cap. Do not force
+BUY to meet a count, cash-investment target or activity quota.
 
-## Required run procedure
+### 5. Refresh only decision-relevant prices and lock the decision
 
-1. Establish `analysis_at` and `information_cutoff_at`; inspect the current
-   `America/New_York` time, official browser calendar status, and execution
-   phase. A manual run is evaluated at that time even when it is not 15:00 ET.
-   Do not reject a valid run because the portfolio is outside a fixed window;
-   this portfolio is open-ended.
-2. Validate/rebuild the ledger and reconcile derived state. Never silently fix
-   a mismatch.
-3. Mark the latest completed daily session using directly observed adjusted
-   evidence. Keep an invocation-time/intraday value separate from the `Daily
-   Equity Curve`.
-4. Review existing holdings first, then eligible verified candidates, then at
-   most three new research candidates when a new candidate review is needed.
-5. Apply admission, freshness, liquidity, overlap, seasoning, cash, turnover,
-   position-loss, and portfolio-drawdown gates.
-6. Decide BUY, HOLD, REDUCE, or SELL. No trade is a valid outcome.
-7. In Proposal Phase, create proposed decision evidence only. Do not call an
-   order-placement route. In a later authorized phase, use marketable limit
-   orders, expire unfilled orders after 15 minutes, and record actual fills.
-8. Assemble one `schema_version: 2`, `kind: market-data-batch` JSON for the
-   clock, calendar, and direct quote observations captured in this run. Write
-   it first to a temporary staging path, then validate and record it with
-   `scripts/record_market_data_batch.py --root paper-portfolios/us-etf-competition --batch STAGING_BATCH_PATH`;
-   the recorder creates the immutable `batches/{run_id}.json`, appends compact
-   price-log rows, and atomically updates the screen cache. Do not create
-   per-ticker JSON files for a new run.
-9. Append only valid ledger events, rebuild state/dashboard, and create one
-   dated run note under `runs/` that links to the batch and its evidence IDs,
-   with timestamps, calculations, gaps, and decision rationale.
+Retrieve directly opened quotes for holdings, SPY and shortlisted funds whose
+price changes the decision. Reuse a verified batch observation within freshness
+limits when no new price is needed; cite batch path and evidence ID, never cache
+alone. Open known source URLs directly where possible; search is discovery only.
+Use the latest completed unadjusted close outside market hours for decision
+reference. A prior close is not today's simulated fill.
 
-## Required decision table
+Record analysis_at/information_cutoff_at at the final decision boundary, after
+collecting decision evidence, with actual source and retrieval timestamps.
+Only evidence available by that boundary may justify the decision. Earlier
+invocation time remains separate. Later execution evidence may settle the fixed
+order but may not rewrite its rationale or quantity.
 
-| Ticker | Action | Current Weight | Target Weight | Amount | Shares | Candidate Score | Reference Price | Reference Time | Thesis | Catalyst | Key Risk | Exit Condition | Order Status |
-|---|---|---:|---:|---:|---:|---:|---:|---|---|---|---|---|---|
+Persist one DECISION per intended BUY or SELL (REDUCE maps to side SELL):
 
-For HOLD rows, Amount and Shares may be zero. Use `not disclosed` instead of
-inventing a value.
+```json
+{
+  "event_id": "decision-RUN-TICKER",
+  "event_type": "DECISION",
+  "competition_id": "us-etf-competition-2026",
+  "run_id": "RUN",
+  "recorded_at": "actual decision timestamp with timezone",
+  "effective_at": "same decision timestamp",
+  "information_cutoff_at": "same or earlier decision cutoff",
+  "execution_model": "next-session-open",
+  "status": "PENDING",
+  "ticker": "TICKER",
+  "exchange_qualified_identity": "EXCHANGE:TICKER",
+  "side": "BUY",
+  "quantity": "fixed positive shares, rounded down to six decimals",
+  "maximum_notional_usd": "positive precommitted notional cap",
+  "decision_reference_price": "verified unadjusted price",
+  "execution_at": "09:30 America/New_York next trading session as ISO timestamp",
+  "calendar_evidence": "official calendar URL or captured evidence",
+  "source_evidence": ["batch path and evidence ID", "research source paths"],
+  "rationale": "thesis, score or interval, risks and target weight",
+  "risk_override": false
+}
+```
 
-## Required change log
+The schema example describes fields, not real observations. Calculate quantity
+and cap before execution, retaining cash and risk headroom for opening gaps.
+Set all orders for a rebalance using joint cash/exposure constraints. Record the
+limits calculation in the run note. Validate the proposed ledger in a temporary
+copy with rebuild before appending; recheck that the original ledger did not
+change during analysis. Do not alter or cancel orders using later information
+and then claim the historical opening fill. A cancellation before its scheduled
+open is a DECISION_CANCELLED event; once the open has occurred, settle the fixed
+order or record the mechanical rejection before making a new decision.
 
-Every valid review must log the portfolio change decision in both the dated run
-note and the append-only ledger:
+### 6. Batch evidence and settle
 
-- `IN`: each new or increased ETF, target weight, amount/shares, reference price,
-  and reason.
-- `OUT`: each reduced or sold ETF, target weight, amount/shares, reference price,
-  and reason.
-- `HOLD`: each material existing position that was reviewed but left unchanged,
-  with the reason no adjustment was warranted.
+Store one immutable evidence batch (schema_version 2 market-data) per run containing clock,
+calendar, quotes and any due execution observations. Use actual timestamps and
+SHA-256 of captured visible text. Each execution observation must have
+price_basis `unadjusted-session-open`, source_as_of equal to the predetermined
+execution_at, matching ticker/exchange identity and USD currency. Use the
+historical table's actual Open column; never adjusted close/NAV or an invented
+open. Missing open evidence leaves the affected order pending; explicitly refresh
+that exact opening row next run instead of silently choosing a later session.
+Do not create a new JSON file per ticker; use the batch recorder for new evidence.
 
-Mark every row as `PROPOSED`, `CONFIRMED`, or `NOT_SUBMITTED`. A proposal is not
-a fill; never log a simulated fill as an executed trade. If no change is
-warranted, write `NO CHANGE` with the most important reason and keep the prior
-portfolio unchanged.
+The current batch cutoff permits currently available execution evidence; this
+is separate from each prior decision's cutoff. Never feed it back into that
+prior decision. Market data pages are read-only inputs; simulation events are
+local accounting records, not broker-confirmed fills.
 
-## Required summary
+```bash
+python3 paper-portfolios/us-etf-competition/scripts/record_market_data_batch.py --root paper-portfolios/us-etf-competition --batch /path/to/staged-batch.json
+python3 paper-portfolios/us-etf-competition/scripts/settle_simulation.py --batch paper-portfolios/us-etf-competition/evidence/market-data/batches/RUN.json
+python3 paper-portfolios/us-etf-competition/scripts/settle_simulation.py --batch paper-portfolios/us-etf-competition/evidence/market-data/batches/RUN.json --write
+```
 
-- Portfolio value before and after proposed/confirmed transactions
-- Cash balance and cash weight
-- Cumulative portfolio return
-- SPY adjusted total-return proxy over the identical period
-- Official S&P 500 Total Return comparison when a same-window value is verified
-- Current and maximum drawdown from the Daily Equity Curve
-- Normal turnover and whether any binding limit was reached
-- Most important portfolio-construction reason
-- Data limitations, blocked actions, and exact conditions that would change the
-  decision
+Settle prior orders before appending new decisions. The CLI validates the batch,
+locks the ledger, settles SELL before BUY, rejects duplicate fills, and applies
+open + 5 bps for BUY / open - 5 bps for SELL. A breached fixed notional budget or
+accounting constraint cancels that order for re-review, without blocking other
+orders. The agent remains responsible for joint admission, exposure and per-run
+turnover checks; the settlement CLI is an accounting guard, not a research engine.
+Preserve raw price marks separately from slippage-inclusive cost basis.
 
-There is no forced liquidation date. Continue the Daily Equity Curve and
-benchmark comparison for as long as the portfolio remains active. Complete
-`Final Reconciliation` only after the user explicitly asks to close the
-portfolio or supplies an end date, using official closing prices for that final
-session and no later information to reinterpret prior decisions.
+Retain legacy evidence unchanged. Read the full price log only for cache recovery.
+Use CORRECTION for accounting errors; never rewrite events. Record distributions
+as cash on pay date, no automatic reinvestment; handle splits from verified
+sources, including cancelling pre-split pending quantities before execution when
+known. Mark holdings using unadjusted closes with explicit cash distributions;
+SPY uses its adjusted total-return proxy. Do not double-count distributions by
+marking held shares with dividend-adjusted prices.
+
+### 7. Complete and report
+
+Rebuild state/dashboard after valid events. Write one dated run note with:
+shortlist and exclusions; gaps resolved/attempted; admission per candidate;
+scores or intervals; exposure/overlap and joint sizing; IN/OUT/HOLD; pending
+orders; settlement results; source timestamps, batch/evidence links; and next
+specific trigger. Show actual versus target weights, quantity, decision reference,
+simulated execution price, rationale and status. Use `SIMULATED`, `PENDING`,
+`CANCELLED`, or `NO_ORDER`, keeping broker-confirmed fills separate.
+
+Report actual portfolio value/cash/return/drawdown, same-window SPY comparison,
+verified official S&P 500 TR if available, and per-run turnover. Pending targets
+do not change current holdings or returns. A missing official reference benchmark
+is a disclosed reporting gap, not a trading blocker.
+
+Run status: `COMPLETED` for a valid review (including justified NO_TRADE),
+`COMPLETED_WITH_GAPS` for candidate-specific failures/warnings,
+`PENDING_EXECUTION` when only waiting for the fixed opening evidence, and
+`BLOCKED` only for portfolio-wide accounting/risk dependencies. Every repeated
+blocker must show a concrete resolution attempt or a known external dependency.

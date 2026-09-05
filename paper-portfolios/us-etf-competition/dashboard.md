@@ -1,8 +1,8 @@
 ---
 kind: paper-portfolio-dashboard
 competition_id: us-etf-competition-2026
-phase: proposal
-as_of: 2026-09-04T15:17:28Z
+phase: simulation
+as_of: 2026-09-05T09:02:26Z
 portfolio_value: 100000.00
 cash: 100000.00
 cumulative_return_pct: 0.00
@@ -11,7 +11,7 @@ maximum_drawdown_pct: 0.00
 
 # US ETF Paper Portfolio Dashboard
 
-> [!info] Proposal Phase
+> [!info] Simulation Phase
 > The local Portfolio Ledger is canonical; browser pages provide read-only market evidence.
 > This dashboard is derived by `rebuild_portfolio.py`.
 
@@ -26,13 +26,21 @@ maximum_drawdown_pct: 0.00
 | SPY operational benchmark | 1.50% |
 | Current drawdown | 0.00% |
 | Maximum drawdown | 0.00% |
-| Normal turnover | 0.00% |
+| Lifetime normal turnover / starting cash | 0.00% |
 
 ## Positions
 
 | Ticker | Quantity | Last Price | Market Value | Weight | Realized P&L |
 |---|---:|---:|---:|---:|---:|
 | — | — | — | — | — | — |
+
+## Pending Decisions
+
+Pending targets do not change current holdings or returns.
+
+| Ticker | Side | Quantity | Scheduled open |
+|---|---|---:|---|
+| — | — | — | — |
 
 ## Daily Equity Curve
 

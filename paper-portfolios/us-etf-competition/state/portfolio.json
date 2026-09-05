@@ -32,8 +32,8 @@
       "session_date": "2026-09-03"
     }
   ],
-  "events_processed": 16,
-  "generated_at": "2026-09-04T15:17:28Z",
+  "events_processed": 17,
+  "generated_at": "2026-09-05T09:02:26Z",
   "last_mark": {
     "benchmark_price": 773.17,
     "cash": 100000.0,
@@ -46,7 +46,8 @@
   "maximum_drawdown_pct": 0.0,
   "normal_turnover_pct": 0.0,
   "normal_turnover_usd": 0.0,
-  "phase": "proposal",
+  "pending_decisions": [],
+  "phase": "simulation",
   "portfolio_value": 100000.0,
   "positions": {},
   "schema_version": 1,

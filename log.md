@@ -1,5 +1,9 @@
 # Log
 
+## 2026-09-05
+
+- `portfolio-policy`: เปิด local simulation ตามคำอนุมัติผู้ใช้ใน `paper-portfolios/us-etf-competition/`; ปรับ PROMPT/config และ automation ให้ research-first, progressive entry และ candidate-local gaps. เพิ่ม `settle_simulation.py` กับ `SIMULATED_FILL` ที่ใช้ราคาเปิดซึ่งกำหนดไว้ล่วงหน้า; append phase authorization และ rebuild projections โดยไม่ซื้อย้อนหลัง. ตรวจ ledger/simulation 16 tests และ market-data 11 tests ผ่าน; cash/holdings เดิมคงอยู่.
+
 ## 2026-09-04
 
 - `portfolio-policy`: Switched `US ETF Paper Portfolio Competition` to batch-first market-data evidence: one immutable batch per run, compact screen cache, and append-only price log; preserved the weekday 15:00 ET cadence, portfolio/Proposal Phase/no-order rules, and legacy dated evidence paths.

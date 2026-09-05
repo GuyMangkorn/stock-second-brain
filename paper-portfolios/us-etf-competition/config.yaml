@@ -16,14 +16,14 @@ universe:
   eligible: unleveraged long-only equity ETFs
   research_root: wiki/analysis/performance
   new_research_budget_per_rebalance: 3
-  same_run_new_candidate_buy: false
+  same_run_new_candidate_buy: true
 
 schedule:
   review_days: [MO, TU, WE, TH, FR]
   review_time: "15:00" # default for the scheduled automation; manual runs override this
   manual_run_policy: evaluate-at-invocation-time
   normal_rebalance_every_trading_sessions: 1
-  holiday_action: NO_TRADE
+  holiday_action: REVIEW_ONLY_FILLS_WAIT
   early_close_action: evaluate-at-invocation-time
   execution_profile: scheduled-inline
 
@@ -52,18 +52,15 @@ price_cache:
   every_verified_price_must_be_logged: true
 
 execution:
-  phase: proposal
-  proposal_trading_sessions: 10
-  proposal_phase_basis: first-10-completed-us-trading-sessions-recorded
-  automatic_activation: explicit-user-authorization-required
-  broker_role: none-browser-evidence-only
-  order_connector_status: unavailable-and-not-used
-  automatic_execution_status: blocked-until-explicit-user-authorization-and-order-capable-paper-connector
+  phase: simulation
+  authorization: explicit-user-request-2026-09-05
+  broker_role: none
   system_of_record: ledger/events.jsonl
-  proposal_slippage_bps_per_side: 5
-  automatic_order_type: marketable-limit
-  order_expiry_minutes: 15
+  execution_model: next-session-open
+  simulated_slippage_bps_per_side: 5
   fractional_shares: true
+  pending_order_policy: fixed-quantity-and-notional-cap
+  broker_orders_allowed: false
 
 costs:
   commission_usd: 0.00
@@ -76,7 +73,9 @@ portfolio_limits:
   minimum_cash_weight_pct: 3.00
   minimum_position_weight_pct: 5.00
   maximum_position_weight_pct: 20.00
-  target_position_count_min: 6
+  target_position_count_min: 6 # long-term goal, never an entry prerequisite
+  progressive_entry: true
+  warning_maximum_position_weight_pct: 5.00
   target_position_count_max: 10
   maximum_sector_theme_weight_pct: 35.00
   maximum_high_overlap_group_weight_pct: 25.00
@@ -129,7 +128,29 @@ risk:
   reduced_position_maximum_weight_pct: 5.00
 
 data_failure:
-  action: NO_TRADE
-  run_status: BLOCKED
+  scope: affected-candidate
+  portfolio_blockers: [invalid-ledger, unverifiable-portfolio-risk]
+  action: SKIP_CANDIDATE
+  run_status: COMPLETED_WITH_GAPS
   allow_risk_reduce_or_sell_with_stale_research: true
-  allow_buy_with_stale_data: false
+  allow_buy_with_stale_critical_data: false
+
+admission:
+  local_review_allowed: true
+  research_pass_required: false
+  noncritical_research_gaps: warning-with-reduced-size
+  holdings_refresh_policy: material-change-or-expired-risk-evidence
+  valuation_freshness_policy: warning-unless-decision-critical
+  incomplete_overlap_policy: assume-full-overlap-with-plausible-group
+analysis_order:
+  - reconcile-holdings-risk-and-pending-decisions
+  - read-vault-performance-thesis-and-prior-blockers
+  - shortlist-by-role-and-evidence
+  - resolve-decision-critical-gaps
+  - refresh-decision-quotes
+  - score-and-size
+  - record-batch-and-settle-prior-decisions
+  - recheck-state-and-record-new-decisions
+sentiment:
+  required: false
+  role: hypothesis-discovery-only

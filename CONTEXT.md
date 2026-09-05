@@ -64,7 +64,7 @@ _Avoid_: Tradable list, approved portfolio
 _Avoid_: All researched ETFs, watchlist
 
 **Tradable Admission Gate**:
-เงื่อนไขที่ ETF ต้องผ่านก่อนรับสถานะซื้อได้ โดยผล `WARNING`, `CHANGES_REQUIRED`, `BLOCKED` หรือข้อมูลราคาที่ stale ไม่ถือว่าผ่าน
+เงื่อนไขที่ ETF ต้องผ่านก่อนรับสถานะซื้อได้; local portfolio review แยกช่องว่างสำคัญที่ห้ามซื้อจากคำเตือนที่ยอมรับได้ด้วยขนาดลดลง โดยไม่เปลี่ยนผล review ของงานวิจัยต้นทาง
 _Avoid_: Research completed, page exists
 
 **Portfolio Review**:
@@ -186,3 +186,15 @@ _Avoid_: Rebalance, opening trade
 **Scheduled Portfolio Run**:
 Portfolio Review ที่ heartbeat เรียกตาม US market calendar และอาจจบด้วย Rebalance, Risk Override, `HOLD` หรือ `BLOCKED/NO TRADE`
 _Avoid_: Guaranteed trade, background live trading
+
+**Local Simulation**:
+การแข่งขันพอร์ตที่บันทึกการซื้อขายจำลองในเครื่องจากกติกาที่กำหนดก่อนเกิดราคา โดยไม่ต้องใช้ broker
+_Avoid_: Broker execution, live trading
+
+**Simulated Fill**:
+การซื้อขายจำลองที่ใช้ราคาตามกติกาซึ่งกำหนดไว้ในคำตัดสินก่อนหน้า และเปลี่ยนเงินสด/holdings ของพอร์ตจำลอง
+_Avoid_: Broker-confirmed Fill, proposed target
+
+**Pending Decision**:
+คำตัดสินซื้อขายที่ตรึงจำนวนและงบไว้แล้วแต่ยังรอหลักฐานราคาสำหรับบันทึกผลจำลอง
+_Avoid_: Current holding, executed trade
